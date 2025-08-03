@@ -1,11 +1,217 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Law</title>
-</head>
-<body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="GitLab Pages">
+        <title>eLiebermann: An Online Dictionary of Pre-Conquest English Law</title>
+        <link rel="stylesheet" href="style.css">
 
-    <h1>Hello, World!</h1>
+    </head>
+    <body>
+        <h1>eLiebermann: An Online Dictionary of Pre-Conquest English Law</h1>
+        <p>
+          An Online Dictionary of Pre-Conquest English Law.
+        </p>
+        <p>
+            Liebermann, F. (Ed.). (2015). Die Gesetze der Angelsachsen: Herausgegeben im Auftrage der Savigny-Stiftung (Cambridge Library Collection - Medieval History). Cambridge: Cambridge University Press. doi:10.1017/CBO9781316225127
+        </p>
+        <p>
+            https://www.cambridge.org/core/books/die-gesetze-der-angelsachsen/C73464C2D5D364303A2EAFC8708D553D
+        </p>
+        
+        <p>
+            You can contribute to this project through Gitlab: <a href="https://gitlab.unimelb.edu.au/mharrop/law/">https://gitlab.unimelb.edu.au/mharrop/law/</a>
+        </p>
+        
+        <p>
+            (A PDF of the relevant book is in the resources folder of this project.) 
+        </p>
+        
+        <hr>
+        
+        <div>
+            <h1>1. Load Page Number: </h1>
+            <input type="number" id="page_number" value='1' /> 
+            &nbsp;
+            <input type='button' value='Load Text' onclick='document.getElementById("my_iframe").src = "https://mharrop.pages.gitlab.unimelb.edu.au/law/text/" + document.getElementById("page_number").value + ".txt";' />
+            <br>
+            <a href="images/1.jpg" target="_blank"><img src="images/1.jpg" width="10%" /></a>
+            
+            <h1>2. Select/Highlight entry text: </h1>
+            <iframe width="90%;" id="my_iframe" src="https://mharrop.pages.gitlab.unimelb.edu.au/law/text/1.txt" ></iframe>
+            <br>
+            <input type="button" value="Process Selection" onclick="process_selection();" />
+            
+<br>
+            <div id="output_html_rendered"> </div>
 
-</body>
+<h1>3. Copy this html and make a new html page on git</h1>
+            <br>
+            <textarea id="output_html_raw" rows="5" cols="100" ></textarea>
+            
+            
+            
+            <br>
+            <input type="button" value="Download" onclick='download(document.getElementById("page_number").value + ".txt",document.getElementById("output").value)' />
+            
+            
+            
+        </div>
+        
+        <script>
+        
+            // JSONP to load abbreviations from data folder
+            var abbreviations  = {};
+            function abbreviationsJSONP(jsonObj) {
+                abbreviations = jsonObj;
+            }
+        
+            function process_selection() {
+                
+                /*
+                *******************
+                TO DO
+                
+                * The abbreviations should link to a html file with the same name. That file could contain the German and English translation columns. 
+                * Column for = sign stuff. These are abbreviation of works that are the same. So multivalued attribute
+                
+                DONE
+                
+                * Put selection on one line
+                * Mouseover the ~ shows the headword as a tooltip
+                * Add page reference to the HTML table
+                
+                *******************
+                */
+                
+                
+                
+                
+                var output_html = "";
+                var entry = document.getElementById('my_iframe').contentWindow.getSelection().toString();
+                
+                //turn into one line
+                entry = entry.replace(/\r/g, " ").replace(/\n/g, " ");
+                
+                var language = whatLanguage(entry);
+                var headWord = whatHeadWord(entry);
+                var seeAlso = whatSeeAlso(entry);
+                
+                
+                // Replace ~ with headword as tooltip
+                entry = entry.replace("~", "<span title='" + headWord + "'>~</span>");
+                
+                
+                output_html += "<h1>" + headWord + "</h1>\n";
+                output_html += "<table>\n";
+                output_html += "<tr>\n";
+                // Headings fo the table:
+                output_html += "<th>Page Number</th><th>Head Word</th><th>Language</th><th>See Also</th><th>Full Entry</th>\n";
+                output_html += "</tr>\n";
+                output_html += "<tr>\n";
+                output_html += "<td>" + document.getElementById("page_number").value + "</td>";
+                output_html += "<td>" + headWord + "</td>";
+                output_html += "<td>" + language + "</td>";
+                output_html += "<td><a href='" + seeAlso + ".html'>" + seeAlso + "</a></td>";
+                output_html += "<td>" + entry + "</td>";
+                output_html += "</tr>\n";
+                output_html += "</table>";
+                
+                
+                //console.log(abbreviations);
+                //console.log(abbreviations.length);
+                for(var i = 0; i < abbreviations.length; i++) {
+                    var obj = abbreviations[i];
+
+                    console.log(abbreviations[i]);
+                    console.log(Object.keys(obj)[0]);
+                    console.log(entry.search(/\bAGu\b/g));
+                    
+                    /*
+                        Search out the abbreviation in abbreviations. Add a link
+                    
+                        entry
+                        
+                        if we add a space to the end of entry, then abreviations will always be followed by a space. 
+                    */
+                    
+                    
+                }
+                
+                
+                document.getElementById('output_html_rendered').innerHTML = output_html;
+                document.getElementById('output_html_raw').value = "<html><body>" + output_html + "</body></html>";
+                
+            }
+            
+            function whatLanguage(str) {
+                // Give this function an entry and it will tell you what language it is. 
+                // Entries starting with L followd by a space are Latin
+                // Entries starting with F followd by a space are French
+                // Entries starting with nothing are English
+                
+                var firstTwoCharacters = str.substring(0, 2);
+                
+                switch(firstTwoCharacters) {
+                    case "L ":
+                        return 'Latin';
+                    break;
+                    case "F ":
+                        return 'French';
+                    break;
+                    default:
+                        return 'English';
+                }
+            }
+            
+            function whatHeadWord(str) {
+                // Give this function an entry and it will tell you what the head word (i.e. the dictionary word of this entry)
+                
+                if (str.substring(0, 2) == "L ") {
+                    str = str.substring(2);
+                }
+                
+                if (str.substring(0, 2) == "F ") {
+                    str = str.substring(2);
+                }
+                
+                return str.split(" ")[0];
+                
+            }
+            
+            function whatSeeAlso(str) {
+                // The .s indicate a See Also. See another entry. 
+                // e.g. abere s. aebaere
+                // e.g. localization s. localisation
+                
+                var n = str.search(" s. ");
+                
+                
+                if (n < 0) {
+                    return "";
+                } else {
+                    return str.split(" s. ")[1];
+                }
+                
+            }
+        
+        
+        
+            function download(filename, text) {
+              var element = document.createElement('a');
+              element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+              element.setAttribute('download', filename);
+            
+              element.style.display = 'none';
+              document.body.appendChild(element);
+            
+              element.click();
+            
+              document.body.removeChild(element);
+            }
+            
+        </script>     
+        <script src="data/abbreviations.js"></script>
+
+    </body>
 </html>
