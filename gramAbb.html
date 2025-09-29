@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>eLiebermann: An Online Dictionary of Pre-Conquest English Law</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <h1>eLiebermann: An Online Dictionary of Pre-Conquest English Law</h1>
+    <div id="content-container">
+        </div>
+
+    <script>
+    var glossaryData  = {};
+    function markforwardJSONP(jsonObj) {
+        glossaryData = jsonObj;
+        const grouped = groupDataByAnchor(glossaryData);
+        generateContent(grouped);
+    }
+
+    function groupDataByAnchor(data) {
+        return data.reduce((acc, item) => {
+            const anchor = item.Anchor;
+            if (!acc[anchor]) {
+                acc[anchor] = [];
+            }
+            acc[anchor].push(item);
+            return acc;
+        }, {});
+    }
+
+    function generateContent(groupedData) {
+        const container = document.getElementById('content-container');
+        let html = '';
+
+        // Iterate over each unique Anchor
+        for (const anchor in groupedData) {
+            const entries = groupedData[anchor];
+
+            const needsGrammaticalColumn = entries.some(entry => entry['Notes: Grammatical']);
+
+            // Get the 'Gesetze Text' of the first entry in the group
+            const headingText = entries.length > 0 ? entries[0]['Gesetze Text'] : anchor;
+
+            // Create a Heading with the Anchor name and the required ID for linking
+            html += `<h2 id="${anchor}">${headingText}</h2>`;
+
+            // Start the table for the entries under this Anchor
+            html += `<table>`;
+            html += `
+                <thead>
+                    <tr>
+                        <th>Gesetze Text</th>
+                        <th>German Expansion</th>
+                        <th>English Translation</th>
+                        ${needsGrammaticalColumn ? '<th>Notes: Grammatical</th>' : ''}
+                    </tr>
+                </thead>
+                <tbody>
+            `;
+
+            // Add a row for each entry
+            entries.forEach(entry => {
+                const grammaticalNote = entry['Notes: Grammatical'] || '';
+
+                html += `
+                    <tr>
+                        <td>${entry['Gesetze Text']}</td>
+                        <td>${entry['German Expansion']}</td>
+                        <td>${entry['English Translation']}</td>
+                        ${needsGrammaticalColumn ? `<td>${grammaticalNote}</td>` : ''}
+                    </tr>
+                `;
+            });
+
+            // Close the table
+            html += `
+                </tbody>
+            </table>
+            `;
+        }
+        container.innerHTML = html;
+    }
+
+    </script>
+    <script src="data/markforward.js"></script>
+
+</body>
+</html>
