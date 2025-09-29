@@ -2,24 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="generator" content="GitLab Pages">
         <title>eLiebermann: An Online Dictionary of Pre-Conquest English Law</title>
 
-            <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
-    
-        <style>
-            /* styling to make the text editor look nice */
-            #editor-container {
-                border: 1px solid #ccc;
-                height: 300px;
-            }
-
-            abbr {
-                background-color: yellow;
-            }
-        </style>
-
-        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css" />
 
     </head>
     <body>
@@ -70,7 +56,6 @@
     <input type="" value="<a href=''></a>" id="dooe_link1"/><br>
     <input type="" value="<a href=''></a>" id="dooe_link2"/><br>
     <input type="" value="<a href=''></a>" id="dooe_link3"/><br>
-
 </p>
 
 <p>
@@ -99,21 +84,17 @@ English translation:<br><div id="english-container"></div>
   <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
 
     <script>
-        // Define the custom toolbar you want to display.
-        // We are keeping it minimal to just bold, italic, and superscript.
+        // Define the custom toolbar with just bold, italic, and superscript.
         const toolbarOptions = [
           ['bold', 'italic'],
           [{ 'script': 'super' }],
         ];
 
-        // Initialize Quill and configure it to use your custom toolbar
-        // and to only allow specific formatting.
+        // Initialize Quill and configure it to use custom toolbar
         const quill = new Quill('#editor-container', {
           modules: {
             toolbar: toolbarOptions,
           },
-          // The 'formats' option acts as a whitelist. Any formatting not listed
-          // here will be automatically removed on paste or edit.
           formats: ['bold', 'italic', 'script'],
           theme: 'snow', // The theme from the stylesheet.
         });
@@ -151,8 +132,6 @@ English translation:<br><div id="english-container"></div>
         markLaw = jsonObj;
     }
 
-    console.log(markLaw);
-
     function process_selection() {
         var output_html = "";
         var entryHTML = quill.root.innerHTML;
@@ -164,6 +143,8 @@ English translation:<br><div id="english-container"></div>
         var language = whatLanguage(entryHTML);
         var headWord = whatHeadWord(entry);
         var seeAlso = whatSeeAlso(entry);
+        var page_number = document.getElementById("page_number").value;
+        var LiebDefinition = parseEnumeratedListAsHtml(entryHTML);
         
         
         // Replace ~ with headword as tooltip
@@ -183,12 +164,65 @@ English translation:<br><div id="english-container"></div>
         output_html += "<td><a href='" + seeAlso + ".html'>" + seeAlso + "</a></td>";
         output_html += "<td>" + entryHTML + "</td>";
 
-        output_html += "<td>" +  parseEnumeratedListAsHtml(entryHTML) + "</td>";
+        output_html += "<td>" + LiebDefinition + "</td>";
 
         output_html += "<td>" + quillEnglish.root.innerHTML + "</td>";
         
         output_html += "</tr>\n";
         output_html += "</table>";
+
+        
+        output_html += `<TEI xmlns="http://www.tei-c.org/ns/1.0">
+            <teiHeader>
+                <fileDesc>
+                <titleStmt>
+                    <title>Dictionary Entry for "${headWord}"</title>
+                </titleStmt>
+                <publicationStmt>
+                    <p>This is a TEI document example.</p>
+                </publicationStmt>
+                <sourceDesc>
+                    <bibl>
+                        <title>Liebermann, F. (Ed.). (2015). Die Gesetze der Angelsachsen: Herausgegeben im Auftrage der Savigny-Stiftung (Cambridge Library Collection - Medieval History). Cambridge: Cambridge University Press. doi:10.1017/CBO9781316225127</title>
+                        <author>Liebermann, F.</author>
+                        <publisher>Cambridge University Press</publisher>
+                        <date>2015</date>
+                        <biblScope unit="page">${page_number}</biblScope>
+                    </bibl>
+                </sourceDesc>
+                </fileDesc>
+            </teiHeader>
+            <text>
+                <body>
+                    <entry>
+                        <form>
+                            <orth>${headWord}</orth>
+                        </form>
+                        <etym>
+                            <lang>${language}</lang>
+                        </etym>
+                        <sense>
+                            <def>${LiebDefinition}</def>
+                            <cit>
+                                <quote>Lorum ipsum</quote>
+                                <bibl>
+                                    <title>Example Dictionary</title>
+                                    <date>2023</date>
+                                    <biblScope unit="page">123</biblScope>
+                                </bibl>
+                            </cit>
+                        </sense>
+                        <ptr target="https://www.etymonline.com/word/cold" type="related-resource" n="Etymology Online"/>
+                        <ptr target="https://www.merriam-webster.com/dictionary/cold" type="related-resource" n="Merriam-Webster"/>
+                        <ptr target="https://en.wikipedia.org/wiki/Cold" type="related-resource" n="Wikipedia"/>
+                        <ptr target="https://www.dictionary.com/browse/cold" type="related-resource" n="Dictionary.com"/>
+                    </entry>
+                </body>
+            </text>
+        </TEI>`;
+
+
+
 
         var links = [];
 
@@ -248,29 +282,51 @@ English translation:<br><div id="english-container"></div>
             output_html += "</ul>";
         }
 
-        for (var i = 0; i < markforward.length; i++) {
-            var obj = markforward[i];
-            var searchTerm = obj["markforward"];
-            var germanExpansion = obj["German Expansion"];
+        const combinedTerms = [];
+        // Add terms from markLaw
+        markLaw.forEach(law => {
+        combinedTerms.push({
+            searchTerm: law[0],
+            data: {
+            type: 'law'
+            }
+        });
+        });
 
-            // Escape any special characters in the search term before creating the regex
+        // Add terms from markforward
+        markforward.forEach(forward => {
+        combinedTerms.push({
+            searchTerm: forward["Gesetze Text"],
+            data: {
+            type: 'forward',
+            germanExpansion: forward["German Expansion"],
+            englishTranslation: forward["English Translation"],
+            anchor: forward["Anchor"]
+            }
+        });
+        });
+
+        // Sort the combined array by the length of the searchTerm, longest to shortest
+        combinedTerms.sort((a, b) => b.searchTerm.length - a.searchTerm.length);
+
+        // Loop through the sorted, combined array
+        for (const item of combinedTerms) {
+            var searchTerm = item.searchTerm;
             var escapedSearchTerm = escapeRegex(searchTerm);
 
-            var regex = new RegExp('\\b' + escapedSearchTerm + '\\b', 'g');
+            var escapedSearchTermForRegex = escapedSearchTerm.replace(/\s+/g, '\\s+');
 
-            output_html = output_html.replace(regex, '<a href="' + encodeURIComponent(searchTerm) + '.html"><abbr title="' + germanExpansion + '">' + searchTerm + '</abbr></a>');
-        }
+            var regex = new RegExp('(?<!<a[^>]*?>)\\b' + escapedSearchTermForRegex + '\\b(?!<\\/a>)', 'g');
 
-        for (const innerArray of markLaw) {
-        //for (var i = 0; i < markLaw.length; i++) {
-            var searchTerm = innerArray[0];
-
-            // Escape any special characters in the search term before creating the regex
-            var escapedSearchTerm = escapeRegex(searchTerm);
-
-            var regex = new RegExp('\\b' + escapedSearchTerm + '\\b', 'g');
-
-            output_html = output_html.replace(regex, '<a title="Law Code" style="background-color: green;" href="' + encodeURIComponent(searchTerm) + '.html"" >' + searchTerm + '</a>');
+            // Check the type to determine which replacement HTML to use
+            if (item.data.type === 'law') {
+                output_html = output_html.replace(regex, '<a title="Law Code" style="background-color: green;" href="' + encodeURIComponent(searchTerm) + '.html"" >' + searchTerm + '</a>');
+            } else if (item.data.type === 'forward') {
+                var germanExpansion = item.data.germanExpansion;
+                var englishTranslation = item.data.englishTranslation;
+                var anchor = item.data.anchor;
+                output_html = output_html.replace(regex, '<a href="#' + encodeURIComponent(anchor) + '.html"><abbr title="' + germanExpansion + " ... " + englishTranslation + '">' + searchTerm + '</abbr></a>');
+            }
         }
         
         
@@ -280,42 +336,52 @@ English translation:<br><div id="english-container"></div>
     }
     
     function whatLanguage(htmlString) {
-        // Give this function an entry and it will tell you what language it is. 
-        // Entries starting with L followd by a space are Latin
-        // Entries starting with F followd by a space are French
-        // Entries starting with no thing are Old English
-        
+        // Give this function an entry and it will tell you what language it is.
+        // Entries starting with superscript L are Latin
+        // Entries starting with superscript F are French
+        // Entries that do not start with a superscript, but instead have a bold and italic word are "Grammatical Term"
+        // Default Old English
+
         const tempElement = document.createElement('div');
         tempElement.innerHTML = htmlString.trim();
 
-        // Get the first child element of the temporary element
-        const firstElement = tempElement.firstElementChild;
+        // The HTML is always inside a p tag, so get the first child which should be the p element.
+        const pElement = tempElement.firstElementChild;
 
-        // If there's no first element, there's no HTML to check
-        if (!firstElement) {
-            return 'Old English';
-        }
+        // Get the first child of the p element.
+        const firstChild = pElement.firstElementChild;
 
-        // Find the first superscript element (<sup>) within the first child element
-        const superscriptElement = firstElement.querySelector('sup');
-
-        // If a superscript element exists, get its text content
-        if (superscriptElement) {
-            const supContent = superscriptElement.textContent.trim();
+        // Check if the first child is a superscript element (<sup>).
+        if (firstChild && firstChild.tagName === 'SUP') {
+            const supContent = firstChild.textContent.trim();
             if (supContent.includes('L')) {
-            return 'Latin';
+                return 'Latin';
             }
             if (supContent.includes('F')) {
-            return 'French';
+                return 'French';
+            }
+        } 
+
+        if (firstChild && firstChild.tagName === 'STRONG') {
+            // Check if the first child of the strong element is an em element.
+            const strongFirstChild = firstChild.firstElementChild;
+            if (strongFirstChild && strongFirstChild.tagName === 'EM') {
+                return 'Grammatical Term';
             }
         }
 
-        // Default to English if no superscript is found or if the content doesn't match L or F
+        // Default to Old English if no match is found.
         return 'Old English';
     }
     
     function whatHeadWord(str) {
         // Give this function an entry and it will tell you what the head word (i.e. the dictionary word of this entry)
+
+        // note the order or removal is important here. It might get rid of I) and then F superscript
+        // Remove "I) ", "II) ", "III) "
+        if (str.startsWith("I) ") || str.startsWith("II) ") || str.startsWith("III) ")) {
+            str = str.substring(str.indexOf(" ") + 1);
+        }
         
         if (str.substring(0, 2) == "L ") {
             str = str.substring(2);
@@ -324,7 +390,8 @@ English translation:<br><div id="english-container"></div>
         if (str.substring(0, 2) == "F ") {
             str = str.substring(2);
         }
-        
+
+
         return str.split(" ")[0];
         
     }
