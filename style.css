@@ -34,12 +34,6 @@ table th {
     height: 300px;
 }
 
-
-/* styling to make the TEI-like elements look good. */
-abbr {
-    background-color: yellow;
-}
-
 h2 {
             border-bottom: 2px solid #ccc;
             padding-bottom: 5px;
@@ -52,3 +46,56 @@ h2 {
             background-color: #ffeeb3; /* Highlight when linked to */
             padding-left: 10px;
         }
+
+
+/* Define modern colors using variables for consistency and easy updates */
+:root {
+  --primary-color: #007bff; /* A nice blue for the main link color */
+  --text-color: #333;
+  --bg-color: #f8f9fa; /* Light background for a clean look */
+  --hover-bg-color: #e2e6ea;
+  --border-color: #ced4da;
+}
+
+/* Style the anchor tag (the link itself) */
+a {
+  text-decoration: none; /* Remove default underline */
+  color: var(--primary-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, clean font */
+  font-size: 16px;
+  display: inline-block; /* Allows padding and margin */
+  margin-right: 15px; /* Space between the two links */
+  padding: 8px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px; /* Slight rounding for a modern feel */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  background-color: var(--bg-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+/* Hover effect for the anchor tag */
+a:hover {
+  background-color: var(--hover-bg-color);
+  border-color: var(--primary-color); /* Highlight border on hover */
+  color: #0056b3;
+  transform: translateY(-1px); /* Slight lift for interaction */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the abbreviation tag inside the link */
+abbr {
+  text-decoration: none; /* Remove the default dotted underline */
+  cursor: pointer; /* Keep the pointer cursor */
+  font-weight: 600; /* Make the text slightly bolder */
+  color: var(--text-color); /* Use a darker color for the text inside */
+  /* This ensures the text color is distinct from the link color */
+}
+
+/* Optional: Style for the specific classes (if needed for distinction) */
+.abbr1 {
+  /* Specific style for Text 1 if desired */
+}
+
+.abbr2 {
+  /* Specific style for Text 2 if desired */
+}
