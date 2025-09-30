@@ -79,7 +79,7 @@ English translation:<br><div id="english-container"></div>
             <br>
             <textarea id="output_html_raw" rows="5" cols="100" ></textarea>
             
-        
+        <p></p>
             
   <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
 
@@ -172,55 +172,6 @@ English translation:<br><div id="english-container"></div>
         output_html += "</table>";
 
         
-        output_html += `<TEI xmlns="http://www.tei-c.org/ns/1.0">
-            <teiHeader>
-                <fileDesc>
-                <titleStmt>
-                    <title>Dictionary Entry for "${headWord}"</title>
-                </titleStmt>
-                <publicationStmt>
-                    <p>This is a TEI document example.</p>
-                </publicationStmt>
-                <sourceDesc>
-                    <bibl>
-                        <title>Liebermann, F. (Ed.). (2015). Die Gesetze der Angelsachsen: Herausgegeben im Auftrage der Savigny-Stiftung (Cambridge Library Collection - Medieval History). Cambridge: Cambridge University Press. doi:10.1017/CBO9781316225127</title>
-                        <author>Liebermann, F.</author>
-                        <publisher>Cambridge University Press</publisher>
-                        <date>2015</date>
-                        <biblScope unit="page">${page_number}</biblScope>
-                    </bibl>
-                </sourceDesc>
-                </fileDesc>
-            </teiHeader>
-            <text>
-                <body>
-                    <entry>
-                        <form>
-                            <orth>${headWord}</orth>
-                        </form>
-                        <etym>
-                            <lang>${language}</lang>
-                        </etym>
-                        <sense>
-                            <def>${LiebDefinition}</def>
-                            <cit>
-                                <quote>Lorum ipsum</quote>
-                                <bibl>
-                                    <title>Example Dictionary</title>
-                                    <date>2023</date>
-                                    <biblScope unit="page">123</biblScope>
-                                </bibl>
-                            </cit>
-                        </sense>
-                        <ptr target="https://www.etymonline.com/word/cold" type="related-resource" n="Etymology Online"/>
-                        <ptr target="https://www.merriam-webster.com/dictionary/cold" type="related-resource" n="Merriam-Webster"/>
-                        <ptr target="https://en.wikipedia.org/wiki/Cold" type="related-resource" n="Wikipedia"/>
-                        <ptr target="https://www.dictionary.com/browse/cold" type="related-resource" n="Dictionary.com"/>
-                    </entry>
-                </body>
-            </text>
-        </TEI>`;
-
 
 
 
@@ -286,9 +237,12 @@ English translation:<br><div id="english-container"></div>
         // Add terms from markLaw
         markLaw.forEach(law => {
         combinedTerms.push({
-            searchTerm: law[0],
+            searchTerm: law["Gesetze Text"],
             data: {
-            type: 'law'
+            type: 'law',
+            germanExpansion: law["German Expansion"],
+            englishTranslation: law["English Translation"],
+            anchor: law["Anchor"]
             }
         });
         });
@@ -318,14 +272,12 @@ English translation:<br><div id="english-container"></div>
 
             var regex = new RegExp('(?<!<a[^>]*?>)\\b' + escapedSearchTermForRegex + '\\b(?!<\\/a>)', 'g');
 
-            // Check the type to determine which replacement HTML to use
+            var anchor = item.data.anchor;
+
             if (item.data.type === 'law') {
-                output_html = output_html.replace(regex, '<a title="Law Code" style="background-color: green;" href="' + encodeURIComponent(searchTerm) + '.html"" >' + searchTerm + '</a>');
+                output_html = output_html.replace(regex, '<a href="lawAbb.html#' + encodeURIComponent(anchor) + '" >' + searchTerm + '</a>');
             } else if (item.data.type === 'forward') {
-                var germanExpansion = item.data.germanExpansion;
-                var englishTranslation = item.data.englishTranslation;
-                var anchor = item.data.anchor;
-                output_html = output_html.replace(regex, '<a href="#' + encodeURIComponent(anchor) + '.html"><abbr title="' + germanExpansion + " ... " + englishTranslation + '">' + searchTerm + '</abbr></a>');
+                output_html = output_html.replace(regex, '<a href="gramAbb.html#' + encodeURIComponent(anchor) + '"><abbr>' + searchTerm + '</abbr></a>');
             }
         }
         
