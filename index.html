@@ -11,13 +11,7 @@
     <body>
         <h1>eLiebermann: An Online Dictionary of Pre-Conquest English Law</h1>
         <p>
-          An Online Dictionary of Pre-Conquest English Law.
-        </p>
-        <p>
             Liebermann, F. (Ed.). (2015). Die Gesetze der Angelsachsen: Herausgegeben im Auftrage der Savigny-Stiftung (Cambridge Library Collection - Medieval History). Cambridge: Cambridge University Press. doi:10.1017/CBO9781316225127
-        </p>
-        <p>
-            https://www.cambridge.org/core/books/die-gesetze-der-angelsachsen/C73464C2D5D364303A2EAFC8708D553D
         </p>
         
         <p>
@@ -26,53 +20,75 @@
 
         </p>
         
-        <p>
-            (A PDF of the relevant book is in the resources folder of this project.) 
-        </p>
-        
         <hr>
         
         <div>
-            <h1>Page Number: </h1>
-            <input type="number" id="page_number" /> 
+            <h1>Page Number</h1>
+            <p><em>Note: This is a page number as it appears in the original text, rather than the page of the PDF. </em></p>
+            <input type="text" id="page_number" /> 
             &nbsp;
             <br>
             
-            <h1>Entry text: </h1>
+            <h1>Full Entry text</h1>
 
 
     <div id="editor-container"></div>
 
-   
 
-
-<p>Bosworth-Toller Link/s:<br>
-    <input type="" value="<a href=''></a>" id="bt_link1"/><br>
-    <input type="" value="<a href=''></a>" id="bt_link2"/><br>
-    <input type="" value="<a href=''></a>" id="bt_link3"/><br>
-</p>
-
-<p>Dictionary of Old English Link/s:<br>
-    <input type="" value="<a href=''></a>" id="dooe_link1"/><br>
-    <input type="" value="<a href=''></a>" id="dooe_link2"/><br>
-    <input type="" value="<a href=''></a>" id="dooe_link3"/><br>
-</p>
-
+<h1>Bosworth-Toller Link/s</h1>
 <p>
-Wiktionary Link/s:<br>
-    <input type="" value="<a href=''></a>" id="wiktionary_link1"/><br>
-    <input type="" value="<a href=''></a>" id="wiktionary_link2"/><br>
-    <input type="" value="<a href=''></a>" id="wiktionary_link3"/><br>
+    <em>Note: Maximum 3 links. If you require more you will need to edit the HTML. Leave blank if no links.</em>
 </p>
-
 <p>
-English translation:<br><div id="english-container"></div>
+    <ul>
+        <li>
+            Link text: <input type="" value="" id="bt_linkText1" placeholder="e.g. Google Search" /> Link URL: <input type="" value="" id="bt_linkURL1" placeholder="e.g. https://www.google.com/"/>
+        </li>
+        <li>
+            Link text: <input type="" value="" id="bt_linkText2" placeholder="e.g. Google Search" /> Link URL: <input type="" value="" id="bt_linkURL2" placeholder="e.g. https://www.google.com/"/>
+        </li>        
+        <li>
+            Link text: <input type="" value="" id="bt_linkText3" placeholder="e.g. Google Search" /> Link URL: <input type="" value="" id="bt_linkURL3" placeholder="e.g. https://www.google.com/"/>
+        </li>
+    </ul>
+</p>
+<h1>Dictionary of Old English Link/s</h1>
+<p>
+    <ul>
+        <li>
+            Link text: <input type="" value="" id="dooe_linkText1" placeholder="e.g. Google Search" /> Link URL: <input type="" value="" id="dooe_linkURL1" placeholder="e.g. https://www.google.com/"/>
+        </li>
+        <li>
+            Link text: <input type="" value="" id="dooe_linkText2" placeholder="e.g. Google Search" /> Link URL: <input type="" value="" id="dooe_linkURL2" placeholder="e.g. https://www.google.com/"/>
+        </li>        
+        <li>
+            Link text: <input type="" value="" id="dooe_linkText3" placeholder="e.g. Google Search" /> Link URL: <input type="" value="" id="dooe_linkURL3" placeholder="e.g. https://www.google.com/"/>
+        </li>
+    </ul>
 </p>
 
-            <br>
+<h1>Wiktionary Link/s</h1>
+<p>
+    <ul>
+        <li>
+            Link text: <input type="" value="" id="wiktionary_linkText1" placeholder="e.g. Google Search" /> Link URL: <input type="" value="" id="wiktionary_linkURL1" placeholder="e.g. https://www.google.com/"/>
+        </li>
+        <li>
+            Link text: <input type="" value="" id="wiktionary_linkText2" placeholder="e.g. Google Search" /> Link URL: <input type="" value="" id="wiktionary_linkURL2" placeholder="e.g. https://www.google.com/"/>
+        </li>        
+        <li>
+            Link text: <input type="" value="" id="wiktionary_linkText3" placeholder="e.g. Google Search" /> Link URL: <input type="" value="" id="wiktionary_linkURL3" placeholder="e.g. https://www.google.com/"/>
+        </li>
+    </ul>
+</p>
+
+<h1>English translation</h1>
+<div id="english-container"></div>
+
+            <p>
             <input type="button" value="Process" onclick="process_selection();" />
             
-<br>
+            </p>
             <div id="output_html_rendered"> </div>
 
 <h1>HTML:</h1>
@@ -103,13 +119,15 @@ English translation:<br><div id="english-container"></div>
         const englishToolbarOptions = [
           ['bold', 'italic'],
           [{ 'script': 'super' }],
+          [{ 'list': 'ordered'}, { 'list': 'bullet' }]
         ];
 
         const quillEnglish = new Quill('#english-container', {
           modules: {
             toolbar: englishToolbarOptions,
           },
-          formats: ['bold', 'italic', 'script'],
+          // ADDED 'list' to the allowed formats
+          formats: ['bold', 'italic', 'script', 'list'],
           theme: 'snow', 
         });
 
@@ -154,7 +172,6 @@ English translation:<br><div id="english-container"></div>
         output_html += "<h1>" + headWord + "</h1>\n";
         output_html += "<table>\n";
         output_html += "<tr>\n";
-        // Headings for the table:
         output_html += "<th>Page Number</th><th>Head Word</th><th>Language</th><th>See Also</th><th>Full Entry</th><th>Liebermann's Definition</th><th>English Translation</th>\n";
         output_html += "</tr>\n";
         output_html += "<tr>\n";
@@ -174,15 +191,20 @@ English translation:<br><div id="english-container"></div>
         
 
 
-
-        var links = [];
+var links = [];
 
         for (let i = 1; i <= 3; i++) {
-            const linkElement = document.getElementById("bt_link" + i);
-            if (linkElement) { // Check if the element exists
-                const linkValue = linkElement.value;
-                if (linkValue !== "<a href=''></a>") {
-                    links.push(linkValue);
+            const textElement = document.getElementById("bt_linkText" + i);
+            const urlElement = document.getElementById("bt_linkURL" + i);
+            
+            if (textElement && urlElement) { // Check if both elements exist
+                const linkText = textElement.value.trim();
+                const linkURL = urlElement.value.trim();
+                
+                // Only add a link if both text and a valid looking URL are present
+                if (linkText !== "" && linkURL.startsWith("http")) { 
+                    const linkHTML = `<a href="${linkURL}" target="_blank">${linkText}</a>`;
+                    links.push(linkHTML);
                 }
             }
         }
@@ -197,11 +219,16 @@ English translation:<br><div id="english-container"></div>
 
         links = [];
         for (let i = 1; i <= 3; i++) {
-            const linkElement = document.getElementById("dooe_link" + i);
-            if (linkElement) { // Check if the element exists
-                const linkValue = linkElement.value;
-                if (linkValue !== "<a href=''></a>") {
-                    links.push(linkValue);
+            const textElement = document.getElementById("dooe_linkText" + i);
+            const urlElement = document.getElementById("dooe_linkURL" + i);
+            
+            if (textElement && urlElement) {
+                const linkText = textElement.value.trim();
+                const linkURL = urlElement.value.trim();
+                
+                if (linkText !== "" && linkURL.startsWith("http")) {
+                    const linkHTML = `<a href="${linkURL}" target="_blank">${linkText}</a>`;
+                    links.push(linkHTML);
                 }
             }
         }
@@ -216,11 +243,16 @@ English translation:<br><div id="english-container"></div>
 
         links = [];
         for (let i = 1; i <= 3; i++) {
-            const linkElement = document.getElementById("wiktionary_link" + i);
-            if (linkElement) { // Check if the element exists
-                const linkValue = linkElement.value;
-                if (linkValue !== "<a href=''></a>") {
-                    links.push(linkValue);
+            const textElement = document.getElementById("wiktionary_linkText" + i);
+            const urlElement = document.getElementById("wiktionary_linkURL" + i);
+            
+            if (textElement && urlElement) {
+                const linkText = textElement.value.trim();
+                const linkURL = urlElement.value.trim();
+                
+                if (linkText !== "" && linkURL.startsWith("http")) {
+                    const linkHTML = `<a href="${linkURL}" target="_blank">${linkText}</a>`;
+                    links.push(linkHTML);
                 }
             }
         }
@@ -283,7 +315,12 @@ English translation:<br><div id="english-container"></div>
         
         
         document.getElementById('output_html_rendered').innerHTML = output_html;
-        document.getElementById('output_html_raw').value = "<html><body>" + output_html + "</body></html>";
+        document.getElementById('output_html_raw').value = `<!DOCTYPE html>
+            <head>
+                <meta charset="utf-8">
+                <title>${headWord} - eLiebermann: An Online Dictionary of Pre-Conquest English Law</title>
+                <link rel="stylesheet" href="style.css" />
+            </head><body> ${output_html} </body></html>`;
         
     }
     
@@ -368,23 +405,20 @@ English translation:<br><div id="english-container"></div>
 
 
     function parseEnumeratedListAsHtml(htmlString) {
-    // This regex is excellent for the task. It finds the list marker and captures the content.
-    //const regex = /<strong>(\d+)<\/strong>\)\s*(.*?)(?=(<strong>|$))/g;
         const regex = /(\d+)<\/strong>\)\s*(.*?)(?=(<strong>|$))/g;
-    const listItems = [];
-    let match;
+        const listItems = [];
+        let match;
 
-    // Loop through all matches in the string.
-    while ((match = regex.exec(htmlString)) !== null) {
-        // The content is in the second capturing group (match[2]).
-        // We trim the content to remove leading/trailing whitespace.
-        const content = match[2].trim();
-        if (content) {
-        listItems.push(content);
+        // Loop through all matches in the string.
+        while ((match = regex.exec(htmlString)) !== null) {
+            // The content is in the second capturing group (match[2]).
+            const content = match[2].trim();
+            if (content) {
+            listItems.push(content);
+            }
         }
-    }
 
-    return `<ol>\n${listItems.map(item => `  <li>${item}</li>`).join('\n')}\n</ol>`;;
+        return `<ol>\n${listItems.map(item => `  <li>${item}</li>`).join('\n')}\n</ol>`;;
     }
   
 </script>     
