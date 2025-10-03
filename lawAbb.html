@@ -8,16 +8,45 @@
 </head>
 <body>
 
+
     <h1>eLiebermann: An Online Dictionary of Pre-Conquest English Law</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam velit felis, rutrum eget nulla at, cursus gravida mi. Nam dignissim quam neque, at blandit erat feugiat bibendum. Donec sed lectus commodo, maximus diam a, tincidunt lacus. Duis finibus mauris sit amet nibh maximus sodales. Donec quis arcu a felis gravida aliquet id ut magna. Nunc sagittis posuere neque, at tincidunt nunc dapibus quis. Nam scelerisque urna nisl, non laoreet ipsum condimentum a. Sed ultricies vehicula justo, sit amet ullamcorper quam pulvinar eget. Fusce eleifend, turpis sed vestibulum pretium, arcu eros sollicitudin est, sed euismod sem orci sed turpis.</p>
+
+    <p>Sed ullamcorper feugiat neque tempor semper. Etiam vitae tellus id odio vulputate ullamcorper et ac nulla. Nullam luctus vulputate justo, et pellentesque mi volutpat finibus. Aliquam ullamcorper varius massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis facilisis, dolor in venenatis elementum, ligula nunc pellentesque urna, in eleifend quam sapien vel ex. Praesent egestas tellus ut consectetur molestie. Cras fermentum nunc varius augue posuere, dapibus auctor purus rhoncus. Donec consectetur pellentesque erat, eget placerat nisl semper at. Proin in dictum arcu. Quisque gravida diam ut libero viverra, et tincidunt nisl laoreet. Etiam a lacinia metus. Curabitur lobortis felis nec ullamcorper tempor. Suspendisse potenti. </p>
+
+    <div id="search-container">
+        <select id="searchScope">
+            <option value="Gesetze Text">Gesetze Text</option>
+            <option value="German Expansion">German Expansion</option>
+            <option value="English Translation">English Translation</option>
+            <option value="Notes: Grammatical">Grammatical Note</option>
+            <option value="all">All Fields</option>
+        </select>
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="filterContent()">Search</button>
+    </div>
+
     <div id="content-container">
         </div>
 
     <script>
     var glossaryData  = {};
+    var groupedDataCache = {}; // Cache the grouped data
+
     function markLawJSONP(jsonObj) {
         glossaryData = jsonObj;
-        const grouped = groupDataByAnchor(glossaryData);
-        generateContent(grouped);
+        // Group the data once upon load
+        groupedDataCache = groupDataByAnchor(glossaryData);
+        // Initially generate all content
+        generateContent(groupedDataCache);
+        
+        // Add event listener for Enter key on search input
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                filterContent();
+            }
+        });
     }
 
     function groupDataByAnchor(data) {
@@ -31,13 +60,90 @@
         }, {});
     }
 
+    /**
+     * Checks if a given glossary entry matches the search term based on the selected scope.
+     * @param {Object} entry - The glossary data object.
+     * @param {string} searchTerm - The lowercased search query.
+     * @param {string} scope - The selected search scope ('Gesetze Text', 'all', etc.).
+     * @returns {boolean} True if the entry matches the search criteria.
+     */
+    function entryMatchesSearch(entry, searchTerm, scope) {
+        // Define the fields to check
+        const fieldsToCheck = {
+            'Gesetze Text': ['Gesetze Text'],
+            'German Expansion': ['German Expansion'],
+            'English Translation': ['English Translation'],
+            'Notes: Grammatical': ['Notes: Grammatical'],
+            'all': ['Gesetze Text', 'German Expansion', 'English Translation', 'Notes: Grammatical']
+        };
+
+        const targetFields = fieldsToCheck[scope];
+
+        if (!targetFields) return false; // Safety check
+
+        // Check if any of the target fields contain the search term
+        return targetFields.some(field => {
+            // Ensure the field exists and convert to lowercase for case-insensitive search
+            return entry[field] && String(entry[field]).toLowerCase().includes(searchTerm);
+        });
+    }
+
+    /**
+     * Filters the content based on the search input and the selected scope.
+     */
+    function filterContent() {
+        const searchInput = document.getElementById('searchInput');
+        const searchScope = document.getElementById('searchScope');
+        
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const scope = searchScope.value;
+
+        if (searchTerm === '') {
+            // If the search box is empty, show all content
+            generateContent(groupedDataCache);
+            return;
+        }
+
+        const filteredGrouped = {};
+
+        // Iterate over the cached, grouped data
+        for (const anchor in groupedDataCache) {
+            const entries = groupedDataCache[anchor];
+            
+            // Filter entries within the group
+            const filteredEntries = entries.filter(entry => {
+                // Use the new helper function to check for a match
+                return entryMatchesSearch(entry, searchTerm, scope);
+            });
+
+            // If there are matching entries, add them to the new filtered group
+            if (filteredEntries.length > 0) {
+                filteredGrouped[anchor] = filteredEntries;
+            }
+        }
+
+        // Generate the content using the filtered data
+        generateContent(filteredGrouped);
+    }
+
     function generateContent(groupedData) {
         const container = document.getElementById('content-container');
         let html = '';
+        
+        // Check if there are any results to display
+        if (Object.keys(groupedData).length === 0 && document.getElementById('searchInput').value.trim() !== '') {
+             html += `<p>No results found for "${document.getElementById('searchInput').value.trim()}".</p>`;
+        } else if (Object.keys(groupedData).length === 0) {
+             // Handle case where data might be empty initially (before markLawJSONP runs)
+             return; 
+        }
 
         // Iterate over each unique Anchor
         for (const anchor in groupedData) {
             const entries = groupedData[anchor];
+
+            // If the filter resulted in an empty group for some reason, skip it
+            if (entries.length === 0) continue; 
 
             const needsGrammaticalColumn = entries.some(entry => entry['Notes: Grammatical']);
 
