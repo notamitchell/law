@@ -9,11 +9,14 @@
 
     </head>
     <body>
-        <h1>eLiebermann: An Online Dictionary of Pre-Conquest English Law</h1>
+        <p><img src="images/banner.png" width="90%" alt="eLiebermann"/></p>
+        <h1>An Online Dictionary of Pre-Conquest English Law</h1>
         <p>
             Liebermann, F. (Ed.). (2015). Die Gesetze der Angelsachsen: Herausgegeben im Auftrage der Savigny-Stiftung (Cambridge Library Collection - Medieval History). Cambridge: Cambridge University Press. doi:10.1017/CBO9781316225127
         </p>
         
+        
+
         <p>
             Code: <a href="https://github.com/notamitchell/law">https://github.com/notamitchell/law</a><br/>
             Website: <a href="https://notamitchell.github.io/law/">https://notamitchell.github.io/law/</a>
@@ -28,69 +31,95 @@
             <input type="text" id="page_number" /> 
             &nbsp;
             <br>
-            
-            <h1>Full Entry text</h1>
+        </div>
+
+        <h1>Full Entry text</h1>
+        <p><em>Copy and paste the full entry for a single word here. This should include bold, italic and superscript text.</em></p>
+
+        <div id="editor-container"></div>
 
 
-    <div id="editor-container"></div>
+    <h1>Bosworth-Toller Link/s</h1>
+    <div id="bt_links_container">
+        <p class="link-row">
+            Link text: <input type="text" class="bt_linkText" placeholder="e.g. Headword" /> 
+            Link URL: <input type="url" class="bt_linkURL" placeholder="e.g. https://www.google.com/"/>
+            <button type="button" class="remove-link-btn" onclick="this.parentNode.remove()">-</button>
+        </p>
+    </div>
+    <button type="button" onclick="addLinkField('bt')">+ Add more Bosworth-Toller Links</button>
+    <br>
+
+    <hr>
+
+    <h1>Dictionary of Old English Link/s</h1>
+    <div id="dooe_links_container">
+        <p class="link-row">
+            Link text: <input type="text" class="dooe_linkText" placeholder="e.g. Headword" /> 
+            Link URL: <input type="url" class="dooe_linkURL" placeholder="e.g. https://www.google.com/"/>
+            <button type="button" class="remove-link-btn" onclick="this.parentNode.remove()">-</button>
+        </p>
+    </div>
+    <button type="button" onclick="addLinkField('dooe')">+ Add more DOE Links</button>
+    <br>
+
+    <hr>
+
+    <h1>Wiktionary Link/s</h1>
+    <div id="wiktionary_links_container">
+        <p class="link-row">
+            Link text: <input type="text" class="wiktionary_linkText" placeholder="e.g. Headword" /> 
+            Link URL: <input type="url" class="wiktionary_linkURL" placeholder="e.g. https://www.google.com/"/>
+            <button type="button" class="remove-link-btn" onclick="this.parentNode.remove()">-</button>
+        </p>
+    </div>
+    <button type="button" onclick="addLinkField('wiktionary')">+ Add more Wiktionary Links</button>
+    <br>
+
+    <hr>
+
+    <h1>Law Code Citation Link/s</h1>
+    <div id="lawCodeCitation_links_container">
+        <p class="link-row">
+            Link text: <input type="text" class="lawCodeCitation_linkText" placeholder="e.g. Headword" /> 
+            Link URL: <input type="url" class="lawCodeCitation_linkURL" placeholder="e.g. https://www.google.com/"/>
+            <button type="button" class="remove-link-btn" onclick="this.parentNode.remove()">-</button>
+        </p>
+    </div>
+    <button type="button" onclick="addLinkField('lawCodeCitation')">+ Add more Law Code Citation Links</button>
+    <br>
+
+    <hr>
 
 
-<h1>Bosworth-Toller Link/s</h1>
-<p>
-    <em>Note: Maximum 3 links. If you require more you will need to edit the HTML. Leave blank if no links.</em>
-</p>
-<p>
-    <ul>
-        <li>
-            Link text: <input type="" value="" id="bt_linkText1" placeholder="e.g. Google Search" /> Link URL: <input type="" value="" id="bt_linkURL1" placeholder="e.g. https://www.google.com/"/>
-        </li>
-        <li>
-            Link text: <input type="" value="" id="bt_linkText2" placeholder="e.g. Google Search" /> Link URL: <input type="" value="" id="bt_linkURL2" placeholder="e.g. https://www.google.com/"/>
-        </li>        
-        <li>
-            Link text: <input type="" value="" id="bt_linkText3" placeholder="e.g. Google Search" /> Link URL: <input type="" value="" id="bt_linkURL3" placeholder="e.g. https://www.google.com/"/>
-        </li>
-    </ul>
-</p>
-<h1>Dictionary of Old English Link/s</h1>
-<p>
-    <ul>
-        <li>
-            Link text: <input type="" value="" id="dooe_linkText1" placeholder="e.g. Google Search" /> Link URL: <input type="" value="" id="dooe_linkURL1" placeholder="e.g. https://www.google.com/"/>
-        </li>
-        <li>
-            Link text: <input type="" value="" id="dooe_linkText2" placeholder="e.g. Google Search" /> Link URL: <input type="" value="" id="dooe_linkURL2" placeholder="e.g. https://www.google.com/"/>
-        </li>        
-        <li>
-            Link text: <input type="" value="" id="dooe_linkText3" placeholder="e.g. Google Search" /> Link URL: <input type="" value="" id="dooe_linkURL3" placeholder="e.g. https://www.google.com/"/>
-        </li>
-    </ul>
-</p>
 
-<h1>Wiktionary Link/s</h1>
-<p>
-    <ul>
-        <li>
-            Link text: <input type="" value="" id="wiktionary_linkText1" placeholder="e.g. Google Search" /> Link URL: <input type="" value="" id="wiktionary_linkURL1" placeholder="e.g. https://www.google.com/"/>
-        </li>
-        <li>
-            Link text: <input type="" value="" id="wiktionary_linkText2" placeholder="e.g. Google Search" /> Link URL: <input type="" value="" id="wiktionary_linkURL2" placeholder="e.g. https://www.google.com/"/>
-        </li>        
-        <li>
-            Link text: <input type="" value="" id="wiktionary_linkText3" placeholder="e.g. Google Search" /> Link URL: <input type="" value="" id="wiktionary_linkURL3" placeholder="e.g. https://www.google.com/"/>
-        </li>
-    </ul>
-</p>
+    <h1>English translation</h1>
+    <div id="english-container"></div>
+    <p><em>This button will create a preview of a webpage for your entry. You can always edit the information above and reprocess the text.</em></p>
 
-<h1>English translation</h1>
-<div id="english-container"></div>
+    <p>
+        <input type="button" value="Process" onclick="process_selection();" />
+    </p>
 
-<p>
-    <input type="button" value="Process" onclick="process_selection();" />
-</p>
-<div id="output_html_rendered"> </div>
+    <p><em>The preview will appear below. Common problems:
 
-<h1>HTML</h1>
+        <ul>
+            <li>An abbreviation or law code is not appearing as a link. </li>
+            <ul>
+                <li>
+                    Check that the word/phrase is known in <a href="https://github.com/notamitchell/law/blob/main/data/markLaw.js">markLaw.js</a> or <a href="https://github.com/notamitchell/law/blob/main/data/markforward.js">markforward.js</a>.
+                    There may be a varient like "3. Pers" versus "3.Pers".
+                </li>
+                <li></li>
+            </ul>
+
+        </ul>
+
+    </em></p>
+
+    <div id="output_html_rendered"> </div>
+
+    <h1>HTML</h1>
     <p><em></em></p>
     <p>
         <textarea id="output_html_raw" rows="5" cols="100" ></textarea>
@@ -169,6 +198,9 @@
         
         output_html = `
         <h1>${headWord}</h1>
+
+        <p>${entryHTML}</p>
+
         <table>
             <tr>
                 <th>Page Number</th>
@@ -194,79 +226,11 @@
         
 
 
-        var links = [];
-
-        for (let i = 1; i <= 3; i++) {
-            const textElement = document.getElementById("bt_linkText" + i);
-            const urlElement = document.getElementById("bt_linkURL" + i);
-            
-            if (textElement && urlElement) { // Check if both elements exist
-                const linkText = textElement.value.trim();
-                const linkURL = urlElement.value.trim();
-                
-                // Only add a link if both text and a valid looking URL are present
-                if (linkText !== "" && linkURL.startsWith("http")) { 
-                    const linkHTML = `<a href="${linkURL}" target="_blank">${linkText}</a>`;
-                    links.push(linkHTML);
-                }
-            }
-        }
-
-        if (links.length > 0) {
-            output_html += "<ul>";
-            for (const link of links) {
-                output_html += `<li>Bosworth-Toller: ${link}</li>`;
-            }
-            output_html += "</ul>";
-        }
-
-        links = [];
-        for (let i = 1; i <= 3; i++) {
-            const textElement = document.getElementById("dooe_linkText" + i);
-            const urlElement = document.getElementById("dooe_linkURL" + i);
-            
-            if (textElement && urlElement) {
-                const linkText = textElement.value.trim();
-                const linkURL = urlElement.value.trim();
-                
-                if (linkText !== "" && linkURL.startsWith("http")) {
-                    const linkHTML = `<a href="${linkURL}" target="_blank">${linkText}</a>`;
-                    links.push(linkHTML);
-                }
-            }
-        }
-
-        if (links.length > 0) {
-            output_html += "<ul>";
-            for (const link of links) {
-                output_html += `<li>Dictionary of Old English: ${link}</li>`;
-            }
-            output_html += "</ul>";
-        }
-
-        links = [];
-        for (let i = 1; i <= 3; i++) {
-            const textElement = document.getElementById("wiktionary_linkText" + i);
-            const urlElement = document.getElementById("wiktionary_linkURL" + i);
-            
-            if (textElement && urlElement) {
-                const linkText = textElement.value.trim();
-                const linkURL = urlElement.value.trim();
-                
-                if (linkText !== "" && linkURL.startsWith("http")) {
-                    const linkHTML = `<a href="${linkURL}" target="_blank">${linkText}</a>`;
-                    links.push(linkHTML);
-                }
-            }
-        }
-
-        if (links.length > 0) {
-            output_html += "<ul>";
-            for (const link of links) {
-                output_html += `<li>Wiktionary: ${link}</li>`;
-            }
-            output_html += "</ul>";
-        }
+        output_html += getLinksHTML('bt', 'Bosworth-Toller');
+        output_html += getLinksHTML('dooe', 'Dictionary of Old English');
+        output_html += getLinksHTML('wiktionary', 'Wiktionary');
+        output_html += getLinksHTML('lawCodeCitation', 'Law Code Citation');
+        
 
 
         
@@ -454,6 +418,51 @@ const getMeaningfulContent = (htmlContent) => {
   // If there's meaningful text, return the original HTML, otherwise return an empty string or a placeholder
   return trimmedText.length > 0 ? htmlContent : '';
 };
+
+function addLinkField(prefix) {
+    const container = document.getElementById(prefix + '_links_container');
+    const newLinkRow = document.createElement('p');
+    newLinkRow.className = 'link-row'; // Use a class for easier styling/selection
+    
+    // Use the prefix to ensure the classes are correct for the new fields
+    newLinkRow.innerHTML = `
+        Link text: <input type="text" class="${prefix}_linkText" placeholder="e.g. Headword" /> 
+        Link URL: <input type="url" class="${prefix}_linkURL" placeholder="e.g. https://www.google.com/"/>
+        <button type="button" class="remove-link-btn" onclick="this.parentNode.remove()">-</button>
+    `;
+    container.appendChild(newLinkRow);
+}
+
+function getLinksHTML(prefix, displayTitle) {
+    const textInputs = document.querySelectorAll(`.${prefix}_linkText`);
+    const urlInputs = document.querySelectorAll(`.${prefix}_linkURL`);
+    
+    const links = [];
+
+    // The NodeList objects (textInputs and urlInputs) have the same length and correspond by index.
+    for (let i = 0; i < textInputs.length; i++) {
+        const linkText = textInputs[i].value.trim();
+        const linkURL = urlInputs[i].value.trim();
+        
+        // Only add a link if both text and a valid looking URL are present
+        if (linkText !== "") { 
+            const linkHTML = `<a href="${linkURL}" target="_blank">${linkText}</a>`;
+            links.push(linkHTML);
+        }
+    }
+
+    let outputHTML = "";
+    if (links.length > 0) {
+        outputHTML += "<ul>";
+        for (const link of links) {
+            // Use the displayTitle passed into the function
+            outputHTML += `<li>${displayTitle}: ${link}</li>`;
+        }
+        outputHTML += "</ul>";
+    }
+    
+    return outputHTML;
+}
   
 </script>     
 <script src="data/markforward.js"></script>
