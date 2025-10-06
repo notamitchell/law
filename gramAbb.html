@@ -9,15 +9,34 @@
 <body>
 
     <h1>eLiebermann: An Online Dictionary of Pre-Conquest English Law</h1>
+
+    <div id="search-container">
+        <select id="searchScope">
+            <option value="Gesetze Text">Gesetze Text</option>
+            <option value="German Expansion">German Expansion</option>
+            <option value="English Translation">English Translation</option>
+            <option value="Notes: Grammatical">Grammatical Note</option>
+            <option value="all">All Fields</option>
+        </select>
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="filterContent()">Search</button>
+    </div>
     <div id="content-container">
-        </div>
+    </div>
 
     <script>
-    var glossaryData  = {};
+    var glossaryData = {};
+    // Variable to hold the raw, grouped data (used for filtering)
+    var groupedGlossaryData = {};
+    // Variable to hold the complete, generated HTML before filtering
+    var fullContentHtml = '';
+
     function markforwardJSONP(jsonObj) {
         glossaryData = jsonObj;
-        const grouped = groupDataByAnchor(glossaryData);
-        generateContent(grouped);
+        groupedGlossaryData = groupDataByAnchor(glossaryData);
+        generateContent(groupedGlossaryData);
+        // Store the initial HTML after generation
+        fullContentHtml = document.getElementById('content-container').innerHTML;
     }
 
     function groupDataByAnchor(data) {
@@ -31,6 +50,53 @@
         }, {});
     }
 
+    // New function to filter the content
+    function filterContent() {
+        const searchText = document.getElementById('searchInput').value.toLowerCase().trim();
+        const searchScope = document.getElementById('searchScope').value;
+        const container = document.getElementById('content-container');
+
+        // If search text is empty, restore the full content and exit
+        if (searchText === '') {
+            container.innerHTML = fullContentHtml;
+            return;
+        }
+
+        const filteredGroups = {};
+        
+        // Iterate through all original groups (anchors)
+        for (const anchor in groupedGlossaryData) {
+            const entries = groupedGlossaryData[anchor];
+            
+            // Check if ANY entry in the group matches the search criteria
+            const groupMatches = entries.some(entry => {
+                // The Gesetze Text field is now an <li>, so we check for matches in the original entries
+                
+                if (searchScope === 'all') {
+                    // Check all relevant fields for a match
+                    return Object.keys(entry).some(key => {
+                        // Keys we want to search in
+                        if (['Gesetze Text', 'German Expansion', 'English Translation', 'Notes: Grammatical'].includes(key)) {
+                            return (entry[key] || '').toLowerCase().includes(searchText);
+                        }
+                        return false;
+                    });
+                } else {
+                    // Check only the selected field for a match
+                    return (entry[searchScope] || '').toLowerCase().includes(searchText);
+                }
+            });
+
+            // If a match is found in the group, include the entire group (all entries)
+            if (groupMatches) {
+                filteredGroups[anchor] = entries;
+            }
+        }
+
+        // Re-generate the HTML using only the filtered groups
+        generateContent(filteredGroups);
+    }
+
     function generateContent(groupedData) {
         const container = document.getElementById('content-container');
         let html = '';
@@ -39,10 +105,11 @@
         for (const anchor in groupedData) {
             const entries = groupedData[anchor];
 
+            if (entries.length === 0) continue;
+            
+            const firstEntry = entries[0];
             const needsGrammaticalColumn = entries.some(entry => entry['Notes: Grammatical']);
-
-            // Get the 'Gesetze Text' of the first entry in the group
-            const headingText = entries.length > 0 ? entries[0]['Gesetze Text'] : anchor;
+            const headingText = firstEntry['Gesetze Text'] || anchor;
 
             // Create a Heading with the Anchor name and the required ID for linking
             html += `<h2 id="${anchor}">${headingText}</h2>`;
@@ -61,19 +128,31 @@
                 <tbody>
             `;
 
-            // Add a row for each entry
-            entries.forEach(entry => {
-                const grammaticalNote = entry['Notes: Grammatical'] || '';
+            // --- Single Row Logic ---
 
-                html += `
-                    <tr>
-                        <td>${entry['Gesetze Text']}</td>
-                        <td>${entry['German Expansion']}</td>
-                        <td>${entry['English Translation']}</td>
-                        ${needsGrammaticalColumn ? `<td>${grammaticalNote}</td>` : ''}
-                    </tr>
-                `;
+            const gesetzeTexts = entries.map(entry => entry['Gesetze Text']);
+
+            let gesetzeListHtml = '<ul>';
+            gesetzeTexts.forEach(text => {
+                gesetzeListHtml += `<li>${text}</li>`;
             });
+            gesetzeListHtml += '</ul>';
+
+            const germanExpansion = firstEntry['German Expansion'] || '';
+            const englishTranslation = firstEntry['English Translation'] || '';
+            const grammaticalNote = firstEntry['Notes: Grammatical'] || '';
+
+            // Create the single table row (<tr>)
+            html += `
+                <tr>
+                    <td>${gesetzeListHtml}</td>
+                    <td>${germanExpansion}</td>
+                    <td>${englishTranslation}</td>
+                    ${needsGrammaticalColumn ? `<td>${grammaticalNote}</td>` : ''}
+                </tr>
+            `;
+
+            // --- End of Single Row Logic ---
 
             // Close the table
             html += `
@@ -81,6 +160,15 @@
             </table>
             `;
         }
+        
+        // If no results are found, show a message
+        if (html === '' && Object.keys(groupedData).length > 0) {
+            html = '<p>No results found for your search criteria.</p>';
+        } else if (html === '') {
+            // Handle case where groupedData is empty initially (shouldn't happen with valid JSONP)
+            html = '<p>Data loading...</p>';
+        }
+
         container.innerHTML = html;
     }
 
