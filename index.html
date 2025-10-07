@@ -107,23 +107,32 @@
             <li>An abbreviation or law code is not appearing as a link. </li>
             <ul>
                 <li>
-                    Check that the word/phrase is known in <a href="https://github.com/notamitchell/law/blob/main/data/markLaw.js">markLaw.js</a> or <a href="https://github.com/notamitchell/law/blob/main/data/markforward.js">markforward.js</a>.
-                    There may be a varient like "3. Pers" versus "3.Pers".
+                    Check that the word/phrase is known in <a href="https://github.com/notamitchell/law/blob/main/data/markLaw.js">markLaw.js</a> (law codes) 
+                    or <a href="https://github.com/notamitchell/law/blob/main/data/markforward.js">markforward.js</a> (abbreviations, etc.).
+                    There may be a varient not included in the files like "3. Pers" versus "3.Pers".
                 </li>
-                <li></li>
+                <li>Is this varient likely to come up again and again? You will need to add it to one of the files listed above. Otherwise you can just edit the text (e.g. add/remove a space) and press the process button again.</li>
+                <li>Alternatively, you can edit the generated HTML below to manually create the required link. </li>
             </ul>
-
-        </ul>
 
     </em></p>
 
+    <hr/>
+
     <div id="output_html_rendered"> </div>
+
+
 
     <h1>HTML</h1>
     <p><em></em></p>
     <p>
         <textarea id="output_html_raw" rows="5" cols="100" ></textarea>
     </p>
+        <p><em>Above is the HTML of a webpage for you entry. Copy and paste the HTML into a text editor and save it with the file extension ".html". The file name should be the headword. 
+        Maintain the capitalisation of the orgiginal entry. 
+        Note: file names can not include any special characters. A word like Abkürzungen will need to be in a file called "Abkurzungen.html".</em></p>
+
+        <p><em>The HTML files you create will be reviewed and uploaded to a folder of entries (https://github.com/notamitchell/law/tree/main/entries)</em></p>
     <p>&nbsp;</p>
             
   <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
@@ -368,21 +377,29 @@
         
     }
     
-    function whatSeeAlso(str) {
-        // The .s indicate a See Also. See another entry. 
-        // e.g. abere s. aebaere
-        // e.g. localization s. localisation
-        
-        var n = str.search(" s. ");
-        
-        
-        if (n < 0) {
-            return "";
-        } else {
-            return str.split(" s. ")[1].trim();
-        }
-        
+
+function whatSeeAlso(htmlString) {
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = htmlString;
+    const plainText = tempDiv.textContent || tempDiv.innerText || '';
+    const parts = plainText.split(" s.");
+
+    console.log(plainText);
+    console.log(parts);
+
+    const firstPart = parts[0] ? parts[0].trim() : '';
+
+    console.log(firstPart);
+
+    // A single word is a non-empty string that does not contain any whitespace characters.
+    const isSingleWord = firstPart !== '' && !/\s/.test(firstPart);
+
+    if (isSingleWord) {
+        return parts.slice(1).join(" .s").trim();
+    } else {
+        return "";
     }
+}
 
 
 
