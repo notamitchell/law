@@ -5,6 +5,7 @@
         <title>eLiebermann: An Online Dictionary of Pre-Conquest English Law</title>
         <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
         <link rel="stylesheet" href="style.css" />
+
     </head>
     <body>
         <p><img src="images/banner.png" width="90%" alt="eLiebermann"/></p>
@@ -13,7 +14,7 @@
             Liebermann, F. (Ed.). (2015). Die Gesetze der Angelsachsen: Herausgegeben im Auftrage der Savigny-Stiftung (Cambridge Library Collection - Medieval History). Cambridge: Cambridge University Press. doi:10.1017/CBO9781316225127
         </p>
         <p>
-            Code: <a href="https://github.com/notamitchell/law">https://github.com/notamitchell/law</a><br/>
+            Code and data: <a href="https://github.com/notamitchell/law">https://github.com/notamitchell/law</a><br/>
             Website: <a href="https://notamitchell.github.io/law/">https://notamitchell.github.io/law/</a>
         </p>
         <hr>
@@ -24,9 +25,21 @@
             &nbsp;
             <br>
         </div>
+        <div>
+            <h1>Direct link to page</h1>
+            <p><em>Note: Use the URL from archive.org. This link goes to page 26: 
+                https://archive.org/details/diegesetzederang02liebuoft/page/26/mode/2up,
+                so you can just change the 26 to whatever page you need.  
+            </em></p>
+            <input type="text" id="archivePageLink" /> 
+            &nbsp;
+            <br>
+        </div>
+
 
         <h1>Full Entry text</h1>
         <p><em>Copy and paste the full entry for a single word here. This should include bold, italic and superscript text.</em></p>
+
         <div id="editor-container"></div>
 
 
@@ -86,8 +99,12 @@
 
     <h1>English translation</h1>
     <div id="english-container"></div>
-    <p><em>This button will create a preview of a webpage for your entry. You can always edit the information above and reprocess the text.</em></p>
 
+    <h1>Liebermann Definition</h1>
+    <div id="liebermannDefinition-container"></div>
+
+    <hr>
+    <p><em>This button will create a preview of a webpage for your entry. You can always edit the information above and reprocess the text.</em></p>
     <p>
         <input type="button" value="Process" onclick="process_selection();" />
     </p>
@@ -155,7 +172,20 @@
           modules: {
             toolbar: englishToolbarOptions,
           },
-          // ADDED 'list' to the allowed formats
+          formats: ['bold', 'italic', 'script', 'list'],
+          theme: 'snow', 
+        });
+
+        const liebermannDefinitionToolbarOptions = [
+          ['bold', 'italic'],
+          [{ 'script': 'super' }],
+          [{ 'list': 'ordered'}, { 'list': 'bullet' }]
+        ];
+
+        const quillLiebermannDefinition = new Quill('#liebermannDefinition-container', {
+          modules: {
+            toolbar: liebermannDefinitionToolbarOptions,
+          },
           formats: ['bold', 'italic', 'script', 'list'],
           theme: 'snow', 
         });
@@ -191,10 +221,10 @@
         var headWord = whatHeadWord(entry);
         var seeAlso = whatSeeAlso(entry);
         var page_number = document.getElementById("page_number").value;
-        var LiebDefinition = parseEnumeratedListAsHtml(entryHTML);
-        
+        var archivePageLink = document.getElementById("archivePageLink").value;
+        var LiebDefinition = getMeaningfulContent(quillLiebermannDefinition.root.innerHTML);
+
         entry = entry.replace("~", "<span title='" + headWord + "'>~</span>");
-        
         
         output_html = `
         <h1>${headWord}</h1>
@@ -217,22 +247,19 @@
                 <td>${language}</td>
                 <td>${seeAlso ? `<a href='${seeAlso}.html'>${seeAlso}</a>` : ''}</td>
                 <td>${addLinks(entryHTML)}</td>
-                <td>${addLinks(LiebDefinition)}</td>
+                <td>${LiebDefinition}</td>
                 <td>${getMeaningfulContent(quillEnglish.root.innerHTML)}</td>
             </tr>
         </table>
+
+        <p>Source page: <a href="${archivePageLink}">${archivePageLink}</a></p>
         `;
 
-        
-
-
+    
         output_html += getLinksHTML('bt', 'Bosworth-Toller');
         output_html += getLinksHTML('dooe', 'Dictionary of Old English');
         output_html += getLinksHTML('wiktionary', 'Wiktionary');
         output_html += getLinksHTML('lawCodeCitation', 'Law Code Citation');
-        
-
-
         
         
         document.getElementById('output_html_rendered').innerHTML = output_html;
@@ -254,28 +281,28 @@
         const combinedTerms = [];
         // Add terms from markLaw
         markLaw.forEach(law => {
-        combinedTerms.push({
-            searchTerm: law["Gesetze Text"],
-            data: {
-            type: 'law',
-            germanExpansion: law["German Expansion"],
-            englishTranslation: law["English Translation"],
-            anchor: law["Anchor"]
-            }
-        });
+            combinedTerms.push({
+                searchTerm: law["Gesetze Text"],
+                data: {
+                type: 'law',
+                germanExpansion: law["German Expansion"],
+                englishTranslation: law["English Translation"],
+                anchor: law["Anchor"]
+                }
+            });
         });
 
         // Add terms from markforward
         markforward.forEach(forward => {
-        combinedTerms.push({
-            searchTerm: forward["Gesetze Text"],
-            data: {
-            type: 'forward',
-            germanExpansion: forward["German Expansion"],
-            englishTranslation: forward["English Translation"],
-            anchor: forward["Anchor"]
-            }
-        });
+            combinedTerms.push({
+                searchTerm: forward["Gesetze Text"],
+                data: {
+                type: 'forward',
+                germanExpansion: forward["German Expansion"],
+                englishTranslation: forward["English Translation"],
+                anchor: forward["Anchor"]
+                }
+            });
         });
 
         // Sort the combined array by the length of the searchTerm, longest to shortest
@@ -284,13 +311,9 @@
         // Loop through the sorted, combined array
         for (const item of combinedTerms) {
             var searchTerm = item.searchTerm;
-            
             var escapedSearchTerm = escapeRegex(searchTerm);
-
             var escapedSearchTermForRegex = escapedSearchTerm.replace(/\s+/g, '\\s+');
-
             var regex = new RegExp('(?<!<a[^>]*?>)\\b' + escapedSearchTermForRegex + '\\b(?!<\\/a>)', 'g');
-
             var anchor = item.data.anchor;
 
             if (item.data.type === 'law') {
@@ -392,32 +415,6 @@ function whatSeeAlso(htmlString) {
     }
 }
 
-
-
-
-function parseEnumeratedListAsHtml(htmlString) {
-    const regex = /(\d+)<\/strong>\)\s*(.*?)(?=(<strong>|$))/g;
-    const listItems = [];
-    let match;
-
-    // Loop through all matches in the string.
-    while ((match = regex.exec(htmlString)) !== null) {
-        // The content is in the second capturing group (match[2]).
-        const content = match[2].trim();
-        if (content) {
-            listItems.push(content);
-        }
-    }
-
-    // Return nothing (undefined) if no list items were found.
-    if (listItems.length === 0) {
-        return "";
-    }
-
-    return `<ol>\n${listItems.map(item => `  <li>${item}</li>`).join('\n')}\n</ol>`;
-}
-
-
 const getMeaningfulContent = (htmlContent) => {
   const tempDiv = document.createElement('div');
   tempDiv.innerHTML = htmlContent;
@@ -468,11 +465,13 @@ function getLinksHTML(prefix, displayTitle) {
         }
         outputHTML += "</ul>";
     }
+    
     return outputHTML;
 }
+  
 </script>     
-<script src="data/markforward.js"></script>
-<script src="data/markLaw.js"></script>
+    <script src="data/markforward.js"></script>
+    <script src="data/markLaw.js"></script>
 
     </body>
 </html>
