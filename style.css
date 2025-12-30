@@ -1,31 +1,57 @@
 body {
-  font-family: sans-serif;
   margin: auto;
   max-width: 1280px;
+
+
+  color: rgba(33,33,33,1);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12pt;
+  font-weight: 400;
+  line-height: 1.75;
+  margin-top: 15px;
 }
 
 table {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Georgia', 'Times New Roman', serif; /* Matching the scholarly serif style */
   border-collapse: collapse;
   width: 100%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 20px 0;
+  color: #333;
+  /* Removed heavy box-shadow for a flatter, cleaner academic look */
 }
-
-table td, table th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-table tr:nth-child(even){background-color: #f2f2f2;}
-
-table tr:hover {background-color: #ddd;}
 
 table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 15px 10px;
   text-align: left;
-  background-color: #04AA6D;
-  color: white;
+  background-color: #1a2b3c; /* Deep navy blue from the site header */
+  color: #ffffff;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  border: none;
+}
+
+table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #eee; /* Light horizontal lines only */
+  line-height: 1.5;
+}
+
+/* Subtler zebra striping */
+table tr:nth-child(even) {
+  background-color: #f9f9fb;
+}
+
+/* Refined hover state */
+table tr:hover {
+  background-color: #f1f4f7;
+}
+
+/* Specific styling for shorthand/dictionary terms if needed */
+table td:first-child {
+  font-weight: bold;
+  color: #1a2b3c;
 }
 
 /* styling to make the text editor look nice */
@@ -34,11 +60,27 @@ table th {
     height: 300px;
 }
 
+h1 {
+
+  color:rgba(6,65,124,1);
+  font-family: 'Playfair Display', serif;
+  font-size: 29pt;
+  font-weight: 400;
+  letter-spacing: -0.6px;
+  line-height: 1.44;
+}
+
 h2 {
-            border-bottom: 2px solid #ccc;
+
             padding-bottom: 5px;
-            margin-top: 30px;
-            color: #0056b3;
+
+
+            color: rgba(6,65,124,1);
+  font-family: 'Playfair Display', serif;
+  font-size: 20pt;
+  font-weight: 400;
+  line-height: 1.56;
+  margin-top: 10px;
   }
         
         /* Style for the linkable Anchor headings */
@@ -89,13 +131,4 @@ abbr {
   font-weight: 600; /* Make the text slightly bolder */
   color: var(--text-color); /* Use a darker color for the text inside */
   /* This ensures the text color is distinct from the link color */
-}
-
-/* Optional: Style for the specific classes (if needed for distinction) */
-.abbr1 {
-  /* Specific style for Text 1 if desired */
-}
-
-.abbr2 {
-  /* Specific style for Text 2 if desired */
 }
