@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statutes of the Realm - Commentary</title>
+    <style>
+        :root {
+            --primary-bg: #1e1e1e;
+            --sidebar-bg: #ffffff;
+            --accent-color: #0066cc;
+            --text-main: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            background-color: var(--primary-bg);
+        }
+
+        .sidebar {
+            width: 400px;
+            background: var(--sidebar-bg);
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #ccc;
+            box-shadow: 4px 0 10px rgba(0,0,0,0.3);
+            z-index: 10;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            background: #f4f4f4;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .commentary-display {
+            flex: 1;
+            padding: 25px;
+            overflow-y: auto;
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        #commentaryContent {
+            width: 100%;
+            border: none;
+            height: 100%;
+        }
+
+        .jump-menu {
+            padding: 15px;
+            background: #f9f9f9;
+            border-top: 1px solid #ddd;
+        }
+
+        .jump-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .viewer-container {
+            flex: 1;
+            position: relative;
+            padding: 15px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            border: none;
+            background: #fff;
+        }
+
+        .btn-jump {
+            background: white;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+
+        .btn-jump:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        h2 { margin-top: 0; color: #111; font-size: 1.4rem; }
+    </style>
+</head>
+<body>
+
+<aside class="sidebar">
+    <div class="sidebar-header">
+        <h3 style="margin:0">Statutes of the Realm</h3>
+        <p style="margin:5px 0 0; font-size:0.8rem; color:#666;">Volume 5: Commentary</p>
+    </div>
+
+    <div class="commentary-display" id="commentaryTarget">
+        <p style="color:#888">Select a page to view commentary...</p>
+    </div>
+
+    <div class="jump-menu">
+        <strong>Annotated Pages:</strong>
+        <div class="jump-list" id="jumpLinks">
+            Loading...
+        </div>
+    </div>
+</aside>
+
+<main class="viewer-container">
+    <iframe 
+        id="archiveFrame" 
+        src="https://archive.org/embed/statutes_of_the_realm_5#mode/1up/page/n1"
+        allowfullscreen>
+    </iframe>
+</main>
+
+<script>
+    // --- CONFIGURATION ---
+    const GITHUB_USER = 'notamitchell';
+    const GITHUB_REPO = 'law';
+    const FOLDER_PATH = 'commentary'; 
+    
+    const PAGES_BASE_URL = `https://${GITHUB_USER}.github.io/${GITHUB_REPO}/${FOLDER_PATH}`;
+    const API_URL = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${FOLDER_PATH}`;
+
+    const frame = document.getElementById('archiveFrame');
+    const display = document.getElementById('commentaryTarget');
+    const jumpContainer = document.getElementById('jumpLinks');
+
+    async function initFromGitHub() {
+        try {
+            const response = await fetch(API_URL);
+            if (!response.ok) throw new Error('Failed to fetch file list');
+            
+            const files = await response.json();
+            
+            const pages = files
+                .filter(file => file.name.endsWith('.html'))
+                .map(file => parseInt(file.name.replace('.html', '')))
+                .sort((a, b) => a - b);
+
+            jumpContainer.innerHTML = '';
+            
+            pages.forEach(page => {
+                const btn = document.createElement('button');
+                btn.className = 'btn-jump';
+                btn.innerText = `p. ${page}`;
+                btn.onclick = () => goToPage(page);
+                jumpContainer.appendChild(btn);
+            });
+
+        } catch (error) {
+            console.error(error);
+            jumpContainer.innerHTML = '<span style="color:red">Error loading pages.</span>';
+        }
+    }
+
+    /**
+     * Updates the Archive.org viewer and fetches the HTML commentary
+     */
+    async function goToPage(pageNum) {
+        // 1. Update the Archive.org Iframe with an offset
+        // Since page 3 is indexed as n2, we subtract 1 from the actual page number
+        const archiveIndex = pageNum - 1;
+        const identifier = "statutes_of_the_realm_5";
+        frame.src = `https://archive.org/embed/${identifier}#mode/1up/page/n${archiveIndex}`;
+
+        // 2. Fetch the HTML commentary from GitHub (using the real page number)
+        const commentaryUrl = `${PAGES_BASE_URL}/${pageNum}.html`;
+        
+        display.innerHTML = `<p style="color:#888">Loading commentary for page ${pageNum}...</p>`;
+
+        try {
+            const res = await fetch(commentaryUrl);
+            if (res.ok) {
+                const htmlContent = await res.text();
+                display.innerHTML = `
+                    <div class="active-note">
+                        <small style="color:var(--accent-color); font-weight:bold;">PAGE ${pageNum}</small>
+                        <hr style="border:0; border-top:1px solid #eee; margin:10px 0;">
+                        ${htmlContent}
+                    </div>
+                `;
+            } else {
+                display.innerHTML = `<p style="color:#888">No commentary found for page ${pageNum}.</p>`;
+            }
+        } catch (err) {
+            display.innerHTML = `<p style="color:red">Error loading commentary.</p>`;
+        }
+    }
+
+    initFromGitHub();
+</script>
+
+</body>
+</html>
