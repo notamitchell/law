@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statuta Vetera: Advanced Search</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; display: flex; background-color: #f4f4f4; }
+        #sidebar { width: 250px; background: #2c3e50; color: white; height: 100vh; padding: 20px; position: fixed; overflow-y: auto; }
+        #main-content { margin-left: 290px; padding: 20px; width: calc(100% - 330px); }
+        
+        .facet-group { margin-bottom: 25px; }
+        .facet-title { font-weight: bold; border-bottom: 1px solid #555; margin-bottom: 10px; padding-bottom: 5px; display: block; }
+        select, input[type="text"] { width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; margin-bottom: 10px; box-sizing: border-box; }
+        
+        /* Search Bar Layout */
+        .search-container { display: flex; gap: 10px; margin-bottom: 20px; }
+        #searchInput { flex-grow: 1; padding: 12px; }
+        #searchScope { width: 150px; }
+
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); table-layout: fixed; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; overflow: hidden; }
+        th { background-color: #007bff; color: white; text-transform: uppercase; font-size: 12px; }
+        
+        /* Column Widths */
+        .col-title { width: 25%; }
+        .col-meta { width: 15%; }
+        .col-preview { width: 45%; font-size: 0.9em; color: #555; }
+
+        .preview-text { font-style: italic; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .highlight { background-color: yellow; font-weight: bold; color: black; }
+        
+        tr:hover { background-color: #f9f9f9; }
+        a { color: #007bff; text-decoration: none; font-weight: bold; }
+        .badge { background: #eee; padding: 2px 8px; border-radius: 10px; font-size: 11px; color: #666; }
+        .loading-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.8); display: flex; justify-content: center; align-items: center; z-index: 1000; }
+    </style>
+</head>
+<body>
+
+    <div id="loading" class="loading-overlay"><h3>Indexing TEI Documents...</h3></div>
+
+    <div id="sidebar">
+        <h2>Filters</h2>
+        <div class="facet-group">
+            <span class="facet-title">Author</span>
+            <select id="authorFacet"><option value="">All Authors</option></select>
+        </div>
+        <div class="facet-group">
+            <span class="facet-title">Century / Date</span>
+            <select id="dateFacet"><option value="">All Dates</option></select>
+        </div>
+        <button onclick="resetFilters()" style="width:100%; padding: 10px; cursor:pointer;">Reset All</button>
+    </div>
+
+    <div id="main-content">
+        <h1>Statuta Vetera</h1>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Enter keywords...">
+            <select id="searchScope">
+                <option value="all">Everywhere</option>
+                <option value="title">Title Only</option>
+                <option value="author">Author Only</option>
+                <option value="content">Content Only</option>
+            </select>
+        </div>
+        
+        <div id="table-container">
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th class="col-title">Document Title</th>
+                        <th class="col-meta">Author</th>
+                        <th class="col-meta">Date</th>
+                        <th class="col-preview">Preview</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const CONFIG = {
+            user: 'notamitchell',
+            repo: 'law',
+            path: 'tei',
+            pagesBase: 'https://notamitchell.github.io/law/tei/'
+        };
+
+        let allDocs = [];
+
+        async function init() {
+            try {
+                const response = await fetch(`https://api.github.com/repos/${CONFIG.user}/${CONFIG.repo}/contents/${CONFIG.path}`);
+                const files = await response.json();
+                const xmlFiles = files.filter(f => f.name.endsWith('.xml'));
+
+                const promises = xmlFiles.map(async file => {
+                    const res = await fetch(file.download_url);
+                    const text = await res.text();
+                    const xml = new DOMParser().parseFromString(text, "text/xml");
+
+                    const getTEI = (tag) => xml.getElementsByTagName(tag)[0]?.textContent?.trim() || "Unknown";
+                    
+                    // Clean text for preview: remove XML tags and extra whitespace
+                    const plainText = xml.documentElement.textContent.replace(/\s+/g, ' ').trim();
+
+                    return {
+                        title: getTEI("title"),
+                        author: getTEI("author"),
+                        date: getTEI("date"),
+                        url: CONFIG.pagesBase + file.name.replace('.xml', '.html'), // Assuming HTML pages exist
+                        content: plainText,
+                        raw: text.toLowerCase()
+                    };
+                });
+
+                allDocs = await Promise.all(promises);
+                populateFacets(allDocs);
+                renderTable(allDocs);
+                document.getElementById('loading').style.display = 'none';
+            } catch (e) {
+                console.error(e);
+                document.getElementById('loading').innerHTML = "Error loading files.";
+            }
+        }
+
+        function getPreview(text, term) {
+            if (!term || term.length < 2) return text.substring(0, 160) + "...";
+
+            const index = text.toLowerCase().indexOf(term.toLowerCase());
+            if (index === -1) return text.substring(0, 160) + "...";
+
+            // Extract context (approx 60 chars before and 100 after)
+            const start = Math.max(0, index - 60);
+            const end = Math.min(text.length, index + 100);
+            let snippet = text.substring(start, end);
+
+            // Highlight the term
+            const regex = new RegExp(`(${term})`, 'gi');
+            snippet = snippet.replace(regex, '<span class="highlight">$1</span>');
+
+            return (start > 0 ? "..." : "") + snippet + (end < text.length ? "..." : "");
+        }
+
+        function renderTable(docs, searchTerm = "") {
+            const body = document.getElementById('resultsBody');
+            body.innerHTML = docs.map(doc => `
+                <tr>
+                    <td class="col-title"><a href="${doc.url}" target="_blank">${doc.title}</a></td>
+                    <td class="col-meta">${doc.author}</td>
+                    <td class="col-meta"><span class="badge">${doc.date}</span></td>
+                    <td class="col-preview"><div class="preview-text">${getPreview(doc.content, searchTerm)}</div></td>
+                </tr>
+            `).join('');
+        }
+
+        function filterDocs() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const scope = document.getElementById('searchScope').value;
+            const authorTerm = document.getElementById('authorFacet').value;
+            const dateTerm = document.getElementById('dateFacet').value;
+
+            const filtered = allDocs.filter(doc => {
+                let matchesSearch = false;
+                if (!searchTerm) {
+                    matchesSearch = true;
+                } else {
+                    const inTitle = doc.title.toLowerCase().includes(searchTerm);
+                    const inAuthor = doc.author.toLowerCase().includes(searchTerm);
+                    const inContent = doc.content.toLowerCase().includes(searchTerm);
+
+                    if (scope === 'title') matchesSearch = inTitle;
+                    else if (scope === 'author') matchesSearch = inAuthor;
+                    else if (scope === 'content') matchesSearch = inContent;
+                    else matchesSearch = inTitle || inAuthor || inContent;
+                }
+
+                const matchesAuthor = !authorTerm || doc.author === authorTerm;
+                const matchesDate = !dateTerm || doc.date === dateTerm;
+                return matchesSearch && matchesAuthor && matchesDate;
+            });
+
+            renderTable(filtered, searchTerm);
+        }
+
+        function populateFacets(docs) {
+            const authors = [...new Set(docs.map(d => d.author))].sort();
+            const dates = [...new Set(docs.map(d => d.date))].sort();
+            const authorSelect = document.getElementById('authorFacet');
+            const dateSelect = document.getElementById('dateFacet');
+            authors.forEach(a => authorSelect.add(new Option(a, a)));
+            dates.forEach(d => dateSelect.add(new Option(d, d)));
+        }
+
+        function resetFilters() {
+            document.getElementById('searchInput').value = "";
+            document.getElementById('searchScope').value = "all";
+            document.getElementById('authorFacet').value = "";
+            document.getElementById('dateFacet').value = "";
+            renderTable(allDocs);
+        }
+
+        document.getElementById('searchInput').addEventListener('input', filterDocs);
+        document.getElementById('searchScope').addEventListener('change', filterDocs);
+        document.getElementById('authorFacet').addEventListener('change', filterDocs);
+        document.getElementById('dateFacet').addEventListener('change', filterDocs);
+
+        init();
+    </script>
+</body>
+</html>
