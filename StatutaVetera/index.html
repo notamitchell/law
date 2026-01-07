@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Statuta Vetera: Manuscript Search</title>
     <link rel="stylesheet" href="../style.css" />
+    <style>
+        /* Basic styling for the highlight and layout if style.css is missing */
+        .highlight { background-color: #ffeb3b; font-weight: bold; padding: 0 2px; }
+        .preview-text { font-size: 0.9em; color: #555; line-height: 1.4; }
+        .loading-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+                           background: rgba(255,255,255,0.8); display: flex; 
+                           justify-content: center; align-items: center; z-index: 1000; }
+    </style>
 </head>
 <body>
 
@@ -19,20 +27,24 @@
             <span class="facet-title">Repository</span>
             <select id="repositoryFacet"><option value="">All Repositories</option></select>
         </div>
-        <button onclick="resetFilters()" style="width:100%; padding: 10px; cursor:pointer;">Reset All</button>
+        <button onclick="resetFilters()" style="width:100%; padding: 10px; cursor:pointer; margin-top:10px;">Reset All</button>
     </div>
 
     <div id="main-content">
         <h1>Statuta Vetera</h1>
         
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search titles or content...">
+            <input type="text" id="searchInput" placeholder="Search manuscripts...">
             <select id="searchScope">
                 <option value="all">Everywhere</option>
                 <option value="title">Title Only</option>
                 <option value="settlement">Settlement Only</option>
+                <option value="repository">Repository Only</option>
                 <option value="content">Content Only</option>
+                <option value="provenance">Provenance Only</option>
+                <option value="bibl">Bibliography Only</option>
             </select>
+            <button id="searchButton">Search</button>
         </div>
         
         <div id="table-container">
@@ -71,23 +83,28 @@
                     const text = await res.text();
                     const xml = new DOMParser().parseFromString(text, "text/xml");
 
-                    // Specifically target title within titleStmt
+                    // Helper to get first instance
+                    const getTEI = (tag) => xml.getElementsByTagName(tag)[0]?.textContent?.trim() || "";
+                    
+                    // Helper to get ALL instances (e.g. multiple bibl entries)
+                    const getTEIAll = (tag) => Array.from(xml.getElementsByTagName(tag))
+                                                    .map(el => el.textContent.replace(/\s+/g, ' ').trim())
+                                                    .filter(t => t !== "")
+                                                    .join(' | ');
+
                     const titleStmt = xml.getElementsByTagName("titleStmt")[0];
                     const fullTitle = titleStmt?.getElementsByTagName("title")[0]?.textContent?.trim() || "Untitled";
-                    
-                    // Metadata from msIdentifier
-                    const getTEI = (tag) => xml.getElementsByTagName(tag)[0]?.textContent?.trim() || "Unknown";
-                    
                     const plainText = xml.documentElement.textContent.replace(/\s+/g, ' ').trim();
 
                     return {
                         title: fullTitle,
                         settlement: getTEI("settlement"),
                         repository: getTEI("repository"),
+                        provenance: getTEIAll("provenance"), 
+                        bibl: getTEIAll("bibl"),           
                         idno: getTEI("idno"),
-                        url: CONFIG.pagesBase + file.name.replace('.xml', '.html'),
-                        content: plainText,
-                        raw: text.toLowerCase()
+                        url: CONFIG.pagesBase + file.name,
+                        content: plainText
                     };
                 });
 
@@ -101,28 +118,58 @@
             }
         }
 
+        /**
+         * Generates a snippet of text around the found search term.
+         */
         function getPreview(text, term) {
+            if (!text) return "";
             if (!term || term.length < 2) return text.substring(0, 160) + "...";
+            
             const index = text.toLowerCase().indexOf(term.toLowerCase());
             if (index === -1) return text.substring(0, 160) + "...";
+            
             const start = Math.max(0, index - 60);
             const end = Math.min(text.length, index + 100);
             let snippet = text.substring(start, end);
+            
             const regex = new RegExp(`(${term})`, 'gi');
             snippet = snippet.replace(regex, '<span class="highlight">$1</span>');
+            
             return (start > 0 ? "..." : "") + snippet + (end < text.length ? "..." : "");
         }
 
-        function renderTable(docs, searchTerm = "") {
+        /**
+         * Renders the table, choosing the preview source based on the search scope.
+         */
+        function renderTable(docs, searchTerm = "", scope = "all") {
             const body = document.getElementById('resultsBody');
-            body.innerHTML = docs.map(doc => `
-                <tr>
-                    <td class="col-title"><a href="${doc.url}" target="_blank">${doc.title}</a></td>
-                    <td class="col-settlement">${doc.settlement}</td>
-                    <td class="col-repo">${doc.repository}</td>
-                    <td class="col-preview"><div class="preview-text">${getPreview(doc.content, searchTerm)}</div></td>
-                </tr>
-            `).join('');
+            body.innerHTML = docs.map(doc => {
+                
+                // Determine which field to use for the preview column
+                let previewSource = doc.content; 
+
+                if (scope === 'bibl') previewSource = doc.bibl;
+                else if (scope === 'provenance') previewSource = doc.provenance;
+                else if (scope === 'title') previewSource = doc.title;
+                else if (scope === 'settlement') previewSource = doc.settlement;
+                else if (scope === 'repository') previewSource = doc.repository;
+                else if (scope === 'all' && searchTerm) {
+                    // When searching everywhere, try to find the best field to preview
+                    const term = searchTerm.toLowerCase();
+                    if (doc.bibl.toLowerCase().includes(term)) previewSource = doc.bibl;
+                    else if (doc.provenance.toLowerCase().includes(term)) previewSource = doc.provenance;
+                    else if (doc.title.toLowerCase().includes(term)) previewSource = doc.title;
+                }
+
+                return `
+                    <tr>
+                        <td class="col-title"><a href="${doc.url}" target="_blank">${doc.title}</a></td>
+                        <td class="col-settlement">${doc.settlement}</td>
+                        <td class="col-repo">${doc.repository}</td>
+                        <td class="col-preview"><div class="preview-text">${getPreview(previewSource, searchTerm)}</div></td>
+                    </tr>
+                `;
+            }).join('');
         }
 
         function filterDocs() {
@@ -138,12 +185,18 @@
                 } else {
                     const inTitle = doc.title.toLowerCase().includes(searchTerm);
                     const inSettlement = doc.settlement.toLowerCase().includes(searchTerm);
+                    const inRepo = doc.repository.toLowerCase().includes(searchTerm);
                     const inContent = doc.content.toLowerCase().includes(searchTerm);
+                    const inProv = doc.provenance.toLowerCase().includes(searchTerm);
+                    const inBibl = doc.bibl.toLowerCase().includes(searchTerm);
 
                     if (scope === 'title') matchesSearch = inTitle;
                     else if (scope === 'settlement') matchesSearch = inSettlement;
+                    else if (scope === 'repository') matchesSearch = inRepo;
                     else if (scope === 'content') matchesSearch = inContent;
-                    else matchesSearch = inTitle || inSettlement || inContent || doc.repository.toLowerCase().includes(searchTerm);
+                    else if (scope === 'provenance') matchesSearch = inProv;
+                    else if (scope === 'bibl') matchesSearch = inBibl;
+                    else matchesSearch = inTitle || inSettlement || inRepo || inContent || inProv || inBibl;
                 }
 
                 const matchesSettlement = !settlementTerm || doc.settlement === settlementTerm;
@@ -151,12 +204,12 @@
                 return matchesSearch && matchesSettlement && matchesRepo;
             });
 
-            renderTable(filtered, searchTerm);
+            renderTable(filtered, searchTerm, scope);
         }
 
         function populateFacets(docs) {
-            const settlements = [...new Set(docs.map(d => d.settlement))].sort();
-            const repositories = [...new Set(docs.map(d => d.repository))].sort();
+            const settlements = [...new Set(docs.map(d => d.settlement).filter(s => s))].sort();
+            const repositories = [...new Set(docs.map(d => d.repository).filter(r => r))].sort();
             
             const setSelect = document.getElementById('settlementFacet');
             const repoSelect = document.getElementById('repositoryFacet');
@@ -173,7 +226,11 @@
             renderTable(allDocs);
         }
 
-        document.getElementById('searchInput').addEventListener('input', filterDocs);
+        // Listeners
+        document.getElementById('searchButton').addEventListener('click', filterDocs);
+        document.getElementById('searchInput').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') filterDocs();
+        });
         document.getElementById('searchScope').addEventListener('change', filterDocs);
         document.getElementById('settlementFacet').addEventListener('change', filterDocs);
         document.getElementById('repositoryFacet').addEventListener('change', filterDocs);
