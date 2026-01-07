@@ -6,29 +6,52 @@
     <title>Statuta Vetera: Manuscript Search</title>
     <link rel="stylesheet" href="../style.css" />
     <style>
-        /* Basic styling for the highlight and layout if style.css is missing */
+
+        /* New Filter Layout */
+        .search-container { 
+            display: flex; 
+            gap: 10px; 
+            margin-bottom: 20px; 
+            background: #f4f4f4; 
+            padding: 15px; 
+            border-radius: 8px;
+        }
+        .search-container input[type="text"] { flex-grow: 1; padding: 8px; }
+
+        .filters-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 20px; 
+            background: #fff; 
+            border: 1px solid #ddd; 
+            padding: 20px; 
+            border-radius: 8px; 
+            margin-bottom: 30px;
+        }
+
+        .facet-group { margin-bottom: 10px; }
+        .facet-title { font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem; color: #333; text-transform: uppercase; }
+        
+        .range-inputs { display: flex; gap: 5px; }
+        .range-inputs input { width: 100%; padding: 6px; font-size: 0.8em; border: 1px solid #ccc; border-radius: 4px; }
+        
+        /* Table Styles */
+        #table-container { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 12px 8px; text-align: left; border-bottom: 1px solid #ddd; font-size: 0.9em; }
         .highlight { background-color: #ffeb3b; font-weight: bold; padding: 0 2px; }
-        .preview-text { font-size: 0.9em; color: #555; line-height: 1.4; }
+
         .loading-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
                            background: rgba(255,255,255,0.8); display: flex; 
                            justify-content: center; align-items: center; z-index: 1000; }
+        
+        .reset-btn { background: #666; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; align-self: flex-end; }
+        .reset-btn:hover { background: #444; }
     </style>
 </head>
 <body>
 
     <div id="loading" class="loading-overlay"><h3>Indexing TEI Documents...</h3></div>
-
-    <div id="sidebar">
-        <div class="facet-group">
-            <span class="facet-title">Settlement</span>
-            <select id="settlementFacet"><option value="">All Locations</option></select>
-        </div>
-        <div class="facet-group">
-            <span class="facet-title">Repository</span>
-            <select id="repositoryFacet"><option value="">All Repositories</option></select>
-        </div>
-        <button onclick="resetFilters()" style="width:100%; padding: 10px; cursor:pointer; margin-top:10px;">Reset All</button>
-    </div>
 
     <div id="main-content">
         <h1>Statuta Vetera</h1>
@@ -40,21 +63,58 @@
                 <option value="title">Title Only</option>
                 <option value="settlement">Settlement Only</option>
                 <option value="repository">Repository Only</option>
-                <option value="content">Content Only</option>
-                <option value="provenance">Provenance Only</option>
-                <option value="bibl">Bibliography Only</option>
             </select>
-            <button id="searchButton">Search</button>
+            <button id="searchButton" style="padding: 8px 20px; cursor:pointer;">Search</button>
+        </div>
+
+        <div class="filters-grid">
+            <div class="facet-group">
+                <span class="facet-title">Settlement</span>
+                <select id="settlementFacet" style="width:100%; padding: 6px;"><option value="">All Locations</option></select>
+            </div>
+            
+            <div class="facet-group">
+                <span class="facet-title">Repository</span>
+                <select id="repositoryFacet" style="width:100%; padding: 6px;"><option value="">All Repositories</option></select>
+            </div>
+
+            <div class="facet-group">
+                <span class="facet-title">Leaf Dimensions (mm)</span>
+                <div class="range-inputs">
+                    <input type="number" id="lHMin" placeholder="Min H">
+                    <input type="number" id="lHMax" placeholder="Max H">
+                </div>
+                <div class="range-inputs" style="margin-top:5px;">
+                    <input type="number" id="lWMin" placeholder="Min W">
+                    <input type="number" id="lWMax" placeholder="Max W">
+                </div>
+            </div>
+
+            <div class="facet-group">
+                <span class="facet-title">Written Dimensions (mm)</span>
+                <div class="range-inputs">
+                    <input type="number" id="wHMin" placeholder="Min H">
+                    <input type="number" id="wHMax" placeholder="Max H">
+                </div>
+                <div class="range-inputs" style="margin-top:5px;">
+                    <input type="number" id="wWMin" placeholder="Min W">
+                    <input type="number" id="wWMax" placeholder="Max W">
+                </div>
+            </div>
+
+            <button onclick="resetFilters()" class="reset-btn">Reset Filters</button>
         </div>
         
         <div id="table-container">
             <table id="resultsTable">
                 <thead>
                     <tr>
-                        <th class="col-title">Title</th>
-                        <th class="col-settlement">Settlement</th>
-                        <th class="col-repo">Repository</th>
-                        <th class="col-preview">Preview</th>
+                        <th>Title</th>
+                        <th>Settlement / Repository</th>
+                        <th>Leaf (H x W)</th>
+                        <th>Written (H x W)</th>
+                        <th>Bibliography</th>
+                        <th>Provenance</th>
                     </tr>
                 </thead>
                 <tbody id="resultsBody"></tbody>
@@ -83,28 +143,27 @@
                     const text = await res.text();
                     const xml = new DOMParser().parseFromString(text, "text/xml");
 
-                    // Helper to get first instance
                     const getTEI = (tag) => xml.getElementsByTagName(tag)[0]?.textContent?.trim() || "";
-                    
-                    // Helper to get ALL instances (e.g. multiple bibl entries)
-                    const getTEIAll = (tag) => Array.from(xml.getElementsByTagName(tag))
-                                                    .map(el => el.textContent.replace(/\s+/g, ' ').trim())
-                                                    .filter(t => t !== "")
-                                                    .join(' | ');
+                    const getDim = (type, dimension) => {
+                        const node = xml.querySelector(`dimensions[type="${type}"] ${dimension}`);
+                        return node ? parseInt(node.textContent) : null;
+                    };
 
                     const titleStmt = xml.getElementsByTagName("titleStmt")[0];
                     const fullTitle = titleStmt?.getElementsByTagName("title")[0]?.textContent?.trim() || "Untitled";
-                    const plainText = xml.documentElement.textContent.replace(/\s+/g, ' ').trim();
 
                     return {
                         title: fullTitle,
                         settlement: getTEI("settlement"),
                         repository: getTEI("repository"),
-                        provenance: getTEIAll("provenance"), 
-                        bibl: getTEIAll("bibl"),           
-                        idno: getTEI("idno"),
+                        provenance: getTEI("provenance"), 
+                        bibl: getTEI("bibl"),  
+                        leafH: getDim("leaf", "height"),
+                        leafW: getDim("leaf", "width"),
+                        writtenH: getDim("written", "height"),
+                        writtenW: getDim("written", "width"),
                         url: CONFIG.pagesBase + file.name,
-                        content: plainText
+                        content: xml.documentElement.textContent.replace(/\s+/g, ' ').trim()
                     };
                 });
 
@@ -118,122 +177,84 @@
             }
         }
 
-        /**
-         * Generates a snippet of text around the found search term.
-         */
-        function getPreview(text, term) {
-            if (!text) return "";
-            if (!term || term.length < 2) return text.substring(0, 160) + "...";
-            
-            const index = text.toLowerCase().indexOf(term.toLowerCase());
-            if (index === -1) return text.substring(0, 160) + "...";
-            
-            const start = Math.max(0, index - 60);
-            const end = Math.min(text.length, index + 100);
-            let snippet = text.substring(start, end);
-            
-            const regex = new RegExp(`(${term})`, 'gi');
-            snippet = snippet.replace(regex, '<span class="highlight">$1</span>');
-            
-            return (start > 0 ? "..." : "") + snippet + (end < text.length ? "..." : "");
-        }
-
-        /**
-         * Renders the table, choosing the preview source based on the search scope.
-         */
-        function renderTable(docs, searchTerm = "", scope = "all") {
+        function renderTable(docs, searchTerm = "") {
             const body = document.getElementById('resultsBody');
             body.innerHTML = docs.map(doc => {
+                const leafDim = (doc.leafH && doc.leafW) ? `${doc.leafH}x${doc.leafW}` : "-";
+                const writDim = (doc.writtenH && doc.writtenW) ? `${doc.writtenH}x${doc.writtenW}` : "-";
                 
-                // Determine which field to use for the preview column
-                let previewSource = doc.content; 
-
-                if (scope === 'bibl') previewSource = doc.bibl;
-                else if (scope === 'provenance') previewSource = doc.provenance;
-                else if (scope === 'title') previewSource = doc.title;
-                else if (scope === 'settlement') previewSource = doc.settlement;
-                else if (scope === 'repository') previewSource = doc.repository;
-                else if (scope === 'all' && searchTerm) {
-                    // When searching everywhere, try to find the best field to preview
-                    const term = searchTerm.toLowerCase();
-                    if (doc.bibl.toLowerCase().includes(term)) previewSource = doc.bibl;
-                    else if (doc.provenance.toLowerCase().includes(term)) previewSource = doc.provenance;
-                    else if (doc.title.toLowerCase().includes(term)) previewSource = doc.title;
-                }
-
                 return `
                     <tr>
-                        <td class="col-title"><a href="${doc.url}" target="_blank">${doc.title}</a></td>
-                        <td class="col-settlement">${doc.settlement}</td>
-                        <td class="col-repo">${doc.repository}</td>
-                        <td class="col-preview"><div class="preview-text">${getPreview(previewSource, searchTerm)}</div></td>
+                        <td><a href="${doc.url}" target="_blank" style="text-decoration:none; color:#2c3e50; font-weight:bold;">${doc.title}</a></td>
+                        <td>${doc.settlement}<br><small style="color:#777">${doc.repository}</small></td>
+                        <td>${leafDim}</td>
+                        <td>${writDim}</td>
+                        <td>${doc.bibl}</td>
+                        <td>${doc.provenance}</td>
                     </tr>
                 `;
             }).join('');
         }
 
+
+
         function filterDocs() {
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            const scope = document.getElementById('searchScope').value;
-            const settlementTerm = document.getElementById('settlementFacet').value;
-            const repositoryTerm = document.getElementById('repositoryFacet').value;
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const sett = document.getElementById('settlementFacet').value;
+            const repo = document.getElementById('repositoryFacet').value;
+            
+            const filters = {
+                lhMin: parseInt(document.getElementById('lHMin').value),
+                lhMax: parseInt(document.getElementById('lHMax').value),
+                lwMin: parseInt(document.getElementById('lWMin').value),
+                lwMax: parseInt(document.getElementById('lWMax').value),
+                whMin: parseInt(document.getElementById('wHMin').value),
+                whMax: parseInt(document.getElementById('wHMax').value),
+                wwMin: parseInt(document.getElementById('wWMin').value),
+                wwMax: parseInt(document.getElementById('wWMax').value)
+            };
 
             const filtered = allDocs.filter(doc => {
-                let matchesSearch = false;
-                if (!searchTerm) {
-                    matchesSearch = true;
-                } else {
-                    const inTitle = doc.title.toLowerCase().includes(searchTerm);
-                    const inSettlement = doc.settlement.toLowerCase().includes(searchTerm);
-                    const inRepo = doc.repository.toLowerCase().includes(searchTerm);
-                    const inContent = doc.content.toLowerCase().includes(searchTerm);
-                    const inProv = doc.provenance.toLowerCase().includes(searchTerm);
-                    const inBibl = doc.bibl.toLowerCase().includes(searchTerm);
+                const matchSearch = !search || doc.title.toLowerCase().includes(search) || doc.content.toLowerCase().includes(search);
+                const matchSett = !sett || doc.settlement === sett;
+                const matchRepo = !repo || doc.repository === repo;
 
-                    if (scope === 'title') matchesSearch = inTitle;
-                    else if (scope === 'settlement') matchesSearch = inSettlement;
-                    else if (scope === 'repository') matchesSearch = inRepo;
-                    else if (scope === 'content') matchesSearch = inContent;
-                    else if (scope === 'provenance') matchesSearch = inProv;
-                    else if (scope === 'bibl') matchesSearch = inBibl;
-                    else matchesSearch = inTitle || inSettlement || inRepo || inContent || inProv || inBibl;
-                }
+                const inRange = (val, min, max) => (!min || (val && val >= min)) && (!max || (val && val <= max));
 
-                const matchesSettlement = !settlementTerm || doc.settlement === settlementTerm;
-                const matchesRepo = !repositoryTerm || doc.repository === repositoryTerm;
-                return matchesSearch && matchesSettlement && matchesRepo;
+                return matchSearch && matchSett && matchRepo &&
+                       inRange(doc.leafH, filters.lhMin, filters.lhMax) &&
+                       inRange(doc.leafW, filters.lwMin, filters.lwMax) &&
+                       inRange(doc.writtenH, filters.whMin, filters.whMax) &&
+                       inRange(doc.writtenW, filters.wwMin, filters.wwMax);
             });
 
-            renderTable(filtered, searchTerm, scope);
+            renderTable(filtered, search);
         }
 
         function populateFacets(docs) {
             const settlements = [...new Set(docs.map(d => d.settlement).filter(s => s))].sort();
             const repositories = [...new Set(docs.map(d => d.repository).filter(r => r))].sort();
             
-            const setSelect = document.getElementById('settlementFacet');
-            const repoSelect = document.getElementById('repositoryFacet');
-            
-            settlements.forEach(s => setSelect.add(new Option(s, s)));
-            repositories.forEach(r => repoSelect.add(new Option(r, r)));
+            const sSelect = document.getElementById('settlementFacet');
+            settlements.forEach(s => sSelect.add(new Option(s, s)));
+
+            const rSelect = document.getElementById('repositoryFacet');
+            repositories.forEach(r => rSelect.add(new Option(r, r)));
         }
 
         function resetFilters() {
-            document.getElementById('searchInput').value = "";
-            document.getElementById('searchScope').value = "all";
-            document.getElementById('settlementFacet').value = "";
-            document.getElementById('repositoryFacet').value = "";
+            const ids = ['searchInput', 'settlementFacet', 'repositoryFacet', 'lHMin', 'lHMax', 'lWMin', 'lWMax', 'wHMin', 'wHMax', 'wWMin', 'wWMax'];
+            ids.forEach(id => {
+                const el = document.getElementById(id);
+                if(el) el.value = "";
+            });
             renderTable(allDocs);
         }
 
-        // Listeners
         document.getElementById('searchButton').addEventListener('click', filterDocs);
-        document.getElementById('searchInput').addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') filterDocs();
+        document.querySelectorAll('input, select').forEach(el => {
+            el.addEventListener('input', filterDocs);
         });
-        document.getElementById('searchScope').addEventListener('change', filterDocs);
-        document.getElementById('settlementFacet').addEventListener('change', filterDocs);
-        document.getElementById('repositoryFacet').addEventListener('change', filterDocs);
 
         init();
     </script>
