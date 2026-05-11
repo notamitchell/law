@@ -129,6 +129,98 @@ hr.sep{border:none;border-top:1px solid var(--border);margin:4px 0;}
 .drag-handle{color:var(--text-dim);font-size:14px;}
 .frame-thumb{width:38px;height:25px;object-fit:cover;border-radius:1px;flex-shrink:0;border:1px solid var(--border2);}
 
+/* ── FULLSCREEN CAMERA OVERLAY ── */
+#fsCamera{
+  display:none;position:fixed;inset:0;z-index:8000;
+  background:#000;flex-direction:column;
+}
+#fsCamera.open{display:flex;}
+
+/* The flickering display — fills all space above controls bar */
+#fsDisplay{
+  flex:1;position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  background:#000;
+}
+#fsVideo{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;display:block;
+}
+/* historical image shown as cover image, toggled via opacity */
+#fsHistImg{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:contain;display:block;
+  background:#000;
+  transition:none; /* instant flicker */
+}
+/* eye label */
+#fsEyeLabel{
+  position:absolute;top:16px;left:50%;transform:translateX(-50%);
+  background:rgba(0,0,0,.6);color:var(--amber2);
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  padding:5px 14px;border-radius:20px;pointer-events:none;
+}
+/* which-frame indicator */
+#fsFrameLabel{
+  position:absolute;top:16px;right:16px;
+  background:rgba(0,0,0,.55);color:var(--text-dim);
+  font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+  padding:4px 10px;border-radius:20px;pointer-events:none;
+}
+/* close button */
+#fsClose{
+  position:absolute;top:14px;left:14px;
+  width:36px;height:36px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.5);
+  color:#fff;font-size:18px;line-height:1;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);z-index:2;
+}
+#fsClose:hover{background:rgba(255,255,255,.15);}
+
+/* Controls bar at bottom */
+#fsBar{
+  flex-shrink:0;background:rgba(0,0,0,.85);
+  padding:14px 20px 28px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.fs-speed-row{display:flex;align-items:center;gap:10px;}
+.fs-speed-row label{color:var(--text-dim);font-size:10px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;min-width:80px;margin:0;}
+.fs-speed-row input[type=range]{flex:1;}
+.fs-speed-row .range-val{min-width:48px;text-align:right;color:var(--amber2);font-size:11px;}
+
+/* Shutter row */
+.fs-shutter-row{display:flex;align-items:center;justify-content:center;position:relative;min-height:72px;}
+#fsShutter{
+  width:68px;height:68px;border-radius:50%;
+  background:#fff;border:4px solid rgba(255,255,255,.4);
+  box-shadow:0 0 0 3px rgba(255,255,255,.15);
+  cursor:pointer;transition:transform .08s,background .08s;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+#fsShutter:active{transform:scale(.92);background:#ddd;}
+#fsShutter.busy{background:var(--amber);border-color:var(--amber2);}
+#fsBurstCount{
+  position:absolute;right:calc(50% - 80px);
+  color:var(--text-dim);font-size:10px;letter-spacing:.08em;
+  font-family:var(--mono);
+}
+
+/* Burst thumbnails strip (shown inside fullscreen after shots) */
+#fsBurstStrip{
+  display:flex;gap:8px;overflow-x:auto;padding:4px 0;
+  min-height:0;
+}
+#fsBurstStrip::-webkit-scrollbar{height:3px;}
+#fsBurstStrip::-webkit-scrollbar-thumb{background:var(--border2);}
+.burst-thumb{
+  flex-shrink:0;height:60px;border-radius:2px;
+  border:2px solid var(--border);cursor:pointer;
+  object-fit:cover;transition:border-color .15s;
+}
+.burst-thumb.selected{border-color:var(--amber);}
+
 /* Export grid */
 .export-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
 .export-card{background:var(--bg2);border:1px solid var(--border);border-radius:3px;padding:12px;display:flex;flex-direction:column;gap:8px;align-items:center;}
@@ -310,70 +402,34 @@ hr.sep{border:none;border-top:1px solid var(--border);margin:4px 0;}
 
 <!-- ═══ 5. CONTEMPORARY LEFT ═══ -->
 <div class="phase" id="phase5">
-  <div class="split">
-    <div class="controls-col">
-      <div class="panel">
-        <div class="panel-title">Contemporary Left Eye</div>
-        <div class="col">
-          <p class="hint">Align your camera to match the historical left-eye view. The ghost overlay helps you line up the shot.</p>
-          <div><label>Ghost opacity</label>
-            <div class="range-row">
-              <input type="range" id="ghostOpacityL" min="0" max="100" value="40" oninput="updateGhostOpacity('L',this)"/>
-              <span class="range-val" id="ghostOpacityLVal">40%</span>
-            </div></div>
-          <div class="row" style="gap:8px;">
-            <button class="ghost grow" onclick="startCamera('L')">Start Camera</button>
-            <button class="primary" onclick="capturePhoto('L')" id="btnCaptureL" disabled>Capture</button>
-          </div>
-          <div id="camStatusL" class="status"></div>
-          <hr class="sep">
-          <label>Shots <span class="hint">(tap to select &middot; long-press/right-click to delete)</span></label>
-          <div class="thumb-row" id="thumbsLeft"></div>
-          <div class="hint" id="hintLeft">No photos yet</div>
-          <button class="primary next-btn" id="btnGoPhase6" onclick="goTo(6)" disabled>Next Step &#8594;</button>
-        </div>
-      </div>
-    </div>
-    <div class="preview-col">
-      <div class="camera-outer" id="cameraWrapL">
-        <video id="cameraVideoL" autoplay playsinline muted></video>
-        <div class="ghost-overlay" id="ghostOverlayL"></div>
-      </div>
+  <div class="panel">
+    <div class="panel-title">Contemporary Left Eye</div>
+    <div class="col">
+      <p class="hint">Open the camera to align your shot with the historical left-eye view. The display will flicker between the historical photo and your live feed so you can match the angle precisely. Tap the shutter to take a burst of 3 shots.</p>
+      <button class="primary" style="align-self:flex-start;" onclick="openFsCamera('L')">&#9654; Open Camera</button>
+      <div id="camStatusL" class="status"></div>
+      <hr class="sep">
+      <label>Captured shots &mdash; <span class="hint">tap to select &middot; long-press or right-click to delete</span></label>
+      <div class="thumb-row" id="thumbsLeft"></div>
+      <div class="hint" id="hintLeft">No photos yet</div>
+      <button class="primary next-btn" id="btnGoPhase6" onclick="goTo(6)" disabled>Next Step &#8594;</button>
     </div>
   </div>
 </div>
 
 <!-- ═══ 6. CONTEMPORARY RIGHT ═══ -->
 <div class="phase" id="phase6">
-  <div class="split">
-    <div class="controls-col">
-      <div class="panel">
-        <div class="panel-title">Contemporary Right Eye</div>
-        <div class="col">
-          <p class="hint">Align for the right-eye view. Skip this step if you like &mdash; the left eye will be mirrored.</p>
-          <div><label>Ghost opacity</label>
-            <div class="range-row">
-              <input type="range" id="ghostOpacityR" min="0" max="100" value="40" oninput="updateGhostOpacity('R',this)"/>
-              <span class="range-val" id="ghostOpacityRVal">40%</span>
-            </div></div>
-          <div class="row" style="gap:8px;">
-            <button class="ghost grow" onclick="startCamera('R')">Start Camera</button>
-            <button class="primary" onclick="capturePhoto('R')" id="btnCaptureR" disabled>Capture</button>
-          </div>
-          <div id="camStatusR" class="status"></div>
-          <hr class="sep">
-          <label>Shots <span class="hint">(tap to select &middot; long-press/right-click to delete)</span></label>
-          <div class="thumb-row" id="thumbsRight"></div>
-          <div class="hint" id="hintRight">None &mdash; will mirror left eye</div>
-          <button class="primary next-btn" onclick="proceedToPhase7()">Next Step &#8594;</button>
-        </div>
-      </div>
-    </div>
-    <div class="preview-col">
-      <div class="camera-outer" id="cameraWrapR">
-        <video id="cameraVideoR" autoplay playsinline muted></video>
-        <div class="ghost-overlay" id="ghostOverlayR"></div>
-      </div>
+  <div class="panel">
+    <div class="panel-title">Contemporary Right Eye</div>
+    <div class="col">
+      <p class="hint">Now capture the right-eye view. You can skip this step &mdash; if no photos are taken the left eye will be mirrored automatically.</p>
+      <button class="primary" style="align-self:flex-start;" onclick="openFsCamera('R')">&#9654; Open Camera</button>
+      <div id="camStatusR" class="status"></div>
+      <hr class="sep">
+      <label>Captured shots &mdash; <span class="hint">tap to select &middot; long-press or right-click to delete</span></label>
+      <div class="thumb-row" id="thumbsRight"></div>
+      <div class="hint" id="hintRight">None &mdash; will mirror left eye if skipped</div>
+      <button class="primary next-btn" onclick="proceedToPhase7()">Next Step &#8594;</button>
     </div>
   </div>
 </div>
@@ -421,6 +477,39 @@ hr.sep{border:none;border-top:1px solid var(--border);margin:4px 0;}
 </div><!-- .phases -->
 </div><!-- .app -->
 
+<!-- ═══ FULLSCREEN CAMERA OVERLAY ═══ -->
+<div id="fsCamera">
+  <div id="fsDisplay">
+    <video id="fsVideo" autoplay playsinline muted></video>
+    <img id="fsHistImg" alt="" style="opacity:0;"/>
+    <div id="fsEyeLabel">Left Eye</div>
+    <div id="fsFrameLabel">Live</div>
+    <button id="fsClose" onclick="closeFsCamera()" title="Close">&#x2715;</button>
+  </div>
+  <div id="fsBar">
+    <!-- Speed control -->
+    <div class="fs-speed-row">
+      <label>Flicker speed</label>
+      <input type="range" id="fsFlickerSpeed" min="100" max="2000" value="600"
+        oninput="updateFsFlicker(this)"/>
+      <span class="range-val" id="fsFlickerSpeedVal">600 ms</span>
+    </div>
+    <!-- Burst strip (populated after shots) -->
+    <div id="fsBurstStrip"></div>
+    <!-- Shutter row -->
+    <div class="fs-shutter-row">
+      <span id="fsBurstCount"></span>
+      <button id="fsShutter" onclick="takeBurst()" title="Take burst of 3 photos">
+        <!-- camera icon SVG -->
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+          <circle cx="12" cy="13" r="4"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
 <canvas id="leftCanvas" style="display:none;"></canvas>
 <canvas id="rightCanvas" style="display:none;"></canvas>
 
@@ -445,8 +534,6 @@ function goTo(n){
   if(n===2) setTimeout(()=>initCropCanvas('L'),60);
   if(n===3) setTimeout(()=>initCropCanvas('R'),60);
   if(n===4) setTimeout(restartWiggle,80);
-  if(n===5) setTimeout(()=>setGhostOverlay('L'),80);
-  if(n===6) setTimeout(()=>setGhostOverlay('R'),80);
 }
 document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{if(!b.disabled) goTo(+b.dataset.phase);}));
 
@@ -675,39 +762,187 @@ function startWiggle(canvasId,frames,speed){
 }
 function restartWiggle(){const f=buildHistoricalFrames();if(f.length)startWiggle('wiggleCanvas',f,+document.getElementById('wiggleSpeed').value);}
 
-// ── PHASES 5 & 6: CAMERA ──
-function setGhostOverlay(side){
-  const src=side==='L'?S.leftCanvas:S.rightCanvas;if(!src)return;
-  const ghost=document.getElementById('ghostOverlay'+side);if(!ghost)return;
-  ghost.style.backgroundImage='url('+src.toDataURL()+')';
-  const op=document.getElementById('ghostOpacity'+side);
-  ghost.style.opacity=((op?+op.value:40)/100).toFixed(2);
+// ── PHASES 5 & 6: FULLSCREEN FLICKER CAMERA ──
+
+const FS = {
+  side: 'L',           // which eye we're capturing
+  stream: null,        // active MediaStream
+  flickerTimer: null,  // setInterval for flicker
+  showingHist: false,  // true = historical frame visible
+  burstResults: [],    // canvases from current burst session
+  selBurst: 0,         // which burst shot is selected
+};
+
+function openFsCamera(side) {
+  FS.side = side;
+  FS.burstResults = [];
+
+  // Set the historical image for this eye
+  const histCanvas = side === 'L' ? S.leftCanvas : S.rightCanvas;
+  const histImg = document.getElementById('fsHistImg');
+  if (histCanvas) {
+    histImg.src = histCanvas.toDataURL();
+  } else {
+    histImg.src = '';
+  }
+
+  document.getElementById('fsEyeLabel').textContent = side === 'L' ? 'Left Eye' : 'Right Eye';
+  document.getElementById('fsBurstStrip').innerHTML = '';
+  document.getElementById('fsBurstCount').textContent = '';
+  document.getElementById('fsShutter').classList.remove('busy');
+
+  document.getElementById('fsCamera').classList.add('open');
+
+  // Request fullscreen on mobile if possible
+  const el = document.getElementById('fsCamera');
+  if (el.requestFullscreen) el.requestFullscreen().catch(()=>{});
+
+  startFsStream();
 }
-function updateGhostOpacity(side,inp){
-  document.getElementById('ghostOpacity'+side+'Val').textContent=inp.value+'%';
-  const g=document.getElementById('ghostOverlay'+side);if(g)g.style.opacity=(inp.value/100).toFixed(2);
+
+async function startFsStream() {
+  try {
+    if (FS.stream) FS.stream.getTracks().forEach(t => t.stop());
+    const stream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: 'environment', width: { ideal: 1920 }, height: { ideal: 1080 } },
+      audio: false
+    });
+    FS.stream = stream;
+    const vid = document.getElementById('fsVideo');
+    vid.srcObject = stream;
+    await vid.play();
+    startFlicker();
+    setStatus('camStatus' + FS.side, 'Camera ready', 'ok');
+  } catch(e) {
+    setStatus('camStatus' + FS.side, 'Camera error: ' + e.message, 'err');
+    closeFsCamera();
+  }
 }
-async function startCamera(side){
-  const sid='camStatus'+side,cid='btnCapture'+side;
-  try{
-    const ex=side==='L'?S.streamsL:S.streamsR;if(ex)ex.getTracks().forEach(t=>t.stop());
-    const stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'},audio:false});
-    if(side==='L')S.streamsL=stream;else S.streamsR=stream;
-    document.getElementById('cameraVideo'+side).srcObject=stream;
-    document.getElementById(cid).disabled=false;
-    setStatus(sid,'Camera ready','ok');setGhostOverlay(side);
-  }catch(e){setStatus(sid,'Camera error: '+e.message,'err');}
+
+function startFlicker() {
+  stopFlicker();
+  const speed = +document.getElementById('fsFlickerSpeed').value;
+  const vid      = document.getElementById('fsVideo');
+  const histImg  = document.getElementById('fsHistImg');
+  const frameLabel = document.getElementById('fsFrameLabel');
+
+  FS.showingHist = false;
+  vid.style.opacity      = '1';
+  histImg.style.opacity  = '0';
+  frameLabel.textContent = 'Live';
+
+  FS.flickerTimer = setInterval(() => {
+    FS.showingHist = !FS.showingHist;
+    if (FS.showingHist) {
+      vid.style.opacity      = '0';
+      histImg.style.opacity  = '1';
+      frameLabel.textContent = 'Historical';
+    } else {
+      vid.style.opacity      = '1';
+      histImg.style.opacity  = '0';
+      frameLabel.textContent = 'Live';
+    }
+  }, speed);
 }
-function capturePhoto(side){
-  const vid=document.getElementById('cameraVideo'+side);
-  if(!vid.srcObject){setStatus('camStatus'+side,'Start camera first','err');return;}
-  const cv=document.createElement('canvas');cv.width=vid.videoWidth;cv.height=vid.videoHeight;
-  cv.getContext('2d').drawImage(vid,0,0);
-  const arr=side==='L'?S.contLeft:S.contRight;arr.push(cv);
-  renderThumbs(side);
-  if(side==='L')document.getElementById('btnGoPhase6').disabled=false;
-  setStatus('camStatus'+side,'Captured #'+arr.length,'ok');
+
+function stopFlicker() {
+  if (FS.flickerTimer) { clearInterval(FS.flickerTimer); FS.flickerTimer = null; }
 }
+
+function updateFsFlicker(inp) {
+  document.getElementById('fsFlickerSpeedVal').textContent = inp.value + ' ms';
+  if (FS.stream) startFlicker(); // restart with new speed
+}
+
+async function takeBurst() {
+  const shutter = document.getElementById('fsShutter');
+  if (shutter.classList.contains('busy')) return;
+  shutter.classList.add('busy');
+  stopFlicker();
+
+  // Show live feed during burst
+  document.getElementById('fsVideo').style.opacity = '1';
+  document.getElementById('fsHistImg').style.opacity = '0';
+  document.getElementById('fsFrameLabel').textContent = 'Capturing…';
+
+  const vid = document.getElementById('fsVideo');
+  const BURST = 3;
+  const INTERVAL = 350; // ms between shots
+  const newShots = [];
+
+  for (let i = 0; i < BURST; i++) {
+    document.getElementById('fsBurstCount').textContent = `${i+1} / ${BURST}`;
+    const cv = document.createElement('canvas');
+    cv.width  = vid.videoWidth  || 1280;
+    cv.height = vid.videoHeight || 720;
+    cv.getContext('2d').drawImage(vid, 0, 0);
+    newShots.push(cv);
+    if (i < BURST - 1) await delay(INTERVAL);
+  }
+
+  // Merge into overall collection
+  const arr = FS.side === 'L' ? S.contLeft : S.contRight;
+  newShots.forEach(c => arr.push(c));
+
+  // Select last burst's first shot by default
+  const startIdx = arr.length - BURST;
+  if (FS.side === 'L') S.selLeft  = startIdx;
+  else                 S.selRight = startIdx;
+
+  // Re-render the burst strip inside fullscreen
+  renderFsBurstStrip(arr, startIdx, BURST);
+
+  shutter.classList.remove('busy');
+  document.getElementById('fsBurstCount').textContent = `${BURST} shots taken`;
+
+  // Resume flicker
+  startFlicker();
+
+  // Update main tab thumbnails and enable next button
+  renderThumbs(FS.side);
+  if (FS.side === 'L') document.getElementById('btnGoPhase6').disabled = false;
+  setStatus('camStatus' + FS.side, `${arr.length} photo(s) captured total`, 'ok');
+}
+
+function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+function renderFsBurstStrip(arr, startIdx, count) {
+  const strip = document.getElementById('fsBurstStrip');
+  strip.innerHTML = '';
+  // Show the most recent burst
+  for (let i = startIdx; i < startIdx + count && i < arr.length; i++) {
+    const img = document.createElement('img');
+    img.src = arr[i].toDataURL('image/jpeg', 0.7);
+    img.className = 'burst-thumb' + (i === (FS.side === 'L' ? S.selLeft : S.selRight) ? ' selected' : '');
+    img.title = 'Tap to select this shot';
+    const idx = i;
+    img.onclick = () => {
+      if (FS.side === 'L') S.selLeft  = idx;
+      else                 S.selRight = idx;
+      strip.querySelectorAll('.burst-thumb').forEach((el, j) => {
+        el.classList.toggle('selected', startIdx + j === idx);
+      });
+      renderThumbs(FS.side);
+    };
+    strip.appendChild(img);
+  }
+}
+
+function closeFsCamera() {
+  stopFlicker();
+  if (FS.stream) { FS.stream.getTracks().forEach(t => t.stop()); FS.stream = null; }
+  if (document.fullscreenElement) document.exitFullscreen().catch(()=>{});
+  document.getElementById('fsCamera').classList.remove('open');
+  // Reset video opacity
+  document.getElementById('fsVideo').style.opacity = '1';
+  document.getElementById('fsHistImg').style.opacity = '0';
+}
+
+// kept for compatibility — no longer used but harmless
+function setGhostOverlay(){}
+function updateGhostOpacity(){}
+function startCamera(){}
+function capturePhoto(){}
 function renderThumbs(side){
   const arr=side==='L'?S.contLeft:S.contRight;
   const row=document.getElementById(side==='L'?'thumbsLeft':'thumbsRight');
@@ -733,57 +968,186 @@ function renderThumbs(side){
 }
 
 // ── PHASE 7: COMBINED ──
-function getContFrames(){
-  const lSrc=S.contLeft.length>0?S.contLeft[S.selLeft]:null;
-  const rSrc=S.contRight.length>0?S.contRight[S.selRight]:null;
-  if(!lSrc)return[];
-  const mk=(src,mirror)=>{const cv=document.createElement('canvas');cv.width=src.width;cv.height=src.height;
-    const ctx=cv.getContext('2d');if(mirror){ctx.translate(src.width,0);ctx.scale(-1,1);}ctx.drawImage(src,0,0);return cv;};
-  return[mk(lSrc,false),mk(rSrc||lSrc,!rSrc)];
-}
+
 function proceedToPhase7(){buildCycleList();goTo(7);setTimeout(rebuildFinal,100);}
+
 function buildCycleList(){
-  const hL=S.leftCanvas,hR=S.rightCanvas,cF=getContFrames();
-  const allSrcs=[hL,hR,...cF].filter(Boolean);
-  const maxW=Math.max(...allSrcs.map(c=>c.width));
-  const maxH=Math.max(...allSrcs.map(c=>c.height));
-  const toFrame=(src,id,label)=>{
-    const cv=document.createElement('canvas');cv.width=maxW;cv.height=maxH;
-    cv.getContext('2d').drawImage(src,Math.round((maxW-src.width)/2),Math.round((maxH-src.height)/2));
-    return{id,label,canvas:cv,enabled:true};};
-  S.cycleFrames=[toFrame(hL,'hist-l','Hist. Left'),toFrame(hR,'hist-r','Hist. Right')];
-  if(cF[0])S.cycleFrames.push(toFrame(cF[0],'cont-l','Cont. Left'));
-  if(cF[1])S.cycleFrames.push(toFrame(cF[1],'cont-r','Cont. Right'));
+  // Gather all source canvases: historical L, historical R, then every contemporary shot
+  // Contemporary shots: if no right-eye shots, mirror left for each left shot
+  const hL = S.leftCanvas, hR = S.rightCanvas;
+  const hasRight = S.contRight.length > 0;
+
+  // Build a flat list of all contemporary pairs {l, r, mirrorR}
+  const contPairs = [];
+  const maxL = S.contLeft.length;
+  if (maxL > 0) {
+    for (let i = 0; i < maxL; i++) {
+      const lSrc = S.contLeft[i];
+      const rSrc = hasRight ? (S.contRight[i] || S.contRight[S.contRight.length-1]) : null;
+      contPairs.push({ l: lSrc, r: rSrc, mirrorR: !hasRight });
+    }
+  }
+
+  // Compute canvas dimensions: max across everything
+  const allSrcs = [hL, hR, ...S.contLeft, ...S.contRight].filter(Boolean);
+  if (!allSrcs.length) return;
+  const maxW = Math.max(...allSrcs.map(c=>c.width));
+  const maxH = Math.max(...allSrcs.map(c=>c.height));
+
+  const pad = (src, mirror=false) => {
+    const cv = document.createElement('canvas'); cv.width=maxW; cv.height=maxH;
+    const ctx = cv.getContext('2d');
+    if (mirror) { ctx.translate(maxW,0); ctx.scale(-1,1); }
+    const dx = Math.round((maxW-src.width)/2);
+    const dy = Math.round((maxH-src.height)/2);
+    ctx.drawImage(src, mirror ? -dx : dx, dy);
+    return cv;
+  };
+
+  S.cycleFrames = [];
+
+  // Historical frames — always included, not draggable out
+  S.cycleFrames.push({ id:'hist-l', label:'Historical Left',  canvas:pad(hL), enabled:true,  group:'hist' });
+  S.cycleFrames.push({ id:'hist-r', label:'Historical Right', canvas:pad(hR), enabled:true,  group:'hist' });
+
+  // Contemporary frames — one row per burst shot, L then R side by side in sequence
+  contPairs.forEach((pair, i) => {
+    const shotNum = i + 1;
+    const wasSelectedL = (i === S.selLeft);
+    const wasSelectedR = hasRight && (i === S.selRight);
+    const defaultOn = (i === S.selLeft); // first selected shot on by default for L
+    // Left shot
+    S.cycleFrames.push({
+      id: `cont-l-${shotNum}`,
+      label: `Shot ${shotNum} — Left`,
+      canvas: pad(pair.l),
+      enabled: defaultOn,
+      group: 'cont',
+      shotNum,
+      eye: 'L',
+      wasPicked: wasSelectedL,
+    });
+    // Right shot (real or mirrored)
+    S.cycleFrames.push({
+      id: `cont-r-${shotNum}`,
+      label: `Shot ${shotNum} — Right${pair.mirrorR ? ' (mirrored)' : ''}`,
+      canvas: pad(pair.r || pair.l, pair.mirrorR),
+      enabled: defaultOn,
+      group: 'cont',
+      shotNum,
+      eye: 'R',
+      wasPicked: hasRight ? wasSelectedR : wasSelectedL,
+    });
+  });
+
   renderCycleList();
 }
+
 function renderCycleList(){
-  const list=document.getElementById('cycleList');list.innerHTML='';
-  S.cycleFrames.forEach((f,idx)=>{
-    const item=document.createElement('div');item.className='cycle-item';item.draggable=true;item.dataset.idx=idx;
-    item.innerHTML=`<span class="drag-handle">&#11835;</span><input type="checkbox" ${f.enabled?'checked':''} onchange="toggleFrame(${idx},this.checked)"/><img class="frame-thumb" src="${f.canvas.toDataURL('image/jpeg',0.5)}" alt=""/><span>${f.label}</span>`;
-    item.addEventListener('dragstart',e=>e.dataTransfer.setData('text/plain',idx));
-    item.addEventListener('dragover',e=>e.preventDefault());
-    item.addEventListener('drop',e=>{e.preventDefault();const from=+e.dataTransfer.getData('text/plain'),to=+item.dataset.idx;const[m]=S.cycleFrames.splice(from,1);S.cycleFrames.splice(to,0,m);renderCycleList();rebuildFinal();});
+  const list = document.getElementById('cycleList');
+  list.innerHTML = '';
+
+  // Group headers
+  let lastGroup = null;
+  S.cycleFrames.forEach((f, idx) => {
+    // Section header
+    if (f.group !== lastGroup) {
+      lastGroup = f.group;
+      const hdr = document.createElement('div');
+      hdr.style.cssText = 'font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-dim);padding:8px 0 4px;border-top:1px solid var(--border);margin-top:4px;';
+      hdr.textContent = f.group === 'hist' ? 'Historical' : 'Contemporary';
+      if (f.group === 'hist') hdr.style.borderTop = 'none';
+      list.appendChild(hdr);
+    }
+
+    const item = document.createElement('div');
+    item.className = 'cycle-item'; item.draggable = true; item.dataset.idx = idx;
+
+    const thumbUrl = f.canvas.toDataURL('image/jpeg', 0.5);
+
+    // "was picked in step 5/6" star badge
+    const pickedBadge = f.wasPicked
+      ? `<span title="Selected in capture step" style="color:var(--amber2);font-size:11px;flex-shrink:0;">&#9733;</span>`
+      : `<span style="width:11px;flex-shrink:0;"></span>`;
+
+    item.innerHTML = `
+      <span class="drag-handle">&#11835;</span>
+      <input type="checkbox" ${f.enabled?'checked':''} onchange="toggleFrame(${idx},this.checked)"/>
+      <img class="frame-thumb" src="${thumbUrl}" alt="" style="${f.enabled?'':'opacity:.35;'}"/>
+      <span style="flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${f.label}</span>
+      ${pickedBadge}
+    `;
+
+    item.addEventListener('dragstart', e => e.dataTransfer.setData('text/plain', idx));
+    item.addEventListener('dragover',  e => e.preventDefault());
+    item.addEventListener('drop', e => {
+      e.preventDefault();
+      const from = +e.dataTransfer.getData('text/plain'), to = +item.dataset.idx;
+      const [m] = S.cycleFrames.splice(from,1); S.cycleFrames.splice(to,0,m);
+      renderCycleList(); rebuildFinal();
+    });
     list.appendChild(item);
   });
 }
-function toggleFrame(idx,checked){S.cycleFrames[idx].enabled=checked;rebuildFinal();}
-function rebuildFinal(){const a=S.cycleFrames.filter(f=>f.enabled).map(f=>f.canvas);if(a.length)startWiggle('wiggleFinalCanvas',a,+document.getElementById('finalSpeed').value);}
+
+function toggleFrame(idx, checked){
+  S.cycleFrames[idx].enabled = checked;
+  // Dim the thumbnail in the list
+  const items = document.querySelectorAll('.cycle-item');
+  // re-render is simplest
+  renderCycleList();
+  rebuildFinal();
+}
+
+function rebuildFinal(){
+  const a = S.cycleFrames.filter(f=>f.enabled).map(f=>f.canvas);
+  if (a.length) startWiggle('wiggleFinalCanvas', a, +document.getElementById('finalSpeed').value);
+}
 
 // ── PHASE 8: EXPORT ──
 function buildExport(){
-  const grid=document.getElementById('exportGrid');
-  grid.innerHTML='';
-  const active=S.cycleFrames.filter(f=>f.enabled);
-  active.forEach((f,i)=>{
-    const dataUrl=f.canvas.toDataURL('image/png');
-    const card=document.createElement('div');card.className='export-card';
-    const imgEl=document.createElement('img');imgEl.src=dataUrl;imgEl.alt=f.label;
-    const lbl=document.createElement('div');lbl.className='card-label';lbl.textContent=f.label;
-    const dl=document.createElement('a');dl.href=dataUrl;
-    dl.download='wigglegram-'+String(i+1).padStart(2,'0')+'-'+f.id+'.png';
-    dl.textContent='Download PNG';
-    card.appendChild(imgEl);card.appendChild(lbl);card.appendChild(dl);
+  const grid = document.getElementById('exportGrid');
+  grid.innerHTML = '';
+
+  // Show ALL frames — enabled ones prominently, disabled ones dimmed
+  S.cycleFrames.forEach((f, i) => {
+    const dataUrl = f.canvas.toDataURL('image/png');
+    const card = document.createElement('div');
+    card.className = 'export-card';
+    if (!f.enabled) card.style.opacity = '0.45';
+
+    const imgEl = document.createElement('img');
+    imgEl.src = dataUrl; imgEl.alt = f.label;
+
+    const meta = document.createElement('div');
+    meta.style.cssText = 'display:flex;align-items:center;gap:6px;width:100%;';
+
+    const lbl = document.createElement('div');
+    lbl.className = 'card-label'; lbl.style.flex='1';
+    lbl.textContent = f.label;
+
+    const tags = document.createElement('div');
+    tags.style.cssText = 'display:flex;gap:4px;flex-shrink:0;';
+    if (f.enabled) {
+      const t = document.createElement('span');
+      t.style.cssText = 'font-size:9px;padding:2px 7px;border-radius:10px;background:var(--amber-dim);color:var(--amber2);letter-spacing:.08em;text-transform:uppercase;';
+      t.textContent = 'In sequence';
+      tags.appendChild(t);
+    }
+    if (f.wasPicked) {
+      const t = document.createElement('span');
+      t.style.cssText = 'font-size:9px;padding:2px 7px;border-radius:10px;background:var(--bg3);color:var(--amber);border:1px solid var(--amber-dim);letter-spacing:.08em;';
+      t.textContent = '★ Picked';
+      tags.appendChild(t);
+    }
+    meta.appendChild(lbl); meta.appendChild(tags);
+
+    const dl = document.createElement('a');
+    dl.href = dataUrl;
+    dl.download = 'wigglegram-' + String(i+1).padStart(2,'0') + '-' + f.id + '.png';
+    dl.textContent = 'Download PNG';
+
+    card.appendChild(imgEl); card.appendChild(meta); card.appendChild(dl);
     grid.appendChild(card);
   });
 }
