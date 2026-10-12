@@ -34,11 +34,11 @@
     };
 
     // Characters that don't fold to a plain letter with Unicode normalisation.
-    const FOLD = { 'æ': 'ae', 'Æ': 'Ae', 'þ': 'th', 'Þ': 'Th', 'ð': 'd', 'Ð': 'D', 'ƿ': 'w', 'Ƿ': 'W', 'ȝ': 'g', 'Ȝ': 'G', 'ß': 'ss', 'œ': 'oe', 'Œ': 'Oe', '⁊': 'and' };
+    const FOLD = { 'æ': 'ae', 'Æ': 'Ae', 'þ': 'th', 'Þ': 'Th', 'ð': 'd', 'Ð': 'D', 'ƿ': 'w', 'Ƿ': 'W', 'ȝ': 'g', 'Ȝ': 'G', 'ß': 'ss', 'œ': 'oe', 'Œ': 'Oe', '⁊': 'and', 'ꝥ': 'thaet', 'Ꝥ': 'Thaet' };
 
     /** Headword -> file name, keeping capitals: "æbylgð" -> "aebylgd", "Abkürzungen" -> "Abkurzungen". */
     function slugify(headword, n) {
-        let s = String(headword || '').trim().replace(/[æÆþÞðÐƿǷȝȜßœŒ⁊]/g, c => FOLD[c]);
+        let s = String(headword || '').trim().replace(/[æÆþÞðÐƿǷȝȜßœŒ⁊ꝥꝤ]/g, c => FOLD[c]);
         s = s.normalize('NFD').replace(/[̀-ͯ]/g, '');
         s = s.replace(/[^A-Za-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
         if (n) s += '-' + n;
