@@ -1,0 +1,168 @@
+---
+title: Bulk import
+section: contribute
+description: Turn a Word document of Wörterbuch entries into TEI files.
+scripts:
+  - "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"
+  - "ROOT/scripts/eliebermann.js"
+  - "ROOT/scripts/docx-import.js"
+  - "ROOT/data/markLaw.js"
+  - "ROOT/data/markforward.js"
+---
+{%- assign entry_files = site.static_files | where_exp: "f", "f.path contains '/entries/'" | where: "extname", ".xml" -%}
+<h1>Bulk import from Word</h1>
+
+<p class="lede">Choose a Word document of Wörterbuch entries, like the one the team transcribes into. This page splits it into entries, makes a TEI file for each, and gives you a zip of the files to add to the site. Everything happens in your browser; nothing is uploaded.</p>
+
+<div class="card">
+    <h2>1. Choose the document</h2>
+    <p><input type="file" id="docx" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"></p>
+    <details class="small">
+        <summary>How the document is read</summary>
+        <ul>
+            <li>Each entry is one paragraph that starts with its headword in <strong>bold</strong>. A superscript <sup><strong>L</strong></sup> or <sup><strong>F</strong></sup> before it marks Latin or French; a headword in <strong><em>bold italic</em></strong> is a grammatical term.</li>
+            <li>A paragraph that doesn't start with a bold headword carries on the entry before it (entries that run over a page or column).</li>
+            <li>A paragraph with only a number is the page number of the printed book, and the line after it is the running head. Both are used for the page numbers, not copied into entries.</li>
+            <li>Law codes and abbreviations are linked from <a href="lawAbb.html">the law code list</a> and <a href="gramAbb.html">the grammatical abbreviations</a>.</li>
+        </ul>
+        <p>The full rules are in <a href="https://github.com/notamitchell/law/blob/main/docs/IMPORT.md">docs/IMPORT.md</a>.</p>
+    </details>
+</div>
+
+<div id="summary"></div>
+
+<div id="results" hidden>
+    <div class="card">
+        <h2>2. Check the entries</h2>
+        <p>Entries marked <span class="status-warn">Check</span> may need a look before they go on the site. Click a headword to preview it.</p>
+        <div class="search-bar">
+            <select id="show" aria-label="Show">
+                <option value="all">All entries</option>
+                <option value="warn">Only entries to check</option>
+                <option value="new">Only new entries</option>
+                <option value="exists">Only entries already on the site</option>
+            </select>
+        </div>
+        <div class="table-wrap" style="max-height: 28rem; overflow-y: auto;">
+            <table>
+                <thead><tr><th>Page</th><th>Headword</th><th>Language</th><th>File</th><th>Status</th></tr></thead>
+                <tbody id="rows"></tbody>
+            </table>
+        </div>
+        <div id="preview"></div>
+    </div>
+
+    <div class="card">
+        <h2>3. Download the files</h2>
+        <p><label><input type="checkbox" id="replace"> Also replace entries that are already on the site</label><br>
+        <span class="small muted">Leave this off to keep entries people have already added to (translations, links).</span></p>
+        <p>
+            <button type="button" id="download">Download the TEI files (zip)</button>
+            <button type="button" class="secondary" id="report">Download the list of entries to check (CSV)</button>
+        </p>
+        <p class="small">To publish them, unzip and <a href="https://github.com/notamitchell/law/upload/main/entries" target="_blank" rel="noopener">upload the files to the entries folder on GitHub</a>. GitHub takes up to 100 files at a time, so the zip has them in folders of 100.</p>
+    </div>
+</div>
+
+<script>
+    const root = window.SITE_ROOT || '';
+    const esc = ELieb.escapeXml;
+    const FACSIMILE = {{ site.facsimile_url | jsonify }};
+    const SITE_ENTRIES = [{% for f in entry_files %}"{{ f.basename }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+    const $ = id => document.getElementById(id);
+    let entries = [], sourceName = '';
+
+    $('docx').addEventListener('change', async ev => {
+        const file = ev.target.files[0];
+        if (!file) return;
+        sourceName = file.name;
+        $('summary').innerHTML = '<p class="loading">Reading the document…</p>';
+        $('results').hidden = true;
+        try {
+            const zip = await JSZip.loadAsync(file);
+            const xml = await zip.file('word/document.xml').async('string');
+            const parsed = DocxImport.parse(xml);
+            entries = DocxImport.prepare(parsed.entries, SITE_ENTRIES, ELieb);
+            const today = new Date().toISOString().slice(0, 10);
+            entries.forEach(e => {
+                e.xml = ELieb.buildEntryXml({
+                    headword: e.headword,
+                    slug: e.slug,
+                    lang: e.lang,
+                    page: e.page,
+                    facsimile: e.page ? FACSIMILE.replace('{page}', e.page) : '',
+                    entryHtml: ELieb.linkAbbreviations(e.html, window.markLaw, window.markforward),
+                    seeAlso: e.seeAlso,
+                    change: { when: today, text: `Imported from ${sourceName}.` }
+                });
+            });
+            const fresh = entries.filter(e => !e.exists).length;
+            const flagged = entries.filter(e => e.warnings.length).length;
+            $('summary').innerHTML = `<p class="notice ok"><strong>${entries.length} entries</strong> found in ${esc(sourceName)}:
+                ${fresh} new, ${entries.length - fresh} already on the site, ${flagged} to check.
+                ${parsed.skipped.length ? `${parsed.skipped.length} paragraphs at the start weren't read as entries.` : ''}</p>`;
+            drawRows();
+            $('results').hidden = false;
+        } catch (err) {
+            console.error(err);
+            $('summary').innerHTML = `<p class="notice error">This file couldn't be read as a Word document (.docx).</p>`;
+        }
+    });
+
+    function drawRows() {
+        const show = $('show').value;
+        const list = entries.filter(e =>
+            show === 'all' || (show === 'warn' && e.warnings.length) || (show === 'new' && !e.exists) || (show === 'exists' && e.exists));
+        $('rows').innerHTML = list.map(e => `<tr>
+            <td>${e.page ?? ''}</td>
+            <td><a href="#" data-i="${entries.indexOf(e)}">${esc(e.headword)}</a></td>
+            <td>${ELieb.LANGUAGES[e.lang]}</td>
+            <td><code>${esc(e.slug)}.xml</code></td>
+            <td>${e.exists ? '<span class="status-exists">On the site</span>' : '<span class="status-new">New</span>'}
+                ${e.warnings.length ? `<br><span class="status-warn">Check: ${esc(e.warnings.join('; '))}</span>` : ''}</td>
+        </tr>`).join('');
+    }
+    $('show').addEventListener('change', drawRows);
+
+    $('rows').addEventListener('click', ev => {
+        const a = ev.target.closest('a[data-i]');
+        if (!a) return;
+        ev.preventDefault();
+        const e = entries[+a.dataset.i];
+        const doc = new DOMParser().parseFromString(e.xml, 'application/xml');
+        const r = ELieb.readEntry(doc);
+        $('preview').innerHTML = `<h3>${esc(r.headword)} <span class="lang-badge ${r.lang}">${esc(r.language)}</span> <span class="small muted">p. ${esc(r.page)}</span></h3>
+            <div class="liebermann-text">${ELieb.renderTei(r.original, root)}</div>
+            <details class="small"><summary>TEI</summary><textarea class="output-xml" readonly>${esc(e.xml)}</textarea></details>`;
+        $('preview').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+
+    $('download').addEventListener('click', async () => {
+        const chosen = entries.filter(e => !e.exists || $('replace').checked);
+        if (!chosen.length) { alert('There are no new entries to download.'); return; }
+        const zip = new JSZip();
+        chosen.forEach((e, i) => {
+            const folder = 'entries-' + String(Math.floor(i / 100) + 1).padStart(2, '0');
+            zip.file(`${folder}/${e.slug}.xml`, e.xml);
+        });
+        const blob = await zip.generateAsync({ type: 'blob' });
+        save(blob, sourceName.replace(/\.docx$/i, '') + ' - TEI.zip');
+    });
+
+    $('report').addEventListener('click', () => {
+        const cell = s => '"' + String(s ?? '').replace(/"/g, '""') + '"';
+        const lines = [['Page', 'Headword', 'Language', 'File', 'Already on the site', 'Check'].map(cell).join(',')]
+            .concat(entries.map(e => [e.page, e.headword, ELieb.LANGUAGES[e.lang], e.slug + '.xml', e.exists ? 'yes' : '', e.warnings.join('; ')].map(cell).join(',')));
+        save(new Blob(['﻿' + lines.join('\r\n')], { type: 'text/csv' }), sourceName.replace(/\.docx$/i, '') + ' - entries.csv');
+    });
+
+    function save(blob, name) {
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = name;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    }
+</script>

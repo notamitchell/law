@@ -1,0 +1,76 @@
+{%- assign root = page.root | default: "" -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title and page.title != "Home" %}{{ page.title }} · {% endif %}eLiebermann: An Online Dictionary of Pre-Conquest English Law</title>
+    {%- if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    {%- endif %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ root }}style.css?v={{ site.time | date: '%s' }}">
+    {%- for sheet in page.stylesheets %}
+    <link rel="stylesheet" href="{{ sheet }}">
+    {%- endfor %}
+    <script>window.SITE_ROOT = "{{ root }}";</script>
+    {%- for script in page.scripts %}
+    <script src="{{ script | replace: 'ROOT/', root }}"></script>
+    {%- endfor %}
+</head>
+<body class="{% if page.full_width %}full-width{% endif %}{% if page.section == "home" %} home{% endif %}">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <a class="site-banner" href="{{ root }}index.html">
+            <img src="{{ root }}images/banner.png" alt="eLiebermann">
+        </a>
+        <p class="site-subtitle">An Online Dictionary of Pre-Conquest English Law</p>
+    </header>
+
+    <nav class="main-nav" aria-label="Main">
+        <ul>
+            {%- for item in site.data.navigation.main %}
+            <li><a href="{{ root }}{{ item.url }}"{% if page.section == item.section %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+            {%- endfor %}
+        </ul>
+    </nav>
+
+    {%- assign subnav = site.data.navigation.sections[page.section] %}
+    {%- if subnav %}
+    <nav class="sub-nav" aria-label="{{ page.section | capitalize }}">
+        <ul>
+            {%- for item in subnav %}
+            {%- assign here = page.url | remove_first: "/" | remove: "index.html" %}
+            {%- assign there = item.url | remove: "index.html" %}
+            <li><a href="{{ root }}{{ item.url }}"{% if here == there %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+            {%- endfor %}
+        </ul>
+    </nav>
+    {%- endif %}
+
+    {%- unless page.hide_notice %}
+    <aside class="wip-notice" aria-label="Work in progress">
+        <span class="wip-badge">Work in progress</span>
+        eLiebermann is being built entry by entry. Gaps are entries nobody has added yet, not mistakes.
+    </aside>
+    {%- endunless %}
+
+    <main id="main" class="main-content" tabindex="-1">
+        {{ content }}
+    </main>
+
+    <footer class="site-footer">
+        <ul>
+            {%- for item in site.data.navigation.main %}
+            <li><a href="{{ root }}{{ item.url }}">{{ item.title }}</a></li>
+            {%- endfor %}
+            <li><a href="https://github.com/notamitchell/law">Code and data on GitHub</a></li>
+        </ul>
+        <p>Based on F. Liebermann, <cite>Die Gesetze der Angelsachsen</cite> (Halle, 1903–1916).</p>
+    </footer>
+
+</body>
+</html>

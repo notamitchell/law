@@ -1,0 +1,288 @@
+---
+title: Add an entry
+section: contribute
+description: Turn an entry from Liebermann's Wörterbuch into a TEI file for the dictionary.
+stylesheets:
+  - "https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css"
+scripts:
+  - "https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"
+  - "ROOT/scripts/eliebermann.js"
+  - "ROOT/data/markLaw.js"
+  - "ROOT/data/markforward.js"
+---
+<h1 id="form-title">Add an entry</h1>
+
+<p class="lede">Paste one entry from the Wörterbuch, add what you know, and this page makes the TEI file for it. Nothing is published from here: the file is saved to your computer, and an editor adds it to the site.</p>
+
+<p class="small">Have a whole Word document of entries? Use <a href="import.html">Bulk import</a> instead.</p>
+
+<div class="card">
+    <h2>1. The entry</h2>
+    <div class="field">
+        <label for="editor-container">Full entry text</label>
+        <span class="hint">Paste the whole entry for one word, keeping bold, italic and superscript (the L or F before Latin and French words).</span>
+        <div id="editor-container" class="editor"></div>
+    </div>
+    <div class="two-col">
+        <div class="field">
+            <label for="headword">Headword</label>
+            <span class="hint">Filled in from the entry. Change it if it's wrong.</span>
+            <input type="text" id="headword">
+        </div>
+        <div class="field">
+            <label for="language">Language</label>
+            <span class="hint">Worked out from the entry's formatting.</span>
+            <select id="language">
+                <option value="ang">Old English</option>
+                <option value="la">Latin</option>
+                <option value="fro">French</option>
+                <option value="de">Grammatical term</option>
+            </select>
+        </div>
+        <div class="field">
+            <label for="page_number">Page number</label>
+            <span class="hint">As printed in the volume, not the page of the PDF.</span>
+            <input type="text" id="page_number" inputmode="numeric">
+        </div>
+        <div class="field">
+            <label for="archivePageLink">Link to the page scan</label>
+            <span class="hint">Filled in from the page number (archive.org). Replace it if the scan is elsewhere.</span>
+            <input type="url" id="archivePageLink">
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>2. Definition and translation <span class="small muted">(optional)</span></h2>
+    <div class="field">
+        <label>Liebermann's definition</label>
+        <span class="hint">His meanings, in German. Use a numbered list for numbered senses.</span>
+        <div id="liebermannDefinition-container" class="editor"></div>
+    </div>
+    <div class="field">
+        <label>English translation</label>
+        <span class="hint">Use a numbered list to match numbered senses.</span>
+        <div id="english-container" class="editor"></div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>3. Links <span class="small muted">(optional)</span></h2>
+    <div class="field">
+        <label>See also</label>
+        <span class="hint">Other headwords in this dictionary.</span>
+        <div id="see_links_container"></div>
+        <button type="button" class="secondary" onclick="addLinkRow('see')">+ Add a headword</button>
+    </div>
+    <div class="field">
+        <label>Bosworth-Toller</label>
+        <div id="bt_links_container"></div>
+        <button type="button" class="secondary" onclick="addLinkRow('bt')">+ Add a Bosworth-Toller link</button>
+    </div>
+    <div class="field">
+        <label>Dictionary of Old English</label>
+        <div id="doe_links_container"></div>
+        <button type="button" class="secondary" onclick="addLinkRow('doe')">+ Add a DOE link</button>
+    </div>
+    <div class="field">
+        <label>Wiktionary</label>
+        <div id="wiktionary_links_container"></div>
+        <button type="button" class="secondary" onclick="addLinkRow('wiktionary')">+ Add a Wiktionary link</button>
+    </div>
+    <div class="field">
+        <label>Law code citations</label>
+        <span class="hint">For example "VI As 1,1". Add a link if the passage is online.</span>
+        <div id="lawCode_links_container"></div>
+        <button type="button" class="secondary" onclick="addLinkRow('lawCode')">+ Add a citation</button>
+    </div>
+</div>
+
+<p><button type="button" onclick="processEntry()">Make the TEI file</button></p>
+
+<div id="result" hidden>
+    <h2>Preview</h2>
+    <div id="checks"></div>
+    <div class="card"><div id="preview"></div></div>
+
+    <h2>The TEI file</h2>
+    <p>Save it as <code id="filename"></code>, then <a href="https://github.com/notamitchell/law/upload/main/entries" target="_blank" rel="noopener">upload it to the entries folder on GitHub</a> (or send it to an editor).</p>
+    <p>
+        <button type="button" onclick="downloadXml()">Download the file</button>
+        <button type="button" class="secondary" onclick="copyXml(this)">Copy the XML</button>
+    </p>
+    <textarea id="output_xml" class="output-xml" spellcheck="false" aria-label="TEI XML"></textarea>
+
+    <details class="small">
+        <summary>A law code or abbreviation isn't linked?</summary>
+        <p>Check that the spelling is in <a href="https://github.com/notamitchell/law/blob/main/data/markLaw.js">markLaw.js</a> (law codes and manuscripts) or <a href="https://github.com/notamitchell/law/blob/main/data/markforward.js">markforward.js</a> (abbreviations). There may be a variant that isn't listed, such as "3.Pers" for "3. Pers". If the variant will come up again, add it to the right file; otherwise edit the XML above by hand.</p>
+        <p>Law codes are only linked in roman (upright) type, because Liebermann's italics are German: <em>Abt</em> is "abbot", not the laws of Æthelberht.</p>
+    </details>
+</div>
+
+<script>
+    const root = window.SITE_ROOT || '';
+    const FACSIMILE = {{ site.facsimile_url | jsonify }};
+    const esc = ELieb.escapeXml;
+
+    // The data files call these with their rows.
+    var markLaw = window.markLaw || [];
+    var markforward = window.markforward || [];
+
+    const quill = new Quill('#editor-container', {
+        modules: { toolbar: [['bold', 'italic'], [{ script: 'super' }]] },
+        formats: ['bold', 'italic', 'script'],
+        theme: 'snow'
+    });
+    const listToolbar = [['bold', 'italic'], [{ script: 'super' }], [{ list: 'ordered' }, { list: 'bullet' }]];
+    const quillDefinition = new Quill('#liebermannDefinition-container', { modules: { toolbar: listToolbar }, formats: ['bold', 'italic', 'script', 'list'], theme: 'snow' });
+    const quillEnglish = new Quill('#english-container', { modules: { toolbar: listToolbar }, formats: ['bold', 'italic', 'script', 'list'], theme: 'snow' });
+
+    let headwordEdited = false, languageEdited = false, scanEdited = false;
+    const $ = id => document.getElementById(id);
+    $('headword').addEventListener('input', () => { headwordEdited = true; });
+    $('language').addEventListener('change', () => { languageEdited = true; });
+    $('archivePageLink').addEventListener('input', () => { scanEdited = true; });
+    $('page_number').addEventListener('input', () => {
+        if (!scanEdited) $('archivePageLink').value = $('page_number').value.trim() ? FACSIMILE.replace('{page}', encodeURIComponent($('page_number').value.trim())) : '';
+    });
+
+    // Fill in the headword and language from the pasted entry.
+    quill.on('text-change', () => {
+        const html = quill.root.innerHTML;
+        const found = ELieb.detectHeadword(quill.getText());
+        if (!headwordEdited) $('headword').value = found.headword;
+        if (!languageEdited) $('language').value = ELieb.detectLanguage(html);
+    });
+
+    function addLinkRow(kind, text, url) {
+        const row = document.createElement('p');
+        row.className = 'link-row';
+        row.dataset.kind = kind;
+        row.innerHTML = kind === 'see'
+            ? `<input type="text" class="link-text" placeholder="Headword, e.g. æbære" aria-label="Headword">`
+            : `<input type="text" class="link-text" placeholder="Link text, e.g. boc-land" aria-label="Link text">
+               <input type="url" class="link-url" placeholder="https://…" aria-label="Link address">`;
+        row.innerHTML += `<button type="button" class="secondary" aria-label="Remove" onclick="this.parentNode.remove()">−</button>`;
+        $(kind + '_links_container').appendChild(row);
+        if (text) row.querySelector('.link-text').value = text;
+        if (url && row.querySelector('.link-url')) row.querySelector('.link-url').value = url;
+    }
+    ['see', 'bt', 'doe', 'wiktionary', 'lawCode'].forEach(k => addLinkRow(k));
+
+    function rows(kind) {
+        return [...document.querySelectorAll(`#${kind}_links_container .link-row`)].map(r => ({
+            text: r.querySelector('.link-text').value.trim(),
+            url: r.querySelector('.link-url') ? r.querySelector('.link-url').value.trim() : ''
+        })).filter(l => l.text || l.url);
+    }
+
+    let currentXml = '', currentFile = '';
+
+    function processEntry() {
+        const entryHtml = quill.root.innerHTML;
+        const checks = [];
+        if (ELieb.isEmptyHtml(entryHtml)) {
+            alert('Paste the entry text first.');
+            return;
+        }
+        const headword = $('headword').value.trim();
+        if (!headword) { alert('Add the headword.'); return; }
+        const slug = ELieb.slugify(headword);
+        if (!$('page_number').value.trim()) checks.push('There is no page number.');
+
+        currentXml = ELieb.buildEntryXml({
+            headword,
+            lang: $('language').value,
+            page: $('page_number').value.trim(),
+            facsimile: $('archivePageLink').value.trim(),
+            entryHtml: ELieb.linkAbbreviations(entryHtml, markLaw, markforward),
+            definitionHtml: ELieb.linkAbbreviations(quillDefinition.root.innerHTML, markLaw, markforward),
+            translationHtml: quillEnglish.root.innerHTML,
+            seeAlso: rows('see').map(l => ({ text: l.text, slug: ELieb.slugify(l.text) })),
+            links: { bt: rows('bt'), doe: rows('doe'), wiktionary: rows('wiktionary'), lawCode: rows('lawCode') },
+            change: editing
+                ? { when: new Date().toISOString().slice(0, 10), text: 'Edited with the contribution form.' }
+                : undefined,
+            earlierChanges: editing ? earlierChanges : []
+        });
+        currentFile = slug + '.xml';
+
+        const doc = new DOMParser().parseFromString(currentXml, 'application/xml');
+        if (doc.getElementsByTagName('parsererror').length) checks.push('The XML is not well formed. Please tell an editor.');
+        const e = ELieb.readEntry(doc);
+        $('preview').innerHTML = `<h3 style="margin-top:0">${esc(e.headword)} <span class="lang-badge ${e.lang}">${esc(e.language)}</span></h3>
+            <div class="liebermann-text">${ELieb.renderTei(e.original, root)}</div>`;
+        $('output_xml').value = currentXml;
+        $('filename').textContent = currentFile;
+        $('result').hidden = false;
+
+        fetch(root + 'entries/' + encodeURIComponent(currentFile), { method: 'HEAD' }).then(r => {
+            if (r.ok && slug !== editing) checks.push(`There is already an entry called <a href="${root}entry.html?id=${encodeURIComponent(slug)}">${esc(currentFile)}</a>. Uploading this file replaces it; if it's a different word with the same spelling, ask an editor.`);
+        }).catch(() => {}).finally(() => {
+            $('checks').innerHTML = checks.map(c => `<p class="notice warn">${c}</p>`).join('');
+            $('result').scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+
+    function downloadXml() {
+        const blob = new Blob([currentXml], { type: 'application/xml' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = currentFile;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    }
+
+    function copyXml(button) {
+        navigator.clipboard.writeText($('output_xml').value).then(() => {
+            button.textContent = 'Copied';
+            setTimeout(() => { button.textContent = 'Copy the XML'; }, 2000);
+        });
+    }
+
+    // contribute.html?id=abbod opens an existing entry for editing;
+    // contribute.html?headword=… starts a new one.
+    const params = new URLSearchParams(location.search);
+    let editing = '', earlierChanges = [];
+    if (params.get('headword')) { $('headword').value = params.get('headword'); headwordEdited = true; }
+    if (params.get('id')) loadEntry(params.get('id'));
+
+    function loadEntry(id) {
+        fetch(root + 'entries/' + encodeURIComponent(id) + '.xml').then(r => r.ok ? r.text() : Promise.reject()).then(text => {
+            const e = ELieb.readEntry(new DOMParser().parseFromString(text, 'application/xml'));
+            editing = id;
+            earlierChanges = e.changes;
+            $('form-title').textContent = 'Edit ' + e.headword;
+            document.title = 'Edit ' + e.headword + ' · eLiebermann';
+            // Links are added again when the file is made, so paste plain formatting.
+            const plain = html => html.replace(/<span class="pb"[^>]*>.*?<\/span>/g, '').replace(/<\/?(a|abbr)\b[^>]*>/g, '');
+            quill.clipboard.dangerouslyPasteHTML('<p>' + plain(ELieb.renderTei(e.original, '')) + '</p>');
+            const toHtml = sense => {
+                if (!sense) return '';
+                const subs = [...sense.children].filter(c => c.localName === 'sense');
+                if (subs.length) return '<ol>' + subs.map(s => '<li>' + plain(ELieb.renderTei([...s.children].find(c => c.localName === 'def') || s, '')) + '</li>').join('') + '</ol>';
+                return '<p>' + plain(ELieb.renderTei([...sense.children].find(c => c.localName === 'def') || sense, '')) + '</p>';
+            };
+            if (e.definition) quillDefinition.clipboard.dangerouslyPasteHTML(toHtml(e.definition));
+            if (e.translation) quillEnglish.clipboard.dangerouslyPasteHTML(toHtml(e.translation));
+            $('headword').value = e.headword; headwordEdited = true;
+            $('language').value = e.lang; languageEdited = true;
+            $('page_number').value = e.page;
+            $('archivePageLink').value = e.facsimile; scanEdited = !!e.facsimile;
+            const kinds = { see: 'see', bosworthToller: 'bt', doe: 'doe', wiktionary: 'wiktionary', lawCode: 'lawCode' };
+            const used = new Set();
+            e.xr.forEach(x => {
+                const kind = kinds[x.getAttribute('type')];
+                if (!kind) return;
+                if (!used.has(kind)) { $(kind + '_links_container').innerHTML = ''; used.add(kind); }
+                const ref = [...x.children].find(c => c.localName === 'ref');
+                const target = ref ? ref.getAttribute('target') || '' : '';
+                addLinkRow(kind, (ref || x).textContent.trim(), /^https?:/.test(target) ? target : '');
+            });
+        }).catch(() => {
+            $('form-title').insertAdjacentHTML('afterend', `<p class="notice error">Couldn't open the entry “${esc(id)}”.</p>`);
+        });
+    }
+</script>

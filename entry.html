@@ -1,0 +1,101 @@
+---
+title: Entry
+section: dictionary
+scripts:
+  - "ROOT/scripts/eliebermann.js"
+---
+<article id="entry"><p class="loading">Loading entry…</p></article>
+
+<script>
+(function () {
+    const root = window.SITE_ROOT || '';
+    const target = document.getElementById('entry');
+    const id = new URLSearchParams(location.search).get('id') || '';
+    const esc = ELieb.escapeXml;
+    // Accept a headword as well as a file name: "æbære" finds aebaere.xml.
+    const slug = /^[A-Za-z0-9-]+$/.test(id) ? id : ELieb.slugify(id);
+
+    if (!slug) {
+        target.innerHTML = `<h1>No entry chosen</h1><p>Find one in the <a href="${root}dictionary.html">Dictionary</a>.</p>`;
+        return;
+    }
+
+    fetch(root + 'entries/' + encodeURIComponent(slug) + '.xml')
+        .then(r => { if (!r.ok) throw new Error('missing'); return r.text(); })
+        .then(text => {
+            const doc = new DOMParser().parseFromString(text, 'application/xml');
+            if (doc.getElementsByTagName('parsererror').length) throw new Error('parse');
+            const e = ELieb.readEntry(doc);
+            document.title = e.headword + ' · eLiebermann';
+            target.innerHTML = render(e);
+        })
+        .catch(err => {
+            target.innerHTML = err.message === 'missing'
+                ? `<h1>${esc(id)}</h1>
+                   <p class="notice">There's no entry for <strong>${esc(id)}</strong> yet.
+                   You can <a href="${root}contribute.html?headword=${encodeURIComponent(id)}">add it</a>,
+                   or look for it in the <a href="${root}dictionary.html?q=${encodeURIComponent(id)}">Dictionary</a>.</p>`
+                : `<h1>${esc(id)}</h1><p class="notice error">This entry's file couldn't be read. Its XML may be malformed: <a href="${root}entries/${encodeURIComponent(slug)}.xml">view the file</a>.</p>`;
+        });
+
+    function senses(el) {
+        if (!el) return '';
+        const subs = [...el.children].filter(c => c.localName === 'sense');
+        if (subs.length) {
+            return '<ol>' + subs.map(s => {
+                const def = [...s.children].find(c => c.localName === 'def');
+                return `<li value="${esc(s.getAttribute('n') || '')}">${ELieb.renderTei(def || s, root)}</li>`;
+            }).join('') + '</ol>';
+        }
+        const def = [...el.children].find(c => c.localName === 'def');
+        return `<p class="def">${ELieb.renderTei(def || el, root)}</p>`;
+    }
+
+    function xrList(e, type) {
+        return e.xr.filter(x => x.getAttribute('type') === type)
+            .map(x => `<li>${ELieb.renderTei(x, root)}</li>`).join('');
+    }
+
+    function render(e) {
+        const see = xrList(e, 'see');
+        const links = [['bosworthToller', 'Bosworth-Toller'], ['doe', 'Dictionary of Old English'], ['wiktionary', 'Wiktionary']]
+            .map(([type, label]) => { const items = xrList(e, type); return items ? `<li>${label}<ul>${items}</ul></li>` : ''; })
+            .join('');
+        const citations = xrList(e, 'lawCode');
+        const page = e.page ? `Liebermann, <cite>Gesetze</cite> II.1, p. ${esc(e.page)}` : '';
+        const changes = e.changes.map(c => `${esc(c.when)}: ${esc(c.text.replace(/\.$/, ''))}`).join('; ');
+
+        return `
+        <header class="entry-header">
+            <h1>${esc(e.headword)}${e.n ? ` <sup>${esc(e.n)}</sup>` : ''}</h1>
+            <div class="meta">
+                <span class="lang-badge ${e.lang}">${esc(e.language)}</span>
+                ${page ? `<span>${page}${e.facsimile ? ` · <a href="${esc(e.facsimile)}" target="_blank" rel="noopener">page scan</a>` : ''}</span>` : ''}
+            </div>
+        </header>
+
+        <section class="entry-section">
+            <h2>Liebermann's entry</h2>
+            <div class="liebermann-text">${e.original ? ELieb.renderTei(e.original, root) : ''}</div>
+            <p class="small muted">Law codes and manuscripts link to the <a href="${root}lawAbb.html">law code list</a>; German abbreviations link to the <a href="${root}gramAbb.html">grammatical abbreviations</a>. ~ stands for the headword.</p>
+        </section>
+
+        ${e.definition || e.translation ? `
+        <div class="two-col">
+            ${e.definition ? `<section class="entry-section"><h2>Liebermann's definition</h2>${senses(e.definition)}</section>` : ''}
+            ${e.translation ? `<section class="entry-section"><h2>English translation</h2>${senses(e.translation)}</section>` : ''}
+        </div>` : ''}
+
+        ${see ? `<section class="entry-section"><h2>See also</h2><ul>${see}</ul></section>` : ''}
+        ${links ? `<section class="entry-section"><h2>Other dictionaries</h2><ul>${links}</ul></section>` : ''}
+        ${citations ? `<section class="entry-section"><h2>Law code citations</h2><ul>${citations}</ul></section>` : ''}
+
+        <p class="source-line">
+            ${page ? page + '. ' : ''}${changes ? `History: ${changes}. ` : ''}
+            <a href="${root}contribute.html?id=${encodeURIComponent(slug)}">Suggest a correction</a> ·
+            <a href="${root}entries/${encodeURIComponent(slug)}.xml">View the TEI file</a> ·
+            <a href="https://github.com/notamitchell/law/blob/main/entries/${encodeURIComponent(slug)}.xml">Edit on GitHub</a>
+        </p>`;
+    }
+})();
+</script>

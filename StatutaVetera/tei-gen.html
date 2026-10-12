@@ -1,68 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEI Manuscript Header Generator</title>
-    <style>
-        body { font-family: -apple-system, sans-serif; line-height: 1.4; padding: 20px; max-width: 1000px; margin: 0 auto; background-color: #f0f2f5; }
-        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        h1 { color: #1a73e8; margin-top: 0; }
-        h2 { font-size: 1.1em; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 20px; color: #555; }
-        textarea { width: 100%; height: 100px; margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-family: monospace; }
-        .form-grid { display: grid; grid-template-columns: 120px 1fr 120px 1fr; gap: 10px; align-items: center; }
-        .form-grid label { font-weight: bold; font-size: 0.85em; }
-        .form-grid input { padding: 8px; border: 1px solid #ddd; border-radius: 4px; width: 100%; box-sizing: border-box; }
-        .span-3 { grid-column: span 3; }
-        button { background-color: #1a73e8; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; margin-right: 5px; }
-        button:hover { background-color: #1557b0; }
-        #output { background-color: #1e1e1e; color: #d4d4d4; height: 350px; font-size: 0.9em; }
-        .filename-container { background: #e8f0fe; padding: 15px; border-radius: 4px; border: 1px dashed #1a73e8; margin-top: 10px; display: flex; align-items: center; gap: 10px; }
-        #filenameDisplay { font-family: monospace; font-weight: bold; color: #1557b0; }
-    </style>
-</head>
-<body>
+---
+title: Manuscript description generator
+---
+<h1>Manuscript description generator</h1>
 
-    <h1>TEI Manuscript Generator</h1>
+<p class="lede">Turn a catalogue description of a <em>Statuta Vetera</em> manuscript into a TEI file for the <a href="index.html">manuscript search</a>.</p>
 
-    <div class="card">
-        <h2>1. Paste Source Text</h2>
-        <textarea id="rawInput" placeholder="Cambridge, Trinity College MS O.2.58..."></textarea>
-        <button onclick="extractData()">Process Text &rarr;</button>
+<div class="card">
+    <h2>1. Paste the description</h2>
+    <textarea id="rawInput" rows="6" placeholder="Cambridge, Trinity College MS O.2.58…"></textarea>
+    <p><button type="button" onclick="extractData()">Fill in the form →</button></p>
+</div>
+
+<div class="card">
+    <h2>2. Check the details</h2>
+    <div class="two-col">
+        <div class="field"><label for="f_settlement">Place</label><input type="text" id="f_settlement"></div>
+        <div class="field"><label for="f_repository">Library</label><input type="text" id="f_repository"></div>
+        <div class="field"><label for="f_idno">Shelfmark</label><input type="text" id="f_idno"></div>
+        <div class="field"><label for="f_extent">Extent (ff.)</label><input type="text" id="f_extent"></div>
     </div>
-
-    <div class="card">
-        <h2>2. Refine Form Data</h2>
-        <div class="form-grid">
-            <label>Settlement</label><input type="text" id="f_settlement" class="span-3">
-            <label>Repository</label><input type="text" id="f_repository" class="span-3">
-            <label>ID Number</label><input type="text" id="f_idno" class="span-3">
-            <label>Content (i.e. other Title in TEI)</label><input type="text" id="f_title" class="span-3">
-            <label>Extent (ff)</label><input type="text" id="f_extent">
-            <div style="grid-column: span 2;"></div>
-            <label>Leaf Height</label><input type="text" id="f_lHeight">
-            <label>Leaf Width</label><input type="text" id="f_lWidth">
-            <label>Text Height</label><input type="text" id="f_tHeight">
-            <label>Text Width</label><input type="text" id="f_tWidth">
-            <label>Provenance</label><input type="text" id="f_provenance" class="span-3">
-            <label>Bibliography</label><input type="text" id="f_bibl" class="span-3">
-        </div>
-        <br>
-        <button onclick="generateTEI()" style="background-color: #28a745;">Generate Final TEI XML</button>
+    <div class="field"><label for="f_title">Contents</label><input type="text" id="f_title" style="width:100%"></div>
+    <div class="two-col">
+        <div class="field"><label for="f_lHeight">Leaf height (mm)</label><input type="text" id="f_lHeight"></div>
+        <div class="field"><label for="f_lWidth">Leaf width (mm)</label><input type="text" id="f_lWidth"></div>
+        <div class="field"><label for="f_tHeight">Written height (mm)</label><input type="text" id="f_tHeight"></div>
+        <div class="field"><label for="f_tWidth">Written width (mm)</label><input type="text" id="f_tWidth"></div>
     </div>
+    <div class="field"><label for="f_provenance">Provenance</label><input type="text" id="f_provenance" style="width:100%"></div>
+    <div class="field"><label for="f_bibl">Bibliography</label><input type="text" id="f_bibl" style="width:100%"></div>
+    <p><button type="button" onclick="generateTEI()">Make the TEI file</button></p>
+</div>
 
-    <div class="card">
-        <h2>3. Generated TEI Output</h2>
-        <textarea id="output" readonly></textarea>
-        
-        <div class="filename-container">
-            <span>Suggested Filename:</span>
-            <span id="filenameDisplay">Pending...</span>
-        </div>
-        <br>
-        <button onclick="copyToClipboard()">Copy XML</button>
-        <p>Now save this XML file to your machine. Then upload to github (https://github.com/notamitchell/law/tree/main/tei).</p>
-    </div>
+<div class="card">
+    <h2>3. The TEI file</h2>
+    <textarea id="output" class="output-xml" readonly aria-label="TEI XML"></textarea>
+    <p>Save it as <code id="filenameDisplay">…</code>, then <a href="https://github.com/notamitchell/law/upload/main/tei" target="_blank" rel="noopener">upload it to the tei folder on GitHub</a>.</p>
+    <p>
+        <button type="button" onclick="downloadXML()">Download the file</button>
+        <button type="button" class="secondary" onclick="copyToClipboard(this)">Copy the XML</button>
+    </p>
+</div>
 
 <script>
     function extractData() {
@@ -101,7 +78,7 @@
             .replace(/^-|-$/g, '')     // Trim hyphens from ends
             + '.xml';
         
-        document.getElementById('filenameDisplay').innerText = safeFilename;
+        document.getElementById('filenameDisplay').textContent = safeFilename;
 
         const formattedBody = rawText.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').split('\n').join('<lb/>\n        ');
         
@@ -173,16 +150,16 @@
         document.getElementById('output').value = tei;
     }
 
-    function copyToClipboard() {
-        const output = document.getElementById('output');
-        output.select();
-        document.execCommand('copy');
-        alert("XML copied!");
+    function copyToClipboard(button) {
+        navigator.clipboard.writeText(document.getElementById('output').value).then(() => {
+            button.textContent = 'Copied';
+            setTimeout(() => { button.textContent = 'Copy the XML'; }, 2000);
+        });
     }
 
     function downloadXML() {
         const text = document.getElementById('output').value;
-        const filename = document.getElementById('filenameDisplay').innerText;
+        const filename = document.getElementById('filenameDisplay').textContent;
         if (!text) { alert("Please generate the TEI first!"); return; }
         
         const element = document.createElement('a');
@@ -194,5 +171,3 @@
         document.body.removeChild(element);
     }
 </script>
-</body>
-</html>

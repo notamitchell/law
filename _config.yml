@@ -1,0 +1,36 @@
+title: "eLiebermann"
+description: "An Online Dictionary of Pre-Conquest English Law"
+theme: jekyll-theme-cayman
+
+# Where the TEI files live (see docs/SCHEMA.md).
+entries_dir: entries       # dictionary entries, one file per headword
+pages_dir: pages           # site pages kept as TEI (Home, About)
+manuscripts_dir: tei       # Statuta Vetera manuscript descriptions
+
+# The page of the printed Wörterbuch on archive.org; {page} is replaced
+# with the page number.
+facsimile_url: "https://archive.org/details/diegesetzederang02liebuoft/page/{page}/mode/2up"
+
+exclude:
+  - README.md
+  - docs/
+  - tools/
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      root: ""
+  # Pages one folder down need "../" to reach the site root.
+  - scope:
+      path: "StatutaVetera"
+    values:
+      root: "../"
+      section: statuta
