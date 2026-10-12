@@ -465,17 +465,27 @@ ${translation}
         };
     }
 
-    // The data files (data/markLaw.js, data/markforward.js) call these.
-    // Pages with their own handlers (lawAbb.html, gramAbb.html) define them first.
-    if (typeof window !== 'undefined') {
-        if (!window.markLawJSONP) window.markLawJSONP = rows => { window.markLaw = rows; };
-        if (!window.markforwardJSONP) window.markforwardJSONP = rows => { window.markforward = rows; };
+    /**
+     * Loads the law codes (data/markLaw.json) and abbreviations
+     * (data/markforward.json) for linkAbbreviations(), once per page.
+     * Resolves to { markLaw, markforward }; a file that can't be read gives [].
+     */
+    let abbreviations = null;
+    function loadAbbreviations(root) {
+        const get = file => fetch((root || '') + 'data/' + file)
+            .then(r => { if (!r.ok) throw new Error(file + ': ' + r.status); return r.json(); })
+            .catch(err => { console.error(err); return []; });
+        if (!abbreviations) {
+            abbreviations = Promise.all([get('markLaw.json'), get('markforward.json')])
+                .then(([markLaw, markforward]) => ({ markLaw, markforward }));
+        }
+        return abbreviations;
     }
 
     const api = {
         TEI_NS, LANGUAGES, LANGUAGE_CODES,
         useDom, slugify, sortKey, escapeXml,
-        linkAbbreviations, detectLanguage, detectHeadword,
+        linkAbbreviations, loadAbbreviations, detectLanguage, detectHeadword,
         inlineToTei, isEmptyHtml, buildEntryXml,
         renderTei, resolveTarget, readEntry
     };

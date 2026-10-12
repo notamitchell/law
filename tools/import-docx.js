@@ -15,7 +15,6 @@
  */
 const fs = require('fs');
 const path = require('path');
-const vm = require('vm');
 const { JSDOM } = require('jsdom');
 const JSZip = require('jszip');
 
@@ -23,10 +22,8 @@ const repo = path.resolve(__dirname, '..');
 const ELieb = require(path.join(repo, 'scripts/eliebermann.js'));
 const DocxImport = require(path.join(repo, 'scripts/docx-import.js'));
 
-function loadJsonp(file, callback) {
-    let data = [];
-    vm.runInNewContext(fs.readFileSync(path.join(repo, file), 'utf8'), { [callback]: d => { data = d; } });
-    return data;
+function loadJson(file) {
+    return JSON.parse(fs.readFileSync(path.join(repo, file), 'utf8'));
 }
 
 async function main() {
@@ -45,8 +42,8 @@ async function main() {
 
     const zip = await JSZip.loadAsync(fs.readFileSync(docx));
     const documentXml = await zip.file('word/document.xml').async('string');
-    const markLaw = loadJsonp('data/markLaw.js', 'markLawJSONP');
-    const markforward = loadJsonp('data/markforward.js', 'markforwardJSONP');
+    const markLaw = loadJson('data/markLaw.json');
+    const markforward = loadJson('data/markforward.json');
 
     const entriesDir = path.join(repo, 'entries');
     const existing = fs.readdirSync(entriesDir).filter(f => f.endsWith('.xml')).map(f => f.replace(/\.xml$/, ''));

@@ -39,14 +39,15 @@ The site is built with Jekyll and GitHub Pages, on the model of [Common Ground](
 | Test files (`markdownTest.md`, `citations/adair.html`, `commentary5/`) | Deleted. |
 | Statuta Vetera pages | Same addresses, in the site layout, with no GitHub API calls: the file lists are built in when the site is built. Each manuscript has its own page (`StatutaVetera/manuscript.html?id=…`). The viewer's volumes are listed in `_data/statutes_volumes.yml`. |
 | `style.css` | Rewritten as one stylesheet for every page. |
+| `data/markLaw.js`, `data/markforward.js` (JSONP) | `data/markLaw.json`, `data/markforward.json`: plain JSON, one row per line. |
 | Static deploy | `.github/workflows/static.yml` now lists the entries (`tools/build-index.js`) and builds with Jekyll before deploying. |
 
 The old entry addresses (`entries/abbod.html`) no longer work. Nothing on the site linked to them.
 
 ## Data problems
 
-- **`data/markLaw.js`: the notes are one row out.** The "Notes: Information & Editions" and "Notes: Start page in Liebermann Vol. I" columns describe the *next* law code. For example, the row for *Abt* (Æthelberht) has start page 16, which is where Alfred begins; *Af* (Alfred) has 126, the start of Alfred and Guthrum; the *CHn cor* row's note is about *Cn 1020*; the *Hn Mon* row's note is about I Edgar. Probably a spreadsheet sort that left these columns behind. The law code list now shows both columns, shaded and marked "under review", so they can be checked against the rows they belong to; tick *Show every row in one table, in file order* to see the shift. Fix them in `data/markLaw.js`, then remove `review: true` from those columns in `scripts/abbreviations.js`.
-- **Trailing spaces** in `'VII Atr '`, `'Excom VII '` and 22 rows of `markforward.js`. The linker now ignores them.
+- **`data/markLaw.json`: the notes are one row out.** The "Notes: Information & Editions" and "Notes: Start page in Liebermann Vol. I" columns describe the *next* law code. For example, the row for *Abt* (Æthelberht) has start page 16, which is where Alfred begins; *Af* (Alfred) has 126, the start of Alfred and Guthrum; the *CHn cor* row's note is about *Cn 1020*; the *Hn Mon* row's note is about I Edgar. Probably a spreadsheet sort that left these columns behind. The law code list now shows both columns, shaded and marked "under review", so they can be checked against the rows they belong to; tick *Show every row in one table, in file order* to see the shift. Fix them in `data/markLaw.json`, then remove `review: true` from those columns in `scripts/abbreviations.js`.
+- **Trailing spaces** in `'VII Atr '`, `'Excom VII '` and 22 rows of `markforward.json`. The linker now ignores them.
 - **Single-letter sigla** (A, B, D, E, F, G, H, I, K, O, Q) are linked wherever they stand alone in roman type. That is right for manuscript sigla, but will occasionally catch something else, such as the "I" of a homograph number written without its bracket.
 
 ## Needs a decision

@@ -6,8 +6,6 @@ scripts:
   - "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"
   - "ROOT/scripts/eliebermann.js"
   - "ROOT/scripts/docx-import.js"
-  - "ROOT/data/markLaw.js"
-  - "ROOT/data/markforward.js"
 ---
 {%- assign entry_files = site.static_files | where_exp: "f", "f.path contains '/entries/'" | where: "extname", ".xml" -%}
 <h1>Bulk import from Word</h1>
@@ -81,6 +79,7 @@ scripts:
         try {
             const zip = await JSZip.loadAsync(file);
             const xml = await zip.file('word/document.xml').async('string');
+            const { markLaw, markforward } = await ELieb.loadAbbreviations(root);
             const parsed = DocxImport.parse(xml);
             entries = DocxImport.prepare(parsed.entries, SITE_ENTRIES, ELieb);
             const today = new Date().toISOString().slice(0, 10);
@@ -91,7 +90,7 @@ scripts:
                     lang: e.lang,
                     page: e.page,
                     facsimile: e.page ? FACSIMILE.replace('{page}', e.page) : '',
-                    entryHtml: ELieb.linkAbbreviations(e.html, window.markLaw, window.markforward),
+                    entryHtml: ELieb.linkAbbreviations(e.html, markLaw, markforward),
                     seeAlso: e.seeAlso,
                     change: { when: today, text: `Imported from ${sourceName}.` }
                 });

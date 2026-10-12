@@ -39,7 +39,7 @@ The import reads `word/document.xml` inside the `.docx` paragraph by paragraph, 
 - **The headword** is the first bold text, widened to the whole word around it, so brackets, hyphens and letters outside the bold are kept (`(-)æ-`, `æht(a)`). A sense number after it (**abrecan 1**)) is dropped, and of two forms (**bernet, berning**) the first is the headword.
 - **Language.** Superscript L is Latin, F is French. A headword in bold italic is one of Liebermann's grammatical articles (*Accusativ*, *Adjectiv*). Everything else is Old English.
 - **~ headwords.** A headword written as ~ plus an ending (**~gatio** after **abnegare**) is expanded from the headword before (*abnegatio*), and flagged so an editor can confirm it.
-- **Links.** Law codes and manuscript sigla in `data/markLaw.js` and abbreviations in `data/markforward.js` are linked, longest match first. Law codes are only linked in roman type, since Liebermann's italics are German.
+- **Links.** Law codes and manuscript sigla in `data/markLaw.json` and abbreviations in `data/markforward.json` are linked, longest match first. Law codes are only linked in roman type, since Liebermann's italics are German.
 - **Cross-references.** A short entry that only points elsewhere (**abere** *s.* æbære) gets a "see also" link when the entry it points to is in the document or on the site.
 - **File names** follow the rules in [SCHEMA.md](SCHEMA.md#file-names).
 

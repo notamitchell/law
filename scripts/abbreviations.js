@@ -1,8 +1,8 @@
 /*
  * eLiebermann: the law code and grammatical abbreviation lists
  * (lawAbb.html and gramAbb.html). Both pages share this code; each loads
- * its own data file (data/markLaw.js or data/markforward.js), which calls
- * markLawJSONP() or markforwardJSONP() with the rows.
+ * its own data file, named by data-source on #content-container
+ * (data/markLaw.json or data/markforward.json).
  *
  * Rows with the same Anchor are variant spellings of one abbreviation and
  * share a heading, which is what entry pages link to (lawAbb.html#Ine).
@@ -11,7 +11,7 @@
     'use strict';
 
     // Columns shown only when a group has something in them. `review` marks
-    // columns known to be unreliable: in data/markLaw.js the editions notes
+    // columns known to be unreliable: in data/markLaw.json the editions notes
     // and start pages are out of step with their rows (docs/STOCKTAKE.md).
     const EXTRA = [
         { field: 'Notes: Grammatical', label: 'Note' },
@@ -88,10 +88,12 @@
             </tr>`).join('')}</tbody></table></div>` : `<p>Nothing matches “${esc(term)}”.</p>`;
     }
 
-    window.markLawJSONP = load;
-    window.markforwardJSONP = load;
-
     document.addEventListener('DOMContentLoaded', () => {
+        const container = document.getElementById('content-container');
+        fetch((window.SITE_ROOT || '') + container.dataset.source)
+            .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+            .then(load)
+            .catch(() => { container.innerHTML = '<p class="notice error">The list could not be loaded.</p>'; });
         document.getElementById('searchInput').addEventListener('input', draw);
         document.getElementById('searchScope').addEventListener('change', draw);
         const oneTable = document.getElementById('oneTable');
