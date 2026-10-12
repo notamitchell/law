@@ -4,6 +4,7 @@ section: dictionary
 description: Browse and search the entries of Liebermann's Wörterbuch.
 scripts:
   - "ROOT/scripts/eliebermann.js"
+  - "ROOT/scripts/suggest.js"
 ---
 {%- assign entry_files = site.static_files | where_exp: "f", "f.path contains '/entries/'" | where: "extname", ".xml" -%}
 
@@ -12,7 +13,7 @@ scripts:
 <p class="lede">Entries from the <em>Wörterbuch</em>, volume 2 of Liebermann's <cite>Die Gesetze der Angelsachsen</cite>. Search headwords and Liebermann's text, or browse by letter.</p>
 
 <div class="search-bar" role="search">
-    <input type="search" id="q" placeholder="Search headwords, e.g. bocland" aria-label="Search the dictionary">
+    <input type="search" id="q" data-suggest placeholder="Search headwords, e.g. bocland" aria-label="Search the dictionary">
     <select id="lang" aria-label="Language">
         <option value="">All languages</option>
         <option value="ang">Old English</option>
