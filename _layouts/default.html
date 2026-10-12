@@ -8,6 +8,8 @@
     {%- if page.description %}
     <meta name="description" content="{{ page.description }}">
     {%- endif %}
+    <link rel="icon" href="{{ root }}favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ root }}images/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -23,12 +25,22 @@
 <body class="{% if page.full_width %}full-width{% endif %}{% if page.section == "home" %} home{% endif %}">
     <a class="skip-link" href="#main">Skip to content</a>
 
+    {%- if page.section == "home" %}
     <header class="site-header">
         <a class="site-banner" href="{{ root }}index.html">
-            <img src="{{ root }}images/banner.png" alt="eLiebermann">
+            <img src="{{ root }}images/banner.svg" alt="eLiebermann" width="1200" height="300">
         </a>
         <p class="site-subtitle">An Online Dictionary of Pre-Conquest English Law</p>
     </header>
+    {%- else %}
+    <header class="site-header site-header--slim">
+        <a class="site-brand" href="{{ root }}index.html">
+            <img class="site-logo" src="{{ root }}images/logo.svg" alt="" width="48" height="48">
+            <img class="site-wordmark" src="{{ root }}images/wordmark.svg" alt="eLiebermann">
+        </a>
+        <p class="site-subtitle">An Online Dictionary of Pre-Conquest English Law</p>
+    </header>
+    {%- endif %}
 
     <nav class="main-nav" aria-label="Main">
         <ul>
