@@ -1,0 +1,49 @@
+---
+title: Manuscript
+---
+<p><a href="index.html">← All manuscripts</a></p>
+<article id="ms"><p class="loading">Loading…</p></article>
+
+<script>
+(function () {
+    const root = window.SITE_ROOT || '';
+    const id = new URLSearchParams(location.search).get('id') || '';
+    const target = document.getElementById('ms');
+    const esc = s => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    fetch(root + 'tei/' + encodeURIComponent(id) + '.xml')
+        .then(r => { if (!r.ok) throw new Error(); return r.text(); })
+        .then(text => {
+            const xml = new DOMParser().parseFromString(text, 'text/xml');
+            const one = sel => xml.querySelector(sel)?.textContent?.replace(/\s+/g, ' ').trim() || '';
+            const dims = type => {
+                const h = one(`dimensions[type="${type}"] height`), w = one(`dimensions[type="${type}"] width`);
+                return h && w ? `${h} × ${w} mm` : '';
+            };
+            const extent = xml.querySelector('extent')?.firstChild?.textContent?.trim() || '';
+            const title = one('titleStmt title');
+            document.title = title + ' · eLiebermann';
+            const rows = [
+                ['Place', one('msIdentifier settlement')],
+                ['Library', one('msIdentifier repository')],
+                ['Shelfmark', one('msIdentifier idno')],
+                ['Contents', one('msItem title')],
+                ['Material', xml.querySelector('supportDesc')?.getAttribute('material') || ''],
+                ['Extent', extent],
+                ['Leaf size', dims('leaf')],
+                ['Written area', dims('written')],
+                ['Provenance', one('provenance').replace(/^Provenance:\s*/i, '')],
+                ['Bibliography', one('listBibl bibl').replace(/^Bibliography:\s*/i, '')]
+            ].filter(r => r[1]);
+            const description = [...xml.querySelectorAll('body p')].map(p => p.textContent.replace(/\s+/g, ' ').trim()).filter(Boolean);
+            target.innerHTML = `
+                <h1>${esc(title)}</h1>
+                <div class="table-wrap"><table><tbody>
+                    ${rows.map(r => `<tr><td class="term">${esc(r[0])}</td><td>${esc(r[1])}</td></tr>`).join('')}
+                </tbody></table></div>
+                ${description.length ? `<h2>Description</h2>${description.map(p => `<p>${esc(p)}</p>`).join('')}` : ''}
+                <p class="source-line"><a href="${root}tei/${encodeURIComponent(id)}.xml">View the TEI file</a> ·
+                <a href="https://github.com/notamitchell/law/blob/main/tei/${encodeURIComponent(id)}.xml">Edit on GitHub</a></p>`;
+        })
+        .catch(() => { target.innerHTML = `<h1>Manuscript not found</h1><p>There's no description called “${esc(id)}”.</p>`; });
+})();
+</script>

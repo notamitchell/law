@@ -1,0 +1,101 @@
+---
+title: Dictionary
+section: dictionary
+description: Browse and search the entries of Liebermann's Wörterbuch.
+scripts:
+  - "ROOT/scripts/eliebermann.js"
+---
+{%- assign entry_files = site.static_files | where_exp: "f", "f.path contains '/entries/'" | where: "extname", ".xml" -%}
+
+<h1>Dictionary</h1>
+
+<p class="lede">Entries from the <em>Wörterbuch</em>, volume 2 of Liebermann's <cite>Die Gesetze der Angelsachsen</cite>. Search headwords and Liebermann's text, or browse by letter.</p>
+
+<div class="search-bar" role="search">
+    <input type="search" id="q" placeholder="Search headwords, e.g. bocland" aria-label="Search the dictionary">
+    <select id="lang" aria-label="Language">
+        <option value="">All languages</option>
+        <option value="ang">Old English</option>
+        <option value="la">Latin</option>
+        <option value="fro">French</option>
+        <option value="de">Grammatical terms</option>
+    </select>
+    <label class="small" style="align-self:center; font-weight:400"><input type="checkbox" id="fulltext"> Also search Liebermann's text</label>
+</div>
+
+<ul class="letter-index" id="letters"></ul>
+<p id="count" class="muted small"></p>
+<div id="results"><p class="loading">Loading entries…</p></div>
+
+<script>
+// File names in entries/, listed when the site was built. Used if
+// data/entries.json (written by tools/build-index.js) is missing.
+const ENTRY_FILES = [{% for f in entry_files %}"{{ f.basename }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+
+(function () {
+    const root = window.SITE_ROOT || '';
+    const results = document.getElementById('results');
+    const q = document.getElementById('q');
+    const lang = document.getElementById('lang');
+    const fulltext = document.getElementById('fulltext');
+    const params = new URLSearchParams(location.search);
+    q.value = params.get('q') || '';
+    lang.value = params.get('lang') || '';
+    fulltext.checked = params.get('text') === '1';
+    let entries = [];
+
+    const fold = s => ELieb.sortKey(s).replace(/-/g, '');
+    const letterOf = e => (fold(e.hw).replace(/[^a-z]/g, '')[0] || '#').toUpperCase();
+    const esc = ELieb.escapeXml;
+
+    function draw() {
+        const term = fold(q.value.trim());
+        const raw = q.value.trim().toLowerCase();
+        const list = entries.filter(e =>
+            (!lang.value || e.lang === lang.value) &&
+            (!term || fold(e.hw).includes(term) || (fulltext.checked && (e.text || '').toLowerCase().includes(raw))));
+
+        const byLetter = {};
+        list.forEach(e => { (byLetter[letterOf(e)] = byLetter[letterOf(e)] || []).push(e); });
+        const letters = Object.keys(byLetter).sort();
+
+        document.getElementById('letters').innerHTML = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(l =>
+            byLetter[l] ? `<li><a href="#letter-${l}">${l}</a></li>` : `<li><span>${l}</span></li>`).join('');
+        document.getElementById('count').textContent = `${list.length} of ${entries.length} entries`;
+
+        if (!list.length) {
+            results.innerHTML = `<p>No entries match. <a href="${root}contribute.html">Add an entry</a> if it's missing.</p>`;
+            return;
+        }
+        results.innerHTML = letters.map(l => `
+            <h2 id="letter-${l}">${l}</h2>
+            <ul class="entry-list">${byLetter[l].map(e => `
+                <li>
+                    <a class="headword" href="${root}entry.html?id=${encodeURIComponent(e.id)}">${esc(e.hw)}</a>
+                    ${e.lang !== 'ang' ? `<span class="lang-badge ${e.lang}">${ELieb.LANGUAGES[e.lang] || e.lang}</span>` : ''}
+                    <span class="gloss">${esc(e.gloss || '')}</span>
+                </li>`).join('')}
+            </ul>`).join('');
+    }
+
+    function update() {
+        const p = new URLSearchParams();
+        if (q.value.trim()) p.set('q', q.value.trim());
+        if (lang.value) p.set('lang', lang.value);
+        if (fulltext.checked) p.set('text', '1');
+        history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
+        draw();
+    }
+
+    [q, lang, fulltext].forEach(el => el.addEventListener('input', update));
+
+    fetch(root + 'data/entries.json')
+        .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .catch(() => ENTRY_FILES.map(id => ({ id, hw: id, lang: 'ang', gloss: '' })))
+        .then(list => {
+            entries = list.sort((a, b) => fold(a.hw).localeCompare(fold(b.hw)) || a.id.localeCompare(b.id, undefined, { numeric: true }));
+            draw();
+            if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
+        });
+})();
+</script>
