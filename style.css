@@ -370,6 +370,27 @@ tbody tr:nth-child(even) td.under-review { background: #f9efd3; }
 
 .source-line { font-size: 0.9rem; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 1rem; }
 
+/* The printed page beside the entry; stacked under it on narrow screens. */
+.entry-with-scan { display: grid; grid-template-columns: minmax(0, 1fr) minmax(22rem, 30rem); gap: 2rem; align-items: start; }
+.entry-scan {
+    position: sticky;
+    top: 1rem;
+    height: calc(100vh - 2rem);
+    min-height: 28rem;
+    display: flex;
+    flex-direction: column;
+    background: #2b2b2b;
+    border-radius: var(--radius);
+    padding: 0.5rem;
+}
+.entry-scan-bar { display: flex; justify-content: space-between; gap: 1rem; color: #fff; font-size: 0.85rem; padding: 0 0.25rem 0.5rem; }
+.entry-scan-bar a { color: #cfe2ff; }
+.entry-scan iframe { flex: 1; width: 100%; border: 0; border-radius: 4px; background: #fff; }
+@media (max-width: 60rem) {
+    .entry-with-scan { grid-template-columns: minmax(0, 1fr); }
+    .entry-scan { position: static; height: 80vh; }
+}
+
 /* ---------- Contribution form ---------- */
 
 .editor { background: #fff; }

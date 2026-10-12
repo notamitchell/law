@@ -56,6 +56,13 @@ scripts:
             .map(x => `<li>${ELieb.renderTei(x, root)}</li>`).join('');
     }
 
+    // An archive.org page link (…/details/ID/page/14/…) becomes the address
+    // of archive.org's embedded reader opened at that page.
+    function scanEmbed(url) {
+        const m = /^https?:\/\/archive\.org\/details\/([^/?#]+)\/page\/([^/?#]+)/.exec(url || '');
+        return m ? `https://archive.org/embed/${m[1]}#page/${m[2]}/mode/1up` : '';
+    }
+
     function render(e) {
         const see = xrList(e, 'see');
         const links = [['bosworthToller', 'Bosworth-Toller'], ['doe', 'Dictionary of Old English'], ['wiktionary', 'Wiktionary']]
@@ -64,8 +71,9 @@ scripts:
         const citations = xrList(e, 'lawCode');
         const page = e.page ? `Liebermann, <cite>Gesetze</cite> II.1, p. ${esc(e.page)}` : '';
         const changes = e.changes.map(c => `${esc(c.when)}: ${esc(c.text.replace(/\.$/, ''))}`).join('; ');
+        const scan = scanEmbed(e.facsimile);
 
-        return `
+        const body = `
         <header class="entry-header">
             <h1>${esc(e.headword)}${e.n ? ` <sup>${esc(e.n)}</sup>` : ''}</h1>
             <div class="meta">
@@ -96,6 +104,19 @@ scripts:
             <a href="${root}entries/${encodeURIComponent(slug)}.xml">View the TEI file</a> ·
             <a href="https://github.com/notamitchell/law/blob/main/entries/${encodeURIComponent(slug)}.xml">Edit on GitHub</a>
         </p>`;
+
+        if (!scan) return body;
+        return `
+        <div class="entry-with-scan">
+            <div class="entry-main">${body}</div>
+            <aside class="entry-scan" aria-label="Page scan">
+                <div class="entry-scan-bar">
+                    <span>${e.page ? `Printed page ${esc(e.page)}` : 'Page scan'}</span>
+                    <a href="${esc(e.facsimile)}" target="_blank" rel="noopener">Open on archive.org</a>
+                </div>
+                <iframe src="${esc(scan)}" title="Liebermann, Gesetze II.1${e.page ? `, p. ${esc(e.page)}` : ''}, on archive.org" loading="lazy" allowfullscreen></iframe>
+            </aside>
+        </div>`;
     }
 })();
 </script>
