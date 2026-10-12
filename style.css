@@ -93,6 +93,27 @@ code, pre, textarea.code { font-family: var(--mono); font-size: 0.9em; }
 .site-wordmark { height: 1.9rem; width: auto; }
 .site-header--slim .site-subtitle { margin: 0; color: var(--muted); font-size: 1.05rem; }
 
+/* "Site under construction" tape, in both headers. */
+.construction {
+    display: inline-block;
+    margin: 0.5rem 0 0.25rem;
+    padding: 3px;
+    border-radius: 4px;
+    background: repeating-linear-gradient(-45deg, #f2b705 0 8px, var(--navy-dark) 8px 16px);
+}
+.construction span {
+    display: block;
+    padding: 0.15rem 0.75rem;
+    border-radius: 2px;
+    background: #fff3c4;
+    color: var(--navy-dark);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+.site-header--slim .construction { margin: 0 0 0 auto; }
+
 .main-nav, .sub-nav { background: var(--navy-dark); }
 .main-nav ul, .sub-nav ul {
     list-style: none;
