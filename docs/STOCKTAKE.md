@@ -36,6 +36,7 @@ The site is built with Jekyll and GitHub Pages, on the model of [Common Ground](
 | Editor made HTML | `contribute.html` makes a TEI file, previews it, checks whether the entry already exists, and can open an existing entry for correction. |
 | Entries pasted one at a time | `import.html` (and `tools/import-docx.js`) turns a whole Word document into TEI files. See [IMPORT.md](IMPORT.md). |
 | `lawAbb.html`, `gramAbb.html` | Same addresses, so old links still work; now one shared script (`scripts/abbreviations.js`) and the site layout. |
+| Test files (`markdownTest.md`, `citations/adair.html`, `commentary5/`) | Deleted. |
 | Statuta Vetera pages | Same addresses, in the site layout, with no GitHub API calls: the file lists are built in when the site is built. Each manuscript has its own page (`StatutaVetera/manuscript.html?id=…`). The viewer's volumes are listed in `_data/statutes_volumes.yml`. |
 | `style.css` | Rewritten as one stylesheet for every page. |
 | Static deploy | `.github/workflows/static.yml` now lists the entries (`tools/build-index.js`) and builds with Jekyll before deploying. |
@@ -52,7 +53,5 @@ The old entry addresses (`entries/abbod.html`) no longer work. Nothing on the si
 
 | Item | Suggestion |
 |---|---|
-| `citations/adair.html`, `markdownTest.md` | Delete: test files. Left in place for you to confirm. |
-| `commentary5/*.html` | Replace with real commentary, or delete. They're test text, shown by the viewer. |
 | Viewer volumes 7–11 | Find the archive.org scans, or drop those volumes from `_data/statutes_volumes.yml`. |
 | Old entry addresses | Add redirects if anyone has bookmarked them. |

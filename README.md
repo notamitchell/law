@@ -85,7 +85,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 | `scripts/site-page.js` | Shows the TEI site pages. |
 | `StatutaVetera/` | Manuscript search (`index.html`), manuscript page, Statutes of the Realm viewer (`sidebyside.html`), manuscript TEI generator (`tei-gen.html`). |
 | `tei/*.xml` | Statuta Vetera manuscript descriptions. |
-| `commentary5/` | Commentary pages for volume 5 of the viewer (test pages at present). |
+| `commentaryN/` | Commentary for the viewer, one HTML file per page (`12.html`), in the folder named for its volume in `_data/statutes_volumes.yml`. None yet. |
 | `tools/import-docx.js` | Bulk import on your own computer. |
 | `tools/build-index.js` | Writes `data/entries.json`. Runs on every deploy. |
 | `.github/workflows/static.yml` | Builds and deploys the site on every push to `main`. |
