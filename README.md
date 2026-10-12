@@ -116,11 +116,11 @@ Then open http://localhost:4000/law/.
 
 ## Transcription notes to review
 
-The letters Z to Þ were transcribed from the page scans, working backwards from Z. These are the quirks and judgement calls recorded on their pull requests ([Z](https://github.com/notamitchell/law/pull/5), [Y](https://github.com/notamitchell/law/pull/7), [W](https://github.com/notamitchell/law/pull/8), [V](https://github.com/notamitchell/law/pull/9), [U](https://github.com/notamitchell/law/pull/10), [Þ](https://github.com/notamitchell/law/pull/12)). Tick each one once someone has checked it against the print and agrees with it, or change the entries if not.
+The letters Z to T were transcribed from the page scans, working backwards from Z. These are the quirks and judgement calls recorded on their pull requests ([Z](https://github.com/notamitchell/law/pull/5), [Y](https://github.com/notamitchell/law/pull/7), [W](https://github.com/notamitchell/law/pull/8), [V](https://github.com/notamitchell/law/pull/9), [U](https://github.com/notamitchell/law/pull/10), [Þ](https://github.com/notamitchell/law/pull/12), [T](https://github.com/notamitchell/law/pull/14)). Tick each one once someone has checked it against the print and agrees with it, or change the entries if not.
 
 **Source and status**
 
-- [ ] Z–Þ were transcribed from the page images, not archive.org's OCR. Every entry says "Transcribed by Claude from the page scan; not yet checked against the print." (all letters)
+- [ ] Z–T were transcribed from the page images, not archive.org's OCR. Every entry says "Transcribed by Claude from the page scan; not yet checked against the print." (all letters)
 - [ ] Only spot checks have been done so far, and all matched the scan: wis–wise (p. 245), wud[u] (p. 250), the end of Verbum to vers (p. 233), utalædan to [utaslean] (p. 231). (W, V, U)
 - [ ] An entry that runs over a page keeps a page marker where the page turns, e.g. ymbrenfæsten (p. 253) and vel (p. 233). (Y, W, V)
 
@@ -136,6 +136,8 @@ The letters Z to Þ were transcribed from the page scans, working backwards from
 - [ ] Homographs printed I), II) … are separate entries with the numeral kept in the text: yfel and yfel-2, and þa, þæt, þe, þon, þy in Þ. (Y, Þ)
 - [ ] The two utlaga entries have no I)/II) numerals in print and are stored as utlaga and utlaga-2. (U)
 - [ ] The þæt abbreviation ꝥ now gives the file name "thaet", as þ gives "th". Before that change, the headword ꝥ gave an empty file name. (Þ)
+- [ ] Headwords printed under both T and Þ, such as T[h]eophania (p. 210 and p. 220), are kept as two entries, the T one taking the next free file name (T-h-eophania-2). (T)
+- [ ] A T headword whose file name is already taken gets the next free one, e.g. th-2 to th-4, so nothing already on the site is overwritten. Check whether these should be merged with the earlier entries or renamed. (T)
 
 **Headwords**
 
@@ -146,7 +148,7 @@ The letters Z to Þ were transcribed from the page scans, working backwards from
 
 **Printed text: kept or corrected**
 
-- [ ] Letters broken in the type were read as the intended letter: "mögcn" → mögen, "seincs" → seines, "1,.7" → 1,7 (U); "aufhebend" and "Orthographie" (Þ).
+- [ ] Letters broken in the type were read as the intended letter: "mögcn" → mögen, "seincs" → seines, "1,.7" → 1,7 (U); "aufhebend" and "Orthographie" (Þ); "Untergebenen" and "doppeltes" (T).
 - [ ] Likely misprints in the book are kept as printed: "derehdner" (voleir) and "-rseunessa" (v). (V)
 - [ ] The gap printed "hundfeo:::" in þusend is kept as printed. (Þ)
 - [ ] Literal asterisks in references are kept, e.g. *S.* 375*. (W)
