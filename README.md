@@ -21,6 +21,7 @@
 - [Repository layout](#repository-layout)
 - [Adding entries](#adding-entries)
 - [Running the site locally](#running-the-site-locally)
+- [Transcription notes to review](#transcription-notes-to-review)
 - [Roadmap](#roadmap)
 - [Source](#source)
 
@@ -112,6 +113,49 @@ bundle exec jekyll serve --baseurl /law
 ```
 
 Then open http://localhost:4000/law/.
+
+## Transcription notes to review
+
+The letters Z to Þ were transcribed from the page scans, working backwards from Z. These are the quirks and judgement calls recorded on their pull requests ([Z](https://github.com/notamitchell/law/pull/5), [Y](https://github.com/notamitchell/law/pull/7), [W](https://github.com/notamitchell/law/pull/8), [V](https://github.com/notamitchell/law/pull/9), [U](https://github.com/notamitchell/law/pull/10), [Þ](https://github.com/notamitchell/law/pull/12)). Tick each one once someone has checked it against the print and agrees with it, or change the entries if not.
+
+**Source and status**
+
+- [ ] Z–Þ were transcribed from the page images, not archive.org's OCR. Every entry says "Transcribed by Claude from the page scan; not yet checked against the print." (all letters)
+- [ ] Only spot checks have been done so far, and all matched the scan: wis–wise (p. 245), wud[u] (p. 250), the end of Verbum to vers (p. 233), utalædan to [utaslean] (p. 231). (W, V, U)
+- [ ] An entry that runs over a page keeps a page marker where the page turns, e.g. ymbrenfæsten (p. 253) and vel (p. 233). (Y, W, V)
+
+**Language labels**
+
+- [ ] z- carries the double marker LF, but w is marked FL. Decide on one order. (Z, W)
+- [ ] A superscript F or L inside an entry is kept as a language marker, not linked as a manuscript siglum, e.g. the F before *siste* in Zahlwort. (Z, Y)
+- [ ] Liebermann's German articles are tagged as grammatical terms: Zahlwort, Wortbildung, Wortschatz variirt, both Wortstellung, Verallgemeinernd, Verbum, Vocalverdoppelung, Umlaut, Unpersönliche and Urkundenstil. (Z, W, V, U)
+- [ ] II) un has no F of its own and is tagged French, like I) un. (U)
+
+**Homographs and file names**
+
+- [ ] Homographs printed I), II) … are separate entries with the numeral kept in the text: yfel and yfel-2, and þa, þæt, þe, þon, þy in Þ. (Y, Þ)
+- [ ] The two utlaga entries have no I)/II) numerals in print and are stored as utlaga and utlaga-2. (U)
+- [ ] The þæt abbreviation ꝥ now gives the file name "thaet", as þ gives "th". Before that change, the headword ꝥ gave an empty file name. (Þ)
+
+**Headwords**
+
+- [ ] yfelwyrcendo is the headword, with "wyrto" left in the entry text. (Y)
+- [ ] Some headwords are printed after a plain word (openne **wiðercwide**, se **wodfreca**). The entry text starts with that word, as in the book. (W)
+- [ ] "-unga" stays inside the -ung entry, where it follows a bar. (U)
+- [ ] Wynn is written ƿ only in the w entry, where Liebermann prints the letter form. (W)
+
+**Printed text: kept or corrected**
+
+- [ ] Letters broken in the type were read as the intended letter: "mögcn" → mögen, "seincs" → seines, "1,.7" → 1,7 (U); "aufhebend" and "Orthographie" (Þ).
+- [ ] Likely misprints in the book are kept as printed: "derehdner" (voleir) and "-rseunessa" (v). (V)
+- [ ] The gap printed "hundfeo:::" in þusend is kept as printed. (Þ)
+- [ ] Literal asterisks in references are kept, e.g. *S.* 375*. (W)
+- [ ] "VIIa Atr" is written closed up, to match the law-code list. (W)
+
+**Letter boundaries**
+
+- [ ] Þ starts halfway down column 2 of p. 216; the T entries above it belong to T. (Þ)
+- [ ] Check the start pages noted for the letters still to do: R and S were given as S 187, R 194 (alphabetically R should come first), and K and L were both given as 128.
 
 ## Roadmap
 
