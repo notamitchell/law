@@ -44,3 +44,14 @@ From [the cross-check of dryhtenbeag – fadian](crosscheck-dryhtenbeag-fadian.m
 | [ ] | 60 | *Egypta* | **Ęg-** (twice, with a hook under the E) | **Eg-** | |
 | [ ] | 62 | *Endreim* | **friþian** ⁊ griðian Had 1,1 H | **friðian** | |
 | [ ] | 66 | *expellere* | In Cn: **II Cn** 15a | In Cn: **II** 15a | |
+
+## façe – forisfactum (pp. 67–76)
+
+From [the cross-check of façe – forisfactum](crosscheck-faece-forisfactum.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 67 | *fæmne* | vgl. **Athenaeum** | **Athenæum** | |
+| [ ] | 71 | *fiftyne* | (= I Cn 8,1; fiftene A). **V 18** (aber XIIII D) = VI 25 | **VI 8** | |
+| [ ] | 74 | *fōr* | ac: fore gebetan ebd.**;** foregebetan falsch B | ebd.**]** | |
+| [ ] | 75 | *foresta* | ~ae fera (Eber) Ps Cn for **21,123** (123 superscript?) | **21,122** | |
