@@ -227,3 +227,14 @@ From [the cross-check of weddbryce – wiðertihtlan](crosscheck-weddbryce-wider
 | [ ] | 244 | *Wilhelm* | iunior ECf 11,2; **Ruffus** retr. | **Rufus** | |
 | [ ] | 247 | *witerǣden* | ~ene H; **~ædene** B | **~æddene** | |
 | [ ] | 247 | *wið* | 9) schützend vor; beorgað ~ irre **II As 5** | **I As 5** | |
+
+## wiðerwordian – Zahlwort (pp. 248–253)
+
+From [the cross-check of wiðerwordian – Zahlwort](crosscheck-widerwordian-zahlwort.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 248 | *Wortschatz variirt* | s. or- \| **ọrīge**: werige (dot under the o) | **orīge** | Compare the dots under letters in *Dativ* above. |
+| [ ] | 252 | *-x*, *xp̄* | new entries, from the Word document only | | Check both entries against the print; they were not in the scan transcription. |
+| [ ] | 252 | *y* | 3) von **-ĕa** … 4) von **-ĕo** (short marks) | **-ē̆a**, **-ē̆o** (long and short marks) | |
+| [ ] | 252 | *y* | 12) verschr. für a) **-ƿ**: s. twelfhinde (wynn corrected from þ) | **ƿ**: (no hyphen) | Is there a hyphen? |
