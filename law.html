@@ -1,6 +1,6 @@
 ---
 title: Law clause
-section: dictionary
+section: laws
 scripts:
   - "ROOT/scripts/eliebermann.js"
   - "ROOT/scripts/lawpopup.js"
@@ -100,11 +100,17 @@ scripts:
         if (kw.length) {
             const s = el('section', 'entry-section');
             s.appendChild(el('h2', null, 'Keywords'));
+            s.appendChild(el('p', 'small muted', 'Click a keyword to find the other clauses that have it.'));
             const names = { 'offence-legal-event': 'Offence / legal event', people: 'People', locations: 'Locations' };
             kw.forEach(k => {
                 const p = el('p');
                 p.appendChild(el('strong', null, (names[k.getAttribute('n')] || k.getAttribute('n') || 'Keywords') + ': '));
-                p.appendChild(document.createTextNode(tei(k, 'term').map(x => x.textContent.trim()).join('; ')));
+                tei(k, 'term').forEach((x, j) => {
+                    if (j) p.appendChild(document.createTextNode('; '));
+                    const a = el('a', null, x.textContent.trim());
+                    a.href = root + 'laws.html?kw=' + encodeURIComponent(x.textContent.trim());
+                    p.appendChild(a);
+                });
                 s.appendChild(p);
             });
             target.appendChild(s);

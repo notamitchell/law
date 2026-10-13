@@ -45,6 +45,10 @@ When this was made, **83%** of the dictionary's citations with a clause number f
 
 Codes the spreadsheet has no clauses for, such as the manuscript sigla *G* and *Q*, have no files; entries citing them have nothing to link to.
 
+### The Laws tab
+
+`laws.html` is the search page for the clauses, with its own tab in the menu. It reads `data/laws.json`, which `tools/build-laws-index.js` writes from `oe-laws/` on every deploy (as `tools/build-index.js` does for the dictionary), so a clause added to `oe-laws/` appears in the search by itself. You can search by law code and clause (*Ine 23*, *abt 1a*), pick a law, type a keyword (an offence, a kind of person or a place; the box suggests the ones that exist), and tick a box to search the Old English texts and translations too (þ and th, æ and ae are treated alike). Clicking a keyword on a result or on a clause page searches for it. `law.html` is the page for one clause.
+
 ### The letter A trial
 
 `tools/link-citations.py --letter A` changes the law code citations at the foot of the entries filed under A (including æ-initial ones). A citation that finds its clause changes from `target="law:Ine"` to `target="clause:Ine_23-2"`, and the entry gets a `clause` prefix definition. The site turns that into a link to `law.html?id=Ine_23-2`, which shows the clause, its manuscripts and keywords, the neighbouring clauses, and a button to read the whole law. The citation text is unchanged. Citations that find nothing are left as they were. The tool is safe to run again, and `--dry-run` only reports. Its latest results are in [oe-laws-link-report.md](oe-laws-link-report.md).

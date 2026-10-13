@@ -34,6 +34,8 @@ jobs:
           node-version: 20
       - name: List dictionary entries
         run: node tools/build-index.js
+      - name: List law clauses
+        run: node tools/build-laws-index.js
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:

@@ -92,6 +92,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 | `tools/import-docx.js` | Bulk import on your own computer. |
 | `tools/laws-from-xlsx.py` | Makes `oe-laws/` from the laws spreadsheet, on your own computer. See [docs/OE-LAWS.md](docs/OE-LAWS.md). |
 | `tools/link-citations.py` | Links the law code citations in entries (one letter at a time) to clause files in `oe-laws/`. See [docs/OE-LAWS.md](docs/OE-LAWS.md). |
+| `tools/build-laws-index.js` | Writes `data/laws.json` (every clause with its keywords and text) for the Laws page. Runs on every deploy. |
 | `tools/build-index.js` | Writes `data/entries.json`. Runs on every deploy. |
 | `tools/update-entries.js` | Rewrites the parts of each entry made from Liebermann's text: the numbered meanings and the law code citation list. Run it after adding or changing entries outside the form. |
 | `.github/workflows/static.yml` | Builds and deploys the site on every push to `main`. |
