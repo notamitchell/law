@@ -8,7 +8,15 @@ scripts:
 ---
 <div id="site-page" data-page="Home"><p class="loading">Loading…</p></div>
 
-<form class="search-bar" action="dictionary.html" role="search">
+<!-- data-section="N": once the page text has loaded, this search box is
+     moved to the end of the Nth section of it (1 = the laws, 2 = the dictionary). -->
+<form class="search-bar" action="laws.html" role="search" data-section="1">
+    <input type="search" name="q" placeholder="A law code and clause, e.g. Ine 23, or a word, e.g. theft" aria-label="Search the laws">
+    <input type="hidden" name="text" value="1">
+    <button type="submit">Search the laws</button>
+</form>
+
+<form class="search-bar" action="dictionary.html" role="search" data-section="2">
     <input type="search" name="q" data-suggest placeholder="Look up a word, e.g. bocland" aria-label="Look up a word">
     <button type="submit">Search the dictionary</button>
 </form>
