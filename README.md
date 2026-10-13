@@ -115,13 +115,13 @@ Then open http://localhost:4000/law/.
 
 ## Transcription notes to review
 
-The letters Z to P were transcribed from the page scans, working backwards from Z. These are the quirks and judgement calls recorded on their pull requests ([Z](https://github.com/notamitchell/law/pull/5), [Y](https://github.com/notamitchell/law/pull/7), [W](https://github.com/notamitchell/law/pull/8), [V](https://github.com/notamitchell/law/pull/9), [U](https://github.com/notamitchell/law/pull/10), [Þ](https://github.com/notamitchell/law/pull/12), [T](https://github.com/notamitchell/law/pull/14), [S](https://github.com/notamitchell/law/pull/17), [R](https://github.com/notamitchell/law/pull/19), [Q](https://github.com/notamitchell/law/pull/21), [P](https://github.com/notamitchell/law/pull/24)). Tick each one once someone has checked it against the print and agrees with it, or change the entries if not.
+The letters Z to O were transcribed from the page scans, working backwards from Z. These are the quirks and judgement calls recorded on their pull requests ([Z](https://github.com/notamitchell/law/pull/5), [Y](https://github.com/notamitchell/law/pull/7), [W](https://github.com/notamitchell/law/pull/8), [V](https://github.com/notamitchell/law/pull/9), [U](https://github.com/notamitchell/law/pull/10), [Þ](https://github.com/notamitchell/law/pull/12), [T](https://github.com/notamitchell/law/pull/14), [S](https://github.com/notamitchell/law/pull/17), [R](https://github.com/notamitchell/law/pull/19), [Q](https://github.com/notamitchell/law/pull/21), [P](https://github.com/notamitchell/law/pull/24), [O](https://github.com/notamitchell/law/pull/26)). Tick each one once someone has checked it against the print and agrees with it, or change the entries if not.
 
 **Source and status**
 
-- [ ] Z–P were transcribed from the page images, not archive.org's OCR. Every entry says "Transcribed by Claude from the page scan; not yet checked against the print." (all letters)
+- [ ] Z–O were transcribed from the page images, not archive.org's OCR. Every entry says "Transcribed by Claude from the page scan; not yet checked against the print." (all letters)
 - [ ] Only spot checks have been done so far, and all matched the scan: wis–wise (p. 245), wud[u] (p. 250), the end of Verbum to vers (p. 233), utalædan to [utaslean] (p. 231). (W, V, U)
-- [ ] An entry that runs over a page keeps a page marker where the page turns, e.g. ymbrenfæsten (p. 253) and vel (p. 233). (Y, W, V)
+- [ ] An entry that runs over a page keeps a page marker where the page turns, e.g. ymbrenfæsten (p. 253) and vel (p. 233). The very long entry on, which runs from p. 162 to p. 165, is one entry. (Y, W, V, O)
 
 **Language labels**
 
@@ -149,16 +149,17 @@ The letters Z to P were transcribed from the page scans, working backwards from 
 
 **Printed text: kept or corrected**
 
-- [ ] Letters broken in the type were read as the intended letter: "mögcn" → mögen, "seincs" → seines, "1,.7" → 1,7 (U); "aufhebend" and "Orthographie" (Þ); "Untergebenen" and "doppeltes" (T); "Streitigkeiten" and "einleitend" (S); "eigenem" and "retient" (R).
-- [ ] Likely misprints in the book are kept as printed: "derehdner" (voleir) and "-rseunessa" (v), and "forhttundan" under Particip. (V, P)
+- [ ] Letters broken in the type were read as the intended letter: "mögcn" → mögen, "seincs" → seines, "1,.7" → 1,7 (U); "aufhebend" and "Orthographie" (Þ); "Untergebenen" and "doppeltes" (T); "Streitigkeiten" and "einleitend" (S); "eigenem" and "retient" (R); "ceapnnge" → ceapunge in orceapunga, assuming the "nn" is broken type (O).
+- [ ] Likely misprints in the book are kept as printed: "derehdner" (voleir) and "-rseunessa" (v), "forhttundan" under Particip, "(þingc)" in oðer and "V G G 2" in oððon. (V, P, O)
 - [ ] The gap printed "hundfeo:::" in þusend is kept as printed. (Þ)
+- [ ] In opprimere, the small superscript in "Rb. S. 537^73^" is read as 73 but could be another number. (O)
 - [ ] Literal asterisks in references are kept, e.g. *S.* 375*. (W)
 - [ ] "VIIa Atr" is written closed up, to match the law-code list. (W)
 
 **Letter boundaries**
 
 - [ ] Þ starts halfway down column 2 of p. 216; the T entries above it belong to T. (Þ)
-- [ ] R starts in the lower part of column 1 on p. 180, not 194 as first noted, and ends at the S heading at the top of column 3 on p. 187. Q runs from p. 179 to p. 180, as transcribed, and P from the top of p. 170 to the Q heading on p. 179. K and L were both noted as starting on 128; check which is right. (S, R, Q, P)
+- [ ] R starts in the lower part of column 1 on p. 180, not 194 as first noted, and ends at the S heading at the top of column 3 on p. 187. Q runs from p. 179 to p. 180, as transcribed, P from the top of p. 170 to the Q heading on p. 179, and O from p. 159 to p. 169. K and L were both noted as starting on 128; check which is right. (S, R, Q, P, O)
 
 ## Roadmap
 
