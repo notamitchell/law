@@ -69,3 +69,12 @@ From [the cross-check of forisfactura – geargerihta](crosscheck-forisfactura-g
 | [ ] | 85 | *gærsswin* | ~wyn Rect 2; **~spin**: porcus herbagii Q | **~sƿin** (with wynn) | |
 | [ ] | 86 | *gastlice* | ane gastlice **modor** | **moder** | |
 | [ ] | 86 | *g[e]aldorcræft* | headword **g[e]aldorcræft** Beschwörerei; ac: gal~ Af El 30 G | headword **g[e]aldorcræftig** | Af El 30 has gealdorcræftigan, which may favour -cræftig. |
+
+## gearian – gerefa (pp. 87–96)
+
+From [the cross-check of gearian – gerefa](crosscheck-gearian-gerefa.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 87 | *gebetan* | 3: **~að!** Af 49 B (op: gebete übr.) | **~æð!** | |
+| [ ] | 95 | *gene[ð]an* | ihr waget zu geniessen **Iud Dei VIII 1,1** | **Iud Dei VII 1,1** | |
