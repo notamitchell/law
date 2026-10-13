@@ -555,6 +555,9 @@ ul.citations li { break-inside: avoid; }
 .clause-source { margin: 0 0 0.1rem; font-size: 0.9rem; }
 .clause-source .source-name { font-weight: 600; }
 .clause-reading-text { font-family: var(--serif); font-size: 1.15rem; line-height: 1.45; margin: 0; }
+/* EB Garamond has a rule for text marked as Latin that draws u, U and v as
+   classical V shapes. Liebermann prints u, so keep the ordinary letters. */
+:lang(la) { font-feature-settings: "locl" 0; font-language-override: "ENG"; }
 .clause-sources ul { padding-left: 1.2rem; }
 .clause-source .ms-label { cursor: help; border-bottom: 1px dotted currentColor; }
 .clause-note { margin: 0.3rem 0 0.6rem; color: var(--muted); }
