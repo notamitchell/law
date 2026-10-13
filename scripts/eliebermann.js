@@ -290,7 +290,8 @@
     // ------------------------------------------------------------------
 
     // Manuscripts and versions (Quadripartitus, Instituta Cnuti…). After a
-    // passage they name the reading cited (Af 41 B); they are not codes.
+    // passage they name the reading cited (Af 41 B); they are not codes, and
+    // they are left out of the citation list.
     const SIGLA = new Set(['MsA', 'B', 'Bu', 'C', 'D', 'E', 'F', 'G', 'H', 'Hk', 'I', 'K', 'Ld', 'O', 'Ot',
         'So', 'Vt', 'Io', 'Isp', 'Quadr', 'InCn', 'ConsCn', 'WlEdmr', 'Wb']);
     // Parts of a code: Af El 49 (Introduction), Af Rb 41 (rubric).
@@ -339,16 +340,9 @@
         for (let i = 1; i < parts.length; i += 3) {
             const anchor = parts[i], label = parts[i + 1].trim(), text = parts[i + 2];
             if (SIGLA.has(anchor)) {
-                // "Af 41 B": the reading of manuscript B; it belongs to the passage before.
+                // "Af 41 B": the reading of manuscript B. The citation list names the
+                // passage (Af 41), not the manuscript, so the letter is not added to it.
                 const attached = open && last && !/^\s*:/.test(text);
-                if (attached) {
-                    // The passage is cited in that reading only: list it once, with the siglum.
-                    if (last.isNew) { out.splice(out.indexOf(last), 1); seen.delete(last.text); }
-                    const withSiglum = { text: last.text + ' ' + label, anchor: last.anchor };
-                    withSiglum.isNew = !seen.has(withSiglum.text);
-                    if (withSiglum.isNew) { seen.add(withSiglum.text); out.push(withSiglum); }
-                    last = withSiglum;
-                }
                 if (anchor === 'ConsCn' || anchor === 'Quadr' && /^\s*:/.test(text) || anchor === 'InCn' && /^\s*:/.test(text)) code = null;
                 // keep the run going so "Af 41 B. 43" still reads as Af 43
                 open = attached && /^\s*$/.test(text);

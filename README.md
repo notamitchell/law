@@ -179,7 +179,7 @@ The letters Z to O were transcribed from the page scans, working backwards from 
 7. **The *Rechts- und Sachglossar*** (volume 2, part 2) as a second dictionary, linked from the *Wörterbuch*.
 8. **The Old English laws database** (`oe-laws/`, 2,294 TEI files made from the laws spreadsheet; see [docs/OE-LAWS.md](docs/OE-LAWS.md)). It has a Laws tab (search and one page per clause), and the dictionary entries for the letter A link to it. To do:
     - Link the citations in the entries for the other letters to their clauses (`tools/link-citations.py --letter B`, and so on), through each file's `citationKey`.
-    - Decide how to treat citations that end in a manuscript letter (*9 Q*, *1 Ld*), and find out why citations to *Ger*, *Hl*, *Abt*, *Af* and *Wi* so often find no clause.
+    - Find out why citations to *Ger*, *Hl*, *Abt*, *Af* and *Wi* so often find no clause.
     - Open questions, to answer when there is time:
         - [ ] Six law codes were matched to the law code list by judgement: *Becw*, *Mirc.*, *Nor. Cyricgrið*, *Norðleod.*, *Ord*, *Rom.* Are they right?
         - [ ] Some codes are not on the law code list, so their clauses are not linked: *Cn 1018*, the *Rubrics*, *VI Atr (Latin Paraphrase)*, *Wer*, *Geþyn.*, *Prom. Reg.*, *Rubric List*, *Ymb Æwbricas*. Should they be added to it?

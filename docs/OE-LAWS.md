@@ -41,7 +41,7 @@ A file is named after its law code and clause number, joined by an underscore: `
 
 Each file has one or more `<idno type="citationKey">`, in the form `Ine 23.2`: the law code's Anchor, a space, and the clause number with a comma read as a full stop (Liebermann prints 23,2) and with brackets and capitals ignored. The same keys are listed in `index.json` as `citationKeys`. A dictionary citation such as `<ref target="law:Ine">Ine 23,2</ref>` can be turned into the same key, and so matched to its clause file.
 
-When this was made, **83%** of the dictionary's citations with a clause number found their clause file this way, and **96%** did once a manuscript letter after the number (as in *9 Q* or *1 Ld*) was ignored. Those letters mean "in that manuscript", so a citation like this may deserve its own handling later. The citations that do not match are most often to *Ger*, *Hl*, *Abt*, *Af* and *Wi*. I have not looked into why yet; differences between Liebermann's numbering and the spreadsheet's are the likeliest cause.
+When this was made, **83%** of the dictionary's citations with a clause number found their clause file this way, and **96%** did once a manuscript letter after the number (as in *9 Q* or *1 Ld*) was ignored. The letters have since been taken out of the citation lists. The citations that do not match are most often to *Ger*, *Hl*, *Abt*, *Af* and *Wi*. I have not looked into why yet; differences between Liebermann's numbering and the spreadsheet's are the likeliest cause.
 
 Codes the spreadsheet has no clauses for, such as the manuscript sigla *G* and *Q*, have no files; entries citing them have nothing to link to.
 
@@ -49,11 +49,15 @@ Codes the spreadsheet has no clauses for, such as the manuscript sigla *G* and *
 
 `laws.html` is the search page for the clauses, with its own tab in the menu. It reads `data/laws.json`, which `tools/build-laws-index.js` writes from `oe-laws/` on every deploy (as `tools/build-index.js` does for the dictionary), so a clause added to `oe-laws/` appears in the search by itself. You can search by law code and clause (*Ine 23*, *abt 1a*), pick a law, type a keyword (an offence, a kind of person or a place; the box suggests the ones that exist), and tick a box to search the Old English texts and translations too (þ and th, æ and ae are treated alike). Clicking a keyword on a result or on a clause page searches for it. `law.html` is the page for one clause.
 
+### Manuscript letters are not in the citation lists
+
+Liebermann sometimes follows a passage with the letter of a manuscript or version, such as *Af 41 B* or *Ine 9 Q* (Quadripartitus). The list of law code citations at the foot of an entry names the passage only (*Af 41*, *Ine 9*), and a passage cited in several manuscripts is listed once. Liebermann's own text, above, is unchanged and keeps the letters. The rule is in `scripts/eliebermann.js` (`SIGLA`, in `extractCitations`), so the *Suggest an entry* form and `tools/update-entries.js` both follow it.
+
 ### The letter A trial
 
 `tools/link-citations.py --letter A` changes the law code citations at the foot of the entries filed under A (including æ-initial ones). A citation that finds its clause changes from `target="law:Ine"` to `target="clause:Ine_23-2"`, and the entry gets a `clause` prefix definition. The site turns that into a link to `law.html?id=Ine_23-2`, which shows the clause, its manuscripts and keywords, the neighbouring clauses, and a button to read the whole law. The citation text is unchanged. Citations that find nothing are left as they were. The tool is safe to run again, and `--dry-run` only reports. Its latest results are in [oe-laws-link-report.md](oe-laws-link-report.md).
 
-A citation is matched to a clause in three ways: exactly; by ignoring a manuscript letter after the number (*9 Q*); or, where Liebermann cites *Abt 1* but the spreadsheet has *1[a]* and *1[b]*, by going to the first part.
+The citation lists no longer carry manuscript letters (see the next paragraph). A citation is matched to a clause in two ways: exactly; or, where Liebermann cites *Abt 1* but the spreadsheet has *1[a]* and *1[b]*, by going to the first part.
 
 Results for A: 83% of all citations are linked, and 97% of those that name a clause in a code the database has. The rest are mostly citations to codes with no clause files (see below). Run it with another letter to link other entries.
 
