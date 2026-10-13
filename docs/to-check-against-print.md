@@ -160,3 +160,12 @@ From [the cross-check of orfenins – propriatio](crosscheck-orfenins-propriatio
 | [ ] | 170 | *pæn.* | pæn., **pæng̃.** (tilde over g) | **pænḡ.** (macron over g) | |
 | [ ] | 170 | *par* (F) | trespasser ~ iloc **ù** 28,2 | **u** | |
 | [ ] | 177 | *propensus* | wohlgeneigt Quadr zu CHn cor **1143** | **II43** | Perhaps 1 with a superscript? |
+
+## prosecutio – sacu (pp. 178–187)
+
+From [the cross-check of prosecutio – sacu](crosscheck-prosecutio-sacu.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 181 | *reafian* | Lat.: mortuum **refáre** Wal Q | **refare** | |
+| [ ] | 187 | *rogationes* | headword **rogationes** Bittgang(Prozessions)tage | **rogatione** | |
