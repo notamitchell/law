@@ -24,6 +24,16 @@
         de: 'Grammatical term'
     };
 
+    /**
+     * The little tag after a headword in lists: "OE" for Old English (with
+     * "Old English" as its tooltip), and the full name for the others.
+     */
+    function languageBadge(lang) {
+        const name = LANGUAGES[lang] || lang;
+        const text = lang === 'ang' ? 'OE' : name;
+        return `<span class="lang-badge ${escapeXml(lang)}" title="${escapeXml(name)}">${escapeXml(text)}</span>`;
+    }
+
     // Language codes for the names the old entry pages used.
     const LANGUAGE_CODES = {
         'Old English': 'ang',
@@ -634,7 +644,7 @@ ${translation}
     }
 
     const api = {
-        TEI_NS, LANGUAGES, LANGUAGE_CODES,
+        TEI_NS, LANGUAGES, LANGUAGE_CODES, languageBadge,
         useDom, slugify, sortKey, alphaKey, letterOf, ALPHABET, escapeXml,
         linkAbbreviations, loadAbbreviations, extractCitations, citationXr, splitSenses, sensesXml, detectLanguage, detectHeadword,
         inlineToTei, isEmptyHtml, buildEntryXml,

@@ -73,7 +73,7 @@ const ENTRY_FILES = [{% for f in entry_files %}"{{ f.basename }}"{% unless forlo
             <ul class="entry-list">${byLetter[l].map(e => `
                 <li>
                     <a class="headword" href="${root}entry.html?id=${encodeURIComponent(e.id)}">${esc(e.hw)}</a>
-                    ${e.lang !== 'ang' ? `<span class="lang-badge ${e.lang}">${ELieb.LANGUAGES[e.lang] || e.lang}</span>` : ''}
+                    ${ELieb.languageBadge(e.lang)}
                     <span class="gloss">${esc(e.gloss || '')}</span>
                 </li>`).join('')}
             </ul>`).join('');

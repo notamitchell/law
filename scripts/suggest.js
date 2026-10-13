@@ -83,7 +83,7 @@
                     <li role="option" id="${list.id}-${i}" aria-selected="false">
                         <a href="${href(e)}" tabindex="-1">
                             <span class="headword">${esc(e.hw)}</span>
-                            ${e.lang !== 'ang' ? `<span class="lang-badge ${e.lang}">${ELieb.LANGUAGES[e.lang] || e.lang}</span>` : ''}
+                            ${ELieb.languageBadge(e.lang)}
                             <span class="gloss">${esc(e.gloss || '')}</span>
                         </a>
                     </li>`).join('');
