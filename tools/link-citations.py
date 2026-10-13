@@ -5,6 +5,7 @@ files in oe-laws/ (the Old English laws database).
 
     python3 tools/link-citations.py --letter A --dry-run   # report only
     python3 tools/link-citations.py --letter A             # make the links
+    python3 tools/link-citations.py --letter all           # every letter
 
 Each dictionary entry ends with a list of law code citations, such as
     <xr type="lawCode"><ref target="law:Ine">Ine 23,2</ref></xr>
@@ -15,7 +16,8 @@ not changed, and citations that find no clause are left as they were (they
 still link to the law code list). Running it again is safe: citations already
 linked are skipped.
 
-Only entries whose headword is filed under --letter are touched (default A).
+Only entries whose headword is filed under --letter are touched (default A;
+"all" for every entry).
 The citations written in the entry text itself are not touched.
 
 A citation finds its clause in three steps, and the report says which:
@@ -88,7 +90,7 @@ def norm_clause(clause):
     compared: commas read as full stops, brackets, spaces, capitals and a
     final full stop ignored."""
     s = re.sub(r'[\s\[\]]+', '', clause.replace(',', '.')).lower().rstrip('.,')
-    return re.sub(r'^el\.', 'el', s)         # "El. 49" and "El 49" are one thing
+    return re.sub(r'^([a-z]+)\.', r'\1', s)   # "El. 49" and "El 49", "Prol. 1" and "Prol 1" are one thing
 
 
 class Clauses:
@@ -99,11 +101,13 @@ class Clauses:
             if not c['anchor']:
                 continue
             keys = [k[len(c['anchor']) + 1:] for k in c['citationKeys']]
-            if re.match(r'^El\b', c['clause']):
-                # Alfred's Introduction ("Af El. 49,1"): the catalogue splits
-                # "El. 1" into the keys "el" and "1", and "1" would wrongly
-                # claim Af 1, so use the clause as printed instead.
-                keys = [c['clause']]
+            if re.match(r'^[A-Za-z]', c['clause']):
+                # A clause numbered after a word, such as Alfred's Introduction
+                # ("Af El. 49,1") or a prologue ("XAtr Prol. 1"): the catalogue
+                # splits "Prol. 1" into the keys "prol" and "1", and "1" would
+                # wrongly claim clause 1, so use the clause as printed instead,
+                # part by part ("Prol., 1" is the prologue and clause 1).
+                keys = [k for k in (k.strip() for k in c['clause'].split(',')) if k]
             for k in keys:
                 key = norm_clause(k)
                 if key and key not in self.by_anchor[c['anchor']]:
@@ -153,7 +157,7 @@ class Clauses:
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument('--letter', default='A', help='link the entries filed under this letter')
+    ap.add_argument('--letter', default='A', help='link the entries filed under this letter ("all" for every entry)')
     ap.add_argument('--dry-run', action='store_true', help='report only; change no files')
     ap.add_argument('--entries', default='entries')
     ap.add_argument('--catalogue', default='oe-laws/index.json')
@@ -172,7 +176,7 @@ def main():
     for path in sorted(glob.glob(os.path.join(args.entries, '*.xml'))):
         with open(path, encoding='utf-8', newline='') as f:
             text = f.read()
-        if letter_of(headword_of(text)) != args.letter.upper():
+        if args.letter.lower() != 'all' and letter_of(headword_of(text)) != args.letter.upper():
             continue
         entries_seen += 1
         changed_here = 0
@@ -219,7 +223,8 @@ def main():
     with_clause = linked + outcome['clause not found'] + outcome['citation not understood']
     lines = []
     out = lines.append
-    out('Entries filed under %s: %d (with a law code citation list: %d)' % (args.letter.upper(), entries_seen, entries_with_citations))
+    scope = 'All entries' if args.letter.lower() == 'all' else 'Entries filed under %s' % args.letter.upper()
+    out('%s: %d (with a law code citation list: %d)' % (scope, entries_seen, entries_with_citations))
     out('Citations in their lists: %d' % total)
     for k in ('exact', 'ms-letter', 'subclause', 'already linked'):
         if outcome[k]:

@@ -1,124 +1,149 @@
 # Law code citations linked to clause files
 
-Made by `tools/link-citations.py --letter A`. It is replaced each time the tool runs.
+Made by `tools/link-citations.py --letter ALL`. It is replaced each time the tool runs.
 
 ```
-Entries filed under A: 695 (with a law code citation list: 474)
-Citations in their lists: 2440
-  linked, exact            1920
-  linked, subclause         115
-  LINKED TO A CLAUSE:        2035  (83% of all citations; 98% of those with a clause number to a code in the database)
-  not linked, clause not found             43
-  not linked, code not in database        362
-Entries changed: 328; entries whose whole list is linked: 251
+All entries: 9246 (with a law code citation list: 6299)
+Citations in their lists: 27172
+  linked, exact           20392
+  linked, subclause        1281
+  LINKED TO A CLAUSE:       21673  (80% of all citations; 97% of those with a clause number to a code in the database)
+  not linked, clause not found            755
+  not linked, code not in database       4744
+Entries changed: 4573; entries whose whole list is linked: 3459
 ```
 
 ## The code is in the database but no clause file has that number
 
-By code: Ine (15), Af (7), Rect (3), ICn (3), IIAtr (2), Iudex (2), Romscot (2), Ordal (1), VIAtr (1), IIAs (1), IVEg (1), IAtr (1), Ger (1), AGu (1), VAs (1)
+By code: Ine (332), Af (173), Ath (34), Ger (32), Rect (28), ICn (21), Iudex (19), IICn (19), VAs (10), VIAtr (9), Northu (8), IIAs (6), IVEg (6), Abt (6), IIAtr (4)
 
 Citations (with how many times each occurs):
 
-- Ine Pro ×5
-- Rect 4a ×3
-- Iudex 1 ×2
-- Romscot 1 ×2
-- AGu 8
-- Af El 33
-- Af El 42,1
-- Af El 49,9f
-- Af El Rb 49,6
-- Af Rb 1
-- Af Rb 22
-- Af Rb 29
-- Að 2
-- Ger 15,1
-- I Atr 1,10
-- I Cn 1a
-- I Cn 1c
-- I Cn 36
-- II As 21,1
-- II Atr 3,1f
-- II Atr Pro
-- IV Eg 1,4f
-- Ine Insc
-- Ine Rb 13
-- Ine Rb 28
-- Ine Rb 41
-- Ine Rb 5
-- Ine Rb 52
-- Ine Rb 56
-- Ine Rb 62
-- Ine Rb 73
-- Ine Rb 9
-- Ordal 11
-- V As 3,1
-- VI Atr 40,2
+- Ine Pro ×66
+- Að 2 ×34
+- Rect 4a ×25
+- Ger 15,1 ×21
+- Iudex 1 ×19
+- Af Rb 15 ×10
+- Af Rb El 49,6 ×10
+- Af Rb 19 ×9
+- Ger 18,1 ×9
+- Ine Rb 76 ×9
+- V As 3,1 ×9
+- Af Rb 29 ×8
+- Af Rb 47 ×8
+- Ine Rb 13 ×8
+- Ine Rb 51 ×8
+- Ine Rb 25 ×7
+- Ine Rb 36 ×7
+- Ine Rb 38 ×7
+- Ine Rb 74 ×7
+- Af Rb 10 ×6
+- Af Rb 38 ×6
+- I Cn 1a ×6
+- I Cn 1b ×6
+- Ine Rb 11 ×6
+- Ine Rb 29 ×6
+- Ine Rb 31 ×6
+- Ine Rb 35 ×6
+- Ine Rb 39 ×6
+- Ine Rb 47 ×6
+- Ine Rb 69 ×6
+- VI Atr 40,2 ×6
+- Af Rb 20 ×5
+- Af Rb 25 ×5
+- Af Rb 31 ×5
+- I Cn 1c ×5
+- Ine Rb 20 ×5
+- Ine Rb 22 ×5
+- Ine Rb 28 ×5
+- Ine Rb 50 ×5
+- Ine Rb 62 ×5
+- Ine Rb 68 ×5
+- Ine Rb 9 ×5
+- Af Rb 11 ×4
+- Af Rb 26 ×4
+- Af Rb 4 ×4
+- Af Rb 7 ×4
+- Ine Insc ×4
+- Ine Rb 26 ×4
+- Ine Rb 30 ×4
+- Ine Rb 40 ×4
+- Ine Rb 42 ×4
+- Ine Rb 43 ×4
+- Ine Rb 64 ×4
+- Ine Rb 73 ×4
+- Af El 49,9f ×3
+- Af Insc ×3
+- Af Rb 1 ×3
+- Af Rb 12 ×3
+- Af Rb 14 ×3
+- Af Rb 22 ×3
 
 ## The code has no clause files
 
-By code: LeisWl (122), Hn (63), ECf (36), WlArtFz (33), IudDeiIV (16), ExcomVII (16), IudDeiV (9), ExcomVI (8), IudDeiVII (8), SacrCor (5), IudDeiI (4), WlArt (4), CHnCor (4), IudDeiXIII (4), IudDeiII (3)
+By code: Hn (1288), LeisWl (952), ECf (625), WlArtFz (313), IudDeiIV (274), ExcomVII (138), IudDeiVII (133), PsCnFor (95), IudDeiV (90), CHnCor (80), SacrCor (70), HnLond (67), WlArt (58), ECfRetr (51), LibLond (47)
 
 Citations (with how many times each occurs):
 
-- ECf 32 ×8
-- Leis Wl 6 ×5
-- Wl art Fz 5 ×5
-- Leis Wl 11,1 ×4
-- Leis Wl 14 ×4
-- Leis Wl 2 ×4
-- Leis Wl 3 ×4
-- Leis Wl 5 ×4
-- Leis Wl 5,2 ×4
-- Leis Wl 6,1 ×4
-- Wl art Fz 3,1 ×4
-- Excom VI 15 ×3
-- Excom VII 2 ×3
-- Excom VII 23 ×3
-- Excom VII 3 ×3
-- Iud Dei IV 4,6 ×3
-- Iud Dei V 2,2 ×3
-- Leis Wl 14,3 ×3
-- Leis Wl 2,1 ×3
-- Leis Wl 2,3 ×3
-- Leis Wl 3,4 ×3
-- Leis Wl 30 ×3
-- Leis Wl 35 ×3
-- Leis Wl 44,1 ×3
-- Leis Wl 49 ×3
-- Wl art Fz 4 ×3
-- Wl art Fz 6 ×3
-- Wl art Fz 7 ×3
-- CHn cor 11 ×2
-- ECf 13,1 ×2
-- ECf 35,1 ×2
-- Excom V 6 ×2
-- Excom VI 1,3 ×2
-- Excom VII 12 ×2
-- Hn 10,4 ×2
-- Iud Dei IV 2 ×2
-- Iud Dei IV 2,1 ×2
-- Iud Dei IV 3,3 ×2
-- Iud Dei V 2 ×2
-- Iud Dei V 2,3 ×2
-- Iud Dei VII 12,2 ×2
-- Leis Wl 10,1 ×2
-- Leis Wl 10,2 ×2
-- Leis Wl 11 ×2
-- Leis Wl 12 ×2
-- Leis Wl 17,1 ×2
-- Leis Wl 20,2a ×2
-- Leis Wl 20,4 ×2
-- Leis Wl 21 ×2
-- Leis Wl 21,2 ×2
-- Leis Wl 26 ×2
-- Leis Wl 50 ×2
-- Sacr cor 1,1 ×2
-- Sacr cor Pro ×2
-- Wl art 6 ×2
-- Wl art Fz 1 ×2
-- Wl art Fz 3 ×2
-- Wl art Fz 6,3 ×2
-- Wl art Fz 8 ×2
-- Wl ep 2 ×2
+- ECf 32 ×97
+- Hn 10,1 ×37
+- Iud Dei IV 3,1 ×34
+- Iud Dei VI 1 ×30
+- Sacr cor Pro ×28
+- Wl art Fz 5 ×26
+- ECf 13,1 ×25
+- Iud Dei VII 13 ×25
+- Excom VII 2 ×24
+- Leis Wl 3 ×24
+- Wl art Fz 2 ×24
+- Wl art Fz 6 ×24
+- Iud Dei IV 3,3 ×23
+- Leis Wl 5 ×23
+- ECf 11,1 ×22
+- Wl art Fz 3,1 ×22
+- Iud Dei V 2,2 ×21
+- Leis Wl 10,1 ×21
+- Leis Wl 1,1 ×20
+- Leis Wl Pro ×20
+- Wl art Fz 1 ×20
+- Wl art Fz 10 ×20
+- Wl art Fz 4 ×20
+- ECf 33 ×19
+- Leis Wl 24 ×19
+- Iud Dei IV 3 ×18
+- Iud Dei VII 23,1 ×18
+- Leis Wl 2,3 ×18
+- Iud Dei IV 3,2 ×17
+- Iud Dei IV 3,5 ×17
+- Iud Dei IV 4,1 ×17
+- Iud Dei V 2,1 ×17
+- Wl art Fz 8 ×17
+- Excom VII 5 ×16
+- Iud Dei IV 2 ×16
+- Iud Dei V 2 ×16
+- Iud Dei V 2,3 ×16
+- Leis Wl 37 ×16
+- Leis Wl 47 ×16
+- Sacr cor 1,3 ×16
+- Wl ep Pro ×16
+- Iud Dei IV 4,6 ×15
+- Iud Dei VII 12,1 ×15
+- Leis Wl 2,1 ×15
+- Leis Wl 20,2 ×15
+- Leis Wl 38 ×15
+- Wl art Fz 3 ×15
+- Iud Dei IV 1 ×14
+- Iud Dei IV 2,1 ×14
+- Iud Dei V 2,4 ×14
+- Iud Dei VII 12,2 ×14
+- Leis Wl 1 ×14
+- Leis Wl 4 ×14
+- Wl Lond 1 ×14
+- Wl art Fz 7 ×14
+- Wl art Fz 8,2 ×14
+- Wl art Fz Insc ×14
+- CHn cor 11 ×13
+- Iud Dei IV 4 ×13
+- Iud Dei IV 4,5 ×13
 
