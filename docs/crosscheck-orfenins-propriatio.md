@@ -27,8 +27,8 @@ The site already has these right:
 - **German misspellings:** seitlich for zeitlich (*oð*), ümständen (*permixtura*), tretinen (*placitum*), war for wär (*profugio*).
 - **Greek letters:** ß for β (*oðer*).
 - **Missing text:** ~ in *oðer*; the closing ] after 11616 (*oð*).
-- **Stray marks:** ) for ] in *Particip*, *persona*; extra bars \| in *par*, *probare*; Q,: (*præstare*); (cpa\| for (cpa), (*pp*).
-- **Punctuation dropped** in about fifteen entries, such as *orige* (28,1;), *ornotinus,*, *oðer* (2,1.; 9,1;), *po[d]eir* (28,2;), *prendre* (fut 3:).
+- **Stray marks:** ) for ] in *Particip*, *persona*; extra bars \| in *par*, *probare*; Q,: (*praestare*); (cpa\| for (cpa), (*pp*).
+- **Punctuation dropped** in about fifteen entries, such as *orige* (28,1;), *ornotinus,*, *oðer* (2,1.; 9,1;), *[po(d)eir]* (28,2;), *prendre* (fut 3:).
 - **Line-break hyphens left in:** untrenn- bares (*Praefix*), ~ig- ~ (*peningweorð*); and run together: Hafenoder (*patriare*), AnefangKläger (*propriare*).
 
 ## Typography
