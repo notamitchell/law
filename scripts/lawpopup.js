@@ -1,30 +1,38 @@
 /*
- * eLiebermann: law code popups on entry pages.
+ * eLiebermann: abbreviation popups on entry pages.
  *
- * Every law code or manuscript siglum in an entry is a link to its heading on
- * the law code list (lawAbb.html#Abt). This script turns a click on one of
- * those links into a small popup that shows what the code stands for, taken
- * from data/markLaw.json: the German expansion and the English translation.
+ * Every law code, manuscript siglum and grammatical abbreviation in an entry
+ * is a link to its heading on a list: the law code list (lawAbb.html#Abt) or
+ * the grammatical abbreviations (gramAbb.html#Plural). This script turns a
+ * click on one of those links into a small popup that shows what it stands
+ * for, taken from data/markLaw.json or data/markforward.json: the German
+ * expansion and the English translation, and for a grammatical abbreviation
+ * its note, if it has one.
  *
  * - Click or tap opens the popup and keeps it open; Esc, the × button, or a
  *   click elsewhere closes it. Enter on a focused link does the same.
  * - On a computer, resting the pointer on a code previews the popup.
  * - Ctrl, Cmd, Shift or middle-click still follow the link as usual.
- * - If the data can't be loaded, or a code isn't in it, the link simply
- *   goes to the law code list as it did before.
+ * - If the data can't be loaded, or an abbreviation isn't in it, the link
+ *   simply goes to its list as it did before.
  *
- * The text comes from markLaw.json and is only ever inserted as text, never
- * as HTML.
+ * The text comes from the two data files and is only ever inserted as text,
+ * never as HTML.
  */
 (function () {
     'use strict';
 
-    const LINK = 'a[href*="lawAbb.html#"]';
+    const LINK = 'a[href*="lawAbb.html#"], a[href*="gramAbb.html#"]';
+    // The two lists: where the data is, and what the popup calls things.
+    const KINDS = {
+        law: { file: 'data/markLaw.json', list: 'lawAbb.html', noun: 'Law code', more: 'Full list of law codes' },
+        gram: { file: 'data/markforward.json', list: 'gramAbb.html', noun: 'Abbreviation', more: 'Full list of grammatical abbreviations' }
+    };
     const HOVER_DELAY = 220;   // ms of rest before a hover preview opens
     const LEAVE_DELAY = 280;   // ms before a hover preview closes
 
-    let groups = null;         // anchor -> rows of data/markLaw.json
-    let loading = null;
+    const groups = {};         // kind -> anchor -> rows of that kind's data file
+    const loading = {};
     let popup = null;
     let active = null;         // the link the popup belongs to
     let pinned = false;        // opened by click: stays until dismissed
@@ -35,18 +43,20 @@
     const root = () => window.SITE_ROOT || '';
     const canHover = () => window.matchMedia && window.matchMedia('(hover: hover)').matches;
 
-    function load() {
-        if (!loading) {
-            loading = fetch(root() + 'data/markLaw.json')
+    const kindOf = link => (link.getAttribute('href') || '').indexOf('gramAbb.html#') >= 0 ? 'gram' : 'law';
+
+    function load(kind) {
+        if (!loading[kind]) {
+            loading[kind] = fetch(root() + KINDS[kind].file)
                 .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
                 .then(rows => {
-                    groups = {};
-                    rows.forEach(row => { (groups[row.Anchor] = groups[row.Anchor] || []).push(row); });
-                    return groups;
+                    groups[kind] = {};
+                    rows.forEach(row => { (groups[kind][row.Anchor] = groups[kind][row.Anchor] || []).push(row); });
+                    return groups[kind];
                 })
-                .catch(err => { console.error('Law code popups: ' + err); groups = {}; return groups; });
+                .catch(err => { console.error('Abbreviation popups: ' + err); groups[kind] = {}; return groups[kind]; });
         }
-        return loading;
+        return loading[kind];
     }
 
     function anchorOf(link) {
@@ -57,7 +67,8 @@
     /** The row for this link: the spelling printed in the entry if the group
      *  has it (Q and Quadr share an anchor), otherwise the first row. */
     function rowFor(link) {
-        const rows = groups && groups[anchorOf(link)];
+        const kind = kindOf(link);
+        const rows = groups[kind] && groups[kind][anchorOf(link)];
         if (!rows || !rows.length) return null;
         const printed = norm(link.textContent);
         return rows.find(r => norm(r['Gesetze Text']) === printed) || rows[0];
@@ -78,7 +89,8 @@
         const printed = norm(link.textContent) || norm(row['Gesetze Text']);
         const box = element('div', 'law-popup');
         box.setAttribute('role', 'dialog');
-        box.setAttribute('aria-label', 'Law code ' + printed);
+        const kind = KINDS[kindOf(link)];
+        box.setAttribute('aria-label', kind.noun + ' ' + printed);
         box.tabIndex = -1;
 
         const close = element('button', 'law-popup-close', '×');
@@ -104,10 +116,17 @@
             dd.lang = 'en';
             list.appendChild(dd);
         }
+        // A note belongs to the abbreviation, not to one spelling of it.
+        const siblings = (groups[kindOf(link)] || {})[anchorOf(link)] || [];
+        const note = norm(row['Notes: Grammatical'] || (siblings.find(r => r['Notes: Grammatical']) || {})['Notes: Grammatical']);
+        if (note) {
+            list.appendChild(element('dt', null, 'Note'));
+            list.appendChild(element('dd', 'law-popup-note', note));
+        }
         box.appendChild(list);
 
-        const more = element('a', 'law-popup-more', 'Full list of law codes');
-        more.href = root() + 'lawAbb.html#' + encodeURIComponent(anchorOf(link));
+        const more = element('a', 'law-popup-more', kind.more);
+        more.href = root() + kind.list + '#' + encodeURIComponent(anchorOf(link));
         box.appendChild(more);
 
         box.addEventListener('mouseenter', () => clearTimeout(hideTimer));
@@ -195,7 +214,7 @@
         const byKeyboard = event.detail === 0;
         if (popup && active === link && pinned) { hide(true); return; }
 
-        load().then(() => {
+        load(kindOf(link)).then(() => {
             const row = rowFor(link);
             if (!row) { window.location.href = link.href; return; }
             show(link, row, byKeyboard);
@@ -211,7 +230,7 @@
         clearTimeout(hideTimer);
         clearTimeout(showTimer);
         showTimer = setTimeout(() => {
-            load().then(() => {
+            load(kindOf(link)).then(() => {
                 const row = rowFor(link);
                 if (row && link.matches(':hover') && !pinned) show(link, row, false);
             });
