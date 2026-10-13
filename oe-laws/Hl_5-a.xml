@@ -4,8 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Hl 5[a]</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +21,16 @@
         <idno type="citationKey">Hl 5a</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">9</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Hlothere &amp; Eadric</title> <note type="reign">r. 673–685; 685–686</note></bibl>
+        <bibl type="legalText"><title>Hlothhere and Eadric’s Code</title> <note type="reign">Hlothhere, r. 673–685; Eadric, r. 685–686</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">9</biblScope></bibl>
+          <bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002), p. <biblScope unit="page">128</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922), p. <biblScope unit="page">19</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>H</witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Oliver, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">5[a]</idno>
-          <idno type="editorNumber" n="Oliver">3</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +49,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 138 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 136 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 9.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5[a]">
         <head><ref type="lawCode" target="law:Hl">Hl</ref> 5[a]</head>
-        <ab type="selectedText" xml:lang="und">Gif frigman mannan forstele, gif he eft cuma stermelda, secge an andweardne. Gecænne hine gif he mæge; hæbbe þare freora rim æwdamanna ⁊ ænne mid in aþe æghwilc man æt þam tune þe he tohyre.</ab>
-        <ab type="translation" xml:lang="en">If a freeman steals a person, if he afterwards comes as an informer, let him announce it in the presence [of the thief]. Let him [the man accused] clear himself if he is able; let each man [so charged] have a number of free oathmen and one with [him] in the oath from the dwelling to which he belongs.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif frigman mannan forstele, gif he eft cuma stermelda, secge an andweardne; gecænne hine, gif he mæge: hæbbe þare freora rim æwdamanna ⁊ ænne mid in aþe, æghwilc man æt þam tune þe he tohyre;</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5[a]" corresp="#wit-h">Gif frigman mannan forstele, gif he eft cuma stermelda, secge an andweardne; gecænne hine, gif he mæge: hæbbe þare freora rim æwdamanna ⁊ ænne mid in aþe, æghwilc man æt þam tune þe he tohyre;</ab>
+        <ab type="editionText" xml:lang="ang" source="#oliver" n="3" corresp="#wit-h">Gif frigman mannan forstele, gif he eft cuma stermelda, secge an andweardne. Gecænne hine gif he mæge; hæbbe þare freora rim æwdamanna ⁊ ænne mid in aþe æghwilc man æt þam tune þe he tohyre.</ab>
+        <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If a freeman steals a person, if he afterwards comes as an informer, let him announce it in the presence [of the thief]. Let him [the man accused] clear himself if he is able; let each man [so charged] have a number of free oathmen and one with [him] in the oath from the dwelling to which he belongs.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If a freeman steals a man, and if he [who has been stolen] returns as informer, he shall accuse him to his face; and he [the thief] shall clear himself if he can. And every man involved in such a charge shall have a number of free witnesses, and one [at least] of his witnesses from the village to which he himself belongs.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Freier einen Menschen wegstiehlt, wenn [dann] dieser zurück [in die Heimath] kommt [als] Bestrafungsanzeiger, [so] klage [letzterer] gegen jenen persönlich; [der Menschendieb] reinige sich [von dieser Klage], wenn er kann: er habe solcher Freier eine Anzahl [als] Eidesmannen und [zwar] einen mit im Eide, jeglichen [Eides]mann aus dem Ortsbezirk, welchem er [selbst] zugehört;</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a freeman steals away a person, if [then] this person comes back [home] [as] accuser for punishment, [then] let [the latter] bring the charge against him in person; let [the man-thief] clear himself [of this charge], if he can: let him have a number of such freemen [as] oath-men, and [indeed] one with him in the oath, each [oath-]man from the local district to which he [himself] belongs;</ab>
       </div>
     </body>
   </text>

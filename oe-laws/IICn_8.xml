@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Cn 8</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">IICn 8</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">314</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Cnut</title></bibl>
+        <bibl type="legalText"><title>II Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">314</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">178</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">8</idno>
-          <idno type="editorNumber" n="Robertson">8</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +53,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1756 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1712 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 314.</change>
+      <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 179.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="8">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 8</head>
-        <ab type="selectedText" xml:lang="und">Feos bote. Uton eac ealle ymbe friðes bote ⁊ ymbe feos bóte smeagian swiðe georne: swa ymbe friðes bote swa ðam bondan sy selost ⁊ ðam ðeofan sy laðost, ⁊ swa ymbe feos bóte, þæt an mynet gange ofer ealle ðas ðéode butan ælcon fal[s]e; ⁊ þæt nan man ne forsace.</ab>
-        <ab type="translation" xml:lang="en">The reform of the coinage. Let us all likewise very zealously take thought for the promotion of public security and improvement of the coinage—for the promotion of public security in such a way as shall be best for householders and worst for thieves, and for the improvement of the coinage in such a way that there shall be one currency free from all adulteration throughout this land; and no-one shall refuse it.</ab>
-        <ab type="supplementaryText" xml:lang="und">Uton eac ealle ymbe friðes bote ⁊ feos bote smeagan swyðe geor[n]e: swa embe friðes bote, swa ðam bondan si selost ⁊ þam þeofan si laþast; and swa embe feos bote, þæt an mynet gange ofer ealle þas þéode butan ælcan false; ⁊ þæt nan man ne forsace.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="8" corresp="#wit-g-a">Uton eac ealle ymbe friðes bote ⁊ [ymbe] feos bote smeagan swyðe geor[n]e: swa embe friðes bote, swa ðam bondan si selost ⁊ þa<hi rend="italic">m</hi> þeofan si laþast; and swa embe feos bote, þ<hi rend="italic">æt</hi> an mynet gange ofer ealle þas þéode butan ælcan false; ⁊ þ<hi rend="italic">æt</hi> nan man ne forsace.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="8" corresp="#wit-a">Uton eac ealle ymbe fryðes bote ⁊ embe féos bote smeagan swiðe georne: swa embe fryðes bote, swa þan bundan sy selost ⁊ þam þeofon sy laðost; and swa ymbe féos bote, þæt an mynet gange ofer ealle þas þeode buton ælcon false; ⁊ þæt nan mann ne forsace.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="8" corresp="#wit-q">Agamus etiam omnes sedulo de stabilitate pacis et emendatione pecunię (monetę): de pacis actione, sicut patrifamilias magis placeat et furi plus displiceat (patriote sit melius et latroni odibilius); de correctione pecunię, ut una moneta per totas nationes has sine omni falso teneatur; et nemo repudiet eam.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="8" corresp="#wit-b">Feos bote. Uton eac ealle ymbe friðes bote ⁊ ymbe feos bóte smeagian swiðe georne: swa ymbe friðes bote swa ðam bondan sy selost ⁊ ðam ðeofan sy laðost, ⁊ swa ymbe feos bóte, þæt an mynet gange ofer ealle ðas ðéode butan ælcon fal[s]e; ⁊ þæt nan man ne forsace.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">The reform of the coinage. Let us all likewise very zealously take thought for the promotion of public security and the improvement of the coinage—for the promotion of public security in such a way as shall be best for householders and worst for thieves, and for the improvement of the coinage in such a way that there shall be one currency free from all adulteration throughout this land; and no-one shall refuse it.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Münzreform. B) Lasst uns auch alle auf Besserung öffentlicher Sicherheit und auf (fehlt G) Besserung des Geldes recht ernsthaft bedacht sein: so auf Sicherheitsreform, wie dem Bauern [Hausvater] am liebsten und den Dieben am leidesten sei, und so auf Münzreform, dass Eine Münze über all dies Land hin gehe ohne jedes Falsch; und die weise niemand zurück.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Reform of the coinage. B) Let us also all very earnestly consider the improvement of public security and (lacking in G) the improvement of the coinage: on public security, in the way that is best for the householder (the farmer) and most hateful to thieves; and on reform of the coinage, that one coinage be current throughout all this nation without any falseness; and let no one refuse it.</ab>
+        <note type="editorial">‘ymbe’ is probably to be supplied in G before ‘feos’ (B ‘ymbe’, A and Ld ‘embe’, Consiliatio). B's heading ‘Feos bote’ is red in the margin. Liebermann compares VI Atr 31–32.1; III Eg 8.</note>
       </div>
     </body>
   </text>

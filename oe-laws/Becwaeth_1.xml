@@ -3,33 +3,32 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Becw 1</title>
-        <respStmt><resp>Translation of the selected text</resp><name>Wormald, Making</name></respStmt>
+        <title>Becwæð 1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#wormald">Wormald</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Becwaeth_1</idno>
-        <idno type="citation">Becw 1</idno>
-        <idno type="lawCode">Becw</idno>
+        <idno type="citation">Becwæð 1</idno>
+        <idno type="lawCode">Becwæð</idno>
         <idno type="lawCodeAnchor">Becwaeth</idno>
         <idno type="clause">1</idno>
         <idno type="citationKey">Becwaeth 1</idno>
-        <idno type="legalText">Becw.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">400</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Becwæð</title></bibl>
+        <bibl type="legalText"><title>Becwæð (Bequest)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">400</biblScope></bibl>
+          <bibl xml:id="wormald" type="translation">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -46,17 +45,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2127 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2072 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 400.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
-        <head><ref type="lawCode" target="law:Becwaeth">Becw</ref> 1</head>
-        <ab type="selectedText" xml:lang="und">… Hit becwæð 7 becwæl sé ðe hit ahte mid fullan folcrihte, swa swa hit his yldran mid feo 7 mid feore rihte begeatan 7 letan 7 læfdan ðam to gewealde, ðe hy wel uðan.</ab>
-        <ab type="translation" xml:lang="en">That he bequeathed and [thereafter] died: he who owned it in full customary law, just as his ancestors lawfully acquired it with their property and person and left and made over to the keeping to whom they had good cause to grant it.</ab>
-        <ab type="supplementaryText" xml:lang="und">Hit becwæð 7 becwæl se ðe hit ahte mid fullan folcrihte, swa swa hit his yldran mid feo 7 mid feore rihte begeatan 7 letan 7 læfdan ðam to gewealde, ðe hy wel uðan.</ab>
-        <ab type="supplementaryTranslation" xml:lang="en">That he bequeathed and [thereafter] died: he who owned it in full customary law, just as his ancestors lawfully acquired it with their property and person and left and made over to the keeping to whom they had good cause to grant it.</ab>
+        <head><ref type="lawCode" target="law:Becwaeth">Becwæð</ref> 1</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-b">Hit becwæð 7 becwæl se ðe hit ahte mid fullan folcrihte, swa swa hit his yldran mid feo 7 mid feore rihte begeatan 7 letan 7 læfdan ðam to gewealde, ðe hy wel uðan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-h">… Hit becwæð 7 becwæl sé ðe hit ahte mid fullan folcrihte, swa swa hit his yldran mid feo 7 mid feore rihte begeatan 7 letan 7 læfdan ðam to gewealde, ðe hy wel uðan.</ab>
+        <ab type="translation" xml:lang="en" source="#wormald" corresp="#wit-h">That he bequeathed and [thereafter] died: he who owned it in full customary law, just as his ancestors lawfully acquired it with their property and person and left and made over to the keeping to whom they had good cause to grant it.</ab>
+        <ab type="translation" xml:lang="en" source="#wormald" corresp="#wit-b">That he bequeathed and [thereafter] died: he who owned it in full customary law, just as his ancestors lawfully acquired it with their property and person and left and made over to the keeping to whom they had good cause to grant it.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">… dies vermachte und verstarb der, welcher es nach vollem Landrecht besass, so wie es seine Voreltern, durch Geldzahlung und durch Naturalienabgabe[?], richtig erworben und denjenigen, welchen [oder dem, welchem] sie es frei [völlig] schenkten, zur Verfügung überlassen und hinterlassen hatten.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">… this [land] was bequeathed by him who held it with full folk-right — and he died — just as his forebears had rightly acquired it with money and with payment in kind[?], and had left and bequeathed it into the power of those [or him] to whom they freely [fully] granted it.</ab>
+        <note type="editorial">Liebermann prints H (Textus Roffensis f. 95, after a charm, c. 1120) and B (Cambridge, Corpus Christi College 383, p. 89, after a charm as in H, c. 1125). K is B; H is also given here. The beginning is lacking, perhaps ‘Swa ic hit hæbbe, swa’ as in 2. Leo set the text out rhythmically. ‘dies’ means the land now disputed against me, the holder, by you. ‘feore’: Liebermann would correct to ‘feorme’ (payment in kind; compare Genesis 2659 ‘mid feo and mid feorme’); the formula ‘æt feo oððe æt feore’ (EGu 12) misled the archetype. B's ‘his’ is corrected from ‘is’. Liebermann dates Becwæð c. 1020–c. 1060. The pairs ‘becwæð ⁊ becwæl’, ‘feo ⁊ feore’, ‘letan ⁊ læfdan’ alliterate.</note>
       </div>
     </body>
   </text>

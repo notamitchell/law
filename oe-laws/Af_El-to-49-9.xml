@@ -4,8 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Af El. 49.9</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -16,29 +20,25 @@
         <idno type="clause">El. 49.9</idno>
         <idno type="citationKey">Af el</idno>
         <idno type="citationKey">Af 49.9</idno>
-        <idno type="legalText">Af (domboc)</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">46</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Alfred</title></bibl>
+        <bibl type="legalText"><title>Alfred’s Domboc</title> <note type="reign">Alfred, r. 871–899</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">46</biblScope></bibl>
+          <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">280</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">E</witness>
-          <witness>H</witness>
-          <witness>B (no Prol.)</witness>
-          <witness>G (Prol. only)</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>Bu</witness>
-          <witness>Ot (frags.)</witness>
+          <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b-no-prol"><abbr>B (no Prol.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
-        <bibl type="selectedText">E: Cambridge, Corpus Christi College, MS 173 Jurasinski and Oliver, eds.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">El. 49.9</idno>
-          <idno type="editorNumber" n="Jurasinski and Oliver">Prologue [a]</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -57,17 +57,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 381 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 374 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 46.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="El. 49.9">
         <head><ref type="lawCode" target="law:Af">Af</ref> El. 49.9</head>
-        <ab type="selectedText" xml:lang="und">Ic ða Ælfred cyning þás togædere gegaderode ⁊ awritan het, monege þara þe ure foregengan heoldon, ða ðe me licodon; ⁊ manege þara þe me ne licodon ic áwearp mid minra witena geðeahte, ⁊ on oðre wisan bebead to healdanne. Forðam ic ne dorste geðristlæcan þara minra awuht fela on gewrit settan, forðam me wæs uncuð, hwæt þæs ðam lician wolde ðe æfter ús wæren. Ac ða ðe ic gemette awðer oððe on Ines dæge, mines mæges, oððe on Offan Mercna cyninges, oððe on Æþelbryhtes þe ærest fulluhte onfeng on Angelcynne, þa ðe me ryhtoste ðuhton, ic þa heron gegaderode, ⁊ þa oðre forlét.</ab>
-        <ab type="translation" xml:lang="en">Then I, Alfred the king, gathered these [rulings] together and commanded to be written many of them which our ancestors held – those that pleased me. And many of them that did not please me I discarded with the consent of my counselors, and directed them to be held in a different manner. Thus I did not dare presume to set many of mine in writing, because it was not known to me, what would please those who came after us. But those that I found either from the time of Ine, my kinsman, or of Offa, king of the Mercians, or of Æthelberht who first in England received baptism, those which seemed most just to me, I gathered herein, and left out the others.</ab>
-        <ab type="secondTranslation" xml:lang="en">Now I, King Alfred, have collected these laws, and have given orders for copies to be made of many of those which our predecessors observed and which I myself have approved of. But many of those I did not approve of I have annulled, by the advice of my councillors, while [in other cases] I have ordered changes to be introduced. For I have not dared to presume to set down in writing many of my own, for I cannot tell what [innovations of mine] will meet with the approval of our successors. But those which were the most just of the laws I found—whether they dated from the time of Ine my kinsman, or of Offa, king of the Mercians, or of Æthelberht who was the first [king] to be baptised in England—these I have collected while rejecting the others.</ab>
-        <ab type="supplementaryText" xml:lang="und">Ic ða Ælfred cyning, ðas togædere gegaderode, ond awriten het, monige ðara þe ure foregengan heoldon, þara ðe me lycedon; ond manige ðara ðe me ne lycodon ic awearp mid minre witena geðeahte, ond on oðre wisan bebead to healdanne. Forðon ic ne dorste geðristlæcan ðara minra awuht feola on gewrit setton, forðon me wæs uncuþ, hwæt ðæs þæm lician wolde þe æfter us wæron. Ac þa ða ic gemette aþær oððe on Ines dæge, mines mæges, oððe on Offan Myrcna cyninges oþþe on Æþelberhtes, þe ærest fulluht onfeng on Angelcynne, ða ðe me rihtest þuhton, ic ða heron gegaderode, ond þa oðre forlett.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 49.9" corresp="#wit-h">Ic ða Ælfred cyning, ðas togædere gegaderode, ond awriten het, monige ðara þe ure foregengan heoldon, þara ðe me lycedon; ond monige ðara ðe me ne lycodon ic awearp mid minre witena geðeahte, ond on oðre wisan bebead to healdenne. Forðon ic ne dorste geðristlæcan ðara minra awuht feola on gewrit setton, forðon me wæs uncuþ, hwæt ðæs þæm lician wolde þe æfter us wæron. Ac þa ða ic gemette aþær oððe on Ines dæge, mines mæges, oððe on Offan Myrcna cyninges oþþe on Æþelberhtes, þe ærest fulluht onfeng on Angelcynne, ða ðe me rihtest þuhton, ic ða heron gegaderode, ond ða oþre forlett.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 49.9" corresp="#wit-e">Ic ða Ælfred cyning þás togædere gegaderode ⁊ awritan het, monege þara þe ure foregengan heoldon, ða ðe me licodon; ⁊ manege þara þe me ne licodon ic áwearp mid minra witena geðeahte, ⁊ on oðre wisan bebead to healdanne. Forðam ic ne dorste geðristlæcan þara minra awuht fela on gewrit settan, forðam me wæs uncuð, hwæt þæs ðam lician wolde ðe æfter ús wæren. Ac ða ðe ic gemette awðer oððe on Ines dæge, mines mæges, oððe on Offan Mercna cyninges oððe on Æþelbryhtes, þe ærest fulluhte onfeng on Angelcynne, þa ðe me ryhtoste ðuhton, ic þa heron gegaderode, ⁊ þa oðre forlét.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 49.9" corresp="#wit-q">Ego tunc Ælfredus rex hec collegi simul et scribi precepi, multa eorum que predecessores nostri tenuerunt et mihi placuerunt; et multa que mihi displicuerunt abieci consilio sapientum meorum et aliter obseruari precepi. Et nolui multa de meis in scriptura ponere, dubitans, quid posteris nostris placeret inde. Sed que repperi de diebus Ine regis, cognati mei, uel Offe Mircenorum regis uel Æþelbrihtes, qui primus in Anglorum gente baptizatus est, que michi iustiora uisa sunt hic collegi, ceteraque dimisi.</ab>
+        <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="Prologue [a]" corresp="#wit-e">Ic ða Ælfred cyning þás togædere gegaderode ⁊ awritan het, monege þara þe ure foregengan heoldon, ða ðe me licodon; ⁊ manege þara þe me ne licodon ic áwearp mid minra witena geðeahte, ⁊ on oðre wisan bebead to healdanne. Forðam ic ne dorste geðristlæcan þara minra awuht fela on gewrit settan, forðam me wæs uncuð, hwæt þæs ðam lician wolde ðe æfter ús wæren. Ac ða ðe ic gemette awðer oððe on Ines dæge, mines mæges, oððe on Offan Mercna cyninges, oððe on Æþelbryhtes þe ærest fulluhte onfeng on Angelcynne, þa ðe me ryhtoste ðuhton, ic þa heron gegaderode, ⁊ þa oðre forlét.</ab>
+        <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Then I, Alfred the king, gathered these [rulings] together and commanded to be written many of them which our ancestors held – those that pleased me. And many of them that did not please me I discarded with the consent of my counselors, and directed them to be held in a different manner. Thus I did not dare presume to set many of mine in writing, because it was not known to me, what would please those who came after us. But those that I found either from the time of Ine, my kinsman, or of Offa, king of the Mercians, or of Æthelberht who first in England received baptism, those which seemed most just to me, I gathered herein, and left out the others.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">Now I, King Alfred, have collected these laws, and have given orders for copies to be made of many of those which our predecessors observed and which I myself have approved of. But many of those I did not approve of I have annulled, by the advice of my councillors, while [in other cases] I have ordered changes to be introduced. For I have not dared to presume to set down in writing many of my own, for I cannot tell what [innovations of mine] will meet with the approval of our successors. But those which were the most just of the laws I found—whether they dated from the time of Ine my kinsman, or of Offa, king of the Mercians, or of Æthelberht who was the first [king] to be baptised in England—these I have collected while rejecting the others.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Ich nun, König Aelfred, sammelte diese [folgenden Gesetze] und hiess [sie] niederschreiben, viele von denen, welche unsere Vorgänger hielten, [nämlich] diejenigen, die mir gefielen; und viele von denen, die mir nicht gefielen, verwarf ich mit meiner Witan Beistimmung und gebot [sie] in anderer Weise zu halten. Denn ich wagte nicht mich zu erdreisten, irgend viel meiner [eigenen] schriftlich festzusetzen, denn mir war ungewiss, was davon ihnen, die nach uns kämen, gefallen würde. Die ich dagegen vorfand, die [Gesetze] zu den Lebzeiten sei es Ine’s, meines Verwandten, sei es zu Offa’s, des Mercierkönigs, sei es zu Aethelbryht’s [Lebzeiten], der zuerst im Engländer-Stamme die Taufe empfing, [unter ihnen] die, welche mir am richtigsten schienen, sammelte ich hierin, und die anderen liess ich weg.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">I, then, King Alfred, collected these [following laws] and ordered [them] to be written down, many of those which our predecessors kept, [namely] those that pleased me; and many of those that did not please me I rejected with the agreement of my councillors and commanded [them] to be kept in another way. For I did not dare to presume to set down in writing much of my [own], for it was unknown to me what of it would please those who came after us. But those which I found, either from the days of Ine, my kinsman, or of Offa, king of the Mercians, or of Æthelberht, who first received baptism among the English people, [of those] the ones that seemed to me most just, I collected here, and the others I left out.</ab>
       </div>
     </body>
   </text>

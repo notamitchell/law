@@ -4,8 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Hl 6</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +21,16 @@
         <idno type="citationKey">Hl 6</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">10</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Hlothere &amp; Eadric</title> <note type="reign">r. 673–685; 685–686</note></bibl>
+        <bibl type="legalText"><title>Hlothhere and Eadric’s Code</title> <note type="reign">Hlothhere, r. 673–685; Eadric, r. 685–686</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">10</biblScope></bibl>
+          <bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002), p. <biblScope unit="page">128</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922), p. <biblScope unit="page">19</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>H</witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Oliver, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">6</idno>
-          <idno type="editorNumber" n="Oliver">4</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +48,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 140 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 138 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 10.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6">
         <head><ref type="lawCode" target="law:Hl">Hl</ref> 6</head>
-        <ab type="selectedText" xml:lang="und">Gif ceorle acwyle be libbendum wife ⁊ bearne, riht is þæt hit, þæt bearn, medder folgige, ⁊ him man an his fæderingmagum wilsumne berigean ge[s]elle his feoh to healdenne, oþ þæt he X wintra sie.</ab>
-        <ab type="translation" xml:lang="en">If a freeman should die with a living wife and child, it is right that it, that child, should be under the protection of the mother, and one should give for him one among his father’s kin who willingly gives surety to maintain his property, until he should be 10 years old.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif ceorle acwyle be libbendum wife ⁊ bearne, riht is þæt hit, þæt bearn, medder folgige, ⁊ him mon an his fæderingmagum wilsumne berigean gefelle, his feoh to healdenne, oþ þæt he X wintra sie.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-h">Gif ceorl acwyle be libbendum wife ⁊ bearne, riht is þ<hi rend="italic">æt</hi> hit, þ<hi rend="italic">æt</hi> bearn, medder folgige, ⁊ him mon an his fæderingmagum wilsumne berigean gefelle, his feoh to healdenne, oþ þ<hi rend="italic">æt</hi> he X wintra sie.</ab>
+        <ab type="editionText" xml:lang="ang" source="#oliver" n="4" corresp="#wit-h">Gif ceorle acwyle be libbendum wife ⁊ bearne, riht is þæt hit, þæt bearn, medder folgige, ⁊ him man an his fæderingmagum wilsumne berigean ge[s]elle his feoh to healdenne, oþ þ<hi rend="italic">æt</hi> he X wintra sie.</ab>
+        <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If a freeman should die with a living wife and child, it is right that it, that child, should be under the protection of the mother, and one should give for him one among his father’s kin who willingly gives surety to maintain his property, until he should be 10 years old.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If a man dies leaving a wife and child, it is right, that the child should accompany the mother; and one of his father’s relatives who is willing to act, shall be given him as his guardian to take care of his property, until he is ten years old.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Ehemann stirbt bei lebendem Weibe und Kinde, so ist recht, dass es, das Kind, der Mutter folge, und man ihm unter seinen Vatersmagen einen willigen Schützer gebe, [ihm] sein Vermögen zu wahren, bis dass er [der Sohn] 10 Winter [alt] sei.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a husband dies while his wife and child are living, it is right that it, the child, should follow the mother, and that one should give him a willing protector from among his paternal kinsmen, to look after his property [for him], until he [the son] is 10 winters [old].</ab>
       </div>
     </body>
   </text>

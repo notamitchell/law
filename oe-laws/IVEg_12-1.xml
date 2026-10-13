@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>IV Eg 12.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,24 +18,19 @@
         <idno type="lawCodeAnchor">IVEg</idno>
         <idno type="clause">12.1</idno>
         <idno type="citationKey">IVEg 12.1</idno>
-        <idno type="legalText">IV Edg</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">212</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>IV Edgar</title></bibl>
+        <bibl type="legalText"><title>IV Edgar (Whitbordesstan)</title> <note type="reign">Edgar, r. 957/9–975</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">212</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">36</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">C</witness>
-          <witness>F</witness>
-          <witness>C (Latin)</witness>
+          <witness xml:id="wit-c" rend="bold"><abbr>C</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
+          <witness xml:id="wit-f"><abbr>F</abbr> <note type="manuscript">London, British Library, Cotton Nero E.i</note></witness>
+          <witness xml:id="wit-c-latin"><abbr>C (Latin)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
         </listWit>
-        <bibl type="selectedText">C: Cambridge, Corpus Christi College, MS 265 Gesetze</bibl>
-        <bibl type="supplementaryText">F: British Library, Cotton Nero E.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">12.1</idno>
-          <idno type="editorNumber" n="Robertson">12.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,16 +49,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1032 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1005 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 212.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="12.1">
         <head><ref type="lawCode" target="law:IVEg">IV Eg</ref> 12.1</head>
-        <ab type="selectedText" xml:lang="und">⁊ ðæs wilnige þæt ðes án dom on swylcere smeagunge sy ús eallon gemæne, to gebeorge ⁊ to friðe eallum leodscype.</ab>
-        <ab type="translation" xml:lang="en">But I desire that this one decree relating to investigations such as these shall apply equally to us all, for the protection and security of the whole population.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ þæs wilnige, þæt þes án dóm on swylcere smeagunge sy ús eallon gemæne, to gebeorge ⁊ to friðe eallum leodscipe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12.1" corresp="#wit-f">⁊ þæs wilnige, þ<hi rend="italic">æt</hi> þes án dóm on swylcere smeagunge sy ús eallon gemæne, to gebeorge ⁊ to friðe eallum leodscipe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12.1" corresp="#wit-c">⁊ ðæs wilnige, þæt ðes án dom on swylcere smeagunge sy ús eallon gemæne, to gebeorge ⁊ to friðe eallum leodscype.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="12.1" corresp="#wit-c">⁊ ðæs wilnige þæt ðes án dom on swylcere smeagunge sy ús eallon gemæne, to gebeorge ⁊ to friðe eallum leodscype.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">But I desire that this one decree relating to investigations such as these shall apply equally to us all, for the protection and security of the whole population.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Jedoch das wünsch ich, dass dies eine [obige] Gesetz über solche Untersuchung uns allen gemeinsam sei, zu Schutz und zu Sicherheit allem Volke.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But this I desire, that this one [above] law on such inquiry be common to us all, for the protection and security of all the people.</ab>
+        <note type="editorial">Not in the Latin Versio. In F, ‘þæs’ was changed by the scribe from ‘þæt’. Liebermann compares IV Eg 2.2 ff.</note>
       </div>
     </body>
   </text>

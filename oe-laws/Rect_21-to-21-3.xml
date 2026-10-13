@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Rect 21, 21.1, 21.2, 21.3</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Gobbitt</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Gobbitt</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -18,23 +21,18 @@
         <idno type="citationKey">Rect 21.1</idno>
         <idno type="citationKey">Rect 21.2</idno>
         <idno type="citationKey">Rect 21.3</idno>
-        <idno type="legalText">Rect.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">452</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Rectitudines singularum personarum</title></bibl>
+        <bibl type="legalText"><title>Rectitudines Singularum Personarum</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">452</biblScope></bibl>
+          <bibl xml:id="gobbitt" type="edition">Thom Gobbitt, ed., ‘Rectitudines singularum personarum’ and ‘Gerefa’, <title>Early English Laws</title> (earlyenglishlaws.ac.uk)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">B: earlyenglishlaws ac.uk: RSP+Gerefa Gobbitt, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">21, 21.1, 21.2, 21.3</idno>
-          <idno type="editorNumber" n="Gobbitt">21</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,16 +49,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2175 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2118 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 452.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="21, 21.1, 21.2, 21.3">
         <head><ref type="lawCode" target="law:Rect">Rect</ref> 21, 21.1, 21.2, 21.3</head>
-        <ab type="selectedText" xml:lang="und">LANDLAGA SYN mistlice. swa ic ær beforan sæde. ne sette we na ðas gerihtu ofer ealle ðeoda . ðe we ær beforan ymbe spræcon ac we cyðað hwæt ðeaw is ðær ðær us cuð is gyf we selre geleorniað þæt we willað georne lufian 7 healdon be ðære ðede ðeawe ðewe ðænne onwuniað . for ðam . laga sceal onleode luflice leornian . lof seðe on lande sylf nele leosan .</ab>
-        <ab type="translation" xml:lang="en">The laws of the land are different, just as I said before, [and] we should not set these customs, which we spoke about before, over all lands; but we describe what is custom where [it] is known to us, if we learn that better [customs] then we will eagerly adopt these, the custom of the land in which we then dwell, because the law must be willingly learned from the people if one does not wish to lose one’s honour in the land.</ab>
-        <ab type="supplementaryText" xml:lang="und">[21] Landlaga syn mistlice, swa ic ær beforan sæde. [21.1] Ne sette we na ðas gerihtu ofer ealle ðeoda, ðe we ær beforan ymbe spræcon; ac we cyðað, hwæt ðeaw is ðær ðær us cuð is. [21.2] Gyf we selre geleorniað, þæt we willað georne lufian 7 healdon, be ðære ðede ðeawe, ðe we ðænne onwuniað. [21.3] For ðam laga sceal onleode luflice leornian, lof se ðe on lande sylf nele leosan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="21, 21.1, 21.2, 21.3" corresp="#wit-b">[21] Landlaga syn mistlice, swa ic ær beforan sæde. [21.1] Ne sette we na ðas gerihtu ofer ealle ðeoda, ðe we ær beforan ymbe spræcon; ac we cyðað, hwæt ðeaw is ðær ðær us cuð is. [21.2] Gyf we selre geleorniað, þ<hi rend="italic">æt</hi> we willað georne lufian 7 healdon, be ðære ðede ðeawe, ðe we ðænne onwuniað. [21.3] For ðam laga sceal onleode luflice leornian, lof se ðe on lande sylf nele leosan.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="21, 21.1, 21.2, 21.3" corresp="#wit-q">[21] Leges et consuetudines terrarum sunt multiplices et uarie, sicut prelibauimus. [21.1] Nec sancitum hoc super omnes dicimus generale; notificamus tamen, quid in quibusdam locis sit obseruare. [21.2] Si melius innotescat, gaudenter amplectimur et custodire uolumus iuxta mores populi, cum quo tunc habitabimus. [21.3] Leges debet in populis libenter addiscere, qui non uult in patria solus amittere.</ab>
+        <ab type="editionText" xml:lang="ang" source="#gobbitt" n="21" corresp="#wit-b">LANDLAGA SYN mistlice. swa ic ær beforan sæde. ne sette we na ðas gerihtu ofer ealle ðeoda . ðe we ær beforan ymbe spræcon ac we cyðað hwæt ðeaw is ðær ðær us cuð is gyf we selre geleorniað þæt we willað georne lufian 7 healdon be ðære ðede ðeawe ðewe ðænne onwuniað . for ðam . laga sceal onleode luflice leornian . lof seðe on lande sylf nele leosan .</ab>
+        <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">The laws of the land are different, just as I said before, [and] we should not set these customs, which we spoke about before, over all lands; but we describe what is custom where [it] is known to us, if we learn that better [customs] then we will eagerly adopt these, the custom of the land in which we then dwell, because the law must be willingly learned from the people if one does not wish to lose one’s honour in the land.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">[21] Landgutssatzungen sind verschieden, wie ich zuvor schon sagte. [21.1] Nicht über alle Gegenden hin bestimmen wir diese Gerechtsame, über welche wir eben zuvor gesprochen haben; sondern wir erklären [nur] was dort Gewohnheit ist, wo uns [vertraut] bekannt ist. [21.2] Wenn wir besseres kennen lernen werden, wollen wir eifrig dies [andere] pflegen und halten nach Gewohnheitsrecht der Gegend, die wir alsdann bewohnen werden. [21.3] Denn ‘willig muss Satzung im Volke [= Lande] lernen, wer nicht selbst im Lande Ehre verlieren will’.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">[21] Estate customs vary, as I said before. [21.1] We do not lay down these dues, of which we have just spoken, for all districts; but we declare [only] what is the custom where it is [familiarly] known to us. [21.2] If we learn of something better, we will eagerly cherish and keep that [other] according to the custom of the district where we shall then be living. [21.3] For ‘he must gladly learn the law among the people [= in the land] who does not himself wish to lose honour in the land’.</ab>
+        <note type="editorial">This row combines Liebermann's 21–21.3. 21.3 alliterates, so it is a quotation, probably of a proverb. B begins 21 with an uncial initial (as at 4.4). B's ‘healdon’ and ‘ðede’ stand so. Liebermann compares Rect 2.</note>
       </div>
     </body>
   </text>

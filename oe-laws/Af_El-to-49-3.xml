@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Af El. 49.3</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -16,29 +19,24 @@
         <idno type="clause">El. 49.3</idno>
         <idno type="citationKey">Af el</idno>
         <idno type="citationKey">Af 49.3</idno>
-        <idno type="legalText">Af (domboc)</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">42</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Alfred</title> <note type="reign">r. 871–899</note></bibl>
+        <bibl type="legalText"><title>Alfred’s Domboc</title> <note type="reign">Alfred, r. 871–899</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">42</biblScope></bibl>
+          <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">266</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">E</witness>
-          <witness>H</witness>
-          <witness>B (no Prol.)</witness>
-          <witness>G (Prol. only)</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>Bu</witness>
-          <witness>Ot (frags.)</witness>
+          <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b-no-prol"><abbr>B (no Prol.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
-        <bibl type="selectedText">E: Cambridge, Corpus Christi College, MS 173 Jurasinski and Oliver, eds.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">El. 49.3</idno>
-          <idno type="editorNumber" n="Jurasinski and Oliver">MP 49.3</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -56,16 +54,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 374 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 368 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 42.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="El. 49.3">
         <head><ref type="lawCode" target="law:Af">Af</ref> El. 49.3</head>
-        <ab type="selectedText" xml:lang="und">Ða apostolas ⁊ þa eldran broðor hælo eow wyscað; ⁊ we eów cyðað, þæt we geascodon, þæt ure geferan sume mid urum wordum to eow comon ⁊ eow hefigran to healdanne þonne we him budon, ⁊ eow to swiðe gedwealdon mid ðam mannigfealdum gebodum, ⁊ eowra sawla ma forhwerfdon þonne hie geryhton. Ða gesomnodon we us ymb ðæt, ⁊ ús eallum gelicode ða, þæt we sendon Paulus ⁊ Barnaban; ða men wilniað hiora sawla sellan for Dryhtnes naman.</ab>
-        <ab type="translation" xml:lang="en">“The apostles and the elder brothers wish you health; and we declare to you that we learned, that some of our fellowship came to you with our words and [imposed] on you a heavier burden than we asked, and too greatly led you astray with manifold ordinances, and have ensnared your souls more than they have righted them. Then we assembled ourselves concerning that, and it pleased all of us, that we should send Paul and Barnabas: those men wish to give their souls for the name of the Lord.</ab>
-        <ab type="supplementaryText" xml:lang="und">Ða apostolas ond þa yldran broþra hælo eow wyscað; ⁊ we eow cyþað, þæt we geaxodon, ðæt ure geferan sume mid urum wordum to eow coman ond eow hefigran wisau budon to healdonne ðonne we him budon, ond eow swyðe gedweldon mid ðam monigfealdum gebodum, ond eowra sawla má forhwyrfdon ðonne hie gerihton. Ða gesomnodon we us ymb ðæt, ond us eallum ða gelicode, þæt we sendon Paulus ond Barnaban, ða gewilniað hira sawla (to) syllanue for Dryhtnes noman.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 49.3" corresp="#wit-h">‘Ða apostolas ⁊ þa yldran broþra hælo eow wyscað; ⁊ we eow cyþað, þæt we geaxodon, ðæt ure geferan sume mid urum wordum to eow coman ond eow hefigran wisan budon to healdonne ðonne we him budon, ond eow swyðe gedweldon mid ðam monigfealdum gebodum, ond eowra sawla má forhwyrfdon ðonne heo gerihton. Ða gesomnodon we us ymb ðæt, ond us eallum ða gelicode, þæt we sendon Paulus ond Barnaban, ða gewilniað hira sawla (to) syllanne for Dryhtnes noman.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 49.3" corresp="#wit-e">‘Ða apostolas ⁊ þa eldran broðor hælo eow wyscað; ⁊ we éow cyðað, þæt we geascodon, þæt ure geferan sume mid uru<hi rend="italic">m</hi> wordum to eow comon ⁊ eow hefigran [wisan budon] to healdanne þonne we him budon, ⁊ eow to swiðe gedwealdon mid ðam mannigfealdum gebodum, ⁊ eowra sawla ma forhwerfdon þon<hi rend="italic">ne</hi> hie geryhton. Ða gesomnodon we us ymb ðæt, ⁊ ús eallum gelicode ða, þæt we sendon Paulus ⁊ Barnaban; ða men wilniað hiora sawla sellan for Dryhtnes naman.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 49.3" corresp="#wit-q">‘Apostoli et seniores fratres his qui sunt Antiochie, Sirie et Cilicie fratribus ex gentibus salutem. Quoniam audiuimus, quod quidam ex nobis exeuntes turbauerunt uos uerbis, potius euertentes animas uestras, quibus non mandauimus, placuit nobis collectis in unum eligere uiros et mittere ad uos cum karissimis nostris Barnaba et Paulo, hominibus qui tradere cupiunt animas suas pro nomine domini nostri Iesu Christi.</ab>
+        <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="MP 49.3" corresp="#wit-e">Ða apostolas ⁊ þa eldran broðor hælo eow wyscað; ⁊ we eów cyðað, þæt we geascodon, þæt ure geferan sume mid uru<hi rend="italic">m</hi> wordum to eow comon ⁊ eow hefigran to healdanne þonne we him budon, ⁊ eow to swiðe gedwealdon mid ðam mannigfealdum gebodum, ⁊ eowra sawla ma forhwerfdon þon<hi rend="italic">ne</hi> hie geryhton. Ða gesomnodon we us ymb ðæt, ⁊ ús eallum gelicode ða, þæt we sendon Paulus ⁊ Barnaban; ða men wilniað hiora sawla sellan for Dryhtnes naman.</ab>
+        <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">“The apostles and the elder brothers wish you health; and we declare to you that we learned, that some of our fellowship came to you with our words and [imposed] on you a heavier burden than we asked, and too greatly led you astray with manifold ordinances, and have ensnared your souls more than they have righted them. Then we assembled ourselves concerning that, and it pleased all of us, that we should send Paul and Barnabas: those men wish to give their souls for the name of the Lord.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">‘Die Apostel und die älteren Brüder wünschen euch Heil! Und wir thun euch kund, dass wir erfahren haben, dass einige von unseren Gefährten mit unseren Worten zu euch gekommen sind und euch schwerere Lebensweise zu halten geboten haben, denn wir ihnen geboten, und euch zu sehr mit den vielfachen Geboten beirrt haben und eure Seelen mehr verdreht als sie zurecht gewiesen haben. Da versammelten wir uns deshalb, und uns allen schien nun richtig, dass wir Paulus und Barnabas absendeten; diese Männer streben, ihre Seelen hinzugeben für den Namen des Herrn.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">‘The apostles and the elder brethren wish you salvation! And we make known to you that we have learned that some of our companions have come to you with our words and have commanded you to keep a harder way of life than we commanded them, and have led you too much astray with the manifold commandments and have perverted your souls more than they have set them right. Then we assembled on that account, and it now seemed right to us all that we should send Paul and Barnabas; these men strive to give up their souls for the name of the Lord.</ab>
+        <note type="passageSource">Acts 15,23–26</note>
       </div>
     </body>
   </text>

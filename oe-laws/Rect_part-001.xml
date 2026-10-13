@@ -4,8 +4,8 @@
     <fileDesc>
       <titleStmt>
         <title>Rect</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Gobbitt</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Gobbitt</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -13,21 +13,17 @@
         <idno type="citation">Rect</idno>
         <idno type="lawCode">Rect</idno>
         <idno type="lawCodeAnchor">Rect</idno>
-        <idno type="legalText">Rect.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">448</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Rectitudines singularum personarum</title></bibl>
+        <bibl type="legalText"><title>Rectitudines Singularum Personarum</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">448</biblScope></bibl>
+          <bibl xml:id="gobbitt" type="edition">Thom Gobbitt, ed., ‘Rectitudines singularum personarum’ and ‘Gerefa’, <title>Early English Laws</title> (earlyenglishlaws.ac.uk)</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">B: earlyenglishlaws ac.uk: RSP+Gerefa Gobbitt, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="editorNumber" n="Gobbitt">5.2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -45,15 +41,16 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2153 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2096 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause">
         <head><ref type="lawCode" target="law:Rect">Rect</ref></head>
-        <ab type="selectedText" xml:lang="und">On suman metegafol.</ab>
-        <ab type="translation" xml:lang="en">In some estates meat-rent.</ab>
+        <ab type="editionText" xml:lang="ang" source="#gobbitt" n="5.2" corresp="#wit-b">On suman metegafol.</ab>
+        <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">In some estates meat-rent.</ab>
+        <note type="editorial">This row holds only the Early English Laws text (column T, its clause 5.2: ‘On suman metegafol’), which in Liebermann is part of 4.5 (row above). Liebermann has no separate clause here, so columns K–O are left empty.</note>
       </div>
     </body>
   </text>

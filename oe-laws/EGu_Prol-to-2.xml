@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>EGu Prol., 2</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -18,22 +21,18 @@
         <idno type="citationKey">EGu 2</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">128</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Treaty: Edward &amp; Guthrum</title></bibl>
+        <bibl type="legalText"><title>Treaty of Edward and Guthrum</title> <note type="reign">[Edward, r. 899–924, and Guthrum]</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">128</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">Prol., 2</idno>
-          <idno type="editorNumber" n="Attenborough">§2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,16 +50,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 682 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 672 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 128.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Prol., 2">
         <head><ref type="lawCode" target="law:EGu">EGu</ref> Prol., 2</head>
-        <ab type="selectedText" xml:lang="und">⁊ hig gesetton woruldlice stéora eac, for ðam þingum þe hig wistan, þæt hig elles ne mihton manegum gesteoran, ne fela manna nolde to godcundre bote elles gebugan, swa hy sceolden; ⁊ þa woruldbote hig gesetton gemæne Criste ⁊ cynge, swa hwár swa man nolde godcunde bote gebugan mid rihte to bisceopa dihte.</ab>
-        <ab type="translation" xml:lang="en">And they also fixed secular penalties because they knew that otherwise there would be many people whom they would not be able to control, and that otherwise many men would not be willing to submit as they ought to, to the amends required by the church. And they fixed secular amends which would be divided between Christ and the king, wheresoever people would not legally submit to the amends required by the church and determined by the bishop.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ hi gesetton woruldlice stéora eac, for ðam ðingum ðe hig wistan, þæt híg elles ne mihton manegum gesteoran, ne fela manna nolde to godcundre bote elles gebugan, swá he sceolde; ⁊ ða woruldbote hig settan gemæne Criste ⁊ cynge, swa hwár swa man nolde godcunde bote gebugan míd rihte to bisceopa dihte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol., 2" corresp="#wit-b">⁊ hi gesetton woruldlice stéora eac, for ðam ðingum ðe hig wistan, þ<hi rend="italic">æt</hi> híg elles ne mihton manegu<hi rend="italic">m</hi> gesteoran, ne fela manna nolde to godcundre bote elles gebugan, swá he sceolde; ⁊ ða woruldbote hig settan g<hi rend="italic">e</hi>mæne Criste ⁊ cynge, swa hwár swa man nolde godcunde bote gebugan míd rihte to bisceopa dihte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol., 2" corresp="#wit-h">⁊ hig gesetton woruldlice stéora eac, for ðam þingum þe hig wistan, þæt hig elles ne mihton manegum gesteoran, ne fela manna nolde to godcundre bote elles gebugan, swa hy sceolde; ⁊ þa woruldbote hig gesetton gemæne Criste ⁊ cynge, swa hwár swa man nolde godcunde bote gebugan mid rihte to bisceopa dihte.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="Prol., 2" corresp="#wit-q">Et instituerunt secularem iusticiam, pro eo quod sciebant, quia non poterant aliter multos castigare, et plures nolebant aliter ad Dei cultum inclinari, sicut deberent; et secularem emendationem instituerunt communem Christo et regi, ubicumque recusabitur lex Dei iuste seruari secundum diccionem episcopi.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="§2" corresp="#wit-h">⁊ hig gesetton woruldlice stéora eac, for ðam þingum þe hig wistan, þæt hig elles ne mihton manegum gesteoran, ne fela manna nolde to godcundre bote elles gebugan, swa hy sceolden; ⁊ þa woruldbote hig gesetton gemæne Criste ⁊ cynge, swa hwár swa man nolde godcunde bote gebugan mid rihte to bisceopa dihte.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And they also fixed secular penalties because they knew that otherwise there would be many people whom they would not be able to control, and that otherwise many men would not be willing to submit as they ought to, to the amends required by the church. And they fixed secular amends which would be divided between Christ and the king, wheresoever people would not legally submit to the amends required by the church and determined by the bishop.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und sie setzten auch weltliche Strafordnungen, aus dem Grunde weil sie wussten, dass sie Vielen nicht anders wehren konnten, und viele Leute sich sonst nicht kirchlicher Busse, wie sie sollten, unterwerfen wollten; und die Weltbusse setzten sie Christo und dem Könige gemeinschaftlich, wo immer jemand kirchlicher Busse nach Anordnung der Bischöfe sich nicht gesetzlich unterwerfen wollte.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And they also established secular penalties, for the reason that they knew that they could not otherwise restrain many people, and many people would not otherwise submit to ecclesiastical penance as they should; and they established the secular compensation in common for Christ and the king, wherever anyone would not lawfully submit to ecclesiastical penance as the bishops direct.</ab>
       </div>
     </body>
   </text>

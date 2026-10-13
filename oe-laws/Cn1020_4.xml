@@ -4,8 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Cn 1020 4</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,18 +19,15 @@
         <idno type="citationKey">Cn1020 4</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">273</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Cn 1020</title></bibl>
+        <bibl type="legalText"><title>Cnut’s Letter of 1020</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">273</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">140</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>York Gospels</witness>
+          <witness xml:id="wit-york-gospels"><abbr>York Gospels</abbr> <note type="manuscript">York, Minster Library, Add. 1 (York Gospels)</note></witness>
         </listWit>
-        <bibl type="selectedText">York Gospels Robertson, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">4</idno>
-          <idno type="editorNumber" n="Robertson">4</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -46,15 +45,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1609 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1568 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 273.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 140.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4">
         <head><ref type="lawCode" target="law:Cn1020">Cn 1020</ref> 4</head>
-        <ab type="selectedText" xml:lang="und">Ne ne wandode ic na minum sceattum, þa hwile þe eow unfrið on handa stod; nu ic mid Godes fultume þæt totwæmde mid minum scattum.</ab>
-        <ab type="translation" xml:lang="en">Recently I did not spare my money when hostility was threatening you, and now, with the help of God, I have averted it with my money.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="4" corresp="#wit-york-gospels">Nu ne wandode ic na minum sceattum, þa hwile þe eow unfrið on handa stod; nu ic mid Godes fultume þæt totwæmde mid minum scattum.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-york-gospels">Recently I did not spare my money when hostility was threatening you, and now, with the help of God, I have averted it with my money.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Nun sparte ich meine Schätze nicht, dieweil euch politische Unruhe vorhanden war; nun hab ich mit Gottes Hilfe dies durch meine Schätze beigelegt.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Now I did not spare my treasure while hostility was upon you; now with God's help I have put an end to it with my treasure.</ab>
       </div>
     </body>
   </text>

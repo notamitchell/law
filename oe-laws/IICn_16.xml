@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Cn 16</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">IICn 16</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">320</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Cnut</title></bibl>
+        <bibl type="legalText"><title>II Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">320</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">182</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">16</idno>
-          <idno type="editorNumber" n="Robertson">16</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -53,16 +52,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1774 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1730 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 320.</change>
+      <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 183.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="16">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 16</head>
-        <ab type="selectedText" xml:lang="und">⁊ se ðe oðerne mid wó forsecgan wille, þæt he aðer oððe feo oððe freoma ðe wyrse si, gyf ðonne se oðer þæt geunsoðian mæge þæt hím man on secgan wolde, sy he his tungan scyldig, buton he him mid his wére forgylde.</ab>
-        <ab type="translation" xml:lang="en">And if a man seeks to accuse another man falsely in such a way as to injure him in property or reputation, and if the latter can refute the accusation brought against him, the first shall forfeit his tongue, unless he redeem himself with the wergeld.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ se þe oþerne mid wó forsecgan wylle, þæt he aðer oððe feo oððe freme þe wyrse sig, gyf þonne se oðer þæt geunsoðian mæge, þæt hím man on secgan wolde, sy he his tungan scyldig, butan he hine mid his were forgylde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16" corresp="#wit-g-a">⁊ se þe oþerne mid wó forsecgan wylle, þ<hi rend="italic">æt</hi> he aðer oððe feo oððe freme þe wyrse sig, gyf þonne se oðer þ<hi rend="italic">æt</hi> geunsoðian mæge, þ<hi rend="italic">æt</hi> hím man on secgan wolde, sy he his tungan scyldig, butan he hine mid his were forgylde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16" corresp="#wit-a">⁊ se ðe oðerne mid woh forsecgan wille, þæt he aðor oððe feo oððe feorme þe wyrse sy, gif þonne se oðor þæt geunsoðian mæge, þæt him man on secgan wolde, sy he his tungan scyldig, buton he hine mid were forgilde.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="16" corresp="#wit-q">Qui aliquem accusare presumet, unde pecunia uel commodo peior sit, et denique mendatium pernoscatur, linguam suam perdat (intentator) uel weregildo redimat.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="16" corresp="#wit-b">⁊ se ðe oðerne mid wó forsecgan wille, þæt he aðer oððe feo oððe freoma ðe wyrse si, gyf ðonne se oðer þæt geunsoðian mæge þæt hím man on secgan wolde, sy he his tungan scyldig, buton he him mid his wére forgylde.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">And if a man seeks to accuse another man falsely in such a way as to injure him in property or reputation, and if the latter can refute the accusation brought against him, the first shall forfeit his tongue, unless he redeem himself with his wergeld.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wer einen andern mit Bosheit verklagen will, so dass dieser entweder an Gut oder Gedeihen (Leben Ld Inst.; Unterhaltsmitteln? A) dadurch geschädigt wird: wenn dann der andere [Verklagte] als unwahr das erweisen kann, was jener über ihn klagen wollte, so sei jener seine Zunge [zu verlieren] schuldig, ausser wenn er sich durch sein Wergeld auslöst.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And whoever wishes to accuse another maliciously, so that the latter is harmed thereby either in property or in prosperity (life, Ld Inst.; maintenance? A): if the other [accused] can then prove false what he wished to charge him with, let him be liable [to lose] his tongue, unless he redeems himself with his wergild.</ab>
+        <note type="editorial">A's ‘feorme’ is perhaps a slip for ‘freome’. Liebermann compares III Eg 4.</note>
       </div>
     </body>
   </text>

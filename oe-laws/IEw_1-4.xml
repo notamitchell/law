@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>I Ew 1.4</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,25 +18,20 @@
         <idno type="lawCodeAnchor">IEw</idno>
         <idno type="clause">1.4</idno>
         <idno type="citationKey">IEw 1.4</idno>
-        <idno type="legalText">I Edw</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">138</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Edward</title> <note type="reign">r. 899–924</note></bibl>
+        <bibl type="legalText"><title>I Edward</title> <note type="reign">Edward the Elder, r. 899–924</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">138</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1.4</idno>
-          <idno type="editorNumber" n="Attenborough">1.4</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,16 +49,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 717 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 706 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 138.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.4">
         <head><ref type="lawCode" target="law:IEw">I Ew</ref> 1.4</head>
-        <ab type="selectedText" xml:lang="und">Gif he ðonne ne mehte, ðonne namede him man VI men on ðam ylcan [geburscipe], þe he on hamfæst wære, ⁊ begete þara syxa ænne æt anum hryðere, oððe æt þam orfe þe ðæs weorð sy; ⁊ syððan wexe be ðæs ceapes æhte, gif þær ma to scyle.</ab>
-        <ab type="translation" xml:lang="en">If, however, he cannot do so, then six men from the same locality in which he is resident shall be nominated to him, and he shall choose one of these six for each cow or for livestock of equivalent value. Afterwards, if more witnesses are necessary, the number shall be increased in proportion to the value of the property [in dispute].</ab>
-        <ab type="supplementaryText" xml:lang="und">Gyf he ðone ne mæhte, ðone namede him man VI men on ðam ylcan geburscipe, ðe he on hamfæst wære, ⁊ begete ðara syxa ænne æt anum hryðere, oððe æt ðam orfe ðe ðæs weorð sy; ⁊ syððan wexe be ðæs ceapes eahte, gif ðær ma to scyle.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.4" corresp="#wit-b">Gyf he ðone ne mæhte, ðone namede him man VI men on ðam ylcan geburscipe, ðe he on hamfæst wære, ⁊ begete ðara syxa ænne æt anum hryðere, oððe æt ðam orfe ðe ðæs weorð sy; ⁊ syððan wexe be ðæs ceapes eahte, gif ðær ma to scyle.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.4" corresp="#wit-h">Gif he ðonne ne mehte, ðonne namede him man VI men on ðam ylcan geburhscipe, þe he on hamfæst wære, ⁊ begete þara syxa ænne æt anum hryðere, oððe æt þam orfe þe ðæs weorð sy; ⁊ syððan wexe be ðæs ceapes æhte, gif þær ma to scyle.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.4" corresp="#wit-q">Si non possit, nominentur ei sex homines de eadem geburhscípa, in qua ille residens est, et adquirat ex illis VI unum pro animali uno, uel pro pecore quod hoc ualeat, et postea crescat secundum capitalis estimationem, si plures adesse debeant.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="1.4" corresp="#wit-h">Gif he ðonne ne mehte, ðonne namede him man VI men on ðam ylcan [geburscipe], þe he on hamfæst wære, ⁊ begete þara syxa ænne æt anum hryðere, oððe æt þam orfe þe ðæs weorð sy; ⁊ syððan wexe be ðæs ceapes æhte, gif þær ma to scyle.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If, however, he cannot do so, then six men from the same locality in which he is resident shall be nominated to him, and he shall choose one of these six for each cow or for livestock of equivalent value. Afterwards, if more witnesses are necessary, the number shall be increased in proportion to the value of the property [in dispute].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jener aber [solchen Eid zu erbringen] nicht vermag, dann sollen ihm [durch’s Gericht] sechs Männer in derselben Ortschaft, in welcher er ansässig ist, ernannt werden, und von diesen sechs gewinne er [zum Eideshelfer] einen bei Einem [eingeklagten] Rinde oder bei so viel [Klein]vieh, das gleichviel werth ist; und [der Eid] wachse ferner nach dem Werthe des [eingeklagten] Gegenstandes, je wie dann mehr [Helfer] dazu gehören.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But if he cannot [produce such an oath], then let six men be named for him [by the court] in the same township in which he is resident, and of these six let him win one [as oath-helper] for one [claimed] head of cattle, or for as much [small] livestock as is worth the same; and let [the oath] grow further according to the value of the [claimed] item, as more [helpers] then belong to it.</ab>
       </div>
     </body>
   </text>

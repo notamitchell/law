@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>V Atr 26.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,17 @@
         <idno type="citationKey">VAtr 26.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">243</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>V Atr</title></bibl>
+        <bibl type="legalText"><title>V Æthelred</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">243</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">86</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g"><abbr>G</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-g2"><abbr>G2</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i (second copy)</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G (A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">26.1</idno>
-          <idno type="editorNumber" n="Robertson">26.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +47,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1223 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1191 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 243.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="26.1">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 26.1</head>
-        <ab type="selectedText" xml:lang="und">⁊ beo man georne ymban friðes bote ⁊ ymbe feos bote æghwar on earde, ⁊ ymbe burhbote ⁊ ymbe bricbote æghwar on earde on æghwilcum ende, ⁊ ymbe firdunga, áá þonne neod sy, be þam þe man geræde.</ab>
-        <ab type="translation" xml:lang="en">And the promotion of public security and the improvement of the coinage in every part of the country, and the repairing of fortresses and of bridges throughout the country on every side, and also the duties of military service shall always be diligently attended to, whenever the need arises, in accordance with the orders given.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ beo man georne ymbe friðes bote ⁊ ymbe feos bote æghwar on earde, ⁊ ymbe burhbota on æghwylcan ende ⁊ ymbe fyrdunga eac, be ðam þe man geræde, áá þonne neod sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="26.1" corresp="#wit-g">⁊ beo man georne ymbe friðes bote ⁊ ymbe feos bote æghwar on earde, ⁊ ymbe burhbota on æghwylcan ende ⁊ ymbe fyrdunga eac, be ðam þe man geræde, áá þon<hi rend="italic">ne</hi> neod sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="26.1" corresp="#wit-g2">⁊ beo man georne ymbe friþes bote ⁊ ymbe feos bote æghwær on earde ⁊ ymbe burhbota ⁊ ymbe bricbota on æghwylcan ænde ⁊ ymbe fyrdunga eac, be þam þe man geræde, áá þonne neod sy.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="26.1" corresp="#wit-d">⁊ beo man georne ymban friðes bote ⁊ ymbe feos bote æghwar on earde, ⁊ ymbe burhbote ⁊ ymbe bricbote æghwar on earde on æghwilcum ende, ⁊ ymbe firdunga, áá þonne neod sy, be þam þe man geræde.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And the promotion of public security and the improvement of the coinage in every part of the country, and the repairing of fortresses and of bridges throughout the country on every side, and also the duties of military service shall always be diligently attended to, whenever the need arises, in accordance with the orders given.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und man sei eifrig bemüht um Besserung öffentlicher Sicherheit und um Besserung der Münze überall im Lande und um Festungsherstellung (und um Brückenherstellung G2 D) in jedem Bezirke und auch um die Landwehr, je nachdem beschlossen wird, immer wenn es nöthig ist.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let people be eager for the improvement of public security and the improvement of the coinage everywhere in the land, and for the repair of fortifications (and the repair of bridges, G2 D) in every region, and also for military service, as shall be decided, whenever there is need.</ab>
+        <note type="editorial">The archetype probably read ‘⁊ ymbe bricbota’ here, as G2, D and VI Atr 32.3.</note>
       </div>
     </body>
   </text>

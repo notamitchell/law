@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>IV Atr 2.7</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,21 +18,17 @@
         <idno type="lawCodeAnchor">IVAtr</idno>
         <idno type="clause">2.7</idno>
         <idno type="citationKey">IVAtr 2.7</idno>
-        <idno type="legalText">IVAtr (Latin)</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">232</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>IVAtr (Latin)</title></bibl>
+        <bibl type="legalText"><title>IV Æthelred (London)</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">232</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">72</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>Q</witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">Q: Quadripartitus) Robertson, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">2.7</idno>
-          <idno type="editorNumber" n="Robertson">2.7</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,15 +46,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1148 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1117 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 232.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2.7">
         <head><ref type="lawCode" target="law:IVAtr">IV Atr</ref> 2.7</head>
-        <ab type="selectedText" xml:lang="und">Hogge et Leodium et Nivella qui pertransibant ostensionem dabant et telon.</ab>
-        <ab type="translation" xml:lang="en">Men of Huy and Liège and Nivelles who were passing through (London) paid a sum for exhibition and toll.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2.7" corresp="#wit-q">Hogge et Leodium et Niuella, qui pertransibant (per terras ibant), ostensionem dabant et telon.</ab>
+        <ab type="editionText" xml:lang="la" source="#robertson" n="2.7" corresp="#wit-q">Hogge et Leodium et Nivella qui pertransibant ostensionem dabant et telon.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">Men of Huy and Liège and Nivelles who were passing through (London) paid a sum for exhibition and toll.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Huy und Lüttich und Nivelles, die weiter durch [London (R) / (über Land, übrige)] gingen, zahlten [Gebühr statt Waaren-]Ausstellung und Zoll.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Huy and Liège and Nivelles, who passed on through [London (R) / (overland, the other MSS)], paid [a fee in place of] display [of their goods] and toll.</ab>
       </div>
     </body>
   </text>

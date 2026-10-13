@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II As 1.3</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,23 +20,20 @@
         <idno type="citationKey">IIAs 1.3</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">150</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Æthelstan</title></bibl>
+        <bibl type="legalText"><title>II Æthelstan (Grately)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">150</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Ot</witness>
-          <witness>Ld</witness>
-          <witness>So</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-ot"><abbr>Ot</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-so"><abbr>So</abbr> <note type="manuscript">William Somner's transcript of Cotton Otho B.xi (made before the fire)</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1.3</idno>
-          <idno type="editorNumber" n="Attenborough">1.3</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -52,16 +52,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 756 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 741 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 150.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.3">
         <head><ref type="lawCode" target="law:IIAs">II As</ref> 1.3</head>
-        <ab type="selectedText" xml:lang="und">Gif mon ðeof on carcerne gebringe, ðæt he beo XL nihta on carcerne, ⁊ hine mon ðonne lyse út mid CXX scll'; ⁊ ga sio mægþ him on borh, ðæt he æfre geswice.</ab>
-        <ab type="translation" xml:lang="en">If a thief is put in prison, he shall remain there forty days, and then he may be released on payment of 120 shillings, but his relatives shall stand as surety that he shall cease for ever after [from thieving].</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif] mon ðeof on cwearterne gebringe, þæt he beo feowertig nihta þær inne, ⁊ hine man lyse ðænne ut mid hundtwelfti scill'; ⁊ ga seo mægð him on borh, þæt he æfre geswice.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.3" corresp="#wit-b">Gif] mon ðeof on cwearterne gebringe, þ<hi rend="italic">æt</hi> he beo feowertig nihta þær inne, ⁊ hine man lyse ðænne ut mid hundtwelfti scill'; ⁊ ga seo mægð him on borh, þ<hi rend="italic">æt</hi> he æfre geswice.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.3" corresp="#wit-h">Gif mon ðeof on carcerne gebringe, ðæt he beo XL nihta on carcerne, ⁊ hine mon ðonne lyse út mid CXX scll'; ⁊ ga sio mægþ him on borh, ðæt he æfre geswice.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.3" corresp="#wit-so">Gif mon þeof on carcerne gebringe, þæt he beo XL nihta on carcerne, ⁊ hine mon lyse þonne ut mid CXX scill'; ⁊ gá seo mægð him on borh, þæt he æfre geswice.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.3" corresp="#wit-q">Si fur ponatur in carcere, sit ibi XL noctibus et inde redimatur foras per CXX sol.; et eat cognatio eius in plegium, quod deinceps abstineat.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="1.3" corresp="#wit-h">Gif mon ðeof on carcerne gebringe, ðæt he beo XL nihta on carcerne, ⁊ hine mon ðonne lyse út mid CXX scll'; ⁊ ga sio mægþ him on borh, ðæt he æfre geswice.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If a thief is put in prison, he shall remain there forty days, and then he may be released on payment of 120 shillings, but his relatives shall stand as surety that he shall cease for ever after [from thieving].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Dieb ins Gefängniss gebracht wird, sei er 40 Tage im Kerker (darin B), und dann kann er [beim König] durch 120 Schilling ausgelöst werden; und die Sippe gehe für ihn in Bürgschaft, dass er immer [vom Stehlen] ablasse.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a thief is brought into prison, let him be 40 days in jail (in there, B), and then he can be redeemed [from the king] for 120 shillings; and let the kindred go surety for him that he will forever desist [from stealing].</ab>
       </div>
     </body>
   </text>

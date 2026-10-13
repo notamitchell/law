@@ -4,8 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Wi 26</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +21,16 @@
         <idno type="citationKey">Wi 26</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">14</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Wihtræd</title> <note type="reign">r.690–725</note></bibl>
+        <bibl type="legalText"><title>Wihtred’s Code</title> <note type="reign">Wihtred, r. 690/1–725</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">14</biblScope></bibl>
+          <bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002), p. <biblScope unit="page">162</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922), p. <biblScope unit="page">29</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>H</witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Oliver, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">26</idno>
-          <idno type="editorNumber" n="Oliver">21</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +48,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 193 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 190 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 14.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="26">
         <head><ref type="lawCode" target="law:Wi">Wi</ref> 26</head>
-        <ab type="selectedText" xml:lang="und">Gif man frigne man æt hæbbendre handa gefo, þanne wealde se cyning ðreora anes: oððe hine man cwelle, oþþe ofer sæ selle, oþþe hine his wergilde alese.</ab>
-        <ab type="translation" xml:lang="en">If a person seizes a free man having [the goods in] hand, then the king rules one of three things: either one should kill him, or sell [him] across the sea, or release him in return for his wergild.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif man frigne man æt hæbbendre handa gefo, þanne wealde se cyning ðreora anes: oððe hine man cwelle oþþe ofer sæ selle oþþe hine his wergelde alese.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="26" corresp="#wit-h">Gif man frigne man æt hæbbendre handa gefo, þanne wealde se cyning ðreora anes: oððe hine man cwelle oþþe ofer sæ selle oþþe hine his wergelde alese.</ab>
+        <ab type="editionText" xml:lang="ang" source="#oliver" n="21" corresp="#wit-h">Gif man frigne man æt hæbbendre handa gefo, þanne wealde se cyning ðreora anes: oððe hine man cwelle, oþþe ofer sæ selle, oþþe hine his wergilde alese.</ab>
+        <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If a person seizes a free man having [the goods in] hand, then the king rules one of three things: either one should kill him, or sell [him] across the sea, or release him in return for his <hi rend="italic">wergild</hi>.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If anyone catches a freeman in the act of stealing, the king shall decide which of the following three courses shall be adopted—whether he shall be put to death, or sold beyond the sea, or held to ransom for his wergeld.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn man einen freien Mann bei handhaftem [Diebstahl] fängt, dann bestimme der König von dreien eines: entweder tödte man ihn, oder verkaufe ihn über See oder löse ihn aus durch dessen Wergeld.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If someone catches a free man [in theft] red-handed, then let the king decide one of three things: either let him be killed, or sold over the sea, or let him be redeemed by his wergeld.</ab>
       </div>
     </body>
   </text>

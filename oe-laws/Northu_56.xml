@@ -4,7 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Northu 56</title>
-        <respStmt><resp>Translation of the selected text</resp><name>Whitelock, English Historical Documents, I</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -14,20 +18,18 @@
         <idno type="lawCodeAnchor">Northu</idno>
         <idno type="clause">56</idno>
         <idno type="citationKey">Northu 56</idno>
-        <idno type="legalText">North. Priests' Law</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">383</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Northumbrian Priests' Law</title></bibl>
+        <bibl type="legalText"><title>Northumbrian Priests’ Law</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">383</biblScope></bibl>
+          <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979)</bibl>
+          <bibl xml:id="rabin" type="translation">Andrew Rabin, <title>The Political Writings of Archbishop Wulfstan of York</title> (Manchester: Manchester University Press, 2015)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>D</witness>
+          <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">56</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -46,16 +48,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2050 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2003 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 383.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="56">
         <head><ref type="lawCode" target="law:Northu">Northu</ref> 56</head>
-        <ab type="selectedText" xml:lang="und">Se þe ænige þissa do, gilde wite: friman XII ór, ðeowan ða hyde;—buton wegferende, þa moton for neode meteneade ferian; 7 for unfriðe man mot freolsæfenan nide fulfaran betweonan Eferwic 7 six mila gemete.</ab>
-        <ab type="translation" xml:lang="en">He who does any of these things is to pay the penalty: a freemen 12 ores, a slave with a flogging; except for travellers, who are permitted to carry sustenance for their needs; and in case of hostility one may travel because of necessity between York and a distance of six miles on the eve of festivals.</ab>
-        <ab type="secondTranslation" xml:lang="en">One who does any of these things is to pay a penalty: a freeman twelve ores, a slave with a beating; except for travellers, who may carry food out of necessity; and in times of conflict one may, out of necessity, joiurney a distance of up to six miles from York on the eve of a holy day.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="56" corresp="#wit-d">Se þe ænig þissa do, gilde wite: friman XII ór, ðeowman ða hyde; — buton wegferende, þa moton for neode meteneade ferian; ⁊ for unfriðe man mot freolsæfenan nide fulfaran betweonan Eferwic ⁊ six mila gemete.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">He who does any of these things is to pay the penalty: a freemen 12 ores, a slave with a flogging; except for travellers, who are permitted to carry sustenance for their needs; and in case of hostility one may travel because of necessity between York and a distance of six miles on the eve of festivals.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin" corresp="#wit-d">One who does any of these things is to pay a penalty: a freeman twelve ores, a slave with a beating; except for travellers, who may carry food out of necessity; and in times of conflict one may, out of necessity, joiurney a distance of up to six miles from York on the eve of a holy day.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wer etwas hiervon thut, zahle Strafe: ein Freier 12 Ör, ein Sklav die Haut [Prügel]; — ausgenommen Reisende, die aus Nothwendigkeit Lebensmittel-Bedarf(?) führen dürfen; und Krieges wegen darf man an Feiertags-Vorabenden im Nothfall reisen zwischen York und 6 Meilen Entfernung.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Whoever does any of these things, let him pay a fine: a freeman 12 ores, a slave his hide [a flogging]; — except travellers, who may out of necessity carry needful provisions(?); and on account of war one may, in case of need, travel on the eves of feast-days between York and a distance of six miles.</ab>
+        <note type="editorial">Liebermann thinks ‘neade’ in ‘meteneade’ is perhaps a dittography of the preceding ‘neode’ and should be struck. Liebermann compares EGu 7.1.</note>
       </div>
     </body>
   </text>

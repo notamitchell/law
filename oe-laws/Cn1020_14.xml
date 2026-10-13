@@ -4,8 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Cn 1020 14</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,18 +19,15 @@
         <idno type="citationKey">Cn1020 14</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">274</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Cn 1020</title></bibl>
+        <bibl type="legalText"><title>Cnut’s Letter of 1020</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">274</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">142</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>York Gospels</witness>
+          <witness xml:id="wit-york-gospels"><abbr>York Gospels</abbr> <note type="manuscript">York, Minster Library, Add. 1 (York Gospels)</note></witness>
         </listWit>
-        <bibl type="selectedText">York Gospels Robertson, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">14</idno>
-          <idno type="editorNumber" n="Robertson">14</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -46,15 +45,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1619 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1578 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 274.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="14">
         <head><ref type="lawCode" target="law:Cn1020">Cn 1020</ref> 14</head>
-        <ab type="selectedText" xml:lang="und">For ðam þe ealle biscopas secgað þæt hit swyþe deop wið God to betanne þæt man aðas oððe wedd tobrece.</ab>
-        <ab type="translation" xml:lang="en">For all the bishops declare that very severe amends must be made to God for the violation of oaths or pledges.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="14" corresp="#wit-york-gospels">For ðam þe ealle biscopas secgað þæt hit swyþe deop wið God to betanne þæt man aðas oððe wedd tobrece.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-york-gospels">For all the bishops declare that very severe amends must be made to God for the violation of oaths or pledges.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">weil alle Bischöfe sagen, dass es sehr tief gegenüber der Kirche gebüsst werden [müsse], wenn man Eide oder rechtsförmliche Versprechen verletzt.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">because all the bishops say that it [must] be atoned for very deeply before God if oaths or pledges are broken.</ab>
+        <note type="editorial">Earle supplies ‘is’, Pauli ‘beo’ after ‘deop’.</note>
       </div>
     </body>
   </text>

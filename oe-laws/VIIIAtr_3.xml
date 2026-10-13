@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>VIII Atr 3</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">VIIIAtr 3</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">263</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VIII Atr</title></bibl>
+        <bibl type="legalText"><title>VIII Æthelred</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">263</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">118</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G(A) (part)</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g-a-part"><abbr>G(A) (part)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton MS Nero Ai Liebermann, ed</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">3</idno>
-          <idno type="editorNumber" n="Robertson">3</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +47,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1461 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1424 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 263.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3">
         <head><ref type="lawCode" target="law:VIIIAtr">VIII Atr</ref> 3</head>
-        <ab type="selectedText" xml:lang="und">And gif hit þonne to bote gega ⁊ se cyngc þæt geþafige, þonne bete man þæt ciricgrið into ðare circan, be þæs cyninges fullan mundbryce, ⁊ þa mynsterclænsunge begite, swa þarto gebirige, [⁊ ægþer ge mægbote ge manbote fullice gebete], ⁊ wið God huru þingian georne.</ab>
-        <ab type="translation" xml:lang="en">And if it comes to the payment of compensation and the king allows this course, amends for the violation of the protection of the church shall be made by the payment to the church in question of the full fine for breach of the king's "mund," and the purification of the church shall be carried out as is fitting, [and compensation both to the kin and to the lord of the slain man shall be fully paid], and, above all, supplication shall earnestly be made to God.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ gyf hit þonne to bote gega, ⁊ se cyng þæt geþafige, þonne bete man þæt cyricgrið into þære cyrican, be cynges fullan mundbrice ⁊ þa mynsterclænsunge begyte, swa ðerto gebirige, ⁊ ægþer ge mægbote gc manbote fullice gebete ⁊ wið God huru þingie georne.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-g-a-part">⁊ gyf hit þonne to bote gega, ⁊ se cyng þ<hi rend="italic">æt</hi> geþafige, þon<hi rend="italic">ne</hi> bete man þ<hi rend="italic">æt</hi> cyricgrið into þære cyrican, be cynges fullan mundbrice ⁊ þa mynsterclænsunge begyte, swa ðerto gebirige, ⁊ ægþer ge mægbote ge manbote fullice gebete ⁊ wið God huru þingie georne.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="3" corresp="#wit-d">And gif hit þonne to bote gega ⁊ se cyngc þæt geþafige, þonne bete man þæt ciricgrið into ðare circan, be þæs cyninges fullan mundbryce, ⁊ þa mynsterclænsunge begite, swa þarto gebirige, [⁊ ægþer ge mægbote ge manbote fullice gebete], ⁊ wið God huru þingian georne.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And if it comes to the payment of compensation and the king allows this course, amends for the violation of the protection of the church shall be made by the payment to the church in question of the full fine for breach of the king's "mund," and the purification of the church shall be carried out as is fitting, [and compensation both to the kin and to the lord of the slain man shall be fully paid], and, above all, supplication shall earnestly be made to God.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn es nun zur Busszahlung kommt, indem der König dies erlaubt, dann büsse [jener] Mann den [Bruch des] Sonderfriedens der Kirche an jene [verletzte] Kirche durch vollen [Betrag der Busse für] Bruch des königlichen Sonderschutzes und beschaffe die Kirchenreinigung, wie dazu gehört, und zahle Busse für den [Erschlagenen], sowohl als Verwandten [an die Sippe] wie als Untergebenen [an dessen Herrn], vollständig und sühne vor allem eifrig gegenüber Gott.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if it then comes to compensation, the king permitting it, let [that] man pay compensation for [the breach of] the church's protection to that [violated] church at the full [amount for] breach of the king's protection, and obtain the cleansing of the church as is fitting, and pay compensation for the [slain man] in full, both as kinsman [to the kindred] and as dependant [to his lord], and above all make eager atonement to God.</ab>
+        <note type="editorial">Liebermann supplies ‘⁊ ægþer ge mægbote ge manbote fullice gebete’ in D from G and I Cn 2.5.</note>
       </div>
     </body>
   </text>

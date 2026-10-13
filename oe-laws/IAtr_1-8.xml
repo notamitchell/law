@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>I Atr 1.8</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,22 +20,18 @@
         <idno type="citationKey">IAtr 1.8</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">218</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Æthelred</title> <note type="reign">r. 978–1016</note></bibl>
+        <bibl type="legalText"><title>I Æthelred (Woodstock)</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">218</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">52</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>H</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1.8</idno>
-          <idno type="editorNumber" n="Robertson">1.8</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -50,16 +49,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1052 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1024 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 218.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 52.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.8">
         <head><ref type="lawCode" target="law:IAtr">I Atr</ref> 1.8</head>
-        <ab type="selectedText" xml:lang="und">And gyf mon ðone hlaford teo, þæt he be his ræde uthleope ⁊ ær unriht worhte, nime him fif ðegnas to ⁊ beo him sylf syxta ladie hine ðæs.</ab>
-        <ab type="translation" xml:lang="en">And if the lord is accused of advising the man who had done wrong to escape, he shall choose five thegns, and shall himself make a sixth, and shall clear himself of the accusation.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ gyf mon þone hlaford teo, þæt he be his ræde utthleope ⁊ ær unriht worhte, nime him fif þegnas to ⁊ beo him sylf sixta ladie hine þæs.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.8" corresp="#wit-h">⁊ gyf mon þone hlaford teo, þæt he be his ræde utthleope ⁊ ær unriht worhte, nime him fif þegnas to ⁊ beo him sylf sixta ⁊ ladie hine þæs.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.8" corresp="#wit-b">And gyf mon ðone hlaford teo, þæt he be his hræde uthleope ⁊ ær unriht worhte, nime him fif ðegnas to ⁊ beo him sylf syxta ⁊ ladie hine ðæs.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.8" corresp="#wit-q">Et si dominus eius accusetur, quod consilio suo fugerit et antea malum fecerit, assumat secum V tainos et idem sit sextus et ladiet se.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="1.8" corresp="#wit-b">And gyf mon ðone hlaford teo, þæt he be his ræde uthleope ⁊ ær unriht worhte, nime him fif ðegnas to ⁊ beo him sylf syxta ⁊ ladie hine ðæs.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">And if the lord is accused of advising the man who had done wrong to escape, he shall choose five thegns, and shall himself make a sixth, and shall clear himself of the accusation.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn der Herr beschuldigt wird, dass auf seinen Rath jener entflohen sei und früher schon Missethat verübt habe, so wähle er sich fünf Thegnas [als Eideshelfer] und sei selbst Sechster und schwöre sich davon rein.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if the lord is accused of the man having escaped on his advice and of having already done wrong before, let him take five thegns [as oath-helpers] and be himself the sixth, and clear himself of it.</ab>
       </div>
     </body>
   </text>

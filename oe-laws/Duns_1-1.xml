@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Duns 1.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -13,22 +17,18 @@
         <idno type="lawCodeAnchor">Duns</idno>
         <idno type="clause">1.1</idno>
         <idno type="citationKey">Duns 1.1</idno>
-        <idno type="legalText">Duns.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">374</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Dunsæte</title></bibl>
+        <bibl type="legalText"><title>Dunsæte Ordinance</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">374</biblScope></bibl>
+          <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +47,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1964 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1918 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 374.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.1">
         <head><ref type="lawCode" target="law:Duns">Duns</ref> 1.1</head>
-        <ab type="selectedText" xml:lang="und">Fo se syððan to ðe þæt land age ⁊ hæbbe him ða æscan; ⁊ ðæs on IX nihton gylde þæt yrfe oððe to ðam dæge underwed lecge, þæt sy ðæs orfes oðer healf weorð, ⁊ ðæs on IX nihton þæt wed undo mid rihtan gylde.</ab>
-        <ab type="translation" xml:lang="en">Then whoever owns that [local] territory has it [the investigation] to demand [ie. takes it over], and within nine days restores the cattle or on the same day deposits a pledge worth one and a half time the value of the cattle, and this pledge on the ninth day redeem [ie the balance] through proper payment [for the cattle to the owner].</ab>
-        <ab type="supplementaryText" xml:lang="und">Et recipiat ille in cuius terra deducetur et habeat ipsam inquisitionem; et inde ad nouem dies reddat ipsam pecuniam uel uadium ponat ipsa die, quod ualeat quesitam et inuestigatam pecuniam sesqualteram, et inde ad nouem dies ipsum uadium redimat recta persolutione.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.1" corresp="#wit-b">Fo se syððan to ðe þæt land age ⁊ hæbbe him ða æscan; ⁊ ðæs on IX nihton gylde þæt yrfe oððe to ðam dæge underwed lecge, þæt sy ðæs orfes oðer healf weorð, ⁊ ðæs on IX nihton þæt wed undo mid rihtan gylde.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.1" corresp="#wit-q">Et recipiat ille in cuius terra deducetur et habeat ipsam inquisitionem; et inde ad nouem dies reddat ipsam pecuniam uel uadium ponat ipsa die, quod ualeat quesitam et inuestigatam pecuniam sesqualteram, et inde ad nouem dies ipsum uadium redimat recta persolutione.</ab>
+        <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-b">Then whoever owns that [local] territory has it [the investigation] to demand [ie. takes it over], and within nine days restores the cattle or on the same day deposits a pledge worth one and a half time the value of the cattle, and this pledge on the ninth day redeem [ie the balance] through proper payment [for the cattle to the owner].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Alsdann übernehme [die Spurfolge] wer das [dortige] Land [sammt Immunität] besitzt und erhalte für sich die [weitere] Untersuchung [sammt Ertrag aus Bestrafung des Diebes]; doch bezahle er das Vieh in 9 Tagen von dem [Übernehmen] ab oder hinterlege an diesem Termin ein Unterpfand, das anderthalb des Viehes werth ist, und löse von da in 9 Tagen dies Unterpfand ein durch richtige Bezahlung [des Viehes].</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Then let him who owns the land [there, with its jurisdiction] take over [the pursuit of the track] and keep for himself the [further] inquiry [together with the profit from punishing the thief]; but let him pay for the cattle within 9 days from [taking it over], or on that day deposit a pledge worth one and a half times the cattle, and from then within 9 days redeem that pledge by proper payment [for the cattle].</ab>
+        <note type="editorial">Liebermann compares VI As 8.4 and 2.</note>
       </div>
     </body>
   </text>

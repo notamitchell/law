@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Ger 8[a]</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Gobbitt</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Gobbitt</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,22 +18,17 @@
         <idno type="lawCodeAnchor">Ger</idno>
         <idno type="clause">8[a]</idno>
         <idno type="citationKey">Ger 8a</idno>
-        <idno type="legalText">Ger.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">454</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Be Gesceadwisan Gerefan</title></bibl>
+        <bibl type="legalText"><title>Gerefa (The Reeve)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">454</biblScope></bibl>
+          <bibl xml:id="gobbitt" type="edition">Thom Gobbitt, ed., ‘Rectitudines singularum personarum’ and ‘Gerefa’, <title>Early English Laws</title> (earlyenglishlaws.ac.uk)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>B</witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
         </listWit>
-        <bibl type="selectedText">B: earlyenglishlaws ac.uk: RSP+Ger Gobbitt, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">8[a]</idno>
-          <idno type="editorNumber" n="Gobbitt">23</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -49,16 +47,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2193 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2135 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 454.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="8[a]">
         <head><ref type="lawCode" target="law:Ger">Ger</ref> 8[a]</head>
-        <ab type="selectedText" xml:lang="und">Æfre he mæig findan on ðam he mæig nyt beon . 7 ða nytte don ðe him fylstan scylan .</ab>
-        <ab type="translation" xml:lang="en">He must always discover that in [which] he may be useful, and make use of that which shall assist him.</ab>
-        <ab type="supplementaryText" xml:lang="und">[8[a]] Æfre he mæig findan, on ðam he mæig nyt beon 7 ða nytte don, ðe him fylstan scylan;</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="8[a]" corresp="#wit-b">[8[a]] Æfre he mæig findan, on ðam he mæig nyt beon 7 ða nytte don, ðe him fylstan scylan;</ab>
+        <ab type="editionText" xml:lang="ang" source="#gobbitt" n="23" corresp="#wit-b">Æfre he mæig findan on ðam he mæig nyt beon . 7 ða nytte don ðe him fylstan scylan .</ab>
+        <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">He must always discover that in [which] he may be useful, and make use of that which shall assist him.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Immer kann er [der Vogt] entdecken, woran er nützlich sein und solche nützlichen Verrichtungen ausführen kann, welche ihm helfen werden;</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">He [the reeve] can always find out how he can be useful and carry out such useful tasks as will help him;</ab>
+        <note type="editorial">Liebermann's 8 is split here into two rows. Liebermann compares Gerefa 13.</note>
       </div>
     </body>
   </text>

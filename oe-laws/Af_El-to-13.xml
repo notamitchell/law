@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Af El. 13</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -16,29 +19,24 @@
         <idno type="clause">El. 13</idno>
         <idno type="citationKey">Af el</idno>
         <idno type="citationKey">Af 13</idno>
-        <idno type="legalText">Af (domboc)</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">30</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Alfred</title> <note type="reign">r. 871–899</note></bibl>
+        <bibl type="legalText"><title>Alfred’s Domboc</title> <note type="reign">Alfred, r. 871–899</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">30</biblScope></bibl>
+          <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">236</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">E</witness>
-          <witness>H</witness>
-          <witness>B (no Prol.)</witness>
-          <witness>G (Prol. only)</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>Bu</witness>
-          <witness>Ot (frags.)</witness>
+          <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b-no-prol"><abbr>B (no Prol.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
-        <bibl type="selectedText">E: Cambridge, Corpus Christi College, MS 173 Jurasinski and Oliver, eds.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">El. 13</idno>
-          <idno type="editorNumber" n="Jurasinski and Oliver">MP 13</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -57,16 +55,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 335 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 329 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 30.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="El. 13">
         <head><ref type="lawCode" target="law:Af">Af</ref> El. 13</head>
-        <ab type="selectedText" xml:lang="und">Se mon se ðe his gewealdes monnan ofslea, swelte se deaðe. Se ðe hine þonne nedes ofsloge oððe unwillum oððe ungewealdes, swelce hine God swa sende on his honda, ⁊ he hine ne ymbsyrede, sie he feores wyrðe ⁊ folcryhtre bote, gif he friðstowe gesece. Gif hwa ðonne of giernesse ⁊ gewealdes ofslea his þone nehstan þurh searwa, aluc ðu hine from minum weofode, to þam þæt he deaðe swelte.</ab>
-        <ab type="translation" xml:lang="en">The man who intentionally slays someone – let him die the death. However, he who slew him out of necessity or unwillingly or accidentally, as God sent to his hands, and he did not lie in wait [for his victim]: let him be worthy of life and of the remedy permitted by folk-law, if he should seek a place of refuge. But if someone with deliberation and intent slays his neighbor through guile, take him away from my altar, that he may die the death.</ab>
-        <ab type="supplementaryText" xml:lang="und">Se man þe hys gewealdes man ofslea, swelte se deaþe. Se þe hine þonne neades ofslea oððe ungewylles oððe ungewealdes, swylce hyne God sende swa on his handa, 7 he him ne syrwde ymbe, sy he feores wyrþe 7 folcrihtere bote, gif he friðstowe gesece. Gyf hwa þonne of geornnesse 7 gewealdes ofslea hys þone nyhstan purh syrwunge, alúc þu hyne fram minum weofode, to ðam þæt he deaþe swelte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 13" corresp="#wit-h">Se man þe hys gewealdes man ofslea, swelte se deaþe. Se þe hine þonne neades ofslea oððe ungewylles oððe ungewealdes, swylce hyne God sende swa on his handa, ⁊ he him ne syrwde ymbe, sy he feores wyrþe ⁊ folcrihtere bote, gif he friðstowe gesece. Gyf hwa þonne of geornnesse ⁊ gewealdes ofslea hys þone nyhstan þurh syrwunge, alúc þu hyne fra<hi rend="italic">m</hi> minu<hi rend="italic">m</hi> weofode, to ðam þ<hi rend="italic">æt</hi> he deaþe swelte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 13" corresp="#wit-e">Se mon se ðe his gewealdes monnan ófslea, swelte se deaðe. Se ðe hine þonne nedes ófsloge oððe unwillu<hi rend="italic">m</hi> oððe ungewealdes, swelce hine God swa sende on his honda, ⁊ he hine ne ymbsyrede, sie he feores wyrðe ⁊ folcryhtre bote, gif he friðstowe gesece. Gif hwa ðon<hi rend="italic">ne</hi> óf giernesse ⁊ gewealdes ófslea his þone nehstan þurh searwa, aluc ðu hine fro<hi rend="italic">m</hi> minu<hi rend="italic">m</hi> weofode, to þam þæt he deaðe swelte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 13" corresp="#wit-g-prol-only">Se man se ðe his gewealdes man ofslea, swelte se deaðe. Se ðe hyne ðonne nydes ofsloge oððe unwillu<hi rend="italic">m</hi> oððe ungewealdes, swylce hine God swa sende on hys handa, ⁊ he hyne ymbe ne sierede, sy he feores wyrþe ⁊ folcrihtre bote, gif he fryðstowa gesece. Gyf hwa þonne of geornnesse ⁊ gewealdes ofslea his ðone nyehstan ðurh searwa, aluc ðu hine fra<hi rend="italic">m</hi> minan weofode, to ðam þ<hi rend="italic">æt</hi> he deaðe swelte.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 13" corresp="#wit-q">Qui percusserit hominem uolens occidere, morte moriatur. Qui autem non est insidiatus, sed Deus illum tradidit in manus eius, constituam tibi locum quo fugere debeat. Si quis per industriam occiderit proximum suum et per insidias, ab altari meo auelles eum, ut moriatur.</ab>
+        <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="MP 13" corresp="#wit-e">Se mon se ðe his gewealdes monnan ofslea, swelte se deaðe. Se ðe hine þonne nedes ofsloge oððe unwillum oððe ungewealdes, swelce hine God swa sende on his honda, ⁊ he hine ne ymbsyrede, sie he feores wyrðe ⁊ folcryhtre bote, gif he friðstowe gesece. Gif hwa ðonne of giernesse ⁊ gewealdes ofslea his þone nehstan þurh searwa, aluc ðu hine from minum weofode, to þam þæt he deaðe swelte.</ab>
+        <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">The man who intentionally slays someone – let him die the death. However, he who slew him out of necessity or unwillingly or accidentally, as God sent to his hands, and he did not lie in wait [for his victim]: let him be worthy of life and of the remedy permitted by folk-law, if he should seek a place of refuge. But if someone with deliberation and intent slays his neighbor through guile, take him away from my altar, that he may die the death.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Der Mensch, welcher aus eigener Macht einen Menschen erschlägt, der sterbe Todes. Wer ihn aber aus Noth erschlagen hat oder unfreiwillig oder ohne dafür zu können, wie Gott ihn so in seine Hände lieferte, und [wenn] er ihn nicht umlauert hat, so sei er des Lebens und volksrechtlicher Busse würdig, wenn er eine Schutzstätte findet. Wenn jemand dagegen aus Absicht und mit Willen seinen Nächsten durch Nachstellungen tödtet, so reisse du ihn fort von meinem Altare, auf dass er Todes sterbe.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">The person who slays a person of his own will, let him die the death. But whoever slew him out of necessity, or unwillingly, or without being able to help it, as God so delivered him into his hands, and [if] he did not lie in wait for him, then let him be worthy of life and of compensation according to folk-law, if he reaches a place of sanctuary. If, on the other hand, someone kills his neighbour on purpose and willingly by lying in wait, then tear him away from my altar, so that he may die the death.</ab>
+        <note type="passageSource">Exodus 21,12–14</note>
       </div>
     </body>
   </text>

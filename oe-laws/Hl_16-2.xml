@@ -4,8 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Hl 16.2</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +21,16 @@
         <idno type="citationKey">Hl 16.2</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">11</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Hlothere &amp; Eadric</title> <note type="reign">r. 673–685; 685–686</note></bibl>
+        <bibl type="legalText"><title>Hlothhere and Eadric’s Code</title> <note type="reign">Hlothhere, r. 673–685; Eadric, r. 685–686</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">11</biblScope></bibl>
+          <bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002), p. <biblScope unit="page">132</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922), p. <biblScope unit="page">23</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>H</witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Oliver, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">16.2</idno>
-          <idno type="editorNumber" n="Oliver">11.2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +49,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 154 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 152 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 11.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="16.2">
         <head><ref type="lawCode" target="law:Hl">Hl</ref> 16.2</head>
-        <ab type="selectedText" xml:lang="und">Gif he þæt ne mæge, gekyþe ðanne in wiofode mid his gewitena anum oþþe mid cyninges wicgerefan þat he þat feoh undeornunga his cuþan ceape in wic gebohte, ⁊ him man þanne his weorð agefe.</ab>
-        <ab type="translation" xml:lang="en">If he is unable to do that, let him declare then at the altar with one of his witnesses or with the king’s town-reeve that he bought that property without secrecy by his public purchase in the town; and [the] one [who sold it to him] should then give him back the price of it.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif he þæt ne mæge, gekyþe ðanne in wiofode mid his gewitena anum oþþe mid cyninges wicgerefan, þat he þat feoh undeornunga his cuþan ceape in wic gebohte; ⁊ him man þanne his weorð agefe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16.2" corresp="#wit-h">Gif he þ<hi rend="italic">æt</hi> ne mæge, gekyþe ðanne in wiofode mid his gewitena anum oþþe mid cyninges wicgerefan, þ<hi rend="italic">æt</hi> he þ<hi rend="italic">æt</hi> feoh undeornunga his cuþan ceape in wic gebohte; ⁊ him man þanne his weorð agefe.</ab>
+        <ab type="editionText" xml:lang="ang" source="#oliver" n="11.2" corresp="#wit-h">Gif he þ<hi rend="italic">æt</hi> ne mæge, gekyþe ðanne in wiofode mid his gewitena anum oþþe mid cyninges wicgerefan þ<hi rend="italic">at</hi> he þ<hi rend="italic">at</hi> feoh undeornunga his cuþan ceape in wic gebohte, ⁊ him man þanne his weorð agefe.</ab>
+        <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If he is unable to do that, let him declare then at the altar with one of his witnesses or with the king’s town-reeve that he bought that property without secrecy by his public purchase in the town; and [the] one [who sold it to him] should then give him back the price of it.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If he cannot do so, he shall declare on the altar, with one of his witnesses or with the reeve of the king’s estate, that he bought the property openly in London, and with goods known to be his, and the value [of the property] shall be returned to him.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn er [der Verklagte] das nicht kann, dann erkläre er am Altar mit einem seiner Zeugen oder mit des Königs Stadtvogte [als seinem Eideshelfer], dass er jene Fahrhabe unverhohlen durch seinen offenkundigen Kauf in [dieser] Stadt kaufte; und jener [Kläger] gebe ihm dann deren Preis zurück.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If he [the accused] cannot do that, then let him declare at the altar with one of his witnesses or with the king’s town-reeve [as his oath-helper] that he bought those goods openly by his public purchase in [that] town; and let that [plaintiff] then give him back their price.</ab>
       </div>
     </body>
   </text>

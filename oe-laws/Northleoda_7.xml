@@ -3,33 +3,35 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Norðleod. 7</title>
-        <respStmt><resp>Translation of the selected text</resp><name>Whitelock, English Historical Documents I</name></respStmt>
+        <title>Norðleoda 7</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Northleoda_7</idno>
-        <idno type="citation">Norðleod. 7</idno>
-        <idno type="lawCode">Norðleod.</idno>
+        <idno type="citation">Norðleoda 7</idno>
+        <idno type="lawCode">Norðleoda</idno>
         <idno type="lawCodeAnchor">Northleoda</idno>
         <idno type="clause">7</idno>
         <idno type="citationKey">Northleoda 7</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">460</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Norðleoda laga</title></bibl>
+        <bibl type="legalText"><title>Norðleoda laga (Law of the North People)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">460</biblScope></bibl>
+          <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979)</bibl>
+          <bibl xml:id="rabin" type="translation">Andrew Rabin, <title>The Political Writings of Archbishop Wulfstan of York</title> (Manchester: Manchester University Press, 2015)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>H</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Gesetze</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">7</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,17 +49,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2228 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2168 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 460.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7">
-        <head><ref type="lawCode" target="law:Northleoda">Norðleod.</ref> 7</head>
-        <ab type="selectedText" xml:lang="und">And gif Wilisman geþeo, þæt he hæbbe hiwisc landes 7 mæge cyninges gafol forðbringan, þonne bið his wergild CXX scill'.</ab>
-        <ab type="translation" xml:lang="en">And if a Welshman prospers, that he has a hide of land and may produce the king's tribute, then his wergild is 120 shillings.</ab>
-        <ab type="supplementaryText" xml:lang="und">7 gif Wilisc man geþeo, þæt he hæbbe hywisc landes 7 mage cynges gafel forðbringan, þonne byð his wergyld CCXX scll'.</ab>
-        <ab type="supplementaryTranslation" xml:lang="en">And if a Welshman prospers so that he possesses a hide of land and can pay the king's tribute, then his wergild shall be two hundred and twenty shillings.</ab>
+        <head><ref type="lawCode" target="law:Northleoda">Norðleoda</ref> 7</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-h">7 gif Wilisc man geþeo, þ<hi rend="italic">æt</hi> he hæbbe hywisc landes 7 mage cynges gafel forðbringan, þonne byð his wergyld CCXX scll'.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-d">And gif Wilisman geþeo, þ<hi rend="italic">æt</hi> he hæbbe hiwisc landes 7 mæge cyninges gafol forðbringan, þon<hi rend="italic">ne</hi> bið his wergild CXX scill'.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="7" corresp="#wit-q">Et si Waliscus promoueatur, ut habeat familiam et terram et possit gablum regis reddere, tunc est wera eius CCXX sol.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">And if a Welshman prospers, that he has a hide of land and may produce the king's tribute, then his wergild is 120 shillings.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin" corresp="#wit-h">And if a Welshman prospers so that he possesses a hide of land and can pay the king's tribute, then his wergild shall be two hundred and twenty shillings.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn ein Wälscher [so] emporkommt, dass er 1 Hid Landes besitzt und Steuer [direct] an den König aufzubringen vermag, dann ist sein Wergeld 120 Schill. (220 hlq).</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if a Welshman prospers [so] that he holds 1 hide of land and can pay tax [directly] to the king, then his wergild is 120 shillings (220, hlq).</ab>
+        <note type="editorial">D reads CXX; H's CCXX is a corruption in hlq (likewise below Mirce 3). Liebermann notes that clauses 7–12 are, according to Schmid, a later extension, probably southern-English influenced. Ld: ‘a Welshman's wergild, if he has become so rich that he has a household and property and can pay the king tax: it is 220 shillings’. Liebermann compares Ine 32.</note>
       </div>
     </body>
   </text>

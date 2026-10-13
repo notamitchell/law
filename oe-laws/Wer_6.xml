@@ -4,7 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Wer 6</title>
-        <respStmt><resp>Translation of the selected text</resp><name>Wormald, Making</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#wormald">Wormald</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -13,23 +16,19 @@
         <idno type="lawCode">Wer</idno>
         <idno type="clause">6</idno>
         <idno type="citationKey">Wer 6</idno>
-        <idno type="legalText">Wer.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">392</biblScope>
-        </bibl>
         <bibl type="legalText"><title>Wergeld</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">392</biblScope></bibl>
+          <bibl xml:id="wormald" type="translation">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">6</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +46,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2107 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2054 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 392.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6">
         <head>Wer 6</head>
-        <ab type="selectedText" xml:lang="und">Of ðam dæge, ðe ðæt healsfang agolden sy, on XXI nihtan gylde man ða manbote; ðæs on XXI nihtan ðæt fyhtewite; ðæs on XXI nihtan ðæs weres ðæt frumgyld; 7 swa forð, ðæt fulgolden sy on ðam fyrste, ðe witan geræden.</ab>
-        <ab type="translation" xml:lang="en">From the day when healsfang is to be paid, within twenty-one days, manbot is to be paid; then within twenty-one days the fighting-fine; then within twenty-one days the first instalment of the wergeld; and so on, until full payment is made within the time-limit that the witan have ordained.</ab>
-        <ab type="supplementaryText" xml:lang="und">Of ðam dæge, þe þæt healsfang agolden sy, on XXI nihtan gylde man ða manbote; ðæs on XXI nihtan þæt fyht[e]wite; ðæs on XXI nihtan ðæs weres þæt frumgyld; 7 swa forð, þæt fulgolden sy on ðam fyrste, ðe witan geræddan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-b">Of ðam dæge, þe þ<hi rend="italic">æt</hi> healsfang agolden sy, on XXI nihtan gylde man ða manbote; ðæs on XXI nihtan þ<hi rend="italic">æt</hi> fyht[e]wite; ðæs on XXI nihtan ðæs weres þ<hi rend="italic">æt</hi> fru<hi rend="italic">m</hi>gyld; 7 swa forð, þ<hi rend="italic">æt</hi> fulgolden sy on ðam fyrste, ðe witan geræddan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-h">Of ðam dæge, ðe ðæt healsfang agolden sy, on XXI nihtan gylde man ða manbote; ðæs on XXI nihtan ðæt fyhtewite; ðæs on XXI nihtan ðæs weres ðæt frumgyld; 7 swa forð, ðæt fulgolden sy on ðam fyrste, ðe witan geræden.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6" corresp="#wit-q">A die illa qua healsfangum redditum sit, in XXI. noctem reddatur manbota; inde in XXI. noctem fihtƿita (id est forisfactura pugne); inde ad XXI. noctem ipsius were frumgildum (id est prima redditio); et sic postea, donec persoluatur infra terminum, quem sapientes instituent.</ab>
+        <ab type="translation" xml:lang="en" source="#wormald" corresp="#wit-h">From the day when <hi rend="italic">healsfang</hi> is to be paid, within twenty-one days, <hi rend="italic">manbot</hi> is to be paid; then within twenty-one days the fighting-fine; then within twenty-one days the first instalment of the wergeld; and so on, until full payment is made within the time-limit that the <hi rend="italic">witan</hi> have ordained.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Von dém Tage, da das Halsfanggeld entrichtet ist, in 21 Tagen zahle man [dem Herrn des Erschlagenen] Busse für Erschlagung des Untergebenen; von dem ab in 21 Tagen die Strafe für Blutvergiessen [an die Obrigkeit]; von dem ab in 21 Tagen die Erstzahlung des Wergeldes [an die Sippe]; und so weiter, damit [es] vollbezahlt sei in der Frist, welche die notablen Schiedsmannen bestimmen (-mt haben B).</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Within 21 days from the day the healsfang is paid, let one pay [to the slain man's lord] the compensation for killing his man; within 21 days from then the fine for fighting [to the authorities]; within 21 days from then the first payment of the wergild [to the kin]; and so on, so that [it] is fully paid within the term which the notable arbitrators determine (have determined, B).</ab>
+        <note type="editorial">B reads ‘fyhto wite’; Liebermann prints ‘fyht[e]wite’. Liebermann compares II Em 7.</note>
       </div>
     </body>
   </text>

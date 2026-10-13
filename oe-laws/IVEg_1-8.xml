@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>IV Eg 1.8</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,24 +18,20 @@
         <idno type="lawCodeAnchor">IVEg</idno>
         <idno type="clause">1.8</idno>
         <idno type="citationKey">IVEg 1.8</idno>
-        <idno type="legalText">IV Edg</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">208</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>IV Edgar</title></bibl>
+        <bibl type="legalText"><title>IV Edgar (Whitbordesstan)</title> <note type="reign">Edgar, r. 957/9–975</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">208</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">32</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">C</witness>
-          <witness>F</witness>
-          <witness>C (Latin)</witness>
+          <witness xml:id="wit-c" rend="bold"><abbr>C</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
+          <witness xml:id="wit-f"><abbr>F</abbr> <note type="manuscript">London, British Library, Cotton Nero E.i</note></witness>
+          <witness xml:id="wit-c-latin"><abbr>C (Latin)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">C: Cambridge, Corpus Christi College, MS 265 Gesetze</bibl>
-        <bibl type="supplementaryText">F: British Library, Cotton Nero E.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1.8</idno>
-          <idno type="editorNumber" n="Robertson">1.8</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -50,16 +49,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1012 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 985 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 208.</change>
+      <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 33.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.8">
         <head><ref type="lawCode" target="law:IVEg">IV Eg</ref> 1.8</head>
-        <ab type="selectedText" xml:lang="und">⁊ ic ⁊ mine þegnas wyldan ure preostas to ðan þe ure saula hyrdas us tæcað, þæt syndon ure bisceopas, þe we næfre mishyran ne sceolon on nan þara ðinga þe hi us for Gode tæcað, þæt we ðurh þa hyrsumnysse, þe we heom for Gode hyrsumiað, þæt ece líf geearnian, þe hy us towemað mid lare ⁊ mid bysene godra weorca.</ab>
-        <ab type="translation" xml:lang="en">And that I and my thegns shall enforce upon our priests the duties prescribed for us by the guardians of our souls, namely our bishops, whom we ought never disobey in any of these matters which they, as representatives of God, precribe for us, so that we, through the obedience which we show them as representatives of God, may inherit the eternal life to which they draw us by their teaching and by the example of good works.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ ic ⁊ mine þegnas wyldan ure preostas to ðan þe ure saula hyrdas us tæcað, þæt syndon ure bisceopas, þe we næfre mishyran ne scylon on nan þara þinga, þe hy us for Gode tæcað, þæt we þurh þa hyrsomnysse, þe we heom for Gode hyrsomiað, þæt éce lif geearnian, þe hy us towemað mid lare ⁊ mid bysene goddra weorca.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.8" corresp="#wit-f">⁊ ic ⁊ mine þegnas wyldan ure preostas to ðan þe ure saula hyrdas us tæcað, þ<hi rend="italic">æt</hi> syndon ure bisceopas, þe we næfre mishyran ne scylon on nan þara þinga, þe hy us for Gode tæcað, þ<hi rend="italic">æt</hi> we þurh þa hyrsomnysse, þe we heom for Gode hyrsomiað, þ<hi rend="italic">æt</hi> éce lif geearnian, þe hy us towemað mid lare ⁊ mid bysene goddra weorca.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.8" corresp="#wit-c">⁊ ic ⁊ mine þegnas wyldan ure preostas to ðan þe ure saula hyrdas us tæcað, þæt syndon ure bisceopas, þe we næfre mishyran ne sceolon on nan þara ðinga, þe hi us for Gode tæcað, þæt we ðurh ða hyrsumnysse, þe we heom for Gode hyrsumiað, þæt ece líf geearnian, þe hy us towemað mid lare ⁊ mid bysene godra weorca.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.8" corresp="#wit-q">Ipsi quoque cum omni humilitatis subiectione diligenter obaudiant animarum nostrarum custodibus, uidelicet episcopis, quibus incessanter in cunctis iustificationibus obedientes esse debemus, ut illa obauditione, quam eis recte pro amore Diuinitatis inpendimus, eorum doctrinis et bonorum operum eruditionibus ęterne beatitudinis lętitiam a[di]pisci mereamur cum sanctis omnibus.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="1.8" corresp="#wit-c">⁊ ic ⁊ mine þegnas wyldan ure preostas to ðan þe ure saula hyrdas us tæcað, þæt syndon ure bisceopas, þe we næfre mishyran ne sceolon on nan þara ðinga þe hi us for Gode tæcað, þæt we ðurh þa hyrsumnysse, þe we heom for Gode hyrsumiað, þæt ece líf geearnian, þe hy us towemað mid lare ⁊ mid bysene godra weorca.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">And that I and my thegns shall enforce upon our priests the duties prescribed for us by the guardians of our souls, namely our bishops, whom we ought never to disobey in any of those matters which they, as representatives of God, prescribe for us, so that we, through the obedience which we show them as representatives of God, may inherit the eternal life to which they draw us by their teaching and by the example of good works.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und ich und meine Thegnas mögen unsere Priester dazu lenken, was unsere Seelenhirten uns vorschreiben, nämlich unsere Bischöfe, welchen wir nie ungehorsam sein dürfen in einem der Dinge, die sie uns um Gotteswillen vorschreiben, auf dass wir durch den Gehorsam, den wir ihnen um Gotteswillen leisten, das ewige Leben gewinnen, zu welchem sie uns hinleiten durch Lehre und durch Beispiel guter Werke.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And may I and my thegns direct our priests to what the shepherds of our souls teach us, namely our bishops, whom we must never disobey in any of the things that they teach us for God's sake, so that through the obedience which we render them for God's sake we may earn the eternal life to which they lead us by teaching and by the example of good works.</ab>
+        <note type="editorial">F's ‘goddra’ as printed; C ‘godra’.</note>
       </div>
     </body>
   </text>

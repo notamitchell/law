@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Af El. 25</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -16,29 +19,24 @@
         <idno type="clause">El. 25</idno>
         <idno type="citationKey">Af el</idno>
         <idno type="citationKey">Af 25</idno>
-        <idno type="legalText">Af (domboc)</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">34</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Alfred</title> <note type="reign">r. 871–899</note></bibl>
+        <bibl type="legalText"><title>Alfred’s Domboc</title> <note type="reign">Alfred, r. 871–899</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">34</biblScope></bibl>
+          <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">248</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">E</witness>
-          <witness>H</witness>
-          <witness>B (no Prol.)</witness>
-          <witness>G (Prol. only)</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>Bu</witness>
-          <witness>Ot (frags.)</witness>
+          <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b-no-prol"><abbr>B (no Prol.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
-        <bibl type="selectedText">E: Cambridge, Corpus Christi College, MS 173 Jurasinski and Oliver, eds.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">El. 25</idno>
-          <idno type="editorNumber" n="Jurasinski and Oliver">MP 25</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -57,16 +55,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 347 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 341 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 34.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="El. 25">
         <head><ref type="lawCode" target="law:Af">Af</ref> El. 25</head>
-        <ab type="selectedText" xml:lang="und">Gif ðeof brece mannes hús nihtes ⁊ he weorðe þær ofslegen, ne sie he na mansleges scyldig. Gif he siððan æfter sunnan upgonge þis deð, he bið mansleges scyldig ⁊ he ðonne self swelte, buton he nieddæda wære. Gif mid him cwicum sie funden þæt he ær stæl, be twyfealdum forgielde hit.</ab>
-        <ab type="translation" xml:lang="en">If a thief should break into a man’s house at night and be slain there, let him [the slayer] not [be deemed] culpable for the homicide. If he does this after sunrise, he will be culpable for the homicide; and let him suffer death himself, unless he were constrained by necessity [in killing the thief]. If, while he [the thief] lives, that which he has stolen is found, let him pay twice its value.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif þeof brece mannes hus nihtes ⁊ he wurðe ðær ofslegen, ne sy he na mansleges scyldig. Gif he syððan æfter sunnan uppgange ðis deð, he biþ mansleges scyldig ⁊ he þonne swylte, butan he nyddæde wære. Gif mid him cwycum sy funden þæt he ær stæl, be twyfealdum forgylde hit.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 25" corresp="#wit-h">Gif þeof brece mannes hus nihtes ⁊ he wurðe ðær ofslegen, ne sy he na mansleges scyldig. Gif he syððan æfter sunnan uppgange ðis deð, he biþ mansleges scyldig ⁊ he þonne swylte, butan he nyddæde wære. Gif mid him cwycu<hi rend="italic">m</hi> sy funden þ<hi rend="italic">æt</hi> he ær stæl, be twyfealdu<hi rend="italic">m</hi> forgylde hit.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 25" corresp="#wit-e">Gif ðeof brece mannes hús nihtes ⁊ he weorðe þær ofslegen, ne sie he na mansleges scyldig. Gif he siððan æfter sunnan upgonge þis deð, he bið mansleges scyldig ⁊ he ðonne self swelte, buton he nieddæda wære. Gif mid him cwicum sie funden þæt he ǽr stæl, be twyfealdum forgielde hit.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 25" corresp="#wit-q">Si effringens fur domum uel effodiens fuerit inuentus et accepto uulnere mortuus fuerit, percussor non erit reus sanguinis. Quodsi orto sole hoc fecerit et homicidium perpetrauerit, et ipse morietur. Si non habuerit quod pro furto reddat, uenundabitur. Si inuentum fuerit apud eum quod furatus est uiuens, siue bos siue asinus siue ouis, duplum restituet.</ab>
+        <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="MP 25" corresp="#wit-e">Gif ðeof brece mannes hús nihtes ⁊ he weorðe þær ofslegen, ne sie he na mansleges scyldig. Gif he siððan æfter sunnan upgonge þis deð, he bið mansleges scyldig ⁊ he ðonne self swelte, buton he nieddæda wære. Gif mid him cwicum sie funden þæt he ær stæl, be twyfealdum forgielde hit.</ab>
+        <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If a thief should break into a man’s house at night and be slain there, let him [the slayer] not [be deemed] culpable for the homicide. If he does this after sunrise, he will be culpable for the homicide; and let him suffer death himself, unless he were constrained by necessity [in killing the thief]. If, while he [the thief] lives, that which he has stolen is found, let him pay twice its value.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Dieb jemandes Haus nachts erbricht und dort erschlagen wird, so sei er [der ihn tödtete] nicht Todtschlages schuldig. Wenn dieser später nach Sonnenaufgang das thut, ist er Todtschlages schuldig und er sterbe dann selbst, ausser wenn er in Nothwehr handelte. Wenn bei ihm, dem lebenden [Diebe], was er früher gestohlen hatte, gefunden wird, vergelte er dies zwiefach.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a thief breaks into someone’s house at night and is slain there, then let him [who killed him] not be guilty of manslaughter. If the latter does this later, after sunrise, he is guilty of manslaughter and let him then die himself, unless he acted in self-defence. If what he had stolen earlier is found with him, the living [thief], let him repay it twofold.</ab>
+        <note type="passageSource">Exodus 22,2–4</note>
       </div>
     </body>
   </text>

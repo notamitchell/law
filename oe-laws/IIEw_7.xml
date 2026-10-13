@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Ew 7</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,25 +18,20 @@
         <idno type="lawCodeAnchor">IIEw</idno>
         <idno type="clause">7</idno>
         <idno type="citationKey">IIEw 7</idno>
-        <idno type="legalText">II Edw</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">144</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Edward</title></bibl>
+        <bibl type="legalText"><title>II Edward (Exeter)</title> <note type="reign">Edward the Elder, r. 899–924</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">144</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">7</idno>
-          <idno type="editorNumber" n="Attenborough">7</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,16 +49,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 736 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 724 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 144.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7">
         <head><ref type="lawCode" target="law:IIEw">II Ew</ref> 7</head>
-        <ab type="selectedText" xml:lang="und">[Be ðone ðe oþres mannes man underfehþ butan leafe.] [Ld] Ne underfó nan man oðres mannes man butan þæs leafe ðe he ær fyligde ⁊ ær he sy laðleas wið ælce hand. Gif hit hwa dó, bete mine oferhyrnesse.</ab>
-        <ab type="translation" xml:lang="en">No man shall take into his services one who has been in the service of another without the permission of the latter, and until he is free of all charges from any other quarter. If any man does so, he shall pay as compensation the amount due for insubordination to me.</ab>
-        <ab type="supplementaryText" xml:lang="und">Ne underfo nan man oðres mannes man butan ðæs leafe ðe he ær fylgde, ⁊ ær he sy laðleas wið ælce hand. Gyf hit hwa dó, bete mine oferhyrnesse.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-b">Ne underfo nan man oðres mannes man butan ðæs leafe ðe he ær fylgde, ⁊ ær he sy laðleas wið ælce hand. Gyf hit hwa dó, bete mine oferhyrnesse.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-h">Ne underfó nan man oðres mannes man butan þæs leafe ðe he ær fyligde, ⁊ hær he syl laðleas wið ælce hand. Gif hit hwa dó, bete mine oferhyrnesse.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="7" corresp="#wit-q">Et non recipiat aliquis alterius hominem sine licentia illius, cui ante seruiuit, priusquam innocens sit apud omnem manum. Si quis hoc secus faciat, emendet ouerhyrnessam meam.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="7" corresp="#wit-h">[Be ðone ðe oþres mannes man underfehþ butan leafe.] [Ld] Ne underfó nan man oðres mannes man butan þæs leafe ðe he ær fyligde ⁊ ær he sy laðleas wið ælce hand. Gif hit hwa dó, bete mine oferhyrnesse.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">No man shall take into his services one who has been in the service of another without the permission of the latter, and until he is free of all charges from any other quarter. If any man does so, he shall pay as compensation the amount due for insubordination to me.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Von dem, der den Untergebenen eines anderen Mannes aufnimmt ohne Erlaubniss [des letzteren]. Ld) Niemand nehme den Untergebenen von jemand anders [ins Gefolge] auf ohne Erlaubniss von diesem [letzteren], dem derselbe früher untergeben war, und bevor derselbe gegenüber jeder Person von Verschuldung frei ist. Wenn das einer thut, zahle er als Busse den ‘Ungehorsam’ gegen mich.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of him who receives another man's dependant without [the latter's] permission. Ld) No one is to receive the dependant of someone else [into his following] without the permission of this [latter], to whom he was formerly subject, and before he is free of guilt towards every person. If anyone does that, let him pay as compensation the ‘disobedience’ [fine] to me.</ab>
+        <note type="editorial">H reads ‘syl laðleas’ (Liebermann: H has ‘syllað leas’); he corrects to ‘sy’ from B, Ld and Quadr.</note>
       </div>
     </body>
   </text>

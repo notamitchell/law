@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Atr 9.3</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,24 +18,19 @@
         <idno type="lawCodeAnchor">IIAtr</idno>
         <idno type="clause">9.3</idno>
         <idno type="citationKey">IIAtr 9.3</idno>
-        <idno type="legalText">II Atr Appendix</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">226</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Atr</title></bibl>
+        <bibl type="legalText"><title>II Æthelred (Treaty with Olaf)</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">226</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">62</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">9.3</idno>
-          <idno type="editorNumber" n="Robertson">9.3</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -50,16 +48,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1098 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1069 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 226.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 62.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="9.3">
         <head><ref type="lawCode" target="law:IIAtr">II Atr</ref> 9.3</head>
-        <ab type="selectedText" xml:lang="und">Gif he ðonne ðære freonda hæfð ðe þæt don durron, ðonne berst se team, swa wel swa he liues wære ⁊ sylf andsæc worhte; stent ðonne ðeofscylde se ðe hit on handa hæfð, forðam a bið andsæc swiðere ðonne onsagu.</ab>
-        <ab type="translation" xml:lang="en">If, however, he has friends who are prepared to do so, the vouching to warranty shall fail as completely as if he had himself been alive and had proved his denial. Then he, in whose possession the goods are, will be held guilty of theft, because denial is always stronger than accusation.</ab>
-        <ab type="supplementaryText" xml:lang="und">Si tunc amicos habeat, qui audeant hoc facere, tunc deficit aduocatio, sicut si ille uiueret ac negaret; et habeatur furti reus ille qui in manus habet: quia semper est negatio fortior quam affirmatio.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9.3" corresp="#wit-b">Gif he ðonne ðære freonda hæfð, ðe þæt don durron, ðonne berst se team, swa wel swa he liues wære ⁊ sylf andsæc worhte; stent ðonne ðeofscyldig se ðe hit on handa hæfð: forðam a bið andsæc swiðere ðonne onsagu.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="9.3" corresp="#wit-q">Si tunc amicos habeat, qui audeant hoc facere, tunc deficit aduocatio, sicut si ille uiueret ac negaret; et habeatur furti reus ille qui in manus habet: quia semper est negatio fortior quam affirmatio.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="9.3" corresp="#wit-b">Gif he ðonne ðære freonda hæfð ðe þæt don durron, ðonne berst se team, swa wel swa he liues wære ⁊ sylf andsæc worhte; stent ðonne ðeofscyldig se ðe hit on handa hæfð, forðam a bið andsæc swiðere ðonne onsagu.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">If, however, he has friends who are prepared to do so, the vouching to warranty shall fail as completely as if he had himself been alive and had proved his denial. Then he, in whose possession the goods are, will be held guilty of theft, because denial is always stronger than accusation.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn nämlich der [Verstorbene] solche Freunde besitzt, die das zu thun wagen, dann bricht der Gewährzug so gut, als wäre er am Leben und vollzöge selbst diese Leugnung. Dann steht Diebstahls schuldig, wer das [im Anefang Eingeklagte] in Besitz hat: denn immer ist Ableugnung [des Verklagten] näher zum Beweise als Klage.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">For if the [dead man] has such friends as dare do that, then the vouching to warranty fails, just as if he were alive and made the denial himself. Then whoever has [the attached item] in his possession stands guilty of theft: for denial is always stronger than accusation.</ab>
+        <note type="editorial">B's ‘and sæt’ for ‘andsæc’.</note>
       </div>
     </body>
   </text>

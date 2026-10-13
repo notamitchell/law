@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>VI As 1.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">VIAs 1.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">173</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VI Æthelstan</title></bibl>
+        <bibl type="legalText"><title>VI Æthelstan (London Peace-Guild)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">173</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1.1</idno>
-          <idno type="editorNumber" n="Attenborough">[1].1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +47,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 870 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 850 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 173.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.1">
         <head><ref type="lawCode" target="law:VIAs">VI As</ref> 1.1</head>
-        <ab type="selectedText" xml:lang="und">Ðæt is þonne ærest: Þæt man ne sparige nánan þe[ofe] ofer XII pæningas ⁊ ofer XII wintra mánn þone þe wé on folcriht geáxian, þæt [he] ful sý ⁊ to nánán andsæce ne mæge; þæt wé hine ofslean ⁊ niman eall þæt he áge; ⁊ niman ærest þæt ceapgyld of þam yrfe, ⁊ dæle man syððan þone ofereácan on III: ænne dǽl þam wife, gif heo clæne sy ⁊ þæs fácnes gewita nære, ⁊ þæt oðer on II; to healfum fó se cyng, to healfum se ferscipe. Gif hit bocland sy oððe bisceopa land, þonne ah se landhlaford þone healfan dǽl wið þone geferscipe gemæne.</ab>
-        <ab type="translation" xml:lang="en">First of all: No thief shall be spared [who has stolen goods worth] more than twelve pence, and who is over twelve years old. If we find him guilty according to the public law, and he cannot in any wise deny it, we shall put him to death and take all he possesses; and we shall first take the value of the [stolen] goods from his possessions, and afterwards what is left shall be divided into three. One part shall be given to the wife if she is innocent and not an accessory to the crime; and the remainder shall be divided into two, the king taking one half and the [slain man's] associates the other half. If he is a tenant on land held by title deed, or on land belonging to a bishop, the owner of the land shall share equally with the associates.</ab>
-        <ab type="supplementaryText" xml:lang="und">Est inprimus, ut non paracatur alicui latroni supra XII annos et supra XII den., de quo uere fuerit inquisitum, quod reus sit et ad negacionem aliquam non possit, quin occidatur et capiatur omne quod habet. Et excipiatur inprimis captale repetentis de pecunia ipsa, et diuidatur postea superplus in tres partes: unam partem habeat uxor eius, si in eo munda sit ipsius facinoris conscia non fuerit; reliquum diuidatur in duas partes: dimidium habeat rex, dimidium societas. Si sit bocland uel biscopland (id est terra testamentalis uel episcopalis), tunc erit media pars terrę domino cum societate communis.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.1" corresp="#wit-h">Ðæt is þonne ærest: þæt man ne sparige nánan þe[of] ofer XII pæningas ⁊ ofer XII wintre mán, þone þe wé on folcriht geáxian, þæt ful sý ⁊ to nánán andsæce ne mæge; þæt wé hine ofslean ⁊ niman eall þæt he áge; ⁊ niman ærest þæt ceapgyld of ðam yrfe, ⁊ dæle man syððan þone ofereácan on III: ænne dǽl þam wife, gif heo clæne sy ⁊ þæs fácnes gewita nære, ⁊ þæt oðer on II: to healfum fó se cyng, to healfum se ferscipe. Gif hit bocland sy oððe bisceopa land, þonne ah se landhlaford þone healfan dǽl wið þone ge[fer]scipe gemæne.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.1" corresp="#wit-q">Est inprimis, ut non parcatur alicui latroni supra XII annos et supra XII den., de quo uere fuerit inquisitum, quod reus sit et ad negacionem aliquam non possit, quin occidatur et capiatur omne quod habet. Et excipiatur inprimis captale repetentis de pecunia ipsa, et diuidatur postea superplus in tres partes: unam partem habeat uxor eius, si in eo munda sit et ipsius facinoris conscia non fuerit; reliquum diuidatur in duas partes: dimidium habeat rex, dimidium societas. Si sit bocland uel biscopland (id est terra testamentalis uel episcopalis), tunc erit media pars terrę domino cum societate communis.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="[1].1" corresp="#wit-h">Ðæt is þonne ærest: Þæt man ne sparige nánan þe[ofe] ofer XII pæningas ⁊ ofer XII wintra mánn þone þe wé on folcriht geáxian, þæt [he] ful sý ⁊ to nánán andsæce ne mæge; þæt wé hine ofslean ⁊ niman eall þæt he áge; ⁊ niman ærest þæt ceapgyld of þam yrfe, ⁊ dæle man syððan þone ofereácan on III: ænne dǽl þam wife, gif heo clæne sy ⁊ þæs fácnes gewita nære, ⁊ þæt oðer on II; to healfum fó se cyng, to healfum se ferscipe. Gif hit bocland sy oððe bisceopa land, þonne ah se landhlaford þone healfan dǽl wið þone geferscipe gemæne.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">First of all: No thief shall be spared [who has stolen goods worth] more than twelve pence, and who is over twelve years old. If we find him guilty according to the public law, and he cannot in any wise deny it, we shall put him to death and take all he possesses; and we shall first take the value of the [stolen] goods from his possessions, and afterwards what is left shall be divided into three. One part shall be given to the wife if she is innocent and not an accessory to the crime; and the remainder shall be divided into two, the king taking one half and the [slain man's] associates the other half. If he is a tenant on land held by title deed, or on land belonging to a bishop, the owner of the land shall share equally with the associates.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Nämlich erstens nun: dass man keinen Dieb schone, [der] über 12 Pfennige [gestohlen hat] und ein Mann über 12 Jahre [alt ist] — einen, welchen wir nach Landrecht erkennen, dass er überführt ist und zu keiner Leugnung [zugelassen werden] kann; dass wir ihn [vielmehr] erschlagen und alles, was er hat, fortnehmen, und zuerst von der Habe das Ersatzgeld [für den Bestohlenen] abziehen; und danach theile man den Überrest in drei [Theile]: einen Theil der Ehefrau — wenn sie unschuldig ist und nicht Mitwisserin jener Missethat war — und das Übrige in zwei: zur Hälfte greife der König, zur Hälfte die Genossenschaft. Wenn [des Diebes] Landgut urkundlich geliehen oder auf Bisthumsboden ist, dann erhält der [obere] Grundherr letztere Hälfte mit der Genossenschaft gemeinsam.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Namely, first of all: that we spare no thief [who has stolen] over 12 pence and [is] a man over 12 years [old] — one whom we find according to folk-law to be convicted and [who] can [be allowed] no denial; that we [rather] kill him and take everything he has, and first deduct from the property the compensation-money [for the person robbed]; and after that let the remainder be divided into three [parts]: one part to the wife — if she is innocent and was not privy to the crime — and the rest into two: let the king take half, the fellowship half. If [the thief's] land is bookland or on episcopal land, then the [superior] landlord receives the latter half jointly with the fellowship.</ab>
+        <note type="editorial">Liebermann compares II As 1 and IV As 6. In H, ‘þe’ stands for ‘þeof’ (the scribe skipped ahead to the following ‘of’); ‘biscopa’ should perhaps be corrected to ‘biscopland’ from Quadr.; H's ‘gerefs[cipe]’ is corrected from Quadr.</note>
       </div>
     </body>
   </text>

@@ -8,6 +8,8 @@
         <respStmt><resp>Edition of the text</resp><name ref="#oliver">Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#oliver">Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -22,11 +24,12 @@
         <bibl type="legalText"><title>Æthelberht’s Code</title> <note type="reign">Æthelberht, r. ?584–616</note></bibl>
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">8</biblScope></bibl>
-          <bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002)</bibl>
+          <bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002), p. <biblScope unit="page">78</biblScope></bibl>
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-h">H</witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -45,7 +48,8 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 118 of the spreadsheet Aethelberht.xlsx.</change>
+      <change when="2026-10-14">Generated from row 117 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 8.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -54,8 +58,10 @@
         <head><ref type="lawCode" target="law:Abt">Abt</ref> 78</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="78" corresp="#wit-h">Gif hio cwic bearn gebyreþ, healfne scæt age, gif ceorl ær swylteþ.</ab>
         <ab type="editionText" xml:lang="ang" source="#oliver" n="76.2" corresp="#wit-h">Gif hio cwic bearn gebyreþ, healfne scæt age gif ceorl ær swylteþ.</ab>
-        <ab type="translation" xml:lang="en" source="#oliver">If she bears a living child, let her obtain half the goods [belonging to the household] if the husband dies first.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough">If she bears a living child, she shall have half the goods left by her husband, if he dies first.</ab>
+        <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If she bears a living child, let her obtain half the goods [belonging to the household] if the husband dies first.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If she bears a living child, she shall have half the goods left by her husband, if he dies first.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn sie lebende Nachkommenschaft gebiert, erhalte sie das halbe Vermögen [des Haushalts], wenn [ihr] Mann vor [ihr] stirbt.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If she bears living offspring, let her receive half the property [of the household], if [her] husband dies before [her].</ab>
       </div>
     </body>
   </text>

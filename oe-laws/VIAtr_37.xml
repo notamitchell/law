@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>VI Atr 37</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">VIAtr 37</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">256</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VI Atr</title></bibl>
+        <bibl type="legalText"><title>VI Æthelred (Enham)</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">256</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">102</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">K</witness>
-          <witness>D (incomplete)</witness>
+          <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
+          <witness xml:id="wit-d-incomplete"><abbr>D (incomplete)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
         </listWit>
-        <bibl type="selectedText">K: British Library, Cotton Claudius A.iii Robertson, ed.</bibl>
-        <bibl type="supplementaryText">D: Cambridge, Corpus Christi College, MS 201 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">37</idno>
-          <idno type="editorNumber" n="Robertson">37</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -49,16 +48,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1316 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1283 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 256.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="37">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 37</head>
-        <ab type="selectedText" xml:lang="und">⁊ gyf hwa ymbe cyninges feorh syrwe, sy he his feores scyldig ⁊ ealles þæs þe he age, gif hit him ongesoþod weorðe; ⁊ gif he hine ladian wille ⁊ mage, do þæt be þam deopestan aðe oþþe mid þryfealdan ordale on Ængla lage, ⁊ on Dena lage be þam þe heora lagu sy.</ab>
-        <ab type="translation" xml:lang="en">And if anyone plots against the king's life, he shall forfeit his life and all that he possesses, if it is proved against him, and if he seeks and is able to clear himself, he shall do so by means of the most solemn oath or by the triple ordeal in districts under English law, and in those under Danish law in accordance with their constitution.</ab>
-        <ab type="supplementaryText" xml:lang="und">[Not in D]</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="37">[Not in D]</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="37" corresp="#wit-k">⁊ gyf hwa ymbe cyninges feorh syrwe, sy he his feores scyldig ⁊ ealles þæs þe he age, gif hit him ongesoþod weorðe; ⁊ gif he hine ladian wille ⁊ mage, do þæt be þam deopestan aðe oþþe mid þryfealdan ordale on Ængla lage, ⁊ on Dena lage be þam þe heora lagu sy.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And if anyone plots against the king's life, he shall forfeit his life and all that he possesses, if it is proved against him, and if he seeks and is able to clear himself, he shall do so by means of the most solemn oath or by the triple ordeal in districts under English law, and in those under Danish law in accordance with their constitution.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn jemand nach dem Leben des Königs trachtet, sei er [des Verlustes] seines Lebens schuldig und alles dessen, was er besitzt, wenn es ihm nachgewiesen wird; und wenn er sich reinigen will und kann, thue er das durch den schwersten Eid oder durch dreifaches Ordal im Engländerrecht und im Dänenrecht gemäss dem, was deren Recht ist.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if anyone plots against the king's life, let him be liable [to lose] his life and all that he owns, if it is proved against him; and if he wishes and is able to clear himself, let him do it by the heaviest oath or by the threefold ordeal under English law, and under Danish law according to what their law is.</ab>
+        <note type="editorial">Only in K. Liebermann compares V Atr 30.</note>
       </div>
     </body>
   </text>

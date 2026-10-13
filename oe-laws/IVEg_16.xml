@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>IV Eg 16</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,24 +18,20 @@
         <idno type="lawCodeAnchor">IVEg</idno>
         <idno type="clause">16</idno>
         <idno type="citationKey">IVEg 16</idno>
-        <idno type="legalText">IV Edg</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">214</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>IV Edgar</title></bibl>
+        <bibl type="legalText"><title>IV Edgar (Whitbordesstan)</title> <note type="reign">Edgar, r. 957/9–975</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">214</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">38</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">C</witness>
-          <witness>F</witness>
-          <witness>C (Latin)</witness>
+          <witness xml:id="wit-c" rend="bold"><abbr>C</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
+          <witness xml:id="wit-f"><abbr>F</abbr> <note type="manuscript">London, British Library, Cotton Nero E.i</note></witness>
+          <witness xml:id="wit-c-latin"><abbr>C (Latin)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">C: Cambridge, Corpus Christi College, MS 265 Gesetze</bibl>
-        <bibl type="supplementaryText">F: British Library, Cotton Nero E.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">16</idno>
-          <idno type="editorNumber" n="Robertson">16</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -50,16 +49,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1040 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1013 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 214.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="16">
         <head><ref type="lawCode" target="law:IVEg">IV Eg</ref> 16</head>
-        <ab type="selectedText" xml:lang="und">Ic beo eow swyðe hold hlaford þa hwyle þe me lif gelæst, ⁊ eow eallum swyðe bliðe eom, for ði þe ge swa georne ymbe frið syndon.</ab>
-        <ab type="translation" xml:lang="en">I will be a very gracious lord to you as long as my life lasts. I am very well pleased with you all, because you are so zealous for the preservation of the public peace.</ab>
-        <ab type="supplementaryText" xml:lang="und">Ic beo eow swyðe hold hlaford þa hwile þe me lif gelæst, ⁊ eow eallum swyðe bliðe eom, for þý þe ge swa georne ymbe frið syndon.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16" corresp="#wit-f">Ic beo eow swyðe hold hlaford þa hwile þe me lif gelæst, ⁊ eow eallum swyðe bliðe eom, for þý þe ge swa georne ymbe frið syndon.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16" corresp="#wit-c">Ic beo eow swyðe hold hlaford þa hwyle þe me lif gelæst, ⁊ eow eallum swyðe bliðe eom, for ði þe ge swa georne ymbe frið syndon.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="16" corresp="#wit-q">Quamdiu etenim comes fuerit uita, fidelis omnibus uobis perseuerabo. Et nunc omnes uos in uisceribus Christi commendo, ut magis ác magis abundetis in omni bonitate et scientia et opere bono. Ualete feliciter in Christo!</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="16" corresp="#wit-c">Ic beo eow swyðe hold hlaford þa hwyle þe me lif gelæst, ⁊ eow eallum swyðe bliðe eom, for ði þe ge swa georne ymbe frið syndon.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">I will be a very gracious lord to you as long as my life lasts. I am very well pleased with you all, because you are so zealous for the preservation of the public peace.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Ich bleibe euch ein sehr gnädiger Herr, so lange wie mir das Leben dauert, und bleibe euch allen recht gewogen, weil ihr so eifrig um die öffentliche Sicherheit [bemüht] seid.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">I shall be a very gracious lord to you as long as my life lasts, and I am well disposed to you all, because you are so zealous for [public] peace.</ab>
+        <note type="editorial">In F, what follows was bound in later; in C, the Latin ‘Coena Domini’ follows. In C, the final sentence of the Versio is picked out in red-decorated uncials.</note>
       </div>
     </body>
   </text>

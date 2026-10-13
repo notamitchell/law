@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Grið 31.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Rabin</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Wulfstan</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +20,15 @@
         <idno type="citationKey">Grith 31.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">473</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Be grið 7 be munde</title></bibl>
+        <bibl type="legalText"><title>Be griðe ⁊ be munde (On Sanctuary and Protection)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">473</biblScope></bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>G(B)</witness>
+          <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">G(B): British Library, Cotton Nero A.i Rabin, ed.</bibl>
-        <bibl type="supplementaryText">G(B): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">31.1</idno>
-          <idno type="editorNumber" n="Rabin">31.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +47,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2301 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2237 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 473.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="31.1">
         <head><ref type="lawCode" target="law:Grith">Grið</ref> 31.1</head>
-        <ab type="selectedText" xml:lang="und">Forðam ælc cyricgrið is Cristes agen grið, and ælc Cristen man ah micle þearfe þæt he on ðam griðe mycle mæþe wite.</ab>
-        <ab type="translation" xml:lang="en">Therefore, every church sanctuary is Christ’s own sanctuary, and every Christian has a fundamental responsibility to hold that sanctuary in great reverence.</ab>
-        <ab type="supplementaryText" xml:lang="und">Forðam ælc cyricgrið is Cristenes agen grið; 7 ælc Cristen man ah micle þearfe, þæt he on ðam griðe mycle mæþe wite.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="31.1" corresp="#wit-g-b">Forðam ælc cyricgrið is Cristenes agen grið; 7 ælc Cristen man ah micle þearfe, þ<hi rend="italic">æt</hi> he on ðam griðe mycle mæþe wite.</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" n="31.1" corresp="#wit-g-b">Forðam ælc cyricgrið is Cristes agen grið, and ælc Cristen man ah micle þearfe þæt he on ðam griðe mycle mæþe wite.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-b">Therefore, every church sanctuary is Christ’s own sanctuary, and every Christian has a fundamental responsibility to hold that sanctuary in great reverence.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Denn jeder von einer Kirche [ausgehende] Sonderfriede ist Christi eigener Sonderfriede; und jeder Christenmensch hat stark die Pflicht, dass er vor diesem Sonderfrieden grosse Hochachtung empfinde.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">For every special peace [proceeding] from a church is Christ's own special peace; and every Christian person has a great duty to feel great respect for this special peace.</ab>
+        <note type="editorial">G reads ‘Cristenes’; Liebermann would correct to ‘Cristes’ (as column T has it). Liebermann compares I Cn 2.1. In G, VIII Atr. follows in the same hand. Grið ends here.</note>
       </div>
     </body>
   </text>

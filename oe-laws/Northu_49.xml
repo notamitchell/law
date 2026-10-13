@@ -4,7 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Northu 49</title>
-        <respStmt><resp>Translation of the selected text</resp><name>Whitelock, English Historical Documents, I</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -14,20 +18,18 @@
         <idno type="lawCodeAnchor">Northu</idno>
         <idno type="clause">49</idno>
         <idno type="citationKey">Northu 49</idno>
-        <idno type="legalText">North. Priests' Law</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">383</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Northumbrian Priests' Law</title></bibl>
+        <bibl type="legalText"><title>Northumbrian Priests’ Law</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">383</biblScope></bibl>
+          <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979)</bibl>
+          <bibl xml:id="rabin" type="translation">Andrew Rabin, <title>The Political Writings of Archbishop Wulfstan of York</title> (Manchester: Manchester University Press, 2015)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>D</witness>
+          <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">49</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -45,16 +47,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2042 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1995 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 383.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="49">
         <head><ref type="lawCode" target="law:Northu">Northu</ref> 49</head>
-        <ab type="selectedText" xml:lang="und">Gif hit sy elles landagende man, gilde VI healfmarc, healf Criste 7 healf landrican.</ab>
-        <ab type="translation" xml:lang="en">If it is otherwise a landowner, he is to pay six half-marks, half to Christ and half to the lord of the estate.</ab>
-        <ab type="secondTranslation" xml:lang="en">If he is a landholder of another kind, he is to pay six half-marks: half to Christ, half to the local lord.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="49" corresp="#wit-d">Gif hit sy elles landagende man, gilde VIte healfmarc, healf Criste ⁊ healf landrican.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">If it is otherwise a landowner, he is to pay six half-marks, half to Christ and half to the lord of the estate.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin" corresp="#wit-d">If he is a landholder of another kind, he is to pay six half-marks: half to Christ, half to the local lord.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn es sonst ein Mann ist mit Landeigen [ohne Hofdienstadel], zahle er 6 Halbmark, halb Christo [dem Bischofe] und halb dem Immunitätsherrn.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If it is otherwise a land-owning man [without court-service nobility], let him pay 6 half-marks, half to Christ [the bishop] and half to the lord with jurisdiction.</ab>
+        <note type="editorial">D reads ‘VIte’ (sixte, i.e. 5½ marks), which Liebermann thinks wrong in view of 52 and 60; he would strike ‘te’.</note>
       </div>
     </body>
   </text>

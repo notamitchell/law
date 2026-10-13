@@ -4,8 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Hl 10[b]</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +21,16 @@
         <idno type="citationKey">Hl 10b</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">10</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Hlothere &amp; Eadric</title> <note type="reign">r. 673–685; 685–686</note></bibl>
+        <bibl type="legalText"><title>Hlothhere and Eadric’s Code</title> <note type="reign">Hlothhere, r. 673–685; Eadric, r. 685–686</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">10</biblScope></bibl>
+          <bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002), p. <biblScope unit="page">130</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922), p. <biblScope unit="page">21</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>H</witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Oliver, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">10[b]</idno>
-          <idno type="editorNumber" n="Oliver">6.3</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +48,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 146 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 144 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 10.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="10[b]">
         <head><ref type="lawCode" target="law:Hl">Hl</ref> 10[b]</head>
-        <ab type="selectedText" xml:lang="und">Gif he þonne þæt nylle, gelde þonne C buton aðe, siþþan ane neaht ofer þæt gesem[eþ] hie.</ab>
-        <ab type="translation" xml:lang="en">If he will not do that, let him then pay 100 without oath, after one night following their coming to arbitration.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif he þonne þæt nille, gelde þonne C buton aðe, siþþan ane neaht ofer þæt gesem hie.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10[b]" corresp="#wit-h">Gif he þonne þ<hi rend="italic">æt</hi> nille, gelde þon<hi rend="italic">ne</hi> C buton aðe, siþþan ane neaht ofer þ<hi rend="italic">æt</hi> gesem hie.</ab>
+        <ab type="editionText" xml:lang="ang" source="#oliver" n="6.3" corresp="#wit-h">Gif he þonne þ<hi rend="italic">æt</hi> nylle, gelde þon<hi rend="italic">ne</hi> C buton aðe, siþþan ane neaht ofer þ<hi rend="italic">æt</hi> gesem[eþ] hie.</ab>
+        <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If he will not do that, let him then pay 100 without oath, after one night following their coming to arbitration.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If, however, he is not willing to do this, then he shall pay 100 shillings, without [giving] an oath, on the day after the arbitration.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn er aber das [beides zu geloben] weigert, so zahle er dann 100 [Schilling] ohne [fernere Berechtigung zum] Eid, sobald eine Nacht über den Schiedsspruch [vergangen] ist.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But if he refuses that [to pledge either], then let him pay 100 [shillings] without [any further right to an] oath, as soon as one night has [passed] after the arbitration.</ab>
       </div>
     </body>
   </text>

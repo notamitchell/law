@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Swer 1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -13,23 +17,19 @@
         <idno type="lawCodeAnchor">Swer</idno>
         <idno type="clause">1</idno>
         <idno type="citationKey">Swer 1</idno>
-        <idno type="legalText">Swer.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">396</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Swerian</title></bibl>
+        <bibl type="legalText"><title>Swerian (Oaths)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">396</biblScope></bibl>
+          <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +47,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2111 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2057 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 396.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
         <head><ref type="lawCode" target="law:Swer">Swer</ref> 1</head>
-        <ab type="selectedText" xml:lang="und">Hu se man sceal swerie. On ðone Drihten, þe ðes haligdom is fore halig, ic wille beon N. hold 7 getriwe 7 eal lufian ðæt he lufað 7 eal ascunian ðæt he ascunað, æfter Godes rihte 7 æfter woroldgerysnum, 7 næfre willes ne gewealdes, wordes ne weorces owiht don ðæs him laðre bið, wið þam ðe he me healde, swa ic earnian wille, 7 eall þæt læste, þæt uncer formæl wæs, þa ic to him gebeah 7 his willan geceas.</ab>
-        <ab type="translation" xml:lang="en">How one should take an oath. [I swear] by the Lord before whom this relic is holy, [that] I will be faithful and true to N., and love all he loves and hate all he hates, in accordance with God’s law and the world’s proper practice, and will not intentionally do anything in word or deed that is abhorrent to him, on the understanding that he will keep me as I deserve, [while] all that lasts that was in our agreement when I submitted to him and chose [to follow] his will.</ab>
-        <ab type="supplementaryText" xml:lang="und">Ðus man sceal swerigean hyldaðas. On ðone Drihten, ðe ðæs halidom is fore halig, ic wylle beon Ñ. hold 7 getrywe 7 eal lufian þæt he lufað 7 eal ascunian þæt he ascunoð, æfter Godes rihte 7 æfter woroldgerysnum, 7 næfre willes ne gewealdes, wordes ne weorces owiht don þæs him ladre bið, wið ðam ðe he me healde, swa ic earnian wille, 7 eal þæt læste, þæt uncer formæl wæs, ða ic to him gebeah 7 his willan geceas.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-b">Ðus man sceal swerigean hyldaðas. On ðone Drihten, ðe ðæs halidom is fore halig, ic wylle beon Ñ. hold 7 getrywe 7 eal lufian þ<hi rend="italic">æt</hi> he lufað 7 eal ascunian þ<hi rend="italic">æt</hi> he ascunoð, æfter Godes rihte 7 æfter woroldgerysnu<hi rend="italic">m</hi>, 7 næfre willes ne gewealdes, wordes ne weorces owiht don þæs him ladre bið, wið ðam ðe he me healde, swa ic earnian wille, 7 eal þ<hi rend="italic">æt</hi> læste, þ<hi rend="italic">æt</hi> uncer formæl wæs, ða ic to him gebeah 7 his willan geceas.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-h">Hu se man sceal swerie. On ðone Drihten, þe ðes haligdom is fore halig, ic wille beon N. hold 7 getriwe 7 eal lufian ðæt he lufað 7 eal ascunian ðæt he ascunað, æfter Godes rihte 7 æfter woroldgerysnu<hi rend="italic">m</hi>, 7 næfre willes ne gewealdes, wordes ne weorces owiht don ðæs him laðre bið, wið þam ðe he me healde, swa ic earnian wille, 7 eall þæt læste, þæt uncer formæl wæs, þa ic to him gebeah 7 his willan geceas.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1" corresp="#wit-q">Iuramenta legitima fidelitatis, repetitionis, adlegiationis. (De iuramentis.) In illo Deo, pro quo sanctum hoc sanctificatum est, uolo esse domino meo N. fidelis et credibilis et amare quod amet et absoniare quod absoniet, per Dei rectum et seculi competentiam, et nunquam ex uelle uel posse, uerbo uel opere quicquam facere, quod ei magis displiceat, ut me teneat, sicut deseruire uolo, et totum mihi compleat, quod in nostra prelocutione fuit, quando suus deueni et eius elegi uoluntatem.</ab>
+        <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-h">How one should take an oath. [I swear] by the Lord before whom this relic is holy, [that] I will be faithful and true to N., and love all he loves and hate all he hates, in accordance with God’s law and the world’s proper practice, and will not intentionally do anything in word or deed that is abhorrent to him, on the understanding that he will keep me as I deserve, [while] all that lasts that was in our agreement when I submitted to him and chose [to follow] his will.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Wie der Vasall schwören soll. H. Folgendermassen soll man Huldigungseid[e?] schwören. B) Bei dem Herrn, vor welchem dies Heiligthum heilig ist, ich will N. treu und vertrauenswerth sein und alles lieben, was er liebt und alles verabscheuen, was er verabscheut, gemäss religiöser Pflicht und gemäss bürgerlichen Rechtsgewohnheiten, und niemals mit Willen oder Absicht, in Wort oder Werk etwas dávon thun was ihm verhasster ist, gegen dén Beding, dass er mich halte wie ich verdienen werde, und alles das leiste, was unsere Verabredung war, da ich mich ihm unterwarf und seinen Willen erkor.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(How the vassal shall swear. H. Thus shall one swear oath[s?] of fealty. B) By the Lord before whom this relic is holy, I will be faithful and true to N. and love all that he loves and shun all that he shuns, according to God's law and according to secular custom, and never, willingly or intentionally, in word or deed, do anything that is more hateful to him, on condition that he keep me as I shall deserve, and fulfil all that was our agreement when I submitted to him and chose his will.</ab>
+        <note type="editorial">K is B (Cambridge, Corpus Christi College 383, p. 81, after II Em as in the Quadripartitus, c. 1125); H (Textus Roffensis f. 38v, after Pax, c. 1120) is also given here. Headings in red. Liebermann dates the collection c. 920–c. 1050; individual formulae may be older: formula 1 is used at least in part in II Ew 1.1 (compare III Em 1, I Cn 20), but ‘formæl’ is borrowed from the North, so after 900. The Quadripartitus heading covers the whole collection. B's ‘ascunoð’ and ‘ladre’ stand so. Liebermann's footnote on ‘Heiligthum’: mostly a relic. K: a double space removed.</note>
       </div>
     </body>
   </text>

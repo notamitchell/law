@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Atr 8.3</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,24 +18,19 @@
         <idno type="lawCodeAnchor">IIAtr</idno>
         <idno type="clause">8.3</idno>
         <idno type="citationKey">IIAtr 8.3</idno>
-        <idno type="legalText">II Atr Appendix</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">224</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Atr</title></bibl>
+        <bibl type="legalText"><title>II Æthelred (Treaty with Olaf)</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">224</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">60</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">8.3</idno>
-          <idno type="editorNumber" n="Robertson">8.3</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -50,16 +48,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1093 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1064 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 224.</change>
+      <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 61.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 60.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="8.3">
         <head><ref type="lawCode" target="law:IIAtr">II Atr</ref> 8.3</head>
-        <ab type="selectedText" xml:lang="und">Gif he cenne ofer I scira, hæbbe I wucena fyrst; gif he cenne ofer II scira, hæbbe II wucena fyrst; gyf he cenna ofer III scira, hæbbe III wucena fyrst; ofer eallswa fela scira swa he cenne, hæbbe swa fela wycena fyrst.</ab>
-        <ab type="translation" xml:lang="en">If he can specify the county in which the man in whom he vouches to warranty lives, he shall have a week's adjournment; if he can locate him within two counties, he shall have two weeks; if within three, he shall have three weeks—the number of weeks' adjournment granted him shall correspond to the number of counties which he names.</ab>
-        <ab type="supplementaryText" xml:lang="und">Si aduocet ultra unam sciram, habeat terminum unam ebdomadam; si aduocet ultra duas scyras, habeat duas septimanas de termino; si aduocet in terciam scyram, habeat tres ebdomadas de termino: et ad quot scyras cennabit, habeat totidem septimanus de termino.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="8.3" corresp="#wit-b">Gif he cenne ofer I scira, hæbbe I wucena fyrst; gif he cenne ofer II scira, hæbbe II wucena fyrst; gyf he cenna ofer III scira, hæbbe III wucena fyrst: ofor eallswa fela scira swa he cenne, hæbbe swa fela wycena fyrst.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="8.3" corresp="#wit-q">Si aduocet ultra unam sciram, habeat terminum unam ebdomadam; si aduocet ultra duas scyras, habeat duas septimanas de termino; si aduocet in terciam scyram, habeat tres ebdomadas de termino: et ad quot scyras cennabit, habeat totidem septimanus de termino.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="8.3" corresp="#wit-b">Gif he cenne ofer I scira, hæbbe I wucena fyrst; gif he cenne ofer II scira, hæbbe II wucena fyrst; gyf he cenna ofer III scira, hæbbe III wucena fyrst; ofor eallswa fela scira swa he cenne, hæbbe swa fela wycena fyrst.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">If he can specify the county in which the man whom he vouches to warranty lives, he shall have a week's adjournment; if he can locate him within two counties, he shall have two weeks; if within three, he shall have three weeks—the number of weeks' adjournment granted him shall correspond to the number of counties which he names.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn [Besitz]er [Gewährzug] über 1 Grafschaft hinaus erklärt, erhalte er 1 Woche Frist; wenn er [Gewährzug] über 2 Grafschaften hinaus erklärt, erhalte er 2 Wochen Frist; wenn er [Gewährzug] über 3 Grafschaften hinaus erklärt, erhalte er 3 Wochen Frist: über ebenso viele Grafschaften, wie er [Gewährzug] erklärt, so viele Wochen Frist erhalte er.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If [the possessor] declares [the vouching to warranty] beyond 1 shire, let him have 1 week's respite; if he declares it beyond 2 shires, let him have 2 weeks' respite; if he declares it beyond 3 shires, let him have 3 weeks' respite: for as many shires as he declares, let him have so many weeks' respite.</ab>
       </div>
     </body>
   </text>

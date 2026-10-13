@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>V As Prol., 1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -18,21 +21,17 @@
         <idno type="citationKey">VAs 1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">166</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>V Æthelstan</title></bibl>
+        <bibl type="legalText"><title>V Æthelstan (Exeter)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">166</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">Ld: Archaionomia Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">Prol., 1</idno>
-          <idno type="editorNumber" n="Attenborough">§1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,16 +50,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 855 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 836 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 166.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Prol., 1">
         <head><ref type="lawCode" target="law:VAs">V As</ref> Prol., 1</head>
-        <ab type="selectedText" xml:lang="und">Nu hæbbe ic funden mid ðæm witum, þe mid me wæron æt Eaxanceastre to middanwintre, ðæt þa ealle beon gearwe mid him silfum ⁊ mid wife ⁊ mid ærfe ⁊ mid eallum þingum to farenne ðider ic wille—buton hy ofer þis geswican willan—on þa gerad þæt hy næfre eft on eard ne cuman.</ab>
-        <ab type="translation" xml:lang="en">Now I have decided with the councillors who have been with me at Exeter in midwinter, that all [disturbers of the peace] shall be ready to go themselves, with their wives, with their property, and with everything [they possess], whithersoever I wish, unless henceforth they are willing to cease [from wrongdoing]—with the further provision that they never afterwards return to their native district.</ab>
-        <ab type="supplementaryText" xml:lang="und">Nu hæbbe ic funden mid ðæm witum, ðe æt Eaxceastre mid we wæron to middumwintre, þæt ða ealle syn gearwe mid hire sylfum ⁊ mid yrfe ⁊ mid wife ⁊ mid eallum ðingum to færenne ðider ðider ic ðonne wille—butan hi ofer ðis geswican willan—, on ða gerade ðe heo næfre eft on eorda ne cumen.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol., 1" corresp="#wit-ld">Nu hæbbe ic funden mid ðæm witum, ðe æt Eaxceastre mid we wæron to middu<hi rend="italic">m</hi>wintre, þ<hi rend="italic">æt</hi> ða ealle syn gearwe mid hire sylfu<hi rend="italic">m</hi> ⁊ mid yrfe ⁊ mid wife ⁊ mid eallu<hi rend="italic">m</hi> ðingu<hi rend="italic">m</hi> to færenne ðider ðider ic ðonne wille—butan hi ofer ðis geswican willan—, on ða gerade ðe heo næfre eft on eorda ne cumen.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol., 1" corresp="#wit-h">Nu hæbbe ic funden mid ðæm witum, þe mid me wæron æt Eaxanceastre to middanwintre, ðæt þa ealle beon gearwe mid him silfum ⁊ mid wife ⁊ mid ærfe ⁊ mid eallum þingum to farenne ðider ic wille — buton hy ofer þis geswican willan —, on þa gerad þæt hy næfre eft on eard ne cuman.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="Prol., 1" corresp="#wit-q">Nunc inueni cum illis sapientibus, qui apud Exoniam mecum fuerunt in sancto natali Domini, quod parati sunt omnino (quando uelim) cum se ipsis et uxoribus et pecunia et omni re sua ire quo tunc uolero — nisi malefactores post hoc cessauerint (conquiescant) —, eo tenore quo nunquam deinceps in patriam istam redeant.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="§1" corresp="#wit-h">Nu hæbbe ic funden mid ðæm witum, þe mid me wæron æt Eaxanceastre to middanwintre, ðæt þa ealle beon gearwe mid him silfum ⁊ mid wife ⁊ mid ærfe ⁊ mid eallum þingum to farenne ðider ic wille—buton hy ofer þis geswican willan—on þa gerad þæt hy næfre eft on eard ne cuman.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">Now I have decided with the councillors who have been with me at Exeter in midwinter, that all [disturbers of the peace] shall be ready to go themselves, with their wives, with their property, and with everything [they possess], whithersoever I wish, unless henceforth they are willing to cease [from wrongdoing]—with the further provision that they never afterwards return to their native district.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Nun habe ich beschlossen mit jenen Witan, die in Exeter zu Weihnachten bei mir waren, dass jene [Friedensstörer] alle für sich selbst und mit Weib und mit Fahrhabe und mit allen Sachen bereit sein sollen, dorthin auszuwandern, wohin ich will — es sei denn, sie wollen nach diesem [von Missethat] abstehen —, dergestalt, dass sie niemals wieder in die Heimathgegend kommen.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Now I have decided with those witan who were with me at Exeter at Christmas that those [breakers of the peace] shall all be ready, themselves and with wife and with goods and with all things, to emigrate to wherever I wish — unless they will desist [from wrongdoing] after this —, on the condition that they never come back to the home country.</ab>
       </div>
     </body>
   </text>

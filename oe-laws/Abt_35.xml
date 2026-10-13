@@ -8,6 +8,8 @@
         <respStmt><resp>Edition of the text</resp><name ref="#oliver">Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#oliver">Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -22,11 +24,12 @@
         <bibl type="legalText"><title>Æthelberht’s Code</title> <note type="reign">Æthelberht, r. ?584–616</note></bibl>
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">5</biblScope></bibl>
-          <bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002)</bibl>
+          <bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002), p. <biblScope unit="page">70</biblScope></bibl>
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-h">H</witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -44,7 +47,8 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 51 of the spreadsheet Aethelberht.xlsx.</change>
+      <change when="2026-10-14">Generated from row 50 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 5.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -53,8 +57,10 @@
         <head><ref type="lawCode" target="law:Abt">Abt</ref> 35</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="35" corresp="#wit-h">Gif banes bite weorð, IIII scillingum gebete.</ab>
         <ab type="editionText" xml:lang="ang" source="#oliver" n="35" corresp="#wit-h">Gif banes bite weorð, IIII scillingum gebete.</ab>
-        <ab type="translation" xml:lang="en" source="#oliver">If cutting of a bone occurs, let him pay with 4 shillings.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough">If a bone is damaged, 4 shillings shall be paid as compensation.</ab>
+        <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If cutting of a bone occurs, let him pay with 4 shillings.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If a bone is damaged, 4 shillings shall be paid as compensation.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn eines Knochens Versehrung entsteht, büsse er mit 4 Schillingen.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If the injuring of a bone occurs, let him pay 4 shillings.</ab>
       </div>
     </body>
   </text>

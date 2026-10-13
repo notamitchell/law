@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II As 9</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,23 +20,20 @@
         <idno type="citationKey">IIAs 9</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">154</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Æthelstan</title></bibl>
+        <bibl type="legalText"><title>II Æthelstan (Grately)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">154</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Ot</witness>
-          <witness>Ld</witness>
-          <witness>So</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-ot"><abbr>Ot</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-so"><abbr>So</abbr> <note type="manuscript">William Somner's transcript of Cotton Otho B.xi (made before the fire)</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">9</idno>
-          <idno type="editorNumber" n="Attenborough">9</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,16 +51,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 773 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 758 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 154.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="9">
         <head><ref type="lawCode" target="law:IIAs">II As</ref> 9</head>
-        <ab type="selectedText" xml:lang="und">Be yrfes ætfenge. Se ðe yfre befó, nemne him mon V men his neahgebura, ⁊ begite ðara V: I, ðæt him midswerige, þæt he hit on folcryht him toteo; ⁊ se þe hit him geagnian wille, nemne him mon X men, ⁊ begite þara twegen ⁊ sylle þone að, þæt hit on his æhte geboren wære, buton þam rimaðe; ⁊ stonde þes cyreoþ ofer XX penega.</ab>
-        <ab type="translation" xml:lang="en">He who attaches livestock shall have five men nominated to him from among his neighbours, and he shall select one of the five to swear with him that he is attaching the livestock in accordance with public law. And he who wishes to maintain his claim [to the livestock] shall have ten men nominated to him, and he shall select two of them without calling for the testimony of the whole number, and swear an oath that the livestock was born in his possession. Recourse shall be had to this selected oath when the stock exceeds the value of 20 pence.</ab>
-        <ab type="supplementaryText" xml:lang="und">Be ðonne ðe yrf befehþe. And se ðe yfre befo, namne hine mon fif men his nehbura, ⁊ begite ðara fifa ænne, þæt him swerige mid, þæt he him on folcrihte toteo; ⁊ se ðe hit him agnian wille, nemne him mon X men, ⁊ begyte ðæra II ⁊ sylle þone aþ, þæt hit on his æhte geboren wære, butan ðæm rimaþe; ⁊ stande ðes cyreaþ ofer XX peninga.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9" corresp="#wit-ld">Be ðonne ðe yrf befehþe. And se ðe yrfe befo, namne hine mon fif men his nehbura, ⁊ begite ðara fifa ænne, þ<hi rend="italic">æt</hi> him swerige mid, þ<hi rend="italic">æt</hi> he him on folcrihte toteo; ⁊ se ðe hit him agnian wille, nemne him mon X men, ⁊ begyte ðæra II ⁊ sylle ðone aþ, þ<hi rend="italic">æt</hi> hit on his æhte geboren wære, butan ðæm rimaþe; ⁊ stande ðes cyreaþ ofer XX peninga.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9" corresp="#wit-h">Be yrfes ætfenge. Se ðe yrfe befó, nemne him mon V men his neahgebura, ⁊ begite ðara V: I, ðæt him midswerige, þæt he hit on folcryht him toteo; ⁊ se þe hit him geagnian wille, nemne him mon X men, ⁊ begite þara twegen ⁊ sylle þone að, þæt hit on his æhte geboren wære, buton þam rimaðe; ⁊ stonde þes cyreoþ ofer XX penega.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9" corresp="#wit-ot">[Be þam þe yrfe befó.] ⁊ se ðe yrfe befo, nemne him mon fif men his nehgebura, ⁊ begite þara fifa ænne, þæt him swer[ie mid], þæt he hit him on folcryht toteó; ⁊ se þe hit him agnian wille, [nemne] him mon X men, ⁊ begite þara II ⁊ selle þone að, þæt hit on [his æht] geboren wære, buton þam rimæde; ⁊ stande þes cyre[að ofer X]X peningas.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="9" corresp="#wit-q">De illis qui pecus intertiant. Si quis (homo) pecus aliquod interciet, nominentur ei quinque uicinorum suorum, et ex illis V perquirat unum, qui cum eo iuret, quod in recto publico manum mittat ad propria; et qui hoc propriare sibi uolet, nominentur ei undecim homines, et ex illis adquirat duos et iuret, quod illud (pecus N.) intertiatum in peculio suo natum sit, sine rimaðe; and stande (stet) þes cyreað (id est hoc iusiurandum electiuum) super XX den.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="9" corresp="#wit-h">Be yrfes ætfenge. Se ðe yfre befó, nemne him mon V men his neahgebura, ⁊ begite ðara V: I, ðæt him midswerige, þæt he hit on folcryht him toteo; ⁊ se þe hit him geagnian wille, nemne him mon X men, ⁊ begite þara twegen ⁊ sylle þone að, þæt hit on his æhte geboren wære, buton þam rimaðe; ⁊ stonde þes cyreoþ ofer XX penega.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">He who attaches livestock shall have five men nominated to him from among his neighbours, and he shall select one of the five to swear with him that he is attaching the livestock in accordance with public law. And he who wishes to maintain his claim [to the livestock] shall have ten men nominated to him, and he shall select two of them without calling for the testimony of the whole number, and swear an oath that the livestock was born in his possession. Recourse shall be had to this selected oath when the stock exceeds the value of 20 pence.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Vom Anefang an Vieh. (Von dem, der Vieh anschlägt. Ld So Quadr.) Wer Vieh [im Anefang] anschlägt, dem ernenne [der verklagte Gegner] fünf Männer unter seinen Nachbarn, und der [Kläger] verschaffe von diesen fünf sich einen, dass dieser [Folgendes] mit ihm schwöre: ‘dass er jenes [Vieh] nach Volksrecht an sich ziehe’. Und [der Verklagte] welcher es als sein eigen erklären will, dem ernenne [Kläger] zehn Männer, und von denen verschaffe jener sich zwei [zu Eidhelfern] und leiste folgenden Eid: ‘dass es in seinem Eigen geboren sei’, [jedoch] ohne Eid durch Gesammtheit [Stabeid?]. Und dieser Auswahl-Eid gelte [für Werthe] über 20 Pfennige.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of attachment of cattle. (Of him who attaches cattle. Ld So Quadr.) Whoever attaches cattle, let [the accused opponent] name for him five men from among his neighbours, and let [the claimant] obtain one of these five to swear with him [as follows]: ‘that he takes that [beast] to himself according to folk-law’. And for [the accused] who wishes to declare it his own, let [the claimant] name ten men, and let him obtain two of them [as oath-helpers] and give the following oath: ‘that it was born in his own possession’, [but] without the oath by number [the ‘rim’-oath?]. And this selected oath is to hold [for values] over 20 pence.</ab>
+        <note type="editorial">H's heading ‘Be yrfes ætfenge’ is more original than Ld's ‘Be ðonne ðe yrf befehþe’ (so Liebermann).</note>
       </div>
     </body>
   </text>

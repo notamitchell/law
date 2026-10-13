@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Grið 11</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Rabin</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Wulfstan</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +20,15 @@
         <idno type="citationKey">Grith 11</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">471</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Be grið 7 be munde</title></bibl>
+        <bibl type="legalText"><title>Be griðe ⁊ be munde (On Sanctuary and Protection)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">471</biblScope></bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>G(B)</witness>
+          <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">G(B): British Library, Cotton Nero A.i Rabin, ed.</bibl>
-        <bibl type="supplementaryText">G(B): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">11</idno>
-          <idno type="editorNumber" n="Rabin">11</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +46,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2274 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2210 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 471.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="11">
         <head><ref type="lawCode" target="law:Grith">Grið</ref> 11</head>
-        <ab type="selectedText" xml:lang="und">And gyf hwa cynges mundbrice elles gewyrce, gebete þæt mid V pundum on Engla lage, arcebiscopes and æþelinges mundbrice mid þrim pundum; oðres biscpæs and ealdormannes mid II pundum.</ab>
-        <ab type="translation" xml:lang="en">And if anyone otherwise violates the king’s protection, he is to compensate for that with five pounds according to English law; violation of an archbishop’s and nobleman’s protection with three pounds; another bishop’s and ealdorman’s with two pounds.</ab>
-        <ab type="supplementaryText" xml:lang="und">7 gyf hwa cynges mundbrice elles gewyrce, gebete þæt mid V pundum on Engla lage, arcebiscopes 7 æþelinges mundbrice mid þrim pundum, oðres biscpæs 7 ealdormannes mid II pundum.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="11" corresp="#wit-g-b">7 gyf hwa cynges mundbrice elles gewyrce, gebete þ<hi rend="italic">æt</hi> mid V pundum on Engla lage, arceb<hi rend="italic">iscopes</hi> 7 æþelinges mundbrice mid þri<hi rend="italic">m</hi> pundum, oðres biscpæs 7 ealdormannes mid II pundum.</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" n="11" corresp="#wit-g-b">And gyf hwa cynges mundbrice elles gewyrce, gebete þæt mid V pundum on Engla lage, arcebiscopes and æþelinges mundbrice mid þrim pundum; oðres biscpæs and ealdormannes mid II pundum.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-b">And if anyone otherwise violates the king’s protection, he is to compensate for that with five pounds according to English law; violation of an archbishop’s and nobleman’s protection with three pounds; another bishop’s and ealdorman’s with two pounds.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn einer anderweitig Verletzung königlicher Schutzgewalt verübt, büsse er dies im Engländer-Recht mit 5 Pfund, Verletzung der Schutzgewalt eines Erzbischofs und [= oder] eines Prinzen mit 3 Pfund, die eines anderen Bischofs und [= oder] eines Ealdorman mit 2 Pfund.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if anyone otherwise commits breach of the king's protection, let him atone for it under English law with 5 pounds; breach of the protection of an archbishop and [= or] of a prince with 3 pounds; that of another bishop and [= or] of an ealdorman with 2 pounds.</ab>
+        <note type="editorial">‘English law’ here means the law of the southern English (9), Liebermann notes. Liebermann compares II Cn 58–58.2 and Af 3.</note>
       </div>
     </body>
   </text>

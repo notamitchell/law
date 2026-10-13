@@ -4,8 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Ine 43.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Jurasinski&amp;Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,29 +19,25 @@
         <idno type="lawCodeAnchor">Ine</idno>
         <idno type="clause">43.1</idno>
         <idno type="citationKey">Ine 43.1</idno>
-        <idno type="legalText">Ine (domboc)</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">108</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Ine</title> <note type="reign">r. 688–726</note></bibl>
+        <bibl type="legalText"><title>Ine’s Laws (in Alfred’s Domboc)</title> <note type="reign">Ine, r. 688–726</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">108</biblScope></bibl>
+          <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">408</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">E</witness>
-          <witness>H</witness>
-          <witness>B (no Prol.)</witness>
-          <witness>G (Prol. only)</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>Bu</witness>
-          <witness>Ot (frags.)</witness>
+          <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b-no-prol"><abbr>B (no Prol.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
-        <bibl type="selectedText">E: Cambridge, Corpus Christi College, MS 173 Jurasinski and Oliver, eds.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">43.1</idno>
-          <idno type="editorNumber" n="Jurasinski and Oliver">44.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -56,17 +56,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 618 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 610 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 108.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="43.1">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 43.1</head>
-        <ab type="selectedText" xml:lang="und">Gif mon afelle on wuda wel monega treowa ⁊ wyrð eft undierne, forgielde III treowu ælc mid XXX sciƚƚ. Ne ðearf he hiora má geldan, wære hiora swa fela swa hiora wære, forþon sio ǽsc bið melda, nalles ðeof.</ab>
-        <ab type="translation" xml:lang="en">If a man fells many trees in the forest, and it afterwards is revealed, let him make restitution for three trees each with 30 shillings. He need not make restitution for more no matter how many there were, because the axe is an informant but not a thief.</ab>
-        <ab type="secondTranslation" xml:lang="en">If anyone fells a large number of trees in a wood, and it afterwards becomes known, he shall pay 30 shillings for each of three trees. He need not pay for more, however many there may be, because the axe is an informer and not a thief.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif mon afylle on wuda wel monige treowa, ⁊ wyrð eft undyrne, forgilde ðreo treowa ælc mid XXX scll'; ne þearf he nan má gildon, wære heora swa fela swa heora wære: forðon seo æx bið melda, nalæs ðeof.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="43.1" corresp="#wit-h">Gif mon afylle on wuda wel monige treowa, ⁊ wyrð eft undyrne, forgilde ðreo treowa ælc mid XXX scll'; ne þearf he nan má gildon, wære heora swa fela swa heora wære: forðon seo æx bið melda, nalæs ðeof.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="43.1" corresp="#wit-e">Gif mon afelle on wuda wel monega treowa, ⁊ wyrð eft undierne, forgielde III treowu ælc mid XXX scill.; ne ðearf he hiora má geldan, wære hiora swa fela swa hiora wære: forþon sio ǽsc bið melda, nalles ðeof.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="43.1" corresp="#wit-q">Si quis in nemore multa ligna ceciderit, et postea compareat, soluat tria ligna unumquodque triginta sol.; nec amplius cogitur per legem soluere, quotquot fuerint, quia securis acclamatrix potius est, non fur.</ab>
+        <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="44.1" corresp="#wit-e">Gif mon afelle on wuda wel monega treowa ⁊ wyrð eft undierne, forgielde III treowu ælc mid XXX sciƚƚ. Ne ðearf he hiora má geldan, wære hiora swa fela swa hiora wære, forþon sio ǽsc bið melda, nalles ðeof.</ab>
+        <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If a man fells many trees in the forest, and it afterwards is revealed, let him make restitution for three trees each with 30 shillings. He need not make restitution for more no matter how many there were, because the axe is an informant but not a thief.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If anyone fells a large number of trees in a wood, and it afterwards becomes known, he shall pay 30 shillings for each of three trees. He need not pay for more, however many there may be, because the axe is an informer and not a thief.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand im Walde gar viele Bäume fällt, und es wird späterhin bekannt, entgelte er [nur] 3 Bäume jeden mit 30 Schill.; ihrer mehr braucht er nicht zu zahlen, wären ihrer [auch] so viele wie ihrer wären: denn die Axt ist ein Anzeiger, nicht ein Dieb.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If someone fells a great many trees in the wood, and it becomes known later, let him pay for [only] 3 trees, each with 30 shillings; he need not pay for more of them, however many of them there might be: for the axe is an informer, not a thief.</ab>
       </div>
     </body>
   </text>

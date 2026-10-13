@@ -4,8 +4,8 @@
     <fileDesc>
       <titleStmt>
         <title>Cn 1027 6</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,22 +17,19 @@
         <idno type="citationKey">Cn1027 6</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">276</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Cn 1027</title></bibl>
+        <bibl type="legalText"><title>Cnut’s Letter of 1027</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">276</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">148</biblScope></bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">Flor. of Worcester (ed. Thorpe)</witness>
-          <witness rend="bold">Ox</witness>
-          <witness>Bc</witness>
-          <witness>Rd</witness>
-          <witness>Ma</witness>
+          <witness xml:id="wit-flor-of-worcester-ed-thorpe" rend="bold"><abbr>Flor. of Worcester (ed. Thorpe)</abbr></witness>
+          <witness xml:id="wit-ox" rend="bold"><abbr>Ox</abbr></witness>
+          <witness xml:id="wit-bc"><abbr>Bc</abbr></witness>
+          <witness xml:id="wit-rd"><abbr>Rd</abbr></witness>
+          <witness xml:id="wit-ma"><abbr>Ma</abbr></witness>
+          <witness xml:id="wit-fl-ox"><abbr>Fl, Ox</abbr> <note type="manuscript">Florence (John) of Worcester, Chronicon, and Oxford, Corpus Christi College MS 157</note></witness>
         </listWit>
-        <bibl type="selectedText">Fl and Ox: Cambridge, Corpus Christi College MS 157 Robertson, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">6</idno>
-          <idno type="editorNumber" n="Robertson">6</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,15 +48,17 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1633 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1591 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 148.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6">
         <head><ref type="lawCode" target="law:Cn1027">Cn 1027</ref> 6</head>
-        <ab type="selectedText" xml:lang="und">Locutus sum igitur cum ipso imperatore et domino papa et principibus qui ibi erant de necessitatibus totius populi universi regni mei, tam Anglorum quam Danorum, et eis concederetur lex aequior et pax securior in via Romam adeundi, et ne tot clausuris per viam artentur et propter thelon iniustum fatigenture; annuitque postulatis imperator et Rodulfus rex qui maxime ipsarum clausurarum dominatur, cunctique principes edictis firmaverunt, ut homines mei, tam mercatores quam alii orandi causa viatores, absque omni angaria clausurarum et theloneariorum firma pace et iusta lege securi Romam eant et redeant.</ab>
-        <ab type="translation" xml:lang="en">I therefore spoke with the Emperor himself, and with my lord the Pope, and with the princes who were present, about the needs of the people throughout my kingdom, both English and Danes, that more just regulations should be accorded them and greater security in their journeys to Rome, and that they should not be hindered by so many barriers on their way and harassed by unjust tolls. And the Emperor agreed to my demands, and [so did] King Rudolf, in whose dominion lie most of these barriers, and all the princes confirmed by edict, that my subjects, both merchants and others travelling in the cause of devotion, should go and come to and from Rome in assured peace and under just regulations free from all the hindrances caused by barriers and tolls.</ab>
+        <ab type="editionText" xml:lang="la" source="#robertson" n="6" corresp="#wit-fl-ox">Locutus sum igitur cum ipso imperatore et domino papa et principibus qui ibi erant de necessitatibus totius populi universi regni mei, tam Anglorum quam Danorum, ut eis concederetur lex aequior et pax securior in via Romam adeundi, et ne tot clausuris per viam artentur et propter thelon iniustum fatigentur; annuitque postulatis imperator et Rodulfus rex qui maxime ipsarum clausurarum dominatur, cunctique principes edictis firmaverunt, ut homines mei, tam mercatores quam alii orandi causa viatores, absque omni angaria clausurarum et theloneariorum firma pace et iusta lege securi Romam eant et redeant.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-fl-ox">I therefore spoke with the Emperor himself, and with my lord the Pope, and with the princes who were present, about the needs of the people throughout my kingdom, both English and Danes, that more just regulations should be accorded them and greater security in their journeys to Rome, and that they should not be hindered by so many barriers on their way and harassed by unjust tolls. And the Emperor agreed to my demands, and [so did] King Rudolf, in whose dominion lie most of these barriers, and all the princes confirmed by edict, that my subjects, both merchants and others travelling in the cause of devotion, should go and come to and from Rome in assured peace and under just regulations free from all the hindrances caused by barriers and tolls.</ab>
+        <note type="editorial">Latin only (Cnut's letter of 1027, c. May; Latin translation c. 1070–1100, the Old English original is lost). Liebermann's text is from Florence of Worcester (ed. MGH SS XIII 126), compared with Ox (Oxford, Corpus 157 p. 329) and William of Malmesbury II 183; text in column T. Liebermann gives no German translation.</note>
       </div>
     </body>
   </text>

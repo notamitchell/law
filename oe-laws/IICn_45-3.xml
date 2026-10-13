@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Cn 45.3</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">IICn 45.3</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">342</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Cnut</title></bibl>
+        <bibl type="legalText"><title>II Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">342</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">198</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">45.3</idno>
-          <idno type="editorNumber" n="Robertson">45.3</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -55,16 +54,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1855 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1811 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 342.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="45.3">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 45.3</head>
-        <ab type="selectedText" xml:lang="und">Gyf laford his ðeowan freolsdæge nyde to weorce, ðolie ðæs ðeowan ⁊ beo he syððan folcfrig; ⁊ gylde lahslit se laford mid Denum, wite mid Englum, bi ðam þe seo dæd sy; oððe geladie hine.</ab>
-        <ab type="translation" xml:lang="en">If a lord compels his slave to work during a church festival, he shall lose the slave, who shall henceforth obtain the rights of a freeman, and the lord shall pay lahslit in a Danish district and a fine in an English one, according to the nature of the offence, or else he shall clear himself.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gyf hlaford his þeowan freolsdæge nyde to weorce, þolige þæs þeowan; ⁊ beo he syððan folcfrig; ⁊ gylde lahslit se hlaford mid Denum, wite mid Englum, be ðam þe seo dæd sig; oððe hine geladige.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="45.3" corresp="#wit-g-a">Gyf hlaford his þeowan freolsdæge nyde to weorce, þolige þæs þeowan; ⁊ beo he syððan folcfrig; ⁊ gylde lahslit se hlaford mid Denu<hi rend="italic">m</hi>, wite mid Englum, be ðam þe seo dæd sig; oððe hine geladige.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="45.3" corresp="#wit-a">Gif hlaford his ðeowan freolsdage nyde to weorce, þolige þæs þeowan; ⁊ beo he syððan folcfrig; ⁊ gilde lahslit se hlaford mid Denum, wite mid Englum, be þam þe seo dæde sy; oððe geladige hine.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="45.3" corresp="#wit-q">Si dominus cogat seruum suum festis diebus operari, ipsum seruum perdat; et sit deinceps publice liber; et soluat dominus láhslit cum Dacis, witam cum Anglis, secundum facti meritum; aut neget [hine].</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="45.3" corresp="#wit-b">Gyf laford his ðeowan freolsdæge nyde to weorce, ðolie ðæs ðeowan ⁊ beo he syððan folcfrig; ⁊ gylde lahslit se laford mid Denum, wite mid Englum, bi ðam þe seo dæd sy; oððe geladie hine.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">If a lord compels his slave to work during a church festival, he shall lose the slave, who shall henceforth obtain the rights of a freeman, and the lord shall pay <hi rend="italic">lahslit</hi> in a Danish district and a fine in an English one, according to the nature of the offence, or else he shall clear himself.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Herr seinen Sklaven am Feiertage zur Arbeit zwingt, verliere er den Sklaven; und sei dieser fortan volks[landrechtlich] frei; und zahle der Herr Rechtsbruchbusse bei den Dänen, Strafgeld bei den Engländern, je nachdem die That ist; oder er schwöre sich rein.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a lord compels his slave to work on a feast-day, let him lose the slave; and let the latter thereafter be free [in folk-law]; and let the lord pay lahslit among the Danes, a fine among the English, according to what the deed is; or let him clear himself.</ab>
+        <note type="editorial">Liebermann compares EGu 7.2; Ine 3.</note>
       </div>
     </body>
   </text>

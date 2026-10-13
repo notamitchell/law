@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>VI As 1.5</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">VIAs 1.5</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">174</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VI Æthelstan</title></bibl>
+        <bibl type="legalText"><title>VI Æthelstan (London Peace-Guild)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">174</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1.5</idno>
-          <idno type="editorNumber" n="Attenborough">[1].5</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -49,16 +48,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 874 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 854 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 174.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.5">
         <head><ref type="lawCode" target="law:VIAs">VI As</ref> 1.5</head>
-        <ab type="selectedText" xml:lang="und">⁊ se þe þeof wrecan wille ⁊ ǽhlip gewryce oððe on stræte togeliht, beo CXX scll. scildig wið þone cing. Gif he þonne mann ofslea on þa wrace, beo hé his feores scyldig ⁊ ealles þæs þe he áge, buton se cing him arian wille.</ab>
-        <ab type="translation" xml:lang="en">And he who wishes to avenge a thief and has recourse to violence, or comes to his aid on the high road, shall forfeit 120 shillings to the king. If, however, he slays anyone in the act of vengeance, he shall forfeit his life and all he possesses, unless the king is willing to pardon him.</ab>
-        <ab type="supplementaryText" xml:lang="und">Et qui furem uindicare uelit et euocacionem faciet uel ad eum liberandum in uia descendet, CXX sol. reus sit apud (erga) regem. Si hominem occidat in ea þrace (uindicta), de uita forisfactus sit et de omnibus que habebit, nisi rex ei uelit misereri.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.5" corresp="#wit-q">Et qui furem uindicare uelit et euocacionem faciet uel ad eum liberandum in uia descendet, CXX sol. reus sit apud (erga) regem. Si hominem occidat in ea þrace (uindicta), de uita forisfactus sit et de omnibus que habebit, nisi rex ei uelit misereri.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.5" corresp="#wit-h">⁊ se ðe þeof wrecan wille ⁊ ǽhlip gewyrce oððe on stræte togeliht, beo CXX scll' sciIdig wið þone cing. Gif he þonne mann ofslea on þa wrace, beo hé his feores scyldig ⁊ ealles þæs þe he áge, buton se cing him arian wille.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="[1].5" corresp="#wit-h">⁊ se þe þeof wrecan wille ⁊ ǽhlip gewryce oððe on stræte togeliht, beo CXX scll. scildig wið þone cing. Gif he þonne mann ofslea on þa wrace, beo hé his feores scyldig ⁊ ealles þæs þe he áge, buton se cing him arian wille.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And he who wishes to avenge a thief and has recourse to violence, or comes to his aid on the high road, shall forfeit 120 shillings to the king. If, however, he slays anyone in the act of vengeance, he shall forfeit his life and all he possesses, unless the king is willing to pardon him.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wer einen Dieb rächen will und einen Angriff verübt oder [ihm beim Transport] auf der Strasse beispringt, sei gegenüber dem König 120 Schill. schuldig. Wenn er aber einen Menschen erschlägt bei dieser Rächung [des Diebes], habe er sein Leben verwirkt und alles was er besitzt, ausser wenn der König ihn begnadigen will.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And whoever wishes to avenge a thief and commits an assault or rescues [him while he is being taken] on the road, let him be liable to the king for 120 shillings. But if he kills someone in this avenging [of the thief], let him have forfeited his life and all that he owns, unless the king is willing to pardon him.</ab>
+        <note type="editorial">Liebermann compares II As 6.3.</note>
       </div>
     </body>
   </text>

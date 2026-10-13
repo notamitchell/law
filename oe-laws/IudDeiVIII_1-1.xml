@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Iud Dei VIII 1.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,14 +19,15 @@
         <idno type="citationKey">IudDeiVIII 1.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Iudicium Dei</title></bibl>
-        <bibl type="selectedText">Ca: Cambridge, Corpus Christi College 422 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1.1</idno>
-        </bibl>
+        <bibl type="legalText"><title>Iudicium Dei VIII (Ordeal Formula)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">415</biblScope></bibl>
+          <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
+        <listWit>
+          <witness xml:id="wit-ca"><abbr>Ca</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 422</note></witness>
+        </listWit>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -32,16 +37,22 @@
         <prefixDef ident="entry" matchPattern="(.+)" replacementPattern="entry.html?id=$1"/>
       </listPrefixDef>
     </encodingDesc>
+    <profileDesc>
+    </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2357 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2288 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 415.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.1">
         <head><ref type="lawCode" target="law:IudDeiVIII">Iud Dei VIII</ref> 1.1</head>
-        <ab type="selectedText" xml:lang="und">þæt ge ne genedon, þæt ge þis husl ðicgon ⁊ to ðisson weofode ne gán, gif ge þis dydon, þe ge betogene syndon, oððe wiston, hwa hit dide.</ab>
-        <ab type="translation" xml:lang="en">that you dare not share this Eucharist or approach this altar if you have done what you are accused of, or if you knew who did it.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.1" corresp="#wit-ca">þæt ge ne genedon, þæt ge þis husl ðicgon 7 to ðisson weofode ne gán, gif ge þis dydon, þe ge betogene syndon, oððe wiston, hwa hit dide.</ab>
+        <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-ca">that you dare not share this Eucharist or approach this altar if you have done what you are accused of, or if you knew who did it.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">dass ihr nicht waget, dies Abendmahl zu geniessen und zu diesem Altare zu treten, wenn ihr jenes gethan habt, dessen ihr angeklagt seid, oder wusstet, wer es gethan hat.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">that you do not dare to partake of this communion and to approach this altar if you have done that of which you are accused, or knew who did it.</ab>
+        <note type="editorial">Liebermann would correct ‘genedon’ to ‘geneðon’.</note>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Cn 30.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">IICn 30.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">330</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Cnut</title></bibl>
+        <bibl type="legalText"><title>II Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">330</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">190</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">30.1</idno>
-          <idno type="editorNumber" n="Robertson">30.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +53,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1809 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1765 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 330.</change>
+      <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 191.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="30.1">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 30.1</head>
-        <ab type="selectedText" xml:lang="und">Gyf se hlaford ðonne secge þæt him naðor ne burste ne að ne ordal syþðan þæt gemot wæs on Winceastre, níme se hlaford him twegen getrywe men to innan ðam hundrede, and swerian þæt him nǽfre að ne burste ne ordal ne ðeófgyld ne gulde—buton hé ðone gerefan hæbbe þe þæs wurþe si ðe þæt don mæge.</ab>
-        <ab type="translation" xml:lang="en">If, however, his lord asserts that he has failed neither in oath nor in ordeal since the assembly was held at Winchester, he (the lord) shall chose two trustworthy men within the hundred—unless he have a reeve who is qualified to discharge this duty—and they shall swear that he has never failed in oath or in ordeal or been convicted of stealing.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gyf se hlaford þonne secge, þæt him naðor ne að ne ordal ne burste syððan þæt gemot wæs on Winceastre, nime se hlaford him twegen getrywe men to innon þam hundrede, and swerian, þæt him næfre að ne burste ne ordal, [ne he] þeofgyld ne gulde, butan he þone gerefan hæbbe, þe ðæs wyrðe sig, þe þæt don mæge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="30.1" corresp="#wit-g-a">Gyf se hlaford þonne secge, þ<hi rend="italic">æt</hi> him naðor ne að ne ordal ne burste syððan þ<hi rend="italic">æt</hi> gemot wæs on Winceastre, nime se hlaford him twegen getrywe men to innon þam hundrede, and swerian, þ<hi rend="italic">æt</hi> him næfre að ne burste ne ordal, [ne he] þeofgyld ne gulde, butan he þone gerefan hæbbe, þe ðæs wyrðe sig, þe þ<hi rend="italic">æt</hi> don mæge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="30.1" corresp="#wit-a">Gif se hlaford þonne secge, þæt him naðor ne að ne ordal ne burste, syððan þæt gemot wæs on Winceastre, nime se hlaford him twegen getrywe men to innan þam hundrede, ⁊ swerian, þæt him næfre að ne burste ne ordal, ne he þeofgyld ne gulde, buton he þonne gereafan hæbbe, þe þæs wyrðe sy, þe þæt don mage.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="30.1" corresp="#wit-q">Si dominus eius dicat tunc, quod ei neutrum uel iuramentum uel ordalium fregerit, postquam concilium fuit apud Wincestram, assumat idem dominus secum duos credibiles homines in ipso hundreto et iuret, quod illi nunquam iuramentum uel ordalium fregit, nec furigildum reddidit, nisi talem prepositum habeat, qui eo dignus sit, qui hoc facere possit.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="30.1" corresp="#wit-b">Gyf se hlaford ðonne secge þæt him naðor ne burste ne að ne ordal syþðan þæt gemot wæs on Winceastre, níme se hlaford him twegen getrywe men to innan ðam hundrede, and swerian þæt him nǽfre að ne burste ne ordal ne ðeófgyld ne gulde—buton hé ðone gerefan hæbbe þe þæs wurþe si ðe þæt don mæge.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">If, however, his lord asserts that he has failed neither in oath nor in ordeal since the assembly was held at Winchester, he (the lord) shall choose two trustworthy men within the hundred—unless he have a reeve who is qualified to discharge this duty—and they shall swear that he has never failed in oath or in ordeal or been convicted of stealing.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn der Herr [desselben] freilich behauptet, dass jenem, seitdem der Reichstag zu Winchester war, weder Eid noch Ordal fehlgeschlagen sei, so wähle sich der Herr zwei vertrauenswürdige Männer hinzu innerhalb dieser [einen] Hundertschaft, und [diese drei] sollen schwören, ‘dass jenem nie weder Eid fehlschlug noch Ordal, noch er Diebesbusse bezahlen musste’ — es sei denn, der [Herr] habe einen solchen Amtmann, der dazu berechtigt ist, dass er dies thun dürfe [statt des Gutsherrn].</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But if his lord asserts that neither oath nor ordeal has failed him since the assembly at Winchester, let the lord take two trustworthy men within that [one] hundred, and [these three] are to swear ‘that neither oath nor ordeal ever failed him, nor did he have to pay theft-compensation’ — unless [the lord] has a reeve who is entitled to do this [in place of the lord].</ab>
+        <note type="editorial">G's ‘[ne he]’ is on an erasure in the 16th century. Liebermann compares I Atr 1.2.</note>
       </div>
     </body>
   </text>

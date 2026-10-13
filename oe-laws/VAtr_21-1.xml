@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>V Atr 21.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,17 @@
         <idno type="citationKey">VAtr 21.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">243</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>V Atr</title></bibl>
+        <bibl type="legalText"><title>V Æthelred</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">243</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">84</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g"><abbr>G</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-g2"><abbr>G2</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i (second copy)</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G (A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">21.1</idno>
-          <idno type="editorNumber" n="Robertson">21.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +48,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1215 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1183 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 243.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="21.1">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 21.1</head>
-        <ab type="selectedText" xml:lang="und">⁊ sitte ælc XII monað werleas; ceose siððan þæt heo sylf wille.</ab>
-        <ab type="translation" xml:lang="en">And each of them shall remain without a husband for a year, after which she may decide as she herself desires.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ sitte ælc XII monað werleas; ceose syððan þæt heo sylf wille.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="21.1" corresp="#wit-g">⁊ sitte ælc XII monað werleas; ceose syððan þ<hi rend="italic">æt</hi> heo sylf wille.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="21.1" corresp="#wit-g2">⁊ sitte ælc XII monað werleas; ceose syððan þæt heo sylf wille.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="21.1" corresp="#wit-d">⁊ sitte ælc XII monað werleas; ceose siððan þæt heo sylf wille.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And each of them shall remain without a husband for a year, after which she may decide as she herself desires.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und sitze jede ein Jahr lang gattenlos; wähle sie hernach, was sie selbst will.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let each remain without a husband for twelve months; afterwards let her choose what she herself wishes.</ab>
       </div>
     </body>
   </text>

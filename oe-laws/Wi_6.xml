@@ -4,8 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Wi 6</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +21,16 @@
         <idno type="citationKey">Wi 6</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">12</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Wihtræd</title> <note type="reign">r.690–725</note></bibl>
+        <bibl type="legalText"><title>Wihtred’s Code</title> <note type="reign">Wihtred, r. 690/1–725</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">12</biblScope></bibl>
+          <bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002), p. <biblScope unit="page">154</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922), p. <biblScope unit="page">27</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>H</witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Oliver, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">6</idno>
-          <idno type="editorNumber" n="Oliver">5</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +48,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 168 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 165 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 12.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6">
         <head><ref type="lawCode" target="law:Wi">Wi</ref> 6</head>
-        <ab type="selectedText" xml:lang="und">Gif priost læfe unrihthæmed, oþþe fulwih[t]e untrumes forsitte, oþþe to þon druncen sie þæt he ne mæge, sio he stille his þegnungæ oþ biscopes dom.</ab>
-        <ab type="translation" xml:lang="en">If a priest allows an unlawful union, or neglects the baptism of a sick person, or is so drunk that he is not able [to perform his duties], let him be inactive in his service pending the bishop’s decree.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif priost læfe unriht hæmed, oþþe fulwihðe untrumes forsitte oþþe to þon druncen sie, þæt he ne mæge, sio he stille his þegnungæ oþ biscops dóm.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-h">Gif priost læfe unriht hæmed oþþe fulwihðe untrumes forsitte oþþe to þon druncen sie, þ<hi rend="italic">æt</hi> he ne mæge, sio he stille his þegnungæ oþ biscopes dóm.</ab>
+        <ab type="editionText" xml:lang="ang" source="#oliver" n="5" corresp="#wit-h">Gif priost læfe unrihthæmed, oþþe fulwih[t]e untrumes forsitte, oþþe to þon druncen sie þ<hi rend="italic">æt</hi> he ne mæge, sio he stille his þegnungæ oþ biscopes dom.</ab>
+        <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If a priest allows an unlawful union, or neglects the baptism of a sick person, or is so drunk that he is not able [to perform his duties], let him be inactive in his service pending the bishop’s decree.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If a priest consents to an illicit union, or if he neglects the baptism of a sick man, or is too drunk to discharge this duty, he shall abstain from his ministrations, pending a decision from the bishop.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Priester ein gesetzwidriges [Ehe-]Verhältniss zugiebt oder die Taufe eines Kranken versäumt oder so betrunken ist, dass er nicht [fungiren] kann, sei er seines [Pfarr-]Amtes enthoben bis zu des Bischofs Urtheilsspruche.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a priest permits an unlawful [marriage] relationship or neglects the baptism of a sick person or is so drunk that he cannot [officiate], let him be suspended from his [parish] office until the bishop’s judgment.</ab>
       </div>
     </body>
   </text>

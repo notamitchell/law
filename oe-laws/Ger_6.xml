@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Ger 6</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Gobbitt</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Gobbitt</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,22 +18,17 @@
         <idno type="lawCodeAnchor">Ger</idno>
         <idno type="clause">6</idno>
         <idno type="citationKey">Ger 6</idno>
-        <idno type="legalText">Ger.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">454</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Be Gesceadwisan Gerefan</title></bibl>
+        <bibl type="legalText"><title>Gerefa (The Reeve)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">454</biblScope></bibl>
+          <bibl xml:id="gobbitt" type="edition">Thom Gobbitt, ed., ‘Rectitudines singularum personarum’ and ‘Gerefa’, <title>Early English Laws</title> (earlyenglishlaws.ac.uk)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>B</witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
         </listWit>
-        <bibl type="selectedText">B: earlyenglishlaws ac.uk: RSP+Ger Gobbitt, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">6</idno>
-          <idno type="editorNumber" n="Gobbitt">22.9</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -49,16 +47,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2189 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2131 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 454.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6">
         <head><ref type="lawCode" target="law:Ger">Ger</ref> 6</head>
-        <ab type="selectedText" xml:lang="und">Symle he sceal his hyrmen scyr pan mid manunge to hlafordes neode .7 him eac leanian be ðam ðe hy earnian .</ab>
-        <ab type="translation" xml:lang="en">Similarly, he must inspire his underlings with admonishments to the lord’s need, and reward each of them as they merit.</ab>
-        <ab type="supplementaryText" xml:lang="und">[6] Symle he sceal his hyrmen scyrpan mid manunge to hlafordes neode 7 him eac leanian be ðam ðe hy earnian.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-b">[6] Symle he sceal his hyrmen scyrpan mid manunge to hlafordes neode 7 him eac leanian be ðam ðe hy earnian.</ab>
+        <ab type="editionText" xml:lang="ang" source="#gobbitt" n="22.9" corresp="#wit-b">Symle he sceal his hyrmen scyr pan mid manunge to hlafordes neode .7 him eac leanian be ðam ðe hy earnian .</ab>
+        <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">Similarly, he must inspire his underlings with admonishments to the lord’s need, and reward each of them as they merit.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Immer soll er seine [Guts]unterthanen [Bauern und Domänenknechte] ermuntern durch Ermahnung zu des Gutsherrn Bedarf und ihnen auch lohnen je nachdem sie verdienen.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">He must always urge on his [estate] dependants [peasants and demesne servants] by exhortation to the lord's needs, and also reward them according to what they earn.</ab>
+        <note type="editorial">Liebermann compares Rect 6.3 and 20.2.</note>
       </div>
     </body>
   </text>

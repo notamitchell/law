@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>I Atr 1.14</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,22 +20,18 @@
         <idno type="citationKey">IAtr 1.14</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">218</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Æthelred</title> <note type="reign">r. 978–1016</note></bibl>
+        <bibl type="legalText"><title>I Æthelred (Woodstock)</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">218</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">54</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>H</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1.14</idno>
-          <idno type="editorNumber" n="Robertson">1.14</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -50,16 +49,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1059 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1031 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 218.</change>
+      <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 55.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.14">
         <head><ref type="lawCode" target="law:IAtr">I Atr</ref> 1.14</head>
-        <ab type="selectedText" xml:lang="und">⁊ beo se cyng ælces ðara wita wyrðe ðe ða men gewyrcean þe boclond hæbben, ⁊ ne bete nan man for nanre tihtlan, buton hit sy ðæs cynges gerefan gewitnysse.</ab>
-        <ab type="translation" xml:lang="en">And the king shall be entitled to all the fines which are incurred by men who hold land by title deed, and no one [of these] shall pay the compensation following upon any charge, unless in the presence of the king's reeve.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ beo se cyng ælc þæra wita wyrðe, þe þa men gewyrcen þe bocland habban; ⁊ ne bete nan man for nanre tyhtlan, butan hit sy þæs cynges gerefan gewitnesse.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.14" corresp="#wit-h">⁊ beo se cyng ælc[es] þæra wita wyrðe, þe þa men gewyrcen þe bocland habban; ⁊ ne bete nan man for nanre tyhtlan, butan hit sy þæs cynges gerefan gewitnesse.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.14" corresp="#wit-b">⁊ beo se cyng ælces ðara wita wyrðe, ðe ða men gewyrcean þe boclond hæbben; ⁊ ne bete nan man for nanre tihtlan, buton hit sy ðæs cynges gerefan gewitnysse.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.14" corresp="#wit-q">Et habeat rex forisfacturas omnium eorum qui liberas terras habent; nec componat aliquis pro ulla tyhla, si non intersit testimonium prepositi regis.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="1.14" corresp="#wit-b">⁊ beo se cyng ælces ðara wita wyrðe ðe ða men gewyrcean þe boclond hæbben, ⁊ ne bete nan man for nanre tihtlan, buton hit sy ðæs cynges gerefan gewitnysse.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">And the king shall be entitled to all the fines which are incurred by men who hold land by title deed, and no-one [of these] shall pay the compensation following upon any charge, unless in the presence of the king's reeve.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und der König sei zu jedem der Strafgelder berechtigt, welche die Männer, die urkundlich privilegirtes Grundeigen besitzen, verwirken; und niemand [von diesen] büsse für irgend welche Beschuldigung, ohne dass es unter Mitwissen des Königsvogts geschehe.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let the king be entitled to every one of the fines which the men who hold bookland incur; and let no one [of these] pay compensation for any accusation unless it is with the witness of the king's reeve.</ab>
+        <note type="editorial">H's ‘ælc’ is corrected to ‘ælces’ from B (Liebermann).</note>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>I Em 6</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,27 +18,22 @@
         <idno type="lawCodeAnchor">IEm</idno>
         <idno type="clause">6</idno>
         <idno type="citationKey">IEm 6</idno>
-        <idno type="legalText">I Edm</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">186</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Edmund</title> <note type="reign">r. 939–946</note></bibl>
+        <bibl type="legalText"><title>I Edmund (London)</title> <note type="reign">Edmund, r. 939–946</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">186</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">6</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>H</witness>
-          <witness>B</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>G(B) (part Prol.)</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-g-b-part-prol"><abbr>G(B) (part Prol.)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">6</idno>
-          <idno type="editorNumber" n="Robertson">6</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -53,16 +51,25 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 908 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 887 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 186.</change>
+      <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 7.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 6.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6">
         <head><ref type="lawCode" target="law:IEm">I Em</ref> 6</head>
-        <ab type="selectedText" xml:lang="und">[Be mánsworum ⁊ liblacum.] [Ld] Ða ðe mansweriað ⁊ liblac wyrcað beon hi a fram ælcum Godes dæle aworpene, buton he to rihtre dædbote gecirran þe geornor.</ab>
-        <ab type="translation" xml:lang="en">Those who commit perjury, and practise sorcery shall be cast out forever from the fellowship of God, unless they proceed with special zeal to undertake the prescribed penance.</ab>
-        <ab type="supplementaryText" xml:lang="und">Ða ðe mansweriað ⁊ lyblat wyrcað syn hy á fram ælcum Godes dæle aworpene, buten hy to rihtre dædbote gecyrran.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-h">Ða ðe mansweriað ⁊ lyblat wyrcað syn hy á fram ælcum Godes dæle aworpene, buten hy to rihtre dædbote gecyrran.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-d">Ða ðe mansweriað ⁊ liblac wyrcað, beon hi a fram ælcum Godes dæle aworpene, buton hi to rihtre dædbote gecirran þe geornor.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-b">Ða ðe mánsweriað ⁊ lyblat wyrcað, syn hy a fram ælcum Godes dæle aworpene, bute hy to rihtre dædbote gecyrran.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6" corresp="#wit-q">Qui falsum iurabunt uel liblatum facient, sint in eternum á Dei consortio segregati, nisi ad dignam satisfactionem per omnia reuertantur.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="6" corresp="#wit-d">[Be mánsworum ⁊ liblacum.] [Ld] Ða ðe mansweriað ⁊ liblac wyrcað beon hi a fram ælcum Godes dæle aworpene, buton hi to rihtre dædbote gecirran þe geornor.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">Those who commit perjury, and practise sorcery shall be cast out for ever from the fellowship of God, unless they proceed with special zeal to undertake the prescribed penance.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Über Meineidige und Zaubereien. Ld) Die, welche falsch schwören und Zauberei üben, sie seien immerfort von jedem Antheil an Gott[es Kirche] verstossen, es sei denn, sie bekehren sich zu gesetzlicher Kirchenbusse (um so eifriger D).</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of perjurers and sorcery. Ld) Those who swear falsely and practise sorcery, let them be cast out for ever from any share in God['s church], unless they turn to lawful penance (all the more eagerly, D).</ab>
+        <note type="editorial">In D, the rubric ‘Her gebirað nu to Eadgares gerædnes be gehadodra manna liffadunge’ (i.e. the Canons of Edgar) follows; in H and B, II Em follows on a new line. Liebermann compares II As 26.</note>
       </div>
     </body>
   </text>

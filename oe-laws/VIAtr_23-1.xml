@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>VI Atr 23.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">VIAtr 23.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">252</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VI Atr</title></bibl>
+        <bibl type="legalText"><title>VI Æthelred (Enham)</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">252</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">98</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">K</witness>
-          <witness>D (incomplete)</witness>
+          <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
+          <witness xml:id="wit-d-incomplete"><abbr>D (incomplete)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
         </listWit>
-        <bibl type="selectedText">K: British Library, Cotton Claudius A.iii Robertson, ed.</bibl>
-        <bibl type="supplementaryText">D: Cambridge, Corpus Christi College, MS 201 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">23.1</idno>
-          <idno type="editorNumber" n="Robertson">23.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +47,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1292 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1259 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 252.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="23.1">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 23.1</head>
-        <ab type="selectedText" xml:lang="und">[And sancte Eadwardes mæssedæg witan habbað gecoran þæt man freolsian sceal ofer eall Englaland on XV kl. Aprilis.] [D]</ab>
-        <ab type="translation" xml:lang="en">And the authorities have decided that St Edward's festival shall be celebrated throughout England on the 18th of March.</ab>
-        <ab type="supplementaryText" xml:lang="und">And sancte Eadwardes mæssedæg witan habbað gecoran, þæt man freolsian sceal ofer eall Englaland on XV kl. Aprilis.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="23.1" corresp="#wit-d-incomplete">And s<hi rend="italic">anct</hi>e Eadwardes mæssedæg witan habbað gecoran, þ<hi rend="italic">æt</hi> man freolsian sceal ofer eall Englaland on XV kl. Apr<hi rend="italic">i</hi>l<hi rend="italic">is</hi>.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="23.1" corresp="#wit-k">[And sancte Eadwardes mæssedæg witan habbað gecoran þæt man freolsian sceal ofer eall Englaland on XV kl. Aprilis.] [D]</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And the authorities have decided that St Edward's festival shall be celebrated throughout England on the 18th of March.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Und des heiligen Eadward [des Märtyrers] Fest haben die Witan entschieden, dass über ganz England am 18. März gefeiert werden soll. D)</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(And the witan have decided that the feast of St Edward [the Martyr] is to be celebrated throughout all England on 18 March. D)</ab>
+        <note type="editorial">23.1 follows only in D, as in V Atr 16 and I Cn 17.1.</note>
       </div>
     </body>
   </text>

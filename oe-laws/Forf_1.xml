@@ -3,32 +3,33 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Forf. 1</title>
+        <title>Forf 1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Forf_1</idno>
-        <idno type="citation">Forf. 1</idno>
-        <idno type="lawCode">Forf.</idno>
+        <idno type="citation">Forf 1</idno>
+        <idno type="lawCode">Forf</idno>
         <idno type="lawCodeAnchor">Forf</idno>
         <idno type="clause">1</idno>
         <idno type="citationKey">Forf 1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">388</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Forfang</title></bibl>
+        <bibl type="legalText"><title>Forfang (On Attachment)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">388</biblScope></bibl>
+          <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>H (incompl.)</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-h-incompl"><abbr>H (incompl.)</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="supplementaryText">[Q]: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">Forf. 1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -46,16 +47,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2089 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2039 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 388.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
-        <head><ref type="lawCode" target="law:Forf">Forf.</ref> 1</head>
-        <ab type="selectedText" xml:lang="und">Forfang ofer eal, sy hit on an scire, sy hit on má, fiftyne penegas; 7 ælcon smalon orfe æfre æt scillinge peni.</ab>
-        <ab type="translation" xml:lang="en">[The reward for] the seizure/recovery [of stolen property] is [to be the same] everywhere, be it in one shire, be it in [over] several: 15 pence; and for every small animal a penny shall always be paid per shilling [of the value of the property].</ab>
-        <ab type="supplementaryText" xml:lang="und">Forfang ubique, sit in una scyre, sit in pluribus, XV den. (sint); et de omni paruo pecore semper pro solido denarius reddatur.</ab>
+        <head><ref type="lawCode" target="law:Forf">Forf</ref> 1</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Forf. 1" corresp="#wit-h-incompl">Forfang ofer eall, sy hit on anre sci[r]e, sy hit on má, fiftyne peningas; ⁊ æt ælcon smalon orfe æfre æt scyll' penig.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Forf. 1" corresp="#wit-b">Forfang ofer eal, sy hit on an scire, sy hit on má, fiftyne penegas; 7 ælcon smalon orfe æfre æt scillinge peni.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="Forf. 1" corresp="#wit-q">Forfang ubique, sit in una scyre, sit in pluribus, XV den. (sint); et de omni paruo pecore semper pro solido denarius reddatur.</ab>
+        <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-b">[The reward for] the seizure/recovery [of stolen property] is [to be the same] everywhere, be it in one shire, be it in [over] several: 15 pence; and for every small animal a penny shall always be paid per shilling [of the value of the property].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">[Lohn für] Ergreifung [gestohlenen Viehs] überall, sei es in Einer Grafschaft [derselben, wo es gestohlen war, eingefangen], sei es über mehrere hin, [beträgt] 15 Pfennig; und von jedem kleinen Vieh [zahle Eigenthümer dem Retter] je vom Schilling [Werth: 1] Pfennig.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">[The reward for] seizing [stolen cattle] everywhere, whether in one shire [the same one where it was stolen] or across several, [is] 15 pence; and for each small beast [let the owner pay the rescuer] one penny per shilling [of value].</ab>
+        <note type="editorial">The Latin is the Quadripartitus; Liebermann's Old English is from H (Textus Roffensis f. 32, after Blaseras without a break, c. 1120), and B (p. 1) is also given here. H reads ‘scipe’; Liebermann prints ‘sci[r]e’. B lacks ‘æt’ before ‘ælcon’. Liebermann dates Forfang c. 900–c. 1000, perhaps c. 960. In H, Ordal follows after a paragraph break. Liebermann compares Forf 2.</note>
       </div>
     </body>
   </text>

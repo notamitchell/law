@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>V Atr 7</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,17 @@
         <idno type="citationKey">VAtr 7</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">239</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>V Atr</title></bibl>
+        <bibl type="legalText"><title>V Æthelred</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">239</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">80</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g"><abbr>G</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-g2"><abbr>G2</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i (second copy)</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G (A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">7</idno>
-          <idno type="editorNumber" n="Robertson">7</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -49,16 +49,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1190 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1158 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 239.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 7</head>
-        <ab type="selectedText" xml:lang="und">And canonicas þar seo ár sý þæt hi beoddern ⁊ slæpern habban magan, healdan heora mynster mid rihte ⁊ mid clænnisse, swa heora regol tæce; oððe riht is þæt he þolige þare are se ðe þæt nelle.</ab>
-        <ab type="translation" xml:lang="en">And canons, wherever their property admits of their having a refectory and a dormitory, shall maintain regularity and celibacy in their foundation, as their rule prescribes; otherwise it is right that he who refuses to do so should forfeit his endowment.</ab>
-        <ab type="supplementaryText" xml:lang="und">And canónicas þær seo ár sy, þæt hy beoddern ⁊ slæpern habban magan, healdan heora mynster mid rihte ⁊ mid clænnesse, swa heora regol tæce; oððon riht is, þæt he þolige þære are se ðe þæt nelle.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-g">And canónicas þær seo ár sy, þ<hi rend="italic">æt</hi> hy beoddern ⁊ slæpern habban magan, healdan heora mynster mid rihte ⁊ mid clænnesse, swa heora regol tæce; oððon riht is, þ<hi rend="italic">æt</hi> þolige þære are se ðe þ<hi rend="italic">æt</hi> nelle.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-g2">⁊ canonicas, þær seo ár sy, þæt hy beoddern ⁊ slæpern habban magon, healdan heora mynster mid rihte ⁊ mid clænnesse, swa heora regol tæce; oððon riht is, þæt þolige þære are se þe þæt nelle.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="7" corresp="#wit-d">And canonicas þar seo ár sý þæt hi beoddern ⁊ slæpern habban magan, healdan heora mynster mid rihte ⁊ mid clænnisse, swa heora regol tæce; oððe riht is þæt he þolige þare are se ðe þæt nelle.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And canons, wherever their property admits of their having a refectory and a dormitory, shall maintain regularity and celibacy in their foundation, as their rule prescribes; otherwise it is right that he who refuses to do so should forfeit his endowment.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und Kanoniker, wo solcher Kirchenbesitz vorhanden ist, dass sie [gemeinsamen] Speisesaal und Schlafsaal haben können, sollen ihr Stift gesetzmässig und in Keuschheit halten, wie ihre Regel vorschreibt; oder richtig ist, dass, wer dies nicht will, die Pfründe verliere.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And canons, where there is such church property that they can have a [common] refectory and dormitory, are to keep their foundation lawfully and in chastity, as their rule prescribes; otherwise it is right that whoever will not do this lose the benefice.</ab>
+        <note type="editorial">Liebermann prints G without ‘he’ (D has ‘he’); G2 has a dittography ‘þæ’. Liebermann compares I As 4.</note>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Cn 24.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">IICn 24.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">326</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Cnut</title></bibl>
+        <bibl type="legalText"><title>II Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">326</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">186</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">24.1</idno>
-          <idno type="editorNumber" n="Robertson">24.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +53,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1794 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1750 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 326.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="24.1">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 24.1</head>
-        <ab type="selectedText" xml:lang="und">⁊ gyf hit mon ðonne gefó ⁊ he ðyllice gewitnysse næbbe, ne beo ðær nan team, ac gyfe man ðam agenfrigean his agen ⁊ þæt æftergyld ⁊ þæt wite ðam ðe hit áge.</ab>
-        <ab type="translation" xml:lang="en">If, however, any property is attached, and he [who is in possession of it] has no such witnesses, no vouching to warranty shall be allowed, but the property shall be given up to its rightful owner and also the supplementary payment, and the fine to the party who is entitled thereto.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ gyf hit man þonne befo, ⁊ he þyllice gewitnesse næbbe, ne beo þær nan team, ac agyfe man þam agenfrigan his agen ⁊ þæt æftergild, ⁊ þæt wite þam þe hit áge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="24.1" corresp="#wit-g-a">⁊ gyf hit man þonne befo, ⁊ he þyllice gewitnesse næbbe, ne beo þær nan team, ac agyfe man þa<hi rend="italic">m</hi> agenfrigan his agen ⁊ þ<hi rend="italic">æt</hi> æftergild, ⁊ þ<hi rend="italic">æt</hi> wite þa<hi rend="italic">m</hi> þe hit áge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="24.1" corresp="#wit-a">⁊ gif hit man þonne befo, ⁊ he þillice gewittnysse nabbe, ne beo þar nan team, ac agife man þam ágenfrigean his ægen ⁊ þæt æftergyld, ⁊ þa wite þam þe hit age.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="24.1" corresp="#wit-q">Et si tunc super eum interciętur, et tale testimonium non habeat, non liceat ei aduocare, sed reddat repetenti captale suum et secundam solutionem, et forisfacturam cui pertinebit.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="24.1" corresp="#wit-b">⁊ gyf hit mon ðonne gefó ⁊ he ðyllice gewitnysse næbbe, ne beo ðær nan team, ac gyfe man ðam agenfrigean his agen ⁊ þæt æftergyld ⁊ þæt wite ðam ðe hit áge.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">If, however, any property is attached, and he [who is in possession of it] has no such witnesses, no vouching to warranty shall be allowed, but the property shall be given up to its rightful owner and also the supplementary payment, and the fine to the party who is entitled thereto.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn es nachher im Anefang eingeklagt wird, und er [der verklagte Besitzer] solche Zeugenschaft nicht hat, so sei da kein Gewährzug [ihm erlaubt], sondern er gebe dem Eigenthümer dessen Eigen zurück sammt nochmaliger Werthzahlung, und das Strafgeld dem, der es [das Recht auf das vom Verklagten Verwirkte] besitzt.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if it is then attached, and he [the accused possessor] does not have such witness, let there be no vouching to warranty [allowed him], but let him give back to the owner his property together with a second payment of its value, and the fine to the one who owns it [the right to what the accused has forfeited].</ab>
+        <note type="editorial">A's ‘þæt’ should be ‘þam’.</note>
       </div>
     </body>
   </text>

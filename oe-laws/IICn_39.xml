@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Cn 39</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">IICn 39</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">340</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Cnut</title></bibl>
+        <bibl type="legalText"><title>II Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">340</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">196</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">39</idno>
-          <idno type="editorNumber" n="Robertson">39</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -55,16 +54,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1840 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1796 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 340.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 196.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="39">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 39</head>
-        <ab type="selectedText" xml:lang="und">Gif hwa preoste ofslea. Gyf hwa weofodðegen afylle, sy he utlaga wið God ⁊ wið men, buton he ðurh wrecsið ðe deoppor gebete ⁊ eac wið ða mægða, oððe ladige mid werlade.</ab>
-        <ab type="translation" xml:lang="en">If anyone slay a priest. If anyone slays a minister of the altar, he shall be both excommunicated and outlawed, unless he make amends to the best of his ability by pilgrimage, and likewise by [the payment of compensation] to the kin [of the slain man], or else he shall clear himself by an oath equal in value to his wergeld.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gyf hwa weofodþen afylle, sy he utlah wið God ⁊ wið men, butan he þurh wræcðsið þe deoppor gebete, ⁊ eac wið ða mægðe; oððe geladige hine mid werlade.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="39" corresp="#wit-g-a">Gyf hwa weofodþen afylle, sy he utlah wið God ⁊ wið men, butan he þurh wræcsið þe deoppor gebete, ⁊ eac wið ða mægðe; oððe geladige hine mid werlade.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="39" corresp="#wit-a">Gif hwa wefodþén afylle, sy he utlah wið God ⁊ wið men, buton he þurh wrecsyð þe deoppor gebete, ⁊ eac wið þa mægðe; oððe geladige hine mid werlade.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="39" corresp="#wit-q">Si quis altaris ministrum occidat, útlaga sit erga Deum et homines, nisi dignis satisfactionibus ueros penitentię fructus ostendat et erga parentes eius emendet; uel wéralada se adlegiet.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="39" corresp="#wit-b">Gif hwa preost ofslea. Gyf hwa weofodðegen afylle, sy he utlaga wið God ⁊ wið men, buton he ðurh wrecsið ðe deoppor gebete ⁊ eac wið ða mægða, oððe ladige mid werlade.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">If anyone slay a priest. If anyone slays a minister of the altar, he shall be both excommunicated and outlawed, unless he make amends to the best of his ability by pilgrimage, and likewise by [the payment of compensation] to the kin [of the slain man], or else he shall clear himself by an oath equal in value to his wergeld.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Wenn jemand einen Priester erschlägt. B) Wenn einer einen Altardiener tödtet, sei er friedlos in Kirche und Staat, ausser wenn er um so tiefer durch elende Verbannungspilgerfahrt, und ebenfalls gegenüber der Sippe [des Erschlagenen], büsst — oder er reinige sich durch Eid [so hoch wie dessen] Wergeld —;</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(If anyone kills a priest. B) If anyone kills a servant of the altar, let him be an outlaw before God and men, unless he atones all the more deeply by a pilgrimage of exile, and also [makes amends] to the kindred [of the slain] — or let him clear himself by an oath [to the amount of the victim's] wergild —;</ab>
+        <note type="editorial">G's ‘wræcðsið’ should be ‘wræcsið’ (Ld ‘wrecsiþ’).</note>
       </div>
     </body>
   </text>

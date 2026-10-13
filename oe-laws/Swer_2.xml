@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Swer 2</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -13,23 +17,19 @@
         <idno type="lawCodeAnchor">Swer</idno>
         <idno type="clause">2</idno>
         <idno type="citationKey">Swer 2</idno>
-        <idno type="legalText">Swer.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">396</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Swerian</title></bibl>
+        <bibl type="legalText"><title>Swerian (Oaths)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">396</biblScope></bibl>
+          <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +47,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2112 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2058 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 396.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:Swer">Swer</ref> 2</head>
-        <ab type="selectedText" xml:lang="und">On ðone Drihten, þe ðes haligdom is fore halig, swa ic spæce drife mid fullan folcrihte, butan bræde 7 butan swice 7 butan æghwylcum facne, swa me forstolen wæs ðæt orf N., ðæt ic onspece 7 þæt ic mid N. befangen hæbbe.</ab>
-        <ab type="translation" xml:lang="en">[I swear] by the Lord before whom this relic is holy, [that] I pursue this case with full justice and without deceit or fraud and without any deception since these cattle (N.) for which I bring a claim were stolen from me, and which I [consequently) seized from N.</ab>
-        <ab type="supplementaryText" xml:lang="und">Ðus man sceal swerigean, þonne man hafð his æhte gebryid 7 bringeð hi on gange. On ðone Drihten, ðe ðæs haligdom is for eh, swa ic spæce drife mid fullan folcrihte, butan bræde 7 beswice 7 butan æghwilcum facne, swa me ðeofstolen wæs þæt orf N., þæt ic onspece 7 þæt ic mid Ñ. befangen hæbbe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-b">Ðus man sceal swerigean, þonne man hafð his æhte gebryid 7 bringeð hi on gange. On ðone Drihten, ðe ðæs haligdom is for eh, swa ic spæce drife mid fullan folcrihte, butan bræde 7 biswice 7 butan æghwilcu<hi rend="italic">m</hi> facne, swa me ðeofstolen wæs þ<hi rend="italic">æt</hi> orf N., þ<hi rend="italic">æt</hi> ic onspece 7 þ<hi rend="italic">æt</hi> ic mid Ñ. befangen hæbbe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-h">On ðone Drihten, þe ðes haligdom is fore halig, swa ic spæce drife mid fullan folcrihte, butan bræde 7 butan swice 7 butan æghwylcum facne, swa me forstolen wæs ðæt orf N., ðæt ic onspece 7 þ<hi rend="italic">æt</hi> ic mid N. befangen hæbbe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2" corresp="#wit-q">Per illum Deum, pro quo sanctum hoc sanctificatum est, ita causam prosequor plena populi rectitudine, sine brede et bispice et omni facno, sicut mihi furtiuum est hoc pecus N., de quo loquor, quod cum N. deprehendi.</ab>
+        <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-h">[I swear] by the Lord before whom this relic is holy, [that] I pursue this case with full justice and without deceit or fraud and without any deception since these cattle (N.) for which I bring a claim were stolen from me, and which I [consequently) seized from N.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Folgendermassen soll man [Kläger] schwören, sobald man seine Fahrhabe [im Anefang] erfasst hat und sie in [Gewähr]zug bringt. B) Bei dem Herrn, vor welchem dies Heiligthum heilig ist, só betreib ich Klage kraft vollen Landrechtes ohne List und ohne Tücke und ohne irgend welchen Trug, wie mir dies Vieh N. diebisch gestohlen worden ist, welches ich einklage und welches ich bei N. beschlagnahmt habe.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Thus shall one [the plaintiff] swear, once one has seized one's property [in attachment] and brings it into the [warranty] procedure. B) By the Lord before whom this relic is holy, so do I pursue my suit with full folk-right, without fraud and without deceit and without any trickery, as this cattle N. was stolen from me by theft, which I claim and which I have attached with N.</ab>
+        <note type="editorial">B's ‘gebryid’ is a Middle English form; ‘for eh’ stands so without an abbreviation mark (correct to ‘fore halig’ as in 1). H reads ‘forstolen’; the Quadripartitus read ‘ðeofstolen’ (with B), better. Formula 2 is used at least in part in II As 9 (compare also 3.4 and Duns 8.1). K: ‘beswice’ corrected to ‘biswice’.</note>
       </div>
     </body>
   </text>

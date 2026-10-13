@@ -3,29 +3,31 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Rom. 2</title>
+        <title>Romscot 2</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Romscot_2</idno>
-        <idno type="citation">Rom. 2</idno>
-        <idno type="lawCode">Rom.</idno>
+        <idno type="citation">Romscot 2</idno>
+        <idno type="lawCode">Romscot</idno>
         <idno type="lawCodeAnchor">Romscot</idno>
         <idno type="clause">2</idno>
         <idno type="citationKey">Romscot 2</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">474</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Romscot</title></bibl>
+        <bibl type="legalText"><title>Romscot (Peter’s Pence)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">474</biblScope></bibl>
+          <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>G(A)</witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">G(A): British Library, MS Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -43,15 +45,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2314 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2248 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 474.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
-        <head><ref type="lawCode" target="law:Romscot">Rom.</ref> 2</head>
-        <ab type="selectedText" xml:lang="und">Gif hit hwa forgumie, gylde LX scill' 7 be twelffealdan agife þene Rómpenincg.</ab>
-        <ab type="translation" xml:lang="en">If anyone misses [this date], he should pay [a fine of] 60 shillings, and pay twelve times [the Peter's pence].</ab>
+        <head><ref type="lawCode" target="law:Romscot">Romscot</ref> 2</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-g-a">Gif hit hwa forgumie, gylde LX scill' 7 be twelffealdan agife þene Rómpenincg.</ab>
+        <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-g-a">If anyone misses [this date], he should pay [a fine of] 60 shillings, and pay twelve times [the Peter's pence].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn es jemand versäumt, zahle er 60 Schill. und entrichte den Rompfennig mit Zwölffachem.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If anyone neglects it, let him pay 60 shillings and render the Rome-penny twelvefold.</ab>
+        <note type="editorial">In G, Iudex follows in the same hand.</note>
       </div>
     </body>
   </text>

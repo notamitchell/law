@@ -4,8 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>VIII Atr 6</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +19,16 @@
         <idno type="citationKey">VIIIAtr 6</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">264</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VIII Atr</title></bibl>
+        <bibl type="legalText"><title>VIII Æthelred</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">264</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">120</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G(A) (part)</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g-a-part"><abbr>G(A) (part)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">6</idno>
-          <idno type="editorNumber" n="Robertson">6</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,15 +46,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1467 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1430 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 264.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6">
         <head><ref type="lawCode" target="law:VIIIAtr">VIII Atr</ref> 6</head>
-        <ab type="selectedText" xml:lang="und">And be teoðunge se cyng ⁊ his witan habbað gecoren ⁊ gecweden, ealswa hit riht is, þæt ðriddan dæl þare teoðunge þe to circan gebyrge ga to ciricbote ⁊ oðer dæl þam Godes þeowum, þridde Godes þearfum ⁊ earman þeowetlingan.</ab>
-        <ab type="translation" xml:lang="en">And with regard to tithes, the king and his councillors have decided and agreed, in accordance with the principles of justice, that a third part of the tithes which belong to the church shall be assigned to the repair of churches, the second portion to the servants of God and the third portion to God's poor and to poverty-stricken slaves.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="6" corresp="#wit-d">And be teoðunge se cyng ⁊ his witan habbað gecoren ⁊ gecweden, ealswa hit riht is, þæt ðriddan dæl þare teoðunge þe to circan gebyrge ga to ciricbote ⁊ oðer dæl þam Godes þeowum, þridde Godes þearfum ⁊ earman þeowetlingan.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And with regard to tithes, the king and his councillors have decided and agreed, in accordance with the principles of justice, that a third part of the tithes which belong to the church shall be assigned to the repair of churches, the second portion to the servants of God and the third portion to God's poor and to poverty-stricken slaves.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und über den Zehnt haben der König und seine Witan entschieden und bestimmt, wie es recht ist, dass der dritte Theil des Zehnten, welcher der Kirche zukommt, der Kirchenausbesserung zugehe und das zweite Drittel den Gottesdienern, das dritte Gottes Elenden und armen Knechten.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And concerning tithe, the king and his witan have chosen and declared, as is right, that a third part of the tithe that belongs to the church go to the repair of the church, and the second [third] to the servants of God, the third to God's poor and needy slaves.</ab>
+        <note type="editorial">From here only in D. Liebermann notes that D treats texts arbitrarily (abridging, adding, altering and mixing), so the external authority for what follows, which G does not lack merely by chance, is slight; but c. 43 was written after Edward II was forgotten and before 1016, and Cnut used other chapters.</note>
       </div>
     </body>
   </text>

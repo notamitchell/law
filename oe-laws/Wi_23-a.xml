@@ -3,33 +3,34 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Wi 23 [a]</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Oliver</name></respStmt>
+        <title>Wi 23[a]</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Wi_23-a</idno>
-        <idno type="citation">Wi 23 [a]</idno>
+        <idno type="citation">Wi 23[a]</idno>
         <idno type="lawCode">Wi</idno>
         <idno type="lawCodeAnchor">Wi</idno>
-        <idno type="clause">23 [a]</idno>
+        <idno type="clause">23[a]</idno>
         <idno type="citationKey">Wi 23a</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">14</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Wihtræd</title> <note type="reign">r.690–725</note></bibl>
+        <bibl type="legalText"><title>Wihtred’s Code</title> <note type="reign">Wihtred, r. 690/1–725</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">14</biblScope></bibl>
+          <bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002), p. <biblScope unit="page">160</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922), p. <biblScope unit="page">29</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>H</witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Oliver, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">23 [a]</idno>
-          <idno type="editorNumber" n="Oliver">18</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +48,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 189 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 186 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 14.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
-      <div type="clause" n="23 [a]">
-        <head><ref type="lawCode" target="law:Wi">Wi</ref> 23 [a]</head>
-        <ab type="selectedText" xml:lang="und">Gif man gedes þeuwne esne in heora gemange tihte, his drythen hine his ane aþe geclænsie, gif he huslgenga sie.</ab>
-        <ab type="translation" xml:lang="en">If a person should bring a charge against an unfree servant of a fellowship(?) in their midst, let his lord clear him by his oath alone, if he [the lord] is a communicant.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif man Gedes þeuwne esne in heora gemange tihte, his drythen hine his ane aþe geclænsie, gif he huslgenga sie;</ab>
+      <div type="clause" n="23[a]">
+        <head><ref type="lawCode" target="law:Wi">Wi</ref> 23[a]</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="23[a]" corresp="#wit-h">Gif man Gedes þeuwne esne in heora gemange tihte, his dryhten hine his ane aþe geclænsie, gif he huslgenga sie;</ab>
+        <ab type="editionText" xml:lang="ang" source="#oliver" n="18" corresp="#wit-h">Gif man gedes þeuwne esne in heora gemange tihte, his drythen hine his ane aþe geclænsie, gif he huslgenga sie.</ab>
+        <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If a person should bring a charge against an unfree servant of a fellowship(?) in their midst, let his lord clear him by his oath alone, if he [the lord] is a communicant.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If anyone brings an accusation against a bond servant of a company in presence of the company, his lord shall clear him by his own oath if he (the lord) is a communicant.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand einen Slavenknecht [eines] Gottes[hauses] in ihrer [der Hörigen] Gemeinde anklagt, so reinige diesen sein Herr durch seinen alleinigen Eid, wenn der [Herr] Abendmahlsgänger ist;</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If someone accuses a slave-servant of a church in their [the dependants’] community, let his lord clear him by his sole oath, if that [lord] is a communicant;</ab>
       </div>
     </body>
   </text>

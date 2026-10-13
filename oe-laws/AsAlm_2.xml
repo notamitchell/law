@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>As Alm 2</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,23 +18,18 @@
         <idno type="lawCodeAnchor">AsAlm</idno>
         <idno type="clause">2</idno>
         <idno type="citationKey">AsAlm 2</idno>
-        <idno type="legalText">As Alms</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">148</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Æthelstan Alms</title></bibl>
+        <bibl type="legalText"><title>Æthelstan’s Charities Ordinance</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">148</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">Ld</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-ld" rend="bold"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">Ld: Archaionomia Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">2</idno>
-          <idno type="editorNumber" n="Attenborough">2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -50,16 +48,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 750 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 736 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 148.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:AsAlm">As Alm</ref> 2</head>
-        <ab type="selectedText" xml:lang="und">⁊ gif gereafa ðis oferheald, gebete XXX scill., ⁊ sie þæt feoh gedæled ðæm ðearfum ðe on ða tun synd, ðe ðis ungefremed wunie, on ðæs bisceopes gewitnesse.</ab>
-        <ab type="translation" xml:lang="en">And if the reeve neglects [to do] this, he shall pay 30 shillings compensation, and the money shall be divided, with the cognisance of the bishop, among the poor who are on the estate where [this] remains unfulfilled.</ab>
-        <ab type="supplementaryText" xml:lang="und">Et si prepositus hoc superteneat, emendet triginta sol., et diuidatur hęc pecunia per testimonium episcopi pauperibus qui in ipsa uilla sunt, ubi hoc non fuerit executum.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-ld">⁊ gif se gereafa ðis oferheald, gebete XXX scill., ⁊ sie þæt feoh gedæled ðæm ðearfum ðe on ða tun synd, ðe ðis ungefremed wunie, on ðæs bisceopes gewitnesse.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2" corresp="#wit-q">Et si prepositus hoc superteneat, emendet triginta sol., et diuidatur hęc pecunia per testimonium episcopi pauperibus qui in ipsa uilla sunt, ubi hoc non fuerit executum.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="2" corresp="#wit-ld">⁊ gif gereafa ðis oferheald, gebete XXX scill., ⁊ sie þæt feoh gedæled ðæm ðearfum ðe on ða tun synd, ðe ðis ungefremed wunie, on ðæs bisceopes gewitnesse.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-ld">And if the reeve neglects [to do] this, he shall pay 30 shillings compensation, and the money shall be divided, with the cognisance of the bishop, among the poor who are on the estate where [this] remains unfulfilled.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn der [königliche] Vogt dies versäumt, büsse er 30 Schill., und werde dies Geld unter Zeugniss des Bischofs den Armen vertheilt, die in jenem Herrschaftsbezirke sind, wo dies unausgeführt geblieben ist.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if the [royal] reeve neglects this, let him pay 30 shillings in compensation, and let this money be distributed, under the witness of the bishop, to the poor who are in that estate where this has remained undone.</ab>
+        <note type="editorial">II As follows in both Ld and Quadr.</note>
       </div>
     </body>
   </text>

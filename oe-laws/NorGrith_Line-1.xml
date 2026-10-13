@@ -3,33 +3,32 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Nor. Cyricgrið Line 1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Rabin</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Wulfstan</name></respStmt>
+        <title>Nor Grið Line 1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">NorGrith_Line-1</idno>
-        <idno type="citation">Nor. Cyricgrið Line 1</idno>
-        <idno type="lawCode">Nor. Cyricgrið</idno>
+        <idno type="citation">Nor Grið Line 1</idno>
+        <idno type="lawCode">Nor Grið</idno>
         <idno type="lawCodeAnchor">NorGrith</idno>
         <idno type="clause">Line 1</idno>
         <idno type="citationKey">NorGrith line1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">473</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Norðhymbra Cyricgrið</title></bibl>
+        <bibl type="legalText"><title>Norðhymbra cyricgrið (Northumbrian Church-Sanctuary)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">473</biblScope></bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>G(B)</witness>
+          <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">G(B): British Library, MS Cotton Nero A.i Rabin, ed.</bibl>
-        <bibl type="supplementaryText">G(B): British Library, MS Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">Line 1</idno>
-          <idno type="editorNumber" n="Rabin">1[a]</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +47,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2303 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2238 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 473.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Line 1">
-        <head><ref type="lawCode" target="law:NorGrith">Nor. Cyricgrið</ref> Line 1</head>
-        <ab type="selectedText" xml:lang="und">And on Norðhymbra lage is sanctus Petrus cyricfrið and sanctus Wilfriðus and sanctus lohannes binnan cyricwagum þreo hundred æt cwicum men, and æt dædum botleas.</ab>
-        <ab type="translation" xml:lang="en">And according to the law of the Northumbrians, the compensation owed for a violation of Church sanctuary at Saint Peter’s, Saint Wilfrid’s, and within the walls of Saint John’s is three hundred if the victim is alive, but it cannot be compensated for if he is dead.</ab>
-        <ab type="supplementaryText" xml:lang="und">[1] 7 on Norðhymbra lage is sanctus Petrus</ab>
+        <head><ref type="lawCode" target="law:NorGrith">Nor Grið</ref> Line 1</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Line 1" corresp="#wit-g-b">[1] 7 on Norðhymbra lage is s<hi rend="italic">anctu</hi>s Petrus</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" n="1[a]" corresp="#wit-g-b">And on Norðhymbra lage is sanctus Petrus cyricfrið and sanctus Wilfriðus and sanctus lohannes binnan cyricwagum þreo hundred æt cwicum men, and æt dædum botleas.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-b">And according to the law of the Northumbrians, the compensation owed for a violation of Church sanctuary at Saint Peter’s, Saint Wilfrid’s, and within the walls of Saint John’s is three hundred if the victim is alive, but it cannot be compensated for if he is dead.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">1. Und im Northumbrer-Recht beträgt [Busse für Verletzung von] Kirchenfrieden des H. Petrus und des H. Wilfrid und des H. Johann innerhalb der Kirchenmauern 3 ‘Hundert’ beim lebend [gebliebenen verletzten] Menschen, und bei getödtetem [ist die That durch Geld] unabbüssbar.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">1. And in Northumbrian law [the compensation for breach of] the church-peace of St Peter and of St Wilfrid and of St John within the church walls is 3 ‘hundreds’ for a person [injured but] still living, and for one killed [the deed is] beyond compensation [by money].</ab>
+        <note type="editorial">MS G (Cotton Nero A I, f. 96v, after VIII Atr. 5.2, hand c. 1070). Liebermann numbers this text by manuscript line (1–9), as the sheet does; erasure, wear and chemicals have made it partly illegible, and the bracketed letters are his supplements (with readings from G. F. Warner, 1902). Clause 1 runs over lines 1–5. The churches are York Minster, Ripon and Beverley; Wilfrid died 709, John 721; 1 ‘hundred’ of silver = 8 pounds. Liebermann dates the text c. 1015–c. 1050 and compares VIII Atr 1.1, 4 and 4.1. Column K is one line of the MS per row; Liebermann's German and the English are given on the row where each clause begins.</note>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II As 14.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,23 +20,20 @@
         <idno type="citationKey">IIAs 14.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">158</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Æthelstan</title></bibl>
+        <bibl type="legalText"><title>II Æthelstan (Grately)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">158</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Ot</witness>
-          <witness>Ld</witness>
-          <witness>So</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-ot"><abbr>Ot</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-so"><abbr>So</abbr> <note type="manuscript">William Somner's transcript of Cotton Otho B.xi (made before the fire)</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">14.1</idno>
-          <idno type="editorNumber" n="Attenborough">14.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -52,16 +52,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 781 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 766 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 158.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="14.1">
         <head><ref type="lawCode" target="law:IIAs">II As</ref> 14.1</head>
-        <ab type="selectedText" xml:lang="und">⁊ gif se mynetere fúl wurðe, slea mon of þa hond, ðe he ðæt fúl mid worhte, ⁊ sette up on ða mynetsmiððan; ⁊ gif hit þonne tyhtle sy, ⁊ he hine ladian wille, ðonne ga he to þam hatum isene, ⁊ ladige þa hond, mid ðe mon tyhð, ðæt he ðæt facen mid worhte; ⁊ gif he on þam ordale ful wurðe, dó mon þæt ilce, swa hit ær beforan cwæð.</ab>
-        <ab type="translation" xml:lang="en">And if a moneyer is found guilty [of issuing base or light coins] the hand shall be cut off with which he committed the crime, and fastened up on the mint. But if he is accused and he wishes to clear himself, then shall he go the the hot iron [ordeal] and redeem the hand with which he is accused of having committed the crime. And if he is proved guilty the same punishment shall be inflicted as we have already declared.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif se mynetere ful wurþe, slea mon ða hand of, ðe þæt ful mid worhte, ⁊ sette ufan on ða minetsmiþan. Gif hit ðonne tyhtle sy, ⁊ he hine ladian wille, ðonne gá he to hatum isene ⁊ ladie ða hand, mid ðæm mon tyhþ, þæt he þæt facn worhte. Gif he ðonne on ðæm ordale ful wurþe, dó man þæt ylce, swa hit her beforan cwyþ.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14.1" corresp="#wit-ld">Gif se mynetere ful wurþe, slea mon ða hand of, ðe þ<hi rend="italic">æt</hi> ful mid worhte, ⁊ sette ufan on ða minetsmiþan. Gif hit ðonne tyhtle sy, ⁊ he hine ladian wille, ðonne gá he to hatum isene ⁊ ladie ða hand, mid ðæm mon tyhþ, þ<hi rend="italic">æt</hi> he þ<hi rend="italic">æt</hi> facn worhte. Gif he ðonne on ðæm ordale ful wurþe, dó man þæt ylce, swa hit her beforan cwyþ.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14.1" corresp="#wit-h">⁊ gif se mynetere fúl wurðe, slea mon of þa hond, ðe he ðæt fúl mid worhte, ⁊ sette up on ða mynetsmiððan; ⁊ gif hit þonne tyhtle sy, ⁊ he hine ladian wille, ðonne ga he to þam hatum isene ⁊ ladige þa hond, mid ðe mon tyhð, ðæt he þæt facen mid worhte; ⁊ gif he on þam ordale ful wurðe, dó mon þæt ilce, swa hit ær beforan cwæð.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14.1" corresp="#wit-ot">[Gif se] mynetere ful wurðe, slea man ða hand of, ðe he þæt ful [mid wor]hte, ⁊ sette upp an þa mynetsmyðþan. Gif hit þonne [tyhtle] sie, ⁊ he hine ladian wille, þonne ga he to hatum isene ⁊ ladie [þa hand, m]id þe man tyhð, þæt þæt facen worhte. Gif he þonne on þam or[dale ful] wurþe, do man þæt ylce swa hit her beforan cweð.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="14.1" corresp="#wit-q">Si monetarius reus fuerit, amputetur eius (ei) manus et ponatur supra monete fabricam. Si inculpatio sit, et se purgare uelit, eat ad ferrum calidum et allegiet manum que inculpatur (adcausatam) quod falsum fecerit. Si in ordalio reus fuerit, fiat ei quod supra dictum est.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="14.1" corresp="#wit-h">⁊ gif se mynetere fúl wurðe, slea mon of þa hond, ðe he ðæt fúl mid worhte, ⁊ sette up on ða mynetsmiððan; ⁊ gif hit þonne tyhtle sy, ⁊ he hine ladian wille, ðonne ga he to þam hatum isene, ⁊ ladige þa hond, mid ðe mon tyhð, ðæt he ðæt facen mid worhte; ⁊ gif he on þam ordale ful wurðe, dó mon þæt ilce, swa hit ær beforan cwæð.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And if a moneyer is found guilty [of issuing base or light coins] the hand shall be cut off with which he committed the crime, and fastened up on the mint. But if he is accused and he wishes to clear himself, then shall he go the the hot iron [ordeal] and redeem the hand with which he is accused of having committed the crime. And if he is proved guilty the same punishment shall be inflicted as we have already declared.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Und H) wenn der Münzer [der Fälschung] schuldig ertappt wird, haue man die Hand ab, mit der er die Fälschung verübt hat und befestige [sie] (oben Ld) über der Münzschmiede; (und H) wenn es dagegen [nur] Anklage ist, und er sich [davon] reinigen will, dann gehe er zum heissen Eisen[ordal] und reinige die Hand, mit welcher er verklagt ist, dass er die Fälschung damit verübt habe; (und H) wenn er (aber So Ld) in diesem Ordal schuldig erscheint, thue man [ihm] dasselbe, wie es eben (hier Ot Ld) zuvor lautet(e H).</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(And, H) if the moneyer is caught guilty [of forgery], let the hand be struck off with which he committed the forgery and fastened (up, Ld) over the mint; (and, H) if on the other hand it is [only] an accusation, and he wishes to clear himself [of it], then let him go to the hot iron [ordeal] and clear the hand with which he is accused of having committed the forgery; (and, H) if (however, So Ld) he is found guilty in this ordeal, let the same be done [to him] as it just (here, Ot Ld) said above.</ab>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Rect 2</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Gobbitt</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Gobbitt</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,23 +18,18 @@
         <idno type="lawCodeAnchor">Rect</idno>
         <idno type="clause">2</idno>
         <idno type="citationKey">Rect 2</idno>
-        <idno type="legalText">Rect.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">445</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Rectitudines singularum personarum</title></bibl>
+        <bibl type="legalText"><title>Rectitudines Singularum Personarum</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">445</biblScope></bibl>
+          <bibl xml:id="gobbitt" type="edition">Thom Gobbitt, ed., ‘Rectitudines singularum personarum’ and ‘Gerefa’, <title>Early English Laws</title> (earlyenglishlaws.ac.uk)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">B: earlyenglishlaws ac.uk: RSP+Gerefa Gobbitt, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">2</idno>
-          <idno type="editorNumber" n="Gobbitt">2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -49,16 +47,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2146 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2089 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 445.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:Rect">Rect</ref> 2</head>
-        <ab type="selectedText" xml:lang="und">GE NEATES RIHT . Geneat riht is mistlic be ðam ðe onlan|de stænt . on sumon he sceal land gafol syllan 7 gærsswyn . on geare . 7 ridan 7 auerian 7 lade lædan. wyrcan . 7 hlaford feormian. ripan 7 mawan . deorhege heawan. 7 sæte haldan .bytlian . 7 burh hegegian nigefaran to tune feccan . cyricsceat syllan . 7 ælmes feoh . heafod|wearde healdan .7 horswearde . ærendi|an . fyr . swa nyr . swa hwyder swa him mon to tæcð.</ab>
-        <ab type="translation" xml:lang="en">The duty of the tenant The duty of the tenant is diverse, according to [the customs] that stand on the estate. In some he must pay land tax and a pasturage pig each year, and ride and provide horses for team work and carry loads, labour, provide food for the lord, reap and mow, cut the animal-hedge, and maintain snares, build and fence the dwellings within an enclosure, and lead newcomers to the enclosure, pay church tribute and alms money, hold head-guard (duties) and guard horses, go on errands, either further or nearer or to wherever he is sent.</ab>
-        <ab type="supplementaryText" xml:lang="und">[2] Geneates riht. Geneatriht is mistlic be ðam ðe on lande stænt: on sumon he sceal landgafol syllan 7 gærsswyn on geare 7 ridan 7 auerian 7 lade lædan, wyrcan 7 hlaford feormian, ripan 7 mawan, deorhege heawan 7 sæte haldan, bytlian 7 burh hegegian, nigefaran to tune feccan, cyricsceat syllan 7 aelmesfeoh, heafodwearde healdan 7 horswearde, ærendian fyr swa nyr, swa hwyder swa him mon to tæcð.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-b">[2] Geneates riht. Geneatriht is mistlic be ðam ðe on lande stænt: on sumon he sceal landgafol syllan 7 gærsswyn on geare 7 ridan 7 auerian 7 lade lædan, wyrcan 7 hlaford feormian, ripan 7 mawan, deorhege heawan 7 sæte haldan, bytlian 7 burh hegegian, nigefaran to tune feccan, cyricsceat syllan 7 aelmesfeoh, heafodwearde healdan 7 horswearde, ærendian fyr swa nyr, swa hwyder swa him mon to tæcð.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2" corresp="#wit-q">(Uillani.) Uillani rectum est uarium et multiplex, secundum quod in terra statutum est: in quibusdam terris debet dare landgablum et gærsspin (id est porcum herbagii) et equitare et aueriare et summagium ducere, operari et dominum suum firmare, metere et falcare, deorhege cedere et stabilitatem obseruare, edificare et circumsepire, nouam faram adducere, ciricsceattum dare et ælmesfeoh (id est pecuniam elemosine), heafodwardam custodire et horswardam, in nuntium ire longe uel prope, quocumque dicetur ei.</ab>
+        <ab type="editionText" xml:lang="ang" source="#gobbitt" n="2" corresp="#wit-b">GE NEATES RIHT . Geneat riht is mistlic be ðam ðe onlan|de stænt . on sumon he sceal land gafol syllan 7 gærsswyn . on geare . 7 ridan 7 auerian 7 lade lædan. wyrcan . 7 hlaford feormian. ripan 7 mawan . deorhege heawan. 7 sæte haldan .bytlian . 7 burh hegegian nigefaran to tune feccan . cyricsceat syllan . 7 ælmes feoh . heafod|wearde healdan .7 horswearde . ærendi|an . fyr . swa nyr . swa hwyder swa him mon to tæcð.</ab>
+        <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">The duty of the tenant The duty of the tenant is diverse, according to [the customs] that stand on the estate. In some he must pay land tax and a pasturage pig each year, and ride and provide horses for team work and carry loads, labour, provide food for the lord, reap and mow, cut the animal-hedge, and maintain snares, build and fence the dwellings within an enclosure, and lead newcomers to the enclosure, pay church tribute and alms money, hold head-guard (duties) and guard horses, go on errands, either further or nearer or to wherever he is sent.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Rechtspflicht des Geneat [des persönlich freien Bauern unter Gutsherrschaft]. Geneatpflicht ist verschieden, je nachdem es auf dem Landgute [hofrechtlich] gilt: auf einigen [Gütern] muss er [der Herrschaft] Grundzins zahlen und jährlich ein Schwein als Gras[rechtsentgelt], und reiten und Pferde-Spanndienst leisten, Transportladung führen, [in Frohn] arbeiten und dem [Guts]herrn Gastung leisten, Ernte schneiden und [Heu] mähen, Wildgehege [für des Herrn Jagd] zuhauen und Fangvorrichtung halten, Baudienst leisten und das Herrenhaus [Domänengehöft] umfestigen, fremde Ankömmlinge zum Gutsdorfe holen, Kirchensteuer zahlen und Almosengeld, Leibwache [beim Herrn] halten und Pferdebewachung, Botschaft tragen fern wie nah, wohin immer ihm zugewiesen wird.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">The duty of the geneat [the personally free peasant under a lord's estate]. The geneat's duty varies according to what holds on the estate [by custom]: on some [estates] he must pay [the lord] land-rent and yearly a pig as grass-[rent], and ride and do carrying service with horses, carry loads, work [in labour-service] and provide the [estate-]lord with hospitality, reap and mow, cut the deer-fence [for the lord's hunting] and maintain the hunting-stand, do building work and fence the manor-house, fetch strangers to the village, pay church-scot and alms-money, keep guard [at the lord's side] and guard horses, carry messages far or near, wherever he is directed.</ab>
+        <note type="editorial">Liebermann compares the customs of Tidenham, Gloucestershire (Bath cartulary, c. 1050), and Rect 4.1c and 4a.</note>
       </div>
     </body>
   </text>

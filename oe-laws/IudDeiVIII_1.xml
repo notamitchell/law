@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Iud Dei VIII 1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,14 +19,15 @@
         <idno type="citationKey">IudDeiVIII 1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Iudicium Dei</title></bibl>
-        <bibl type="selectedText">Ca: Cambridge, Corpus Christi College 422 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1</idno>
-        </bibl>
+        <bibl type="legalText"><title>Iudicium Dei VIII (Ordeal Formula)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">415</biblScope></bibl>
+          <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
+        <listWit>
+          <witness xml:id="wit-ca"><abbr>Ca</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 422</note></witness>
+        </listWit>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -32,16 +37,22 @@
         <prefixDef ident="entry" matchPattern="(.+)" replacementPattern="entry.html?id=$1"/>
       </listPrefixDef>
     </encodingDesc>
+    <profileDesc>
+    </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2356 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2287 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 415.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
         <head><ref type="lawCode" target="law:IudDeiVIII">Iud Dei VIII</ref> 1</head>
-        <ab type="selectedText" xml:lang="und">Ic eow halsie þurh ðonne Fæder ⁊ þone Sunu ⁊ þone Halgan gast ⁊ þurh heowerne cristendóm, þe ge uiiderfengon, ⁊ þurh þa halgan rode, þe Crist on ðrowode, ⁊ þurh þa halgan godspel ⁊ ða reliquias, þe on ðisse cyrcan syndon,</ab>
-        <ab type="translation" xml:lang="en">I adjure you by the Father and the Son and the Holy Spirit, and by the Christianity which you have received, and by the holy Cross on which Christ suffered, and by the holy Gospels and the relics which are in this church,</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-ca">Ic eow halsie þurh ðonne Fæder 7 þone Sunu 7 þone Halgan gast 7 þurh heowerne cristendóm, þe ge underfengon, 7 þurh þa halgan rode, þe Crist on ðrowode, 7 þurh þa halgan godspel 7 ða reliquias, þe on ðisse cyrcan syndon,</ab>
+        <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-ca">I adjure you by the Father and the Son and the Holy Spirit, and by the Christianity which you have received, and by the holy Cross on which Christ suffered, and by the holy Gospels and the relics which are in this church,</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Ich beschwöre euch bei dem Vater und dem Sohne und dem Heiligen Geiste und bei eurem Christenthum, welches ihr empfangen habt, und bei dem heiligen Kreuze, an welchem Christus gelitten hat, und bei den heiligen Evangelien und den Reliquien, welche in dieser Kirche sind,</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">I adjure you by the Father and the Son and the Holy Spirit, and by your Christianity which you have received, and by the holy cross on which Christ suffered, and by the holy gospels and the relics which are in this church,</ab>
+        <note type="editorial">Chapter 1 is translated word for word from the Latin ordo printed by Zeumer (Formulae p. 697, no. 5), Liebermann notes.</note>
       </div>
     </body>
   </text>

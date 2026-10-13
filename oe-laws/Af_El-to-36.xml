@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Af El. 36</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -16,29 +19,24 @@
         <idno type="clause">El. 36</idno>
         <idno type="citationKey">Af el</idno>
         <idno type="citationKey">Af 36</idno>
-        <idno type="legalText">Af (domboc)</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">38</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Alfred</title> <note type="reign">r. 871–899</note></bibl>
+        <bibl type="legalText"><title>Alfred’s Domboc</title> <note type="reign">Alfred, r. 871–899</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">38</biblScope></bibl>
+          <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">254</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">E</witness>
-          <witness>H</witness>
-          <witness>B (no Prol.)</witness>
-          <witness>G (Prol. only)</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>Bu</witness>
-          <witness>Ot (frags.)</witness>
+          <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b-no-prol"><abbr>B (no Prol.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
-        <bibl type="selectedText">E: Cambridge, Corpus Christi College, MS 173 Jurasinski and Oliver, eds.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">El. 36</idno>
-          <idno type="editorNumber" n="Jurasinski and Oliver">MP 36</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -56,16 +54,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 358 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 352 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 38.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="El. 36">
         <head><ref type="lawCode" target="law:Af">Af</ref> El. 36</head>
-        <ab type="selectedText" xml:lang="und">Gif mon næbbe buton anfeald hrægl hine mid to wreonne ⁊ to werianne, ⁊ he hit to wedde selle, ær sunnan setlgonge sie hit agifen. Gif ðu swa ne dest, þonne cleopað he to me, ⁊ ic hine gehiere, forðon ðe ic eom swiðe mildheort.</ab>
-        <ab type="translation" xml:lang="en">If someone has but one article with which to cover and clothe himself, and he gives it to you in pledge, let it be returned to him before the setting of the sun. If you do not do so, then he will cry out to me, and I will hear him, because I am greatly merciful.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif man næbbe butan anfeald hrægl hine mid to wreonne oððe to werianne, and he hit to wedde sylle, ær sunnan setlgange sy hit agifen. Gif þu swa ne dest, þonne clypiað hy to me, and ic hy gehyre, forðam þe ic eam swyþe mildheort.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 36" corresp="#wit-h">Gif man næbbe butan anfeald hrægl hine mid to wreonne oððe to werianne, and he hit to wedde sylle, ær sunnan setlgange sy hit agifen. Gif þu swa ne dest, þonne clypiað hy to me, and ic hy gehyre, forðam þe ic eam swyþe mildheort.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 36" corresp="#wit-e">Gif mon næbbe buton anfeald hrægl hine mid to wreonne ⁊ to werianne, ⁊ he hit to wedde selle, ǽr sunnan setlgonge sie hit agifen. Gif ðu swa ne dest, þonne cleopað he to me, ⁊ ic hine gehiere, forðon ðe ic eom swiðe mildheort.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 36" corresp="#wit-q">Si pignus a proximo tuo acceperis uestimentum, ante solis occasum redde illi. Ipsum enim est solum quo operitur indumentum carnis eius, nec habet aliud in quo dormiat. Si clamauerit ad me, exaudiam eum, quia misericors sum.</ab>
+        <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="MP 36" corresp="#wit-e">Gif mon næbbe buton anfeald hrægl hine mid to wreonne ⁊ to werianne, ⁊ he hit to wedde selle, ær sunnan setlgonge sie hit agifen. Gif ðu swa ne dest, þonne cleopað he to me, ⁊ ic hine gehiere, forðon ðe ic eom swiðe mildheort.</ab>
+        <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If someone has but one article with which to cover and clothe himself, and he gives it to you in pledge, let it be returned to him before the setting of the sun. If you do not do so, then he will cry out to me, and I will hear him, because I am greatly merciful.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand nur ein einziges Gewand hat, sich damit zu verhüllen und zu decken, und er es zu Pfand giebt, werde es vor Sonnen-Untergang zurückgegeben. Wenn du nicht so handelst, dann wird er zu mir rufen, und ich erhöre ihn, weil ich sehr barmherzig bin.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If someone has only a single garment to wrap and cover himself with, and he gives it as a pledge, let it be given back before sunset. If you do not act so, then he will cry to me, and I will hear him, because I am very merciful.</ab>
+        <note type="passageSource">Exodus 22,26–27</note>
       </div>
     </body>
   </text>

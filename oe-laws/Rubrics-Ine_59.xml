@@ -3,36 +3,36 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Rubrics: Ine 59</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
+        <title>Ine Rb 59</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Rubrics-Ine_59</idno>
-        <idno type="citation">Rubrics: Ine 59</idno>
-        <idno type="lawCode">Rubrics: Ine</idno>
+        <idno type="citation">Ine Rb 59</idno>
+        <idno type="lawCode">Ine Rb</idno>
         <idno type="clause">59</idno>
-        <idno type="citationKey">Rubrics: Ine 59</idno>
+        <idno type="citationKey">Ine Rb 59</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">24</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Alfred</title></bibl>
+        <bibl type="legalText"><title>Rubrics to Ine’s Laws (in Alfred’s Domboc)</title> <note type="reign">Alfred, r. 871–899</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">24</biblScope></bibl>
+          <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">212</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">E</witness>
-          <witness>H</witness>
-          <witness>Q</witness>
-          <witness>G (Prol.)</witness>
-          <witness>B</witness>
-          <witness>Ot (frag.)</witness>
+          <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-g-prol"><abbr>G (Prol.)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-ot-frag"><abbr>Ot (frag.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
-        <bibl type="selectedText">E: Cambridge, Corpus Christi College, MS 173 Jurasinski&amp;Oliver, eds. B: Cambridge, Corpus Christi College, MS 383 Gesetze. The rubrics from B appear as Calibri.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">59</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +48,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 303 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 298 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 24.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="59">
-        <head>Rubrics: Ine 59</head>
-        <ab type="selectedText" xml:lang="und">CIII Be cuus horne</ab>
-        <ab type="translation" xml:lang="en">Concerning a cow’s horn</ab>
-        <ab type="supplementaryText" xml:lang="und">CIII. Be cúhorne.</ab>
+        <head>Ine Rb 59</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="59" corresp="#wit-h">CIII. Be cúhorne.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="59" corresp="#wit-e">CIII. Be cuus horne.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="59" corresp="#wit-q">De cornu uaccæ.</ab>
+        <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">CIII Be cuus horne</ab>
+        <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning a cow’s horn</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Vom Kuhhorne.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of a cow’s horn.</ab>
       </div>
     </body>
   </text>

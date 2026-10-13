@@ -3,23 +3,25 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>VI Atr (Latin Paraphrase)</title>
+        <title>VI Atr Lat Inscr.</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">VI-Atr-Latin-Paraphrase_part-001</idno>
-        <idno type="citation">VI Atr (Latin Paraphrase)</idno>
-        <idno type="lawCode">VI Atr (Latin Paraphrase)</idno>
+        <idno type="citation">VI Atr Lat Inscr.</idno>
+        <idno type="lawCode">VI Atr Lat</idno>
+        <idno type="clause">Inscr.</idno>
+        <idno type="citationKey">VI Atr Lat inscr.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">247</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VI Atr (Latin Paraphrase)</title></bibl>
+        <bibl type="legalText"><title>VI Æthelred, Latin paraphrase</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">247</biblScope></bibl>
+        </listBibl>
         <listWit>
-          <witness>K</witness>
+          <witness xml:id="wit-k"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
         </listWit>
-        <bibl type="selectedText">K: British Library, Cotton Claudius A.iii Liebermann, ed.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -36,14 +38,15 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1340 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1306 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
-      <div type="clause">
-        <head>VI Atr (Latin Paraphrase)</head>
-        <ab type="selectedText" xml:lang="und">Incipiunt sinodalia decreta.</ab>
+      <div type="clause" n="Inscr.">
+        <head>VI Atr Lat Inscr.</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Inscr." corresp="#wit-k">Incipiunt sinodalia decreta.</ab>
+        <note type="editorial">Latin paraphrase of VI Atr (early 11th c.; K = Cotton Claudius A III f. 30). This passage has no Old English equivalent; Liebermann gives no German translation.</note>
       </div>
     </body>
   </text>

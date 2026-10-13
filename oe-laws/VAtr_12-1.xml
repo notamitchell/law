@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>V Atr 12.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,17 @@
         <idno type="citationKey">VAtr 12.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">241</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>V Atr</title></bibl>
+        <bibl type="legalText"><title>V Æthelred</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">241</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">82</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g"><abbr>G</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-g2"><abbr>G2</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i (second copy)</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G (A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">12.1</idno>
-          <idno type="editorNumber" n="Robertson">12.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +48,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1201 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1169 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 241.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="12.1">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 12.1</head>
-        <ab type="selectedText" xml:lang="und">⁊ gif man ænig lic of rihtscriftscire elles hwar lecge, gelæste man sawlsceat swa ðeah into ðam mynstre þe hit to hirde.</ab>
-        <ab type="translation" xml:lang="en">And if any body is buried elsewhere than in the parish to which it properly belongs, the payment shall nevertheless be made to the church to which the deceased belonged.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ gyf man ænig lic of rihtscriftscire elles hwar lecge, gelæste man saulsceat swa þeh into þam mynstre, þe hit to hyrde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12.1" corresp="#wit-g">⁊ gyf man ænig lic of rihtscriftscire elles hwar lecge, gelæste man saulsceat swa þeh into þam mynstre, þe hit to hyrde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12.1" corresp="#wit-g2">⁊ gif man ænig lic of rihtscriftscire elles hwær lecge, gelæste man saulsceat swa þeh into þam mynstre, þe hit to hyrde.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="12.1" corresp="#wit-d">⁊ gif man ænig lic of rihtscriftscire elles hwar lecge, gelæste man sawlsceat swa ðeah into ðam mynstre þe hit to hirde.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And if any body is buried elsewhere than in the parish to which it properly belongs, the payment shall nevertheless be made to the church to which the deceased belonged.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn man eine Leiche ausserhalb ihres gesetzlichen Beichtsprengels anderswo bestattet, zahle man Seelengeld [für sie] dennoch in die Kirche, zu der sie gehört hat.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if any body is buried elsewhere, outside its proper parish, let soul-scot [for it] nevertheless be paid to the minster to which it belonged.</ab>
+        <note type="editorial">Liebermann compares II Eg 5.2.</note>
       </div>
     </body>
   </text>

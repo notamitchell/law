@@ -3,30 +3,32 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Wal</title>
+        <title>Wal 1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Wal_part-001</idno>
-        <idno type="citation">Wal</idno>
+        <idno type="citation">Wal 1</idno>
         <idno type="lawCode">Wal</idno>
         <idno type="lawCodeAnchor">Wal</idno>
-        <idno type="legalText">Walreaf</idno>
+        <idno type="clause">1</idno>
+        <idno type="citationKey">Wal 1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">392</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Walreaf</title></bibl>
+        <bibl type="legalText"><title>Walreaf (Robbing the Dead)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">392</biblScope></bibl>
+          <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">Wal.</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -44,16 +46,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2097 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2045 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 392.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
-      <div type="clause">
-        <head><ref type="lawCode" target="law:Wal">Wal</ref></head>
-        <ab type="selectedText" xml:lang="und">Walreaf is niðinges dæde: gif hwá ofsacen wille, do þæt mid eahta 7 feowertig fulbórenra þegena.</ab>
-        <ab type="translation" xml:lang="en">Robbing the slain is a villianous act; if anyone wishes to deny it, let him do so with [the help of] 48 noble-born thegns.</ab>
-        <ab type="supplementaryText" xml:lang="und">Wealreaf (id est mortuum refare) est opus niðingi: si quis negare uelit, faciat hoc cum (XLVIII tainis plene nobilibus.</ab>
+      <div type="clause" n="1">
+        <head><ref type="lawCode" target="law:Wal">Wal</ref> 1</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-q">Wealreaf (id est mortuum refare) est opus niðingi: si quis negare uelit, faciat hoc cum XLVIII tainis plene nobilibus.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-h">Walreaf is niðinges dǽde: gif hwá ofsacen wille, do þæt mid eahta ⁊ feowertig fulbórenra þegena.</ab>
+        <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-h">Robbing the slain is a villianous act; if anyone wishes to deny it, let him do so with [the help of] 48 noble-born thegns.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Leichenberaubung ist That eines [Fried- und] Ehrlosen: wenn es einer ableugnen will, thue er das mit [Eideshilfe von] 48 vollgeborenen Thegnas.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Robbing a corpse is the deed of a nithing [a man without peace or honour]: if anyone wishes to deny it, let him do so with [the oath-help of] 48 fully-born thegns.</ab>
+        <note type="editorial">The Latin is the Quadripartitus; Liebermann's Old English is from H (Textus Roffensis f. 32v, after Ordal, same hand, c. 1120; perhaps a fragment of a law, after c. 910 because of Norse influence). Liebermann explains ‘niðing’ as ‘worthless, wretched man’. In the Quadripartitus it follows Pax; IV Atr follows it. K: a stray opening bracket before ‘XLVIII’ removed. Clause number 1 added (this text has a single clause). Liebermann compares I Cn 3 and 6.2a (MS A).</note>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>I Cn 18a</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">ICn 18a</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">298</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>I Cn</title></bibl>
+        <bibl type="legalText"><title>I Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">298</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">168</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness rend="bold">G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a" rend="bold"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">G(A): British Library, Cotton Nero A.i (up to, and including, cap.14.2; thereafter B.) B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">18a</idno>
-          <idno type="editorNumber" n="Robertson">18a</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +53,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1710 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1667 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 298.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="18a">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 18a</head>
-        <ab type="selectedText" xml:lang="und">Forðam ealle we sceolan ænne timan gebidan, þæt us wære leofra ðonne all þæt on middanearde is, ðæ[t] we aworhton, ða hwile ðe we mihton, georne Godes willan.</ab>
-        <ab type="translation" xml:lang="en">For we shall all arrive at a time when we shall wish, above all else in the world, that we had zealously done the will of God, as long as we could.</ab>
-        <ab type="supplementaryText" xml:lang="und">Forðam ealle we sceolon ænne timan gebidan, þonne us wære leofra þonne eall þæt on middanearde is, þær we á worhtan, þa hwile, þe we mihton, georne Godes willan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18a" corresp="#wit-g-a">Forðam ealle we sceolon ænne timan gebidan, þonne us wære leofra þonn<hi rend="italic">e</hi> eall þ<hi rend="italic">æt</hi> on middanearde is, þær we á worhtan, þa hwile, þe we mihton, georne Godes willan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18a" corresp="#wit-a">Forðam ealle we sculon anne timan gebydan, þonne us ware leofre þonn eall þæt on middanearde is, þæt we aworhton þa hwile, þe we mihton, georne Godes willan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18a" corresp="#wit-b">Forðam ealle we sceolan ænne timan gebidan, þæt us wære leofra ðonne [all] þæt on middaneearde is, ðær we aworhton ða hwile, ðe we mihton, georne Godes willan.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="18a" corresp="#wit-q">quia singulos nos tempus expectat, quo nobis esset carius, quam quicquid in orbe terrarum mundus obtinuit, Dei nostri uoluntatem fecisse, dum licuit.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="18a" corresp="#wit-b">Forðam ealle we sceolan ænne timan gebidan, þæt us wære leofra ðonne all þæt on middanearde is, ðæ[t] we aworhton, ða hwile ðe we mihton, georne Godes willan.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">For we shall all arrive at a time when we shall wish, above all else in the world, that we had zealously done the will of God, as long as we could.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Denn wir alle werden Einen Zeitpunkt erleben, da uns lieber denn alles was auf Erden ist [das] sein würde, dass (vorher? hätten dort G) wir Gottes Willen die Zeitdauer über, da wir konnten, eifrig (stets G) gethan hätten.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">For we shall all live to see a time when it would be dearer to us than everything on earth that (before? had there, G) we had eagerly (always, G) done God's will while we could.</ab>
+        <note type="editorial">G's ‘þær we á worhtan’ (A, Ld ‘þæt’); Liebermann would perhaps correct to ‘þæt ær’, as in 18.2 in A. Liebermann compares Wulfstan p. 113.; Robertson (p. 139) takes I Cn from B, which begins at ‘mæssedæg’ in 14.2, the earlier clauses being supplied from G</note>
       </div>
     </body>
   </text>

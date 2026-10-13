@@ -4,8 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Wi 5</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +21,16 @@
         <idno type="citationKey">Wi 5</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">12</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Wihtræd</title> <note type="reign">r.690–725</note></bibl>
+        <bibl type="legalText"><title>Wihtred’s Code</title> <note type="reign">Wihtred, r. 690/1–725</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">12</biblScope></bibl>
+          <bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002), p. <biblScope unit="page">154</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922), p. <biblScope unit="page">25</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>H</witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Oliver, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">5</idno>
-          <idno type="editorNumber" n="Oliver">4</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +48,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 165 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 162 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 12.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5">
         <head><ref type="lawCode" target="law:Wi">Wi</ref> 5</head>
-        <ab type="selectedText" xml:lang="und">Gif ðæs geweorþe gesiþcundne mannan ofer þis gemot, þæt he unrihthæmed genime ofer cyngæs bebod ⁊ biscopes ⁊ boca dom, se þæt gebete his dryhtne C scƚƚ an ald reht.</ab>
-        <ab type="translation" xml:lang="en">If after this assembly [something] of this [nature] befalls to a gesiþ-born man, that he should take up an unlawful union against the king’s command and the bishop’s and the decrees of the books, he makes restitution for that to his lord with 100 shillings according to established right.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif ðæs geweorþe gesiþcundne mannan ofer þis gemot, þæt he unriht hæmed genime ofer cyngæs bebod ⁊ biscopes ⁊ boca dom, se þæt gebete his dryhtne C scll' an ald reht.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-h">Gif ðæs geweorþe gesiþcundne mannan ofer þis gemot, þ<hi rend="italic">æt</hi> he unriht hæmed genime ofer cyngæs bebod ⁊ biscopes ⁊ boca dom, se þæt gebete his dryhtne C scll' an ald reht.</ab>
+        <ab type="editionText" xml:lang="ang" source="#oliver" n="4" corresp="#wit-h">Gif ðæs geweorþe gesiþcundne mannan ofer þis gemot, þ<hi rend="italic">æt</hi> he unrihthæmed genime ofer cyngæs bebod ⁊ biscopes ⁊ boca dom, se þæt gebete his dryhtne C scƚƚ an ald reht.</ab>
+        <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If after this assembly [something] of this [nature] befalls to a <hi rend="italic">gesiþ</hi>-born man, that he should take up an unlawful union against the king’s command and the bishop’s and the decrees of the books, he makes restitution for that to his lord with 100 shillings according to established right.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If after this meeting, a nobleman presumes to enter into an illicit union, despite the command of the king and the bishop, and the written law, he shall pay 100 shillings compensation to his lord, in accordance with established custom.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn es einem Mann vom [Kriegs]gefolgschaftsstande nach dieser [Staats]versammlung begegnet, dass er gesetzwidrige [Ehe-]Verbindung eingeht gegen das Gebot des Königs und Bischofs und der Bücher Spruch, der büsse das seinem Herrn mit 100 Schll. nach altem Recht.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If it happens to a man of the [military] retainer class after this [national] assembly that he enters an unlawful [marriage] union against the command of the king and bishop and the decree of the books, let him make amends for it to his lord with 100 shillings according to old law.</ab>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>V Atr 30</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,17 @@
         <idno type="citationKey">VAtr 30</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">245</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>V Atr</title></bibl>
+        <bibl type="legalText"><title>V Æthelred</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">245</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">86</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g"><abbr>G</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-g2"><abbr>G2</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i (second copy)</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G (A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">30</idno>
-          <idno type="editorNumber" n="Robertson">30</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +48,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1228 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1196 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 245.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="30">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 30</head>
-        <ab type="selectedText" xml:lang="und">⁊ gif hwa ymbe cyninc sirewe, beo his feores scildig, buton he hine ladige be þam deopestan þe witan gerædan.</ab>
-        <ab type="translation" xml:lang="en">And if anyone plots against the king, he shall forfeit his life, unless he clears himself by the most solemn oath determined upon by the authorities.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ gyf hwa ymb cyninges feoh syrwe, sy he his feores scyldig; ⁊ gif he ladian wille, do þæt be ðæs cynges wergylde oððe mid þryfealdan ordale on Engla lage.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="30" corresp="#wit-g">⁊ gyf hwa ymb cyninges feorh syrwe, sy he his feores scyldig; ⁊ gif he ladian wille, do þ<hi rend="italic">æt</hi> be ðæs cynges wergylde oððe mid þryfealdan ordale on Engla lage.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="30" corresp="#wit-g2">⁊ gif hwa ymbe cyninges feorh syrwe, sy he his feores scyldig; ⁊ gif he ladigan wille, do þæt be þæs cynge wyrgylde oððe mid þryfealdan ordale on Engla lage.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="30" corresp="#wit-d">⁊ gif hwa ymbe cyninc sirewe, beo his feores scildig, buton he hine ladige be þam deopestan þe witan gerædan.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And if anyone plots against the king, he shall forfeit his life, unless he clears himself by the most solemn oath determined upon by the authorities.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn jemand nach dem Leben des Königs trachtet, sei er [des Verlustes] seines Lebens schuldig; und (ausser D) wenn er sich [von der Anklage] reinigen will, thue er das [durch Eid] in Höhe von des Königs Wergeld oder durch dreifaches Ordal nach Engländer-Recht (durch den schwersten [Beweis], den die Witan [des Gerichts] bestimmen D).</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if anyone plots against the king's life, let him be liable [to lose] his life; and if he wishes to clear himself (unless, D), let him do so [by oath] to the amount of the king's wergild, or by the threefold ordeal according to English law (by the heaviest [proof], which the witan [of the court] decide, D).</ab>
+        <note type="editorial">K had ‘feoh’ (money) for ‘feorh’ (life). G2 adds two lines in the upper margin (12th c.), largely cut away by the binder. Liebermann compares Af 4, 4.1.</note>
       </div>
     </body>
   </text>

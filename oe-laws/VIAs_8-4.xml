@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>VI As 8.4</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">VIAs 8.4</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">179</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VI Æthelstan</title></bibl>
+        <bibl type="legalText"><title>VI Æthelstan (London Peace-Guild)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">179</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">8.4</idno>
-          <idno type="editorNumber" n="Attenborough">[8].4</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +47,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 887 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 867 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 179.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="8.4">
         <head><ref type="lawCode" target="law:VIAs">VI As</ref> 8.4</head>
-        <ab type="selectedText" xml:lang="und">⁊ gif man spór gespirige of scyre on oðre, fon þa menn tó þe þar nycst syndon ⁊ drifan þæt spór, oð hit man þam gerefan gecyðe: fó hé syððan tó mid his monunge ⁊ adrife þæt spór út of his scíre, gif he mage; gif he þonne ne mæge, forgylde þæt yfre angylde. ⁊ habban þa gerefscypas begen þa fullan spæce gemæne, si swa hwær swa hit sy, swa be norðan mearce swa be suðan, á of scire on oðre—þæt ælc gerefa fylste oðrum to ure ealra friðe, be cynges oferhyrnesse.</ab>
-        <ab type="translation" xml:lang="en">And if anyone traces a trail from one district to another, the men who are nearest shall take up the trail, follow it until it can be brought to the notice of the reeve. Afterwards, he, with the men under his jurisdiction, shall take up the trail and follow it, if he can, to the boundary of his district. If, however, he cannot, he shall pay the value of the cattle, and the whole case shall be undertaken by the authorities of the two districts in common wheresoever it may happen that a trail passes from one district to another, whetherto the north or the south of our borders — all reeves shall help one another to maintain the security upon which we are all dependent or pay the fine for insubordination to the king.</ab>
-        <ab type="supplementaryText" xml:lang="und">Et si uestigium minetur ab una scyra in aliam, excipiant hoc qui propiores (proximiores) aderunt et educant illud uestigium; uel indicetur preposito: et ipse postea suscipiat cum monicione sua et minet uestigium illud extra scyram suam, si possit; si non possit, reddat ipsum pecus uno gildo. Et habeant ambe prepositure placitum hoc (questionis huius) in communi, sit alterutrum quod sit, sic a septentrionali merca sic ab australi: semper de scyra in aliam (scyram) omnis prepositus adiuuet alium ad pacem omnium nostrum per regis ouerhyrnessam.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="8.4" corresp="#wit-h">⁊ gif man spór gespirige of scyre on oðre, fon þa menn tó þe þar nycst syndon ⁊ drifan þæt spór, oð hit man þam gerefan gecyðe: fó hé syððan tó mid his monunge ⁊ adrife þæt spór út of his scíre, gif he mage; gif he þonne ne mæge, forgylde þæt yrfe angylde. ⁊ habban þa gerefscypas begen þa fullan spæce gemæne, si swa hwær swa hit sy, swa be norðan mearce swa be suðan: á of scire on oðre þæt ælc gerefa fylste oðrum to ure ealra friðe, be cynges oferhyrnesse.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="8.4" corresp="#wit-q">Et si uestigium minetur ab una scyra in aliam, excipiant hoc qui propiores (proximiores) aderunt et educant illud uestigium; uel indicetur preposito: et ipse postea suscipiat cum monicione sua et minet uestigium illud extra scyram suam, si possit; si non possit, reddat ipsum pecus uno gildo. Et habeant ambe prepositure placitum hoc (questionis huius) in communi, sit alterutrum quod sit, sic a septentrionali merca sic ab australi: semper de scyra in aliam (scyram) omnis prepositus adiuuet alium ad pacem omnium nostrum per regis ouerhyrnessam.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="[8].4" corresp="#wit-h">⁊ gif man spór gespirige of scyre on oðre, fon þa menn tó þe þar nycst syndon ⁊ drifan þæt spór, oð hit man þam gerefan gecyðe: fó hé syððan tó mid his monunge ⁊ adrife þæt spór út of his scíre, gif he mage; gif he þonne ne mæge, forgylde þæt yfre angylde. ⁊ habban þa gerefscypas begen þa fullan spæce gemæne, si swa hwær swa hit sy, swa be norðan mearce swa be suðan, á of scire on oðre—þæt ælc gerefa fylste oðrum to ure ealra friðe, be cynges oferhyrnesse.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And if anyone traces a trail from one district to another, the men who are nearest shall take up the trail, follow it until it can be brought to the notice of the reeve. Afterwards, he, with the men under his jurisdiction, shall take up the trail and follow it, if he can, to the boundary of his district. If, however, he cannot, he shall pay the value of the cattle, and the whole case shall be undertaken by the authorities of the two districts in common wheresoever it may happen that a trail passes from one district to another, whetherto the north or the south of our borders — all reeves shall help one another to maintain the security upon which we are all dependent or pay the fine for insubordination to the king.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn man die Spur [verlorenen Viehs] von einer Grafschaft in die andere verfolgt, so sollen die Leute, welche dort zunächst wohnen, [sie] aufnehmen und die Spur verfolgen, bis man es dem [Grafschafts]vogt künde: der nehme sie dann mit seinem Bezirk[svolke] auf und leite die Spur aus seiner Grafschaft hinaus, wenn er kann; wenn er [das] aber nicht kann, bezahle er das Vieh mit einfachem Ersatz. Und es erhalten beide Sheriffsämter [das, wo Eigenthümer wohnt, und das des Spurendes] die ganze Klagesache gemeinsam, sei es, wo immer es sei, entweder nördlich der Grenze [unserer Grafschaft] oder südlich: dass immer aus einer Grafschaft in die andere jeder [Grafschafts-]vogt dem anderen helfe zu unser aller Polizeiordnung bei [Strafe der Busse für] Ungehorsam gegen den König.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if the track [of lost cattle] is followed from one shire into another, then the men who live nearest there are to take [it] up and follow the track until it is reported to the [shire-]reeve: let him then take it up with the [people of his] district and lead the track out of his shire, if he can; but if he cannot [do that], let him pay for the cattle with single compensation. And both sheriffdoms [that where the owner lives and that where the track ends] are to have the whole suit in common, wherever it may be, whether north of the boundary [of our shire] or south: so that always from one shire to another every [shire-]reeve help the other for the peace of us all, on [pain of the fine for] disobedience to the king.</ab>
       </div>
     </body>
   </text>

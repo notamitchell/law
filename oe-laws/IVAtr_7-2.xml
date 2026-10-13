@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>IV Atr 7.2</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,21 +18,17 @@
         <idno type="lawCodeAnchor">IVAtr</idno>
         <idno type="clause">7.2</idno>
         <idno type="citationKey">IVAtr 7.2</idno>
-        <idno type="legalText">IVAtr (Latin)</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">236</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>IVAtr (Latin)</title></bibl>
+        <bibl type="legalText"><title>IV Æthelred (London)</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">236</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">76</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>Q</witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">Q: Quadripartitus) Robertson, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">7.2</idno>
-          <idno type="editorNumber" n="Robertson">7.2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,15 +46,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1169 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1138 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 236.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7.2">
         <head><ref type="lawCode" target="law:IVAtr">IV Atr</ref> 7.2</head>
-        <ab type="selectedText" xml:lang="und">Et habeat postea dampnum illud ex incuria sua, ut cambiat ab institutis monetariis purum et recte appendens.</ab>
-        <ab type="translation" xml:lang="en">And afterwards such a trader shall pay the penalty of his carelessness by having to change [his base money] for pure money of the proper weight obtained from the authorised moneyers.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="7.2" corresp="#wit-q">Et habeat postea dampnum illud ex incuria sua, ut cambiat ab institutis monetariis purum et recte appendens.</ab>
+        <ab type="editionText" xml:lang="la" source="#robertson" n="7.2" corresp="#wit-q">Et habeat postea dampnum illud ex incuria sua, ut cambiat ab institutis monetariis purum et recte appendens.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">And afterwards such a trader shall pay the penalty of his carelessness by having to change [his base money] for pure money of the proper weight obtained from the authorised moneyers.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und [dieser Kaufmann] trage danach infolge seiner Unachtsamkeit den Schaden, dass er von den angestellten Münzern reines und vollwichtiges Geld [gegen sein mangelhaftes] einwechseln muss.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let [this merchant] afterwards bear the loss resulting from his carelessness, in that he must exchange [his defective money] for pure money of full weight from the appointed moneyers.</ab>
       </div>
     </body>
   </text>

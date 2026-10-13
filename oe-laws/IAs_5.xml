@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>I As 5</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,22 +20,18 @@
         <idno type="citationKey">IAs 5</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">148</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Æthelstan</title> <note type="reign">r. 924–939</note></bibl>
+        <bibl type="legalText"><title>I Æthelstan (Tithes)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">148</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">G(B)</witness>
-          <witness>D</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-g-b" rend="bold"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">G(B): British Library, Cotton Nero A.i Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">D: Cambridge, Corpus Christi College, MS 201 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">5</idno>
-          <idno type="editorNumber" n="Attenborough">5</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -50,16 +49,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 746 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 733 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 148.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5">
         <head><ref type="lawCode" target="law:IAs">I As</ref> 5</head>
-        <ab type="selectedText" xml:lang="und">Nu ge gehyrað, cwæð se cyng, hwæs ic Gode ann, ⁊ hwæt ge gelæstan sceolan be minre oferhyrnysse. ⁊ gedoð eac, þæt ge me unnon mines agenes, þe ge me mid rihte gestrynan magan. Nelle ic, þæt ge me mid unrihte ahwar oht gestrynan; ac ic wille eowres agenes geunnan eow rihtlice, on þa gerad þe ge me unnan mines; ⁊ beorgað ægþer ge eow ge ðam þe ge myngian scylan wið Godes yrre ⁊ wið mine oferyrnesse.</ab>
-        <ab type="translation" xml:lang="en">Now ye hear, saith the king, what I grant to God, and what ye must perform on pain of forfeiting the fine of insubordination to me. And ye shall see to it also that ye grant me that which is my own, and which ye may legally acquire for me. I do not wish that ye should anywhere acquire anything for me wrongfully, but I will rightfully grant you that which is yours, on the condition that ye grant me what is mine. And ye must guard against the anger of God and insubordination to me, both yourselves and those whom it is your duty to admonish.</ab>
-        <ab type="supplementaryText" xml:lang="und">Nu ge gehirað, cwæð se cyngc, hwæs ic Gode ann, ⁊ hwæt ge gelæstan sculan be mynre ofer[hy]rnesse. ⁊ gedoð eac, þæt ge me geunnon mines agenes, þe ge me mid rihte gestrinan magon. Nelle ic, þæt ge me mid unrihte ahwar aht gestrynan; ac ic wille eowres geunnan eow rihtlice, on þa gerad þe ge me geunnan mines; ⁊ beorgað ægðer ge eow ge þam þe ge mingian sculon wið Godes irre ⁊ wið mine oferhirnesse.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-d">Nu ge gehirað, cw<hi rend="italic">æð</hi> se cyngc, hwæs ic Gode ann, ⁊ hwæt ge gelæstan sculon be mynre ofer[hy]rnesse. ⁊ gedoð eac, þ<hi rend="italic">æt</hi> ge me geunnon mines agenes, þe ge me mid rihte gestrinan magon. Nelle ic, þ<hi rend="italic">æt</hi> ge me mid unrihte ahwar aht gestrynan; ac ic wille eowres geunnan eow rihtlice, on þa gerad þe ge me geunnan mines; ⁊ beorgað ægðer ge eow ge þa<hi rend="italic">m</hi> þe ge mingian sculon wið Godes irre ⁊ wið mine oferhirnesse.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-g-b">Nu ge gehyrað, cwæð se cyng, hwæs ic Gode ann, ⁊ hwæt ge gelæstan sceolan be minre oferhyrnysse. ⁊ gedoð eac, þæt ge me unnon mines agenes, þe ge me mid rihte gestrynan magan. Nelle ic, þæt ge me mid unrihte ahwar oht gestrynan; ac ic wille eowres agenes geunnan eow rihtlice, on þa gerad þe ge me unnan mines; ⁊ beorgað ægþer ge eow ge ðam þe ge myngian scylan wið Godes yrre ⁊ wið mine oferyrnesse.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-ld">Nu ge gehyraþ, hwæt Drihtene us bebeod, ⁊ hwæt us fulfremian gebyraþ. Gedó þæt ge georniaþ ðara ðinga ðe ge me rihtlic begytan mæg. Ic nylle, þæt ge me hwæt mid woh begytaþ. Gif ic eow ealla eowra ðinga geunne, on ða gerade ðe ge me mine georniaþ, warniaþ eow ⁊ hio ðe eowe tobelimpaþ ðæs Drihtenes eorres ⁊ mines.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5" corresp="#wit-q">Nunc auditis, quid Deo precupiam, et quid complere debeatis. Facite etiam, ut michi mea propria cupiatis, que michi poteritis recte adquirere. Nolo, ut aliquid michi iniuste conquiratis. Sed omnia uestra uobis concedo, eo tenore quo mihi mea similiter exoptetis. Cauete simul et uobis et eis quos ammonere debetis ab ira Dei et transgressione mea.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="5" corresp="#wit-g-b">Nu ge gehyrað, cwæð se cyng, hwæs ic Gode ann, ⁊ hwæt ge gelæstan sceolan be minre oferhyrnysse. ⁊ gedoð eac, þæt ge me unnon mines agenes, þe ge me mid rihte gestrynan magan. Nelle ic, þæt ge me mid unrihte ahwar oht gestrynan; ac ic wille eowres agenes geunnan eow rihtlice, on þa gerad þe ge me unnan mines; ⁊ beorgað ægþer ge eow ge ðam þe ge myngian scylan wið Godes yrre ⁊ wið mine oferyrnesse.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-g-b">Now ye hear, saith the king, what I grant to God, and what ye must perform on pain of forfeiting the fine of insubordination to me. And ye shall see to it also that ye grant me that which is my own, and which ye may legally acquire for me. I do not wish that ye should anywhere acquire anything for me wrongfully, but I will rightfully grant you that which is yours, on the condition that ye grant me what is mine. And ye must guard against the anger of God and insubordination to me, both yourselves and those whom it is your duty to admonish.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Nun hört ihr, sprach der König, was ich Gott gönne (was der Herr uns gebot Ld), und was ihr leisten sollet (uns zu vollbringen zukommt Ld) bei [Strafe der Busse für] Ungehorsam gegen mich. Und bewirkt auch, dass ihr mir mein Eigen gönnet, was (die Dinge einfordert, welche Ld) ihr mir gesetzlich erwerben könnet. Ich will nicht, dass ihr mir unrechtmässig irgendwo etwas erwerbet; sondern (Wenn Ld) ich will das Eure (all eure Dinge lq) euch rechtmässig gönnen in der Voraussetzung, dass ihr mir das Meine gönnet (erstrebet Ld), hütet euch sowohl als auch (und Ld) die, welche ihr mahnen sollt (welche zu euch gehören Ld), vor dem Zorn Gottes (des Herrn und vor meinem Ld) und vor dem Ungehorsam gegen mich.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Now you hear, said the king, what I grant to God (what the Lord commanded us, Ld), and what you are to perform (it falls to us to accomplish, Ld) on [pain of the fine for] disobedience to me. And bring it about also that you grant me my own, which (claim the things which, Ld) you can lawfully acquire for me. I do not wish you to acquire anything for me anywhere unlawfully; but (If, Ld) I will grant you yours (all your things, lq) rightfully, on the condition that you grant me mine (strive for mine, Ld); guard both yourselves and (and, Ld) those whom you are to admonish (who belong to you, Ld) against the anger of God (the Lord's and against mine, Ld) and against disobedience to me.</ab>
+        <note type="editorial">‘cwæð se cyng’ is missing from Ld and Quadr. and is perhaps interpolated. In D, two letters of ‘ofer[hy]rnesse’ are erased. In D the homily ‘De christianitate’ follows; in G, I Edmund follows.</note>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>I Cn 16</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">ICn 16</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">296</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>I Cn</title></bibl>
+        <bibl type="legalText"><title>I Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">296</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">166</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness rend="bold">G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a" rend="bold"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">G(A): British Library, Cotton Nero A.i (up to, and including, cap.14.2; thereafter B.) B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">16</idno>
-          <idno type="editorNumber" n="Robertson">16</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -53,16 +52,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1702 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1659 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 296.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="16">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 16</head>
-        <ab type="selectedText" xml:lang="und">Be fæstene. Þæt man ælc beboden fæsten healde, sy hit ymbrenfæsten, sy hit lenctenfæsten, sy elles oðer fæsten, mid ealr[e] geor[n]fulnysse.</ab>
-        <ab type="translation" xml:lang="en">Concerning fasts. And every prescribed fast shall be observed with all diligence, whether it be the fast of the Ember Days, or the Lent fast, or any other fast.</ab>
-        <ab type="supplementaryText" xml:lang="und">And þæt man ælc beboden fæsten healde, si hit ymbrenfæsten, si hit lengctenfæsten, si hit elles oðer fæstæn, mid ealre geornfulnesse.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16" corresp="#wit-g-a">And þ<hi rend="italic">æt</hi> man ælc beboden fæsten healde, si hit ymbrenfæsten, si hit lengctenfæsten, si hit elles oðer fæstæn, mid ealre geornfulnesse.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16" corresp="#wit-a">And þæt man ælc bebodan festen healde, sy hit ymbrenfæsten, sy hit le[n]ctenfesten, sy hit ælles oððer festen, mid ealre geornfulnesse.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16" corresp="#wit-b">Be fæstene. Þæt man ælc beboden fæsten healde, sy hit ymbrenfæsten, sy hit lenctenfæsten, sy elles oðer fæsten, mid ealra geor[n]fulnysse.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="16" corresp="#wit-q">Omne indictum ieiunium deuote conseruetur, siue quatuortemporale siue quadragesimale uel deinceps aliud quodcumque sit.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="16" corresp="#wit-b">Be fæstene. Þæt man ælc beboden fæsten healde, sy hit ymbrenfæsten, sy hit lenctenfæsten, sy elles oðer fæsten, mid ealr[e] geor[n]fulnysse.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">Concerning fasts. And every prescribed fast shall be observed with all diligence, whether it be the fast of the Ember Days, or the Lent fast, or any other fast.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Vom Fasten B) Und dass man jedes gebotene Fasten mit aller Bereitwilligkeit halte, sei es Quatemberfasten, sei es Frühlingsfasten, sei es sonst anderes Fasten.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of fasting, B) And that every commanded fast be kept with all eagerness, whether it be an Ember fast or a Lenten fast or any other fast.</ab>
+        <note type="editorial">B's rubrics are always in red. Liebermann compares II Eg 5.1; VI Atr 23, 22.3.; Robertson (p. 139) takes I Cn from B, which begins at ‘mæssedæg’ in 14.2, the earlier clauses being supplied from G</note>
       </div>
     </body>
   </text>

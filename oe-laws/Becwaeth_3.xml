@@ -3,33 +3,32 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Becw 3</title>
-        <respStmt><resp>Translation of the selected text</resp><name>Wormald, Making</name></respStmt>
+        <title>Becwæð 3</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#wormald">Wormald</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Becwaeth_3</idno>
-        <idno type="citation">Becw 3</idno>
-        <idno type="lawCode">Becw</idno>
+        <idno type="citation">Becwæð 3</idno>
+        <idno type="lawCode">Becwæð</idno>
         <idno type="lawCodeAnchor">Becwaeth</idno>
         <idno type="clause">3</idno>
         <idno type="citationKey">Becwaeth 3</idno>
-        <idno type="legalText">Becw.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">400</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Becwæð</title></bibl>
+        <bibl type="legalText"><title>Becwæð (Bequest)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">400</biblScope></bibl>
+          <bibl xml:id="wormald" type="translation">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">3</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -46,17 +45,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2129 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2074 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 400.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3">
-        <head><ref type="lawCode" target="law:Becwaeth">Becw</ref> 3</head>
-        <ab type="selectedText" xml:lang="und">7: ic agnian wylle to agenre æhte ðæt ðæt ic hæbbe 7 næfre ð[e m]yntan ne plot ne ploh, ne turf ne toft, ne furh ne fotmæl, ne land ne læse, ne fersc ne mersc, ne ruh ne rum, wudes ne feldes, landes ne strandes, wealtes ne wæteres</ab>
-        <ab type="translation" xml:lang="en">And I wish to own as my own property what I have, and never to devise to you [anything], plot or ploughland, turf or toft, furrow or footmark, land or meadow, fresh water or marshland, brushwood land or clearing, wood or field, land or shore, wood or water;</ab>
-        <ab type="supplementaryText" xml:lang="und">7: ic agnian wille to agenre æhte þæt þæt ic hæbbe 7 næfre ðe myntan ne plot ne ploh, ne turf ne toft, ne furh ne fotmæl, ne land ne læse, ne fersc ne mersc, ne ruh ne rum, wudes ne feldes, landes ne strandes, wealtes ne wæteres;</ab>
-        <ab type="supplementaryTranslation" xml:lang="en">And I wish to own as my own property what I have, and never to devise to you [anything], plot or ploughland, turf or toft, furrow or footmark, land or meadow, fresh water or marshland, brushwood land or clearing, wood or field, land or shore, wood or water;</ab>
+        <head><ref type="lawCode" target="law:Becwaeth">Becwæð</ref> 3</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-b">7: ic agnian wille to agenre æhte þ<hi rend="italic">æt</hi> þ<hi rend="italic">æt</hi> ic hæbbe 7 næfre ðe myntan ne plot ne ploh, ne turf ne toft, ne furh ne fotmæl, ne land ne læsse, ne fersc ne mersc, ne ruh ne ru<hi rend="italic">m</hi>, wudes ne feldes, landes ne strandes, wealtes ne wæteres;</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-h">7: ic agnian wylle to agenre æhte ðæt ðæt ic hæbbe 7 næfre ð[e m]yntan ne plot ne ploh, ne turf ne toft, ne furh ne fotmæl, ne land ne læse, ne fersc ne mersc, ne ruh ne ru<hi rend="italic">m</hi>, wudes ne feldes, landes ne strandes, wealtes ne wæteres</ab>
+        <ab type="translation" xml:lang="en" source="#wormald" corresp="#wit-h">And I wish to own as my own property what I have, and never to devise to you [anything], plot or ploughland, turf or toft, furrow or footmark, land or meadow, fresh water or marshland, brushwood land or clearing, wood or field, land or shore, wood or water;</ab>
+        <ab type="translation" xml:lang="en" source="#wormald" corresp="#wit-b">And I wish to own as my own property what I have, and never to devise to you [anything], plot or ploughland, turf or toft, furrow or footmark, land or meadow, fresh water or marshland, brushwood land or clearing, wood or field, land or shore, wood or water;</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Beziehungsweise: ich will als eigen Gut behaupten, was ich habe, und niemals dir zudenken weder Fleck noch Pflug Landes, weder Rasenstück noch Hausstelle, weder Furche noch Fussbreite, weder Ackerland noch Weide, weder frisch [Wasser] noch Sumpf, weder rauhes [unebenes, buschiges?] noch offenes, an Wald noch Feld, an Land noch Strand, an Wald noch Gewässer.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Or: I will claim as my own property what I have, and never intend for you either plot or ploughland, either turf or toft, either furrow or foot's breadth, either land or pasture, either fresh [water] or marsh, either rough [uneven, bushy?] or open, of wood or field, of land or shore, of wood or water.</ab>
+        <note type="editorial">H reads ‘ð[e m]yntan’ (corrupt ‘ðæt yntan’); editors add ‘hit’ after ‘ic’. All editors read H's ‘wealtes’ as ‘wealdes’. B's ‘læsse’ stands so (Liebermann's text has it); B's ‘mersc’ was altered from ‘merst’. The many pairs alliterate or rhyme. Liebermann compares Swer 3.4. K: ‘læse’ corrected to B's ‘læsse’.</note>
       </div>
     </body>
   </text>

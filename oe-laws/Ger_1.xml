@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Ger 1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Gobbitt</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Gobbitt</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,22 +18,17 @@
         <idno type="lawCodeAnchor">Ger</idno>
         <idno type="clause">1</idno>
         <idno type="citationKey">Ger 1</idno>
-        <idno type="legalText">Ger.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">453</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Be Gesceadwisan Gerefan</title></bibl>
+        <bibl type="legalText"><title>Gerefa (The Reeve)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">453</biblScope></bibl>
+          <bibl xml:id="gobbitt" type="edition">Thom Gobbitt, ed., ‘Rectitudines singularum personarum’ and ‘Gerefa’, <title>Early English Laws</title> (earlyenglishlaws.ac.uk)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>B</witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
         </listWit>
-        <bibl type="selectedText">B: earlyenglishlaws ac.uk: RSP+Ger Gobbitt, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1</idno>
-          <idno type="editorNumber" n="Gobbitt">22.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -49,16 +47,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2180 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2122 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 453.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
         <head><ref type="lawCode" target="law:Ger">Ger</ref> 1</head>
-        <ab type="selectedText" xml:lang="und">Bege sceadwisan ge refan . SE SCADwis gerefa sceal ægðær witan ge hlafordes land riht ge folces gerihtu be ðam ðe hit of ealddagum . witan geræddan 7 ælcre tilðan timan ðe to tune belimpð .</ab>
-        <ab type="translation" xml:lang="en">Concerning the wise reeve. The wise reeve must know both the lord’s land law and the rights of the people as wise men counselled in days of old, and the season in which each task is due on the estate,</ab>
-        <ab type="supplementaryText" xml:lang="und">[1] Se scadwis gerefa sceal ægðær witan ge hlafordes landriht ge folces gerihtu, be ðam ðe hit of ealddagum witan geraeddan, 7 ælcre tilðan timan, ðe to tune belimpð;</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-b">[1] Se scadwis gerefa sceal ægðær witan ge hlafordes landriht ge folces gerihtu, be ðam ðe hit of ealddagu<hi rend="italic">m</hi> witan geræddan, 7 ælcre tilðan timan, ðe to tune belimpð;</ab>
+        <ab type="editionText" xml:lang="ang" source="#gobbitt" n="22.1" corresp="#wit-b">Bege sceadwisan ge refan . SE SCADwis gerefa sceal ægðær witan ge hlafordes land riht ge folces gerihtu be ðam ðe hit of ealddagum . witan geræddan 7 ælcre tilðan timan ðe to tune belimpð .</ab>
+        <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">Concerning the wise reeve. The wise reeve must know both the lord’s land law and the rights of the people as wise men counselled in days of old, and the season in which each task is due on the estate,</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Der kluge Amtmann muss kennen [vgl. Rect. 2] sowohl das herrschaftliche Gutsrecht als auch des Volkes Gerechtsame, gemäss dem wie es seit alten Tagen Rathsvorsteher bestimmten, und den Zeitpunkt jeder Feldarbeit, der für [dies] Landgut passt;</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">The prudent reeve must know both the lord's estate-law and the people's dues, according to what the counsellors laid down from old days, and the time of each piece of field-work that belongs to [this] estate;</ab>
+        <note type="editorial">K: ‘geraeddan’ corrected to ‘geræddan’. Liebermann compares Rect 2, 1, 21.4 and 4.6.</note>
       </div>
     </body>
   </text>

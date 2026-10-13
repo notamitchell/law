@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>VI Atr 1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">VIAtr 1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">246</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VI Atr</title></bibl>
+        <bibl type="legalText"><title>VI Æthelred (Enham)</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">246</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">90</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">K</witness>
-          <witness>D (incomplete)</witness>
+          <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
+          <witness xml:id="wit-d-incomplete"><abbr>D (incomplete)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
         </listWit>
-        <bibl type="selectedText">K: British Library, Cotton Claudius A.iii Robertson, ed.</bibl>
-        <bibl type="supplementaryText">D: Cambridge, Corpus Christi College, MS 201 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1</idno>
-          <idno type="editorNumber" n="Robertson">1[a]</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +47,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1245 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1212 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 246.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 1</head>
-        <ab type="selectedText" xml:lang="und">⁊ þæt is þonne ærest þæra biscpa frumræd, þæt we ealle fram synnum georne gecyrran, þæs þe we don magan, ⁊ ure misdæda andettan georne ⁊ geornlice betan ⁊ ænne God rihtlice lufian ⁊ weorðian ⁊ ænne Christendom anrædlice healdan ⁊ ælcne hæþendom georne forbugan ⁊ gebedrædene aræran georne us betweonan ⁊ sibbe ⁊ some lufian georne</ab>
-        <ab type="translation" xml:lang="en">And first of all, the primary ordinance of the bishops is, that we all zealously turn from sins, as far as we can, and readily confess our misdeeds, and zealously make amends, and duly love and honour one God, and unanimously uphold one Christian faith, and zealously renounce all heathen practices, and earnestly promote among us the habit of prayer, and zealously cherish peace and concord,</ab>
-        <ab type="supplementaryText" xml:lang="und">[Not in D]</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1">[Not in D]</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="1[a]" corresp="#wit-k">⁊ þæt is þonne ærest þæra biscpa frumræd, þæt we ealle fram synnum georne gecyrran, þæs þe we don magan, ⁊ ure misdæda andettan georne ⁊ geornlice betan ⁊ ænne God rihtlice lufian ⁊ weorðian ⁊ ænne Christendom anrædlice healdan ⁊ ælcne hæþendom georne forbugan ⁊ gebedrædene aræran georne us betweonan ⁊ sibbe ⁊ some lufian georne</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And first of all, the primary ordinance of the bishops is, that we all zealously turn from sins, as far as we can, and readily confess our misdeeds, and zealously make amends, and duly love and honour one God, and unanimously uphold one Christian faith, and zealously renounce all heathen practices, and earnestly promote among us the habit of prayer, and zealously cherish peace and concord,</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und das ist nun zuerst die vornehmste Verordnung der Bischöfe, dass wir alle von Sünden eifrig umkehren, so weit wir es zu thun vermögen, und unsere Missethaten eifrig bekennen und eifervoll büssen, und Einen Gott recht lieben und ehren und Ein Christenthum einmüthig halten und jedes Heidenthum eifrig vermeiden, und unter uns willig Gebetseinrichtung aufstellen, und Freundschaft und Eintracht eifrig pflegen,</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And this, then, is first the foremost ordinance of the bishops: that we all turn eagerly from sins, as far as we can, and eagerly confess our misdeeds and zealously atone for them, and rightly love and honour one God and unanimously hold one Christian faith and eagerly shun all heathenism, and willingly set up [a fellowship of] prayer among us, and eagerly cultivate friendship and concord,</ab>
+        <note type="editorial">Liebermann compares V Atr 1.</note>
       </div>
     </body>
   </text>

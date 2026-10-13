@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>I Cn 26.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">ICn 26.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">306</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>I Cn</title></bibl>
+        <bibl type="legalText"><title>I Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">306</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">172</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness rend="bold">G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a" rend="bold"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">G(A): British Library, Cotton Nero A.i (up to, and including, cap.14.2; thereafter B.) B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">26.1</idno>
-          <idno type="editorNumber" n="Robertson">26.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +53,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1734 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1691 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 306.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="26.1">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 26.1</head>
-        <ab type="selectedText" xml:lang="und">Forðam wace se hyrde bi[ð] funden to hyrde ðe nele ða heorde ðe he healdan scéal mid hréame bewerian, buton he elles mǽge, gyf ðær hwylc ðeodsceaða sceaðian onginneð.</ab>
-        <ab type="translation" xml:lang="en">For a shepherd will be considered failing in his trust, if he will not provide for the safety of the flock, which is committed to his keeping, by raising the alarm, if he cannot do anything else, when any spoiler proceeds to harm it.</ab>
-        <ab type="supplementaryText" xml:lang="und">Forðam wace byð se hyrde funden to heorde, þe nele þa heorde, þe he healdan sceal, mid hreame bewerian, butan he elles mæge, gyf þær hwylc þeodsceaða sceaðian onginneð.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="26.1" corresp="#wit-g-a">Forðam wace byð se hyrde funden to heorde, þe nele þa heorde, þe he healdan sceal, mid hreame bewerian, butan he elles mæge, gyf þær hwylc þeodsceaða sceaðian onginneð.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="26.1" corresp="#wit-a">Forþam wac bið se hyrde funden to heorde, þe nele þa heorde, þe [he] healdan sceal, mid hreame bewerian, buton he elles mæge, gyf ðær hwylc þeodsceaða sceaðian onginneð.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="26.1" corresp="#wit-b">Forðam wace se hyrde bið funden to hyrde, ðe nele ða heorde, ðe he healdan scéal, mid hréame bewerian, buton [he] helles mǽge, gyf ðær hwylc ðeodsceaða sceaðian onginneð.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="26.1" corresp="#wit-q">quia superuacue pastor est, qui commisso sibi gregi non uult saltem clamore succurrere, si quid ei noceat.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="26.1" corresp="#wit-b">Forðam wace se hyrde bi[ð] funden to hyrde ðe nele ða heorde ðe he healdan scéal mid hréame bewerian, buton he elles mǽge, gyf ðær hwylc ðeodsceaða sceaðian onginneð.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">For a shepherd will be considered failing in his trust, if he will not provide for the safety of the flock, which is committed to his keeping, by raising the alarm, if he cannot do anything else, when any spoiler proceeds to harm it.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Denn schwach wird jener Hirt für seine Herde befunden, der es unterlässt, die Herde, die er hüten soll — wenn er es auf andere [stärkere] Art nicht vermag —, durch Zuruf zu schützen, falls da irgend ein Volksschädiger [Erzfeind] zu schaden beginnt.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">For that shepherd is found weak for his flock who will not defend the flock which he must keep — if he cannot do it in some other [stronger] way — by shouting, if any public enemy [the arch-enemy] begins to do harm there.</ab>
+        <note type="editorial">‘he’ supplied in A by Liebermann.; Robertson (p. 139) takes I Cn from B, which begins at ‘mæssedæg’ in 14.2, the earlier clauses being supplied from G</note>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Cn 1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">IICn 1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">308</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Cnut</title></bibl>
+        <bibl type="legalText"><title>II Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">308</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">174</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1</idno>
-          <idno type="editorNumber" n="Robertson">1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +53,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1741 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1697 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 308.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 1</head>
-        <ab type="selectedText" xml:lang="und">Þæt is ðonne æryst, þæt ic wylle þæt man rihte lage up arǽre ⁊ æghwylce unlage georne afylle, þæt man awéodige ⁊ awyrtwalie æghwylc unriht, swa man geornost mæge, of [ð]issum earde ⁊ arǽre up Godes riht.</ab>
-        <ab type="translation" xml:lang="en">The first provision is, that I desire that justice be promoted and every injustice zealously suppressed, that every illegality be rooted up and eradicated from this land with the utmost diligence, and the law of God promoted.</ab>
-        <ab type="supplementaryText" xml:lang="und">Ðæt is þonne ærest, þæt ic wylle, þæt man rihte laga upp arære ⁊ æghwylce unlaga georne afylle, ⁊ þæt man áweodige ⁊ awyrtwalige æghwylc unriht, swa man geornost mæge, of þysum earde, ⁊ arære up Godes riht;</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-g-a">Ðæt is þonne ærest, þ<hi rend="italic">æt</hi> ic wylle, þ<hi rend="italic">æt</hi> man rihte laga upp arære ⁊ æghwylce unlaga georne afylle, ⁊ þ<hi rend="italic">æt</hi> man áweodige ⁊ awyrtwalige æghwylc unriht, swa man geornost mæge, of þysum earde, ⁊ arære up Godes riht;</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-a">Þæt is þanne ærost, þæt ic wylle, þæt man rihte laga upp arære ⁊ æghwilce unlaga georne afylle, ⁊ þæt man áweodige ⁊ áwrytwalige æghwylc unriht, swa man geornest mage, of ðissum hearde, ⁊ arare up Godes riht;</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-d-frags">And witena gerædnes is, þæt man rihte laga upp arǽre and æghwilce unlaga georne afille, and þæt man awéodige ⁊ awyrtwalige æghwilc unriht, swa man geornost mæge, of þisan earde, ⁊ aræere up Godes riht;</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1" corresp="#wit-q">Inprimis uolo, ut iustę leges erigantur et iniuste subuertantur, et omnis iniusticia, quanta possumus obseruantia, de finibus nostris sarculetur et explantetur, et Dei iusticia modis omnibus exaltetur.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="1" corresp="#wit-b">Þæt is ðonne æryst, þæt ic wylle þæt man rihte lage up arǽre ⁊ æghwylce unlage georne afylle, þæt man awéodige ⁊ awyrtwalie æghwylc unriht, swa man geornost mæge, of [ð]issum earde ⁊ arǽre up Godes riht.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">The first provision is, that I desire that justice be promoted and every injustice zealously suppressed, that every illegality be rooted up and eradicated from this land with the utmost diligence, and the law of God promoted.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Nämlich zuerst nun, dass ich will (Und Beschluss der Witan ist D), dass man echte Rechtsverordnungen aufrichte und jeden Rechtsmissbrauch eifrig abschaffe, und dass man jedes Unrecht, wie man eifrigst vermag, aus diesem Lande ausreute und entwurzele und Gottes Recht aufrichte,</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Namely, first, that I will (And it is the decision of the witan, D) that just laws be set up and every unjust law eagerly suppressed, and that every injustice be weeded out and rooted up from this country as eagerly as possible, and God's law be raised up,</ab>
+        <note type="editorial">Liebermann compares V Atr 1, 1.1.</note>
       </div>
     </body>
   </text>

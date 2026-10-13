@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>VI As 6.2</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">VIAs 6.2</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">176</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VI Æthelstan</title></bibl>
+        <bibl type="legalText"><title>VI Æthelstan (London Peace-Guild)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">176</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">6.2</idno>
-          <idno type="editorNumber" n="Attenborough">[6].2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +47,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 880 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 860 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 176.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6.2">
         <head><ref type="lawCode" target="law:VIAs">VI As</ref> 6.2</head>
-        <ab type="selectedText" xml:lang="und">⁊ oxan to mancuse ⁊ cù to XX ⁊ swyn to X ⁊ sceap to scll.</ab>
-        <ab type="translation" xml:lang="en">An ox shall be valued at a mancus and a cow at twenty pence, a pig at ten pence, and a sheep at a shilling.</ab>
-        <ab type="supplementaryText" xml:lang="und">Et bos una manca (id est XXX den.) et uacca XX den. et porcus X den. et ouis solido (V den.) persoluatur.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.2" corresp="#wit-h">⁊ oxan to mancuse ⁊ cú to XX ⁊ swyn to X ⁊ sceap to scll'.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.2" corresp="#wit-q">Et bos una manca (id est XXX den.) et uacca XX den. et porcus X den. et ouis solido (V den.) persoluatur.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="[6].2" corresp="#wit-h">⁊ oxan to mancuse ⁊ cù to XX ⁊ swyn to X ⁊ sceap to scll.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">An ox shall be valued at a mancus and a cow at twenty pence, a pig at ten pence, and a sheep at a shilling.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und einen Ochsen [ersetzen wir dem Genossen taxirt] zu 1 Mancus und eine Kuh zu 20 (Pfennig Quadr.) und ein Schwein zu 10 (Pfennig Quadr.) und ein Schaf zu 1 Schilling.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And an ox [we replace to the fellow-member, valued] at 1 mancus, and a cow at 20 (pence, Quadr.), and a pig at 10 (pence, Quadr.), and a sheep at 1 shilling.</ab>
       </div>
     </body>
   </text>

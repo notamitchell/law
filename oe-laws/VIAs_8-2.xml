@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>VI As 8.2</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">VIAs 8.2</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">178</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VI Æthelstan</title></bibl>
+        <bibl type="legalText"><title>VI Æthelstan (London Peace-Guild)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">178</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">8.2</idno>
-          <idno type="editorNumber" n="Attenborough">[8].2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +47,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 885 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 865 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 178.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="8.2">
         <head><ref type="lawCode" target="law:VIAs">VI As</ref> 8.2</head>
-        <ab type="selectedText" xml:lang="und">⁊ gif þonne þæt gebyrige, þæt ænig mægð to þan strang sy and to þam mycel, innon landes oððe uton landes, XII hynde oððe twyhynde, þæt us ures rihtes wyrnen ⁊ þone þeof foren forstande, þæt we rídan be eallum mannum tó mid þam gerefan þe hit on his mónunge sy.</ab>
-        <ab type="translation" xml:lang="en">Again, if it happens that any group of kinsmen — whether nobles or commoners within or beyond the borders of our district— become so strong and powerful as to prevent us from exercising our legal rights, and stand up in defence of a thief, we shall ride out against them in full force with the reeve in whose district the offence takes place.</ab>
-        <ab type="supplementaryText" xml:lang="und">Et si eueniat, quod aliqua cognatio (tribus) ad hoc magna sit et fortis, in terra uel extra, tþelfhyndes uel tþihindes, ut rectum nostrum difforciet ac furem defendat, adeamus omnes una cum preposito, in cuius mannicione est (sit).</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="8.2" corresp="#wit-h">⁊ gif þonne þæt gebyrige, þæt ænig mægð to þan strang sy and to þam mycel, innon landes oððe uton landes, XIIhynde oððe twyhynde, þæt us ures rihtes wyrnen ⁊ þone þeof foren forstande, þæt we rídan be eallum mannum tó mid þam gerefan þe hit on his mónunge sy.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="8.2" corresp="#wit-q">Et si eueniat, quod aliqua cognatio (tribus) ad hoc magna sit et fortis, in terra uel extra, twelfhyndes uel twihindes, ut rectum nostrum difforciet ac furem defendat, adeamus omnes una cum preposito, in cuius mannicione est (sit).</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="[8].2" corresp="#wit-h">⁊ gif þonne þæt gebyrige, þæt ænig mægð to þan strang sy and to þam mycel, innon landes oððe uton landes, XII hynde oððe twyhynde, þæt us ures rihtes wyrnen ⁊ þone þeof foren forstande, þæt we rídan be eallum mannum tó mid þam gerefan þe hit on his mónunge sy.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">Again, if it happens that any group of kinsmen — whether nobles or commoners within or beyond the borders of our district— become so strong and powerful as to prevent us from exercising our legal rights, and stand up in defence of a thief, we shall ride out against them in full force with the reeve in whose district the offence takes place.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn nun der Fall vorkommt, dass eine Sippe so stark und so gross ist — innerhalb [dieser] Landschaft oder ausser Landes, von 1200 [Schilling Wergeld] oder 200 —, dass sie uns unser Recht verweigern und [sie] für den Dieb schützend eintritt: dass wir in gesammter Mannschaft hinzureiten mit dem [Grafschafts-]vogte, der es [Sheriff] im Bezirke jenes [Diebes] ist,</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if it then happens that a kindred is so strong and so large — within [this] district or outside it, of 1200 [shillings' wergild] or 200 — that they refuse us our right and [it] steps in to protect the thief: that we ride there with all our men, with the [shire-]reeve in whose district that [thief] is,</ab>
+        <note type="editorial">The Latin's ‘tþelfhyndes’, ‘tþihindes’ use þ for the OE letter wynn (w); here normalised to w. H's ‘wyrnen … forstande’ was emended by Schmid to ‘wyrne … forstanden’. The German sentence continues in 8.3.</note>
       </div>
     </body>
   </text>

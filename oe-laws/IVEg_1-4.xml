@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>IV Eg 1.4</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,24 +18,20 @@
         <idno type="lawCodeAnchor">IVEg</idno>
         <idno type="clause">1.4</idno>
         <idno type="citationKey">IVEg 1.4</idno>
-        <idno type="legalText">IV Edg</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">206</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>IV Edgar</title></bibl>
+        <bibl type="legalText"><title>IV Edgar (Whitbordesstan)</title> <note type="reign">Edgar, r. 957/9–975</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">206</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">30</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">C</witness>
-          <witness>F</witness>
-          <witness>C (Latin)</witness>
+          <witness xml:id="wit-c" rend="bold"><abbr>C</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
+          <witness xml:id="wit-f"><abbr>F</abbr> <note type="manuscript">London, British Library, Cotton Nero E.i</note></witness>
+          <witness xml:id="wit-c-latin"><abbr>C (Latin)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">C: Cambridge, Corpus Christi College, MS 265 Gesetze</bibl>
-        <bibl type="supplementaryText">F: British Library, Cotton Nero E.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1.4</idno>
-          <idno type="editorNumber" n="Robertson">1.4</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,16 +50,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1007 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 980 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 206.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 30.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.4">
         <head><ref type="lawCode" target="law:IVEg">IV Eg</ref> 1.4</head>
-        <ab type="selectedText" xml:lang="und">Ðonne beode ic ⁊ se arcebisceop, þæt ge God ne gremian, ne naðer ne geearnian ne þone fǽrlican deað þises andweardan lifes, ne huru þone toweardan écere helle, min ænigum oftige Godes gerihta; ac ægðer ge earm ge eadig, þe ænige teolunga hæbbe, gelæste Gode his teoðunga mid ealra blisse ⁊ mid eallum unnan, swa seo gerædnys tæce þe mine witan æt Andeferan geræddon ⁊ nu eft æt Wihtbordesstane mid wedde gefæstnodon.</ab>
-        <ab type="translation" xml:lang="en">I and the archbishop enjoin, therefore, that you do not, by withholding any of God's dues, provoke Him to wrath, and incur either the sudden death [which is befalling you] in this present life, or, still worse, the death to come in everlasting hell; but everyone, both rich and poor, whose property has yielded him anything, shall, with all gladness and with all willingness, render his tithes to God, as is prescribed by the ordinance which my councillors enacted at Andover, and have now confirmed by solemn declaration at Wihtbordestan.</ab>
-        <ab type="supplementaryText" xml:lang="und">Ðonne beode ic ⁊ se ærcebisceop, þæt ge God ne grymman, ne naþer ne geearnian ne þone fǽrlican deað þises andweardan lifes, ne huru þone toweardan écere helle, min ænegum oftige Godes gerihta; ac ægðer ge earm ge eadig, þe ænige tylunge hæbbe, gelæste Gode his teoðunga mid ealra blisse ⁊ mid eallum unnan, swa seo gerædnys tæce, þe mine witan æt Andeferan geræddon ⁊ nu eft æt Wihtbordesstane mid wedde gefæstnodon.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.4" corresp="#wit-f">Ðonne beode ic ⁊ se ærcebisceop, þ<hi rend="italic">æt</hi> ge God ne grymman, ne naþer ne geearnian ne þone fǽrlican deað þises andweardan lifes, ne huru þone toweardan écere helle, mid ænegum oftige Godes gerihta; ac ægðer ge earm ge eadig, þe ænige tylunge hæbbe, gelæste Gode his teoðunga mid ealra blisse ⁊ mid eallum unnan, swa seo gerædnys tæce, þe mine witan æt Andeferan geræddon ⁊ nu eft æt Wihtbordesstane mid wedde gefæstnodon.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.4" corresp="#wit-c">Ðonne beode ic ⁊ se arcebisceop, þæt ge God ne gremian, ne naðer ne geearnian ne þone færlican deað þises andweardan lifes, ne huru þone toweardan écere helle mid anigum oftige Godes gerihta; ac ægðer ge earm ge eadig, þe ænige teolunga hæbbe, gelæste Gode his teoðunga mid ealre blisse ⁊ mid eallum unnan, swa seo gerædnys tæce, þe mine witan æt Andeferan geræddon ⁊ nu eft æt Wihtbordesstane mid wedde gefæstnodon.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.4" corresp="#wit-q">Quapropter diuina auctoritate et nostra uos commoneo, ne Dominum maiestatis ad iracundiam prouocetis in aliqua retractione diuine rectitudinis, ne exientibus uestris peccatis mortem repentinam uitę præsentis incidatis et præcipue futuram, que nullo fine concluditur, gehenne infernalis; sed uterque, diues, pauper et mediocris, decimas Deo persoluat omnium que possidet cum deuotione et puro affectu cordis, sicut institutio docet, quam optimates nostri et principes ad locum cui inditum constat ęssę uocabulum Andeferan et postea ad Wighbordesstane instituentes confirmauere.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="1.4" corresp="#wit-c">Ðonne beode ic ⁊ se arcebisceop, þæt ge God ne gremian, ne naðer ne geearnian ne þone fǽrlican deað þises andweardan lifes, ne huru þone toweardan écere helle, mid ænigum oftige Godes gerihta; ac ægðer ge earm ge eadig, þe ænige teolunga hæbbe, gelæste Gode his teoðunga mid ealre blisse ⁊ mid eallum unnan, swa seo gerædnys tæce þe mine witan æt Andeferan geræddon ⁊ nu eft æt Wihtbordesstane mid wedde gefæstnodon.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">I and the archbishop enjoin, therefore, that you do not, by withholding any of God's dues, provoke Him to wrath, and incur either the sudden death [which is befalling you] in this present life, or, still worse, the death to come in everlasting hell; but everyone, both rich and poor, whose property has yielded him anything, shall, with all gladness and with all willingness, render his tithes to God, as is prescribed by the ordinance which my councillors enacted at Andover, and have now confirmed by solemn declaration at Wihtbordestan.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Nun gebiet ich und Erzbischof [Dunstan von Canterbury], dass ihr Gott nicht erzürnet noch auch verdienet das plötzliche Tod[esende] dieses gegenwärtigen Lebens, oder vollends das zukünftige [Verderben] ewiger Hölle, durch irgend welche Entziehung der Kirchen-Gerechtsame; sondern jeder, arm und reich, der irgend Ackernutzung hat, leiste Gott seine Zehnten mit aller Freudigkeit und mit aller Bereitwilligkeit, wie die Verordnung vorschreibt, welche meine Witan zu Andover bestimmt und jetzt wiederum zu ‘Wihtbordesstan’ durch rechtsförmliches Versprechen bekräftigt haben.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Now I and the archbishop [Dunstan of Canterbury] command that you do not anger God nor earn either the sudden death of this present life, or still less the future [ruin] of eternal hell, by any withholding of God's dues; but let everyone, poor and rich, who has any tillage, pay God his tithes with all gladness and with all willingness, as the ordinance prescribes which my witan decided at Andover and have now again confirmed by pledge at ‘Wihtbordesstan’ [i.e. ‘Wihtbord's stone’].</ab>
+        <note type="editorial">Liebermann compares II Eg 1.1 and IV Eg Prol.</note>
       </div>
     </body>
   </text>

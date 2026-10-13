@@ -4,8 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Af 11.3</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,29 +19,25 @@
         <idno type="lawCodeAnchor">Af</idno>
         <idno type="clause">11.3</idno>
         <idno type="citationKey">Af 11.3</idno>
-        <idno type="legalText">Af (domboc)</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">56</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Alfred</title></bibl>
+        <bibl type="legalText"><title>Alfred’s Domboc</title> <note type="reign">Alfred, r. 871–899</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">56</biblScope></bibl>
+          <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">306</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">E</witness>
-          <witness>H</witness>
-          <witness>B (no Prol.)</witness>
-          <witness>G (Prol. only)</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>Bu</witness>
-          <witness>Ot (frags.)</witness>
+          <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b-no-prol"><abbr>B (no Prol.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
-        <bibl type="selectedText">E: Cambridge, Corpus Christi College, MS 173 Jurasinski and Oliver, eds.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">11.3</idno>
-          <idno type="editorNumber" n="Jurasinski and Oliver">13.3</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -55,17 +55,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 419 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 412 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 56.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="11.3">
         <head><ref type="lawCode" target="law:Af">Af</ref> 11.3</head>
-        <ab type="selectedText" xml:lang="und">Gif oðer mon mid hire læge ær, sie be healfum ðæm þonne sio bot.</ab>
-        <ab type="translation" xml:lang="en">If another man lay with her before, let the recompense be half.</ab>
-        <ab type="secondTranslation" xml:lang="en">If another man has previously lain with her, that the compensation shall be half this [amount].</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif oðer mon mid hire læge ǽr, sy be healfum ðæm ðonne seo bot.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="11.3" corresp="#wit-h">Gif oðer mon mid hire læge ǽr, sy be healfum ðæm ðonne seo bot.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="11.3" corresp="#wit-e">Gif oðer mon mid hire læge ǽr, sie be healfum ðæm þon<hi rend="italic">ne</hi> sio bot.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="11.3" corresp="#wit-q">Si alius cum ea iacuit antea, sit emendatio medietas hec.</ab>
+        <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="13.3" corresp="#wit-e">Gif oðer mon mid hire læge ær, sie be healfum ðæm þon<hi rend="italic">ne</hi> sio bot.</ab>
+        <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If another man lay with her before, let the recompense be half.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If another man has previously lain with her, that the compensation shall be half this [amount].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn schon vorher ein anderer Mann bei ihr gelegen hat, dann sei die Busse um halb so viel.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If another man has lain with her before, then let the compensation be half as much.</ab>
       </div>
     </body>
   </text>

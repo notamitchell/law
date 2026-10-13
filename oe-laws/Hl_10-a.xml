@@ -4,8 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Hl 10[a]</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +21,16 @@
         <idno type="citationKey">Hl 10a</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">10</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Hlothere &amp; Eadric</title> <note type="reign">r. 673–685; 685–686</note></bibl>
+        <bibl type="legalText"><title>Hlothhere and Eadric’s Code</title> <note type="reign">Hlothhere, r. 673–685; Eadric, r. 685–686</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">10</biblScope></bibl>
+          <bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002), p. <biblScope unit="page">130</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922), p. <biblScope unit="page">21</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>H</witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Oliver, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">10[a]</idno>
-          <idno type="editorNumber" n="Oliver">6.2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +48,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 145 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 143 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 10.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="10[a]">
         <head><ref type="lawCode" target="law:Hl">Hl</ref> 10[a]</head>
-        <ab type="selectedText" xml:lang="und">Gif man oþerne tithte, siþþan he him byrigan gesealdne hæbbe, ⁊ ðonne ymb III niht, gesecæn hiom sæmend, buton þam ufor leofre sio þe þa tihtlan age. Siþþan sio sace gesemed sio, an seofan nihtum se man þam oþrum riht gedo, gecwime an feo oððe an aþe, swa hwæder swa him leofre sio.</ab>
-        <ab type="translation" xml:lang="en">If a person brings a charge against another, after he has given him surety, and then within 3 nights, let them seek out for themselves an arbitrator, unless later be preferable to him who brings the charge; after the matter shall be arbitrated, in seven nights the person [charged] should do right to the other; let him satisfy [him] with property or with oath, whichever is preferable to him.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif man oþerne tithte, siþþan he him byrigan gesealdne hæbbe, ⁊ ðonne ymb III niht gesecæn hiom sæmend (buton þam ufor leofre sio þe þa tihtlan age); siþþan sio sace gesemed sio, an seofan nihtum se man þam oþrum riht gedo, gecwime an feo oððe an aþe, swa hwæder swa him leofre sio.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10[a]" corresp="#wit-h">Gif man oþerne tithte, siþþan he him byrigan gesealdne hæbbe, ⁊ ðonne ymb III niht gesecæn hiom sæmend (buton þam ufor leofre sio þe þa tihtlan age); siþþan sio sace gesemed sio, an seofan nihtum se man þam oþrum riht gedo, gecwime an feo oððe an aþe, swa hwæder swa him leofre sio.</ab>
+        <ab type="editionText" xml:lang="ang" source="#oliver" n="6.2" corresp="#wit-h">Gif man oþerne tithte, siþþan he him byrigan gesealdne hæbbe, ⁊ ðonne ymb III niht, gesecæn hiom sæmend, buton þam ufor leofre sio þe þa tihtlan age. Siþþan sio sace gesemed sio, an seofan nihtum se man þam oþrum riht gedo, gecwime an feo oððe an aþe, swa hwæder swa him leofre sio.</ab>
+        <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If a person brings a charge against another, after he has given him surety, and then within 3 nights, let them seek out for themselves an arbitrator, unless later be preferable to him who brings the charge; after the matter shall be arbitrated, in seven nights the person [charged] should do right to the other; let him satisfy [him] with property or with oath, whichever is preferable to him.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If one man charges another, after the other has provided him with a surety, then three days later they shall attempt to find an arbitrator, unless the accuser prefers a longer delay. Within a week after the suit has been decided by arbitration, the accused shall render justice to the other and satisfy him with money, or with an oath, whichever he [the accused] prefers.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand einen anderen bezichtigt, nachdem dieser ihm einen Bürgen bestellt hat, [so] sollen sie binnen 3 Nächten darauf sich einen Schiedsrichter aufsuchen (ausser wenn später[er Termin] demjenigen lieber ist, der die Klage erhebt); nachdem die Streitsache entschieden ist, erfülle der [beklagte] Mann in 7 Nächten dem anderen das Urtheil, passe es ihm in Werthzahlung oder durch [Reinigungs-]Eid, welches von beiden ihm [dem Beklagten] lieber sei.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If someone accuses another after the latter has provided him with a surety, [then] within 3 nights after that they are to seek themselves an arbitrator (unless a later [date] is preferred by the one who brings the charge); after the dispute is decided, let the [accused] man fulfil the judgment to the other within 7 nights, satisfying him by payment of value or by [exculpatory] oath, whichever of the two is preferred by him [the accused].</ab>
       </div>
     </body>
   </text>

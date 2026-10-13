@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>V Atr 31.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,17 @@
         <idno type="citationKey">VAtr 31.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">245</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>V Atr</title></bibl>
+        <bibl type="legalText"><title>V Æthelred</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">245</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">88</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g"><abbr>G</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-g2"><abbr>G2</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i (second copy)</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G (A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">31.1</idno>
-          <idno type="editorNumber" n="Robertson">31.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +48,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1230 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1198 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 245.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 88.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="31.1">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 31.1</head>
-        <ab type="selectedText" xml:lang="und">⁊ gif he ongean geonbyrde oððe æhlip gewirce, ⁊ hine man þonne þurh þæt afille, licge ægilde eallum his freondum.</ab>
-        <ab type="translation" xml:lang="en">And if he offers resistance to the course of justice or commits a breach of the law, and through that brings about his own death, no compensation shall be paid for him to any of his friends.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ gyf he ongean riht þurh æhlyp geonbyrde ⁊ swa gewyrce, þæt hine man afylle, licge ægylde eallan his freondan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="31.1" corresp="#wit-g">⁊ gyf he ongean riht þurh æhlyp geonbyrde ⁊ swa gewyrce, þ<hi rend="italic">æt</hi> hine man afylle, licge ægylde eallan his freondan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="31.1" corresp="#wit-g2">⁊ gif he ongean riht þurh æhlyp geonbyrde ⁊ swa gewyrce, þæt hine man afylle, licge ægylde eallum his freondan.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="31.1" corresp="#wit-d">⁊ gif he ongean riht geonbyrde oððe æhlip gewirce, ⁊ hine man þonne þurh þæt afille, licge ægilde eallum his freondum.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And if he offers resistance to the course of justice or commits a breach of the law, and through that brings about his own death, no compensation shall be paid for him to any of his friends.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn er gegen das Recht durch Gewalt ankämpft (oder Gewalt verübt und nun deshalb D) und so veranlasst, dass er erschlagen wird, liege er todt, allen seinen Freunden nicht [durch Wergeld] entgolten.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if he resists the law by assault (or commits assault and therefore, D) and so brings it about that he is killed, let him lie uncompensated [by wergild] to all his friends.</ab>
+        <note type="editorial">Liebermann compares EGu 6.7.</note>
       </div>
     </body>
   </text>

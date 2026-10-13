@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>VII Atr 2.3</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,18 +20,15 @@
         <idno type="citationKey">VIIAtr 2.3</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">260</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VII Atr</title></bibl>
+        <bibl type="legalText"><title>VII Æthelred (Bath)</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">260</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">110</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>Q</witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">Q: Quadripartitus Robertson, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">2.3</idno>
-          <idno type="editorNumber" n="Robertson">2.3</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -46,15 +46,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1417 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1382 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 260.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2.3">
         <head><ref type="lawCode" target="law:VIIAtr">VII Atr</ref> 2.3</head>
-        <ab type="selectedText" xml:lang="und">Et sit omnis servus liber ab opere illis tribus diebus, quo melius ieiunare possit, et operetur sibimet quod vult.</ab>
-        <ab type="translation" xml:lang="en">And all slaves shall be exempt from work on those three days, so that they can fast the better and may make what they want for themselves.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2.3" corresp="#wit-q">Et sit omnis seruus liber ab opere illis tribus diebus, quo melius ieiunare possit, et operetur sibimet quod uult.</ab>
+        <ab type="editionText" xml:lang="la" source="#robertson" n="2.3" corresp="#wit-q">Et sit omnis servus liber ab opere illis tribus diebus, quo melius ieiunare possit, et operetur sibimet quod vult.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">And all slaves shall be exempt from work on those three days, so that they can fast the better and may make what they want for themselves.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und jeder Sklav sei frei von Arbeit an jenen drei Tagen, damit er besser fasten könne, und arbeite für sich, was er will.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let every slave be free from work on those three days, so that he can fast better, and let him work for himself at what he wishes.</ab>
+        <note type="editorial">Liebermann compares VIIa Atr 5.1.</note>
       </div>
     </body>
   </text>

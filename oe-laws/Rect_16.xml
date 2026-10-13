@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Rect 16</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Gobbitt</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Gobbitt</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,23 +18,18 @@
         <idno type="lawCodeAnchor">Rect</idno>
         <idno type="clause">16</idno>
         <idno type="citationKey">Rect 16</idno>
-        <idno type="legalText">Rect.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">451</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Rectitudines singularum personarum</title></bibl>
+        <bibl type="legalText"><title>Rectitudines Singularum Personarum</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">451</biblScope></bibl>
+          <bibl xml:id="gobbitt" type="edition">Thom Gobbitt, ed., ‘Rectitudines singularum personarum’ and ‘Gerefa’, <title>Early English Laws</title> (earlyenglishlaws.ac.uk)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">B: earlyenglishlaws ac.uk: RSP+Gerefa Gobbitt, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">16</idno>
-          <idno type="editorNumber" n="Gobbitt">17</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -49,16 +47,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2170 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2113 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 451.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="16">
         <head><ref type="lawCode" target="law:Rect">Rect</ref> 16</head>
-        <ab type="selectedText" xml:lang="und">Be cys wyrhte . Cyswyhrtan gebyreð hunded cyse 7 þæt heo of wringhwæge buteran macige to hlafordes beode . 7 hæbbe hire ða syringe ealle butan ðæs hyrdes dæle .</ab>
-        <ab type="translation" xml:lang="en">Concerning the cheese-wright To the cheese-wright is due a hundred cheeses and that she make butter from the strained whey for the lord’s table, and she [should] have all the sour milk except the shepherd’s portion.</ab>
-        <ab type="supplementaryText" xml:lang="und">[16] Be cyswyrhte Cyswyrhtan gebyreð hundred cyse, 7 þæt heo of wringhwæge buteran macige to hlafordes beode; 7 hæbbe hire ða syringe ealle butan ðæs hyrdes dæle.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16" corresp="#wit-b">[16] Be cyswyrhte. Cyswyrhtan gebyreð hundred cyse, 7 þ<hi rend="italic">æt</hi> heo of wringhwæge buteran macige to hlafordes beode; 7 hæbbe hire ða syringe ealle butan ðæs hyrdes dæle.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="16" corresp="#wit-q">Caseum facienti reddere conuenit centum caseos, et ut butirum faciat ad mensam domini sui de siringie; et habeat sibi totam siringiam preter partem pastoris.</ab>
+        <ab type="editionText" xml:lang="ang" source="#gobbitt" n="17" corresp="#wit-b">Be cys wyrhte . Cyswyhrtan gebyreð hunded cyse 7 þæt heo of wringhwæge buteran macige to hlafordes beode . 7 hæbbe hire ða syringe ealle butan ðæs hyrdes dæle .</ab>
+        <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">Concerning the cheese-wright To the cheese-wright is due a hundred cheeses and that she make butter from the strained whey for the lord’s table, and she [should] have all the sour milk except the shepherd’s portion.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Von der Käsemacherin. Der Käsemacherin gebühren 100 Käse, und dass sie aus Molke, [die enttropft] der Käsepresse, Butter mache für die Herrschaftstafel; und sie erhalte für sich die Buttermilch ganz, ausser jenes Hirten Theil.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of the cheese-maker. To the cheese-maker are due 100 cheeses, and that she make butter for the lord's table from the whey [that drips] from the cheese-press; and let her have all the buttermilk for herself, except the herdsman's share.</ab>
+        <note type="editorial">The heading ‘cyswyrhte’ is a Middle English form. The Quadripartitus reads ‘sirin.’ for ‘wring’ (Anglo-Saxon ‘si’ written in ligature resembles ‘ƿ’). K: line breaks removed and a missing full stop after the heading supplied. Liebermann compares Rect 14.</note>
       </div>
     </body>
   </text>

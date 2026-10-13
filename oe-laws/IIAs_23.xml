@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II As 23</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,23 +20,20 @@
         <idno type="citationKey">IIAs 23</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">162</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Æthelstan</title></bibl>
+        <bibl type="legalText"><title>II Æthelstan (Grately)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">162</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Ot</witness>
-          <witness>Ld</witness>
-          <witness>So</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-ot"><abbr>Ot</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-so"><abbr>So</abbr> <note type="manuscript">William Somner's transcript of Cotton Otho B.xi (made before the fire)</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">23</idno>
-          <idno type="editorNumber" n="Attenborough">23</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,16 +51,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 801 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 786 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 162.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="23">
         <head><ref type="lawCode" target="law:IIAs">II As</ref> 23</head>
-        <ab type="selectedText" xml:lang="und">[Be ðon ðe ordales weddigaþ.] [Ld] Gif hwa ordales weddige, ðonne cume he þrim nihtum ær to þam mæssepreoste þe hit halgian scyle, ond fede hine sylfne mid hlafe ⁊ mid wætre ⁊ sealte ⁊ wyrtum, ær he togan scyle, ⁊ gestonde him mæssan þæra þreora daga ælcne, ⁊ offrige to ⁊ gá to husle ðy dæge þe he to ðam ordale gan scyle, swerige ðonne þone að þæt he sy mid folcryhte unscyldig ðære tihtlan, ær he to þam ordale gá.</ab>
-        <ab type="translation" xml:lang="en">If anyone engages to undergo an ordeal, he shall come three days before the mass-priest who is to consecrate it, and he shall feed himself on bread and water and salt and herbs before he proceeds thither, and he shall attend mass on each of the three days. And on the day he has to go to the ordeal, he shall make an offering and attend communion; and then before he goes to the ordeal, he shall swear an oath that according to the public law he is innocent of the accusation.</ab>
-        <ab type="supplementaryText" xml:lang="und">Be ðon ðe ordales weddigaþ. Gif hwa ordales weddige, ðonne cume he ðrim nihtum ær to ðam mæssepreoste ðe hit halgian scyle, ⁊ fede hine sylfne mid hlafe ⁊ sealte ⁊ wætere ⁊ wyrtum, ær he togán scyle, ⁊ gestande his mæssan ðæra ðreora dage ylce, ⁊ geoffrige to ⁊ ga to husle ðy dæge ðe he to ðæm ordale gán scyle, swyrige ðone aþ, þæt he se mid folcrihte unscyldig ðære tyhtelan, ær ðe he to ðæm ordale gá.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="23" corresp="#wit-ld">Be ðon ðe ordales weddigaþ. Gif hwa ordales weddige, ðonne cume he ðrim nihtum ær to ðæm mæssepreoste ðe hit halgian scyle, ⁊ fede hine sylfne mid hlafe ⁊ sealte ⁊ wætere ⁊ wyrtum, ær he togán scyle, ⁊ gestande his mæssan ðæra ðreora dage ylce, ⁊ geoffrige to ⁊ ga to husle ðy dæge ðe he to ðæm ordale gán scyle, ⁊ swyrige ðone aþ, þæt he se mid folcrihte unscyldig ðære tyhtelan, ær ðe he to ðæm ordale gá.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="23" corresp="#wit-h">Gif hwa ordales weddige, ðonne cume he þrim nihtum ær to þam mæssepreoste þe hit halgian scyle, ond fede hine sylfne mid hlafe ⁊ mid wætre ⁊ sealte ⁊ wyrtum, ær he togan scyle, ⁊ gestonde him mæssan þæra þreora daga ælcne, ⁊ offrige to ⁊ gá to husle ðy dæge þe he to ðam ordale gan scyle, ⁊ swerige ðonne þone að, þæt he sy mid folcryhte unscyldig ðære tihtlan, ær he to þam ordale gá.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="23" corresp="#wit-ot">… dales weddige, þonne … preoste ðe hit haligan …, ⁊ fede … ⁊ wætere ⁊ wyrtum, ær he togan scyle, … þære þreora daga ælce, ⁊ geoffrige to ⁊ ga to hus …. þam ordale gan scyle, ⁊ swerige þone að, þæt he sie … yldig ðære tyhtlan, ær he to ðam ordale …</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="23" corresp="#wit-q">De illis qui ordalium uadiant. Si quis iudicium ferri uel aque uadiauerit, accedat tribus noctibus ante ad presbiterum qui debet sanctificare eum, et pascat se pane et sale et aqua et herbis, et audiat missam ipsorum trium dierum (singulorum,) et offerat et eat ad sacr(osanct)am communi(cati)onem ipsa die qua ad ordalium examinari debebit, et iuret quod publico iure sit innocens illius ac(cusa)tionis, antequam ad ordalium ueniat.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="23" corresp="#wit-h">[Be ðon ðe ordales weddigaþ.] [Ld] Gif hwa ordales weddige, ðonne cume he þrim nihtum ær to þam mæssepreoste þe hit halgian scyle, ond fede hine sylfne mid hlafe ⁊ mid wætre ⁊ sealte ⁊ wyrtum, ær he togan scyle, ⁊ gestonde him mæssan þæra þreora daga ælcne, ⁊ offrige to ⁊ gá to husle ðy dæge þe he to ðam ordale gan scyle, swerige ðonne þone að þæt he sy mid folcryhte unscyldig ðære tihtlan, ær he to þam ordale gá.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If anyone engages to undergo an ordeal, he shall come three days before the mass-priest who is to consecrate it, and he shall feed himself on bread and water and salt and herbs before he proceeds thither, and he shall attend mass on each of the three days. And on the day he has to go to the ordeal, he shall make an offering and attend communion; and then before he goes to the ordeal, he shall swear an oath that according to the public law he is innocent of the accusation.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Von denen, die Ordal rechtsförmlich versprechen. Ld) Wenn einer sich zum Ordal verpflichtet [hat], dann komme er drei Tage vorher zum Priester, der es weihen soll, und nähre sich mit Brot und mit Wasser und Salz; und Pflanzen, bevor er herantreten soll, und stelle sich zur Messe jeden der drei Tage und opfere auch und gehe zum Abendmahl an dem Tage, da er zum Ordale schreiten soll, und schwöre dann, bevor er zum Ordale schreitet, folgenden Eid: dass er nach Volksrecht dieser Inzicht unschuldig sei.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of those who formally pledge themselves to an ordeal. Ld) If anyone [has] pledged himself to an ordeal, then let him come three days beforehand to the priest who is to consecrate it, and feed himself on bread and water and salt and herbs before he is to go to it, and attend mass on each of the three days, and also make an offering and go to communion on the day on which he is to go to the ordeal, and then, before he goes to the ordeal, swear the following oath: that according to folk-law he is innocent of this charge.</ab>
       </div>
     </body>
   </text>

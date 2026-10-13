@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>VIII Atr 2</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">VIIIAtr 2</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">263</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VIII Atr</title></bibl>
+        <bibl type="legalText"><title>VIII Æthelred</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">263</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">118</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G(A) (part)</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g-a-part"><abbr>G(A) (part)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton MS Nero Ai Liebermann, ed</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">2</idno>
-          <idno type="editorNumber" n="Robertson">2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +47,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1459 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1422 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 263.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:VIIIAtr">VIII Atr</ref> 2</head>
-        <ab type="selectedText" xml:lang="und">And þæt is þonne ærest, þæt he his agenne wer gesille þam cyninge ⁊ Christe ⁊ mid þam hine silfne inlagige to bote.</ab>
-        <ab type="translation" xml:lang="en">And the first condition is, that he shall give his own wergeld to the king and to Christ, and by that means obtain the legal right to offer compensation.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ þæt is þonne ærest, þæt he his agenne wer Christe ⁊ þam cyninge gesylle ⁊ mid þam hine sylfne inlagie to bote.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-g-a-part">⁊ þ<hi rend="italic">æt</hi> is þon<hi rend="italic">ne</hi> ærest, þ<hi rend="italic">æt</hi> he his agenne wer Chr<hi rend="italic">ist</hi>e ⁊ þam cyninge gesylle ⁊ mid þam hine sylfne inlagie to bote.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="2" corresp="#wit-d">And þæt is þonne ærest, þæt he his agenne wer gesille þam cyninge ⁊ Christe ⁊ mid þam hine silfne inlagige to bote.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And the first condition is, that he shall give his own wergeld to the king and to Christ, and by that means obtain the legal right to offer compensation.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">und nämlich zuerst nun, dass er sein eigenes Wergeld Christo [der Kirche] und dem König zahle und hiermit sich selbst in den Friedensgenuss einkaufe zur Bussfähigkeit.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">and namely, first, that he pay his own wergild to Christ [the Church] and to the king, and thereby buy himself back into the law so as to be allowed to make amends.</ab>
       </div>
     </body>
   </text>

@@ -4,7 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Wif 8</title>
-        <respStmt><resp>Translation of the selected text</resp><name>Whitelock, English Historical Documents, I</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -14,23 +17,19 @@
         <idno type="lawCodeAnchor">Wif</idno>
         <idno type="clause">8</idno>
         <idno type="citationKey">Wif 8</idno>
-        <idno type="legalText">Wif.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">442</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Be Wifmannes Beweddung</title></bibl>
+        <bibl type="legalText"><title>Wifmannes Beweddung (On the Betrothal of a Woman)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">442</biblScope></bibl>
+          <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">8</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +47,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2141 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2085 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 442.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="8">
         <head><ref type="lawCode" target="law:Wif">Wif</ref> 8</head>
-        <ab type="selectedText" xml:lang="und">Æt þam giftan sceal mæssepreost beon mid rihte, se sceal mid Godes bletsunge heora gesomnunge gederian an ealre gesundfulnesse.</ab>
-        <ab type="translation" xml:lang="en">At the marriage there should by rights be a mass-priest, who shall unite them together with God's blessing in all prosperity.</ab>
-        <ab type="supplementaryText" xml:lang="und">Æt ðam giftan sceal mæssepreost beon mid rihte, se sceal mid Godes bletsunge heora gesomnunge gederian on ealre gesundfulnesse.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="8" corresp="#wit-b">Æt ðam giftan sceal mæssepreost beon mid rihte, se sceal mid Godes bletsunge heora gesomnunge gederian on ealre gesundfulnesse.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="8" corresp="#wit-h">Æt þa<hi rend="italic">m</hi> giftan sceal mæssepreost beon mid rihte, se sceal mid Godes bletsunge heora gesomnung<hi rend="italic">e</hi> g<hi rend="italic">e</hi>derian an ealre g<hi rend="italic">e</hi>sundfulnesse.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="8" corresp="#wit-q">Huic dationi debet interesse presbiter, qui cum Dei benedictione debet eorum consortium adunare in omnem sanitatem.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-h">At the marriage there should by rights be a mass-priest, who shall unite them together with God's blessing in all prosperity.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Bei der Trauung soll von rechtswegen der Priester sein: der soll durch Gottes Segen ihre Vereinigung zusammenthun in aller Heilsamkeit.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">At the wedding a mass-priest shall by right be present, who shall unite their union with God's blessing in all prosperity.</ab>
       </div>
     </body>
   </text>

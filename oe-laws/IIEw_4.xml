@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Ew 4</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,25 +18,20 @@
         <idno type="lawCodeAnchor">IIEw</idno>
         <idno type="clause">4</idno>
         <idno type="citationKey">IIEw 4</idno>
-        <idno type="legalText">II Edw</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">142</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Edward</title></bibl>
+        <bibl type="legalText"><title>II Edward (Exeter)</title> <note type="reign">Edward the Elder, r. 899–924</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">142</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">4</idno>
-          <idno type="editorNumber" n="Attenborough">4</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,16 +49,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 731 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 719 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 142.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4">
         <head><ref type="lawCode" target="law:IIEw">II Ew</ref> 4</head>
-        <ab type="selectedText" xml:lang="und">[Be ðon ðe heora agen secan willon.] [Ld] Eac ic wylle, þæt ælc man hæbbe symle þa men gearowe on his lande, ðe lǽdan ða men ðe heora ágen secan willen, ⁊ hy for nanum medsceattum ne werian, ne fúl náwar friðian ne feormian willes ne gewealdes.</ab>
-        <ab type="translation" xml:lang="en">It is my will also that everyone shall always have ready on his estate men who will guide others wishing to follow up their own [cattle]; and they [who guide] shall not for any bribes whatsoever hinder them; nor shall they anywhere shield crime, nor willingly and deliberately harbour [a criminal].</ab>
-        <ab type="supplementaryText" xml:lang="und">Eac ic wille, þæt ælc man hæbbe symble ða men gearowe on his lande, ðe læden ða men ðe hera agen secan willan, ⁊ hy for nanum medsceatum ne werian, ne ful nawar friðian ne feormian willes ne gewealdes.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-b">Eac ic wille, þ<hi rend="italic">æt</hi> ælc man hæbbe symble ða men gearowe on his lande, ðe læden ða men ðe hera agen secan willan, ⁊ hy for nanu<hi rend="italic">m</hi> medsceatum ne werian, ne ful nawar friðian ne feormian willes ne gewealdes.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-h">Eac ic wylle, þæt ælc man hæbbe symle þa men gearowe on his lande, ðe lǽden ða men ðe heora ágen secan willen, ⁊ hy for nanum medsceattum ne werian, ne fúl náwar friðian ne feormian willes ne gewealdes.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4" corresp="#wit-q">Etiam uolo, ut omnis homo simul habeat illos homines paratos in terra sua, qui conducant eos, qui suum proprium querere uolunt, et eos pro nulla mercede manuteneant, nec inmundum alicubi pacificent uel firment ex possibili uel impossibili.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="4" corresp="#wit-h">[Be ðon ðe heora agen secan willon.] [Ld] Eac ic wylle, þæt ælc man hæbbe symle þa men gearowe on his lande, ðe lǽdan ða men ðe heora ágen secan willen, ⁊ hy for nanum medsceattum ne werian, ne fúl náwar friðian ne feormian willes ne gewealdes.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">It is my will also that everyone shall always have ready on his estate men who will guide others wishing to follow up their own [cattle]; and they [who guide] shall not for any bribes whatsoever hinder them; nor shall they anywhere shield crime, nor willingly and deliberately harbour [a criminal].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Über [Geleitshilfe für (Quadr.)] diejenigen, welche ihr [verloren gegangenes] Eigenthum aufspüren wollen. Ld) Ferner will ich, dass jedermann auf seinem Landgute stets solche Leute bereit halte, welche diejenigen Männer, welche ihr eigen [Vieh] aufspüren wollen, führen sollen und dieselben nicht [etwa, vom Diebe bewogen] durch irgend welche Bestechungen abwehren, (Über diejenigen, welche Verbrechen beschirmen. Ld) noch auch Verbrechen irgendwo beschirmen oder unterstützen mit Willen oder Absicht.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(On [escort-help for (Quadr.)] those who wish to track down their [lost] property. Ld) Further, I will that everyone keep such people always ready on his estate as shall guide those men who wish to track down their own [cattle], and shall not [say, induced by the thief] turn them away through any bribes, (On those who shelter crime. Ld) nor anywhere shelter or support crime, wilfully or intentionally.</ab>
+        <note type="editorial">Ld begins a new chapter (Liebermann's numbering 5) at ‘ne ful friþiaþ’.</note>
       </div>
     </body>
   </text>

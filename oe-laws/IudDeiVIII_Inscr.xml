@@ -3,29 +3,31 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Iud. Dei VIII Inscr.</title>
+        <title>Iud Dei VIII Inscr.</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">IudDeiVIII_Inscr</idno>
-        <idno type="citation">Iud. Dei VIII Inscr.</idno>
-        <idno type="lawCode">Iud. Dei VIII</idno>
+        <idno type="citation">Iud Dei VIII Inscr.</idno>
+        <idno type="lawCode">Iud Dei VIII</idno>
         <idno type="lawCodeAnchor">IudDeiVIII</idno>
         <idno type="clause">Inscr.</idno>
         <idno type="citationKey">IudDeiVIII inscr.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">415</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Iudicium Dei</title></bibl>
+        <bibl type="legalText"><title>Iudicium Dei VIII (Ordeal Formula)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">415</biblScope></bibl>
+          <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">Ca</witness>
+          <witness xml:id="wit-ca" rend="bold"><abbr>Ca</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 422</note></witness>
         </listWit>
-        <bibl type="selectedText">Ca: Cambridge, Corpus Christi College 422 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">Iud. Dei VIII Inscr.</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -35,16 +37,22 @@
         <prefixDef ident="entry" matchPattern="(.+)" replacementPattern="entry.html?id=$1"/>
       </listPrefixDef>
     </encodingDesc>
+    <profileDesc>
+    </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2355 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2286 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 415.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Inscr.">
-        <head><ref type="lawCode" target="law:IudDeiVIII">Iud. Dei VIII</ref> Inscr.</head>
-        <ab type="selectedText" xml:lang="und">Halsie man ðonne man her.</ab>
-        <ab type="translation" xml:lang="en">Adjure the offender [as] here[in]:</ab>
+        <head><ref type="lawCode" target="law:IudDeiVIII">Iud Dei VIII</ref> Inscr.</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Iud. Dei VIII Inscr." corresp="#wit-ca">Halsie man ðonne man her.</ab>
+        <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-ca">Adjure the offender [as] here[in]:</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Beschwöre man den [zum Abendmahl vor dem Kaltwasser-Ordal tretenden] Menschen hier.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Let one here adjure the person [coming to communion before the cold-water ordeal].</ab>
+        <note type="editorial">MS Ca (Cambridge, Corpus Christi College 422, p. 330, after Iud Dei I 22.5). Liebermann dates it c. 950–1050; the language is late West Saxon, and irregularities may be the scribe's. ‘ðonne’ stands for ‘ðone’.</note>
       </div>
     </body>
   </text>

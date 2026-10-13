@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Em 6</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,25 +18,20 @@
         <idno type="lawCodeAnchor">IIEm</idno>
         <idno type="clause">6</idno>
         <idno type="citationKey">IIEm 6</idno>
-        <idno type="legalText">II Edm</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">188</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Edmund</title></bibl>
+        <bibl type="legalText"><title>II Edmund</title> <note type="reign">Edmund, r. 939–946</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">188</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">10</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>H</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">6</idno>
-          <idno type="editorNumber" n="Robertson">6</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,16 +49,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 921 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 899 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 188.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6">
         <head><ref type="lawCode" target="law:IIEm">II Em</ref> 6</head>
-        <ab type="selectedText" xml:lang="und">[Be mundbryce ⁊ hamsocne.] [Ld] Eac we cwædon be mundbryce ⁊ be hamsocnum: se ðe hit ofer ðis do, þæt he þolie ealles ðæs he age ⁊ sy on cyniges dome hwæðer he lif age.</ab>
-        <ab type="translation" xml:lang="en">Further, with respect to the violation of [the king's] mund and attacks on a man's house, we have ordained that he who commits either of these after this shall forfeit all that he possesses, and it shall be for the king to decide whether his life shall be preserved.</ab>
-        <ab type="supplementaryText" xml:lang="und">Eac we cwædon be mundbrice ⁊ be hamsocnum: se ðe hit ofer ðis dó, ðæt he þolige ealles ðæs he age, ⁊ si on cyninges dome, hwæðer he lif age.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-h">Eac we cwædon be mundbrice ⁊ be hamsocnu<hi rend="italic">m</hi>: se ðe hit ofer ðis dó, ðæt he þolige ealles ðæs he age, ⁊ si on cyninges dome, hwæðer he lif age.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-b">Eac we cwædon be mundbryce ⁊ hamsocnum: se ðe hit ofer ðis do, þæt he ðolie ealles ðæs he age, ⁊ sy on cyniges dome, hwæðer he lif age.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6" corresp="#wit-q">Item diximus de mundbryce et hamsocne: qui deinceps hec egerit, perdat omne quod habebit, et sit in arbitrio regis, an uitam habeat.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="6" corresp="#wit-b">[Be mundbryce ⁊ hamsocne.] [Ld] Eac we cwædon be mundbryce ⁊ be hamsocnum: se ðe hit ofer ðis do, þæt he þolie ealles ðæs he age ⁊ sy on cyniges dome hwæðer he lif age.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">Further, with respect to the violation of [the king's] <hi rend="italic">mund</hi> and attacks on a man's house, we have ordained that he who commits either of these after this shall forfeit all that he possesses, and it shall be for the king to decide whether his life shall be preserved.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Über Verletzung des Friedensschutzes und feindliche Heimsuchung. Ld) Ferner bestimmten wir über Verletzung des [königlichen] Friedensschutzes und [feindliche] Heimsuchungen: wer das nach diesem verübt, dass er alles, was er besitzt, verliere, und in des Königs Entscheidung stehe, ob er das Leben behalte.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of breach of protection and hostile house-attack. Ld) Further we determined concerning breach of [the king's] protection and [hostile] attacks on houses: whoever commits that after this, that he lose everything he owns, and that it be at the king's judgment whether he keeps his life.</ab>
+        <note type="editorial">Liebermann compares Ine 6.</note>
       </div>
     </body>
   </text>

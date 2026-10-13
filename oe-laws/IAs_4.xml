@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>I As 4</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,22 +20,18 @@
         <idno type="citationKey">IAs 4</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">146</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Æthelstan</title> <note type="reign">r. 924–939</note></bibl>
+        <bibl type="legalText"><title>I Æthelstan (Tithes)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">146</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">G(B)</witness>
-          <witness>D</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-g-b" rend="bold"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">G(B): British Library, Cotton Nero A.i Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">D: Cambridge, Corpus Christi College, MS 201 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">4</idno>
-          <idno type="editorNumber" n="Attenborough">4</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,16 +50,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 744 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 731 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 146.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4">
         <head><ref type="lawCode" target="law:IAs">I As</ref> 4</head>
-        <ab type="selectedText" xml:lang="und">⁊ ic wille eac, þæt mine gerefan gedon, þæt man agyfe þa ciricsceattas ⁊ þa sawlsceattas to þam stowum þe hit mid rihte togebyrige ⁊ sulhælmessan on geare, on þa gerad þæt þa his brucan æt þam haligan stowan, þe heora cyrcan begán willað ⁊ to Gode ⁊ to me geearnian willað. Se ðe þonne nelle, þolige þære are oððe eft to rihte gecyrre.</ab>
-        <ab type="translation" xml:lang="en">And I further desire that my reeves see to it that church dues and payments for the souls of the dead are rendered at the places to which they are legally due, and that 'plough-alms' [are rendered] yearly—on the understanding that all these payments shall be used at the holy places by those who are willing to attend to their churches, and wish to gain the favour of God and me. He who is not willing [to attend his church] shall either forfeit his benefice or revert to a proper discharge of his duties.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ ic wille eac, þæt mine gerefan gedon, þæt man agife þa ciricsceattas ⁊ þa sawlsceattas to ðam stowum þe hit mid rihte togebirige ⁊ sulhælmessan on geare, on ða gerad þæt þa his brucan æt ðam haligum stowum, þe heora cirican began willað ⁊ to Gode ⁊ to me gééarnian willað. Se þe þonne nelle, þolige þare are oððe eft to rihte gecirre.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-d">⁊ ic wille eac, þ<hi rend="italic">æt</hi> mine gerefan gedon, þ<hi rend="italic">æt</hi> man agife þa ciricsceattas ⁊ þa sawlsceattas to ða<hi rend="italic">m</hi> stowu<hi rend="italic">m</hi> þe hit mid rihte togebirige ⁊ sulhælmessan on geare, on ða gerad þ<hi rend="italic">æt</hi> þa his brucan æt ðam halig<hi rend="italic">um</hi> stowum, þe heora cirican began willað ⁊ to Gode ⁊ to me géearnian willað. Se þe þon<hi rend="italic">ne</hi> nelle, þolig<hi rend="italic">e</hi> þare are oððe eft to rihte gecirre.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-g-b">⁊ ic wille eac, þæt mine gerefan gedon, þæt man agyfe þa cyricsceattas ⁊ þa sawlsceattas to þam stowum þe hit mid rihte togebyrige ⁊ sulhælmessan on geare, on þa gerad þæt þa his brucan æt þam haligan stowan, þe heora cyrcan begán willað ⁊ to Gode ⁊ to me geearnian willað. Se ðe þonne nelle, þolige þære are oððe eft to rihte gecyrre.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4" corresp="#wit-q">Et uolo, ut cyricsceatta reddantur ad eum locum cui recte pertinent, et inde gaudeant in ipsis locis qui hęc dignius erga Deum et nos uolunt deseruire.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="4" corresp="#wit-g-b">⁊ ic wille eac, þæt mine gerefan gedon, þæt man agyfe þa ciricsceattas ⁊ þa sawlsceattas to þam stowum þe hit mid rihte togebyrige ⁊ sulhælmessan on geare, on þa gerad þæt þa his brucan æt þam haligan stowan, þe heora cyrcan begán willað ⁊ to Gode ⁊ to me geearnian willað. Se ðe þonne nelle, þolige þære are oððe eft to rihte gecyrre.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-g-b">And I further desire that my reeves see to it that church dues and payments for the souls of the dead are rendered at the places to which they are legally due, and that 'plough-alms' [are rendered] yearly—on the understanding that all these payments shall be used at the holy places by those who are willing to attend to their churches, and wish to gain the favour of God and me. He who is not willing [to attend his church] shall either forfeit his benefice or revert to a proper discharge of his duties.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und ich will auch, dass meine Vögte bewirken, dass man die Kirchensteuern und die Seelschatzungen an jene Stätten gebe, denen es gesetzlich zukommt, und Pflugalmosen jährlich, in der Absicht dass diejenigen dessen geniessen an den heiligen Stätten, die ihrer Kirchen warten wollen und um Gott und um mich sich verdient machen wollen. Wer aber nicht will, verliere die Pfründe oder kehre zum Recht zurück.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And I will also that my reeves bring it about that church-dues and soul-scot are given to those places to which it lawfully belongs, and plough-alms yearly, on the condition that those may enjoy it at the holy places who are willing to serve their churches and to earn merit with God and with me. But whoever will not, let him lose the benefice or return to what is right.</ab>
+        <note type="editorial">Chapter 4 is missing from Ld.</note>
       </div>
     </body>
   </text>

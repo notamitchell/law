@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>III Eg 7</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,27 +18,22 @@
         <idno type="lawCodeAnchor">IIIEg</idno>
         <idno type="clause">7</idno>
         <idno type="citationKey">IIIEg 7</idno>
-        <idno type="legalText">III Edg</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">204</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>III Edgar</title></bibl>
+        <bibl type="legalText"><title>III Edgar (Andover)</title> <note type="reign">Edgar, r. 957/9–975</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">204</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">26</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G(A)</witness>
-          <witness>A</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>So</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-so"><abbr>So</abbr> <note type="manuscript">William Somner's transcript of Cotton Otho B.xi (made before the fire)</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A. i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">7</idno>
-          <idno type="editorNumber" n="Robertson">7</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +52,24 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 992 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 966 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 204.</change>
+      <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 27.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 26.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7">
         <head><ref type="lawCode" target="law:IIIEg">III Eg</ref> 7</head>
-        <ab type="selectedText" xml:lang="und">[Be tyhtbysigum.] [Ld] ⁊ se þe tihtbisig sy ⁊ folc ungetrywe ⁊ þas gemot forbuge þrywa, þonne scifte man of þam gemote ða ðe him toridan, ⁊ finde þonne git borh, gif he mæge.</ab>
-        <ab type="translation" xml:lang="en">And if anyone who has a bad reputation and is unworthy of public confidence fails to attend the court-meetings three times, men shall be chosen from the meetings who shall ride to him, and may then still find a surety, if he can.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ se ðe tihtbysig sý ⁊ folce ungetriwe ⁊ þas gemot forbuge, þonne sceawie man of ðam gemote þa þe him toridan, ⁊ finde him þonne gyt borh, gyf he mæge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-g-a">⁊ se ðe tihtbysig sý ⁊ folce ungetriwe ⁊ þas gemot forbuge, þon<hi rend="italic">ne</hi> sceawie man of ðam gemote þa þe him toridan, ⁊ finde him þon<hi rend="italic">ne</hi> gyt borh, gyf he mæge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-a">⁊ se þe tihtbysig sy ⁊ folce ungetrywe ⁊ þas gemót forbuge ðriwa, þonne sceapige mon of þam gemote ða ðe him tórídon, ⁊ finde him þonne gyt borh, gyf he mæge.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="7" corresp="#wit-q">Et qui fuerit accusationibus infamatus et populo incredibilis et hec placita declinauerit, uideatur de (ipso) placito qui mittantur ad eum, et inueniat etiam tunc sibi fideiussores, si possit.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="7" corresp="#wit-d">[Be tyhtbysigum.] [Ld] ⁊ se þe tihtbisig sy ⁊ folce ungetrywe ⁊ þas gemot forbuge þrywa, þonne scifte man of þam gemote ða ðe him toridan, ⁊ finde þonne git borh, gif he mæge.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And if anyone who has a bad reputation and is unworthy of public confidence fails to attend the court-meetings three times, men shall be chosen from the meeting who shall ride to him, and he may then still find a surety, if he can.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Von oft Bescholtenen. Ld) Und wer oft bescholten ist und der Allgemeinheit Vertrauens unwürdig [gilt] und diese Gerichtsversammlungen dreimal (fehlt G Qu.) vermeidet: dann möge man aus der Gerichtsversammlung die [Männer] aussuchen (abordnen D), welche zu ihm ziehen sollen, und er mag sich [auch] dann noch Bürgschaft finden, wenn er kann.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of those often accused. Ld) And whoever is often accused and [held] untrustworthy by the people and avoids these court-meetings three times (lacking in G, Qu.): then let [men] be chosen (appointed, D) from the court-meeting to ride to him, and let him [even] then still find himself a surety, if he can.</ab>
+        <note type="editorial">‘þriwa’ should be supplied in G from II As 20, A, D, G2 and II Cn 25. A's ‘sceapige’ also in the copy in B. Liebermann compares II As 20, 20.1, 20.4.</note>
       </div>
     </body>
   </text>

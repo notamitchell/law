@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>V Atr 11.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,17 @@
         <idno type="citationKey">VAtr 11.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">241</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>V Atr</title></bibl>
+        <bibl type="legalText"><title>V Æthelred</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">241</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">82</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g"><abbr>G</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-g2"><abbr>G2</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i (second copy)</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G (A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">11.1</idno>
-          <idno type="editorNumber" n="Robertson">11.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +47,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1199 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1167 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 241.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 82.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="11.1">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 11.1</head>
-        <ab type="selectedText" xml:lang="und">Þæt is sulhælmessan XV niht onufan eastron ⁊ geoguðe teoðunge be pentecosten ⁊ eorðwæstma be ealra halgena mæssen [⁊ Romfeoh be Petres mæssan] ⁊ leohtgescot þriwa on geare.</ab>
-        <ab type="translation" xml:lang="en">Namely, plough-alms fifteen days after Easter, and the tithe of young livestock at Pentecost, and [the tithe] of the fruits of the earth at the feast of All Saints, [and Peter's Pence by St Peter's Day], and light dues three times in the year.</ab>
-        <ab type="supplementaryText" xml:lang="und">Ðæt is sulhælmessan XV niht onufan eastran ⁊ geogoðe teoðunge be pentecosten ⁊ eorðwæstma be ealra halgena mæssan ⁊ Romfeoh be Petres mæssan ⁊ leohtgescot þriwa on geare.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="11.1" corresp="#wit-g">Ðæt is sulhælmessan XV niht onufan eastran ⁊ geogoðe teoðunge be pentecosten ⁊ eorðwæstma be ealra halgena mæssan ⁊ Romfeoh be Petres mæssan ⁊ leohtgescot þriwa on geare.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="11.1" corresp="#wit-g2">Ðæt is sulhælmessan huru XV niht onufan eastran ⁊ geogoðe teoðunge be pentecosten ⁊ eorðwæstma be alra halgena mæssan ⁊ Romfeoh be Petres mæssan ⁊ leohtgescot þriwa on geare.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="11.1" corresp="#wit-d">Þæt is sulhælmessan XV niht onufan eastron ⁊ geoguðe teoðunge be pentecosten ⁊ eorðwæstma be ealra halgena mæssan [⁊ Romfeoh be Petres mæssan] ⁊ leohtgescot þriwa on geare.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">Namely, plough-alms fifteen days after Easter, and the tithe of young livestock at Pentecost, and [the tithe] of the fruits of the earth at the feast of All Saints, [and Peter's Pence by St Peter's Day], and light dues three times in the year.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">nämlich Pflugalmosen (spätestens G2) vierzehn Tage nach Ostern und Jungvieh-Zehnt zu Pfingsten und Feldfrüchte[-Zehnt] zum Aller-Heiligen-Fest [1. November] und Romgeld zum Petersfest [1. August] und Lichtschoss dreimal im Jahre.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">namely plough-alms (at the latest, G2) a fortnight after Easter, and the tithe of young stock at Pentecost, and [the tithe of] the fruits of the earth at All Saints [1 November], and Rome-money at St Peter's day [1 August], and light-dues three times a year.</ab>
+        <note type="editorial">Liebermann compares II Eg 2.3 and 3; EGu 6.1 f.</note>
       </div>
     </body>
   </text>

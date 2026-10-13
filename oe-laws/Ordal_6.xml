@@ -3,35 +3,33 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Ord 6</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <title>Ordal 6</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Ordal_6</idno>
-        <idno type="citation">Ord 6</idno>
-        <idno type="lawCode">Ord</idno>
+        <idno type="citation">Ordal 6</idno>
+        <idno type="lawCode">Ordal</idno>
         <idno type="lawCodeAnchor">Ordal</idno>
         <idno type="clause">6</idno>
         <idno type="citationKey">Ordal 6</idno>
-        <idno type="legalText">Ordal</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">387</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Ordal</title></bibl>
+        <bibl type="legalText"><title>Ordal (On the Ordeal)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">387</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">6</idno>
-          <idno type="editorNumber" n="Attenborough">1.6</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -49,16 +47,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2082 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2034 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 387.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6">
-        <head><ref type="lawCode" target="law:Ordal">Ord</ref> 6</head>
-        <ab type="selectedText" xml:lang="und">And se þe þǽs lag abréce, beo þæt órdal on him forad, and gilde þan cyninge CXX scill. to wíte.</ab>
-        <ab type="translation" xml:lang="en">And if anyone breaks these rules, the ordeal shall in his case be invalidated, and he shall pay a fine of 120 shillings to the king.</ab>
-        <ab type="supplementaryText" xml:lang="und">7 se þe þǽs lage abréce, beo þæt órdal on him forad, 7 gilde þam cyninge CXX scill' to wíte.</ab>
+        <head><ref type="lawCode" target="law:Ordal">Ordal</ref> 6</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-h">7 se þe þǽs lage abréce, beo þ<hi rend="italic">æt</hi> órdal on him forad, 7 gilde þam cyninge CXX scill' to wíte.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6" corresp="#wit-q">Et qui leges istas infregerit (fregerit), sit ordalium (id est iudicium uel examen) fractum in eo, et reddat regi centum uiginti solidos wite.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="1.6" corresp="#wit-h">And se þe þǽs lag abréce, beo þæt órdal on him forad, and gilde þan cyninge CXX scill. to wíte.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And if anyone breaks these rules, the ordeal shall in his case be invalidated, and he shall pay a fine of 120 shillings to the king.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wer diese Vorschriften verletzt: an ihm sei das Ordal gescheitert, und er zahle dem König 120 Schill. als [Ungehorsams]strafe.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And whoever breaks these rules: let the ordeal be [counted as] failed in his case, and let him pay the king 120 shillings as a fine [for disobedience].</ab>
+        <note type="editorial">In H, Walreaf follows on a new line.</note>
       </div>
     </body>
   </text>

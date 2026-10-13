@@ -4,7 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Northu 2.2</title>
-        <respStmt><resp>Translation of the selected text</resp><name>Whitelock, English Historical Documents, I</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -14,20 +18,18 @@
         <idno type="lawCodeAnchor">Northu</idno>
         <idno type="clause">2.2</idno>
         <idno type="citationKey">Northu 2.2</idno>
-        <idno type="legalText">North. Priests' Law</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">380</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Northumbrian Priests' Law</title></bibl>
+        <bibl type="legalText"><title>Northumbrian Priests’ Law</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">380</biblScope></bibl>
+          <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979)</bibl>
+          <bibl xml:id="rabin" type="translation">Andrew Rabin, <title>The Political Writings of Archbishop Wulfstan of York</title> (Manchester: Manchester University Press, 2015)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>D</witness>
+          <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">2.2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -46,16 +48,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1993 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1946 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 380.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2.2">
         <head><ref type="lawCode" target="law:Northu">Northu</ref> 2.2</head>
-        <ab type="selectedText" xml:lang="und">7 gilde se þe woh dide XX ór þam biscope, XII ór þam preoste, þe he of his circan asette, XII ór eallum geferan, 7 þolige þæs feos eac, gif he on unriht ænig for oðres preostes circan sealde.</ab>
-        <ab type="translation" xml:lang="en">And he who did that wrong is to pay 20 ores to the bishop, 12 ores to the priest whom he ousted from his church, 12 ores to all the colleagues, and he is also to forfeit the money if he gave any wrongly for the church of another priest.</ab>
-        <ab type="secondTranslation" xml:lang="en">And he who committed that offence is to pay twenty ores to the bishop, twelve ores to the priest whom he displaced from his church, twelve ores to all of his colleagues, and he is also to forfeit the payment, if he paid anything wrongfully for another priest's church.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.2" corresp="#wit-d">⁊ gilde se þe woh dide XX ór þa<hi rend="italic">m</hi> biscope, XII ór þa<hi rend="italic">m</hi> preoste, þe he of his circan asette, XII ór eallu<hi rend="italic">m</hi> geferan, ⁊ þolige þæs feos eac, gif he on unriht ænig for oðres preostes circan sealde.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">And he who did that wrong is to pay 20 ores to the bishop, 12 ores to the priest whom he ousted from his church, 12 ores to all the colleagues, and he is also to forfeit the money if he gave any wrongly for the church of another priest.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin" corresp="#wit-d">And he who committed that offence is to pay twenty ores to the bishop, twelve ores to the priest whom he displaced from his church, twelve ores to all of his colleagues, and he is also to forfeit the payment, if he paid anything wrongfully for another priest's church.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und der, welcher das Unrecht beging, zahle 20 Ör dem Bischofe, 12 Ör dem Pfarrer, den er aus dessen Kirche entfernt hat, 12 Ör allen Genossen und verliere auch das Geld, wenn er widerrechtlich etwas für die Kirche [jenes] anderen Pfarrers gezahlt hat.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let him who did the wrong pay 20 ores to the bishop, 12 ores to the priest whom he removed from his church, 12 ores to all the fellows, and let him also lose the money, if he wrongfully paid anything for [that] other priest's church.</ab>
+        <note type="editorial">D reads ‘ór ⁊ þ.’; the scribe first wrote ‘XX ór ⁊ þ. b. XX ór; þ. p. … XII ór ⁊ eal.’, then erased the second ‘⁊’ and corrected the second XX to XII, but left the first ‘⁊’ and the punctuation before ‘þ. p.’.</note>
       </div>
     </body>
   </text>

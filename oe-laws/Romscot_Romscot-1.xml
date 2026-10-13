@@ -3,29 +3,31 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Rom. Romscot 1</title>
+        <title>Romscot 1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Romscot_Romscot-1</idno>
-        <idno type="citation">Rom. Romscot 1</idno>
-        <idno type="lawCode">Rom.</idno>
+        <idno type="citation">Romscot 1</idno>
+        <idno type="lawCode">Romscot</idno>
         <idno type="lawCodeAnchor">Romscot</idno>
-        <idno type="clause">Romscot 1</idno>
-        <idno type="citationKey">Romscot romscot1</idno>
+        <idno type="clause">1</idno>
+        <idno type="citationKey">Romscot 1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">474</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Romscot</title></bibl>
+        <bibl type="legalText"><title>Romscot (Peter’s Pence)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">474</biblScope></bibl>
+          <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>G(A)</witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">G(A): British Library, MS Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">Romscot 1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -43,15 +45,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2313 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2247 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 474.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
-      <div type="clause" n="Romscot 1">
-        <head><ref type="lawCode" target="law:Romscot">Rom.</ref> Romscot 1</head>
-        <ab type="selectedText" xml:lang="und">Romgescot sý agifen on sanctus Petrus mæssedæg ǽr undern æfter middesumera.</ab>
-        <ab type="translation" xml:lang="en">St Peter's pence is to be paid before Terce on St Peter's day after midsummer [1 August].</ab>
+      <div type="clause" n="1">
+        <head><ref type="lawCode" target="law:Romscot">Romscot</ref> 1</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-g-a">Romgescot sý agifen on s<hi rend="italic">anctu</hi>s Petrus mæssedæg ǽr undern æfter middesumera.</ab>
+        <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-g-a">St Peter's pence is to be paid before Terce on St Peter's day after midsummer [1 August].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Romschoss werde entrichtet an dem nach Mittsommer [fallenden] Fest des heiligen Petrus [1. Aug.] vor Mittag.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Let Rome-scot be paid on the feast of St Peter [1 August] that falls after midsummer, before noon.</ab>
+        <note type="editorial">MS G (Cotton Nero A I, f. 47, after the Af–Ine rubrics, same hand c. 1060). Liebermann dates it about 1050 and wonders if it is a private note of local law (G elsewhere has a text of Kentish origin). Clause number standardised from ‘Romscot 1’.</note>
       </div>
     </body>
   </text>
