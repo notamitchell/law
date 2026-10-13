@@ -1,17 +1,22 @@
 #!/usr/bin/env node
 /*
- * Law code citations: rewrites the citation list (<xr type="lawCode">) of
- * every entry in entries/ from the law codes cited in Liebermann's text, so
- * each passage, such as "VI As 1,1", is listed and links to its code on the
- * law code list. Citations added by hand that the text doesn't give (or that
- * have a link to the passage online) are kept after the generated ones.
+ * Rewrites the parts of every entry in entries/ that are made from
+ * Liebermann's text (the dictScrap), so they match it:
+ *
+ * - the numbered meanings: each bold "2)" and the text after it, as
+ *   <sense n="2"> in a <dictScrap type="senses"> after the full text;
+ * - the law code citations (<xr type="lawCode">): every passage cited, such
+ *   as "VI As 1,1", linked to its code on the law code list. Citations added
+ *   by hand that the text doesn't give (or that have a link to the passage
+ *   online) are kept after the generated ones.
  *
  *   npm install
- *   node tools/add-citations.js             # every entry
- *   node tools/add-citations.js bocland ad  # just these
- *   node tools/add-citations.js --dry-run   # report only
+ *   node tools/update-entries.js             # every entry
+ *   node tools/update-entries.js bocland ad  # just these
+ *   node tools/update-entries.js --dry-run   # report only
  *
- * The Suggest an entry form makes the same list when it saves an entry.
+ * The Suggest an entry form makes the same parts when it saves an entry.
+ * Run this after adding or changing entries any other way.
  */
 const fs = require('fs');
 const path = require('path');
@@ -25,7 +30,11 @@ const unescape = t => t.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&qu
 const XR = /^\s*<xr type="lawCode"><ref(?: target="([^"]*)")?>([\s\S]*?)<\/ref><\/xr>\s*$/;
 
 function update(xml) {
-    const scrap = /<dictScrap[^>]*>([\s\S]*?)<\/dictScrap>/.exec(xml);
+    const scrap = /<dictScrap type="liebermann">([\s\S]*?)<\/dictScrap>/.exec(xml);
+    // The numbered meanings: drop the old block, put the new one after the full text.
+    xml = xml.replace(/\n\s*<dictScrap type="senses">[\s\S]*?<\/dictScrap>/, '');
+    const senses = ELieb.sensesXml(scrap ? scrap[1] : '');
+    if (senses) xml = xml.replace(/^(\s*)(<dictScrap type="liebermann">[\s\S]*?<\/dictScrap>)/m, (m, pad, full) => `${pad}${full}\n${pad}${senses}`);
     const lines = xml.split('\n');
     const extra = [];
     const kept = lines.filter(line => {
@@ -48,17 +57,18 @@ function main() {
     const only = args.filter(a => !a.startsWith('--'));
     const dir = path.join(repo, 'entries');
     const files = only.length ? only.map(id => id + '.xml') : fs.readdirSync(dir).filter(f => f.endsWith('.xml'));
-    let changed = 0, withCitations = 0, citations = 0;
+    let changed = 0, withCitations = 0, citations = 0, withSenses = 0;
     for (const file of files) {
         const before = fs.readFileSync(path.join(dir, file), 'utf8');
         const { xml, count } = update(before);
         if (count) { withCitations++; citations += count; }
+        if (xml.includes('<dictScrap type="senses">')) withSenses++;
         if (xml !== before) {
             changed++;
             if (!dryRun) fs.writeFileSync(path.join(dir, file), xml);
         }
     }
-    console.log(`${files.length} entries, ${withCitations} with citations (${citations} in all); ${changed} ${dryRun ? 'would change' : 'changed'}.`);
+    console.log(`${files.length} entries: ${withSenses} with numbered meanings, ${withCitations} with citations (${citations} in all); ${changed} ${dryRun ? 'would change' : 'changed'}.`);
 }
 
 if (require.main === module) main();
