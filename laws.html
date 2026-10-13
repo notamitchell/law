@@ -1,0 +1,124 @@
+---
+title: Laws
+section: laws
+description: Search the clauses of the Old English laws, by law code, clause number, keyword, or text.
+scripts:
+  - "ROOT/scripts/eliebermann.js"
+---
+<h1>Laws</h1>
+
+<p class="lede">The clauses of the Old English law codes that Liebermann's dictionary cites, one clause at a time, with the Old English text and an English translation. Search by law code and clause number, by keyword (an offence, a kind of person, a place), or by the words of the text.</p>
+
+<div class="search-bar" role="search">
+    <input type="search" id="q" placeholder="Law code and clause, e.g. Ine 23 or Af 5" aria-label="Search by law code and clause">
+    <select id="law" aria-label="Law"><option value="">All laws</option></select>
+    <input type="search" id="kw" list="kwlist" placeholder="Keyword, e.g. Theft, Bishops, Churches" aria-label="Keyword: an offence, a kind of person or a place">
+    <datalist id="kwlist"></datalist>
+    <label class="small" style="align-self:center; font-weight:400"><input type="checkbox" id="fulltext"> Also search the texts and translations</label>
+</div>
+
+<p id="count" class="muted small"></p>
+<div id="results"><p class="loading">Loading clauses…</p></div>
+
+<p class="small muted">The clauses were made from a spreadsheet and have not yet been checked against the print. Keywords name kinds of people and places (<em>Bishops</em>, <em>Churches</em>), not individuals.</p>
+
+<script>
+(function () {
+    const root = window.SITE_ROOT || '';
+    const results = document.getElementById('results');
+    const q = document.getElementById('q');
+    const law = document.getElementById('law');
+    const kw = document.getElementById('kw');
+    const fulltext = document.getElementById('fulltext');
+    const params = new URLSearchParams(location.search);
+    q.value = params.get('q') || '';
+    kw.value = params.get('kw') || '';
+    fulltext.checked = params.get('text') === '1';
+    const wantedLaw = params.get('law') || '';
+    const LIMIT = 300;
+    let showAll = false;
+    let clauses = [];
+
+    const esc = ELieb.escapeXml;
+    // Plain lower-case letters: æ as ae, þ as th, accents removed, punctuation as spaces.
+    const fold = s => ELieb.slugify(s).toLowerCase().replace(/-/g, ' ');
+    const squash = s => fold(s).replace(/ /g, '');
+    const keywords = c => c.offences.concat(c.people, c.places);
+
+    function snippet(c) {
+        const t = c.en || c.text || '';
+        return t.length > 200 ? t.slice(0, 200).replace(/\s+\S*$/, '') + '…' : t;
+    }
+
+    function draw() {
+        const term = squash(q.value.trim());
+        const kword = fold(kw.value.trim());
+        const text = fold(q.value.trim());
+        const list = clauses.filter(c =>
+            (!law.value || c.law === law.value) &&
+            (!kword || c._kw.includes(kword)) &&
+            (!term || c._cite.some(x => x.startsWith(term)) || (fulltext.checked && c._text.includes(text))));
+
+        document.getElementById('count').textContent = `${list.length} of ${clauses.length} clauses`;
+        if (!list.length) {
+            results.innerHTML = '<p>No clauses match. Try a shorter search, or leave the keyword empty.</p>';
+            return;
+        }
+        const shown = showAll ? list : list.slice(0, LIMIT);
+        const groups = [];
+        shown.forEach(c => {
+            const g = groups[groups.length - 1];
+            if (g && g.law === c.law) g.items.push(c); else groups.push({ law: c.law, items: [c] });
+        });
+        results.innerHTML = groups.map(g => `
+            <h2>${esc(g.law || 'Other')}</h2>
+            <ul class="entry-list clause-list">${g.items.map(c => `
+                <li>
+                    <a class="headword" href="${root}law.html?id=${encodeURIComponent(c.id)}">${esc(c.citation)}</a>
+                    <span class="gloss">${esc(snippet(c))}</span>
+                    ${keywords(c).length ? `<span class="chips">${keywords(c).slice(0, 6).map(k => `<button type="button" class="chip" data-kw="${esc(k)}">${esc(k)}</button>`).join('')}</span>` : ''}
+                </li>`).join('')}
+            </ul>`).join('') +
+            (list.length > shown.length ? `<p><button type="button" class="button" id="more">Show all ${list.length} clauses</button></p>` : '');
+    }
+
+    function update() {
+        showAll = false;
+        const p = new URLSearchParams();
+        if (q.value.trim()) p.set('q', q.value.trim());
+        if (law.value) p.set('law', law.value);
+        if (kw.value.trim()) p.set('kw', kw.value.trim());
+        if (fulltext.checked) p.set('text', '1');
+        history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
+        draw();
+    }
+
+    [q, law, kw, fulltext].forEach(el => el.addEventListener('input', update));
+    results.addEventListener('click', e => {
+        const chip = e.target.closest('.chip');
+        if (chip) { kw.value = chip.dataset.kw; update(); window.scrollTo(0, 0); return; }
+        if (e.target.id === 'more') { showAll = true; draw(); }
+    });
+
+    fetch(root + 'data/laws.json')
+        .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(list => {
+            list.forEach(c => {
+                // The search must match the start of the citation, the law's name, or the start of any word in them
+                // ("ine 23" finds Ine 23.2 but not Mine 23).
+                const words = fold(c.citation + ' ' + c.law).split(' ').filter(Boolean);
+                c._cite = words.map((w, i) => words.slice(i).join(''));
+                c._kw = fold(keywords(c).join(' | '));
+                c._text = fold(c.text + ' ' + c.en);
+            });
+            clauses = list;
+            const laws = [...new Set(list.map(c => c.law))].filter(Boolean);
+            law.innerHTML = '<option value="">All laws</option>' + laws.map(l => `<option>${esc(l)}</option>`).join('');
+            law.value = wantedLaw;
+            const terms = [...new Set(list.flatMap(keywords))].sort((a, b) => a.localeCompare(b));
+            document.getElementById('kwlist').innerHTML = terms.map(t => `<option value="${esc(t)}">`).join('');
+            draw();
+        })
+        .catch(() => { results.innerHTML = '<p>The list of clauses could not be loaded.</p>'; });
+})();
+</script>
