@@ -578,7 +578,8 @@ OTHER = 'Other laws and legal texts'
 def king_parts(king):
     """'Hlothhere, r. 673–685; Eadric, r. 685–686' -> [('Hlothhere', 'r. 673–685'), ('Eadric', 'r. 685–686')]."""
     out = []
-    for part in re.split(r';|, and ', king.strip('[] ')):
+    king = re.sub(r'^Attributed to ', '', king.strip('[] '))
+    for part in re.split(r';|, and ', king):
         part = part.strip(' []')
         m = re.match(r'(.*?),\s*((?:r\.|d\.).*)$', part)
         out.append((m.group(1).strip(), m.group(2).strip()) if m else (part, ''))
