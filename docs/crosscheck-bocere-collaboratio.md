@@ -17,7 +17,7 @@ The entries from *bocere* to *collaboratio* were checked against the team's Word
     - **Page numbers.** Page 36 begins inside *clæne*, but the 51 entries after it (*clænnesse* to *collaboratio*) were labelled page 35. They are now page 36, with their scan links.
 - **Questions for an editor (12).** See below. The site is unchanged on these until they are answered.
 - **Slips in the Word document (about 35).** The site is already right. See below.
-- **Entry divisions (6).** In the Word document a headword is not in bold, so its entry runs into the one before: *II) bræde*, *I) bry[g]de* and *II) bry[g]de*, *[-byrigan]*, *II) byrne*, *cearwund*, *II) ceas*. The site has them as separate entries already.
+- **Entry divisions (7).** In the Word document a headword is not in bold, so its entry runs into the one before: *II) bræde*, *I) bry[g]de* and *II) bry[g]de*, *[-byrigan]*, *II) byrne*, *cearwund*, *II) ceas*. The site has them as separate entries already.
 
 ## Questions for an editor
 
