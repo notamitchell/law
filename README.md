@@ -98,7 +98,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 | `tools/build-index.js` | Writes `data/entries.json`. Runs on every deploy. |
 | `tools/update-entries.js` | Rewrites the parts of each entry made from Liebermann's text: the numbered meanings and the law code citation list. Run it after adding or changing entries outside the form. |
 | `.github/workflows/static.yml` | Builds and deploys the site on every push to `main`. |
-| `docs/` | Entry format, import rules, the latest import report and the stock-take of October 2026. |
+| `docs/` | Entry format, import rules, the latest import report, the stock-take of October 2026, and the cross-checks against the team's Word transcriptions (`crosscheck-*.md`). |
 
 ## Adding entries
 
@@ -130,6 +130,7 @@ The letters Z to O were transcribed from the page scans, working backwards from 
 
 - [ ] Z–O were transcribed from the page images, not archive.org's OCR. Every entry says "Transcribed by Claude from the page scan; not yet checked against the print." (all letters)
 - [ ] Only spot checks have been done so far, and all matched the scan: wis–wise (p. 245), wud[u] (p. 250), the end of Verbum to vers (p. 233), utalædan to [utaslean] (p. 231). (W, V, U)
+- [ ] A to *boc* (pp. 1–25) have been cross-checked against the team's Word transcription, *A - boc.docx*: see [docs/crosscheck-A-boc.md](docs/crosscheck-A-boc.md) for what was fixed and the questions still open. (A, B)
 - [ ] An entry that runs over a page keeps a page marker where the page turns, e.g. ymbrenfæsten (p. 253) and vel (p. 233). The very long entry on, which runs from p. 162 to p. 165, is one entry. (Y, W, V, O)
 
 **Language labels**
