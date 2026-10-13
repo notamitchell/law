@@ -200,3 +200,11 @@ From [the cross-check of tǣcing – þe](crosscheck-taecing-the.md).
 |---|---|---|---|---|---|
 | [ ] | 211 | *to* | **gecieran** to bote II Ew 1,1 | **gecierran** | |
 | [ ] | 216 | *þ* | 11) für **ƿ**, d. i. w (small wynn) | **Ƿ** (capital) | |
+
+## underþæncan – wedd (pp. 228–237)
+
+From [the cross-check of underþæncan – wedd](crosscheck-underthaencan-wedd.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 237 | *weallan* | 3: ~leð I Cn 6,1 A (**~lað!** G) | (**~að!** G) | |
