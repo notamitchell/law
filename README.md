@@ -175,6 +175,13 @@ The letters Z to O were transcribed from the page scans, working backwards from 
 5. **Cross-references with ~.** Resolve pointers like *s.* abb~ to the entry they mean.
 6. **Validation.** A TEI customisation (ODD) for the entry format, and a check on every push that each entry is valid.
 7. **The *Rechts- und Sachglossar*** (volume 2, part 2) as a second dictionary, linked from the *Wörterbuch*.
+8. **The Old English laws database** (`oe-laws/`, 2,294 TEI files made from the laws spreadsheet; see [docs/OE-LAWS.md](docs/OE-LAWS.md)). It is not on the site yet. To do:
+    - Put it on the site as its own section, and link dictionary citations (*Ine* 23,2) to their clauses through each file's `citationKey`.
+    - Decide how to treat citations that end in a manuscript letter (*9 Q*, *1 Ld*), and find out why citations to *Ger*, *Hl*, *Abt*, *Af* and *Wi* so often find no clause.
+    - Open questions, to answer when there is time:
+        - [ ] Six law codes were matched to the law code list by judgement: *Becw*, *Mirc.*, *Nor. Cyricgrið*, *Norðleod.*, *Ord*, *Rom.* Are they right?
+        - [ ] Some codes are not on the law code list, so their clauses are not linked: *Cn 1018*, the *Rubrics*, *VI Atr (Latin Paraphrase)*, *Wer*, *Geþyn.*, *Prom. Reg.*, *Rubric List*, *Ymb Æwbricas*. Should they be added to it?
+        - [ ] The spreadsheet does not say which language each text is in, and some is Latin, so the texts are marked `xml:lang="und"`. How should Old English and Latin be told apart?
 
 ## Statuta Vetera (a separate project)
 
