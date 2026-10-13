@@ -2,7 +2,7 @@
 
 Each dictionary entry is one TEI XML file in `entries/`, named after its headword (see [File names](#file-names)). The site reads these files in the browser; nothing else needs updating when one is added.
 
-The files are made by the [contribution form](../contribute.html), the [bulk import](../import.html) or `tools/import-docx.js`, all of which use `ELieb.buildEntryXml()` in `scripts/eliebermann.js`. If you edit a file by hand, keep to the shape below.
+The files are made by the [Suggest an entry](../contribute.html) form, the bulk import (`import.html` or `tools/import-docx.js`), all of which use `ELieb.buildEntryXml()` in `scripts/eliebermann.js`. If you edit a file by hand, keep to the shape below.
 
 ## Example
 
@@ -58,7 +58,7 @@ The files are made by the [contribution form](../contribute.html), the [bulk imp
 | `idno type="slug"` | The file name without `.xml`. |
 | `sourceDesc/bibl` | Where the entry is printed: `biblScope unit="page"` is the page of the *Wörterbuch* as printed (not the page of a PDF), and `ptr type="facsimile"` links to the scan of that page. |
 | `listPrefixDef` | Says what the short link targets below (`law:`, `gram:`, `entry:`) point to. The same in every file. |
-| `revisionDesc/change` | One line per change, with its date: created, imported, edited. The form adds a line when an entry is edited. |
+| `revisionDesc/change` | One line per change, with its date: created, imported, edited. The form adds a line when a change is suggested. |
 
 ## The entry
 

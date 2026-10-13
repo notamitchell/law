@@ -93,6 +93,27 @@ code, pre, textarea.code { font-family: var(--mono); font-size: 0.9em; }
 .site-wordmark { height: 1.9rem; width: auto; }
 .site-header--slim .site-subtitle { margin: 0; color: var(--muted); font-size: 1.05rem; }
 
+/* "Site under construction" tape, in both headers. */
+.construction {
+    display: inline-block;
+    margin: 0.5rem 0 0.25rem;
+    padding: 3px;
+    border-radius: 4px;
+    background: repeating-linear-gradient(-45deg, #f2b705 0 8px, var(--navy-dark) 8px 16px);
+}
+.construction span {
+    display: block;
+    padding: 0.15rem 0.75rem;
+    border-radius: 2px;
+    background: #fff3c4;
+    color: var(--navy-dark);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+.site-header--slim .construction { margin: 0 0 0 auto; }
+
 .main-nav, .sub-nav { background: var(--navy-dark); }
 .main-nav ul, .sub-nav ul {
     list-style: none;
@@ -368,6 +389,12 @@ tbody tr:nth-child(even) td.under-review { background: #f9efd3; }
 .entry-section ol { padding-left: 1.5rem; }
 .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 0 2rem; }
 
+.suggest-change {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 1rem;
+    margin: 2rem 0 1rem; padding: 0.75rem 1rem;
+    background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius);
+}
+.suggest-change p { margin: 0; }
 .source-line { font-size: 0.9rem; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 1rem; }
 
 /* The printed page beside the entry; stacked under it on narrow screens. */
@@ -375,8 +402,6 @@ tbody tr:nth-child(even) td.under-review { background: #f9efd3; }
 .entry-scan {
     position: sticky;
     top: 1rem;
-    height: calc(100vh - 2rem);
-    min-height: 28rem;
     display: flex;
     flex-direction: column;
     background: #2b2b2b;
@@ -385,10 +410,14 @@ tbody tr:nth-child(even) td.under-review { background: #f9efd3; }
 }
 .entry-scan-bar { display: flex; justify-content: space-between; gap: 1rem; color: #fff; font-size: 0.85rem; padding: 0 0.25rem 0.5rem; }
 .entry-scan-bar a { color: #cfe2ff; }
+.entry-scan.loaded { height: calc(100vh - 2rem); min-height: 28rem; }
 .entry-scan iframe { flex: 1; width: 100%; border: 0; border-radius: 4px; background: #fff; }
+.entry-scan-load { text-align: center; padding: 2rem 1rem; color: #ddd; font-size: 0.85rem; }
+.entry-scan-load p { margin: 0.75rem 0 0; }
 @media (max-width: 60rem) {
     .entry-with-scan { grid-template-columns: minmax(0, 1fr); }
-    .entry-scan { position: static; height: 80vh; }
+    .entry-scan { position: static; }
+    .entry-scan.loaded { height: 80vh; }
 }
 
 /* ---------- Contribution form ---------- */

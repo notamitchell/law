@@ -9,8 +9,7 @@
 > - **Look up a word:** [Dictionary](https://notamitchell.github.io/law/dictionary.html)
 > - **Abbreviations:** [Law codes and manuscripts](https://notamitchell.github.io/law/lawAbb.html) · [Grammatical abbreviations](https://notamitchell.github.io/law/gramAbb.html)
 > - **Statuta Vetera:** [Manuscripts](https://notamitchell.github.io/law/StatutaVetera/) · [Statutes of the Realm viewer](https://notamitchell.github.io/law/StatutaVetera/sidebyside.html)
-> - **Add or correct an entry:** [Add an entry](https://notamitchell.github.io/law/contribute.html), or *Suggest a correction* at the foot of any entry
-> - **Import a Word document of entries:** [Bulk import](https://notamitchell.github.io/law/import.html)
+> - **Suggest an entry or a change:** [Suggest an entry](https://notamitchell.github.io/law/contribute.html), or *Suggest a change* at the foot of any entry
 
 ---
 
@@ -21,6 +20,7 @@
 - [Repository layout](#repository-layout)
 - [Adding entries](#adding-entries)
 - [Running the site locally](#running-the-site-locally)
+- [Transcription notes to review](#transcription-notes-to-review)
 - [Roadmap](#roadmap)
 - [Source](#source)
 
@@ -33,7 +33,7 @@ eLiebermann is a digital edition of the *Wörterbuch*, the dictionary in Felix L
 It is a static website hosted on **GitHub Pages** and built with **Jekyll**, using the `jekyll-theme-cayman` theme with a custom layout. It has no server or database of its own:
 
 - **Entries** are TEI XML files in `entries/`, one per headword. The browser fetches them and renders them on the fly. The format is in [docs/SCHEMA.md](docs/SCHEMA.md).
-- **New entries** are made in the browser, by the [contribution form](contribute.html) for one entry or the [bulk import](import.html) for a whole Word document. Both produce TEI files, which an editor adds to `entries/` on GitHub. Sending submissions straight to the site is on the [roadmap](#roadmap).
+- **New entries and changes** are suggested in the browser with the [Suggest an entry](contribute.html) form, which makes a TEI file for an editor to add to `entries/` on GitHub. Whole Word documents are imported with `tools/import-docx.js` (the browser import page is kept in the code but is not on the site for now). Sending submissions straight to the site is on the [roadmap](#roadmap).
 
 The project is deliberately a **perpetual work in progress**. Entries that don't exist yet are invitations to contribute, not defects.
 
@@ -50,7 +50,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
            built on deploy)      rendered in the
                                  browser)
 
- Contributor ──▶ contribute.html (one entry) or import.html (a Word document)
+ Contributor ──▶ contribute.html (suggest an entry, or ?id= a change to one)
                    │  builds TEI with scripts/eliebermann.js, links law codes and abbreviations
                    ▼
                  TEI file(s) downloaded ──▶ editor uploads to entries/ on GitHub ──▶ site rebuilds
@@ -74,8 +74,8 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 | `index.html`, `about.html` | Home and About. Their text is in `pages/`. |
 | `dictionary.html` | A–Z list and search. |
 | `entry.html` | Shows one entry. |
-| `contribute.html` | Form for one entry: makes, previews and downloads its TEI file; `?id=` opens an existing entry for correction. |
-| `import.html` | Bulk import of a Word document. |
+| `contribute.html` | *Suggest an entry*: makes, previews and downloads one entry's TEI file. `?id=` suggests a change to an existing entry, with the form filled in from its file. |
+| `import.html` | Bulk import of a Word document in the browser. Not on the site for now (`published: false`); see [docs/IMPORT.md](docs/IMPORT.md). |
 | `abbreviations.html`, `lawAbb.html`, `gramAbb.html` | The abbreviation lists (`scripts/abbreviations.js`). |
 | `entries/*.xml` | **The dictionary.** One TEI file per entry. See [docs/SCHEMA.md](docs/SCHEMA.md). |
 | `pages/*.xml` | Text of the site pages, as TEI. |
@@ -93,11 +93,11 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 
 ## Adding entries
 
-**One entry:** fill in [Add an entry](https://notamitchell.github.io/law/contribute.html), download the file, and upload it to [`entries/`](https://github.com/notamitchell/law/upload/main/entries).
+**One entry:** fill in [Suggest an entry](https://notamitchell.github.io/law/contribute.html), download the file, and upload it to [`entries/`](https://github.com/notamitchell/law/upload/main/entries).
 
-**A Word document of entries:** use [Bulk import](https://notamitchell.github.io/law/import.html) and upload the files from the zip, or run `node tools/import-docx.js` (see [docs/IMPORT.md](docs/IMPORT.md)). Entries already on the site are kept unless you ask to replace them.
+**A Word document of entries:** run `node tools/import-docx.js` (see [docs/IMPORT.md](docs/IMPORT.md)). Entries already on the site are kept unless you ask to replace them.
 
-**A correction:** *Suggest a correction* at the foot of an entry opens it in the form; download the new file and upload it over the old one. Or edit the XML on GitHub directly.
+**A change:** *Suggest a change* at the foot of an entry opens the form filled in from that entry; the file it makes has the same name, so uploading it replaces the entry. Or edit the XML on GitHub directly.
 
 **A law code or abbreviation that isn't linked:** add its spelling to `data/markLaw.json` or `data/markforward.json` with the same Anchor as its main form. Existing entries keep their links as they were made; re-import or re-save an entry to pick up new ones.
 
@@ -112,6 +112,51 @@ bundle exec jekyll serve --baseurl /law
 ```
 
 Then open http://localhost:4000/law/.
+
+## Transcription notes to review
+
+The letters Z to Q were transcribed from the page scans, working backwards from Z. These are the quirks and judgement calls recorded on their pull requests ([Z](https://github.com/notamitchell/law/pull/5), [Y](https://github.com/notamitchell/law/pull/7), [W](https://github.com/notamitchell/law/pull/8), [V](https://github.com/notamitchell/law/pull/9), [U](https://github.com/notamitchell/law/pull/10), [Þ](https://github.com/notamitchell/law/pull/12), [T](https://github.com/notamitchell/law/pull/14), [S](https://github.com/notamitchell/law/pull/17), [R](https://github.com/notamitchell/law/pull/19), [Q](https://github.com/notamitchell/law/pull/21)). Tick each one once someone has checked it against the print and agrees with it, or change the entries if not.
+
+**Source and status**
+
+- [ ] Z–Q were transcribed from the page images, not archive.org's OCR. Every entry says "Transcribed by Claude from the page scan; not yet checked against the print." (all letters)
+- [ ] Only spot checks have been done so far, and all matched the scan: wis–wise (p. 245), wud[u] (p. 250), the end of Verbum to vers (p. 233), utalædan to [utaslean] (p. 231). (W, V, U)
+- [ ] An entry that runs over a page keeps a page marker where the page turns, e.g. ymbrenfæsten (p. 253) and vel (p. 233). (Y, W, V)
+
+**Language labels**
+
+- [ ] z- carries the double marker LF, but w is marked FL. Decide on one order. (Z, W)
+- [ ] A superscript F or L inside an entry is kept as a language marker, not linked as a manuscript siglum, e.g. the F before *siste* in Zahlwort. (Z, Y)
+- [ ] Liebermann's German articles are tagged as grammatical terms: Zahlwort, Wortbildung, Wortschatz variirt, both Wortstellung, Verallgemeinernd, Verbum, Vocalverdoppelung, Umlaut, Unpersönliche and Urkundenstil. (Z, W, V, U)
+- [ ] II) un has no F of its own and is tagged French, like I) un. (U)
+
+**Homographs and file names**
+
+- [ ] Homographs printed I), II) … are separate entries with the numeral kept in the text: yfel and yfel-2, and þa, þæt, þe, þon, þy in Þ, and I) sio / II) sio(n), I) set / II) set, scyld- and seo in S, and rad I–V, r[i]san, ryman and riht I/II in R, and the French que I–III in Q. Numbered senses inside one entry stay together, as in the long qui and quod, and so do numbered people under one name (Radulfus, Ricardus, Rodbertus). (Y, Þ, S, R, Q)
+- [ ] The two utlaga entries have no I)/II) numerals in print and are stored as utlaga and utlaga-2. (U)
+- [ ] The þæt abbreviation ꝥ now gives the file name "thaet", as þ gives "th". Before that change, the headword ꝥ gave an empty file name. (Þ)
+- [ ] Headwords printed under both T and Þ, such as T[h]eophania (p. 210 and p. 220), are kept as two entries, the T one taking the next free file name (T-h-eophania-2). (T)
+- [ ] A T headword whose file name is already taken gets the next free one, e.g. th-2 to th-4, so nothing already on the site is overwritten. Check whether these should be merged with the earlier entries or renamed. (T)
+
+**Headwords**
+
+- [ ] yfelwyrcendo is the headword, with "wyrto" left in the entry text. (Y)
+- [ ] Some headwords are printed after a plain word (openne **wiðercwide**, se **wodfreca**). The entry text starts with that word, as in the book. (W)
+- [ ] "-unga" stays inside the -ung entry, where it follows a bar. (U)
+- [ ] Wynn is written ƿ only in the w entry, where Liebermann prints the letter form. (W)
+
+**Printed text: kept or corrected**
+
+- [ ] Letters broken in the type were read as the intended letter: "mögcn" → mögen, "seincs" → seines, "1,.7" → 1,7 (U); "aufhebend" and "Orthographie" (Þ); "Untergebenen" and "doppeltes" (T); "Streitigkeiten" and "einleitend" (S); "eigenem" and "retient" (R).
+- [ ] Likely misprints in the book are kept as printed: "derehdner" (voleir) and "-rseunessa" (v). (V)
+- [ ] The gap printed "hundfeo:::" in þusend is kept as printed. (Þ)
+- [ ] Literal asterisks in references are kept, e.g. *S.* 375*. (W)
+- [ ] "VIIa Atr" is written closed up, to match the law-code list. (W)
+
+**Letter boundaries**
+
+- [ ] Þ starts halfway down column 2 of p. 216; the T entries above it belong to T. (Þ)
+- [ ] R starts in the lower part of column 1 on p. 180, not 194 as first noted, and ends at the S heading at the top of column 3 on p. 187. Q runs from p. 179 to p. 180, as transcribed. K and L were both noted as starting on 128; check which is right. (S, R, Q)
 
 ## Roadmap
 

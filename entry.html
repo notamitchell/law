@@ -28,12 +28,13 @@ scripts:
             const e = ELieb.readEntry(doc);
             document.title = e.headword + ' · eLiebermann';
             target.innerHTML = render(e);
+            showScanOnClick();
         })
         .catch(err => {
             target.innerHTML = err.message === 'missing'
                 ? `<h1>${esc(id)}</h1>
                    <p class="notice">There's no entry for <strong>${esc(id)}</strong> yet.
-                   You can <a href="${root}contribute.html?headword=${encodeURIComponent(id)}">add it</a>,
+                   You can <a href="${root}contribute.html?headword=${encodeURIComponent(id)}">suggest it</a>,
                    or look for it in the <a href="${root}dictionary.html?q=${encodeURIComponent(id)}">Dictionary</a>.</p>`
                 : `<h1>${esc(id)}</h1><p class="notice error">This entry's file couldn't be read. Its XML may be malformed: <a href="${root}entries/${encodeURIComponent(slug)}.xml">view the file</a>.</p>`;
         });
@@ -98,9 +99,13 @@ scripts:
         ${links ? `<section class="entry-section"><h2>Other dictionaries</h2><ul>${links}</ul></section>` : ''}
         ${citations ? `<section class="entry-section"><h2>Law code citations</h2><ul>${citations}</ul></section>` : ''}
 
+        <div class="suggest-change">
+            <p>Spotted a mistake, or have a translation or link to add?</p>
+            <a class="button" href="${root}contribute.html?id=${encodeURIComponent(slug)}">Suggest a change</a>
+        </div>
+
         <p class="source-line">
             ${page ? page + '. ' : ''}${changes ? `History: ${changes}. ` : ''}
-            <a href="${root}contribute.html?id=${encodeURIComponent(slug)}">Suggest a correction</a> ·
             <a href="${root}entries/${encodeURIComponent(slug)}.xml">View the TEI file</a> ·
             <a href="https://github.com/notamitchell/law/blob/main/entries/${encodeURIComponent(slug)}.xml">Edit on GitHub</a>
         </p>`;
@@ -114,9 +119,27 @@ scripts:
                     <span>${e.page ? `Printed page ${esc(e.page)}` : 'Page scan'}</span>
                     <a href="${esc(e.facsimile)}" target="_blank" rel="noopener">Open on archive.org</a>
                 </div>
-                <iframe src="${esc(scan)}" title="Liebermann, Gesetze II.1${e.page ? `, p. ${esc(e.page)}` : ''}, on archive.org" loading="lazy" allowfullscreen></iframe>
+                <div class="entry-scan-load">
+                    <button type="button" data-scan="${esc(scan)}" data-title="Liebermann, Gesetze II.1${e.page ? `, p. ${esc(e.page)}` : ''}, on archive.org">Show page scan</button>
+                    <p>The scan loads from archive.org.</p>
+                </div>
             </aside>
         </div>`;
+    }
+
+    // The scan only loads from archive.org when the reader asks for it.
+    function showScanOnClick() {
+        const button = target.querySelector('[data-scan]');
+        if (!button) return;
+        button.addEventListener('click', () => {
+            const frame = document.createElement('iframe');
+            frame.src = button.dataset.scan;
+            frame.title = button.dataset.title;
+            frame.allowFullscreen = true;
+            const aside = button.closest('.entry-scan');
+            aside.classList.add('loaded');
+            button.parentElement.replaceWith(frame);
+        });
     }
 })();
 </script>

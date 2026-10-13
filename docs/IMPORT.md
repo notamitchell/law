@@ -6,7 +6,9 @@ There are two ways to run it. Both use the same code (`scripts/docx-import.js` a
 
 ## In the browser (no setup)
 
-1. Open [Bulk import](https://notamitchell.github.io/law/import.html) and choose the `.docx`.
+The browser page, `import.html`, is not on the site for now: its front matter has `published: false`, so Jekyll leaves it out. To use it, run the site locally with `bundle exec jekyll serve --unpublished --baseurl /law` and open http://localhost:4000/law/import.html. To put it back on the site, delete that line and add it to `_data/navigation.yml`.
+
+1. Open the Bulk import page and choose the `.docx`.
 2. Check the list. Entries marked **Check** need a look (see [What gets flagged](#what-gets-flagged)); click a headword to preview it.
 3. Download the zip. It holds the new entries in folders of 100, because GitHub's web upload takes 100 files at a time.
 4. Upload each folder's files to [the entries folder on GitHub](https://github.com/notamitchell/law/upload/main/entries) and commit. The site rebuilds in a minute or two.
