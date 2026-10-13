@@ -565,6 +565,32 @@ ul.citations li { break-inside: avoid; }
 .ms-list .ms-siglum { display: inline-block; min-width: 2.5rem; }
 .clause-sources li:target { background: var(--highlight); }
 .clause-nav { display: flex; justify-content: space-between; gap: 1rem; margin: 1.5rem 0; }
+/* Laws page: the list of law codes */
+.code-group h2 { font-size: 1.35rem; margin: 1.6em 0 0.4em; }
+.code-group-reign { font-family: var(--sans, inherit); font-size: 0.9rem; font-weight: 400; color: var(--muted); margin-left: 0.4rem; }
+.code-list { list-style: none; margin: 0; padding: 0; }
+.code-list li { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.2rem 1rem; padding: 0.45rem 0; border-bottom: 1px solid #ebe8e1; }
+.code-list a { text-decoration: none; }
+.code-list a:hover .code-name, .code-list a:focus-visible .code-name { text-decoration: underline; }
+.code-name { font-family: var(--serif); font-size: 1.15rem; }
+.code-abbr { display: inline-block; min-width: 4.5rem; font-size: 0.85rem; font-weight: 600; color: var(--muted); }
+.code-meta { font-size: 0.85rem; color: var(--muted); }
+h2.result-code .code-abbr { min-width: 0; margin-left: 0.4rem; }
+.entry-header .code-abbr { min-width: 0; }
+/* One law code, clause by clause */
+.breadcrumb { margin: 0 0 0.5rem; color: var(--muted); }
+.code-tools { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0 0.5rem; }
+.code-tools input { flex: 1 1 16rem; }
+.code-clauses { list-style: none; margin: 1rem 0; padding: 0; }
+.code-clauses li { display: grid; grid-template-columns: 6rem 1fr 1fr; gap: 0 1.5rem; padding: 0.6rem 0; border-bottom: 1px solid #ebe8e1; }
+.code-clauses li:target { background: var(--highlight); }
+.code-clause-no { font-family: var(--serif); font-weight: 600; font-size: 1.05rem; }
+.code-clause-oe { font-family: var(--serif); font-size: 1.08rem; margin: 0; }
+.code-clause-en { margin: 0; color: #333; }
+@media (max-width: 760px) {
+    .code-clauses li { grid-template-columns: 1fr; }
+    .code-clause-en { margin-top: 0.3rem; color: var(--muted); }
+}
 .whole-code h2 { font-size: 1.1rem; margin: 1.8rem 0 0.2rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
 .whole-code h2.current a { background: rgba(255, 230, 120, 0.45); padding: 0 0.3rem; }
 

@@ -576,6 +576,66 @@ def assign_ids(rows, catalogue):
     return used, report
 
 
+# The Laws page lists the law codes under the king who issued them (column
+# E). The key is the first name in E; codes with no king go under OTHER.
+GROUPS = {
+    'Æthelberht': 'Æthelberht of Kent', 'Hlothhere': 'Hlothhere and Eadric of Kent', 'Wihtred': 'Wihtred of Kent',
+    'Alfred': 'Alfred the Great', 'Ine': 'Ine of Wessex', 'Edward': 'Edward the Elder', 'Æthelstan': 'Æthelstan',
+    'Edmund': 'Edmund I', 'Edgar': 'Edgar', 'Æthelred': 'Æthelred II', 'Cnut': 'Cnut',
+}
+OTHER = 'Other laws and legal texts'
+
+
+def king_parts(king):
+    """'Hlothhere, r. 673–685; Eadric, r. 685–686' -> [('Hlothhere', 'r. 673–685'), ('Eadric', 'r. 685–686')]."""
+    out = []
+    king = re.sub(r'^Attributed to ', '', king.strip('[] '))
+    for part in re.split(r';|, and ', king):
+        part = part.strip(' []')
+        m = re.match(r'(.*?),\s*((?:r\.|d\.).*)$', part)
+        out.append((m.group(1).strip(), m.group(2).strip()) if m else (part, ''))
+    return [p for p in out if p[0]]
+
+
+def write_codes(rows, catalogue, find_anchor, path):
+    """oe-laws/codes.json: one line per law code, in the spreadsheet's order, for the Laws page."""
+    first_ids = {}
+    counts = Counter()
+    for c in catalogue:
+        code = OLD_CODES.get(c['code'].strip(), c['code'].strip())
+        first_ids.setdefault(code, c['id'])
+        counts[code] += 1
+    codes = {}
+    for r in rows:
+        c = codes.get(r['code'])
+        if c is None:
+            parts = king_parts(r['king']) if r['king'] else []
+            key = parts[0][0].split()[0] if parts else ''
+            c = codes[r['code']] = {
+                'code': r['code'], 'anchor': find_anchor(r['code'])[0], 'name': r['codeName'] or r['code'],
+                'king': ' and '.join(p[0] for p in parts), 'reign': r['king'],
+                'group': GROUPS.get(key, key) if key else OTHER,
+                'date': r['promulgation'], 'clauses': counts[r['code']], 'first': first_ids.get(r['code'], ''),
+                'editors': [], 'manuscripts': [],
+            }
+        u_by, aa_by = TRANSLATORS.get(r['code'], (None, None))
+        names = [EDITOR_OVERRIDE.get(r['code'], (r['editor'],))[0] if r['editor'] else '',
+                 abt.surname(r['secondRef']) if r['secondTranslation'] else '',
+                 u_by if r['translation'] and not r['editor'] else '', aa_by if r['supplementaryTranslation'] else '']
+        for name in names:
+            name = (name or '').replace(' C&S', '')
+            if name and name not in c['editors']:
+                c['editors'].append(name)
+        for sig in (r['kSig'], r['nSig'], r['afSig'], r['tSig']):
+            for k in ([sig] if sig in MS_NAMES else [sig_key(x) for x in re.split(r'[;,]\s*', sig or '')]):
+                k = k.strip()
+                if k and (k in MS_NAMES or re.fullmatch(r'[A-Z][a-z]?\d?', k)) and k not in c['manuscripts']:
+                    c['manuscripts'].append(k)
+    with open(path, 'w', encoding='utf-8', newline='\n') as f:
+        f.write('[\n' + ',\n'.join(json.dumps(c, ensure_ascii=False, separators=(',', ':')) for c in codes.values()) + '\n]\n')
+    print('written: %s (%d law codes)' % (path, len(codes)))
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('xlsx')
@@ -587,7 +647,8 @@ def main():
     args = ap.parse_args()
 
     only = set(args.code) if args.code else None
-    rows = [r for r in read_rows(args.xlsx, only) if r['code'] not in SKIP]
+    all_rows = read_rows(args.xlsx, only)
+    rows = [r for r in all_rows if r['code'] not in SKIP]
     find_anchor = old.anchor_finder(args.mark_law)
     for r in rows:
         r['anchor'] = find_anchor(r['code'])[0]
@@ -656,6 +717,8 @@ def main():
     with open(index_path, 'w', encoding='utf-8', newline='\n') as f:
         f.write('[\n' + ',\n'.join(json.dumps(c, ensure_ascii=False, separators=(',', ':')) for c in out) + '\n]\n')
     print('written: %d files and %s (%d clauses in all)' % (len(outputs), index_path, len(out)))
+    if not only:
+        write_codes(all_rows, out, find_anchor, os.path.join(args.out, 'codes.json'))
 
 
 if __name__ == '__main__':

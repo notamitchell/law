@@ -1,0 +1,78 @@
+---
+title: Law code
+section: laws
+description: One law code of pre-Conquest England, clause by clause, with its text and an English translation.
+scripts:
+  - "ROOT/scripts/eliebermann.js"
+---
+<article id="code"><p class="loading">Loading the law code…</p></article>
+
+<script>
+(function () {
+    const root = window.SITE_ROOT || '';
+    const target = document.getElementById('code');
+    const wanted = new URLSearchParams(location.search).get('code') || '';
+    const esc = ELieb.escapeXml;
+    const clauseUrl = id => root + 'law.html?id=' + encodeURIComponent(id);
+    const codeUrl = code => root + 'lawcode.html?code=' + encodeURIComponent(code);
+    const fold = s => ELieb.slugify(s).toLowerCase().replace(/-/g, '');
+
+    function render(code, codes, clauses) {
+        const i = codes.indexOf(code);
+        const mine = clauses.filter(c => c.code === code.code);
+        document.title = code.name + ' · eLiebermann';
+        const lawAbb = code.anchor ? `<a href="${root}lawAbb.html#${encodeURIComponent(code.anchor)}" title="On the list of law codes and manuscripts">${esc(code.code)}</a>` : esc(code.code);
+        const bits = [
+            `<span class="code-abbr">${lawAbb}</span>`,
+            code.reign ? esc(code.reign.replace(/^\[|\]$/g, '')) : '',
+            code.date ? 'Promulgated: ' + esc(code.date) : ''
+        ].filter(Boolean);
+        const sources = ['Liebermann'].concat(code.editors || []);
+        target.innerHTML = `
+            <p class="breadcrumb small"><a href="${root}laws.html">Laws</a> › ${esc(code.group)}</p>
+            <header class="entry-header">
+                <h1>${esc(code.name)}</h1>
+                <div class="meta">${bits.map(b => `<span>${b}</span>`).join('')}</div>
+            </header>
+            <p>${mine.length} clauses.
+               ${code.manuscripts && code.manuscripts.length ? `Manuscripts: ${code.manuscripts.map(esc).join(', ')}.` : ''}
+               Editions and translations: ${sources.map(esc).join(', ')}.</p>
+            <div class="code-tools">
+                <input type="search" id="find" placeholder="Find in this law code (clause number or words)" aria-label="Find in this law code">
+                <a class="button" href="${mine.length ? clauseUrl(mine[0].id) + '&all=1' : '#'}">Read with every text and translation</a>
+            </div>
+            <p class="small muted">Each clause below gives the opening text in Liebermann’s edition and the first English translation. Click a clause number to see all its texts, manuscripts and translations.</p>
+            <ol class="code-clauses" id="clauses"></ol>
+            <nav class="clause-nav">
+                ${i > 0 ? `<a href="${codeUrl(codes[i - 1].code)}">← ${esc(codes[i - 1].name)}</a>` : '<span></span>'}
+                ${i < codes.length - 1 ? `<a href="${codeUrl(codes[i + 1].code)}">${esc(codes[i + 1].name)} →</a>` : '<span></span>'}
+            </nav>`;
+        const ol = document.getElementById('clauses');
+        const draw = term => {
+            const t = fold(term || '');
+            const shown = !t ? mine : mine.filter(c => fold(c.clause).startsWith(t) || fold(c.oe + ' ' + c.gloss + ' ' + c.en).includes(t));
+            ol.innerHTML = shown.length ? shown.map(c => `
+                <li id="${esc(c.id)}">
+                    <a class="code-clause-no" href="${clauseUrl(c.id)}">${esc(c.clause || c.citation)}</a>
+                    <p class="code-clause-oe">${esc(c.oe)}</p>
+                    <p class="code-clause-en">${esc(c.gloss)}</p>
+                </li>`).join('') : '<li class="muted">Nothing in this law code matches.</li>';
+        };
+        draw('');
+        document.getElementById('find').addEventListener('input', e => draw(e.target.value.trim()));
+        if (location.hash) { const el = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (el) el.scrollIntoView(); }
+    }
+
+    Promise.all([
+        fetch(root + 'oe-laws/codes.json').then(r => r.json()),
+        fetch(root + 'data/laws.json').then(r => r.json())
+    ]).then(([codes, clauses]) => {
+        codes = codes.filter(c => clauses.some(x => x.code === c.code));
+        const code = codes.find(c => c.code === wanted) || codes.find(c => fold(c.code) === fold(wanted));
+        if (!code) throw new Error('missing');
+        render(code, codes, clauses);
+    }).catch(() => {
+        target.innerHTML = `<h1>Law code not found</h1><p>There is no law code “${esc(wanted)}” in the database. <a href="${root}laws.html">See the list of law codes.</a></p>`;
+    });
+})();
+</script>
