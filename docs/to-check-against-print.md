@@ -141,3 +141,11 @@ From [the cross-check of mirc – Northamtunescire](crosscheck-mirc-northamtunes
 | [ ] | 154 | *nellan* | nille Hl 10; **nylle** | **nyle** | |
 | [ ] | 155 | *nemne* | [Vgl. … namian, nominare, **nūm**, numer | **num** | |
 | [ ] | 157 | *nominatim* | mit Bezeichnung des Klagegegenstands **Hn 50,1** | **Hn 50,1a** | |
+
+## norðan – orf (pp. 158–167)
+
+From [the cross-check of norðan – orf](crosscheck-nordan-orf.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 159 | *o* | b) eo … c) **ŭ**: s. mægburg (short mark) | **ū** (long mark) | |
