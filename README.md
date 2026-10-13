@@ -87,10 +87,11 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 | `scripts/site-page.js` | Shows the TEI site pages. |
 | `StatutaVetera/` | Manuscript search (`index.html`), manuscript page, Statutes of the Realm viewer (`sidebyside.html`), manuscript TEI generator (`tei-gen.html`). |
 | `tei/*.xml` | Statuta Vetera manuscript descriptions. |
-| `oe-laws/*.xml`, `oe-laws/index.json` | The Old English laws database: one TEI file per clause (2,294 of them) and a catalogue of them. Not on the site yet. See [docs/OE-LAWS.md](docs/OE-LAWS.md). |
+| `oe-laws/*.xml`, `oe-laws/index.json` | The Old English laws database: one TEI file per clause (2,294 of them) and a catalogue of them. Shown one clause at a time by `law.html`; the letter A entries link to it. See [docs/OE-LAWS.md](docs/OE-LAWS.md). |
 | `commentaryN/` | Commentary for the viewer, one HTML file per page (`12.html`), in the folder named for its volume in `_data/statutes_volumes.yml`. None yet. |
 | `tools/import-docx.js` | Bulk import on your own computer. |
 | `tools/laws-from-xlsx.py` | Makes `oe-laws/` from the laws spreadsheet, on your own computer. See [docs/OE-LAWS.md](docs/OE-LAWS.md). |
+| `tools/link-citations.py` | Links the law code citations in entries (one letter at a time) to clause files in `oe-laws/`. See [docs/OE-LAWS.md](docs/OE-LAWS.md). |
 | `tools/build-index.js` | Writes `data/entries.json`. Runs on every deploy. |
 | `tools/add-citations.js` | Rewrites each entry's law code citation list from the codes cited in its text. Run it after adding or changing entries by hand. |
 | `.github/workflows/static.yml` | Builds and deploys the site on every push to `main`. |

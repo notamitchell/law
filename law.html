@@ -1,0 +1,174 @@
+---
+title: Law clause
+section: dictionary
+scripts:
+  - "ROOT/scripts/eliebermann.js"
+  - "ROOT/scripts/lawpopup.js"
+---
+<article id="clause"><p class="loading">Loading clause…</p></article>
+
+<script>
+(function () {
+    const root = window.SITE_ROOT || '';
+    const target = document.getElementById('clause');
+    const id = new URLSearchParams(location.search).get('id') || '';
+    const NS = 'http://www.tei-c.org/ns/1.0';
+    let catalogue = [];
+
+    const el = (tag, cls, text) => {
+        const n = document.createElement(tag);
+        if (cls) n.className = cls;
+        if (text !== undefined) n.textContent = text;
+        return n;
+    };
+    const first = (doc, sel) => doc.querySelector(sel);
+    const tei = (doc, name) => [...doc.getElementsByTagNameNS(NS, name)];
+    const fetchXml = file => fetch(root + 'oe-laws/' + file)
+        .then(r => { if (!r.ok) throw new Error('missing'); return r.text(); })
+        .then(t => new DOMParser().parseFromString(t, 'application/xml'));
+
+    const LABELS = [
+        ['selectedText', 'Text'],
+        ['translation', 'Translation'],
+        ['secondTranslation', 'Second translation'],
+        ['supplementaryText', 'Supplementary manuscript'],
+        ['supplementaryTranslation', 'Translation of the supplementary manuscript']
+    ];
+
+    // The texts of one clause as a block of headed paragraphs.
+    function texts(doc, heading) {
+        const wrap = el('div', 'clause-texts');
+        const div = tei(doc, 'div').find(d => d.getAttribute('type') === 'clause');
+        if (!div) return wrap;
+        wrap.appendChild(heading);
+        LABELS.forEach(([type, label]) => {
+            tei(div, 'ab').filter(a => a.getAttribute('type') === type).forEach(a => {
+                const p = el('div', 'clause-text clause-' + type);
+                p.appendChild(el('h3', null, label));
+                p.appendChild(el('p', null, a.textContent.trim()));
+                wrap.appendChild(p);
+            });
+        });
+        return wrap;
+    }
+
+    function codeLink(row) {
+        if (!row.anchor) return el('span', null, row.code);
+        const a = el('a', null, row.code);
+        a.href = root + 'lawAbb.html#' + encodeURIComponent(row.anchor);
+        return a;
+    }
+
+    function render(row, doc) {
+        const h1 = el('h1');
+        h1.appendChild(codeLink(row));
+        h1.appendChild(document.createTextNode(row.clause ? ' ' + row.clause : ''));
+        document.title = row.citation + ' · eLiebermann';
+
+        target.textContent = '';
+        const header = el('header', 'entry-header');
+        header.appendChild(h1);
+        const meta = el('div', 'meta');
+        if (row.legalText) meta.appendChild(el('span', null, row.legalText));
+        const promulg = first(doc, 'note[type="promulgation"]') || tei(doc, 'note').find(n => n.getAttribute('type') === 'promulgation');
+        if (promulg && promulg.textContent.trim()) meta.appendChild(el('span', null, 'Promulgated: ' + promulg.textContent.trim()));
+        if (row.page) meta.appendChild(el('span', null, 'Liebermann, Gesetze I, p. ' + row.page));
+        header.appendChild(meta);
+        target.appendChild(header);
+
+        const sec = el('section', 'entry-section');
+        const t = texts(doc, el('span'));
+        sec.appendChild(t);
+        target.appendChild(sec);
+
+        const wits = tei(doc, 'witness');
+        if (wits.length) {
+            const s = el('section', 'entry-section');
+            s.appendChild(el('h2', null, 'Manuscripts'));
+            const p = el('p');
+            wits.forEach((w, i) => {
+                if (i) p.appendChild(document.createTextNode(', '));
+                const span = el(w.getAttribute('rend') === 'bold' ? 'strong' : 'span', null, w.textContent.trim());
+                p.appendChild(span);
+            });
+            s.appendChild(p);
+            s.appendChild(el('p', 'small muted', 'The manuscript in bold is the one the text above is taken from, where more than one is listed.'));
+            target.appendChild(s);
+        }
+
+        const kw = tei(doc, 'keywords').filter(k => k.textContent.trim());
+        if (kw.length) {
+            const s = el('section', 'entry-section');
+            s.appendChild(el('h2', null, 'Keywords'));
+            const names = { 'offence-legal-event': 'Offence / legal event', people: 'People', locations: 'Locations' };
+            kw.forEach(k => {
+                const p = el('p');
+                p.appendChild(el('strong', null, (names[k.getAttribute('n')] || k.getAttribute('n') || 'Keywords') + ': '));
+                p.appendChild(document.createTextNode(tei(k, 'term').map(x => x.textContent.trim()).join('; ')));
+                s.appendChild(p);
+            });
+            target.appendChild(s);
+        }
+
+        // Neighbouring clauses and the whole code
+        const sameCode = catalogue.filter(c => c.code === row.code);
+        const i = sameCode.findIndex(c => c.id === row.id);
+        const nav = el('nav', 'clause-nav');
+        const link = (c, label) => { const a = el('a', null, label); a.href = '?id=' + encodeURIComponent(c.id); return a; };
+        nav.appendChild(i > 0 ? link(sameCode[i - 1], '← ' + sameCode[i - 1].citation) : el('span'));
+        nav.appendChild(i < sameCode.length - 1 ? link(sameCode[i + 1], sameCode[i + 1].citation + ' →') : el('span'));
+        target.appendChild(nav);
+
+        const whole = el('section', 'entry-section');
+        const btn = el('button', 'button', 'Show the whole of ' + row.code + ' (' + sameCode.length + ' clauses)');
+        btn.type = 'button';
+        const out = el('div', 'whole-code');
+        btn.addEventListener('click', () => {
+            btn.disabled = true;
+            btn.textContent = 'Loading…';
+            Promise.all(sameCode.map(c => fetchXml(c.file).then(d => ({ c, d })).catch(() => ({ c, d: null }))))
+                .then(items => {
+                    items.forEach(({ c, d }) => {
+                        const h = el('h2', c.id === row.id ? 'current' : null);
+                        h.id = c.id;
+                        const a = el('a', null, c.citation);
+                        a.href = '?id=' + encodeURIComponent(c.id);
+                        h.appendChild(a);
+                        if (d) out.appendChild(texts(d, h)); else { out.appendChild(h); out.appendChild(el('p', 'muted', 'This clause could not be loaded.')); }
+                    });
+                    btn.remove();
+                    const cur = document.getElementById(row.id);
+                    if (cur) cur.scrollIntoView();
+                });
+        });
+        whole.appendChild(btn);
+        whole.appendChild(out);
+        target.appendChild(whole);
+
+        const src = el('p', 'source-line');
+        src.appendChild(document.createTextNode('Made from the OE Laws spreadsheet, not yet checked against the print. '));
+        const a = el('a', null, 'View the TEI file');
+        a.href = root + 'oe-laws/' + encodeURIComponent(row.file);
+        src.appendChild(a);
+        target.appendChild(src);
+    }
+
+    if (!id) {
+        target.innerHTML = '<h1>No clause chosen</h1><p>Clauses are reached from the law code citations at the foot of dictionary entries.</p>';
+        return;
+    }
+    fetch(root + 'oe-laws/index.json')
+        .then(r => r.json())
+        .then(list => {
+            catalogue = list;
+            const row = list.find(c => c.id === id);
+            if (!row) throw new Error('missing');
+            return fetchXml(row.file).then(doc => render(row, doc));
+        })
+        .catch(() => {
+            target.innerHTML = '';
+            target.appendChild(el('h1', null, 'Clause not found'));
+            target.appendChild(el('p', null, 'There is no clause "' + id + '" in the laws database.'));
+        });
+})();
+</script>

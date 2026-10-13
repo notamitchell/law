@@ -2,7 +2,7 @@
 
 `oe-laws/` holds the text of the laws themselves, one clause at a time. It was made from the spreadsheet *OE_Laws_Database_For_Claude.xlsx*: **each clause row of the spreadsheet is one TEI XML file** (2,294 files), plus `oe-laws/index.json`, a catalogue listing every file.
 
-It is not on the website yet. The aim is for it to become its own section of the site, linked to the dictionary through the law code citations in the entries ("Ine 23,2" and so on).
+It is not a section of the website yet, but there is a first clause page, `law.html`, and the dictionary entries for the letter A link to it (see "Linking to dictionary entries"). The aim is for the laws to become their own section of the site.
 
 ## What is in a file
 
@@ -44,6 +44,16 @@ Each file has one or more `<idno type="citationKey">`, in the form `Ine 23.2`: t
 When this was made, **83%** of the dictionary's citations with a clause number found their clause file this way, and **96%** did once a manuscript letter after the number (as in *9 Q* or *1 Ld*) was ignored. Those letters mean "in that manuscript", so a citation like this may deserve its own handling later. The citations that do not match are most often to *Ger*, *Hl*, *Abt*, *Af* and *Wi*. I have not looked into why yet; differences between Liebermann's numbering and the spreadsheet's are the likeliest cause.
 
 Codes the spreadsheet has no clauses for, such as the manuscript sigla *G* and *Q*, have no files; entries citing them have nothing to link to.
+
+### The letter A trial
+
+`tools/link-citations.py --letter A` changes the law code citations at the foot of the entries filed under A (including æ-initial ones). A citation that finds its clause changes from `target="law:Ine"` to `target="clause:Ine_23-2"`, and the entry gets a `clause` prefix definition. The site turns that into a link to `law.html?id=Ine_23-2`, which shows the clause, its manuscripts and keywords, the neighbouring clauses, and a button to read the whole law. The citation text is unchanged. Citations that find nothing are left as they were. The tool is safe to run again, and `--dry-run` only reports. Its latest results are in [oe-laws-link-report.md](oe-laws-link-report.md).
+
+A citation is matched to a clause in three ways: exactly; by ignoring a manuscript letter after the number (*9 Q*); or, where Liebermann cites *Abt 1* but the spreadsheet has *1[a]* and *1[b]*, by going to the first part.
+
+Results for A: 83% of all citations are linked, and 97% of those that name a clause in a code the database has. The rest are mostly citations to codes with no clause files (see below). Run it with another letter to link other entries.
+
+**Alfred's Introduction.** The catalogue's `citationKeys` for these clauses (*Af El. 1*) are wrong: they give the keys *Af el* and *Af 1*, so *Af 1* would also point at the Introduction. `link-citations.py` works round this by using the clause as printed; `laws-from-xlsx.py` should be fixed to give *Af el.1*.
 
 ## Law codes that need a decision
 
