@@ -29,7 +29,7 @@ The site already has these right:
 - **Old English:** seynde for scynde (*scendan*), þære for þare (*se*), heorðþæning for heorðpæning (*sellan*).
 - **German misspellings:** Übereinstimmend for übereinstimmend (*sammæle*), abgekürzts (*sancte*), Sanctis for sanctis (*sanctuarium*), Urteilspruch (*sceotan*), Diocese (*scir*), Gründe (*seducere*), Entschlüsse (*self*), Beamier (*serviens*).
 - **Stray marks:** a doubled comma in (21,1a,) (*serement*); "Negation]," for "Negation];" (*si*).
-- **Punctuation dropped** in about a dozen entries, such as *scip* (3,2.), *sculan* (17,3;, 54,2;), *scyldig* (1,1;), *searo* (13;), *secan* (17,1;), *secgan* (1,2;), *simle* (B,).
+- **Punctuation dropped** in about a dozen entries, such as *scip* (3,2.), *sculan* (17,3;, 54,2;), *scyldig* (1,1;), *sear[o]* (13;), *secan* (17,1;), *secgan* (1,2;), *simle* (B,).
 - **Line-break hyphens left in:** þrid- dan (*sceatt*), ær- ~gonge (*setlgang*); and run together: SchillingMehrzahl (*sculan*), SchekelMünze (*siclus*).
 
 ## Typography
