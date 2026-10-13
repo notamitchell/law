@@ -128,8 +128,8 @@ class Clauses:
             if t == spelling:
                 rest = ''
                 break
-            if t.startswith(spelling + ' '):
-                rest = t[len(spelling):].strip()
+            if t.startswith(spelling + ' ') or t.startswith(spelling + ','):    # Af 41 and Cn 1020,11
+                rest = t[len(spelling):].strip(' ,')
                 break
         if rest is None:
             return 'citation not understood', None
