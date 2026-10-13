@@ -159,7 +159,7 @@ The letters Z to O were transcribed from the page scans, working backwards from 
 
 **Printed text: kept or corrected**
 
-- [ ] Letters broken in the type were read as the intended letter: "mögcn" → mögen, "seincs" → seines, "1,.7" → 1,7 (U); "aufhebend" and "Orthographie" (Þ); "Untergebenen" and "doppeltes" (T); "Streitigkeiten" and "einleitend" (S); "eigenem" and "retient" (R); "ceapnnge" → ceapunge in orceapunga, assuming the "nn" is broken type (O).
+- [ ] Letters broken in the type were read as the intended letter: "mögcn" → mögen, "seincs" → seines, "1,.7" → 1,7 (U); "aufhebend" and "Orthographie" (Þ); "Untergebenen" and "doppeltes" (T); "Streitigkeiten" and "einleitend" (S); "eigenem" and "retient" (R); "ceapnnge" → ceapunge in orceapunga, assuming the "nn" is broken type (O). Checked against the print: the "!" after sacu in -ch- is an ink mark and is left out, and "dém" in chose is a printing error for dem (C).
 - [ ] Likely misprints in the book are kept as printed: "derehdner" (voleir) and "-rseunessa" (v), "forhttundan" under Particip, "(þingc)" in oðer and "V G G 2" in oððon, and "As Alm 1.2" in bisceop, surely for 1,2. (V, P, O, B)
 - [ ] The gap printed "hundfeo:::" in þusend is kept as printed. (Þ)
 - [ ] In opprimere, the small superscript in "Rb. S. 537^73^" is read as 73 but could be another number. (O)
