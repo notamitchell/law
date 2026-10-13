@@ -55,3 +55,17 @@ From [the cross-check of façe – forisfactum](crosscheck-faece-forisfactum.md)
 | [ ] | 71 | *fiftyne* | (= I Cn 8,1; fiftene A). **V 18** (aber XIIII D) = VI 25 | **VI 8** | |
 | [ ] | 74 | *fōr* | ac: fore gebetan ebd.**;** foregebetan falsch B | ebd.**]** | |
 | [ ] | 75 | *foresta* | ~ae fera (Eber) Ps Cn for **21,123** (123 superscript?) | **21,122** | |
+
+## forisfactura – geargerihta (pp. 77–86)
+
+From [the cross-check of forisfactura – geargerihta](crosscheck-forisfactura-geargerihta.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 76–77 | *forisfactum* | 2) Vergehen niederen Grades Hn 23 [s. 30 Z. vorher**,** 6 weiter] | vorher**.** 6 weiter | |
+| [ ] | 79 | *forsteall* | Hinderung der Spursuche **III Em 6** | **II Em 6** | |
+| [ ] | 82 | *Frigedæg* | Frigd- V As 3; **~!** V Atr 17 = VI 24 D | **~** (no !) | |
+| [ ] | 84 | *fylstan* | **oðrum** to friðe VI As 8,4 | **oþrum** | |
+| [ ] | 85 | *gærsswin* | ~wyn Rect 2; **~spin**: porcus herbagii Q | **~sƿin** (with wynn) | |
+| [ ] | 86 | *gastlice* | ane gastlice **modor** | **moder** | |
+| [ ] | 86 | *g[e]aldorcræft* | headword **g[e]aldorcræft** Beschwörerei; ac: gal~ Af El 30 G | headword **g[e]aldorcræftig** | Af El 30 has gealdorcræftigan, which may favour -cræftig. |
