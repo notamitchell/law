@@ -110,8 +110,18 @@ scripts:
         const col = (title, cls) => { const c = el('div', 'clause-col ' + cls); c.appendChild(el('h3', null, title)); grid.appendChild(c); return c; };
         const abs = tei(div, 'ab');
         const texts = abs.filter(a => /^(liebermannText|editionText)$/.test(a.getAttribute('type')));
-        const langs = new Set(texts.map(a => a.getAttribute('xml:lang')));
-        const left = col(langs.has('la') && !langs.has('ang') ? 'Latin text' : langs.has('la') ? 'Old English and Latin texts' : 'Old English text', 'clause-col--text');
+        // Texts from the Quadripartitus (MS Q) have their own heading, unless
+        // the clause survives only in Latin. Liebermann's texts come first, in
+        // the order of his columns (his leftmost, main text first), then the
+        // other editors'.
+        const witOf = a => wits[(a.getAttribute('corresp') || '').replace(/^#/, '')] || {};
+        const isQ = a => /^Q\b/.test(witOf(a).abbr || '');
+        const hasOE = texts.some(a => a.getAttribute('xml:lang') === 'ang');
+        const main = texts.filter(a => !(hasOE && isQ(a)));
+        const quad = texts.filter(a => hasOE && isQ(a));
+        const byEditor = list => list.filter(a => a.getAttribute('type') === 'liebermannText')
+            .concat(list.filter(a => a.getAttribute('type') !== 'liebermannText'));
+        const left = col(hasOE ? 'Old English text' : 'Latin text', 'clause-col--text');
         const right = col('Translations', 'clause-col--translation');
         const add = (column, a, bits, cls) => {
             const id = (a.getAttribute('source') || '').replace(/^#/, '');
@@ -131,7 +141,7 @@ scripts:
             box.appendChild(p);
             column.appendChild(box);
         };
-        texts.forEach(a => {
+        const addText = (a, showLatin) => {
             const id = (a.getAttribute('source') || '').replace(/^#/, '');
             const src = srcs[id] || {};
             const lieb = a.getAttribute('type') === 'liebermannText';
@@ -139,17 +149,23 @@ scripts:
             add(left, a, [msLabel(a, wits),
                 lieb ? (src.page ? 'Gesetze I, p. ' + src.page : '') : (n ? '§ ' + n : ''),
                 !lieb && src.page ? 'p. ' + src.page : '',
-                a.getAttribute('xml:lang') === 'la' && langs.has('ang') ? 'Latin' : '']);
-        });
+                showLatin && a.getAttribute('xml:lang') === 'la' ? 'Latin' : '']);
+        };
+        byEditor(main).forEach(a => addText(a, hasOE));
+        if (quad.length) {
+            left.appendChild(el('h3', 'clause-subhead', 'Quadripartitus'));
+            byEditor(quad).forEach(a => addText(a, false));
+        }
         const trans = abs.filter(a => a.getAttribute('type') === 'translation');
         const isGerman = a => a.getAttribute('xml:lang') === 'de' || a.getAttribute('ana') === '#fromGerman';
+        // Liebermann's German first, then Claude's English of it, then the other translations.
+        trans.filter(a => a.getAttribute('xml:lang') === 'de').forEach(a => add(right, a, ['German translation']));
+        trans.filter(a => a.getAttribute('ana') === '#fromGerman').forEach(a => add(right, a, ['English of Liebermann’s German']));
         trans.filter(a => !isGerman(a)).forEach(a => {
             const id = (a.getAttribute('source') || '').replace(/^#/, '');
             const src = srcs[id] || {};
             add(right, a, [msLabel(a, wits, 'of MS '), src.page ? 'p. ' + src.page : '']);
         });
-        trans.filter(isGerman).forEach(a => add(right, a,
-            [a.getAttribute('xml:lang') === 'de' ? 'German translation' : 'English of Liebermann’s German'], 'clause-reading--german'));
         if (!trans.length) { right.remove(); grid.classList.add('clause-grid--single'); }
         wrap.appendChild(grid);
         tei(div, 'note').forEach(n => {
@@ -237,12 +253,11 @@ scripts:
                 const ul = el('ul', 'ms-list');
                 Object.values(witnesses(doc)).forEach(w => {
                     const li = el('li');
-                    li.appendChild(el(w.selected ? 'strong' : 'span', 'ms-siglum', w.abbr));
+                    li.appendChild(el('span', 'ms-siglum', w.abbr));
                     if (w.name) li.appendChild(document.createTextNode(' – ' + w.name));
                     ul.appendChild(li);
                 });
                 s.appendChild(ul);
-                s.appendChild(el('p', 'small muted', 'The letters are Liebermann’s sigla. In bold: the manuscript chosen for the edition, where Liebermann lists more than one. Each text above names the manuscript it comes from.'));
             } else {
                 const p = el('p');
                 wits.forEach((w, i) => {

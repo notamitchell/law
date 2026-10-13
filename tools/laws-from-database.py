@@ -187,6 +187,11 @@ def sig_key(s):
     return re.sub(r'\s*\(.*?\)\s*', '', s or '').strip()
 
 
+def same_sig(a, b):
+    """'Cons.Cn.' and 'Cons. Cn.' are the same siglum."""
+    return re.sub(r'[\s.]', '', a).lower() == re.sub(r'[\s.]', '', b).lower()
+
+
 def ident(text):
     return old.slugify(text).lower() or 'x'
 
@@ -328,7 +333,7 @@ def build(row, today, source_name, refs):
             return ''
         k = sig_key(sig)
         for w in wits:
-            if w[1] == sig or sig_key(w[1]) == k:
+            if w[1] == sig or same_sig(sig_key(w[1]), k):
                 if name and not w[3]:
                     w[3] = name
                 return w[0]
@@ -381,8 +386,8 @@ def build(row, today, source_name, refs):
         # No modern editor: column T is Liebermann's text of another manuscript.
         texts.append(('liebermannText', language(row['tText']), lie, row['tTextXml'], row['liebermannNumber'], t_wit))
 
-    # Liebermann's texts before the modern edition; within each, Old English before Latin.
-    texts.sort(key=lambda t: (t[0] == 'editionText', t[1] == 'la'))
+    # Liebermann's texts (in the order of his columns: K, N, AF, O, T) before the modern edition.
+    texts.sort(key=lambda t: t[0] == 'editionText')
 
     def translator(name):
         if name == 'Whitelock':
