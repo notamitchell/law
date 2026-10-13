@@ -92,5 +92,5 @@ The script finds the columns by their headings in row 1, so columns can be moved
 ## Law codes that need a decision
 
 - **Cn 1018** (77 rows) has not been checked: Liebermann does not print it as one text. Its files are in the old layout and the script leaves them alone (`SKIP` in the script). Take it out of `SKIP` once it is decided.
-- **Not on the law code list**, so their clauses are not linked to it and dictionary citations cannot find them: *Af Rb* and *Ine Rb* (the rubrics), *VI Atr Lat*, *Wer*, *Geþyncðo*, *Prom. Reg.*, *Cn 1018* and *Ymb Æwbricas*. Add them to `data/markLaw.json` and run the script again.
+- **Not on the law code list**, so their clauses are not linked to it and dictionary citations cannot find them: *Af Rb* and *Ine Rb* (the rubrics), *VI Atr Lat*, *Geþyncðo*, *Prom. Reg.*, *Cn 1018* and *Ymb Æwbricas*. Add them to `data/markLaw.json` and run the script again.
 - **Translators not recorded** for Duns, Forf, Pax, Wal, Swer, Romscot, Iudex, Iud Dei VIII and VI Atr Lat (see above).
