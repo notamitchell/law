@@ -19,7 +19,11 @@
     {%- endfor %}
     <script>window.SITE_ROOT = "{{ root }}";</script>
     {%- for script in page.scripts %}
-    <script src="{{ script | replace: 'ROOT/', root }}"></script>
+    {%- if script contains 'ROOT/' %}
+    <script src="{{ script | replace: 'ROOT/', root }}?v={{ site.time | date: '%s' }}"></script>
+    {%- else %}
+    <script src="{{ script }}"></script>
+    {%- endif %}
     {%- endfor %}
 </head>
 <body class="{% if page.full_width %}full-width{% endif %}{% if page.section == "home" %} home{% endif %}">
