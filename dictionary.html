@@ -44,6 +44,7 @@ const ENTRY_FILES = [{% for f in entry_files %}"{{ f.basename }}"{% unless forlo
     lang.value = params.get('lang') || '';
     fulltext.checked = params.get('text') === '1';
     let entries = [];
+    let present = new Set();      // the letters that have entries at all
 
     const fold = s => ELieb.sortKey(s).replace(/-/g, '');
     const letterOf = e => ELieb.letterOf(e.hw);
@@ -60,7 +61,8 @@ const ENTRY_FILES = [{% for f in entry_files %}"{{ f.basename }}"{% unless forlo
         list.forEach(e => { (byLetter[letterOf(e)] = byLetter[letterOf(e)] || []).push(e); });
         const letters = ELieb.ALPHABET.concat('#').filter(l => byLetter[l]);
 
-        document.getElementById('letters').innerHTML = ELieb.ALPHABET.map(l =>
+        // Only letters that begin at least one headword (X has none), whatever the search.
+        document.getElementById('letters').innerHTML = ELieb.ALPHABET.filter(l => present.has(l)).map(l =>
             byLetter[l] ? `<li><a href="#letter-${l}">${l}</a></li>` : `<li><span>${l}</span></li>`).join('');
         document.getElementById('count').textContent = `${list.length} of ${entries.length} entries`;
 
@@ -96,6 +98,7 @@ const ENTRY_FILES = [{% for f in entry_files %}"{{ f.basename }}"{% unless forlo
         .then(list => {
             // Liebermann's order (þ after t); keys are plain ASCII, so compare code points.
             list.forEach(e => { e.key = ELieb.alphaKey(e.hw); });
+            present = new Set(list.map(e => ELieb.letterOf(e.hw)));
             entries = list.sort((a, b) => (a.key < b.key ? -1 : a.key > b.key ? 1 : 0) || a.id.localeCompare(b.id, undefined, { numeric: true }));
             draw();
             if (location.hash) document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView();
