@@ -216,3 +216,14 @@ From [the cross-check of þǣra – understandan](crosscheck-thaera-understandan
 | ✓ | Page | Entry | Site | Word document | Print |
 |---|---|---|---|---|---|
 | [ ] | 226 | *u* | überflüssig geschr. hinter **ƿ**: s. twelfhynde (corrected from þ) | **Ƿ** (capital) | Small or capital wynn? Compare the item for *þ* 11) above. |
+
+## weddbryce – wiðertihtlan (pp. 238–247)
+
+From [the cross-check of weddbryce – wiðertihtlan](crosscheck-weddbryce-widertihtlan.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 242 | *wiccan* | (wican! Ld wycan B; **wyce**: sortileg[a]e Q) | **wycc** | |
+| [ ] | 244 | *Wilhelm* | iunior ECf 11,2; **Ruffus** retr. | **Rufus** | |
+| [ ] | 247 | *witerǣden* | ~ene H; **~ædene** B | **~æddene** | |
+| [ ] | 247 | *wið* | 9) schützend vor; beorgað ~ irre **II As 5** | **I As 5** | |
