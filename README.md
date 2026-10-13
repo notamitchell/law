@@ -167,6 +167,7 @@ The letters Z to O were transcribed from the page scans, working backwards from 
 **Letter boundaries**
 
 - [ ] Þ starts halfway down column 2 of p. 216; the T entries above it belong to T. (Þ)
+- [ ] The dictionary list has a section Æ for headwords that begin with æ, after A, as in other Old English dictionaries. This was added to the site's list on request. Check where the printed Wörterbuch files them (the words that begin with æ were listed within A before). (Æ)
 - [ ] R starts in the lower part of column 1 on p. 180, not 194 as first noted, and ends at the S heading at the top of column 3 on p. 187. Q runs from p. 179 to p. 180, as transcribed, P from the top of p. 170 to the Q heading on p. 179, and O from p. 159 to p. 169. K and L were both noted as starting on 128; check which is right. (S, R, Q, P, O)
 
 ## Roadmap

@@ -45,7 +45,7 @@ PREFIX_LAW = re.compile(r'^(?P<indent>[ \t]*)<prefixDef ident="law"[^>]*/>[ \t]*
 PREFIX_CLAUSE = '<prefixDef ident="clause" matchPattern="(.+)" replacementPattern="law.html?id=$1"/>'
 
 
-# ---- which letter an entry is filed under (same rules as ELieb.letterOf) ----
+# ---- which letter an entry is filed under (same rules as ELieb.letterOf; Æ is a letter of its own) ----
 
 def slugify(text):
     s = ''.join(FOLD.get(c, c) for c in str(text).strip())
@@ -54,16 +54,25 @@ def slugify(text):
     return re.sub(r'[^A-Za-z0-9]+', '-', s).strip('-')
 
 
+def begins_with_ash(headword):
+    first = unicodedata.normalize('NFD', re.sub(r'^[^\W\d_]*', lambda m: m.group(0), re.sub(r'^[\W\d_]+', '', str(headword)))[:1])
+    return first[:1] in ('æ', 'Æ')
+
+
 def alpha_key(headword):
-    s = re.sub('[ꝥꝤ]', 'þæt', str(headword)).replace('ł', 'l').replace('Ł', 'L')
+    s = ''.join(c for c in unicodedata.normalize('NFD', str(headword)) if not unicodedata.combining(c))
+    s = re.sub('[ꝥꝤ]', 'þæt', s).replace('ł', 'l').replace('Ł', 'L')
     parts = re.split('[þÞðÐ]|[ꝥꝤ]', s)
-    return 't~'.join(slugify(p).lower().replace('-', '') for p in parts)
+    key = 't~'.join(slugify(p).lower().replace('-', '') for p in parts)
+    return re.sub(r'^[^a-z]*ae', 'a~', key) if begins_with_ash(headword) else key
 
 
 def letter_of(headword):
     key = re.sub('[^a-z~]', '', alpha_key(headword))
     if key.startswith('t~'):
         return 'Þ'
+    if key.startswith('a~'):
+        return 'Æ'
     return key[0].upper() if key and key[0].isalpha() else '#'
 
 
