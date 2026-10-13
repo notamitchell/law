@@ -4,8 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Abt 87</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +19,15 @@
         <idno type="citationKey">Abt 87</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">8</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Æthelberht</title> <note type="reign">r. ?584–616</note></bibl>
+        <bibl type="legalText"><title>Æthelberht’s Code</title> <note type="reign">Æthelberht, r. ?584–616</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">8</biblScope></bibl>
+          <bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002)</bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+        </listBibl>
         <listWit>
-          <witness>H</witness>
+          <witness xml:id="wit-h">H</witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Oliver, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">87</idno>
-          <idno type="editorNumber" n="Oliver">80</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +45,17 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 127 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-13">Generated from row 127 of the spreadsheet Aethelberht.xlsx.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="87">
         <head><ref type="lawCode" target="law:Abt">Abt</ref> 87</head>
-        <ab type="selectedText" xml:lang="und">Gif esnes eage ⁊ foot of weorðeþ aslagen, ealne weorðe hine forgelde.</ab>
-        <ab type="translation" xml:lang="en">If a servant’s eye or foot becomes struck off, let him pay him [i.e., the servant’s master] the entire worth.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif esnes eage ⁊ foot of weorðeþ aslagen, ealne weorðe hine forgelde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="87" corresp="#wit-h">Gif esnes eage ⁊ foot of weorðeþ aslagen, ealne weorðe hine forgelde.</ab>
+        <ab type="editionText" xml:lang="ang" source="#oliver" n="80" corresp="#wit-h">Gif esnes eage ⁊ foot of weorðeþ aslagen, ealne weorðe hine forgelde.</ab>
+        <ab type="translation" xml:lang="en" source="#oliver">If a servant’s eye or foot becomes struck off, let him pay him [i.e., the servant’s master] the entire worth.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough">If the eye and foot of a servant are destroyed [by blows], his full value shall be paid.</ab>
       </div>
     </body>
   </text>

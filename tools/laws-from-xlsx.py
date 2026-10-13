@@ -399,12 +399,30 @@ def main():
         rows.append(row)
 
     os.makedirs(args.out, exist_ok=True)
+    # Law codes already made from a spreadsheet in the new layout
+    # (tools/law-code-from-xlsx.py, e.g. Æthelberht) are better than this
+    # spreadsheet's rows for them, so their files and catalogue lines are kept.
+    kept = {}
+    index_path = os.path.join(args.out, 'index.json')
+    if os.path.exists(index_path):
+        for c in json.load(open(index_path, encoding='utf-8')):
+            p = os.path.join(args.out, c['file'])
+            if os.path.exists(p) and 'type="liebermannText"' in open(p, encoding='utf-8').read():
+                kept.setdefault(c['code'], []).append(c)
+    if kept:
+        print('kept (new layout, not replaced): ' + ', '.join('%s (%d clauses)' % (k, len(v)) for k, v in kept.items()))
+    kept_files = {c['file'] for v in kept.values() for c in v}
     for name in os.listdir(args.out):
-        if name.endswith('.xml') or name == 'index.json':
+        if (name.endswith('.xml') and name not in kept_files) or name == 'index.json':
             os.remove(os.path.join(args.out, name))
 
     catalogue = []
     for row in rows:
+        if row['code'] in kept:
+            catalogue.extend(kept.pop(row['code']))
+            continue
+        if any(c.get('source') and c['code'] == row['code'] for c in catalogue):
+            continue      # a later row of a kept code
         with open(os.path.join(args.out, row['id'] + '.xml'), 'w', encoding='utf-8', newline='\n') as f:
             f.write(build(row, row['block'], row['anchor'], args.date))
         catalogue.append({
@@ -413,6 +431,8 @@ def main():
             'citationKeys': [(row['anchor'] or row['code']) + ' ' + k for k in clause_keys(row['clause'])],
             'legalText': row['block'].get('title', ''), 'page': row['page'], 'sheetRow': row['sheetRow'],
         })
+    for v in kept.values():      # kept codes this spreadsheet does not have at all
+        catalogue.extend(v)
     with open(os.path.join(args.out, 'index.json'), 'w', encoding='utf-8', newline='\n') as f:
         f.write('[\n' + ',\n'.join(json.dumps(c, ensure_ascii=False, separators=(',', ':')) for c in catalogue) + '\n]\n')
 
