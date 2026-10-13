@@ -78,3 +78,12 @@ From [the cross-check of gearian – gerefa](crosscheck-gearian-gerefa.md).
 |---|---|---|---|---|---|
 | [ ] | 87 | *gebetan* | 3: **~að!** Af 49 B (op: gebete übr.) | **~æð!** | |
 | [ ] | 95 | *gene[ð]an* | ihr waget zu geniessen **Iud Dei VIII 1,1** | **Iud Dei VII 1,1** | |
+
+## gerefscipe – habban (pp. 97–107)
+
+From [the cross-check of gerefscipe – habban](crosscheck-gerefscipe-habban.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 104 | *glengum*, *gliman* | glengum ends "Der.: woruldg~"; gliman ends "Northu **41**" (moved from the end of glengum, where the site had "[41") | as the site now | Is there anything after woruldg~ (a bracket)? |
+| [ ] | 107 | *h* | vor l: s. hlaford(swice), **geladian**(?), utæthleapan, **belidens**(?) | **gelaðian**(?), **beledens**(?) | |

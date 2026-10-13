@@ -151,7 +151,9 @@
 
             // Page number, sometimes with the running head in the same paragraph.
             const pm = text.match(/^(\d+)\.?(?:\s+(.+\s[–-]\s.+))?$/);
-            if (pm && runs.every(r => r.b || r.space || !r.text.trim() || pm[2])) {
+            // A running head is short; a long paragraph that only begins with a number
+            // ("48. II Cn 5,1; …") is text, not a page number.
+            if (pm && (!pm[2] || pm[2].length < 80) && runs.every(r => r.b || r.space || !r.text.trim() || pm[2])) {
                 page = parseInt(pm[1], 10);
                 pageChanged = true;
                 expectRunningHead = !pm[2];
