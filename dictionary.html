@@ -98,7 +98,7 @@ const ENTRY_FILES = [{% for f in entry_files %}"{{ f.basename }}"{% unless forlo
             list.forEach(e => { e.key = ELieb.alphaKey(e.hw); });
             entries = list.sort((a, b) => (a.key < b.key ? -1 : a.key > b.key ? 1 : 0) || a.id.localeCompare(b.id, undefined, { numeric: true }));
             draw();
-            if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
+            if (location.hash) document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView();
         });
 })();
 </script>

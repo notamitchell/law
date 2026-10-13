@@ -60,22 +60,33 @@
         return slugify(headword).toLowerCase();
     }
 
-    // Liebermann's alphabet: þ (and ð, which he files with it) is a letter of
-    // its own after t, as in the printed Wörterbuch, where Þ runs from p. 216.
-    const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTÞUVWXYZ'.split('');
+    // The alphabet of the list: þ (and ð, which Liebermann files with it) is a
+    // letter of its own after t, as in the printed Wörterbuch, where Þ runs
+    // from p. 216. Headwords that begin with æ are a letter of their own, Æ,
+    // after A.
+    const ALPHABET = 'AÆBCDEFGHIJKLMNOPQRSTÞUVWXYZ'.split('');
     const THORN = /[þÞðÐ]|[ꝥꝤ]/g;
 
-    /** Key for listing headwords in Liebermann's order: æ as ae, þ after every t. */
-    function alphaKey(headword) {
-        // "~" sorts after every letter, so "t~" comes after "tz" and before "u".
-        return String(headword || '').replace(/[ꝥꝤ]/g, 'þæt').replace(/ł/g, 'l').replace(/Ł/g, 'L').split(THORN)
-            .map(part => sortKey(part).replace(/-/g, '')).join('t~');
+    /** True when a headword begins with æ (or æ with an accent or macron), ignoring brackets and hyphens before it. */
+    function beginsWithAsh(headword) {
+        const first = String(headword || '').replace(/^[^\p{L}]+/u, '').normalize('NFD').charAt(0);
+        return first === 'æ' || first === 'Æ';
     }
 
-    /** The letter of the alphabet a headword is listed under (A–Z and Þ). */
+    /** Key for listing headwords in Liebermann's order: æ as ae, þ after every t, and a word that begins with æ after every word that begins with a. */
+    function alphaKey(headword) {
+        // "~" sorts after every letter, so "t~" comes after "tz" and before "u", and "a~" after "az" and before "b".
+        // Accents and macrons come off first, so that ǣ and ǽ are æ.
+        const key = String(headword || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[ꝥꝤ]/g, 'þæt').replace(/ł/g, 'l').replace(/Ł/g, 'L').split(THORN)
+            .map(part => sortKey(part).replace(/-/g, '')).join('t~');
+        return beginsWithAsh(headword) ? key.replace(/^[^a-z]*ae/, 'a~') : key;
+    }
+
+    /** The letter of the alphabet a headword is listed under (A–Z, Æ and Þ). */
     function letterOf(headword) {
         const key = alphaKey(headword).replace(/[^a-z~]/g, '');
         if (key.startsWith('t~')) return 'Þ';
+        if (key.startsWith('a~')) return 'Æ';
         return /[a-z]/.test(key[0] || '') ? key[0].toUpperCase() : '#';
     }
 
