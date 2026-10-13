@@ -97,7 +97,7 @@
         while (walker.nextNode()) textNodes.push(walker.currentNode);
 
         textNodes.forEach(node => {
-            if (node.parentElement.closest('a, strong, b')) return;
+            if (node.parentElement.closest('a, strong, b, [data-page]')) return;
             if (languageMarker && languageMarker.contains(node)) return;
             const text = node.nodeValue;
             const regex = node.parentElement.closest('em, i') ? italicTerms : allTerms;
@@ -135,7 +135,7 @@
         const first = container.querySelector('p') || container;
         let el = first.firstChild;
         while (el && el.nodeType === 3 && !el.nodeValue.trim()) el = el.nextSibling;
-        if (el && el.nodeType === 1 && el.tagName === 'SUP' && /^\s*[LF]\s*$/.test(el.textContent)) return el;
+        if (el && el.nodeType === 1 && el.tagName === 'SUP' && /^\s*[LF]{1,2}\s*$/.test(el.textContent)) return el;
         return null;
     }
 
@@ -147,7 +147,7 @@
     function detectLanguage(html) {
         const container = parseHtml(html);
         const marker = findLanguageMarker(container);
-        if (marker) return marker.textContent.trim() === 'L' ? 'la' : 'fro';
+        if (marker) return marker.textContent.trim()[0] === 'L' ? 'la' : 'fro';
         const first = (container.querySelector('p') || container).firstElementChild;
         if (first && first.tagName === 'STRONG' && first.firstElementChild && first.firstElementChild.tagName === 'EM') return 'de';
         return 'ang';
@@ -162,7 +162,7 @@
             n = { I: 1, II: 2, III: 3, IV: 4, V: 5 }[hom[1]];
             s = s.slice(hom[0].length);
         }
-        s = s.replace(/^[LF]\s+/, '');
+        s = s.replace(/^[LF]{1,2}\s+/, '');
         const word = (s.split(' ')[0] || '').replace(/[.,;:]+$/, '');
         return { headword: word, n };
     }
@@ -389,7 +389,7 @@ ${translation}
             }
             case 'lbl':
                 if (attr('type') === 'language') {
-                    const label = node.textContent.trim() === 'L' ? 'Latin' : 'French';
+                    const label = { L: 'Latin', F: 'French', LF: 'Latin and French', FL: 'French and Latin' }[node.textContent.trim()] || 'French';
                     return `<sup class="lang-marker" title="${label}"><strong>${inner()}</strong></sup>`;
                 }
                 return '<span class="lbl">' + inner() + '</span>';

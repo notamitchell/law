@@ -34,7 +34,7 @@ scripts:
             target.innerHTML = err.message === 'missing'
                 ? `<h1>${esc(id)}</h1>
                    <p class="notice">There's no entry for <strong>${esc(id)}</strong> yet.
-                   You can <a href="${root}contribute.html?headword=${encodeURIComponent(id)}">add it</a>,
+                   You can <a href="${root}contribute.html?headword=${encodeURIComponent(id)}">suggest it</a>,
                    or look for it in the <a href="${root}dictionary.html?q=${encodeURIComponent(id)}">Dictionary</a>.</p>`
                 : `<h1>${esc(id)}</h1><p class="notice error">This entry's file couldn't be read. Its XML may be malformed: <a href="${root}entries/${encodeURIComponent(slug)}.xml">view the file</a>.</p>`;
         });
@@ -99,9 +99,13 @@ scripts:
         ${links ? `<section class="entry-section"><h2>Other dictionaries</h2><ul>${links}</ul></section>` : ''}
         ${citations ? `<section class="entry-section"><h2>Law code citations</h2><ul>${citations}</ul></section>` : ''}
 
+        <div class="suggest-change">
+            <p>Spotted a mistake, or have a translation or link to add?</p>
+            <a class="button" href="${root}contribute.html?id=${encodeURIComponent(slug)}">Suggest a change</a>
+        </div>
+
         <p class="source-line">
             ${page ? page + '. ' : ''}${changes ? `History: ${changes}. ` : ''}
-            <a href="${root}contribute.html?id=${encodeURIComponent(slug)}">Suggest a correction</a> ·
             <a href="${root}entries/${encodeURIComponent(slug)}.xml">View the TEI file</a> ·
             <a href="https://github.com/notamitchell/law/blob/main/entries/${encodeURIComponent(slug)}.xml">Edit on GitHub</a>
         </p>`;

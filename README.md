@@ -9,8 +9,7 @@
 > - **Look up a word:** [Dictionary](https://notamitchell.github.io/law/dictionary.html)
 > - **Abbreviations:** [Law codes and manuscripts](https://notamitchell.github.io/law/lawAbb.html) · [Grammatical abbreviations](https://notamitchell.github.io/law/gramAbb.html)
 > - **Statuta Vetera:** [Manuscripts](https://notamitchell.github.io/law/StatutaVetera/) · [Statutes of the Realm viewer](https://notamitchell.github.io/law/StatutaVetera/sidebyside.html)
-> - **Add or correct an entry:** [Add an entry](https://notamitchell.github.io/law/contribute.html), or *Suggest a correction* at the foot of any entry
-> - **Import a Word document of entries:** [Bulk import](https://notamitchell.github.io/law/import.html)
+> - **Suggest an entry or a change:** [Suggest an entry](https://notamitchell.github.io/law/contribute.html), or *Suggest a change* at the foot of any entry
 
 ---
 
@@ -34,7 +33,7 @@ eLiebermann is a digital edition of the *Wörterbuch*, the dictionary in Felix L
 It is a static website hosted on **GitHub Pages** and built with **Jekyll**, using the `jekyll-theme-cayman` theme with a custom layout. It has no server or database of its own:
 
 - **Entries** are TEI XML files in `entries/`, one per headword. The browser fetches them and renders them on the fly. The format is in [docs/SCHEMA.md](docs/SCHEMA.md).
-- **New entries** are made in the browser, by the [contribution form](contribute.html) for one entry or the [bulk import](import.html) for a whole Word document. Both produce TEI files, which an editor adds to `entries/` on GitHub. Sending submissions straight to the site is on the [roadmap](#roadmap).
+- **New entries and changes** are suggested in the browser with the [Suggest an entry](contribute.html) form, which makes a TEI file for an editor to add to `entries/` on GitHub. Whole Word documents are imported with `tools/import-docx.js` (the browser import page is kept in the code but is not on the site for now). Sending submissions straight to the site is on the [roadmap](#roadmap).
 
 The project is deliberately a **perpetual work in progress**. Entries that don't exist yet are invitations to contribute, not defects.
 
@@ -51,7 +50,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
            built on deploy)      rendered in the
                                  browser)
 
- Contributor ──▶ contribute.html (one entry) or import.html (a Word document)
+ Contributor ──▶ contribute.html (suggest an entry, or ?id= a change to one)
                    │  builds TEI with scripts/eliebermann.js, links law codes and abbreviations
                    ▼
                  TEI file(s) downloaded ──▶ editor uploads to entries/ on GitHub ──▶ site rebuilds
@@ -75,8 +74,8 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 | `index.html`, `about.html` | Home and About. Their text is in `pages/`. |
 | `dictionary.html` | A–Z list and search. |
 | `entry.html` | Shows one entry. |
-| `contribute.html` | Form for one entry: makes, previews and downloads its TEI file; `?id=` opens an existing entry for correction. |
-| `import.html` | Bulk import of a Word document. |
+| `contribute.html` | *Suggest an entry*: makes, previews and downloads one entry's TEI file. `?id=` suggests a change to an existing entry, with the form filled in from its file. |
+| `import.html` | Bulk import of a Word document in the browser. Not on the site for now (`published: false`); see [docs/IMPORT.md](docs/IMPORT.md). |
 | `abbreviations.html`, `lawAbb.html`, `gramAbb.html` | The abbreviation lists (`scripts/abbreviations.js`). |
 | `entries/*.xml` | **The dictionary.** One TEI file per entry. See [docs/SCHEMA.md](docs/SCHEMA.md). |
 | `pages/*.xml` | Text of the site pages, as TEI. |
@@ -94,11 +93,11 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 
 ## Adding entries
 
-**One entry:** fill in [Add an entry](https://notamitchell.github.io/law/contribute.html), download the file, and upload it to [`entries/`](https://github.com/notamitchell/law/upload/main/entries).
+**One entry:** fill in [Suggest an entry](https://notamitchell.github.io/law/contribute.html), download the file, and upload it to [`entries/`](https://github.com/notamitchell/law/upload/main/entries).
 
-**A Word document of entries:** use [Bulk import](https://notamitchell.github.io/law/import.html) and upload the files from the zip, or run `node tools/import-docx.js` (see [docs/IMPORT.md](docs/IMPORT.md)). Entries already on the site are kept unless you ask to replace them.
+**A Word document of entries:** run `node tools/import-docx.js` (see [docs/IMPORT.md](docs/IMPORT.md)). Entries already on the site are kept unless you ask to replace them.
 
-**A correction:** *Suggest a correction* at the foot of an entry opens it in the form; download the new file and upload it over the old one. Or edit the XML on GitHub directly.
+**A change:** *Suggest a change* at the foot of an entry opens the form filled in from that entry; the file it makes has the same name, so uploading it replaces the entry. Or edit the XML on GitHub directly.
 
 **A law code or abbreviation that isn't linked:** add its spelling to `data/markLaw.js` or `data/markforward.js` with the same Anchor as its main form. Existing entries keep their links as they were made; re-import or re-save an entry to pick up new ones.
 

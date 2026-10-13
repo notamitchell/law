@@ -1,7 +1,7 @@
 ---
-title: Add an entry
+title: Suggest an entry
 section: contribute
-description: Turn an entry from Liebermann's Wörterbuch into a TEI file for the dictionary.
+description: Suggest an entry from Liebermann's Wörterbuch, or a change to one, as a TEI file for the dictionary.
 stylesheets:
   - "https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css"
 scripts:
@@ -10,11 +10,9 @@ scripts:
   - "ROOT/data/markLaw.js"
   - "ROOT/data/markforward.js"
 ---
-<h1 id="form-title">Add an entry</h1>
+<h1 id="form-title">Suggest an entry</h1>
 
-<p class="lede">Paste one entry from the Wörterbuch, add what you know, and this page makes the TEI file for it. Nothing is published from here: the file is saved to your computer, and an editor adds it to the site.</p>
-
-<p class="small">Have a whole Word document of entries? Use <a href="import.html">Bulk import</a> instead.</p>
+<p class="lede" id="form-lede">Paste one entry from the Wörterbuch, add what you know, and this page makes the TEI file for it. Nothing is published from here: you save the file and send it to an editor, who checks it and adds it to the site.</p>
 
 <div class="card">
     <h2>1. The entry</h2>
@@ -97,7 +95,7 @@ scripts:
     </div>
 </div>
 
-<p><button type="button" onclick="processEntry()">Make the TEI file</button></p>
+<p><button type="button" id="make" onclick="processEntry()">Make the TEI file</button></p>
 
 <div id="result" hidden>
     <h2>Preview</h2>
@@ -105,7 +103,7 @@ scripts:
     <div class="card"><div id="preview"></div></div>
 
     <h2>The TEI file</h2>
-    <p>Save it as <code id="filename"></code>, then <a href="https://github.com/notamitchell/law/upload/main/entries" target="_blank" rel="noopener">upload it to the entries folder on GitHub</a> (or send it to an editor).</p>
+    <p>Save it as <code id="filename"></code> and send it to an editor. Editors: <a href="https://github.com/notamitchell/law/upload/main/entries" target="_blank" rel="noopener">upload it to the entries folder on GitHub</a>.</p>
     <p>
         <button type="button" onclick="downloadXml()">Download the file</button>
         <button type="button" class="secondary" onclick="copyXml(this)">Copy the XML</button>
@@ -128,9 +126,27 @@ scripts:
     var markLaw = window.markLaw || [];
     var markforward = window.markforward || [];
 
+    // A page break inside an entry, shown as [p. 4] and kept when a change is
+    // suggested to an entry that runs over a page. It becomes <pb n="4"/>.
+    const Embed = Quill.import('blots/embed');
+    class PageBreak extends Embed {
+        static create(n) {
+            const node = super.create();
+            node.setAttribute('data-page', n);
+            node.setAttribute('title', `Page ${n} of the printed volume begins here`);
+            node.textContent = `[p. ${n}]`;
+            return node;
+        }
+        static value(node) { return node.getAttribute('data-page'); }
+    }
+    PageBreak.blotName = 'pagebreak';
+    PageBreak.tagName = 'SPAN';
+    PageBreak.className = 'pb';
+    Quill.register(PageBreak);
+
     const quill = new Quill('#editor-container', {
         modules: { toolbar: [['bold', 'italic'], [{ script: 'super' }]] },
-        formats: ['bold', 'italic', 'script'],
+        formats: ['bold', 'italic', 'script', 'pagebreak'],
         theme: 'snow'
     });
     const listToolbar = [['bold', 'italic'], [{ script: 'super' }], [{ list: 'ordered' }, { list: 'bullet' }]];
@@ -154,7 +170,7 @@ scripts:
         if (!languageEdited) $('language').value = ELieb.detectLanguage(html);
     });
 
-    function addLinkRow(kind, text, url) {
+    function addLinkRow(kind, text, url, slug) {
         const row = document.createElement('p');
         row.className = 'link-row';
         row.dataset.kind = kind;
@@ -165,6 +181,8 @@ scripts:
         row.innerHTML += `<button type="button" class="secondary" aria-label="Remove" onclick="this.parentNode.remove()">−</button>`;
         $(kind + '_links_container').appendChild(row);
         if (text) row.querySelector('.link-text').value = text;
+        // The entry a See also link points to, kept while its text is unchanged.
+        if (slug) { row.dataset.text = text; row.dataset.slug = slug; }
         if (url && row.querySelector('.link-url')) row.querySelector('.link-url').value = url;
     }
     ['see', 'bt', 'doe', 'wiktionary', 'lawCode'].forEach(k => addLinkRow(k));
@@ -172,7 +190,8 @@ scripts:
     function rows(kind) {
         return [...document.querySelectorAll(`#${kind}_links_container .link-row`)].map(r => ({
             text: r.querySelector('.link-text').value.trim(),
-            url: r.querySelector('.link-url') ? r.querySelector('.link-url').value.trim() : ''
+            url: r.querySelector('.link-url') ? r.querySelector('.link-url').value.trim() : '',
+            slug: r.dataset.slug && r.dataset.text === r.querySelector('.link-text').value.trim() ? r.dataset.slug : ''
         })).filter(l => l.text || l.url);
     }
 
@@ -187,21 +206,23 @@ scripts:
         }
         const headword = $('headword').value.trim();
         if (!headword) { alert('Add the headword.'); return; }
-        const slug = ELieb.slugify(headword);
+        // A change keeps the entry's file name: homographs are stal.xml, stal-2.xml…
+        const slug = editing || ELieb.slugify(headword);
         if (!$('page_number').value.trim()) checks.push('There is no page number.');
 
         currentXml = ELieb.buildEntryXml({
             headword,
+            slug,
             lang: $('language').value,
             page: $('page_number').value.trim(),
             facsimile: $('archivePageLink').value.trim(),
             entryHtml: ELieb.linkAbbreviations(entryHtml, markLaw, markforward),
             definitionHtml: ELieb.linkAbbreviations(quillDefinition.root.innerHTML, markLaw, markforward),
             translationHtml: quillEnglish.root.innerHTML,
-            seeAlso: rows('see').map(l => ({ text: l.text, slug: ELieb.slugify(l.text) })),
+            seeAlso: rows('see').map(l => ({ text: l.text, slug: l.slug || ELieb.slugify(l.text) })),
             links: { bt: rows('bt'), doe: rows('doe'), wiktionary: rows('wiktionary'), lawCode: rows('lawCode') },
             change: editing
-                ? { when: new Date().toISOString().slice(0, 10), text: 'Edited with the contribution form.' }
+                ? { when: new Date().toISOString().slice(0, 10), text: 'Change suggested with the form.' }
                 : undefined,
             earlierChanges: editing ? earlierChanges : []
         });
@@ -242,8 +263,8 @@ scripts:
         });
     }
 
-    // contribute.html?id=abbod opens an existing entry for editing;
-    // contribute.html?headword=… starts a new one.
+    // contribute.html?id=abbod suggests a change to an existing entry, with the
+    // form filled in from its file; contribute.html?headword=… starts a new one.
     const params = new URLSearchParams(location.search);
     let editing = '', earlierChanges = [];
     if (params.get('headword')) { $('headword').value = params.get('headword'); headwordEdited = true; }
@@ -254,10 +275,13 @@ scripts:
             const e = ELieb.readEntry(new DOMParser().parseFromString(text, 'application/xml'));
             editing = id;
             earlierChanges = e.changes;
-            $('form-title').textContent = 'Edit ' + e.headword;
-            document.title = 'Edit ' + e.headword + ' · eLiebermann';
+            $('form-title').textContent = 'Suggest a change to ' + e.headword;
+            $('form-lede').innerHTML = `The form below is filled in from <a href="${root}entry.html?id=${encodeURIComponent(id)}">the entry as it is now</a>. Change what's wrong or add what's missing, make the file, and send it to an editor, who checks it and replaces the entry.`;
+            document.title = 'Suggest a change to ' + e.headword + ' · eLiebermann';
             // Links are added again when the file is made, so paste plain formatting.
-            const plain = html => html.replace(/<span class="pb"[^>]*>.*?<\/span>/g, '').replace(/<\/?(a|abbr)\b[^>]*>/g, '');
+            const plain = html => html
+                .replace(/<span class="pb"[^>]*>\[p\. ([^\]]*)\]<\/span>/g, '<span class="pb" data-page="$1"></span>')
+                .replace(/<\/?(a|abbr)\b[^>]*>/g, '');
             quill.clipboard.dangerouslyPasteHTML('<p>' + plain(ELieb.renderTei(e.original, '')) + '</p>');
             const toHtml = sense => {
                 if (!sense) return '';
@@ -279,7 +303,8 @@ scripts:
                 if (!used.has(kind)) { $(kind + '_links_container').innerHTML = ''; used.add(kind); }
                 const ref = [...x.children].find(c => c.localName === 'ref');
                 const target = ref ? ref.getAttribute('target') || '' : '';
-                addLinkRow(kind, (ref || x).textContent.trim(), /^https?:/.test(target) ? target : '');
+                addLinkRow(kind, (ref || x).textContent.trim(), /^https?:/.test(target) ? target : '',
+                    target.startsWith('entry:') ? target.slice(6) : '');
             });
         }).catch(() => {
             $('form-title').insertAdjacentHTML('afterend', `<p class="notice error">Couldn't open the entry “${esc(id)}”.</p>`);
