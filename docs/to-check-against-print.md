@@ -118,3 +118,15 @@ From [the cross-check of iustitiabilis – mægen](crosscheck-iustitiabilis-maeg
 | [ ] | 132 | *Lazarus* | **L** Lazarus Iud Dei IV 3,3 | **F** Lazarus | |
 | [ ] | 132 | *leap* | ænne leap **fulne** [ac] sædcynnes | **fullne** | |
 | [ ] | 135 | *licgan* | on **unfriðe** II Atr 6 | **unfriþe** | |
+
+## mægenþrymmas – minutus (pp. 138–147)
+
+From [the cross-check of mægenþrymmas – minutus](crosscheck-maegenthrymmas-minutus.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 138 | *mæg[e]ðman[n]* | headword **mæg[e]ðman[n]** | **mæg[e]ðma[n]** | |
+| [ ] | 138 | *mæð* | Rang VI Atr 49. VIII 4,1 **=** I Cn 3a | VI Atr 49. **=** VIII 4,1 I Cn 3a | Where does the = stand? |
+| [ ] | 139–140 | *man*, *mann* | abgekürzt durch **m̄** (with a macron) | **m̃** (with a tilde) | Same sign in both entries. |
+| [ ] | 144 | *meillur* (F) | headword le **meillur** aveir | le **meilhir** | |
+| [ ] | 146 | *miclian* | 1) pl 3: **~að** | **~æð** | |
