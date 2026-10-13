@@ -46,7 +46,7 @@ const ENTRY_FILES = [{% for f in entry_files %}"{{ f.basename }}"{% unless forlo
     let entries = [];
 
     const fold = s => ELieb.sortKey(s).replace(/-/g, '');
-    const letterOf = e => (fold(e.hw).replace(/[^a-z]/g, '')[0] || '#').toUpperCase();
+    const letterOf = e => ELieb.letterOf(e.hw);
     const esc = ELieb.escapeXml;
 
     function draw() {
@@ -58,9 +58,9 @@ const ENTRY_FILES = [{% for f in entry_files %}"{{ f.basename }}"{% unless forlo
 
         const byLetter = {};
         list.forEach(e => { (byLetter[letterOf(e)] = byLetter[letterOf(e)] || []).push(e); });
-        const letters = Object.keys(byLetter).sort();
+        const letters = ELieb.ALPHABET.concat('#').filter(l => byLetter[l]);
 
-        document.getElementById('letters').innerHTML = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(l =>
+        document.getElementById('letters').innerHTML = ELieb.ALPHABET.map(l =>
             byLetter[l] ? `<li><a href="#letter-${l}">${l}</a></li>` : `<li><span>${l}</span></li>`).join('');
         document.getElementById('count').textContent = `${list.length} of ${entries.length} entries`;
 
@@ -94,7 +94,9 @@ const ENTRY_FILES = [{% for f in entry_files %}"{{ f.basename }}"{% unless forlo
         .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
         .catch(() => ENTRY_FILES.map(id => ({ id, hw: id, lang: 'ang', gloss: '' })))
         .then(list => {
-            entries = list.sort((a, b) => fold(a.hw).localeCompare(fold(b.hw)) || a.id.localeCompare(b.id, undefined, { numeric: true }));
+            // Liebermann's order (þ after t); keys are plain ASCII, so compare code points.
+            list.forEach(e => { e.key = ELieb.alphaKey(e.hw); });
+            entries = list.sort((a, b) => (a.key < b.key ? -1 : a.key > b.key ? 1 : 0) || a.id.localeCompare(b.id, undefined, { numeric: true }));
             draw();
             if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
         });

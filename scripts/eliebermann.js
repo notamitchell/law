@@ -50,6 +50,25 @@
         return slugify(headword).toLowerCase();
     }
 
+    // Liebermann's alphabet: þ (and ð, which he files with it) is a letter of
+    // its own after t, as in the printed Wörterbuch, where Þ runs from p. 216.
+    const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTÞUVWXYZ'.split('');
+    const THORN = /[þÞðÐ]|[ꝥꝤ]/g;
+
+    /** Key for listing headwords in Liebermann's order: æ as ae, þ after every t. */
+    function alphaKey(headword) {
+        // "~" sorts after every letter, so "t~" comes after "tz" and before "u".
+        return String(headword || '').replace(/[ꝥꝤ]/g, 'þæt').replace(/ł/g, 'l').replace(/Ł/g, 'L').split(THORN)
+            .map(part => sortKey(part).replace(/-/g, '')).join('t~');
+    }
+
+    /** The letter of the alphabet a headword is listed under (A–Z and Þ). */
+    function letterOf(headword) {
+        const key = alphaKey(headword).replace(/[^a-z~]/g, '');
+        if (key.startsWith('t~')) return 'Þ';
+        return /[a-z]/.test(key[0] || '') ? key[0].toUpperCase() : '#';
+    }
+
     function escapeXml(s) {
         return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
@@ -484,7 +503,7 @@ ${translation}
 
     const api = {
         TEI_NS, LANGUAGES, LANGUAGE_CODES,
-        useDom, slugify, sortKey, escapeXml,
+        useDom, slugify, sortKey, alphaKey, letterOf, ALPHABET, escapeXml,
         linkAbbreviations, loadAbbreviations, detectLanguage, detectHeadword,
         inlineToTei, isEmptyHtml, buildEntryXml,
         renderTei, resolveTarget, readEntry
