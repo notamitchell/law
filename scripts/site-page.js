@@ -16,6 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // The first heading is the page title.
             html = html.replace(/<h2>(.*?)<\/h2>/, '<h1>$1</h1>');
             el.innerHTML = html;
+            // Elements marked data-section="N" (e.g. a search box) belong at
+            // the end of the Nth section of the page text.
+            const sections = el.querySelectorAll('section');
+            document.querySelectorAll('[data-section]').forEach(node => {
+                const target = sections[Number(node.dataset.section) - 1];
+                if (target) target.appendChild(node);
+            });
         })
         .catch(() => { el.innerHTML = '<p class="notice error">This page’s text couldn’t be loaded.</p>'; });
 });
