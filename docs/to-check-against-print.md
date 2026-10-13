@@ -169,3 +169,14 @@ From [the cross-check of prosecutio – sacu](crosscheck-prosecutio-sacu.md).
 |---|---|---|---|---|---|
 | [ ] | 181 | *reafian* | Lat.: mortuum **refáre** Wal Q | **refare** | |
 | [ ] | 187 | *rogationes* | headword **rogationes** Bittgang(Prozessions)tage | **rogatione** | |
+
+## sadelian – singan (pp. 188–197)
+
+From [the cross-check of sadelian – singan](crosscheck-sadelian-singan.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 188 | *sancte* | undecl. gn: ~ (abgekürzt **sc̄e**) | (abgekürzt **sc̄a**) | |
+| [ ] | 188 | *sapientes* | II Em 7. **Hn 75,5b**. 88,15 | **Hn 76,5b** | |
+| [ ] | 194 | *sehtan* | Ordal 5,2, wo H **séte** | **sete** | |
+| [ ] | 194 | *self* | him sylfum fremu für **íhn** Rect 10,1 | **ihn** | If the print has the accent, is it a printing error, like dém in *chose*? |
