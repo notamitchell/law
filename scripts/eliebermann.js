@@ -519,10 +519,11 @@ ${translation}
 
     function resolveTarget(target, root) {
         if (!target) return '';
-        const m = target.match(/^(law|gram|entry):(.+)$/);
+        const m = target.match(/^(law|gram|entry|clause):(.+)$/);
         if (m) {
             if (m[1] === 'law') return root + 'lawAbb.html#' + encodeURIComponent(m[2]);
             if (m[1] === 'gram') return root + 'gramAbb.html#' + encodeURIComponent(m[2]);
+            if (m[1] === 'clause') return root + 'law.html?id=' + encodeURIComponent(m[2]);
             return root + 'entry.html?id=' + encodeURIComponent(m[2]);
         }
         return target;
