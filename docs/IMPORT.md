@@ -32,7 +32,7 @@ It writes the files straight into `entries/` and a report to `docs/import-report
 
 The import reads `word/document.xml` inside the `.docx` paragraph by paragraph, keeping bold, italic, superscript and subscript.
 
-- **Page numbers.** A paragraph that is only a number (`1.`, `2`) is the page number of the printed book. The paragraph after it is the running head (`Abetot – Accent`). Neither is copied into an entry; the page number is recorded on every entry that starts on that page.
+- **Page numbers.** A paragraph that is only a number (`1.`, `2`) is the page number of the printed book. The paragraph after it is the running head (`Abetot – Accent`). A page number and a short running head in one paragraph (`105 God – godian`) are read the same way, but a long paragraph that only begins with a number (`48. II Cn 5,1; …`) is text. Neither is copied into an entry; the page number is recorded on every entry that starts on that page.
 - **Letter headings.** A paragraph that is only a capital letter (`A`, `B.`) is skipped.
 - **A new entry** starts with a paragraph whose first bold text comes before any other text, apart from:
   - the superscript **L** or **F** that marks Latin and French headwords;
