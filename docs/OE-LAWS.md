@@ -63,6 +63,38 @@ Results for A and Æ together: 82% of all citations are linked, and 97% of those
 
 **Alfred's Introduction.** The catalogue's `citationKeys` for these clauses (*Af El. 1*) are wrong: they give the keys *Af el* and *Af 1*, so *Af 1* would also point at the Introduction. `link-citations.py` works round this by using the clause as printed; `laws-from-xlsx.py` should be fixed to give *Af el.1*.
 
+## The new layout (Æthelberht first)
+
+From October 2026, law codes are being improved one at a time in their own spreadsheet with more columns. **Æthelberht (*Abt*) is the first and is the model for the rest.** Its 128 clause files were made from *Aethelberht.xlsx* with `tools/law-code-from-xlsx.py`, and each now holds four texts:
+
+| In the spreadsheet | In the file | On the clause page |
+| --- | --- | --- |
+| **K** Liebermann's text (MS in **H**, page in **I**, number in **J**) | `<ab type="liebermannText" source="#liebermann">` | *Old English text*, labelled **Liebermann** · Gesetze I, p. … · MS … |
+| **P** Modern editor's text (editor in **M**, MS in **N**, number in **O**) | `<ab type="editionText" source="#oliver">` | *Old English text*, labelled **Oliver** · § … · MS … |
+| **Q** Modern editor's translation | `<ab type="translation" source="#oliver">` | *Translations*, labelled **Oliver** |
+| **R** Second translation (translator and book in **S**) | `<ab type="translation" source="#attenborough">` | *Translations*, labelled **Attenborough** |
+| **L**, **S** full references | `<listBibl type="sources">`, one `<bibl xml:id="…">` each | *Editions and translations*, at the foot of the page |
+
+- On the page the Old English texts are on the left and the translations on the right (one above the other on a phone). Each is labelled with the surname of its editor or translator, which links to the full reference at the foot of the page; hovering over it shows the reference too.
+- The surname of the second translator is taken from column **S** (the name before the first comma), and of the modern editor from column **M**.
+- **Italic is kept.** Italic letters in the Old English (Liebermann's and Oliver's expansions of abbreviations, such as scillingu*m*) and italic words in the translations (*mundbyrd*, *wergild*) are `<hi rend="italic">`. Italic in a book reference is its `<title>`.
+- **D** (*Æthelberht's Code*) and **E** (*Æthelberht, r. ?584–616*) appear under the clause heading. The short name in the Laws list and its menu is the king's name from **E**.
+- The file names are the same as before (`Abt_1-a.xml`…), so links from dictionary entries still work.
+- Every other law code is still in the old layout and is shown as before. `law.html` shows a clause in the new layout whenever its file has a `liebermannText`.
+
+### Doing the next law code
+
+Make its spreadsheet with the same column headings as *Aethelberht.xlsx* (the script finds the columns by their headings in row 1, so their order does not matter). Then, from the repository folder:
+
+```
+python3 tools/law-code-from-xlsx.py path/to/Ine.xlsx --dry-run    # report only
+python3 tools/law-code-from-xlsx.py path/to/Ine.xlsx
+```
+
+It replaces only the files of the law code(s) in that spreadsheet and their lines in `oe-laws/index.json`, and leaves everything else alone. It reports any clause that is new or that no longer has a row.
+
+**`tools/laws-from-xlsx.py` will not undo this.** If the big spreadsheet is ever run again, it keeps every law code that is already in the new layout and does not replace it.
+
 ## Law codes that need a decision
 
 61 of the spreadsheet's 73 law codes are linked to the law code list. Two groups are not certain:

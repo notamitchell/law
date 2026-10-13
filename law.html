@@ -35,11 +35,96 @@ scripts:
         ['supplementaryTranslation', 'Translation of the supplementary manuscript']
     ];
 
+    // TEI inline markup as HTML: <hi rend="italic"> and <title> in italic.
+    function inline(node) {
+        const frag = document.createDocumentFragment();
+        node.childNodes.forEach(n => {
+            if (n.nodeType === 3) { frag.appendChild(document.createTextNode(n.nodeValue)); return; }
+            if (n.nodeType !== 1) return;
+            const name = n.localName;
+            const italic = (name === 'hi' && /italic/.test(n.getAttribute('rend') || '')) || name === 'title';
+            const out = el(italic ? (name === 'title' ? 'cite' : 'em') : 'span');
+            out.appendChild(inline(n));
+            frag.appendChild(out);
+        });
+        return frag;
+    }
+    const plainText = node => node.textContent.replace(/\s+/g, ' ').trim();
+
+    // The editions and translations a clause file names (new layout only):
+    // { liebermann: {name, ref, page}, oliver: {...}, ... }
+    function sources(doc) {
+        const out = {};
+        tei(doc, 'listBibl').forEach(list => tei(list, 'bibl').forEach(b => {
+            const id = b.getAttribute('xml:id') || b.getAttributeNS('http://www.w3.org/XML/1998/namespace', 'id');
+            if (!id) return;
+            const name = tei(doc, 'name').find(n => n.getAttribute('ref') === '#' + id);
+            const page = tei(b, 'biblScope').find(s => s.getAttribute('unit') === 'page');
+            out[id] = { id, bibl: b, name: name ? plainText(name) : id, page: page ? plainText(page) : '' };
+        }));
+        return out;
+    }
+
+    // A translator's or editor's surname, linked to the full reference at the foot of the page.
+    function sourceLink(src) {
+        const a = el('a', 'source-name', src.name);
+        a.href = '#src-' + src.id;
+        a.title = plainText(src.bibl);
+        return a;
+    }
+
+    // New layout: Liebermann's text and the modern edition on the left,
+    // the two translations on the right, each labelled with its source.
+    function newTexts(doc, div, heading) {
+        const wrap = el('div', 'clause-texts clause-texts--sources');
+        wrap.appendChild(heading);
+        const srcs = sources(doc);
+        const grid = el('div', 'clause-grid');
+        const col = (title, cls) => { const c = el('div', 'clause-col ' + cls); c.appendChild(el('h3', null, title)); grid.appendChild(c); return c; };
+        const left = col('Old English text', 'clause-col--text');
+        const right = col('Translations', 'clause-col--translation');
+        const abs = tei(div, 'ab');
+        const add = (column, a, details) => {
+            const id = (a.getAttribute('source') || '').replace(/^#/, '');
+            const src = srcs[id] || { id, name: id || 'Unknown', bibl: a, page: '' };
+            const box = el('div', 'clause-reading');
+            const label = el('p', 'clause-source');
+            label.appendChild(sourceLink(src));
+            const bits = details(a, src).filter(Boolean);
+            if (bits.length) label.appendChild(el('span', 'muted', ' · ' + bits.join(' · ')));
+            box.appendChild(label);
+            const p = el('p', 'clause-reading-text');
+            if (a.getAttribute('xml:lang') === 'ang') p.lang = 'ang';
+            p.appendChild(inline(a));
+            box.appendChild(p);
+            column.appendChild(box);
+        };
+        const ms = a => { const c = (a.getAttribute('corresp') || '').replace(/^#wit-/, ''); return c ? 'MS ' + c.toUpperCase() : ''; };
+        abs.filter(a => a.getAttribute('type') === 'liebermannText').forEach(a =>
+            add(left, a, (a, s) => [s.page ? 'Gesetze I, p. ' + s.page : '', ms(a)]));
+        abs.filter(a => a.getAttribute('type') === 'editionText').forEach(a =>
+            add(left, a, a => [a.getAttribute('n') ? '§ ' + a.getAttribute('n') : '', ms(a)]));
+        abs.filter(a => a.getAttribute('type') === 'translation').forEach(a => add(right, a, () => []));
+        wrap.appendChild(grid);
+        [['supplementaryText', 'Supplementary manuscript'], ['supplementaryTranslation', 'Translation of the supplementary manuscript']].forEach(([type, label]) => {
+            abs.filter(a => a.getAttribute('type') === type).forEach(a => {
+                const p = el('div', 'clause-text clause-' + type);
+                p.appendChild(el('h3', null, label));
+                const t = el('p');
+                t.appendChild(inline(a));
+                p.appendChild(t);
+                wrap.appendChild(p);
+            });
+        });
+        return wrap;
+    }
+
     // The texts of one clause as a block of headed paragraphs.
     function texts(doc, heading) {
         const wrap = el('div', 'clause-texts');
         const div = tei(doc, 'div').find(d => d.getAttribute('type') === 'clause');
         if (!div) return wrap;
+        if (tei(div, 'ab').some(a => a.getAttribute('type') === 'liebermannText')) return newTexts(doc, div, heading);
         wrap.appendChild(heading);
         LABELS.forEach(([type, label]) => {
             tei(div, 'ab').filter(a => a.getAttribute('type') === type).forEach(a => {
@@ -69,10 +154,17 @@ scripts:
         const header = el('header', 'entry-header');
         header.appendChild(h1);
         const meta = el('div', 'meta');
-        if (row.legalText) meta.appendChild(el('span', null, row.legalText));
+        const isNew = tei(doc, 'ab').some(a => a.getAttribute('type') === 'liebermannText');
+        const lawBibl = tei(doc, 'bibl').find(b => b.getAttribute('type') === 'legalText');
+        if (isNew && lawBibl) {
+            const t = tei(lawBibl, 'title')[0];
+            const reign = tei(lawBibl, 'note').find(n => n.getAttribute('type') === 'reign');
+            if (t) meta.appendChild(el('span', null, plainText(t)));
+            if (reign) meta.appendChild(el('span', null, plainText(reign)));
+        } else if (row.legalText) meta.appendChild(el('span', null, row.legalText));
         const promulg = first(doc, 'note[type="promulgation"]') || tei(doc, 'note').find(n => n.getAttribute('type') === 'promulgation');
         if (promulg && promulg.textContent.trim()) meta.appendChild(el('span', null, 'Promulgated: ' + promulg.textContent.trim()));
-        if (row.page) meta.appendChild(el('span', null, 'Liebermann, Gesetze I, p. ' + row.page));
+        if (row.page && !isNew) meta.appendChild(el('span', null, 'Liebermann, Gesetze I, p. ' + row.page));
         header.appendChild(meta);
         target.appendChild(header);
 
@@ -116,6 +208,22 @@ scripts:
             target.appendChild(s);
         }
 
+        const srcs = Object.values(sources(doc));
+        if (srcs.length) {
+            const s = el('section', 'entry-section clause-sources');
+            s.appendChild(el('h2', null, 'Editions and translations'));
+            const ul = el('ul');
+            srcs.forEach(x => {
+                const li = el('li');
+                li.id = 'src-' + x.id;
+                li.appendChild(el('strong', null, x.name + ': '));
+                li.appendChild(inline(x.bibl));
+                ul.appendChild(li);
+            });
+            s.appendChild(ul);
+            target.appendChild(s);
+        }
+
         // Neighbouring clauses and the whole code
         const sameCode = catalogue.filter(c => c.code === row.code);
         const i = sameCode.findIndex(c => c.id === row.id);
@@ -152,7 +260,8 @@ scripts:
         target.appendChild(whole);
 
         const src = el('p', 'source-line');
-        src.appendChild(document.createTextNode('Made from the OE Laws spreadsheet, not yet checked against the print. '));
+        const change = tei(doc, 'change')[0];
+        src.appendChild(document.createTextNode((change ? plainText(change) : 'Made from the OE Laws spreadsheet, not yet checked against the print.') + ' '));
         const a = el('a', null, 'View the TEI file');
         a.href = root + 'oe-laws/' + encodeURIComponent(row.file);
         src.appendChild(a);

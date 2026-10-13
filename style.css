@@ -539,6 +539,14 @@ ul.citations li { break-inside: avoid; }
 .clause-texts h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 1.1rem 0 0.2rem; }
 .clause-texts p { margin: 0 0 0.4rem; }
 .clause-translation p { font-size: 1.05rem; }
+.clause-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2rem; }
+@media (max-width: 760px) { .clause-grid { grid-template-columns: 1fr; } }
+.clause-reading { margin: 0 0 0.9rem; }
+.clause-source { margin: 0 0 0.1rem; font-size: 0.9rem; }
+.clause-source .source-name { font-weight: 600; }
+.clause-reading-text { font-family: var(--serif); font-size: 1.15rem; line-height: 1.45; margin: 0; }
+.clause-sources ul { padding-left: 1.2rem; }
+.clause-sources li:target { background: var(--highlight); }
 .clause-nav { display: flex; justify-content: space-between; gap: 1rem; margin: 1.5rem 0; }
 .whole-code h2 { font-size: 1.1rem; margin: 1.8rem 0 0.2rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
 .whole-code h2.current a { background: rgba(255, 230, 120, 0.45); padding: 0 0.3rem; }

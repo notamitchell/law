@@ -41,11 +41,12 @@ const clauses = catalogue.map(c => {
         offences: terms(xml, 'offence-legal-event'),
         people: terms(xml, 'people'),
         places: terms(xml, 'locations'),
-        text: ab(xml, 'selectedText').concat(ab(xml, 'supplementaryText')).join(' '),
+        text: ab(xml, 'liebermannText').concat(ab(xml, 'editionText'), ab(xml, 'selectedText'), ab(xml, 'supplementaryText')).join(' '),
+        gloss: ab(xml, 'translation')[0] || '',
         en: ab(xml, 'translation').concat(ab(xml, 'secondTranslation'), ab(xml, 'supplementaryTranslation')).join(' '),
         row: c.sheetRow
     };
-}).sort((a, b) => a.row - b.row);
+});   // in the order of oe-laws/index.json, which is the order of the spreadsheets
 
 fs.writeFileSync(path.join(repo, 'data', 'laws.json'),
     '[\n' + clauses.map(c => JSON.stringify(c)).join(',\n') + '\n]\n');

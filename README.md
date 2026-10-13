@@ -91,6 +91,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 | `commentaryN/` | Commentary for the viewer, one HTML file per page (`12.html`), in the folder named for its volume in `_data/statutes_volumes.yml`. None yet. |
 | `tools/import-docx.js` | Bulk import on your own computer. |
 | `tools/laws-from-xlsx.py` | Makes `oe-laws/` from the laws spreadsheet, on your own computer. See [docs/OE-LAWS.md](docs/OE-LAWS.md). |
+| `tools/law-code-from-xlsx.py` | Remakes one law code's clauses from its own spreadsheet in the new layout (Liebermann's text, a modern edition, two translations). Æthelberht is the first. See [docs/OE-LAWS.md](docs/OE-LAWS.md#the-new-layout-thelberht-first). |
 | `tools/link-citations.py` | Links the law code citations in entries (one letter at a time) to clause files in `oe-laws/`. See [docs/OE-LAWS.md](docs/OE-LAWS.md). |
 | `tools/build-laws-index.js` | Writes `data/laws.json` (every clause with its keywords and text) for the Laws page. Runs on every deploy. |
 | `tools/see-also.py` | Makes each entry's "See also" links from Liebermann's own cross-references (*s. WORD*, *s. d.*). Writes a report of what it could not link, `docs/see-also-report.md`. |

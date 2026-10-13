@@ -46,7 +46,7 @@ scripts:
     const keywords = c => c.offences.concat(c.people, c.places);
 
     function snippet(c) {
-        const t = c.en || c.text || '';
+        const t = c.gloss || c.en || c.text || '';
         return t.length > 200 ? t.slice(0, 200).replace(/\s+\S*$/, '') + '…' : t;
     }
 
