@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>IV Eg 2</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,24 +18,20 @@
         <idno type="lawCodeAnchor">IVEg</idno>
         <idno type="clause">2</idno>
         <idno type="citationKey">IVEg 2</idno>
-        <idno type="legalText">IV Edg</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">208</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>IV Edgar</title></bibl>
+        <bibl type="legalText"><title>IV Edgar (Whitbordesstan)</title> <note type="reign">Edgar, r. 957/9–975</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">208</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">32</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">C</witness>
-          <witness>F</witness>
-          <witness>C (Latin)</witness>
+          <witness xml:id="wit-c" rend="bold"><abbr>C</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
+          <witness xml:id="wit-f"><abbr>F</abbr> <note type="manuscript">London, British Library, Cotton Nero E.i</note></witness>
+          <witness xml:id="wit-c-latin"><abbr>C (Latin)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">C: Cambridge, Corpus Christi College, MS 265 Gesetze</bibl>
-        <bibl type="supplementaryText">F: British Library, Cotton Nero E.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">2</idno>
-          <idno type="editorNumber" n="Robertson">2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -50,16 +49,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1013 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 986 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 208.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:IVEg">IV Eg</ref> 2</head>
-        <ab type="selectedText" xml:lang="und">Woruldgerihta ic wille þæt standen on ælcum leodscype swa gode swa hi mon betste aredian mæge, Gode to gecwemnysse ⁊ me to fullum cynescype ⁊ earmum ⁊ eadegum to ðearfe ⁊ to friðe.</ab>
-        <ab type="translation" xml:lang="en">My will is that the rights of the laity be maintained in every province at the best standard which can be devised, in accordance with what will be acceptable to God, and will preserve my royal dignity unimpaired, and tend to the advantage and security of rich and poor.</ab>
-        <ab type="supplementaryText" xml:lang="und">Woruldgerihta ic wille þæt standen on ælcum leodscipe swa gode swa hy mon betste aredian mæge, Gode to gecwemnysse ⁊ me to fullum cynescipe ⁊ earmum ⁊ eadegum to ðearfe ⁊ to friðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-f">Woruldgerihta ic wille þ<hi rend="italic">æt</hi> standen on ælcum leodscipe swa gode swa hy mon betste aredian mæge, Gode to gecwemnysse ⁊ me to fullum cynescipe ⁊ earmum ⁊ eadegu<hi rend="italic">m</hi> to ðearfe ⁊ to friðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-c">Woruldgerihta ic wille þæt standen on ælcum leodscype swa gode swa hi mon betste aredian mæge, Gode to gecwemnysse ⁊ me to fullum cynescype ⁊ earmum ⁊ eadegum to ðearfe ⁊ to friðe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2" corresp="#wit-q">In nomine sancte et indiuidue Trinitatis moderantis uniuersum orbem præcipio statuere in unaquaque regione terrarum mundane iustitię legem, quantocumque quis inuestigando ordinare ualuerit meliorem, ad immense maiestatis gloriam et honorem diuitibusque ad gaudium et pacem et pauperibus ad plenam consolationem.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="2" corresp="#wit-c">Woruldgerihta ic wille þæt standen on ælcum leodscype swa gode swa hi mon betste aredian mæge, Gode to gecwemnysse ⁊ me to fullum cynescype ⁊ earmum ⁊ eadegum to ðearfe ⁊ to friðe.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">My will is that the rights of the laity be maintained in every province at the best standard which can be devised, in accordance with what will be acceptable to God, and will preserve my royal dignity unimpaired, and tend to the advantage and security of rich and poor.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">✠ Weltliche Rechte will ich, dass in jeder Völkerschaft so gute bestehen, wie man sie als beste ausfindig machen kann, Gott zum Wohlgefallen und mir zur vollen Königswürde und Armen und Reichen zum Nutzen und zur Sicherheit.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">✠ I will that secular rights stand in every nation as good as they can best be devised, to the pleasure of God and to my full royal dignity, and to the benefit and security of poor and rich.</ab>
+        <note type="editorial">Liebermann compares IV Eg Prol.</note>
       </div>
     </body>
   </text>

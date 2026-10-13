@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>I Atr 1.2</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,22 +20,18 @@
         <idno type="citationKey">IAtr 1.2</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">216</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Æthelred</title> <note type="reign">r. 978–1016</note></bibl>
+        <bibl type="legalText"><title>I Æthelred (Woodstock)</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">216</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">52</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>H</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1.2</idno>
-          <idno type="editorNumber" n="Robertson">1.2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,16 +50,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1046 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1018 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 216.</change>
+      <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 53.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.2">
         <head><ref type="lawCode" target="law:IAtr">I Atr</ref> 1.2</head>
-        <ab type="selectedText" xml:lang="und">Gyf se hlaford sæcge þæt him naðor ne burste ne að ne ordal syððan þæt gemot wæs æt Bromdune, nime se hlaford him twegen getreowa ðegenas innan ðam hundrede ⁊ swerian þæt him næfre að ne burste ne he ðeofgyld ne gulde—buton he ðone gerefan hæbbe ðe ðæs wyrðe sy þe þæt don mæge.</ab>
-        <ab type="translation" xml:lang="en">If his lord asserts that he (the accused) has failed neither in oath nor in ordeal since the assembly was held at Bromdun, he (the lord) shall choose two trustworthy thegns within the hundred, and they shall swear that neither has his oath ever failed nor has he been convicted of stealing—unless the lord have a reeve who is qualified to discharge his duty.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif se hlaford sæcge, þæt him naðer ne burste ne að ne ordal, syððan þæt gemot wæs æt Bromdune, nime se hlaford him twegen getreowa þegenas innan þam hundrede, ⁊ swerian, þæt him næfre að ne burste, ne he þeofgyld ne gulde—butan he þone gerefan hæbbe, þe þæs wyrðe sy, þe þæt don mæge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-h">Gif se hlaford sæcge, þ<hi rend="italic">æt</hi> him naðer ne burste ne að ne ordal, syððan þ<hi rend="italic">æt</hi> gemot wæs æt Bromdune, nime se hlaford him twegen getreowa þegenas innan þam hundrede, ⁊ swerian, þ<hi rend="italic">æt</hi> him næfre að ne burste, ne he þeofgyld ne gulde—butan he þone gerefan hæbbe, þe þæs wyrðe sy, þe þ<hi rend="italic">æt</hi> don mæge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-b">Gyf se hlaford sæcge, þæt him naðor ne burste ne að ne ordal, syððan þæt gemot wæs æt Bromdune, nime se hlaford him twegen getreowa ðegenas innan ðam hundrede, ⁊ swerian, þæt him næfre að ne burste, ne he ðeofgyld ne gulde — buton he ðone gerefan hæbbe, ðe ðæs wyrðe sy, þe þæt don mæge.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.2" corresp="#wit-q">Si dominus eius dicat, quod neutrum ei fregit uel aþ uel ordal, postquam concilium fuit apud Brundonam, assumat idem dominus sibi duos credibiles tainos in ipso hundreto et iuret, quod numquam iusiurandum (iuramentum) fregit nec furigildum persoluit — nisi talem prepositum habeat, qui dignus eo sit, ut hoc facere possit.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="1.2" corresp="#wit-b">Gyf se hlaford sæcge þæt him naðor ne burste ne að ne ordal syððan þæt gemot wæs æt Bromdune, nime se hlaford him twegen getreowa ðegenas innan ðam hundrede ⁊ swerian þæt him næfre að ne burste ne he ðeofgyld ne gulde—buton he ðone gerefan hæbbe ðe ðæs wyrðe sy þe þæt don mæge.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">If his lord asserts that he (the accused) has failed neither in oath nor in ordeal since the assembly was held at Bromdun, he (the lord) shall choose two trustworthy thegns within the hundred, and they shall swear that neither has his oath ever failed nor has he been convicted of stealing—unless the lord have a reeve who is qualified to discharge this duty.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn der Herr [desselben freilich] behauptet, dass jenem, seitdem der [Reichs]tag zu ‘Bromdun’ war, weder Eid noch Ordal fehlgeschlagen sei, so wähle sich der Herr zwei vertrauenswürdige Thegnas innerhalb dieser [einen] Hundertschaft, und [diese drei] sollen schwören, ‘dass jenem nie weder Eid fehlschlug, noch er Diebesbusse bezahlen musste’ — es sei denn, der [Herr] habe einen solchen Amtmann, der dazu berechtigt ist, dass er dies thun dürfe [statt des Gutsherrn].</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But if his lord asserts that neither oath nor ordeal has failed him since the assembly at ‘Bromdun’, let the lord choose two trustworthy thegns within that [one] hundred, and [these three] are to swear ‘that neither oath ever failed him nor did he have to pay theft-compensation’ — unless [the lord] has a reeve who is entitled to do this [in place of the lord].</ab>
+        <note type="editorial">H lacks ‘ne ordal’ after ‘að ne burste’; Liebermann supplies it from II Cn 30.1. Liebermann compares III Atr 4.</note>
       </div>
     </body>
   </text>

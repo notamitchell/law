@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Cn 53</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">IICn 53</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">348</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Cnut</title></bibl>
+        <bibl type="legalText"><title>II Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">348</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">202</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">53</idno>
-          <idno type="editorNumber" n="Robertson">53</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +53,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1872 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1828 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 348.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 202.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="53">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 53</head>
-        <ab type="selectedText" xml:lang="und">Ðæt nan wif heo ne forlicgge. Gyf be cwicum ceorle wif hig be oðrum were forlicge, ⁊ hit open wyrðe, gewyrðe heo to woruldsceame syððan hyre sylfre, ⁊ hæbbe se rihtwere eall þæt seo age, ⁊ heo ðonne ðolie ægðer ge nosu ge ða earan.</ab>
-        <ab type="translation" xml:lang="en">No woman shall commit adultery. If, while her husband is still alive, a woman commits adultery with another man and it is discovered, she shall bring disgrace upon herself, and her lawful husband shall have all that she possesses, and she shall then lose both her nose and her ears.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif be cwicum ceorle wif hi be oðrum were forlicge, ⁊ hit open weorðe, geweorðe heo to woruldsceame syððan hyre sylfre, ⁊ hæbbe se rihtwer eall þæt heo ahte; ⁊ heo þolige nasa ⁊ earena.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="53" corresp="#wit-g-a">Gif be cwicum ceorle wif hi be oðrum were forlicge, ⁊ hit open weorðe, geweorðe heo to woruldsceame syððan hyre sylfre, ⁊ hæbbe se rihtwer eall þ<hi rend="italic">æt</hi> heo ahte; ⁊ heo þolige nasa ⁊ earena.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="53" corresp="#wit-a">Gif be cwycum ceorle wif hig be oðrum were forligce, ⁊ hit open weorðe, geweorðe heo to weruldscame siððan hyre sylfre; ⁊ hæbbe se rihtwer eall þæt hyeo ahte; ⁊ heo þolige nase ⁊ earena.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="53" corresp="#wit-q">Si mulier, uiuente marito suo, faciat adulterium, et manifestetur, fiat (sit) ad dedecus seculi postea sibi ipsi, et habeat legalis maritus eius omne quod ipsa habebat; et ipsa perdat nasum et aures.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="53" corresp="#wit-b">Ðæt nan wif heo ne forlicgge. Gyf be cwicum ceorle wif hig be oðrum were forlicge, ⁊ hit open wyrðe, gewyrðe heo to woruldsceame syððan hyre sylfre, ⁊ hæbbe se rihtwere eall þæt heo age, ⁊ heo ðonne ðolie ægðer ge nosu ge ða earan.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">No woman shall commit adultery. If, while her husband is still alive, a woman commits adultery with another man and it is discovered, she shall bring disgrace upon herself, and her lawful husband shall have all that she possesses, and she shall then lose both her nose and her ears.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Dass kein Eheweib hure. B) Wenn bei Lebzeiten des Ehemanns eine Ehefrau mit anderem Manne hurt, und dies unleugbar wird, so werde sie dann sich selbst zur Schande vor den Menschen, und erhalte der Ehemann alles was sie besass (besitzt B); und sie verliere (dann beides, B) Nase und (wie B) Ohren.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(That no wife should whore. B) If, in her husband's lifetime, a wife whores with another man, and this becomes undeniable, let her then become a shame before men to herself, and let the husband receive all that she possessed (possesses, B); and let her lose (then both, B) nose and (as well as, B) ears.</ab>
       </div>
     </body>
   </text>

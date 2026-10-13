@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>I Cn 20.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">ICn 20.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">300</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>I Cn</title></bibl>
+        <bibl type="legalText"><title>I Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">300</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">170</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness rend="bold">G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a" rend="bold"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">G(A): British Library, Cotton Nero A.i (up to, and including, cap.14.2; thereafter B.) B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">20.1</idno>
-          <idno type="editorNumber" n="Robertson">20.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +53,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1720 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1677 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 300.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="20.1">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 20.1</head>
-        <ab type="selectedText" xml:lang="und">Forðam eall þæt we æfre for rihthlafordhylde doð, eall we doð hit us sylfum to mycelre ðéarfe, forðam ðam bið witodlice God hold ðe biþ his hlaforde rihtlice hold.</ab>
-        <ab type="translation" xml:lang="en">For all that we ever do, through just fidelity to our lord, we do to our own great advantage, for truly God shall be gracious to him who is justly faithful to his lord.</ab>
-        <ab type="supplementaryText" xml:lang="und">Forðam eall þæt we æfre for rihthlafordhelde doð, eall we hit doð us sylfum to mycelre þearfe; forþam byð witodlice God hold, þe byð his hlaforde rihtlice hold.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20.1" corresp="#wit-g-a">Forða<hi rend="italic">m</hi> eall þ<hi rend="italic">æt</hi> we æfre for rihthlafordhelde doð, eall we hit doð us sylfum to mycelre þearfe; forþa<hi rend="italic">m</hi> [þam] byð witodlice God hold, þe byð his hlaforde rihtlice hold.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20.1" corresp="#wit-a">Forþam eall þæt we afre for rihthlafordhelde doð, eall we hit doð us silfum to mycelre ðearfe; forþam þam bið God hold, þe bið his hlaforde hold.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20.1" corresp="#wit-b">Forðam eall þæt we æfre for rihthlafordhylde doð, eall we doð hit us sylfum to mycelre ðéarfe; forðam ðam bið witodlice God hold, ðe biþ his hlaforde rihtlice hold.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="20.1" corresp="#wit-q">quia quicquid pro recta dominorum fidelitate facimus, ad magnam nobis utilitatem facimus; et scienter Deus illi fidelis est, qui domino suo recte fidelis est.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="20.1" corresp="#wit-b">Forðam eall þæt we æfre for rihthlafordhylde doð, eall we doð hit us sylfum to mycelre ðéarfe, forðam ðam bið witodlice God hold ðe biþ his hlaforde rihtlice hold.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">For all that we ever do, through just fidelity to our lord, we do to our own great advantage, for truly God shall be gracious to him who is justly faithful to his lord.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Denn alles was wir je aus echter Treue gegen den Herrn thun, das alles thun wir uns selbst zu grossem Nutzen; denn gewisslich dem wird Gott gnädig sein, der seinem Herrn recht getreu ist.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">For all that we ever do out of true loyalty to our lord, we do it all to our own great benefit; for God will certainly be gracious to him who is rightly loyal to his lord.</ab>
+        <note type="editorial">‘þam’ supplied in G from the other MSS and Wulfstan homilies (119, 299).; Robertson (p. 139) takes I Cn from B, which begins at ‘mæssedæg’ in 14.2, the earlier clauses being supplied from G</note>
       </div>
     </body>
   </text>

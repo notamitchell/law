@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>I Cn 8.2</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">ICn 8.2</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">292</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>I Cn</title></bibl>
+        <bibl type="legalText"><title>I Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">292</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">164</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness rend="bold">G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a" rend="bold"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">G(A): British Library, Cotton Nero A.i (up to, and including, cap.14.2; thereafter B.) B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">8.2</idno>
-          <idno type="editorNumber" n="Robertson">8.2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +53,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1686 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1643 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 292.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="8.2">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 8.2</head>
-        <ab type="selectedText" xml:lang="und">⁊ gyf hwa þonne þa teoþunge gelæstan nelle swa we gecweden habbað, þæt is se teoða æcer ealswa seo sulh hit gegá, þonne fare þæs cingces gerefa to ⁊ þæs bisceopes ⁊ þæs landrican ⁊ þæs mynstres mæssepreost ⁊ nim[an] unþances ðone teoðan dæl to þam mynstre þe hit to gebyrige, ⁊ tæcan him to þam nigoðan dæle, ⁊ todæle mann þa eahta dælas on twa, ⁊ fo se landhlaford to healfum, to healfum se bisceop, si hit ciningces mann, se hit þegnes.</ab>
-        <ab type="translation" xml:lang="en">And if anyone refuses to render his tithes as we have decreed, namely, the produce of every tenth acre traversed by the plough, then the king's reeve and the bishop's and the reeve of the lord of the manor and the priest of the church shall go, and, without his consent, take the tenth part for the church to which it is due, and shall assign the next tenth to him, and the eight [remaining] parts shall be divided in two, and the lord of the manor shall take half and the bishop half, whether the man be under the lordship of the king or of a thegn.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ gyf hwa þonne þa teoþunge gelæstan nelle, swa we gecweden habbað, þæt is se teoða æcer ealswa seo sulh hit gegá, þonne fare þæs cingces gerefa to ⁊ þæs bisceopes ⁊ þæs landrican ⁊ þæs mynstres mæssepreost, ⁊ nime unþances ðone teoðan dæl to þam mynstre, þe hit to gebyrige; ⁊ tæcan him to þam nigoðan dæle, ⁊ todæle mann þa eahta dælas on twa, ⁊ fo se landhlaford to healfum, to healfum se bisceop, si hit ciningces mann, se hit þegnes.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="8.2" corresp="#wit-g-a">⁊ gyf hwa þonne þa teoþunge gelæstan nelle, swa we gecweden habbað, þ<hi rend="italic">æt</hi> is se teoða æcer ealswa seo sulh hit gegá, þonne fare þæs cingces gerefa to ⁊ þæs bisceopes ⁊ þæs landrican ⁊ þæs mynstres mæssepreost, ⁊ nime[n] unþances ðone teoðan dæl to þam mynstre, þe hit to gebyrige; ⁊ tæcan him to þa<hi rend="italic">m</hi> nigoðan dæle, ⁊ todæle mann þa eahta dælas on twa, ⁊ fo se landhlaford to healfum, to healfu<hi rend="italic">m</hi> se bisceop, si hit ciningces mann, s[i] hit þegnes.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="8.2" corresp="#wit-a">And gyf hwa þonne þa teoþunge gelæstan nelle, swa we gecweden habbaþ, þæt is se teoða æcer, ealswa seo sulh hit gegað, þonne fare to þæs cyninges gerefa ⁊ þas biscopas ⁊ þæs landrican ⁊ þæs mynstres mæssepreost, ⁊ niman unþances þonne teoðan dæl to þam mynstre, þe hit to gebirige; ⁊ teacan him to þam nigoðum dæle, ⁊ todæle man þa eahta dælas on twa, ⁊ fo se landhlaford to healfum, to healfan se biscop, sy hyt cyninges man, sy hit þegnes.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="8.2" corresp="#wit-q">Si quis hanc decimam dare nolit, sicut omnium nostrum commune est institutum, hoc est decima acra, sicut aratrum peragrabit, eat prepositus regis et episcopi et ipsius terrę domini cum sacerdote, et ingratis auferant et ęcclesię cui pertinebit reddant; nonam uero partem relinquant ei qui decimam dare noluit; octo partes reliquas in duo diuidant, et sit una medietas episcopi, alia terrę domini, siue regis homo sit siue taini.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="8.2" corresp="#wit-g-a">⁊ gyf hwa þonne þa teoþunge gelæstan nelle swa we gecweden habbað, þæt is se teoða æcer ealswa seo sulh hit gegá, þonne fare þæs cingces gerefa to ⁊ þæs bisceopes ⁊ þæs landrican ⁊ þæs mynstres mæssepreost ⁊ nim[an] unþances ðone teoðan dæl to þam mynstre þe hit to gebyrige, ⁊ tæcan him to þam nigoðan dæle, ⁊ todæle mann þa eahta dælas on twa, ⁊ fo se landhlaford to healfum, to healfum se bisceop, si hit ciningces mann, se hit þegnes.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a">And if anyone refuses to render his tithes as we have decreed, namely, the produce of every tenth acre traversed by the plough, then the king's reeve and the bishop's and the reeve of the lord of the manor and the priest of the church shall go, and, without his consent, take the tenth part for the church to which it is due, and shall assign the next tenth to him, and the eight [remaining] parts shall be divided in two, and the lord of the manor shall take half and the bishop half, whether the man be under the lordship of the king or of a thegn.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn nun einer die Zehnten, wie wir verordnet haben, zu leisten sich weigert — nämlich [je]der zehnte Acker, wie der Pflug es überschreitet —, dann ziehe zu [ihm hin] der Königsvogt und [der] des Bischofs und [der] des Immunitätsherrn und der Pfarrer der [berechtigten] Kirche, und sie nehmen gegen seinen Willen für diese Kirche, der es zukommt, den Zehnten fort und weisen ihn zum neunten Zehntel; und vertheile man die [übrigen] acht Zehntel in zwei [Hälften], und ergreife der Immunitätsherr die Hälfte, die Hälfte der Bischof, sei es [der Weigerer] ein Vasall des Königs, sei es eines Adligen.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if anyone then refuses to pay the tithe as we have ordained — namely [every] tenth acre, as the plough passes over it —, then let the king's reeve and the bishop's [reeve] and the [reeve] of the lord of the immunity and the priest of the [entitled] minster go [to him], and take the tenth part against his will for the minster to which it belongs, and assign him the ninth part; and let the [remaining] eight parts be divided in two, and let the landlord take half, the bishop half, whether [the refuser] is the king's man or a thegn's.</ab>
+        <note type="editorial">G's ‘nime’ should be ‘niman’ (other MSS, II Eg, VIII Atr); G's ‘se hit’ is so in G (= ‘sy hit’). Liebermann compares II Eg 3.1; VIII Atr 7 f.</note>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>AGu 2</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,22 +20,19 @@
         <idno type="citationKey">AGu 2</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">126</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Treaty: Alfred &amp; Guthrum</title></bibl>
+        <bibl type="legalText"><title>Treaty of Alfred and Guthrum</title> <note type="reign">Alfred, r. 871–899; Guthrum, d. 890</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">126</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B1</witness>
-          <witness>B2</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-b1" rend="bold"><abbr>B1</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383 (first copy)</note></witness>
+          <witness xml:id="wit-b2"><abbr>B2</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383 (second copy)</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
         </listWit>
-        <bibl type="selectedText">B1: Cambridge, Corpus Christi College, MS 383 Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">B2: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">2</idno>
-          <idno type="editorNumber" n="Attenborough">2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -50,16 +50,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 674 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 665 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 126.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:AGu">AGu</ref> 2</head>
-        <ab type="selectedText" xml:lang="und">[Be ofslægenan mannes were] [Ld] Ðæt is ðonne, gif man ofslægan weorðe, ealle we lætað efen dyrne Engliscne ⁊ Deniscne, to VIII healfmearcum asodenes goldes, buton ðam ceorle ðe on gafollande sit ⁊ heora liesengum, ða syndan eac efen dyre: ægðer to CC scill.</ab>
-        <ab type="translation" xml:lang="en">Secondly, if a man is slain, whether he is an Englishman or a Dane, all of us shall place the same value on his life—namely 8 half-marks of pure gold, with the exception of commoners who occupy tributary land, and freedmen of the Danes. These also shall be valued at the same amount—[namely] 200 shillings—in either case.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ hi cwædon, gif mon ofslægan wurðe, eal we lætað, efen dyrne Engliscne ⁊ Denisce, þæt is to VIII healfmarcum asodenes goldes, buton ðam ceorle ðe on gafollande sit ⁊ heora lysyngon ….</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-b2">⁊ hi cwædon, gyf mon ofslægen wurðe, eal we letað efen dyrne Engliscne ⁊ Denisce, þæt is to VIII healfmarcum asodenes goldes, buton ðam ceorle ðe on gafollande sit ⁊ heora lysyngon ….</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-b">Ðæt is ðon<hi rend="italic">ne</hi>, gif man ofslægen weorðe, ealle we lætað efen dyrne Engliscne ⁊ Deniscne, to VIII healfmearcum asodenes goldes, buton ðam ceorle ðe on gafollande sit ⁊ heora liesengum, ða syndan eac efen dyre: ægðer to CC scill.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2" corresp="#wit-q">Hoc autem est primum: Si quis occidatur, omnes reputamus eque carum Dacum et Anglicum, ad VIII dimidias marcas cocti auri, preter ceorlum (id est rusticum) qui in gafulland (id est in terra censaria) manet et eorum lisingun, id est redemptiones sint eque care: CC sol.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="2" corresp="#wit-b1">[Be ofslægenan mannes were] [Ld] Ðæt is ðonne, gif man ofslægan weorðe, ealle we lætað efen dyrne Engliscne ⁊ Deniscne, to VIII healfmearcum asodenes goldes, buton ðam ceorle ðe on gafollande sit ⁊ heora liesengum, ða syndan eac efen dyre: ægðer to CC scill.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-b1">Secondly, if a man is slain, whether he is an Englishman or a Dane, all of us shall place the same value on his life—namely 8 half-marks of pure gold, with the exception of commoners who occupy tributary land, and freedmen of the Danes. These also shall be valued at the same amount—[namely] 200 shillings—in either case.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Vom Wergeld eines erschlagenen Mannes. Ld) Es folgt sodann (Und sie bestimmten B2): wenn ein Mensch erschlagen wird, schätzen wir einen Englischen und Dänischen ganz gleich theuer, (nämlich B2) zu 8 Halbmark geläuterten Goldes — ausser dem Gemeinfreien, der auf Zinsland sitzt, und den Freigelassenen jener [Dänen]; diese sind auch gleich theuer: jeder von beiden zu 200 Schill.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of the wergeld of a slain man. Ld) It follows then (And they determined B2): if a person is slain, we value an Englishman and a Dane as equally dear, (namely B2) at 8 half-marks of refined gold — except for the common freeman who sits on tributary land and the freedmen of those [Danes]; these too are equally dear: each at 200 shillings.</ab>
       </div>
     </body>
   </text>

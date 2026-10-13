@@ -87,11 +87,11 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 | `scripts/site-page.js` | Shows the TEI site pages. |
 | `StatutaVetera/` | Manuscript search (`index.html`), manuscript page, Statutes of the Realm viewer (`sidebyside.html`), manuscript TEI generator (`tei-gen.html`). |
 | `tei/*.xml` | Statuta Vetera manuscript descriptions. |
-| `oe-laws/*.xml`, `oe-laws/index.json` | The Old English laws database: one TEI file per clause (2,294 of them) and a catalogue of them. Shown one clause at a time by `law.html`; the letter A entries link to it. See [docs/OE-LAWS.md](docs/OE-LAWS.md). |
+| `oe-laws/*.xml`, `oe-laws/index.json` | The Old English laws database: one TEI file per clause (2,293 of them) and a catalogue of them. Each clause has Liebermann's text(s), his German and an English rendering of it, a modern edition and translations, each labelled with its manuscript. Shown one clause at a time by `law.html`; the letter A entries link to it. See [docs/OE-LAWS.md](docs/OE-LAWS.md). |
 | `commentaryN/` | Commentary for the viewer, one HTML file per page (`12.html`), in the folder named for its volume in `_data/statutes_volumes.yml`. None yet. |
 | `tools/import-docx.js` | Bulk import on your own computer. |
-| `tools/laws-from-xlsx.py` | Makes `oe-laws/` from the laws spreadsheet, on your own computer. See [docs/OE-LAWS.md](docs/OE-LAWS.md). |
-| `tools/law-code-from-xlsx.py` | Remakes one law code's clauses from its own spreadsheet in the new layout (Liebermann's text, a modern edition, two translations). Æthelberht is the first. See [docs/OE-LAWS.md](docs/OE-LAWS.md#the-new-layout-thelberht-first). |
+| `tools/laws-from-database.py` | Makes `oe-laws/` from the full laws database spreadsheet, on your own computer, keeping every clause's file name. See [docs/OE-LAWS.md](docs/OE-LAWS.md#making-the-files-again). |
+| `tools/laws-from-xlsx.py`, `tools/law-code-from-xlsx.py` | The earlier scripts (the first layout, and one law code at a time). Not needed now, but `laws-from-database.py` uses their helpers. |
 | `tools/link-citations.py` | Links the law code citations in entries (one letter at a time) to clause files in `oe-laws/`. See [docs/OE-LAWS.md](docs/OE-LAWS.md). |
 | `tools/build-laws-index.js` | Writes `data/laws.json` (every clause with its keywords and text) for the Laws page. Runs on every deploy. |
 | `tools/see-also.py` | Makes each entry's "See also" links from Liebermann's own cross-references (*s. WORD*, *s. d.*). Writes a report of what it could not link, `docs/see-also-report.md`. |
@@ -181,7 +181,7 @@ The letters Z to O were transcribed from the page scans, working backwards from 
 5. **Cross-references.** *See also* links are made from Liebermann's *s.* and *s. d.* by `tools/see-also.py` (see `docs/see-also-report.md` for what is left: headwords with several entries, words with ~ or a hyphen, entries not yet in the dictionary). Still to do: pointers like *s.* abb~, and *s. o.*, *s. u.*, *s. z.*, *s. n.*.
 6. **Validation.** A TEI customisation (ODD) for the entry format, and a check on every push that each entry is valid.
 7. **The *Rechts- und Sachglossar*** (volume 2, part 2) as a second dictionary, linked from the *Wörterbuch*.
-8. **The Old English laws database** (`oe-laws/`, 2,294 TEI files made from the laws spreadsheet; see [docs/OE-LAWS.md](docs/OE-LAWS.md)). It has a Laws tab (search and one page per clause), and the dictionary entries for the letter A link to it. To do:
+8. **The Old English laws database** (`oe-laws/`, 2,293 TEI files made from the laws spreadsheet; see [docs/OE-LAWS.md](docs/OE-LAWS.md)). It has a Laws tab (search and one page per clause), and the dictionary entries for the letter A link to it. To do:
     - Link the citations in the entries for the other letters to their clauses (`tools/link-citations.py --letter B`, and so on), through each file's `citationKey`.
     - Find out why citations to *Ger*, *Hl*, *Abt*, *Af* and *Wi* so often find no clause.
     - Open questions, to answer when there is time:

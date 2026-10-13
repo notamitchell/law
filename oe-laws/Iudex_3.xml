@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Iudex 3</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,19 +19,16 @@
         <idno type="citationKey">Iudex 3</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">474</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Iudex</title></bibl>
+        <bibl type="legalText"><title>Iudex (Judicial Duties)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">474</biblScope></bibl>
+          <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>G(A)</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">G(A): British Library, MS Cotton Nero A.i Gesetze</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">3</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -45,16 +46,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2318 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2251 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 474.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3">
         <head><ref type="lawCode" target="law:Iudex">Iudex</ref> 3</head>
-        <ab type="selectedText" xml:lang="und">Domas sceolon beon butan ælcere hadarunge: þæt ys, þæt he ne murne naðer ne rycum ne heanum, ne leofum ne laðum folcriht to recceanne.</ab>
-        <ab type="translation" xml:lang="en">Judgements are to be made without regard for the individual: that is, he [the judge] is not to care whether [the accused] is rich or poor, a friend or enemy – full legal rights are to be extended [to all].</ab>
-        <ab type="supplementaryText" xml:lang="und">Iudicia debent esse sine omni haderunga, cur non parcatur alicui diuiti uel egeno, amico uel inimico ius publicum recitari.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-g-a">Domas sceolon beon butan ælcere hadarunge: þæt ys, þæt he ne murne naðer ne rycum ne heanum, ne leofum ne laðum folcriht to recceanne.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3" corresp="#wit-q">Iudicia debent esse sine omni haderunga, cur non parcatur alicui diuiti uel egeno, amico uel inimico ius publicum recitari.</ab>
+        <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-g-a">Judgements are to be made without regard for the individual: that is, he [the judge] is not to care whether [the accused] is rich or poor, a friend or enemy – full legal rights are to be extended [to all].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Urtheilssprüche sollen ohne jede Personen-Rücksicht sein: d. h. dass er sich nicht scheue, weder Reichen [Grossen] noch Niederen, nicht Lieben noch Verhassten Gemeinrecht zuzuerkennen.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Judgments must be without any respect of persons: that is, that he not shrink from awarding common law to rich [great] or lowly, to friend or foe.</ab>
+        <note type="editorial">Liebermann compares Isidore, Sent. III 52.2, I Ew Prol. and Af El 43.</note>
       </div>
     </body>
   </text>

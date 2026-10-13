@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Em 4</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,25 +18,20 @@
         <idno type="lawCodeAnchor">IIEm</idno>
         <idno type="clause">4</idno>
         <idno type="citationKey">IIEm 4</idno>
-        <idno type="legalText">II Edm</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">188</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Edmund</title></bibl>
+        <bibl type="legalText"><title>II Edmund</title> <note type="reign">Edmund, r. 939–946</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">188</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">10</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>H</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">4</idno>
-          <idno type="editorNumber" n="Robertson">4</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,16 +49,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 919 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 897 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 188.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 10.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4">
         <head><ref type="lawCode" target="law:IIEm">II Em</ref> 4</head>
-        <ab type="selectedText" xml:lang="und">[Be blodgeote.] [Ld] Eac ic cyðe, þæt ic nelle socne habban [þone ðe mannes blod geote] to minum hirede, ær he hæbbe g[od]cunde bote underfangan ⁊ wið ða mægðe gebet—on bote befangen—⁊ to ælcum rihte gebogen, swa biscop him tæce ðe hit on his scyre sy.</ab>
-        <ab type="translation" xml:lang="en">Further, I declare that I forbid anyone [who commits homicide] to have right of access to my household, until he has undertaken to make amends as the church requires, and has made—or set about making—reparation to the kin, and has submitted to every legal penalty prescribed by the bishop in whose diocese it is.</ab>
-        <ab type="supplementaryText" xml:lang="und">Eac ic cyðe, þæt ic nelle socne habban to minum hirede, ær he hæbbe godcunde bote underfangan ⁊ wið þa mægðer gebet on bote befangen ⁊ to ælcum rihte gebogen, swa biscop him tæce, ðe hit on his scyre sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-h">Eac ic cyðe, þæt ic nelle socne habban to minu<hi rend="italic">m</hi> hirede, ær he hæbbe godcunde bote underfangen ⁊ wið þa <hi rend="italic">m</hi>ægðer gebet on bote befangen ⁊ to ælcum rihte gebogen, swa biscop him tæce, ðe hit on his scyre sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-b">Eac ic cyðe, þæt ic nelle socne habban to minum hirede, ær he hæbbe godcunde bote underfangan ⁊ wið ða mægðe gebet on bote befangen ⁊ to ælcum rihte gebogen, swa biscop him tæce, ðe hit on his scyre sy.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4" corresp="#wit-q">Amplius indico, quod eum qui sanguinem fundet humanum nolo socnam habere in familiam meam, antequam diuinam emendationem susceperit et ad omne rectum inclinetur, sicut episcopus docebit, in cuius scira fuerit.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="4" corresp="#wit-b">[Be blodgeote.] [Ld] Eac ic cyðe, þæt ic nelle socne habban [þone ðe mannes blod geote] to minum hirede, ær he hæbbe g[od]cunde bote underfangen ⁊ wið ða mægðe gebet—on bote befangen—⁊ to ælcum rihte gebogen, swa biscop him tæce ðe hit on his scyre sy.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">Further, I declare that I forbid anyone [who commits homicide] to have right of access to my household, until he has undertaken to make amends as the church requires, and has made—or set about making—reparation to the kin, and has submitted to every legal penalty prescribed by the bishop in whose diocese it is.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Von Blutvergiessen. Ld) Ferner thue ich kund, dass ich (den, der Menschenblut vergiesst lq) nicht zu meinem Hofe Zuflucht finden [lassen] will, bevor er kirchlicher Busse sich unterzogen und gegenüber der Sippe [des Erschlagenen die von ihr] geforderte[?] Busse auf sich genommen und jeder Rechtspflicht sich unterworfen hat, wie der Bischof ihm vorschreibt, der es in jenes [Thäters] Sprengel ist.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of bloodshed. Ld) Further I make known that I will not [let] (him who sheds human blood, lq) find refuge at my court until he has undergone ecclesiastical penance and taken upon himself the compensation demanded[?] [by] the kindred [of the slain man] and submitted to every legal obligation, as the bishop in whose diocese that [offender] is prescribes for him.</ab>
+        <note type="editorial">H lacks the subject; Liebermann would supply from Ld ‘þone þe mannes blod geote’ (so Quadr.). H's ‘þa mægðer’ is corrected to ‘mægðe’ from Ld (B: ‘ðam ægðe’); ‘gebet’ perhaps for ‘gebeden(e) bote’. Liebermann compares I Em 3.</note>
       </div>
     </body>
   </text>

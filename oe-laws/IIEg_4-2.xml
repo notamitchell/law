@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Eg 4.2</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,27 +18,22 @@
         <idno type="lawCodeAnchor">IIEg</idno>
         <idno type="clause">4.2</idno>
         <idno type="citationKey">IIEg 4.2</idno>
-        <idno type="legalText">II Edg</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">198</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Edgar</title></bibl>
+        <bibl type="legalText"><title>II Edgar (Andover)</title> <note type="reign">Edgar, r. 957/9–975</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">198</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">22</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G(A)</witness>
-          <witness>A</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>So</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-so"><abbr>So</abbr> <note type="manuscript">William Somner's transcript of Cotton Otho B.xi (made before the fire)</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A. i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">4.2</idno>
-          <idno type="editorNumber" n="Robertson">4.2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +52,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 970 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 945 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 198.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 22.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4.2">
         <head><ref type="lawCode" target="law:IIEg">II Eg</ref> 4.2</head>
-        <ab type="selectedText" xml:lang="und">⁊ gif he hine eft sillan nelle, læde hine eft to Rome ⁊ oðre swilc bote; ⁊ þonne he ham cume, gilde þam cynge twahund scill'.</ab>
-        <ab type="translation" xml:lang="en">And if he again refuses to give it, he shall take it again to Rome, and hand over the same sum as compensation, and when he comes home, he shall pay 200 shillings to the king.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ gyf he hine eft syllan nylle, læde hine eft to Róme ⁊ oðre swylce bote; ⁊ þonne he ham cume, gylde þam cynge twahund scill'.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.2" corresp="#wit-g-a">⁊ gyf he hine eft syllan nylle, læde hine eft to Róme ⁊ oðre swylce bote; ⁊ þon<hi rend="italic">ne</hi> he ha<hi rend="italic">m</hi> cume, gylde þa<hi rend="italic">m</hi> cynge twahund scill'.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.2" corresp="#wit-a">⁊ gyf he hine eft syllan nelle, læde hine eft to Rome ⁊ oðere swilce bote; ⁊ þonne he ham cume, gylde þam cinge twahund scyllinga.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.2" corresp="#wit-q">Et si iterum reddere nolit, deferat eum Romam iterum et eandem emendationem; et cum redierit, emendet CC sol. regi.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="4.2" corresp="#wit-d">⁊ gif he hine eft sillan nelle, læde hine eft to Rome ⁊ oðre swilce bote; ⁊ þonne he ham cume, gilde þam cynge twahund scill'.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And if he again refuses to give it, he shall take it again to Rome, and hand over the same sum as compensation, and when he comes home, he shall pay 200 shillings to the king.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn er zum zweiten Male sich weigert, den [Peterspfennig] zu geben, trage er ihn wiederum nach Rom mit einer zweiten solchen Busssumme; und wenn er heimkommt, zahle er dem König 200 Schill.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if he again refuses to give the [Peter's Penny], let him take it to Rome again with a second such penalty; and when he comes home, let him pay the king 200 shillings.</ab>
       </div>
     </body>
   </text>

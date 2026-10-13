@@ -4,8 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Cn 1020 12</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,18 +19,15 @@
         <idno type="citationKey">Cn1020 12</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">274</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Cn 1020</title></bibl>
+        <bibl type="legalText"><title>Cnut’s Letter of 1020</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">274</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">142</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>York Gospels</witness>
+          <witness xml:id="wit-york-gospels"><abbr>York Gospels</abbr> <note type="manuscript">York, Minster Library, Add. 1 (York Gospels)</note></witness>
         </listWit>
-        <bibl type="selectedText">York Gospels Robertson, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">12</idno>
-          <idno type="editorNumber" n="Robertson">12</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -46,15 +45,18 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1617 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1576 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 274.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="12">
         <head><ref type="lawCode" target="law:Cn1020">Cn 1020</ref> 12</head>
-        <ab type="selectedText" xml:lang="und">⁊ gyf hwa þeof friðige oððe forena forlicge, sy he emscyldig wið me þam ðe þeof scolde, buton he hine mid fulre lade wið me geclænsian mæge.</ab>
-        <ab type="translation" xml:lang="en">And if anyone protects a thief or takes action on his behalf, he shall incur the same penalty at my hands as the thief was liable to, unless he can clear himself to my satisfaction with a full oath of exculpation.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="12" corresp="#wit-york-gospels">⁊ gyf hwa þeof friðige oððe forena forlicge, sy he emscyldig wið me þam ðe þeof scolde, buton he hine mid fulre lade wið me geclænsian mæge.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-york-gospels">And if anyone protects a thief or takes action on his behalf, he shall incur the same penalty at my hands as the thief was liable to, unless he can clear himself to my satisfaction with a full oath of exculpation.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn jemand einen Dieb schirmt oder vertretend [für ihn] sich einlegt, sei er mir gegenüber gleich dem [Strafmaasse] schuldig, das der Dieb schuldet, ausser wenn er sich mir gegenüber durch vollen Beweis zu reinigen vermag.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if anyone protects a thief or intercedes [for him], let him be liable to me for the same [penalty] as the thief, unless he can clear himself to me with full proof.</ab>
       </div>
     </body>
   </text>

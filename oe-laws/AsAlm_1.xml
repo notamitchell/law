@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>As Alm 1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,23 +18,18 @@
         <idno type="lawCodeAnchor">AsAlm</idno>
         <idno type="clause">1</idno>
         <idno type="citationKey">AsAlm 1</idno>
-        <idno type="legalText">As Alms</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">148</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Æthelstan Alms</title></bibl>
+        <bibl type="legalText"><title>Æthelstan’s Charities Ordinance</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">148</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">Ld</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-ld" rend="bold"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">Ld: Archaionomia Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1</idno>
-          <idno type="editorNumber" n="Attenborough">1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -50,16 +48,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 749 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 735 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 148.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
         <head><ref type="lawCode" target="law:AsAlm">As Alm</ref> 1</head>
-        <ab type="selectedText" xml:lang="und">Fram twam minra feorma agyfe mon hine elce monaþ ane ambra meles ⁊ án sconc spices oþþe án rám weorþe IIII peningas ⁊ scrud for twelf monþa ælc gear. ⁊ þæt ge alysaþ an witeðeowne. ⁊ ðæs ealle sie gedón for Drihtenesse mildheortnesse ⁊ mine lufu under þæs bisceopes gewitnesse on ðæs rice it sie.</ab>
-        <ab type="translation" xml:lang="en">From two of my rents he shall be supplied with an amber of meal, a shank of bacon or a ram worth four pence every month, and clothes for twelve months annually. [And I desire you] to make free annually one man who has been reduced to penal slavery. And all this shall be done for the lovingkindness of God, and for the love you bear me, with the cognisance of the bishop in whose diocese the gift is made.</ab>
-        <ab type="supplementaryText" xml:lang="und">De duabus nihtfirmis detur ei singulus mensibus una ambra (plena) farine et una perna uel unus aries qui ualeat quattuor denarios et casei quatuor et in tercia die pasche triginta denarii ad uestitum duodecim mensium unoquoque anno. Et liberabitis unum þiteðioþne (id est forisfacto-seruum). Et hoc totum peragatur in misericordia Dei et amicitia mea sub testimonio episcopi, in cuius episcopatu sit.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-q">De duabus nihtfirmis detur ei singulis mensibus una ambra (plena) farine et una perna uel unus aries qui ualeat quattuor denarios et casei quatuor et in tercia die pasche triginta denarii ad uestitum duodecim mensium unoquoque anno. Et liberabitis unum þiteðioþne (id est forisfacto-seruum). Et hoc totum peragatur in misericordia Dei et amicitia mea sub testimonio episcopi, in cuius episcopatu sit.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-ld">Fram twam minra feorma agyfe mon hine elce monaþ ane ambra meles ⁊ án sconc spices oþþe án rám weorþe IIII peningas ⁊ scrud for twelf monþa ælc gear. ⁊ þæt ge alysaþ an witeðeowne. ⁊ ðæs ealle sie gedón for Drihtenesse mildheortnesse ⁊ mine lufu under þæs bisceopes gewitnesse, on ðæs rice it sie.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="1" corresp="#wit-ld">Fram twam minra feorma agyfe mon hine elce monaþ ane ambra meles ⁊ án sconc spices oþþe án rám weorþe IIII peningas ⁊ scrud for twelf monþa ælc gear. ⁊ þæt ge alysaþ an witeðeowne. ⁊ ðæs ealle sie gedón for Drihtenesse mildheortnesse ⁊ mine lufu under þæs bisceopes gewitnesse on ðæs rice it sie.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-ld">From two of my rents he shall be supplied with an amber of meal, a shank of bacon or a ram worth four pence every month, and clothes for twelve months annually. [And I desire you] to make free annually one man who has been reduced to penal slavery. And all this shall be done for the lovingkindness of God, and for the love you bear me, with the cognisance of the bishop in whose diocese the gift is made.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Von je zwei meiner Anrechte auf (einen Tag Quadr.) Beköstigung gebe man ihm jeden Monat einen Eimer Mehl und einen Schinken Speck oder einen Widder, 4 Pfennig werth, und (4 Käse und am 3. Tage Ostern 30 Pfennige zu Quadr.) Kleidung für 12 Monate jedes Jahr. Und dass ihr [jährlich] einen Strafhörigen befreiet! Und dies alles werde gethan um des Herrn Barmherzigkeit willen und [aus] Liebe zu mir unter Zeugniss jenes Bischofs, in dessen Sprengel es ist.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">From every two of my food-rents (of one day, Quadr.) let him be given each month an amber of meal and a ham of bacon or a ram worth 4 pence, and (4 cheeses and on the third day of Easter 30 pence for, Quadr.) clothing for 12 months each year. And you are to free [each year] one penal slave! And let all this be done for the sake of the Lord's mercy and [out of] love for me, under the witness of the bishop in whose diocese it is.</ab>
+        <note type="editorial">Ld has ‘minra feorma’; Liebermann would correct to ‘nihtfeorma’ from Quadr., and thinks a line is missing after ‘peningas’ (skipped because it also ended in ‘peningas’), to be supplied from Quadr.</note>
       </div>
     </body>
   </text>

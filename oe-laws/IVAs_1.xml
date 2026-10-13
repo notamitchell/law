@@ -4,8 +4,9 @@
     <fileDesc>
       <titleStmt>
         <title>IV As 1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +18,15 @@
         <idno type="citationKey">IVAs 1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">171</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>IV Æthelstan (Lat.)</title></bibl>
+        <bibl type="legalText"><title>IV Æthelstan (Thunresfeld)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">171</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">Q</witness>
-          <witness>H (frag.)</witness>
+          <witness xml:id="wit-q" rend="bold"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-h-frag"><abbr>H (frag.)</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
         </listWit>
-        <bibl type="selectedText">Q: Quadripartitus Attenborough, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1</idno>
-          <idno type="editorNumber" n="Attenborough">1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,15 +45,18 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 831 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 814 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 171.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
         <head><ref type="lawCode" target="law:IVAs">IV As</ref> 1</head>
-        <ab type="selectedText" xml:lang="und">[Ubi hæc judicia fuerunt instituta.] [Q/Br] Hæc sunt iudicia quæ sapientes Exoniæ consilio Æþelstani regis instituerunt et item apud Fefresham et tertia vice apud Ðunresfelde, ubi totum hoc definitum simul et confirmatum est.</ab>
-        <ab type="translation" xml:lang="en">These are the ordinances which the councillors established at Exeter by the advice of King Ethelstan, and again at Faversham, and on a third occasion at Thundersfield (?) where all these provisions were drawn up, and ratified.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-q">Hec sunt iudicia, que sapientes Exonie consilio Æþelstani regis instituerunt et item apud Fefresham et tertia uice apud Þunresfelde, ubi totum hoc diffinitum simul et confirmatum est.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="1" corresp="#wit-q">[Ubi hæc judicia fuerunt instituta.] [Q/Br] Hæc sunt iudicia quæ sapientes Exoniæ consilio Æþelstani regis instituerunt et item apud Fefresham et tertia vice apud Ðunresfelde, ubi totum hoc definitum simul et confirmatum est.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-q">These are the ordinances which the councillors established at Exeter by the advice of King Ethelstan, and again at Faversham, and on a third occasion at Thundersfield (?) where all these provisions were drawn up, and ratified.</ab>
+        <note type="editorial">Latin only; no German translation in Liebermann.</note>
       </div>
     </body>
   </text>

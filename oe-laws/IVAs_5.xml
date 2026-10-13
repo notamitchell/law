@@ -4,8 +4,9 @@
     <fileDesc>
       <titleStmt>
         <title>IV As 5</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +18,15 @@
         <idno type="citationKey">IVAs 5</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">172</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>IV Æthelstan (Lat.)</title></bibl>
+        <bibl type="legalText"><title>IV Æthelstan (Thunresfeld)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">172</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">Q</witness>
-          <witness>H (frag.)</witness>
+          <witness xml:id="wit-q" rend="bold"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-h-frag"><abbr>H (frag.)</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
         </listWit>
-        <bibl type="selectedText">Q: Quadripartitus Attenborough, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">5</idno>
-          <idno type="editorNumber" n="Attenborough">5</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,15 +44,18 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 837 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 820 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 172.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5">
         <head><ref type="lawCode" target="law:IVAs">IV As</ref> 5</head>
-        <ab type="selectedText" xml:lang="und">[Ne dominus libero homini ius prohibeat.] [Q/Br] Et item, ne dominus libero homini hlafordsocnam prohibeat, qui ei per omnia rectum fecerit.</ab>
-        <ab type="translation" xml:lang="en">And further, a freeman who has acted rightly in all respects to his lord, shall not be prevented from seeking a [new] lord.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5" corresp="#wit-q">Et item, ne dominus libero homini hlafordsocnam prohibeat, qui ei per omnia rectum fecerit.</ab>
+        <ab type="editionText" xml:lang="la" source="#attenborough" n="5" corresp="#wit-q">[Ne dominus libero homini ius prohibeat.] [Q/Br] Et item, ne dominus libero homini hlafordsocnam prohibeat, qui ei per omnia rectum fecerit.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-q">And further, a freeman who has acted rightly in all respects to his lord, shall not be prevented from seeking a [new] lord.</ab>
+        <note type="editorial">Latin only; no German translation in Liebermann. Liebermann compares III As 4.1.</note>
       </div>
     </body>
   </text>

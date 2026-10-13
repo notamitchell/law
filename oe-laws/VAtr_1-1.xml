@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>V Atr 1.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,17 @@
         <idno type="citationKey">VAtr 1.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">237</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>V Atr</title></bibl>
+        <bibl type="legalText"><title>V Æthelred</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">237</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">78</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g"><abbr>G</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-g2"><abbr>G2</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i (second copy)</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G (A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1.1</idno>
-          <idno type="editorNumber" n="Robertson">1.1[a]</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +47,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1180 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1148 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 237.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.1">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 1.1</head>
-        <ab type="selectedText" xml:lang="und">⁊ ure[s] hlafordes gerædnes ⁊ his witena is, þæt man rihte lage up arære ⁊ ælce unlage georne afille, ⁊ þæt man læte æghwilcne man beon rihtes wurðe,</ab>
-        <ab type="translation" xml:lang="en">And the decree of our lord and of his councillors is, that justice shall be promoted and all injustice zealously suppressed, and that every man shall be allowed the benefit of the law,</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ ures hlafordes gerædnes ⁊ his witena is, þæt man rihte laga up arǽre ⁊ ælce unlaga georne afylle, ⁊ þæt man læte æghwylcne man rihtes wyrþe,</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.1" corresp="#wit-g">⁊ ures hlafordes gerædnes ⁊ his witena is, þ<hi rend="italic">æt</hi> man rihte laga up arǽre ⁊ ælce unlaga georne afylle, ⁊ þ<hi rend="italic">æt</hi> man læte æghwylcne man rihtes wyrþe,</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.1" corresp="#wit-g2">⁊ witena gerædnes is, þæt man rihte laga up arære ⁊ ælce unlaga georne afylle, ⁊ þæt man læte beon æghwylcne man rihtes wyrðe,</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="1.1[a]" corresp="#wit-d">⁊ ure[s] hlafordes gerædnes ⁊ his witena is, þæt man rihte lage up arære ⁊ ælce unlage georne afille, ⁊ þæt man læte æghwilcne man beon rihtes wurðe,</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And the decree of our lord and of his councillors is, that justice shall be promoted and all injustice zealously suppressed, and that every man shall be allowed the benefit of the law,</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und Verordnung unseres Herrn [Königs] und seiner Witan ist, dass man echte Rechtsordnungen (-nung D) aufrichte und jeden Rechtsmissbrauch eifrig abschaffe, und dass man jeden Menschen [seines] Rechtes theilhaftig sein lasse,</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And it is the ordinance of our lord [the king] and his witan that just laws (law, D) be set up and every abuse of law be eagerly suppressed, and that every man be allowed to have his rights,</ab>
+        <note type="editorial">G2 throughout omits ‘ures hlafordes … ⁊ his’ (‘our lord's … and his’). Liebermann compares III Eg 1.</note>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Af El. 21</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -16,29 +19,24 @@
         <idno type="clause">El. 21</idno>
         <idno type="citationKey">Af el</idno>
         <idno type="citationKey">Af 21</idno>
-        <idno type="legalText">Af (domboc)</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">32</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Alfred</title> <note type="reign">r. 871–899</note></bibl>
+        <bibl type="legalText"><title>Alfred’s Domboc</title> <note type="reign">Alfred, r. 871–899</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">32</biblScope></bibl>
+          <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">244</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">E</witness>
-          <witness>H</witness>
-          <witness>B (no Prol.)</witness>
-          <witness>G (Prol. only)</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>Bu</witness>
-          <witness>Ot (frags.)</witness>
+          <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b-no-prol"><abbr>B (no Prol.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
-        <bibl type="selectedText">E: Cambridge, Corpus Christi College, MS 173 Jurasinski and Oliver, eds.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">El. 21</idno>
-          <idno type="editorNumber" n="Jurasinski and Oliver">MP 21</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -56,16 +54,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 343 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 337 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 32.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="El. 21">
         <head><ref type="lawCode" target="law:Af">Af</ref> El. 21</head>
-        <ab type="selectedText" xml:lang="und">Gif oxa ofhnite wer oððe wif, þæt hie dead sien, sie he mid stanum ofworpod, ⁊ ne sie his flæsc eten; se hlaford bið unscyldig. Gif se oxa hnitol wære twam dagum ær oððe ðrim, ⁊ se hlaford hit wisse ⁊ hine inne betynan nolde, ⁊ he ðonne wer oððe wif ofsloge, sie he mid stanum ofworpod, ⁊ sie se hlaford ófslegen oððe forgolden, swa ðæt witan to ryhte finden. Sunu oððe dohtor gif he ofstinge, ðæs ilcan domes sie he wyrðe. Gif he ðonne ðeow oððe ðeowmennen ofstinge, geselle þam hlaforde XXX scill seolfres, ⁊ se oxa mid stanum ofworpod.</ab>
-        <ab type="translation" xml:lang="en">If an ox should gore a man or woman, so that they die, let it be slain by stoning, and let its flesh not be eaten; the lord will be guiltless. If the ox was given to pushing with its horns two or three days before, and the lord knew of it and did not wish to enclose him, and it then killed a man or woman, let it be slain by stoning, and let the lord be slain or paid for, as the assembly may deem right. If it gore a son or daughter, let him be worthy of the same judgment. If, however, it should gore a male or female slave, let the lord give thirty silver shillings and the ox be killed by stoning.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif oxa ofhnite wer oððe wif, þæt hy deade syn, sy he mid stanum oftorfod, ⁊ ne sy his flæsc geeten; se hlaford byð unscyldig. Gif se oxa hnitol wære twam dagum ær oððe ðrym, ⁊ se hlaford hit wiste ⁊ hine innan betynan nolde, ⁊ he þonne wer oððe wif ofsloge, sy he mid stanum ofworpen, ⁊ sy se hlaford ofslegen oððe se man forgolden, swa þæt wytan to rihte fyndaþ. Sunu oððe dohtor gif he stynge, þæs ilcan domes sy he wyrðe. Gyf he þonne þeowan oððe þeowene ofstynge, gesylle þam hlaforde þryttig scll' seolfres, ⁊ sy se oxa mid stanum ofworpen.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 21" corresp="#wit-h">Gif oxa ofhnite wer oððe wif, þ<hi rend="italic">æt</hi> hy deade syn, sy he mid stanu<hi rend="italic">m</hi> oftorfod, ⁊ ne sy his flæsc geeten; se hlaford byð unscyldig. Gif se oxa hnitol wære twam dagum ær oððe þrym, ⁊ se hlaford hit wiste ⁊ hine innan betynan nolde, ⁊ he þonne wer oððe wif ofsloge, sy he mid stanu<hi rend="italic">m</hi> ofworpen, ⁊ sy se hlaford ofslegen oððe se man forgolden, swa þ<hi rend="italic">æt</hi> wytan to rihte fyndaþ. Sunu oððe dohter gif he stynge, þæs ilcan domes sy he wyrðe. Gyf he þonne þeowan oððe þeowene ofstynge, gesylle þa<hi rend="italic">m</hi> hlaforde þryttig scll' seolfres, ⁊ sy se oxa mid stanu<hi rend="italic">m</hi> ofworpen.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 21" corresp="#wit-e">Gif oxa ofhnite wer oððe wíf, þæt hie dead sien, sie he mid stanu<hi rend="italic">m</hi> ofworpod, ⁊ ne sie his flæsc eten; se hlaford bið unscyldig. Gif se oxa hnitol wære twam dagu<hi rend="italic">m</hi> ær oððe ðrim, ⁊ se hlaford hit wisse ⁊ hine inne betynan nolde, ⁊ he ðonne wer oððe wíf ofsloge, sie he mid stanu<hi rend="italic">m</hi> ofworpod, ⁊ sie se hlaford ófslegen oððe forgolden, swa ðæt witan to ryhte finden. Sunu oððe dohtor gif he ofstinge, ðæs ilcan domes sie he wyrðe. Gif he ðon<hi rend="italic">ne</hi> ðeow oððe ðeowmennen ófstinge, geselle þam hlaforde XXX scill. seolfres, ⁊ se oxa mid stanum ofworpod.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 21" corresp="#wit-q">Si bos cornu petierit uirum aut mulierem, et mortui fuerint, lapidibus obruetur, et non comedentur carnes eius; dominus quoque bouis innocens erit. Quodsi bos cornupeta fuerit ab heri et nudiustercius, et contestati sunt dominum eius, nec reclusit eum, occideritque uirum aut mulierem, et bos lapidibus obruetur, et dominum illius occident. Quodsi pretium ei fuerit impositum, dabit pro anima sua quicquid fuerit postulatus. Filium quoque et filiam si cornu petierit, simili sententiæ subiacebit. Si seruum ancillamque inuaserit, triginta siclos argenti dabit domino suo, bos uero lapidibus opprimetur.</ab>
+        <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="MP 21" corresp="#wit-e">Gif oxa ofhnite wer oððe wif, þæt hie dead sien, sie he mid stanu<hi rend="italic">m</hi> ofworpod, ⁊ ne sie his flæsc eten; se hlaford bið unscyldig. Gif se oxa hnitol wære twam dagu<hi rend="italic">m</hi> ær oððe ðrim, ⁊ se hlaford hit wisse ⁊ hine inne betynan nolde, ⁊ he ðonne wer oððe wif ofsloge, sie he mid stanu<hi rend="italic">m</hi> ofworpod, ⁊ sie se hlaford ófslegen oððe forgolden, swa ðæt witan to ryhte finden. Sunu oððe dohtor gif he ofstinge, ðæs ilcan domes sie he wyrðe. Gif he ðonne ðeow oððe ðeowmennen ofstinge, geselle þam hlaforde XXX scill seolfres, ⁊ se oxa mid stanum ofworpod.</ab>
+        <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If an ox should gore a man or woman, so that they die, let it be slain by stoning, and let its flesh not be eaten; the lord will be guiltless. If the ox was given to pushing with its horns two or three days before, and the lord knew of it and did not wish to enclose him, and it then killed a man or woman, let it be slain by stoning, and let the lord be slain or paid for, as the assembly may deem right. If it gore a son or daughter, let him be worthy of the same judgment. If, however, it should gore a male or female slave, let the lord give thirty silver shillings and the ox be killed by stoning.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Ochs Mann oder Weib stösst, dass sie todt sind, werde er mit Steinen todtgeworfen, und sein Fleisch werde nicht gegessen; der Herr ist unschuldig. Wenn der Ochs stössig war an zwei Tagen vorher oder an dreien, und der Herr es wusste und ihn nicht drinnen einschliessen wollte, und der nun Mann oder Weib getödtet hat, so werde der [Ochs] mit Steinen todtgeworfen, und der Herr werde getödtet oder losgekauft, wie das die [Gerichts-]Oberen zu Recht finden. Wenn der [Ochs dem Nachbar] Sohn oder Tochter todt stösst, sei er [der Herr] desselben Urtheiles theilhaftig. Wenn jener [Ochs] jedoch Sklaven oder Sklavin todt stösst, zahle er [sein Herr] dem Herrn [jener] 30 Schill. Silbers, und werde der Ochs mit Steinen todtgeworfen.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If an ox gores a man or a woman so that they are dead, let it be stoned to death, and let its flesh not be eaten; the owner is innocent. If the ox was given to goring two days before or three, and the owner knew it and would not shut it in, and it has now killed a man or a woman, then let [the ox] be stoned to death, and let the owner be killed or redeemed, as the [judicial] authorities find to be right. If [the ox] gores to death [a neighbour’s] son or daughter, let him [the owner] be subject to the same judgment. But if that [ox] gores to death a slave or a slave woman, let him [its owner] pay the master [of those] 30 shillings of silver, and let the ox be stoned to death.</ab>
+        <note type="passageSource">Exodus 21,28–32</note>
       </div>
     </body>
   </text>

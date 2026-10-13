@@ -3,35 +3,37 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Had. 1.3</title>
-        <respStmt><resp>Translation of the selected text</resp><name>Whitelock, English Historical Documents I</name></respStmt>
+        <title>Had 1.3</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Had_1-3</idno>
-        <idno type="citation">Had. 1.3</idno>
-        <idno type="lawCode">Had.</idno>
+        <idno type="citation">Had 1.3</idno>
+        <idno type="lawCode">Had</idno>
         <idno type="lawCodeAnchor">Had</idno>
         <idno type="clause">1.3</idno>
         <idno type="citationKey">Had 1.3</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">466</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Hadbot</title></bibl>
+        <bibl type="legalText"><title>Hadbot (Compensation for Clerics)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">466</biblScope></bibl>
+          <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979)</bibl>
+          <bibl xml:id="rabin" type="translation">Andrew Rabin, <title>The Political Writings of Archbishop Wulfstan of York</title> (Manchester: Manchester University Press, 2015)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>O</witness>
-          <witness>H</witness>
-          <witness>Ld</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-o"><abbr>O</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 190</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Gesetze</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1.3</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -49,17 +51,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2250 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2187 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 466.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.3">
-        <head><ref type="lawCode" target="law:Had">Had.</ref> 1.3</head>
-        <ab type="selectedText" xml:lang="und">Forðam halidom 7 hádas 7 gehalgode Godes hus a man sceal for Godes ege wurðian georne.</ab>
-        <ab type="translation" xml:lang="en">For relics and holy orders and the consecrated houses of God must always be zealously honoured for the fear of God.</ab>
-        <ab type="supplementaryText" xml:lang="und">Forþam haligdom 7 hadas 7 gehalgode Godes hus á man sceal for Godes ege wurðian georne.</ab>
-        <ab type="supplementaryTranslation" xml:lang="en">For one must always – for fear of God – diligently honour the sanctity, orders, and house of God.</ab>
+        <head><ref type="lawCode" target="law:Had">Had</ref> 1.3</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.3" corresp="#wit-h">Forþam haligdom 7 hadas 7 gehalgode Godes hus á man sceal for Godes ege wurðian georne.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.3" corresp="#wit-d">Forða<hi rend="italic">m</hi> halido<hi rend="italic">m</hi> 7 hádas 7 gehalgode Godes hus a man sceal for Godes ege wurðian georne.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.3" corresp="#wit-q">Quia sanctuaria (sanctificationes) et ordines et Deo dicatas domos semper pro timore Dei debent diligenter uenerari (reuereri ad honorem Dei).</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">For relics and holy orders and the consecrated houses of God must always be zealously honoured for the fear of God.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin" corresp="#wit-h">For one must always – for fear of God – diligently honour the sanctity, orders, and house of God.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Denn Heiligthum und Ordinirte und geweihte Gotteshäuser soll man stets aus Gottesfurcht eifrig ehren.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">For holy things and ordained men and consecrated houses of God must always be eagerly honoured out of fear of God.</ab>
+        <note type="editorial">Liebermann compares I Cn 4 and 4.3.</note>
       </div>
     </body>
   </text>

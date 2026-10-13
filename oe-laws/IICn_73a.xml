@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Cn 73a</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">IICn 73a</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">360</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Cnut</title></bibl>
+        <bibl type="legalText"><title>II Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">360</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">210</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">73a</idno>
-          <idno type="editorNumber" n="Robertson">73a</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +53,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1918 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1874 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 360.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 210.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="73a">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 73a</head>
-        <ab type="selectedText" xml:lang="und">⁊ gyf heo ðonne binnon ðæs geares fæce wer geceose, ðonne ðolie heo ðære morgengeafe ⁊ ealre [þære] æhtan ðe he[o þurh þone ærran were healfde, ⁊ fon þa nyxtan frynd to þam lande ⁊ to þam æhte þæt heo ær hæfde.</ab>
-        <ab type="translation" xml:lang="en">And if then, within the space of the year, she chooses a husband, she shall lose her morning-gift and all the property which she had from her first husband, and his nearest relatives shall take the land and the property which she had held.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ gif heo binnan geares fæce wer geceose, þonne þolige heo þære morgengyfe ⁊ ealre þæra æhta, þe heo þurh ærran wer hæfde; ⁊ fon þa nehstan frynd to ðam landan ⁊ to þan æhtan, þe heo ær hæfde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="73a" corresp="#wit-g-a">⁊ gif heo binnan geares fæce wer geceose, þonne þolige heo þære morgengyfe ⁊ ealra þæra æhta, þe heo þurh ærran wer hæfde; ⁊ fon þa nehstan frynd to ða<hi rend="italic">m</hi> landan ⁊ to þan æhtan, þe heo ær hæfde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="73a" corresp="#wit-a">⁊ gif heo binnan geares fæce wer geceose, þonne þolige hyo þare morgangyfe ⁊ ealra þara ehta, þeo heo þurh erran wer hæfde; ⁊ fon þa nihstan frind to þam lande ⁊ to þan ehtan, þe heo ǽr hafde.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="73a" corresp="#wit-q">Et si intra unius anni spatium maritum seligat, perdat morgangyfam suam et omnem pecuniam, quam ex priori marito habebat; et manus iniciant proximi amici eius ad terram et pecuniam, quam ante habebat.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="73a" corresp="#wit-b">⁊ gyf heo ðonne binnon ðæs geares fæce wer geceose, ðonne ðolie heo ðære morgengeafe ⁊ ealre [þære] æhtan ðe he[o þurh þone ærran were heafde, ⁊ fon þa nyxtan frynd to þam lande ⁊ to þam æhte þæt heo ær hæfde.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">And if then, within the space of the year, she chooses a husband, she shall lose her morning-gift and all the property which she had from her first husband, and his nearest relatives shall take the land and the property which she had held.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn sie aber (dann B) innerhalb der Frist eines (des B) Jahres einen Gatten wählt, dann verliere sie jene Morgengabe und alle jene Güter, die sie durch den früheren Mann erhalten hat; und es mögen die nächsten Blutsfreunde [des letzteren] zu dem Lande (den Landgütern G) und zu der Habe greifen, die sie bisher besessen hat.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But if she (then, B) chooses a husband within the space of a (the, B) year, then let her lose that morning-gift and all those goods which she received through the former husband; and let the nearest kinsmen [of the latter] take possession of the land (the landed estates, G) and the property which she has held until now.</ab>
+        <note type="editorial">Liebermann compares A's ‘þeo’ with I Cn 3 ‘beo’.</note>
       </div>
     </body>
   </text>

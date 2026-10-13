@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Grið 19</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Rabin</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Wulfstan</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +20,15 @@
         <idno type="citationKey">Grith 19</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">471</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Be grið 7 be munde</title></bibl>
+        <bibl type="legalText"><title>Be griðe ⁊ be munde (On Sanctuary and Protection)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">471</biblScope></bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>G(B)</witness>
+          <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">G(B): British Library, Cotton Nero A.i Rabin, ed.</bibl>
-        <bibl type="supplementaryText">G(B): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">19</idno>
-          <idno type="editorNumber" n="Rabin">19</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -46,16 +45,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2284 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2220 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 471.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="19">
         <head><ref type="lawCode" target="law:Grith">Grið</ref> 19</head>
-        <ab type="selectedText" xml:lang="und">Hælnesgrið and hadgrið healde man mid rihte æfre swyþe georne, and Godes lagum fylge 7 lareowum hlyste, swa þærto gebyrige.</ab>
-        <ab type="translation" xml:lang="en">The security and ecclesiastical privileges of the sanctuary are always to be observed most assiduously according to the law, and God’s laws are to be followed and teachers are to be heeded, as is appropriate to them.</ab>
-        <ab type="supplementaryText" xml:lang="und">Hælnesgrið 7 hadgrið healde man mid rihte æfre swyþe georne 7 Godes lagum fylge 7 lareowum hlyste, swa þærto gebyrige.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="19" corresp="#wit-g-b">Hælnesgrið 7 hadgrið healde man mid rihte æfre swyþe georne 7 Godes lagum fylge 7 lareowum hlyste, swa þærto gebyrige.</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" n="19" corresp="#wit-g-b">Hælnesgrið and hadgrið healde man mid rihte æfre swyþe georne, and Godes lagum fylge 7 lareowum hlyste, swa þærto gebyrige.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-b">The security and ecclesiastical privileges of the sanctuary are always to be observed most assiduously according to the law, and God’s laws are to be followed and teachers are to be heeded, as is appropriate to them.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Den Sonderfrieden des Heiligthums und den des Klerus halte man stets nach Recht höchst willig und folge den kirchlichen Gesetzen und lausche den [geistlichen] Lehrern, wie jenen zukommt.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Let the special peace of the sanctuary and that of the clergy always be kept lawfully and most willingly, and let one follow the laws of the Church and listen to the [spiritual] teachers, as befits them.</ab>
       </div>
     </body>
   </text>

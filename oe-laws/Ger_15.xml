@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Ger 15</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Gobbitt</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Gobbitt</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,22 +18,17 @@
         <idno type="lawCodeAnchor">Ger</idno>
         <idno type="clause">15</idno>
         <idno type="citationKey">Ger 15</idno>
-        <idno type="legalText">Ger.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">455</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Be Gesceadwisan Gerefan</title></bibl>
+        <bibl type="legalText"><title>Gerefa (The Reeve)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">455</biblScope></bibl>
+          <bibl xml:id="gobbitt" type="edition">Thom Gobbitt, ed., ‘Rectitudines singularum personarum’ and ‘Gerefa’, <title>Early English Laws</title> (earlyenglishlaws.ac.uk)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>B</witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
         </listWit>
-        <bibl type="selectedText">B: earlyenglishlaws ac.uk: RSP+Ger Gobbitt, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">15</idno>
-          <idno type="editorNumber" n="Gobbitt">28</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -49,16 +47,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2204 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2146 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 455.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="15">
         <head><ref type="lawCode" target="law:Ger">Ger</ref> 15</head>
-        <ab type="selectedText" xml:lang="und">Æcse . adsan. bil byrse .Scafan . sage. cimb|iren. tige hoc . næfebor . mattuc. ipping|iren . scear . culter . 7 eac gadiren. Siðe . Sicol . weo dhoc. Spade. Scofle. wadspitel . bærwan . besman . bytel . race . geafle. hlædre. horscamb. 7 Sceara. fyrtange . wæipundern. 7 fela towtola. flexlinan. Spinle . reol. gearnwindan . stodlan . lorgas. presse. pihten. timplean. wifte. wefle. wulcamb. cip amb. Crancstæf . Sceaðele. SeamSticcan .Scearra. Nædle . Slic.</ab>
-        <ab type="translation" xml:lang="en">Axe, adze, billhook, chisel, plane, saw, joining iron, hook for earthenware vessels, auger, mattock, crowbar, ploughshare, coulter, and also a goad, scythe, sickle, weed-hook (hoe), spade, shovel, woad-dibble, barrow, broom, mallet, rake, fork, ladder, horse-comb, scissors, fire tongs, weighing scale and many spinning implements, a cord for hanging flax from, spindle, reel, yarn winder, weaver’s slay, distaff, clothes’ press, loom parts, [weavers’ instrument], [weavers’ instrument], [weavers’ instrument], wool comb, weaver’s beam, pail, [weaver’s instrument], shuttle, harness, [weaver’s instrument], shears, needle, mallet.</ab>
-        <ab type="supplementaryText" xml:lang="und">[15] Æcse, adsan, bil, byrse, scafan, sage, cimbiren, tigehoc, næfebor, mattuc, ippingiren, scear, culter 7 eac gadiren, siðe, sicol, weodhoc, spade, scofle, wadspitel, bærwan, besman, bytel, race, geafle, hlædre, horscamb 7 sceara, fyrtange, wæipundern; [15.1] 7 fela towtola: flexlinan, spinle, reol, gearnwindan, stodlan, lorgas, presse, pihten, timplean, wifte, wefle, wulcamb, cip, amb, crancstæf, sceaðele, seamsticcan, scearra, nædle, slic.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15" corresp="#wit-b">[15] Æcse, adsan, bil, byrse, scafan, sage, cimbiren, tigehoc, næfebor, mattuc, ippingiren, scear, culter 7 eac gadiren, siðe, sicol, weodhoc, spade, scofle, wadspitel, bærwan, besman, bytel, race, geafle, hlædre, horscamb 7 sceara, fyrtange, wæipundern; [15.1] 7 fela towtola: flexlinan, spinle, reol, gearnwindan, stodlan, lorgas, presse, pihten, timplean, wifte, wefle, wulcamb, cip, amb, crancstæf, sceaðele, seamsticcan, scearra, nædle, slic.</ab>
+        <ab type="editionText" xml:lang="ang" source="#gobbitt" n="28" corresp="#wit-b">Æcse . adsan. bil byrse .Scafan . sage. cimb|iren. tige hoc . næfebor . mattuc. ipping|iren . scear . culter . 7 eac gadiren. Siðe . Sicol . weo dhoc. Spade. Scofle. wadspitel . bærwan . besman . bytel . race . geafle. hlædre. horscamb. 7 Sceara. fyrtange . wæipundern. 7 fela towtola. flexlinan. Spinle . reol. gearnwindan . stodlan . lorgas. presse. pihten. timplean. wifte. wefle. wulcamb. cip amb. Crancstæf . Sceaðele. SeamSticcan .Scearra. Nædle . Slic.</ab>
+        <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">Axe, adze, billhook, chisel, plane, saw, joining iron, hook for earthenware vessels, auger, mattock, crowbar, ploughshare, coulter, and also a goad, scythe, sickle, weed-hook (hoe), spade, shovel, woad-dibble, barrow, broom, mallet, rake, fork, ladder, horse-comb, scissors, fire tongs, weighing scale and many spinning implements, a cord for hanging flax from, spindle, reel, yarn winder, weaver’s slay, distaff, clothes’ press, loom parts, [weavers’ instrument], [weavers’ instrument], [weavers’ instrument], wool comb, weaver’s beam, pail, [weaver’s instrument], shuttle, harness, [weaver’s instrument], shears, needle, mallet.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">[15] Axt, Beil, Hippe, Bohrer, Hobel, Säge, Kimmeisen [Böttcherbeil], Ziehhaken, Naber [= Bohrer], Hacke, Brecheisen[?], Pflugschar, Kolter und auch Stachelstock, Sense, Sichel, Unkrauthacke, Spaten, Schaufel, Waidhacke, Tragebahre, Besen, Stössel, Rechen, [Heu-]Gabel, Leiter, Pferdekamm und [grosse Wirthschafts-]Scheere, Feuerzange, Wage mit Gewicht; [15.1] und viele Spinngeräthe: Flachsleine, Spindel, Haspel, Garnwinde, Rietkamm des Webstuhls, Zeugbäume, [Tuch]presse, Weberkamm, Karden..?, Einschlag, Kette [oder Schiffchen], Wollkamm, Webebaum, Webespule [oder Riedblatt], Haspelstock, Schiffchen[?], ‘Saumstöcke’, kleine Scheere, Nadel, Schlägel.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">[15] Axe, adze, bill, borer, plane, saw, chime-iron [cooper's axe], drawing-hook, auger, mattock, crowbar[?], ploughshare, coulter and also goad, scythe, sickle, weed-hook, spade, shovel, woad-dibble, barrow, broom, beetle, rake, [hay-]fork, ladder, horse-comb and [large household] shears, fire-tongs, scales with weights; [15.1] and many spinning implements: flax-line, spindle, reel, yarn-winder, stodles [loom uprights], beams, press, comb, carders(?), weft, warp [or shuttle], wool-comb, loom-roller, slay [or reed], winding-stick, shuttle[?], seam-sticks, small shears, needle, beater.</ab>
+        <note type="editorial">This row combines Liebermann's 15–15.1. B's ‘næfebor’ stands so. Liebermann's translations of the rarer terms are marked with queries; the English follows his German.</note>
       </div>
     </body>
   </text>

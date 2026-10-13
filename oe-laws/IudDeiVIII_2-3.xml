@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Iud Dei VIII 2.3</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,14 +19,15 @@
         <idno type="citationKey">IudDeiVIII 2.3</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Iudicium Dei</title></bibl>
-        <bibl type="selectedText">Ca: Cambridge, Corpus Christi College 422 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">2.3</idno>
-        </bibl>
+        <bibl type="legalText"><title>Iudicium Dei VIII (Ordeal Formula)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">415</biblScope></bibl>
+          <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
+        <listWit>
+          <witness xml:id="wit-ca"><abbr>Ca</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 422</note></witness>
+        </listWit>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -32,16 +37,22 @@
         <prefixDef ident="entry" matchPattern="(.+)" replacementPattern="entry.html?id=$1"/>
       </listPrefixDef>
     </encodingDesc>
+    <profileDesc>
+    </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2361 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2292 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 415.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2.3">
         <head><ref type="lawCode" target="law:IudDeiVIII">Iud Dei VIII</ref> 2.3</head>
-        <ab type="selectedText" xml:lang="und">Forðan we ðe þonne geornlice biddaþ, Drihten hælend Crist, þæt u gedó her swilc tácn, gyf ðes man scyldig sy, þæt ðis wæter hine ne onfó.</ab>
-        <ab type="translation" xml:lang="en">Therefore, we now sincerely ask you, Lord Saviour Christ, that if this man is guilty, you would perform the following sign here: that this water may not receive him.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.3" corresp="#wit-ca">Forðan we ðe þon<hi rend="italic">ne</hi> geornlice biddaþ, Drihten hælend Crist, þ<hi rend="italic">æt</hi> ðu gedó her swilc tácn, gyf ðes man scyldig sy, þ<hi rend="italic">æt</hi> ðis wæter hine ne onfó.</ab>
+        <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-ca">Therefore, we now sincerely ask you, Lord Saviour Christ, that if this man is guilty, you would perform the following sign here: that this water may not receive him.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Deshalb bitten wir dich nun innig, Herr Heiland Christus, dass, wenn dieser Mensch schuldig ist, du hier folgendes Zeichen thun mögest: dass dies Wasser ihn nicht aufnehme.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Therefore we now earnestly pray you, Lord Saviour Christ, that, if this man is guilty, you may give here this sign: that this water does not receive him.</ab>
+        <note type="editorial">Liebermann refers to the original of 2.3 f. at Iud Dei VII 24 f.</note>
       </div>
     </body>
   </text>

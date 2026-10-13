@@ -3,33 +3,35 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Norðleod. 1</title>
-        <respStmt><resp>Translation of the selected text</resp><name>Whitelock, English Historical Documents I</name></respStmt>
+        <title>Norðleoda 1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Northleoda_1</idno>
-        <idno type="citation">Norðleod. 1</idno>
-        <idno type="lawCode">Norðleod.</idno>
+        <idno type="citation">Norðleoda 1</idno>
+        <idno type="lawCode">Norðleoda</idno>
         <idno type="lawCodeAnchor">Northleoda</idno>
         <idno type="clause">1</idno>
         <idno type="citationKey">Northleoda 1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">458</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Norðleoda laga</title></bibl>
+        <bibl type="legalText"><title>Norðleoda laga (Law of the North People)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">458</biblScope></bibl>
+          <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979)</bibl>
+          <bibl xml:id="rabin" type="translation">Andrew Rabin, <title>The Political Writings of Archbishop Wulfstan of York</title> (Manchester: Manchester University Press, 2015)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>H</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Gesetze</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,17 +49,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2222 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2162 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 458.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
-        <head><ref type="lawCode" target="law:Northleoda">Norðleod.</ref> 1</head>
-        <ab type="selectedText" xml:lang="und">Norðleoda cynges gild is XXX þusend þrymsa: fiftene þusend þrymsa bið þæs wergildes, XV þusend þæs cynedomes; se wer gebirað magum 7 seo cynebot þam leodum.</ab>
-        <ab type="translation" xml:lang="en">The payment for a king of the North people is 30,000 thrymsas; 15,000 thrymsas belong to the wergild, 15,000 to the kingship; the wergild belongs to the kinsmen and the royal-compensation to the people.</ab>
-        <ab type="supplementaryText" xml:lang="und">Cynges wergild is inne mid Englum on folcriht XXX þusend þrymsa: XV þusend þrymsa byð þæs weres 7 XV þusend þæs cynedomes; se wer gebyreð þam magum 7 seo cynebot þam leodum.</ab>
-        <ab type="supplementaryTranslation" xml:lang="en">According to the folk-lore of the English people, a king's wergild is is thirty-thousand thrymsas: fifteen thousand thrymsas are for the man and fifteen thousand thrymsas are for the kingship. The personal wergild belongs to his kinsmen and the royal compensation belongs to the people.</ab>
+        <head><ref type="lawCode" target="law:Northleoda">Norðleoda</ref> 1</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-h">Cynges wergild is inne mid Englu<hi rend="italic">m</hi> on folcriht XXX þusend þrymsa: XV þusend þrymsa byð þæs weres 7 XV þusend þæs cynedomes; se wer gebyreð þa<hi rend="italic">m</hi> magu<hi rend="italic">m</hi> 7 seo cynebot þam leodum.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-d">Norðleoda cynges gild is XXX þusend þrymsa: fiftene þusend þrymsa bið þæs wergildes, XV þusend þæs cynedomes; se wer gebirað magu<hi rend="italic">m</hi> 7 seo cynebot þa<hi rend="italic">m</hi> leodu<hi rend="italic">m</hi>.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1" corresp="#wit-q">Regis weregildum est cum Anglis in (iure) publico recto XXX milia þrimsa: id est XV milia þrimsa sunt de wera et XV milia cynedomes, id est regie dignitatis (censure); ipsum natalis eius pretium pertinet cognationi et cynebot ipsius terrę nationi.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">The payment for a king of the North people is 30,000 <hi rend="italic">thrymsas</hi>; 15,000 <hi rend="italic">thrymsas</hi> belong to the wergild, 15,000 to the kingship; the wergild belongs to the kinsmen and the royal-compensation to the people.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin" corresp="#wit-h">According to the folk-lore of the English people, a king's wergild is is thirty-thousand <hi rend="italic">thrymsas</hi>: fifteen thousand <hi rend="italic">thrymsas</hi> are for the man and fifteen thousand <hi rend="italic">thrymsas</hi> are for the kingship. The personal wergild belongs to his kinsmen and the royal compensation belongs to the people.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Entgelt (Wergeld hlq) für den König der Nordleute ist volksrechtlich [im Lande H] (bei den Engländern hlq) 30 000 Tremissen [375 Pfund]: (und von denen seien Ld) 15 000 Tremissen ist [Betrag] des Wergeldes (und) 15 000 [der] der Königswürde; das Wergeld gebührt den Verwandten (gehört der Sippe des Königsgeschlechts Ld) und die Königsbusse dem Volke (des Landes lq).</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">The payment (wergild, hlq) for the king of the North-people is by folk-right [in the land, H] (among the English, hlq) 30,000 thrymsas [375 pounds]: (and of these let there be, Ld) 15,000 thrymsas [as the sum] of the wergild (and) 15,000 [that] of the kingship; the wergild belongs to the kinsmen (belongs to the kin of the royal house, Ld) and the king-compensation to the people (of the land, lq).</ab>
+        <note type="editorial">H's ‘inne mid Englum’ is a corruption in hlq (compare Grið 4). D supplies ‘on folcriht’ from the others and Mirce 3. Liebermann compares Mirce 3.1 and 4.</note>
       </div>
     </body>
   </text>

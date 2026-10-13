@@ -3,33 +3,30 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Nor. Cyricgrið 4</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Rabin</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Wulfstan</name></respStmt>
+        <title>Nor Grið 4</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">NorGrith_4</idno>
-        <idno type="citation">Nor. Cyricgrið 4</idno>
-        <idno type="lawCode">Nor. Cyricgrið</idno>
+        <idno type="citation">Nor Grið 4</idno>
+        <idno type="lawCode">Nor Grið</idno>
         <idno type="lawCodeAnchor">NorGrith</idno>
         <idno type="clause">4</idno>
         <idno type="citationKey">NorGrith 4</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">473</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Norðhymbra Cyricgrið</title></bibl>
+        <bibl type="legalText"><title>Norðhymbra cyricgrið (Northumbrian Church-Sanctuary)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">473</biblScope></bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>G(B)</witness>
+          <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">G(B): British Library, MS Cotton Nero A.i Rabin, ed.</bibl>
-        <bibl type="supplementaryText">G(B): British Library, MS Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">4</idno>
-          <idno type="editorNumber" n="Rabin">1[d]</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -41,24 +38,20 @@
     </encodingDesc>
     <profileDesc>
       <creation><note type="promulgation">c.1015–c.1050; post–1023 (Wormald); ?1014 (Rabin)</note></creation>
-      <textClass>
-        <keywords n="offence-legal-event"><term>Ecclesiastical directives</term><term>Boundaries</term><term>Compensation</term><term>Sanctuary</term><term>Breach of Church peace</term><term>Assault</term><term>Homicide</term><term>Capital offences</term></keywords>
-      </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2306 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2241 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 473.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4">
-        <head><ref type="lawCode" target="law:NorGrith">Nor. Cyricgrið</ref> 4</head>
-        <ab type="selectedText" xml:lang="und">And on Norðhymbra lage is sanctus Petrus cyricfrið and sanctus Wilfriðus and sanctus lohannes binnan cyricwagum þreo hundred æt cwicum men, and æt dædum botleas.</ab>
-        <ab type="translation" xml:lang="en">And according to the law of the Northumbrians, the compensation owed for a violation of Church sanctuary at Saint Peter’s, Saint Wilfrid’s, and within the walls of Saint John’s is three hundred if the victim is alive, but it cannot be compensated for if he is dead.</ab>
-        <ab type="supplementaryText" xml:lang="und">[hundr]ed æt cwicum men, 7 æt dædum</ab>
-        <note type="source">The text in the spreadsheet column "J" is one merged cell shared by rows 2303 to 2306, so the same text appears in each of those clauses.</note>
-        <note type="source">The text in the spreadsheet column "K" is one merged cell shared by rows 2303 to 2306, so the same text appears in each of those clauses.</note>
-        <note type="source">The text in the spreadsheet column "O" is one merged cell shared by rows 2303 to 2306, so the same text appears in each of those clauses.</note>
+        <head><ref type="lawCode" target="law:NorGrith">Nor Grið</ref> 4</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-g-b">[hundr]ed æt cwicum men, 7 æt deadu<hi rend="italic">m</hi></ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">[Fortsetzung von 1]</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">[Continuation of clause 1; see line 1.]</ab>
+        <note type="editorial">Warner could not make out the ‘m’ of ‘men’.</note>
       </div>
     </body>
   </text>

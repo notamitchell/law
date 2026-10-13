@@ -4,8 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Ine 72</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Jurasinski&amp;Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,29 +19,25 @@
         <idno type="lawCodeAnchor">Ine</idno>
         <idno type="clause">72</idno>
         <idno type="citationKey">Ine 72</idno>
-        <idno type="legalText">Ine (domboc)</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">120</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Ine</title> <note type="reign">r. 688–726</note></bibl>
+        <bibl type="legalText"><title>Ine’s Laws (in Alfred’s Domboc)</title> <note type="reign">Ine, r. 688–726</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">120</biblScope></bibl>
+          <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">432</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">E</witness>
-          <witness>H</witness>
-          <witness>B (no Prol.)</witness>
-          <witness>G (Prol. only)</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>Bu</witness>
-          <witness>Ot (frags.)</witness>
+          <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b-no-prol"><abbr>B (no Prol.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
-        <bibl type="selectedText">E: Cambridge, Corpus Christi College, MS 173 Jurasinski and Oliver, eds.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">72</idno>
-          <idno type="editorNumber" n="Jurasinski and Oliver">74</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -55,17 +55,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 660 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 652 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 120.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="72">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 72</head>
-        <ab type="selectedText" xml:lang="und">{CXVI} Gif mon wergildðeof gefehð, ⁊ he losige ðy dæge þam monnum ðe hine gefoð, þeah hine mon gefo ymb niht, nah him mon mare æt ðonne fulwite.</ab>
-        <ab type="translation" xml:lang="en">If a thief is caught who owes wergild for his offense, and he escapes on the day that he was caught from the men who caught him, but he is caught again before night, [the captors] need pay no more than the full fine.</ab>
-        <ab type="secondTranslation" xml:lang="en">If a thief, who has forfeited his wergeld is caught, and if he escapes the same day from his captors, yet is [re]captured before the night is passed, no more than the full fine shall be exacted from them.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif mon wergildþeof gefehð, ⁊ he losie þy dæge þam monnum þe hine gefoð, þeah hine mon gefó ymb nyht, nah him man mare æt ðonne fulwite.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="72" corresp="#wit-h">CXVI. Gif mon wergildþeof gefehð, ⁊ he losie þy dæge þam monnum þe hine gefoð, þeah hine mon gefó ymb nyht, nah him man mare æt ðonne fulwite.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="72" corresp="#wit-e">CXVI. Gif mon wergildðeof gefehð, ⁊ he losige ðy dæge þam monnum ðe hine gefoð, þeah hine mon gefó ymb niht, nah him mon mare æt þon<hi rend="italic">ne</hi> fulwite.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="72" corresp="#wit-q">Si weregildo-fur capiatur, et ipsa die perdant eum qui ceperant illum, si iterum capiatur ipsa nocte, non habebitur amplius inde quam plena wita.</ab>
+        <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="74" corresp="#wit-e">{CXVI} Gif mon wergildðeof gefehð, ⁊ he losige ðy dæge þa<hi rend="italic">m</hi> monnum ðe hine gefoð, þeah hine mon gefo ymb niht, nah him mon mare æt ðon<hi rend="italic">ne</hi> fulwite.</ab>
+        <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If a thief is caught who owes wergild for his offense, and he escapes on the day that he was caught from the men who caught him, but he is caught again before night, [the captors] need pay no more than the full fine.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If a thief, who has forfeited his wergeld is caught, and if he escapes the same day from his captors, yet is [re]captured before the night is passed, no more than the full fine shall be exacted from them.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Verbrecher [bei einer in] Wergeld [verfallenden That] gefasst wird, er jedoch an demselben Tage den Leuten, die ihn fangen, entflieht, so erhält man von ihm nicht mehr als volles Strafgeld, selbst falls er [noch] zur Nacht [wieder] eingefangen wird.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If an offender [in a deed incurring] wergeld is caught, but escapes on the same day from the people who catch him, then no more than the full fine is to be had from him, even if he is caught [again] by nightfall.</ab>
       </div>
     </body>
   </text>

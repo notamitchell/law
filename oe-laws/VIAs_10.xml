@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>VI As 10</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">VIAs 10</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">181</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VI Æthelstan</title></bibl>
+        <bibl type="legalText"><title>VI Æthelstan (London Peace-Guild)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">181</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">10</idno>
-          <idno type="editorNumber" n="Attenborough">Tenth:</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -49,16 +48,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 894 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 874 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 181.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="10">
         <head><ref type="lawCode" target="law:VIAs">VI As</ref> 10</head>
-        <ab type="selectedText" xml:lang="und">Teoðe: Þæt þa witan ealle sealdan heora wedd ealle togædere þam arcebiscope æt Þunresfelda, þa Ælfeah Stybb ⁊ Brihtnoð Oddan sunu cóman togeanes þam gemote þæs cinges worde, þæt ælc gerefa náme þæt wedd on his agenre scire, þæt hi ealle þæt frið swa healdan woldan, swa Æþelstan cyng hit geræd hæfð ⁊ his witan ǽrest æt Gréatanléa ⁊ eft æt Exanceastre ⁊ syððan æt Fæfresham ⁊ feorðan syððe æt Þunresfelda beforan þam arcebiscope ⁊ eallum þam bisceopan ⁊ his witum, þe se cyng silf namode, þe þæron wæron, þæt man þas domas healdan sceoldan, þe on þissum gemote gesette wæron, buton þam þe þær ær ofadóne wæron; þæt wæs Sunnandæges cyping, ⁊ þæt man mid fulre gewitnesse ⁊ getreowe moste ceapian butan porte.</ab>
-        <ab type="translation" xml:lang="en">Tenth: The councillors, all in a body, gave their solemn pledges to the archbishop at Thundersfield, when Alfeah Stybb and Brihtnoth, the son of Odda, attended the assembly at the request of the king: that every reeve should exact a pledge from his own shire, that they would all observe the decrees for the public security which King Ethelstan and his councillors had enacted, first at Grately, and afterwards at Exeter, and then at Faversham, and on a fourth occasion at Thundersfield, in the presence of the archbishop and all the bishops and the members of the royal council nominated by the king himself who were present ; [and] that the decrees should be observed, which were established at this meeting, except those which had been abrogated ; namely, the decrees relating to trading on Sunday and to bargaining outside a town in the presence of ample and trustworthy witnesses.</ab>
-        <ab type="supplementaryText" xml:lang="und">Decimum, quod sapientes omnes dederunt uadium suum insimul archiepiscopo apud þunresfeldam, quando Ælfeach Stybb et Brihtnodus Odonis filius uenerunt ad concilium ex uerbo (ore) regis, ut omnis prepositus uadium capiat in suo comitatu de pace seruanda, sicut Æþelstanus rex hoc consuluit et sapientes sui prius apud Grateleiam et postea Exonie et postea apud Fefresham et quarta uice apud Þunresfeldam coram archiepiscopo et episcopis et sapientibus, quos rex ipse nominauit, qui interfuerunt, ut iudicia conseruarentur, que in hoc concilio fuerant instituta, preter hoc quod ante erat (fuit) exceptum: id est negotiato dominice diei, et quod pleno testimonio et credibili possit emi extra portum.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10" corresp="#wit-q">Decimum, quod sapientes omnes dederunt uadium suum insimul archiepiscopo apud þunresfeldam, quando Ælfeach Stybb et Brihtnodus Odonis filius uenerunt ad concilium ex uerbo (ore) regis, ut omnis prepositus uadium capiat in suo comitatu de pace seruanda, sicut Æþelstanus rex hoc consuluit et sapientes sui prius apud Grateleiam et postea Exonie et postea apud Fefresham et quarta uice apud Þunresfeldam coram archiepiscopo et episcopis et sapientibus, quos rex ipse nominauit, qui interfuerunt, ut iudicia conseruarentur, que in hoc concilio fuerant instituta, preter hoc quod ante erat (fuit) exceptum: id est negotiatio dominice diei, et quod pleno testimonio et credibili possit emi extra portum.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10" corresp="#wit-h">Teoðe, þæt þa witan ealle sealdan heora wedd ealle togædere þam arcebiscope æt Þunresfelda, þa Ælfeah Stybb ⁊ Brihtnoð Oddan sunu cóman togeanes þam gemote þæs cinges worde, þæt ælc gerefa náme þæt wedd on his agenre scire, þæt hi ealle þæt frið swa healdan woldan, swa Æþelstan cyng hit geræd hæfð ⁊ his witan ǽrest æt Gréatanléa ⁊ eft æt Exanceastre ⁊ syððan æt Fæfresham ⁊ feorðan syðe æt Þunresfelda beforan þam arcebiscope ⁊ eallum þam bisceopan ⁊ his witum, þe se cyng silf namode, þe þæron wæron, þæt man þas domas healdan sceoldan, þe on þissum gemote gesette wæron, buton þam þe þær ær ofadóne wæron: þæt wæs Sunnandæges cyping, ⁊ þæt man mid fulre gewitnesse ⁊ getreowre moste ceapian butan porte.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="Tenth:" corresp="#wit-h">Teoðe: Þæt þa witan ealle sealdan heora wedd ealle togædere þam arcebiscope æt Þunresfelda, þa Ælfeah Stybb ⁊ Brihtnoð Oddan sunu cóman togeanes þam gemote þæs cinges worde, þæt ælc gerefa náme þæt wedd on his agenre scire, þæt hi ealle þæt frið swa healdan woldan, swa Æþelstan cyng hit geræd hæfð ⁊ his witan ǽrest æt Gréatanléa ⁊ eft æt Exanceastre ⁊ syððan æt Fæfresham ⁊ feorðan syððe æt Þunresfelda beforan þam arcebiscope ⁊ eallum þam bisceopan ⁊ his witum, þe se cyng silf namode, þe þæron wæron, þæt man þas domas healdan sceoldan, þe on þissum gemote gesette wæron, buton þam þe þær ær ofadóne wæron; þæt wæs Sunnandæges cyping, ⁊ þæt man mid fulre gewitnesse ⁊ getreowe moste ceapian butan porte.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">Tenth: The councillors, all in a body, gave their solemn pledges to the archbishop at Thundersfield, when Alfeah Stybb and Brihtnoth, the son of Odda, attended the assembly at the request of the king: that every reeve should exact a pledge from his own shire, that they would all observe the decrees for the public security which King Ethelstan and his councillors had enacted, first at Grately, and afterwards at Exeter, and then at Faversham, and on a fourth occasion at Thundersfield, in the presence of the archbishop and all the bishops and the members of the royal council nominated by the king himself who were present ; [and] that the decrees should be observed, which were established at this meeting, except those which had been abrogated ; namely, the decrees relating to trading on Sunday and to bargaining outside a town in the presence of ample and trustworthy witnesses.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Zehntens, dass alle Witan ihr rechtsförmliches Versprechen allesammt dem Erzbischofe zu Thundersfield gegeben haben — als Aelfeah Stybb [d. h. Baumstumpf oder Stamm] und Brihtnoth, Oddas Sohn, im Auftrage des Königs jener Versammlung entgegen kamen —, [daraufhin] dass jeder [Grafschafts]vogt in seiner eigenen Grafschaft folgendes rechtsförmliche Versprechen [den Eingesessenen] abnehmen werde: dass sie alle die Friedensordnung so bewahren wollen, wie König Aethelstan es verordnet hat mit seinen Witan zuerst zu Greatley — und wiederum zu Exeter und dann zu Faversham und zum vierten Male zu Thundersfield — vor dem Erzbischofe und allen Bischöfen und seinen Witan, welche der König selbst ernannt hatte, die dabei waren, dass man diese Gesetze halten solle, welche auf jener [frühesten] Versammlung festgesetzt wurden, ausser denen, die davon bereits abgeschafft wurden: nämlich [wieder erlaubt ist] Kaufhandel am Sonntag, und dass man unter vollem und glaubwürdigem Zeugnisse [auch] ausserhalb einer Stadt handeln darf.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Tenthly, that all the witan gave their formal pledge all together to the archbishop at Thundersfield — when Ælfheah Stybb [i.e. ‘stump’ or ‘stock’] and Brihtnoth, Odda's son, came to meet that assembly at the king's command —, [to the effect] that every [shire-]reeve should take the following formal pledge [from the inhabitants] in his own shire: that they would all keep the peace-ordinance as King Æthelstan has ordained it with his witan, first at Greatley — and again at Exeter and then at Faversham and the fourth time at Thundersfield — before the archbishop and all the bishops and his witan, whom the king himself had named, who were present, that those laws should be kept which were established at that [first] assembly, except those that have already been abolished from it: namely, [trade is again permitted] on Sunday, and one may trade [even] outside a town with full and trustworthy witness.</ab>
+        <note type="editorial">H's ‘ǽr east’ (for ǽrest), and ‘syðe’ for H's ‘siðe’ (Liebermann after Quadr.); ‘be’/‘on’ added before ‘þæs cinges worde’ by Price/Schmid unnecessarily. Liebermann compares II As 24.1; 12.</note>
       </div>
     </body>
   </text>

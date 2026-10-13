@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Grið 9</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Rabin</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Wulfstan</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +20,15 @@
         <idno type="citationKey">Grith 9</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">470</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Be grið 7 be munde</title></bibl>
+        <bibl type="legalText"><title>Be griðe ⁊ be munde (On Sanctuary and Protection)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">470</biblScope></bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>G(B)</witness>
+          <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">G(B): British Library, Cotton Nero A.i Rabin, ed.</bibl>
-        <bibl type="supplementaryText">G(B): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">9</idno>
-          <idno type="editorNumber" n="Rabin">9</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +46,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2272 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2208 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 470.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="9">
         <head><ref type="lawCode" target="law:Grith">Grið</ref> 9</head>
-        <ab type="selectedText" xml:lang="und">And on Suðengla lage griðlagu þus stent: ðæt, gif hwa gefeohteð on cyrican oððon on cynges huse, þonne sy forworht eal þæt he age, and sy on cynges dome, hwæðer he lif age þe nage.</ab>
-        <ab type="translation" xml:lang="en">And according to southern English law, the law of sanctuary stands thus: if anyone fights in church or in the king’s house, then he is to forfeit all that he owns, and it is the king’s judgment whether he lives or dies.</ab>
-        <ab type="supplementaryText" xml:lang="und">7 on Suðengla lage griðlagu þus stent, ðæt, gif hwa gefeohteð on cyrican oððon on cynges huse, þonne sy forworht eal þæt he age, 7 sy on cynges dome, hwæðer he lif age þe nage.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9" corresp="#wit-g-b">7 on Suðengla lage griðlagu þus stent, ðæt, gif hwa gefeohteð on cyrican oððon on cynges huse, þon<hi rend="italic">ne</hi> sy forworht eal þ<hi rend="italic">æt</hi> he age, 7 sy on cynges dome, hwæðer he lif age þe nage.</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" n="9" corresp="#wit-g-b">And on Suðengla lage griðlagu þus stent: ðæt, gif hwa gefeohteð on cyrican oððon on cynges huse, þonne sy forworht eal þæt he age, and sy on cynges dome, hwæðer he lif age þe nage.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-b">And according to southern English law, the law of sanctuary stands thus: if anyone fights in church or in the king’s house, then he is to forfeit all that he owns, and it is the king’s judgment whether he lives or dies.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und im Recht der Südengländer gilt das Sonderfriedensrecht so: dass, wenn einer ficht in einer Kirche oder im Hause des Königs, dann sei verwirkt alles was er besitzt, und es stehe in des Königs Entscheidung, ob er sein Leben behalte oder verliere.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And in the law of the southern English the law of special peace stands thus: that if anyone fights in a church or in the king's house, then all that he owns is forfeit, and it rests with the king's judgment whether he keeps his life or not.</ab>
+        <note type="editorial">Line breaks inside K were removed. Liebermann compares Ine 6.</note>
       </div>
     </body>
   </text>

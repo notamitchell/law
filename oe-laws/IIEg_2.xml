@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Eg 2</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,27 +18,22 @@
         <idno type="lawCodeAnchor">IIEg</idno>
         <idno type="clause">2</idno>
         <idno type="citationKey">IIEg 2</idno>
-        <idno type="legalText">II Edg</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">196</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Edgar</title></bibl>
+        <bibl type="legalText"><title>II Edgar (Andover)</title> <note type="reign">Edgar, r. 957/9–975</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">196</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">20</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G(A)</witness>
-          <witness>A</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>So</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-so"><abbr>So</abbr> <note type="manuscript">William Somner's transcript of Cotton Otho B.xi (made before the fire)</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A. i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">2</idno>
-          <idno type="editorNumber" n="Robertson">2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +52,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 962 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 937 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 196.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 20.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:IIEg">II Eg</ref> 2</head>
-        <ab type="selectedText" xml:lang="und">[Be cyricsceat.] [Ld] Gif hwa þonne þegna sy þe on his boclande circan hæbbe þe legerstow on sy, gesylle þone þriddan dæl his agenra tepðunga into his circan.</ab>
-        <ab type="translation" xml:lang="en">If however, there is a thegn who, on the land which he holds by title-deed, has a church to which is attached a graveyard, he shall pay the third part of his own tithes to his church.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gyf hwa þonne ðegna sý, ðe on his bóclande cyrican habbe, þe legerstow on sy, gesylle he þane þriddan dæl his agenre tepðunge into his cyrican.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-g-a">Gyf hwa þon<hi rend="italic">ne</hi> ðegna sý, ðe on his bóclande cyrican habbe, þe legerstow on sy, gesylle he þan<hi rend="italic">e</hi> þriddan dæl his agenre teoðunge into his cyrican.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-a">Gif hwa þonne þegena sy, þe on his boclande cyricean hæbbe, ðe legerstow on sy, gesylle ðone ðriddan dæl his agenre teoþunge into his cyricean.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2" corresp="#wit-q">Si quis tainorum sit, qui in feudo suo ecclesiam habeat, ubi cimiterium sit, dęt ei tertiam partem decime sue.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="2" corresp="#wit-d">[Be cyricsceat.] [Ld] Gif hwa þonne þegna sy þe on his boclande circan hæbbe þe legerstow on sy, gesylle þone þriddan dæl his agenra teoðunga into his circan.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">If however, there is a thegn who, on the land which he holds by title-deed, has a church to which is attached a graveyard, he shall pay the third part of his own tithes to his church.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Von Kirchensteuer. Ld) Wenn [es] aber einer der Adligen ist, der auf seinem kraft Urkundenprivilegs besessenen Lande eine Kirche hat, an der ein Friedhof liegt, so zahle er ein Drittel des auf ihm [lastenden] Zehnten an [diese] seine Kirche [und zwei Drittel der alten Pfarre].</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of church-dues. Ld) But if it is one of the thegns who has on his bookland a church at which there is a graveyard, let him pay a third of the tithe [owed] by him to [this] his church [and two thirds to the old minster].</ab>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II As 5</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,23 +20,20 @@
         <idno type="citationKey">IIAs 5</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">152</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Æthelstan</title></bibl>
+        <bibl type="legalText"><title>II Æthelstan (Grately)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">152</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Ot</witness>
-          <witness>Ld</witness>
-          <witness>So</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-ot"><abbr>Ot</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-so"><abbr>So</abbr> <note type="manuscript">William Somner's transcript of Cotton Otho B.xi (made before the fire)</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">5</idno>
-          <idno type="editorNumber" n="Attenborough">5</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -52,16 +52,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 766 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 751 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 152.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5">
         <head><ref type="lawCode" target="law:IIAs">II As</ref> 5</head>
-        <ab type="selectedText" xml:lang="und">[Be cyricbryce.] [B, Ld] ⁊ we cwædon be ciricbryce: gif he ful wære on ðam þryfealdan ordale, bete be þam þe sio dómboc secge.</ab>
-        <ab type="translation" xml:lang="en">And we have declared with regard to breaking into a church—if he [who is accused of doing so] is found guilty in the threefold ordeal, he shall pay such compensation for it as the written law declares.</ab>
-        <ab type="supplementaryText" xml:lang="und">[Be cyricbryce.] And we cwædon be ciricbryce: gyf he fúl wære on ðam ðryfealdan ordale, [bete] be ðam ðe seo dómboc secge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-b">[Be cyricbryce.] And we cwædon be cyricbryce: gyf he fúl wære on ða<hi rend="italic">m</hi> ðryfealdan ordale, [bete] be ðam ðe seo dómboc secge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-h">⁊ we cwædon be ciricbryce: gif he ful wære on ðam ðryfealdan ordale, bete be þam þe sio dómboc secge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-so">Be cyricbryce. We cwædon be cyricbryce: gif he ful wære on ðam þreofealdum ordale, bete be ðam þe seo domboc sæcge.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5" corresp="#wit-q">Et de infracturis ecclesiarum: si quis reus appareat in triplici ordalio, emendetur sicut iudicialis liber dicit.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="5" corresp="#wit-h">[Be cyricbryce.] [B, Ld] ⁊ we cwædon be ciricbryce: gif he ful wære on ðam þryfealdan ordale, bete be þam þe sio dómboc secge.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And we have declared with regard to breaking into a church—if he [who is accused of doing so] is found guilty in the threefold ordeal, he shall pay such compensation for it as the written law declares.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Von Einbruch in Kirchen. B So) Und wir bestimmten über Einbruch in Kirchen, wenn der [Missethäter] überführt wird im dreifachen Ordal, büsse er gemäss dem, was das Gesetzbuch besagt.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of breaking into churches. B So) And we determined concerning breaking into churches: if the [offender] is convicted in the threefold ordeal, let him pay compensation according to what the law-book says.</ab>
+        <note type="editorial">‘bete’ was added in the margin of B in the 16th century. Liebermann compares Af 6.</note>
       </div>
     </body>
   </text>

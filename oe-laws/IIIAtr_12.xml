@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>III Atr 12</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">IIIAtr 12</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">230</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>III Atr</title></bibl>
+        <bibl type="legalText"><title>III Æthelred (Wantage)</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">230</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">68</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Robertson, ed.</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">12</idno>
-          <idno type="editorNumber" n="Robertson">12</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +47,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1128 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1098 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 230.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="12">
         <head><ref type="lawCode" target="law:IIIAtr">III Atr</ref> 12</head>
-        <ab type="selectedText" xml:lang="und">And æt cynges spǽce lecge man VI healfmarc wedd ⁊ æt eorles ⁊ biscopes XII óran wedd ⁊ æt ælcum þegene VI óran wedd.</ab>
-        <ab type="translation" xml:lang="en">And in the case of an action brought by the king, 6 half-marks shall be deposited as security, and in the case of one brought by an earl or a bishop, 12 ores, and of one brought by a thegn, 6 ores as security.</ab>
-        <ab type="supplementaryText" xml:lang="und">Et de placito regis ponatur uadium sex dimid. marcis, comitis et episcopi uadium duodecim oris.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12" corresp="#wit-h">And æt cynges spǽce lecge man VI healfmarc wedd ⁊ æt eorles ⁊ biscopes XII óran wedd ⁊ æt ælcum þegene VI óran wedd.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="12" corresp="#wit-q">Et de placito regis ponatur uadium sex dimid. marcis, comitis et episcopi uadium duodecim oris.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="12" corresp="#wit-h">And æt cynges spǽce lecge man VI healfmarc wedd ⁊ æt eorles ⁊ biscopes XII óran wedd ⁊ æt ælcum þegene VI óran wedd.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h">And in the case of an action brought by the king, 6 half-marks shall be deposited as security, and in the case of one brought by an earl or a bishop, 12 ores, and of one brought by a thegn, 6 ores as security.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und bei Anklage durch den König [Staat] hinterlege [Verklagt]er 6 Halbmark Pfand und bei einer durch Graf oder Bischof 12 Ör Pfand und bei [einer durch] irgend einen Thegn 6 Ör Pfand.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And in a suit brought by the king [the state], let [the accused] deposit 6 half-marks as pledge, and in one brought by an earl or bishop 12 ores as pledge, and in [one brought by] any thegn 6 ores as pledge.</ab>
+        <note type="editorial">Quadr. omits the last clause (on the thegn).</note>
       </div>
     </body>
   </text>

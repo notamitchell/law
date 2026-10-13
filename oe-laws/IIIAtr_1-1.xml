@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>III Atr 1.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">IIIAtr 1.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">228</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>III Atr</title></bibl>
+        <bibl type="legalText"><title>III Æthelred (Wantage)</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">228</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">64</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Robertson, ed.</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1.1</idno>
-          <idno type="editorNumber" n="Robertson">1.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -49,16 +48,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1103 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1073 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 228.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 64.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.1">
         <head><ref type="lawCode" target="law:IIIAtr">III Atr</ref> 1.1</head>
-        <ab type="selectedText" xml:lang="und">⁊ þæt grið, þæt se ealdormann ⁊ kinges geréfa in Fif burga geþincða sylle, bete man þæt mid XII hund'.</ab>
-        <ab type="translation" xml:lang="en">But for breach of the peace which the ealdorman or the king's reeve establishes in the court of the Five Boroughs, 1200 [of silver] shall be paid as compensation.</ab>
-        <ab type="supplementaryText" xml:lang="und">Et pax, quam aldremannus uel prepositus regis in Quinque burgorum geþincða dabit, emendetur XII hund'.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.1" corresp="#wit-q">Et pax, quam aldremannus uel prepositus regis in Quinque burgorum geþincða dabit, emendetur XII hund'.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.1" corresp="#wit-h">⁊ þæt grið, þæt se ealdormann ⁊ kinges geréfa on Fif burga geþincða sylle, bete man þæt mid XII hund'.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="1.1" corresp="#wit-h">⁊ þæt grið, þæt se ealdormann ⁊ kinges geréfa on Fif burga geþincða sylle, bete man þæt mid XII hund'.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h">But for breach of the peace which the ealdorman or the king's reeve establishes in the court of the Five Boroughs, 1200 [of silver] shall be paid as compensation.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und der Friedensschutz, den der Ealdorman, bezw. ein Königsvogt im Gericht der Fünf Burgen [Lincoln, Nottingham, Derby, Stamford, Leicester] giebt: büsse man den mit 12 Hundert [zu je 8 Pfund Silber].</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And the protection which the ealdorman or a king's reeve gives in the court of the Five Boroughs [Lincoln, Nottingham, Derby, Stamford, Leicester]: let it be compensated with 12 hundred [of 8 pounds of silver each].</ab>
       </div>
     </body>
   </text>

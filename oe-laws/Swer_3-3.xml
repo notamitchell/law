@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Swer 3.3</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -13,23 +17,19 @@
         <idno type="lawCodeAnchor">Swer</idno>
         <idno type="clause">3.3</idno>
         <idno type="citationKey">Swer 3.3</idno>
-        <idno type="legalText">Swer.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">396</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Swerian</title></bibl>
+        <bibl type="legalText"><title>Swerian (Oaths)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">396</biblScope></bibl>
+          <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">3.3</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -46,16 +46,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2116 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2062 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 396.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3.3">
         <head><ref type="lawCode" target="law:Swer">Swer</ref> 3.3</head>
-        <ab type="selectedText" xml:lang="und">7 swa ic orf hæbbe, swa hit me se sealde, ðe hit to syllanne agte.</ab>
-        <ab type="translation" xml:lang="en">[Alternatively:] And so I [do] have cattle that were sold to me by [someone] who [legally] owned them.</ab>
-        <ab type="supplementaryText" xml:lang="und">7 swa ic orf hæbbe, swa hit me se sealde, ðe hit to syllanne ahte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.3" corresp="#wit-b">7 swa ic orf hæbbe, swa hit me se sealde, ðe hit to syllanne ahte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.3" corresp="#wit-h">7 swa ic orf hæbbe, swa hit me se sealde, ðe hit to syllanne agte.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.3" corresp="#wit-q">Et sic pecus habeo, sicut mihi uendidit, cui iure pertinebat.</ab>
+        <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-h">[Alternatively:] And so I [do] have cattle that were sold to me by [someone] who [legally] owned them.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Beziehungsweise: só besitz ich Vieh, wie dér es mir veräussert hat, der es zu veräussern befugt war.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Or: I possess the cattle just as he sold it to me who was entitled to sell it.</ab>
+        <note type="editorial">B lacks ‘se’; Liebermann supplies it. H reads ‘agte’ (so). Liebermann compares Becw 2.</note>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Cn 51</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,25 +20,22 @@
         <idno type="citationKey">IICn 51</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">346</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Cnut</title></bibl>
+        <bibl type="legalText"><title>II Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">346</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">200</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">51</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -52,16 +52,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1868 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1824 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 346.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 200.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="51">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 51</head>
-        <ab type="selectedText" xml:lang="und">Be siblegere. Gyf hwa sibleger gewyrce, gebete þæt be sibbe mæðe, swa be were swa be wite swa be ealre æhta.</ab>
-        <ab type="translation" xml:lang="en">Concerning incest. If anyone commits incest, he shall make amends according to the degree of relationship [between them], either by the payment of wergeld or of a fine, or by the forfeiture of all his possessions.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif hwa sibleger gewyrce, gebete þæt be sibbe mæðe, swa be were swa be wite swa be ealre æhte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="51" corresp="#wit-g-a">Gif hwa sibleger gewyrce, gebete þ<hi rend="italic">æt</hi> be sibbe mæðe, swa be were swa be wite swa be ealre æhte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="51" corresp="#wit-a">Gif hwa sibleger gewirce, gebete þæt be sibbe mæðe, swa be were swa be wite swa be ealra ehte:</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="51" corresp="#wit-q">Si quis cum pertinente sua iaceat, emendet hoc secundum cognationis modum, sic wéra sic wita sic omni pecunia:</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="51" corresp="#wit-b">Be siblegere. Gyf hwa sibleger gewyrce, gebete þæt be sibbe mæðe, swa be were swa be wite swa be ealra æhta.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">Concerning incest. If anyone commits incest, he shall make amends according to the degree of relationship [between them], either by the payment of wergeld or of a fine, or by the forfeiture of all his possessions.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Von Blutschande. B) Wenn einer Blutschande verübt, büsse er das nach dem Grade der Verwandtschaft: entweder durch [sein] Wergeld oder durch Strafgeld oder durch [seinen] ganzen Besitz.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of incest. B) If anyone commits incest, let him make amends according to the degree of kinship: either by [his] wergild or by a fine or by [his] whole property.</ab>
+        <note type="editorial">Liebermann compares EGu 4.</note>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>VI As 1.4</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">VIAs 1.4</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">174</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VI Æthelstan</title></bibl>
+        <bibl type="legalText"><title>VI Æthelstan (London Peace-Guild)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">174</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1.4</idno>
-          <idno type="editorNumber" n="Attenborough">[1].4</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -49,16 +48,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 873 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 853 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 174.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.4">
         <head><ref type="lawCode" target="law:VIAs">VI As</ref> 1.4</head>
-        <ab type="selectedText" xml:lang="und">⁊ se ðe þyfðe oft ǽr forworht wære openlice ⁊ to órdale gá ⁊ þar fúl weorðe, þæt hine man slea, butan þa magas oððe se hlaford hine útniman willan be his were ⁊ be fullan ceapgilde ⁊ eac hine on borh gehabban syððan þæt he ælces yfeles geswice. Gif he eft ofer þæt stalie, agifan þa mágas þonne hine swa gewyld swa hine ær út æt þam ordale namon, þam gerefan þe þar togebyrige, ⁊ slea man hine on þa þeofwráce. Gif hine þonne hwa forene forstande ⁊ hine geniman wille, ⁊ he wære fúl æt þam ordale, þæt hine man lecgan ne moste, þæt he wære his feores scyldig, buton he cyng gesohte, ⁊ he him his féorh forgifan wolde, eall swa hit ær æt Gréatanléa ⁊ æt Exanceastre ⁊ æt Þunresfelda gecweden wæs.</ab>
-        <ab type="translation" xml:lang="en">And he who has been frequently and publicly convicted of theft, and who goes to the ordeal and is there proved guilty, shall be slain, unless his kinsmen or his lord will ransom him by the payment of his wergeld and the full value of the [stolen] goods; and, in addition, stand surety for him henceforth, that he will desist from every form of crime. If he steals again after this, his kinsmen shall give him back to the reeve to whose jurisdiction the case belongs, in as helpless a condition as he was when they delivered him from the ordeal; and he shall be slain in accordance with the punishment for theft. Futhermore, if anyone stands up for him and wishes to rescue him in order to prevent his being killed, after he has been convicted at the ordeal, he shall forfeit his life unless he appeals to the king, and the king is willing to grant him his life, just as was declared at Grately, and at Exeter, and at Thundersfield.</ab>
-        <ab type="supplementaryText" xml:lang="und">Et fur qui seps forisfactus fuerit aperte et ad ordalium eat (uadat) et reus appareat, occidatur nisi cognatio eius (tribus sua) uel dominus redimere uelit eum secundum weram suam et pleno ceapgildo et etiam in plegium habere deincips, quod ab omni malo cesset (plegiare, quod semper in reliquum cesset a malo). Et si postea furetur, reddat eum cognacio illa iusticiabilem, sicut ante ab ordalio ceperit, preposito, qui ad hoc pertinebit, et occidatur. Si quis obstabit et eum cripere uelit, reum in ordalio, quin occidatur, uitę suę in culpa sit, nisi regem requirat, et ei uitam perdonare uelit (perdonauerit), sicut apud Greatteleiam et Exoniam et apud Þunresfeldam dictum est</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.4" corresp="#wit-q">Et fur qui sepe forisfactus fuerit aperte et ad ordalium eat (uadat) et reus appareat, occidatur nisi cognatio eius (tribus sua) uel dominus redimere uelit eum secundum weram suam et pleno ceapgildo et etiam in plegium habere deinceps, quod ab omni malo cesset (plegiare, quod semper in reliquum cesset a malo). Et si postea furetur, reddat eum cognacio illa iusticiabilem, sicut ante ab ordalio ceperit, preposito, qui ad hoc pertinebit, et occidatur. Si quis obstabit et eum cripere uelit, reum in ordalio, quin occidatur, uitę suę in culpa sit, nisi regem requirat, et ei uitam perdonare uelit (perdonauerit), sicut apud Greatteleiam et Exoniam et apud Þunresfeldam dictum est.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.4" corresp="#wit-h">⁊ se ðe þyfðe oft ǽr forworht wære openlice ⁊ to órdale gá ⁊ þar fúl weorðe, þæt hine man slea, buton þa magas oððe se hlaford hine útniman willan be his were ⁊ be fullan ceapgilde ⁊ eac hine on borh gehabban syððan, þæt he ælces yfeles geswice. Gif he eft ofer þæt stalie, agifan þa mágas þonne hine, swa gewyld swa hine ær út æt þam ordale namon, þam gerefan þe þar togebyrige, ⁊ slea man hine on þa þeofwráce. Gif hine þonne hwa forene forstande ⁊ hine geniman wille, ⁊ he wære fúl æt þam ordale, þæt hine man lecgan ne moste, þæt he wære his feores scyldig, buton he cyng gesohte, ⁊ he him his féorh forgifan wolde, eall swa hit ær æt Gréatanléa ⁊ æt Exanceastre ⁊ æt Þunresfelda gecweden wæs.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="[1].4" corresp="#wit-h">⁊ se ðe þyfðe oft ǽr forworht wære openlice ⁊ to órdale gá ⁊ þar fúl weorðe, þæt hine man slea, butan þa magas oððe se hlaford hine útniman willan be his were ⁊ be fullan ceapgilde ⁊ eac hine on borh gehabban syððan þæt he ælces yfeles geswice. Gif he eft ofer þæt stalie, agifan þa mágas þonne hine swa gewyld swa hine ær út æt þam ordale namon, þam gerefan þe þar togebyrige, ⁊ slea man hine on þa þeofwráce. Gif hine þonne hwa forene forstande ⁊ hine geniman wille, ⁊ he wære fúl æt þam ordale, þæt hine man lecgan ne moste, þæt he wære his feores scyldig, buton he cyng gesohte, ⁊ he him his féorh forgifan wolde, eall swa hit ær æt Gréatanléa ⁊ æt Exanceastre ⁊ æt Þunresfelda gecweden wæs.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And he who has been frequently and publicly convicted of theft, and who goes to the ordeal and is there proved guilty, shall be slain, unless his kinsmen or his lord will ransom him by the payment of his wergeld and the full value of the [stolen] goods; and, in addition, stand surety for him henceforth, that he will desist from every form of crime. If he steals again after this, his kinsmen shall give him back to the reeve to whose jurisdiction the case belongs, in as helpless a condition as he was when they delivered him from the ordeal; and he shall be slain in accordance with the punishment for theft. Futhermore, if anyone stands up for him and wishes to rescue him in order to prevent his being killed, after he has been convicted at the ordeal, he shall forfeit his life unless he appeals to the king, and the king is willing to grant him his life, just as was declared at Grately, and at Exeter, and at Thundersfield.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wer Diebstahls [schon] zuvor oft offenbar überführt gewesen ist und [nun] zum Ordal schreitet und dabei schuldig befunden wird: dass man ihn erschlage, es sei denn, die Verwandten oder der Herr wollen ihn [aus der Haft] herausnehmen gegen Zahlung seines Wergeldes und des vollen Ersatzes [für das Gestohlene] und ausserdem ihn fernerhin unter Verbürgung [dafür] halten, dass er von jeder Missethat abstehe. Wenn er wiederum nach diesem stiehlt, dann sollen ihn die Verwandten so gefesselt zurückliefern, wie sie ihn zuvor von dem Ordale [an sich] genommen hatten, an den Vogt, der dort zuständig ist, und erschlage man ihn gemäss der Diebesstrafe. Wenn aber einer für ihn eintritt und ihn [dem Gericht] fortnehmen will, obwohl jener beim Ordal schuldig befunden war, so dass man den [Dieb] nicht hinrichten kann: dass der [Begünstiger] sein Leben verwirkt habe, es sei denn, er suche den König auf, und dieser wolle ihm sein Leben schenken: ganz wie es zuvor zu Greatley und zu Exeter und zu Thundersfield verkündet worden ist.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And whoever has [already] often been openly convicted of theft before and [now] goes to the ordeal and is found guilty there: that he be killed, unless the kinsmen or the lord are willing to take him out [of custody] on payment of his wergild and the full compensation [for the stolen goods], and moreover to keep him thereafter under surety [to the effect] that he will desist from all wrongdoing. If he steals again after this, then the kinsmen are to hand him back, bound just as they had [first] taken him from the ordeal, to the reeve who is responsible there, and let him be killed according to the punishment for thieves. But if anyone intervenes for him and wants to take him away [from the court], although he was found guilty at the ordeal, so that the [thief] cannot be executed: that the [protector] shall have forfeited his life, unless he seeks out the king and the king is willing to grant him his life: just as was proclaimed previously at Greatley and at Exeter and at Thundersfield.</ab>
+        <note type="editorial">‘hi’ (in ‘swa hi hine’) is supplied in H by Price. Liebermann compares II As 1.3 ff. and V As Pr. 3.</note>
       </div>
     </body>
   </text>

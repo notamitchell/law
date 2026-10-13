@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Cn 75.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">IICn 75.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">362</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Cnut</title></bibl>
+        <bibl type="legalText"><title>II Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">362</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">212</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">75.1</idno>
-          <idno type="editorNumber" n="Robertson">75.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +53,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1925 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1881 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 362.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="75.1">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 75.1</head>
-        <ab type="selectedText" xml:lang="und">And se ðe þæt wepn age, hine geladige, gyf he durre, ðæt hit næfre næs naðer ne his gewill ne his geweald ne his ræd ne his gewitnes; ðonne is þæt Godes riht, þæt he beo clæne.</ab>
-        <ab type="translation" xml:lang="en">And he who owns the weapon shall clear himself, if he dare, asserting that the mischief was done without his desire or authority or advice or cognisance; then according to the law of God he shall be clear [of any charge of complicity].</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ se ðe þæt wæpn áge, hine geladige, gif he durre, þæt hit næfre næs naðer ne his gewill ne his geweald ne his ræd ne his gewitnes: þonne is þæt Godes riht, þæt he beo clæne.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="75.1" corresp="#wit-g-a">⁊ se ðe þ<hi rend="italic">æt</hi> wæpn áge, hine geladige, gif he durre, þ<hi rend="italic">æt</hi> hit næfre næs naðer ne his gewill ne his geweald ne his ræd ne his gewitnes: þonne is þ<hi rend="italic">æt</hi> Godes riht, þ<hi rend="italic">æt</hi> he beo clæne.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="75.1" corresp="#wit-a">And se ðe þæt wæpen age, hine geladige, gif he durre, þæt hit næffre næs naðer ne his gewyll ne his geweald ne his ræd ne his gewitnes: þonne his þæt Godes riht, þæt he beo clæne.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="75.1" corresp="#wit-q">Et si ille, cuius armis malefactum est, se adlegiare audeat, quod nec uelle nec (uel) posse suum fuerit nec (uel) testimonium, Dei rectum est, ut inde quietus sit.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="75.1" corresp="#wit-b">And se ðe þæt wepn age, hine geladige, gyf he durre, ðæt hit næfre næs naðer ne his gewill ne his geweald ne his ræd ne his gewitnes; ðonne is þæt Godes riht, þæt he beo clæne.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">And he who owns the weapon shall clear himself, if he dare, asserting that the mischief was done without his desire or authority or advice or cognisance; then according to the law of God he shall be clear [of any charge of complicity].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wer die Waffe zu eigen hat, reinige sich, wenn er es wagt [durch dén Eid], dass es [das Verbrechen] nimmer weder sein Wille, noch seine Absicht, noch sein Rath, noch sein Mitwissen war: dann ist es Gottes [d. h. vollkommenes] Recht, dass er rein dastehe.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And whoever owns the weapon, let him clear himself, if he dares, [by the oath] that it [the crime] was never either his will, nor his intention, nor his counsel, nor his knowledge: then it is God's [that is, perfect] right that he stand clean.</ab>
       </div>
     </body>
   </text>

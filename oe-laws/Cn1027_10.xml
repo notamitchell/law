@@ -4,8 +4,8 @@
     <fileDesc>
       <titleStmt>
         <title>Cn 1027 10</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,22 +17,19 @@
         <idno type="citationKey">Cn1027 10</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">277</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Cn 1027</title></bibl>
+        <bibl type="legalText"><title>Cnut’s Letter of 1027</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">277</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">148</biblScope></bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">Flor. of Worcester (ed. Thorpe)</witness>
-          <witness rend="bold">Ox</witness>
-          <witness>Bc</witness>
-          <witness>Rd</witness>
-          <witness>Ma</witness>
+          <witness xml:id="wit-flor-of-worcester-ed-thorpe" rend="bold"><abbr>Flor. of Worcester (ed. Thorpe)</abbr></witness>
+          <witness xml:id="wit-ox" rend="bold"><abbr>Ox</abbr></witness>
+          <witness xml:id="wit-bc"><abbr>Bc</abbr></witness>
+          <witness xml:id="wit-rd"><abbr>Rd</abbr></witness>
+          <witness xml:id="wit-ma"><abbr>Ma</abbr></witness>
+          <witness xml:id="wit-fl-ox"><abbr>Fl, Ox</abbr> <note type="manuscript">Florence (John) of Worcester, Chronicon, and Oxford, Corpus Christi College MS 157</note></witness>
         </listWit>
-        <bibl type="selectedText">Fl and Ox: Cambridge, Corpus Christi College MS 157 Robertson, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">10</idno>
-          <idno type="editorNumber" n="Robertson">10</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -50,15 +47,17 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1637 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1595 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 148.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="10">
         <head><ref type="lawCode" target="law:Cn1027">Cn 1027</ref> 10</head>
-        <ab type="selectedText" xml:lang="und">Nunc itaque notum sit omnibus vobis, quia ipso Deo omnipotenti supplex devovi vitam meam amodo in omnibus iustificare, et regna mihi subdita populosque iuste et pie regere aequumque iudicium per omnia observare; et si quid per meae iuventutis intemperantiam aut negligentiam hactenus praeter id quod iustum erat actum est, totum Deo auxiliante deinceps dispono emendare.</ab>
-        <ab type="translation" xml:lang="en">Now, therefore, be it known to all of you that, as a suppliant to God Almighty, I have vowed henceforth to regulate my life in all things, and to rule the kingdoms and peoples subject to me justly and uprightly, and to maintain equity in all things, and I purpose henceforth, with the help of God to amend whatever has hitherto been done contrary to what is right, through the intemperance of youth or through negligence.</ab>
+        <ab type="editionText" xml:lang="la" source="#robertson" n="10" corresp="#wit-fl-ox">Nunc itaque notum sit omnibus vobis, quia ipsi Deo omnipotenti supplex devovi vitam meam amodo in omnibus iustificare, et regna mihi subdita populosque iuste et pie regere aequumque iudicium per omnia observare; et si quid per meae iuventutis intemperantiam aut negligentiam hactenus praeter id quod iustum erat actum est, totum Deo auxiliante deinceps dispono emendare.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-fl-ox">Now, therefore, be it known to all of you that, as a suppliant to God Almighty, I have vowed henceforth to regulate my life in all things, and to rule the kingdoms and peoples subject to me justly and uprightly, and to maintain equity in all things, and I purpose henceforth, with the help of God to amend whatever has hitherto been done contrary to what is right, through the intemperance of youth or through negligence.</ab>
+        <note type="editorial">Latin only (Cnut's letter of 1027, c. May; Latin translation c. 1070–1100, the Old English original is lost). Liebermann's text is from Florence of Worcester (ed. MGH SS XIII 126), compared with Ox (Oxford, Corpus 157 p. 329) and William of Malmesbury II 183; text in column T. Liebermann gives no German translation.</note>
       </div>
     </body>
   </text>

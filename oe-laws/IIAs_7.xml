@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II As 7</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,23 +20,21 @@
         <idno type="citationKey">IIAs 7</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">154</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Æthelstan</title></bibl>
+        <bibl type="legalText"><title>II Æthelstan (Grately)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">154</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Ot</witness>
-          <witness>Ld</witness>
-          <witness>So</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-ot"><abbr>Ot</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-so"><abbr>So</abbr> <note type="manuscript">William Somner's transcript of Cotton Otho B.xi (made before the fire)</note></witness>
+          <witness xml:id="wit-so-ot-from-swa-hit"><abbr>So; Ot from ‘swa hit’</abbr> <note type="manuscript">William Somner's transcript of Cotton Otho B.xi (made before the fire) – So; Ot from ‘swa hit’</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">7</idno>
-          <idno type="editorNumber" n="Attenborough">7</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -52,16 +53,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 771 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 756 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 154.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7">
         <head><ref type="lawCode" target="law:IIAs">II As</ref> 7</head>
-        <ab type="selectedText" xml:lang="und">[Be anfealdum ordale.] [Ld, So] ⁊ we cwædon be ðam anfealdum ordale æt þam monnum þe oft betihtlede wæron: ⁊ hy fule wurdon ⁊ hy niten, hwa hy on borh nime, gebringe man hy on carcerne ⁊ man hy do út, swa hit her beforan cweden is.</ab>
-        <ab type="translation" xml:lang="en">And we have declared that, with regard to the simple ordeal for men who have often been accused of theft, and have been found guilty, and do not know anyone who will stand as surety for them, they shall be put in prison and they shall be liberated [only] on the conditions stated above.</ab>
-        <ab type="supplementaryText" xml:lang="und">Be anfealdum ordale. And we cwædon be ðam anfealdum ordale æt ðæm mannum ðe ðeofþe getyhtlod wæron: ⁊ hi fule wyrden ⁊ hí nyten, hwa hi on borh nime, gebringe hine mon on carcerne ⁊ hine man dó ut, swa her beforan gecweden is.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-ld">Be anfealdum ordale. And we cwædon be ðæm anfealdum ordale æt ðæm mannum ðe ðeofþe getyhtlod wæron: ⁊ hi fule wyrden ⁊ hí nyten, hwa hi on borh nime, gebringe hine mon on carcerne ⁊ hine man dó ut, swa her beforan gecweden is.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-h">⁊ we cwædon be ðam anfealdum ordale æt þam monnum þe oft betihtlede wæron: ⁊ hy fule wurdon ⁊ hy niten, hwa hy on borh nime, gebringe man hy on carcerne ⁊ man hy don út, swa hit her beforan cweden is.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-so-ot-from-swa-hit">Be anfealdum ordale. We cwædon be anfealdum ordale æt ðæm mannum þe oft getyhlod wæron: ⁊ hie fule wyrðen ⁊ hie nyten, hwa hi on borh nime, gebringe hine mon on carcerne ⁊ hine mon do út, swa hit her beforan gecweden is.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="7" corresp="#wit-q">De simplici ordalio. Diximus de simplici ordalio: Homo qui sepe fuerit accusatus et reus fiat (appareat) et nesciat, quis eum sumat in plegium, ponatur in carcere et educatur inde, sicut supra dictum est.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="7" corresp="#wit-h">[Be anfealdum ordale.] [Ld, So] ⁊ we cwædon be ðam anfealdum ordale æt þam monnum þe oft betihtlede wæron: ⁊ hy fule wurdon ⁊ hy niten, hwa hy on borh nime, gebringe man hy on carcerne ⁊ man hy do út, swa hit her beforan cweden is.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And we have declared that, with regard to the simple ordeal for men who have often been accused of theft, and have been found guilty, and do not know anyone who will stand as surety for them, they shall be put in prison and they shall be liberated [only] on the conditions stated above.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Vom einfachen Ordal. Und wir bestimmten über das einfache Ordal bei den Leuten, die oft (Diebstahls Ld) bezichtigt worden sind: [wenn] sie schuldig befunden wurden und niemanden wissen, wer sie in Bürgschaft nehme, so bringe man sie (ihn So Ld) ins Gefängniss und man lasse sie [nur] so heraus, wie es hier zuvor bestimmt steht.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of the single ordeal. And we determined concerning the single ordeal for those people who have often been accused (of theft, Ld): [if] they were found guilty and know of no one who will take them into surety, let them (him, So Ld) be brought to prison and let them out [only] as is laid down here above.</ab>
+        <note type="editorial">Liebermann compares II As 6.1 and 1.3 ff. H lacks the heading. The surviving burnt Ot resumes at ‘swa hit her beforan gecweden is’.</note>
       </div>
     </body>
   </text>

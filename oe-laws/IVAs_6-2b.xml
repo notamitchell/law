@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>IV As 6.2b</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,21 +18,17 @@
         <idno type="lawCodeAnchor">IVAs</idno>
         <idno type="clause">6.2b</idno>
         <idno type="citationKey">IVAs 6.2b</idno>
-        <idno type="legalText">IV As (fragment)</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">171</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>IVÆthelstan (OE)</title></bibl>
+        <bibl type="legalText"><title>IV Æthelstan (Thunresfeld)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">171</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>H (frag.)</witness>
+          <witness xml:id="wit-h-frag"><abbr>H (frag.)</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
         </listWit>
-        <bibl type="selectedText">H Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">6.2b</idno>
-          <idno type="editorNumber" n="Attenborough">6.3</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,15 +46,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 850 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 832 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 171.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6.2b">
         <head><ref type="lawCode" target="law:IVAs">IV As</ref> 6.2b</head>
-        <ab type="selectedText" xml:lang="und">⁊ gif hine hwa licge binnan ðæm fyrste, þonne gebete ge ðæs mundbyrde ðe he ær sohte, oþþe he hine twelfa sum ladige, þæt he þa socne nyste.</ab>
-        <ab type="translation" xml:lang="en">If anyone slays him within that period of respite, he shall pay as compensation the mundbyrd of him to whom the thief has fled to clear himself [by asseverating] with the support of eleven others that he was not aware that the privilege of sanctuary had been obtained.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.2b" corresp="#wit-h-frag">⁊ gif hine hwa lecge binnan ðæm fyrste, þonne gebete he ðæs mundbyrde ðe he ær sohte, oþþe he hine twelfa sum ladige, þæt he þa socne nyste.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="6.3" corresp="#wit-h-frag">⁊ gif hine hwa licge binnan ðæm fyrste, þonne gebete ge ðæs mundbyrde ðe he ær sohte, oþþe he hine twelfa sum ladige, þæt he þa socne nyste.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h-frag">If anyone slays him within that period of respite, he shall pay as compensation the <hi rend="italic">mundbyrd</hi> of him to whom the thief has fled to clear himself [by asseverating] with the support of eleven others that he was not aware that the privilege of sanctuary had been obtained.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn ihn einer binnen dieser Frist erschlägt, dann büsse er dessen Schutzgewalt, welchen jener zuvor aufgesucht hatte, oder reinige sich selbzwölft, dass er dies Asyl nicht gekannt habe.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if anyone kills him within this period of respite, then let him pay compensation for the protection of the one whom he had sought out, or clear himself as one of twelve that he did not know of this sanctuary.</ab>
+        <note type="editorial">6.2b is missing from the Latin on p. 172 — perhaps rightly (Liebermann).</note>
       </div>
     </body>
   </text>

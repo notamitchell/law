@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>I Cn 4.2</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">ICn 4.2</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">284</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>I Cn</title></bibl>
+        <bibl type="legalText"><title>I Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">284</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">158</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness rend="bold">G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a" rend="bold"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">G(A): British Library, Cotton Nero A.i (up to, and including, cap.14.2; thereafter B.) B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">4.2</idno>
-          <idno type="editorNumber" n="Robertson">4.2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +53,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1661 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1618 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 284.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 158.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4.2">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 4.2</head>
-        <ab type="selectedText" xml:lang="und">Mycel is seo halsung ⁊ mære is seo halgung þe deofla afyrsað ⁊ on fleame gebringeð, swa oft swa man fullað oððe husel halgað; ⁊ halige englas þær abutan hwearfiað ⁊ þa dæda beweardiað ⁊ þurh Godes mihta þam sacerdon fylstað, swa oft swa hi Criste deniað mid rihte.</ab>
-        <ab type="translation" xml:lang="en">Great is the exorcising and wonderful is the hallowing through which he drives away devils and puts them to flight, as often as he baptises anyone or hallows the Eucharist; and holy angels hover round there and protect these acts, and, through the power of God, help the priests as often as they serve Christ as they ought.</ab>
-        <ab type="supplementaryText" xml:lang="und">Mycel is seo halsung ⁊ mære is seo halgung, þe deofla afyrsað ⁊ on fleame gebringeð, swa oft swa man fullað oððe husel halgað; ⁊ halige englas þær abutan hwearfiað ⁊ þa dæda beweardiað ⁊ þurh Godes mihta þam sacerdon fylstað, swa oft swa hig Criste deniað mid rihte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.2" corresp="#wit-g-a">Mycel is seo halsung ⁊ mære is seo halgung, þe deofla afyrsað ⁊ on fleame gebringeð, swa oft swa man fullað oððe husel halgað; ⁊ halige englas þær abutan hwearfiað ⁊ þa dæda beweardiað ⁊ þurh Godes mihta þam sacerdon fylstað, swa oft swa hig Criste deniað mid rihte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.2" corresp="#wit-a">Micel is seo halsung ⁊ mære is seo halgung, þe he deofla afyrseð ⁊ on fleame gebringeð, swa oft swa he man fullað oððe husl halgað; and englas þær hwearfiað ⁊ þa dæda bewerdiað ⁊ þurh Godes mihta þam sacerdon fylstað, swa oft swa hig Criste ðeniað mid rihte.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.2" corresp="#wit-q">Et magna coniuratio multaque benedictio est, quę diabolum semouet (propellit di.) et in fugam redigit, quotiens diuina potentia operante (cooperante potentia), beatorum spirituum prosequente custodia, per manus temporalium sacerdotum sacri baptismatis uel eucharistiæ sacrosancta misteria celebrantur.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="4.2" corresp="#wit-g-a">Mycel is seo halsung ⁊ mære is seo halgung þe deofla afyrsað ⁊ on fleame gebringeð, swa oft swa man fullað oððe husel halgað; ⁊ halige englas þær abutan hwearfiað ⁊ þa dæda beweardiað ⁊ þurh Godes mihta þam sacerdon fylstað, swa oft swa hi Criste ðeniað mid rihte.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a">Great is the exorcising and wonderful is the hallowing through which he drives away devils and puts them to flight, as often as he baptises anyone or hallows the Eucharist; and holy angels hover round there and protect these acts, and, through the power of God, help the priests as often as they serve Christ as they ought.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Gross ist die Beschwörung und hehr ist die Weihe, welche (durch w. er A) Teufel austreibt und zur Flucht bringt, so oft wie getauft oder die Hostie geweiht wird (wie er einen Menschen tauft o. d. H. weiht A); und (heilige G) Engel schweben dort (umher G) und beschützen die [Weihe]-Handlungen und helfen kraft Gottesmacht den Priestern, so oft wie diese Christo ordnungsgemäss dienen.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Great is the exorcism and glorious the consecration by which (he, A) drives out devils and puts them to flight, as often as baptism is given or the host consecrated (as he baptises someone or consecrates the host, A); and (holy, G) angels hover there (round about, G) and guard the [sacred] acts and through God's might help the priests, as often as they serve Christ rightly.</ab>
+        <note type="editorial">‘halige’ and ‘abutan’ are probably G's additions (missing from A, Ld and the Polity).</note>
       </div>
     </body>
   </text>

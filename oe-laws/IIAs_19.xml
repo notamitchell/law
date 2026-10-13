@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II As 19</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,23 +20,20 @@
         <idno type="citationKey">IIAs 19</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">160</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Æthelstan</title></bibl>
+        <bibl type="legalText"><title>II Æthelstan (Grately)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">160</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Ot</witness>
-          <witness>Ld</witness>
-          <witness>So</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-ot"><abbr>Ot</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-so"><abbr>So</abbr> <note type="manuscript">William Somner's transcript of Cotton Otho B.xi (made before the fire)</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">19</idno>
-          <idno type="editorNumber" n="Attenborough">19</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,16 +51,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 787 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 772 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 160.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="19">
         <head><ref type="lawCode" target="law:IIAs">II As</ref> 19</head>
-        <ab type="selectedText" xml:lang="und">[Be þeowman ðe ful wurþe æt ordale.] [Ld] Ond we cwædon be þeowan men, gif he fúl wurþe æt þam ordale, þæt mon gulde þæt ceapgild ⁊ swinge hine man ðriwa oððe þæt oþer gild sealde; ⁊ sy þæt wite be healfum wurðe æt þam ðeowum.</ab>
-        <ab type="translation" xml:lang="en">And we have declared with regard to a slave who has been found guilty in the ordeal, that [his master] shall pay the amount involved, and either inflict three scourgings on him or pay a second sum equal to the amount involved. And the fine for theft by a slave shall be half the amount [paid by a freeman for a similar amount].</ab>
-        <ab type="supplementaryText" xml:lang="und">Be ðeowman ðe ful wurþe æt ordale. We cwædon be ðeowmen, gif he ful wyrþe æt þæm ordale, þæt mon gylde þæt ceapgylde ⁊ swynge hine ðrywa oþþe þæt oþer gylde sylle; ⁊ sy þæt wite be healfan wyrþe æt ðæm ðeowan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="19" corresp="#wit-ld">Be ðeowman ðe ful wurþe æt ordale. We cwædon be ðeowmen, gif he ful wyrþe æt þæm ordale, þ<hi rend="italic">æt</hi> mon gylde þ<hi rend="italic">æt</hi> ceapgylde ⁊ swynge hine ðrywa oþþe þ<hi rend="italic">æt</hi> oþer gylde sylle; ⁊ sy þ<hi rend="italic">æt</hi> wite be healfan wyrþe æt ðæm ðeowan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="19" corresp="#wit-h">Ond we cwædon be þeowan men, gif he fúl wurþe æt þam ordale, þæt mon gulde þæt ceapgild ⁊ swinge hine (man) ðriwa oððe þæt oþer gild sealde; ⁊ sy þæt wite be healfum wurðe æt þam ðeowum.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="19" corresp="#wit-ot">.. we cwædon be þeowan men, gif .. ful wyrþe æt þam ordale, þæt man g:lde þæt ceapgyld ⁊ swing … hine þriwa oððe þæt oþer g:ld sealde; … þæt wite be healfum wyrþe æt þam ðeowan.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="19" corresp="#wit-q">De seruo qui reus sit ad ordalium. Diximus de seruo, si reus sit in ordalio, reddatur captale simpliciter, et uerberetur seruus ipse ter, aut secundam redditionem addat; et sit wita dimidia de seruo.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="19" corresp="#wit-h">[Be þeowman ðe ful wurþe æt ordale.] [Ld] Ond we cwædon be þeowan men, gif he fúl wurþe æt þam ordale, þæt mon gulde þæt ceapgild ⁊ swinge hine man ðriwa oððe þæt oþer gild sealde; ⁊ sy þæt wite be healfum wurðe æt þam ðeowum.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And we have declared with regard to a slave who has been found guilty in the ordeal, that [his master] shall pay the amount involved, and either inflict three scourgings on him or pay a second sum equal to the amount involved. And the fine for theft by a slave shall be half the amount [paid by a freeman for a similar amount].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Vom Sklaven, der beim Ordal überführt wird. Ld) Und wir bestimmten, über den unfreien Mann, wenn er überführt wird beim Ordal, dass man [der Herr dem Kläger] das Ersatzgeld zahle, und jener dreimal gegeisselt oder das zweite Ersatzgeld gezahlt werde; und das Strafgeld vom Unfreien sei halb so viel werth [wie vom Freien].</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of the slave who is convicted at the ordeal. Ld) And we determined concerning the unfree man, if he is convicted at the ordeal, that [the lord] pay [the plaintiff] the compensation-money, and that he be flogged three times or the second compensation-money be paid; and that the fine for the unfree be worth half as much [as for the free].</ab>
       </div>
     </body>
   </text>

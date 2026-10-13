@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Swer 4</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -13,23 +17,19 @@
         <idno type="lawCodeAnchor">Swer</idno>
         <idno type="clause">4</idno>
         <idno type="citationKey">Swer 4</idno>
-        <idno type="legalText">Swer.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">396</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Swerian</title></bibl>
+        <bibl type="legalText"><title>Swerian (Oaths)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">396</biblScope></bibl>
+          <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">4</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +47,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2118 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2064 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 396.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4">
         <head><ref type="lawCode" target="law:Swer">Swer</ref> 4</head>
-        <ab type="selectedText" xml:lang="und">On ðone Drihten, ne teo ic N. ne for hete ne for hole ne for unrihtre feohgyrnesse, ne ic nan soðre nat, bute swa min secga me sæde, 7 ic sylf to soðe talige, ðæt he mines orfes þeof wære.</ab>
-        <ab type="translation" xml:lang="en">[I swear] by the Lord, [that] I do not accuse N. because of hatred or slander or out of avarice, and [I know] nothing more true than what my informant told me, and what I myself consider to be true: that N. stole my cattle.</ab>
-        <ab type="supplementaryText" xml:lang="und">Ðæs að, þe his æhte bryideð: þæt he hit ne dæð ne for hete ne for hole. On ðone Drihten, ne te ic Ñ ne for hete ne for hole ne for unrihtre feohgyrnesse, ne ic nan soðre nat, bute swa min secga me sæde, 7 ic sylf to soðe talige, þæt he mines orfes ðeof wære.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-b">Ðæs að, þe his æhte bryideð: þ<hi rend="italic">æt</hi> he hit ne dæð ne for hete ne for hole. On ðone Drihten, ne te ic Ñ ne for hete ne for hole ne for unrihtre feohgyrnesse, ne ic nan soðre nat, bute swa min secga me sæde, 7 ic sylf to soðe talige, þ<hi rend="italic">æt</hi> he mines orfes ðeof wære.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-h">On ðone Drihten, ne teo ic N. ne for hete ne for hole ne for unrihtre feohgyrnesse, ne ic nan soðre nat, bute swa min secga me sæde, 7 ic sylf to soðe talige, ðæt he mines orfes þeof wære.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4" corresp="#wit-q">In omnipotenti Deo, non attraho mihi hoc N. pro amicitia uel inimicitia uel pro iniusto lucro, nec uerius inde scio, quam mihi sagemannus meus dixit, et ipse in ueritate loquor, quod pecunie mee latro fuit N.</ab>
+        <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-h">[I swear] by the Lord, [that] I do not accuse N. because of hatred or slander or out of avarice, and [I know] nothing more true than what my informant told me, and what I myself consider to be true: that N. stole my cattle.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Eid dessen, der sein Werthstück im Anefang greift: dass er dies nicht aus Hass oder zur Verleumdung thut. B) Bei dem Herrn …, nicht bezichtige ich N. aus Hass oder zur Verleumdung oder aus ungerechter Geldgier, und ich weiss nichts Wahreres als wie mein Melder mir gesagt hat, und ich selbst als Wahrheit erachte, [nämlich] dass ér der Dieb meines Viehs gewesen sei.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(The oath of him who attaches his property: that he does not do it out of hatred or malice. B) By the Lord …, I do not accuse N. out of hatred or malice or out of unjust greed for money, nor do I know anything truer than what my informant told me and I myself hold to be true, [namely] that he was the thief of my cattle.</ab>
+        <note type="editorial">B reads ‘te’ (so); H's ‘teo’ is corrected from ‘teo. c.’, and H's ‘hole’ altered from ‘hele’.</note>
       </div>
     </body>
   </text>

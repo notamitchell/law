@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Af El. 28</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -16,29 +19,24 @@
         <idno type="clause">El. 28</idno>
         <idno type="citationKey">Af el</idno>
         <idno type="citationKey">Af 28</idno>
-        <idno type="legalText">Af (domboc)</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">36</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Alfred</title> <note type="reign">r. 871–899</note></bibl>
+        <bibl type="legalText"><title>Alfred’s Domboc</title> <note type="reign">Alfred, r. 871–899</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">36</biblScope></bibl>
+          <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">250</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">E</witness>
-          <witness>H</witness>
-          <witness>B (no Prol.)</witness>
-          <witness>G (Prol. only)</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>Bu</witness>
-          <witness>Ot (frags.)</witness>
+          <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b-no-prol"><abbr>B (no Prol.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
-        <bibl type="selectedText">E: Cambridge, Corpus Christi College, MS 173 Jurasinski and Oliver, eds.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">El. 28</idno>
-          <idno type="editorNumber" n="Jurasinski and Oliver">MP 28</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -56,16 +54,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 350 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 344 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 36.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="El. 28">
         <head><ref type="lawCode" target="law:Af">Af</ref> El. 28</head>
-        <ab type="selectedText" xml:lang="und">Gif hwa oðfæste his friend fioh, gif he hit self stæle, forgylde be twyfealdum. Gif he nyte, hwa hit stæle, geladige hine selfne, þæt he ðær nan facn ne gefremede. Gif hit ðonne cucu feoh wære, ⁊ he secgge, þæt hit here name oððe hit self ácwæle, ⁊ gewitnesse hæbbe, ne þearf he þæt geldan. Gif he ðonne gewitnesse næbbe, ⁊ he him ne getriewe, swerige he þonne.</ab>
-        <ab type="translation" xml:lang="en">Should someone entrust property to his friend: if he [the recipient] steals it himself, let him pay twofold restitution. If he does not know who stole it, let him submit to proof that he did no wrong. If, however, it was living property, and he should say that a troop took it or that it died on its own, and he has a witness, he need not pay for it. If, however, he does not have a witness, and he [the owner] does not believe him, let him swear.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif hwa oðfæste his freond feoh, gif he hit sylf stele, forgylde be twyfealdum. Gif he nite, hwa hitt stele, geladie hine sylfne, þæt he þær nan fanc on ne fremede. Gif hit þonne cucu feoh wære, ⁊ he sæcge, þæt hit here name oððe þæt hit sylf acwæle, ⁊ he gewitnesse hæbbe, ne þearf he þæt gyldan. Gif he þonne gewitnesse næbbe, ⁊ he him getreowe ne sy, swerie he þonne.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 28" corresp="#wit-h">Gif hwa oðfæste his freond feoh, gif he hit sylf stele, forgylde be twyfealdum. Gif he nite, hwa hitt stele, geladie hine sylfne, þ<hi rend="italic">æt</hi> he þær nan fanc on ne fremede. Gif hit þonne cucu feoh wære, ⁊ he sæcge, þ<hi rend="italic">æt</hi> hit here name oððe þ<hi rend="italic">æt</hi> hit sylf acwæle, ⁊ he gewitnesse hæbbe, ne þearf he þ<hi rend="italic">æt</hi> gyldan. Gif he þonne gewitnesse næbbe, ⁊ he him getreowe ne sy, swerie he þonne.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 28" corresp="#wit-e">Gif hwa oðfæste his friend fioh, gif he hit self stæle, forgylde be twyfealdu<hi rend="italic">m</hi>. Gif he nyte, hwa hit stæle, geladige hine selfne, þæt he ðær nán facn ne gefremede. Gif hit ðonne cucu feoh wære, ⁊ he secgge, þæt hit here name oððe hit self ácwæle, ⁊ gewitnesse hæbbe, ne þearf he þæt geldan. Gif he ðonne gewitnesse næbbe, ⁊ he him ne getriewe, swerige he þon<hi rend="italic">ne</hi>.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 28" corresp="#wit-q">Si quis commendauerit amico suo pecuniam uel uas in custodiam, et ab eo qui susceperat furto ablata fuerit, si inuenitur fur, duplum reddet. Si latet, dominus domus applicabitur ad deos (id est iudices) et iurabit, quod non extenderit manum in rem proximi sui ad perpetrandam fraudem. Si quis commendauerit proximo suo asinum, bouem, ouem et omne iumentum ad custodiam, et mortuum fuerit aut debilitatum uel captum ab hostibus, nullusque hoc uiderit, iusiurandum erit in medio, quod non extenderit manum ad rem proximi sui, suscipietque dominus iuramentum, et ille reddere non cogetur.</ab>
+        <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="MP 28" corresp="#wit-e">Gif hwa oðfæste his friend fioh, gif he hit self stæle, forgylde be twyfealdu<hi rend="italic">m</hi>. Gif he nyte, hwa hit stæle, geladige hine selfne, þæt he ðær nan facn ne gefremede. Gif hit ðonne cucu feoh wære, ⁊ he secgge, þæt hit here name oððe hit self ácwæle, ⁊ gewitnesse hæbbe, ne þearf he þæt geldan. Gif he ðonne gewitnesse næbbe, ⁊ he him ne getriewe, swerige he þon<hi rend="italic">ne</hi>.</ab>
+        <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Should someone entrust property to his friend: if he [the recipient] steals it himself, let him pay twofold restitution. If he does not know who stole it, let him submit to proof that he did no wrong. If, however, it was living property, and he should say that a troop took it or that it died on its own, and he has a witness, he need not pay for it. If, however, he does not have a witness, and he [the owner] does not believe him, let him swear.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand seinem Freunde Fahrhabe anvertraut: wenn dieser sie selbst gestohlen hat, vergelte er sie zwiefach. Wenn er nicht weiss, wer sie stahl, reinige er sich selbst, dass er keinen Betrug daran verübte. Wenn es aber Lebgut war, und er sagt, dass Feindesheer es fortgenommen habe, oder dass es [von] selbst gestorben sei, und er Zeugniss hat, so braucht er das nicht zu ersetzen. Wenn er jedoch kein Zeugniss hat, und jener ihm nicht traut, dann schwöre er [sich rein].</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If someone entrusts movable goods to his friend: if the latter has stolen them himself, let him repay them twofold. If he does not know who stole them, let him clear himself [of the charge] that he committed any fraud in it. But if it was livestock, and he says that an enemy army took it away or that it died [of] itself, and he has witness, then he need not make it good. But if he has no witness, and the other does not trust him, then let him swear [himself clear].</ab>
+        <note type="passageSource">Exodus 22,7–11</note>
       </div>
     </body>
   </text>

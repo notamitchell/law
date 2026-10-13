@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Ew 5.2</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,25 +18,20 @@
         <idno type="lawCodeAnchor">IIEw</idno>
         <idno type="clause">5.2</idno>
         <idno type="citationKey">IIEw 5.2</idno>
-        <idno type="legalText">II Edw</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">144</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Edward</title></bibl>
+        <bibl type="legalText"><title>II Edward (Exeter)</title> <note type="reign">Edward the Elder, r. 899–924</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">144</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">5.2</idno>
-          <idno type="editorNumber" n="Attenborough">5.2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -52,16 +50,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 734 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 722 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 144.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5.2">
         <head><ref type="lawCode" target="law:IIEw">II Ew</ref> 5.2</head>
-        <ab type="selectedText" xml:lang="und">Gif hine hwa feormige syððan, bete swa seo domboc sæcge, ⁊ se scyle ðe flyman feormige, gif hit sy herinne; gif hit sy east inne, gif hit sy norð inne, bete be ðam þe þa friðgewritu sæcgen.</ab>
-        <ab type="translation" xml:lang="en">If anyone subsequently harbours him, he shall pay such compensation as the written laws declare of him who harbours a fugitive, if the offence is committed in his own kingdom. If the offence is committed in the eastern or northern kingdoms, compensation shall be paid in accordance with the provision of the treaties.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gyf hine hwa feormige syððan, bete swa seo domboc secge, ⁊ se scyle ðe flyman feormie, gif hit sy herinne; gif hit sy east inne, gif hit sy norð inne, bete be ðam ðe ða friðgewritu secgen.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.2" corresp="#wit-b">Gyf hine hwa feormige syððan, bete swa seo domboc secge, ⁊ se scyle ðe flyman feormie, gyf hit sy herinne; gif hit sy east inne, gif hit sy norð inne, bete be ðam ðe ða friðgewritu secgan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.2" corresp="#wit-h">Gif hine hwa feormige syððan, bete swa seo domboc sæcge, ⁊ se scyle ðe flyman feormige, gif hit sy herinne; gif hit sy east inne, gif hit sy norð inne, bete be ðam þe þa friðgehwritu sæcgan.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5.2" corresp="#wit-q">Si quis eum deinceps firmabit, emendet sicut liber iudiciorum docet, ac debet qui flyman (id est forisbannitum) confirmabit, si sit hic intus; si sit east intro, si sit nord intus, emendet sicut scripta pacis continent.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="5.2" corresp="#wit-h">Gif hine hwa feormige syððan, bete swa seo domboc sæcge, ⁊ se scyle ðe flyman feormige, gif hit sy herinne; gif hit sy east inne, gif hit sy norð inne, bete be ðam þe þa friðgewritu sæcgen.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If anyone subsequently harbours him, he shall pay such compensation as the written laws declare of him who harbours a fugitive, if the offence is committed in his own kingdom. If the offence is committed in the eastern or northern kingdoms, compensation shall be paid in accordance with the provision of the treaties.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ihn einer nachher beherbergt, büsse er so, wie das Gesetzbuch besagt, und [zwar, wie] der, welcher einen Geächteten beherbergt, [büssen] muss, falls es hier im [Englischen] Innenlande geschieht; wenn es im Ost[anglischen Lande] geschieht, [oder] wenn es im Nord[humbrischen Lande] geschieht, büsse er gemäss dem, was die Friedensartikel [mit den Nordleuten vereinbart] besagen.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If anyone afterwards harbours him, let him pay compensation as the law-book says, and [namely as] he who harbours an outlaw must [pay], if it happens here in the [English] inland; if it happens in the East[-Anglian land], [or] if it happens in the North[umbrian land], let him pay according to what the peace-articles [agreed with the Northmen] say.</ab>
+        <note type="editorial">Liebermann compares Ine 30.</note>
       </div>
     </body>
   </text>

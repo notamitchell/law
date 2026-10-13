@@ -4,7 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Northu 3</title>
-        <respStmt><resp>Translation of the selected text</resp><name>Whitelock, English Historical Documents, I</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -14,20 +18,18 @@
         <idno type="lawCodeAnchor">Northu</idno>
         <idno type="clause">3</idno>
         <idno type="citationKey">Northu 3</idno>
-        <idno type="legalText">North. Priests' Law</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">380</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Northumbrian Priests' Law</title></bibl>
+        <bibl type="legalText"><title>Northumbrian Priests’ Law</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">380</biblScope></bibl>
+          <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979)</bibl>
+          <bibl xml:id="rabin" type="translation">Andrew Rabin, <title>The Political Writings of Archbishop Wulfstan of York</title> (Manchester: Manchester University Press, 2015)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>D</witness>
+          <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">3</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -45,16 +47,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1995 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1948 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 380.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3">
         <head><ref type="lawCode" target="law:Northu">Northu</ref> 3</head>
-        <ab type="selectedText" xml:lang="und">And gif hwilc preost agilte 7 he ofer biscopes gebod mæssige, gilde for ðam gebode XX ór, 7 þar to eacan þone gilt gebete, ðe hit ær geworhte.</ab>
-        <ab type="translation" xml:lang="en">And if any priest commits an offence and he celebates mass in spite of the bishop's prohibition, he is to pay 20 ores for disregard of the prohibition, and in addition make amends for the offence which he previously committed.</ab>
-        <ab type="secondTranslation" xml:lang="en">And if any priest sins and he holds mass in spite of the bishop's command, he is to pay twenty ores for neglecting that command, and also do penance for the wrong which he committed previously.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-d">And gif hwilc pr<hi rend="italic">eost</hi> agilte ⁊ he ofer biscopes gebod mæssige, gilde for ða<hi rend="italic">m</hi> gebode XX ór, ⁊ þar to eacan þone gilt gebete, ðe hit ær geworhte.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">And if any priest commits an offence and he celebates mass in spite of the bishop's prohibition, he is to pay 20 ores for disregard of the prohibition, and in addition make amends for the offence which he previously committed.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin" corresp="#wit-d">And if any priest sins and he holds mass in spite of the bishop's command, he is to pay twenty ores for neglecting that command, and also do penance for the wrong which he committed previously.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn ein Priester schuldig wird und er [nachher] gegen des Bischofs Gebot Messe liest, so zahle er wegen des [gebrochenen] Gebots 20 Ör, und ausserdem büsse er jene Schuld, die er vor [dem Verbote] verbrochen hatte.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if any priest does wrong and he [afterwards] says mass against the bishop's command, let him pay 20 ores for the [broken] command, and in addition atone for the offence which he committed before [the prohibition].</ab>
+        <note type="editorial">Thorpe corrects ‘hit’ to ‘he’. Earlier editions print XII here, wrongly.</note>
       </div>
     </body>
   </text>

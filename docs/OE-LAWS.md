@@ -1,33 +1,35 @@
 # The Old English laws database (`oe-laws/`)
 
-`oe-laws/` holds the text of the laws themselves, one clause at a time. It was made from the spreadsheet *OE_Laws_Database_For_Claude.xlsx*: **each clause row of the spreadsheet is one TEI XML file** (2,294 files), plus `oe-laws/index.json`, a catalogue listing every file.
+`oe-laws/` holds the text of the laws themselves, one clause at a time: **each clause row of the laws database spreadsheet is one TEI XML file** (2,293 files), plus `oe-laws/index.json`, a catalogue listing every file. The Laws tab (`laws.html`) searches them and `law.html` shows one clause.
 
-It is not a section of the website yet, but there is a first clause page, `law.html`, and the dictionary entries for the letter A link to it (see "Linking to dictionary entries"). The aim is for the laws to become their own section of the site.
+Since October 2026 the files are made from the full, checked spreadsheet *OE_Laws_Database - Updated by Claude.xlsx* (columns A–AO) with `tools/laws-from-database.py`. Every law code now has the layout that Æthelberht had first, with more texts. The one exception is **Cn 1018**, which is waiting for a decision and is left as it was (see "Law codes that need a decision").
 
 ## What is in a file
 
-Take `oe-laws/Abt_1-a.xml`, the clause *Abt 1[a]*. Its header says where the clause comes from and its body holds the texts.
+Take `oe-laws/Had_10.xml`, the clause *Had 10*. Its header says where the clause comes from; its body holds the texts.
 
-| In the spreadsheet | In the file |
-| --- | --- |
-| **A** (code and clause joined) | the title, and `<idno type="citation">` |
-| **B** Liebermann's code abbreviation | `<idno type="lawCode">`; the link in the clause heading; `<idno type="lawCodeAnchor">` when the code is on the [law code list](../lawAbb.html) |
-| **C** Liebermann's internal clause numbering | `<idno type="clause">`, the `n` of the clause, and `<idno type="citationKey">` (see below) |
-| **D** Code/Legal text | `<idno type="legalText">` when it differs from B (for example *Af (domboc)*) |
-| **E** Place and date of promulgation | `<creation><note type="promulgation">`, kept exactly as typed |
-| **F** MSS (Liebermann's sigla) | `<listWit>`, one `<witness>` per manuscript. The editors' selected manuscript is in bold in the spreadsheet and is kept as `rend="bold"` |
-| **G** Gesetze page number | `<biblScope unit="page">`, in a reference to Liebermann, *Die Gesetze der Angelsachsen*, vol. 1 |
-| **H**, **I** Editorial numbers (Liebermann's, and the modern editor's) | `<idno type="liebermannNumber">` and `<idno type="editorNumber">` |
-| **J** Selected MS | `<ab type="selectedText">` |
-| **K** Translation of the selected text | `<ab type="translation" xml:lang="en">` |
-| **L** Second translation (where made) | `<ab type="secondTranslation">` |
-| **M** Supplementary MS (where made) | `<ab type="supplementaryText">` |
-| **N** Translation of the supplementary MS | `<ab type="supplementaryTranslation">` |
-| **O** Offence/Legal event | `<keywords n="offence-legal-event">`, one `<term>` for each item between semicolons |
-| **P** People | `<keywords n="people">`, the same way |
-| **Q** Locations | `<keywords n="locations">`, the same way |
+| In the spreadsheet | In the file | On the clause page |
+| --- | --- | --- |
+| **B** code, **C** clause | the title; `<idno type="lawCode">`, `<idno type="clause">`, `<idno type="citationKey">`; `<idno type="lawCodeAnchor">` when the code is on the [law code list](../lawAbb.html) | the heading |
+| **D** name of the code, **E** king and reign, **F** date and place | `<bibl type="legalText">`, `<note type="reign">`, `<note type="promulgation">` | under the heading |
+| **G** Liebermann's manuscripts (bold = chosen); **AJ–AO** the sigla and full names of the manuscripts each text comes from | `<listWit>`: one `<witness>` each, with the siglum in `<abbr>` and the full name in `<note type="manuscript">` | *Manuscripts*; each text is labelled *MS H* etc., with the full name on hover |
+| **K** Liebermann's text (MS in **AJ**, page in **I**, number in **J**) | `<ab type="liebermannText" source="#liebermann" corresp="#wit-h">` | left column, labelled **Liebermann** · MS … · Gesetze I, p. … |
+| **N** his second MS (siglum **AE**), **AF** his third (siglum **AG**), **O** the Quadripartitus Latin | more `<ab type="liebermannText">`, each with its own `corresp` | left column, one box each |
+| **L** Liebermann's German translation | `<ab type="translation" xml:lang="de" source="#liebermann">` | right column, *German translation*, in smaller grey type |
+| **M** Claude's English of the German | `<ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">` | right column, *English of Liebermann's German* |
+| **P**–**S**, **V** the modern edition (reference, editor, MS, number, page) and **T** its text | `<bibl xml:id="robertson">` etc. in `<listBibl type="sources">`; `<ab type="editionText">` | left column, labelled with the editor's surname · MS … · § … · p. … |
+| **U** the editor's translation | `<ab type="translation" source="#robertson">` | right column, first |
+| **W** second translation (translator and book in **X**, page in **Y**) | `<ab type="translation" source="#attenborough">` | right column |
+| **AA** translation of the manuscript in K | `<ab type="translation" corresp="#wit-…">` | right column, *of MS …* |
+| **AB**, **AC**, **AD** offence, people, places | `<keywords>` | *Keywords* |
+| **AH** source of the passage | `<note type="passageSource">` | under the texts |
+| **AI** notes | the scholarly notes in `<note type="editorial">`; the record of checking in `<revisionDesc>` (`<change type="checked">`) | *Notes* under the texts; the checking at the foot of the page |
 
-The spreadsheet repeats a **sub-header row** before each block of clauses. Those rows are not clauses, so they do not become files. They name the law, its editor, its translator and the manuscripts used, and that information is copied into the header of every file in the block (the title, the editor and translator, `<bibl type="legalText">`, `<bibl type="selectedText">`). The 352 empty rows are skipped.
+- **Language.** Each text is marked Old English (`ang`), Latin (`la`) or German (`de`). The script decides between Old English and Latin from the words (þ, ð, æ and ⁊ mean Old English; *et*, *est*, *quod* and Latin endings mean Latin). It looked right in every case I checked.
+- **Codes with no modern editor** (Northu, Had, Duns, Wer and the other short texts): in the old spreadsheet, column T held Liebermann's text of another manuscript, not a modern edition. It is shown as Liebermann's, labelled with its manuscript, and left out where it is the same manuscript as K. Their translators are not in the spreadsheet any more (they were in the sub-header rows), so the script names them (`TRANSLATORS` in the script): Whitelock (*English Historical Documents* I) for Northu, Wif, Geþyncðo, Norðleoda, Mirce, Að and Had; Whitelock, Brett and Brooke (*Councils and Synods*) for Episc; Wormald (*The Making of English Law*) for Wer and Becwæð; Rabin for the translations of H in Geþyncðo, Norðleoda, Mirce, Að and Had. The old sheet names no translator for Duns, Forf, Pax, Wal, Swer, Romscot, Iudex, Iud Dei VIII and VI Atr Lat; their translations say *Translator not recorded*.
+- **Grið and Nor Grið.** Their old sub-header rows name Rabin's *Old English Legal Writings: Wulfstan* (2020), which has the Old English text; the spreadsheet's column P names his 2015 book of translations. The files use the 2020 book (`EDITOR_OVERRIDE` in the script).
+- **Notes.** Remarks about the spreadsheet itself ("a line break inside K was removed", "text in column T") are tidied away (`NOTE_TIDY` in the script). The record of checking ("K: checked against Gesetze I p. 3", "T: corrected against Robertson p. 200 (…)") is not shown as a note: it becomes a line at the foot of the clause page, such as *Liebermann's text checked against Die Gesetze der Angelsachsen I, p. 3*. What a cell said before a correction is not on the website; it is in the spreadsheet.
+- **Italic** in the spreadsheet (Liebermann's and the editors' expansions of abbreviations, italic words in translations) is kept as `<hi rend="italic">`; italic in a book reference is its `<title>`.
 
 ## File names and identifiers
 
@@ -63,71 +65,24 @@ Results for A and Æ together: 82% of all citations are linked, and 97% of those
 
 **Alfred's Introduction.** The catalogue's `citationKeys` for these clauses (*Af El. 1*) are wrong: they give the keys *Af el* and *Af 1*, so *Af 1* would also point at the Introduction. `link-citations.py` works round this by using the clause as printed; `laws-from-xlsx.py` should be fixed to give *Af el.1*.
 
-## The new layout (Æthelberht first)
+## Making the files again
 
-From October 2026, law codes are being improved one at a time in their own spreadsheet with more columns. **Æthelberht (*Abt*) is the first and is the model for the rest.** Its 128 clause files were made from *Aethelberht.xlsx* with `tools/law-code-from-xlsx.py`, and each now holds four texts:
-
-| In the spreadsheet | In the file | On the clause page |
-| --- | --- | --- |
-| **K** Liebermann's text (MS in **H**, page in **I**, number in **J**) | `<ab type="liebermannText" source="#liebermann">` | *Old English text*, labelled **Liebermann** · Gesetze I, p. … · MS … |
-| **P** Modern editor's text (editor in **M**, MS in **N**, number in **O**) | `<ab type="editionText" source="#oliver">` | *Old English text*, labelled **Oliver** · § … · MS … |
-| **Q** Modern editor's translation | `<ab type="translation" source="#oliver">` | *Translations*, labelled **Oliver** |
-| **R** Second translation (translator and book in **S**) | `<ab type="translation" source="#attenborough">` | *Translations*, labelled **Attenborough** |
-| **L**, **S** full references | `<listBibl type="sources">`, one `<bibl xml:id="…">` each | *Editions and translations*, at the foot of the page |
-
-- On the page the Old English texts are on the left and the translations on the right (one above the other on a phone). Each is labelled with the surname of its editor or translator, which links to the full reference at the foot of the page; hovering over it shows the reference too.
-- The surname of the second translator is taken from column **S** (the name before the first comma), and of the modern editor from column **M**.
-- **Italic is kept.** Italic letters in the Old English (Liebermann's and Oliver's expansions of abbreviations, such as scillingu*m*) and italic words in the translations (*mundbyrd*, *wergild*) are `<hi rend="italic">`. Italic in a book reference is its `<title>`.
-- **D** (*Æthelberht's Code*) and **E** (*Æthelberht, r. ?584–616*) appear under the clause heading. The short name in the Laws list and its menu is the king's name from **E**.
-- The file names are the same as before (`Abt_1-a.xml`…), so links from dictionary entries still work.
-- Every other law code is still in the old layout and is shown as before. `law.html` shows a clause in the new layout whenever its file has a `liebermannText`.
-
-### Doing the next law code
-
-Make its spreadsheet with the same column headings as *Aethelberht.xlsx* (the script finds the columns by their headings in row 1, so their order does not matter). Then, from the repository folder:
+Correct the spreadsheet, then, from the repository folder (you need Python 3 and `pip install openpyxl`):
 
 ```
-python3 tools/law-code-from-xlsx.py path/to/Ine.xlsx --dry-run    # report only
-python3 tools/law-code-from-xlsx.py path/to/Ine.xlsx
+python3 tools/laws-from-database.py "path/to/OE_Laws_Database - Updated by Claude.xlsx" --dry-run   # report only
+python3 tools/laws-from-database.py "path/to/OE_Laws_Database - Updated by Claude.xlsx"
+python3 tools/laws-from-database.py "path/to/…xlsx" --code Ine                                      # one law code only
 ```
 
-It replaces only the files of the law code(s) in that spreadsheet and their lines in `oe-laws/index.json`, and leaves everything else alone. It reports any clause that is new or that no longer has a row.
+The script finds the columns by their headings in row 1, so columns can be moved but not renamed. It reads the sheet called *Sheet1* (the *Read me* and *corrections* sheets are ignored).
 
-**`tools/laws-from-xlsx.py` will not undo this.** If the big spreadsheet is ever run again, it keeps every law code that is already in the new layout and does not replace it.
+**File names stay the same.** Each row is matched to the file its clause had before, by law code and clause number, so dictionary entries that link to a clause keep working. Where a clause number was changed in the spreadsheet (for example *I Atr 1.10*, which the old spreadsheet had as a second *1.1*), the row keeps the old file (`IAtr_1-1_dup2.xml`), and the dry run lists every such case. A clause that is new gets a new file; a file whose clause no longer has a row is removed. In October 2026 one file was removed: `Rubrics-INE_part-001`, which was a sub-header row, not a clause. All 1,069 clause links in the dictionary still find their files.
+
+`tools/law-code-from-xlsx.py` (one code at a time, from a spreadsheet in Æthelberht's old column order) and `tools/laws-from-xlsx.py` (the first, old layout) are kept because the new script uses their helpers, but they are not needed any more.
 
 ## Law codes that need a decision
 
-61 of the spreadsheet's 73 law codes are linked to the law code list. Two groups are not certain:
-
-**Matched by me, please confirm** (the spreadsheet's spelling is not quite the list's; I think they are the same):
-
-| Spreadsheet | Law code list |
-| --- | --- |
-| *Becw* | *Becwæð* (`Becwaeth`) |
-| *Mirc.* | *Mirce* |
-| *Nor. Cyricgrið* | *Nor Grið* (`NorGrith`) |
-| *Norðleod.* | *Norðleoda* (`Northleoda`) |
-| *Ord* | *Ordal* |
-| *Rom.* | *Romscot* |
-
-**Not on the law code list**, so their files are not linked: *Cn 1018* (77 clauses), *Rubrics: Af* and *Rubrics Af* and *Rubrics: AF*, *Rubrics: Ine* and *Rubrics: INE*, *VI Atr (Latin Paraphrase)* (65), *Wer* (11), *Geþyn.* (9), *Prom. Reg.* (5), *Rubric List* and *Ymb Æwbricas*. Add them to `data/markLaw.json`, or tell the script which existing code they are (the list `ASSUMED_ANCHORS` in `tools/laws-from-xlsx.py`), and run it again.
-
-## Choices made that you may want to change
-
-- **Language.** The spreadsheet does not say which language each text is in, and some of it is Latin. The selected and supplementary texts are marked `xml:lang="und"` (undetermined); the translations are marked English. Language can be added once it is known.
-- **Selected manuscript.** In the spreadsheet the editors' selection is shown in bold only where more than one manuscript is listed. The files keep that bold. Where a clause lists just one manuscript, that is the one used, and it has no bold. `<bibl type="selectedText">` always names the manuscript (from the sub-header row).
-- **Spaces.** Runs of spaces, line breaks and non-breaking spaces in the spreadsheet cells are single ordinary spaces in the files. Nothing else in the text is changed.
-- **Merged cells.** Where the spreadsheet merges a cell over several clauses (5 clauses in *Nor. Cyricgrið*), the merged text is copied into each of those clauses and a `<note type="source">` says so.
-- **A note typed in a clause cell.** One clause cell (the first *Cn 1018* row) holds a sentence of explanation, not a clause number. It is kept as `<note type="clause">`, and the file has no clause number.
-- **People and Locations** are lists of kinds of people and places (*Bishops*, *Churches*), not named individuals, so they are keywords, not `<persName>` and `<placeName>`.
-- Every file says it was **generated from a row of the spreadsheet and not yet checked against the print.**
-
-## Making the files again
-
-If the spreadsheet is corrected, make the folder again from it. You need Python 3 and `pip install openpyxl`; then, from the repository folder:
-
-```
-python3 tools/laws-from-xlsx.py path/to/OE_Laws_Database_For_Claude.xlsx
-```
-
-The script replaces the files in `oe-laws/` (it removes the old `.xml` files and `index.json` first, and touches nothing else) and prints a short report. Row numbers in each file's `revisionDesc` refer to the spreadsheet it was made from.
+- **Cn 1018** (77 rows) has not been checked: Liebermann does not print it as one text. Its files are in the old layout and the script leaves them alone (`SKIP` in the script). Take it out of `SKIP` once it is decided.
+- **Not on the law code list**, so their clauses are not linked to it and dictionary citations cannot find them: *Af Rb* and *Ine Rb* (the rubrics), *VI Atr Lat*, *Wer*, *Geþyncðo*, *Prom. Reg.*, *Cn 1018* and *Ymb Æwbricas*. Add them to `data/markLaw.json` and run the script again.
+- **Translators not recorded** for Duns, Forf, Pax, Wal, Swer, Romscot, Iudex, Iud Dei VIII and VI Atr Lat (see above).

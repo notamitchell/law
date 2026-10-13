@@ -4,8 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>VIII Atr 32</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +19,16 @@
         <idno type="citationKey">VIIIAtr 32</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">267</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VIII Atr</title></bibl>
+        <bibl type="legalText"><title>VIII Æthelred</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">267</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">126</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G(A) (part)</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g-a-part"><abbr>G(A) (part)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">32</idno>
-          <idno type="editorNumber" n="Robertson">32</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,15 +47,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1501 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1464 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 267.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="32">
         <head><ref type="lawCode" target="law:VIIIAtr">VIII Atr</ref> 32</head>
-        <ab type="selectedText" xml:lang="und">And se cyngc beodeð eallum his gerefan on æghwilcere stowe, þæt ge þam abbodan æt eallum worldneodum beorgan swa ge betst magon, ⁊ be þam þe ge willan Godes oððe minne freondscipe habban, filstan heora wícneran æghwar to rihte, þæt heo sylfe magan þe oftor on mynstrum fæste gewunian ⁊ regollice libban.</ab>
-        <ab type="translation" xml:lang="en">And the king enjoins upon all his reeves in every locality: you shall support the abbots in all their temporal needs as you best can, and if you desire to have God's favour and mine, help their stewards everywhere to obtain their rights so that they themselves may constantly remain secure in their monasteries and live according to their rule.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="32" corresp="#wit-d">And se cyngc beodeð eallum his gerefan on æghwilcere stowe, þæt ge þam abbodan æt eallum worldneodum beorgan swa ge betst magon, ⁊ be þam þe ge willan Godes oððe minne freondscipe habban, filstan heora wícneran æghwar to rihte, þæt heo sylfe magan þe oftor on mynstrum fæste gewunian ⁊ regollice libban.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And the king enjoins upon all his reeves in every locality: you shall support the abbots in all their temporal needs as you best can, and if you desire to have God's favour and mine, help their stewards everywhere to obtain their rights so that they themselves may constantly remain secure in their monasteries and live according to their rule.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und der König gebietet allen seinen Vögten an jedem Platze, dass ihr den Äbten bei allen weltlichen Nöthen Schutz gewähret, wie ihr bestens vermöget und, je nachdem ihr Gottes oder meine Freundschaft haben wollet, ihren Verwaltern überall zum Rechte verhelfet, damit jene [Äbte] selbst um so öfter fest in den Klöstern bleiben und kanonisch regelrecht leben können.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And the king commands all his reeves in every place that you protect the abbots in all their worldly needs as best you can, and, as you wish to have God's friendship or mine, help their stewards everywhere to their rights, so that those [abbots] themselves may more often stay firmly in their minsters and live according to the rule.</ab>
+        <note type="editorial">The Consiliatio Cnuti inserts VIII Atr 32–34, I Cn 6 and VIII Atr 43–44 between II Cn 84.4 and 84.5 (Latin printed by Liebermann on pp. 267–268).</note>
       </div>
     </body>
   </text>

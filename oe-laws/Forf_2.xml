@@ -3,32 +3,33 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Forf. 2</title>
+        <title>Forf 2</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Forf_2</idno>
-        <idno type="citation">Forf. 2</idno>
-        <idno type="lawCode">Forf.</idno>
+        <idno type="citation">Forf 2</idno>
+        <idno type="lawCode">Forf</idno>
         <idno type="lawCodeAnchor">Forf</idno>
         <idno type="clause">2</idno>
         <idno type="citationKey">Forf 2</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">388</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Forfang</title></bibl>
+        <bibl type="legalText"><title>Forfang (On Attachment)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">388</biblScope></bibl>
+          <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>H (incompl.)</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-h-incompl"><abbr>H (incompl.)</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="supplementaryText">[Q]: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +48,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2090 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2040 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 388.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
-        <head><ref type="lawCode" target="law:Forf">Forf.</ref> 2</head>
-        <ab type="selectedText" xml:lang="und">Be forfencge. Embe forfang witan habbað gerǽdd, þæt man ofer eall [Engle]land gelíc[n]e dom healde: þæt is æt men fiftene peningas 7 æt horse healswá, sy hit ofer ane scire, sy hit ofer má, ðe læs ðe unmihtig man feorr for his agenon swince 7 eac to feola sylle.</ab>
-        <ab type="translation" xml:lang="en">Of seizure/recovery: Wise men have decreed that throughout all England the same judgement holds: that is, 15 pennies for men and also for horses, be it over one shire or several, lest a man of small means is burdened by long journeys to recover [the objects of] his own labour.[?]</ab>
-        <ab type="supplementaryText" xml:lang="und">De forefang (id est preuencione uel anticipatione) decreuimus, ut per totam Angliam idem iudicium teneri debeat, hoc est de homine XV denar. et de equo similiter (reddantur), sit ultra unam schiram (unum comitatum), sit ultra plures, ne homo impotens longe pro suo proprio laboret (fatigetur) et etiam nimis det.</ab>
+        <head><ref type="lawCode" target="law:Forf">Forf</ref> 2</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-b">Be forfencge. Embe forfang witan habbað gerǽdd, þæt man ofer eall [Engle]land gelíc[n]e dom healde: þæt is æt men fiftene peningas ⁊ æt horse healswá, sy hit ofer ane scire, sy hit ofer má, ðe læs ðe unmihtig man feorr for his agenon swince ⁊ eac to feola sylle.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2" corresp="#wit-q">De forefang (id est preuencione uel anticipatione) decreuimus, ut per totam Angliam idem iudicium teneri debeat, hoc est de homine XV denar. et de equo similiter (reddantur), sit ultra unam schiram (unum comitatum), sit ultra plures, ne homo impotens longe pro suo proprio laboret (fatigetur) et etiam nimis det.</ab>
+        <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-b">Of seizure/recovery: Wise men have decreed that throughout all England the same judgement holds: that is, 15 pennies for men and also for horses, be it over one shire or several, lest a man of small means is burdened by long journeys to recover [the objects of] his own labour.[?]</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Von [Lohn für] Wiederergreifung. Betreffend Einfangen [von Gestohlenem] haben die Witan bestimmt, dass gleiches Gesetz über ganz England (das ganze Land B Cons.) gehalten werde: nämlich [Eigenthümer zahle dem Retter] für [jeden zurückgebrachten] Sklaven 15 Pfennig, und für ein Pferd ebenso, sei es über Eine Grafschaft hin [zu verfolgen gewesen], sei es über mehrere hin, damit nicht ein unvermögender Mann um sein Eigen [wieder zu erlangen] weithin sich mühe und auch nicht zu viel zahle.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of [the reward for] recovery. Concerning the seizing [of stolen goods] the witan have decreed that the same law be kept over all England (the whole land, B, Cons.): namely [let the owner pay the rescuer] 15 pence for [each recovered] slave, and the same for a horse, whether [it had to be pursued] across one shire or across several, lest a man without means should toil far for his own [property] and also pay too much.</ab>
+        <note type="editorial">A later addition (c. 1000), already placed here in the archetype of B, the Quadripartitus and the Consiliatio (so before 1100), related to II Atr App. 8.3 and 9. The heading is in red. ‘Engle’ is in a later hand and was also missing in the Consiliatio, but is probably original; the ‘n’ of ‘líc[n]e’ is written above in a later hand. ‘healswá’: compare ‘his’ II Cn 75 (so not ‘healf’). Liebermann compares Forf 1.</note>
       </div>
     </body>
   </text>

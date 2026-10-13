@@ -4,8 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Wi 22</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +21,16 @@
         <idno type="citationKey">Wi 22</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">14</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Wihtræd</title> <note type="reign">r.690–725</note></bibl>
+        <bibl type="legalText"><title>Wihtred’s Code</title> <note type="reign">Wihtred, r. 690/1–725</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">14</biblScope></bibl>
+          <bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002), p. <biblScope unit="page">158</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922), p. <biblScope unit="page">29</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>H</witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Oliver, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">22</idno>
-          <idno type="editorNumber" n="Oliver">17</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +48,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 188 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 185 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 14.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="22">
         <head><ref type="lawCode" target="law:Wi">Wi</ref> 22</head>
-        <ab type="selectedText" xml:lang="und">Gif man biscopes esne tihte oþþe cyninges, cænne hine an gerefan hand oþþe hine gerefa clensie, oþþe selle to swinganne.</ab>
-        <ab type="translation" xml:lang="en">If a person should bring a charge against a bishop’s servant or the king’s, let him clear himself in the presence of the reeve: either let the reeve clear him, or give him to be flogged.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif man biscopes esne tihte oþþe cyninges, cænne hine an gerefan hand, oþþe hine gerefa clensie, oþþe selle to swinganne.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="22" corresp="#wit-h">Gif man biscopes esne tihte oþþe cyninges, cænne hine an gerefan hand, oþþe hine gerefa clensie, oþþe selle to swinganne.</ab>
+        <ab type="editionText" xml:lang="ang" source="#oliver" n="17" corresp="#wit-h">Gif man biscopes esne tihte oþþe cyninges, cænne hine an gerefan hand oþþe hine gerefa clensie, oþþe selle to swinganne.</ab>
+        <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If a person should bring a charge against a bishop’s servant or the king’s, let him clear himself in the presence of the reeve: either let the reeve clear him, or give him to be flogged.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If a servant of a bishop or of the king is accused, he shall clear himself by the hand of the reeve. The reeve shall either exculpate him or deliver him up to be scourged.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand einen Bischofs- oder Königsknecht verklagt, so reinige sich dieser in des Vogtes Hand, oder der Vogt reinige ihn oder liefere ihn [dem Kläger] zum Geisseln aus.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If someone accuses a servant of a bishop or of the king, let him clear himself in the reeve’s hand, or let the reeve clear him or hand him over [to the plaintiff] to be flogged.</ab>
       </div>
     </body>
   </text>

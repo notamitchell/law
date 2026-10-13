@@ -3,31 +3,32 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Prom. Reg. Sacr. cor. Prol.</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <title>Prom. Reg. Prol.</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Prom-Reg_Sacr-cor-Prol</idno>
-        <idno type="citation">Prom. Reg. Sacr. cor. Prol.</idno>
+        <idno type="citation">Prom. Reg. Prol.</idno>
         <idno type="lawCode">Prom. Reg.</idno>
-        <idno type="clause">Sacr. cor. Prol.</idno>
-        <idno type="citationKey">Prom. Reg. sacr.cor.prol.</idno>
+        <idno type="clause">Prol.</idno>
+        <idno type="citationKey">Prom. Reg. prol.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">214</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Promissio Regis</title></bibl>
+        <bibl type="legalText"><title>Promissio Regis (Coronation Oath)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">214</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">42</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">Cp</witness>
-          <witness>Ju</witness>
+          <witness xml:id="wit-cp" rend="bold"><abbr>Cp</abbr> <note type="manuscript">London, British Library, Cotton Cleopatra B.xiii</note></witness>
+          <witness xml:id="wit-ju"><abbr>Ju</abbr></witness>
         </listWit>
-        <bibl type="selectedText">Cp: London, British Library, MS Cotton Cleopatra B.XIII Robertson, ed</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">Sacr. cor. Prol.</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -46,15 +47,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1956 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1911 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 214.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
-      <div type="clause" n="Sacr. cor. Prol.">
-        <head>Prom. Reg. Sacr. cor. Prol.</head>
-        <ab type="selectedText" xml:lang="und">Ðis gewrit is gewriten stǽf be stæfe be þam gewrite þe Dunstan arcebisceop sealde urum hlaforde æt Cingestune, þa on dæg þa hine man halgode to cinge, ⁊ forbead him ælc wedd to syllanne butan þysan wedde þe he up on Cristes weofod léde, swa se bisceop him dihte:</ab>
-        <ab type="translation" xml:lang="en">This document has been copied, letter by letter, from that which Archbishop Dunstan gave to our lord at Kingston, on the day when he was consecrated as king, forbidding him to give any pledge except this one which he laid upon Christ's altar, as the bishop directed him:</ab>
+      <div type="clause" n="Prol.">
+        <head>Prom. Reg. Prol.</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol." corresp="#wit-cp">Ðis gewrit is gewriten stǽf be stæfe be þam gewrite, þe Dunstan arcebisceop sealde urum hlaforde æt Cingestune, þa on dæg þa hine man halgode to cinge, ⁊ forbead him ælc wedd to syllanne, butan þysan wedde, þe he up on Cristes weofod léde, swa se bisceop him dihte:</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" corresp="#wit-cp">Ðis gewrit is gewriten stǽf be stæfe be þam gewrite þe Dunstan arcebisceop sealde urum hlaforde æt Cingestune, þa on dæg þa hine man halgode to cinge, ⁊ forbead him ælc wedd to syllanne butan þysan wedde þe he up on Cristes weofod léde, swa se bisceop him dihte:</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-cp">This document has been copied, letter by letter, from that which Archbishop Dunstan gave to our lord at Kingston, on the day when he was consecrated as king, forbidding him to give any pledge except this one which he laid upon Christ's altar, as the bishop directed him:</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Folgender Urkundentext ist geschrieben Buchstaben für Buchstaben gemäss der Urkunde, welche Erzbischof Dunstan unserem Herrn zu Kingston an jenem Tage, als dieser zum König geweiht wurde, übergab, und [jener] verbot ihm, jegliches Versprechen abzugeben ausser folgendem Versprechen, das der [König], wie der Bischof ihm gebot, auf Christi Altar legte:</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">The following document is written letter for letter according to the document which Archbishop Dunstan gave to our lord at Kingston on that day when he was consecrated king, and [he] forbade him to give any pledge except the following pledge, which the [king], as the bishop instructed him, laid upon Christ's altar:</ab>
+        <note type="editorial">MS Cp (Cotton Cleopatra B XIII), headed ‘Promissio regis’; Liebermann dates it 975 or 978, 14 April. He prints the corresponding passages of the tenth-century coronation liturgy in Latin alongside (from p. 215), but there is no Latin for the prologue. Clause number standardised from ‘Sacr. cor. Prol.’ (Liebermann's siglum for this text is ‘Sacr. cor.’). K is the same MS (Cp) as column T.</note>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>V Atr 1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,17 @@
         <idno type="citationKey">VAtr 1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">237</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>V Atr</title></bibl>
+        <bibl type="legalText"><title>V Æthelred</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">237</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">78</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g"><abbr>G</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-g2"><abbr>G2</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i (second copy)</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G (A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1</idno>
-          <idno type="editorNumber" n="Robertson">1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +48,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1179 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1147 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 237.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 78.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 1</head>
-        <ab type="selectedText" xml:lang="und">Þis þonne ærest, þæt we ealle ænne God lufian ⁊ wurðian ⁊ ænne Cristendom georne healdan ⁊ ælcne hæðendom mid ealle awurpan; ⁊ þæt we habbað ealle ægðer ge mid worde ge mid wedde gefæstnod, þæt we under anum cynedom ænne Cristendom healdan willað.</ab>
-        <ab type="translation" xml:lang="en">The first provision is: that we all love and honour one God, and zealously observe one Christian faith, and wholly renounce all heathen practices. We have confirmed, both by word and by pledge, our firm intention of observing one Christian faith under the authority of one king.</ab>
-        <ab type="supplementaryText" xml:lang="und">Ðæt is þonne ærest, þæt we ealle ænne God lufian ⁊ weorðian ⁊ ænne Cristendom georne healdan ⁊ ælcne hæðendom mid ealle aweorpan; ⁊ þæt we habbað ealle ægþer ge mid worde ge mid wedde gefæstnod, þæt we under anum cynedome ænne Cristendom healdan willað.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-g">Ðæt is þon<hi rend="italic">ne</hi> ærest, þ<hi rend="italic">æt</hi> we ealle ænne God lufian ⁊ weorðian ⁊ ænne Cristendom georne healdan ⁊ ælcne hæðendom mid ealle aweorpan; ⁊ þ<hi rend="italic">æt</hi> we habbað ealle ægþer ge mid worde ge mid wedde gefæstnod, þ<hi rend="italic">æt</hi> we under anum cynedome ænne Cristendom healdan willað.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-g2">Ðæt þonne ærest, þæt we ealle fram synnan georne gecyrran ⁊ ure misdæda geornlice betan ⁊ ænne God lufian ⁊ weorðian ⁊ ænne Cristendom georne healdan ⁊ ælcne hæþendom mid ealle aweorpan.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="1" corresp="#wit-d">Þis þonne ærest, þæt we ealle ænne God lufian ⁊ wurðian ⁊ ænne Cristendom georne healdan ⁊ ælcne hæðendom mid ealle awurpan; ⁊ þæt we habbað ealle ægðer ge mid worde ge mid wedde gefæstnod, þæt we under anum cynedome ænne Cristendom healdan willað.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">The first provision is: that we all love and honour one God, and zealously observe one Christian faith, and wholly renounce all heathen practices. We have confirmed, both by word and by pledge, our firm intention of observing one Christian faith under the authority of one king.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Nämlich zuerst nun, dass wir alle (von Sünden eifrig umkehren und unsere Missethaten eifervoll büssen und G2) Einen Gott lieben und ehren und Ein Christenthum eifrig halten und jedes Heidentum durchaus verwerfen; und Folgendes haben wir alle sowohl mit Wort wie mit rechtsförmlichem Versprechen bekräftigt: dass wir unter Einem Königtum Ein Christentum halten wollen.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Namely, first, that we all (eagerly turn from sins and zealously atone for our misdeeds, and, G2) love and honour one God and eagerly hold one Christian faith and utterly reject all heathenism; and we have all confirmed the following both by word and by formal pledge: that we will hold one Christian faith under one kingship.</ab>
+        <note type="editorial">Liebermann compares EGu Prol. 1.</note>
       </div>
     </body>
   </text>

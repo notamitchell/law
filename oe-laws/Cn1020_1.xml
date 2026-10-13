@@ -4,8 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Cn 1020 1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,18 +19,15 @@
         <idno type="citationKey">Cn1020 1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">273</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Cn 1020</title></bibl>
+        <bibl type="legalText"><title>Cnut’s Letter of 1020</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">273</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">140</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>York Gospels</witness>
+          <witness xml:id="wit-york-gospels"><abbr>York Gospels</abbr> <note type="manuscript">York, Minster Library, Add. 1 (York Gospels)</note></witness>
         </listWit>
-        <bibl type="selectedText">York Gospels Robertson, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1</idno>
-          <idno type="editorNumber" n="Robertson">1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -46,15 +45,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1606 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1565 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 273.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
         <head><ref type="lawCode" target="law:Cn1020">Cn 1020</ref> 1</head>
-        <ab type="selectedText" xml:lang="und">Cnut cyning gret his arcebiscopas ⁊ his leodbiscopas ⁊ Þurcyl eorl ⁊ ealle his eorlas ⁊ ealne his þeodscype, twelfhynde ⁊ twyhynde, gehadode ⁊ læwede, on Englalande freondlice.</ab>
-        <ab type="translation" xml:lang="en">King Canute sends friendly greetings to his archbishops and his diocesan bishops and Earl Thurkil and all his earls and all his subjects in England, nobles and commoners, ecclesiastics and laymen.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="1" corresp="#wit-york-gospels">Cnut cyning gret his arcebiscopas ⁊ his leodbiscopas ⁊ Þurcyl eorl ⁊ ealle his eorlas ⁊ ealne his þeodscype, twelfhynde ⁊ twyhynde, gehadode ⁊ læwede, on Englalande freondlice.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-york-gospels">King Canute sends friendly greetings to his archbishops and his diocesan bishops and Earl Thurkil and all his earls and all his subjects in England, nobles and commoners, ecclesiastics and laymen.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">König Cnut grüsst seine Erzbischöfe und seine Suffragan-Bischöfe und Thurkil, Herzog [von Ostanglien] und alle seine Grafen und sein ganzes Volk — von 1200 und 200 [Schilling Wergeld], Geistliche und Laien — in England freundlich.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">King Cnut greets his archbishops and his diocesan bishops and Earl Thorkell [of East Anglia] and all his earls and all his people — of 1200 and 200 [shillings' wergild], clergy and laity — in England in friendship.</ab>
+        <note type="editorial">Only source: the York Gospels (York Minster), copied c. 1030–70 on a blank flyleaf after homilies (Wulfstan ed. Napier no. 59 ff.) that repeat pieces of Æthelred's and Cnut's laws. Dated 1020, February–July.</note>
       </div>
     </body>
   </text>

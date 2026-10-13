@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>AGu Prol.</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,21 +20,19 @@
         <idno type="citationKey">AGu prol.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">126</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Treaty: Alfred &amp; Guthrum</title></bibl>
+        <bibl type="legalText"><title>Treaty of Alfred and Guthrum</title> <note type="reign">Alfred, r. 871–899; Guthrum, d. 890</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">126</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B1</witness>
-          <witness>B2</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-b1" rend="bold"><abbr>B1</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383 (first copy)</note></witness>
+          <witness xml:id="wit-b2"><abbr>B2</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383 (second copy)</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
         </listWit>
-        <bibl type="selectedText">B1: Cambridge, Corpus Christi College, MS 383 Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">B2: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">Prol.</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -50,16 +51,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 672 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 663 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 126.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Prol.">
         <head><ref type="lawCode" target="law:AGu">AGu</ref> Prol.</head>
-        <ab type="selectedText" xml:lang="und">[Ælfredes laga cyninges.] [Ld] Ðis is ðæt frið, ðæt Ælfred cyninc ⁊ Gyðrum cyning ⁊ ealles Angelcynnes witan ⁊ eal seo ðeod ðe on Eastænglum beoð ealle gecweden habbað ⁊ mid aðum gefeostnod for hy selfe ⁊ heora gingran, ge for geborene ge for ungeborene, ðe Godes miltse reccen oððe ure.</ab>
-        <ab type="translation" xml:lang="en">These are the terms of peace which King Alfred and King Guthrum and the councillors of all the English nation, and all the people who dwell in East Anglia, have all agreed upon and confirmed with oaths, on their own behalf and for their subjects, both living and unborn, who are anxious for God's favour and ours.</ab>
-        <ab type="supplementaryText" xml:lang="und">Ðis is þæt frið, ðæt Ælfred cyng ⁊ Guðrum cing ⁊ ealles Angelcynnes witan ⁊ eal seo ðeod ðe on Eastenglum beoð, ⁊ gesworen habbað, ge for hy selfe ge for heora ofspryng.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol." corresp="#wit-b2">Ðis is þæt frið, ðæt Ælfred cyng ⁊ Guðrum cing ⁊ ealles Angelcynnes witan ⁊ eal seo ðeod ðe on Eastenglum beoð, ⁊ gesworen habbað, ge for hy sylfe ge for heora ofspryng.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol." corresp="#wit-b">Ðis is ðæt frið, ðæt Ælfred cyninc ⁊ Gyðrum cyning ⁊ ealles Angelcynnes witan ⁊ eal seo ðeod ðe on Eastænglum beoð ealle gecweden habbað ⁊ mid aðum gefeostnod for hy sylfe ⁊ for heora gingran, ge for geborene ge for ungeborene, ðe Godes miltse recce oððe ure.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="Prol." corresp="#wit-q">Hęc sunt pacis agenda, que Ælfredus rex et Godrun rex et omnes Anglię sapientes et omnis populus, qui in Eastanglia manet, constituerunt et iureiurando confirmauerunt pro se ipsis et iunioribus suis, progenitis et ingenitis, qui Dei misericordiam diligunt et nostram.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" corresp="#wit-b1">[Ælfredes laga cyninges.] [Ld] Ðis is ðæt frið, ðæt Ælfred cyninc ⁊ Gyðrum cyning ⁊ ealles Angelcynnes witan ⁊ eal seo ðeod ðe on Eastænglum beoð ealle gecweden habbað ⁊ mid aðum gefeostnod for hy selfe ⁊ heora gingran, ge for geborene ge for ungeborene, ðe Godes miltse reccen oððe ure.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-b1">These are the terms of peace which King Alfred and King Guthrum and the councillors of all the English nation, and all the people who dwell in East Anglia, have all agreed upon and confirmed with oaths, on their own behalf and for their subjects, both living and unborn, who are anxious for God's favour and ours.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Dies ist der Friede, welchen König Aelfred und König Guthrum und die Witan der ganzen Englischen Nation und das ganze Volk, welches in Ostanglien ist, alle bestimmt und mit Eiden gefestigt (beschworen B2) haben für sich selbst und für ihre Nachkommen (Nachkommenschaft B2), so für geborene wie für noch nicht geborene, die Gottes Gnade erstreben oder die unsere.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">This is the peace which King Alfred and King Guthrum and the councillors of the whole English nation and all the people who are in East Anglia have all determined and confirmed with oaths (sworn B2), for themselves and for their descendants (offspring B2), both born and not yet born, who seek God’s mercy or ours.</ab>
       </div>
     </body>
   </text>

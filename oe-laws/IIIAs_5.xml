@@ -4,8 +4,9 @@
     <fileDesc>
       <titleStmt>
         <title>III As 5</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,18 +18,14 @@
         <idno type="citationKey">IIIAs 5</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">170</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>III Æthelstan</title></bibl>
+        <bibl type="legalText"><title>III Æthelstan (Kent)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">170</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+        </listBibl>
         <listWit>
-          <witness>Q</witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">Q: Quadripartitus Attenborough, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">5</idno>
-          <idno type="editorNumber" n="Attenborough">5</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -46,15 +43,18 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 821 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 805 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 170.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5">
         <head><ref type="lawCode" target="law:IIIAs">III As</ref> 5</head>
-        <ab type="selectedText" xml:lang="und">Quintum, qui ex hoc descedat, sit dignus eorum quæ in scripto pacis dicuntur, quod apud Greateleiam institutum est.</ab>
-        <ab type="translation" xml:lang="en">Fifthly, he who neglects this shall be liable to those [punishments] which are stated in the statute relating to to the public peace, which was drawn up at Grately.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5" corresp="#wit-q">Quintum: qui ex hoc discedat, sit dignus eorum que in scripto pacis dicuntur (habentur), quod apud Greateleiam institutum est.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="5" corresp="#wit-q">Quintum, qui ex hoc descedat, sit dignus eorum quæ in scripto pacis dicuntur, quod apud Greateleiam institutum est.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-q">Fifthly, he who neglects this shall be liable to those [punishments] which are stated in the statute relating to to the public peace, which was drawn up at Grately.</ab>
+        <note type="editorial">Latin only; no German translation in Liebermann. Liebermann compares II As 25.2.</note>
       </div>
     </body>
   </text>

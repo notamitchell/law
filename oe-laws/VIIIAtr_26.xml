@@ -4,8 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>VIII Atr 26</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +19,16 @@
         <idno type="citationKey">VIIIAtr 26</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">266</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VIII Atr</title></bibl>
+        <bibl type="legalText"><title>VIII Æthelred</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">266</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">124</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G(A) (part)</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g-a-part"><abbr>G(A) (part)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">26</idno>
-          <idno type="editorNumber" n="Robertson">26</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,15 +46,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1493 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1456 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 266.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="26">
         <head><ref type="lawCode" target="law:VIIIAtr">VIII Atr</ref> 26</head>
-        <ab type="selectedText" xml:lang="und">Gif mæssepreost manslaga wurðe oððe elles mánweorc to swiðe gewurce, þonne þolige he ægðres ge hádes gé éardes ⁊ wræcnige swa wíde swa papa him scrife ⁊ dædbete georne.</ab>
-        <ab type="translation" xml:lang="en">If a priest commits homicide or perpetrates any other great crime, he shall be deprived of his ecclesiastical office and likewise banished, and shall travel as a pilgrim as far as the Pope appoints for him, and zealously make amends.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="26" corresp="#wit-d">Gif mæssepreost manslaga wurðe oððe elles mánweorc to swiðe gewurce, þonne þolige he ægðres ge hádes gé éardes ⁊ wræcnige swa wíde swa papa him scrife ⁊ dædbete georne.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">If a priest commits homicide or perpetrates any other great crime, he shall be deprived of his ecclesiastical office and likewise banished, and shall travel as a pilgrim as far as the Pope appoints for him, and zealously make amends.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Priester Todtschläger wird oder sonst zu arg Missethat verübt, dann verliere er beides, sowohl geistlichen Grad wie Heimath [sammt gesellschaftlicher Stellung] und pilgere elend verbannt, so weit wie der Papst ihm zur Absolution auferlegen wird und thue eifrig [geistliche] Busse.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a priest becomes a slayer or otherwise commits too grievous a misdeed, then let him lose both his orders and his homeland [with his social standing], and go into exile on pilgrimage as far as the Pope prescribes for him, and do eager penance.</ab>
+        <note type="editorial">The accents in D (‘gé éardes’) serve to separate words.</note>
       </div>
     </body>
   </text>

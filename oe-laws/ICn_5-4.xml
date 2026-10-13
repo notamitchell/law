@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>I Cn 5.4</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">ICn 5.4</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">288</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>I Cn</title></bibl>
+        <bibl type="legalText"><title>I Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">288</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">162</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness rend="bold">G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a" rend="bold"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">G(A): British Library, Cotton Nero A.i (up to, and including, cap.14.2; thereafter B.) B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">5.4</idno>
-          <idno type="editorNumber" n="Robertson">5a.4</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +53,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1673 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1630 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 288.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5.4">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 5.4</head>
-        <ab type="selectedText" xml:lang="und">⁊ gyf he ladian wille, geladige þonne be dæde mæðe, swa mid þryfealdre swa mid anfealdre lade, be ðam þe seo dæd sy.</ab>
-        <ab type="translation" xml:lang="en">And if he seeks to clear himself, he shall do so in proportion to the deed, either by the triple mode of proof, or by the simple, in accordance with the nature of the deed.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ gyf he ladian wylle, geladige þonne be dæde mæðe, swa mid þryfealdre swa mid anfealdre lade, be ðam þe seo dæd sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.4" corresp="#wit-g-a">⁊ gyf he ladian wylle, geladige þonne be dæde mæðe, swa mid þryfealdre swa mid anfealdre lade, be ðam þe seo dæd sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.4" corresp="#wit-a">⁊ gif he hine ladian wille, geladiage þonne be dade maðe, swa mid þrifealde [swa mid anfealdre] lade, be þam þe seo dade sy.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5.4" corresp="#wit-q">Si se purgare uelit, secundum facti mensuram sit, uel per triplicem negationem uel per simplicem (singularem).</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="5a.4" corresp="#wit-g-a">⁊ gyf he ladian wille, geladige þonne be dæde mæðe, swa mid þryfealdre swa mid anfealdre lade, be ðam þe seo dæd sy.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a">And if he seeks to clear himself, he shall do so in proportion to the deed, either by the triple mode of proof, or by the simple, in accordance with the nature of the deed.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn er sich reinigen will, dann reinige er sich nach Verhältniss der That entweder durch dreifachen oder durch einfachen Reinigungsbeweis, je nachdem die That ist.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if he wishes to clear himself, then let him clear himself according to the gravity of the deed, either by the threefold or by the single clearing, according to what the deed is.</ab>
+        <note type="editorial">A lacks ‘swa mid anfealdre’, supplied by Liebermann. Liebermann compares VIII Atr 27.1.</note>
       </div>
     </body>
   </text>

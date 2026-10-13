@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Cn 4a</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">IICn 4a</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">310</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Cnut</title></bibl>
+        <bibl type="legalText"><title>II Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">310</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">176</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">4a</idno>
-          <idno type="editorNumber" n="Robertson">4a</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +53,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1748 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1704 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 310.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4a">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 4a</head>
-        <ab type="selectedText" xml:lang="und">Wiccean. Gyf wiccan oððe wigeleres, morðwyrhtan oððe horcwéonan ahwar on lande wurðon agytene, fyse hi man georne ut of ðissan earde, oððe on earde forfare hi mid ealle, buton hi geswican ⁊ ðe deoppor gebétan.</ab>
-        <ab type="translation" xml:lang="en">Wizards. If wizards or sorcerers, those who secretly compass death, or prostitutes be met with anywhere in the land, they shall be zealously driven out of this land or utterly destroyed in the land, unless they cease from their wickedness and make amends to the utmost of their ability.</ab>
-        <ab type="supplementaryText" xml:lang="und">And gif wiccean oððe wigleras, morðwyrhtan oððe hórcwenan ahwær on lande wurðan agitene, fyse hig man georne ut of þysum earde, oððon on earde forfaran hig mid ealle, butan hig geswican ⁊ þe deoppar gebetan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4a" corresp="#wit-g-a">And gif wiccean oððe wigleras, morðwyrhtan oððe hórcwenan ahwær on lande wurðan agitene, fyse hig man georne ut of þysum earde, oððon on earde forfare hig mid ealle, butan hig geswican ⁊ þe deoppar gebetan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4a" corresp="#wit-a">And gif wiccan oððe wigleras, morðwyrhtan oððe horcwenan ahwær on lande wurþan agytene, fysie hi man georne ut of ðysan earde, oððe on earde forfære hig mid ealle, buton hi geswycan ⁊ þe deopor gebeten.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4a" corresp="#wit-d-frags">⁊ gif wiccan oððe wigleras, morðwirhtan oððe hórcwenan ahwar on lande wurðan agitene, fise hi man georne ut of þisan earde, oððe on earde forfare hi mid ealle, buton hi geswican ⁊ þe deoppor gebetan.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4a" corresp="#wit-q">Et si sage uel incantatrices, uenefice (aut murdri operarii) uel meretrices alicubi compareant, expellantur a finibus nostris uel in eis pereant, nisi cessauerint et profundius emendent.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="4a" corresp="#wit-b">Wiccean. Gyf wiccan oððe wigeleres, morðwyrhtan oððe horcwéonan ahwar on lande wurðon agytene, fyse hi man georne ut of ðissan earde, oððe on earde forfare hi mid ealle, buton hi geswican ⁊ ðe deoppor gebétan.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">Wizards. If wizards or sorcerers, those who secretly compass death, or prostitutes be met with anywhere in the land, they shall be zealously driven out of this land or utterly destroyed in the land, unless they cease from their wickedness and make amends to the utmost of their ability.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Zauberer. B) Und wenn Zauberer oder Wahrsager, heimliche Mordstifter oder Hurenweiber irgendwo im Lande betroffen werden, jage man sie eifrig aus diesem Lande oder vernichte sie (sie sollen untergehen G) gänzlich im Lande, es sei denn, sie lassen [vom Bösen] ab und büssen um so tiefer.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Witches. B) And if witches or soothsayers, secret murderers or whores are found anywhere in the land, let them be eagerly driven out of this country, or destroyed (let them perish, G) utterly in the land, unless they desist [from evil] and atone all the more deeply.</ab>
+        <note type="editorial">G's ‘forfaran’ should be corrected to ‘forfare’ from the other MSS and EGu 11; G's ‘oððon’ is less original than ‘oððe’. A's ‘morðwytan’ should perhaps be ‘-wyrhtan’, or understood as ‘morð[ge]witan’ (accessories to murder). Liebermann compares EGu 11; VI Atr 7.</note>
       </div>
     </body>
   </text>

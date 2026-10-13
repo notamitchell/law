@@ -4,8 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Ine Ine Prol.</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Jurasinski&amp;Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,29 +19,25 @@
         <idno type="lawCodeAnchor">Ine</idno>
         <idno type="clause">Ine Prol.</idno>
         <idno type="citationKey">Ine ineprol.</idno>
-        <idno type="legalText">Ine (domboc)</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">88</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Ine</title> <note type="reign">r. 688–726</note></bibl>
+        <bibl type="legalText"><title>Ine’s Laws (in Alfred’s Domboc)</title> <note type="reign">Ine, r. 688–726</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">88</biblScope></bibl>
+          <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">370</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">E</witness>
-          <witness>H</witness>
-          <witness>B (no Prol.)</witness>
-          <witness>G (Prol. only)</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>Bu</witness>
-          <witness>Ot (frags.)</witness>
+          <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b-no-prol"><abbr>B (no Prol.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
-        <bibl type="selectedText">E: Cambridge, Corpus Christi College, MS 173 Jurasinski and Oliver, eds.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">Ine Prol.</idno>
-          <idno type="editorNumber" n="Jurasinski and Oliver">Prologue</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -56,17 +56,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 546 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 538 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 88.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Ine Prol.">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> Ine Prol.</head>
-        <ab type="selectedText" xml:lang="und">{XLIIII.} Ic, Ine, mid Godes gife Wesseaxna kyning, mid geðeahte ⁊ mid lare Cenredes mines fæder ⁊ Heddes mines biscepes ⁊ Eorcenwoldes mines biscepes, mid eallum minum ealdormonnum ⁊ þæm ieldstan witum minre ðeode ⁊ eác micelre gesomnunge Godes ðeowa, wæs smeagende be ðare hælo urra sawla ⁊ be ðam staþole ures rice, þætte ryht æw ⁊ ryhte cynedomas ðurh ure folc gefæstnode ⁊ getrymyde wæron, ðætte nænig ealdormanna ne us undergeðeodedra æfter ðam wære awendende ðas ure domas.</ab>
-        <ab type="translation" xml:lang="en">I, Ine, by God’s gift king of the West Saxons, with the advice and instruction of Cenred my father and Hædde my bishop and Eorconwald my bishop, with all my ealdormen and the senior counselors of my people and also a great gathering of God’s servants have been considering the well-being of our souls and the foundation of our kingdom, so that just law and just royal judgments should be established and made strong throughout our folk, so that after this time no ealdorman nor any other subject to us should depart from these our judgments.</ab>
-        <ab type="secondTranslation" xml:lang="en">I, Ine, by the grace of God king of Wessex, with the advice and instruction of Cenred, my father, of Hedde, my bishop, and of Erconwald, my bishop, and with all my ealdormen and the chief councillors of my people, and with a great concourse of the servants of God as well, have been taking counsel for the salvation of our souls and the security of our realm, in order that just law and just decrees may be established and ensured throughout our nation, so that no ealdorman nor subject of ours may from henceforth pervert these our decrees.</ab>
-        <ab type="supplementaryText" xml:lang="und">Ic Ýne, mid Godes gife Wesseaxna cyning, mid geðeahte ⁊ lare Cænredes mines fæder ⁊ Hæddes mines biscopes ⁊ Eorcenwoldes mines bisceopes, mid eallum minum ealdormonnum ⁊ þæm yldestan witum minre ðeode ⁊ eac micelre gesomnunge Godes ðeowa, wæs smeagende be ðære hǽlo ure sawla ond be ðam staþole ures rices, þæt ryht ǽw ⁊ ryhte cynedomas ðurh ure folc gefæstnode ⁊ getrymyde wæron, ðæt nænig ealdormonna ne us undergeðeodedra æfter ðam wære awendende ðas ure domas.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Ine Prol." corresp="#wit-h">Ic Ýne, mid Godes gife Westseaxna cyning, mid geðeahte ⁊ lare Cænredes mines fæder ⁊ Hæddes mines biscopes ⁊ Eorcenwoldes mines biscopes, mid eallum minum ealdermonnum ⁊ þam yldestan witum minre ðeode ⁊ eac micelre gesomnunge Godes ðeowa, wæs smeagende be ðære hǽlo ure sawla ond be þam staþole ures rices, ðæt ryht ǽw ⁊ ryhte cynedomas ðurh ure folc gefæstnode ⁊ getrymede wæron, ðæt nænig ealdermonna ne us undergeðeodedra æfter þam wære awendende ðas ure domas.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Ine Prol." corresp="#wit-e">XLIIII. Ic Ine, mid Godes gife Wesseaxna kyning, mid geðeahte ⁊ mid lare Cenredes mines fæder ⁊ Heddes mines biscepes ⁊ Eorcenwoldes mines biscepes, mid eallum minum ealdormonnum ⁊ þæm ieldstan witum minre ðeode ⁊ éac micelre gesomnunge Godes ðeowa, wæs smeagende be ðære hælo urra sawla ⁊ be ðam staþole ures rices, þætte ryht æw ⁊ ryhte cynedomas ðurh ure folc gefæstnode ⁊ getrymede wæron, þætte nænig ealdormonna ne us undergeðeodedra æfter þam wære awendende ðas ure dómas.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="Ine Prol." corresp="#wit-q">Institutiones Ine regis. Ego Inæ, Dei gratia Westsaxonum rex, exortatione et doctrina Cenredes patris mei et Heddes episcopi mei et Erkenwoldes episcopi mei et omnium aldermannorum meorum et seniorum sapientum regni mei multaque congregatione seruorum Dei, sollicitus de salute animarum nostrarum et statu regni nostri (mei) constitui rectum coniugium et recta (iusta) iudicia pro stabilitate et confirmatione populi mei benigna sedulitate celebrari, et nulli aldermanno uel alicui de toto regimine nostro conscripta liceat abolere iudicia.</ab>
+        <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="Prologue" corresp="#wit-e">{XLIIII.} Ic, Ine, mid Godes gife Wesseaxna kyning, mid geðeahte ⁊ mid lare Cenredes mines fæder ⁊ Heddes mines biscepes ⁊ Eorcenwoldes mines biscepes, mid eallum minum ealdormonnu<hi rend="italic">m</hi> ⁊ þæm ieldstan witum minre ðeode ⁊ eác micelre gesomnunge Godes ðeowa, wæs smeagende be ðare hælo urra sawla ⁊ be ðam staþole ures rice, þætte ryht æw ⁊ ryhte cynedomas ðurh ure folc gefæstnode ⁊ getrymyde wæron, ðætte nænig ealdormanna ne us undergeðeodedra æfter ðam wære awendende ðas ure domas.</ab>
+        <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">I, Ine, by God’s gift king of the West Saxons, with the advice and instruction of Cenred my father and Hædde my bishop and Eorconwald my bishop, with all my ealdormen and the senior counselors of my people and also a great gathering of God’s servants have been considering the well-being of our souls and the foundation of our kingdom, so that just law and just royal judgments should be established and made strong throughout our folk, so that after this time no ealdorman nor any other subject to us should depart from these our judgments.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">I, Ine, by the grace of God king of Wessex, with the advice and instruction of Cenred, my father, of Hedde, my bishop, and of Erconwald, my bishop, and with all my ealdormen and the chief councillors of my people, and with a great concourse of the servants of God as well, have been taking counsel for the salvation of our souls and the security of our realm, in order that just law and just decrees may be established and ensured throughout our nation, so that no ealdorman nor subject of ours may from henceforth pervert these our decrees.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">[König Ines Satzungen.] Ich Ine, durch Gottes Gnade König der Westsachsen, mit Rath und mit Lehre Kenreds, meines Vaters, und Heddes, meines Bischofs, und Eorkenwolds, meines Bischofs, mit allen meinen Ealdormen und den ehrwürdigsten Witan meines Volkes und auch [mit] grosser Versammlung Geistlicher, pflog Rath über das Heil unserer Seelen und über den Zustand unseres Reiches, auf dass richtiges [Gewohnheits]recht und rechte Königsverordnungen über unser Volk hin befestigt und gesichert würden, dass keiner der Ealdormen noch der uns Untergebenen hinfort diese unsere Gesetze verkehren sollte.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">[King Ine’s ordinances.] I, Ine, by God’s grace king of the West Saxons, with the counsel and with the teaching of Cenred, my father, and of Hædde, my bishop, and of Eorcenwold, my bishop, with all my ealdormen and the most venerable councillors of my people, and also [with] a great assembly of clergy, took counsel concerning the salvation of our souls and concerning the state of our kingdom, so that right [customary] law and right royal ordinances might be established and secured throughout our people, so that none of the ealdormen nor of those subject to us should thereafter pervert these our laws.</ab>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Cn 84.4a</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">IICn 84.4a</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">368</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Cnut</title></bibl>
+        <bibl type="legalText"><title>II Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">368</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">216</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">84.4a</idno>
-          <idno type="editorNumber" n="Robertson">84.4a</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -53,16 +52,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1951 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1907 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 368.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="84.4a">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 84.4a</head>
-        <ab type="selectedText" xml:lang="und">And ælc ðe gescead wite, hlyste him georne ⁊ godcunde lare gewha on geðance healde swyðe fæste him sylfum to ðearfe.</ab>
-        <ab type="translation" xml:lang="en">And everyone who has discernment shall earnestly give heed to them, and everyone for his own well-being shall keep fast in his mind their spiritual instruction.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ ælc þe gescead wite, hlyste him georne, ⁊ godcunde lare gehwa on geþance healde swyðe fæste, him sylfum to þearfe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="84.4a" corresp="#wit-g-a">⁊ ælc þe gescead wite, hlyste him georne, ⁊ godcunde lare gehwa on geþance healde swyðe fæste, him sylfum to þearfe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="84.4a" corresp="#wit-a">⁊ alc þe gescad wite, hliste him georne, and godcunde lara gehwa on geþance healde swyðe fæste, him sylfum to ðearfe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="84.4a" corresp="#wit-q">Et omnis qui discretionis particeps (sciens) est et zelum Dei habet, audiat illos gratissime et Dei doctrinam in mente habeat firmiter, sibimet ad utilitatem.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="84.4a" corresp="#wit-b">And ælc ðe gescead wite, hlyste him georne ⁊ godcunde lare gewha on geðance healde swyðe fæste him sylfum to ðearfe.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">And everyone who has discernment shall earnestly give heed to them, and everyone for his own well-being shall keep fast in his mind their spiritual instruction.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und jeder, der Vernunft besitzt, lausche ihnen willig, und jeder halte geistliche Lehre recht fest im Gedächtnisse, sich selbst zum Nutzen.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let everyone who has understanding listen to them willingly, and let everyone hold spiritual teaching very firmly in memory, for his own benefit.</ab>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Em 7.3</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,25 +18,20 @@
         <idno type="lawCodeAnchor">IIEm</idno>
         <idno type="clause">7.3</idno>
         <idno type="citationKey">IIEm 7.3</idno>
-        <idno type="legalText">II Edm</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">190</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Edmund</title></bibl>
+        <bibl type="legalText"><title>II Edmund</title> <note type="reign">Edmund, r. 939–946</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">190</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">10</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>H</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">7.3</idno>
-          <idno type="editorNumber" n="Robertson">7.3</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,16 +49,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 925 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 903 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 190.</change>
+      <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 11.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7.3">
         <head><ref type="lawCode" target="law:IIEm">II Em</ref> 7.3</head>
-        <ab type="selectedText" xml:lang="und">Ðonne þæt gedon sy, ðonne rære man cyninges munde; of ðam dæge on XXI nihton gylde man healsfang; ðæs on XXI nihton manbote; ðæs on XXI nihton ðæs weres ðæt frumgyld.</ab>
-        <ab type="translation" xml:lang="en">When this is done, the king's 'mund' shall be established. In twenty-one days from that time healsfang shall be paid; in twenty-one days after that, 'manbot' (the compensation due to the slain man's lord), and twenty-one days after that the first installment of the wergeld.</ab>
-        <ab type="supplementaryText" xml:lang="und">Ðonne þæt gedon sy, ðonne rære man cyninges munde; of ðam dæge on XXI nihton gylde man healsfang; ðæs on XXI nihton manbote; ðæs on XXI niht ðæs weres ðæt frumgyld.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7.3" corresp="#wit-h">Ðonne þæt gedon sy, ðon<hi rend="italic">ne</hi> rære man cyninges munde; of ðam dæge on XXI nihton gylde man healsfang; ðæs on XXI niht manbote; ðæs on XXI niht ðæs weres ðæt frumgyld.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7.3" corresp="#wit-b">Ðonne þæt gedon sy, ðonne rære man cyninges munde; of ðam dæge on XXI nihton gylde man healsfang; ðæs on XXI nihton manbote; ðæs on XXI nihton ðæs weres þæt frumgyld.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="7.3" corresp="#wit-q">Postquam hoc factum erit, erigatur inter eos pax regis; ab illa die in XXI. diem reddatur halsfangium; inde ad XXI. diem manbota; inde ad XXI. diem reddatur ipsius were frumgildum.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="7.3" corresp="#wit-b">Ðonne þæt gedon sy, ðonne rære man cyninges munde; of ðam dæge on XXI nihton gylde man healsfang; ðæs on XXI nihton manbote; ðæs on XXI nihton ðæs weres ðæt frumgyld.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">When this is done, the king's 'mund' shall be established. In twenty-one days from that time healsfang shall be paid; in twenty-one days after that, 'manbot' (the compensation due to the slain man's lord), and twenty-one days after that the first instalment of the wergeld.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn das geschehen ist, dann errichte man den Schutz des Königsfriedens; von dem Tage an in 21 Nächten zahle man Halsfang; darauf in 21 Nächten Busse für Erschlagung des Untergebenen; darauf in 21 Nächten vom Wergeld die Erstzahlung.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">When that is done, then let the protection of the king's peace be established; from that day in 21 nights let the healsfang be paid; after that in 21 nights the compensation for [the killing of] the dependant; after that in 21 nights the first instalment of the wergild.</ab>
+        <note type="editorial">Twelfhyndes (Schmid's App. VII, 1) adds ‘þæs on XXI nihtan þæt fyhtwite’. In H, I Æthelred follows; in B, ‘Ðus man sceal swerigean’ (Schmid's App. X) follows in the same hand without a break, as in Quadr.</note>
       </div>
     </body>
   </text>

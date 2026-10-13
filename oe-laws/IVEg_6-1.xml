@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>IV Eg 6.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,24 +18,20 @@
         <idno type="lawCodeAnchor">IVEg</idno>
         <idno type="clause">6.1</idno>
         <idno type="citationKey">IVEg 6.1</idno>
-        <idno type="legalText">IV Edg</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">210</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>IV Edgar</title></bibl>
+        <bibl type="legalText"><title>IV Edgar (Whitbordesstan)</title> <note type="reign">Edgar, r. 957/9–975</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">210</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">34</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">C</witness>
-          <witness>F</witness>
-          <witness>C (Latin)</witness>
+          <witness xml:id="wit-c" rend="bold"><abbr>C</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
+          <witness xml:id="wit-f"><abbr>F</abbr> <note type="manuscript">London, British Library, Cotton Nero E.i</note></witness>
+          <witness xml:id="wit-c-latin"><abbr>C (Latin)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">C: Cambridge, Corpus Christi College, MS 265 Gesetze</bibl>
-        <bibl type="supplementaryText">F: British Library, Cotton Nero E.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">6.1</idno>
-          <idno type="editorNumber" n="Robertson">6.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -50,16 +49,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1023 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 996 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 210.</change>
+      <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 35.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6.1">
         <head><ref type="lawCode" target="law:IVEg">IV Eg</ref> 6.1</head>
-        <ab type="selectedText" xml:lang="und">⁊ heora ælc, þonne hine man ærest to wytnesse gecysð, sylle þone að, þæt he næfre, ne for feo ne for lufe ne for ege, ne ætsace nanes þara þinga þe he to gewytnesse wæs, ⁊ nan oðer þingc on gewytnesse ne cyðe butan þæt án þæt he geseah oððe gehyrde.</ab>
-        <ab type="translation" xml:lang="en">And each of them, when he is first chosen as a witness, shall swear an oath that he will never, for money, or favour or fear, deny any of the things of which he has witness, or declares in his testimony anything except only what he has seen and heard.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ heora ælc, þonne hine man ærest to witnysse gecysð, sylle þæne að, þæt he næfre, ne for feo ne for lufe ne for ege, ne ætsace nanes þara þinga, þe he to gewitnysse wæs, ⁊ nán oðer þingc on gewytnesse ne cyðe buton þæt án, þæt he geseah oððe gehyrde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.1" corresp="#wit-f">⁊ heora ælc, þonne hine man ærest to witnysse gecysð, sylle þæne að, þ<hi rend="italic">æt</hi> he næfre, ne for feo ne for lufe ne for ege, ne ætsace nanes þara þinga, þe he to gewitnysse wæs, ⁊ nán oðer þingc on gewytnesse ne cyðe buton þ<hi rend="italic">æt</hi> án, þ<hi rend="italic">æt</hi> he geseah oððe gehyrde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.1" corresp="#wit-c">⁊ heora ælc, þonne hine man ærest to wytnesse gecysð, sylle þone að, þæt he næfre, ne for feo ne for lufe ne for ege, ne ætsace nanes þara þinga, þe he to gewytnesse wæs, ⁊ nan oðer þingc on gewytnesse ne cyðe butan þæt án, þæt he geseah oððe gehyrde.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.1" corresp="#wit-q">Quique huic iustificationis operi fuerit electus et prepositus, iuret quod nullo modo, deprauatus pecunię muneribus nec alicuius amore uel timore seductus, quicquam aliud testificare uelit nisi quę auribus audierit aut oculis uiderit, uel negare presumat quod factum pro certo scierit.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="6.1" corresp="#wit-c">⁊ heora ælc, þonne hine man ærest to wytnesse gecysð, sylle þone að, þæt he næfre, ne for feo ne for lufe ne for ege, ne ætsace nanes þara þinga þe he to gewytnesse wæs, ⁊ nan oðer þingc on gewytnesse ne cyðe butan þæt án þæt he geseah oððe gehyrde.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">And each of them, when he is first chosen as a witness, shall swear an oath that he will never, for money, or favour or fear, deny any of the things of which he has been witness, or declare in his testimony anything except only what he has seen or heard.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und jeder von den [Geschäfts-Zeugen], wenn er zuerst zur Zeugenschaft erkoren wird, leiste folgenden Eid: ‘dass er nie, weder für Geld, noch aus Liebe, noch aus Furcht keines der Dinge, wo er als Zeuge [zugezogen] war, ableugnen werde, und nichts anderes im Zeugniss aussagen werde, als allein das, was er gesehen oder gehört hat’.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let each of [these transaction-witnesses], when he is first chosen as a witness, swear the following oath: ‘that he will never, neither for money nor for love nor for fear, deny any of the things to which he was a witness, and will declare nothing else in his witness except only what he saw or heard’.</ab>
+        <note type="editorial">Liebermann compares Swer 8.</note>
       </div>
     </body>
   </text>

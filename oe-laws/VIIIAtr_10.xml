@@ -4,8 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>VIII Atr 10</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +19,16 @@
         <idno type="citationKey">VIIIAtr 10</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">265</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VIII Atr</title></bibl>
+        <bibl type="legalText"><title>VIII Æthelred</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">265</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">120</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G(A) (part)</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g-a-part"><abbr>G(A) (part)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">10</idno>
-          <idno type="editorNumber" n="Robertson">10</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -46,15 +45,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1472 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1435 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 265.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="10">
         <head><ref type="lawCode" target="law:VIIIAtr">VIII Atr</ref> 10</head>
-        <ab type="selectedText" xml:lang="und">And Romfeoh gelæste man æghwilce geare be Petres mæssan.</ab>
-        <ab type="translation" xml:lang="en">And Peter's Pence shall be rendered every year by St Peter's Day.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="10" corresp="#wit-d">And Romfeoh gelæste man æghwilce geare be Petres mæssan.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And Peter's Pence shall be rendered every year by St Peter's Day.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und Romgeld werde in jedem Jahre zu Petri Festtag entrichtet.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let Rome-money be paid every year by St Peter's day.</ab>
+        <note type="editorial">Liebermann compares II Eg 4.</note>
       </div>
     </body>
   </text>

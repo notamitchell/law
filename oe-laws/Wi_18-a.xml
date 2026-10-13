@@ -3,33 +3,34 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Wi 18 [a]</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Oliver</name></respStmt>
+        <title>Wi 18[a]</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#oliver">Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Wi_18-a</idno>
-        <idno type="citation">Wi 18 [a]</idno>
+        <idno type="citation">Wi 18[a]</idno>
         <idno type="lawCode">Wi</idno>
         <idno type="lawCodeAnchor">Wi</idno>
-        <idno type="clause">18 [a]</idno>
+        <idno type="clause">18[a]</idno>
         <idno type="citationKey">Wi 18a</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">13</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Wihtræd</title> <note type="reign">r.690–725</note></bibl>
+        <bibl type="legalText"><title>Wihtred’s Code</title> <note type="reign">Wihtred, r. 690/1–725</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">13</biblScope></bibl>
+          <bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002), p. <biblScope unit="page">158</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922), p. <biblScope unit="page">29</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>H</witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Oliver, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">18 [a]</idno>
-          <idno type="editorNumber" n="Oliver">14</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +49,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 181 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 178 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 13.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
-      <div type="clause" n="18 [a]">
-        <head><ref type="lawCode" target="law:Wi">Wi</ref> 18 [a]</head>
-        <ab type="selectedText" xml:lang="und">Preost hine clænsie sylfæs soþe in his halgum hrægle ætforan wiofode, ðus cweþende: Veritatem dico in xro non mentior.</ab>
-        <ab type="translation" xml:lang="en">A priest should clear himself with his own truth in his holy vestments before the altar, thus saying: Ueritatem dico in Christo, non mentior.</ab>
-        <ab type="supplementaryText" xml:lang="und">Preost hine clænsie sylfæs soþe in his halgum hrægle ætforan wiofode, ðus cweþende: 'Ueritatem dico in Christo non mentior'.</ab>
+      <div type="clause" n="18[a]">
+        <head><ref type="lawCode" target="law:Wi">Wi</ref> 18[a]</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18[a]" corresp="#wit-h">Preost hine clænsie sylfæs soþe in his halgum hrægle ætforan wiofode ðus cweþende: ‘Ueritatem dico in Chr<hi rend="italic">isto</hi>, non mentior’.</ab>
+        <ab type="editionText" xml:lang="ang" source="#oliver" n="14" corresp="#wit-h">Preost hine clænsie sylfæs soþe in his halgum hrægle ætforan wiofode, ðus cweþende: <hi rend="italic">Veritatem dico in xro non mentior</hi>.</ab>
+        <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">A priest should clear himself with his own truth in his holy vestments before the altar, thus saying: <hi rend="italic">Ueritatem dico in Christo, non mentior</hi>.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">A priest shall clear himself by his own asseveration, [standing] in his holy garments before the altar and declaring as follows “Veritatem dico in Christo, non mentior.”</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Ein Priester reinige sich durch Betheuerung [nur] von [ihm] selbst in seinem heiligen [Amts]gewande vor dem Altar so sprechend: ‘Veritatem dico in Christo, non mentior’.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">A priest is to clear himself by a declaration [only] of [him]self in his holy [vestment of] office before the altar, speaking thus: ‘Veritatem dico in Christo, non mentior’.</ab>
       </div>
     </body>
   </text>

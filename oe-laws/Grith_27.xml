@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Grið 27</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Rabin</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Wulfstan</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +20,15 @@
         <idno type="citationKey">Grith 27</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">472</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Be grið 7 be munde</title></bibl>
+        <bibl type="legalText"><title>Be griðe ⁊ be munde (On Sanctuary and Protection)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">472</biblScope></bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>G(B)</witness>
+          <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">G(B): British Library, Cotton Nero A.i Rabin, ed.</bibl>
-        <bibl type="supplementaryText">G(B): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">27</idno>
-          <idno type="editorNumber" n="Rabin">27</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +46,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2296 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2232 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 472.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="27">
         <head><ref type="lawCode" target="law:Grith">Grið</ref> 27</head>
-        <ab type="selectedText" xml:lang="und">Oððon hwilcan geþance mæg ænig man æfre geþencan on his mode þæt he to sacerdan heafod ahylde, and bletsunge gyrne, and heora mæssan on cyrcan gestande, and æt hlafgange heora hand cysse, and sona þær æfter hy hrædlice syððan scyrde oððe scynde mid worde oððe weorce?</ab>
-        <ab type="translation" xml:lang="en">Or by what stretch of the imagination can anyone ever think in his mind that he may bow his head to the priests, desire their blessings, attend their Masses in church, and kiss their hand during the procession with the host, yet then immediately thereafter injure or abuse them by word or deed?</ab>
-        <ab type="supplementaryText" xml:lang="und">Oððon hwilcan geþance mæg ænig man æfre geþencan on his mode, þæt he to sacerdan heafod ahylde 7 bletsunge gyrne 7 heora mæssan on cyrcan gestande 7 æt hlafgange heora hand cysse, 7 sona þær æfter hy hrædlice syððan scyrde oððe scynde mid worde oððe weorce?</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="27" corresp="#wit-g-b">Oððon hwilcan geþance mæg ænig man æfre geþencan on his mode, þ<hi rend="italic">æt</hi> he to sacerdan heafod ahylde 7 bletsunge gyrne 7 heora mæssan on cyrcan gestande 7 æt hlafgange heora hand cysse, 7 sona þær æfter hy hrædlice syððan scyrde oððe scynde mid worde oððe weorce?</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" n="27" corresp="#wit-g-b">Oððon hwilcan geþance mæg ænig man æfre geþencan on his mode þæt he to sacerdan heafod ahylde, and bletsunge gyrne, and heora mæssan on cyrcan gestande, and æt hlafgange heora hand cysse, and sona þær æfter hy hrædlice syððan scyrde oððe scynde mid worde oððe weorce?</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-b">Or by what stretch of the imagination can anyone ever think in his mind that he may bow his head to the priests, desire their blessings, attend their Masses in church, and kiss their hand during the procession with the host, yet then immediately thereafter injure or abuse them by word or deed?</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Oder mit welcher Überlegung kann jemand jemals in seinem Sinne sich [dázu] entschliessen, dass er vor den Priestern das Haupt neigt und Segen erbittet und ihren Messen in der Kirche beiwohnt und beim Abendmahlsempfange ihre Hand küsst, sofort jedoch danach sie dann schnell verletzt oder bedrängt durch Wort oder That?</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Or with what consideration can anyone ever resolve in his mind [to do this]: that he bows his head before the priests and asks for blessing and attends their masses in church and kisses their hand at communion, yet immediately afterwards quickly injures or oppresses them by word or deed?</ab>
       </div>
     </body>
   </text>

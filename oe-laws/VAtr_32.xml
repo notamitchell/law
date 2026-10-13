@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>V Atr 32</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,17 @@
         <idno type="citationKey">VAtr 32</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">245</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>V Atr</title></bibl>
+        <bibl type="legalText"><title>V Æthelred</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">245</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">88</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g"><abbr>G</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-g2"><abbr>G2</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i (second copy)</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G (A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">32</idno>
-          <idno type="editorNumber" n="Robertson">32</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +48,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1231 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1199 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 245.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="32">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 32</head>
-        <ab type="selectedText" xml:lang="und">⁊ æfre alecgan heonan forð þa unlaga þe ure hlaford oft ⁊ gelome silf het alecgan.</ab>
-        <ab type="translation" xml:lang="en">And there shall henceforth be an end to the unjust practices which our lord himself has frequently and often commanded us to stop.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ æfre alicgan heonan forð þa unlaga, þe ær þysan wæran to gewunelice wide.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="32" corresp="#wit-g">⁊ æfre alicgan heonan forð þa unlaga, þe ær þysan wæran to gewunelice wide.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="32" corresp="#wit-g2">⁊ æfre alicgan heonan forð þa unlaga, þe ær þysan [wæran] to gewunelice wide.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="32" corresp="#wit-d">⁊ æfre alecgan heonan forð þa unlaga þe ure hlaford oft ⁊ gelome silf het alecgan.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And there shall henceforth be an end to the unjust practices which our lord himself has frequently and often commanded us to stop.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und stets hinfort sollen die Rechtsmissbräuche unterbleiben, die vordem allzu gewöhnlich verbreitet gewesen sind (sollen sie die R. ablegen, die unser Herr selbst oft und häufig abzuschaffen befahl D).</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let the abuses which were all too common before now always cease henceforth (let them lay aside the abuses which our lord himself has often and frequently ordered abolished, D).</ab>
+        <note type="editorial">In G2, ‘wæran’ was written above the line later.</note>
       </div>
     </body>
   </text>

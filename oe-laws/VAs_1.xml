@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>V As 1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,21 +20,17 @@
         <idno type="citationKey">VAs 1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">166</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>V Æthelstan</title></bibl>
+        <bibl type="legalText"><title>V Æthelstan (Exeter)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">166</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">Ld: Archaionomia Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1</idno>
-          <idno type="editorNumber" n="Attenborough">1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -49,16 +48,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 858 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 839 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 166.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
         <head><ref type="lawCode" target="law:VAs">V As</ref> 1</head>
-        <ab type="selectedText" xml:lang="und">[Be ðon (þe) oþres monnes man underfehþ.] [Ld] ⁊ se ðe oþres monnes man underfó, ðe he for his yfele him from dó, ⁊ him [gesteoran] ne mæge his yfeles, gylde hine ðæm þe he ær folgode, ⁊ gesylle þam cynge CXX scll.</ab>
-        <ab type="translation" xml:lang="en">[Of taking into service another's man.] And he who takes into his service one who has been in the service of another, whom the latter has dismissed, because of his evil conduct, and because he has not been able to restrain him from evil doing, shall pay compensation for him, to the man in whose service he has been, and give 120 shillings to the king.</ab>
-        <ab type="supplementaryText" xml:lang="und">Be ðon oþres monnes man underfehþ. And se ðe oþres mannes man underfó, ðe he for his yfle him from dó, ⁊ him gesteoran ne mæge his yfles, gilde hine ðæm ðe he ær folgode, ⁊ gesylle ðæm cyng CXX scill.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-ld">Be ðon oþres monnes man underfehþ. And se ðe oþres mannes man underfó, ðe he for his yfle him from dó, ⁊ him gesteoran ne mæge his yfles, gilde hine ðæm ðe he ær folgode, ⁊ gesylle ðæm cyng CXX scill.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-h">⁊ se ðe oþres monnes man underfó, ðe he for his yfele him from ðó, ⁊ him getruwian ne mæge his yfeles, gylde hine ðæm þe he ær folgode, ⁊ gesylle þam cynge CXX scll.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1" corresp="#wit-q">Et qui alterius hominem suscipiet, quem pro malefactis suis a se dimittat et castigare non possit, reddat eum domino suo cui prius seruiuit, et regi centum uiginti sol.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="1" corresp="#wit-h">[Be ðon (þe) oþres monnes man underfehþ.] [Ld] ⁊ se ðe oþres monnes man underfó, ðe he for his yfele him from dó, ⁊ him [gesteoran] ne mæge his yfeles, gylde hine ðæm þe he ær folgode, ⁊ gesylle þam cynge CXX scll.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">[Of taking into service another's man.] And he who takes into his service one who has been in the service of another, whom the latter has dismissed, because of his evil conduct, and because he has not been able to restrain him from evil doing, shall pay compensation for him, to the man in whose service he has been, and give 120 shillings to the king.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Von dem, der den Untergebenen eines anderen aufnimmt. Ld) Und wer den Untergebenen eines anderen Mannes aufnimmt — den dieser wegen dessen Missethat von sich jagt, indem er ihn von dessen Vergehen nicht zurückhalten kann — entgelte ihn demjenigen, dem derselbe früher untergeben war, und zahle dem König 120 Schill.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of him who takes in another's dependant. Ld) And whoever takes in another man's dependant — whom that man drives away on account of his misdeeds, being unable to restrain him from his offences — let him pay for him to the one to whom he was formerly subject, and pay the king 120 shillings.</ab>
+        <note type="editorial">H's ‘getruwian’ should be corrected to ‘gestyran’ from Ld and Quadr. (Liebermann). Liebermann would supply ‘þe’ in Ld's heading from Quadr. Liebermann compares II As 22, 22.1.</note>
       </div>
     </body>
   </text>

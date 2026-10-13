@@ -4,8 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>VIII Atr 28</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +19,16 @@
         <idno type="citationKey">VIIIAtr 28</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">266</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VIII Atr</title></bibl>
+        <bibl type="legalText"><title>VIII Æthelred</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">266</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">124</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G(A) (part)</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g-a-part"><abbr>G(A) (part)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">28</idno>
-          <idno type="editorNumber" n="Robertson">28</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,15 +46,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1496 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1459 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 266.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="28">
         <head><ref type="lawCode" target="law:VIIIAtr">VIII Atr</ref> 28</head>
-        <ab type="selectedText" xml:lang="und">Gif weofodþen be boca tæcincge his agen lif rihtlice fadige, þonne sy he fulles þegnweres ⁊ weorðscipes wurðe, ge on life ge on legere.</ab>
-        <ab type="translation" xml:lang="en">If a member of the priesthood orders his own life aright, according to the teaching of the canon law, he shall be entitled to the full wergeld and privileges of a thegn, both during his life and after his death.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="28" corresp="#wit-d">Gif weofodþen be boca tæcincge his agen lif rihtlice fadige, þonne sy he fulles þegnweres ⁊ weorðscipes wurðe, ge on life ge on legere.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">If a member of the priesthood orders his own life aright, according to the teaching of the canon law, he shall be entitled to the full wergeld and privileges of a thegn, both during his life and after his death.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Altardiener nach Vorschrift der Kanones sein eigenes Leben gesetzmässig regelt, dann sei er vollen Thegn-Wergeldes und Ehrenranges theilhaftig, so im Leben wie im Grabe.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a servant of the altar orders his own life lawfully according to the teaching of the books [canons], then let him be entitled to a full thegn's wergild and honour, both in life and in the grave.</ab>
+        <note type="editorial">Chapters 28–30 form an 11th-c. ‘Additamentum’ to the Canons of Edgar 60 (ed. Thorpe, Ancient Laws 401). Liebermann compares VI Atr 5.3.</note>
       </div>
     </body>
   </text>

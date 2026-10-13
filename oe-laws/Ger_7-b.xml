@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Ger 7[b]</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Gobbitt</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Gobbitt</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,22 +18,17 @@
         <idno type="lawCodeAnchor">Ger</idno>
         <idno type="clause">7[b]</idno>
         <idno type="citationKey">Ger 7b</idno>
-        <idno type="legalText">Ger.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">454</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Be Gesceadwisan Gerefan</title></bibl>
+        <bibl type="legalText"><title>Gerefa (The Reeve)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">454</biblScope></bibl>
+          <bibl xml:id="gobbitt" type="edition">Thom Gobbitt, ed., ‘Rectitudines singularum personarum’ and ‘Gerefa’, <title>Early English Laws</title> (earlyenglishlaws.ac.uk)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>B</witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
         </listWit>
-        <bibl type="selectedText">B: earlyenglishlaws ac.uk: RSP+Ger Gobbitt, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">7[b]</idno>
-          <idno type="editorNumber" n="Gobbitt">22.11</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -49,16 +47,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2191 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2133 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 454.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7[b]">
         <head><ref type="lawCode" target="law:Ger">Ger</ref> 7[b]</head>
-        <ab type="selectedText" xml:lang="und">Selre him his æfre of folgoðe ðonne on . gyf hine magan wyldan ða ðe he scolde wealdan .</ab>
-        <ab type="translation" xml:lang="en">[It is] better [use of] him if he is always out labouring than in [his position], if those whom he should govern would rule him.</ab>
-        <ab type="supplementaryText" xml:lang="und">[7[b]] selre him his æfre of folgoðe ðonne on, gyf hine magan wyldan ða ðe he scolde wealdan;</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7[b]" corresp="#wit-b">[7[b]] selre him his æfre of folgoðe ðonne on, gyf hine magan wyldan ða ðe he scolde wealdan;</ab>
+        <ab type="editionText" xml:lang="ang" source="#gobbitt" n="22.11" corresp="#wit-b">Selre him his æfre of folgoðe ðonne on . gyf hine magan wyldan ða ðe he scolde wealdan .</ab>
+        <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">[It is] better [use of] him if he is always out labouring than in [his position], if those whom he should govern would rule him.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">besser für ihn ist, stets ausser Amte als darin [sein], wenn ihn díe beherrschen können, die er regieren sollte;</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">it is better for him always [to be] out of office than in it, if those whom he should rule can rule him;</ab>
+        <note type="editorial">B's ‘his’ stands for ‘is’ (so also in B at II Cn 75 f.). B's ‘scolde’ stands so.</note>
       </div>
     </body>
   </text>

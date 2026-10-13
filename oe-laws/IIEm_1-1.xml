@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Em 1.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,25 +18,20 @@
         <idno type="lawCodeAnchor">IIEm</idno>
         <idno type="clause">1.1</idno>
         <idno type="citationKey">IIEm 1.1</idno>
-        <idno type="legalText">II Edm</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">186</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Edmund</title></bibl>
+        <bibl type="legalText"><title>II Edmund</title> <note type="reign">Edmund, r. 939–946</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">186</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">8</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>H</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1.1</idno>
-          <idno type="editorNumber" n="Robertson">1.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,16 +49,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 914 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 892 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 186.</change>
+      <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 9.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.1">
         <head><ref type="lawCode" target="law:IIEm">II Em</ref> 1.1</head>
-        <ab type="selectedText" xml:lang="und">Gyf hine ðonne seo mægð forlæte ⁊ him foregyldan nellen, ðonne wille ic þæt eal seo mægð sy unfah, butan ðam hand[d]ædan, gif hy him syððan ne doð mete ne munde.</ab>
-        <ab type="translation" xml:lang="en">If, however, his kindred abandon him and will not pay compensation on his behalf, it is my will that, if afterwards they give him neither food nor shelter, all of the kindred, except the delinquent, shall be free from vendetta.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif hine þonne seo mægð forlete, ⁊ him foregyldan nellen, ðonne wille ic, ðæt eall seo mægð sy unfah, butan ðam handdædan, gif hy him syððan ne doð mete ne munde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.1" corresp="#wit-h">Gif hine þonne seo mægð forlete, ⁊ him foregyldan nellen, ðon<hi rend="italic">ne</hi> wille ic, ðæt eall seo mægð sy unfah, butan ðam handdædan, gif hy him syððan ne doð mete ne munde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.1" corresp="#wit-b">Gyf hine ðonne seo mægð forlæte, ⁊ him foregyldan nellen, ðonne wille ic, þæt eal seo mægð sy unfah, butan ðam handædan, gif hy him syððan ne doð mete ne munde.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.1" corresp="#wit-q">Si eum cognatio sua deserat et pro eo gildare nolit, tunc uolo, ut omnis tribus (uel cognatio) illa sit extra factionem, preter solum malefactorem, si deinceps ei nec uictum det nec pacem.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="1.1" corresp="#wit-b">Gyf hine ðonne seo mægð forlæte ⁊ him foregyldan nellen, ðonne wille ic þæt eal seo mægð sy unfah, butan ðam hand[d]ædan, gif hy him syððan ne doð mete ne munde.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">If, however, his kindred abandon him and will not pay compensation on his behalf, it is my will that, if afterwards they give him neither food nor shelter, all the kindred, except the delinquent, shall be free from vendetta.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ihn aber die Sippe verlässt, und [sie] zu seinen Gunsten nicht zahlen wollen, dann will ich, dass diese Sippe ganz, nur ausser dem wirklichen Thäter, durch Rache unverfolgt bleibe; vorausgesetzt, sie gewähren ihm fernerhin weder Speise noch Schutz.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But if the kindred abandons him and [they] will not pay on his behalf, then I will that this whole kindred, except only the actual perpetrator, remain free from vengeance, provided they give him neither food nor protection thereafter.</ab>
       </div>
     </body>
   </text>

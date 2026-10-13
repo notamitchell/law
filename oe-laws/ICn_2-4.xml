@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>I Cn 2.4</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">ICn 2.4</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">280</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>I Cn</title></bibl>
+        <bibl type="legalText"><title>I Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">280</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">156</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness rend="bold">G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a" rend="bold"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">G(A): British Library, Cotton Nero A.i (up to, and including, cap.14.2; thereafter B.) B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">2.4</idno>
-          <idno type="editorNumber" n="Robertson">2.4</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +53,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1653 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1610 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 280.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2.4">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 2.4</head>
-        <ab type="selectedText" xml:lang="und">And þæt is þonne ærest, þæt he his agenne wer Criste ⁊ þam cyningce gesylle ⁊ mid þam hine sylfne inlagie to bote.</ab>
-        <ab type="translation" xml:lang="en">And the first condition is, that he shall give his own wergeld to Christ and to the king and by that means obtain the legal right to offer compensation.</ab>
-        <ab type="supplementaryText" xml:lang="und">And þæt is þonne ærest, þæt he his agenne wer Criste ⁊ þam cyningce gesylle, ⁊ mid þam hine sylfne inlagie to bote.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.4" corresp="#wit-g-a">And þ<hi rend="italic">æt</hi> is þonne ærest, þ<hi rend="italic">æt</hi> he his agenne wer Criste ⁊ þam cyningce gesylle, ⁊ mid þam hine sylfne inlagie to bote.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.4" corresp="#wit-a">And þæt is þonne ærost, þæt he his agenne wær Cryste ⁊ þam cyningce gesylle, ⁊ mid þam hyne sylfne inlagie to bote.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2.4" corresp="#wit-q">Et hoc tunc imprimis sit, ut weram suam (pretium natalis sui) Christo persoluat et regi, et per eam (hoc) se inlegiet ad emendandum.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="2.4" corresp="#wit-g-a">And þæt is þonne ærest, þæt he his agenne wer Criste ⁊ þam cyningce gesylle ⁊ mid þam hine sylfne inlagie to bote.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a">And the first condition is, that he shall give his own wergeld to Christ and to the king and by that means obtain the legal right to offer compensation.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">und nämlich zuerst nun, dass er sein eigenes Wergeld der Kirche und dem König zahle und hiermit sich selbst in den Friedensgenuss einkaufe zur Bussfähigkeit.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">and namely, first, that he pay his own wergild to Christ and to the king, and thereby buy himself back into the law so as to be allowed to make amends.</ab>
+        <note type="editorial">In G, ‘⁊ þam’ was written twice but erased. 2.4 is missing from the Instituta Cnuti. Liebermann compares VIII Atr 2.</note>
       </div>
     </body>
   </text>

@@ -3,36 +3,36 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Rubrics: Af 15</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
+        <title>Af Rb 15</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Rubrics-Af_15</idno>
-        <idno type="citation">Rubrics: Af 15</idno>
-        <idno type="lawCode">Rubrics: Af</idno>
+        <idno type="citation">Af Rb 15</idno>
+        <idno type="lawCode">Af Rb</idno>
         <idno type="clause">15</idno>
-        <idno type="citationKey">Rubrics: Af 15</idno>
+        <idno type="citationKey">Af Rb 15</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">16</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Alfred</title></bibl>
+        <bibl type="legalText"><title>Rubrics to Alfred’s Domboc</title> <note type="reign">Alfred, r. 871–899</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">16</biblScope></bibl>
+          <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">190</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">E</witness>
-          <witness>H</witness>
-          <witness>Q</witness>
-          <witness>G (Prol.)</witness>
-          <witness>B</witness>
-          <witness>Ot (frag.)</witness>
+          <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-g-prol"><abbr>G (Prol.)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-ot-frag"><abbr>Ot (frag.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
-        <bibl type="selectedText">E: Cambridge, Corpus Christi College, MS 173 Jurasinski&amp;Oliver, eds. B: Cambridge, Corpus Christi College, MS 383 Gesetze. The rubrics from B appear as Calibri.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">15</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +48,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 214 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 210 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 16.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="15">
-        <head>Rubrics: Af 15</head>
-        <ab type="selectedText" xml:lang="und">XV Be þam monnum þe beforan biscopum feohtað Be ðam þæt man toforan bisceope feohteð Be ðam gif man of myran folan adrifþ oððe cucealf Ðe oðrum his unmagum ætfæsteð</ab>
-        <ab type="translation" xml:lang="en">Concerning men who fight in the presence of bishops Concerning that a man fights before a bishop Concerning if a man causes abortion of a foal from a mare or a cow-calf He who afflicts the child of another</ab>
-        <ab type="supplementaryText" xml:lang="und">XV. Be þam monnum ðe beforan biscope feohtaþ.</ab>
+        <head>Af Rb 15</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15" corresp="#wit-h">XV. Be þam monnum ðe beforan biscope feohtaþ.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15" corresp="#wit-e">XV. Be þam monnum þe beforan biscopum feohtað.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="15" corresp="#wit-q">De illis qui coram episcopo pugnant.</ab>
+        <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">XV Be þam monnu<hi rend="italic">m</hi> þe beforan biscopu<hi rend="italic">m</hi> feohtað Be ða<hi rend="italic">m</hi> þ<hi rend="italic">æt</hi> man toforan b<hi rend="italic">isceope</hi> feohteð Be ða<hi rend="italic">m</hi> gif man of myran folan adrifþ oððe cucealf Ðe oðru<hi rend="italic">m</hi> his unmagu<hi rend="italic">m</hi> ætfæsteð</ab>
+        <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning men who fight in the presence of bishops Concerning that a man fights before a bishop Concerning if a man causes abortion of a foal from a mare or a cow-calf He who afflicts the child of another</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Von denjenigen Männern, die in Gegenwart von Bischöfen fechten.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of those men who fight in the presence of bishops.</ab>
       </div>
     </body>
   </text>

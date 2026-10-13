@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II As Inscr.</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,21 +20,19 @@
         <idno type="citationKey">IIAs inscr.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">150</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Æthelstan</title></bibl>
+        <bibl type="legalText"><title>II Æthelstan (Grately)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">150</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Ot</witness>
-          <witness>Ld</witness>
-          <witness>So</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-ot"><abbr>Ot</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-so"><abbr>So</abbr> <note type="manuscript">William Somner's transcript of Cotton Otho B.xi (made before the fire)</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">II As. Inscr.</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -49,15 +50,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 752 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 737 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 150.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Inscr.">
         <head><ref type="lawCode" target="law:IIAs">II As</ref> Inscr.</head>
-        <ab type="selectedText" xml:lang="und">Æþelstanes gerædnesse.</ab>
-        <ab type="translation" xml:lang="en">Æthelstan's ordinances.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="II As. Inscr." corresp="#wit-h">Æþelstanes gerænesse.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" corresp="#wit-h">Æþelstanes gerædnesse.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">Æthelstan's ordinances.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Aethelstans Gesetze. H)</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Æthelstan's laws. H)</ab>
+        <note type="editorial">Heading only in H (in red), after Walreaf; Liebermann would correct to ‘gerædn.’. B has no heading, so K is empty. Base text B = CCCC 383 (c. 1130); H = Textus Roffensis; Ot = Cotton Otho B XI (burnt; here mostly known from Somner's transcript, So).</note>
       </div>
     </body>
   </text>

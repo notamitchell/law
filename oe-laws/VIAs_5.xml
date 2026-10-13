@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>VI As 5</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">VIAs 5</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">176</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VI Æthelstan</title></bibl>
+        <bibl type="legalText"><title>VI Æthelstan (London Peace-Guild)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">176</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">5</idno>
-          <idno type="editorNumber" n="Attenborough">[5]</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +47,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 878 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 858 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 176.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5">
         <head><ref type="lawCode" target="law:VIAs">VI As</ref> 5</head>
-        <ab type="selectedText" xml:lang="und">Fifte: Þæt man ne forlǽte náne ǽscan naðer ne be norðan mearce ne be suðan, ǽr ælc man hæbbe áne ráde geríden þe hors habbe; ⁊ se þe hors nabbe, wyrce þam hlaforde þe him fore ríde oððe gánge, oð ðæt he ham cúme, buton man ǽr to rihte cuman mæge.</ab>
-        <ab type="translation" xml:lang="en">Fifth : No quest shall be abandoned either on the northern or the southern boundary until every man who has a horse has ridden out once. And he who has not a horse shall go on working for his lord, when the latter is proceeding on horse-back or on foot in his stead, until he [the lord] comes home — unless justice has already been obtained.</ab>
-        <ab type="supplementaryText" xml:lang="und">Quintim: ne intermittatur aliquod uestigium (ali[qu]a uestigatio) uel a septentrionali merca uel australi, priusquam omnis homo unam equitationem equitauerit, qui equum habeat; et qui equum non habeat, operetur domino qui equitabit pro eo uel pedes eat, donec ille domum redeat, si antea consequi non poterit.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-h">Fifte: þæt man ne forlǽte náne ǽscan naðer ne be norðan mearce ne be suðan, ǽr ælc man hæbbe áne ráde geríden þe hors habbe; ⁊ se þe hors nabbe, wyrce þam hlaforde þe him fore ríde oððe gánge, oðð he ham cúme, buton man ǽr to rihte cuman mæge.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5" corresp="#wit-q">Quintum: ne intermittatur aliquod uestigium (ali[qu]a uestigatio) uel a septentrionali merca uel australi, priusquam omnis homo unam equitationem equitauerit, qui equum habeat; et qui equum non habeat, operetur domino qui equitabit pro eo uel pedes eat, donec ille domum redeat, si antea consequi non poterit.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="[5]" corresp="#wit-h">Fifte: Þæt man ne forlǽte náne ǽscan naðer ne be norðan mearce ne be suðan, ǽr ælc man hæbbe áne ráde geríden þe hors habbe; ⁊ se þe hors nabbe, wyrce þam hlaforde þe him fore ríde oððe gánge, oð ðæt he ham cúme, buton man ǽr to rihte cuman mæge.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">Fifth : No quest shall be abandoned either on the northern or the southern boundary until every man who has a horse has ridden out once. And he who has not a horse shall go on working for his lord, when the latter is proceeding on horse-back or on foot in his stead, until he [the lord] comes home — unless justice has already been obtained.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Fünftens: dass man keine Nachforschung fallen lasse, weder nördlich der Grenze noch südlich der Grenze, bevor jeder Mann, der ein Pferd besitzt, Einen Ritt geritten hat; und wer kein Pferd besitzt, arbeite für den Herrn, welcher an seiner Statt reitet oder geht, bis dieser heimkehrt, ausser wenn man [der Bestohlene schon] vorher zu seinem Rechte gelangen kann.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Fifthly: that no search be abandoned, either north of the boundary or south of the boundary, before every man who has a horse has ridden one ride; and whoever has no horse, let him work for the lord who rides or goes in his place until he comes home, unless one [the person robbed] can get his right before that.</ab>
+        <note type="editorial">H's ‘oðð’ stands for ‘oð’ (editors correct to ‘oð ðæt’).</note>
       </div>
     </body>
   </text>

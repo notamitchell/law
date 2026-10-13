@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Iud Dei VIII 2.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,14 +19,15 @@
         <idno type="citationKey">IudDeiVIII 2.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Iudicium Dei</title></bibl>
-        <bibl type="selectedText">Ca: Cambridge, Corpus Christi College 422 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">2.1</idno>
-        </bibl>
+        <bibl type="legalText"><title>Iudicium Dei VIII (Ordeal Formula)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">415</biblScope></bibl>
+          <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
+        <listWit>
+          <witness xml:id="wit-ca"><abbr>Ca</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 422</note></witness>
+        </listWit>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -32,16 +37,21 @@
         <prefixDef ident="entry" matchPattern="(.+)" replacementPattern="entry.html?id=$1"/>
       </listPrefixDef>
     </encodingDesc>
+    <profileDesc>
+    </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2359 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2290 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 415.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2.1">
         <head><ref type="lawCode" target="law:IudDeiVIII">Iud Dei VIII</ref> 2.1</head>
-        <ab type="selectedText" xml:lang="und">þæt, gyf þu ænig ðing ðisse stale wite oððe gewita wære, ðonne gedylegie ðin heorte, ⁊ þis wæter ðe ne underfó;</ab>
-        <ab type="translation" xml:lang="en">if you know anything about this theft or have been an accomplice, then let your heart perish, and let not this water receive you.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.1" corresp="#wit-ca">þæt, gyf ðu ænig ðing ðisse stale wite oððe gewita wære, ðonne gedylegie ðin heorte, 7 þis wæter ðe ne underfó;</ab>
+        <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-ca">if you know anything about this theft or have been an accomplice, then let your heart perish, and let not this water receive you.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">dass, wenn du etwas von diesem Diebstahle weisst oder Mitwisser gewesen bist, dann vergehe dein Herz, und dies Wasser nehme dich nicht auf;</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">that, if you know anything of this theft or have been an accessory, then may your heart fail, and may this water not receive you;</ab>
       </div>
     </body>
   </text>

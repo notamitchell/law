@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>VI As 8.7</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">VIAs 8.7</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">180</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VI Æthelstan</title></bibl>
+        <bibl type="legalText"><title>VI Æthelstan (London Peace-Guild)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">180</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">8.7</idno>
-          <idno type="editorNumber" n="Attenborough">[8].7</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +47,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 890 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 870 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 180.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="8.7">
         <head><ref type="lawCode" target="law:VIAs">VI As</ref> 8.7</head>
-        <ab type="selectedText" xml:lang="und">⁊ we beodað eac urum hiremannum, þæt ælc mann wite, hwænne he his yrfe hæbbe, oððe hwænne he næbbe, on his nehebura gewitnesse, ⁊ us spór tæce, gif he hit findan ne mǽg, binnon þrim nihton; forðam we wenað þæt mænige gimeléase menn ne reccean hú heora yrfe fare, for þam ofertruan on þam friðe.</ab>
-        <ab type="translation" xml:lang="en">And we further enjoin those under our jurisdiction, that every man should note, with the witness of his neighbours, when he has, and when he ceases to have, possession of his cattle. If he cannot find them, he shall point out the trail to us within three days; for we believe that many heedless men do not care where their cattle wander, owing to their excessive confidence in the public security [which now exists].</ab>
-        <ab type="supplementaryText" xml:lang="und">Precipimus etiam hyremannis nostris, ut omnis homo sciat, quando habeat pecus suum, quando non habeat, in uicinorum suorum testimonio, et nobis uestigium monstret, si inuenire non possit, infra tres noctes; quia credimus, quod multi (plures) idiote non curant, quomodo peculium suum agat, et superconfidunt in pace nostra.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="8.7" corresp="#wit-h">⁊ we beodaþ eac urum hiremannum, þæt ælc mann wite, hwænne he his yrfe hæbbe oððe hwænne he næbbe, on his nehebura gewitnesse, ⁊ us spór tæce, gif he hit findan ne mǽg, binnon þrim nihton; forðam we wenað, þæt mænige gimeléase menn ne reccean, hú heora yrfe fare, for þam ofertruan on þam friðe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="8.7" corresp="#wit-q">Precipimus etiam hyremannis nostris, ut omnis homo sciat, quando habeat pecus suum, quando non habeat, in uicinorum suorum testimonio, et nobis uestigium monstret, si inuenire non possit, infra tres noctes; quia credimus, quod multi (plures) idiote non curant, quomodo peculium suum agat, et superconfidunt in pace nostra.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="[8].7" corresp="#wit-h">⁊ we beodað eac urum hiremannum, þæt ælc mann wite, hwænne he his yrfe hæbbe, oððe hwænne he næbbe, on his nehebura gewitnesse, ⁊ us spór tæce, gif he hit findan ne mǽg, binnon þrim nihton; forðam we wenað þæt mænige gimeléase menn ne reccean hú heora yrfe fare, for þam ofertruan on þam friðe.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And we further enjoin those under our jurisdiction, that every man should note, with the witness of his neighbours, when he has, and when he ceases to have, possession of his cattle. If he cannot find them, he shall point out the trail to us within three days; for we believe that many heedless men do not care where their cattle wander, owing to their excessive confidence in the public security [which now exists].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wir gebieten auch unseren Hintersassen, dass jedermann [den Zeitpunkt] vermerke, wann er sein Vieh hat oder wann er [es] nicht hat — unter Zeugniss seiner Nachbarn —, und wenn er es nicht finden kann, uns binnen drei Nächten die Spur weise; denn wir meinen, dass manche unachtsame Leute sich nicht kümmern, wie ihr Vieh läuft, wegen des übermässigen Vertrauens zu dieser Polizeiordnung.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And we also command our dependants that everyone note [the time] when he has his cattle or when he does not have [it] — in the witness of his neighbours —, and if he cannot find it, show us the track within three nights; for we believe that many careless people do not bother how their cattle wander, because of their excessive trust in this peace-ordinance.</ab>
       </div>
     </body>
   </text>

@@ -4,8 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Af 12</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,29 +19,25 @@
         <idno type="lawCodeAnchor">Af</idno>
         <idno type="clause">12</idno>
         <idno type="citationKey">Af 12</idno>
-        <idno type="legalText">Af (domboc)</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">56</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Alfred</title></bibl>
+        <bibl type="legalText"><title>Alfred’s Domboc</title> <note type="reign">Alfred, r. 871–899</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">56</biblScope></bibl>
+          <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">308</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">E</witness>
-          <witness>H</witness>
-          <witness>B (no Prol.)</witness>
-          <witness>G (Prol. only)</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>Bu</witness>
-          <witness>Ot (frags.)</witness>
+          <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b-no-prol"><abbr>B (no Prol.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
-        <bibl type="selectedText">E: Cambridge, Corpus Christi College, MS 173 Jurasinski and Oliver, eds.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">12</idno>
-          <idno type="editorNumber" n="Jurasinski and Oliver">14</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -56,17 +56,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 422 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 415 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 56.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="12">
         <head><ref type="lawCode" target="law:Af">Af</ref> 12</head>
-        <ab type="selectedText" xml:lang="und">{XIII} Gif mon oðres wudu bærneð, oððe heaweð unaliefedne, forgielde ælc great treow mid scill, ⁊ siððan æghwylc, sie swa fela swa hiora sie, mid V pæningim; ⁊ XXX scill to wite.</ab>
-        <ab type="translation" xml:lang="en">If a someone burns another’s wood or cuts it down without permission, let him compensate for each large tree with 5 shillings, and afterwards each [smaller tree], however many there may be, with 5 pennies; and 30 shillings as fine.</ab>
-        <ab type="secondTranslation" xml:lang="en">If one man burns or fells the trees of another, without permission [to do so], he shall pay 5 shillings for each big tree, and 5 pence for each of the rest, however many there may be; and [he shall pay] 30 shillings as a fine.</ab>
-        <ab type="supplementaryText" xml:lang="und">XIII. Gif mon oþres wudu bærneð oþþe heaweþ unalyfedne, forgylde ælc great treow mid V scll', ond siþþan ælc, swa monig swa þær sy, mid V peningum; ⁊ XXX scll' to wite.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12" corresp="#wit-h">XIII. Gif mon oþres wudu bærneð oþþe heaweþ unalyfedne, forgylde ælc great treow mid V scll', ond siþþan ælc, swa monig swa þær sy, mid V peningum; ⁊ XXX scll' to wite.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12" corresp="#wit-e">XIII. Gif mon oðres wudu bærneð oððe heaweð unaliefedne, forgielde ælc great treow mid V scill., ⁊ siððan æghwylc, sie swa fela swa hiora sie, mid V pæningum; ⁊ XXX scill. to wite.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="12" corresp="#wit-q">Si quis nemus alterius sine licentia comburat uel taliet, soluat omne grossum lignum quinque solidis, deinceps omne, quotquot sint, quinque denariis restituat, et triginta sol. wite, id est forisfacti.</ab>
+        <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="14" corresp="#wit-e">{XIII} Gif mon oðres wudu bærneð, oððe heaweð unaliefedne, forgielde ælc great treow mid scill, ⁊ siððan æghwylc, sie swa fela swa hiora sie, mid V pæningim; ⁊ XXX scill to wite.</ab>
+        <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If a someone burns another’s wood or cuts it down without permission, let him compensate for each large tree with 5 shillings, and afterwards each [smaller tree], however many there may be, with 5 pennies; and 30 shillings as fine.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If one man burns or fells the trees of another, without permission [to do so], he shall pay 5 shillings for each big tree, and 5 pence for each of the rest, however many there may be; and [he shall pay] 30 shillings as a fine.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand das Gehölz eines anderen ohne Erlaubniss abbrennt oder abhaut, so vergelte er jeden grossen Baum mit 5 Schill., und weiterhin jeden, sei es so viele als ihrer seien, mit 5 Pfennigen; und 30 Schill. zur Strafe.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If someone burns or cuts down another’s woodland without permission, let him pay for each large tree with 5 shillings, and after that for each one, however many of them there may be, with 5 pence; and 30 shillings as a fine.</ab>
       </div>
     </body>
   </text>

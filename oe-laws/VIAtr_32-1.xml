@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>VI Atr 32.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">VIAtr 32.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">254</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VI Atr</title></bibl>
+        <bibl type="legalText"><title>VI Æthelred (Enham)</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">254</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">100</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">K</witness>
-          <witness>D (incomplete)</witness>
+          <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
+          <witness xml:id="wit-d-incomplete"><abbr>D (incomplete)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
         </listWit>
-        <bibl type="selectedText">K: British Library, Cotton Claudius A.iii Robertson, ed.</bibl>
-        <bibl type="supplementaryText">D: Cambridge, Corpus Christi College, MS 201 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">32.1</idno>
-          <idno type="editorNumber" n="Robertson">32.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +46,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1309 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1276 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 254.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="32.1">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 32.1</head>
-        <ab type="selectedText" xml:lang="und">⁊ swa ymbe feos bote þæt an mynet gange ofer ealle þas þeode butan ælcon false.</ab>
-        <ab type="translation" xml:lang="en">And the coinage shall be improved by having one currency, free from all adulteration, throughout all the country.</ab>
-        <ab type="supplementaryText" xml:lang="und">and swa ymbe feos bote, þæt an mynet gange ofer ealle þas þeode buton ælcon false.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="32.1" corresp="#wit-d-incomplete">and swa ymbe feos bote, þ<hi rend="italic">æt</hi> an mynet gange ofer ealle þas þeode buton ælcon false.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="32.1" corresp="#wit-k">⁊ swa ymbe feos bote þæt an mynet gange ofer ealle þas þeode butan ælcon false.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And the coinage shall be improved by having one currency, free from all adulteration, throughout all the country.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">und so auf Münzreform, dass Eine Münze über all dies Land hin gehe ohne jedes Falsch.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">and on reform of the coinage, so that one coinage may be current throughout all this nation without any falseness.</ab>
+        <note type="editorial">Liebermann compares III Eg 8.</note>
       </div>
     </body>
   </text>

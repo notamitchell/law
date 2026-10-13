@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>IV Eg 15</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,24 +18,20 @@
         <idno type="lawCodeAnchor">IVEg</idno>
         <idno type="clause">15</idno>
         <idno type="citationKey">IVEg 15</idno>
-        <idno type="legalText">IV Edg</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">214</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>IV Edgar</title></bibl>
+        <bibl type="legalText"><title>IV Edgar (Whitbordesstan)</title> <note type="reign">Edgar, r. 957/9–975</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">214</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">38</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">C</witness>
-          <witness>F</witness>
-          <witness>C (Latin)</witness>
+          <witness xml:id="wit-c" rend="bold"><abbr>C</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
+          <witness xml:id="wit-f"><abbr>F</abbr> <note type="manuscript">London, British Library, Cotton Nero E.i</note></witness>
+          <witness xml:id="wit-c-latin"><abbr>C (Latin)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">C: Cambridge, Corpus Christi College, MS 265 Gesetze</bibl>
-        <bibl type="supplementaryText">F: British Library, Cotton Nero E.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">15</idno>
-          <idno type="editorNumber" n="Robertson">15</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,16 +50,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1038 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1011 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 214.</change>
+      <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 39.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="15">
         <head><ref type="lawCode" target="law:IVEg">IV Eg</ref> 15</head>
-        <ab type="selectedText" xml:lang="und">Þonne fyrðrige Oslác eorl ⁊ eall here þe on his ealdordome wunað, þæt ðis stande, Gode to lofe ⁊ ure ealra saula to ðearfe ⁊ eallum folce to friðe.</ab>
-        <ab type="translation" xml:lang="en">Further, Earl Oslac and all the population dwelling in his earldom shall preserve the observance of this, to the praise of God, and for the good of the souls of all of us, and the security of the whole nation.</ab>
-        <ab type="supplementaryText" xml:lang="und">Þonne fyrþrige Oslác eorl ⁊ éal here, þe on his ealdor[do]me wunað, þæt þis stande, Gode to lofe ⁊ ure ealra saula to þearfe ⁊ eallum folce to friðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15" corresp="#wit-f">Þonne fyrþrige Oslác eorl ⁊ éal here, þe on his ealdor[do]me wunað, þ<hi rend="italic">æt</hi> þis stande, Gode to lofe ⁊ ure ealra saula to þearfe ⁊ eallum folce to friðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15" corresp="#wit-c">Þonne fyrðrige Oslác eorl ⁊ eall here, þe on ðis ealdordome wunað, þæt ðis stande, Gode to lofe ⁊ ure ealra saula to ðearfe ⁊ eallum folce to friðe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="15" corresp="#wit-q">ad pacis abundantiam Deoque, omnium saluatori, ad laudem et magnificentiam et nobis omnibus in hac terrena peregrinatione degentibus ad uite longinquitatem nostrorumque peccaminum abolitionem et remissionem.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="15" corresp="#wit-c">Þonne fyrðrige Oslác eorl ⁊ eall here þe on his ealdordome wunað, þæt ðis stande, Gode to lofe ⁊ ure ealra saula to ðearfe ⁊ eallum folce to friðe.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">Further, Earl Oslac and all the population dwelling in his earldom shall promote the observance of this, to the praise of God, and for the good of the souls of all of us, and the security of the whole nation.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Nun befördere Earl Oslac und das ganze ‘Heer’ [der Nordleute], das in seinem [Northumbrischen] Herzogthume wohnt, dass Obiges gelte, Gott zum Lobe und zum Nutzen unser aller Seelen und allem Volke zur Sicherheit.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Now let Earl Oslac and the whole ‘army’ [of the Northmen] which lives in his [Northumbrian] ealdormanry promote that the above stand, to the praise of God and the benefit of all our souls and the security of all the people.</ab>
+        <note type="editorial">F's ‘ealdor[do]me’ is corrected in other ink from ‘ealdorme’.</note>
       </div>
     </body>
   </text>

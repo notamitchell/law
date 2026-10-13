@@ -3,33 +3,32 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Becw 3.2</title>
-        <respStmt><resp>Translation of the selected text</resp><name>Wormald, Making</name></respStmt>
+        <title>Becwæð 3.2</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#wormald">Wormald</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Becwaeth_3-2</idno>
-        <idno type="citation">Becw 3.2</idno>
-        <idno type="lawCode">Becw</idno>
+        <idno type="citation">Becwæð 3.2</idno>
+        <idno type="lawCode">Becwæð</idno>
         <idno type="lawCodeAnchor">Becwaeth</idno>
         <idno type="clause">3.2</idno>
         <idno type="citationKey">Becwaeth 3.2</idno>
-        <idno type="legalText">Becw.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">400</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Becwæð</title></bibl>
+        <bibl type="legalText"><title>Becwæð (Bequest)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">400</biblScope></bibl>
+          <bibl xml:id="wormald" type="translation">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">3.2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -43,17 +42,21 @@
       <creation><note type="promulgation">c.1020–c.1060; c.990–c.1020 (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2131 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2076 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 400.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3.2">
-        <head><ref type="lawCode" target="law:Becwaeth">Becw</ref> 3.2</head>
-        <ab type="selectedText" xml:lang="und">Do, swa ic lære: beo ðe be þinum 7 læt [m]e be minum; ne gyrne ic ðines, ne læðes ne landes, ne sace ne socne; ne ðu mines ne ðærft, ne mynte ic ðe nan ðing.</ab>
-        <ab type="translation" xml:lang="en">Do as I instruct: you may stay with yours and leave me with mine: I do not grudge what is yours, lathe or landsake or soke; you have no need for mine, nor you I devise you anything.</ab>
-        <ab type="supplementaryText" xml:lang="und">Do, swa ic lære: beo ðe be ðinum 7 læt me be minum; ne gyrne ic ðines, ne læðes ne landes, ne sace ne socne; ne ðu mines ne ðearft, ne mynte ic ðe nan ðing.</ab>
-        <ab type="supplementaryTranslation" xml:lang="en">Do as I instruct: you may stay with yours and leave me with mine: I do not grudge what is yours, lathe or landsake or soke; you have no need for mine, nor you I devise you anything.</ab>
+        <head><ref type="lawCode" target="law:Becwaeth">Becwæð</ref> 3.2</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.2" corresp="#wit-b">Do, swa ic lære: beo ðe be ðinum 7 læt me be minu<hi rend="italic">m</hi>; ne gyrne ic ðines, ne læðes ne landes, ne sace ne socne; ne ðu mines ne ðearft, ne mynte ic ðe nan ðing.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.2" corresp="#wit-h">Do, swa ic lære: beo ðe be þinu<hi rend="italic">m</hi> 7 læt [m]e be minu<hi rend="italic">m</hi>; ne gyrne ic ðines, ne læðes ne landes, ne sace ne socne; ne ðu mines ne ðærft, ne mynte ic ðe nan ðing.</ab>
+        <ab type="translation" xml:lang="en" source="#wormald" corresp="#wit-h">Do as I instruct: you may stay with yours and leave me with mine: I do not grudge what is yours, lathe or landsake or soke; you have no need for mine, nor you I devise you anything.</ab>
+        <ab type="translation" xml:lang="en" source="#wormald" corresp="#wit-b">Do as I instruct: you may stay with yours and leave me with mine: I do not grudge what is yours, lathe or landsake or soke; you have no need for mine, nor you I devise you anything.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Handle wie ich ermahne: bleibe dir bei Deinem und lass mich bei Meinem; ich begehre nicht das Deine, weder Gaubezirk noch Land, noch Gerichtsbarkeit; noch bedarfst du des Meinen, noch denk ich dir etwas zu.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Do as I counsel: keep to what is yours and leave me to what is mine; I do not desire what is yours, neither lathe nor land, nor sake nor soke [jurisdiction]; nor do you need what is mine, nor do I intend anything for you.</ab>
+        <note type="editorial">‘sace ne socne’ (process and inquiry) is an alliterating pair, already a single concept. B's ‘sace’ is corrected from ‘sacene’; H reads ‘ðærft’, B's ‘ðearft’ is better. In B II Atr follows; in H the rest of the page is blank.</note>
       </div>
     </body>
   </text>

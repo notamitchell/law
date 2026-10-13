@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>III Eg 8.3</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,27 +18,22 @@
         <idno type="lawCodeAnchor">IIIEg</idno>
         <idno type="clause">8.3</idno>
         <idno type="citationKey">IIIEg 8.3</idno>
-        <idno type="legalText">III Edg</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">204</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>III Edgar</title></bibl>
+        <bibl type="legalText"><title>III Edgar (Andover)</title> <note type="reign">Edgar, r. 957/9–975</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">204</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">28</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G(A)</witness>
-          <witness>A</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>So</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-so"><abbr>So</abbr> <note type="manuscript">William Somner's transcript of Cotton Otho B.xi (made before the fire)</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A. i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">8.3</idno>
-          <idno type="editorNumber" n="Robertson">8.3</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -53,16 +51,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 999 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 973 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 204.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="8.3">
         <head><ref type="lawCode" target="law:IIIEg">III Eg</ref> 8.3</head>
-        <ab type="selectedText" xml:lang="und">⁊ gif hwa hi þonne undeoror sille, oððe eawunga oððe dearnunga, gilde ægðer þam cynge LX scill' ge se þe hi sille ge se þe hi bicge.</ab>
-        <ab type="translation" xml:lang="en">And if anyone sells it at a cheaper rate, either openly or secretly, both he who sells it and he who buys it, shall pay 60 shillings to the king.</ab>
-        <ab type="supplementaryText" xml:lang="und">[Not in G(A), Ld.] ⁊ gyf hwa hi þonne undeoror sylle, oððe eawunga oððe dearnunga, gylde ægþer þam cynge LX seyllinga ge se þe hy sylle ge se ðe hy bicge. [A]</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="8.3">[Not in G(A), Ld.] ⁊ gyf hwa hi þon<hi rend="italic">ne</hi> undeoror sylle, oððe eawunga oððe dearnunga, gylde ægþer þam cynge LX seyllinga ge se þe hy sylle ge se ðe hy bicge. [A]</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="8.3" corresp="#wit-d">⁊ gif hwa hi þonne undeoror sille, oððe eawunga oððe dearnunga, gilde ægðer þam cynge LX scill' ge se þe hi sille ge se þe hi bicge.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And if anyone sells it at a cheaper rate, either openly or secretly, both he who sells it and he who buys it, shall pay 60 shillings to the king.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Und wenn sie jemand nun billiger verkauft, entweder öffentlich oder heimlich, so zahle sowohl wer sie verkauft, als wer sie kauft dem König 60 (40 D) Schill. A D G2.)</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(And if anyone sells it more cheaply, either openly or secretly, let both the seller and the buyer pay the king 60 (40, D) shillings. A D G2.)</ab>
+        <note type="editorial">Not in G or Ld; K gives A's text. D reads XL, to be corrected to LX from A and G2. In A, a charter of Oswald of York (c. 972) follows in another hand, then I–II Cn; in D and G2, V Atr follows in the same hand.</note>
       </div>
     </body>
   </text>

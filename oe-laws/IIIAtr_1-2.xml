@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>III Atr 1.2</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">IIIAtr 1.2</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">228</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>III Atr</title></bibl>
+        <bibl type="legalText"><title>III Æthelred (Wantage)</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">228</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">64</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Robertson, ed.</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1.2</idno>
-          <idno type="editorNumber" n="Robertson">1.2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -49,16 +48,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1104 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1074 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 228.</change>
+      <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 65.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 64.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.2">
         <head><ref type="lawCode" target="law:IIIAtr">III Atr</ref> 1.2</head>
-        <ab type="selectedText" xml:lang="und">And þæt grið þæt man sylleð on I burhgaþinðe, bete man þæt mid VI hund ̅r and þæ[t] man sylle on wǽpentáke, bete man þæt mid mid hund ̅r, gif hit man brecð,; and þæt man sylle on éalhuse, bete man þæt æt deadum menn mid VI healfmearc ⁊ æt cwicon mid XII óran.</ab>
-        <ab type="translation" xml:lang="en">And for the breach of peace established on the court of one borough, 600 [of silver] shall be paid as compensation, and 100 for that established in a wapentake, In the case of breach of peace in an ale-house, 6 half-marks shall be paid as compensation if a man is slain, and 12 ores if no-one is slain.</ab>
-        <ab type="supplementaryText" xml:lang="und">Et pax que dabitur in unius burgi þincþa, emendetur VI hund'; et ubi dabiture in wapentako, emendetur infracta pax I hundreto; et pax que dabitur in ealahus, emendetur de homine occiso sex dimidiis marcis, de uiuo duodecim oris.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-q">Et pax que dabitur in unius burgi þincþa, emendetur VI hund'; et ubi dabitur in wapentako, emendetur infracta pax I hundreto; et pax que dabitur in ealahus, emendetur de homine occiso sex dimidiis marcis, de uiuo duodecim oris.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-h">And þæt grið, þæt man sylleð on I burhgaþinðe, bete man þæt mid VI hundr; and þær man sylle on wǽpentáke, bete man þæt mid hundr, gif hit man brecð; and þæt man sylle on éalahuse, bete man þæt æt deadum menn mid VI healfmarce ⁊ æt cwicon mid XII óran.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="1.2" corresp="#wit-h">And þæt grið þæt man sylleð on I burhgaþinðe, bete man þæt mid VI hund ̅r and þæ[t] man sylle on wǽpentáke, bete man þæt mid hund ̅r, gif hit man brecð; and þæt man sylle on éalahuse, bete man þæt æt deadum menn mid VI healfmarce ⁊ æt cwicon mid XII óran.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h">And for the breach of peace established in the court of one borough, 600 [of silver] shall be paid as compensation, and 100 for that established in a wapentake, In the case of breach of the peace in an ale-house, 6 half-marks shall be paid as compensation if a man is slain, and 12 ores if no-one is slain.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und der Friedensschutz, der gegeben wird im Gericht Einer Stadt, den büsse man mit 6 Hundert; und der im Wapentake gegeben wird, den büsse man mit 1 Hundert, wenn man ihn bricht; und der im Bierhause gegeben wird, den büsse man, [wenn man da] einen Menschen erschlagen, mit 6 Halbmark, und [wenn Angegriffener] lebt, mit 12 Ör.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And the protection which is given in the court of a single borough, let it be compensated with 6 hundred; and that which is given in the wapentake, let it be compensated with 1 hundred, if it is broken; and that which is given in an alehouse, let it be compensated, [if] a person [is] killed [there], with 6 half-marks, and [if the person attacked] lives, with 12 ores.</ab>
+        <note type="editorial">H's ‘burhgaþinðe’ (with I written above ‘ga’ by the scribe) is emended by editors to ‘burhgeþincðe’; ‘þær’ should be ‘þæt’, but the archetype had ‘þær’ (Quadr.).</note>
       </div>
     </body>
   </text>

@@ -20,7 +20,16 @@ const decode = s => s
     .trim();
 const pick = (xml, re) => { const m = xml.match(re); return m ? decode(m[1]) : ''; };
 const idno = (xml, type) => pick(xml, new RegExp('<idno type="' + type + '">([^<]*)</idno>'));
-const ab = (xml, type) => [...xml.matchAll(new RegExp('<ab type="' + type + '"[^>]*>([\\s\\S]*?)</ab>', 'g'))].map(m => decode(m[1])).filter(Boolean);
+const ab = (xml, type, lang) => [...xml.matchAll(new RegExp('<ab type="' + type + '"([^>]*)>([\\s\\S]*?)</ab>', 'g'))]
+    .filter(m => !lang || new RegExp('xml:lang="' + lang + '"').test(m[1]))
+    .map(m => decode(m[2])).filter(Boolean);
+// English translations, the modern editors' first and the English of Liebermann's German last.
+const english = xml => {
+    const all = [...xml.matchAll(/<ab type="translation"([^>]*)>([\s\S]*?)<\/ab>/g)]
+        .filter(m => !/xml:lang="de"/.test(m[1]));
+    return all.filter(m => !/ana="#fromGerman"/.test(m[1])).concat(all.filter(m => /ana="#fromGerman"/.test(m[1])))
+        .map(m => decode(m[2])).filter(Boolean);
+};
 const terms = (xml, n) => {
     const k = xml.match(new RegExp('<keywords n="' + n + '">([\\s\\S]*?)</keywords>'));
     return k ? [...k[1].matchAll(/<term>([^<]*)<\/term>/g)].map(m => decode(m[1])).filter(Boolean) : [];
@@ -42,8 +51,8 @@ const clauses = catalogue.map(c => {
         people: terms(xml, 'people'),
         places: terms(xml, 'locations'),
         text: ab(xml, 'liebermannText').concat(ab(xml, 'editionText'), ab(xml, 'selectedText'), ab(xml, 'supplementaryText')).join(' '),
-        gloss: ab(xml, 'translation')[0] || '',
-        en: ab(xml, 'translation').concat(ab(xml, 'secondTranslation'), ab(xml, 'supplementaryTranslation')).join(' '),
+        gloss: english(xml)[0] || '',
+        en: english(xml).concat(ab(xml, 'secondTranslation'), ab(xml, 'supplementaryTranslation')).join(' '),
         row: c.sheetRow
     };
 });   // in the order of oe-laws/index.json, which is the order of the spreadsheets

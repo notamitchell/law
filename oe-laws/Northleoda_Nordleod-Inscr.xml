@@ -3,33 +3,35 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Norðleod. Norðleod Inscr.</title>
-        <respStmt><resp>Translation of the selected text</resp><name>Whitelock, English Historical Documents I</name></respStmt>
+        <title>Norðleoda Inscr.</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Northleoda_Nordleod-Inscr</idno>
-        <idno type="citation">Norðleod. Norðleod Inscr.</idno>
-        <idno type="lawCode">Norðleod.</idno>
+        <idno type="citation">Norðleoda Inscr.</idno>
+        <idno type="lawCode">Norðleoda</idno>
         <idno type="lawCodeAnchor">Northleoda</idno>
-        <idno type="clause">Norðleod Inscr.</idno>
-        <idno type="citationKey">Northleoda norðleodinscr.</idno>
+        <idno type="clause">Inscr.</idno>
+        <idno type="citationKey">Northleoda inscr.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">458</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Norðleoda laga</title></bibl>
+        <bibl type="legalText"><title>Norðleoda laga (Law of the North People)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">458</biblScope></bibl>
+          <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979)</bibl>
+          <bibl xml:id="rabin" type="translation">Andrew Rabin, <title>The Political Writings of Archbishop Wulfstan of York</title> (Manchester: Manchester University Press, 2015)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>H</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Gesetze</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">Norðleod Inscr.</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,17 +49,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2221 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2161 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 458.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
-      <div type="clause" n="Norðleod Inscr.">
-        <head><ref type="lawCode" target="law:Northleoda">Norðleod.</ref> Norðleod Inscr.</head>
-        <ab type="selectedText" xml:lang="und">Norðleoda laga</ab>
-        <ab type="translation" xml:lang="en">The law of the North people</ab>
-        <ab type="supplementaryText" xml:lang="und">Be wergylde</ab>
-        <ab type="supplementaryTranslation" xml:lang="en">Concerning Wergild</ab>
+      <div type="clause" n="Inscr.">
+        <head><ref type="lawCode" target="law:Northleoda">Norðleoda</ref> Inscr.</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Inscr." corresp="#wit-h">Be wergylde</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Inscr." corresp="#wit-d">Norðleoda laga</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">The law of the North people</ab>
+        <ab type="translation" xml:lang="en" source="#rabin" corresp="#wit-h">Concerning Wergild</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Nordleute-Recht. (Von Wergeld[ern Ld] hlq).</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">The law of the North-people. (Of wergild[s, Ld] hlq).</ab>
+        <note type="editorial">Liebermann prints D (Cambridge, Corpus Christi College 201, p. 102, after Geþyncðo, c. 1060), H (Textus Roffensis f. 93v, after Geþyncðo, c. 1120) and Ld (Lambarde's print), with the Quadripartitus. K is H; D is also given here. H's heading is in red. ‘Nordleute’ are the Anglo-Scandinavians of northern England. Liebermann dates the core c. 920–954; the language of the archetype and the compilation need only date from c. 1050; the compiler perhaps also wrote or knew Geþyncðo and Mirce, and was perhaps a Mercian. ‘hlq’ is the exemplar of H and lq (lq = exemplar of Ld and the Quadripartitus). Clause number standardised from ‘Norðleod Inscr.’.</note>
       </div>
     </body>
   </text>

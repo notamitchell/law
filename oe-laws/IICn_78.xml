@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Cn 78</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,26 +20,22 @@
         <idno type="citationKey">IICn 78</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">364</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Cnut</title></bibl>
+        <bibl type="legalText"><title>II Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">364</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">214</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">78</idno>
-          <idno type="editorNumber" n="Robertson">78</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +53,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1935 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1891 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 364.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 214.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="78">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 78</head>
-        <ab type="selectedText" xml:lang="und">Be ðam ðe toforan his laforde feallað. And se man ðe on fyrdunge ætforan his hlaforde fealle, sy hit innon lande, sy hit ut of lande, beon ða heregeata forgyfene, ⁊ fon ða yrfenuman to lande ⁊ to æhte ⁊ scyften hit swiðe rihte.</ab>
-        <ab type="translation" xml:lang="en">Concerning the man who falls before his lord. And the heriots of the man who falls before his lord during a campaign, whether within the country or abroad, shall be remitted, and the heirs shall succeed to his land and his property and make a very just division of the same.</ab>
-        <ab type="supplementaryText" xml:lang="und">And se man, þe on þam fyrdunge ætforan his hlaforde fealle, si hit innan lande, si hit of lande, beon ða heregeata forgyfene; ⁊ fon þa erfenuman to lande ⁊ to æhtan ⁊ scyftan hit swyðe rihte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="78" corresp="#wit-g-a">And se man, þe on þam fyrdunge ætforan his hlaforde fealle, si hit innan lande, si hit of lande, beon ða heregeata forgyfene; ⁊ fon þa erfenuman to lande ⁊ to æhtan ⁊ scyftan hit swyðe rihte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="78" corresp="#wit-a">⁊ se man þe on þam fyrdunge ætforan his hlaforde fealle, sy hit innan lande, sy hit of lande, beon þa heregeata forgyfene; ⁊ fon þa yrfenuman to lande ⁊ to æhtan ⁊ scyftan hit swiðe rihte.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="78" corresp="#wit-q">Et qui in bello ante dominum suum ceciderit, sit hoc in terra sit alibi: sint releuationes condonatę; et habeant heredes eius terram et pecuniam eius (suam) et recte diuidant inter se.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="78" corresp="#wit-b">Be ðam ðe toforan his laforde fealleð. And se man ðe on fyrdunge ætforan his hlaforde fealle, sy hit innon lande, sy hit ut of lande, beon ða heregeata forgyfene, ⁊ fon ða yrfenuman to lande ⁊ to æhte ⁊ scyften hit swiðe rihte.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">Concerning the man who falls before his lord. And the heriots of the man who falls before his lord during a campaign, whether within the country or abroad, shall be remitted, and the heirs shall succeed to his land and his property and make a very just division of the same.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Von dem der im Angesicht seines Herrn fällt. B) Und der Mann, der im Kriegszuge fällt in Gegenwart seines Herrn, sei es im Land, sei es fern vom Land: seien die Heergewæte [seinen Erben] erlassen; und mögen die Erbnehmer Land und Fahrhabe ergreifen und es sehr rechtlich theilen.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of him who falls in his lord's presence. B) And the man who falls on campaign in the presence of his lord, whether in the land or away from the land: let the heriots be remitted [to his heirs]; and let the heirs take the land and movable goods and divide it very justly.</ab>
       </div>
     </body>
   </text>

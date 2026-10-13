@@ -4,7 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Wer 4</title>
-        <respStmt><resp>Translation of the selected text</resp><name>Wormald, Making</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#wormald">Wormald</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -13,23 +16,19 @@
         <idno type="lawCode">Wer</idno>
         <idno type="clause">4</idno>
         <idno type="citationKey">Wer 4</idno>
-        <idno type="legalText">Wer.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">392</biblScope>
-        </bibl>
         <bibl type="legalText"><title>Wergeld</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">392</biblScope></bibl>
+          <bibl xml:id="wormald" type="translation">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">4</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +46,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2104 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2051 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 392.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4">
         <head>Wer 4</head>
-        <ab type="selectedText" xml:lang="und">Ðonne þæt gedon sy, ðonne rære man cyninges munde, ðæt is ðæt hy ealle gemænum handum of ægðere mægðe on anum wæpne ðam semende syllan, ðæt cyninges mund stande.</ab>
-        <ab type="translation" xml:lang="en">When it is done, the king's mund is to be established, that is that all from either kin give a common pledge on a single weapon to the arbitrator that the king's mund will stand.</ab>
-        <ab type="supplementaryText" xml:lang="und">Ðonne þæt gedon sy, ðonne rære man cyniges munde, þæt is þæt hy ealle gemænum handum of ægðere mægðe on anum wæpne ðam semende syllan, þæt cyniges mund stande.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-b">Ðon<hi rend="italic">ne</hi> þ<hi rend="italic">æt</hi> gedon sy, ðonne rære man cyniges munde, þ<hi rend="italic">æt</hi> is þ<hi rend="italic">æt</hi> hy ealle gemænu<hi rend="italic">m</hi> handu<hi rend="italic">m</hi> of ægðere mægðe on anu<hi rend="italic">m</hi> wæpne ðam semende syllan, þ<hi rend="italic">æt</hi> cyniges mund stande.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-h">Ðonne þæt gedon sy, ðonne rære man cyninges munde, ðæt is ðæt hy ealle gemænu<hi rend="italic">m</hi> handu<hi rend="italic">m</hi> of ægðere mægðe on anum wæpne ðam semende syllan, ðæt cyninges mund stande.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4" corresp="#wit-q">Cum hoc factum fuerit, eleuetur inter eos regis munde (id est pax), hoc est, ut omnes communi manu de utraque cognatione in uno armorum mediatori dent, quod regis munde stet inter eos.</ab>
+        <ab type="translation" xml:lang="en" source="#wormald" corresp="#wit-h">When it is done, the king's <hi rend="italic">mund</hi> is to be established, that is that all from either kin give a common pledge on a single weapon to the arbitrator that the king's <hi rend="italic">mund</hi> will stand.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Nachdem dies vollbracht ist, werde dann Königs-Friedensschutz errichtet, d. h. dass sie alle von beiden Sippen [des Erschlagenen und des Totschlägers] mit gemeinsamer Hand auf Eine Waffe dem Schiedsrichter geloben, dass Königs-Friedensschutz bestehen werde.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">When this is done, let the king's protection then be raised, that is, that all of them from both kindreds [of the slain and of the slayer] pledge to the arbitrator with joint hands on one weapon that the king's protection shall stand.</ab>
+        <note type="editorial">Liebermann compares II Em 7.3.</note>
       </div>
     </body>
   </text>

@@ -8,6 +8,8 @@
         <respStmt><resp>Edition of the text</resp><name ref="#oliver">Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#oliver">Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -22,11 +24,12 @@
         <bibl type="legalText"><title>Æthelberht’s Code</title> <note type="reign">Æthelberht, r. ?584–616</note></bibl>
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">6</biblScope></bibl>
-          <bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002)</bibl>
+          <bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002), p. <biblScope unit="page">70</biblScope></bibl>
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-h">H</witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -44,7 +47,8 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 68 of the spreadsheet Aethelberht.xlsx.</change>
+      <change when="2026-10-14">Generated from row 67 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 6.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -53,8 +57,10 @@
         <head><ref type="lawCode" target="law:Abt">Abt</ref> 51[b]</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="51[b]" corresp="#wit-h">se toþ se þanne bistandeþ: IIII scill';</ab>
         <ab type="editionText" xml:lang="ang" source="#oliver" n="48.1" corresp="#wit-h">Se toþ se þanne bi standeþ, IIII sciƚƚ.</ab>
-        <ab type="translation" xml:lang="en" source="#oliver">[For] that [tooth] which is beside there, 4 shillings.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough">for each of the teeth which stand next to these, 4 shillings [shall be paid as compensation];</ab>
+        <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">[For] that [tooth] which is beside there, 4 shillings.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">for each of the teeth which stand next to these, 4 shillings [shall be paid as compensation];</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">der Zahn, welcher dann [je] daneben steht, 4 Schill.;</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">the tooth which then stands next to [each of] them, 4 shillings;</ab>
       </div>
     </body>
   </text>

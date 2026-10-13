@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>I As Prol.</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,21 +20,18 @@
         <idno type="citationKey">IAs prol.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">146</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Æthelstan</title> <note type="reign">r. 924–939</note></bibl>
+        <bibl type="legalText"><title>I Æthelstan (Tithes)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">146</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">G(B)</witness>
-          <witness>D</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-g-b" rend="bold"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">G(B): British Library, Cotton Nero A.i Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">D: Cambridge, Corpus Christi College, MS 201 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">Prol.</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -50,16 +50,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 740 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 727 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 146.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Prol.">
         <head><ref type="lawCode" target="law:IAs">I As</ref> Prol.</head>
-        <ab type="selectedText" xml:lang="und">Ic Æþelstan cyng, mid geþehte Wulfhelmes [mines] arcebiscopes ⁊ eac minra oþerra biscopa, cyþe þam gerefan to gehwylcere byrig ⁊ eow bidde on Godes naman ⁊ on ealra his haligra ⁊ eac be minum freondscipe beode, þæt ge ærest of minum agenum góde agyfan þa teoþunga, ægþer ge on cwicum ceape ge on þæs geares eorðwæstmum, swa man rihtast mæge oððe gemetan oððe getellan oððe awegan; ⁊ þa biscopas þonne þæt ylce don on heora agenum gode, ⁊ mine ealdormen ⁊ mine gerefan þæt sylfe.</ab>
-        <ab type="translation" xml:lang="en">I, King Æthelstan, with the advice of my archbishop Wulfhelm, and my other bishops also, inform the reeve in every borough, and pray you in the name of God and all of His saints, and command you also by my friendship, that in the first place you render tithes of my own property, both in livestock and in the yearly fruits of the earth, measuring, counting and weighing [them] in accordance with the strictest accuracy. And the bishops shall do the same with their own property, and my ealdormen and my reeves likewise.</ab>
-        <ab type="supplementaryText" xml:lang="und">Æðelstan cyningc mid geþeahte Wulfhelm arcebiscop ⁊ eac minra oðera biscopa, cyð ðam gerefan to hwilcere birig ⁊ eow bidde on Godes naman ⁊ on eallum his haligra ⁊ eac be minum freondscipe, þæt ge ærest of minum agenum gode agifan ða teoðunga, ægðer ge on cwicum ceape ge on ðæs geares eorðwæstmum, swa man rihtost mage oððe gemetan oððe getellan oððe awegan; ⁊ þa biscopas þonne þæt ilce don on heora agenum gode, ⁊ mine ealdormen ⁊ mine gerefan þæt silfe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol." corresp="#wit-d">Æðelstan cyningc mid geþeahte Wulfhelm arcebiscop ⁊ eac minra oðera biscopa, cyð ða<hi rend="italic">m</hi> gerefan to hwilcere birig ⁊ eow bidde on Godes naman ⁊ on eallu<hi rend="italic">m</hi> his haligra ⁊ eac be minu<hi rend="italic">m</hi> freondscipe, þ<hi rend="italic">æt</hi> ge ærest of minu<hi rend="italic">m</hi> agenu<hi rend="italic">m</hi> gode agifan ða teoðunga, ægðer ge on cwicu<hi rend="italic">m</hi> ceape g<hi rend="italic">e</hi> on ðæs geares eorðwæstmu<hi rend="italic">m</hi>, swa man rihtost mage oððe gemetan oððe g<hi rend="italic">e</hi>tellan oððe awegan; ⁊ þa biscopas þonne þ<hi rend="italic">æt</hi> ilce don on heora agenu<hi rend="italic">m</hi> gode, ⁊ mine ealdorm<hi rend="italic">en</hi> ⁊ mine gerefan þ<hi rend="italic">æt</hi> silfe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol." corresp="#wit-g-b">Ic Æþelstan cyng, mid geþehte Wulfhelmes arcebiscopes ⁊ eac minra oþerra biscopa, cyþe þam gerefan to gehwylcere byrig ⁊ eow bidde on Godes naman ⁊ on ealra his haligra ⁊ eac be minum freondscipe beode, þæt ge ærest of minum agenum góde agyfan þa teoþunga, ægþer ge on cwicum ceape ge on þæs geares eorðwæstmum, swa man rihtast mæge oððe gemetan oððe getellan oððe awegan; ⁊ þa biscopas þonne þæt ylce don on heora agenum gode, ⁊ mine ealdormen ⁊ mine gerefan þæt sylfe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol." corresp="#wit-ld">Ic Æþelstane cyning, mid geþeahte Wulfhelmes mines hehbisceopes ⁊ oþra minra bisceopa, bebeode eallum minum gereafum ðurh ealle mine rice on þæs Drihtænes nama ⁊ ealra halgena ⁊ for mine lufu, þæt hi ærost mines agenes æhtes ðam teoþe gesyllaþ, ge ðæs libbēdes yrfes ge ðæs gearlices westmes; ⁊ þæt ilce gedó eac ða bisceopas heora gehwylera ⁊ eac mine ealdormanna ⁊ gereafa.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="Prol." corresp="#wit-q">Ego Æþelstanus rex, consilio Wulfhelmes archiepiscopi mei et aliorum episcoporum meorum, mando prepositis meis omnibus in toto regno meo et precipio in nomine Domini et sanctorum omnium et super amicitiam meam, ut in primis de meo proprio reddant Deo decimas utriusque in uiuente captali et in ornotinis frugibus terre; et episcopi (mei) similiter faciant de suo proprio et aldermanni mei et prepositi mei.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" corresp="#wit-g-b">Ic Æþelstan cyng, mid geþehte Wulfhelmes [mines] arcebiscopes ⁊ eac minra oþerra biscopa, cyþe þam gerefan to gehwylcere byrig ⁊ eow bidde on Godes naman ⁊ on ealra his haligra ⁊ eac be minum freondscipe beode, þæt ge ærest of minum agenum góde agyfan þa teoþunga, ægþer ge on cwicum ceape ge on þæs geares eorðwæstmum, swa man rihtast mæge oððe gemetan oððe getellan oððe awegan; ⁊ þa biscopas þonne þæt ylce don on heora agenum gode, ⁊ mine ealdormen ⁊ mine gerefan þæt sylfe.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-g-b">I, King Æthelstan, with the advice of my archbishop Wulfhelm, and my other bishops also, inform the reeve in every borough, and pray you in the name of God and all of His saints, and command you also by my friendship, that in the first place you render tithes of my own property, both in livestock and in the yearly fruits of the earth, measuring, counting and weighing [them] in accordance with the strictest accuracy. And the bishops shall do the same with their own property, and my <hi rend="italic">ealdormen</hi> and my reeves likewise.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Ich, König Aethelstan, mit Beirath (meines lq) Erzbischofs Wulfhelm und auch meiner anderen Bischöfe, künde den (allen meinen lq) Gerichtsvögten in jeder Stadt (durch mein ganzes Reich hin lq) im Namen Gottes (des Herrn lq) und aller seiner Heiligen und auch bei meiner Freundschaft (aus Liebe zu mir Ld) gebiete ich, dass ihr (sie lq) erstens von meinem eigenen Gute die Zehnten gebet (zahlen lq), sowohl am Lebgute wie an des Jahres Erdfrüchten (vom lebenden Vieh wie von der jährlichen Frucht Ld), wie man genauestens abmessen oder abzählen oder abwiegen kann; und dasselbe sollen dann (auch lq) die Bischöfe an ihrem eigenen Gute (jeder von ihnen Ld) und meine Ealdormen und Vögte dasselbe thun.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">I, King Æthelstan, with the counsel of (my, lq) Archbishop Wulfhelm and also of my other bishops, make known to the (all my, lq) reeves in every town (throughout my whole kingdom, lq), in the name of God (the Lord, lq) and of all his saints, and also by my friendship (out of love for me, Ld) I command that you (they, lq) first of all give (pay, lq) the tithes from my own property, both of live stock and of the year's fruits of the earth (of the living cattle and of the yearly crop, Ld), as one can most exactly measure or count or weigh; and the bishops are then (also, lq) to do the same from their own property (each of them, Ld), and my ealdormen and reeves likewise.</ab>
+        <note type="editorial">Liebermann prints Ld in bold where it differs; ‘lq’ = what Ld and Quadripartitus have in common. D's ‘Æðelstan cyningc … cyð’ is corrected by Liebermann to ‘Ic Æ… cyðe’ from G, Ld and Quadr.; he also corrects ‘Wulfhelm arcebiscop’ (16th-c. addition) to ‘Wulfhelmes arcebiscopes’ and ‘eallum’ to ‘ealra’, and supplies ‘beode’.</note>
       </div>
     </body>
   </text>

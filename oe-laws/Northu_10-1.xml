@@ -4,7 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Northu 10.1</title>
-        <respStmt><resp>Translation of the selected text</resp><name>Whitelock, English Historical Documents, I</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -14,20 +18,18 @@
         <idno type="lawCodeAnchor">Northu</idno>
         <idno type="clause">10.1</idno>
         <idno type="citationKey">Northu 10.1</idno>
-        <idno type="legalText">North. Priests' Law</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">381</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Northumbrian Priests' Law</title></bibl>
+        <bibl type="legalText"><title>Northumbrian Priests’ Law</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">381</biblScope></bibl>
+          <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979)</bibl>
+          <bibl xml:id="rabin" type="translation">Andrew Rabin, <title>The Political Writings of Archbishop Wulfstan of York</title> (Manchester: Manchester University Press, 2015)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>D</witness>
+          <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">10.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -45,16 +47,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2003 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1956 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 381.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="10.1">
         <head><ref type="lawCode" target="law:Northu">Northu</ref> 10.1</head>
-        <ab type="selectedText" xml:lang="und">7 gif hæþen cild binnon IX nihton þurh gimeliste forfaren sy, betan for Gode buton worldwite; 7 gif hit ofer nigan niht gewurðe, betan for Gode, 7 gilde XII ór for ðare heorde, þe he wæs hæþen swa lange.</ab>
-        <ab type="translation" xml:lang="en">If if a child dies a heathen within nine days, through carelessness, amends are to be made to God, without a secular fine; and if it occur after nine days, amends are to be made to God, and 12 ores to be paid for the [lack of] care, that it remained heathen so long.</ab>
-        <ab type="secondTranslation" xml:lang="en">And if a child dies a heathen within nine nights out of neglect, penance is to be done before God and twelves ores are to be paid for that neglect, because he remained a heathen for so long.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10.1" corresp="#wit-d">⁊ gif hæþen cild binnon IX nihton þurh gimeliste forfaren sy, betan for Gode buton worldwite; ⁊ gif hit ofer nigan niht gewurðe, betan for Gode, ⁊ gilde XII ór for ðare heorde, þe he wæs hæþen swa lange.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">If if a child dies a heathen within nine days, through carelessness, amends are to be made to God, without a secular fine; and if it occur after nine days, amends are to be made to God, and 12 ores to be paid for the [lack of] care, that it remained heathen so long.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin" corresp="#wit-d">And if a child dies a heathen within nine nights out of neglect, penance is to be done before God and twelves ores are to be paid for that neglect, because he remained a heathen for so long.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn ein durch Nachlässigkeit ungetauftes Kind innerhalb 9 Tagen gestorben ist, so mögen sie [die Eltern nur] geistlich büssen, ohne materielles Strafgeld; wenn das [Sterben] jedoch nach 9 Tagen geschieht, sollen sie geistlich büssen, und er [der Vormund] zahle 12 Ör für die Obhut[sverletzung], dass es so lange ungetauft gewesen ist.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if a child unbaptised through negligence has died within 9 days, let them [the parents] atone [only] spiritually, without a secular fine; but if [the death] happens after 9 days, let them atone spiritually, and let him [the guardian] pay 12 ores for the [breach of] care, that it was unbaptised so long.</ab>
       </div>
     </body>
   </text>

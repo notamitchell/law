@@ -3,33 +3,30 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Nor. Cyricgrið 9</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Rabin</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Wulfstan</name></respStmt>
+        <title>Nor Grið 9</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">NorGrith_9</idno>
-        <idno type="citation">Nor. Cyricgrið 9</idno>
-        <idno type="lawCode">Nor. Cyricgrið</idno>
+        <idno type="citation">Nor Grið 9</idno>
+        <idno type="lawCode">Nor Grið</idno>
         <idno type="lawCodeAnchor">NorGrith</idno>
         <idno type="clause">9</idno>
         <idno type="citationKey">NorGrith 9</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">473</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Norðhymbra Cyricgrið</title></bibl>
+        <bibl type="legalText"><title>Norðhymbra cyricgrið (Northumbrian Church-Sanctuary)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">473</biblScope></bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>G(B)</witness>
+          <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">G(B): British Library, MS Cotton Nero A.i Rabin, ed.</bibl>
-        <bibl type="supplementaryText">G(B): British Library, MS Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">9</idno>
-          <idno type="editorNumber" n="Rabin">4[b]</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -41,24 +38,19 @@
     </encodingDesc>
     <profileDesc>
       <creation><note type="promulgation">c.1015–c.1050; post–1023 (Wormald); ?1014 (Rabin)</note></creation>
-      <textClass>
-        <keywords n="offence-legal-event"><term>Ecclesiastical directives</term><term>Sanctuary</term></keywords>
-      </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2311 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2246 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 473.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="9">
-        <head><ref type="lawCode" target="law:NorGrith">Nor. Cyricgrið</ref> 9</head>
-        <ab type="selectedText" xml:lang="und">And cyricgrið dyre æghwar be mæðe ofer ealle ðam rice.</ab>
-        <ab type="translation" xml:lang="en">[4] And Church sanctuary is to be respected everywhere according to its degree over the entire kingdom.</ab>
-        <ab type="supplementaryText" xml:lang="und">æghwar be mæðe ofer ealle ðam rice.</ab>
-        <note type="source">The text in the spreadsheet column "J" is one merged cell shared by rows 2310 to 2311, so the same text appears in each of those clauses.</note>
-        <note type="source">The text in the spreadsheet column "K" is one merged cell shared by rows 2310 to 2311, so the same text appears in each of those clauses.</note>
-        <note type="source">The text in the spreadsheet column "O" is one merged cell shared by rows 2310 to 2311, so the same text appears in each of those clauses.</note>
+        <head><ref type="lawCode" target="law:NorGrith">Nor Grið</ref> 9</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9" corresp="#wit-g-b">æghwar be mæðe ofer ealle ðam rice.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">[Fortsetzung von 4]</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">[Continuation of clause 4; see line 8.]</ab>
       </div>
     </body>
   </text>

@@ -3,34 +3,36 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Blas. 2</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <title>Blas 2</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#wormald">Wormald</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Blas_2</idno>
-        <idno type="citation">Blas. 2</idno>
-        <idno type="lawCode">Blas.</idno>
+        <idno type="citation">Blas 2</idno>
+        <idno type="lawCode">Blas</idno>
         <idno type="lawCodeAnchor">Blas</idno>
         <idno type="clause">2</idno>
         <idno type="citationKey">Blas 2</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">388</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Be Blaserum</title></bibl>
+        <bibl type="legalText"><title>Be Blaserum (On Incendiaries)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">388</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="wormald" type="translation">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>B</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">2</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,17 +50,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2086 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2037 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 388.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
-        <head><ref type="lawCode" target="law:Blas">Blas.</ref> 2</head>
-        <ab type="selectedText" xml:lang="und">and hæbbe se teond cyre, swa wæterordal swa ysenordal, swa hwæðer [swa] him leofra sy.</ab>
-        <ab type="translation" xml:lang="en">And the man who is accused shall go to the ordeal, and the accuser shall choose either the ordeal by water or the ordeal by iron—whichever he prefers.]</ab>
-        <ab type="secondTranslation" xml:lang="en">And the person charged is to go himself to the ordeal, and the accuser to have a choice between water-ordeal and iron-ordeal.</ab>
-        <ab type="supplementaryText" xml:lang="und">7 hæbbe se ðe tyhð cyre swa wæterordal swa isenordal, swa hwæðer swa him leofre sy.</ab>
+        <head><ref type="lawCode" target="law:Blas">Blas</ref> 2</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-b">7 hæbbe se ðe tyhð cyre swa wæterordal swa isenordal, swa hwæðer swa him leofre sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-h">⁊ hæbbe se teond cyre swa wæterordal swa ysenordal, swa hwæþer him leofra sy.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2" corresp="#wit-q">Et sit in arbitrio compellantis ordalium aque uel igniti ferri, quod ei carius (et complacitius) erit.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" corresp="#wit-h">and hæbbe se teond cyre, swa wæterordal swa ysenordal, swa hwæðer [swa] him leofra sy.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And the man who is accused shall go to the ordeal, and the accuser shall choose either the ordeal by water or the ordeal by iron—whichever he prefers.]</ab>
+        <ab type="translation" xml:lang="en" source="#wormald" corresp="#wit-h">And the person charged is to go himself to the ordeal, and the accuser to have a choice between water-ordeal and iron-ordeal.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Jedoch habe der Kläger die Wahl: ob Wasserordal oder Eisenordal, welches von beiden ihm lieber ist [von jenem erbracht zu verlangen].</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">However, let the accuser have the choice: whether water ordeal or iron ordeal, whichever of the two he prefers [to demand that the other undergo].</ab>
+        <note type="editorial">H omits ‘swa’ after ‘hwæþer’ (also in I Atr 1.3 and III Atr 6). B's ‘cyre’ was later altered to ‘kyre’. Liebermann compares III Atr 6.</note>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>IV Eg 9</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,24 +18,20 @@
         <idno type="lawCodeAnchor">IVEg</idno>
         <idno type="clause">9</idno>
         <idno type="citationKey">IVEg 9</idno>
-        <idno type="legalText">IV Edg</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">212</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>IV Edgar</title></bibl>
+        <bibl type="legalText"><title>IV Edgar (Whitbordesstan)</title> <note type="reign">Edgar, r. 957/9–975</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">212</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">34</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">C</witness>
-          <witness>F</witness>
-          <witness>C (Latin)</witness>
+          <witness xml:id="wit-c" rend="bold"><abbr>C</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
+          <witness xml:id="wit-f"><abbr>F</abbr> <note type="manuscript">London, British Library, Cotton Nero E.i</note></witness>
+          <witness xml:id="wit-c-latin"><abbr>C (Latin)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">C: Cambridge, Corpus Christi College, MS 265 Gesetze</bibl>
-        <bibl type="supplementaryText">F: British Library, Cotton Nero E.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">9</idno>
-          <idno type="editorNumber" n="Robertson">9</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,16 +50,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1028 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1001 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 212.</change>
+      <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 35.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="9">
         <head><ref type="lawCode" target="law:IVEg">IV Eg</ref> 9</head>
-        <ab type="selectedText" xml:lang="und">Gif hit þonne ofer V niht ungecyd on gemænre læse wunað, þolige þæs orfes swa we ær cwædon, ⁊ þara hyrda ælc ðolige ðære hyde, ⁊ ðæs ne sy nan forgyfnes, gesecan þæt hi gesecan; ⁊ he ðeahhwæðere cyðe on hwæs gewytnesse he þæt orf bohte.</ab>
-        <ab type="translation" xml:lang="en">If, however, it remains unnotified on the common pasture for more than five days, he shall forfeit the livestock as we have stated, and each of the herdsmen shall undergo the lash, and there shall be no remission for that punishment, whatever refuge they seek; and the man himself shall declare none the less who was present as witness when he bought the livestock.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif hit þonne ofer fif niht ungecyd on gemænre læse wunað, þolige þæs orfes swa we ǽr cwædon, ⁊ þara hyrda ælc þolige þære hyde; ⁊ þæs ne sy nán forgifnes, gesecen þæt hy gesecen; ⁊ he ðeahhwæðere cyðe, on hwæs gewitnysse he þæt orf bohte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9" corresp="#wit-f">Gif hit þonne ofer fif niht ungecyd on gemænre læse wunað, þolige þæs orfes swa we ǽr cwædon, ⁊ þara hyrda ælc þolige þære hyde; ⁊ þæs ne sy nán forgifnes, gesecen þæt hy gesecen; ⁊ he ðeahhwæðere cyðe, on hwæs gewitnysse he þæt orf bohte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9" corresp="#wit-c">Gif hit þonne ofer V niht ungecyd on gemænre læse wunað, þolige þæs orfes, swa we ær cwædon, ⁊ ðara hyrda ælc ðolige ðære hyde; ⁊ ðæs ne sy nan forgyfnes, gesecan þæt hi gesecan; ⁊ he ðeahhwæðere cyðe, on hwæs gewitnysse he þæt orf bohte.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="9" corresp="#wit-q">Si uero alióquin noctibus quinque contigerit abscondi, sicut diximus, omne pecus perdat ad detrimendum et ignominiam sui; dirisque uerberum plagis pastores ipsos absque miseratione liceat affligi.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="9" corresp="#wit-c">Gif hit þonne ofer V niht ungecyd on gemænre læse wunað, þolige þæs orfes swa we ær cwædon, ⁊ þara hyrda ælc ðolige ðære hyde, ⁊ ðæs ne sy nan forgyfnes, gesecan þæt hi gesecan; ⁊ he ðeahhwæðere cyðe on hwæs gewytnesse he þæt orf bohte.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">If, however, it remains unnotified on the common pasture for more than days, he shall forfeit the livestock as we have stated, and each of the herdsmen shall undergo the lash, and there shall be no remission of that punishment, whatever refuge they seek; and the man himself shall declare none the less who was present as witness when he bought the livestock.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn es jedoch über fünf Nächte ungemeldet auf Gemeinweide bleibt, verliere er, wie wir eben sagten, das Vieh, und jeder der Hirten verwirke die Haut [leide Prügelstrafe]; und für letzteres sei keine Erlassung, mögen sie [Zufluchtschutz] erreichen, welchen sie auch aufsuchen; und jener [Käufer] melde nichtsdestoweniger, unter wessen Zeugenschaft er das Vieh gekauft habe.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But if it remains unreported on the common pasture beyond five nights, let him lose the cattle, as we have just said, and let each of the herdsmen forfeit his hide [suffer a flogging]; and for the latter let there be no remission, whatever [sanctuary] they may seek; and let that [buyer] nevertheless report under whose witness he bought the cattle.</ab>
+        <note type="editorial">Liebermann compares IV Eg 8.1.</note>
       </div>
     </body>
   </text>

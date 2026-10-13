@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>II Em Prol. 1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -16,25 +19,20 @@
         <idno type="clause">Prol. 1</idno>
         <idno type="citationKey">IIEm prol</idno>
         <idno type="citationKey">IIEm 1</idno>
-        <idno type="legalText">II Edm</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">186</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>II Edmund</title></bibl>
+        <bibl type="legalText"><title>II Edmund</title> <note type="reign">Edmund, r. 939–946</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">186</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">8</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>H</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">Prol. 1</idno>
-          <idno type="editorNumber" n="Robertson">§1[a]</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -52,16 +50,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 911 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 889 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 186.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Prol. 1">
         <head><ref type="lawCode" target="law:IIEm">II Em</ref> Prol. 1</head>
-        <ab type="selectedText" xml:lang="und">Ðonne ðuhte us ærest mæst ðearf, þæt we ure gesibsumnesse ⁊ geþwærnesse fæstlicost us betweonan heoldan gynd ealne minne anwald.</ab>
-        <ab type="translation" xml:lang="en">Now, it has seemed to us first of all especially needful that we steadfastly maintain peace and concord among ourselves throughout all my dominion.</ab>
-        <ab type="supplementaryText" xml:lang="und">Ðonne ðuhte us ærest mæst ðearf, ðæt we ure gesibsumnesse ⁊ geðwærnesse fæstlicost us betweonan heoldan gynd ealne minne anwald.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol. 1" corresp="#wit-h">Ðonne ðuhte us ærest mæst ðearf, ðæt we ure gesibsumnesse ⁊ geðwærnesse fæstlicost us betweonan heoldan gynd ealne minne anwald.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol. 1" corresp="#wit-b">Ðonne ðuhte us ærest mæst ðearf, þæt we ure gesibsumnesse ⁊ geþwærnæsse fæstlicost us betweonan heoldan gynd ealne minne anwald.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="Prol. 1" corresp="#wit-q">Et magnum nobis necesse uisum est, ut amicitiam nostram et boni diligentiam teneamus inter nos in toto regno meo.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="§1[a]" corresp="#wit-b">Ðonne ðuhte us ærest mæst ðearf, þæt we ure gesibsumnesse ⁊ geþwærnesse fæstlicost us betweonan heoldan gynd ealne minne anwald.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">Now, it has seemed to us first of all especially needful that we steadfastly maintain peace and concord among ourselves throughout all my dominion.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Erstlich nun däuchte uns zumeist nöthig, dass wir unsere Friedlichkeit und Eintracht zwischen uns festestens bewahren über all mein Gebiet hin.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">First, then, it seemed to us most needful that we keep our peaceableness and concord among ourselves most firmly throughout all my dominion.</ab>
       </div>
     </body>
   </text>

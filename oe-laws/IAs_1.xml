@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>I As 1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,22 +20,18 @@
         <idno type="citationKey">IAs 1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">146</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Æthelstan</title> <note type="reign">r. 924–939</note></bibl>
+        <bibl type="legalText"><title>I Æthelstan (Tithes)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">146</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">G(B)</witness>
-          <witness>D</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
+          <witness xml:id="wit-g-b" rend="bold"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
-        <bibl type="selectedText">G(B): British Library, Cotton Nero A.i Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">D: Cambridge, Corpus Christi College, MS 201 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">1</idno>
-          <idno type="editorNumber" n="Attenborough">1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -50,16 +49,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 741 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 728 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 146.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
         <head><ref type="lawCode" target="law:IAs">I As</ref> 1</head>
-        <ab type="selectedText" xml:lang="und">Ic wille, þæt [mine] biscopas ⁊ þa gerefan hit beodan eallum þam þe him hyran scylan, ⁊ þæt hit to þam rihtan andagan gelæst sy [⁊ ðæs sie to ðæm dæg ðær beheafdunges seint Iơhannes þæs fulhteres].</ab>
-        <ab type="translation" xml:lang="en">And I desire my bishops and the reeves to give this order to all those whose duty it is to obey them, and that it [the payment] be rendered on the legally-appointed day; and that shall be the day on which Saint John the Baptist was beheaded.</ab>
-        <ab type="supplementaryText" xml:lang="und">⁊ ic wille, þæt biscopas ⁊ þa gerefan hit beodan eallum þam þe him hiran sculon, þæt hit to ðam rihtan andagan gelæst sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-d">⁊ ic wille, þ<hi rend="italic">æt</hi> b<hi rend="italic">iscopas</hi> ⁊ þa gerefan hit beodan eallu<hi rend="italic">m</hi> þa<hi rend="italic">m</hi> þe hi<hi rend="italic">m</hi> hiran sculon, þ<hi rend="italic">æt</hi> hit to ða<hi rend="italic">m</hi> rihtan andagan gelæst sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-g-b">⁊ ic wille, þæt biscopas ⁊ þa gerefan hit beodan eallum þam þe him hyran scylan, ⁊ þæt hit to þam rihtan andagan gelæst sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-ld">⁊ ic wille, þæt mine bisceopes ⁊ gereafa ðæs demaþ eallum ðe hio gehyrsumian gebyraþ, ⁊ þæt ilce to ðam tide fulfremaþ ðe we hio settaþ, ⁊ ðæs sie to ðæm dæg ðær beheafdunges scint Iohannes þæs fulhteres.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1" corresp="#wit-q">Et uolo, ut episcopi mei et prepositi hoc iudicent omnibus, qui eis parere debent, et hoc ad terminum expleant quem eis ponimus, id est Decollatio sancti Iohannis baptiste.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="1" corresp="#wit-g-b">Ic wille, þæt [mine] biscopas ⁊ þa gerefan hit beodan eallum þam þe him hyran scylan, ⁊ þæt hit to þam rihtan andagan gelæst sy [⁊ ðæs sie to ðæm dæg ðær beheafdunges seint Iơhannes þæs fulhteres].</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-g-b">And I desire my bishops and the reeves to give this order to all those whose duty it is to obey them, and that it [the payment] be rendered on the legally-appointed day; and that shall be the day on which Saint John the Baptist was beheaded.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und ich will, dass (meine lq) Bischöfe und die Vögte es gebieten (dies zuerkennen lq) allen denen, welche ihnen zu gehorchen verpflichtet sind, und dass es zum gesetzlichen Termin geleistet werde (und dass sie selbiges vollziehen zu der Zeit, die wir ihnen ansetzen, und dies sei zum Tage der Enthauptung s. Johannes des Täufers lq).</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And I will that (my, lq) bishops and the reeves command it (adjudge this, lq) to all those who are bound to obey them, and that it be performed by the lawful term (and that they carry it out at the time which we set for them, and this is to be by the day of the Beheading of St John the Baptist, lq).</ab>
+        <note type="editorial">Liebermann adds ‘mine’ from Ld and Quadr., and ‘⁊’ before ‘þæt hit’ from G, Ld and Quadr.</note>
       </div>
     </body>
   </text>

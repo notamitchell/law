@@ -4,8 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Ine 5</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Jurasinski&amp;Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,29 +19,25 @@
         <idno type="lawCodeAnchor">Ine</idno>
         <idno type="clause">5</idno>
         <idno type="citationKey">Ine 5</idno>
-        <idno type="legalText">Ine (domboc)</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">90</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Ine</title> <note type="reign">r. 688–726</note></bibl>
+        <bibl type="legalText"><title>Ine’s Laws (in Alfred’s Domboc)</title> <note type="reign">Ine, r. 688–726</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">90</biblScope></bibl>
+          <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">374</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">E</witness>
-          <witness>H</witness>
-          <witness>B (no Prol.)</witness>
-          <witness>G (Prol. only)</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>Bu</witness>
-          <witness>Ot (frags.)</witness>
+          <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b-no-prol"><abbr>B (no Prol.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
-        <bibl type="selectedText">E: Cambridge, Corpus Christi College, MS 173 Jurasinski and Oliver, eds.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">5</idno>
-          <idno type="editorNumber" n="Jurasinski and Oliver">5</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -56,17 +56,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 555 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 547 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 90.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 5</head>
-        <ab type="selectedText" xml:lang="und">{XLVIIII} Gif swa he deaðes scyldig ⁊ he cirican geierne, hæbbe his feorh ⁊ bete, swa him ryht wisige.</ab>
-        <ab type="translation" xml:lang="en">If someone has commited an offense for which he owes his life and he flees into a church, let him keep his life and make restitution according to how [judgment of] law directs him.</ab>
-        <ab type="secondTranslation" xml:lang="en">If anyone is liable to the death penalty, and he flees to a church, his life shall be spared and he shall pay such compensation as he is directed [to pay] by legal decision.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif swa sy deaðes scyldig ⁊ he cirican geyrne, hæbbe his feorh ⁊ bete, swa him ryht wisie.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-h">Gif hwa sy deaðes scyldig ⁊ he cirican geyrne, hæbbe his feorh ⁊ bete, swa him ryht wisie.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-e">XLVIIII. Gif hwa sie deaðes scyldig ⁊ he cirican geierne, hæbbe his feorh ⁊ bete, swa him ryht wisige.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5" corresp="#wit-q">Si quis sit mortis reus et ad ecclesiam confugiat, uitam habeat et emendet, sicut rectum sibi consulet.</ab>
+        <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="5" corresp="#wit-e">{XLVIIII} Gif swa he deaðes scyldig ⁊ he cirican geierne, hæbbe his feorh ⁊ bete, swa him ryht wisige.</ab>
+        <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If someone has commited an offense for which he owes his life and he flees into a church, let him keep his life and make restitution according to how [judgment of] law directs him.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If anyone is liable to the death penalty, and he flees to a church, his life shall be spared and he shall pay such compensation as he is directed [to pay] by legal decision.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand Todes schuldig ist und er eine Kirche erreicht, so behalte er sein Leben und büsse, wie ihm [das] die Rechtsordnung zuweist.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If someone is liable to death and he reaches a church, let him keep his life and pay compensation as the law directs him.</ab>
       </div>
     </body>
   </text>

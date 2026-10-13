@@ -4,8 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Ine 38</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Jurasinski&amp;Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,29 +19,25 @@
         <idno type="lawCodeAnchor">Ine</idno>
         <idno type="clause">38</idno>
         <idno type="citationKey">Ine 38</idno>
-        <idno type="legalText">Ine (domboc)</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">104</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Ine</title> <note type="reign">r. 688–726</note></bibl>
+        <bibl type="legalText"><title>Ine’s Laws (in Alfred’s Domboc)</title> <note type="reign">Ine, r. 688–726</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">104</biblScope></bibl>
+          <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">404</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">E</witness>
-          <witness>H</witness>
-          <witness>B (no Prol.)</witness>
-          <witness>G (Prol. only)</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>Bu</witness>
-          <witness>Ot (frags.)</witness>
+          <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b-no-prol"><abbr>B (no Prol.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
-        <bibl type="selectedText">E: Cambridge, Corpus Christi College, MS 173 Jurasinski and Oliver, eds.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">38</idno>
-          <idno type="editorNumber" n="Jurasinski and Oliver">39</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -56,17 +56,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 611 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 603 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 104.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="38">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 38</head>
-        <ab type="selectedText" xml:lang="und">{LXXXII} Gif ceorl ⁊ his wif bearn hæbben gemæne, ⁊ fere se ceorl forð, hæbbe sio modor hire bearn ⁊ fede. Agife hire mon VI sciƚƚ to fostre, cu on sumera, oxan on wintra. Healden þa mægas þone fr[um]stol, oððæt hit gewintred sie.</ab>
-        <ab type="translation" xml:lang="en">If a ceorl and his wife have a child together, and the ceorl dies, the mother shall keep and support her child. She should be given 6 shillings for the foster, a cow in summer, an ox in winter. Let the kin maintain the homestead until the child has reached maturity.</ab>
-        <ab type="secondTranslation" xml:lang="en">If a husband has a child by his wife and the husband dies, the mother shall have her child and rear it, and [every year] 6 shillings shall be given for its maintenance — a cow in summer and an ox in winter; the relatives shall keep the family home until the child reaches maturity.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif ciorl ⁊ his wif bearn hæbben gemæne, ⁊ se ceorl forðfære, hæbbe seo modor hire bearn ond fede; agife mon hire VI scll' to fostre, cú on sumera, oxan on wintra; healden ða magas ðone frumstol, oþ þæt hit gewintred sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="38" corresp="#wit-h">LXXXII. Gif ciorl ⁊ his wif bearn hæbben gemæne, ⁊ se ciorl forðfære, hæbbe seo moder hire bearn ond fede; (⁊) agife mon hire VI scll' to fostre, cú on sumera, oxan on wintra; healden ða magas ðone frumstol, oþ þ<hi rend="italic">æt</hi> hit gewintred sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="38" corresp="#wit-e">LXXXII. Gif ceorl ⁊ his wif bearn hæbben gemæne, ⁊ fere se ceorl forð, hæbbe sio modor hire bearn ⁊ fede: agife hire mon VI scill. to fostre, cu on sumera, oxan on wintra; healden þa mægas þone frumstol, oð ðæt hit gewintred sie.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="38" corresp="#wit-q">Si ceorl et femina puerum communiter (simul) habeant, et abeat homo uiam suam, habeat mater puerum suum et nutriat: reddantur ei sex sol. ad nutriendum, uacca in estate, bos in hieme. Custodiant parentes eius hoc primum captale, donec puer exercuerit.</ab>
+        <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="39" corresp="#wit-e">{LXXXII} Gif ceorl ⁊ his wif bearn hæbben gemæne, ⁊ fere se ceorl forð, hæbbe sio modor hire bearn ⁊ fede. Agife hire mon VI sciƚƚ to fostre, cu on sumera, oxan on wintra. Healden þa mægas þone fr[um]stol, oððæt hit gewintred sie.</ab>
+        <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If a <hi rend="italic">ceorl</hi> and his wife have a child together, and the <hi rend="italic">ceorl</hi> dies, the mother shall keep and support her child. She should be given 6 shillings for the foster, a cow in summer, an ox in winter. Let the kin maintain the homestead until the child has reached maturity.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If a husband has a child by his wife and the husband dies, the mother shall have her child and rear it, and [every year] 6 shillings shall be given for its maintenance — a cow in summer and an ox in winter; the relatives shall keep the family home until the child reaches maturity.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn der Freibauer und sein Weib ein Kind gemeinschaftlich haben, und der Mann stirbt, so behalte die Mutter ihr Kind und erziehe [es]: man gebe ihr 6 Schill. [jährlich] zum Erziehungsgelde, eine Kuh im Sommer, einen Ochsen im Winter; die Verwandten sollen den Hauptsitz [das Stammgut] behüten, bis dass es [das Kind] volljährig ist.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a free peasant and his wife have a child together, and the husband dies, let the mother keep her child and bring [it] up: let her be given 6 shillings [a year] for its upkeep, a cow in summer, an ox in winter; let the kinsmen look after the chief residence [the family estate] until it [the child] is of age.</ab>
       </div>
     </body>
   </text>

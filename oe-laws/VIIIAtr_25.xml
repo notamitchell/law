@@ -4,8 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>VIII Atr 25</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,19 +19,16 @@
         <idno type="citationKey">VIIIAtr 25</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">266</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VIII Atr</title></bibl>
+        <bibl type="legalText"><title>VIII Æthelred</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">266</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">124</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G(A) (part)</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g-a-part"><abbr>G(A) (part)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">25</idno>
-          <idno type="editorNumber" n="Robertson">25</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,15 +47,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1492 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1455 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 266.</change>
+      <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 124.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="25">
         <head><ref type="lawCode" target="law:VIIIAtr">VIII Atr</ref> 25</head>
-        <ab type="selectedText" xml:lang="und">And ne þearf ænig mynstermunuc ahwar mid rihte fæhðbote biddan ne fahðbote betan; he gæð of his mæglage þonne he gebihð to regollage.</ab>
-        <ab type="translation" xml:lang="en">And no monk who belongs to a monastery anywhere may lawfully either demand or pay any compensation incurred by vendetta. He leaves the law of his kindred behind when he accepts monastic rule.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="25" corresp="#wit-d">And ne þearf ænig mynstermunuc ahwar mid rihte fæhðbote biddan ne fæhðbote betan; he gæð of his mæglage þonne he gebihð to regollage.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And no monk who belongs to a monastery anywhere may lawfully either demand or pay any compensation incurred by vendetta. He leaves the law of his kindred behind when he accepts monastic rule.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und nicht darf ein Klostermönch irgendwo gesetzlich Geldbusse für Todtschlag [verübt an seinem Verwandten] fordern noch auch Geldbusse für Todtschlag [verübt durch seinen Verwandten] zahlen: er tritt aus seinem Sippenrecht, sobald er sich dem Rechte der Ordensregel unterwirft.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And no monk of a minster may anywhere lawfully demand feud-compensation [for the killing of his kinsman] or pay feud-compensation [for a killing by his kinsman]: he leaves his kin-law when he submits to the law of the rule.</ab>
       </div>
     </body>
   </text>

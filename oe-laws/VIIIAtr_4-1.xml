@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>VIII Atr 4.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">VIIIAtr 4.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">264</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VIII Atr</title></bibl>
+        <bibl type="legalText"><title>VIII Æthelred</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">264</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">118</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">D</witness>
-          <witness>G(A) (part)</witness>
+          <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-g-a-part"><abbr>G(A) (part)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton MS Nero Ai Liebermann, ed</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">4.1</idno>
-          <idno type="editorNumber" n="Robertson">4.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,16 +46,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1463 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1426 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 264.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4.1">
         <head><ref type="lawCode" target="law:VIIIAtr">VIII Atr</ref> 4.1</head>
-        <ab type="selectedText" xml:lang="und">Bete man æfre ærest þone griðbryce into ðare circan be þam þe seo dæd sy ⁊ be þam þe þare circan mæð sy.</ab>
-        <ab type="translation" xml:lang="en">And in the first instance, amends for breach of its protection shall always be made to the church, in accordance with the nature of the offence and also in proportion to the status of the church.</ab>
-        <ab type="supplementaryText" xml:lang="und">gebete man ærest þæne griðbryce into ðære cyrcan, be þam þe seo dæd sy ⁊ be ðam þe ðære cyrcan mæð sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.1" corresp="#wit-g-a-part">gebete man ærest þæne griðbryce into ðære cyrcan, be þam þe seo dæd sy ⁊ be ðam þe ðære cyrcan mæð sy.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="4.1" corresp="#wit-d">Bete man æfre ærest þone griðbryce into ðare circan be þam þe seo dæd sy ⁊ be þam þe þare circan mæð sy.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And in the first instance, amends for breach of its protection shall always be made to the church, in accordance with the nature of the offence and also in proportion to the status of the church.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">büsse er (immer D) zuerst an die [verletzte] Kirche den Bruch des Sonderfriedens, je nachdem die Missethat ist und je nachdem der Rang dieser Kirche ist.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">let him (always, D) first pay compensation to the [violated] church for the breach of protection, according to what the deed is and according to the rank of that church.</ab>
       </div>
     </body>
   </text>

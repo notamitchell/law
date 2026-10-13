@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>IV Atr 7.3</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,21 +18,17 @@
         <idno type="lawCodeAnchor">IVAtr</idno>
         <idno type="clause">7.3</idno>
         <idno type="citationKey">IVAtr 7.3</idno>
-        <idno type="legalText">IVAtr (Latin)</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">236</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>IVAtr (Latin)</title></bibl>
+        <bibl type="legalText"><title>IV Æthelred (London)</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">236</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">76</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness>Q</witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">Q: Quadripartitus) Robertson, ed.</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">7.3</idno>
-          <idno type="editorNumber" n="Robertson">7.3</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -47,15 +46,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1170 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1139 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 236.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7.3">
         <head><ref type="lawCode" target="law:IVAtr">IV Atr</ref> 7.3</head>
-        <ab type="selectedText" xml:lang="und">Et portirevae qui falsi huius consentanei fuerint, eiusdem censurae digni sint cum falsis monetariis, nisi rex indulgeat eis vel se possint adlegiare eodem cyrað vel ordalio praedicto.</ab>
-        <ab type="translation" xml:lang="en">And town-reeves who have been accessories to such a fraud shall be liable to the same punishment as coiners, unless the king pardon them, or they can clear themselves by a similar oath of nominated jurors, or by the ordeal specified above.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7.3" corresp="#wit-q">Et portireue qui falsi huius consentanei fuerint, eiusdem censure digni sint cum falsis monetariis, nisi rex indulgeat eis, uel se possint adlegiare eodem cyrað uel ordalio predicto.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="7.3" corresp="#wit-q">Et portirevae qui falsi huius consentanei fuerint, eiusdem censurae digni sint cum falsis monetariis, nisi rex indulgeat eis vel se possint adlegiare eodem cyrað vel ordalio praedicto.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">And town-reeves who have been accessories to such a fraud shall be liable to the same punishment as coiners, unless the king pardon them, or they can clear themselves by a similar oath of nominated jurors, or by the ordeal specified above.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und Stadtvögte, welche Mitwisser obiger Fälschung sind, seien desselben Strafurtheils mit den Falschmünzern theilhaftig, ausser wenn der König ihrer schonen will, oder sie sich unschuldig erweisen können durch jenen Eid mit [vom Richter] erkorenen Helfern oder durch vorgenanntes Ordal.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And town-reeves who are privy to the above forgery, let them be subject to the same sentence as the false moneyers, unless the king is willing to spare them, or they can prove themselves innocent by that oath with helpers chosen [by the judge] or by the aforesaid ordeal.</ab>
+        <note type="editorial">Liebermann compares IV Atr 5.2.</note>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>VI As 12.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Attenborough</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,20 +20,16 @@
         <idno type="citationKey">VIAs 12.1</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">182</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>VI Æthelstan</title></bibl>
+        <bibl type="legalText"><title>VI Æthelstan (London Peace-Guild)</title> <note type="reign">Æthelstan, r. 924–939</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">182</biblScope></bibl>
+          <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">H</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">H: Textus Roffensis Attenborough, ed.</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">12.1</idno>
-          <idno type="editorNumber" n="Attenborough">[12].1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -49,16 +48,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 896 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 876 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 182.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="12.1">
         <head><ref type="lawCode" target="law:VIAs">VI As</ref> 12.1</head>
-        <ab type="selectedText" xml:lang="und">Twelfte: Þæt se cyng cwæð nú eft æt Witlanbyrig to his witan ⁊ het cyðan þam arcebiscope be Þeodrede biscop, þæt him to hreowlic þuhte, þæt man swa geongne mancwealde oððe eft for swa lytlan, swa he geáxod hæfde, þæt man gehwær dyde. Cwæð þa, þæt him þuhte ⁊ þam þe he hit wiðrædde, þæt man nænne gingran mann ne sloge þonne XV wintre man, buton he hine werian wolde oððe fleoge ⁊ on hand gán nolde; þæt hine man þonne lede swa æt maran swa æt læssan, swa hwæðer hit þonne wære. ⁊ gif he þonne on hand gán wille, þonne dó hine man on cárcern, swa hit æt Gréatenléa gecweden wæs, ⁊ hine be þam ylcan lysige.</ab>
-        <ab type="translation" xml:lang="en">Twelfth: Now again the king has been addressing his councillors at Whittlebury, and has sent word to the archbishop by Bishop Theodred, that he thinks it cruel to put to death such young people and for such slight offences, as he has learnt is the practice everywhere. He has declared now that both he himself and those with whom he has discussed the matter are of opinion that no one should be slain who is under fifteen years old, unless he is minded to defend himself, or tries to escape and refuses to give himself up. Then, he shall be struck down whether his offence be great or small — whichever it may be. But if he will give himself up he shall be put in prison, as was declared at Grately; and he shall be liberated on the same conditions [as were laid down there].</ab>
-        <ab type="supplementaryText" xml:lang="und">Duodecimum est, quod rex dixit nunc iterum apud Þitlanbyrig sapientibus suis et precepit ostendi archiepiscopo et ceteris episcopis, quod ei miserabile uidetur, ut aliquis tam iuuenis occidatur uel pro tam parua re, sicut innotuit ei, quod ubique fiebat. Dixit itaque, quod ei uidebatur et eis cum quibus hoc egerat, ne aliquis occidatur iunior quam quindecim annorum, nisi se uelit defendere aut fugere et in manus ire nolit: ut tunc deducatur sic in maiori sic in minori, qualecumque sit. Si dederit se, ponatur in carcere, sicut apud Greateleiam dictum est, et per idem redimatur.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12.1" corresp="#wit-q">Duodecimum est, quod rex dixit nunc iterum apud Þitlanbyrig sapientibus suis et precepit ostendi archiepiscopo et ceteris episcopis, quod ei miserabile uidetur, ut aliquis tam iuuenis occidatur uel pro tam parua re, sicut innotuit ei, quod ubique fiebat. Dixit itaque, quod ei uidebatur et eis cum quibus hoc egerat, ne aliquis occidatur iunior quam quindecim annorum, nisi se uelit defendere aut fugere et in manus ire nolit: ut tunc deducatur sic in maiori sic in minori, qualecumque sit. Si dederit se, ponatur in carcere, sicut apud Greateleiam dictum est, et per idem redimatur.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12.1" corresp="#wit-h">Twelfte, þæt se cyng cwæð nú eft æt Witlanbyrig to his witan ⁊ het cyðan þam arcebiscope be Þeodrede biscop, þæt him to hreowlic þuhte, þæt man swa geongne man cwealde oððe eft for swa lytlan, swa he geáxod hæfde, þæt man gehwær dyde. Cwæð þa, þæt him þuhte ⁊ þam þe he hit wiðrædde, þæt man nænne gingran mann ne sloge þonne XV wintre man, buton he hine werian wolde oððe fleoge ⁊ on hand gán nolde: þæt hine man þonne lede swa æt maran swa æt læssan, swa hwæðer hit þonne wære. ⁊ gif he þonne on hand gán wille, þonne dó hine man on cárcern, swa hit æt Gréatanléa gecweden wæs, ⁊ hine be þam ylcan lysige.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="[12].1" corresp="#wit-h">Twelfte: Þæt se cyng cwæð nú eft æt Witlanbyrig to his witan ⁊ het cyðan þam arcebiscope be Þeodrede biscop, þæt him to hreowlic þuhte, þæt man swa geongne mancwealde oððe eft for swa lytlan, swa he geáxod hæfde, þæt man gehwær dyde. Cwæð þa, þæt him þuhte ⁊ þam þe he hit wiðrædde, þæt man nænne gingran mann ne sloge þonne XV wintre man, buton he hine werian wolde oððe fleoge ⁊ on hand gán nolde; þæt hine man þonne lede swa æt maran swa æt læssan, swa hwæðer hit þonne wære. ⁊ gif he þonne on hand gán wille, þonne dó hine man on cárcern, swa hit æt Gréatenléa gecweden wæs, ⁊ hine be þam ylcan lysige.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">Twelfth: Now again the king has been addressing his councillors at Whittlebury, and has sent word to the archbishop by Bishop Theodred, that he thinks it cruel to put to death such young people and for such slight offences, as he has learnt is the practice everywhere. He has declared now that both he himself and those with whom he has discussed the matter are of opinion that no one should be slain who is under fifteen years old, unless he is minded to defend himself, or tries to escape and refuses to give himself up. Then, he shall be struck down whether his offence be great or small — whichever it may be. But if he will give himself up he shall be put in prison, as was declared at Grately; and he shall be liberated on the same conditions [as were laid down there].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Zwölftens, dass der König nun wieder zu Whittlebury [?] seinen Witan erklärte und dem Erzbischofe durch Bischof Theodred künden liess, dass es ihm zu grausam dünke, wenn man einen so jungen Menschen oder ferner für so geringen [Diebstahl] hinrichte, wie er erfahren habe, dass man überall thue. Er erklärte da, dass ihm und denen, mit denen er es berieth, richtig scheine, dass man keinen jüngeren als einen 15 Jahr [alten] Menschen hinrichte; es sei denn, der will sich wehren oder flieht und will sich nicht unterwerfen: dann [freilich], dass man ihn niederstrecke so bei grösserem wie bei geringerem [Diebstahl], was es dann auch sei. Wenn er jedoch sich unterwerfen will, dann bringe man ihn in den Kerker, wie es zu Greatley bestimmt worden ist, und löse ihn [von der Haft] unter demselben [Beding].</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Twelfthly, that the king has now declared again to his witan at Whittlebury [?] and had it made known to the archbishop through Bishop Theodred that it seemed to him too cruel that so young a person should be put to death, or moreover for so small [a theft], as he had learned was done everywhere. He declared then that it seemed right to him and to those with whom he took counsel on it that no one younger than a person of 15 years should be put to death, unless he will defend himself or flees and will not surrender: then [indeed] that he be struck down whether for a greater or a lesser [theft], whatever it may be. But if he will surrender, then let him be put in prison, as was determined at Greatley, and be redeemed [from custody] on the same [terms].</ab>
+        <note type="editorial">Liebermann compares II As 1.3; 1 and VI As 1.1.</note>
       </div>
     </body>
   </text>

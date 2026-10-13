@@ -73,39 +73,93 @@ scripts:
         return a;
     }
 
-    // New layout: Liebermann's text and the modern edition on the left,
-    // the two translations on the right, each labelled with its source.
+    // The manuscripts a clause file names: { 'wit-h': {abbr: 'H', name: 'Rochester, …', selected} }
+    function witnesses(doc) {
+        const out = {};
+        tei(doc, 'witness').forEach(w => {
+            const id = w.getAttribute('xml:id') || w.getAttributeNS('http://www.w3.org/XML/1998/namespace', 'id');
+            const abbr = tei(w, 'abbr')[0];
+            const name = tei(w, 'note')[0];
+            out[id || ''] = { abbr: abbr ? plainText(abbr) : plainText(w), name: name ? plainText(name) : '',
+                              selected: w.getAttribute('rend') === 'bold' };
+        });
+        return out;
+    }
+
+    // "MS H", with the manuscript's full name on hover.
+    function msLabel(a, wits, prefix) {
+        const id = (a.getAttribute('corresp') || '').replace(/^#/, '');
+        const w = wits[id];
+        if (!id) return null;
+        const s = el('span', 'ms-label', (prefix || 'MS ') + (w ? w.abbr : id.replace(/^wit-/, '').toUpperCase()));
+        if (w && w.name) s.title = w.name;
+        return s;
+    }
+
+    const LANG_NAMES = { de: 'German', la: 'Latin' };
+
+    // New layout: the texts on the left (Liebermann's manuscripts, then the
+    // modern edition), the translations on the right, each labelled with its
+    // source and the manuscript it comes from.
     function newTexts(doc, div, heading) {
         const wrap = el('div', 'clause-texts clause-texts--sources');
         wrap.appendChild(heading);
         const srcs = sources(doc);
+        const wits = witnesses(doc);
         const grid = el('div', 'clause-grid');
         const col = (title, cls) => { const c = el('div', 'clause-col ' + cls); c.appendChild(el('h3', null, title)); grid.appendChild(c); return c; };
-        const left = col('Old English text', 'clause-col--text');
-        const right = col('Translations', 'clause-col--translation');
         const abs = tei(div, 'ab');
-        const add = (column, a, details) => {
+        const texts = abs.filter(a => /^(liebermannText|editionText)$/.test(a.getAttribute('type')));
+        const langs = new Set(texts.map(a => a.getAttribute('xml:lang')));
+        const left = col(langs.has('la') && !langs.has('ang') ? 'Latin text' : langs.has('la') ? 'Old English and Latin texts' : 'Old English text', 'clause-col--text');
+        const right = col('Translations', 'clause-col--translation');
+        const add = (column, a, bits, cls) => {
             const id = (a.getAttribute('source') || '').replace(/^#/, '');
             const src = srcs[id] || { id, name: id || 'Unknown', bibl: a, page: '' };
-            const box = el('div', 'clause-reading');
+            const box = el('div', 'clause-reading' + (cls ? ' ' + cls : ''));
             const label = el('p', 'clause-source');
             label.appendChild(sourceLink(src));
-            const bits = details(a, src).filter(Boolean);
-            if (bits.length) label.appendChild(el('span', 'muted', ' · ' + bits.join(' · ')));
+            bits.filter(Boolean).forEach(b => {
+                label.appendChild(document.createTextNode(' · '));
+                label.appendChild(typeof b === 'string' ? el('span', 'muted', b) : b);
+            });
             box.appendChild(label);
             const p = el('p', 'clause-reading-text');
-            if (a.getAttribute('xml:lang') === 'ang') p.lang = 'ang';
+            const lang = a.getAttribute('xml:lang');
+            if (lang && lang !== 'und') p.lang = lang;
             p.appendChild(inline(a));
             box.appendChild(p);
             column.appendChild(box);
         };
-        const ms = a => { const c = (a.getAttribute('corresp') || '').replace(/^#wit-/, ''); return c ? 'MS ' + c.toUpperCase() : ''; };
-        abs.filter(a => a.getAttribute('type') === 'liebermannText').forEach(a =>
-            add(left, a, (a, s) => [s.page ? 'Gesetze I, p. ' + s.page : '', ms(a)]));
-        abs.filter(a => a.getAttribute('type') === 'editionText').forEach(a =>
-            add(left, a, a => [a.getAttribute('n') ? '§ ' + a.getAttribute('n') : '', ms(a)]));
-        abs.filter(a => a.getAttribute('type') === 'translation').forEach(a => add(right, a, () => []));
+        texts.forEach(a => {
+            const id = (a.getAttribute('source') || '').replace(/^#/, '');
+            const src = srcs[id] || {};
+            const lieb = a.getAttribute('type') === 'liebermannText';
+            const n = a.getAttribute('n');
+            add(left, a, [msLabel(a, wits),
+                lieb ? (src.page ? 'Gesetze I, p. ' + src.page : '') : (n ? '§ ' + n : ''),
+                !lieb && src.page ? 'p. ' + src.page : '',
+                a.getAttribute('xml:lang') === 'la' && langs.has('ang') ? 'Latin' : '']);
+        });
+        const trans = abs.filter(a => a.getAttribute('type') === 'translation');
+        const isGerman = a => a.getAttribute('xml:lang') === 'de' || a.getAttribute('ana') === '#fromGerman';
+        trans.filter(a => !isGerman(a)).forEach(a => {
+            const id = (a.getAttribute('source') || '').replace(/^#/, '');
+            const src = srcs[id] || {};
+            add(right, a, [msLabel(a, wits, 'of MS '), src.page ? 'p. ' + src.page : '']);
+        });
+        trans.filter(isGerman).forEach(a => add(right, a,
+            [a.getAttribute('xml:lang') === 'de' ? 'German translation' : 'English of Liebermann’s German'], 'clause-reading--german'));
+        if (!trans.length) { right.remove(); grid.classList.add('clause-grid--single'); }
         wrap.appendChild(grid);
+        tei(div, 'note').forEach(n => {
+            const type = n.getAttribute('type');
+            if (type !== 'passageSource' && type !== 'editorial') return;
+            const p = el('p', 'clause-note small');
+            p.appendChild(el('strong', null, type === 'passageSource' ? 'Source of the passage: ' : 'Notes: '));
+            p.appendChild(inline(n));
+            wrap.appendChild(p);
+        });
         [['supplementaryText', 'Supplementary manuscript'], ['supplementaryTranslation', 'Translation of the supplementary manuscript']].forEach(([type, label]) => {
             abs.filter(a => a.getAttribute('type') === type).forEach(a => {
                 const p = el('div', 'clause-text clause-' + type);
@@ -177,14 +231,26 @@ scripts:
         if (wits.length) {
             const s = el('section', 'entry-section');
             s.appendChild(el('h2', null, 'Manuscripts'));
-            const p = el('p');
-            wits.forEach((w, i) => {
-                if (i) p.appendChild(document.createTextNode(', '));
-                const span = el(w.getAttribute('rend') === 'bold' ? 'strong' : 'span', null, w.textContent.trim());
-                p.appendChild(span);
-            });
-            s.appendChild(p);
-            s.appendChild(el('p', 'small muted', 'The manuscript in bold is the one the text above is taken from, where more than one is listed.'));
+            const named = wits.some(w => tei(w, 'abbr').length);
+            if (named) {
+                const ul = el('ul', 'ms-list');
+                Object.values(witnesses(doc)).forEach(w => {
+                    const li = el('li');
+                    li.appendChild(el(w.selected ? 'strong' : 'span', 'ms-siglum', w.abbr));
+                    if (w.name) li.appendChild(document.createTextNode(' – ' + w.name));
+                    ul.appendChild(li);
+                });
+                s.appendChild(ul);
+                s.appendChild(el('p', 'small muted', 'The letters are Liebermann’s sigla. In bold: the manuscript chosen for the edition, where Liebermann lists more than one. Each text above names the manuscript it comes from.'));
+            } else {
+                const p = el('p');
+                wits.forEach((w, i) => {
+                    if (i) p.appendChild(document.createTextNode(', '));
+                    p.appendChild(el(w.getAttribute('rend') === 'bold' ? 'strong' : 'span', null, w.textContent.trim()));
+                });
+                s.appendChild(p);
+                s.appendChild(el('p', 'small muted', 'The manuscript in bold is the one the text above is taken from, where more than one is listed.'));
+            }
             target.appendChild(s);
         }
 
@@ -260,8 +326,11 @@ scripts:
         target.appendChild(whole);
 
         const src = el('p', 'source-line');
-        const change = tei(doc, 'change')[0];
-        src.appendChild(document.createTextNode((change ? plainText(change) : 'Made from the OE Laws spreadsheet, not yet checked against the print.') + ' '));
+        const changes = tei(doc, 'change');
+        const checked = changes.filter(c => c.getAttribute('type') === 'checked');
+        const made = changes.find(c => c.getAttribute('type') !== 'checked');
+        src.appendChild(document.createTextNode((made ? plainText(made) : 'Made from the OE Laws spreadsheet, not yet checked against the print.') + ' '));
+        checked.forEach(c => src.appendChild(document.createTextNode(plainText(c) + ' ')));
         const a = el('a', null, 'View the TEI file');
         a.href = root + 'oe-laws/' + encodeURIComponent(row.file);
         src.appendChild(a);

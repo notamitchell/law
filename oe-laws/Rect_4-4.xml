@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Rect 4.4</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Gobbitt</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Gobbitt</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,23 +18,18 @@
         <idno type="lawCodeAnchor">Rect</idno>
         <idno type="clause">4.4</idno>
         <idno type="citationKey">Rect 4.4</idno>
-        <idno type="legalText">Rect.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">447</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Rectitudines singularum personarum</title></bibl>
+        <bibl type="legalText"><title>Rectitudines Singularum Personarum</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">447</biblScope></bibl>
+          <bibl xml:id="gobbitt" type="edition">Thom Gobbitt, ed., ‘Rectitudines singularum personarum’ and ‘Gerefa’, <title>Early English Laws</title> (earlyenglishlaws.ac.uk)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">B: earlyenglishlaws ac.uk: RSP+Gerefa Gobbitt, ed.</bibl>
-        <bibl type="supplementaryText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">4.4</idno>
-          <idno type="editorNumber" n="Gobbitt">5</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -48,16 +46,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 2151 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 2094 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 447.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4.4">
         <head><ref type="lawCode" target="law:Rect">Rect</ref> 4.4</head>
-        <ab type="selectedText" xml:lang="und">ðEOS LANDlagu stænt on suman lande . ge hwar hit is swa ic ær cwæð hefigre gehwar ea leohtre . forðam ealle landsida ne syn gelice.</ab>
-        <ab type="translation" xml:lang="en">This land-law stands on some estates, in some places it is, just as I said before, heavier, elsewhere, lighter, because not all estates are the same.</ab>
-        <ab type="supplementaryText" xml:lang="und">[4.4] Deos landlagu stænt on suman lande; gehwar hit is, swa ic ær cwæð, hefigre, gehwar ea[c] leohtre; forðam ealle landsida ne syn gelice.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.4" corresp="#wit-b">[4.4] Deos landlagu stænt on suman lande; gehwar hit is, swa ic ær cwæð, hefigre, gehwar ea[c] leohtre; forðam ealle landsida ne syn gelice.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.4" corresp="#wit-q">Hęc consuetudo stat in quibusdam locis, et alicubi est, sicut prediximus, grauior et alicubi leuior; quia omnium terrarum instituta non sunt equalia.</ab>
+        <ab type="editionText" xml:lang="ang" source="#gobbitt" n="5" corresp="#wit-b">ðEOS LANDlagu stænt on suman lande . ge hwar hit is swa ic ær cwæð hefigre gehwar ea leohtre . forðam ealle landsida ne syn gelice.</ab>
+        <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">This land-law stands on some estates, in some places it is, just as I said before, heavier, elsewhere, lighter, because not all estates are the same.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Dieses Gutsrecht gilt auf [manch] einem Gute; an einem Orte ist es, wie ich zuvor gesagt habe, schwerer, anderswo auch leichter; denn nicht sind alle Gutsgewohnheiten gleich.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">This estate-law holds on [many] an estate; in one place it is, as I said before, heavier, elsewhere also lighter; for not all estate customs are alike.</ab>
+        <note type="editorial">B begins this clause after a paragraph break with an uncial Ð, as if a new piece began (compare 21). B reads ‘ea’; Liebermann prints ‘ea[c]’. Liebermann compares 2, 3 and 4.</note>
       </div>
     </body>
   </text>

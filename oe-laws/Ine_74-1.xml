@@ -4,8 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Ine 74.1</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Jurasinski and Oliver</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Jurasinski&amp;Oliver</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -15,29 +19,25 @@
         <idno type="lawCodeAnchor">Ine</idno>
         <idno type="clause">74.1</idno>
         <idno type="citationKey">Ine 74.1</idno>
-        <idno type="legalText">Ine (domboc)</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">120</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Ine</title> <note type="reign">r. 688–726</note></bibl>
+        <bibl type="legalText"><title>Ine’s Laws (in Alfred’s Domboc)</title> <note type="reign">Ine, r. 688–726</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">120</biblScope></bibl>
+          <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">434</biblScope></bibl>
+          <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">E</witness>
-          <witness>H</witness>
-          <witness>B (no Prol.)</witness>
-          <witness>G (Prol. only)</witness>
-          <witness>Q</witness>
-          <witness>Ld</witness>
-          <witness>Bu</witness>
-          <witness>Ot (frags.)</witness>
+          <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-b-no-prol"><abbr>B (no Prol.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
-        <bibl type="selectedText">E: Cambridge, Corpus Christi College, MS 173 Jurasinski and Oliver, eds.</bibl>
-        <bibl type="supplementaryText">H: Textus Roffensis Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">74.1</idno>
-          <idno type="editorNumber" n="Jurasinski and Oliver">75.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -55,17 +55,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 663 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 655 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 120.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="74.1">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 74.1</head>
-        <ab type="selectedText" xml:lang="und">Gif he þonne þone ceap nelle fore gesellan, þonne mot hine se hlaford gefreogean. Gieldan siððan his mægas þone wer, gif he mægburg hæbbe freo. Gif he næbbe, heden his þa gefan.</ab>
-        <ab type="translation" xml:lang="en">If, however, he does not wish to pay this amount for him, then the lord may free him. His kinsmen must afterwards pay the wer [for the slain man], if he has free kin. If he does not, then his enemies may take possession of him.</ab>
-        <ab type="secondTranslation" xml:lang="en">If, however, the lord will not pay this price for him, he must liberate him; afterwards his kinsmen must pay the wergeld, if he has a free kindred; if he has not [a free kindred], then his enemies may deal with him.</ab>
-        <ab type="supplementaryText" xml:lang="und">Gif he þonne þone ceap nylle foregesellan, þonne mot hine se hlaford gefreogean; gildon siððan his magas þone wer; gif he mægburh hæbbe freo; gif he næbbe, heden his ðonne ða gefan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="74.1" corresp="#wit-h">Gif he þonne þone ceap nylle foregesyllan, þonne mot hine se hlaford gefreogean; gildon siððan his magas þone wer, gif he mægburh hæbbe freo; gif he næbbe, heden his ðonne ða gefan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="74.1" corresp="#wit-e">Gif he þon<hi rend="italic">ne</hi> þone ceap nelle foregesellan, þon<hi rend="italic">ne</hi> mot hine se hlaford gefreogean; gielden siððan his mægas þone wer, gif he mægburg hæbbe freo; gif he næbbe, heden his þa gefan.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="74.1" corresp="#wit-q">Si hoc captale nolit pro eo dare, tunc dominus eius liberum faciat eum; et soluant postea parentes eius weram illam (occisi), si cognationem habeat liberam; si non habeat, obseruent eum inimici sui.</ab>
+        <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="75.1" corresp="#wit-e">Gif he þon<hi rend="italic">ne</hi> þone ceap nelle fore gesellan, þon<hi rend="italic">ne</hi> mot hine se hlaford gefreogean. Gieldan siððan his mægas þone wer, gif he mægburg hæbbe freo. Gif he næbbe, heden his þa gefan.</ab>
+        <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If, however, he does not wish to pay this amount for him, then the lord may free him. His kinsmen must afterwards pay the <hi rend="italic">wer</hi> [for the slain man], if he has free kin. If he does not, then his enemies may take possession of him.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If, however, the lord will not pay this price for him, he must liberate him; afterwards his kinsmen must pay the wergeld, if he has a free kindred; if he has not [a free kindred], then his enemies may deal with him.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn er jedoch diesen Preis nicht für [ihn] hergeben will, dann darf ihn der Herr freigeben; es sollen alsdann seine [des Todtschlägers] Verwandte [für ihn] das Wergeld [des Erschlagenen an dessen Sippe] zahlen, falls jener freie Verwandtschaft besitzt; wenn er solche nicht besitzt, mögen sich die Rächer seiner bemächtigen.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But if he will not pay this price for [him], then the lord may set him free; his [the killer’s] kinsmen are then to pay the wergeld [of the slain man to his kin, for him], if he has free kindred; if he has none, let the avengers take hold of him.</ab>
       </div>
     </body>
   </text>

@@ -4,8 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>I Cn Prol.</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Robertson</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -17,25 +20,22 @@
         <idno type="citationKey">ICn prol.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">278</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>I Cn</title></bibl>
+        <bibl type="legalText"><title>I Cnut (Winchester)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">278</biblScope></bibl>
+          <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">154</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness rend="bold">G(A)</witness>
-          <witness>A</witness>
-          <witness>Ld</witness>
-          <witness>D (frags.)</witness>
-          <witness>Q</witness>
-          <witness>Inst. Cn.</witness>
-          <witness>Cons. Cn.</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-g-a" rend="bold"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-a"><abbr>A</abbr> <note type="manuscript">London, British Library, Harley 55</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
+          <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
-        <bibl type="selectedText">G(A): British Library, Cotton Nero A.i (up to, and including, cap.14.2; thereafter B.) B: Cambridge, Corpus Christi College, MS 383 Robertson, ed.</bibl>
-        <bibl type="supplementaryText">G(A): British Library, Cotton Nero A.i Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">Prol.</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -54,16 +54,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1647 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1604 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 278.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Prol.">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> Prol.</head>
-        <ab type="selectedText" xml:lang="und">[Text from G(A), and so to 14.2 incl.] Ðis is seo gerædnys þe Cnut ciningc, ealles Englalandes ciningc ⁊ Dena cining, mid his witena geþeahte gerædde, Gode to lofe ⁊ him sylfum to cynescipe ⁊ [folce] to þearfe; ⁊ þæt wæs on ðære halgan midewintres tide on Winceastre.</ab>
-        <ab type="translation" xml:lang="en">This is the ordinance which King Canute, King of all England and King of the Danes, determined upon with the advice of his Councillors, to the glory of God and for the furtherance of his own royal authority and for his [people's] benefit; and that was during the holy Christmas season at Winchester.</ab>
-        <ab type="supplementaryText" xml:lang="und">Ðis is seo gerædnys, þe Cnut ciningc, ealles Englalandes ciningc ⁊ Dena cining, mid his witena geþeahte gerædde, Gode to lofe ⁊ him sylfum to cynescipe ⁊ to þearfe; ⁊ þæt wæs on ðære halgan midewintres tide on Winceastre.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol." corresp="#wit-g-a">Ðis is seo gerædnys, þe Cnut ciningc, ealles Englalandes ciningc ⁊ Dena cining, mid his witena geþeahte gerædde, Gode to lofe ⁊ him sylfum to cynescipe ⁊ to þearfe; ⁊ þ<hi rend="italic">æt</hi> wæs on ðære halgan midewintres tide on Winceastre.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol." corresp="#wit-a">Ðis is seo gerednes, þe Cnut cyningc mid his witena geþeahte geredde, Gode to lofe ⁊ hym sylfum to cynescipe ⁊ to þearfe; ⁊ þæt wæs on ðam halgan middewintres tid on Winceastre.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="Prol." corresp="#wit-q">Hęc sunt instituta Cnudi regis Anglorum, Danorum, Norwegarum uenerando sapientum eius consilio ad laudem et gloriam Dei et suam regalitatem et commune commodum habita in sancto natali Domini apud Wintoniam.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" corresp="#wit-g-a">[Text from G(A), and so to 14.2 incl.] Ðis is seo gerædnys þe Cnut ciningc, ealles Englalandes ciningc ⁊ Dena cining, mid his witena geþeahte gerædde, Gode to lofe ⁊ him sylfum to cynescipe ⁊ [folce] to þearfe; ⁊ þæt wæs on ðære halgan midewintres tide on Winceastre.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a">This is the ordinance which King Canute, King of all England and King of the Danes, determined upon with the advice of his Councillors, to the glory of God and for the furtherance of his own royal authority and for his [people's] benefit; and that was during the holy Christmas season at Winchester.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Prolog. Dies ist der Beschluss, welchen König Cnut, König von ganz England und Dänenkönig mit Beistimmung seiner Witan beschloss, Gott zum Preise und sich selbst zur königlichen Ehre und zum Nutzen (dem Volke Ld Quadr.); und dies geschah an dem heiligen Weihnachtsfeste in Winchester.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Prologue. This is the ordinance which King Cnut, king of all England and king of the Danes, decreed with the counsel of his witan, to the praise of God and to his own royal dignity and benefit (to the people, Ld Quadr.); and that was at the holy Christmas season at Winchester.</ab>
+        <note type="editorial">‘⁊ to þearfe’ in G after ‘to cynescipe’; Ld adds ‘folc’. Liebermann compares II Eg Prol.</note>
       </div>
     </body>
   </text>

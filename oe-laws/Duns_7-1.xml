@@ -4,6 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Duns 7.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -13,22 +17,18 @@
         <idno type="lawCodeAnchor">Duns</idno>
         <idno type="clause">7.1</idno>
         <idno type="citationKey">Duns 7.1</idno>
-        <idno type="legalText">Duns.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>, <biblScope unit="page">378</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Dunsæte</title></bibl>
+        <bibl type="legalText"><title>Dunsæte Ordinance</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">378</biblScope></bibl>
+          <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
+          <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+        </listBibl>
         <listWit>
-          <witness rend="bold">B</witness>
-          <witness>Q</witness>
+          <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
-        <bibl type="selectedText">B: Cambridge, Corpus Christi College, MS 383 Gesetze</bibl>
-        <bibl type="supplementaryText">Q: Quadripartitus Gesetze</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">7.1</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -46,16 +46,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1980 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1934 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 378.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7.1">
         <head><ref type="lawCode" target="law:Duns">Duns</ref> 7.1</head>
-        <ab type="selectedText" xml:lang="und">Oðre ungesawene ðing man mot mid aðe gewyrðan, ⁊ syððan be ðam gyldan.</ab>
-        <ab type="translation" xml:lang="en">Other unseen things [i.e. not on the above list?] may be valued [by the plaintiff] by [taking an] oath, and paid out accordingly.</ab>
-        <ab type="supplementaryText" xml:lang="und">Cetere res ungesaþene (id est non uise) possunt iuramento comprobari et secundum hoc reddi. Capra duos d.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7.1" corresp="#wit-q">Cetere res ungesaþene (id est non uise) possunt iuramento comprobari et secundum hoc reddi. Capra duos d.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7.1" corresp="#wit-b">Oðre ungesawene ðing man mot mid aðe gewyrðan, ⁊ syððan be ðam gyldan.</ab>
+        <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-b">Other unseen things [i.e. not on the above list?] may be valued [by the plaintiff] by [taking an] oath, and paid out accordingly.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Andere, unsichtbare [abstracte] Sachen dürfen [vom Kläger] durch Eid bewerthet und [ihm] dann demgemäss bezahlt werden.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Other, unseen [abstract] things may be valued by oath [by the plaintiff] and then paid [to him] accordingly.</ab>
+        <note type="editorial">The Quadripartitus's ‘Capra duos d.’ at the end of this clause belongs to 7 in the OE (see the note there).</note>
       </div>
     </body>
   </text>
