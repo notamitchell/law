@@ -49,7 +49,11 @@ Codes the spreadsheet has no clauses for, such as the manuscript sigla *G* and *
 
 ### The Laws tab
 
-`laws.html` is the search page for the clauses, with its own tab in the menu. It reads `data/laws.json`, which `tools/build-laws-index.js` writes from `oe-laws/` on every deploy (as `tools/build-index.js` does for the dictionary), so a clause added to `oe-laws/` appears in the search by itself. You can search by law code and clause (*Ine 23*, *abt 1a*), pick a law, type a keyword (an offence, a kind of person or a place; the box suggests the ones that exist), and tick a box to search the Old English texts and translations too (þ and th, æ and ae are treated alike). Clicking a keyword on a result or on a clause page searches for it. `law.html` is the page for one clause.
+`laws.html` opens with the **list of law codes**, grouped under the king who issued them (codes with no king are under *Other laws and legal texts*). It reads `oe-laws/codes.json`, which `tools/laws-from-database.py` writes: one line per law code, with its abbreviation, its full name (column D), the king and reign (E), the date (F of its first row), the number of clauses, its manuscripts and its editors and translators. The group names are in `GROUPS` in the script.
+
+Each law code has its own page, `lawcode.html?code=Abt`, listing every clause with the opening of Liebermann's text and the first English translation, a box to find a clause or a word in that code, links to the previous and next codes, and a button that opens the first clause with the whole code shown (`law.html?id=…&all=1`). The law code in the heading of a clause page links back to that list.
+
+Searching works as before: by law code and clause (*Ine 23*, *abt 1a*), by law code (the menu, grouped by king, shows each code's abbreviation and full name), by keyword (an offence, a kind of person or a place; the box suggests the ones that exist), and, with the box ticked, in the texts and translations too (þ and th, æ and ae are treated alike). The clauses come from `data/laws.json`, which `tools/build-laws-index.js` writes from `oe-laws/` on every deploy, so a clause added to `oe-laws/` appears by itself. Clicking a keyword on a result or on a clause page searches for it. `law.html` is the page for one clause.
 
 ### Manuscript letters are not in the citation lists
 
