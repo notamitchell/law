@@ -15,6 +15,17 @@ scripts:
     const NS = 'http://www.tei-c.org/ns/1.0';
     let catalogue = [];
 
+    // Liebermann's volume 1 on archive.org, opened at a printed page.
+    // "445/6" or "450/451" (a clause running over two pages) opens at the first.
+    const SCAN_URL = {{ site.laws_facsimile_url | jsonify }};
+    const SCAN_ID = (/\/details\/([^/?#]+)/.exec(SCAN_URL || '') || [])[1] || '';
+    function scanPage(page) {
+        const m = /^\s*(\d+)/.exec(page || '');
+        return m ? m[1] : '';
+    }
+    const scanLink = p => SCAN_URL.replace('{page}', p);
+    const scanEmbed = p => `https://archive.org/embed/${SCAN_ID}#page/${p}/mode/1up`;
+
     const el = (tag, cls, text) => {
         const n = document.createElement(tag);
         if (cls) n.className = cls;
@@ -235,7 +246,21 @@ scripts:
         } else if (row.legalText) meta.appendChild(el('span', null, row.legalText));
         const promulg = first(doc, 'note[type="promulgation"]') || tei(doc, 'note').find(n => n.getAttribute('type') === 'promulgation');
         if (promulg && promulg.textContent.trim()) meta.appendChild(el('span', null, 'Promulgated: ' + promulg.textContent.trim()));
-        if (row.page && !isNew) meta.appendChild(el('span', null, 'Liebermann, Gesetze I, p. ' + row.page));
+        const lieb = sources(doc).liebermann;
+        const liebPage = isNew ? (lieb ? lieb.page : '') : row.page;
+        const scanAt = SCAN_ID ? scanPage(liebPage) : '';
+        if (liebPage) {
+            const s = el('span', null, 'Liebermann, Gesetze I, p. ' + liebPage);
+            if (scanAt) {
+                s.appendChild(document.createTextNode(' · '));
+                const a = el('a', null, 'page scan');
+                a.href = scanLink(scanAt);
+                a.target = '_blank';
+                a.rel = 'noopener';
+                s.appendChild(a);
+            }
+            meta.appendChild(s);
+        }
         header.appendChild(meta);
         target.appendChild(header);
 
@@ -352,6 +377,44 @@ scripts:
         a.href = root + 'oe-laws/' + encodeURIComponent(row.file);
         src.appendChild(a);
         target.appendChild(src);
+
+        if (scanAt) addScanPanel(scanAt, liebPage);
+    }
+
+    // The page of Liebermann's volume 1 beside the clause, as on the
+    // dictionary entries. The scan only loads from archive.org when the
+    // reader asks for it.
+    function addScanPanel(p, label) {
+        const main = el('div', 'entry-main');
+        while (target.firstChild) main.appendChild(target.firstChild);
+        const aside = el('aside', 'entry-scan');
+        aside.setAttribute('aria-label', 'Page scan');
+        const bar = el('div', 'entry-scan-bar');
+        bar.appendChild(el('span', null, 'Liebermann I, printed page ' + label));
+        const open = el('a', null, 'Open on archive.org');
+        open.href = scanLink(p);
+        open.target = '_blank';
+        open.rel = 'noopener';
+        bar.appendChild(open);
+        aside.appendChild(bar);
+        const load = el('div', 'entry-scan-load');
+        const btn = el('button', null, 'Show page scan');
+        btn.type = 'button';
+        btn.addEventListener('click', () => {
+            const frame = document.createElement('iframe');
+            frame.src = scanEmbed(p);
+            frame.title = 'Liebermann, Gesetze I, p. ' + label + ', on archive.org';
+            frame.allowFullscreen = true;
+            aside.classList.add('loaded');
+            load.replaceWith(frame);
+        });
+        load.appendChild(btn);
+        load.appendChild(el('p', null, 'The scan loads from archive.org.'));
+        aside.appendChild(load);
+        const wrap = el('div', 'entry-with-scan');
+        wrap.appendChild(main);
+        wrap.appendChild(aside);
+        target.appendChild(wrap);
     }
 
     if (!id) {
