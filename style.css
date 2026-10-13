@@ -377,7 +377,19 @@ td.term { font-weight: 600; color: var(--navy-dark); white-space: nowrap; }
     margin: 0 0 1.5rem;
 }
 .liebermann-text a { text-decoration: none; border-bottom: 1px dotted var(--link); }
-.liebermann-text a.ref-lawCode { color: #7a2e0e; border-bottom-color: #7a2e0e; }
+/* Links in entries have a colour for each kind of place they lead:
+   law codes (brown), manuscripts (purple), grammatical abbreviations (blue). */
+:root { --law-code: #7a2e0e; --manuscript: #5b3a8e; --abbreviation: var(--link); }
+.liebermann-text a.ref-lawCode, .entry-section a.ref-lawCode { color: var(--law-code); border-bottom-color: var(--law-code); }
+.liebermann-text a.ref-manuscript, .entry-section a.ref-manuscript { color: var(--manuscript); border-bottom-color: var(--manuscript); }
+.liebermann-text a.ref-abbreviation { color: var(--abbreviation); border-bottom-color: var(--abbreviation); }
+.link-key { white-space: nowrap; border-bottom: 1px dotted currentColor; }
+.link-key--law { color: var(--law-code); }
+.link-key--ms { color: var(--manuscript); }
+.link-key--gram { color: var(--abbreviation); }
+.law-popup--law .law-popup-code { color: var(--law-code); }
+.law-popup--ms .law-popup-code { color: var(--manuscript); }
+.law-popup--gram .law-popup-code { color: var(--abbreviation); }
 .liebermann-text .pb, .pb { font-family: var(--sans); font-size: 0.75rem; color: var(--muted); vertical-align: super; }
 .lang-marker { color: var(--navy); }
 

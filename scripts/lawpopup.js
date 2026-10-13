@@ -107,7 +107,7 @@
 
     function build(link, row) {
         const printed = norm(link.textContent) || norm(row['Gesetze Text']);
-        const box = element('div', 'law-popup');
+        const box = element('div', 'law-popup law-popup--' + kindOf(link));
         box.setAttribute('role', 'dialog');
         const kind = KINDS[kindOf(link)];
         box.setAttribute('aria-label', kind.noun + ' ' + printed);
@@ -269,4 +269,31 @@
     });
 
     window.addEventListener('resize', place);
+
+    // ------------------------------------------------------------------
+    // Manuscript sigla look different from law codes
+    // ------------------------------------------------------------------
+    // Entries link a manuscript siglum to the law code list (lawAbb.html#H).
+    // Once the list of manuscripts has loaded, such links are pointed at the
+    // manuscripts list instead and given the class ref-manuscript, so they
+    // can have their own colour (style.css). Entries are drawn after the page
+    // loads, so links added later are marked too.
+    function markManuscripts(scope) {
+        if (!groups.ms) return;
+        (scope || document).querySelectorAll('a[href*="lawAbb.html#"]').forEach(a => {
+            const anchor = anchorOf(a);
+            if (!groups.ms[anchor]) return;
+            a.classList.remove('ref-lawCode');
+            a.classList.add('ref-manuscript');
+            a.setAttribute('href', a.getAttribute('href').replace('lawAbb.html#', 'msAbb.html#'));
+        });
+    }
+    load('ms').then(() => {
+        markManuscripts();
+        if (window.MutationObserver) {
+            new MutationObserver(records => {
+                if (records.some(r => r.addedNodes.length)) markManuscripts();
+            }).observe(document.documentElement, { childList: true, subtree: true });
+        }
+    });
 })();
