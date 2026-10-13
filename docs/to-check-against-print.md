@@ -107,3 +107,14 @@ From [the cross-check of hund – iustitia](crosscheck-hund-iustitia.md).
 | [ ] | 118 | *hundred* | ~dorum ECf 13,1 **≐** (a dotted equals sign) | **=** | |
 | [ ] | 125 | *insulicolae* | headword **insulicolae** | **insulicolæ** | |
 | [ ] | 126 | *Iohannes* | II) Apostel und Evangelist **Iud Dei VI 1**. 1,4. VII 23 | **Iud Dei VII 1** | |
+
+## iustitiabilis – mægen (pp. 128–137)
+
+From [the cross-check of iustitiabilis – mægen](crosscheck-iustitiabilis-maegen.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 128 | *ł* | headword **ł** (l with a stroke through it) | **ƚ** (l with a bar) | Which sign is printed? |
+| [ ] | 132 | *Lazarus* | **L** Lazarus Iud Dei IV 3,3 | **F** Lazarus | |
+| [ ] | 132 | *leap* | ænne leap **fulne** [ac] sædcynnes | **fullne** | |
+| [ ] | 135 | *licgan* | on **unfriðe** II Atr 6 | **unfriþe** | |
