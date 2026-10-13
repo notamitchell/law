@@ -53,6 +53,13 @@ scripts:
         return `<p class="def">${ELieb.renderTei(def || el, root)}</p>`;
     }
 
+    // Each numbered meaning (a bold "2)") starts a new paragraph.
+    function paragraphs(html) {
+        const { head, senses } = ELieb.splitSenses(html, true);
+        if (!senses.length) return html;
+        return `<p>${head.trim()}</p>` + senses.map(s => `<p class="sense"><strong>${esc(s.n)}</strong>) ${s.body.trim()}</p>`).join('');
+    }
+
     function xrList(e, type) {
         return e.xr.filter(x => x.getAttribute('type') === type)
             .map(x => `<li>${ELieb.renderTei(x, root)}</li>`).join('');
@@ -86,7 +93,7 @@ scripts:
 
         <section class="entry-section">
             <h2>Liebermann's entry</h2>
-            <div class="liebermann-text">${e.original ? ELieb.renderTei(e.original, root) : ''}</div>
+            <div class="liebermann-text">${e.original ? paragraphs(ELieb.renderTei(e.original, root)) : ''}</div>
             <p class="small muted">Click a law code or manuscript to see what it stands for; the <a href="${root}lawAbb.html">law code list</a> has them all. German abbreviations link to the <a href="${root}gramAbb.html">grammatical abbreviations</a>. ~ stands for the headword.</p>
         </section>
 
