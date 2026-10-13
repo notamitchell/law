@@ -96,3 +96,14 @@ From [the cross-check of habban – hume](crosscheck-habban-hume.md).
 |---|---|---|---|---|---|
 | [ ] | 111 | *heafod* | heevit. – Der.: **Hursteheved** | **Hurstesheved** | |
 | [ ] | 114 | *her* | [lies heron]; irrig **hĭc** (breve) | **hǐc** (caron) | |
+
+## hund – iustitia (pp. 118–127)
+
+From [the cross-check of hund – iustitia](crosscheck-hund-iustitia.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 118 | *hundred* | abgekürzt: mid XII hund’ .., VI **hundı** .., mid hundr̄ 1,1 f. | VI **hundr** ... | What abbreviation mark follows hund? |
+| [ ] | 118 | *hundred* | ~dorum ECf 13,1 **≐** (a dotted equals sign) | **=** | |
+| [ ] | 125 | *insulicolae* | headword **insulicolae** | **insulicolæ** | |
+| [ ] | 126 | *Iohannes* | II) Apostel und Evangelist **Iud Dei VI 1**. 1,4. VII 23 | **Iud Dei VII 1** | |
