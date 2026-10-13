@@ -7,8 +7,6 @@ stylesheets:
 scripts:
   - "https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"
   - "ROOT/scripts/eliebermann.js"
-  - "ROOT/data/markLaw.js"
-  - "ROOT/data/markforward.js"
 ---
 <h1 id="form-title">Suggest an entry</h1>
 
@@ -112,7 +110,7 @@ scripts:
 
     <details class="small">
         <summary>A law code or abbreviation isn't linked?</summary>
-        <p>Check that the spelling is in <a href="https://github.com/notamitchell/law/blob/main/data/markLaw.js">markLaw.js</a> (law codes and manuscripts) or <a href="https://github.com/notamitchell/law/blob/main/data/markforward.js">markforward.js</a> (abbreviations). There may be a variant that isn't listed, such as "3.Pers" for "3. Pers". If the variant will come up again, add it to the right file; otherwise edit the XML above by hand.</p>
+        <p>Check that the spelling is in <a href="https://github.com/notamitchell/law/blob/main/data/markLaw.json">markLaw.json</a> (law codes and manuscripts) or <a href="https://github.com/notamitchell/law/blob/main/data/markforward.json">markforward.json</a> (abbreviations). There may be a variant that isn't listed, such as "3.Pers" for "3. Pers". If the variant will come up again, add it to the right file; otherwise edit the XML above by hand.</p>
         <p>Law codes are only linked in roman (upright) type, because Liebermann's italics are German: <em>Abt</em> is "abbot", not the laws of Æthelberht.</p>
     </details>
 </div>
@@ -122,9 +120,8 @@ scripts:
     const FACSIMILE = {{ site.facsimile_url | jsonify }};
     const esc = ELieb.escapeXml;
 
-    // The data files call these with their rows.
-    var markLaw = window.markLaw || [];
-    var markforward = window.markforward || [];
+    // Law codes and abbreviations to link, from data/markLaw.json and data/markforward.json.
+    const abbreviations = ELieb.loadAbbreviations(root);
 
     // A page break inside an entry, shown as [p. 4] and kept when a change is
     // suggested to an entry that runs over a page. It becomes <pb n="4"/>.
@@ -197,7 +194,8 @@ scripts:
 
     let currentXml = '', currentFile = '';
 
-    function processEntry() {
+    async function processEntry() {
+        const { markLaw, markforward } = await abbreviations;
         const entryHtml = quill.root.innerHTML;
         const checks = [];
         if (ELieb.isEmptyHtml(entryHtml)) {

@@ -89,8 +89,8 @@ The text inside `dictScrap` keeps the formatting of the printed page, because it
 | bold (headwords, sense numbers) | `<hi rend="bold">` |
 | italic (Liebermann's German) | `<hi rend="italic">` |
 | superscript (footnote numbers, manuscript variants) | `<hi rend="superscript">` |
-| a law code, text or manuscript siglum | `<ref type="lawCode" target="law:IICn">II Cn</ref>`, where `IICn` is its Anchor in `data/markLaw.js` |
-| a German abbreviation | `<ref type="abbreviation" target="gram:Plural"><abbr>pl</abbr></ref>`, where `Plural` is its Anchor in `data/markforward.js` |
+| a law code, text or manuscript siglum | `<ref type="lawCode" target="law:IICn">II Cn</ref>`, where `IICn` is its Anchor in `data/markLaw.json` |
+| a German abbreviation | `<ref type="abbreviation" target="gram:Plural"><abbr>pl</abbr></ref>`, where `Plural` is its Anchor in `data/markforward.json` |
 | an entry that runs over a page | `<pb n="4"/>` where page 4 begins |
 | a line break the editor wants kept | `<lb/>` |
 

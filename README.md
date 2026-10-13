@@ -45,7 +45,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
  Visitor ──▶ index / dictionary / entry.html?id=… / lawAbb / gramAbb / StatutaVetera/…
                  │                     │                  │
                  ▼                     ▼                  ▼
-          data/entries.json     entries/<id>.xml    data/markLaw.js, data/markforward.js
+          data/entries.json     entries/<id>.xml    data/markLaw.json, data/markforward.json
           (list for search,     (fetched and        (law codes and abbreviations)
            built on deploy)      rendered in the
                                  browser)
@@ -58,7 +58,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 
 - **Entry pages** (`entry.html?id=abbod`) fetch `entries/abbod.xml` and render it with `ELieb.renderTei()`. The `id` can also be a headword (`entry.html?id=æbære`). If there is no file, the page offers to start one.
 - **The Dictionary page** reads `data/entries.json`, which `tools/build-index.js` writes on every deploy from the files in `entries/`. If it's missing (for example in a local build where you didn't run the script), the page falls back to a plain list of file names.
-- **Abbreviation links.** When an entry is made, `ELieb.linkAbbreviations()` links every law code, manuscript siglum and abbreviation listed in `data/markLaw.js` and `data/markforward.js`, longest match first, and stores the links in the TEI. Law codes are only linked in roman type, since Liebermann's italics are German.
+- **Abbreviation links.** When an entry is made, `ELieb.linkAbbreviations()` links every law code, manuscript siglum and abbreviation listed in `data/markLaw.json` and `data/markforward.json`, longest match first, and stores the links in the TEI. Law codes are only linked in roman type, since Liebermann's italics are German.
 - **Site pages are TEI too.** The text of Home and About is in `pages/Home.xml` and `pages/About.xml`, so it can be edited like an entry.
 - **Statuta Vetera.** The manuscript search reads every file in `tei/`; the list of files is written into the page when the site is built, so it makes no GitHub API calls. The viewer's volumes and their commentary folders are in `_data/statutes_volumes.yml`.
 
@@ -79,7 +79,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 | `abbreviations.html`, `lawAbb.html`, `gramAbb.html` | The abbreviation lists (`scripts/abbreviations.js`). |
 | `entries/*.xml` | **The dictionary.** One TEI file per entry. See [docs/SCHEMA.md](docs/SCHEMA.md). |
 | `pages/*.xml` | Text of the site pages, as TEI. |
-| `data/markLaw.js`, `data/markforward.js` | Law codes and manuscript sigla; grammatical abbreviations. Edit these to add a spelling that isn't linked. |
+| `data/markLaw.json`, `data/markforward.json` | Law codes and manuscript sigla; grammatical abbreviations. Edit these to add a spelling that isn't linked. |
 | `scripts/eliebermann.js` | Shared code: file names, linking, building TEI from the form, rendering TEI. |
 | `scripts/docx-import.js` | Splits a Word document into entries. See [docs/IMPORT.md](docs/IMPORT.md). |
 | `scripts/site-page.js` | Shows the TEI site pages. |
@@ -99,7 +99,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 
 **A change:** *Suggest a change* at the foot of an entry opens the form filled in from that entry; the file it makes has the same name, so uploading it replaces the entry. Or edit the XML on GitHub directly.
 
-**A law code or abbreviation that isn't linked:** add its spelling to `data/markLaw.js` or `data/markforward.js` with the same Anchor as its main form. Existing entries keep their links as they were made; re-import or re-save an entry to pick up new ones.
+**A law code or abbreviation that isn't linked:** add its spelling to `data/markLaw.json` or `data/markforward.json` with the same Anchor as its main form. Existing entries keep their links as they were made; re-import or re-save an entry to pick up new ones.
 
 ## Running the site locally
 
@@ -162,7 +162,7 @@ The letters Z to Q were transcribed from the page scans, working backwards from 
 
 1. **Contributions straight to the site.** As in [Common Ground](https://github.com/historicalesque/carlton): the form sends each entry to a Google Apps Script, which saves a copy to a Google Sheet in the team's shared Drive and opens a pull request on this repository. Editors pick *Accept* or *Reject* in the Sheet's Decision column, and the script merges or closes the pull request. Needs a Google account for the Sheet and script, and a GitHub token with write access to this repository. Until then, the form and import download files for an editor to add.
 2. **A review page** listing submissions, with a before-and-after comparison for corrections to existing entries.
-3. **Fix the notes in `data/markLaw.js`** (they are one row out; see the [stock-take](docs/STOCKTAKE.md#data-problems)). The law code list shows them marked "under review" until then.
+3. **Fix the notes in `data/markLaw.json`** (they are one row out; see the [stock-take](docs/STOCKTAKE.md#data-problems)). The law code list shows them marked "under review" until then.
 4. **Better search:** search inside entries with tolerance for spelling variants (æ/ae, þ/ð), and find every entry that cites a given law code.
 5. **Cross-references with ~.** Resolve pointers like *s.* abb~ to the entry they mean.
 6. **Validation.** A TEI customisation (ODD) for the entry format, and a check on every push that each entry is valid.
