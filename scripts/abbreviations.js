@@ -1,8 +1,9 @@
 /*
- * eLiebermann: the law code and grammatical abbreviation lists
- * (lawAbb.html and gramAbb.html). Both pages share this code; each loads
- * its own data file, named by data-source on #content-container
- * (data/markLaw.json or data/markforward.json).
+ * eLiebermann: the lists of law codes, manuscripts and grammatical
+ * abbreviations (lawAbb.html, msAbb.html and gramAbb.html). The pages share
+ * this code; each loads its own data file, named by data-source on
+ * #content-container (data/markLaw.json, data/manuscripts.json or
+ * data/markforward.json).
  *
  * Rows with the same Anchor are variant spellings of one abbreviation and
  * share a heading, which is what entry pages link to (lawAbb.html#Ine).
@@ -28,9 +29,26 @@
         rows.forEach(row => { (groups[row.Anchor] = groups[row.Anchor] || []).push(row); });
         draw();
         if (location.hash) {
-            const el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+            const anchor = decodeURIComponent(location.hash.slice(1));
+            const el = document.getElementById(anchor);
             if (el) el.scrollIntoView();
+            else forward(anchor);
         }
+    }
+
+    // Dictionary entries link manuscript sigla to the law code list
+    // (lawAbb.html#H). If the anchor isn't here but is on the list named by
+    // data-elsewhere ("data/manuscripts.json msAbb.html"), go there.
+    function forward(anchor) {
+        const container = document.getElementById('content-container');
+        const [file, page] = (container.dataset.elsewhere || '').split(' ');
+        if (!file || !page) return;
+        fetch((window.SITE_ROOT || '') + file)
+            .then(r => r.json())
+            .then(rows => {
+                if (rows.some(r => r.Anchor === anchor)) location.replace((window.SITE_ROOT || '') + page + '#' + encodeURIComponent(anchor));
+            })
+            .catch(() => {});
     }
 
     function matches(row, term, scope) {
