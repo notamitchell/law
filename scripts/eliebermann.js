@@ -346,8 +346,10 @@
         };
         const passages = text => {
             let rest = text, m;
-            if (code && (m = new RegExp(`^\\s+(${PASSAGE})(?![\\p{L}\\d)])`, 'u').exec(rest)) && (!last || !open || last.anchor !== code.anchor || code.fresh)) {
-                add(code.label + ' ' + m[1].replace(/\.$/, '')); rest = rest.slice(m[0].length); code.fresh = false;
+            // The passage follows after a space (Af 41) or, for Liebermann's "Cn 1020,11"
+            // and "Iud Dei X,17", straight after a comma.
+            if (code && (m = new RegExp(`^(\\s+|,(?=\\d))(${PASSAGE})(?![\\p{L}\\d)])`, 'u').exec(rest)) && (!last || !open || last.anchor !== code.anchor || code.fresh)) {
+                add(code.label + (m[1] === ',' ? ',' : ' ') + m[2].replace(/\.$/, '')); rest = rest.slice(m[0].length); code.fresh = false;
             } else if (code && code.fresh && !/^\s*$/.test(rest)) {
                 code = null;   // a code with no passage after it, e.g. "VI As" in a sentence
             }
