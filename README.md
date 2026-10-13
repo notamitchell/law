@@ -8,7 +8,6 @@
 >
 > - **Look up a word:** [Dictionary](https://notamitchell.github.io/law/dictionary.html)
 > - **Abbreviations:** [Law codes and manuscripts](https://notamitchell.github.io/law/lawAbb.html) · [Grammatical abbreviations](https://notamitchell.github.io/law/gramAbb.html)
-> - **Statuta Vetera:** [Manuscripts](https://notamitchell.github.io/law/StatutaVetera/) · [Statutes of the Realm viewer](https://notamitchell.github.io/law/StatutaVetera/sidebyside.html)
 > - **Suggest an entry or a change:** [Suggest an entry](https://notamitchell.github.io/law/contribute.html), or *Suggest a change* at the foot of any entry
 
 ---
@@ -22,13 +21,14 @@
 - [Running the site locally](#running-the-site-locally)
 - [Transcription notes to review](#transcription-notes-to-review)
 - [Roadmap](#roadmap)
+- [Statuta Vetera (a separate project)](#statuta-vetera-a-separate-project)
 - [Source](#source)
 
 ---
 
 ## Overview
 
-eLiebermann is a digital edition of the *Wörterbuch*, the dictionary in Felix Liebermann's *Die Gesetze der Angelsachsen* (1903–1916), the standard edition of the laws of England before the Norman Conquest. Alongside it, the site describes manuscripts of the *Statuta Vetera* and has a viewer for the *Statutes of the Realm*.
+eLiebermann is a digital edition of the *Wörterbuch*, the dictionary in Felix Liebermann's *Die Gesetze der Angelsachsen* (1903–1916), the standard edition of the laws of England before the Norman Conquest. The repository also hosts [Statuta Vetera](#statuta-vetera-a-separate-project), a separate project.
 
 It is a static website hosted on **GitHub Pages** and built with **Jekyll**, using the `jekyll-theme-cayman` theme with a custom layout. It has no server or database of its own:
 
@@ -170,7 +170,18 @@ The letters Z to O were transcribed from the page scans, working backwards from 
 5. **Cross-references with ~.** Resolve pointers like *s.* abb~ to the entry they mean.
 6. **Validation.** A TEI customisation (ODD) for the entry format, and a check on every push that each entry is valid.
 7. **The *Rechts- und Sachglossar*** (volume 2, part 2) as a second dictionary, linked from the *Wörterbuch*.
-8. **Statuta Vetera:** real commentary for the viewer, scans for volumes 7–11, and links between manuscripts and the statutes they contain.
+
+## Statuta Vetera (a separate project)
+
+*Statuta Vetera* is a separate project: descriptions of manuscripts of the *Statuta Vetera*, the collections of early English statutes copied for lawyers' use, and a viewer for reading the *Statutes of the Realm* beside commentary. It is hosted here for now, but isn't in the eLiebermann menu or home page. It may move to its own repository later.
+
+- [Manuscripts](https://notamitchell.github.io/law/StatutaVetera/): search and filter the manuscript descriptions
+- [Statutes of the Realm viewer](https://notamitchell.github.io/law/StatutaVetera/sidebyside.html)
+- [Manuscript description generator](https://notamitchell.github.io/law/StatutaVetera/tei-gen.html): turns a catalogue description into a TEI file for `tei/`
+
+Its files are `StatutaVetera/`, `tei/` (manuscript descriptions, format in [docs/SCHEMA.md](docs/SCHEMA.md#manuscripts-statuta-vetera)) and `_data/statutes_volumes.yml` (the viewer's volumes), with its own menu under `statuta` in `_data/navigation.yml`. To move it out, take those files, the `StatutaVetera` defaults in `_config.yml`, and a copy of `_layouts/default.html` and `style.css`.
+
+Still to do: real commentary for the viewer, scans for volumes 7–11, and links between manuscripts and the statutes they contain.
 
 ## Source
 
