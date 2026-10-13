@@ -65,7 +65,7 @@ const ENTRY_FILES = [{% for f in entry_files %}"{{ f.basename }}"{% unless forlo
         document.getElementById('count').textContent = `${list.length} of ${entries.length} entries`;
 
         if (!list.length) {
-            results.innerHTML = `<p>No entries match. <a href="${root}contribute.html">Add an entry</a> if it's missing.</p>`;
+            results.innerHTML = `<p>No entries match. <a href="${root}contribute.html">Suggest an entry</a> if it's missing.</p>`;
             return;
         }
         results.innerHTML = letters.map(l => `
