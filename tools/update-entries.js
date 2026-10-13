@@ -40,7 +40,7 @@ function update(xml) {
     const kept = lines.filter(line => {
         const m = XR.exec(line);
         if (!m) return true;
-        if (!(m[1] || '').startsWith('law:')) extra.push({ text: unescape(m[2].replace(/<[^>]*>/g, '')), url: m[1] ? unescape(m[1]) : '' });
+        if (!/^(law|clause):/.test(m[1] || '')) extra.push({ text: unescape(m[2].replace(/<[^>]*>/g, '')), url: m[1] ? unescape(m[1]) : '' });
         return false;
     });
     const end = kept.findIndex(line => /^\s*<\/entry>/.test(line));
