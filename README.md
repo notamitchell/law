@@ -98,7 +98,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 | `tools/build-index.js` | Writes `data/entries.json`. Runs on every deploy. |
 | `tools/update-entries.js` | Rewrites the parts of each entry made from Liebermann's text: the numbered meanings and the law code citation list. Run it after adding or changing entries outside the form. |
 | `.github/workflows/static.yml` | Builds and deploys the site on every push to `main`. |
-| `docs/` | Entry format, import rules, the latest import report and the stock-take of October 2026. |
+| `docs/` | Entry format, import rules, the latest import report, the stock-take of October 2026, and the cross-checks against the team's Word transcriptions (`crosscheck-*.md`). |
 
 ## Adding entries
 
@@ -130,6 +130,7 @@ The letters Z to O were transcribed from the page scans, working backwards from 
 
 - [ ] Z–O were transcribed from the page images, not archive.org's OCR. Every entry says "Transcribed by Claude from the page scan; not yet checked against the print." (all letters)
 - [ ] Only spot checks have been done so far, and all matched the scan: wis–wise (p. 245), wud[u] (p. 250), the end of Verbum to vers (p. 233), utalædan to [utaslean] (p. 231). (W, V, U)
+- [ ] A to *boc* (pp. 1–25) have been cross-checked against the team's Word transcription, *A - boc.docx*: see [docs/crosscheck-A-boc.md](docs/crosscheck-A-boc.md) for what was fixed and the questions still open. (A, B)
 - [ ] An entry that runs over a page keeps a page marker where the page turns, e.g. ymbrenfæsten (p. 253) and vel (p. 233). The very long entry on, which runs from p. 162 to p. 165, is one entry. (Y, W, V, O)
 
 **Language labels**
@@ -159,7 +160,7 @@ The letters Z to O were transcribed from the page scans, working backwards from 
 **Printed text: kept or corrected**
 
 - [ ] Letters broken in the type were read as the intended letter: "mögcn" → mögen, "seincs" → seines, "1,.7" → 1,7 (U); "aufhebend" and "Orthographie" (Þ); "Untergebenen" and "doppeltes" (T); "Streitigkeiten" and "einleitend" (S); "eigenem" and "retient" (R); "ceapnnge" → ceapunge in orceapunga, assuming the "nn" is broken type (O).
-- [ ] Likely misprints in the book are kept as printed: "derehdner" (voleir) and "-rseunessa" (v), "forhttundan" under Particip, "(þingc)" in oðer and "V G G 2" in oððon. (V, P, O)
+- [ ] Likely misprints in the book are kept as printed: "derehdner" (voleir) and "-rseunessa" (v), "forhttundan" under Particip, "(þingc)" in oðer and "V G G 2" in oððon, and "As Alm 1.2" in bisceop, surely for 1,2. (V, P, O, B)
 - [ ] The gap printed "hundfeo:::" in þusend is kept as printed. (Þ)
 - [ ] In opprimere, the small superscript in "Rb. S. 537^73^" is read as 73 but could be another number. (O)
 - [ ] Literal asterisks in references are kept, e.g. *S.* 375*. (W)
@@ -187,7 +188,8 @@ The letters Z to O were transcribed from the page scans, working backwards from 
         - [ ] Six law codes were matched to the law code list by judgement: *Becw*, *Mirc.*, *Nor. Cyricgrið*, *Norðleod.*, *Ord*, *Rom.* Are they right?
         - [ ] Some codes are not on the law code list, so their clauses are not linked: *Cn 1018*, the *Rubrics*, *VI Atr (Latin Paraphrase)*, *Wer*, *Geþyn.*, *Prom. Reg.*, *Rubric List*, *Ymb Æwbricas*. Should they be added to it?
         - [ ] The spreadsheet does not say which language each text is in, and some is Latin, so the texts are marked `xml:lang="und"`. How should Old English and Latin be told apart?
-9. **Links to Bosworth-Toller** (and later other Old English dictionaries). The dictionary's own addresses are numbers (`bosworthtoller.com/4773`), so they cannot be worked out from a headword; they have to be matched from a list. Two separate tasks:
+9. **"Norðleod 2lq" under *æðeling*** (p. 8): "Ersetzt durch eorl Norðleod 2lq". The print reads 2lq, and so does the site for now. It is probably a misprint, but not obviously for 21q, since Norðleod has only twelve clauses. It may stand for clause 2 and a manuscript siglum (such as Ld). Check Liebermann's text of Norðleod 2 in volume 1 to see which manuscript has *eorl* for *æðeling*, then correct the entry.
+10. **Links to Bosworth-Toller** (and later other Old English dictionaries). The dictionary's own addresses are numbers (`bosworthtoller.com/4773`), so they cannot be worked out from a headword; they have to be matched from a list. Two separate tasks:
     - [ ] **Get a headword list.** There is a data dump, [Bosworth-Toller's Anglo-Saxon Dictionary online, version 0.1](https://lindat.mff.cuni.cz/repository/items/da2f3c19-f5a9-48d2-bb8f-eb84a415f954) (LINDAT, April 2021, 62,936 entries). Its file `bosworth_entries_export.csv` has the columns `id`, `headword` and `body`, and the `id` is the number in the website address. Check the licence when downloading (the site says its data is "free for any purpose" and asks academic users to cite the dictionary). The dump is from 2021, so also **ask Bosworth-Toller for a newer copy** through the contact form on their site, which offers database dumps to researchers.
     - [ ] **Make the links.** With the list, try the letter A first: link a headword only where exactly one Bosworth-Toller entry has that spelling; where several share it, use Liebermann's definition to suggest the right one but leave those for an editor to confirm; report what has no match (spellings differ, *æ*/*þ*/*ð*). Entries already have a place for these links (`<xr type="bosworthToller">`, shown under "Other dictionaries"). Nothing is changed in the entries until the report has been looked at.
     - The Dictionary of Old English has the same problem (its addresses are codes such as `?E03539`) and covers only part of the alphabet, so it needs its own list.
