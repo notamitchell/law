@@ -43,11 +43,22 @@
 <body class="{% if page.full_width %}full-width{% endif %}{% if page.section == "home" %} home{% endif %}">
     <a class="skip-link" href="#main">Skip to content</a>
 
-    {%- if page.section == "home" %}
+    {%- comment -%}
+      Full banner on the Home page (Dōmas) and on any page whose front
+      matter says `banner: eliebermann` (the Dictionary page); a slim
+      header everywhere else.
+    {%- endcomment -%}
+    {%- if page.section == "home" or page.banner == "eliebermann" %}
     <header class="site-header">
+        {%- if page.banner == "eliebermann" %}
+        <a class="site-banner" href="{{ root }}dictionary.html">
+            <img src="{{ root }}images/eliebermann-banner.svg" alt="eLiebermann, with a portrait of Felix Liebermann" width="1200" height="300">
+        </a>
+        {%- else %}
         <a class="site-banner" href="{{ root }}index.html">
             <img src="{{ root }}images/domas-banner.svg" alt="The Dōmas Database" width="1200" height="300">
         </a>
+        {%- endif %}
         <p class="site-subtitle">{{ tagline }}</p>
         <p class="construction"><span>Site under construction</span></p>
     </header>
@@ -59,7 +70,7 @@
         </a>
         {%- else %}
         <a class="site-brand" href="{{ root }}dictionary.html">
-            <img class="site-lockup" src="{{ root }}images/eliebermann-logo.svg" alt="eLiebermann" width="640" height="94">
+            <img class="site-lockup" src="{{ root }}images/eliebermann-logo.svg" alt="eLiebermann" width="619" height="101">
         </a>
         {%- endif %}
         <p class="site-subtitle">{{ tagline }}</p>
