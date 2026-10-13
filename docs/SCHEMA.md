@@ -73,11 +73,12 @@ Inside it, in this order:
 |---|---|---|
 | `form type="lemma"/orth` | yes | The headword as printed, with any brackets or hyphens (`[-abeden]`, `-a-`). |
 | `dictScrap type="liebermann"` | yes | Liebermann's whole entry as printed. See [Liebermann's text](#liebermanns-text). |
+| `dictScrap type="senses"` | no | Liebermann's numbered meanings, taken from the full text: one `<sense n="2">` for each bold "2)", holding the text from after the ")" up to the next number, marked up as in the full text. The text before "1)" (headword and forms) stays only in the full text. The form and `tools/update-entries.js` remake this from the full text, so correct the full text rather than this. |
 | `sense type="liebermann" xml:lang="de"` | no | Liebermann's definition. Either one `<def>`, or numbered `<sense n="1"><def>…</def></sense>` for numbered senses. |
 | `sense type="translation" xml:lang="en"` | no | The English translation, in the same shape. |
 | `xr type="see"` | no | A cross-reference to another entry: `<ref target="entry:aebaere">æbære</ref>`. |
 | `xr type="bosworthToller"`, `"doe"`, `"wiktionary"` | no | Links to the Bosworth-Toller Anglo-Saxon Dictionary, the Dictionary of Old English and Wiktionary: `<ref target="https://…">boc-land</ref>`. One `xr` per link. |
-| `xr type="lawCode"` | no | A law code citation. One is made for every passage cited in the entry, such as `<ref target="law:VIAs">VI As 1,1</ref>`, linked to the code on the law code list; the form and `tools/add-citations.js` remake these from the text, so don't edit them by hand. Citations added by hand have no `law:` target, or a `target` to the passage online, and are kept. |
+| `xr type="lawCode"` | no | A law code citation. One is made for every passage cited in the entry, such as `<ref target="law:VIAs">VI As 1,1</ref>`, linked to the code on the law code list; the form and `tools/update-entries.js` remake these from the text, so don't edit them by hand. Citations added by hand have no `law:` target, or a `target` to the passage online, and are kept. |
 
 ## Liebermann's text
 

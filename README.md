@@ -93,7 +93,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 | `tools/laws-from-xlsx.py` | Makes `oe-laws/` from the laws spreadsheet, on your own computer. See [docs/OE-LAWS.md](docs/OE-LAWS.md). |
 | `tools/link-citations.py` | Links the law code citations in entries (one letter at a time) to clause files in `oe-laws/`. See [docs/OE-LAWS.md](docs/OE-LAWS.md). |
 | `tools/build-index.js` | Writes `data/entries.json`. Runs on every deploy. |
-| `tools/add-citations.js` | Rewrites each entry's law code citation list from the codes cited in its text. Run it after adding or changing entries by hand. |
+| `tools/update-entries.js` | Rewrites the parts of each entry made from Liebermann's text: the numbered meanings and the law code citation list. Run it after adding or changing entries outside the form. |
 | `.github/workflows/static.yml` | Builds and deploys the site on every push to `main`. |
 | `docs/` | Entry format, import rules, the latest import report and the stock-take of October 2026. |
 
@@ -176,6 +176,13 @@ The letters Z to O were transcribed from the page scans, working backwards from 
 5. **Cross-references with ~.** Resolve pointers like *s.* abb~ to the entry they mean.
 6. **Validation.** A TEI customisation (ODD) for the entry format, and a check on every push that each entry is valid.
 7. **The *Rechts- und Sachglossar*** (volume 2, part 2) as a second dictionary, linked from the *Wörterbuch*.
+8. **The Old English laws database** (`oe-laws/`, 2,294 TEI files made from the laws spreadsheet; see [docs/OE-LAWS.md](docs/OE-LAWS.md)). It is not on the site yet. To do:
+    - Put it on the site as its own section, and link dictionary citations (*Ine* 23,2) to their clauses through each file's `citationKey`.
+    - Decide how to treat citations that end in a manuscript letter (*9 Q*, *1 Ld*), and find out why citations to *Ger*, *Hl*, *Abt*, *Af* and *Wi* so often find no clause.
+    - Open questions, to answer when there is time:
+        - [ ] Six law codes were matched to the law code list by judgement: *Becw*, *Mirc.*, *Nor. Cyricgrið*, *Norðleod.*, *Ord*, *Rom.* Are they right?
+        - [ ] Some codes are not on the law code list, so their clauses are not linked: *Cn 1018*, the *Rubrics*, *VI Atr (Latin Paraphrase)*, *Wer*, *Geþyn.*, *Prom. Reg.*, *Rubric List*, *Ymb Æwbricas*. Should they be added to it?
+        - [ ] The spreadsheet does not say which language each text is in, and some is Latin, so the texts are marked `xml:lang="und"`. How should Old English and Latin be told apart?
 
 ## Statuta Vetera (a separate project)
 

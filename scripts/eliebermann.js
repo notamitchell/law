@@ -367,6 +367,40 @@
     }
 
     /**
+     * Splits markup at Liebermann's numbered meanings: a bold number followed
+     * by ")", such as <hi rend="bold">2</hi>) in TEI or <strong>2</strong>)
+     * in HTML. Only numbers outside any other element count. Returns
+     * { head, senses: [{ n, body }] }: head is the text before the first
+     * number (the headword and its forms), and each body runs from after the
+     * ")" to the next number, without the marker. No numbers: senses is [].
+     */
+    function splitSenses(markup, html) {
+        const text = String(markup || '');
+        const marker = html ? /<(strong|b)>(\d+[a-z]?)<\/\1>\)/g : /<hi rend="bold">(\d+[a-z]?)<\/hi>\)/g;
+        const cuts = [];
+        let m;
+        while ((m = marker.exec(text))) {
+            const before = text.slice(0, m.index);
+            const opened = (before.replace(/<(br|hr|img|wbr|input)\b[^>]*>/gi, '').match(/<[A-Za-z][^>]*[^/]>|<[A-Za-z]>/g) || []).length;
+            const closed = (before.match(/<\/[^>]+>/g) || []).length;
+            if (opened === closed) cuts.push({ at: m.index, end: m.index + m[0].length, n: html ? m[2] : m[1] });
+        }
+        if (!cuts.length) return { head: text, senses: [] };
+        return {
+            head: text.slice(0, cuts[0].at),
+            senses: cuts.map((c, i) => ({ n: c.n, body: text.slice(c.end, i + 1 < cuts.length ? cuts[i + 1].at : text.length) }))
+        };
+    }
+
+    /** The numbered meanings of an entry's TEI text as a <dictScrap type="senses">, or ''. */
+    function sensesXml(entryTei, indent) {
+        const { senses } = splitSenses(entryTei);
+        if (!senses.length) return '';
+        const pad = indent || '        ';
+        return `<dictScrap type="senses">\n${senses.map(s => `${pad}  <sense n="${s.n}">${s.body.trim()}</sense>`).join('\n')}\n${pad}</dictScrap>`;
+    }
+
+    /**
      * The law code citation list for an entry: every passage cited in its
      * text, linked to the code on the law code list, followed by any
      * citations added by hand ([{text, url}]) that aren't already in it.
@@ -396,6 +430,7 @@
         const slug = data.slug || slugify(data.headword, data.n);
         const lang = data.lang || 'ang';
         const entryTei = inlineToTei(parseHtml(data.entryHtml), { languageMarker: true });
+        const numbered = sensesXml(entryTei);
         const definition = sensesToTei(data.definitionHtml, '          ');
         const translation = sensesToTei(data.translationHtml, '          ');
         const today = new Date().toISOString().slice(0, 10);
@@ -452,7 +487,8 @@ ${changes.map(c => `      <change when="${escapeXml(c.when)}">${escapeXml(c.text
         <form type="lemma">
           <orth>${escapeXml(data.headword)}</orth>
         </form>
-        <dictScrap type="liebermann">${entryTei}</dictScrap>${definition ? `
+        <dictScrap type="liebermann">${entryTei}</dictScrap>${numbered ? `
+        ${numbered}` : ''}${definition ? `
         <sense type="liebermann" xml:lang="de">
 ${definition}
         </sense>` : ''}${translation ? `
@@ -575,7 +611,7 @@ ${translation}
             lang,
             language: LANGUAGES[lang] || lang,
             entry,
-            original: childrenNamed(entry, 'dictScrap')[0] || null,
+            original: childrenNamed(entry, 'dictScrap').find(d => d.getAttribute('type') !== 'senses') || null,
             definition,
             translation,
             xr: childrenNamed(entry, 'xr'),
@@ -606,7 +642,7 @@ ${translation}
     const api = {
         TEI_NS, LANGUAGES, LANGUAGE_CODES,
         useDom, slugify, sortKey, alphaKey, letterOf, ALPHABET, escapeXml,
-        linkAbbreviations, loadAbbreviations, extractCitations, citationXr, detectLanguage, detectHeadword,
+        linkAbbreviations, loadAbbreviations, extractCitations, citationXr, splitSenses, sensesXml, detectLanguage, detectHeadword,
         inlineToTei, isEmptyHtml, buildEntryXml,
         renderTei, resolveTarget, readEntry
     };
