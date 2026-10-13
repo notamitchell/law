@@ -77,7 +77,7 @@ Inside it, in this order:
 | `sense type="translation" xml:lang="en"` | no | The English translation, in the same shape. |
 | `xr type="see"` | no | A cross-reference to another entry: `<ref target="entry:aebaere">æbære</ref>`. |
 | `xr type="bosworthToller"`, `"doe"`, `"wiktionary"` | no | Links to the Bosworth-Toller Anglo-Saxon Dictionary, the Dictionary of Old English and Wiktionary: `<ref target="https://…">boc-land</ref>`. One `xr` per link. |
-| `xr type="lawCode"` | no | A law code citation, such as `<ref>VI As 1,1</ref>`, with `target` if the passage is online. |
+| `xr type="lawCode"` | no | A law code citation. One is made for every passage cited in the entry, such as `<ref target="law:VIAs">VI As 1,1</ref>`, linked to the code on the law code list; the form and `tools/add-citations.js` remake these from the text, so don't edit them by hand. Citations added by hand have no `law:` target, or a `target` to the passage online, and are kept. |
 
 ## Liebermann's text
 

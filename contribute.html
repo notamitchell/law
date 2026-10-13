@@ -87,7 +87,7 @@ scripts:
     </div>
     <div class="field">
         <label>Law code citations</label>
-        <span class="hint">For example "VI As 1,1". Add a link if the passage is online.</span>
+        <span class="hint">Citations in the entry (such as "VI As 1,1") are listed automatically when the file is made. Add any others here, with a link if the passage is online.</span>
         <div id="lawCode_links_container"></div>
         <button type="button" class="secondary" onclick="addLinkRow('lawCode')">+ Add a citation</button>
     </div>
@@ -298,9 +298,10 @@ scripts:
             e.xr.forEach(x => {
                 const kind = kinds[x.getAttribute('type')];
                 if (!kind) return;
-                if (!used.has(kind)) { $(kind + '_links_container').innerHTML = ''; used.add(kind); }
                 const ref = [...x.children].find(c => c.localName === 'ref');
                 const target = ref ? ref.getAttribute('target') || '' : '';
+                if (kind === 'lawCode' && target.startsWith('law:')) return;   // made again from the entry text
+                if (!used.has(kind)) { $(kind + '_links_container').innerHTML = ''; used.add(kind); }
                 addLinkRow(kind, (ref || x).textContent.trim(), /^https?:/.test(target) ? target : '',
                     target.startsWith('entry:') ? target.slice(6) : '');
             });

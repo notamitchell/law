@@ -90,6 +90,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 | `commentaryN/` | Commentary for the viewer, one HTML file per page (`12.html`), in the folder named for its volume in `_data/statutes_volumes.yml`. None yet. |
 | `tools/import-docx.js` | Bulk import on your own computer. |
 | `tools/build-index.js` | Writes `data/entries.json`. Runs on every deploy. |
+| `tools/add-citations.js` | Rewrites each entry's law code citation list from the codes cited in its text. Run it after adding or changing entries by hand. |
 | `.github/workflows/static.yml` | Builds and deploys the site on every push to `main`. |
 | `docs/` | Entry format, import rules, the latest import report and the stock-take of October 2026. |
 
