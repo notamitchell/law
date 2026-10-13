@@ -168,7 +168,7 @@ The letters Z to O were transcribed from the page scans, working backwards from 
 
 1. **Contributions straight to the site.** As in [Common Ground](https://github.com/historicalesque/carlton): the form sends each entry to a Google Apps Script, which saves a copy to a Google Sheet in the team's shared Drive and opens a pull request on this repository. Editors pick *Accept* or *Reject* in the Sheet's Decision column, and the script merges or closes the pull request. Needs a Google account for the Sheet and script, and a GitHub token with write access to this repository. Until then, the form and import download files for an editor to add.
 2. **A review page** listing submissions, with a before-and-after comparison for corrections to existing entries.
-3. **Fix the notes in `data/markLaw.json`** (they are one row out; see the [stock-take](docs/STOCKTAKE.md#data-problems)). The law code list shows them marked "under review" until then.
+3. **Check the notes in `data/markLaw.json`.** They were one row out and were realigned in October 2026 from the corrected glossary (see the [stock-take](docs/STOCKTAKE.md#data-problems)). The law code list keeps its "Under construction" notice until they have been checked against Liebermann.
 4. **Better search:** search inside entries with tolerance for spelling variants (æ/ae, þ/ð), and find every entry that cites a given law code.
 5. **Cross-references with ~.** Resolve pointers like *s.* abb~ to the entry they mean.
 6. **Validation.** A TEI customisation (ODD) for the entry format, and a check on every push that each entry is valid.

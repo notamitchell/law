@@ -10,13 +10,11 @@
 (function () {
     'use strict';
 
-    // Columns shown only when a group has something in them. `review` marks
-    // columns known to be unreliable: in data/markLaw.json the editions notes
-    // and start pages are out of step with their rows (docs/STOCKTAKE.md).
+    // Columns shown only when a group has something in them.
     const EXTRA = [
         { field: 'Notes: Grammatical', label: 'Note' },
-        { field: 'Notes: Information & Editions', label: 'Manuscripts and editions', review: true },
-        { field: 'Notes: Start page in Liebermann Vol. I', label: 'Start page, vol. I', review: true }
+        { field: 'Notes: Information & Editions', label: 'Manuscripts and editions' },
+        { field: 'Notes: Start page in Liebermann Vol. I', label: 'Start page, vol. I' }
     ];
     const FIELDS = ['Gesetze Text', 'German Expansion', 'English Translation'].concat(EXTRA.map(c => c.field));
     let groups = {};
@@ -53,8 +51,8 @@
             if (!rows.length) return;
             shown++;
             const extra = EXTRA.filter(c => rows.some(r => r[c.field] && String(r[c.field]).trim()));
-            const head = c => c.review ? `<th class="under-review" title="Under review: may belong to another row">${c.label} ⚠</th>` : `<th>${c.label}</th>`;
-            const cell = (c, r) => `<td${c.review ? ' class="under-review"' : ''}>${esc(r[c.field])}</td>`;
+            const head = c => `<th>${c.label}</th>`;
+            const cell = (c, r) => `<td>${esc(r[c.field])}</td>`;
             html += `<h2 id="${esc(anchor)}">${esc(groups[anchor][0]['Gesetze Text'])}</h2>
                 <div class="table-wrap"><table>
                 <thead><tr><th>As printed</th><th>German expansion</th><th>English</th>${extra.map(head).join('')}</tr></thead>
@@ -78,13 +76,12 @@
         const extra = EXTRA.filter(c => all.some(r => r[c.field] && String(r[c.field]).trim()));
         document.getElementById('count').textContent = `${rows.length} of ${all.length} rows`;
         container.innerHTML = rows.length ? `<div class="table-wrap"><table>
-            <thead><tr><th>As printed</th><th>German expansion</th><th>English</th>${extra.map(c =>
-                c.review ? `<th class="under-review">${c.label} ⚠</th>` : `<th>${c.label}</th>`).join('')}</tr></thead>
+            <thead><tr><th>As printed</th><th>German expansion</th><th>English</th>${extra.map(c => `<th>${c.label}</th>`).join('')}</tr></thead>
             <tbody>${rows.map(r => `<tr>
                 <td class="term">${esc(r['Gesetze Text'])}</td>
                 <td>${esc(r['German Expansion'])}</td>
                 <td>${esc(r['English Translation'])}</td>
-                ${extra.map(c => `<td${c.review ? ' class="under-review"' : ''}>${esc(r[c.field])}</td>`).join('')}
+                ${extra.map(c => `<td>${esc(r[c.field])}</td>`).join('')}
             </tr>`).join('')}</tbody></table></div>` : `<p>Nothing matches “${esc(term)}”.</p>`;
     }
 
