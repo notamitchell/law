@@ -59,6 +59,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 - **Entry pages** (`entry.html?id=abbod`) fetch `entries/abbod.xml` and render it with `ELieb.renderTei()`. The `id` can also be a headword (`entry.html?id=æbære`). If there is no file, the page offers to start one.
 - **The Dictionary page** reads `data/entries.json`, which `tools/build-index.js` writes on every deploy from the files in `entries/`. If it's missing (for example in a local build where you didn't run the script), the page falls back to a plain list of file names.
 - **Abbreviation links.** When an entry is made, `ELieb.linkAbbreviations()` links every law code, manuscript siglum and abbreviation listed in `data/markLaw.json` and `data/markforward.json`, longest match first, and stores the links in the TEI. Law codes are only linked in roman type, since Liebermann's italics are German.
+- **Law code popups.** On an entry page, clicking a law code or manuscript siglum opens a small popup with its German expansion and English translation, read from `data/markLaw.json` by the link's Anchor (`scripts/lawpopup.js`). Hovering previews it on a computer. Ctrl/Cmd-click, or any failure to load the data, still goes to the law code list. Fix a wrong popup by fixing its row in `data/markLaw.json`.
 - **Site pages are TEI too.** The text of Home and About is in `pages/Home.xml` and `pages/About.xml`, so it can be edited like an entry.
 - **Statuta Vetera.** The manuscript search reads every file in `tei/`; the list of files is written into the page when the site is built, so it makes no GitHub API calls. The viewer's volumes and their commentary folders are in `_data/statutes_volumes.yml`.
 
@@ -82,6 +83,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 | `data/markLaw.json`, `data/markforward.json` | Law codes and manuscript sigla; grammatical abbreviations. Edit these to add a spelling that isn't linked. |
 | `scripts/eliebermann.js` | Shared code: file names, linking, building TEI from the form, rendering TEI. |
 | `scripts/docx-import.js` | Splits a Word document into entries. See [docs/IMPORT.md](docs/IMPORT.md). |
+| `scripts/lawpopup.js`                               | The law code popups on entry pages.                                                                                                                            |
 | `scripts/site-page.js` | Shows the TEI site pages. |
 | `StatutaVetera/` | Manuscript search (`index.html`), manuscript page, Statutes of the Realm viewer (`sidebyside.html`), manuscript TEI generator (`tei-gen.html`). |
 | `tei/*.xml` | Statuta Vetera manuscript descriptions. |
