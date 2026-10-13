@@ -149,3 +149,14 @@ From [the cross-check of norðan – orf](crosscheck-nordan-orf.md).
 | ✓ | Page | Entry | Site | Word document | Print |
 |---|---|---|---|---|---|
 | [ ] | 159 | *o* | b) eo … c) **ŭ**: s. mægburg (short mark) | **ū** (long mark) | |
+
+## orfenins – propriatio (pp. 168–177)
+
+From [the cross-check of orfenins – propriatio](crosscheck-orfenins-propriatio.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 170 | *p* | 1) durch Ähnlichkeit mit **ƿ** (wynn), irrig für w | **þ** (thorn) | Already a judgement call in the README's transcription notes. |
+| [ ] | 170 | *pæn.* | pæn., **pæng̃.** (tilde over g) | **pænḡ.** (macron over g) | |
+| [ ] | 170 | *par* (F) | trespasser ~ iloc **ù** 28,2 | **u** | |
+| [ ] | 177 | *propensus* | wohlgeneigt Quadr zu CHn cor **1143** | **II43** | Perhaps 1 with a superscript? |
