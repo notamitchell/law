@@ -2,10 +2,12 @@
  * eLiebermann: abbreviation popups on entry pages.
  *
  * Every law code, manuscript siglum and grammatical abbreviation in an entry
- * is a link to its heading on a list: the law code list (lawAbb.html#Abt) or
- * the grammatical abbreviations (gramAbb.html#Plural). This script turns a
- * click on one of those links into a small popup that shows what it stands
- * for, taken from data/markLaw.json or data/markforward.json: the German
+ * is a link to its heading on a list: the law code list (lawAbb.html#Abt,
+ * which also takes manuscript sigla such as lawAbb.html#H and sends them on to
+ * msAbb.html) or the grammatical abbreviations (gramAbb.html#Plural). This
+ * script turns a click on one of those links into a small popup that shows
+ * what it stands for, taken from data/markLaw.json, data/manuscripts.json or
+ * data/markforward.json: the German
  * expansion and the English translation, and for a grammatical abbreviation
  * its note, if it has one.
  *
@@ -22,10 +24,13 @@
 (function () {
     'use strict';
 
-    const LINK = 'a[href*="lawAbb.html#"], a[href*="gramAbb.html#"]';
+    const LINK = 'a[href*="lawAbb.html#"], a[href*="msAbb.html#"], a[href*="gramAbb.html#"]';
     // The two lists: where the data is, and what the popup calls things.
     const KINDS = {
         law: { file: 'data/markLaw.json', list: 'lawAbb.html', noun: 'Law code', more: 'Full list of law codes' },
+        // Manuscript sigla are linked to lawAbb.html like law codes (lawAbb.html
+        // sends them on to msAbb.html); their data is in a file of their own.
+        ms: { file: 'data/manuscripts.json', list: 'msAbb.html', noun: 'Manuscript', more: 'Full list of manuscripts' },
         gram: { file: 'data/markforward.json', list: 'gramAbb.html', noun: 'Abbreviation', more: 'Full list of grammatical abbreviations' }
     };
     const HOVER_DELAY = 220;   // ms of rest before a hover preview opens
@@ -43,7 +48,14 @@
     const root = () => window.SITE_ROOT || '';
     const canHover = () => window.matchMedia && window.matchMedia('(hover: hover)').matches;
 
-    const kindOf = link => (link.getAttribute('href') || '').indexOf('gramAbb.html#') >= 0 ? 'gram' : 'law';
+    // 'gram', 'law' or 'ms'. A link to lawAbb.html is a manuscript if its
+    // anchor is in data/manuscripts.json (known once that file has loaded).
+    const kindOf = link => {
+        const href = link.getAttribute('href') || '';
+        if (href.indexOf('gramAbb.html#') >= 0) return 'gram';
+        if (href.indexOf('msAbb.html#') >= 0) return 'ms';
+        return groups.ms && groups.ms[anchorOf(link)] ? 'ms' : 'law';
+    };
 
     function load(kind) {
         if (!loading[kind]) {
@@ -57,6 +69,14 @@
                 .catch(err => { console.error('Abbreviation popups: ' + err); groups[kind] = {}; return groups[kind]; });
         }
         return loading[kind];
+    }
+
+    // Loads what a link needs: for a law code link, the manuscripts too, since
+    // manuscript sigla are linked to the law code list.
+    function ready(link) {
+        const href = link.getAttribute('href') || '';
+        if (href.indexOf('gramAbb.html#') >= 0) return load('gram');
+        return Promise.all([load('ms'), load('law')]);
     }
 
     function anchorOf(link) {
@@ -214,7 +234,7 @@
         const byKeyboard = event.detail === 0;
         if (popup && active === link && pinned) { hide(true); return; }
 
-        load(kindOf(link)).then(() => {
+        ready(link).then(() => {
             const row = rowFor(link);
             if (!row) { window.location.href = link.href; return; }
             show(link, row, byKeyboard);
@@ -230,7 +250,7 @@
         clearTimeout(hideTimer);
         clearTimeout(showTimer);
         showTimer = setTimeout(() => {
-            load(kindOf(link)).then(() => {
+            ready(link).then(() => {
                 const row = rowFor(link);
                 if (row && link.matches(':hover') && !pinned) show(link, row, false);
             });

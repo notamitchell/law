@@ -58,7 +58,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 
 - **Entry pages** (`entry.html?id=abbod`) fetch `entries/abbod.xml` and render it with `ELieb.renderTei()`. The `id` can also be a headword (`entry.html?id=æbære`). If there is no file, the page offers to start one.
 - **The Dictionary page** reads `data/entries.json`, which `tools/build-index.js` writes on every deploy from the files in `entries/`. If it's missing (for example in a local build where you didn't run the script), the page falls back to a plain list of file names.
-- **Abbreviation links.** When an entry is made, `ELieb.linkAbbreviations()` links every law code, manuscript siglum and abbreviation listed in `data/markLaw.json` and `data/markforward.json`, longest match first, and stores the links in the TEI. Law codes are only linked in roman type, since Liebermann's italics are German.
+- **Abbreviation links.** When an entry is made, `ELieb.linkAbbreviations()` links every law code, manuscript siglum and abbreviation listed in `data/markLaw.json`, `data/manuscripts.json` and `data/markforward.json`, longest match first, and stores the links in the TEI. Law codes are only linked in roman type, since Liebermann's italics are German.
 - **Abbreviation popups.** On an entry page, clicking a law code, manuscript siglum or grammatical abbreviation opens a small popup with its German expansion and English translation (and, for a grammatical abbreviation, its note), read by the link's Anchor from `data/markLaw.json` or `data/markforward.json` (`scripts/lawpopup.js`). Hovering previews it on a computer. Ctrl/Cmd-click, or any failure to load the data, still goes to the list. Fix a wrong popup by fixing its row in the data file.
 - **Site pages are TEI too.** The text of Home and About is in `pages/Home.xml` and `pages/About.xml`, so it can be edited like an entry.
 - **Statuta Vetera.** The manuscript search reads every file in `tei/`; the list of files is written into the page when the site is built, so it makes no GitHub API calls. The viewer's volumes and their commentary folders are in `_data/statutes_volumes.yml`.
@@ -77,10 +77,10 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 | `entry.html` | Shows one entry. |
 | `contribute.html` | *Suggest an entry*: makes, previews and downloads one entry's TEI file. `?id=` suggests a change to an existing entry, with the form filled in from its file. |
 | `import.html` | Bulk import of a Word document in the browser. Not on the site for now (`published: false`); see [docs/IMPORT.md](docs/IMPORT.md). |
-| `abbreviations.html`, `lawAbb.html`, `gramAbb.html` | The abbreviation lists (`scripts/abbreviations.js`). |
+| `abbreviations.html`, `lawAbb.html`, `msAbb.html`, `gramAbb.html` | The abbreviation lists: law codes, manuscripts and grammatical abbreviations (`scripts/abbreviations.js`). |
 | `entries/*.xml` | **The dictionary.** One TEI file per entry. See [docs/SCHEMA.md](docs/SCHEMA.md). |
 | `pages/*.xml` | Text of the site pages, as TEI. |
-| `data/markLaw.json`, `data/markforward.json` | Law codes and manuscript sigla; grammatical abbreviations. Edit these to add a spelling that isn't linked. |
+| `data/markLaw.json`, `data/manuscripts.json`, `data/markforward.json` | Law codes; manuscript sigla; grammatical abbreviations. Edit these to add a spelling that isn't linked. Manuscript sigla are linked like law codes (`law:H`, to `lawAbb.html#H`), and `lawAbb.html` sends a manuscript's link on to `msAbb.html`. |
 | `scripts/eliebermann.js` | Shared code: file names, linking, building TEI from the form, rendering TEI. |
 | `scripts/docx-import.js` | Splits a Word document into entries. See [docs/IMPORT.md](docs/IMPORT.md). |
 | `scripts/lawpopup.js`                               | The abbreviation popups (law codes, manuscripts, grammatical) on entry pages.                                                                                                                            |
@@ -108,7 +108,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 
 **A change:** *Suggest a change* at the foot of an entry opens the form filled in from that entry; the file it makes has the same name, so uploading it replaces the entry. Or edit the XML on GitHub directly.
 
-**A law code or abbreviation that isn't linked:** add its spelling to `data/markLaw.json` or `data/markforward.json` with the same Anchor as its main form. Existing entries keep their links as they were made; re-import or re-save an entry to pick up new ones.
+**A law code, manuscript or abbreviation that isn't linked:** add its spelling to `data/markLaw.json`, `data/manuscripts.json` or `data/markforward.json` with the same Anchor as its main form. Existing entries keep their links as they were made; re-import or re-save an entry to pick up new ones.
 
 ## Running the site locally
 

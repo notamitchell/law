@@ -42,7 +42,8 @@ async function main() {
 
     const zip = await JSZip.loadAsync(fs.readFileSync(docx));
     const documentXml = await zip.file('word/document.xml').async('string');
-    const markLaw = loadJson('data/markLaw.json');
+    // Manuscript sigla are linked like law codes.
+    const markLaw = loadJson('data/markLaw.json').concat(loadJson('data/manuscripts.json'));
     const markforward = loadJson('data/markforward.json');
 
     const entriesDir = path.join(repo, 'entries');

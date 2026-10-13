@@ -1,0 +1,24 @@
+---
+title: Manuscripts
+section: abbreviations
+scripts:
+  - "ROOT/scripts/abbreviations.js"
+---
+<h1>Manuscripts</h1>
+
+<p class="lede">The sigla Liebermann uses for the manuscripts and early printed texts of the laws (A for MS Harley 55, H for the Textus Roffensis…), with his German description and the manuscript's library and shelfmark. Entries link here when they cite a manuscript.</p>
+
+<div class="search-bar" role="search">
+    <input type="search" id="searchInput" placeholder="Search…" aria-label="Search">
+    <select id="searchScope" aria-label="Search in">
+        <option value="all">All fields</option>
+        <option value="Gesetze Text">Siglum</option>
+        <option value="German Expansion">German</option>
+        <option value="English Translation">Library and shelfmark</option>
+    </select>
+</div>
+<p id="count" class="muted small"></p>
+
+<div id="content-container" data-source="data/manuscripts.json"><p class="loading">Loading…</p></div>
+
+<p class="small muted">The Quadripartitus (Q), the Latin translation of the laws, is on the <a href="lawAbb.html#Quadr">list of law codes</a>. The list comes from <a href="https://github.com/notamitchell/law/blob/main/data/manuscripts.json">data/manuscripts.json</a>. To add a siglum or a spelling that isn't linked yet, add a row there with the same Anchor as its main form.</p>

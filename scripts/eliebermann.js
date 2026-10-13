@@ -640,8 +640,9 @@ ${translation}
     }
 
     /**
-     * Loads the law codes (data/markLaw.json) and abbreviations
-     * (data/markforward.json) for linkAbbreviations(), once per page.
+     * Loads the law codes (data/markLaw.json), manuscript sigla
+     * (data/manuscripts.json) and abbreviations (data/markforward.json) for
+     * linkAbbreviations(), once per page.
      * Resolves to { markLaw, markforward }; a file that can't be read gives [].
      */
     let abbreviations = null;
@@ -650,8 +651,10 @@ ${translation}
             .then(r => { if (!r.ok) throw new Error(file + ': ' + r.status); return r.json(); })
             .catch(err => { console.error(err); return []; });
         if (!abbreviations) {
-            abbreviations = Promise.all([get('markLaw.json'), get('markforward.json')])
-                .then(([markLaw, markforward]) => ({ markLaw, markforward }));
+            // Manuscript sigla (data/manuscripts.json) are linked like law codes,
+            // so they are added to markLaw here.
+            abbreviations = Promise.all([get('markLaw.json'), get('manuscripts.json'), get('markforward.json')])
+                .then(([markLaw, manuscripts, markforward]) => ({ markLaw: markLaw.concat(manuscripts), markforward }));
         }
         return abbreviations;
     }
