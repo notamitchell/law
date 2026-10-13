@@ -21,9 +21,21 @@ scripts:
         return;
     }
 
-    fetch(root + 'entries/' + encodeURIComponent(slug) + '.xml')
-        .then(r => { if (!r.ok) throw new Error('missing'); return r.text(); })
-        .then(text => {
+    // The law codes in the laws database, so a citation with no clause of its
+    // own can still go to its code's page. If the list can't be loaded, those
+    // citations are shown as plain text.
+    let lawCodes = {};
+    const codesLoaded = fetch(root + 'oe-laws/codes.json')
+        .then(r => r.ok ? r.json() : [])
+        .then(list => { list.forEach(c => { if (c.anchor) lawCodes[c.anchor] = c.code; }); })
+        .catch(() => {});
+
+    Promise.all([
+        fetch(root + 'entries/' + encodeURIComponent(slug) + '.xml')
+            .then(r => { if (!r.ok) throw new Error('missing'); return r.text(); }),
+        codesLoaded
+    ])
+        .then(([text]) => {
             const doc = new DOMParser().parseFromString(text, 'application/xml');
             if (doc.getElementsByTagName('parsererror').length) throw new Error('parse');
             const e = ELieb.readEntry(doc);
@@ -66,6 +78,28 @@ scripts:
             .map(x => `<li>${ELieb.renderTei(x, root)}</li>`).join('');
     }
 
+    // The law code citations listed under the entry go into the laws
+    // database: to the clause where it has one ("clause:Ine_23-2"), otherwise
+    // to the page of the whole code ("law:Ine"). They never open the
+    // abbreviation popup; a code the database doesn't have yet is plain text.
+    function citationList(e) {
+        return e.xr.filter(x => x.getAttribute('type') === 'lawCode').map(x => {
+            const ref = [...x.children].find(c => c.localName === 'ref') || x;
+            const text = esc(ref.textContent.replace(/\s+/g, ' ').trim());
+            const m = /^(clause|law):(.+)$/.exec(ref.getAttribute('target') || '');
+            let href = '', title = '';
+            if (m && m[1] === 'clause') {
+                href = root + 'law.html?id=' + encodeURIComponent(m[2]);
+            } else if (m && lawCodes[m[2]]) {
+                href = root + 'lawcode.html?code=' + encodeURIComponent(lawCodes[m[2]]);
+                title = 'This clause is not yet in the laws database; this opens the whole of ' + lawCodes[m[2]];
+            }
+            return href
+                ? `<li><a href="${esc(href)}"${title ? ` title="${esc(title)}"` : ''}>${text}</a></li>`
+                : `<li>${text}</li>`;
+        }).join('');
+    }
+
     // An archive.org page link (…/details/ID/page/14/…) becomes the address
     // of archive.org's embedded reader opened at that page.
     function scanEmbed(url) {
@@ -78,7 +112,7 @@ scripts:
         const links = [['bosworthToller', 'Bosworth-Toller'], ['doe', 'Dictionary of Old English'], ['wiktionary', 'Wiktionary']]
             .map(([type, label]) => { const items = xrList(e, type); return items ? `<li>${label}<ul>${items}</ul></li>` : ''; })
             .join('');
-        const citations = xrList(e, 'lawCode');
+        const citations = citationList(e);
         const page = e.page ? `Liebermann, <cite>Gesetze</cite> II.1, p. ${esc(e.page)}` : '';
         const changes = e.changes.map(c => `${esc(c.when)}: ${esc(c.text.replace(/\.$/, ''))}`).join('; ');
         const scan = scanEmbed(e.facsimile);
