@@ -30,3 +30,17 @@ From [the cross-check of d – dryhten](crosscheck-d-dryhten.md).
 | [ ] | 48–49 | *Declination* | agene **teoðunge** I Cn 11 A | **teoþunge** | |
 | [ ] | 51 | *Dene* | Fz: … Danelahe 2,3 f. L. 21,2 L; **Denelae** 2,3 f. I. 21,2 I. 39,2. 42,2; **Danelae** … | **Danelae** … **Denelae** (the other way round) | |
 | [ ] | 53 | *diacon* | dt: **~nē** Northu 23 f. (with a macron) | **~ne** | |
+
+## dryhtenbeag – fadian (pp. 56–66)
+
+From [the cross-check of dryhtenbeag – fadian](crosscheck-dryhtenbeag-fadian.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 56 | *duble* (F) | a ~ de **çeo** zum doppelten dessen | de **ceo** | |
+| [ ] | 57 | *e* (F) | prosthetisch s. scot, **sœinus**, estuveir | **soinus** | |
+| [ ] | 57 | *ea-* | 6) von ē … 7) **von ē̆o:** s. eom, Eorcanberht | **von: ō̆e** | |
+| [ ] | 60 | *-egn* | dafür: -ein, -en, -ain, -an **[**s. þegn (the bracket is not closed) | no bracket | Is there a [ ? If so, where does it close? |
+| [ ] | 60 | *Egypta* | **Ęg-** (twice, with a hook under the E) | **Eg-** | |
+| [ ] | 62 | *Endreim* | **friþian** ⁊ griðian Had 1,1 H | **friðian** | |
+| [ ] | 66 | *expellere* | In Cn: **II Cn** 15a | In Cn: **II** 15a | |
