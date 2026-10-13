@@ -18,3 +18,15 @@ From [the cross-check of collarium – d](crosscheck-collarium-d.md).
 |---|---|---|---|---|---|
 | [ ] | 43 | *c[w]ucu* | swa cucne swa deadne G 2. II Cn 25a; **[**diese Wendung lag vor für vivum vel mortuum III Em 2 | no bracket | Is there a [ ? If so, where does it close? |
 | [ ] | 43 | *cweðan* | cwæð H \| **pl 1:** ~að Af 42,5 | **pl:** ~að | |
+
+## d – dryhten (pp. 46–55)
+
+From [the cross-check of d – dryhten](crosscheck-d-dryhten.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 46 | *Dativ* | him to **tẹo** Duns 8,1; gihefgind**ụ**m heorte 4,4 (dots under e and u) | teo, gihefgindum (no dots) | |
+| [ ] | 46 | *Dativ* | clænan (**þam**) life libban; **þam** halgan dæge Cn 1020,18 | **þæm**, twice | |
+| [ ] | 48–49 | *Declination* | agene **teoðunge** I Cn 11 A | **teoþunge** | |
+| [ ] | 51 | *Dene* | Fz: … Danelahe 2,3 f. L. 21,2 L; **Denelae** 2,3 f. I. 21,2 I. 39,2. 42,2; **Danelae** … | **Danelae** … **Denelae** (the other way round) | |
+| [ ] | 53 | *diacon* | dt: **~nē** Northu 23 f. (with a macron) | **~ne** | |
