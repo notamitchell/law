@@ -378,7 +378,14 @@
         let m = re.exec(flat);
         passages(m ? flat.slice(0, m.index) : flat, 0);
         while (m) {
-            const anchor = m[1], label = m[2].trim();
+            const anchor = m[1];
+            // A code Liebermann gives by its numeral alone ("III Atr 3,2. IV 1",
+            // linked to IVAtr by tools/series-citations.py) is written out in
+            // full in the list: "IV Atr", "Iud Dei VII", "VIIa Atr".
+            let label = m[2].trim();
+            if (/^(?:VIIa|[IVX]+)$/.test(label) && anchor !== label) {
+                label = anchor.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/^(VIIa|[IVX]+)(?=[A-Z][a-z])/, '$1 ');
+            }
             const pos = m.index + m[0].length;
             const next = re.exec(flat);
             const text = flat.slice(pos, next ? next.index : flat.length);
