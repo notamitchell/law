@@ -115,11 +115,11 @@ Then open http://localhost:4000/law/.
 
 ## Transcription notes to review
 
-The letters Z to Q were transcribed from the page scans, working backwards from Z. These are the quirks and judgement calls recorded on their pull requests ([Z](https://github.com/notamitchell/law/pull/5), [Y](https://github.com/notamitchell/law/pull/7), [W](https://github.com/notamitchell/law/pull/8), [V](https://github.com/notamitchell/law/pull/9), [U](https://github.com/notamitchell/law/pull/10), [Þ](https://github.com/notamitchell/law/pull/12), [T](https://github.com/notamitchell/law/pull/14), [S](https://github.com/notamitchell/law/pull/17), [R](https://github.com/notamitchell/law/pull/19), [Q](https://github.com/notamitchell/law/pull/21)). Tick each one once someone has checked it against the print and agrees with it, or change the entries if not.
+The letters Z to P were transcribed from the page scans, working backwards from Z. These are the quirks and judgement calls recorded on their pull requests ([Z](https://github.com/notamitchell/law/pull/5), [Y](https://github.com/notamitchell/law/pull/7), [W](https://github.com/notamitchell/law/pull/8), [V](https://github.com/notamitchell/law/pull/9), [U](https://github.com/notamitchell/law/pull/10), [Þ](https://github.com/notamitchell/law/pull/12), [T](https://github.com/notamitchell/law/pull/14), [S](https://github.com/notamitchell/law/pull/17), [R](https://github.com/notamitchell/law/pull/19), [Q](https://github.com/notamitchell/law/pull/21), [P](https://github.com/notamitchell/law/pull/24)). Tick each one once someone has checked it against the print and agrees with it, or change the entries if not.
 
 **Source and status**
 
-- [ ] Z–Q were transcribed from the page images, not archive.org's OCR. Every entry says "Transcribed by Claude from the page scan; not yet checked against the print." (all letters)
+- [ ] Z–P were transcribed from the page images, not archive.org's OCR. Every entry says "Transcribed by Claude from the page scan; not yet checked against the print." (all letters)
 - [ ] Only spot checks have been done so far, and all matched the scan: wis–wise (p. 245), wud[u] (p. 250), the end of Verbum to vers (p. 233), utalædan to [utaslean] (p. 231). (W, V, U)
 - [ ] An entry that runs over a page keeps a page marker where the page turns, e.g. ymbrenfæsten (p. 253) and vel (p. 233). (Y, W, V)
 
@@ -128,11 +128,13 @@ The letters Z to Q were transcribed from the page scans, working backwards from 
 - [ ] z- carries the double marker LF, but w is marked FL. Decide on one order. (Z, W)
 - [ ] A superscript F or L inside an entry is kept as a language marker, not linked as a manuscript siglum, e.g. the F before *siste* in Zahlwort. (Z, Y)
 - [ ] Liebermann's German articles are tagged as grammatical terms: Zahlwort, Wortbildung, Wortschatz variirt, both Wortstellung, Verallgemeinernd, Verbum, Vocalverdoppelung, Umlaut, Unpersönliche and Urkundenstil. (Z, W, V, U)
+- [ ] German articles printed twice (Personalpronomen, Possessivprn., Praeposition) are stored as two entries each, the second being the Latin or French one with a `-2` file name. (P)
 - [ ] II) un has no F of its own and is tagged French, like I) un. (U)
 
 **Homographs and file names**
 
 - [ ] Homographs printed I), II) … are separate entries with the numeral kept in the text: yfel and yfel-2, and þa, þæt, þe, þon, þy in Þ, and I) sio / II) sio(n), I) set / II) set, scyld- and seo in S, and rad I–V, r[i]san, ryman and riht I/II in R, and the French que I–III in Q. Numbered senses inside one entry stay together, as in the long qui and quod, and so do numbered people under one name (Radulfus, Ricardus, Rodbertus). (Y, Þ, S, R, Q)
+- [ ] Under Petrus, the numbered people II) and III) are separate entries, unlike Radulfus, Ricardus and Rodbertus in R, which keep theirs together. Pick one rule. (R, P)
 - [ ] The two utlaga entries have no I)/II) numerals in print and are stored as utlaga and utlaga-2. (U)
 - [ ] The þæt abbreviation ꝥ now gives the file name "thaet", as þ gives "th". Before that change, the headword ꝥ gave an empty file name. (Þ)
 - [ ] Headwords printed under both T and Þ, such as T[h]eophania (p. 210 and p. 220), are kept as two entries, the T one taking the next free file name (T-h-eophania-2). (T)
@@ -143,12 +145,12 @@ The letters Z to Q were transcribed from the page scans, working backwards from 
 - [ ] yfelwyrcendo is the headword, with "wyrto" left in the entry text. (Y)
 - [ ] Some headwords are printed after a plain word (openne **wiðercwide**, se **wodfreca**). The entry text starts with that word, as in the book. (W)
 - [ ] "-unga" stays inside the -ung entry, where it follows a bar. (U)
-- [ ] Wynn is written ƿ only in the w entry, where Liebermann prints the letter form. (W)
+- [ ] Wynn is written ƿ only in the w entry, where Liebermann prints the letter form, and in p 1), where the sign after "durch Ähnlichkeit mit" is read as wynn because the sense requires it. (W, P)
 
 **Printed text: kept or corrected**
 
 - [ ] Letters broken in the type were read as the intended letter: "mögcn" → mögen, "seincs" → seines, "1,.7" → 1,7 (U); "aufhebend" and "Orthographie" (Þ); "Untergebenen" and "doppeltes" (T); "Streitigkeiten" and "einleitend" (S); "eigenem" and "retient" (R).
-- [ ] Likely misprints in the book are kept as printed: "derehdner" (voleir) and "-rseunessa" (v). (V)
+- [ ] Likely misprints in the book are kept as printed: "derehdner" (voleir) and "-rseunessa" (v), and "forhttundan" under Particip. (V, P)
 - [ ] The gap printed "hundfeo:::" in þusend is kept as printed. (Þ)
 - [ ] Literal asterisks in references are kept, e.g. *S.* 375*. (W)
 - [ ] "VIIa Atr" is written closed up, to match the law-code list. (W)
@@ -156,7 +158,7 @@ The letters Z to Q were transcribed from the page scans, working backwards from 
 **Letter boundaries**
 
 - [ ] Þ starts halfway down column 2 of p. 216; the T entries above it belong to T. (Þ)
-- [ ] R starts in the lower part of column 1 on p. 180, not 194 as first noted, and ends at the S heading at the top of column 3 on p. 187. Q runs from p. 179 to p. 180, as transcribed. K and L were both noted as starting on 128; check which is right. (S, R, Q)
+- [ ] R starts in the lower part of column 1 on p. 180, not 194 as first noted, and ends at the S heading at the top of column 3 on p. 187. Q runs from p. 179 to p. 180, as transcribed, and P from the top of p. 170 to the Q heading on p. 179. K and L were both noted as starting on 128; check which is right. (S, R, Q, P)
 
 ## Roadmap
 
