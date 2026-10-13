@@ -177,13 +177,17 @@ The letters Z to O were transcribed from the page scans, working backwards from 
 5. **Cross-references with ~.** Resolve pointers like *s.* abb~ to the entry they mean.
 6. **Validation.** A TEI customisation (ODD) for the entry format, and a check on every push that each entry is valid.
 7. **The *Rechts- und Sachglossar*** (volume 2, part 2) as a second dictionary, linked from the *Wörterbuch*.
-8. **The Old English laws database** (`oe-laws/`, 2,294 TEI files made from the laws spreadsheet; see [docs/OE-LAWS.md](docs/OE-LAWS.md)). It is not on the site yet. To do:
-    - Put it on the site as its own section, and link dictionary citations (*Ine* 23,2) to their clauses through each file's `citationKey`.
+8. **The Old English laws database** (`oe-laws/`, 2,294 TEI files made from the laws spreadsheet; see [docs/OE-LAWS.md](docs/OE-LAWS.md)). It has a Laws tab (search and one page per clause), and the dictionary entries for the letter A link to it. To do:
+    - Link the citations in the entries for the other letters to their clauses (`tools/link-citations.py --letter B`, and so on), through each file's `citationKey`.
     - Find out why citations to *Ger*, *Hl*, *Abt*, *Af* and *Wi* so often find no clause.
     - Open questions, to answer when there is time:
         - [ ] Six law codes were matched to the law code list by judgement: *Becw*, *Mirc.*, *Nor. Cyricgrið*, *Norðleod.*, *Ord*, *Rom.* Are they right?
         - [ ] Some codes are not on the law code list, so their clauses are not linked: *Cn 1018*, the *Rubrics*, *VI Atr (Latin Paraphrase)*, *Wer*, *Geþyn.*, *Prom. Reg.*, *Rubric List*, *Ymb Æwbricas*. Should they be added to it?
         - [ ] The spreadsheet does not say which language each text is in, and some is Latin, so the texts are marked `xml:lang="und"`. How should Old English and Latin be told apart?
+9. **Links to Bosworth-Toller** (and later other Old English dictionaries). The dictionary's own addresses are numbers (`bosworthtoller.com/4773`), so they cannot be worked out from a headword; they have to be matched from a list. Two separate tasks:
+    - [ ] **Get a headword list.** There is a data dump, [Bosworth-Toller's Anglo-Saxon Dictionary online, version 0.1](https://lindat.mff.cuni.cz/repository/items/da2f3c19-f5a9-48d2-bb8f-eb84a415f954) (LINDAT, April 2021, 62,936 entries). Its file `bosworth_entries_export.csv` has the columns `id`, `headword` and `body`, and the `id` is the number in the website address. Check the licence when downloading (the site says its data is "free for any purpose" and asks academic users to cite the dictionary). The dump is from 2021, so also **ask Bosworth-Toller for a newer copy** through the contact form on their site, which offers database dumps to researchers.
+    - [ ] **Make the links.** With the list, try the letter A first: link a headword only where exactly one Bosworth-Toller entry has that spelling; where several share it, use Liebermann's definition to suggest the right one but leave those for an editor to confirm; report what has no match (spellings differ, *æ*/*þ*/*ð*). Entries already have a place for these links (`<xr type="bosworthToller">`, shown under "Other dictionaries"). Nothing is changed in the entries until the report has been looked at.
+    - The Dictionary of Old English has the same problem (its addresses are codes such as `?E03539`) and covers only part of the alphabet, so it needs its own list.
 
 ## Statuta Vetera (a separate project)
 
