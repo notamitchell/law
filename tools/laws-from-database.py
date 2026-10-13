@@ -47,6 +47,7 @@ def _load(name, file):
 
 old = _load('laws_from_xlsx', 'laws-from-xlsx.py')       # slugify, clause keys, anchors, witnesses
 abt = _load('law_code_from_xlsx', 'law-code-from-xlsx.py')  # italic runs
+rubrics = _load('rubric_split', 'rubric_split.py')         # J&O's E and B rubrics, apart
 
 SKIP = {'Cn 1018'}
 
@@ -367,7 +368,15 @@ def build(row, today, source_name, refs):
         name, sid, ref = EDITOR_OVERRIDE.get(code, (editor, ident(editor), row['editionRefXml']))
         ed_src = srcs.add(sid, name, ref, 'edition', row['editorPage'])
         if row['tTextXml']:
-            texts.append(('editionText', language(row['tText']), ed_src, row['tTextXml'], row['editorNumber'], t_wit))
+            # Jurasinski and Oliver print MS B's rubric after MS E's in the same cell.
+            e_text, b_text, e_trans, b_trans = rubrics.split(code, clause, row['tTextXml'], row['translationXml'])
+            lang = 'ang' if code in rubrics.RUBRIC_CODES else language(row['tText'])
+            texts.append(('editionText', lang, ed_src, e_text, row['editorNumber'], t_wit))
+            if b_text:
+                b_wit = witness('B', MS_NAMES['B'])
+                texts.append(('editionText', 'ang', ed_src, b_text, '', b_wit))
+                row['translationXml'] = e_trans
+                row['bTranslationXml'] = b_trans
     elif row['tTextXml'] and sig_key(row['tSig']) not in shown:
         # No modern editor: column T is Liebermann's text of another manuscript.
         texts.append(('liebermannText', language(row['tText']), lie, row['tTextXml'], row['liebermannNumber'], t_wit))
@@ -389,6 +398,8 @@ def build(row, today, source_name, refs):
     if row['translationXml']:
         src = ed_src or translator(u_by)
         translations.append(('translation', 'en', src, row['translationXml'], t_wit))
+        if row.get('bTranslationXml'):
+            translations.append(('translation', 'en', src, row['bTranslationXml'], witness('B')))
     if row['secondTranslationXml']:
         second = abt.surname(row['secondRef'])
         if second:
