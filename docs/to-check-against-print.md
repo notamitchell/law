@@ -87,3 +87,12 @@ From [the cross-check of gerefscipe – habban](crosscheck-gerefscipe-habban.md)
 |---|---|---|---|---|---|
 | [ ] | 104 | *glengum*, *gliman* | glengum ends "Der.: woruldg~"; gliman ends "Northu **41**" (moved from the end of glengum, where the site had "[41") | as the site now | Is there anything after woruldg~ (a bracket)? |
 | [ ] | 107 | *h* | vor l: s. hlaford(swice), **geladian**(?), utæthleapan, **belidens**(?) | **gelaðian**(?), **beledens**(?) | |
+
+## habban – hume (pp. 108–117)
+
+From [the cross-check of habban – hume](crosscheck-habban-hume.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 111 | *heafod* | heevit. – Der.: **Hursteheved** | **Hurstesheved** | |
+| [ ] | 114 | *her* | [lies heron]; irrig **hĭc** (breve) | **hǐc** (caron) | |
