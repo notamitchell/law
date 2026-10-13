@@ -93,6 +93,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 | `tools/laws-from-xlsx.py` | Makes `oe-laws/` from the laws spreadsheet, on your own computer. See [docs/OE-LAWS.md](docs/OE-LAWS.md). |
 | `tools/link-citations.py` | Links the law code citations in entries (one letter at a time) to clause files in `oe-laws/`. See [docs/OE-LAWS.md](docs/OE-LAWS.md). |
 | `tools/build-laws-index.js` | Writes `data/laws.json` (every clause with its keywords and text) for the Laws page. Runs on every deploy. |
+| `tools/see-also.py` | Makes each entry's "See also" links from Liebermann's own cross-references (*s. WORD*, *s. d.*). Writes a report of what it could not link, `docs/see-also-report.md`. |
 | `tools/build-index.js` | Writes `data/entries.json`. Runs on every deploy. |
 | `tools/update-entries.js` | Rewrites the parts of each entry made from Liebermann's text: the numbered meanings and the law code citation list. Run it after adding or changing entries outside the form. |
 | `.github/workflows/static.yml` | Builds and deploys the site on every push to `main`. |
@@ -174,7 +175,7 @@ The letters Z to O were transcribed from the page scans, working backwards from 
 2. **A review page** listing submissions, with a before-and-after comparison for corrections to existing entries.
 3. **Check the notes in `data/markLaw.json`.** They were one row out and were realigned in October 2026 from the corrected glossary (see the [stock-take](docs/STOCKTAKE.md#data-problems)). The law code list keeps its "Under construction" notice until they have been checked against Liebermann.
 4. **Better search:** search inside entries with tolerance for spelling variants (æ/ae, þ/ð), and find every entry that cites a given law code.
-5. **Cross-references with ~.** Resolve pointers like *s.* abb~ to the entry they mean.
+5. **Cross-references.** *See also* links are made from Liebermann's *s.* and *s. d.* by `tools/see-also.py` (see `docs/see-also-report.md` for what is left: headwords with several entries, words with ~ or a hyphen, entries not yet in the dictionary). Still to do: pointers like *s.* abb~, and *s. o.*, *s. u.*, *s. z.*, *s. n.*.
 6. **Validation.** A TEI customisation (ODD) for the entry format, and a check on every push that each entry is valid.
 7. **The *Rechts- und Sachglossar*** (volume 2, part 2) as a second dictionary, linked from the *Wörterbuch*.
 8. **The Old English laws database** (`oe-laws/`, 2,294 TEI files made from the laws spreadsheet; see [docs/OE-LAWS.md](docs/OE-LAWS.md)). It has a Laws tab (search and one page per clause), and the dictionary entries for the letter A link to it. To do:
