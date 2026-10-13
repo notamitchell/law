@@ -17,25 +17,27 @@ Of the 102:
     - *að*: the typing slip "Espisc 5" is now **Episc** 5, linked to the law code.
     - *abnegatio* (p. 2) and *æfw[i]erdlan* (p. 5) are entries of their own again, as in the Word document. They had been run into *abnegare* and *æfwerdelsan*.
     - **Page numbers.** Page 4 begins inside *acquietare*, but the 54 entries after it (*acquirere* to *-æ-*) were labelled page 3, so page 4 had no entries at all. They are now page 4, with their scan links.
-- **Questions for an editor (11).** See below. The site is unchanged on these until they are answered.
+- **Checked against the print (11).** Questions where neither reading was clearly right, answered by an editor from the book (see below). Four led to changes on the site.
 - **Slips in the Word document (about 80).** The site is already right and is unchanged. They are listed below so the Word file can be corrected.
 - **Entry divisions (7).** In the Word document a headword is not in bold, so its entry runs into the one before (*ærendgewrit*, *æx*, *Æxeceaster*, *afangen*, *Augustinus*, *behwyrfð*). The site has them as separate entries already. *boc* stops at "Buch VI" because the document ends there. The rest of it will be in the next document.
 
-## Questions for an editor
+## Checked against the print
 
-| Page | Entry | Site (scan transcription) | Word document |
-|---|---|---|---|
-| 1 | *a-* (vor Nasalen) | geändert aus **o-** in H | geändert aus **o** in H |
-| 2 | *Accent* | **éac** … **féo** | **eác** … **feó** (which letter carries the accent?) |
-| 6 | *ælmihtig* | ~ges Godes … Swer **7–9.** Excom VII 2 | Swer **7–9 B.** Excom VII 2 |
-| 6 | *ænig* | nis **~ ~** niemand Ger 16 | nis **~** niemand Ger 16 |
-| 6 | *ænig* | geänd. aus ængie **B8)** | geänd. aus ængie **B3)** |
-| 7 | *æt* | V Pro 2. — **\***Dem regierten Worte …; Der.:**\*** þæræt | no asterisks |
-| 8 | *æðeling* | Ersetzt durch eorl Norðleod **2lq** | Norðleod **21q** (both look wrong) |
-| 9 | *agān* | EGu 9,1 = II Cn **45. I 17** | II Cn **45.1 17** |
-| 14 | *andlang* | up on **B 2** | up on **Q B 2** |
-| 24 | *betihtlod* | **betyhtlet** I 1,3 | **betyhlet** I 1,3 |
-| 25 | *bisceop* | As Alm **1. 2.** | As Alm **1,2.** |
+These were put to an editor, who checked them in the book.
+
+| Page | Entry | Site (scan transcription) | Word document | In the print | Site now |
+|---|---|---|---|---|---|
+| 1 | *a-* (vor Nasalen) | geändert aus **o-** in H | aus **o** in H | aus **o** in H | **Corrected** |
+| 2 | *Accent* | **éac** … **eác** … **féo** | **eác** … **feó** | as the site | Unchanged |
+| 6 | *ælmihtig* | Swer **7–9.** Excom VII 2 | Swer **7–9 B.** | Swer 7–9 **B.** | **Corrected** |
+| 6 | *ænig* | nis **~ ~** niemand | nis **~** niemand | as the site | Unchanged |
+| 6 | *ænig* | ængie B<sup>**8**</sup>) | ængie **B3)** | B with superscript **3** | **Corrected** |
+| 7 | *æt* | **\***Dem regierten Worte; Der.:**\*** | no asterisks | no asterisks | **Corrected** |
+| 8 | *æðeling* | Norðleod **2lq** | Norðleod **21q** | **2lq** | Kept as printed: see the README's roadmap |
+| 9 | *agān* | II Cn **45. I 17** | II Cn **45.1 17** | as the site | Unchanged |
+| 14 | *andlang* | up on **B 2** | up on **Q B 2** | as the site | Unchanged |
+| 24 | *betihtlod* | **betyhtlet** I 1,3 | **betyhlet** | as the site | Unchanged |
+| 25 | *bisceop* | As Alm **1. 2.** | As Alm **1,2.** | **1.2**, surely a misprint for 1,2 | Kept as printed: see the README's misprints list |
 
 ## Slips in the Word document
 
