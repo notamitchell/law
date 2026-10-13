@@ -180,3 +180,14 @@ From [the cross-check of sadelian – singan](crosscheck-sadelian-singan.md).
 | [ ] | 188 | *sapientes* | II Em 7. **Hn 75,5b**. 88,15 | **Hn 76,5b** | |
 | [ ] | 194 | *sehtan* | Ordal 5,2, wo H **séte** | **sete** | |
 | [ ] | 194 | *self* | him sylfum fremu für **íhn** Rect 10,1 | **ihn** | If the print has the accent, is it a printing error, like dém in *chose*? |
+
+## Singular – tǣcan (pp. 198–207)
+
+From [the cross-check of Singular – tǣcan](crosscheck-singular-taecan.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 199 | *[sōmbryce]* | headword **[sōmbryce]** (with a macron) | **[sombryce]** | |
+| [ ] | 201 | *[-stal]*, *stalu* | headwords **[-stal]**, **stalu** | **[-stall]**, **stallu** | |
+| [ ] | 203 | *sunu* | Sohn **Af El 3** Ld (Christus meinend 49. 49,7) | **Af El 13** | |
+| [ ] | 207 | *swiðe* | to þam (bis zu **dém** Grade, **só**) | **dem** Grade, só | Liebermann accents both dém and só here, which looks like his way of marking stress. If so, the dém in *chose* (corrected to dem as a printing error) may be the same and could be restored. |
