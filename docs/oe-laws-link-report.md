@@ -3,19 +3,20 @@
 Made by `tools/link-citations.py --letter ALL`. It is replaced each time the tool runs.
 
 ```
-All entries: 9246 (with a law code citation list: 6299)
-Citations in their lists: 27172
-  linked, exact           20392
-  linked, subclause        1281
-  LINKED TO A CLAUSE:       21673  (80% of all citations; 97% of those with a clause number to a code in the database)
-  not linked, clause not found            755
-  not linked, code not in database       4744
-Entries changed: 4573; entries whose whole list is linked: 3459
+All entries: 9246 (with a law code citation list: 6305)
+Citations in their lists: 28062
+  linked, exact             567
+  linked, subclause          51
+  linked, already linked  21791
+  LINKED TO A CLAUSE:       22409  (80% of all citations; 97% of those with a clause number to a code in the database)
+  not linked, clause not found            772
+  not linked, code not in database       4881
+Entries changed: 262; entries whose whole list is linked: 3461
 ```
 
 ## The code is in the database but no clause file has that number
 
-By code: Ine (332), Af (173), Ath (34), Ger (32), Rect (28), ICn (21), Iudex (19), IICn (19), VAs (10), VIAtr (9), Northu (8), IIAs (6), IVEg (6), Abt (6), IIAtr (4)
+By code: Ine (332), Af (173), Ath (34), Ger (32), Rect (28), IICn (23), ICn (21), Iudex (19), VIAtr (11), VAs (10), Northu (8), IIAtr (7), VIAs (7), IIAs (6), IVEg (6)
 
 Citations (with how many times each occurs):
 
@@ -82,27 +83,28 @@ Citations (with how many times each occurs):
 
 ## The code has no clause files
 
-By code: Hn (1288), LeisWl (952), ECf (625), WlArtFz (313), IudDeiIV (274), ExcomVII (138), IudDeiVII (133), PsCnFor (95), IudDeiV (90), CHnCor (80), SacrCor (70), HnLond (67), WlArt (58), ECfRetr (51), LibLond (47)
+By code: Hn (1288), LeisWl (952), ECf (625), WlArtFz (313), IudDeiIV (279), IudDeiVII (153), ExcomVII (138), IudDeiV (99), PsCnFor (95), CHnCor (80), SacrCor (70), HnLond (67), WlArt (58), ExcomVI (51), ECfRetr (51)
 
 Citations (with how many times each occurs):
 
 - ECf 32 ×97
 - Hn 10,1 ×37
+- Iud Dei VI 1 ×35
 - Iud Dei IV 3,1 ×34
-- Iud Dei VI 1 ×30
+- Iud Dei VII 13 ×28
 - Sacr cor Pro ×28
 - Wl art Fz 5 ×26
 - ECf 13,1 ×25
-- Iud Dei VII 13 ×25
+- Iud Dei IV 3,3 ×25
 - Excom VII 2 ×24
 - Leis Wl 3 ×24
 - Wl art Fz 2 ×24
 - Wl art Fz 6 ×24
-- Iud Dei IV 3,3 ×23
+- Iud Dei V 2,2 ×23
 - Leis Wl 5 ×23
 - ECf 11,1 ×22
 - Wl art Fz 3,1 ×22
-- Iud Dei V 2,2 ×21
+- Iud Dei VII 23,1 ×21
 - Leis Wl 10,1 ×21
 - Leis Wl 1,1 ×20
 - Leis Wl Pro ×20
@@ -110,32 +112,32 @@ Citations (with how many times each occurs):
 - Wl art Fz 10 ×20
 - Wl art Fz 4 ×20
 - ECf 33 ×19
+- Iud Dei V 2 ×19
+- Iud Dei V 2,1 ×19
 - Leis Wl 24 ×19
+- Iud Dei IV 2 ×18
 - Iud Dei IV 3 ×18
-- Iud Dei VII 23,1 ×18
 - Leis Wl 2,3 ×18
 - Iud Dei IV 3,2 ×17
 - Iud Dei IV 3,5 ×17
 - Iud Dei IV 4,1 ×17
-- Iud Dei V 2,1 ×17
+- Iud Dei VII 12,1 ×17
 - Wl art Fz 8 ×17
 - Excom VII 5 ×16
-- Iud Dei IV 2 ×16
-- Iud Dei V 2 ×16
 - Iud Dei V 2,3 ×16
 - Leis Wl 37 ×16
 - Leis Wl 47 ×16
 - Sacr cor 1,3 ×16
 - Wl ep Pro ×16
 - Iud Dei IV 4,6 ×15
-- Iud Dei VII 12,1 ×15
+- Iud Dei V 2,4 ×15
 - Leis Wl 2,1 ×15
 - Leis Wl 20,2 ×15
 - Leis Wl 38 ×15
 - Wl art Fz 3 ×15
+- Excom VI 1,4 ×14
 - Iud Dei IV 1 ×14
 - Iud Dei IV 2,1 ×14
-- Iud Dei V 2,4 ×14
 - Iud Dei VII 12,2 ×14
 - Leis Wl 1 ×14
 - Leis Wl 4 ×14
@@ -145,5 +147,4 @@ Citations (with how many times each occurs):
 - Wl art Fz Insc ×14
 - CHn cor 11 ×13
 - Iud Dei IV 4 ×13
-- Iud Dei IV 4,5 ×13
 
