@@ -208,3 +208,11 @@ From [the cross-check of underþæncan – wedd](crosscheck-underthaencan-wedd.m
 | ✓ | Page | Entry | Site | Word document | Print |
 |---|---|---|---|---|---|
 | [ ] | 237 | *weallan* | 3: ~leð I Cn 6,1 A (**~lað!** G) | (**~að!** G) | |
+
+## þǣra – understandan (pp. 218–227)
+
+From [the cross-check of þǣra – understandan](crosscheck-thaera-understandan.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 226 | *u* | überflüssig geschr. hinter **ƿ**: s. twelfhynde (corrected from þ) | **Ƿ** (capital) | Small or capital wynn? Compare the item for *þ* 11) above. |
