@@ -1,10 +1,24 @@
 {%- assign root = page.root | default: "" -%}
+{%- comment -%}
+  Two brands share this site: the Home and Laws pages belong to the
+  Dōmas Database (the laws); every other page belongs to eLiebermann
+  (the dictionary). "domas" decides which banner, logo and name to show.
+{%- endcomment -%}
+{%- assign domas = false -%}
+{%- if page.section == "home" or page.section == "laws" -%}{%- assign domas = true -%}{%- endif -%}
+{%- if domas -%}
+{%- assign brand = "The Dōmas Database" -%}
+{%- assign tagline = "The Complete Law Codes of Pre-Conquest England" -%}
+{%- else -%}
+{%- assign brand = "eLiebermann" -%}
+{%- assign tagline = "An Online Dictionary of Pre-Conquest English Law" -%}
+{%- endif -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title and page.title != "Home" %}{{ page.title }} · {% endif %}eLiebermann: An Online Dictionary of Pre-Conquest English Law</title>
+    <title>{% if page.title and page.title != "Home" %}{{ page.title }} · {% endif %}{{ brand }}: {{ tagline }}</title>
     {%- if page.description %}
     <meta name="description" content="{{ page.description }}">
     {%- endif %}
@@ -32,18 +46,24 @@
     {%- if page.section == "home" %}
     <header class="site-header">
         <a class="site-banner" href="{{ root }}index.html">
-            <img src="{{ root }}images/banner.svg" alt="eLiebermann" width="1200" height="300">
+            <img src="{{ root }}images/domas-banner.svg" alt="The Dōmas Database" width="1200" height="300">
         </a>
-        <p class="site-subtitle">An Online Dictionary of Pre-Conquest English Law</p>
+        <p class="site-subtitle">{{ tagline }}</p>
         <p class="construction"><span>Site under construction</span></p>
     </header>
     {%- else %}
     <header class="site-header site-header--slim">
+        {%- if domas %}
         <a class="site-brand" href="{{ root }}index.html">
+            <img class="site-lockup" src="{{ root }}images/domas-logo.svg" alt="The Dōmas Database" width="295" height="94">
+        </a>
+        {%- else %}
+        <a class="site-brand" href="{{ root }}dictionary.html">
             <img class="site-logo" src="{{ root }}images/logo.svg" alt="" width="48" height="48">
             <img class="site-wordmark" src="{{ root }}images/wordmark.svg" alt="eLiebermann">
         </a>
-        <p class="site-subtitle">An Online Dictionary of Pre-Conquest English Law</p>
+        {%- endif %}
+        <p class="site-subtitle">{{ tagline }}</p>
         <p class="construction"><span>Site under construction</span></p>
     </header>
     {%- endif %}
