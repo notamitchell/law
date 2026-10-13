@@ -41,6 +41,7 @@ scripts:
             const e = ELieb.readEntry(doc);
             document.title = e.headword + ' · eLiebermann';
             target.innerHTML = render(e);
+            linkClauses(e);
             showScanOnClick();
         })
         .catch(err => {
@@ -100,6 +101,19 @@ scripts:
         }).join('');
     }
 
+    // In Liebermann's text, the number of a cited clause ("8" in "Ine 8")
+    // links to that clause, as in the citation list under the entry. The law
+    // code itself keeps its own link and popup.
+    function linkClauses(e) {
+        const clauses = {};
+        e.xr.filter(x => x.getAttribute('type') === 'lawCode').forEach(x => {
+            const ref = [...x.children].find(c => c.localName === 'ref') || x;
+            const m = /^clause:(.+)$/.exec(ref.getAttribute('target') || '');
+            if (m) clauses[ref.textContent.replace(/\s+/g, ' ').trim()] = root + 'law.html?id=' + encodeURIComponent(m[1]);
+        });
+        ELieb.linkClauseNumbers(target.querySelector('.liebermann-text'), clauses);
+    }
+
     // An archive.org page link (…/details/ID/page/14/…) becomes the address
     // of archive.org's embedded reader opened at that page.
     function scanEmbed(url) {
@@ -129,7 +143,7 @@ scripts:
         <section class="entry-section">
             <h2>Liebermann's entry</h2>
             <div class="liebermann-text">${e.original ? paragraphs(ELieb.renderTei(e.original, root)) : ''}</div>
-            <p class="small muted">Click a <span class="link-key link-key--law">law code</span>, <span class="link-key link-key--ms">manuscript</span> or <span class="link-key link-key--gram">abbreviation</span> to see what it stands for. The lists of <a href="${root}lawAbb.html">law codes</a>, <a href="${root}msAbb.html">manuscripts</a> and <a href="${root}gramAbb.html">grammatical abbreviations</a> have them all. ~ stands for the headword.</p>
+            <p class="small muted">Click a <span class="link-key link-key--law">law code</span>, <span class="link-key link-key--ms">manuscript</span> or <span class="link-key link-key--gram">abbreviation</span> to see what it stands for, or a <span class="link-key link-key--clause">clause number</span> to read that clause. The lists of <a href="${root}lawAbb.html">law codes</a>, <a href="${root}msAbb.html">manuscripts</a> and <a href="${root}gramAbb.html">grammatical abbreviations</a> have them all. ~ stands for the headword.</p>
         </section>
 
         ${e.definition || e.translation ? `

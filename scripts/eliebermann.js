@@ -336,32 +336,53 @@
             .replace(/<(lb|pb)\b[^>]*\/>/g, ' ')
             .replace(/<ref type="lawCode" target="law:([^"]*)">([\s\S]*?)<\/ref>/g, (m, a, l) => `\u0001${a}\u0002${l.replace(/<[^>]*>/g, '')}\u0003`)
             .replace(/<[^>]*>/g, '');
-        const parts = unescape(flat).split(/\u0001([^\u0002]*)\u0002([^\u0003]*)\u0003/);
         const out = [], seen = new Set();
+        scanCitations(unescape(flat), (text, anchor) => {
+            if (!seen.has(text)) { seen.add(text); out.push({ text, anchor }); }
+        });
+        return out;
+    }
+
+    /**
+     * The rules of extractCitations(), on text already flattened (law code
+     * refs as \u0001anchor\u0002label\u0003, stops as \u0004). Calls
+     * found(text, anchor, start, end) for every passage, repeats included;
+     * start and end are where its number stands in the flat text.
+     */
+    function scanCitations(flat, found) {
         let code = null, last = null, open = false;   // open: only spaces since the last passage
-        const add = text => {
+        const add = (text, start, end) => {
             last = { text: text.replace(/\s+/g, ' ').trim(), anchor: code.anchor };
-            last.isNew = !seen.has(last.text);
-            if (last.isNew) { seen.add(last.text); out.push(last); }
+            found(last.text, last.anchor, start, end);
         };
-        const passages = text => {
-            let rest = text, m;
+        const passages = (text, pos) => {
+            let rest = text, at = pos, m;
             // The passage follows after a space (Af 41) or, for Liebermann's "Cn 1020,11"
             // and "Iud Dei X,17", straight after a comma.
             if (code && (m = new RegExp(`^(\\s+|,(?=\\d))(${PASSAGE})(?![\\p{L}\\d)])`, 'u').exec(rest)) && (!last || !open || last.anchor !== code.anchor || code.fresh)) {
-                add(code.label + (m[1] === ',' ? ',' : ' ') + m[2].replace(/\.$/, '')); rest = rest.slice(m[0].length); code.fresh = false;
+                const n = m[2].replace(/\.$/, ''), s = at + m[1].length;
+                add(code.label + (m[1] === ',' ? ',' : ' ') + n, s, s + n.length);
+                rest = rest.slice(m[0].length); at += m[0].length; code.fresh = false;
             } else if (code && code.fresh && !/^\s*$/.test(rest)) {
                 code = null;   // a code with no passage after it, e.g. "VI As" in a sentence
             }
             while (code && last && (m = new RegExp(`^(?:\\s*\\([^()]*\\))?\\.?\\s+(${PASSAGE})(?![\\p{L}\\d)])`, 'u').exec(rest))) {
-                add(code.label + ' ' + m[1].replace(/\.$/, '')); rest = rest.slice(m[0].length);
+                const n = m[1].replace(/\.$/, ''), s = at + m[0].length - m[1].length;
+                add(code.label + ' ' + n, s, s + n.length);
+                rest = rest.slice(m[0].length); at += m[0].length;
             }
             open = !!last && !(code && code.fresh) && /^\s*$/.test(rest);
             if (!open && !(code && code.fresh)) code = code && /^[\s.]*$/.test(rest) ? code : null;
         };
-        passages(parts[0]);
-        for (let i = 1; i < parts.length; i += 3) {
-            const anchor = parts[i], label = parts[i + 1].trim(), text = parts[i + 2];
+        const re = /\u0001([^\u0002]*)\u0002([^\u0003]*)\u0003/g;
+        let m = re.exec(flat);
+        passages(m ? flat.slice(0, m.index) : flat, 0);
+        while (m) {
+            const anchor = m[1], label = m[2].trim();
+            const pos = m.index + m[0].length;
+            const next = re.exec(flat);
+            const text = flat.slice(pos, next ? next.index : flat.length);
+            m = next;
             if (SIGLA.has(anchor)) {
                 // "Af 41 B": the reading of manuscript B. The citation list names the
                 // passage (Af 41), not the manuscript, so the letter is not added to it.
@@ -369,18 +390,69 @@
                 if (anchor === 'ConsCn' || anchor === 'Quadr' && /^\s*:/.test(text) || anchor === 'InCn' && /^\s*:/.test(text)) code = null;
                 // keep the run going so "Af 41 B. 43" still reads as Af 43
                 open = attached && /^\s*$/.test(text);
-                if (code && last && /^\.\s+\d/.test(text)) { passages(text); } else if (!/^\s*$/.test(text)) { code = code && /^[\s.]*$/.test(text) ? code : null; }
+                if (code && last && /^\.\s+\d/.test(text)) { passages(text, pos); } else if (!/^\s*$/.test(text)) { code = code && /^[\s.]*$/.test(text) ? code : null; }
                 continue;
             }
             if (QUALIFIERS.has(anchor)) {
                 if (code && (code.fresh || open)) { code = { anchor: code.anchor, label: code.label + ' ' + label, fresh: true }; last = null; }
-                passages(text);
+                passages(text, pos);
                 continue;
             }
             code = { anchor, label, fresh: true };
-            passages(text);
+            passages(text, pos);
         }
-        return out.map(c => ({ text: c.text, anchor: c.anchor }));
+    }
+
+    /**
+     * Links the clause numbers in an entry as shown on its page: in "Ine 8",
+     * "Ine" stays the link to the law code (with its popup) and "8" becomes a
+     * link to the clause. The passages are found by the same rules as the
+     * citation list under the entry, and a number is linked only when that
+     * list has a clause for it: clauses is { 'Ine 8': 'law.html?id=Ine_8' }.
+     */
+    function linkClauseNumbers(container, clauses) {
+        if (!container || !clauses || !Object.keys(clauses).length) return 0;
+        const isCode = el => el.localName === 'a' && /(?:lawAbb|msAbb)\.html#/.test(el.getAttribute('href') || '');
+        // The text as extractCitations() sees it, with where each character came from.
+        let flat = '';
+        const from = [];   // from[i] = [textNode, offset] or null
+        const put = (str, node, offset) => {
+            for (let i = 0; i < str.length; i++) { flat += str[i]; from.push(node ? [node, offset + i] : null); }
+        };
+        const walk = node => {
+            node.childNodes.forEach(n => {
+                if (n.nodeType === 3) return put(n.nodeValue, n, 0);
+                if (n.nodeType !== 1) return;
+                if (isCode(n)) {
+                    let anchor = '';
+                    try { anchor = decodeURIComponent(n.getAttribute('href').split('#')[1] || ''); } catch (e) { /* keep '' */ }
+                    return put('\u0001' + anchor + '\u0002' + n.textContent + '\u0003', null, 0);
+                }
+                if (n.localName === 'a') return put(n.textContent, null, 0);
+                if (n.localName === 'sup' && !n.classList.contains('lang-marker')) return put('\u0004', null, 0);
+                if (n.localName === 'br' || n.classList.contains('pb')) return put(' ', null, 0);
+                walk(n);
+            });
+        };
+        walk(container);
+        const hits = [];
+        scanCitations(flat, (text, anchor, start, end) => {
+            const href = clauses[text];
+            const a = from[start], b = from[end - 1];
+            if (href && a && b && a[0] === b[0]) hits.push({ node: a[0], start: a[1], end: b[1] + 1, href, text });
+        });
+        // Wrap from the last to the first, so earlier offsets stay right.
+        hits.reverse().forEach(h => {
+            const tail = h.node.splitText(h.start);
+            tail.splitText(h.end - h.start);
+            const link = container.ownerDocument.createElement('a');
+            link.className = 'ref-clause';
+            link.href = h.href;
+            link.title = h.text + ' in the laws database';
+            tail.parentNode.replaceChild(link, tail);
+            link.appendChild(tail);
+        });
+        return hits.length;
     }
 
     /**
@@ -662,7 +734,7 @@ ${translation}
     const api = {
         TEI_NS, LANGUAGES, LANGUAGE_CODES, languageBadge,
         useDom, slugify, sortKey, alphaKey, letterOf, ALPHABET, escapeXml,
-        linkAbbreviations, loadAbbreviations, extractCitations, citationXr, splitSenses, sensesXml, detectLanguage, detectHeadword,
+        linkAbbreviations, loadAbbreviations, extractCitations, linkClauseNumbers, citationXr, splitSenses, sensesXml, detectLanguage, detectHeadword,
         inlineToTei, isEmptyHtml, buildEntryXml,
         renderTei, resolveTarget, readEntry
     };
