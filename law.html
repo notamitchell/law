@@ -191,10 +191,11 @@ scripts:
         return wrap;
     }
 
+    // The law code in the heading links to its page, which lists all its clauses.
     function codeLink(row) {
-        if (!row.anchor) return el('span', null, row.code);
         const a = el('a', null, row.code);
-        a.href = root + 'lawAbb.html#' + encodeURIComponent(row.anchor);
+        a.href = root + 'lawcode.html?code=' + encodeURIComponent(row.code) + '#' + encodeURIComponent(row.id);
+        a.title = 'All the clauses of ' + row.code;
         return a;
     }
 
@@ -324,6 +325,7 @@ scripts:
         whole.appendChild(btn);
         whole.appendChild(out);
         target.appendChild(whole);
+        if (new URLSearchParams(location.search).get('all') === '1') btn.click();
 
         const src = el('p', 'source-line');
         const changes = tei(doc, 'change');
