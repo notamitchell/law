@@ -18,10 +18,20 @@ in the text of an entry (the <dictScrap type="liebermann">):
                 s. d." sends the reader to aa).
 
 Each one found becomes <xr type="see"><ref target="entry:ID">headword</ref></xr>.
-A target is linked only when exactly one entry has that headword. Otherwise
-nothing is linked, and the report says why (no such entry yet, a headword
-shared by several entries, a word ending in a hyphen or ~, ...), so that a
-person can decide. An entry is never linked to itself.
+How a word is matched to an entry, in order:
+  - the headword exactly, ignoring accents, or as one of the spellings a
+    bracketed headword stands for (g[e]noh is genoh or gnoh);
+  - a ~ is filled in from the entry's own headword(s): under [-feald], anf~ is
+    anfeald; under hunteontig, hund~ is hundteontig;
+  - a prefix or suffix with no entry of its own (heah-, -sceatt) goes to the
+    word itself (heah, sceatt);
+  - otherwise one usual spelling difference (ceapman / ceapmon, i / ie / y);
+  - where several entries share the headword: the one numbered by a following
+    I or II ("s. ure n. II"), else the one in the same language or with the
+    same F / L mark, else all of them, told apart by Liebermann's first gloss.
+Links a person has checked and found wrong are listed in SKIP. The report says
+what was linked by a guess (to check) and what could not be linked, and why.
+An entry is never linked to itself.
 
 Existing "See also" links are kept, with one exception: a link to the entry d
 is removed when the entry has "s. d." in it, since the programming that made
@@ -58,8 +68,62 @@ def read(path):
 
 
 def fold(s):
-    s = unicodedata.normalize('NFD', s.lower())
+    s = unicodedata.normalize('NFD', s.lower()).replace('ð', 'þ')
     return ''.join(c for c in s if not unicodedata.combining(c))
+
+
+# Links the tool would make that a person has checked and found wrong:
+# (entry, target). The near spellings and stems are guesses, and these missed.
+SKIP = {
+    ('Pars', 'helm'), ('ae-4', 'helm'), ('haelm', 'helm'),        # healm is not helm
+    ('Consonanten', 'l'), ('l-2', 'l'),                          # ll: the double letter
+    ('maector', 'mete'),                                         # mæte is not mete
+    ('fiht', 'f-re-ht'), ('fyht', 'f-re-ht'),                    # feoht is not freht
+    ('Fremdwort-Declination', 'tu-sc'), ('Fremdwort-Declination', 'te'),
+    ('cs', 'g-o-s'), ('gar', 'war-u'),
+}
+
+ROMAN = {'I': 1, 'II': 2, 'III': 3, 'IV': 4, 'V': 5}
+SECTION = re.compile(r'^\s*(?:<lbl[^>]*>[^<]*</lbl>\s*)?<hi rend="bold">(I|II|III|IV|V)</hi>\)')
+
+
+def spellings(hw):
+    """The forms a headword with Liebermann's brackets stands for:
+    g[e]noh -> genoh, gnoh; aw[ie]rdan -> awierdan, awrdan, awirdan, awerdan;
+    mon(n)- -> monn-, mon-."""
+    parts = re.split(r'(\[[^\]]*\]|\([^)]*\))', hw)
+    forms = ['']
+    for part in parts:
+        if re.fullmatch(r'\[[^\]]*\]|\([^)]*\)', part or ''):
+            inner = part[1:-1]
+            opts = {inner}
+            if part.startswith('('):
+                opts.add('')                # heal(swa): healswa or heal
+            elif len(inner) > 1 and inner.isalpha():
+                opts.update(inner)          # [ie]: ie, i or e
+            else:
+                opts.add('')                # g[e]noh: genoh or gnoh
+            forms = [f + o for f in forms for o in opts]
+        else:
+            forms = [f + part for f in forms]
+        if len(forms) > 64:
+            break
+    return {f for f in forms if f}
+
+
+def respellings(word):
+    """Common spelling differences between Liebermann's cross-references and
+    his headwords (ceapman / ceapmon, cierr / cyrr, ...): one change at a time."""
+    swaps = [('an', 'on'), ('on', 'an'), ('ie', 'i'), ('ie', 'y'), ('i', 'ie'), ('y', 'ie'), ('i', 'y'), ('y', 'i'),
+             ('æ', 'e'), ('e', 'æ'), ('ea', 'e'), ('eo', 'e'), ('io', 'eo'), ('eo', 'io'), ('u', 'o'), ('o', 'u'),
+             ('c', 'k'), ('k', 'c'), ('nn', 'n'), ('ll', 'l'), ('n', 'nn'), ('l', 'll'), ('tt', 't'), ('t', 'tt'),
+             ('mm', 'm'), ('ss', 's'), ('dd', 'd'), ('gg', 'g')]
+    out = set()
+    for a, b in swaps:
+        for m in re.finditer(re.escape(a), word):
+            out.add(word[:m.start()] + b + word[m.end():])
+    out.discard(word)
+    return out
 
 
 def esc(s):
@@ -72,11 +136,41 @@ class Index:
         self.hw = {}
         self.exact = collections.defaultdict(list)
         self.folded = collections.defaultdict(list)
+        self.variant = collections.defaultdict(list)
+        self.lang = {}
+        self.section = {}
+        self.pointer = set()
+        self.mark = {}
+        self.gloss = {}
         for path in sorted(glob.glob(os.path.join(directory, '*.xml'))):
-            m = ORTH.search(read(path))
+            text = read(path)
+            m = ORTH.search(text)
             if not m:
                 continue
             id_ = os.path.basename(path)[:-4]
+            lm = re.search(r'<entry xml:lang="([^"]*)"', text)
+            self.lang[id_] = lm.group(1) if lm else ''
+            sm = SCRAP.search(text)
+            nm = SECTION.match(sm.group(2)) if sm else None
+            # Liebermann's first italic word after the headword ("vb", "Recht"),
+            # to tell apart entries that share a headword
+            for gm in re.finditer(r'<hi rend="italic">(.*?)</hi>', sm.group(2) if sm else ''):
+                g = html.unescape(re.sub(r'<[^>]+>', '', gm.group(1))).strip(' ,;:.[]()')
+                if len(re.sub(r'\W', '', g)) < 2 or g.startswith('s.') or g in ('s', 'vgl'):
+                    continue
+                self.gloss[id_] = g if len(g) <= 24 else g[:22].rsplit(' ', 1)[0] + '…'
+                break
+            # Liebermann's L / F before a headword (Latin, French)
+            lb = re.match(r'\s*<lbl type="language">([^<]*)</lbl>', sm.group(2)) if sm else None
+            self.mark[id_] = lb.group(1).strip() if lb else ''
+            # an entry that is only a pointer elsewhere ("hwirfe s. hwier~")
+            if sm:
+                body = re.sub(r'<hi rend="bold">.*?</hi>', '', sm.group(2), count=1)
+                body = html.unescape(re.sub(r'<[^>]+>', '', body)).strip(' ,')
+                if body.startswith('s.') and len(body) < 60:
+                    self.pointer.add(id_)
+            if nm:
+                self.section[id_] = nm.group(1)
             hw = html.unescape(re.sub(r'<[^>]+>', '', m.group(1))).strip()
             self.hw[id_] = hw
             # Names that are not in the text of the laws are headed [Wiht]; a
@@ -84,16 +178,58 @@ class Index:
             plain = re.sub(r'^\[(.*)\]$', r'\1', hw)
             self.exact[plain].append(id_)
             self.folded[fold(plain)].append(id_)
+            for form in spellings(plain):
+                if form != plain and id_ not in self.variant[fold(form)]:
+                    self.variant[fold(form)].append(id_)
 
-    def find(self, word):
-        """-> (id or None, why not)"""
-        for table, key in ((self.exact, word), (self.folded, fold(word))):
-            ids = table.get(key)
-            if ids:
-                if len(ids) == 1:
-                    return ids[0], ''
-                return None, 'several entries have this headword: ' + ', '.join(ids)
-        return None, 'no entry with this headword (yet)'
+    def lookup(self, word):
+        """Every entry with this headword (exactly, then ignoring accents, then
+        as one of the spellings a bracketed headword stands for)."""
+        for table, key in ((self.exact, word), (self.folded, fold(word)), (self.variant, fold(word))):
+            if table.get(key):
+                return list(table[key])
+        return []
+
+    def label(self, id_):
+        hw = re.sub(r'^\[(.*)\]$', r'\1', self.hw.get(id_, id_))
+        return hw + (' ' + self.section[id_] if id_ in self.section else '')
+
+    def find(self, word, lang='', numeral='', mark=None):
+        """-> (list of ids, why not / how)"""
+        ids = self.lookup(word)
+        how = ''
+        if not ids:
+            # A prefix or suffix (heah-, -sceatt) with no entry of its own: the
+            # entry for the word itself.
+            bare = word.strip('-')
+            if bare != word and len(bare) > 2:
+                ids = self.lookup(bare)
+                how = 'linked to the word without the hyphen' if ids else ''
+        if not ids:
+            cands = sorted({i for r in respellings(fold(word)) for i in self.lookup(r) if i not in self.pointer})
+            if len(cands) == 1:
+                return cands, 'linked by a near spelling: ' + self.hw[cands[0]]
+            if cands:
+                return [], 'no entry with this headword; near spellings: ' + ', '.join(cands)
+            return [], 'no entry with this headword (yet)'
+        if len(ids) == 1:
+            return ids, how
+        if numeral:
+            pick = [i for i in ids if self.section.get(i) == numeral]
+            if len(pick) == 1:
+                return pick, how
+        same = [i for i in ids if self.lang.get(i) == lang]
+        if len(same) == 1:
+            return same, how
+        if same:
+            ids = same
+        if mark is not None:
+            same = [i for i in ids if self.mark.get(i, '') == mark]
+            if len(same) == 1:
+                return same, how
+            if same:
+                ids = same
+        return ids, 'several entries have this headword, all linked: ' + ', '.join(ids)
 
 
 def words(text, backwards=False):
@@ -134,58 +270,176 @@ def clean(token):
     return token.strip().rstrip('.,;:')
 
 
+def headwords(scrap, index, entry_id):
+    """The entry's own headword(s), for filling in a ~: the orth, and any other
+    bold words before Liebermann's first abbreviation ("wys, wyssian")."""
+    out = [index.hw.get(entry_id, '')]
+    head = scrap.split('<ref type="abbreviation"', 1)[0]
+    out += [html.unescape(re.sub(r'<[^>]+>', '', h)) for h in re.findall(r'<hi rend="bold">(.*?)</hi>', head)]
+    forms = []
+    for h in out:
+        h = h.strip().strip('[]').strip().rstrip(',').strip('-')
+        if h and not re.fullmatch(r'[IVX]+|\d+[a-z]?', h):
+            for f in spellings(h) | {re.sub(r'[\[\]()]', '', h)}:
+                if f not in forms:
+                    forms.append(f)
+    return forms
+
+
+def tilde(word, h):
+    """Liebermann's ~ stands for letters of the headword h: under [-feald],
+    anf~ is anfeald; under Bernaba, Bar~ is Barnaba; under ciepemon, ~nna is
+    ciepemonna; under hunteontig, hund~ is hundteontig. -> the possible
+    spellings, the likeliest (where a letter is shared) first. The ~ always
+    stands for at least one letter."""
+    pre, _, post = word.partition('~')
+    first, second = [], []
+    if not pre and not post:
+        return [], []
+    if pre and post:
+        return [pre + h + post], []
+    for k in range(1, len(h)):
+        if pre:
+            stands, shared = len(h) - k, pre[-1].lower() == h[k - 1].lower()
+            cand = pre + h[k:]
+        else:
+            stands, shared = k, post[0].lower() == h[k].lower()
+            cand = h[:k] + post
+        # the ~ stands for a fair part of the headword: two letters at least
+        # where a letter is shared, more than half the word where none is
+        if shared and stands >= min(2, len(h) - 1):
+            first.append(cand)
+        elif not shared and 2 * stands > len(h):
+            second.append(cand)
+    if pre:
+        second.append(pre + h)
+    return first, second
+
+
+def resolve(word, index, lang, numeral, heads, entry_id=''):
+    """-> (ids, why/how, shown)"""
+    if '~' in word:
+        picked, seen, tried = [], [], []
+        for h in heads:
+            got = tilde(word, h)
+            # where no likely spelling is a headword, try them with the usual
+            # spelling differences (ungielde -> ung[i]lde) before the less likely ones
+            got = (got[0], sorted({r for c in got[0] for r in respellings(c)}), got[1])
+            for n, group in enumerate(got):
+                found = {}
+                for cand in group:
+                    tried.append(cand)
+                    ids = [i for i in index.lookup(cand) if i != entry_id and not (n == 1 and i in index.pointer)]
+                    if ids:
+                        found.setdefault(tuple(ids), cand)
+                if len(found) == 1:
+                    picked.append(list(found.values())[0])
+                    break
+                if found:
+                    seen += list(found.values())
+                    break
+        picked = list(dict.fromkeys(picked))
+        # several headwords, several readings: keep those in the entry's own language
+        same = [c for c in picked if any(index.lang.get(i) == lang for i in index.lookup(c))]
+        if same:
+            picked = same
+        if picked and len(picked) <= 3:
+            ids, whys = [], []
+            for cand in picked:
+                got, why = index.find(cand, lang, numeral, index.mark.get(entry_id, ''))
+                got = [i for i in got if i != entry_id] or [i for i in index.lookup(cand) if i != entry_id]
+                ids += [i for i in got if i not in ids]
+            return ids, '~ read as ' + ', '.join(picked), ' / '.join(picked)
+        if seen:
+            return [], 'only the start or end of a word: ~ could be ' + ', '.join(seen), word
+        return [], 'only the start or end of a word: no entry for it', word
+    if re.search(r'\d', word):
+        return [], 'a number, not a headword', word
+    ids, why = index.find(word, lang, numeral, index.mark.get(entry_id, ''))
+    return ids, why, word
+
+
 def targets(scrap, entry_id, index):
     """Every cross-reference in an entry's text:
-    [(kind, shown text, id or None, why not)]"""
+    [(kind, shown text, [ids], why not / how)]"""
     found = []
+    lang = index.lang.get(entry_id, '')
     # A headword that is also a law code (Ine, Wiht ...) is linked as one in the
     # text; for finding the word, that link is only the word.
     scrap = re.sub(r'<ref type="lawCode" target="[^"]*">([^<]*)</ref>', r'\1', scrap)
+    heads = headwords(scrap, index, entry_id)
     for m in ABBR.finditer(scrap):
         kind = m.group('kind')
         if kind in OTHER:
-            found.append((kind, m.group('text'), None, 'not linked: ' + kind))
+            found.append((kind, m.group('text'), [], 'not linked: ' + kind))
             continue
         if kind not in SIEHE:
             continue
+        after = ''
         if SIEHE[kind] == 'after':
             tail = scrap[m.end():]
             if tail.startswith('</hi>'):
                 tail = tail[5:]
             node = re.split(r'<', tail, maxsplit=1)[0]
             if not node[:1].isspace():
-                found.append((kind, '', None, 'nothing follows'))
+                found.append((kind, '', [], 'nothing follows'))
                 continue
             toks = words(node)
+            after = words.right + tail[len(node):]
         else:
             head = scrap[:m.start()]
             node = re.split(r'>', head[::-1], maxsplit=1)[0][::-1] if '>' in head else head
             before = head[:len(head) - len(node)]
+            # "pares [s. d.]": the bracket belongs to the s. d.
+            node = re.sub(r'\[\s*$', '', node)
             toks = words(html.unescape(node), backwards=True)
-            if toks and node.strip() == toks[0] and before.endswith('</hi>') and re.search(r'<hi rend="bold">[^<]*</hi>$', before):
-                pass
             if len(toks) > 1 and before.endswith('</hi>') and re.search(r'<hi rend="bold">[^<]*</hi>$', before) \
                     and node.lstrip().startswith(toks[0]):
                 toks = toks[1:]     # "hereditaria terra, bocland": terra belongs to the headword
+        # "s. ure n. II", "s. riht II": which of several entries
+        plain_after = html.unescape(re.sub(r'<[^>]+>', '', after))
+        nm = re.match(r'\s*(?:n\.\s*)?(I{1,3}|IV|V)\b(?!\s*\))', plain_after)
+        numeral = nm.group(1) if nm else ''
+        if nm:
+            words.right = words.right[len(words.right) - len(words.right.lstrip()):]
+            words.right = re.sub(r'^\s*(?:n\.\s*)?(I{1,3}|IV|V)\b', '', words.right)
         phrase = bool(toks) and (
-            (SIEHE[kind] == 'after' and re.match(r"\s+[^\W\d_]", words.right)) or
+            (SIEHE[kind] == 'after' and not numeral and re.match(r"\s+[^\W\d_]", words.right)) or
             (SIEHE[kind] == 'before' and re.search(r"[^\W\d_][\w'’.]*\s+$", words.left)))
         if not toks:
-            found.append((kind, '', None, 'no word found'))
+            found.append((kind, '', [], 'no word found'))
         elif phrase:
-            found.append((kind, ' '.join(toks), None, 'part of a longer phrase, not a single headword'))
+            found.append((kind, ' '.join(toks), [], 'part of a longer phrase, not a single headword'))
             toks = []
-        for tok in toks:
+        for i, tok in enumerate(toks):
             word = clean(html.unescape(tok))
             if not word:
                 continue
-            id_, why = index.find(word)
-            if not id_ and re.search(r'^[-~]|[-~]$|~', word) and 'several' not in why:
-                why = 'only the start or end of a word'
-            elif not id_ and re.search(r'\d', word) and 'several' not in why:
-                why = 'a number, not a headword'
-            found.append((kind, word, id_ if id_ != entry_id else None, why or ('this entry itself' if id_ == entry_id else '')))
+            ids, why, shown = resolve(word, index, lang, numeral if i == len(toks) - 1 else '', heads, entry_id)
+            if any((entry_id, x) in SKIP for x in ids):
+                ids = [x for x in ids if (entry_id, x) not in SKIP]
+                why = why or 'checked and found wrong'
+            if entry_id in ids:
+                ids = [x for x in ids if x != entry_id]
+                why = why or 'this entry itself'
+            found.append((kind, shown, ids, why))
     return found
+
+
+def labels(final, index):
+    """The text of each link; where two would read the same, Liebermann's
+    first gloss is added: aveir (vb), aveir (sbst)."""
+    out = [index.label(i) for i in final]
+    for n, l in enumerate(out):
+        if out.count(l) > 1 or [index.label(i) for i in final].count(index.label(final[n])) > 1:
+            g = index.gloss.get(final[n])
+            out[n] = l + (' (' + g + ')' if g else '')
+    return [esc(l) for l in out]
+
+
+def block_labels_ok(text, final, index):
+    shown = re.findall(r'<xr type="see"><ref target="entry:[^"]*">(.*?)</ref></xr>', text)
+    return shown == labels(final, index)
 
 
 def update(path, index, write):
@@ -197,17 +451,18 @@ def update(path, index, write):
         return False, [], [], []
     found = targets(m.group(2), entry_id, index)
     want = []
-    for kind, shown, id_, why in found:
-        if id_ and id_ not in want:
-            want.append(id_)
+    for kind, shown, ids, why in found:
+        for id_ in ids:
+            if id_ not in want:
+                want.append(id_)
     existing = SEE.findall(text)
     has_dort = any(k == 'sieheDort' for k, _, _, _ in found)
     removed = [x for x in existing if x == 'd' and has_dort and x not in want]
     kept = [x for x in existing if x not in removed]
     final = want + [x for x in kept if x not in want]
-    if final == existing:
+    if final == existing and block_labels_ok(text, final, index):
         return False, [], [], found
-    block = ''.join('        <xr type="see"><ref target="entry:%s">%s</ref></xr>\n' % (i, esc(index.hw.get(i, i))) for i in final)
+    block = ''.join('        <xr type="see"><ref target="entry:%s">%s</ref></xr>\n' % (i, l) for i, l in zip(final, labels(final, index)))
     new = SEE.sub('', text)
     first_xr = re.search(r'^[ \t]*<xr ', new, re.M)
     if first_xr:
@@ -242,15 +497,15 @@ def main():
         ch, add, rem, found = update(path, index, not args.dry_run)
         entry_id = os.path.basename(path)[:-4]
         if args.show:
-            for kind, shown, id_, why in found:
-                print('  %-12s %-20s -> %s %s' % (entry_id, shown, id_ or '-', why))
+            for kind, shown, ids, why in found:
+                print('  %-12s %-20s -> %s %s' % (entry_id, shown, ','.join(ids) or '-', why))
         changed += ch
         added += len(add)
         removed += len(rem)
-        for kind, shown, id_, why in found:
-            tally[(kind, 'linked' if id_ else 'not linked')] += 1
-            if not id_ and kind in SIEHE and why:
-                key = why.split(':')[0]
+        for kind, shown, ids, why in found:
+            tally[(kind, 'linked' if ids else 'not linked')] += 1
+            if kind in SIEHE and why:
+                key = ('linked, ' if ids else 'not linked, ') + re.sub(r'^~ read as.*', '~ filled in from the headword', why.split(':')[0].split(';')[0])
                 problems[key].append((entry_id, shown, why))
 
     lines = ['Entries: %d; changed: %d; links added: %d; wrong links removed: %d' % (len(paths), changed, added, removed)]
@@ -259,7 +514,7 @@ def main():
         if l or n:
             lines.append('  %-15s found %5d, linked %5d' % (kind, l + n, l))
     for key, items in sorted(problems.items(), key=lambda kv: -len(kv[1])):
-        lines.append('  not linked, %-45s %5d' % (key, len(items)))
+        lines.append('  %-57s %5d' % (key, len(items)))
     print('\n'.join(lines))
     print('(dry run: no files changed)' if args.dry_run else '(entries updated)')
 
@@ -268,10 +523,10 @@ def main():
             f.write('# See also links made from Liebermann\'s cross-references\n\n')
             f.write('Made by `tools/see-also.py`. It is replaced each time the tool runs.\n\n```\n%s\n```\n\n' % '\n'.join(lines))
             for key, items in sorted(problems.items(), key=lambda kv: -len(kv[1])):
-                if key.startswith('this entry'):
+                if 'this entry' in key:
                     continue
                 f.write('## %s (%d)\n\n' % (key.capitalize(), len(items)))
-                shown = items if key.startswith('several') else items[:150]
+                shown = items
                 for entry_id, word, why in shown:
                     extra = why.split(': ', 1)[1] if ': ' in why else ''
                     f.write('- **%s**: s. %s%s\n' % (entry_id, word, ' (' + extra + ')' if extra else ''))
