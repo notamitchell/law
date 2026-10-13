@@ -191,3 +191,12 @@ From [the cross-check of Singular – tǣcan](crosscheck-singular-taecan.md).
 | [ ] | 201 | *[-stal]*, *stalu* | headwords **[-stal]**, **stalu** | **[-stall]**, **stallu** | |
 | [ ] | 203 | *sunu* | Sohn **Af El 3** Ld (Christus meinend 49. 49,7) | **Af El 13** | |
 | [ ] | 207 | *swiðe* | to þam (bis zu **dém** Grade, **só**) | **dem** Grade, só | Liebermann accents both dém and só here, which looks like his way of marking stress. If so, the dém in *chose* (corrected to dem as a printing error) may be the same and could be restored. |
+
+## tǣcing – þe (pp. 208–217)
+
+From [the cross-check of tǣcing – þe](crosscheck-taecing-the.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 211 | *to* | **gecieran** to bote II Ew 1,1 | **gecierran** | |
+| [ ] | 216 | *þ* | 11) für **ƿ**, d. i. w (small wynn) | **Ƿ** (capital) | |
