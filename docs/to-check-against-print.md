@@ -130,3 +130,14 @@ From [the cross-check of mægenþrymmas – minutus](crosscheck-maegenthrymmas-m
 | [ ] | 139–140 | *man*, *mann* | abgekürzt durch **m̄** (with a macron) | **m̃** (with a tilde) | Same sign in both entries. |
 | [ ] | 144 | *meillur* (F) | headword le **meillur** aveir | le **meilhir** | |
 | [ ] | 146 | *miclian* | 1) pl 3: **~að** | **~æð** | |
+
+## mirc – Northamtunescire (pp. 148–157)
+
+From [the cross-check of mirc – Northamtunescire](crosscheck-mirc-northamtunescire.md).
+
+| ✓ | Page | Entry | Site | Word document | Print |
+|---|---|---|---|---|---|
+| [ ] | 153 | *nawiht* | his gewitness noht ne **forstonde** II As 10,1 | **forstende** | |
+| [ ] | 154 | *nellan* | nille Hl 10; **nylle** | **nyle** | |
+| [ ] | 155 | *nemne* | [Vgl. … namian, nominare, **nūm**, numer | **num** | |
+| [ ] | 157 | *nominatim* | mit Bezeichnung des Klagegegenstands **Hn 50,1** | **Hn 50,1a** | |
