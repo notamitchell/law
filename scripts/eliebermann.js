@@ -285,6 +285,106 @@
         return `${indent}<def>${inlineToTei(container)}</def>`;
     }
 
+    // ------------------------------------------------------------------
+    // Law code citations: "Af 41. 43 B" in Liebermann's text -> Af 41, Af 43 B
+    // ------------------------------------------------------------------
+
+    // Manuscripts and versions (Quadripartitus, Instituta Cnuti…). After a
+    // passage they name the reading cited (Af 41 B); they are not codes.
+    const SIGLA = new Set(['MsA', 'B', 'Bu', 'C', 'D', 'E', 'F', 'G', 'H', 'Hk', 'I', 'K', 'Ld', 'O', 'Ot',
+        'So', 'Vt', 'Io', 'Isp', 'Quadr', 'InCn', 'ConsCn', 'WlEdmr', 'Wb']);
+    // Parts of a code: Af El 49 (Introduction), Af Rb 41 (rubric).
+    const QUALIFIERS = new Set(['El', 'Rb', 'retr']);
+    // A passage: 41, 2,1, 70,21a, Insc., Prol.
+    const PASSAGE = String.raw`(?:\d+[a-z]{0,2}(?:,\d+[a-z]{0,2})*|Inscr?\.?|Prol?\.?|Epil\.?)`;
+
+    /**
+     * The law code passages cited in an entry's TEI text (the inside of
+     * <dictScrap>), in order and without repeats: [{ text: 'Af 41 B', anchor: 'Af' }].
+     * Follows Liebermann's style, where "II Cn 13,1. 77,1" is two passages of
+     * II Cnut. A number that isn't straight after a code (after a word, a
+     * semicolon or a bar) is left out, since it can't be told apart reliably.
+     */
+    function extractCitations(teiText) {
+        const unescape = t => t.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&amp;/g, '&');
+        // Law code refs become \u0001anchor\u0002label\u0003; superscripts
+        // (footnotes, variants) and line or page breaks become a stop (\u0004).
+        const flat = String(teiText || '')
+            .replace(/<hi rend="superscript">[\s\S]*?<\/hi>/g, '\u0004')
+            .replace(/<(lb|pb)\b[^>]*\/>/g, ' ')
+            .replace(/<ref type="lawCode" target="law:([^"]*)">([\s\S]*?)<\/ref>/g, (m, a, l) => `\u0001${a}\u0002${l.replace(/<[^>]*>/g, '')}\u0003`)
+            .replace(/<[^>]*>/g, '');
+        const parts = unescape(flat).split(/\u0001([^\u0002]*)\u0002([^\u0003]*)\u0003/);
+        const out = [], seen = new Set();
+        let code = null, last = null, open = false;   // open: only spaces since the last passage
+        const add = text => {
+            last = { text: text.replace(/\s+/g, ' ').trim(), anchor: code.anchor };
+            last.isNew = !seen.has(last.text);
+            if (last.isNew) { seen.add(last.text); out.push(last); }
+        };
+        const passages = text => {
+            let rest = text, m;
+            if (code && (m = new RegExp(`^\\s+(${PASSAGE})(?![\\p{L}\\d)])`, 'u').exec(rest)) && (!last || !open || last.anchor !== code.anchor || code.fresh)) {
+                add(code.label + ' ' + m[1].replace(/\.$/, '')); rest = rest.slice(m[0].length); code.fresh = false;
+            } else if (code && code.fresh && !/^\s*$/.test(rest)) {
+                code = null;   // a code with no passage after it, e.g. "VI As" in a sentence
+            }
+            while (code && last && (m = new RegExp(`^(?:\\s*\\([^()]*\\))?\\.?\\s+(${PASSAGE})(?![\\p{L}\\d)])`, 'u').exec(rest))) {
+                add(code.label + ' ' + m[1].replace(/\.$/, '')); rest = rest.slice(m[0].length);
+            }
+            open = !!last && !(code && code.fresh) && /^\s*$/.test(rest);
+            if (!open && !(code && code.fresh)) code = code && /^[\s.]*$/.test(rest) ? code : null;
+        };
+        passages(parts[0]);
+        for (let i = 1; i < parts.length; i += 3) {
+            const anchor = parts[i], label = parts[i + 1].trim(), text = parts[i + 2];
+            if (SIGLA.has(anchor)) {
+                // "Af 41 B": the reading of manuscript B; it belongs to the passage before.
+                const attached = open && last && !/^\s*:/.test(text);
+                if (attached) {
+                    // The passage is cited in that reading only: list it once, with the siglum.
+                    if (last.isNew) { out.splice(out.indexOf(last), 1); seen.delete(last.text); }
+                    const withSiglum = { text: last.text + ' ' + label, anchor: last.anchor };
+                    withSiglum.isNew = !seen.has(withSiglum.text);
+                    if (withSiglum.isNew) { seen.add(withSiglum.text); out.push(withSiglum); }
+                    last = withSiglum;
+                }
+                if (anchor === 'ConsCn' || anchor === 'Quadr' && /^\s*:/.test(text) || anchor === 'InCn' && /^\s*:/.test(text)) code = null;
+                // keep the run going so "Af 41 B. 43" still reads as Af 43
+                open = attached && /^\s*$/.test(text);
+                if (code && last && /^\.\s+\d/.test(text)) { passages(text); } else if (!/^\s*$/.test(text)) { code = code && /^[\s.]*$/.test(text) ? code : null; }
+                continue;
+            }
+            if (QUALIFIERS.has(anchor)) {
+                if (code && (code.fresh || open)) { code = { anchor: code.anchor, label: code.label + ' ' + label, fresh: true }; last = null; }
+                passages(text);
+                continue;
+            }
+            code = { anchor, label, fresh: true };
+            passages(text);
+        }
+        return out.map(c => ({ text: c.text, anchor: c.anchor }));
+    }
+
+    /**
+     * The law code citation list for an entry: every passage cited in its
+     * text, linked to the code on the law code list, followed by any
+     * citations added by hand ([{text, url}]) that aren't already in it.
+     * Returns <xr type="lawCode"> elements, one per citation.
+     */
+    function citationXr(entryTei, extra) {
+        const found = extractCitations(entryTei);
+        const have = new Set(found.map(c => c.text));
+        const xr = found.map(c => `<xr type="lawCode"><ref target="law:${escapeXml(c.anchor)}">${escapeXml(c.text)}</ref></xr>`);
+        (extra || []).filter(l => l.text || l.url).forEach(l => {
+            const text = (l.text || l.url).replace(/\s+/g, ' ').trim();
+            if (!l.url && have.has(text)) return;
+            have.add(text);
+            xr.push(`<xr type="lawCode"><ref${l.url ? ` target="${escapeXml(l.url)}"` : ''}>${escapeXml(text)}</ref></xr>`);
+        });
+        return xr;
+    }
+
     /**
      * Builds an entry as a TEI document.
      * data: { headword, n, lang, page, facsimile, entryHtml, definitionHtml,
@@ -305,13 +405,14 @@
         (data.seeAlso || []).filter(s => s.text).forEach(s => {
             xr.push(`<xr type="see"><ref target="entry:${escapeXml(s.slug || slugify(s.text))}">${escapeXml(s.text)}</ref></xr>`);
         });
-        const linkTypes = [['bt', 'bosworthToller'], ['doe', 'doe'], ['wiktionary', 'wiktionary'], ['lawCode', 'lawCode']];
+        const linkTypes = [['bt', 'bosworthToller'], ['doe', 'doe'], ['wiktionary', 'wiktionary']];
         linkTypes.forEach(([key, type]) => {
             ((data.links || {})[key] || []).filter(l => l.text || l.url).forEach(l => {
                 const target = l.url ? ` target="${escapeXml(l.url)}"` : '';
                 xr.push(`<xr type="${type}"><ref${target}>${escapeXml(l.text || l.url)}</ref></xr>`);
             });
         });
+        xr.push(...citationXr(entryTei, (data.links || {}).lawCode));
 
         const page = data.page ? `<biblScope unit="page">${escapeXml(data.page)}</biblScope>` : '';
         const facs = data.facsimile ? `\n            <ptr type="facsimile" target="${escapeXml(data.facsimile)}"/>` : '';
@@ -504,7 +605,7 @@ ${translation}
     const api = {
         TEI_NS, LANGUAGES, LANGUAGE_CODES,
         useDom, slugify, sortKey, alphaKey, letterOf, ALPHABET, escapeXml,
-        linkAbbreviations, loadAbbreviations, detectLanguage, detectHeadword,
+        linkAbbreviations, loadAbbreviations, extractCitations, citationXr, detectLanguage, detectHeadword,
         inlineToTei, isEmptyHtml, buildEntryXml,
         renderTei, resolveTarget, readEntry
     };
