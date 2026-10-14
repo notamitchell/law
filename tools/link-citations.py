@@ -142,6 +142,11 @@ class Clauses:
         key = norm_clause(rest)
         if key in files:
             return 'exact', files[key]
+        z = re.match(r'^Z\.?\s*(\d+)$', rest)      # "Nor grið Z. 6": line 6 of a text numbered by lines
+        if z:
+            for k in (z.group(1), 'line' + z.group(1)):
+                if k in files:
+                    return 'line', files[k]
         m = re.match(r'^(.*\S)\s+([A-Z][A-Za-z]{0,2})\.?$', rest)
         if m and m.group(2) in self.sigla:
             key = norm_clause(m.group(1))

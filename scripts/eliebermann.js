@@ -317,8 +317,9 @@
         'So', 'Vt', 'Io', 'Isp', 'Quadr', 'InCn', 'ConsCn', 'WlEdmr', 'Wb']);
     // Parts of a code: Af El 49 (Introduction), Af Rb 41 (rubric).
     const QUALIFIERS = new Set(['El', 'Rb', 'retr']);
-    // A passage: 41, 2,1, 70,21a, Insc., Prol.
-    const PASSAGE = String.raw`(?:\d+[a-z]{0,2}(?:,\d+[a-z]{0,2})*|Inscr?\.?|Prol?\.?|Epil\.?)`;
+    // A passage: 41, 2,1, 70,21a, Insc., Prol., or a line (Zeile) of a text
+    // Liebermann numbers by lines, such as Nor grið Z. 6.
+    const PASSAGE = String.raw`(?:\d+[a-z]{0,2}(?:,\d+[a-z]{0,2})*|Inscr?\.?|Prol?\.?|Epil\.?|Z\.\s?\d+)`;
 
     /**
      * The law code passages cited in an entry's TEI text (the inside of
@@ -368,7 +369,9 @@
             }
             while (code && last && (m = new RegExp(`^(?:\\s*\\([^()]*\\))?\\.?\\s+(${PASSAGE})(?![\\p{L}\\d)])`, 'u').exec(rest))) {
                 const n = m[1].replace(/\.$/, ''), s = at + m[0].length - m[1].length;
-                add(code.label + ' ' + n, s, s + n.length);
+                // after a line ("Z. 6. 9"), a bare number is another line
+                const line = /^\d+$/.test(n) && / Z\. ?\d+$/.test(last.text) ? 'Z. ' : '';
+                add(code.label + ' ' + line + n, s, s + n.length);
                 rest = rest.slice(m[0].length); at += m[0].length;
             }
             open = !!last && !(code && code.fresh) && /^\s*$/.test(rest);
@@ -445,6 +448,8 @@
         const hits = [];
         scanCitations(flat, (text, anchor, start, end) => {
             const href = clauses[text];
+            // "Z. 6" (line 6): "Z." keeps its own link; the number is linked.
+            if (/^Z\./.test(flat.slice(start, end))) start += flat.slice(start, end).search(/\d/);
             const a = from[start], b = from[end - 1];
             if (href && a && b && a[0] === b[0]) hits.push({ node: a[0], start: a[1], end: b[1] + 1, href, text });
         });
