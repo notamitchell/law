@@ -62,8 +62,10 @@ scripts:
             let g = out.find(x => x.name === c.group);
             if (!g) out.push(g = { name: c.group, reign: '', items: [] });
             g.items.push(c);
-            // The group's dates: from a code issued by the king alone (not a treaty).
-            if (c.reign && (!g.reign || (g.joint && !/ and /.test(c.king)))) {
+            // The group's dates: from a code issued by the king alone (not a treaty),
+            // and not from one listed under another king (Ine Rb, issued by Alfred).
+            const otherKing = c.king && c.group !== 'Other laws and legal texts' && !c.group.includes(c.king.split(' ')[0]);
+            if (c.reign && !otherKing && (!g.reign || (g.joint && !/ and /.test(c.king)))) {
                 g.reign = c.reign.replace(/^\[|\]$/g, '');
                 g.joint = / and /.test(c.king) && !/^Hlothhere/.test(c.king);
             }

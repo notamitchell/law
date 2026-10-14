@@ -589,6 +589,9 @@ GROUPS = {
     'Edmund': 'Edmund I', 'Edgar': 'Edgar', 'Æthelred': 'Æthelred II', 'Cnut': 'Cnut',
 }
 OTHER = 'Other laws and legal texts'
+# Codes listed under another king than the one who issued them: the rubrics
+# to Ine's laws were written for Alfred's Domboc but belong with Ine's laws.
+GROUP_OVERRIDE = {'Ine Rb': 'Ine of Wessex'}
 
 
 def king_parts(king):
@@ -619,7 +622,7 @@ def write_codes(rows, catalogue, find_anchor, path):
             c = codes[r['code']] = {
                 'code': r['code'], 'anchor': find_anchor(r['code'])[0], 'name': r['codeName'] or r['code'],
                 'king': ' and '.join(p[0] for p in parts), 'reign': r['king'],
-                'group': GROUPS.get(key, key) if key else OTHER,
+                'group': GROUP_OVERRIDE.get(r['code']) or (GROUPS.get(key, key) if key else OTHER),
                 'date': r['promulgation'], 'clauses': counts[r['code']], 'first': first_ids.get(r['code'], ''),
                 'editors': [], 'manuscripts': [],
             }
