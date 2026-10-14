@@ -3,29 +3,30 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Cn 1018</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Kennedy</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Kennedy</name></respStmt>
+        <title>Cn 1018 9</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#kennedy">Kennedy</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#kennedy">Kennedy</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Cn-1018_part-018</idno>
-        <idno type="citation">Cn 1018</idno>
+        <idno type="citation">Cn 1018 9</idno>
         <idno type="lawCode">Cn 1018</idno>
+        <idno type="clause">9</idno>
+        <idno type="citationKey">Cn 1018 9</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Cnut 1018</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <bibl type="legalText"><title>Cnut’s Code of 1018 (Oxford)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="kennedy" type="edition">A. G. Kennedy, ‘Cnut’s Law Code of 1018’, <title>Anglo-Saxon England</title> 11 (1983), 57–81</bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">214</biblScope></bibl>
+        </listBibl>
         <listWit>
-          <witness>D</witness>
+          <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Kennedy ed. (Digital edition)</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">[Not identified as such in Gesetze.] The whole code can only be read by reassembling it from Liebermann's edition, 1 278, 280, 308–12, 288–91, 252–8. (Whitelock)</idno>
-          <idno type="editorNumber" n="Kennedy">9</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -43,15 +44,17 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1545 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1505 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
-      <div type="clause">
-        <head>Cn 1018</head>
-        <ab type="selectedText" xml:lang="und">Manslagan 7 manswaran. hadbrican. 7 æwbrican. gebugan 7 gebetan. oððe of cyððe mid synne gewitan.</ab>
-        <ab type="translation" xml:lang="en">Killers and perjurers, violators of the clergy and adulterers shall submit and make amends, or leave their native land with their sins.</ab>
+      <div type="clause" n="9">
+        <head>Cn 1018 9</head>
+        <ab type="editionText" xml:lang="ang" source="#kennedy" n="9" corresp="#wit-d">Manslagan 7 manswaran. hadbrican. 7 æwbrican. gebugan 7 gebetan. oððe of cyððe mid synne gewitan.</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">Manslagan and manswaran, hadbrican and æwbrican, gebugan and gebetan, oððe of cyððe mid synne gewitan.</ab>
+        <ab type="translation" xml:lang="en" source="#kennedy" corresp="#wit-d">Killers and perjurers, violators of the clergy and adulterers shall submit and make amends, or leave their native land with their sins.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">Murderers and perjurers, those who violate holy orders and those who violate their marriage vows shall submit and do penance or leave their native land with their sins.</ab>
       </div>
     </body>
   </text>

@@ -150,10 +150,12 @@ scripts:
             p.appendChild(inline(a));
             box.appendChild(p);
             // The translator's own footnotes (Whitelock's, from EHD), under her translation.
-            const own = a.getAttribute('type') === 'translation' ? tei(div, 'note').filter(n => n.getAttribute('type') === 'translator' && (n.getAttribute('source') || '').replace(/^#/, '') === id) : [];
+            // (Rabin's textual notes go under his text, the readings of the other manuscripts.)
+            const noteType = { translation: 'translator', editionText: 'textual' }[a.getAttribute('type')];
+            const own = noteType ? tei(div, 'note').filter(n => n.getAttribute('type') === noteType && (n.getAttribute('source') || '').replace(/^#/, '') === id) : [];
             if (own.length) {
                 const ol = el('ol', 'clause-reading-notes small');
-                ol.setAttribute('aria-label', src.name + '’s notes');
+                ol.setAttribute('aria-label', src.name + (noteType === 'textual' ? '’s textual notes' : '’s notes'));
                 own.forEach(n => { const li = el('li'); li.appendChild(inline(n)); ol.appendChild(li); });
                 box.appendChild(ol);
             }
@@ -212,7 +214,8 @@ scripts:
         const wrap = el('div', 'clause-texts');
         const div = tei(doc, 'div').find(d => d.getAttribute('type') === 'clause');
         if (!div) return wrap;
-        if (tei(div, 'ab').some(a => a.getAttribute('type') === 'liebermannText')) return newTexts(doc, div, heading);
+        // Files built from the laws database (Liebermann's texts and the editors'); Cn 1018 has only editors' texts.
+        if (tei(div, 'ab').some(a => /^(liebermannText|editionText)$/.test(a.getAttribute('type')))) return newTexts(doc, div, heading);
         wrap.appendChild(heading);
         LABELS.forEach(([type, label]) => {
             tei(div, 'ab').filter(a => a.getAttribute('type') === type).forEach(a => {
@@ -243,7 +246,7 @@ scripts:
         const header = el('header', 'entry-header');
         header.appendChild(h1);
         const meta = el('div', 'meta');
-        const isNew = tei(doc, 'ab').some(a => a.getAttribute('type') === 'liebermannText');
+        const isNew = tei(doc, 'ab').some(a => /^(liebermannText|editionText)$/.test(a.getAttribute('type')));
         const lawBibl = tei(doc, 'bibl').find(b => b.getAttribute('type') === 'legalText');
         if (isNew && lawBibl) {
             const t = tei(lawBibl, 'title')[0];

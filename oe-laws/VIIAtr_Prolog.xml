@@ -6,7 +6,9 @@
         <title>VII Atr Prolog</title>
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
@@ -24,10 +26,12 @@
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">260</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">108</biblScope></bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">180</biblScope></bibl>
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-t"><abbr>T</abbr> <note type="manuscript">London, British Library, Cotton MS Titus A.xxvii, fol. 145r</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -57,9 +61,14 @@
         <head><ref type="lawCode" target="law:VIIAtr">VII Atr</ref> Prolog</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prolog" corresp="#wit-q">Hoc instituerunt Æþelredus rex et sapientes eius apud Badam.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" corresp="#wit-q">Hoc instituerunt Æþelredus rex et sapientes eius apud Badam.</ab>
+        <ab type="editionText" xml:lang="la" source="#rabin-doml" corresp="#wit-t">Hoc instituerunt Æþelredus rex et sapientes eius apud Badam.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">This is the edict which was drawn up by King Æthelred and his councillors at Bath.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-t">King Æthelred and his councilors decreed this at Bath:</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">Prolog. Dies setzten König Aethelred und seine Witan zu Bath fest.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Prologue. This King Æthelred and his witan established at Bath.</ab>
+        <note type="textual" source="#rabin-doml">Manuscripts: Br = Johannis Brompton Chronicon (Cambridge, Corpus Christi College MS 96, and London, British Library, Cotton MS Tiberius C.xiii); Hk = Holkham 228 (privately held), fols. 82r–83v; M = Macro (privately held); T = London, British Library, Cotton MS Titus A.xxvii, fol. 145r.</note>
+        <note type="textual" source="#rabin-doml">rex: omitted Br</note>
+        <note type="textual" source="#rabin-doml">Badam: habam BrHkM</note>
       </div>
     </body>
   </text>

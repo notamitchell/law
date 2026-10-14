@@ -6,7 +6,9 @@
         <title>I Em 2</title>
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
@@ -24,11 +26,12 @@
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">184</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">6</biblScope></bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">346</biblScope></bibl>
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
-          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
           <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
@@ -65,10 +68,16 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-b">Teoðunge we bebeodað ælcum Cristenum men be his Cristendome ⁊ cyricsceat ⁊ ælmesfeoh. Gif hit hwa don nelle, sy he amansomod.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2" corresp="#wit-q">Decimam precipimus omni Christiano super Christianitatem suam et cyricsceatum (id est ecclesie censum) et ælmesfeoh (id est elemosine pecuniam). Si quis hoc dare nolit, excommunicatus sit.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="2" corresp="#wit-d">[Be teoþungum ⁊ cyricsceatum.] [Ld] Teoðunge we bebeodað ælcum Cristene men be his Cristendóme, and ciricsceat ⁊ Romfeoh ⁊ sulhælmessan. And gif hit hwa don nelle, si he amansumod.</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">Teoðunge we bebeodað ælcum Cristene men be his Cristendome and ciricsceat and Romfeoh and sulhælmessan. And gif hit hwa don nelle, si he amansumod.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">We enjoin upon every Christian man, in accordance with his Christian profession, to pay tithes and church-dues and Peter's Pence and plough-alms. And if anyone refuses to do so, he shall be excommunicated.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">We direct every Christian to pay tithes and Church dues and dues to Rome and plow dues in accordance with Christian doctrine. And if anyone refuses to do so, let him be excommunicated.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">(Von Zehnten und Kirchensteuern. Ld) Zehnt(en?) [an die Kirche zu zahlen] gebieten wir jedem Christenmenschen bei seinem Christenthume und Kirchensteuer und Romgeld [Peterspfennig] und Pflugalmosen. Und wenn das einer nicht thun will, sei er excommunicirt.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of tithes and church-dues. Ld) Tithe(s?) [to be paid to the church] we command of every Christian man by his Christianity, and church-scot and Rome-money [Peter's Pence] and plough-alms. And if anyone will not do it, let him be excommunicated.</ab>
         <note type="editorial">‘Romfeoh ⁊ sulhælmessan’ only in D; H, B and Quadr. have ‘ælmesfeoh’ (alms-money). Liebermann compares EGu 6 f.</note>
+        <note type="textual" source="#rabin-doml">Romfeoh: almesfeoh HB</note>
+        <note type="textual" source="#rabin-doml">and sulhælmessan: omitted HB</note>
+        <note type="textual" source="#rabin-doml">And gif: Gif HB</note>
+        <note type="translator" source="#rabin-doml">dues to Rome and plow dues: See notes to The Laws of Edward and Guthrum 6.1 and 6.3. These two forms of ecclesiastical dues are omitted from the versions of 1 Edmund preserved in Cambridge, Corpus Christi College MS 383, Textus Roffensis, and Quadripartitus. As with similar passages in 1 Æthelstan, it is likely these are an interpolation by Wulfstan.</note>
       </div>
     </body>
   </text>

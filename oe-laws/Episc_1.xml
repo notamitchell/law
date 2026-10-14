@@ -5,7 +5,8 @@
       <titleStmt>
         <title>Episc 1</title>
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
-        <respStmt><resp>Translation</resp><name ref="#rabin">Rabin</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
@@ -22,7 +23,7 @@
         <bibl type="legalText"><title>Episcopus (Episcopal Duties)</title></bibl>
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">477</biblScope></bibl>
-          <bibl xml:id="rabin" type="translation">Andrew Rabin, <title>The Political Writings of Archbishop Wulfstan of York</title> (Manchester: Manchester University Press, 2015)</bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">102</biblScope></bibl>
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
         </listBibl>
         <listWit>
@@ -52,10 +53,13 @@
         <head><ref type="lawCode" target="law:Episc">Episc</ref> 1</head>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1" corresp="#wit-q">Episcopo (iure) pertinet, omne rectum (omnem rectitudinem) promovere, Dei uidelicet et (ac) seculi.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-x">Bisceope gebyreð ælc rihting, ge on godcundan þingan ge on woruldcundan.</ab>
-        <ab type="translation" xml:lang="en" source="#rabin" corresp="#wit-x">It is proper for a bishop to offer guidance in all things, both in religious and secular matters.</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-x"><hi rend="italic">Item</hi> Bisceope gebyreð ælc rihting, ge on godcundan þingan ge on woruldcundan.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-x">It is proper for a bishop to offer guidance in all things, both in religious and secular matters.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">Einem Bischofe gebührt jede Leitung sowohl in kirchlichen Dingen wie in weltlichen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">To a bishop belongs all direction, both in spiritual matters and in secular ones.</ab>
         <note type="editorial">Spacing and a line break inside K were tidied.</note>
+        <note type="textual" source="#rabin-doml">Manuscripts: X = Oxford, Bodleian Library, MS Junius 121, fols. 13v–15r. Item: preceded by vii. in manuscript</note>
+        <note type="translator" source="#rabin-doml">[title] Furthermore: This is the only title given to the text in the manuscript, where it follows the sixth chapter of 2 Polity (“Likewise, Concerning Bishops”). The title Episcopus (On Episcopal Duties) was given to it by Liebermann.</note>
       </div>
     </body>
   </text>

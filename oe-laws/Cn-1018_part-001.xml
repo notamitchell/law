@@ -3,29 +3,30 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Cn 1018</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Kennedy</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Kennedy</name></respStmt>
+        <title>Cn 1018 Prol.</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#kennedy">Kennedy</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#kennedy">Kennedy</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Cn-1018_part-001</idno>
-        <idno type="citation">Cn 1018</idno>
+        <idno type="citation">Cn 1018 Prol.</idno>
         <idno type="lawCode">Cn 1018</idno>
+        <idno type="clause">Prol.</idno>
+        <idno type="citationKey">Cn 1018 prol.</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Cnut 1018</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <bibl type="legalText"><title>Cnut’s Code of 1018 (Oxford)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="kennedy" type="edition">A. G. Kennedy, ‘Cnut’s Law Code of 1018’, <title>Anglo-Saxon England</title> 11 (1983), 57–81</bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">210</biblScope></bibl>
+        </listBibl>
         <listWit>
-          <witness>D</witness>
+          <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Kennedy ed. (Digital edition)</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">[Not identified as such in Gesetze.] The whole code can only be read by reassembling it from Liebermann's edition, 1 278, 280, 308–12, 288–91, 252–8. (Whitelock)</idno>
-          <idno type="editorNumber" n="Kennedy">Prologue</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -38,21 +39,24 @@
     <profileDesc>
       <creation><note type="promulgation">1018 (Whitelock, Kennedy, Wormald); Oxford</note></creation>
       <textClass>
-        <keywords n="offence-legal-event"><term>Assembly</term><term>Boundaries</term><term>Written laws/decisions</term><term>Treaty</term></keywords>
-        <keywords n="people"><term>Cnut</term><term>King</term><term>Councillors</term><term>Danes</term><term>Englishmen</term><term>Public security</term><term>God</term><term>All people</term><term>Named individuals</term><term>Nobles</term><term>Secular classes</term><term>Rank</term></keywords>
+        <keywords n="offence-legal-event"><term>Assembly</term><term>Boundaries</term><term>Written laws/decisions</term><term>Treaty</term><term>Public security</term></keywords>
+        <keywords n="people"><term>Cnut</term><term>King</term><term>Councillors</term><term>Danes</term><term>Englishmen</term><term>God</term><term>All people</term><term>Named individuals</term><term>Nobles</term><term>Secular classes</term><term>Rank</term></keywords>
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1528 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1488 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
-      <div type="clause">
-        <head>Cn 1018</head>
-        <ab type="selectedText" xml:lang="und">IN NOMINE DOMINI Ðis is seo gerædnes þe witan geræddon. 7 be manegum godum bisnum. asmeadon. And þæt wæs geworden sona swa cnút cyngc. mid his witena geþeahte. frið 7 freondscipe. betweox denum 7 englum. fullice gefæstnode. 7 heora ærran saca. ealle getwæmde.</ab>
-        <ab type="translation" xml:lang="en">In the name of God. This is the ordinance which the councillors determined and devised according to many good precedents. And that took place as soon as King Cnut, with the advice of his councillors, fully established peace and friendship between the Danes and the English, and put an end to all their former enmity.</ab>
-        <note type="clause">[Not identified as such in Gesetze.] The whole code can only be read by reassembling it from Liebermann's edition, 1 278, 280, 308–12, 288–91, 252–8. (Whitelock)</note>
+      <div type="clause" n="Prol.">
+        <head>Cn 1018 Prol.</head>
+        <ab type="editionText" xml:lang="ang" source="#kennedy" n="Prologue" corresp="#wit-d">IN NOMINE DOMINI Ðis is seo gerædnes þe witan geræddon. 7 be manegum godum bisnum. asmeadon. And þæt wæs geworden sona swa cnút cyngc. mid his witena geþeahte. frið 7 freondscipe. betweox denum 7 englum. fullice gefæstnode. 7 heora ærran saca. ealle getwæmde.</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">In nomine Domini. Ðis is seo gerædnes þe witan geræddon and be manegum godum bisnum asmeadon. And þæt wæs geworden sona swa Cnut cyngc, mid his witena geþeahte, frið and freondscipe betweox Denum and Englum fullice gefæstnode and heora ærran saca ealle getwæmde.</ab>
+        <ab type="translation" xml:lang="en" source="#kennedy" corresp="#wit-d">In the name of God. This is the ordinance which the councillors determined and devised according to many good precedents. And that took place as soon as King Cnut, with the advice of his councillors, fully established peace and friendship between the Danes and the English, and put an end to all their former enmity.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">In the name of the Lord. This is the decree which the council decided upon and deemed to be in accordance with many good practices. And that came about just as soon as King Cnut, on the advice of his council, fully established peace and friendship between the Danes and the English and resolved all their former strife.</ab>
+        <note type="textual" source="#rabin-doml">Manuscripts: D = Cambridge, Corpus Christi College MS 201, pp. 126–30.</note>
+        <note type="translator" source="#rabin-doml">the council: The opening clauses of this text (Pr to 1.3) place a greater emphasis on the rights, privileges, and prerogatives of the royal council than does the other legislation associated with Wulfstan. It is unclear whether this reflects the priorities of the Oxford meeting or whether it is instead indicative of the archbishop’s own interests.</note>
       </div>
     </body>
   </text>

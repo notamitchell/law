@@ -3,29 +3,30 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Cn 1018</title>
-        <respStmt><resp>Edition of the selected text</resp><name>Kennedy</name></respStmt>
-        <respStmt><resp>Translation of the selected text</resp><name>Kennedy</name></respStmt>
+        <title>Cn 1018 6</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#kennedy">Kennedy</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#kennedy">Kennedy</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">Cn-1018_part-014</idno>
-        <idno type="citation">Cn 1018</idno>
+        <idno type="citation">Cn 1018 6</idno>
         <idno type="lawCode">Cn 1018</idno>
+        <idno type="clause">6</idno>
+        <idno type="citationKey">Cn 1018 6</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl type="edition">
-          <author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, <biblScope unit="volume">1</biblScope>
-        </bibl>
-        <bibl type="legalText"><title>Cnut 1018</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <bibl type="legalText"><title>Cnut’s Code of 1018 (Oxford)</title> <note type="reign">Cnut, r. 1016–1035</note></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="kennedy" type="edition">A. G. Kennedy, ‘Cnut’s Law Code of 1018’, <title>Anglo-Saxon England</title> 11 (1983), 57–81</bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">212</biblScope></bibl>
+        </listBibl>
         <listWit>
-          <witness>D</witness>
+          <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
         </listWit>
-        <bibl type="selectedText">D: Cambridge, Corpus Christi College, MS 201 Kennedy ed. (Digital edition)</bibl>
-        <bibl type="numbering">
-          <idno type="liebermannNumber">[Not identified as such in Gesetze.] The whole code can only be read by reassembling it from Liebermann's edition, 1 278, 280, 308–12, 288–91, 252–8. (Whitelock)</idno>
-          <idno type="editorNumber" n="Kennedy">6</idno>
-        </bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -38,20 +39,22 @@
     <profileDesc>
       <creation><note type="promulgation">1018 (Whitelock, Kennedy, Wormald); Oxford</note></creation>
       <textClass>
-        <keywords n="offence-legal-event"><term>Slavery</term><term>Spiritual welfare</term><term>Administrative directives</term><term>Ecclesiastical directives</term><term>Boundaries</term><term>Spiritual welfare</term></keywords>
+        <keywords n="offence-legal-event"><term>Slavery</term><term>Spiritual welfare</term><term>Administrative directives</term><term>Ecclesiastical directives</term><term>Boundaries</term></keywords>
         <keywords n="people"><term>Christians</term><term>Christ</term><term>All people</term><term>Named individuals</term></keywords>
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-13">Generated from row 1541 of the OE Laws Database spreadsheet; not yet checked against the print.</change>
+      <change when="2026-10-14">Generated from row 1501 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
-      <div type="clause">
-        <head>Cn 1018</head>
-        <ab type="selectedText" xml:lang="und">And witena gerædnes is. þæt man cristene men. ealles to swiðe of earde ne sille. ne on hæðendom huru ne gebrýnge. ac beorge man georne. þæt man þa sawla ne forfare þe crist mid his agenum life gebohte.</ab>
-        <ab type="translation" xml:lang="en">And the decree of the councillors is that Christian men be not all too often sold out of the country, and certainly not sent into heathen lands, but one should take good care that the souls which Christ bought with his own life should not be destroyed.</ab>
+      <div type="clause" n="6">
+        <head>Cn 1018 6</head>
+        <ab type="editionText" xml:lang="ang" source="#kennedy" n="6" corresp="#wit-d">And witena gerædnes is. þæt man cristene men. ealles to swiðe of earde ne sille. ne on hæðendom huru ne gebrýnge. ac beorge man georne. þæt man þa sawla ne forfare þe crist mid his agenum life gebohte.</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">And witena gerædnes is þæt man Cristene men ealles to swiðe of earde ne sille, ne on hæðendom huru ne gebrynge; ac beorge man georne þæt man þa sawla ne forfare þe Crist mid his agenum life gebohte.</ab>
+        <ab type="translation" xml:lang="en" source="#kennedy" corresp="#wit-d">And the decree of the councillors is that Christian men be not all too often sold out of the country, and certainly not sent into heathen lands, but one should take good care that the souls which Christ bought with his own life should not be destroyed.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">And the council’s decree is that Christians are not to be sold too frequently out of this land, and especially not be brought into heathen lands; but we must zealously ensure that the souls not be destroyed which Christ purchased with his own life.</ab>
       </div>
     </body>
   </text>
