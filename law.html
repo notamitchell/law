@@ -106,7 +106,7 @@ scripts:
         return s;
     }
 
-    const LANG_NAMES = { de: 'German', la: 'Latin' };
+    const LANG_NAMES = { de: 'German', la: 'Latin', xno: 'Anglo-Norman French' };
 
     // New layout: the texts on the left (Liebermann's manuscripts, then the
     // modern edition), the translations on the right, each labelled with its
@@ -127,11 +127,12 @@ scripts:
         const witOf = a => wits[(a.getAttribute('corresp') || '').replace(/^#/, '')] || {};
         const isQ = a => /^Q\b/.test(witOf(a).abbr || '');
         const hasOE = texts.some(a => a.getAttribute('xml:lang') === 'ang');
+        const hasFrench = texts.some(a => a.getAttribute('xml:lang') === 'xno');
         const main = texts.filter(a => !(hasOE && isQ(a)));
         const quad = texts.filter(a => hasOE && isQ(a));
         const byEditor = list => list.filter(a => a.getAttribute('type') === 'liebermannText')
             .concat(list.filter(a => a.getAttribute('type') !== 'liebermannText'));
-        const left = col(hasOE ? 'Old English text' : 'Latin text', 'clause-col--text');
+        const left = col(hasOE ? 'Old English text' : hasFrench ? 'Anglo-Norman French text' : 'Latin text', 'clause-col--text');
         const right = col('Translations', 'clause-col--translation');
         const add = (column, a, bits, cls) => {
             const id = (a.getAttribute('source') || '').replace(/^#/, '');

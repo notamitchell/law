@@ -49,6 +49,8 @@ FOLD = {'æ': 'ae', 'Æ': 'Ae', 'þ': 'th', 'Þ': 'Th', 'ð': 'd', 'Ð': 'D', '�
 ASSUMED_ANCHORS = {
     'ord': 'Ordal', 'becw': 'Becwaeth', 'mirc': 'Mirce', 'norðleod': 'Northleoda',
     'norcyricgrið': 'NorGrith', 'rom': 'Romscot',
+    'promreg': 'SacrCor',       # the dictionary cites the Promissio regis as "Sacr cor"
+    'wllad': 'WiLad', 'hncom': 'HnComm',
 }
 
 ILLEGAL_XML = re.compile('[\x00-\x08\x0b\x0c\x0e-\x1f￾￿]')
