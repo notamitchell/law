@@ -106,6 +106,9 @@ HEADERS = [
     ('page numbers in rabin', 'rabinPage'),
     ('rabin’s textual notes', 'rabinTextNotes'),
     ('rabin’s notes to the translation', 'rabinNotes'),
+    ('liebermann’s marginal cross-references', 'vglPrinted'),
+    ('liebermann’s cross-references written out', 'vglRefs'),
+    ('cross-references: page in gesetze', 'vglRemark'),
 ]
 NEEDED = ['code', 'clause', 'kText', 'german', 'english', 'nText', 'kSig', 'tSig', 'notes']
 
@@ -313,7 +316,8 @@ def read_rows(path, only=None):
         for name in ('codeName', 'king', 'promulgation', 'liebermannMS', 'page', 'liebermannNumber', 'editor',
                      'editorMS', 'editorNumber', 'editorPage', 'secondPage', 'offence', 'people', 'locations',
                      'nSig', 'afSig', 'kSig', 'tSig', 'kName', 'nName', 'afName', 'tName', 'notes', 'passageSource',
-                     'thirdRef', 'thirdMS', 'thirdPage', 'translatorNotes', 'rabinRef', 'rabinPage', 'rabinTextNotes', 'rabinNotes'):
+                     'thirdRef', 'thirdMS', 'thirdPage', 'translatorNotes', 'rabinRef', 'rabinPage', 'rabinTextNotes', 'rabinNotes',
+                     'vglPrinted', 'vglRefs', 'vglRemark'):
             row[name] = get(name)
         for name in ('kText', 'german', 'english', 'nText', 'latin', 'tText', 'translation',
                      'secondTranslation', 'supplementaryTranslation', 'afText', 'thirdTranslation', 'rabinText', 'rabinTranslation'):
@@ -355,6 +359,68 @@ class Sources:
         if sid not in self.items:
             self.items[sid] = (name, xml, kind, page)
         return sid
+
+
+# ---------------------------------------------------------------- Liebermann's cross-references
+def vgl_key(clause):
+    """A clause number compared loosely: commas as full stops, no spaces, 'Prol.'/'Pr.' alike."""
+    c = str(clause).replace(',', '.').replace(' ', '').lower().rstrip('.')
+    c = re.sub(r'^(prolog|prol|pr)\.?', 'prol', c)
+    c = re.sub(r'^(inscr|insc)\.?', 'inscr', c)
+    return re.sub(r'^([a-z]+)\.', r'\1', c)
+
+
+def vgl_links(rows):
+    """Resolve each row's written-out cross-references (column BB) to clause files, and collect the
+    reverse links. Sets row['vglLinks'] = [(text, id or '')] and row['vglBack'] = [(citation, id)]."""
+    where, order = {}, defaultdict(list)
+    for r in rows:
+        clause = r['clause']
+        m = re.match(r'^(Prol|Inscr|El|Pr)\.?,?\s*(\d.*)$', clause)
+        keys = [m.group(1) + m.group(2)] if m else ([clause] if re.match(r'^[A-Za-z]', clause) else re.split(r',\s*', clause))
+        for k in keys:
+            k = vgl_key(k)
+            if k and (r['code'], k) not in where:
+                where[(r['code'], k)] = r['id']
+                order[r['code']].append(k)
+    codes = sorted({r['code'] for r in rows} | {'Af El'}, key=len, reverse=True)
+
+    def find(ref):
+        for code in codes:
+            if ref == code or ref.startswith(code + ' '):
+                break
+        else:
+            return ''
+        clause = ref[len(code):].strip()
+        if code == 'Af El':
+            code, clause = 'Af', 'El ' + clause
+        if code == 'Að' and vgl_key(clause) == '2':     # Liebermann's Að 2 is the sheet's "Had 2[as Að]"
+            code, clause = 'Had', '2[as Að]'
+        k = vgl_key(clause)
+        k = re.split(r'[–—-]', re.sub(r'f+\.?$', '', k))[0]
+        if not k or '[?]' in k:
+            return ''
+        if (code, k) in where:
+            return where[(code, k)]
+        for kk in order[code]:
+            if kk.startswith(k) and len(kk) > len(k) and not kk[len(k)].isdigit():
+                return where[(code, kk)]
+        m = re.match(r'^(.+)\.\d+[a-z]?$', k) or re.match(r'^(.*\d)[a-z]$', k)
+        return where.get((code, m.group(1)), '') if m else ''
+
+    back = defaultdict(list)
+    for r in rows:
+        r['vglLinks'] = []
+        for ref in [x.strip() for x in r.get('vglRefs', '').split(';') if x.strip()]:
+            rid = find(ref)
+            if rid == r['id']:
+                rid = ''
+            r['vglLinks'].append((ref, rid))
+            if rid and r['id'] not in [b[1] for b in back[rid]]:
+                back[rid].append((('%s %s' % (r['code'], r['clause'])).strip(), r['id']))
+    for r in rows:
+        r['vglBack'] = back.get(r['id'], [])
+    return sum(1 for r in rows for _, i in r['vglLinks'] if i), sum(len(r['vglLinks']) for r in rows)
 
 
 def build(row, today, source_name, refs):
@@ -588,6 +654,17 @@ def build(row, today, source_name, refs):
         w('        <ab%s>%s</ab>' % (at, xml))
     if row['passageSourceXml']:
         w('        <note type="passageSource">%s</note>' % row['passageSourceXml'])
+    if row.get('vglLinks') or row.get('vglPrinted'):
+        page = re.match(r'Gesetze I p\. ([^;]+)', row['vglRemark'])
+        items = ['<ref target="clause:%s">%s</ref>' % (attr(i), esc(t)) if i else esc(t) for t, i in row['vglLinks']]
+        w('        <note type="comparison" source="#liebermann"%s>%s</note>' % (
+            (' n="%s"' % attr(page.group(1))) if page else '', '; '.join(items)))
+        w('        <note type="comparisonPrinted" source="#liebermann">%s</note>' % esc(row['vglPrinted']))
+        if 'TO COMPLETE' in row['vglRemark']:
+            w('        <note type="comparisonIncomplete">Some of Liebermann’s notes here are cut off in the gutter of the scan used, and are still to be completed.</note>')
+    if row.get('vglBack'):
+        w('        <note type="comparedBy" source="#liebermann">%s</note>' % '; '.join(
+            '<ref target="clause:%s">%s</ref>' % (attr(i), esc(t)) for t, i in row['vglBack']))
     if notes:
         w('        <note type="editorial">%s</note>' % esc(notes))
     if row['translatorNotes'] and 'whitelock' in srcs.items:
@@ -751,6 +828,8 @@ def main():
         print('  no row now (file removed): %s (%s %s)' % (c['id'], c['code'], c['clause']))
     # (references from the dictionary to removed files are checked in docs, see OE-LAWS.md)
 
+    linked, total = vgl_links(rows)
+    print('Liebermann’s cross-references: %d of %d linked to a clause' % (linked, total))
     refs = {}
     for r in rows:
         if r['secondRef']:

@@ -53,6 +53,15 @@ scripts:
             if (n.nodeType !== 1) return;
             const name = n.localName;
             const italic = (name === 'hi' && /italic/.test(n.getAttribute('rend') || '')) || name === 'title';
+            const target = name === 'ref' ? (n.getAttribute('target') || '') : '';
+            if (target.startsWith('clause:')) {
+                // a link to another clause of the database (Liebermann's cross-references)
+                const a = el('a', 'clause-link');
+                a.href = 'law.html?id=' + encodeURIComponent(target.slice(7));
+                a.appendChild(inline(n));
+                frag.appendChild(a);
+                return;
+            }
             const out = el(italic ? (name === 'title' ? 'cite' : 'em') : 'span');
             out.appendChild(inline(n));
             frag.appendChild(out);
@@ -189,6 +198,33 @@ scripts:
         });
         if (!trans.length) { right.remove(); grid.classList.add('clause-grid--single'); }
         wrap.appendChild(grid);
+        // Liebermann's marginal cross-references ("Vgl."), and the clauses he compares with this one.
+        const noteOf = type => tei(div, 'note').find(n => n.getAttribute('type') === type);
+        const cmp = noteOf('comparison'), back = noteOf('comparedBy');
+        if (cmp || back) {
+            const box = el('div', 'clause-compare small');
+            if (cmp) {
+                const p = el('p');
+                p.appendChild(el('strong', null, 'Compare (Liebermann' + (cmp.getAttribute('n') ? ', Gesetze I p. ' + cmp.getAttribute('n') : '') + '): '));
+                const printed = noteOf('comparisonPrinted');
+                if (plainText(cmp)) {
+                    p.appendChild(inline(cmp));
+                    if (printed) p.appendChild(el('span', 'muted', ' — as printed: ' + plainText(printed)));
+                } else if (printed) {
+                    p.appendChild(document.createTextNode(plainText(printed)));
+                }
+                box.appendChild(p);
+                const inc = noteOf('comparisonIncomplete');
+                if (inc) box.appendChild(el('p', 'muted', plainText(inc)));
+            }
+            if (back) {
+                const p = el('p');
+                p.appendChild(el('strong', null, 'Liebermann compares this clause at: '));
+                p.appendChild(inline(back));
+                box.appendChild(p);
+            }
+            wrap.appendChild(box);
+        }
         tei(div, 'note').forEach(n => {
             const type = n.getAttribute('type');
             if (type !== 'passageSource' && type !== 'editorial') return;

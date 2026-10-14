@@ -36,6 +36,16 @@ Take `oe-laws/Had_10.xml`, the clause *Had 10*. Its header says where the clause
 - **Notes.** Remarks about the spreadsheet itself ("a line break inside K was removed", "text in column T") are tidied away (`NOTE_TIDY` in the script). The record of checking ("K: checked against Gesetze I p. 3", "T: corrected against Robertson p. 200 (…)") is not shown as a note: it becomes a line at the foot of the clause page, such as *Liebermann's text checked against Die Gesetze der Angelsachsen I, p. 3*. What a cell said before a correction is not on the website; it is in the spreadsheet.
 - **Italic** in the spreadsheet (Liebermann's and the editors' expansions of abbreviations, italic words in translations) is kept as `<hi rend="italic">`; italic in a book reference is its `<title>`.
 
+## Liebermann's cross-references ("Vgl.")
+
+In the outer margin beside his German translation, Liebermann prints short notes comparing a clause with other laws (*Vgl. I Em. 3; II 4*, *ebd. 4, 1*). All 1,348 such notes in *Gesetze* I pp. 2–528 were transcribed from the page images in October 2026 (none occur before I Edward). In the spreadsheet:
+
+- **BA** holds the notes exactly as printed (one note per entry, separated by " | ");
+- **BB** the references written out in full ("ebd." and bare numbers expanded: *I Em 3; II Em 4*);
+- **BC** the page in *Gesetze* I, and anything still to check. Notes cut off in the gutter of the archive.org scan say **TO COMPLETE**; the sheet *Vgl to complete* lists them, and the sheet *Liebermann Vgl* lists every note, including those beside texts that are not in the database.
+
+`tools/laws-from-database.py` (`vgl_links`) resolves each reference in BB to a clause file and writes `<note type="comparison">` (the references, linked with `<ref target="clause:ID">`), `<note type="comparisonPrinted">` (BA) and, where needed, `<note type="comparisonIncomplete">`. It also collects the reverse links: a clause that other clauses compare with it gets `<note type="comparedBy">`. The clause page shows both, as *Compare (Liebermann, Gesetze I p. …)* and *Liebermann compares this clause at*.
+
 ## File names and identifiers
 
 A file is named after its law code and clause number, joined by an underscore: `Abt_1-a.xml`, `Ine_23-2.xml`. The code part is the code's **Anchor** on the law code list where there is one (so `IICn` for *II Cn*), otherwise the abbreviation with plain letters. In names, þ is *th*, æ is *ae* and ð is *d*, as for dictionary entries. The same text is the file's `xml:id`.
