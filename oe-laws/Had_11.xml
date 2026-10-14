@@ -5,7 +5,9 @@
       <titleStmt>
         <title>Had 11</title>
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
@@ -22,13 +24,14 @@
         <bibl type="legalText"><title>Hadbot (Compensation for Clerics)</title></bibl>
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">468</biblScope></bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">20</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">479</biblScope></bibl>
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-o"><abbr>O</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 190</note></witness>
-          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
@@ -59,10 +62,14 @@
         <head><ref type="lawCode" target="law:Had">Had</ref> 11</head>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="11">[Not in H]</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="11" corresp="#wit-d">And wise wæran worldwitan, þe to godcundan rihtlagan þas laga setton, folce for steore, ⁊ halidóm ⁊ hadas for Godes lufan wurðodon ⁊ Godes hus ⁊ Godes þeowas deoplice griðedon.</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-h">And wise wæran worldwitan þe to godcundan rihtlagan þas laga setton folce for steore, and halidom and hadas for Godes lufan wurðodon and Godes hus and Godes þeowas deoplice griðedon.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">And the secular councillors were wise who added to the ecclesiastical right laws these laws for the control of the people, and honoured relics and holy orders for the love of God, and greatly privileged God’s houses and God’s servants.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml">And wise were the councilors who added these laws to the ecclesiastical canons for the guidance of the people, and who venerated the sacraments and holy orders for the love of God, and greatly honored God’s house and God’s servants.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">Und weise waren die Staatsregenten, welche zu geistlichen Rechtsgesetzen diese Gesetze aufstellten, dem Volke zur Zucht, und aus Liebe zu Gott Heiligthum und Ordines ehrten und Gotteshäuser und Gottesdiener mit hohem Sonderfrieden privilegirten.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And wise were the secular counsellors who added these laws to the spiritual laws, for the discipline of the people, and out of love for God honoured holy things and orders, and privileged God's houses and God's servants with high special peace.</ab>
         <note type="editorial">This clause is lacking in hq (so not in H, as K says); Liebermann thinks it perhaps better, since it agrees word for word with Grið 24 and partly in content with Had 1.1 and 1.3. The OE in N is from D. In D, ‘Incipit de baptismo’ (Napier, Wulfstan IV) follows; O ends here. Liebermann compares VIII Atr 36 and Grið 24.; U: checked against Whitelock, EHD I (1979), and corrected (before: ‘And the secular councillors were wise who added to the ecclesiastical right laws these laws for the control of people, and honoured relics and holy orders for the love of God, and greatly privileged God's houses and God's servants.’).</note>
+        <note type="textual" source="#rabin-doml">And . . . griðedon: omitted H, text supplied from D</note>
+        <note type="translator" source="#rabin-doml">Textus Roffensis inverts clauses 9.1 and 10 and omits clause 11 entirely. This is in keeping with the scribe’s treatment of The Compilation on Status generally, which he disarticulates and re-edits in order to reformulate the component texts for a twelfth-century readership and fit them into the manuscript’s organizational program. The preterite verb tenses of this clause recall those of On the Ranks of People and Law, thus providing a neat bookend to the Compilation.</note>
       </div>
     </body>
   </text>

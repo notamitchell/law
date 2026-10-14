@@ -6,7 +6,9 @@
         <title>VII Atr 2.4</title>
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
@@ -24,10 +26,12 @@
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">260</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">110</biblScope></bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">182</biblScope></bibl>
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-t"><abbr>T</abbr> <note type="manuscript">London, British Library, Cotton MS Titus A.xxvii, fol. 145r</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -56,10 +60,13 @@
         <head><ref type="lawCode" target="law:VIIAtr">VII Atr</ref> 2.4</head>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2.4" corresp="#wit-q">Si quis ieiunium suum infringat, seruus corio suo componat, liber pauper reddat XXX denarios et tainus regis CXX sol.; et diuidatur hec pecunia pauperibus.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="2.4" corresp="#wit-q">Si quis ieiunium suum infringat, servus corio suo componat, liber pauper reddat xxx denarios et tainus regis cxx sol.; et dividatur haec pecunia pauperibus.</ab>
+        <ab type="editionText" xml:lang="la" source="#rabin-doml" corresp="#wit-t">Si quis ieiunium suum infringat, servus corio suo componat, liber pauper reddat xxx denarios et tainus regis cxx sol.; et dividatur hec pecunia pauperibus.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">In the case of the fast being broken—if it is a slave [who does so], he shall undergo the lash, if it is a poor freeman, he shall pay 30 pence, and a thegn of the king's [shall pay] 120 shillings. And this money shall be divided among the poor.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-t">If anyone breaks the fast: a slave is to be whipped, a poor freeman is to pay thirty pence and a king’s thane one hundred twenty shillings; and this money is to be distributed to the poor.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand sein Fasten bricht, büsse der Sklav mit seiner Haut, zahle ein armer Freier 30 Pfennig und ein Königsthegn 120 Schill.; und dies Geld werde den Armen vertheilt.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If anyone breaks his fast, let a slave pay with his hide, a poor freeman pay 30 pence and a king's thegn 120 shillings; and let this money be distributed to the poor.</ab>
         <note type="editorial">Liebermann compares EGu and VIIa Atr 3.</note>
+        <note type="translator" source="#rabin-doml">one hundred twenty shillings: This amount is likely an error, as analogous passages elsewhere set the penalty for breaking the fast at only thirty shillings.</note>
       </div>
     </body>
   </text>

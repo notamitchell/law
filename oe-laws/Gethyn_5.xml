@@ -5,8 +5,9 @@
       <titleStmt>
         <title>Geþyncðo 5</title>
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
-        <respStmt><resp>Translation</resp><name ref="#rabin">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
@@ -22,13 +23,13 @@
         <bibl type="legalText"><title>Geþyncðo (Ranks)</title></bibl>
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">458</biblScope></bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">10</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">476</biblScope></bibl>
-          <bibl xml:id="rabin" type="translation">Andrew Rabin, <title>The Political Writings of Archbishop Wulfstan of York</title> (Manchester: Manchester University Press, 2015)</bibl>
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
-          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
       </sourceDesc>
@@ -55,12 +56,14 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-h">7 gif þegen geþeah, þ<hi rend="italic">æt</hi> he wearð to eorle, þonne wæs he syððan eorlrihtes weorðe.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5" corresp="#wit-q">Et si tainus prouehatur ad consulatum, sit postea dignus rectitudine comitis et honore.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-d">….</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-h">And gif þegen geþeah þæt he wearð to eorle, þonne wæs he syððan eorlrihtes weorðe.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">[And if a thegn prospered, that he became an earl, then was he afterwards entitled to an earl’s rights.</ab>
-        <ab type="translation" xml:lang="en" source="#rabin" corresp="#wit-h">And if a thegn prospered so that he became a noble, he was afterwards worthy of a noble's rights.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h">And if a thane prospered so that he became a noble, he was afterward worthy of a noble’s rights.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">Und wenn ein Thegn emporstieg, dass er zum Grafen wurde, dann genoss er fortan Grafenberechtigung.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if a thegn rose so that he became an earl, then he was henceforth entitled to earl-right.</ab>
         <note type="editorial">Lacking in D (Liebermann marks no gap there).; U: checked against Whitelock, EHD I (1979), and corrected (before: ‘…’).</note>
         <note type="translator" source="#whitelock">These chapters are only in Textus Roffensis.</note>
+        <note type="textual" source="#rabin-doml">And . . . weorðe: omitted D</note>
       </div>
     </body>
   </text>

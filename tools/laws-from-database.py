@@ -20,8 +20,9 @@ AJ–AO), and every translation who made it. See docs/OE-LAWS.md.
 
 File names do not change: a row keeps the file name its clause had before,
 so the links from dictionary entries still work. Rows are matched to the old
-files by law code and clause number. Law codes listed in SKIP (Cn 1018, which
-is waiting for a decision) are left exactly as they are.
+files by law code and clause number. Law codes listed in SKIP are left exactly as
+they are (none at present). Cn 1018, which is not in Liebermann, takes its
+clause numbers from column S (Kennedy's, which Rabin follows).
 """
 import argparse
 import datetime
@@ -49,7 +50,7 @@ old = _load('laws_from_xlsx', 'laws-from-xlsx.py')       # slugify, clause keys,
 abt = _load('law_code_from_xlsx', 'law-code-from-xlsx.py')  # italic runs
 rubrics = _load('rubric_split', 'rubric_split.py')         # J&O's E and B rubrics, apart
 
-SKIP = {'Cn 1018'}
+SKIP = set()
 
 # Header text (start of it, case and spaces ignored) -> our name for the column.
 HEADERS = [
@@ -99,6 +100,12 @@ HEADERS = [
     ('ms used by third translator', 'thirdMS'),
     ("page number of third translator", 'thirdPage'),
     ("whitelock's footnotes", 'translatorNotes'),
+    ('edition 2 (rabin)', 'rabinText'),
+    ('rabin’s translation', 'rabinTranslation'),
+    ('rabin’s edition and base ms', 'rabinRef'),
+    ('page numbers in rabin', 'rabinPage'),
+    ('rabin’s textual notes', 'rabinTextNotes'),
+    ('rabin’s notes to the translation', 'rabinNotes'),
 ]
 NEEDED = ['code', 'clause', 'kText', 'german', 'english', 'nText', 'kSig', 'tSig', 'notes']
 
@@ -128,6 +135,9 @@ TRANSLATORS = {   # code -> (translator of U, translator of AA)
 # translations, which has no Old English text).
 RABIN_DOML = ('Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, '
               'Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020)')
+# Rabin's sigla that mean a different manuscript from Liebermann's letter
+RABIN_SIGLA = {('Prom. Reg.', 'C'): 'Cp', ('Cn 1020', 'Y'): 'York Gospels', ('IX Atr', 'MS'): '', ('X Atr', 'MS'): '',
+               ('V Atr', 'G1'): 'G', ('II Eg', 'G1'): 'G', ('III Eg', 'G1'): 'G'}   # Rabin's G1 is Liebermann's G
 EDITOR_OVERRIDE = {'Grið': ('Rabin', 'rabin-doml', RABIN_DOML), 'Nor Grið': ('Rabin', 'rabin-doml', RABIN_DOML)}
 
 # Old spellings of law codes (in oe-laws/index.json) -> the spreadsheet's.
@@ -140,7 +150,7 @@ OLD_CODES = {
 }
 
 MS_NAMES = {
-    'H': 'Rochester, Cathedral Library, A.3.5 (Textus Roffensis), c. 1120–25',
+    'H': 'Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25',
     'E': 'Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)',
     'B': 'Cambridge, Corpus Christi College, MS 383',
     'B1': 'Cambridge, Corpus Christi College, MS 383 (first copy)',
@@ -300,10 +310,10 @@ def read_rows(path, only=None):
         for name in ('codeName', 'king', 'promulgation', 'liebermannMS', 'page', 'liebermannNumber', 'editor',
                      'editorMS', 'editorNumber', 'editorPage', 'secondPage', 'offence', 'people', 'locations',
                      'nSig', 'afSig', 'kSig', 'tSig', 'kName', 'nName', 'afName', 'tName', 'notes', 'passageSource',
-                     'thirdRef', 'thirdMS', 'thirdPage', 'translatorNotes'):
+                     'thirdRef', 'thirdMS', 'thirdPage', 'translatorNotes', 'rabinRef', 'rabinPage', 'rabinTextNotes', 'rabinNotes'):
             row[name] = get(name)
         for name in ('kText', 'german', 'english', 'nText', 'latin', 'tText', 'translation',
-                     'secondTranslation', 'supplementaryTranslation', 'afText', 'thirdTranslation'):
+                     'secondTranslation', 'supplementaryTranslation', 'afText', 'thirdTranslation', 'rabinText', 'rabinTranslation'):
             row[name + 'Xml'] = xml(name)
             row[name] = get(name)
         row['passageSourceXml'] = xml('passageSource')
@@ -311,6 +321,9 @@ def read_rows(path, only=None):
         row['secondRefXml'] = abt.marked(cell('secondRef').value, '<title>%s</title>') if 'secondRef' in col else ''
         row['secondRef'] = get('secondRef')
         row['witnesses'] = old.witnesses(cell('mss')) if 'mss' in col else []
+        if code == 'Cn 1018':
+            # not in Liebermann: Kennedy's numbering (column S), which Rabin follows
+            row['clause'] = {'Prologue': 'Prol.'}.get(row['editorNumber'], row['editorNumber'])
         rows.append(row)
     return rows
 
@@ -413,6 +426,8 @@ def build(row, today, source_name, refs):
     texts.sort(key=lambda t: t[0] == 'editionText')
 
     def translator(name, page=''):
+        if name == 'Rabin':
+            return srcs.add('rabin-doml', 'Rabin', RABIN_DOML, 'translation', page)
         if name == 'Whitelock':
             return srcs.add('whitelock', 'Whitelock', WHITELOCK_EHD, 'translation', page)
         if name == 'Whitelock C&S':
@@ -422,6 +437,18 @@ def build(row, today, source_name, refs):
         return srcs.add('unattributed', 'Translator not recorded',
                         'Translation from the original OE Laws Database spreadsheet; the translator is not recorded', 'translation')
 
+    rabin_translation = None
+    if row['rabinTextXml'] or row['rabinTranslationXml']:
+        # Rabin, Old English Legal Writings: Wulfstan (columns AU-AZ)
+        m = re.search(r'Base MS: (\S+) = (.*?)(?: \(|$)', row['rabinRef'])
+        sig = RABIN_SIGLA.get((code, m.group(1)), m.group(1)) if m else ''
+        r_wit = witness(sig, '' if sig != (m.group(1) if m else '') else (m.group(2) if m else '')) if sig else ''
+        r_src = srcs.add('rabin-doml', 'Rabin', RABIN_DOML, 'edition', row['rabinPage'].split(' / ')[0])
+        if row['rabinTextXml']:
+            lang = 'la' if code == 'VII Atr' else 'ang'
+            texts.append(('editionText', lang, r_src, row['rabinTextXml'], '', r_wit))
+        if row['rabinTranslationXml']:
+            rabin_translation = ('translation', 'en', r_src, row['rabinTranslationXml'], r_wit)
     u_by, aa_by = TRANSLATORS.get(code, (None, None))
     if u_by == 'Whitelock' and NOT_WHITELOCK in row['notes']:
         u_by = None
@@ -432,11 +459,15 @@ def build(row, today, source_name, refs):
             translations.append(('translation', 'en', src, row['bTranslationXml'], witness('B')))
     if row['secondTranslationXml']:
         second = abt.surname(row['secondRef'])
-        if second:
+        if second == 'Rabin' and 'Wulfstan' in row['secondRef'] and '2020' in row['secondRef']:
+            src = srcs.add('rabin-doml', 'Rabin', RABIN_DOML, 'translation', row['secondPage'])
+        elif second:
             src = srcs.add(ident(second), second, row['secondRefXml'], 'translation', row['secondPage'])
         else:
             src = translator(None)
         translations.append(('translation', 'en', src, row['secondTranslationXml'], t_wit))
+    if rabin_translation:
+        translations.append(rabin_translation)       # after the editors' own translations
     if row['thirdTranslationXml']:
         # Whitelock's English Historical Documents (columns AP-AT)
         m = re.match(r'([A-Z][A-Za-z0-9]{0,3})\s+\(', row['thirdMS'])
@@ -556,6 +587,11 @@ def build(row, today, source_name, refs):
     if row['translatorNotes'] and 'whitelock' in srcs.items:
         for n in row['translatorNotes'].split(' | '):
             w('        <note type="translator" source="#whitelock">%s</note>' % esc(n))
+    if 'rabin-doml' in srcs.items:
+        for n in [x for x in row['rabinTextNotes'].split(' | ') if x.strip()]:
+            w('        <note type="textual" source="#rabin-doml">%s</note>' % esc(n))
+        for n in [x for x in row['rabinNotes'].split(' | ') if x.strip()]:
+            w('        <note type="translator" source="#rabin-doml">%s</note>' % esc(n))
     w('      </div>')
     w('    </body>')
     w('  </text>')
@@ -663,7 +699,7 @@ def write_codes(rows, catalogue, find_anchor, path):
         names = [EDITOR_OVERRIDE.get(r['code'], (r['editor'],))[0] if r['editor'] else '',
                  abt.surname(r['secondRef']) if r['secondTranslation'] else '',
                  u_by if r['translation'] and not r['editor'] else '', aa_by if r['supplementaryTranslation'] else '',
-                 'Whitelock' if r['thirdTranslation'] else '']
+                 'Whitelock' if r['thirdTranslation'] else '', 'Rabin' if r['rabinText'] or r['rabinTranslation'] else '']
         for name in names:
             name = (name or '').replace(' C&S', '')
             if name and name not in c['editors']:
