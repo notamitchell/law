@@ -629,9 +629,14 @@ h2.result-code .code-abbr { min-width: 0; margin-left: 0.4rem; }
 .code-clause-no { font-family: var(--serif); font-weight: 600; font-size: 1.05rem; }
 .code-clause-oe { font-family: var(--serif); font-size: 1.08rem; margin: 0; }
 .code-clause-en { margin: 0; color: #333; }
+.code-clauses-head { display: grid; grid-template-columns: 6rem 1fr 1fr; gap: 0 1.5rem; margin-top: 1rem; padding-bottom: 0.3rem; border-bottom: 2px solid #ebe8e1; font-size: 0.85rem; font-weight: 600; color: var(--muted); }
+.code-clauses-head + .code-clauses { margin-top: 0; }
+.code-clause-src { font-family: var(--sans, inherit); font-size: 0.75rem; color: var(--muted); border: 1px solid #ddd8cc; border-radius: 3px; padding: 0 0.3rem; white-space: nowrap; }
 @media (max-width: 760px) {
     .code-clauses li { grid-template-columns: 1fr; }
     .code-clause-en { margin-top: 0.3rem; color: var(--muted); }
+    .code-clauses-head { grid-template-columns: 1fr; }
+    .code-clauses-head span:empty { display: none; }
 }
 .whole-code h2 { font-size: 1.1rem; margin: 1.8rem 0 0.2rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
 .whole-code h2.current a { background: rgba(255, 230, 120, 0.45); padding: 0 0.3rem; }
