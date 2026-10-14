@@ -149,6 +149,14 @@ scripts:
             if (lang && lang !== 'und') p.lang = lang;
             p.appendChild(inline(a));
             box.appendChild(p);
+            // The translator's own footnotes (Whitelock's, from EHD), under her translation.
+            const own = a.getAttribute('type') === 'translation' ? tei(div, 'note').filter(n => n.getAttribute('type') === 'translator' && (n.getAttribute('source') || '').replace(/^#/, '') === id) : [];
+            if (own.length) {
+                const ol = el('ol', 'clause-reading-notes small');
+                ol.setAttribute('aria-label', src.name + '’s notes');
+                own.forEach(n => { const li = el('li'); li.appendChild(inline(n)); ol.appendChild(li); });
+                box.appendChild(ol);
+            }
             column.appendChild(box);
         };
         const addText = (a, showLatin) => {

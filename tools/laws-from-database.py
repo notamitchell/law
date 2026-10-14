@@ -94,6 +94,11 @@ HEADERS = [
     ("manuscript of liebermann's third ms", 'afName'),
     ('siglum of the manuscript in column t', 'tSig'),
     ('manuscript in column t', 'tName'),
+    ('third translation', 'thirdTranslation'),
+    ("third translator's name", 'thirdRef'),
+    ('ms used by third translator', 'thirdMS'),
+    ("page number of third translator", 'thirdPage'),
+    ("whitelock's footnotes", 'translatorNotes'),
 ]
 NEEDED = ['code', 'clause', 'kText', 'german', 'english', 'nText', 'kSig', 'tSig', 'notes']
 
@@ -106,7 +111,10 @@ CLAUDE_REF = ('Claude (an AI model made by Anthropic), semi-literal English tran
 # codes that have no modern editor (column T there is Liebermann's text).
 # The spreadsheet no longer has those rows, so they are recorded here.
 WHITELOCK_EHD = ('Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> '
-                 '(London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979)')
+                 '(London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); '
+                 'page numbers are those of the Taylor &amp; Francis e-Library edition (2007)')
+# Rows of Had whose translation in column U is not Whitelock's (EHD prints Had 1-2 and 9-11 only).
+NOT_WHITELOCK = 'not in Whitelock’s English Historical Documents'
 WHITELOCK_CS = ('D. Whitelock, M. Brett and C. N. L. Brooke, eds, <title>Councils and Synods with Other '
                 'Documents Relating to the English Church, I: A.D. 871–1204</title> (Oxford: Clarendon Press, 1981)')
 TRANSLATORS = {   # code -> (translator of U, translator of AA)
@@ -139,7 +147,7 @@ MS_NAMES = {
     'B2': 'Cambridge, Corpus Christi College, MS 383 (second copy)',
     'D': 'Cambridge, Corpus Christi College, MS 201',
     'G': 'London, British Library, Cotton Nero A.i',
-    'G2': 'London, British Library, Cotton Nero A.i, second text (another hand, c. 1060)',
+    'G2': 'London, British Library, Cotton Nero A.i (second text)',   # the spreadsheet names it code by code
     'A': 'London, British Library, Harley 55',
     'F': 'London, British Library, Cotton Nero E.i',
     'C': 'Cambridge, Corpus Christi College, MS 265',
@@ -291,10 +299,11 @@ def read_rows(path, only=None):
         row = {'sheetRow': r, 'code': code, 'clause': get('clause')}
         for name in ('codeName', 'king', 'promulgation', 'liebermannMS', 'page', 'liebermannNumber', 'editor',
                      'editorMS', 'editorNumber', 'editorPage', 'secondPage', 'offence', 'people', 'locations',
-                     'nSig', 'afSig', 'kSig', 'tSig', 'kName', 'nName', 'afName', 'tName', 'notes', 'passageSource'):
+                     'nSig', 'afSig', 'kSig', 'tSig', 'kName', 'nName', 'afName', 'tName', 'notes', 'passageSource',
+                     'thirdRef', 'thirdMS', 'thirdPage', 'translatorNotes'):
             row[name] = get(name)
         for name in ('kText', 'german', 'english', 'nText', 'latin', 'tText', 'translation',
-                     'secondTranslation', 'supplementaryTranslation', 'afText'):
+                     'secondTranslation', 'supplementaryTranslation', 'afText', 'thirdTranslation'):
             row[name + 'Xml'] = xml(name)
             row[name] = get(name)
         row['passageSourceXml'] = xml('passageSource')
@@ -403,9 +412,9 @@ def build(row, today, source_name, refs):
     # Liebermann's texts (in the order of his columns: K, N, AF, O, T) before the modern edition.
     texts.sort(key=lambda t: t[0] == 'editionText')
 
-    def translator(name):
+    def translator(name, page=''):
         if name == 'Whitelock':
-            return srcs.add('whitelock', 'Whitelock', WHITELOCK_EHD, 'translation')
+            return srcs.add('whitelock', 'Whitelock', WHITELOCK_EHD, 'translation', page)
         if name == 'Whitelock C&S':
             return srcs.add('whitelock-cs', 'Whitelock', WHITELOCK_CS, 'translation')
         if name in refs:
@@ -414,8 +423,10 @@ def build(row, today, source_name, refs):
                         'Translation from the original OE Laws Database spreadsheet; the translator is not recorded', 'translation')
 
     u_by, aa_by = TRANSLATORS.get(code, (None, None))
+    if u_by == 'Whitelock' and NOT_WHITELOCK in row['notes']:
+        u_by = None
     if row['translationXml']:
-        src = ed_src or translator(u_by)
+        src = ed_src or translator(u_by, row['editorPage'] if u_by == 'Whitelock' else '')
         translations.append(('translation', 'en', src, row['translationXml'], t_wit))
         if row.get('bTranslationXml'):
             translations.append(('translation', 'en', src, row['bTranslationXml'], witness('B')))
@@ -426,6 +437,11 @@ def build(row, today, source_name, refs):
         else:
             src = translator(None)
         translations.append(('translation', 'en', src, row['secondTranslationXml'], t_wit))
+    if row['thirdTranslationXml']:
+        # Whitelock's English Historical Documents (columns AP-AT)
+        m = re.match(r'([A-Z][A-Za-z0-9]{0,3})\s+\(', row['thirdMS'])
+        translations.append(('translation', 'en', translator('Whitelock', row['thirdPage']), row['thirdTranslationXml'],
+                             witness(m.group(1), MS_NAMES.get(m.group(1), '')) if m else ''))
     if row['supplementaryTranslationXml']:
         translations.append(('translation', 'en', translator(aa_by), row['supplementaryTranslationXml'],
                              witness(row['kSig'], row['kName'])))
@@ -537,6 +553,9 @@ def build(row, today, source_name, refs):
         w('        <note type="passageSource">%s</note>' % row['passageSourceXml'])
     if notes:
         w('        <note type="editorial">%s</note>' % esc(notes))
+    if row['translatorNotes'] and 'whitelock' in srcs.items:
+        for n in row['translatorNotes'].split(' | '):
+            w('        <note type="translator" source="#whitelock">%s</note>' % esc(n))
     w('      </div>')
     w('    </body>')
     w('  </text>')
@@ -643,7 +662,8 @@ def write_codes(rows, catalogue, find_anchor, path):
         u_by, aa_by = TRANSLATORS.get(r['code'], (None, None))
         names = [EDITOR_OVERRIDE.get(r['code'], (r['editor'],))[0] if r['editor'] else '',
                  abt.surname(r['secondRef']) if r['secondTranslation'] else '',
-                 u_by if r['translation'] and not r['editor'] else '', aa_by if r['supplementaryTranslation'] else '']
+                 u_by if r['translation'] and not r['editor'] else '', aa_by if r['supplementaryTranslation'] else '',
+                 'Whitelock' if r['thirdTranslation'] else '']
         for name in names:
             name = (name or '').replace(' C&S', '')
             if name and name not in c['editors']:
