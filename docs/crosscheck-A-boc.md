@@ -60,11 +60,12 @@ The 95 entries that differ only in typography are left as they are on the site. 
 |---|---|
 | ‘ ’ (curly quotation marks) | ' ' |
 | ‖ | \|\| |
-| HB, GH, BA | H B, G H, B A |
 | 8 f., 27 ff. | 8f., 27ff. |
 | .. | ... |
 | — | –– |
 | ł (vel) | ∤ |
+
+Until October 2026 the site also ran manuscript sigla together (HB, GH, BA) where the Word document spaces them (H B). The site now spaces them too, and links each one.
 
 ## Page numbers elsewhere
 
