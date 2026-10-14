@@ -51,3 +51,10 @@ fs.mkdirSync(path.join(repo, 'data'), { recursive: true });
 fs.writeFileSync(path.join(repo, 'data', 'entries.json'),
     '[\n' + entries.map(e => JSON.stringify(e)).join(',\n') + '\n]\n');
 console.log(`data/entries.json: ${entries.length} entries`);
+
+// A small list of every entry's id and headword, for the previous and next
+// links at the foot of each entry page (the page sorts it into Liebermann's
+// order, as the Dictionary page does).
+fs.writeFileSync(path.join(repo, 'data', 'entry-order.json'),
+    '[\n' + entries.map(e => JSON.stringify([e.id, e.hw, e.lang])).join(',\n') + '\n]\n');
+console.log(`data/entry-order.json: ${entries.length} entries`);
