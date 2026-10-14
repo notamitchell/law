@@ -6,6 +6,7 @@ code in a numbered series, because the code before it is in the same series:
     I As 3. II Eg 3,1. III Atr 3,2. IV 1        IV 1 = IV Atr 1
     Excom V 6. VI 4. VIII 3                     VI 4 = Excom VI 4
     Iud Dei II 3,2. VII 23,2                    VII 23,2 = Iud Dei VII 23,2
+    VI Atr 20 = VIII 13                         VIII 13 = VIII Atr 13
 
     python3 tools/series-citations.py --dry-run   # report only
     python3 tools/series-citations.py             # change the entries
@@ -20,7 +21,9 @@ For each one it
 A numeral counts only when
   - it comes straight after a citation of a code in a numbered series (the
     codes on the law code list written "IV Atr" or "Iud Dei IV"), with only
-    clause numbers between them, and after a full stop ("3,2. IV");
+    clause numbers between them, and after a full stop ("3,2. IV") or an
+    equals sign, Liebermann's mark for the same passage in another law
+    ("VI Atr 20 = VIII 13");
   - a clause number follows it ("IV 1", or "X,17" in Liebermann's style for
     Iud Dei);
   - that code is on the law code list (data/markLaw.json): there is an
@@ -91,7 +94,7 @@ def fix_scrap(scrap, series, found):
     [new citations], numeral, anchor) to found."""
     out, pos, cur, last_cite = [], 0, None, None
     # The run: a clause number or more, then ". IV" and a clause number.
-    run = re.compile(r'(?:\.?\s+%s(?![\w)]))+\.\s+(?P<num>%s)(?=(?:\s+|,)%s(?![\w)]))' % (PASSAGE, ROMAN, PASSAGE))
+    run = re.compile(r'(?:\.?\s+%s(?![\w)]))+(?:\.|\s=)\s+(?P<num>%s)(?=(?:\s+|,)%s(?![\w)]))' % (PASSAGE, ROMAN, PASSAGE))
     tokens = list(REF.finditer(scrap))
     for i, ref in enumerate(tokens):
         out.append(scrap[pos:ref.end()])
@@ -126,7 +129,7 @@ def fix_scrap(scrap, series, found):
         out.append(chunk[cpos:])
         pos = end
         # a code followed by anything but clause numbers ends the run
-        if cur and not re.fullmatch(r'(?:\.?\s+%s(?![\w)])|[\s.])*' % PASSAGE, chunk[cpos:]):
+        if cur and not re.fullmatch(r'(?:\.?\s+%s(?![\w)])|[\s.=])*' % PASSAGE, chunk[cpos:]):
             cur = None
     out.append(scrap[pos:])
     return ''.join(out)

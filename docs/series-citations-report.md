@@ -3,50 +3,50 @@
 Made by `tools/series-citations.py`. It is replaced each time the tool runs.
 
 ```
-Numerals linked: 947, in 376 entries
-Citations added to the lists: 772
-By code: IICn (173), VIIIAtr (101), VIAtr (101), VIAs (97), VAtr (62), IIIAtr (39), IIEw (35), IVEg (33), XAtr (32), VAs (30), IIAtr (25), IudDeiVII (24), VIIaAtr (23), IudDeiXIII (16), IIAs (12), IudDeiV (12), ExcomVI (11), IudDeiXVI (11), ExcomVIII (10), IIIEg (10), ExcomX (9), ExcomXI (9), IVAs (9), IudDeiXIV (8), IIEm (7), IudDeiVI (7), IudDeiVIII (6), IudDeiXII (5), IudDeiIV (5), IXAtr (4), ExcomV (4), IudDeiX (4), IVAtr (4), ExcomIX (2), VIIAtr (2), IudDeiXI (2), IudDeiXV (1), ExcomXIII (1), IudDeiIX (1)
+Numerals linked: 377, in 222 entries
+Citations added to the lists: 310
+By code: VIAtr (295), VIIIAtr (37), XAtr (12), VAtr (6), IIIAtr (6), IICn (5), VIAs (4), VIIaAtr (3), IVAs (2), IIEm (2), IVAtr (1), IVEg (1), IXAtr (1), IIAtr (1), VAs (1)
 ```
 
 Examples:
 
-- Abdenago: after Iud Dei IV 3,3, XII → Iud Dei XII 16,4
-- Abdenago: after Iud Dei XII 16,4, XIII → Iud Dei XIII 13,2
-- Abdenago: after Iud Dei II 3,2, VII → Iud Dei VII 23,2
-- Abiron: after Excom V 6, VI → Excom VI 4
-- Abiron: after Excom VI 4, VIII → Excom VIII 3
-- Abiron: after Excom VIII 3, X → Excom X 7
-- Accent: after III Atr 14, V → V Atr 13,1
-- Accent: after I Atr 4, VIII → VIII Atr 8
-- Aedelred: after I Atr Pro, II → II Atr Pro
-- Aedelred: after II Atr Pro, III → III Atr Pro
-- Aedelred: after III Atr Pro, IX → IX Atr Pro
-- Aedelred: after IX Atr Pro, X → X Atr Pro
-- Aedelred: after I Atr Inscr, II → II Atr 3,1
-- Aedelstan: after I As Pro, II → II As Epil
-- Aedelstan: after II As Epil, VI → VI As 10
-- Aedelstan: after I As Pro, V → V As Pro
-- Aedelstan: after V As Pro, VI → VI As 10
-- Agnus-Dei: after Iud Dei V 2, XVI → Iud Dei XVI 30,17
 - Alliteration: after V Atr 20, VI → VI Atr 25,2
-- Alliteration: after VIII Atr 33, II → II Atr 42
-- Alliteration: after VI Atr 42,2, X → X Atr Pro, X Atr 2
-- Ananias: after Excom V 6, VI → Excom VI 4
-- Andreas: after Excom VI 1,4, VIII → Excom VIII 14
-- Ascensio: after Iud Dei XV 3,2, XVI → Iud Dei XVI 30,11
-- Babilon: after Iud Dei II 3, IV → Iud Dei IV 4,2
-- Cherubim: after Iud Dei V 2, XIII → Iud Dei XIII 12,2
-- Cherubim: after Excom VI 1,2, VIII → Excom VIII 1
-- Christianitas: after I Em 2, II → II Em Pro
-- Conjugation: after I Cn 4, II → II Cn 40,2
-- Conjugation: after I As Pro, VI → VI As 1,4
-- Crist: after Iud Dei IV 3, VI → Iud Dei VI 1
-- Crist: after Iud Dei VI 1, VIII → Iud Dei VIII 2,3
-- Crist: after Iud Dei IV 4,1, V → Iud Dei V 2,1
-- Crist: after Iud Dei V 2,1, VII → Iud Dei VII 23
-- Crist: after VI Atr 41, VIII → VIII Atr 2
-- Crist: after V Atr 31, VIII → VIII Atr 2, VIII Atr 38
-- Cristen: after V Atr 10, VI → VI Atr 12,1
-- Cristen: after VI Atr 12,1, VIII → VIII Atr 2,1
-- Cristen: after V Atr 10,1, VI → VI Atr 13
-- Cristen: after V Atr 19, VI → VI Atr 25,1
+- Alliteration: after V Atr 15, VI → VI Atr 22, VI Atr 22,3, VI Atr 43,1
+- Alliteration: after VI Atr 43,1, VIII → VIII Atr 16
+- Alliteration: after V Atr 1,2, VI → VI Atr 8,2
+- Alliteration: after VI Atr 8,2, X → X Atr 2,1
+- Alliteration: after V Atr 25, VI → VI Atr 28,3
+- Alliteration: after V Atr 19, VI → VI Atr 1, VI Atr 25,1
+- Alliteration: after V Atr 25, VI → VI Atr 28,3
+- Alliteration: after V Atr 5, VI → VI Atr 3a
+- Aprilis: after V Atr 16, VI → VI Atr 23,1
+- Crist: after V Atr 2, VI → VI Atr 9
+- Cristen: after V Atr 4,1, VI → VI Atr 2,2
+- Cristen: after V Atr 10, VI → VI Atr 11
+- Cristendom: after V Atr 22, VI → VI Atr 27
+- Demonstrativum: after V Atr 23, VI → VI Atr 28,1
+- Eastron: after V Atr 18, VI → VI Atr 25
+- Ellipse: after V Atr 10,1, VI → VI Atr 13, VI Atr 21
+- Ellipse: after VI Atr 21, VI → VI Atr 26
+- Engla-lag-u: after V Atr 30, VI → VI Atr 37
+- Formelhafte: after V Atr 25, VI → VI Atr 28,3
+- Formelhafte: after V Atr 25, VI → VI Atr 28,3
+- Frigedaeg: after V Atr 17, VI → VI Atr 24
+- God: after V Atr 26, VI → VI Atr 30, VI Atr 5,3
+- God: after VI Atr 5,3, VIII → VIII Atr 7
+- God: after V Atr 5, VI → VI Atr 3a
+- God: after V Atr 1,2, VI → VI Atr 8,2
+- God: after VI Atr 8,2, X → X Atr 2,1
+- God: after X Atr 2,1, V → V Atr 4
+- God: after V Atr 26, VI → VI Atr 30
+- God: after V Atr 11, VI → VI Atr 16
+- God: after V Atr 21, VI → VI Atr 26, VI Atr 13
+- Hendiadyoin: after V Atr 1,2, VI → VI Atr 8,2
+- Hendiadyoin: after VI Atr 8,2, X → X Atr 2,1
+- Maria: after V Atr 14, VI → VI Atr 22,2
+- Martin: after VI Atr 18,1, VIII → VIII Atr 11
+- Petrus: after V Atr 11,1, VI → VI Atr 18
+- Petrus: after VI Atr 18, VIII → VIII Atr 10
+- Philippus: after V Atr 14,1, VI → VI Atr 22,3
+- Sunnandaeg: after V Atr 13, VI → VI Atr 22,1
+- a-2: after VI Atr 20, VIII → VIII Atr 13
