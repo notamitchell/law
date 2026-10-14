@@ -306,6 +306,20 @@ def read_rows(path, only=None):
     return rows
 
 
+# Keywords that mean the same, merged into one (the first form is kept).
+SAME_KEYWORD = {'Kings': 'King'}
+
+
+def keywords(terms):
+    """A cell's keywords, with SAME_KEYWORD applied and nothing listed twice."""
+    out = []
+    for t in old.split_terms(terms):
+        t = SAME_KEYWORD.get(t, t)
+        if t not in out:
+            out.append(t)
+    return out
+
+
 # ---------------------------------------------------------------- building
 class Sources:
     """The editions and translations one file names, in the order first used."""
@@ -481,7 +495,7 @@ def build(row, today, source_name, refs):
         w('      <textClass>')
         for name, terms in kws:
             if terms:
-                w('        <keywords n="%s">%s</keywords>' % (name, ''.join('<term>%s</term>' % esc(t) for t in old.split_terms(terms))))
+                w('        <keywords n="%s">%s</keywords>' % (name, ''.join('<term>%s</term>' % esc(t) for t in keywords(terms))))
         w('      </textClass>')
     w('    </profileDesc>')
     w('    <revisionDesc>')
