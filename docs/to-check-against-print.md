@@ -16,6 +16,7 @@ From [the cross-check of collarium – d](crosscheck-collarium-d.md).
 
 | ✓ | Page | Entry | Site | Word document | Print |
 |---|---|---|---|---|---|
+| [ ] | 37 | *Comparativ* | 4) … = **spl** des Comparirten (now linked to superlative) | | Liebermann's usual abbreviation is spla. Is it spl or spla in the print? |
 | [ ] | 43 | *c[w]ucu* | swa cucne swa deadne G 2. II Cn 25a; **[**diese Wendung lag vor für vivum vel mortuum III Em 2 | no bracket | Is there a [ ? If so, where does it close? |
 | [ ] | 43 | *cweðan* | cwæð H \| **pl 1:** ~að Af 42,5 | **pl:** ~að | |
 
