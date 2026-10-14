@@ -220,6 +220,9 @@ OE = set('and þæt ðæt se he man ne gif gyf ðe þe beo sy to his hit mid swa
          'scillinga is wið þam ðam'.split())
 
 
+FRENCH_CODES = {'Leis Wl'}
+
+
 def language(text):
     if re.search('[⁊þðæÞÐÆƿ]', text):
         return 'ang'
@@ -412,6 +415,9 @@ def build(row, today, source_name, refs):
             # Jurasinski and Oliver print MS B's rubric after MS E's in the same cell.
             e_text, b_text, e_trans, b_trans = rubrics.split(code, clause, row['tTextXml'], row['translationXml'])
             lang = 'ang' if code in rubrics.RUBRIC_CODES else language(row['tText'])
+            if code in FRENCH_CODES:
+                # Anglo-Norman French, except the clauses Robertson supplies from the Latin version (MS L)
+                lang = 'la' if sig_key(row['tSig']) == 'L' else 'xno'
             texts.append(('editionText', lang, ed_src, e_text, row['editorNumber'], t_wit))
             if b_text:
                 b_wit = witness('B', MS_NAMES['B'])
@@ -656,6 +662,7 @@ GROUPS = {
     'Æthelberht': 'Æthelberht of Kent', 'Hlothhere': 'Hlothhere and Eadric of Kent', 'Wihtred': 'Wihtred of Kent',
     'Alfred': 'Alfred the Great', 'Ine': 'Ine of Wessex', 'Edward': 'Edward the Elder', 'Æthelstan': 'Æthelstan',
     'Edmund': 'Edmund I', 'Edgar': 'Edgar', 'Æthelred': 'Æthelred II', 'Cnut': 'Cnut',
+    'William': 'William I', 'Henry': 'Henry I',
 }
 OTHER = 'Other laws and legal texts'
 # Codes listed under another king than the one who issued them: the rubrics
