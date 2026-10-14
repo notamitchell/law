@@ -160,6 +160,7 @@ From [the cross-check of orfenins – propriatio](crosscheck-orfenins-propriatio
 | [ ] | 170 | *p* | 1) durch Ähnlichkeit mit **ƿ** (wynn), irrig für w | **þ** (thorn) | Already a judgement call in the README's transcription notes. |
 | [ ] | 170 | *pæn.* | pæn., **pæng̃.** (tilde over g) | **pænḡ.** (macron over g) | |
 | [ ] | 170 | *par* (F) | trespasser ~ iloc **ù** 28,2 | **u** | |
+| [ ] | 171 | *Particip* (F) | **1)** praes. mit estre … **II)** pf. **1)** im Passiv … | | Probably **I)** praes., to pair with II) pf. Found while adding the outline view. |
 | [ ] | 177 | *propensus* | wohlgeneigt Quadr zu CHn cor **1143** | **II43** | Perhaps 1 with a superscript? |
 
 ## prosecutio – sacu (pp. 178–187)
