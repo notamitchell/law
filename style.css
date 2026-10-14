@@ -631,6 +631,19 @@ h2.result-code .code-abbr { min-width: 0; margin-left: 0.4rem; }
 .liebermann-text p { margin: 0 0 0.5em; }
 .liebermann-text p:last-child { margin-bottom: 0; }
 .liebermann-text p.sense { padding-left: 1.4em; text-indent: -1.4em; }
+/* Liebermann's outline: one step of indent per level (see splitOutline). */
+.liebermann-text p.sense--depth-1 { margin-left: 1.5em; }
+.liebermann-text p.sense--depth-2 { margin-left: 3em; }
+.liebermann-text p.sense--depth-3 { margin-left: 4.5em; }
+.liebermann-text p.sense--depth-4 { margin-left: 6em; }
+.liebermann-text p.sense--roman, .liebermann-text p.sense--upper { margin-top: 0.9em; }
+.liebermann-text p.sense--depth-0 + p.sense--depth-1, .liebermann-text p.sense--depth-1 + p.sense--depth-2 { margin-top: 0; }
+@media (max-width: 600px) {
+    .liebermann-text p.sense--depth-1 { margin-left: 0.9em; }
+    .liebermann-text p.sense--depth-2 { margin-left: 1.8em; }
+    .liebermann-text p.sense--depth-3 { margin-left: 2.7em; }
+    .liebermann-text p.sense--depth-4 { margin-left: 3.6em; }
+}
 
 /* Laws search page */
 .clause-list li { align-items: baseline; }

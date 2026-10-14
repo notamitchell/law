@@ -493,6 +493,57 @@
         };
     }
 
+    /**
+     * Splits an entry's HTML into Liebermann's outline. He divides an entry
+     * with bold markers followed by ")": capital letters A), B); Roman
+     * numerals I), II); numbers 1), 2); small letters a), b). Their order
+     * varies from entry to entry (A) above I) in Gleitlaut, I) above A) in
+     * mid), so each kind of marker takes the depth at which it first
+     * appears, and returning to a kind closes the deeper ones.
+     * Returns { head, parts: [{ marker, kind, depth, body }] }. Markers
+     * inside another element, and a Roman numeral before the headword (it
+     * numbers words spelled alike), stay in the text. I, V and X count as
+     * capital letters only when they continue a run of letters (H) then I)).
+     */
+    function splitOutline(html) {
+        const text = String(html || '');
+        const marker = /<(strong|b)>([^<]{1,5})<\/\1>\)/g;
+        const cuts = [];
+        let lastUpper = '';
+        let m;
+        while ((m = marker.exec(text))) {
+            const before = text.slice(0, m.index);
+            const opened = (before.replace(/<(br|hr|img|wbr|input)\b[^>]*>/gi, '').match(/<[A-Za-z][^>]*[^/]>|<[A-Za-z]>/g) || []).length;
+            const closed = (before.match(/<\/[^>]+>/g) || []).length;
+            if (opened !== closed) continue;
+            const v = m[2];
+            let kind = '';
+            if (/^\d+[a-z]?$/.test(v)) kind = 'number';
+            else if (/^[IVX]+$/.test(v) && !(v.length === 1 && lastUpper && String.fromCharCode(lastUpper.charCodeAt(0) + 1) === v)) kind = 'roman';
+            else if (/^[A-Z]$/.test(v)) kind = 'upper';
+            else if (/^[a-z]$/.test(v)) kind = 'lower';
+            if (!kind) continue;
+            if (kind === 'upper') lastUpper = v;
+            // A Roman numeral with nothing but a language label before it
+            // numbers the headword (I) lac, II) lac).
+            if (kind === 'roman' && !before.replace(/<[^>]+>/g, '').replace(/^\s*[LF]?\s*$/, '').trim()) continue;
+            cuts.push({ at: m.index, end: m.index + m[0].length, marker: v, kind });
+        }
+        if (!cuts.length) return { head: text, parts: [] };
+        // A coarser kind never goes below finer ones only: Wi[e]lisc lists
+        // meanings a)–d) and then I) adj, II) sbst, which are not inside d).
+        const rank = { upper: 0, roman: 1, number: 2, lower: 3 };
+        const stack = [];
+        const parts = cuts.map((c, i) => {
+            let depth = stack.indexOf(c.kind);
+            if (depth === -1 && stack.length && stack.every(k => rank[k] > rank[c.kind])) stack.length = 0;
+            if (depth === -1) { stack.push(c.kind); depth = stack.length - 1; }
+            else stack.length = depth + 1;
+            return { marker: c.marker, kind: c.kind, depth, body: text.slice(c.end, i + 1 < cuts.length ? cuts[i + 1].at : text.length) };
+        });
+        return { head: text.slice(0, cuts[0].at), parts };
+    }
+
     /** The numbered meanings of an entry's TEI text as a <dictScrap type="senses">, or ''. */
     function sensesXml(entryTei, indent) {
         const { senses } = splitSenses(entryTei);
@@ -746,7 +797,7 @@ ${translation}
     const api = {
         TEI_NS, LANGUAGES, LANGUAGE_CODES, languageBadge,
         useDom, slugify, sortKey, alphaKey, letterOf, ALPHABET, escapeXml,
-        linkAbbreviations, loadAbbreviations, extractCitations, linkClauseNumbers, citationXr, splitSenses, sensesXml, detectLanguage, detectHeadword,
+        linkAbbreviations, loadAbbreviations, extractCitations, linkClauseNumbers, citationXr, splitSenses, splitOutline, sensesXml, detectLanguage, detectHeadword,
         inlineToTei, isEmptyHtml, buildEntryXml,
         renderTei, resolveTarget, readEntry
     };

@@ -67,11 +67,13 @@ scripts:
         return `<p class="def">${ELieb.renderTei(def || el, root)}</p>`;
     }
 
-    // Each numbered meaning (a bold "2)") starts a new paragraph.
+    // Liebermann's outline: each division (A), I), 2), b)) starts a new
+    // paragraph, indented one step for each level below the top.
     function paragraphs(html) {
-        const { head, senses } = ELieb.splitSenses(html, true);
-        if (!senses.length) return html;
-        return `<p>${head.trim()}</p>` + senses.map(s => `<p class="sense"><strong>${esc(s.n)}</strong>) ${s.body.trim()}</p>`).join('');
+        const { head, parts } = ELieb.splitOutline(html);
+        if (!parts.length) return html;
+        return (head.trim() ? `<p>${head.trim()}</p>` : '') + parts.map(s =>
+            `<p class="sense sense--${s.kind} sense--depth-${Math.min(s.depth, 4)}"><strong>${esc(s.marker)}</strong>) ${s.body.trim()}</p>`).join('');
     }
 
     function xrList(e, type) {
