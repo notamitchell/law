@@ -598,6 +598,13 @@ ul.citations li { break-inside: avoid; }
 .clause-texts h3.clause-subhead { margin-top: 1.4rem; }
 .clause-sources li:target { background: var(--highlight); }
 .clause-nav { display: flex; justify-content: space-between; gap: 1rem; margin: 1.5rem 0; }
+/* Entry pages: previous and next entries */
+.entry-nav { display: flex; justify-content: space-between; gap: 1rem; margin: 2rem 0 1.5rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+.entry-nav a { display: flex; flex-direction: column; text-decoration: none; max-width: 48%; }
+.entry-nav__next { text-align: right; margin-left: auto; }
+.entry-nav__label { font-family: var(--sans); font-size: 0.8rem; color: var(--muted); }
+.entry-nav__word { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; overflow-wrap: anywhere; }
+.entry-nav a:hover .entry-nav__word, .entry-nav a:focus-visible .entry-nav__word { text-decoration: underline; text-underline-offset: 3px; }
 /* Laws page: the list of law codes */
 .code-group h2 { font-size: 1.35rem; margin: 1.6em 0 0.4em; }
 .code-group-reign { font-family: var(--sans, inherit); font-size: 0.9rem; font-weight: 400; color: var(--muted); margin-left: 0.4rem; }

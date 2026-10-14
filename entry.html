@@ -43,6 +43,7 @@ scripts:
             target.innerHTML = render(e);
             linkClauses(e);
             showScanOnClick();
+            showNeighbours();
         })
         .catch(err => {
             if (err.message !== 'missing' && err.message !== 'parse') console.error(err);
@@ -180,6 +181,8 @@ scripts:
         ${links ? `<section class="entry-section"><h2>Other dictionaries</h2><p class="small muted">The same word in other dictionaries. Each opens in a new tab.</p><div class="dict-cards">${links}</div></section>` : ''}
         ${citations ? `<section class="entry-section"><h2>Law code citations</h2><ul class="citations">${citations}</ul></section>` : ''}
 
+        <nav class="entry-nav" aria-label="Previous and next entries" hidden></nav>
+
         <div class="suggest-change">
             <p>Spotted a mistake, or have a translation or link to add?</p>
             <a class="button" href="${root}contribute.html?id=${encodeURIComponent(slug)}">Suggest a change</a>
@@ -206,6 +209,27 @@ scripts:
                 </div>
             </aside>
         </div>`;
+    }
+
+    // Links to the previous and next entries in Liebermann's order, as the
+    // Dictionary page lists them. They are left out if the list can't load.
+    function showNeighbours() {
+        const nav = target.querySelector('.entry-nav');
+        if (!nav) return;
+        fetch(root + 'data/entry-order.json')
+            .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+            .then(list => {
+                const order = list.map(([id, hw, lang]) => ({ id, hw, lang, key: ELieb.alphaKey(hw) }))
+                    .sort((a, b) => (a.key < b.key ? -1 : a.key > b.key ? 1 : 0) || a.id.localeCompare(b.id, undefined, { numeric: true }));
+                const i = order.findIndex(x => x.id === slug);
+                if (i === -1) return;
+                const link = (x, dir) => x
+                    ? `<a class="entry-nav__${dir}" href="?id=${encodeURIComponent(x.id)}" rel="${dir}"><span class="entry-nav__label">${dir === 'prev' ? '← Previous' : 'Next →'}</span><span class="entry-nav__word">${esc(x.hw)} ${ELieb.languageBadge(x.lang || 'ang')}</span></a>`
+                    : '<span></span>';
+                nav.innerHTML = link(order[i - 1], 'prev') + link(order[i + 1], 'next');
+                nav.hidden = false;
+            })
+            .catch(() => {});
     }
 
     // The scan only loads from archive.org when the reader asks for it.
