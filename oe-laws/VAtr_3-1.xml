@@ -7,6 +7,7 @@
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
@@ -24,12 +25,13 @@
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">239</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">80</biblScope></bibl>
+          <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">448</biblScope></bibl>
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-g"><abbr>G</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
-          <witness xml:id="wit-g2"><abbr>G2</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i (second copy)</note></witness>
+          <witness xml:id="wit-g2"><abbr>G2</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i, second copy (in the part with entries in Archbishop Wulfstan’s hand)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -60,9 +62,11 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.1" corresp="#wit-g2">Ac elles geræde man friðlice stepra folce to þearfe ⁊ ne forspille for lytlum Godes handgeweorc ⁊ his agenne ceap, þe he deore gebohte.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="3[b]" corresp="#wit-d">ac elles geræde man friðlice steora folc to þearfe, ⁊ ne forspille for litlum Godes handgeweorc ⁊ his agenne ceap þe he deore gebohte.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">but, on the contrary, merciful punishments shall be determined upon for the public good, that the handiwork of God, and what he purchased for himself at a great price, be not destroyed for trivial offences.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-g">But otherwise life-sparing punishments are to be devised for the benefit of the people, and God’s handiwork and his own purchase which he paid for so dearly is not to be destroyed for small offences.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">Sondern anderweitig bestimme man [Leben] schonende Strafen, dem Volke zum Nutzen, und vernichte nicht um Geringes Gottes Händewerk und sein eigen Gut, das er theuer erkauft hat.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But let [life-]sparing punishments be decided on instead, for the benefit of the people, and let God's handiwork and his own property, which he bought dearly, not be destroyed for small [offences].</ab>
         <note type="editorial">G2's ‘stepra’ should be corrected to ‘steora’.</note>
+        <note type="translator" source="#whitelock">Chaps 3–3.1 use a Latin passage which occurs in the part of Cott.Nero A. 1 which has entries in Wulfstan’s hand; friðlice steora corresponds to penas salvandi in this, referring to punishments which will give the criminal opportunity to save his soul; friðlic is unique (cf. Old Norse friðligr “peaceable”), and may describe punishments which do not place a man outside the frið and allow him to be killed with impunity. The dictionaries render it “lenient”, but the alternatives to the death penalty, such as mutilation, in the Latin source cannot be thus described.</note>
       </div>
     </body>
   </text>
