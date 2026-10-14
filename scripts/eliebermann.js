@@ -313,7 +313,7 @@
     // Manuscripts and versions (Quadripartitus, Instituta Cnuti…). After a
     // passage they name the reading cited (Af 41 B); they are not codes, and
     // they are left out of the citation list.
-    const SIGLA = new Set(['MsA', 'B', 'Bu', 'C', 'D', 'E', 'F', 'G', 'H', 'Hk', 'I', 'K', 'Ld', 'O', 'Ot',
+    const SIGLA = new Set(['MsA', 'B', 'Bu', 'C', 'D', 'E', 'F', 'G', 'G2', 'H', 'Hk', 'I', 'K', 'Ld', 'O', 'Ot',
         'So', 'Vt', 'Io', 'Isp', 'Quadr', 'InCn', 'ConsCn', 'WlEdmr', 'Wb']);
     // Parts of a code: Af El 49 (Introduction), Af Rb 41 (rubric).
     const QUALIFIERS = new Set(['El', 'Rb', 'retr']);

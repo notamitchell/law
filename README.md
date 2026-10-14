@@ -79,6 +79,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 | `contribute.html` | *Suggest an entry*: makes, previews and downloads one entry's TEI file. `?id=` suggests a change to an existing entry, with the form filled in from its file. |
 | `import.html` | Bulk import of a Word document in the browser. Not on the site for now (`published: false`); see [docs/IMPORT.md](docs/IMPORT.md). |
 | `abbreviations.html`, `lawAbb.html`, `msAbb.html`, `gramAbb.html` | The abbreviation lists: law codes, manuscripts and grammatical abbreviations (`scripts/abbreviations.js`). |
+| `guide.html` | How to read an entry: Liebermann's own explanation of the dictionary (vol. II.1, p. IV) in English, with a key to his citations. |
 | `entries/*.xml` | **The dictionary.** One TEI file per entry. See [docs/SCHEMA.md](docs/SCHEMA.md). |
 | `pages/*.xml` | Text of the site pages, as TEI. |
 | `data/markLaw.json`, `data/manuscripts.json`, `data/markforward.json` | Law codes; manuscript sigla; grammatical abbreviations. Edit these to add a spelling that isn't linked. Manuscript sigla are linked like law codes (`law:H`, to `lawAbb.html#H`), and `lawAbb.html` sends a manuscript's link on to `msAbb.html`. |
