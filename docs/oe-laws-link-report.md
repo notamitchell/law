@@ -4,18 +4,19 @@ Made by `tools/link-citations.py --letter ALL`. It is replaced each time the too
 
 ```
 All entries: 9246 (with a law code citation list: 6309)
-Citations in their lists: 28096
-  linked, exact               1
-  linked, already linked  22409
-  LINKED TO A CLAUSE:       22410  (80% of all citations; 97% of those with a clause number to a code in the database)
-  not linked, clause not found            772
+Citations in their lists: 28406
+  linked, exact             304
+  linked, subclause           4
+  linked, already linked  22443
+  LINKED TO A CLAUSE:       22751  (80% of all citations; 97% of those with a clause number to a code in the database)
+  not linked, clause not found            774
   not linked, code not in database       4881
-Entries changed: 33; entries whose whole list is linked: 3450
+Entries changed: 203; entries whose whole list is linked: 3464
 ```
 
 ## The code is in the database but no clause file has that number
 
-By code: Ine (332), Af (173), Ath (34), Ger (32), Rect (28), IICn (23), ICn (21), Iudex (19), VIAtr (11), VAs (10), Northu (8), IIAtr (7), VIAs (7), IIAs (6), IVEg (6)
+By code: Ine (332), Af (173), Ath (34), Ger (32), Rect (28), IICn (23), ICn (21), Iudex (19), VIAtr (11), VAs (10), Northu (8), VIAs (8), IIAtr (7), IIAs (6), IVEg (6)
 
 Citations (with how many times each occurs):
 
