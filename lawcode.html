@@ -28,6 +28,24 @@ scripts:
             code.date ? 'Promulgated: ' + esc(code.date) : ''
         ].filter(Boolean);
         const sources = ['Liebermann'].concat(code.editors || []);
+        // Column headings name the source most of this code's clauses use;
+        // a clause from another source carries its own small label.
+        const commonest = key => {
+            const n = {};
+            mine.forEach(c => { if (c[key]) n[c[key]] = (n[c[key]] || 0) + 1; });
+            return Object.keys(n).sort((a, b) => n[b] - n[a])[0] || '';
+        };
+        const textLabel = commonest('oeLabel'), enLabel = commonest('glossLabel');
+        const lang = commonest('oeLang');
+        const textHead = (lang === 'la' ? 'Latin' : lang === 'ang' ? 'Old English' : 'Text') + (textLabel ? ': ' + textLabel : '');
+        const enHead = 'English' + (enLabel ? ': ' + enLabel : '');
+        // Brief: just "MS B" when the editor is the same as the heading's.
+        const tag = (label, usual) => {
+            if (!label || label === usual) return '';
+            const ed = usual.split(',')[0];
+            const short = label.startsWith(ed + ', ') ? label.slice(ed.length + 2) : label;
+            return `<span class="code-clause-src">${esc(short)}</span> `;
+        };
         target.innerHTML = `
             <p class="breadcrumb small"><a href="${root}laws.html">Laws</a> › ${esc(code.group)}</p>
             <header class="entry-header">
@@ -41,7 +59,12 @@ scripts:
                 <input type="search" id="find" placeholder="Find in this law code (clause number or words)" aria-label="Find in this law code">
                 <a class="button" href="${mine.length ? clauseUrl(mine[0].id) + '&all=1' : '#'}">Read with every text and translation</a>
             </div>
-            <p class="small muted">Each clause below gives the opening text in Liebermann’s edition and the first English translation. Click a clause number to see all its texts, manuscripts and translations.</p>
+            <p class="small muted">Each clause below gives the text of the first manuscript in Liebermann’s edition (his leftmost column) and Claude’s semi-literal English of Liebermann’s German translation. Where a clause has neither, another edition or translation is shown and labelled. Click a clause number to see all its texts, manuscripts and translations.</p>
+            <div class="code-clauses-head">
+                <span></span>
+                <span>${esc(textHead)}</span>
+                <span>${esc(enHead)}</span>
+            </div>
             <ol class="code-clauses" id="clauses"></ol>
             <nav class="clause-nav">
                 ${i > 0 ? `<a href="${codeUrl(codes[i - 1].code)}">← ${esc(codes[i - 1].name)}</a>` : '<span></span>'}
@@ -54,8 +77,8 @@ scripts:
             ol.innerHTML = shown.length ? shown.map(c => `
                 <li id="${esc(c.id)}">
                     <a class="code-clause-no" href="${clauseUrl(c.id)}">${esc(c.clause || c.citation)}</a>
-                    <p class="code-clause-oe">${esc(c.oe)}</p>
-                    <p class="code-clause-en">${esc(c.gloss)}</p>
+                    <p class="code-clause-oe">${tag(c.oeLabel, textLabel)}${esc(c.oe)}</p>
+                    <p class="code-clause-en">${tag(c.glossLabel, enLabel)}${esc(c.gloss)}</p>
                 </li>`).join('') : '<li class="muted">Nothing in this law code matches.</li>';
         };
         draw('');
