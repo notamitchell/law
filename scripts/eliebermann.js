@@ -114,7 +114,10 @@
      */
     function linkAbbreviations(html, markLaw, markforward) {
         const terms = [];
-        (markLaw || []).forEach(t => terms.push({ text: t['Gesetze Text'].trim(), anchor: t['Anchor'], type: 'law' }));
+        // Sigla marked "Link automatically": "no" (single letters such as L or S, and sigla spelled like a
+        // law code, e.g. Wi) are linked by hand only: in running text they are mostly something else.
+        (markLaw || []).filter(t => t['Link automatically'] !== 'no')
+            .forEach(t => terms.push({ text: t['Gesetze Text'].trim(), anchor: t['Anchor'], type: 'law' }));
         (markforward || []).forEach(t => terms.push({ text: t['Gesetze Text'].trim(), anchor: t['Anchor'], type: 'gram' }));
         const byText = new Map();
         terms.filter(t => t.text).forEach(t => { if (!byText.has(t.text)) byText.set(t.text, t); });

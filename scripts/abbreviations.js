@@ -15,7 +15,12 @@
     const EXTRA = [
         { field: 'Notes: Grammatical', label: 'Note' },
         { field: 'Notes: Information & Editions', label: 'Manuscripts and editions' },
-        { field: 'Notes: Start page in Liebermann Vol. I', label: 'Start page, vol. I' }
+        { field: 'Notes: Start page in Liebermann Vol. I', label: 'Start page, vol. I' },
+        // the list of manuscripts (data/manuscripts.json), from Liebermann's Gesetze I, pp. xiv, xviii–xlii
+        { field: 'Date (Liebermann)', label: 'Date (Liebermann)' },
+        { field: 'Laws in it', label: 'Laws in it' },
+        { field: 'Notes', label: 'Notes' },
+        { field: 'Liebermann I, page', label: 'Gesetze I, p.' }
     ];
     const FIELDS = ['Gesetze Text', 'German Expansion', 'English Translation'].concat(EXTRA.map(c => c.field));
     let groups = {};
