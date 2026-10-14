@@ -378,8 +378,9 @@ td.term { font-weight: 600; color: var(--navy-dark); white-space: nowrap; }
 }
 .liebermann-text a { text-decoration: none; border-bottom: 1px dotted var(--link); }
 /* Links in entries have a colour for each kind of place they lead:
-   law codes (brown), manuscripts (purple), grammatical abbreviations (blue). */
-:root { --law-code: #7a2e0e; --manuscript: #5b3a8e; --abbreviation: var(--link); }
+   law codes (brown), clause numbers (a brighter red, solid underline),
+   manuscripts (purple), grammatical abbreviations (blue). */
+:root { --law-code: #7a2e0e; --clause: #b8401f; --manuscript: #5b3a8e; --abbreviation: var(--link); }
 .liebermann-text a.ref-lawCode, .entry-section a.ref-lawCode { color: var(--law-code); border-bottom-color: var(--law-code); }
 .liebermann-text a.ref-manuscript, .entry-section a.ref-manuscript { color: var(--manuscript); border-bottom-color: var(--manuscript); }
 .liebermann-text a.ref-abbreviation { color: var(--abbreviation); border-bottom-color: var(--abbreviation); }
@@ -390,9 +391,9 @@ td.term { font-weight: 600; color: var(--navy-dark); white-space: nowrap; }
 .law-popup--law .law-popup-code { color: var(--law-code); }
 .law-popup--ms .law-popup-code { color: var(--manuscript); }
 .law-popup--gram .law-popup-code { color: var(--abbreviation); }
-.liebermann-text a.ref-clause { color: var(--law-code, #7a2e0e); border-bottom: 1px solid currentColor; }
+.liebermann-text a.ref-clause { color: var(--clause); border-bottom: 1px solid currentColor; }
 .liebermann-text a.ref-clause:hover, .liebermann-text a.ref-clause:focus-visible { background: var(--highlight); }
-.link-key--clause { color: var(--law-code, #7a2e0e); border-bottom-style: solid; }
+.link-key--clause { color: var(--clause); border-bottom-style: solid; }
 .liebermann-text .pb, .pb { font-family: var(--sans); font-size: 0.75rem; color: var(--muted); vertical-align: super; }
 .lang-marker { color: var(--navy); }
 
