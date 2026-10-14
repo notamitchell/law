@@ -139,7 +139,7 @@ MS_NAMES = {
     'B2': 'Cambridge, Corpus Christi College, MS 383 (second copy)',
     'D': 'Cambridge, Corpus Christi College, MS 201',
     'G': 'London, British Library, Cotton Nero A.i',
-    'G2': 'London, British Library, Cotton Nero A.i (second copy)',
+    'G2': 'London, British Library, Cotton Nero A.i, second text (another hand, c. 1060)',
     'A': 'London, British Library, Harley 55',
     'F': 'London, British Library, Cotton Nero E.i',
     'C': 'Cambridge, Corpus Christi College, MS 265',
