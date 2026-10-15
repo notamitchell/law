@@ -1,14 +1,19 @@
 {%- assign root = page.root | default: "" -%}
 {%- comment -%}
-  The whole site is eLiebermann. The Laws pages show the "lawcodes
-  database" logo, every other inner page the "legal dictionary" logo,
-  and the Home page the name alone.
+  The whole site is eLiebermann. Each section has its own logo: Laws
+  "lawcodes database", Guides "guide to the Gesetze", Dictionary
+  "legal dictionary"; Home, About and Make a suggestion show the name
+  alone.
 {%- endcomment -%}
 {%- assign brand = "eLiebermann" -%}
 {%- if page.section == "home" -%}
 {%- assign tagline = "The Laws of Early England, after Felix Liebermann" -%}
+{%- elsif page.section == "about" or page.section == "contribute" -%}
+{%- assign tagline = "The Laws of Early England, after Felix Liebermann" -%}
 {%- elsif page.section == "laws" -%}
 {%- assign tagline = "The Lawcodes of Early England: Texts and Translations" -%}
+{%- elsif page.section == "abbreviations" -%}
+{%- assign tagline = "A Guide to Felix Liebermann's Gesetze der Angelsachsen" -%}
 {%- else -%}
 {%- assign tagline = "A Dictionary of Early English Lawcodes" -%}
 {%- endif -%}
@@ -55,6 +60,14 @@
         {%- if page.section == "laws" %}
         <a class="site-brand" href="{{ root }}laws.html">
             <img class="site-lockup" src="{{ root }}images/eliebermann-lawcodes.svg" alt="eLiebermann: lawcodes database" width="511" height="110">
+        </a>
+        {%- elsif page.section == "abbreviations" %}
+        <a class="site-brand" href="{{ root }}abbreviations.html">
+            <img class="site-lockup" src="{{ root }}images/eliebermann-guides.svg" alt="eLiebermann: guide to the Gesetze" width="511" height="112">
+        </a>
+        {%- elsif page.section == "about" or page.section == "contribute" %}
+        <a class="site-brand" href="{{ root }}index.html">
+            <img class="site-lockup site-lockup--name" src="{{ root }}images/eliebermann.svg" alt="eLiebermann" width="510" height="74">
         </a>
         {%- else %}
         <a class="site-brand" href="{{ root }}dictionary.html">

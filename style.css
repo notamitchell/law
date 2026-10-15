@@ -98,9 +98,13 @@ code, pre, textarea.code { font-family: var(--mono); font-size: 0.9em; }
 /* The eLiebermann logo (name over "legal dictionary" or "lawcodes database")
    in the slim header of inner pages. */
 .site-lockup { display: block; height: 4rem; width: auto; }
+/* The name alone (About, Make a suggestion), at the same letter size as
+   the name in the two-line logos. */
+.site-lockup--name { height: 2.65rem; }
 /* On narrow phones the logo shrinks to fit rather than overflow. */
 @media (max-width: 26rem) {
     .site-lockup { height: auto; width: auto; max-width: 100%; max-height: 4rem; }
+    .site-lockup--name { max-height: 2.65rem; }
 }
 .site-header--slim .site-subtitle { margin: 0; color: var(--muted); font-size: 1.05rem; }
 
