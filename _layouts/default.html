@@ -1,16 +1,15 @@
 {%- assign root = page.root | default: "" -%}
 {%- comment -%}
-  Two brands share this site: the Home and Laws pages belong to the
-  Dōmas Database (the laws); every other page belongs to eLiebermann
-  (the dictionary). "domas" decides which banner, logo and name to show.
+  The whole site is eLiebermann. The Laws pages show the "lawcodes
+  database" logo, every other inner page the "legal dictionary" logo,
+  and the Home page the name alone.
 {%- endcomment -%}
-{%- assign domas = false -%}
-{%- if page.section == "home" or page.section == "laws" -%}{%- assign domas = true -%}{%- endif -%}
-{%- if domas -%}
-{%- assign brand = "The Dōmas Database" -%}
+{%- assign brand = "eLiebermann" -%}
+{%- if page.section == "home" -%}
+{%- assign tagline = "The Laws of Pre-Conquest England, after Felix Liebermann" -%}
+{%- elsif page.section == "laws" -%}
 {%- assign tagline = "The Law Codes of Pre-Conquest England: Texts and Translations" -%}
 {%- else -%}
-{%- assign brand = "eLiebermann" -%}
 {%- assign tagline = "An Online Dictionary of Pre-Conquest English Law" -%}
 {%- endif -%}
 <!DOCTYPE html>
@@ -43,37 +42,25 @@
 <body class="{% if page.full_width %}full-width{% endif %}{% if page.section == "home" %} home{% endif %}">
     <a class="skip-link" href="#main">Skip to content</a>
 
-    {%- comment -%}
-      Full banner on the Home page (Dōmas) and on any page whose front
-      matter says `banner: eliebermann` (the Dictionary page); a slim
-      header everywhere else.
-    {%- endcomment -%}
-    {%- if page.section == "home" or page.banner == "eliebermann" %}
+    {%- if page.section == "home" %}
     <header class="site-header">
-        {%- if page.banner == "eliebermann" %}
-        <a class="site-banner" href="{{ root }}dictionary.html">
-            <img src="{{ root }}images/eliebermann-banner.svg" alt="eLiebermann, with a portrait of Felix Liebermann" width="1200" height="300">
-        </a>
-        {%- else %}
         <a class="site-banner" href="{{ root }}index.html">
-            <img src="{{ root }}images/domas-banner.svg" alt="The Dōmas Database" width="1200" height="300">
+            <img src="{{ root }}images/eliebermann.svg" alt="eLiebermann" width="510" height="74">
         </a>
-        {%- endif %}
         <p class="site-subtitle">{{ tagline }}</p>
         <p class="construction"><span>Site under construction</span></p>
     </header>
     {%- else %}
     <header class="site-header site-header--slim">
-        {%- if domas %}
-        <a class="site-brand" href="{{ root }}index.html">
-            <img class="site-lockup" src="{{ root }}images/domas-logo.svg" alt="The Dōmas Database" width="295" height="94">
+        {%- if page.section == "laws" %}
+        <a class="site-brand" href="{{ root }}laws.html">
+            <img class="site-lockup" src="{{ root }}images/eliebermann-lawcodes.svg" alt="eLiebermann: lawcodes database" width="511" height="110">
         </a>
         {%- else %}
         <a class="site-brand" href="{{ root }}dictionary.html">
-            <img class="site-lockup" src="{{ root }}images/eliebermann-logo.svg" alt="eLiebermann" width="619" height="101">
+            <img class="site-lockup" src="{{ root }}images/eliebermann-dictionary.svg" alt="eLiebermann: legal dictionary" width="511" height="112">
         </a>
         {%- endif %}
-        <p class="site-subtitle">{{ tagline }}</p>
         <p class="construction"><span>Site under construction</span></p>
     </header>
     {%- endif %}
