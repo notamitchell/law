@@ -28,6 +28,18 @@
      * The little tag after a headword in lists: "OE" for Old English (with
      * "Old English" as its tooltip), and the full name for the others.
      */
+    // Languages the reader has chosen to hide ("Hide French", "Hide Latin" on the
+    // Dictionary page). Remembered in this browser, so the entry pages' Previous
+    // and Next links and the search suggestions skip them too.
+    const HIDE_KEY = 'eliebermann.hiddenLanguages';
+    function hiddenLanguages() {
+        try { return new Set(JSON.parse(localStorage.getItem(HIDE_KEY) || '[]')); } catch (e) { return new Set(); }
+    }
+    function setHiddenLanguages(set) {
+        try { localStorage.setItem(HIDE_KEY, JSON.stringify([...set])); } catch (e) { /* not remembered */ }
+    }
+    const isShown = (lang, hidden) => !(hidden || hiddenLanguages()).has(lang || 'ang');
+
     function languageBadge(lang) {
         const name = LANGUAGES[lang] || lang;
         const text = lang === 'ang' ? 'OE' : name;
@@ -804,7 +816,7 @@ ${translation}
     }
 
     const api = {
-        TEI_NS, LANGUAGES, LANGUAGE_CODES, languageBadge,
+        TEI_NS, LANGUAGES, LANGUAGE_CODES, languageBadge, hiddenLanguages, setHiddenLanguages, isShown,
         useDom, slugify, sortKey, alphaKey, letterOf, ALPHABET, escapeXml,
         linkAbbreviations, loadAbbreviations, extractCitations, linkClauseNumbers, citationXr, splitSenses, splitOutline, sensesXml, detectLanguage, detectHeadword,
         inlineToTei, isEmptyHtml, buildEntryXml,

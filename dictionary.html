@@ -23,6 +23,10 @@ scripts:
     </select>
     <label class="small" style="align-self:center; font-weight:400"><input type="checkbox" id="fulltext"> Also search Liebermann's text</label>
 </div>
+<div class="hide-langs" role="group" aria-label="Hide entries in a language">
+    <button type="button" class="hide-lang" data-hide="fro" aria-pressed="false">Hide French</button>
+    <button type="button" class="hide-lang" data-hide="la" aria-pressed="false">Hide Latin</button>
+</div>
 
 <ul class="letter-index" id="letters"></ul>
 <p id="count" class="muted small"></p>
@@ -44,6 +48,31 @@ const ENTRY_FILES = [{% for f in entry_files %}"{{ f.basename }}"{% unless forlo
     lang.value = params.get('lang') || '';
     fulltext.checked = params.get('text') === '1';
     let entries = [];
+    // "Hide French" / "Hide Latin": remembered in this browser (see ELieb.hiddenLanguages),
+    // so the entry pages' Previous and Next links and the search suggestions follow them.
+    let hidden = ELieb.hiddenLanguages();
+    const hideButtons = [...document.querySelectorAll('[data-hide]')];
+    const NAMES = { fro: 'French', la: 'Latin' };
+    function showButtons() {
+        hideButtons.forEach(b => {
+            const on = hidden.has(b.dataset.hide);
+            b.setAttribute('aria-pressed', String(on));
+            b.textContent = (on ? 'Show ' : 'Hide ') + NAMES[b.dataset.hide];
+        });
+    }
+    hideButtons.forEach(b => b.addEventListener('click', () => {
+        const l = b.dataset.hide;
+        if (hidden.has(l)) hidden.delete(l); else hidden.add(l);
+        if (hidden.has(l) && lang.value === l) lang.value = '';   // hiding a language undoes choosing it
+        ELieb.setHiddenLanguages(hidden);
+        showButtons();
+        update();
+    }));
+    lang.addEventListener('input', () => {
+        // Choosing a language in the list shows it again.
+        if (hidden.delete(lang.value)) { ELieb.setHiddenLanguages(hidden); showButtons(); }
+    });
+    showButtons();
     let present = new Set();      // the letters that have entries at all
 
     const fold = s => ELieb.sortKey(s).replace(/-/g, '');
@@ -54,6 +83,7 @@ const ENTRY_FILES = [{% for f in entry_files %}"{{ f.basename }}"{% unless forlo
         const term = fold(q.value.trim());
         const raw = q.value.trim().toLowerCase();
         const list = entries.filter(e =>
+            ELieb.isShown(e.lang, hidden) &&
             (!lang.value || e.lang === lang.value) &&
             (!term || fold(e.hw).includes(term) || (fulltext.checked && (e.text || '').toLowerCase().includes(raw))));
 
@@ -64,7 +94,9 @@ const ENTRY_FILES = [{% for f in entry_files %}"{{ f.basename }}"{% unless forlo
         // Only letters that begin at least one headword (X has none), whatever the search.
         document.getElementById('letters').innerHTML = ELieb.ALPHABET.filter(l => present.has(l)).map(l =>
             byLetter[l] ? `<li><a href="#letter-${l}">${l}</a></li>` : `<li><span>${l}</span></li>`).join('');
-        document.getElementById('count').textContent = `${list.length} of ${entries.length} entries`;
+        const hiddenNames = ['fro', 'la'].filter(l => hidden.has(l)).map(l => NAMES[l]);
+        document.getElementById('count').textContent = `${list.length} of ${entries.length} entries`
+            + (hiddenNames.length ? ` (${hiddenNames.join(' and ')} entries hidden)` : '');
 
         if (!list.length) {
             results.innerHTML = `<p>No entries match. <a href="${root}contribute.html">Suggest an entry</a> if it's missing.</p>`;
