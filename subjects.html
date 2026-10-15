@@ -1,0 +1,227 @@
+---
+title: Subjects
+section: laws
+description: Browse the clauses of the Old English laws by subject — legal matters, people and places — and see how each subject runs through the law codes.
+scripts:
+  - "ROOT/scripts/eliebermann.js"
+---
+<article id="subjects"><p class="loading">Loading the subjects…</p></article>
+
+<script>
+(function () {
+    const root = window.SITE_ROOT || '';
+    const target = document.getElementById('subjects');
+    const params = new URLSearchParams(location.search);
+    const wanted = params.get('k') || '';
+    const esc = ELieb.escapeXml;
+    const fold = s => ELieb.slugify(s || '').toLowerCase().replace(/-/g, ' ').trim();
+    const plural = (n, one, many) => n.toLocaleString('en-GB') + ' ' + (n === 1 ? one : many);
+    const subjectUrl = k => root + 'subjects.html?k=' + encodeURIComponent(k);
+    const clauseUrl = id => root + 'law.html?id=' + encodeURIComponent(id);
+    const codeUrl = code => root + 'lawcode.html?code=' + encodeURIComponent(code);
+    const FIELDS = ['offences', 'people', 'places'];
+    const OTHER = 'Other laws and legal texts';
+    let SORT = 'count';
+    try { SORT = localStorage.getItem('subjects-sort') || 'count'; } catch (e) { /* no storage */ }
+
+    // The law codes in the order of the timeline: the kings in turn, then the
+    // undated and other texts at the end.
+    function timelineOrder(codes) {
+        return codes.filter(c => c.group !== OTHER).concat(codes.filter(c => c.group === OTHER));
+    }
+
+    // ---------------------------------------------------------------- the index
+
+    function drawIndex(data, clauses) {
+        document.title = 'Subjects · eLiebermann';
+        const count = {};   // field -> term -> clauses
+        FIELDS.forEach(f => { count[f] = {}; });
+        clauses.forEach(c => FIELDS.forEach(f => c[f].forEach(k => { count[f][k] = (count[f][k] || 0) + 1; })));
+        const tagged = clauses.filter(c => FIELDS.some(f => c[f].length)).length;
+        const total = FIELDS.reduce((n, f) => n + Object.keys(count[f]).length, 0);
+
+        const term = (k, n) => `<li data-k="${esc(fold(k))}"><a href="${subjectUrl(k)}">${esc(k)}</a> <span class="subject-n">${n}</span></li>`;
+        const sorted = (terms, f) => terms.filter(k => count[f][k])
+            .sort(SORT === 'az' ? (a, b) => a.localeCompare(b) : (a, b) => count[f][b] - count[f][a] || a.localeCompare(b));
+
+        const sections = data.sections.map(sec => {
+            const f = sec.field;
+            const placed = new Set(sec.general);
+            sec.groups.forEach(g => { g.terms.forEach(k => placed.add(k)); if (g.broad) placed.add(g.broad); });
+            const others = Object.keys(count[f]).filter(k => !placed.has(k));
+            const groups = sec.groups.concat(others.length ? [{ name: 'Other', broad: null, terms: others }] : []);
+            const general = sec.general.filter(k => count[f][k]);
+            return `
+            <section class="subject-section" id="${esc(sec.id)}">
+                <h2>${esc(sec.title)} <span class="subject-section-n">${plural(Object.keys(count[f]).length, 'subject', 'subjects')}</span></h2>
+                <p class="muted">${esc(sec.intro)}${general.length ? ` The broadest keywords, ${general.map(k => `<a href="${subjectUrl(k)}">${esc(k)}</a> (${count[f][k]})`).join(' and ')}, are on too many clauses to browse here.` : ''}</p>
+                <div class="subject-groups">${groups.map(g => {
+                    const list = sorted(g.terms, f);
+                    if (!list.length && !(g.broad && count[f][g.broad])) return '';
+                    return `
+                    <div class="subject-group">
+                        <h3>${esc(g.name)}</h3>
+                        ${g.broad && count[f][g.broad] ? `<p class="subject-broad">All tagged <a href="${subjectUrl(g.broad)}">${esc(g.broad)}</a> <span class="subject-n">${count[f][g.broad]}</span></p>` : ''}
+                        <ul class="subject-terms">${list.map(k => term(k, count[f][k])).join('')}</ul>
+                    </div>`;
+                }).join('')}
+                </div>
+            </section>`;
+        }).join('');
+
+        target.innerHTML = `
+            <h1>Subjects</h1>
+            <p class="lede">The clauses of the laws have been read and indexed by hand, for this database: the legal matters it deals with, the people it concerns, and the places it names. Browse the subjects below to find every clause on a subject, and to see how it runs through the law codes from Æthelberht to Henry I.</p>
+            <p class="small muted">${plural(total, 'subject', 'subjects')} on ${plural(tagged, 'clause', 'clauses')}. The number after each subject is the number of clauses indexed with it.</p>
+            <div class="subject-tools">
+                <input type="search" id="find" placeholder="Find a subject, e.g. Theft, Widow, Churches" aria-label="Find a subject">
+                <div class="subject-sort" role="group" aria-label="Order of subjects">
+                    <button type="button" class="hide-lang" data-sort="count" aria-pressed="${SORT !== 'az'}">Most clauses first</button>
+                    <button type="button" class="hide-lang" data-sort="az" aria-pressed="${SORT === 'az'}">A–Z</button>
+                </div>
+            </div>
+            <nav class="subject-jump small" aria-label="Sections">${data.sections.map(s => `<a href="#${esc(s.id)}">${esc(s.title)}</a>`).join(' · ')}</nav>
+            <p id="none" class="muted" hidden>No subject matches. <a href="${root}laws.html">Search the texts of the clauses instead.</a></p>
+            ${sections}`;
+
+        const find = document.getElementById('find');
+        find.addEventListener('input', () => {
+            const t = fold(find.value);
+            let any = false;
+            target.querySelectorAll('.subject-terms li').forEach(li => { const on = !t || li.dataset.k.includes(t); li.hidden = !on; any = any || on; });
+            target.querySelectorAll('.subject-group').forEach(g => { g.hidden = !!t && !g.querySelector('.subject-terms li:not([hidden])'); });
+            target.querySelectorAll('.subject-section').forEach(s => { s.hidden = !!t && !s.querySelector('.subject-group:not([hidden])'); });
+            document.getElementById('none').hidden = any;
+        });
+        target.querySelectorAll('[data-sort]').forEach(b => b.addEventListener('click', () => {
+            SORT = b.dataset.sort;
+            try { localStorage.setItem('subjects-sort', SORT); } catch (e) { /* no storage */ }
+            const t = find.value;
+            drawIndex(data, clauses);
+            const f2 = document.getElementById('find');
+            f2.value = t; f2.dispatchEvent(new Event('input'));
+        }));
+    }
+
+    // -------------------------------------------------------------- one subject
+
+    function drawSubject(k, data, clauses, codes) {
+        const fieldsOf = FIELDS.filter(f => clauses.some(c => c[f].includes(k)));
+        const mine = clauses.filter(c => fieldsOf.some(f => c[f].includes(k)));
+        document.title = k + ' · Subjects · eLiebermann';
+
+        // Where it sits: section, group, and the indexer's broader or narrower keywords.
+        const places = [];
+        let narrower = [], broader = '';
+        data.sections.forEach(sec => {
+            if (!fieldsOf.includes(sec.field)) return;
+            const g = sec.groups.find(g => g.terms.includes(k) || g.broad === k);
+            places.push({ sec, g });
+            if (g && g.broad === k) narrower = g.terms;
+            else if (g && g.broad) broader = g.broad;
+        });
+
+        // The timeline: every law code, with the number of this subject's clauses in it.
+        const order = timelineOrder(codes);
+        const perCode = {}, sizeOf = {};
+        clauses.forEach(c => { sizeOf[c.code] = (sizeOf[c.code] || 0) + 1; });
+        mine.forEach(c => { perCode[c.code] = (perCode[c.code] || 0) + 1; });
+        const max = Math.max(1, ...Object.values(perCode));
+        const inCodes = Object.keys(perCode).length;
+        // Short labels for the kings' groups; the bars' own labels name each law code.
+        const SHORT = {
+            'Æthelberht of Kent': 'Kent', 'Hlothhere and Eadric of Kent': 'Kent', 'Wihtred of Kent': 'Kent',
+            'Alfred the Great': 'Alfred & Ine', 'Ine of Wessex': 'Alfred & Ine',
+            'Edward the Elder': 'Edward', 'Edmund I': 'Edmund', 'Æthelred II': 'Æthelred II'
+        };
+        SHORT[OTHER] = 'Other texts';
+        // A law code none of whose clauses has been indexed yet.
+        const indexed = new Set(clauses.filter(c => FIELDS.some(f => c[f].length)).map(c => c.code));
+        const kings = [];
+        order.forEach(c => {
+            const label = SHORT[c.group] || c.group;
+            const last = kings[kings.length - 1];
+            if (last && last.name === label) last.codes.push(c); else kings.push({ name: label, other: c.group === OTHER, codes: [c] });
+        });
+        const strip = `
+            <figure class="subject-timeline">
+                <figcaption><strong>Through the law codes</strong> <span class="muted">Clauses on this subject in each law code, from the earliest to the latest. Point to a bar for details; click it to go to that law code below.</span></figcaption>
+                <div class="timeline-scroll"><div class="timeline" style="min-width:${order.length * 13}px">${kings.map(g => {
+                    const unindexed = g.codes.every(c => !indexed.has(c.code));
+                    return `
+                    <div class="timeline-king${g.other ? ' timeline-other' : ''}${unindexed ? ' timeline-unindexed' : ''}" style="flex-grow:${g.codes.length}">
+                        <div class="timeline-bars">${g.codes.map(c => {
+                            const n = perCode[c.code] || 0;
+                            const tip = `${c.code} · ${c.name}: ${!indexed.has(c.code) ? 'not yet indexed' : n ? plural(n, 'clause', 'clauses') + ' of ' + sizeOf[c.code] : 'none'}`;
+                            return n
+                                ? `<a class="timeline-bar" href="#code-${esc(c.code.replace(/\W+/g, '-'))}" title="${esc(tip)}" aria-label="${esc(tip)}"><span style="height:${Math.max(6, Math.round(n / max * 100))}%"></span></a>`
+                                : `<span class="timeline-bar timeline-empty" title="${esc(tip)}"><span></span></span>`;
+                        }).join('')}</div>
+                        <div class="timeline-label">${esc(g.name)}${unindexed ? '<br><em>not yet indexed</em>' : ''}</div>
+                    </div>`;
+                }).join('')}
+                </div></div>
+                <p class="timeline-scale small muted">Tallest bar: ${plural(max, 'clause', 'clauses')}.</p>
+            </figure>`;
+
+        // Related: the keywords most often indexed together with this one.
+        const skip = new Set([k, broader].concat(...data.sections.map(s => s.general)));
+        const co = {};
+        mine.forEach(c => FIELDS.forEach(f => c[f].forEach(x => { if (!skip.has(x)) co[x] = (co[x] || 0) + 1; })));
+        const related = Object.keys(co).sort((a, b) => co[b] - co[a] || a.localeCompare(b)).slice(0, 14);
+        const chipList = list => `<span class="chips">${list.map(x => `<a class="chip" href="${subjectUrl(x)}">${esc(x)}</a>`).join('')}</span>`;
+
+        // The clauses, by law code in timeline order.
+        const byCode = {};
+        mine.forEach(c => { (byCode[c.code] = byCode[c.code] || []).push(c); });
+        const list = order.filter(c => byCode[c.code]).map(c => `
+            <section class="subject-code" id="code-${esc(c.code.replace(/\W+/g, '-'))}">
+                <h3><a href="${codeUrl(c.code)}">${esc(c.name)}</a> <span class="subject-code-meta">${esc(c.code)} · ${plural(byCode[c.code].length, 'clause', 'clauses')}</span></h3>
+                <ol class="code-clauses">${byCode[c.code].map(x => `
+                    <li>
+                        <a class="code-clause-no" href="${clauseUrl(x.id)}">${esc(x.clause || x.citation)}</a>
+                        <p class="code-clause-oe">${esc(x.oe)}</p>
+                        <p class="code-clause-en">${esc(x.gloss)}</p>
+                    </li>`).join('')}
+                </ol>
+            </section>`).join('');
+
+        const crumbs = places.map(p => `<a href="${root}subjects.html#${esc(p.sec.id)}">${esc(p.sec.title)}</a>${p.g ? ' › ' + esc(p.g.name) : ''}`).join(' · ');
+        target.innerHTML = `
+            <p class="breadcrumb small"><a href="${root}subjects.html">Subjects</a>${crumbs ? ' › ' + crumbs : ''}</p>
+            <header class="entry-header">
+                <h1>${esc(k)}</h1>
+                <div class="meta"><span>${plural(mine.length, 'clause', 'clauses')} in ${plural(inCodes, 'law code', 'law codes')}</span></div>
+            </header>
+            ${strip}
+            <dl class="kw-groups subject-related">
+                ${broader ? `<dt>Broader</dt><dd>${chipList([broader])}</dd>` : ''}
+                ${narrower.length ? `<dt>Narrower</dt><dd>${chipList(narrower.filter(x => clauses.some(c => FIELDS.some(f => c[f].includes(x)))))}</dd>` : ''}
+                ${related.length ? `<dt>Often with</dt><dd>${chipList(related)}</dd>` : ''}
+            </dl>
+            <div class="subject-list-head">
+                <h2>The clauses</h2>
+                <a class="button" href="${root}laws.html?kw=${encodeURIComponent(k)}">Search within these clauses</a>
+            </div>
+            <p class="small muted">Each clause gives the text of the first manuscript in Liebermann’s edition and Claude’s semi-literal English of Liebermann’s German, as on the law code pages.</p>
+            ${list}`;
+        if (location.hash) { const el = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (el) el.scrollIntoView(); }
+    }
+
+    Promise.all([
+        fetch(root + 'data/subject-groups.json').then(r => r.json()),
+        fetch(root + 'data/laws.json').then(r => r.json()),
+        fetch(root + 'oe-laws/codes.json').then(r => r.json())
+    ]).then(([data, clauses, codes]) => {
+        codes = codes.filter(c => clauses.some(x => x.code === c.code));
+        if (!wanted) return drawIndex(data, clauses);
+        const all = new Set(clauses.flatMap(c => FIELDS.flatMap(f => c[f])));
+        const k = all.has(wanted) ? wanted : [...all].find(x => fold(x) === fold(wanted));
+        if (!k) {
+            target.innerHTML = `<h1>Subject not found</h1><p>No clause is indexed with “${esc(wanted)}”. <a href="${root}subjects.html">See all the subjects.</a></p>`;
+            return;
+        }
+        drawSubject(k, data, clauses, codes);
+    }).catch(() => { target.innerHTML = '<p>The subjects could not be loaded.</p>'; });
+})();
+</script>
