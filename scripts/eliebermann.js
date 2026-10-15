@@ -444,7 +444,13 @@
                 if (n.localName === 'a') return put(n.textContent, null, 0);
                 if (n.localName === 'sup' && !n.classList.contains('lang-marker')) return put('\u0004', null, 0);
                 if (n.localName === 'br' || n.classList.contains('pb')) return put(' ', null, 0);
+                // A paragraph ends a citation: without the break, "II As 20,5"
+                // at the end of one sense ran into the next sense's "2)" and
+                // was read as 20,52.
+                const block = /^(p|div|li|ol|ul)$/.test(n.localName);
+                if (block) put(' ', null, 0);
                 walk(n);
+                if (block) put(' ', null, 0);
             });
         };
         walk(container);
