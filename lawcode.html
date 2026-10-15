@@ -55,14 +55,11 @@ scripts:
             <p>${mine.length} clauses.
                ${code.manuscripts && code.manuscripts.length ? `Manuscripts: ${code.manuscripts.map(esc).join(', ')}.` : ''}
                Editions and translations: ${sources.map(esc).join(', ')}.</p>
-            <aside class="code-callout">
-                <p><strong>This page is a summary: one text and one translation of each clause.</strong>
-                   Each clause has its own page with <strong>all</strong> its texts, manuscripts, editions and translations, and its notes, cross-references and keywords. Click a clause number, or <em>All texts and translations</em> under any clause, to open it.</p>
-                <p><a class="button" href="${mine.length ? clauseUrl(mine[0].id) + '&all=1' : '#'}">Read the whole law code with every text and translation</a></p>
-            </aside>
             <div class="code-tools">
                 <input type="search" id="find" placeholder="Find in this law code (clause number or words)" aria-label="Find in this law code">
+                <a class="button" href="${mine.length ? clauseUrl(mine[0].id) + '&all=1' : '#'}">Read with every text and translation</a>
             </div>
+            <p class="code-callout">Below is the code in summary form: one text and one translation of each clause. Each clause has its own page with all its texts, manuscripts, editions and translations, and its notes, cross-references and keywords. Click a clause number, or <em>All texts and translations</em> under any clause, to open it.</p>
             <p class="small muted">The summary gives the text of the first manuscript in Liebermann’s edition (his leftmost column) and Claude’s semi-literal English of Liebermann’s German translation. Where a clause has neither, another edition or translation is shown and labelled.</p>
             <div class="code-clauses-head">
                 <span></span>
