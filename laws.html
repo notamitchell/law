@@ -8,7 +8,7 @@ scripts:
 ---
 <h1>Laws</h1>
 
-<p class="lede">The law codes of early England, as Liebermann edited them, with additional editions and translations. Choose a law code to read it clause by clause, or search the clauses below.</p>
+<p class="lede">The law codes of early England, as Liebermann edited them, with additional editions and translations. Choose a law code to read it clause by clause, <a href="subjects.html">browse the clauses by subject</a>, or search the clauses below.</p>
 
 <div class="search-bar" role="search">
     <input type="search" id="q" placeholder="Law code and clause, e.g. Ine 23, Alfred 5, II Cnut 30,1" aria-label="Search by law code (abbreviation or name) and clause">
@@ -21,7 +21,7 @@ scripts:
 <p id="count" class="muted small"></p>
 <div id="results"><p class="loading">Loading the law codes…</p></div>
 
-<p class="small muted">Keywords name kinds of people and places (<em>Bishops</em>, <em>Churches</em>), not individuals.</p>
+<p class="small muted">Keywords name legal matters, kinds of people and places (<em>Theft</em>, <em>Bishops</em>, <em>Churches</em>). <a href="subjects.html">Browse them all by subject.</a></p>
 
 <script>
 (function () {
@@ -42,6 +42,7 @@ scripts:
     let clauses = [];
     let codes = [];
     let searcher = null;
+    let allTerms = [];
     const byCode = {};
 
     const esc = ELieb.escapeXml;
@@ -139,7 +140,10 @@ scripts:
 
         const readAs = reading && reading.exact && !law.value
             ? ` · read as <strong>${reading.codes.map(esc).join(', ')}${reading.clause ? ' ' + esc(clauseLabel(reading.clause)) : ''}</strong>` : '';
-        count.innerHTML = `${list.length} of ${clauses.length} clauses${readAs}`;
+        // A keyword that is a subject: link to its page, with the timeline.
+        const subject = kw.value.trim() && allTerms.find(t => fold(t) === kword);
+        count.innerHTML = `${list.length} of ${clauses.length} clauses${readAs}` +
+            (subject ? ` · <a href="${root}subjects.html?k=${encodeURIComponent(subject)}">See “${esc(subject)}” through all the law codes</a>` : '');
         if (!list.length) {
             results.innerHTML = '<p>No clauses match. Try a shorter search, or leave the keyword empty.</p>' + ambiguous();
             return;
@@ -221,6 +225,7 @@ scripts:
             `<optgroup label="${esc(g.name)}">${g.items.map(c => `<option value="${esc(c.code)}">${esc(c.code)} – ${esc(c.name)}</option>`).join('')}</optgroup>`).join('');
         law.value = byCode[wantedLaw] ? wantedLaw : '';
         const terms = [...new Set(list.flatMap(keywords))].sort((a, b) => a.localeCompare(b));
+        allTerms = terms;
         document.getElementById('kwlist').innerHTML = terms.map(t => `<option value="${esc(t)}">`).join('');
         draw();
     }).catch(() => { results.innerHTML = '<p>The law codes could not be loaded.</p>'; });

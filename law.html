@@ -486,9 +486,9 @@ scripts:
         if (kw.length) {
             const s = el('section', 'entry-section');
             s.appendChild(el('h2', null, 'Keywords'));
-            s.appendChild(el('p', 'small muted', 'Click a keyword to find the other law code clauses tagged with it.'));
-            // Each keyword is a bubble, as in the Laws page's search results, linking to that search.
-            const names = { 'offence-legal-event': 'Offence / legal event', people: 'People', locations: 'Locations' };
+            s.appendChild(el('p', 'small muted', 'Click a keyword to see every clause indexed with it, through all the law codes.'));
+            // Each keyword is a bubble, linking to its page under Subjects.
+            const names = { 'offence-legal-event': 'Legal matters', people: 'People', locations: 'Places' };
             const dl = el('dl', 'kw-groups');
             kw.forEach(k => {
                 dl.appendChild(el('dt', null, names[k.getAttribute('n')] || k.getAttribute('n') || 'Keywords'));
@@ -496,7 +496,7 @@ scripts:
                 const chips = el('span', 'chips');
                 tei(k, 'term').forEach(x => {
                     const a = el('a', 'chip', x.textContent.trim());
-                    a.href = root + 'laws.html?kw=' + encodeURIComponent(x.textContent.trim());
+                    a.href = root + 'subjects.html?k=' + encodeURIComponent(x.textContent.trim());
                     a.title = 'Other clauses tagged “' + x.textContent.trim() + '”';
                     chips.appendChild(a);
                 });
