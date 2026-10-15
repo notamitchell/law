@@ -28,7 +28,7 @@
      * The little tag after a headword in lists: "OE" for Old English (with
      * "Old English" as its tooltip), and the full name for the others.
      */
-    // Languages the reader has chosen to hide ("Hide French", "Hide Latin" on the
+    // Languages the reader has chosen to hide ("Hide Old English", "Hide Latin" etc. on the
     // Dictionary page). Remembered in this browser, so the entry pages' Previous
     // and Next links and the search suggestions skip them too.
     const HIDE_KEY = 'eliebermann.hiddenLanguages';
