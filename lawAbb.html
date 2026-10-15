@@ -8,25 +8,27 @@ scripts:
 
 <p class="lede">Law codes and legal texts as Liebermann abbreviates them, with their German expansions and English names. Entries link here when they cite a law code. The manuscripts have <a href="msAbb.html">a list of their own</a>.</p>
 
+<p class="small">The <strong>German expansion</strong> and the <strong>start page</strong> are as Liebermann prints them in his list of abbreviations (“Alphabetisches Verzeichniss der Citirzeichen”, <em>Gesetze</em> I, p. xi), with his ditto marks written out; a few abbreviations used in the dictionary that are not in that list say so. <strong>English</strong> gives the names editors use (Attenborough, Robertson, Whitelock, Oliver, Jurasinski and Oliver, Rabin), with the editor named where the names differ. Everything else (manuscripts, editions, where a code was issued) is under <strong>Manuscripts, editions and notes</strong>.</p>
+
 <div class="notice warn">
-    <p><span class="wip-badge">Under construction</span> The <strong>Manuscripts and editions</strong> and <strong>Start page, vol. I</strong> columns have just been corrected, and are still being checked. Don't rely on them until this notice is gone.</p>
+    <p><span class="wip-badge">Under construction</span> The manuscripts in the <strong>Manuscripts, editions and notes</strong> column have not all been checked against Liebermann yet.</p>
 </div>
 
 <div class="search-bar" role="search">
     <input type="search" id="searchInput" placeholder="Search…" aria-label="Search">
     <select id="searchScope" aria-label="Search in">
         <option value="all">All fields</option>
-        <option value="Gesetze Text">As printed</option>
-        <option value="German Expansion">German expansion</option>
+        <option value="Gesetze Text">Abbreviation</option>
+        <option value="German Expansion">Liebermann’s German expansion</option>
         <option value="English Translation">English</option>
-        <option value="Notes: Information &amp; Editions">Manuscripts and editions</option>
-        <option value="Notes: Start page in Liebermann Vol. I">Start page, vol. I</option>
+        <option value="Notes: Information &amp; Editions">Manuscripts, editions and notes</option>
+        <option value="Notes: Start page in Liebermann Vol. I">Start page, Liebermann vol. I</option>
     </select>
     <label class="small" style="align-self:center; font-weight:400"><input type="checkbox" id="oneTable"> Show every row in one table, in file order</label>
 </div>
 <p id="count" class="muted small"></p>
 
-<div id="content-container" data-source="data/markLaw.json" data-elsewhere="data/manuscripts.json msAbb.html"><p class="loading">Loading…</p></div>
+<div id="content-container" data-source="data/markLaw.json" data-heads="Abbreviation (as printed in Liebermann)|Liebermann’s German expansion|English" data-elsewhere="data/manuscripts.json msAbb.html"><p class="loading">Loading…</p></div>
 
 <p class="small muted">The list comes from <a href="https://github.com/notamitchell/law/blob/main/data/markLaw.json">data/markLaw.json</a>. To add a spelling that isn't linked yet, add a row there with the same Anchor as its main form.</p>
 

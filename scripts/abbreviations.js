@@ -14,8 +14,8 @@
     // Columns shown only when a group has something in them.
     const EXTRA = [
         { field: 'Notes: Grammatical', label: 'Note' },
-        { field: 'Notes: Information & Editions', label: 'Manuscripts and editions' },
-        { field: 'Notes: Start page in Liebermann Vol. I', label: 'Start page, vol. I' },
+        { field: 'Notes: Information & Editions', label: 'Manuscripts, editions and notes' },
+        { field: 'Notes: Start page in Liebermann Vol. I', label: 'Start page, Liebermann vol. I' },
         // the list of manuscripts (data/manuscripts.json), from Liebermann's Gesetze I, pp. xiv, xviii–xlii
         { field: 'Date (Liebermann)', label: 'Date (Liebermann)' },
         { field: 'Laws in it', label: 'Laws in it' },
@@ -24,6 +24,11 @@
     ];
     const FIELDS = ['Gesetze Text', 'German Expansion', 'English Translation'].concat(EXTRA.map(c => c.field));
     let groups = {};
+    // The first three column heads; a page can name them with data-heads="A|B|C" on #content-container.
+    function heads() {
+        const h = (document.getElementById('content-container').dataset.heads || 'As printed|German expansion|English').split('|');
+        return h.map(t => `<th>${esc(t)}</th>`).join('');
+    }
 
     function esc(s) {
         return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -78,7 +83,7 @@
             const cell = (c, r) => `<td>${esc(r[c.field])}</td>`;
             html += `<h2 id="${esc(anchor)}">${esc(groups[anchor][0]['Gesetze Text'])}</h2>
                 <div class="table-wrap"><table>
-                <thead><tr><th>As printed</th><th>German expansion</th><th>English</th>${extra.map(head).join('')}</tr></thead>
+                <thead><tr>${heads()}${extra.map(head).join('')}</tr></thead>
                 <tbody>${rows.map(r => `<tr>
                     <td class="term">${esc(r['Gesetze Text'])}</td>
                     <td>${esc(r['German Expansion'])}</td>
@@ -99,7 +104,7 @@
         const extra = EXTRA.filter(c => all.some(r => r[c.field] && String(r[c.field]).trim()));
         document.getElementById('count').textContent = `${rows.length} of ${all.length} rows`;
         container.innerHTML = rows.length ? `<div class="table-wrap"><table>
-            <thead><tr><th>As printed</th><th>German expansion</th><th>English</th>${extra.map(c => `<th>${c.label}</th>`).join('')}</tr></thead>
+            <thead><tr>${heads()}${extra.map(c => `<th>${c.label}</th>`).join('')}</tr></thead>
             <tbody>${rows.map(r => `<tr>
                 <td class="term">${esc(r['Gesetze Text'])}</td>
                 <td>${esc(r['German Expansion'])}</td>
