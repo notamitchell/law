@@ -738,7 +738,8 @@ ${translation}
             case 'lb': return '<br>';
             case 'pb': return `<span class="pb" title="Page ${escapeXml(attr('n'))} of the printed volume">[p. ${escapeXml(attr('n'))}]</span>`;
             case 'p': return '<p>' + inner() + '</p>';
-            case 'head': return '<h2>' + inner() + '</h2>';
+            // <head rend="sub"> is a subheading within a section (site pages).
+            case 'head': return attr('rend') === 'sub' ? '<h3>' + inner() + '</h3>' : '<h2>' + inner() + '</h2>';
             case 'list': {
                 const tag = attr('rend') === 'numbered' ? 'ol' : 'ul';
                 return `<${tag}>` + inner() + `</${tag}>`;
