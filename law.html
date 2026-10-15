@@ -487,18 +487,23 @@ scripts:
             const s = el('section', 'entry-section');
             s.appendChild(el('h2', null, 'Keywords'));
             s.appendChild(el('p', 'small muted', 'Click a keyword to find the other law code clauses tagged with it.'));
+            // Each keyword is a bubble, as in the Laws page's search results, linking to that search.
             const names = { 'offence-legal-event': 'Offence / legal event', people: 'People', locations: 'Locations' };
+            const dl = el('dl', 'kw-groups');
             kw.forEach(k => {
-                const p = el('p');
-                p.appendChild(el('strong', null, (names[k.getAttribute('n')] || k.getAttribute('n') || 'Keywords') + ': '));
-                tei(k, 'term').forEach((x, j) => {
-                    if (j) p.appendChild(document.createTextNode('; '));
-                    const a = el('a', null, x.textContent.trim());
+                dl.appendChild(el('dt', null, names[k.getAttribute('n')] || k.getAttribute('n') || 'Keywords'));
+                const dd = el('dd');
+                const chips = el('span', 'chips');
+                tei(k, 'term').forEach(x => {
+                    const a = el('a', 'chip', x.textContent.trim());
                     a.href = root + 'laws.html?kw=' + encodeURIComponent(x.textContent.trim());
-                    p.appendChild(a);
+                    a.title = 'Other clauses tagged “' + x.textContent.trim() + '”';
+                    chips.appendChild(a);
                 });
-                s.appendChild(p);
+                dd.appendChild(chips);
+                dl.appendChild(dd);
             });
+            s.appendChild(dl);
             target.appendChild(s);
         }
 

@@ -14,6 +14,8 @@
     --navy-dark: #1a2b3c;
     --link: #06417c;
     --link-hover: #0a5cad;
+    --powder: #4e7092;        /* the site's blue (--navy), less saturated: keyword bubbles */
+    --powder-tint: #e9eff5;
     --highlight: #ffeeb3;
     --ok: #1e6b35;
     --warn: #8a5a00;
@@ -690,7 +692,16 @@ h2.result-code .code-abbr { min-width: 0; margin-left: 0.4rem; }
 .clause-list .gloss { flex: 1 1 24rem; }
 .chips { display: flex; flex-wrap: wrap; gap: 0.25rem; flex: 1 1 100%; }
 .chip { font: inherit; font-size: 0.78rem; padding: 0.05rem 0.55rem; border: 1px solid var(--rule); border-radius: 999px; background: transparent; color: var(--muted); cursor: pointer; }
-.chip:hover, .chip:focus-visible { color: var(--link, #0b4a82); border-color: currentColor; }
+.chip:hover, .chip:focus-visible, .chip:active { color: var(--powder); border-color: var(--powder); background: var(--powder-tint); }
+.chip:focus-visible { outline: 2px solid var(--powder); outline-offset: 1px; }
+a.chip { text-decoration: none; display: inline-block; }
+/* Clause pages: keywords as bubbles, under their group's name */
+.kw-groups { display: grid; grid-template-columns: max-content 1fr; gap: 0.5rem 0.9rem; align-items: baseline; margin: 0.6rem 0 0; }
+.kw-groups dt { font-weight: 600; }
+.kw-groups dd { margin: 0; }
+.kw-groups .chips { gap: 0.35rem; }
+.kw-groups .chip { font-size: 0.9rem; padding: 0.1rem 0.7rem; color: var(--ink); }
+@media (max-width: 34rem) { .kw-groups { grid-template-columns: 1fr; gap: 0.2rem; } .kw-groups dd { margin-bottom: 0.5rem; } }
 
 /* How to read an entry */
 .guide-sections > li { margin: 0 0 1.2rem; }
