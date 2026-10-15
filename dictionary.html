@@ -24,8 +24,10 @@ scripts:
     <label class="small" style="align-self:center; font-weight:400"><input type="checkbox" id="fulltext"> Also search Liebermann's text</label>
 </div>
 <div class="hide-langs" role="group" aria-label="Hide entries in a language">
-    <button type="button" class="hide-lang" data-hide="fro" aria-pressed="false">Hide French</button>
+    <button type="button" class="hide-lang" data-hide="ang" aria-pressed="false">Hide Old English</button>
     <button type="button" class="hide-lang" data-hide="la" aria-pressed="false">Hide Latin</button>
+    <button type="button" class="hide-lang" data-hide="fro" aria-pressed="false">Hide French</button>
+    <button type="button" class="hide-lang" data-hide="de" aria-pressed="false">Hide Grammatical Terms</button>
 </div>
 
 <ul class="letter-index" id="letters"></ul>
@@ -48,11 +50,11 @@ const ENTRY_FILES = [{% for f in entry_files %}"{{ f.basename }}"{% unless forlo
     lang.value = params.get('lang') || '';
     fulltext.checked = params.get('text') === '1';
     let entries = [];
-    // "Hide French" / "Hide Latin": remembered in this browser (see ELieb.hiddenLanguages),
+    // "Hide Old English", "Hide Latin", "Hide French", "Hide Grammatical Terms": remembered in this browser (see ELieb.hiddenLanguages),
     // so the entry pages' Previous and Next links and the search suggestions follow them.
     let hidden = ELieb.hiddenLanguages();
     const hideButtons = [...document.querySelectorAll('[data-hide]')];
-    const NAMES = { fro: 'French', la: 'Latin' };
+    const NAMES = { ang: 'Old English', la: 'Latin', fro: 'French', de: 'Grammatical Terms' };
     function showButtons() {
         hideButtons.forEach(b => {
             const on = hidden.has(b.dataset.hide);
@@ -94,12 +96,15 @@ const ENTRY_FILES = [{% for f in entry_files %}"{{ f.basename }}"{% unless forlo
         // Only letters that begin at least one headword (X has none), whatever the search.
         document.getElementById('letters').innerHTML = ELieb.ALPHABET.filter(l => present.has(l)).map(l =>
             byLetter[l] ? `<li><a href="#letter-${l}">${l}</a></li>` : `<li><span>${l}</span></li>`).join('');
-        const hiddenNames = ['fro', 'la'].filter(l => hidden.has(l)).map(l => NAMES[l]);
+        const hiddenNames = ['ang', 'la', 'fro', 'de'].filter(l => hidden.has(l)).map(l => l === 'de' ? 'grammatical term' : NAMES[l]);
+        const joined = hiddenNames.length > 1 ? hiddenNames.slice(0, -1).join(', ') + ' and ' + hiddenNames[hiddenNames.length - 1] : hiddenNames[0];
         document.getElementById('count').textContent = `${list.length} of ${entries.length} entries`
-            + (hiddenNames.length ? ` (${hiddenNames.join(' and ')} entries hidden)` : '');
+            + (hiddenNames.length ? ` (${joined} entries hidden)` : '');
 
         if (!list.length) {
-            results.innerHTML = `<p>No entries match. <a href="${root}contribute.html">Suggest an entry</a> if it's missing.</p>`;
+            results.innerHTML = hidden.size
+                ? `<p>No entries match. Some languages are hidden: press a <strong>Show</strong> button above to include them.</p>`
+                : `<p>No entries match. <a href="${root}contribute.html">Suggest an entry</a> if it's missing.</p>`;
             return;
         }
         results.innerHTML = letters.map(l => `
