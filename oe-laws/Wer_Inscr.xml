@@ -7,6 +7,7 @@
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -22,6 +23,7 @@
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">392</biblScope></bibl>
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+          <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -41,7 +43,7 @@
       <creation><note type="promulgation">944–c.1060; c.945 (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 2046 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-15">Generated from row 2046 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 392.</change>
     </revisionDesc>
   </teiHeader>
@@ -53,6 +55,10 @@
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="Wer Inscr." corresp="#wit-q">(De persolutione occisi.)</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">(Wie jemand von 1200 [Schilling Wergeld, wenn erschlagen,] entgolten werden muss. B)</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(How one must pay for a man of 1200 [shillings' wergild, when slain]. B)</ab>
+        <note type="comparison" source="#wormald-mel" n="375"><label>parallel text; same words and phrases in the same order</label> <ref target="clause:IIEm_1">II Em 1</ref> <quote>Table 5.5 parallel columns: 'Gif man ofslegen weorðe, gylde hine man swa he geboren sy' set against II Em 'Gif hwa heononforð ænigne man ofslea ... swa boren swa he sy'</quote></note>
+        <note type="comparison" source="#wormald-mel" n="375"><label>parallel text; same words and phrases in the same order</label> <ref target="clause:IIEm_7">II Em 7–7.3</ref> <quote>Table 5.5 parallel columns: Wergeld 'rihte is ðæt se slaga ... weres beweddod hæbbe ... rære man cyninges munde ... healsfang ... manbote ... frumgyld' set against II Em 'Witan scylan fæhðe settan ...'</quote></note>
+        <note type="comparison" source="#wormald-mel" n="377"><label>same words in same order</label> <ref target="clause:IIEm_7">II Em 7–7.3</ref> <quote>It is not just that the same words, indeed phrases, feature in each; as near as makes no difference, they recur in the same order</quote></note>
+        <note type="comparedBy" source="#wormald-mel" n="311"><ref target="clause:IIEm_7">II Em 7–7.3</ref></note>
         <note type="editorial">Liebermann's text has two columns: H (Textus Roffensis f. 41v, after EGu in the same line and hand, c. 1120; perhaps a fragment of a law) and B (Cambridge, Corpus Christi College 383, p. 86, after Wif, as in the Quadripartitus, c. 1125). K is B; H is also given here. B's heading is in red and not original; H has none. Liebermann dates Wer 944–c. 1060.</note>
       </div>
     </body>

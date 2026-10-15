@@ -9,6 +9,8 @@
         <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -25,6 +27,8 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">142</biblScope></bibl>
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+          <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -49,7 +53,7 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 716 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-15">Generated from row 716 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 142.</change>
     </revisionDesc>
   </teiHeader>
@@ -64,6 +68,10 @@
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If anyone is accused of theft, those who have found him a lord shall stand surety for him, that he shall clear himself from the accusation; or if he has any other friends, they may perform the same office.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">(Von den des Diebstahls Beschuldigten. Ld) Wenn einer Diebstahls beschuldigt wird, dann sollen diejenigen, welche ihn (früher B) einem Herrn überwiesen hatten, sich für ihn verbürgen [dafür], dass er sich von dem [Klagepunkt] reinigen werde; oder andere Freunde, wenn er [welche] hat, sollen dasselbe thun.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of those accused of theft. Ld) If anyone is accused of theft, then those who had (earlier, B) commended him to a lord are to stand surety for him [to the effect] that he will clear himself of the [charge]; or other friends, if he has [any], are to do the same.</ab>
+        <note type="comparison" source="#wormald-mel" n="290"><label>linked with</label> <ref target="clause:Af_1">Af 1–1.8</ref> <quote>Exeter's laws on surety and theft were intimately linked with Alfred's 'oath and pledge'</quote></note>
+        <note type="comparison" source="#wormald-ppmel" n="122"><label>cf.</label> <ref target="clause:Af_1">Af 1–1.7</ref> <quote>Provisional loss of goods to friends is envisaged by Edward the Elder for those accused of theft who have no surety.</quote></note>
+        <note type="comparison" source="#wormald-ppmel" n="173"><label>makes explicit</label> <ref target="clause:Af_1">Af 1–1.8</ref> <quote>Edward then makes it explicit that the 'friends' of Alfred's law must use the 'possessions' that he had ordered pledge-breakers to surrender</quote></note>
+        <note type="comparedBy" source="#wormald-mel" n="316"><ref target="clause:IIIEg_6">III Eg 6–7.3</ref></note>
         <note type="editorial">‘he’ is supplied by Liebermann from Ld; B omits it.</note>
       </div>
     </body>
