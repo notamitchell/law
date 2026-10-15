@@ -4,13 +4,14 @@ section: laws
 description: Search the clauses of the Old English laws, by law code, clause number, keyword, or text.
 scripts:
   - "ROOT/scripts/eliebermann.js"
+  - "ROOT/scripts/law-search.js"
 ---
 <h1>Laws</h1>
 
 <p class="lede">The law codes of pre-Conquest England, from Æthelberht of Kent to Cnut, as Liebermann edited them, with modern editions and translations. Choose a law code to read it clause by clause, or search the clauses below.</p>
 
 <div class="search-bar" role="search">
-    <input type="search" id="q" placeholder="Law code and clause, e.g. Ine 23 or Af 5" aria-label="Search by law code and clause">
+    <input type="search" id="q" placeholder="Law code and clause, e.g. Ine 23, Alfred 5, II Cnut 30,1" aria-label="Search by law code (abbreviation or name) and clause">
     <select id="law" aria-label="Law code"><option value="">All law codes</option></select>
     <input type="search" id="kw" list="kwlist" placeholder="Keyword, e.g. Theft, Bishops, Churches" aria-label="Keyword: an offence, a kind of person or a place">
     <datalist id="kwlist"></datalist>
@@ -40,6 +41,7 @@ scripts:
     let showAll = false;
     let clauses = [];
     let codes = [];
+    let searcher = null;
     const byCode = {};
 
     const esc = ELieb.escapeXml;
@@ -93,14 +95,22 @@ scripts:
         const term = squash(q.value.trim());
         const kword = fold(kw.value.trim());
         const text = fold(q.value.trim());
+        // A law code by its abbreviation or its name, then perhaps a clause ("Alfred 5", "II Cnut 30,1");
+        // otherwise the start of a citation or of a word in a law code's name, as before.
+        const reading = q.value.trim() ? searcher.read(q.value) : null;
+        const byCite = c => reading
+            ? reading.codes.includes(c.code) && LawSearch.clauseMatches(c._keys, reading.clause)
+            : c._cite.some(x => x.startsWith(term));
         const list = clauses.filter(c =>
             (!law.value || c.code === law.value) &&
             (!kword || c._kw.includes(kword)) &&
-            (!term || c._cite.some(x => x.startsWith(term)) || (fulltext.checked && c._text.includes(text))));
+            (!term || byCite(c) || (fulltext.checked && c._text.includes(text))));
 
-        count.textContent = `${list.length} of ${clauses.length} clauses`;
+        const readAs = reading && reading.exact && !law.value
+            ? ` · read as <strong>${reading.codes.map(esc).join(', ')}${reading.clause ? ' ' + esc(clauseLabel(reading.clause)) : ''}</strong>` : '';
+        count.innerHTML = `${list.length} of ${clauses.length} clauses${readAs}`;
         if (!list.length) {
-            results.innerHTML = '<p>No clauses match. Try a shorter search, or leave the keyword empty.</p>';
+            results.innerHTML = '<p>No clauses match. Try a shorter search, or leave the keyword empty.</p>' + ambiguous();
             return;
         }
         const shown = showAll ? list : list.slice(0, LIMIT);
@@ -122,6 +132,22 @@ scripts:
             </ul>`;
         }).join('') +
             (list.length > shown.length ? `<p><button type="button" class="button" id="more">Show all ${list.length} clauses</button></p>` : '');
+    }
+
+    // "el49.3" -> "El 49.3", "prol" -> "Prol." (for the "read as" line)
+    function clauseLabel(k) {
+        return k.replace(/^(prol|inscr|epil|rubr)/, w => w[0].toUpperCase() + w.slice(1) + '. ').replace(/^el/, 'El ').trim();
+    }
+
+    // "Edgar 3": the king made several codes, so say which they are.
+    function ambiguous() {
+        const words = q.value.trim().split(/\s+/);
+        if (words.length < 2) return '';
+        const r = searcher.read(words.slice(0, -1).join(' '));
+        if (!r || r.codes.length < 2) return '';
+        const last = words[words.length - 1];
+        return `<p>That name fits ${r.codes.length} law codes. Which one did you mean?</p><ul class="code-list">${r.codes.map(code =>
+            `<li><a href="?q=${encodeURIComponent(code + ' ' + last)}"><span class="code-abbr">${esc(code + ' ' + last)}</span> <span class="code-name">${esc((byCode[code] || {}).name || '')}</span></a></li>`).join('')}</ul>`;
     }
 
     function update() {
@@ -154,10 +180,12 @@ scripts:
             // ("ine 23" finds Ine 23.2 but not Mine 23).
             const words = fold(c.citation + ' ' + name).split(' ').filter(Boolean);
             c._cite = words.map((w, i) => words.slice(i).join(''));
+            c._keys = LawSearch.clauseKeys(c);
             c._kw = fold(keywords(c).join(' | '));
             c._text = fold(c.text + ' ' + c.en);
         });
         clauses = list;
+        searcher = LawSearch.build(codes);
         law.innerHTML = '<option value="">All law codes</option>' + groups().map(g =>
             `<optgroup label="${esc(g.name)}">${g.items.map(c => `<option value="${esc(c.code)}">${esc(c.code)} – ${esc(c.name)}</option>`).join('')}</optgroup>`).join('');
         law.value = byCode[wantedLaw] ? wantedLaw : '';
