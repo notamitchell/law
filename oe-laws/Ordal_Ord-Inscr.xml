@@ -8,6 +8,8 @@
         <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +26,8 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">386</biblScope></bibl>
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
+          <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -45,7 +49,7 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 2022 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-15">Generated from row 2022 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 386.</change>
     </revisionDesc>
   </teiHeader>
@@ -58,6 +62,9 @@
         <ab type="editionText" xml:lang="ang" source="#attenborough" corresp="#wit-h">DOM BE HATEN ÍSENE AND WÆTRE</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">Gesetz (Gottesgericht?) vom heissen Eisen und [siedenden] Wasser.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Law (judgment of God?) concerning hot iron and [boiling] water.</ab>
+        <note type="comparison" source="#wormald-mel" n="373"><label>fills gaps in</label> <ref target="clause:IIAs_23">II As 23–23.2</ref> <quote>The Grately code gave the first and fullest official statement on ordeal procedure … it filled gaps left by Grately itself</quote></note>
+        <note type="comparison" source="#wormald-mel" n="374"><label>shared phrase</label> <ref target="clause:VIAs_8-3">VI As 8.3</ref> <quote>'on twa healfa' is also in VI As 8:3</quote></note>
+        <note type="comparison" source="#wormald-ppmel" n="77"><label>compare</label> <ref target="clause:IIAs_23">II As 23–23.2</ref> <quote>This may be compared with the fuller account in a perhaps semi-official tract from the same sort of date</quote></note>
         <note type="editorial">Liebermann's text is from H (Textus Roffensis f. 32, after Forfang 1, in the same hand, c. 1120), the same manuscript as the modern edition. The heading is in red. Since clause 1 begins with ‘And’, the beginning is lacking, and the heading, which presents this fragment of a royal law as an independent work, is therefore not original. Liebermann dates it c. 936–58 or up to c. 1000. In the Quadripartitus it follows VI As. Clause number standardised from ‘Ord. Inscr.’.</note>
       </div>
     </body>

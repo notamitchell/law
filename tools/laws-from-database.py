@@ -141,6 +141,21 @@ RABIN_DOML = ('Andrew Rabin, ed. and trans., <title>Old English Legal Writings: 
 # Rabin's sigla that mean a different manuscript from Liebermann's letter
 RABIN_SIGLA = {('Prom. Reg.', 'C'): 'Cp', ('Cn 1020', 'Y'): 'York Gospels', ('IX Atr', 'MS'): '', ('X Atr', 'MS'): '',
                ('V Atr', 'G1'): 'G', ('II Eg', 'G1'): 'G', ('III Eg', 'G1'): 'G'}   # Rabin's G1 is Liebermann's G
+# Other scholars' clause-to-clause cross-references: the 'Cross-references' sheet of the spreadsheet.
+WORMALD_MEL = ('Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation '
+               'and its Limits</title> (Oxford: Blackwell, 1999)')
+WORMALD_PPMEL = ('Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth '
+                 'Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University '
+                 'of London, 2014)')
+JO_REF = ('Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> '
+          '(Cambridge: Cambridge University Press, 2021)')
+XR_WORKS = {   # 'Work' on the Cross-references sheet (start of it) -> (source id, name, reference)
+    'Whitelock': ('whitelock', 'Whitelock', WHITELOCK_EHD),
+    'Rabin': ('rabin-doml', 'Rabin', RABIN_DOML),
+    'Wormald, The Making': ('wormald-mel', 'Wormald, MEL', WORMALD_MEL),
+    'Wormald, Papers': ('wormald-ppmel', 'Wormald, Papers Preparatory', WORMALD_PPMEL),
+    'Jurasinski and Oliver': ('jurasinski-and-oliver', 'Jurasinski and Oliver', JO_REF),
+}
 EDITOR_OVERRIDE = {'Grið': ('Rabin', 'rabin-doml', RABIN_DOML), 'Nor Grið': ('Rabin', 'rabin-doml', RABIN_DOML)}
 
 # Old spellings of law codes (in oe-laws/index.json) -> the spreadsheet's.
@@ -370,28 +385,32 @@ def vgl_key(clause):
     return re.sub(r'^([a-z]+)\.', r'\1', c)
 
 
-def vgl_links(rows):
-    """Resolve each row's written-out cross-references (column BB) to clause files, and collect the
-    reverse links. Sets row['vglLinks'] = [(text, id or '')] and row['vglBack'] = [(citation, id)]."""
-    where, order = {}, defaultdict(list)
+def clause_finder(rows):
+    """A function that turns a written-out reference ("I Em 3", "Af El 49.3", "II Cn 30–31") into the id
+    of the clause it names (the first clause of a run), or '' if it names none in the database."""
+    where, order, first = {}, defaultdict(list), {}
     for r in rows:
-        clause = r['clause']
+        first.setdefault(r['code'], r.get('id', r['sheetRow']))
+        clause = re.sub(r'^%s\.?\s+' % re.escape(r['code']), '', r['clause'])     # "Ine Prol.", "II Ew. 1"
         m = re.match(r'^(Prol|Inscr|El|Pr)\.?,?\s*(\d.*)$', clause)
         keys = [m.group(1) + m.group(2)] if m else ([clause] if re.match(r'^[A-Za-z]', clause) else re.split(r',\s*', clause))
         for k in keys:
             k = vgl_key(k)
             if k and (r['code'], k) not in where:
-                where[(r['code'], k)] = r['id']
+                where[(r['code'], k)] = r.get('id', r['sheetRow'])
                 order[r['code']].append(k)
     codes = sorted({r['code'] for r in rows} | {'Af El'}, key=len, reverse=True)
 
-    def find(ref):
+    def find(ref, whole_code=False):
+        """whole_code: a reference to a whole text ("Blas") finds its first clause."""
         for code in codes:
             if ref == code or ref.startswith(code + ' '):
                 break
         else:
             return ''
         clause = ref[len(code):].strip()
+        if not clause and whole_code:
+            return first.get(code, '')
         if code == 'Af El':
             code, clause = 'Af', 'El ' + clause
         if code == 'Að' and vgl_key(clause) == '2':     # Liebermann's Að 2 is the sheet's "Had 2[as Að]"
@@ -407,6 +426,13 @@ def vgl_links(rows):
                 return where[(code, kk)]
         m = re.match(r'^(.+)\.\d+[a-z]?$', k) or re.match(r'^(.*\d)[a-z]$', k)
         return where.get((code, m.group(1)), '') if m else ''
+    return find
+
+
+def vgl_links(rows):
+    """Resolve each row's written-out cross-references (column BB) to clause files, and collect the
+    reverse links. Sets row['vglLinks'] = [(text, id or '')] and row['vglBack'] = [(citation, id)]."""
+    find = clause_finder(rows)
 
     back = defaultdict(list)
     for r in rows:
@@ -421,6 +447,47 @@ def vgl_links(rows):
     for r in rows:
         r['vglBack'] = back.get(r['id'], [])
     return sum(1 for r in rows for _, i in r['vglLinks'] if i), sum(len(r['vglLinks']) for r in rows)
+
+
+def read_cross_references(path):
+    """The 'Cross-references' sheet: [{work, page, from, to, relation, said}] (empty if there is none)."""
+    wb = openpyxl.load_workbook(path, read_only=True)
+    if 'Cross-references' not in wb.sheetnames:
+        return []
+    out = []
+    for v in list(wb['Cross-references'].iter_rows(min_row=2, values_only=True)):
+        if not v or not v[3]:
+            continue
+        work = next((k for k in XR_WORKS if str(v[1] or '').startswith(k)), None)
+        if work:
+            out.append({'work': work, 'page': '' if v[2] is None else str(v[2]), 'from': str(v[3]).strip(),
+                        'to': str(v[4] or '').strip(), 'relation': str(v[5] or '').strip(), 'said': str(v[6] or '').strip()})
+    return out
+
+
+def xr_links(rows, links):
+    """Attach other scholars' cross-references to the clauses: row['xr'] = [(work, page, relation, text, id, said)],
+    row['xrBack'] = [(work, page, relation, citation, id)]."""
+    find = clause_finder(rows)
+    by_id = {r['id']: r for r in rows}
+    for r in rows:
+        r['xr'], r['xrBack'] = [], []
+    n = 0
+    for l in links:
+        fid = find(l['from'], True)
+        if not fid:
+            continue
+        tid = find(l['to'], True)
+        if tid == fid:
+            tid = ''
+        by_id[fid]['xr'].append((l['work'], l['page'], l['relation'], l['to'], tid, l['said']))
+        n += 1
+        if tid:
+            back = by_id[tid]['xrBack']
+            item = (l['work'], l['page'], l['relation'], l['from'], fid)
+            if not any(b[0] == item[0] and b[4] == fid for b in back):
+                back.append(item)
+    return n
 
 
 def build(row, today, source_name, refs):
@@ -573,6 +640,12 @@ def build(row, today, source_name, refs):
         if ('t', sid) not in seen:
             seen.add(('t', sid))
             w('        <respStmt><resp>Translation</resp><name ref="#%s">%s</name></respStmt>' % (sid, esc(srcs.items[sid][0])))
+    for work in dict.fromkeys([x[0] for x in row.get('xr', [])] + [x[0] for x in row.get('xrBack', [])]):
+        sid, name, ref = XR_WORKS[work]
+        srcs.add(sid, name, ref, 'study')
+        if ('e', sid) not in seen and ('t', sid) not in seen and ('x', sid) not in seen:
+            seen.add(('x', sid))
+            w('        <respStmt><resp>Cross-references to other clauses</resp><name ref="#%s">%s</name></respStmt>' % (sid, esc(srcs.items[sid][0])))
     w('      </titleStmt>')
     w('      <publicationStmt>')
     w('        <publisher>%s</publisher>' % esc(old.PUBLISHER))
@@ -665,6 +738,15 @@ def build(row, today, source_name, refs):
     if row.get('vglBack'):
         w('        <note type="comparedBy" source="#liebermann">%s</note>' % '; '.join(
             '<ref target="clause:%s">%s</ref>' % (attr(i), esc(t)) for t, i in row['vglBack']))
+    for work, page, rel, text, tid, said in row.get('xr', []):
+        sid = XR_WORKS[work][0]
+        w('        <note type="comparison" source="#%s"%s>%s%s%s</note>' % (
+            sid, (' n="%s"' % attr(page)) if page else '', ('<label>%s</label> ' % esc(rel)) if rel else '',
+            ('<ref target="clause:%s">%s</ref>' % (attr(tid), esc(text))) if tid else esc(text),
+            (' <quote>%s</quote>' % esc(said)) if said else ''))
+    for work, page, rel, text, fid in row.get('xrBack', []):
+        w('        <note type="comparedBy" source="#%s"%s><ref target="clause:%s">%s</ref></note>' % (
+            XR_WORKS[work][0], (' n="%s"' % attr(page)) if page else '', attr(fid), esc(text)))
     if notes:
         w('        <note type="editorial">%s</note>' % esc(notes))
     if row['translatorNotes'] and 'whitelock' in srcs.items:
@@ -830,6 +912,7 @@ def main():
 
     linked, total = vgl_links(rows)
     print('Liebermann’s cross-references: %d of %d linked to a clause' % (linked, total))
+    print('Other scholars’ cross-references: %d placed on a clause' % xr_links(rows, read_cross_references(args.xlsx)))
     refs = {}
     for r in rows:
         if r['secondRef']:

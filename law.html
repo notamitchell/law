@@ -198,11 +198,20 @@ scripts:
         });
         if (!trans.length) { right.remove(); grid.classList.add('clause-grid--single'); }
         wrap.appendChild(grid);
-        // Liebermann's marginal cross-references ("Vgl."), and the clauses he compares with this one.
-        const noteOf = type => tei(div, 'note').find(n => n.getAttribute('type') === type);
-        const cmp = noteOf('comparison'), back = noteOf('comparedBy');
-        if (cmp || back) {
+        // Cross-references to other clauses: Liebermann's marginal notes ("Vgl."), then other scholars'
+        // (Whitelock, Rabin, Wormald, Jurasinski and Oliver), each under the scholar's name; then the
+        // clauses that each of them compares with this one.
+        const notesOf = type => tei(div, 'note').filter(n => n.getAttribute('type') === type);
+        const noteOf = type => notesOf(type)[0];
+        const srcId = n => (n.getAttribute('source') || '').replace(/^#/, '');
+        const cmpAll = notesOf('comparison'), backAll = notesOf('comparedBy');
+        const cmp = cmpAll.find(n => srcId(n) === 'liebermann'), back = backAll.find(n => srcId(n) === 'liebermann');
+        const others = cmpAll.filter(n => srcId(n) !== 'liebermann'), othersBack = backAll.filter(n => srcId(n) !== 'liebermann');
+        const scholar = id => (srcs[id] || {}).name || id;
+        const childOf = (n, name) => Array.from(n.childNodes).find(c => c.localName === name);
+        if (cmp || back || others.length || othersBack.length) {
             const box = el('div', 'clause-compare small');
+            box.appendChild(el('h3', 'clause-compare__head', 'Cross-references'));
             if (cmp) {
                 const p = el('p');
                 p.appendChild(el('strong', null, 'Compare (Liebermann' + (cmp.getAttribute('n') ? ', Gesetze I p. ' + cmp.getAttribute('n') : '') + '): '));
@@ -217,12 +226,61 @@ scripts:
                 const inc = noteOf('comparisonIncomplete');
                 if (inc) box.appendChild(el('p', 'muted', plainText(inc)));
             }
+            // Other scholars: one line per scholar. Links made in the same words on the same page are
+            // given together: relation, clauses, page, then the scholar's words.
+            const bySource = {};
+            others.forEach(n => (bySource[srcId(n)] = bySource[srcId(n)] || []).push(n));
+            Object.entries(bySource).forEach(([id, ns]) => {
+                const groups = [];
+                ns.forEach(n => {
+                    const label = childOf(n, 'label'), quote = childOf(n, 'quote');
+                    const key = [label ? plainText(label) : '', n.getAttribute('n') || '', quote ? plainText(quote) : ''].join('|');
+                    let g = groups.find(x => x.key === key);
+                    if (!g) groups.push(g = { key, label, quote, page: n.getAttribute('n'), notes: [] });
+                    g.notes.push(n);
+                });
+                const p = el('p');
+                p.appendChild(el('strong', null, 'Compare (' + scholar(id) + '): '));
+                groups.forEach((g, i) => {
+                    if (i) p.appendChild(document.createTextNode('; '));
+                    if (g.label) p.appendChild(el('span', 'muted', plainText(g.label) + ' '));
+                    g.notes.forEach((n, j) => {
+                        if (j) p.appendChild(document.createTextNode(', '));
+                        const ref = childOf(n, 'ref');
+                        if (ref) {
+                            const a = el('a', null, plainText(ref));
+                            a.href = 'law.html?id=' + encodeURIComponent((ref.getAttribute('target') || '').replace(/^clause:/, ''));
+                            p.appendChild(a);
+                        } else {
+                            p.appendChild(document.createTextNode(Array.from(n.childNodes).filter(c => c.nodeType === 3).map(c => c.textContent).join('').trim()));
+                        }
+                    });
+                    if (g.page) p.appendChild(el('span', 'muted', ' (p. ' + g.page + ')'));
+                    if (g.quote) {
+                        p.appendChild(document.createTextNode(' '));
+                        p.appendChild(el('span', 'clause-compare__quote', '“' + plainText(g.quote) + '”'));
+                    }
+                });
+                box.appendChild(p);
+            });
             if (back) {
                 const p = el('p');
                 p.appendChild(el('strong', null, 'Liebermann compares this clause at: '));
                 p.appendChild(inline(back));
                 box.appendChild(p);
             }
+            const backBySource = {};
+            othersBack.forEach(n => (backBySource[srcId(n)] = backBySource[srcId(n)] || []).push(n));
+            Object.entries(backBySource).forEach(([id, ns]) => {
+                const p = el('p');
+                p.appendChild(el('strong', null, 'Compared with this clause (' + scholar(id) + '): '));
+                ns.forEach((n, i) => {
+                    if (i) p.appendChild(document.createTextNode('; '));
+                    p.appendChild(inline(n));
+                    if (n.getAttribute('n')) p.appendChild(el('span', 'muted', ' (p. ' + n.getAttribute('n') + ')'));
+                });
+                box.appendChild(p);
+            });
             wrap.appendChild(box);
         }
         tei(div, 'note').forEach(n => {
@@ -365,7 +423,7 @@ scripts:
         const srcs = Object.values(sources(doc));
         if (srcs.length) {
             const s = el('section', 'entry-section clause-sources');
-            s.appendChild(el('h2', null, 'Editions and translations'));
+            s.appendChild(el('h2', null, 'Editions, translations and studies'));
             const ul = el('ul');
             srcs.forEach(x => {
                 const li = el('li');

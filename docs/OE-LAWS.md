@@ -46,6 +46,12 @@ In the outer margin beside his German translation, Liebermann prints short notes
 
 `tools/laws-from-database.py` (`vgl_links`) resolves each reference in BB to a clause file and writes `<note type="comparison">` (the references, linked with `<ref target="clause:ID">`), `<note type="comparisonPrinted">` (BA) and, where needed, `<note type="comparisonIncomplete">`. It also collects the reverse links: a clause that other clauses compare with it gets `<note type="comparedBy">`. The clause page shows both, as *Compare (Liebermann, Gesetze I p. …)* and *Liebermann compares this clause at*.
 
+## Other scholars' cross-references
+
+Places where other scholars say that one clause repeats, revises, derives from, or should be compared with another were collected in October 2026 from Whitelock's footnotes (*EHD* I), Rabin's notes to his translations (DOML 66), Wormald's *Making of English Law* I (including his tables of sources) and *Papers Preparatory*, and Jurasinski and Oliver's *Laws of Alfred*. Only links between two law clauses were taken, not lists of clauses on the same topic. Clause numbers are Liebermann's: Jurasinski and Oliver's own numbering of Alfred, Ine and Wihtred was converted using the Liebermann numbers they print in brackets.
+
+The spreadsheet's sheet **Cross-references** has one line per link (scholar, work, page, clause, linked clause, the relation in the scholar's terms, the scholar's words, a remark), and column **BD** of Sheet1 has the same in short. `read_cross_references` and `xr_links` in `tools/laws-from-database.py` read that sheet and write, on the clause a link starts from, `<note type="comparison" source="#wormald-mel" n="PAGE"><label>relation</label> <ref target="clause:ID">…</ref> <quote>…</quote></note>`, and on the linked clause `<note type="comparedBy" source="#…" n="PAGE">`. The scholar's work is added to the file's sources. The clause page lists them under the scholar's name: *Compare (Wormald, MEL): …* and *Compared with this clause (Wormald, MEL): …*.
+
 ## File names and identifiers
 
 A file is named after its law code and clause number, joined by an underscore: `Abt_1-a.xml`, `Ine_23-2.xml`. The code part is the code's **Anchor** on the law code list where there is one (so `IICn` for *II Cn*), otherwise the abbreviation with plain letters. In names, þ is *th*, æ is *ae* and ð is *d*, as for dictionary entries. The same text is the file's `xml:id`.
