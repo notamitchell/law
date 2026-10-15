@@ -1,0 +1,124 @@
+"""Date and place of each law code, from the spreadsheet's free-text column.
+
+The spreadsheet column "Place and date of promulgation" holds dates, places
+and the scholars who propose them in one string, e.g.
+"1018 (Whitelock, Kennedy, Wormald); Oxford". The clause pages show them as
+separate lines:
+
+    Date:  1018 (Whitelock, Kennedy, Wormald)
+    Place: Oxford
+
+TABLE gives, for every string the spreadsheet had in October 2026, its
+dates and places, each with the scholars who propose it (an empty list
+means the spreadsheet names nobody). Where a string is not in TABLE (the
+spreadsheet has been changed), parse() splits it by rule: parts separated
+by ";", a part with digits is a date, any other part a place, and names in
+brackets at the end are its scholars. Check the page, and add the new
+string to TABLE if the rule gets it wrong. See docs/OE-LAWS.md.
+"""
+import html
+import re
+
+W, WM, R, A, RB, K, L = 'Whitelock', 'Wormald', 'Robertson', 'Attenborough', 'Rabin', 'Kennedy', 'Liebermann'
+
+# spreadsheet text -> ([(date, [scholars])], [(place, [scholars])])
+TABLE = {
+    '880–90; 886–90 (Whitelock)': ([('880–90', []), ('886–90', [W])], []),
+    '601–4; 597–616, perhaps 602–3 (Whitelock)': ([('601–4', []), ('597–616, perhaps 602–3', [W])], []),
+    '890–901; 885–899 (Whitelock)': ([('890–901', []), ('885–899', [W])], []),
+    "925–40; before c.1110 (Nowell 'translation' from Q?)": ([('925–40', []), ('before c.1110 (Nowell’s ‘translation’ from Q?)', [])], []),
+    '1002–23 (Whitelock); 1006–8 (Rabin)': ([('1002–23', [W]), ('1006–8', [RB])], []),
+    'c.1020–c.1060; c.990–c.1020 (Wormald)': ([('c.1020–c.1060', []), ('c.990–c.1020', [WM])], []),
+    "c.930–75; ?mid 990's (Wormald)": ([('c.930–75', []), ('?mid-990s', [WM])], []),
+    '5 August 1100; Westminster (Robertson)': ([('5 August 1100', [])], [('Westminster', [R])]),
+    '1018 (Whitelock, Kennedy, Wormald); Oxford': ([('1018', [W, K, WM])], [('Oxford', [])]),
+    '1020; 1019/1020 (Robertson, Wormald); issued in England (Robertson).; end of 1019 or very beginning of 1020, probably written from Denmark (Whitelock)':
+        ([('1020', []), ('1019/1020', [R, WM]), ('end of 1019 or very beginning of 1020', [W])],
+         [('England', [R]), ('probably written from Denmark', [W])]),
+    '1027; ?en route from Rome to Denmark (Robertson)': ([('1027', [])], [('?en route from Rome to Denmark', [R])]),
+    'c.926–c.1000; c.930, ?Archenfield, on the Wye (Wormald)': ([('c.926–c.1000', []), ('c.930', [WM])], [('?Archenfield, on the Wye', [WM])]),
+    'Nov. 921–938?; 1002–4 (Wormald, Rabin)': ([('Nov. 921–938?', []), ('1002–4', [WM, RB])], []),
+    'c.1000–1050; ??(Whitelock); 1002x1008 (Rabin)': ([('c.1000–1050', []), ('1002×1008', [RB])], []),
+    "c.900–c.1000, c. ?960; ?mid 990's (Wormald)": ([('c.900–c.1000, c. ?960', []), ('?mid-990s', [WM])], []),
+    '960 (c.1025?) – 1060; ?Bath Abbey (Wormald)': ([('960 (c.1025?)–1060', [])], [('?Bath Abbey', [WM])]),
+    '1028–1070; before 1014 (Wormald); 1006–8 (Rabin)': ([('1028–1070', []), ('before 1014', [WM]), ('1006–8', [RB])], []),
+    '685–6; 673–85? (Whitelock)': ([('685–6', []), ('673–85?', [W])], []),
+    '1115–33, probably 1131; Westminster (Robertson)': ([('1115–33, probably 1131', [])], [('Westminster', [R])]),
+    '1109–11; Reading (Robertson)': ([('1109–11', [])], [('Reading', [R])]),
+    'Christmas 1100; Westminster (Robertson)': ([('Christmas 1100', [])], [('Westminster', [R])]),
+    '946–c.961 (Liebermann, Robertson); 939–c.961 (Whitelock)': ([('946–c.961', [L, R]), ('939–c.961', [W])], []),
+    '925–c.936; before III As (Attenborough)': ([('925–c.936', []), ('before III As', [A])], []),
+    '?Date: before III As (Attenborough)': ([('before III As', [A])], []),
+    '980–1013; ?same time as III Atr (Robertson); Woodstock, Mercia': ([('980–1013', []), ('?same time as III Atr', [R])], [('Woodstock, Mercia', [])]),
+    'Christmas, 1027–34; 1020/21 (Wormald); Winchester; 1020–23 (Whitelock)': ([('Christmas, 1027–34', []), ('1020/21', [WM]), ('1020–23', [W])], [('Winchester', [])]),
+    'Easter; Apr. 942–Mar. 946; 942 or 944–6 (Robertson); London': ([('Easter, Apr. 942–Mar. 946', []), ('942 or 944–6', [R])], [('London', [])]),
+    '901–24; before 918 (Attenborough)': ([('901–24', []), ('before 918', [A])], []),
+    '925–c.935; before III–VI As (Attenborough); Grately; c.926–c.930 (Whitelock)': ([('925–c.935', []), ('before III–VI As', [A]), ('c.926–c.930', [W])], [('Grately', [])]),
+    "991; 991 or 994 (Whitelock); mid-990's (Wormald)": ([('991', []), ('991 or 994', [W]), ('mid-990s', [WM])], []),
+    "c.1000; (Robertson is silent); mid-990's (Wormald); 991 or 994 (Whitelock)": ([('c.1000', []), ('mid-990s', [WM]), ('991 or 994', [W])], []),
+    "991; mid-990's (Wormald); 991 or 994 (Whitelock)": ([('991', []), ('mid-990s', [WM]), ('991 or 994', [W])], []),
+    '959–c.962; after IV Edg (Robertson); Andover; 959–63 (Whitelock)': ([('959–c.962', []), ('after IV Eg', [R]), ('959–63', [W])], [('Andover', [])]),
+    'c.943–46; no evidence of exact date (Robertson); 939–46 (Whitelock)': ([('c.943–46', []), ('no evidence of exact date', [R]), ('939–46', [W])], []),
+    '924–5; before 918 (Attenborough); Exeter': ([('924–5', []), ('before 918', [A])], [('Exeter', [])]),
+    'c.928–c.938; after I & V As (Attenborough)': ([('c.928–c.938', []), ('after I & V As', [A])], []),
+    "981–1012 or ?997; probably 997 (Whitelock); ?mid–990's (Wormald); Wantage, Wessex": ([('981–1012 or ?997', []), ('probably 997', [W]), ('?mid-990s', [WM])], [('Wantage, Wessex', [])]),
+    '940–6; no evidence of date (Robertson); Culinton: ?Colyton, Devonshire': ([('940–6', []), ('no evidence of date', [R])], [('Culinton (?Colyton, Devonshire)', [])]),
+    'c.929–939; before VI As (Attenborough); Ðunresfeld': ([('c.929–939', []), ('before VI As', [A])], [('Ðunresfeld', [])]),
+    "c.991–c.1002; ?mid-990's (Wormald)": ([('c.991–c.1002', []), ('?mid-990s', [WM])], []),
+    '962 –963; 962 or 963 ( Robertson); Wihtbordesstan; 962–3 (Whitelock)': ([('962–963', []), ('962 or 963', [R]), ('962–3', [W])], [('Wihtbordesstan', [])]),
+    '980-1016; ? as for VIII Atr (Wormald); Woodstock': ([('980–1016', []), ('?as for VIII Atr', [WM])], [('Woodstock', [])]),
+    '688–95; 688–94 (Whitelock)': ([('688–95', []), ('688–94', [W])], []),
+    'c.980–c.1050 (Liebermann; ?960 (Wormald)': ([('c.980–c.1050', [L]), ('?960', [WM])], []),
+    '1090–1135 (Robertson)': ([('1090–1135', [R])], []),
+    'c.1015–c.1050; post–1023 (Wormald); ?1014 (Rabin)': ([('c.1015–c.1050', []), ('after 1023', [WM]), ('?1014', [RB])], []),
+    '1028–c.1060; probably 1020–23 (Whitelock)': ([('1028–c.1060', []), ('probably 1020–23', [W])], []),
+    'c.936–58, or c.1000; ?c. 930 (Wormald)': ([('c.936–58, or c.1000', []), ('?c.930', [WM])], []),
+    "c.910–c.1060 ; ?mid-990's (Wormald)": ([('c.910–c.1060', []), ('?mid-990s', [WM])], []),
+    '975 or 978, 14 April; 978 or 979 (Robertson); Kingston, if 978–9 (Robertson)': ([('975 or 978, 14 April', []), ('978 or 979', [R])], [('Kingston, if 978–9', [R])]),
+    '960 (c.1025?)–1060; ?Bath Abbey (Wormald)': ([('960 (c.1025?)–1060', [])], [('?Bath Abbey', [WM])]),
+    'c.1050; before 959 (Wormald)': ([('c.1050', []), ('before 959', [WM])], []),
+    "c.920–c.1050; early 900's (Wormald)": ([('c.920–c.1050', []), ('early 900s', [WM])], []),
+    'c.927–937; before III, IV & VI As (Attenborough); Exeter': ([('c.927–937', []), ('before III, IV & VI As', [A])], [('Exeter', [])]),
+    '1008; Enham': ([('1008', [])], [('Enham', [])]),
+    'c.930–940; after II & V As (Attenborough); London': ([('c.930–940', []), ('after II & V As', [A])], [('London', [])]),
+    '16 May 1008 –13 May 1011; 1008 (Robertson, Wormald); Enham': ([('16 May 1008–13 May 1011', []), ('1008', [R, WM])], [('Enham', [])]),
+    '16 May 1008 – 13 May 1011; 1008 (Wormald); Enham': ([('16 May 1008–13 May 1011', []), ('1008', [WM])], [('Enham', [])]),
+    '992–1011; no evidence of exact date (Robertson); 1009 (Whitelock, Wormald); Bath': ([('992–1011', []), ('no evidence of exact date', [R]), ('1009', [W, WM])], [('Bath', [])]),
+    '1014': ([('1014', [])], []),
+    'c.910–c.1060 (Liebermann); ?c.995 (Wormald)': ([('c.910–c.1060', [L]), ('?c.995', [WM])], []),
+    '944–c.1060; c.945 (Wormald)': ([('944–c.1060', []), ('c.945', [WM])], []),
+    '695–6; 6 Sept., 695 (Attenborough); 6 Sept. 695 (Whitelock)': ([('695–6', []), ('6 Sept. 695', [A, W])], []),
+    'c.970 (1030?) –c.1060; 1008–1020 (Wormald); no clear indication of date; probably not early (Whitelock)':
+        ([('c.970 (1030?)–c.1060', []), ('1008–1020', [WM]), ('no clear indication of date; probably not early', [W])], []),
+    '1066–75 (Robertson); London': ([('1066–75', [R])], [('London', [])]),
+    'compiled 1110–35 (Robertson)': ([('compiled 1110–35', [R])], []),
+    'c. 1210 (Robertson)': ([('c.1210', [R])], []),
+    '1070–76, perhaps April 1072 (Robertson)': ([('1070–76, perhaps April 1072', [R])], []),
+    '1068–77 (Robertson)': ([('1068–77', [R])], []),
+    "1009–1016; ?as for V&VI Atr: 1008 (Wormald); ?King's Enham (Wormald)": ([('1009–1016', []), ('?as for V & VI Atr: 1008', [WM])], [('?King’s Enham', [WM])]),
+}
+
+KNOWN = {W, WM, R, A, RB, K, L}
+
+
+def _key(text):
+    return re.sub(r'\s+', ' ', html.unescape(text or '')).strip()
+
+
+def _auto(text):
+    dates, places = [], []
+    for part in [p.strip() for p in text.split(';') if p.strip()]:
+        m = re.match(r'^(.*?)\s*\(([^()]*)\)\.?$', part)
+        who = []
+        if m and all(n.strip() in KNOWN for n in m.group(2).split(',')):
+            part, who = m.group(1).strip(), [n.strip() for n in m.group(2).split(',')]
+        (dates if re.search(r'\d', part) else places).append((part, who))
+    return dates, places
+
+
+def parse(text):
+    """([(date, [scholars])], [(place, [scholars])]) for one spreadsheet string."""
+    key = _key(text)
+    if not key:
+        return [], []
+    return TABLE.get(key) or _auto(key)

@@ -590,7 +590,14 @@ ul.citations li { break-inside: avoid; }
 /* EB Garamond has a rule for text marked as Latin that draws u, U and v as
    classical V shapes. Liebermann prints u, so keep the ordinary letters. */
 :lang(la) { font-feature-settings: "locl" 0; font-language-override: "ENG"; }
-.clause-sources ul { padding-left: 1.2rem; }
+.clause-sources ul { list-style: none; padding-left: 0; }
+.clause-sources li { margin: 0 0 0.4rem; }
+/* Date and Place, each on its own line under the name of the law code */
+.entry-header .meta:has(+ .clause-dates) { margin-bottom: 0.35rem; }
+.clause-dates { color: var(--muted); margin-bottom: 1.5rem; }
+.clause-dates p { margin: 0.1rem 0; }
+.clause-dates__label { font-weight: 600; }
+.clause-dates__sep { color: var(--muted); }
 .clause-source .ms-label { cursor: help; border-bottom: 1px dotted currentColor; }
 .clause-note { margin: 0.3rem 0 0.6rem; color: var(--muted); }
 .clause-note strong { color: inherit; font-weight: 600; }
