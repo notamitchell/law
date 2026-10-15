@@ -23,7 +23,9 @@
         const term = fold(typed);
         if (!term) return [];
         const starts = [], contains = [];
+        const hidden = ELieb.hiddenLanguages();
         for (const e of entries) {
+            if (!ELieb.isShown(e.lang, hidden)) continue;
             const i = e.key.indexOf(term);
             if (i === 0) starts.push(e);
             else if (i > 0) contains.push(e);

@@ -212,7 +212,8 @@ scripts:
     }
 
     // Links to the previous and next entries in Liebermann's order, as the
-    // Dictionary page lists them. They are left out if the list can't load.
+    // Dictionary page lists them, skipping any language the reader has hidden
+    // there. They are left out if the list can't load.
     function showNeighbours() {
         const nav = target.querySelector('.entry-nav');
         if (!nav) return;
@@ -221,6 +222,10 @@ scripts:
             .then(list => {
                 const order = list.map(([id, hw, lang]) => ({ id, hw, lang, key: ELieb.alphaKey(hw) }))
                     .sort((a, b) => (a.key < b.key ? -1 : a.key > b.key ? 1 : 0) || a.id.localeCompare(b.id, undefined, { numeric: true }));
+                const hidden = ELieb.hiddenLanguages();
+                const shown = order.filter(x => x.id === slug || ELieb.isShown(x.lang, hidden));
+                order.length = 0;
+                order.push(...shown);
                 const i = order.findIndex(x => x.id === slug);
                 if (i === -1) return;
                 const link = (x, dir) => x
