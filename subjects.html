@@ -179,9 +179,10 @@ scripts:
                 <h3><a href="${codeUrl(c.code)}">${esc(c.name)}</a> <span class="subject-code-meta">${esc(c.code)} · ${plural(byCode[c.code].length, 'clause', 'clauses')}</span></h3>
                 <ol class="code-clauses">${byCode[c.code].map(x => `
                     <li>
-                        <a class="code-clause-no" href="${clauseUrl(x.id)}">${esc(x.clause || x.citation)}</a>
+                        <a class="code-clause-no" href="${clauseUrl(x.id)}" title="All texts, manuscripts and translations of ${esc(x.citation)}">${esc(x.clause || x.citation)}</a>
                         <p class="code-clause-oe">${esc(x.oe)}</p>
                         <p class="code-clause-en">${esc(x.gloss)}</p>
+                        <a class="code-clause-more" href="${clauseUrl(x.id)}">All texts and translations<span aria-hidden="true"> ›</span><span class="visually-hidden"> of ${esc(x.citation)}</span></a>
                     </li>`).join('')}
                 </ol>
             </section>`).join('');
@@ -203,7 +204,7 @@ scripts:
                 <h2>The clauses</h2>
                 <a class="button" href="${root}laws.html?kw=${encodeURIComponent(k)}">Search within these clauses</a>
             </div>
-            <p class="small muted">Each clause gives the text of the first manuscript in Liebermann’s edition and Claude’s semi-literal English of Liebermann’s German, as on the law code pages.</p>
+            <p class="small muted">Each clause gives the text of the first manuscript in Liebermann’s edition and Claude’s semi-literal English of Liebermann’s German, as on the law code pages. Click a clause number, or <em>All texts and translations</em>, for all its texts, manuscripts and translations.</p>
             ${list}`;
         if (location.hash) { const el = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (el) el.scrollIntoView(); }
     }

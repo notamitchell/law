@@ -55,11 +55,15 @@ scripts:
             <p>${mine.length} clauses.
                ${code.manuscripts && code.manuscripts.length ? `Manuscripts: ${code.manuscripts.map(esc).join(', ')}.` : ''}
                Editions and translations: ${sources.map(esc).join(', ')}.</p>
+            <aside class="code-callout">
+                <p><strong>This page is a summary: one text and one translation of each clause.</strong>
+                   Each clause has its own page with <strong>all</strong> its texts, manuscripts, editions and translations, and its notes, cross-references and keywords. Click a clause number, or <em>All texts and translations</em> under any clause, to open it.</p>
+                <p><a class="button" href="${mine.length ? clauseUrl(mine[0].id) + '&all=1' : '#'}">Read the whole law code with every text and translation</a></p>
+            </aside>
             <div class="code-tools">
                 <input type="search" id="find" placeholder="Find in this law code (clause number or words)" aria-label="Find in this law code">
-                <a class="button" href="${mine.length ? clauseUrl(mine[0].id) + '&all=1' : '#'}">Read with every text and translation</a>
             </div>
-            <p class="small muted">Each clause below gives the text of the first manuscript in Liebermann’s edition (his leftmost column) and Claude’s semi-literal English of Liebermann’s German translation. Where a clause has neither, another edition or translation is shown and labelled. Click a clause number to see all its texts, manuscripts and translations.</p>
+            <p class="small muted">The summary gives the text of the first manuscript in Liebermann’s edition (his leftmost column) and Claude’s semi-literal English of Liebermann’s German translation. Where a clause has neither, another edition or translation is shown and labelled.</p>
             <div class="code-clauses-head">
                 <span></span>
                 <span>${esc(textHead)}</span>
@@ -76,9 +80,10 @@ scripts:
             const shown = !t ? mine : mine.filter(c => fold(c.clause).startsWith(t) || fold(c.oe + ' ' + c.gloss + ' ' + c.en).includes(t));
             ol.innerHTML = shown.length ? shown.map(c => `
                 <li id="${esc(c.id)}">
-                    <a class="code-clause-no" href="${clauseUrl(c.id)}">${esc(c.clause || c.citation)}</a>
+                    <a class="code-clause-no" href="${clauseUrl(c.id)}" title="All texts, manuscripts and translations of ${esc(c.citation)}">${esc(c.clause || c.citation)}</a>
                     <p class="code-clause-oe">${tag(c.oeLabel, textLabel)}${esc(c.oe)}</p>
                     <p class="code-clause-en">${tag(c.glossLabel, enLabel)}${esc(c.gloss)}</p>
+                    <a class="code-clause-more" href="${clauseUrl(c.id)}">All texts and translations<span aria-hidden="true"> ›</span><span class="visually-hidden"> of ${esc(c.citation)}</span></a>
                 </li>`).join('') : '<li class="muted">Nothing in this law code matches.</li>';
         };
         draw('');
