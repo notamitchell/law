@@ -8,7 +8,7 @@ scripts:
 ---
 <h1>Laws</h1>
 
-<p class="lede">The law codes of pre-Conquest England, from Æthelberht of Kent to Cnut, as Liebermann edited them, with modern editions and translations. Choose a law code to read it clause by clause, or search the clauses below.</p>
+<p class="lede">The law codes of early England, as Liebermann edited them, with additional editions and translations. Choose a law code to read it clause by clause, or search the clauses below.</p>
 
 <div class="search-bar" role="search">
     <input type="search" id="q" placeholder="Law code and clause, e.g. Ine 23, Alfred 5, II Cnut 30,1" aria-label="Search by law code (abbreviation or name) and clause">
@@ -75,6 +75,37 @@ scripts:
         return out;
     }
 
+    // The suggested dates of a law code, short, for the list: the "Place and
+    // date of promulgation" text without scholars' names (in brackets), places,
+    // or remarks with no date in them. The law code's own page has it in full.
+    function summaryDates(text) {
+        const SEASON = /^(Easter|Christmas|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept?|Oct|Nov|Dec)/;
+        const seen = new Set();
+        const out = [];
+        for (let part of (text || '').split(';')) {
+            part = part.replace(/\([^)\d]*(\)|$)/g, ' ')          // (Whitelock), (Robertson, Wormald), but not (1030?)
+                .replace(/^\s*\?Date:\s*/, '')
+                .replace(/,\s*probably written from .*/, '')
+                .replace(/\s+/g, ' ').trim();
+            // A place, or a place with a condition ("Kingston, if 978–9").
+            const lead = part.match(/^\??([A-ZÐÞ][^\s,]*)/);
+            if (lead && !SEASON.test(lead[1]) && !/^\??(Date|before|after)/.test(part)) continue;
+            // A place after the date ("c.930, ?Archenfield, on the Wye").
+            part = part.replace(/,\s*\??[A-ZÐÞ].*$/, m => {
+                const word = m.replace(/^,\s*\??/, '');
+                return SEASON.test(word) || /^[IVX]+\b/.test(word) ? m : '';   // a month, or "III, IV & VI As"
+            });
+            part = part.replace(/\s*–\s*/g, '–').trim();
+            // Keep dates, and dates relative to other codes ("before III As").
+            if (!/\d/.test(part) && !/^\??(before|after|same time|as for|Easter|Christmas)\b/i.test(part)) continue;
+            const key = part.replace(/[\s,.]/g, '');
+            if (seen.has(key)) continue;
+            seen.add(key);
+            out.push(part);
+        }
+        return out.join('; ');
+    }
+
     // No search: the list of law codes.
     function drawCodes() {
         count.textContent = `${codes.length} law codes, ${clauses.length} clauses`;
@@ -84,7 +115,7 @@ scripts:
                 <ul class="code-list">${g.items.map(c => `
                     <li>
                         <a href="${codeUrl(c.code)}"><span class="code-abbr">${esc(c.code)}</span> <span class="code-name">${esc(c.name)}</span></a>
-                        <span class="code-meta">${esc(plural(c.clauses, 'clause', 'clauses'))}${c.date ? ' · ' + esc(c.date) : ''}</span>
+                        <span class="code-meta">${esc(plural(c.clauses, 'clause', 'clauses'))}${summaryDates(c.date) ? ' · Suggested dates: ' + esc(summaryDates(c.date)) : ''}</span>
                     </li>`).join('')}
                 </ul>
             </section>`).join('');
