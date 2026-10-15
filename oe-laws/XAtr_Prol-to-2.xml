@@ -4,11 +4,14 @@
     <fileDesc>
       <titleStmt>
         <title>X Atr Prol. 2</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +30,7 @@
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">130</biblScope></bibl>
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">208</biblScope></bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-vr"><abbr>Vr</abbr> <note type="manuscript">Vatican, Biblioteca Apostolica, Reg. lat. 946</note></witness>
@@ -50,14 +54,18 @@
     <revisionDesc>
       <change when="2026-10-14">Generated from row 1483 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 269.</change>
+      <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 269.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Prol. 2">
         <head><ref type="lawCode" target="law:XAtr">X Atr</ref> Prol. 2</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol. 2" corresp="#wit-vr">Nu wille ic georne æfter þam spyrian, hu we lara ⁊ laga betst magan healdan ⁊ æghwylce unlaga swyþost aweorpan.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="§2" corresp="#wit-vr">Nu wille ic georne æfter þam spyrian, hu we lara ⁊ laga betst magan healdan ⁊ æghwylce unlaga swyþost aweorpan.</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml">Pr.2 Nu wille ic georne æfter þam spyrian hu we lara and laga betst magan healdan and æghwylce unlaga swyþost aweorpan.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-vr">Now I desire zealously to search out how we may best uphold precepts and laws and most fully renounce all unjust practices.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml">Pr.2 Now I fervently wish to discover how we might best adhere to the teachings and laws and totally reject all injustice.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">Nun will ich eifrig dem nachspüren, wie wir aufs beste Lehren und Gesetze halten und jegliche Gesetzwidrigkeiten völligst beseitigen können.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Now I will eagerly seek out how we may best keep teachings and laws and most completely cast out every abuse of law.</ab>
         <note type="comparison" source="#liebermann" n="269"><ref target="clause:VIAtr_40">VI Atr 40</ref></note>

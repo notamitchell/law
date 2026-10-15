@@ -9,6 +9,8 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -23,7 +25,7 @@
         <bibl type="legalText"><title>Norðhymbra cyricgrið (Northumbrian Church-Sanctuary)</title></bibl>
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">473</biblScope></bibl>
-          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020)</bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">32</biblScope></bibl>
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
         </listBibl>
@@ -52,8 +54,11 @@
       <div type="clause" n="3">
         <head><ref type="lawCode" target="law:NorGrith">Nor Grið</ref> 3</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-g-b">[Iohann]es binnan cyricwagum þreo</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-b">Iohannes binnan cyricwagum þreo</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-b">and within the walls of Saint John’s is three</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">[Fortsetzung von 1]</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">[Continuation of clause 1; see line 1.]</ab>
+        <note type="textual" source="#rabin-doml">Iohannes: reconstructed by Liebermann</note>
       </div>
     </body>
   </text>
