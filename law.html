@@ -79,10 +79,14 @@ scripts:
             if (!id) return;
             const name = tei(doc, 'name').find(n => n.getAttribute('ref') === '#' + id);
             const page = tei(b, 'biblScope').find(s => s.getAttribute('unit') === 'page');
-            out[id] = { id, bibl: b, name: name ? plainText(name) : id, page: page ? plainText(page) : '' };
+            out[id] = { id, bibl: b, type: b.getAttribute('type') || '', name: name ? plainText(name) : (SOURCE_NAMES[id] || id.charAt(0).toUpperCase() + id.slice(1)),
+                        page: page ? plainText(page) : '' };
         }));
         return out;
     }
+
+    // Names for works a clause file lists without naming (e.g. Liebermann in Cn 1018).
+    const SOURCE_NAMES = { liebermann: 'Liebermann', 'wormald-mel': 'Wormald', 'wormald-ppmel': 'Wormald', 'rabin-doml': 'Rabin', 'whitelock-cs': 'Whitelock' };
 
     // A translator's or editor's surname, linked to the full reference at the foot of the page.
     function sourceLink(src) {
@@ -113,6 +117,42 @@ scripts:
         const s = el('span', 'ms-label', (prefix || 'MS ') + (w ? w.abbr : id.replace(/^wit-/, '').toUpperCase()));
         if (w && w.name) s.title = w.name;
         return s;
+    }
+
+    // Manuscript sigla link to the Manuscripts list (msAbb.html), or, for the Quadripartitus and the
+    // other Latin versions, to the list of law codes (lawAbb.html).
+    let siglumIndex = null;
+    const sigKey = s => s.replace(/[\s.]/g, '');
+    const SIGLUM_ALIASES = { 'InstCn': 'In(Cn)' };
+    function loadSigla() {
+        const get = f => fetch(root + 'data/' + f).then(r => r.json()).catch(() => []);
+        return Promise.all([get('manuscripts.json'), get('markLaw.json')]).then(([ms, law]) => {
+            siglumIndex = {};
+            law.forEach(r => { if (r['Gesetze Text']) siglumIndex[sigKey(r['Gesetze Text'])] = 'lawAbb.html#' + encodeURIComponent(r.Anchor); });
+            ms.forEach(r => { if (r['Gesetze Text']) siglumIndex[sigKey(r['Gesetze Text'])] = 'msAbb.html#' + encodeURIComponent(r.Anchor); });
+        });
+    }
+    // "G (Prol.)" -> the page for G; "Fl, Ox" -> one link each.
+    function siglumHref(sig) {
+        if (!siglumIndex) return '';
+        let k = sigKey(sig);
+        k = SIGLUM_ALIASES[k] || k;
+        return siglumIndex[k] || siglumIndex[sigKey(sig.replace(/\s*\([^)]*\)\s*$/, ''))] || '';
+    }
+    function siglumLinks(sig) {
+        const frag = document.createDocumentFragment();
+        const parts = sig.split(/,\s*/);
+        const linkable = parts.length > 1 && parts.every(p => siglumHref(p)) ? parts : [sig];
+        linkable.forEach((p, i) => {
+            if (i) frag.appendChild(document.createTextNode(', '));
+            const href = siglumHref(p);
+            if (!href) { frag.appendChild(document.createTextNode(p)); return; }
+            const a = el('a', null, p);
+            a.href = root + href;
+            a.title = 'See ' + p + ' in the list of ' + (href.startsWith('msAbb') ? 'manuscripts' : 'law codes');
+            frag.appendChild(a);
+        });
+        return frag;
     }
 
     const LANG_NAMES = { de: 'German', la: 'Latin', xno: 'Anglo-Norman French' };
@@ -331,6 +371,45 @@ scripts:
         return a;
     }
 
+    // "Date: 1018 (Whitelock, Kennedy, Wormald)" and "Place: Oxford", each on its own line. Each
+    // date or place is followed by the scholars who propose it, linked to their works at the foot of the page.
+    function datePlace(doc, srcs) {
+        const creation = tei(doc, 'creation')[0];
+        if (!creation) return null;
+        const box = el('div', 'clause-dates');
+        const line = (label, items) => {
+            if (!items.length) return;
+            const p = el('p');
+            p.appendChild(el('span', 'clause-dates__label', label + ': '));
+            items.forEach((it, i) => {
+                if (i) p.appendChild(el('span', 'clause-dates__sep', ' · '));
+                p.appendChild(document.createTextNode(plainText(it)));
+                const ids = (it.getAttribute('source') || '').split(/\s+/).map(x => x.replace(/^#/, '')).filter(Boolean);
+                if (ids.length) {
+                    p.appendChild(document.createTextNode(' ('));
+                    ids.forEach((id, j) => {
+                        if (j) p.appendChild(document.createTextNode(', '));
+                        const src = srcs[id] || { id, name: id, bibl: it };
+                        const a = sourceLink(src);
+                        a.textContent = src.name.split(',')[0];
+                        p.appendChild(a);
+                    });
+                    p.appendChild(document.createTextNode(')'));
+                }
+            });
+            box.appendChild(p);
+        };
+        const kids = Array.from(creation.children);
+        line('Date', kids.filter(n => n.localName === 'date'));
+        line('Place', kids.filter(n => n.localName === 'placeName'));
+        if (!box.children.length) {
+            // Older files: only the spreadsheet's wording.
+            const note = kids.find(n => n.localName === 'note' && n.getAttribute('type') === 'promulgation');
+            if (note && plainText(note)) box.appendChild(el('p', null, 'Date and place: ' + plainText(note)));
+        }
+        return box.children.length ? box : null;
+    }
+
     function render(row, doc) {
         const h1 = el('h1');
         h1.appendChild(codeLink(row));
@@ -349,9 +428,8 @@ scripts:
             if (t) meta.appendChild(el('span', null, plainText(t)));
             if (reign) meta.appendChild(el('span', null, plainText(reign)));
         } else if (row.legalText) meta.appendChild(el('span', null, row.legalText));
-        const promulg = first(doc, 'note[type="promulgation"]') || tei(doc, 'note').find(n => n.getAttribute('type') === 'promulgation');
-        if (promulg && promulg.textContent.trim()) meta.appendChild(el('span', null, 'Promulgated: ' + promulg.textContent.trim()));
-        const lieb = sources(doc).liebermann;
+        const allSrcs = sources(doc);
+        const lieb = allSrcs.liebermann;
         const liebPage = isNew ? (lieb ? lieb.page : '') : row.page;
         const scanAt = SCAN_ID ? scanPage(liebPage) : '';
         if (liebPage) {
@@ -367,6 +445,8 @@ scripts:
             meta.appendChild(s);
         }
         header.appendChild(meta);
+        const dated = datePlace(doc, allSrcs);
+        if (dated) header.appendChild(dated);
         target.appendChild(header);
 
         const sec = el('section', 'entry-section');
@@ -383,8 +463,10 @@ scripts:
                 const ul = el('ul', 'ms-list');
                 Object.values(witnesses(doc)).forEach(w => {
                     const li = el('li');
-                    li.appendChild(el('span', 'ms-siglum', w.abbr));
-                    if (w.name) li.appendChild(document.createTextNode(' – ' + w.name));
+                    const sig = el('span', 'ms-siglum');
+                    sig.appendChild(siglumLinks(w.abbr));
+                    li.appendChild(sig);
+                    if (w.name) li.appendChild(document.createTextNode(' ' + w.name));
                     ul.appendChild(li);
                 });
                 s.appendChild(ul);
@@ -404,7 +486,7 @@ scripts:
         if (kw.length) {
             const s = el('section', 'entry-section');
             s.appendChild(el('h2', null, 'Keywords'));
-            s.appendChild(el('p', 'small muted', 'Click a keyword to find the other clauses that have it.'));
+            s.appendChild(el('p', 'small muted', 'Click a keyword to find the other law code clauses tagged with it.'));
             const names = { 'offence-legal-event': 'Offence / legal event', people: 'People', locations: 'Locations' };
             kw.forEach(k => {
                 const p = el('p');
@@ -420,12 +502,15 @@ scripts:
             target.appendChild(s);
         }
 
-        const srcs = Object.values(sources(doc));
-        if (srcs.length) {
+        // Editions and translations, then studies (only if there are any), without bullet points.
+        const srcs = Object.values(allSrcs);
+        [['Editions and translations', srcs.filter(x => x.type !== 'study')],
+         ['Studies', srcs.filter(x => x.type === 'study')]].forEach(([title, list]) => {
+            if (!list.length) return;
             const s = el('section', 'entry-section clause-sources');
-            s.appendChild(el('h2', null, 'Editions, translations and studies'));
+            s.appendChild(el('h2', null, title));
             const ul = el('ul');
-            srcs.forEach(x => {
+            list.forEach(x => {
                 const li = el('li');
                 li.id = 'src-' + x.id;
                 li.appendChild(el('strong', null, x.name + ': '));
@@ -434,7 +519,7 @@ scripts:
             });
             s.appendChild(ul);
             target.appendChild(s);
-        }
+        });
 
         // Neighbouring clauses and the whole code
         const sameCode = catalogue.filter(c => c.code === row.code);
@@ -494,7 +579,7 @@ scripts:
             catalogue = list;
             const row = list.find(c => c.id === id);
             if (!row) throw new Error('missing');
-            return fetchXml(row.file).then(doc => render(row, doc));
+            return Promise.all([fetchXml(row.file), loadSigla()]).then(([doc]) => render(row, doc));
         })
         .catch(() => {
             target.innerHTML = '';

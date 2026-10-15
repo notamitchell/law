@@ -49,6 +49,7 @@ def _load(name, file):
 old = _load('laws_from_xlsx', 'laws-from-xlsx.py')       # slugify, clause keys, anchors, witnesses
 abt = _load('law_code_from_xlsx', 'law-code-from-xlsx.py')  # italic runs
 rubrics = _load('rubric_split', 'rubric_split.py')         # J&O's E and B rubrics, apart
+promulgation = _load('promulgation', 'promulgation.py')  # date and place, with their scholars
 
 SKIP = set()
 
@@ -350,6 +351,45 @@ def read_rows(path, only=None):
     return rows
 
 
+ROBERTSON_REF = ('A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> '
+                 '(Cambridge: Cambridge University Press, 1925)')
+ATTENBOROUGH_REF = ('F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> '
+                    '(Cambridge: Cambridge University Press, 1922)')
+KENNEDY_REF = 'A. G. Kennedy, ‘Cnut’s Law Code of 1018’, <title>Anglo-Saxon England</title> 11 (1983), 57–81'
+# A scholar named for a date or place -> (source id, name, reference). A work not
+# already on the clause page as an edition or translation is listed under Studies.
+DATE_SCHOLARS = {
+    'Whitelock': ('whitelock', 'Whitelock', WHITELOCK_EHD),
+    'Wormald': ('wormald-mel', 'Wormald, MEL', WORMALD_MEL),
+    'Rabin': ('rabin-doml', 'Rabin', RABIN_DOML),
+    'Robertson': ('robertson', 'Robertson', ROBERTSON_REF),
+    'Attenborough': ('attenborough', 'Attenborough', ATTENBOROUGH_REF),
+    'Kennedy': ('kennedy', 'Kennedy', KENNEDY_REF),
+    'Liebermann': ('liebermann', 'Liebermann', LIEBERMANN_REF),
+}
+
+
+def date_place(text, srcs):
+    """The code's dates and places as [(kind, text, [source ids])], adding the scholars' works to srcs."""
+    dates, places = promulgation.parse(text)
+    out = []
+    for kind, items in (('date', dates), ('placeName', places)):
+        for what, who in items:
+            ids = []
+            for name in who:
+                sid, short, ref = DATE_SCHOLARS[name]
+                srcs.add(sid, short, ref, 'study')
+                ids.append(sid)
+            out.append((kind, what, ids))
+    return out
+
+
+def creation_xml(dated):
+    """<date> and <placeName> elements, each pointing to the works that propose it."""
+    return ''.join('<%s%s>%s</%s>' % (kind, (' source="%s"' % ' '.join('#' + i for i in ids)) if ids else '', esc(what), kind)
+                   for kind, what, ids in dated)
+
+
 # Keywords that mean the same, merged into one (the first form is kept).
 SAME_KEYWORD = {'Kings': 'King'}
 
@@ -646,6 +686,11 @@ def build(row, today, source_name, refs):
         if ('e', sid) not in seen and ('t', sid) not in seen and ('x', sid) not in seen:
             seen.add(('x', sid))
             w('        <respStmt><resp>Cross-references to other clauses</resp><name ref="#%s">%s</name></respStmt>' % (sid, esc(srcs.items[sid][0])))
+    dated = date_place(row['promulgation'], srcs)
+    for sid in dict.fromkeys(sid for _, _, ids in dated for sid in ids):
+        if not any((k, sid) in seen for k in 'etx'):
+            seen.add(('x', sid))
+            w('        <respStmt><resp>Date and place</resp><name ref="#%s">%s</name></respStmt>' % (sid, esc(srcs.items[sid][0])))
     w('      </titleStmt>')
     w('      <publicationStmt>')
     w('        <publisher>%s</publisher>' % esc(old.PUBLISHER))
@@ -682,7 +727,7 @@ def build(row, today, source_name, refs):
     kws = [('offence-legal-event', row['offence']), ('people', row['people']), ('locations', row['locations'])]
     w('    <profileDesc>')
     if row['promulgation']:
-        w('      <creation><note type="promulgation">%s</note></creation>' % esc(row['promulgation']))
+        w('      <creation>%s<note type="promulgation">%s</note></creation>' % (creation_xml(dated), esc(row['promulgation'])))
     if any(t for _, t in kws):
         w('      <textClass>')
         for name, terms in kws:
