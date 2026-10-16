@@ -50,8 +50,8 @@ In the outer margin beside his German translation, Liebermann prints short notes
 
 Where later editors divide one of Liebermann's clauses, the spreadsheet gives each part its own row, with a letter in square brackets (Abt 1[a] … 1[g]): that is how it records which words of each text go with which words of each translation. The website shows the clause whole, as Liebermann prints it. `tools/merge-parts.py` joins the part files into one file for the clause (`Abt_1.xml`):
 
-- each text keeps its parts as `<seg type="part" n="a">…</seg>`, which the clause page marks with small letters (a translation that gives the same words for two parts is shown once, for both: `n="f g"`);
-- `<note type="concordance">` gives the editions' numbers for the parts (Oliver 1, 2, … 7), shown under the heading;
+- each text keeps its parts as `<seg type="part" n="22.1" corresp="#part-b">…</seg>`: `n` is the clause number the page shows before the part (the text's own editor's number where it has one, e.g. Oliver's; otherwise the number of the edition that divides the clause), `corresp` the spreadsheet row's letter; a translation that gives the same words for two parts is shown once, for both (`n="6–7" corresp="#part-f #part-g"`);
+- `<note type="concordance" source="#oliver">` gives the editions' numbers for the parts (Oliver 1, 2, … 7), shown under the heading; `source` is the edition whose numbers are shown in texts that have none of their own;
 - notes, keywords, sources and manuscripts of the parts are gathered; a note on one part has `target="#part-a"` and is shown with its letter;
 - `oe-laws/index.json` has one entry for the clause, with `"parts"`: the part files' ids and clause numbers. A link to a part (`law.html?id=Abt_1-c`) opens the clause with that part highlighted. Links to a part that cite the whole clause ("Abt 1", without a letter), from the dictionary and from the cross-references, are pointed at the clause.
 
