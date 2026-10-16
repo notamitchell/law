@@ -59,6 +59,15 @@ scripts:
                 return;
             }
             if (name === 'note' && n.getAttribute('type') === 'remark') return;
+            if (name === 'seg' && n.getAttribute('type') === 'part') {
+                // one part of a clause the later editors divide (tools/merge-parts.py): its letter, then its text
+                const letters = (n.getAttribute('n') || '').split(/\s+/).filter(x => /^[a-z]$/.test(x));
+                const span = el('span', ['part'].concat(letters.map(x => 'part-' + x)).join(' '));
+                if (letters.length) span.appendChild(el('sup', 'part-mark', letters.length > 1 ? letters[0] + '–' + letters[letters.length - 1] : letters[0]));
+                span.appendChild(inline(n, opts));
+                frag.appendChild(span);
+                return;
+            }
             if (name === 'lb') { frag.appendChild(el('br')); if (n.getAttribute('type') === 'paragraph') frag.appendChild(el('br')); return; }
             const rend = name === 'hi' ? (n.getAttribute('rend') || '') : '';
             if (/bold|spaced|smallcaps/.test(rend)) {
@@ -315,7 +324,7 @@ scripts:
             if (own.length) {
                 const ol = el('ol', 'clause-reading-notes small');
                 ol.setAttribute('aria-label', src.name + (noteType === 'textual' ? '’s textual notes' : '’s notes'));
-                own.forEach(n => { const li = el('li'); li.appendChild(inline(n)); ol.appendChild(li); });
+                own.forEach(n => { const li = el('li'); li.appendChild(partLabel(n)); li.appendChild(inline(n)); ol.appendChild(li); });
                 box.appendChild(ol);
             }
             column.appendChild(box);
@@ -437,6 +446,7 @@ scripts:
             if (type !== 'passageSource' && type !== 'editorial') return;
             const p = el('p', 'clause-note small');
             p.appendChild(el('strong', null, type === 'passageSource' ? 'Source of the passage: ' : 'Notes: '));
+            p.appendChild(partLabel(n));
             p.appendChild(inline(n));
             wrap.appendChild(p);
         });
@@ -519,22 +529,26 @@ scripts:
         return box.children.length ? box : null;
     }
 
-    // A clause of Liebermann's that the database divides with letters in square brackets (Abt 1 as 1[a]–1[g])
-    // to match later editors' numbering: say so, and link the parts.
-    function subdivision(row) {
-        const m = (row.clause || '').match(/^(.*?)\[([a-z])\]$/);
-        if (!m) return null;
-        const base = m[1];
-        const parts = catalogue.filter(c => c.code === row.code && (c.clause === base || (c.clause.startsWith(base + '[') && /^\[[a-z]\]$/.test(c.clause.slice(base.length)))));
-        if (parts.length < 2) return null;
-        const p = el('p', 'clause-subdivision small');
-        p.appendChild(document.createTextNode('Liebermann prints ' + row.code + ' ' + base + ' as one clause. Here it is divided into '));
-        parts.forEach((c, i) => {
-            if (i) p.appendChild(document.createTextNode(i === parts.length - 1 ? ' and ' : ', '));
-            if (c.id === row.id) p.appendChild(el('strong', null, c.clause));
-            else { const a = el('a', null, c.clause); a.href = '?id=' + encodeURIComponent(c.id); p.appendChild(a); }
-        });
-        p.appendChild(document.createTextNode(' (the letters in square brackets are not Liebermann’s), to match the numbering of later editors.'));
+    // A clause of Liebermann's that later editors divide (Abt 1 = Oliver 1–7): the texts mark the parts with
+    // small letters; say so, with the editions' numbers (the concordance note written by tools/merge-parts.py).
+    const partLabel = n => {
+        const m = (n.getAttribute('target') || '').match(/^#part-([a-z])$/);
+        return m ? el('sup', 'part-mark', m[1]) : document.createTextNode('');
+    };
+
+    function partsNote(row, doc) {
+        if (!row.parts || row.parts.length < 2) return null;
+        const p = el('p', 'clause-parts small');
+        const letters = row.parts.map(x => (x.clause.match(/\[([a-z])\]$/) || [])[1]).filter(Boolean);
+        p.appendChild(document.createTextNode('Liebermann prints this as one clause. Later editors divide it, and the small letters '
+            + letters.map(l => l).join(', ') + ' in the texts below mark their divisions'));
+        const conc = tei(doc, 'note').find(n => n.getAttribute('type') === 'concordance');
+        if (conc && plainText(conc)) {
+            p.appendChild(document.createTextNode(' ('));
+            p.appendChild(el('span', 'clause-parts__conc', plainText(conc)));
+            p.appendChild(document.createTextNode(')'));
+        }
+        p.appendChild(document.createTextNode('.'));
         return p;
     }
 
@@ -575,7 +589,7 @@ scripts:
         header.appendChild(meta);
         const dated = datePlace(doc, allSrcs);
         if (dated) header.appendChild(dated);
-        const parts = subdivision(row);
+        const parts = partsNote(row, doc);
         if (parts) header.appendChild(parts);
         target.appendChild(header);
 
@@ -712,9 +726,18 @@ scripts:
         .then(r => r.json())
         .then(list => {
             catalogue = list;
-            const row = list.find(c => c.id === id);
+            // a part of a clause that is shown whole (Abt_1-c): the whole clause, with that part marked
+            const row = list.find(c => c.id === id) || list.find(c => (c.parts || []).some(p => p.id === id));
             if (!row) throw new Error('missing');
-            return Promise.all([fetchXml(row.file), loadSigla()]).then(([doc]) => render(row, doc));
+            const part = row.id === id ? '' : ((row.parts.find(p => p.id === id).clause.match(/\[([a-z])\]$/) || [])[1] || '');
+            return Promise.all([fetchXml(row.file), loadSigla()]).then(([doc]) => {
+                render(row, doc);
+                if (part) {
+                    const marked = target.querySelectorAll('.part-' + part);
+                    marked.forEach(e => e.classList.add('part-active'));
+                    if (marked[0]) marked[0].scrollIntoView({ block: 'center' });
+                }
+            });
         })
         .catch(() => {
             target.innerHTML = '';

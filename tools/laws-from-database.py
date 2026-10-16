@@ -945,6 +945,15 @@ def main():
         r['anchor'] = find_anchor(r['code'])[0]
     index_path = os.path.join(args.out, 'index.json')
     catalogue = json.load(open(index_path, encoding='utf-8'))
+    # A clause joined from its lettered parts by tools/merge-parts.py: the part files' names and numbers
+    # come back, so the parts are rebuilt under the same names, to be joined again.
+    expanded = []
+    for c in catalogue:
+        if c.get('parts'):
+            expanded.extend(dict(c, id=p['id'], file=p['id'] + '.xml', clause=p['clause'], parts=None) for p in c['parts'])
+        else:
+            expanded.append(c)
+    catalogue = [{k: v for k, v in c.items() if k != 'parts'} for c in expanded]
     codes = {r['code'] for r in rows}
     mine = [c for c in catalogue if OLD_CODES.get(c['code'].strip(), c['code'].strip()) in codes]
     used, report = assign_ids(rows, mine)
