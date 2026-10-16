@@ -160,7 +160,7 @@ scripts:
         <header class="entry-header">
             <h1>${esc(e.headword)}${e.n ? ` <sup>${esc(e.n)}</sup>` : ''}</h1>
             <div class="meta">
-                <span class="lang-badge ${e.lang}">${esc(e.language)}</span>
+                <span class="lang-badge ${e.lang}">${esc(e.language)}</span>${ELieb.isProperNoun(e.headword, e.lang) ? ELieb.properNounBadge() : ''}
                 ${page ? `<span>${page}${e.facsimile ? ` · <a href="${esc(e.facsimile)}" target="_blank" rel="noopener">page scan</a>` : ''}</span>` : ''}
             </div>
         </header>
@@ -223,13 +223,13 @@ scripts:
                 const order = list.map(([id, hw, lang]) => ({ id, hw, lang, key: ELieb.alphaKey(hw) }))
                     .sort((a, b) => (a.key < b.key ? -1 : a.key > b.key ? 1 : 0) || a.id.localeCompare(b.id, undefined, { numeric: true }));
                 const hidden = ELieb.hiddenLanguages();
-                const shown = order.filter(x => x.id === slug || ELieb.isShown(x.lang, hidden));
+                const shown = order.filter(x => x.id === slug || ELieb.isShown(x.lang, hidden, x.hw));
                 order.length = 0;
                 order.push(...shown);
                 const i = order.findIndex(x => x.id === slug);
                 if (i === -1) return;
                 const link = (x, dir) => x
-                    ? `<a class="entry-nav__${dir}" href="?id=${encodeURIComponent(x.id)}" rel="${dir}"><span class="entry-nav__label">${dir === 'prev' ? '← Previous' : 'Next →'}</span><span class="entry-nav__word">${esc(x.hw)} ${ELieb.languageBadge(x.lang || 'ang')}</span></a>`
+                    ? `<a class="entry-nav__${dir}" href="?id=${encodeURIComponent(x.id)}" rel="${dir}"><span class="entry-nav__label">${dir === 'prev' ? '← Previous' : 'Next →'}</span><span class="entry-nav__word">${esc(x.hw)} ${ELieb.languageBadge(x.lang || 'ang', x.hw)}</span></a>`
                     : '<span></span>';
                 nav.innerHTML = link(order[i - 1], 'prev') + link(order[i + 1], 'next');
                 nav.hidden = false;

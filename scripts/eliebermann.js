@@ -38,12 +38,30 @@
     function setHiddenLanguages(set) {
         try { localStorage.setItem(HIDE_KEY, JSON.stringify([...set])); } catch (e) { /* not remembered */ }
     }
-    const isShown = (lang, hidden) => !(hidden || hiddenLanguages()).has(lang || 'ang');
+    // An Old English headword that begins with a capital letter (after any
+    // bracket or hyphen) is a proper noun: Ine, Cent, [E]aldred, Æðel-.
+    function isProperNoun(headword, lang) {
+        if ((lang || 'ang') !== 'ang') return false;
+        const first = String(headword || '').replace(/^[\s\[\(\-~]+/, '').charAt(0);
+        return first !== '' && first !== first.toLowerCase() && first === first.toUpperCase();
+    }
 
-    function languageBadge(lang) {
+    // "prop" in the hidden set hides proper nouns ("Hide Proper Nouns").
+    const isShown = (lang, hidden, headword) => {
+        const h = hidden || hiddenLanguages();
+        return !h.has(lang || 'ang') && !(h.has('prop') && isProperNoun(headword, lang));
+    };
+
+    function properNounBadge() {
+        return '<span class="lang-badge prop" title="Proper noun: a name of a person, place, people or day">Proper Noun</span>';
+    }
+
+    // The language tag, then "Proper Noun" for an Old English name.
+    function languageBadge(lang, headword) {
         const name = LANGUAGES[lang] || lang;
         const text = lang === 'ang' ? 'OE' : name;
-        return `<span class="lang-badge ${escapeXml(lang)}" title="${escapeXml(name)}">${escapeXml(text)}</span>`;
+        return `<span class="lang-badge ${escapeXml(lang)}" title="${escapeXml(name)}">${escapeXml(text)}</span>` +
+            (isProperNoun(headword, lang) ? ' ' + properNounBadge() : '');
     }
 
     // Language codes for the names the old entry pages used.
@@ -817,7 +835,7 @@ ${translation}
     }
 
     const api = {
-        TEI_NS, LANGUAGES, LANGUAGE_CODES, languageBadge, hiddenLanguages, setHiddenLanguages, isShown,
+        TEI_NS, LANGUAGES, LANGUAGE_CODES, languageBadge, properNounBadge, isProperNoun, hiddenLanguages, setHiddenLanguages, isShown,
         useDom, slugify, sortKey, alphaKey, letterOf, ALPHABET, escapeXml,
         linkAbbreviations, loadAbbreviations, extractCitations, linkClauseNumbers, citationXr, splitSenses, splitOutline, sensesXml, detectLanguage, detectHeadword,
         inlineToTei, isEmptyHtml, buildEntryXml,
