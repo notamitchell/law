@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">18</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">194</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,23 +50,36 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 221 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 221 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 18.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Ot added from Gesetze I, p. 18.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 18.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="25">
         <head>Af Rb 25</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25" corresp="#wit-h">XXVI. Be ciorles mennen nydhæmede.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25" corresp="#wit-e">XXIII. Be ceorles mennenes niedhæmede.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="25" corresp="#wit-q">De uillanæ feminæ uiolento concubitu.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25" corresp="#wit-h">XXVI. Be ciorles mennen<ptr type="liebermannNote" n="11" target="#Rubrics-Af_25.lnote.oe.11"/> nydhæmede.<ptr type="liebermannNote" n="9" target="#Rubrics-Af_25.lnote.oe.9"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25" corresp="#wit-e">XXIII. Be ceorles<ptr type="liebermannNote" n="8" target="#Rubrics-Af_25.lnote.oe.8"/> mennenes niedhæmede.<ptr type="liebermannNote" n="9" target="#Rubrics-Af_25.lnote.oe.9-2"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25" corresp="#wit-g-prol">XXIII. Be ceorles mennenes niedhæmde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25" corresp="#wit-ot-frag">… e ceorles mennenes niedhæmede.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="25" corresp="#wit-q">De uillanæ<ptr type="liebermannNote" n="7" target="#Rubrics-Af_25.lnote.oe.7"/> feminæ uiolento concubitu.<ptr type="liebermannNote" n="8" target="#Rubrics-Af_25.lnote.oe.8-2"/></ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">XXVI Be .XII. hyndum men</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-b">Be twylfhendu<hi rend="italic">m</hi> m<hi rend="italic">en</hi></ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning a 12-hundred man</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Über Nothzüchtigung der Sklavin eines Gemeinfreien.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Über<ptr type="liebermannNote" n="1" target="#Rubrics-Af_25.lnote.de.1"/> Nothzüchtigung der Sklavin<ptr type="liebermannNote" n="2" target="#Rubrics-Af_25.lnote.de.2"/> eines Gemeinfreien.<ptr type="liebermannNote" n="3" target="#Rubrics-Af_25.lnote.de.3"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Concerning the rape of a common freeman’s slave woman.</ab>
         <note type="editorial">H’s rubric XXVI belongs to Af 25.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_25.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">viol. c. f. vil. <hi rend="italic">Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">viol. c. f. vil. Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_25.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">Si servus servam apprehendat violento concubitu <hi rend="italic">fügt zu Hk;</hi> De servo qui servam violenter cogat <hi rend="italic">fügt zu Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">Si servus servam apprehendat violento concubitu added by Hk; De servo qui servam violenter cogat added by Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_25.lnote.oe.8-2" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de">c. m. <hi rend="italic">und Rb.</hi> 26 <hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">c. m. and rubric 26 lacking in Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_25.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de">nydhæmed <hi rend="italic">Ld;</hi> nedhæmeð <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">nydhæmed Ld; nedhæmeð So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_25.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">dahinter Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">erasure after it</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_25.lnote.oe.9-2" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">y <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">y on an erasure</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Af_25.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">41</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">H allein setzt Af 25 hinter 31, 1 und Ld Af 26 hinter 25, 1, um ähnlichen Inhalt zu vereinigen, zwar laut jener Verschiedenheit voneinander unabhängig, möglicherweise aber gemäss einem [Ælfredschen? Waitz <hi rend="italic">Dt. VerfG.</hi> I 436] Vermerk des Archetyps. Price-Thorpe (danach Schmid) stellt, wie Ld 26, und ohne sachlichen Grund 2 folgende Kapitel voraus</seg><seg type="translation" xml:lang="en" source="#claude">H alone puts Af 25 after 31, 1, and Ld puts Af 26 after 25, 1, so as to bring together similar content; they do so independently of each other, as that difference shows, but possibly in accordance with a [Ælfredian? Waitz <hi rend="italic">Dt. VerfG.</hi> I 436] note in the archetype. Price-Thorpe (and Schmid after him), like Ld with 26, and without any reason in the substance, moves 2 following chapters forward</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Af_25.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">41</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">mennen</hi> in H ist eine nicht vollendete Korrektur. — Quadr setzt hier ‘Bauersfrau’, im Text Af 25 richtig ‘Sklavin des Bauern’</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">mennen</hi> in H is an unfinished correction. — Quadr has ‘peasant’s wife’ here, but in the text of Af 25 correctly ‘the peasant’s female slave’</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Af_25.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">41</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Rb für 25, 1 fügt Quadr in später Rez. hinzu</seg><seg type="translation" xml:lang="en" source="#claude">Quadr adds a Rb for 25, 1 in its later rec.</seg></note>
       </div>
     </body>
   </text>

@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">20</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">198</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,21 +50,29 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 233 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 233 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 20.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Ot added from Gesetze I, p. 20.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 20.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="42">
         <head>Af Rb 42</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="42" corresp="#wit-h">XXXVIII. Be fæhþum.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="42" corresp="#wit-e">XXXVIII. Be fæhðe.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="42" corresp="#wit-q">De factione.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="42" corresp="#wit-h">XXXVIII. Be fæhþum.<ptr type="liebermannNote" n="1" target="#Rubrics-Af_42.lnote.oe.1"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="42" corresp="#wit-e">XXXVIII. Be<ptr type="liebermannNote" n="*" target="#Rubrics-Af_42.lnote.oe.star"/> fæhðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="42" corresp="#wit-g-prol">XXXVIII. Be fæhðum.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="42" corresp="#wit-ot-frag">… fæhþe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="42" corresp="#wit-q">De<ptr type="liebermannNote" n="1" target="#Rubrics-Af_42.lnote.oe.1-2"/> factione.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">XXXVIII Be fæhðe</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning an act of violence</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Von Fehde.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Von Fehde.<ptr type="liebermannNote" n="1" target="#Rubrics-Af_42.lnote.de.1"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of feud.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_42.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">21</biblScope></bibl><seg type="original" xml:lang="de">De inimico negante rectum postulanti. Ubi sine wita liceat pugnare <hi rend="italic">Hk Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">De inimico negante rectum postulanti. Ubi sine wita liceat pugnare Hk Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_42.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">20</biblScope></bibl><seg type="original" xml:lang="de">[42] Be gefeohte al. fæþe <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">[42] Be gefeohte al. fæþe Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_42.lnote.oe.1-2" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">21</biblScope></bibl><seg type="original" xml:lang="de">um <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">um on an erasure</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Af_42.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">41</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">‘Von Fehden’ GH. Q spät. Rez. schöpft aus seinem Texte Rb zu 42. 42, 5. — Zu S. 20{*}: <hi rend="italic">fæhþe</hi> bessert Ld unter <hi rend="italic">Errata</hi>. Hier zeigt sich, dass er mehrere Hss. benutzte, deren eine ‘von blutigem Fechten’ las</seg><seg type="translation" xml:lang="en" source="#claude">‘Of feuds’ GH. Q later rec. draws Rbb for 42. 42, 5 from its own text. — On p. 20{*}: Ld corrects to <hi rend="italic">fæhþe</hi> in his <hi rend="italic">Errata</hi>. This shows that he used several MSS, one of which read ‘of bloody fighting’</seg></note>
       </div>
     </body>
   </text>

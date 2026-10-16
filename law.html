@@ -103,7 +103,7 @@ scripts:
         textual: {
             subtypes: ['textual'],
             title: 'Liebermann’s textual notes',
-            intro: 'Liebermann’s footnotes to this text (Gesetze I, at the foot of the page), in his German, with an English rendering made with an LLM (Claude). Numbers are his, counted afresh on each page; * marks an editor’s emendation.'
+            intro: 'Liebermann’s footnotes to this text (Gesetze I, at the foot of the page), in his German, with an English rendering made with an LLM (Claude). Numbers are his, counted afresh on each page (and for each manuscript, where he prints several side by side); * marks an editor’s emendation.'
         },
         attenborough: {
             type: 'editorNote', source: 'attenborough', subtypes: ['endnote', 'footnote'], who: 'Attenborough’s',
@@ -133,7 +133,7 @@ scripts:
     // The notes of one group as a list: number, German as printed, English, where printed, remarks.
     function notesList(notes, group) {
         const box = el('div', 'lnotes small');
-        box.appendChild(el('p', 'lnotes__intro muted', group.intro));
+        if (group.intro) box.appendChild(el('p', 'lnotes__intro muted', group.intro));
         const ol = el('ol', 'lnotes__list');
         notes.forEach(n => {
             const li = el('li');
@@ -200,6 +200,7 @@ scripts:
         });
         // Closed unless the reader opens them, clause by clause; open only when the link points at a note.
         set(notes.some(n => location.hash === '#' + htmlId(xmlId(n))));
+        return true;
     }
 
     // The editions and translations a clause file names (new layout only):
@@ -246,7 +247,7 @@ scripts:
         const id = (a.getAttribute('corresp') || '').replace(/^#/, '');
         const w = wits[id];
         if (!id) return null;
-        const abbr = w ? w.abbr : id.replace(/^wit-/, '').toUpperCase();
+        const abbr = (w ? w.abbr : id.replace(/^wit-/, '').toUpperCase()).replace(/\s*\([^)]*\)\s*$/, '');
         // The Quadripartitus is a Latin translation known from several manuscripts, not one manuscript: just "Q".
         const isQuad = /^Q\b/.test(abbr);
         const s = el('span', 'ms-label', (isQuad ? (prefix ? 'of ' : '') : (prefix || 'MS ')) + abbr);
@@ -318,7 +319,7 @@ scripts:
             .concat(list.filter(a => a.getAttribute('type') !== 'liebermannText'));
         const left = col(hasOE ? 'Old English text' : hasFrench ? 'Anglo-Norman French text' : 'Latin text', 'clause-col--text');
         const right = col('Translations', 'clause-col--translation');
-        const liebTexts = []; let liebFirst = null;
+        const liebTexts = [];
         const add = (column, a, bits, cls) => {
             const id = (a.getAttribute('source') || '').replace(/^#/, '');
             const src = srcs[id] || { id, name: id || 'Unknown', bibl: a, page: '' };
@@ -337,8 +338,7 @@ scripts:
             box.appendChild(p);
             // Liebermann's own notes, behind a button: textual notes on his texts (one button, on his first
             // text, for the numbers in all of them), Erklärungen on his German.
-            if (a.getAttribute('type') === 'liebermannText') liebTexts.push([p, a]);
-            if (a === texts.find(x => x.getAttribute('type') === 'liebermannText')) liebFirst = [box, label];
+            if (a.getAttribute('type') === 'liebermannText') liebTexts.push([box, label, p, a]);
             else if (a.getAttribute('type') === 'translation' && a.getAttribute('xml:lang') === 'de' && id === 'liebermann') attachNotes(box, label, [[p, a]], div, 'erklaerung');
             // Attenborough's notes: footnotes on his text (where it is given), the notes at the back on his translation.
             if (id === 'attenborough') {
@@ -374,7 +374,15 @@ scripts:
             left.appendChild(el('h3', 'clause-subhead', 'Quadripartitus'));
             byEditor(quad).forEach(a => addText(a, false));
         }
-        if (liebFirst) attachNotes(liebFirst[0], liebFirst[1], liebTexts, div, 'textual');
+        // Liebermann's textual notes: each of his texts gets the notes whose numbers stand in it (his footnotes
+        // are numbered separately for each manuscript's column); notes with no number in any text go with the first.
+        const targets = ab => tei(ab, 'ptr').map(x => (x.getAttribute('target') || '').replace(/^#/, ''));
+        const pointed = new Set([].concat(...liebTexts.map(t => targets(t[3]))));
+        let introShown = false;      // the explanation once, over the first list
+        liebTexts.forEach(([box, label, p, a], i) => {
+            const mine = new Set(targets(a));
+            if (attachNotes(box, label, [[p, a]], div, 'textual', n => mine.has(xmlId(n)) || (i === 0 && !pointed.has(xmlId(n))), introShown ? { intro: '' } : null)) introShown = true;
+        });
         const trans = abs.filter(a => a.getAttribute('type') === 'translation');
         const isGerman = a => a.getAttribute('xml:lang') === 'de' || a.getAttribute('ana') === '#fromGerman';
         // Liebermann's German first, then the LLM's English of it (made with Claude), then the other translations.

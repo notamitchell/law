@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">18</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">194</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,21 +50,31 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 223 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 223 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 18.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Ot added from Gesetze I, p. 18.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 18.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="28">
         <head>Af Rb 28</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28" corresp="#wit-h">XXVIII. Be swa gerades monnes slæge.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28" corresp="#wit-e">XXVIII. Be swa gerades monnes slege.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="28" corresp="#wit-q">De huiusmodi occisione.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28" corresp="#wit-h">XXVIII. Be swa gerades monnes<ptr type="liebermannNote" n="2" target="#Rubrics-Af_28.lnote.oe.2"/> slæge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28" corresp="#wit-e">XXVIII. Be<ptr type="liebermannNote" n="13" target="#Rubrics-Af_28.lnote.oe.13"/> swa gerades monnes slege.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28" corresp="#wit-g-prol">XXVIII. Be swa gerades mannes sleges.<ptr type="liebermannNote" n="5" target="#Rubrics-Af_28.lnote.oe.5"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28" corresp="#wit-ot-frag">:XVIII.<ptr type="liebermannNote" n="5" target="#Rubrics-Af_28.lnote.oe.5-2"/> Be swa gerades ::nnes slege.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="28" corresp="#wit-q">De<ptr type="liebermannNote" n="16" target="#Rubrics-Af_28.lnote.oe.16"/> huiusmodi occisione.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">XXVIII Be swa gerades monnes slege</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning the killing of a man in this condition</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Über Erschlagung eines so beschaffenen Menschen.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Über<ptr type="liebermannNote" n="1" target="#Rubrics-Af_28.lnote.de.1"/> Erschlagung eines so beschaffenen Menschen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Concerning the slaying of a person of such a kind.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_28.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">corrigirt aus</hi> XXVII.</seg><seg type="translation" xml:lang="en" source="#claude">corrected from XXVII.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_28.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">statt dieser Rubrik:</hi> De carente cognatione homicida vel occiso [De h. v. o. c. c. <hi rend="italic">Br</hi>] <hi rend="italic">Hk Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">instead of this rubric: De carente cognatione homicida vel occiso [De h. v. o. c. c. Br] Hk Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_28.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Rubrik fehlt So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">rubric lacking in So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_28.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_28.lnote.oe.5-2" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de">slege <hi rend="italic">zu bessern</hi></seg><seg type="translation" xml:lang="en" source="#claude">slege to be emended</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Af_28.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">41</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl.</hi> vor. S., Sp. 2, Z. 1</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf.</hi> prec. p., col. 2, l. 1</seg></note>
       </div>
     </body>
   </text>

@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">16</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">190</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,23 +50,38 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 212 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 212 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 16.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 16: “monnum” → “monnum”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Ot added from Gesetze I, p. 16.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 16.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="19">
         <head>Af Rb 19</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="19" corresp="#wit-h">XVII. Be þon monnum þe heora wæpna to monslyhte lænaþ.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="19" corresp="#wit-e">XVII. Be ðam monnum þe heora wæpen to monslyhte lænað.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="19" corresp="#wit-q">De illis qui prestant arma sua ad homicidium.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="19" corresp="#wit-h">XVII. Be þon<ptr type="liebermannNote" n="1" target="#Rubrics-Af_19.lnote.oe.1"/> monnum<ptr type="liebermannNote" n="2" target="#Rubrics-Af_19.lnote.oe.2"/> þe heora<ptr type="liebermannNote" n="3" target="#Rubrics-Af_19.lnote.oe.3"/> wæpna<ptr type="liebermannNote" n="4" target="#Rubrics-Af_19.lnote.oe.4"/> to monslyhte<ptr type="liebermannNote" n="2" target="#Rubrics-Af_19.lnote.oe.2-2"/> lænaþ.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="19" corresp="#wit-e">XVII. Be ðam<ptr type="liebermannNote" n="1" target="#Rubrics-Af_19.lnote.oe.1-2"/> monnu<hi rend="italic">m</hi> þe heora wæpen<ptr type="liebermannNote" n="2" target="#Rubrics-Af_19.lnote.oe.2-2"/> to monslyhte lænað.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="19" corresp="#wit-g-prol">XVII. Be þa<hi rend="italic">m</hi> mannu<hi rend="italic">m</hi> ðe hyra wæpn to manslihte lænað.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="19" corresp="#wit-ot-frag">… e þā monnū þe<ptr type="liebermannNote" n="1" target="#Rubrics-Af_19.lnote.oe.1-4"/> hiora wæpen to monslyhte…</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="19" corresp="#wit-q">De illis<ptr type="liebermannNote" n="1" target="#Rubrics-Af_19.lnote.oe.1-3"/> qui prestant arma sua ad homicidium.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">XVII Be ðam monnum þe heora wæpen to monslyhte lænað</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-b">Be þam þe heore wepna lænað to manslihte</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning men who lend their weapons for killing a man</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-b">Concerning those who lend their weapons for killing a man</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Von denjenigen, die ihre Waffe zu Todtschlag darleihen.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Von<ptr type="liebermannNote" n="1" target="#Rubrics-Af_19.lnote.de.1"/> denjenigen, die ihre Waffe<ptr type="liebermannNote" n="2" target="#Rubrics-Af_19.lnote.de.2"/> zu Todtschlag darleihen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of those who lend their weapon for manslaughter.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_19.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de">þe hiora <hi rend="italic">geändert aus</hi> þeora, <hi rend="italic">indem</hi> hi <hi rend="italic">übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">þe hiora altered from þeora by writing hi above</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_19.lnote.oe.1-2" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">prestantibus a. ad occisionem <hi rend="italic">Br;</hi> De forbatore [armorum <hi rend="italic">Br</hi>] et fabro <hi rend="italic">fügt Hk Br zu</hi></seg><seg type="translation" xml:lang="en" source="#claude">prestantibus a. ad occisionem Br; De forbatore [armorum Br] et fabro added by Hk Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_19.lnote.oe.1-3" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de">ðon <hi rend="italic">statt</hi> ð. m. <hi rend="italic">Ld;</hi> wæpna lænum <hi rend="italic">statt</hi> ðam — lænað <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">ðon instead of ð. m. Ld; wæpna lænum instead of ðam — lænað So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_19.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de">wæpne lænaþ to mansliht <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">wæpne lænaþ to mansliht Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_19.lnote.oe.1-4" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">geänd.</hi> þam</seg><seg type="translation" xml:lang="en" source="#claude">altered þam</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_19.lnote.oe.2-2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_19.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">eo <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">eo on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_19.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">a <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">a on an erasure</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Af_19.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">40</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">‘Über Entleihungen von Waffen’ So</seg><seg type="translation" xml:lang="en" source="#claude">‘On lendings of weapons’ So</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Af_19.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">40</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">‘Waffen’ H, was Frühere aufnehmen; aber Sing. Af 19</seg><seg type="translation" xml:lang="en" source="#claude">‘Weapons’ H, which earlier editors adopt; but sing. Af 19</seg></note>
       </div>
     </body>
   </text>

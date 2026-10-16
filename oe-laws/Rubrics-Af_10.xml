@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">16</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">188</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,23 +50,34 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 206 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 206 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 16.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Ot added from Gesetze I, p. 16.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 16.</change>
+      <change when="2026-10" type="checked">Liebermann’s Latin text corrected against Gesetze I, p. 16: “XII hyndi” → “XIIhyndi”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="10">
         <head>Af Rb 10</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10" corresp="#wit-h">XI. Be XIIhyndes monnes wife forlegenu<hi rend="italic">m</hi>.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10" corresp="#wit-e">XI. Be twelfhyndes monnes wife forlegenum.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="10" corresp="#wit-q">De muliere XII hyndi hominis fornicata.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10" corresp="#wit-h">XI. Be XIIhyndes monnes<ptr type="liebermannNote" n="3" target="#Rubrics-Af_10.lnote.oe.3"/> wife forlegenu<hi rend="italic">m</hi>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10" corresp="#wit-e">XI. Be twelfhyndes<ptr type="liebermannNote" n="13" target="#Rubrics-Af_10.lnote.oe.13"/> monnes wife forlegenum.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10" corresp="#wit-g-prol">XI. Be XII hyndes mannes wife forlegenu<hi rend="italic">m</hi>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10" corresp="#wit-ot-frag">… welfhyndes monnes wife forlegenū.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="10" corresp="#wit-q">De muliere<ptr type="liebermannNote" n="9" target="#Rubrics-Af_10.lnote.oe.9"/> XIIhyndi<ptr type="liebermannNote" n="10" target="#Rubrics-Af_10.lnote.oe.10"/> hominis<ptr type="liebermannNote" n="11" target="#Rubrics-Af_10.lnote.oe.11"/> fornicata.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">XI Be twelfhyndes monnes wife forlegenum</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-b">Be hæmedðingu<hi rend="italic">m</hi></ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning lying with the wife of a 1,200 man</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-b">Concerning carnal intercourse</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Vom beschlafenen Weibe eines Mannes von 1200 [Schilling Wergeld].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Vom<ptr type="liebermannNote" n="1" target="#Rubrics-Af_10.lnote.de.1"/> beschlafenen Weibe eines Mannes von 1200 [Schilling Wergeld].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of the wife of a man of 1200 [shillings’ wergeld] being lain with.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_10.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">17</biblScope></bibl><seg type="original" xml:lang="de">sponsa <hi rend="italic">Hk Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">sponsa Hk Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_10.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">17</biblScope></bibl><seg type="original" xml:lang="de">tlefh. <hi rend="italic">Dm;</hi> tlefhinde <hi rend="italic">T;</hi> XIIhindi <hi rend="italic">Hk;</hi> XIIh. h. <hi rend="italic">fehlt Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">tlefh. Dm; tlefhinde T; XIIhindi Hk; XIIh. h. lacking in Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_10.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">17</biblScope></bibl><seg type="original" xml:lang="de">vel VIhindi <hi rend="italic">fügt Hk zu</hi></seg><seg type="translation" xml:lang="en" source="#claude">vel VIhindi added by Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_10.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">16</biblScope></bibl><seg type="original" xml:lang="de">t. m. w. <hi rend="italic">fehlt So Ld;</hi> forligerum <hi rend="italic">So;</hi> forleg. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">t. m. w. lacking in So Ld; forligerum So; forleg. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_10.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">17</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Af_10.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">40</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">‘Von Hurereien’ So</seg><seg type="translation" xml:lang="en" source="#claude">‘Of fornications’ So</seg></note>
       </div>
     </body>
   </text>

@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">16</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">190</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,23 +50,39 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 213 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 213 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 16.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Ot added from Gesetze I, p. 16.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 16.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="20">
         <head>Af Rb 20</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20" corresp="#wit-h">XVIII. Be þon þe (man) munecum heora feoh buton leafe befæstað.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20" corresp="#wit-e">XVIII. Be ðam þe munecum heora feoh buton leafe befæstað.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="20" corresp="#wit-q">De illis qui pecuniam committunt monachis sine licentia.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20" corresp="#wit-h">XVIII. Be þon<ptr type="liebermannNote" n="1" target="#Rubrics-Af_20.lnote.oe.1"/> þe<ptr type="liebermannNote" n="5" target="#Rubrics-Af_20.lnote.oe.5"/> (man<ptr type="liebermannNote" n="5" target="#Rubrics-Af_20.lnote.oe.5"/>) munecum<ptr type="liebermannNote" n="6" target="#Rubrics-Af_20.lnote.oe.6"/> heora<ptr type="liebermannNote" n="3" target="#Rubrics-Af_20.lnote.oe.3"/> feoh buton<ptr type="liebermannNote" n="2" target="#Rubrics-Af_20.lnote.oe.2"/> leafe befæstað.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20" corresp="#wit-e">XVIII. Be ðam þe munecum heora<ptr type="liebermannNote" n="3" target="#Rubrics-Af_20.lnote.oe.3-2"/> feoh buton<ptr type="liebermannNote" n="4" target="#Rubrics-Af_20.lnote.oe.4"/> leafe befæstað.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20" corresp="#wit-g-prol">XVIII.<ptr type="liebermannNote" n="1" target="#Rubrics-Af_20.lnote.oe.1-2"/> Be ðan<ptr type="liebermannNote" n="2" target="#Rubrics-Af_20.lnote.oe.2-2"/> þe munecu<hi rend="italic">m</hi> heora feoh butan leafe befestað.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20" corresp="#wit-ot-frag">… e þā þe munecum heora feoh buton lea …</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="20" corresp="#wit-q">De illis<ptr type="liebermannNote" n="2" target="#Rubrics-Af_20.lnote.oe.2-3"/> qui pecuniam committunt monachis sine<ptr type="liebermannNote" n="3" target="#Rubrics-Af_20.lnote.oe.3-3"/> licentia.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">XVIII Be ðam þe munecum heora feoh butan leafe befæstað</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-b">Be þam þe munecan heore feoh befæstað</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning someone who entrusts monks with their property without permission.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-b">Concerning someone who entrusts monks with their property</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Von denen, die ihr Gut Mönchen anvertrauen ohne Genehmigung [durch deren Oberen].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Von denen, die ihr Gut<ptr type="liebermannNote" n="1" target="#Rubrics-Af_20.lnote.de.1"/> Mönchen anvertrauen ohne Genehmigung [durch deren Oberen].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of those who entrust their property to monks without permission [from their superior].</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_20.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">peccunia commissa monacho <hi rend="italic">Hk Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">peccunia commissa monacho Hk Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_20.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">s. l. <hi rend="italic">fehlt Brti</hi></seg><seg type="translation" xml:lang="en" source="#claude">s. l. lacking in Brti</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_20.lnote.oe.3-2" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_20.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de">b. l. <hi rend="italic">fehlt So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">b. l. lacking in So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_20.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">geänd.</hi> þam</seg><seg type="translation" xml:lang="en" source="#claude">altered þam</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_20.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">übergeschr. vom Schreiber</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above by the scribe</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_20.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">e <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">e on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_20.lnote.oe.3-3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">eo <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">eo on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_20.lnote.oe.2-2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_20.lnote.oe.1-2" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Der Beginn aller Zahlen der Verso-Seiten ist durch den Einbinder verschnitten, was ich nicht im einzelnen bemerke.</hi></seg><seg type="translation" xml:lang="en" source="#claude">The beginning of all the numbers on the verso pages has been cropped by the binder; I do not note this in each case.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_20.lnote.oe.2-3" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">geändert durch andere Hd. in</hi> ðam</seg><seg type="translation" xml:lang="en" source="#claude">altered by another hand to ðam</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Af_20.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">41</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">= Fahrhabe; ‘nummum’ Lambarde; ‘cattle’ Price, beides zu eng</seg><seg type="translation" xml:lang="en" source="#claude">= movable goods; ‘nummum’ Lambarde; ‘cattle’ Price, both too narrow</seg></note>
       </div>
     </body>
   </text>

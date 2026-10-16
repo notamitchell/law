@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">18</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">196</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,23 +50,35 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 231 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 231 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 18.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Ot added from Gesetze I, p. 18.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 18.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="39">
         <head>Af Rb 39</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="39" corresp="#wit-h">XXXVI. Be cierlisces monnes flettgefiohte.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="39" corresp="#wit-e">XXXVI. Be cierlisces monnes fletgefeohte.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="39" corresp="#wit-q">Si quis pugnet in domo uillani.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="39" corresp="#wit-h">XXXVI. Be cierlisces<ptr type="liebermannNote" n="18" target="#Rubrics-Af_39.lnote.oe.18"/> monnes<ptr type="liebermannNote" n="2" target="#Rubrics-Af_39.lnote.oe.2"/> flettgefiohte.<ptr type="liebermannNote" n="7" target="#Rubrics-Af_39.lnote.oe.7"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="39" corresp="#wit-e">XXXVI. Be cierlisces<ptr type="liebermannNote" n="23" target="#Rubrics-Af_39.lnote.oe.23"/> monnes fletgefeohte.<ptr type="liebermannNote" n="24" target="#Rubrics-Af_39.lnote.oe.24"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="39" corresp="#wit-g-prol">XXXVI. Be cyrlisces mannes fletgefeohte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="39" corresp="#wit-ot-frag">… ierlisces monnes fletgefeohte.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="39" corresp="#wit-q">Si quis pugnet<ptr type="liebermannNote" n="25" target="#Rubrics-Af_39.lnote.oe.25"/> in domo uillani.<ptr type="liebermannNote" n="26" target="#Rubrics-Af_39.lnote.oe.26"/></ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">XXXVI Be cierlisces monnes flet gefeohte</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-b">Eft Be cyrlisces monnes flettegefeohte</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning fighting in a <hi rend="italic">ceorl</hi>’s house</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-b">Following Concerning fighting in a <hi rend="italic">ceorl</hi>’s house</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Vom Fechten im Hause eines gemeinfreien Mannes.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Vom Fechten im Hause eines gemeinfreien Mannes.<ptr type="liebermannNote" n="1" target="#Rubrics-Af_39.lnote.de.1"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of fighting in the house of a common freeman.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_39.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">vel tantum arma extrahat <hi rend="italic">fügt zu Hk;</hi> De pugna vel extractione armorum in d. v. <hi rend="italic">Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">vel tantum arma extrahat added by Hk; De pugna vel extractione armorum in d. v. Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_39.lnote.oe.26" n="26" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">VIhindi vel XIIhindi <hi rend="italic">fügt zu Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">VIhindi vel XIIhindi added by Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_39.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de">cyrl. m. fletteg. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">cyrl. m. fletteg. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_39.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de">[40] Be <hi rend="spaced">burhbryce</hi> <hi rend="italic">fügt zu Ld</hi> [<hi rend="italic">aus B?</hi>]; <hi rend="italic">vgl. Quadr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">[40] Be <hi rend="italic">burhbryce</hi> added by Ld [from B?]; cf. Quadr.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_39.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">ie <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">ie on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_39.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_39.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">i <hi rend="italic">in</hi> e <hi rend="italic">geändert</hi></seg><seg type="translation" xml:lang="en" source="#claude">i altered to e</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Af_39.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">41</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Q spät. Rez. zieht auch 39, 1. 2 in die Rubrik. Sodann erfinden aus dem Texte B und Q für 40 die Rubrik ‘Vom Hauseinbruch’; Q spät. Rez. fügt ebendaher Genaueres und auch für 40, 2 eine Rubrik hinzu</seg><seg type="translation" xml:lang="en" source="#claude">Q later rec. also draws 39, 1. 2 into the rubric. Then B and Q invent from the text the rubric ‘On housebreaking’ for 40; Q later rec. adds, from the same source, further detail and also a rubric for 40, 2</seg></note>
       </div>
     </body>
   </text>

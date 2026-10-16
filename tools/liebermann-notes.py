@@ -16,7 +16,7 @@ twice does no harm: it first removes the notes it added before.
 The notes (see docs/OE-LAWS.md, "Liebermann's notes" and "Attenborough's notes"):
 
 - Liebermann's textual notes on his Old English (or Latin) texts, printed at the
-  foot of the page in Gesetze I (columns K, N, AF, O of the spreadsheet);
+  foot of the page in Gesetze I (columns K, N, AF, BF, BI, O of the spreadsheet);
 - his Erklärungen, the notes to his German translation, printed in Gesetze III
   (column L), and his own footnotes to the German in Gesetze I;
 - Attenborough's notes (The Laws of the Earliest English Kings, 1922): the notes
@@ -29,7 +29,8 @@ Sheet "Texts with note markers" holds the texts with each note number in curly
 brackets after its word: {4}, {*}, {+1} (a number Liebermann forgot to print and
 supplies in vol. III), {2/4} (number 2, misprinted 4 in vol. I). Columns: A row,
 B clause file, C code, D clause, E Gesetze I page, F column K, G column L,
-H remarks, I column N, J column AF, K column O, L column T, M column U, N column W.
+H remarks, I column N, J column AF, K column O, L column T, M column U, N column W,
+O column BF, P column BI (Liebermann's fourth and fifth texts).
 Taking out the brackets must give the texts now in the clause file exactly; if
 not, the file is left alone and the difference reported.
 
@@ -88,8 +89,8 @@ RESP_ATT = ('<respStmt><resp>Transcription of Attenborough’s notes</resp>'
             '<name ref="#claude">Claude</name></respStmt>')
 
 # Columns of "Texts with note markers" (0-based) -> the spreadsheet column they copy
-TEXT_COLS = {5: 'K', 6: 'L', 8: 'N', 9: 'AF', 10: 'O', 11: 'T', 12: 'U', 13: 'W'}
-LIEB_TEXT = ('K', 'N', 'AF', 'O')
+TEXT_COLS = {5: 'K', 6: 'L', 8: 'N', 9: 'AF', 10: 'O', 11: 'T', 12: 'U', 13: 'W', 14: 'BF', 15: 'BI'}
+LIEB_TEXT = ('K', 'N', 'AF', 'BF', 'BI', 'O')
 
 
 def tags_to_tei(s):
