@@ -54,7 +54,7 @@ scripts:
             if (n.nodeType === 3) { frag.appendChild(document.createTextNode(n.nodeValue)); return; }
             if (n.nodeType !== 1) return;
             const name = n.localName;
-            if (name === 'ptr' && n.getAttribute('type') === 'liebermannNote') {
+            if (name === 'ptr' && /^(liebermannNote|editorNote)$/.test(n.getAttribute('type'))) {
                 if (opts && opts.notes) frag.appendChild(noteRef(n));
                 return;
             }
@@ -105,6 +105,11 @@ scripts:
             title: 'Liebermann’s textual notes',
             intro: 'Liebermann’s footnotes to this text (Gesetze I, at the foot of the page), in his German, with an English rendering made with an LLM (Claude). Numbers are his, counted afresh on each page; * marks an editor’s emendation.'
         },
+        attenborough: {
+            type: 'editorNote', source: 'attenborough', subtypes: ['endnote', 'footnote'], who: 'Attenborough’s',
+            title: 'Attenborough’s notes',
+            intro: 'Attenborough’s notes (The Laws of the Earliest English Kings, 1922): the notes at the back of his book, keyed to the numbers in his translation, and his footnotes to his Old English text.'
+        },
         erklaerung: {
             subtypes: ['erklaerung', 'translationFootnote'],
             title: 'Liebermann’s Erklärungen',
@@ -121,7 +126,7 @@ scripts:
         a.href = '#' + htmlId((ptr.getAttribute('target') || '').replace(/^#/, ''));
         a.title = rend === 'supplied' ? 'Note ' + n + ': not printed in Gesetze I; Liebermann says in vol. III where it belongs'
             : /^printed-as-/.test(rend) ? 'Note ' + n + ': printed as ' + rend.slice(11) + ' in Gesetze I, corrected by Liebermann in vol. III'
-            : 'Liebermann’s note ' + n;
+            : (ptr.getAttribute('type') === 'editorNote' ? 'Note ' : 'Liebermann’s note ') + n;
         sup.appendChild(a);
         return sup;
     }
@@ -133,19 +138,28 @@ scripts:
         notes.forEach(n => {
             const li = el('li');
             li.id = htmlId(xmlId(n));
-            const num = el('span', 'lnotes__num', (n.getAttribute('n') || '') + (/wholeClause/.test(n.getAttribute('rend') || '') ? '' : ')'));
+            const whole = /wholeClause/.test(n.getAttribute('rend') || '');
+            const nn = n.getAttribute('n') || '';
+            const num = el('span', 'lnotes__num', nn === '0' ? '' : nn + (whole ? '' : ')'));
             li.appendChild(num);
-            if (/wholeClause/.test(n.getAttribute('rend') || '')) li.appendChild(el('span', 'muted', ' (on the clause as a whole, no number in the text) '));
+            if (whole) li.appendChild(el('span', 'muted', ' (on the clause as a whole, no number in the text) '));
             const kids = Array.from(n.children);
+            const label = kids.find(k => k.localName === 'label');
+            if (n.getAttribute('subtype') === 'footnote' && group.textShown === false) {
+                const on = el('span', 'muted', 'On his Old English text (not given here)' + (label ? ', at ' : ': '));
+                if (label) { const w = el('em', null, plainText(label)); on.appendChild(w); on.appendChild(document.createTextNode(': ')); }
+                li.appendChild(on);
+            }
             const seg = type => kids.find(k => k.localName === 'seg' && k.getAttribute('type') === type);
             const de = seg('original'), en = seg('translation');
-            if (de) { const p = el('span', 'lnotes__de'); p.lang = 'de'; p.appendChild(inline(de)); li.appendChild(p); }
+            if (de) { const p = el('span', 'lnotes__de'); p.lang = de.getAttribute('xml:lang') || 'de'; p.appendChild(inline(de)); li.appendChild(p); }
             if (en) { const p = el('span', 'lnotes__en'); p.lang = 'en'; p.appendChild(inline(en)); li.appendChild(p); }
             const bibl = kids.find(k => k.localName === 'bibl');
             const where = [];
             if (bibl) {
                 const scope = u => { const s = tei(bibl, 'biblScope').find(b => b.getAttribute('unit') === u); return s ? plainText(s) : ''; };
-                where.push('Gesetze ' + ({ 1: 'I', 3: 'III' }[scope('volume')] || scope('volume')) + ', p. ' + scope('page') + (scope('column') ? ', col. ' + scope('column') : ''));
+                if (n.getAttribute('type') === 'editorNote') where.push((group.name || '') + ', p. ' + scope('page') + (n.getAttribute('subtype') === 'footnote' ? ', footnote to his Old English text' : ''));
+                else where.push('Gesetze ' + ({ 1: 'I', 3: 'III' }[scope('volume')] || scope('volume')) + ', p. ' + scope('page') + (scope('column') ? ', col. ' + scope('column') : ''));
             }
             if (n.getAttribute('subtype') === 'translationFootnote') where.push('Liebermann’s footnote to his German translation');
             const remark = kids.find(k => k.localName === 'note' && k.getAttribute('type') === 'remark');
@@ -157,12 +171,17 @@ scripts:
         box.appendChild(ol);
         return box;
     }
-    // Adds the "Liebermann's notes" button to a text's label line and the notes under its text.
-    function attachNotes(box, label, p, a, div, groupKey) {
-        const group = NOTE_GROUPS[groupKey];
-        const notes = tei(div, 'note').filter(n => n.getAttribute('type') === 'liebermannNote' && group.subtypes.includes(n.getAttribute('subtype')));
+    // Adds the "Liebermann's notes" (or "Attenborough's notes") button to a text's label line and the notes
+    // under its text. `texts` are the [paragraph, <ab>] pairs whose note numbers the button shows (all of
+    // Liebermann's texts share his textual notes, which are numbered by the page). `filter` narrows the notes.
+    function attachNotes(box, label, texts, div, groupKey, filter, extra) {
+        const group = Object.assign({}, NOTE_GROUPS[groupKey], extra || {});
+        const src = n => (n.getAttribute('source') || '').replace(/^#/, '');
+        const notes = tei(div, 'note').filter(n => n.getAttribute('type') === (group.type || 'liebermannNote') && group.subtypes.includes(n.getAttribute('subtype'))
+            && (!group.source || src(n) === group.source) && (!filter || filter(n)));
         if (!notes.length) return;
-        const btn = el('button', 'chip lnotes-toggle', 'Liebermann’s notes');
+        const who = group.who || 'Liebermann’s';
+        const btn = el('button', 'chip lnotes-toggle', who + ' notes');
         btn.type = 'button';
         btn.title = 'Show or hide ' + group.title + ' (' + notes.length + ')';
         label.appendChild(document.createTextNode(' '));
@@ -171,10 +190,9 @@ scripts:
         box.appendChild(list);
         const set = on => {
             btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-            btn.textContent = (on ? 'Hide ' : 'Show ') + 'Liebermann’s notes';
+            btn.textContent = (on ? 'Hide ' : 'Show ') + who + ' notes';
             list.hidden = !on;
-            p.textContent = '';
-            p.appendChild(inline(a, { notes: on }));
+            texts.forEach(([p, a]) => { p.textContent = ''; p.appendChild(inline(a, { notes: on })); });
         };
         btn.addEventListener('click', () => {
             const on = btn.getAttribute('aria-pressed') !== 'true';
@@ -300,6 +318,7 @@ scripts:
             .concat(list.filter(a => a.getAttribute('type') !== 'liebermannText'));
         const left = col(hasOE ? 'Old English text' : hasFrench ? 'Anglo-Norman French text' : 'Latin text', 'clause-col--text');
         const right = col('Translations', 'clause-col--translation');
+        const liebTexts = []; let liebFirst = null;
         const add = (column, a, bits, cls) => {
             const id = (a.getAttribute('source') || '').replace(/^#/, '');
             const src = srcs[id] || { id, name: id || 'Unknown', bibl: a, page: '' };
@@ -316,9 +335,18 @@ scripts:
             if (lang && lang !== 'und') p.lang = lang;
             p.appendChild(inline(a));
             box.appendChild(p);
-            // Liebermann's own notes, behind a button: textual notes on his text, Erklärungen on his German.
-            if (a === texts.find(x => x.getAttribute('type') === 'liebermannText')) attachNotes(box, label, p, a, div, 'textual');
-            else if (a.getAttribute('type') === 'translation' && a.getAttribute('xml:lang') === 'de' && id === 'liebermann') attachNotes(box, label, p, a, div, 'erklaerung');
+            // Liebermann's own notes, behind a button: textual notes on his texts (one button, on his first
+            // text, for the numbers in all of them), Erklärungen on his German.
+            if (a.getAttribute('type') === 'liebermannText') liebTexts.push([p, a]);
+            if (a === texts.find(x => x.getAttribute('type') === 'liebermannText')) liebFirst = [box, label];
+            else if (a.getAttribute('type') === 'translation' && a.getAttribute('xml:lang') === 'de' && id === 'liebermann') attachNotes(box, label, [[p, a]], div, 'erklaerung');
+            // Attenborough's notes: footnotes on his text (where it is given), the notes at the back on his translation.
+            if (id === 'attenborough') {
+                const attText = abs.some(x => x.getAttribute('type') === 'editionText' && (x.getAttribute('source') || '') === '#attenborough');
+                if (a.getAttribute('type') === 'editionText') attachNotes(box, label, [[p, a]], div, 'attenborough', n => n.getAttribute('subtype') === 'footnote', { name: 'Attenborough', textShown: true, intro: 'Attenborough’s footnotes to his Old English text (The Laws of the Earliest English Kings, 1922).' });
+                else if (a.getAttribute('type') === 'translation') attachNotes(box, label, [[p, a]], div, 'attenborough', attText ? (n => n.getAttribute('subtype') === 'endnote') : null,
+                    { name: 'Attenborough', textShown: attText, intro: attText ? 'Attenborough’s notes to his translation, printed at the back of his book (The Laws of the Earliest English Kings, 1922).' : NOTE_GROUPS.attenborough.intro });
+            }
             // The translator's own footnotes (Whitelock's, from EHD), under her translation.
             // (Rabin's textual notes go under his text, the readings of the other manuscripts.)
             const noteType = { translation: 'translator', editionText: 'textual' }[a.getAttribute('type')];
@@ -346,6 +374,7 @@ scripts:
             left.appendChild(el('h3', 'clause-subhead', 'Quadripartitus'));
             byEditor(quad).forEach(a => addText(a, false));
         }
+        if (liebFirst) attachNotes(liebFirst[0], liebFirst[1], liebTexts, div, 'textual');
         const trans = abs.filter(a => a.getAttribute('type') === 'translation');
         const isGerman = a => a.getAttribute('xml:lang') === 'de' || a.getAttribute('ana') === '#fromGerman';
         // Liebermann's German first, then the LLM's English of it (made with Claude), then the other translations.

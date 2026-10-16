@@ -57,41 +57,45 @@ Where later editors divide one of Liebermann's clauses, the spreadsheet gives ea
 
 `laws-from-database.py` reads `"parts"` back, so a rebuild makes the part files under the same names. The order is therefore: `laws-from-database.py`, then `liebermann-notes.py`, then `merge-parts.py`, then `build-laws-index.js` and `link-citations.py`. So far only Æthelberht is joined (`merge-parts.py --code Abt`); without `--code` it joins every code.
 
-## Liebermann's notes (Æthelberht, October 2026)
+## The editors' notes, and the check of October 2026
 
-Liebermann's edition has two sets of notes that the plain texts leave out. Both are now in the clause files for **Æthelberht** (Abt), as a pilot; the other codes can follow in the same way.
+Liebermann's edition has two sets of notes that the plain texts leave out, and Attenborough's has two more. They are in the clause files for the codes done so far: **Æthelberht** (Abt; Liebermann only, the pilot) and, from the check of October 2026 (one code, one pull request at a time, Hlothhere onwards), **Hlothhere and Eadric** (Hl).
 
-- **Textual notes on his Old English (or Latin) text**: the footnotes at the foot of the column in *Gesetze* I (manuscript readings, erasures, other inks, editors' emendations). Numbered afresh on each page; `*` marks an editor's emendation. For Abt: *Gesetze* I pp. 3–8, 43 notes.
-- **Erklärungen on his German translation**: the numbers in the German refer to notes printed separately in *Gesetze* III (1916), numbered afresh in each of Liebermann's clauses (all of Abt 1 is one clause there, though the database divides it into 1[a]–1[g]). For Abt: *Gesetze* III pp. 3–17, 288 notes, plus Liebermann's own footnote on the German at Abt Inscr (vol. I p. 3).
+- **Liebermann's textual notes on his texts**: the footnotes at the foot of the page in *Gesetze* I (manuscript readings, erasures, other inks, editors' emendations). Numbered afresh on each page; `*`, `**`, `†` mark an editor's emendation. They stand on any of his texts (columns K, N, AF, O).
+- **Liebermann's Erklärungen on his German translation**: the numbers in the German refer to notes printed separately in *Gesetze* III (1916), numbered afresh in each of Liebermann's clauses (all of Abt 1 is one clause there, though the database divides it into 1[a]–1[g]). A few notes have no number in the text and are on the clause as a whole.
+- **Attenborough's notes** (*The Laws of the Earliest English Kings*, 1922): the notes at the back of his book, keyed to numbers in his translation (column W where he is the second translator, as for Hl; column U where he is the modern editor), and his footnotes to his Old English text (column T where he is the editor; where his text is not in the database, as for Hl, the note gives the word it stands on).
 
-Each note is given in Liebermann's German exactly as printed (his spelling, italics, letter-spacing) and in a semi-literal English rendering made with an LLM (Claude). They were transcribed from the page images (not the OCR), and each Erklärung was then proofread against the page in a second, independent pass.
+Liebermann's notes are given in his German exactly as printed (his spelling, italics, letter-spacing, emphasis accents) and in an English rendering made with an LLM (Claude); Attenborough's as printed.
 
-**Where the data lives.** In the workbook *Liebermann_notes_Abt.xlsx* (kept with the main spreadsheet, not in this repository):
+**How they were made.** From the page images, not the OCR. Every page was transcribed twice, independently; every difference between the two, and between them and the spreadsheet, was settled by looking at the page again. The English of Liebermann's notes was checked by a second, independent reading. Errors found in the spreadsheet's texts on the way were corrected (see below).
 
-- sheet *Texts with note markers*: columns K and L of the main spreadsheet with the note numbers in curly brackets after their word: `{4}`, `{*}`, `{+1}` (a number Liebermann forgot to print and in vol. III says where to put), `{2/4}` (note 2, misprinted 4 in vol. I and corrected by Liebermann in vol. III). Take out the brackets and you have K and L exactly; the script checks this.
-- sheet *Liebermann notes*: one line per note per clause row: where printed, number, German, English, remarks, readings to check.
+**Where the data lives.** In the main spreadsheet (the stage `lnotes_stage.py` copies them in from one workbook per code):
 
-Later these can become columns of the main spreadsheet (K and L with markers) and a sheet of it (the notes); the script would then read them from there.
+- sheet *Texts with note markers*: the texts with the note numbers in curly brackets after their word: `{4}`, `{*}`, `{+1}` (a number Liebermann forgot to print and in vol. III says where to put), `{2/4}` (note 2, misprinted 4 in vol. I and corrected by Liebermann in vol. III). Columns F and G are K and L; I–N are N, AF, O, T, U and W. Take out the brackets and you have the Sheet1 cell exactly; the script checks this.
+- sheet *Liebermann notes*: one line per note per clause row: where printed, number, German, English, remarks, readings to check. A blank number is a note on the whole clause.
+- sheet *Attenborough notes*: one line per note: where printed, number, the word it stands on (footnotes to a text not in the database), the note, remarks.
+- sheet *Corrections (Oct 2026)*: every change made to Sheet1 in the check, with the page it was checked against; column AI of the row says the same (`K: corrected against Gesetze I p. 10, October 2026 (was “tithte”, now “tihte”)`), and the clause file records it in `<revisionDesc>`.
 
 **In the clause file**, the note numbers are empty pointers inside the existing texts, so the plain text is unchanged and there is no second copy of it to keep in step:
 
 ```xml
 <ab type="liebermannText" …>Godes<ptr type="liebermannNote" n="4" target="#Abt_1-a.lnote.oe.4"/> feoh …</ab>
 <ab type="translation" xml:lang="de" source="#liebermann">Gottes<ptr type="liebermannNote" n="1" target="#Abt_1-a.lnote.de.1"/> und …</ab>
+<ab type="translation" xml:lang="en" source="#attenborough" …>… [the accused<ptr type="editorNote" n="1" target="#Hl_10-a.attnote.n.1"/>] prefers.</ab>
 ```
 
-`rend="supplied"` marks a number supplied from Liebermann's correction, `rend="printed-as-4"` one he corrected. The notes follow at the end of the clause, `<note type="liebermannNote">` with `subtype="textual"` (vol. I, on the Old English), `"erklaerung"` (vol. III) or `"translationFootnote"` (vol. I, on the German), each with the volume and page in `<bibl>`, the German in `<seg type="original" xml:lang="de">` and the English in `<seg type="translation" xml:lang="en" source="#claude">`. Italic is `<hi rend="italic">`, letter-spacing `<hi rend="spaced">`, small capitals `<hi rend="smallcaps">`, and a paragraph break inside a note `<lb type="paragraph"/>`. Notes with no number in the text (Abt 54.3, 64.1, whose notes are on the whole clause) have `rend="wholeClause"`.
+`rend="supplied"` marks a number supplied from Liebermann's correction, `rend="printed-as-4"` one he corrected. The notes follow at the end of the clause: `<note type="liebermannNote">` with `subtype="textual"` (vol. I, on his texts), `"erklaerung"` (vol. III) or `"translationFootnote"` (vol. I, on the German), each with the volume and page in `<bibl>`, the German in `<seg type="original" xml:lang="de">` and the English in `<seg type="translation" xml:lang="en" source="#claude">`; and `<note type="editorNote" source="#attenborough">` with `subtype="endnote"` or `"footnote"`, the page in `<bibl>`, the word a footnote stands on in `<label>`, and the note in `<seg type="original" xml:lang="en">`. Italic is `<hi rend="italic">`, letter-spacing `<hi rend="spaced">`, small capitals `<hi rend="smallcaps">`, and a paragraph break inside a note `<lb type="paragraph"/>`. Notes with no number in the text have `rend="wholeClause"` (and `n="0"` if they have no number at all).
 
-**On the clause page**, Liebermann's text and his German translation each get a small button, *Show Liebermann's notes*. It shows the note numbers in the text as grey superscripts (each a link to its note) and lists the notes under the text: German, English, and where printed. The Erklärungen carry a line saying that much of them is superseded. The notes are closed on every clause until the reader opens them for that clause; the choice is not carried to the next clause or to the whole code. They open by themselves only when a link points at a note.
+**On the clause page**, each set has a small button on the label line of its text: *Show Liebermann's notes* on his first text (it shows the numbers in all his texts) and on his German, *Show Attenborough's notes* on his translation (and on his text, where it is given). A button shows the note numbers as grey superscripts (each a link to its note) and lists the notes under the text. The Erklärungen carry a line saying that much of them is superseded. The notes are closed on every clause until the reader opens them for that clause; the choice is not carried to the next clause or to the whole code. They open by themselves only when a link points at a note.
 
-**Making them again.** `tools/laws-from-database.py` rebuilds the clause files without the notes, so run the notes script after it:
+**Making them again.** `tools/laws-from-database.py` rebuilds the clause files without the notes, so run the notes script after it, on the main spreadsheet:
 
 ```
-python3 tools/liebermann-notes.py "path/to/Liebermann_notes_Abt.xlsx" --dry-run
-python3 tools/liebermann-notes.py "path/to/Liebermann_notes_Abt.xlsx"
+python3 tools/liebermann-notes.py "path/to/OE_Laws_Database - Updated by Claude.xlsx" --dry-run
+python3 tools/liebermann-notes.py "path/to/OE_Laws_Database - Updated by Claude.xlsx"
 ```
 
-It needs `pip install openpyxl lxml`. It removes any notes it added before, so it can be run any number of times, and it leaves a file alone (and says so) if the text in the workbook no longer matches the file.
+It needs `pip install openpyxl lxml`. It removes any notes it added before, so it can be run any number of times, and it leaves a file alone (and says so) if a text in the spreadsheet no longer matches the file.
 
 ## Other scholars' cross-references
 
@@ -147,7 +151,7 @@ python3 tools/laws-from-database.py "path/to/OE_Laws_Database - Updated by Claud
 python3 tools/laws-from-database.py "path/to/…xlsx" --code Ine                                      # one law code only
 ```
 
-**Then run `tools/liebermann-notes.py`** (see "Liebermann's notes" above), or Liebermann's notes will be missing from the rebuilt files.
+**Then run `tools/liebermann-notes.py`** on the main spreadsheet (see "The editors' notes" above), or the notes will be missing from the rebuilt files.
 
 The script finds the columns by their headings in row 1, so columns can be moved but not renamed. It reads the sheet called *Sheet1* (the *Read me* and *corrections* sheets are ignored).
 

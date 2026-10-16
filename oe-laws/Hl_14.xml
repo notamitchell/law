@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -31,6 +32,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">395</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -53,7 +55,7 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 148 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 148 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 11.</change>
     </revisionDesc>
   </teiHeader>
@@ -66,10 +68,14 @@
         <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If that house becomes bloodied, let him pay the man [the price for violation of] his protection and 50 shillings to the king.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">[But] if the house is stained with blood, the owner shall have his <hi rend="italic">mundbyrd</hi> paid to him, and 50 shillings shall be paid to the king.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-h">If the house is stained by bloodshed, he is to pay to the man [the price for breach of] his protection, and 50 shillings to the king.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">wenn das Haus blutbefleckt wird, entgelte er demselben Manne dessen Sonderschutzrecht und dem Könige 50 Schill.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">wenn<ptr type="liebermannNote" n="1" target="#Hl_14.lnote.de.1"/> das Haus blutbefleckt<ptr type="liebermannNote" n="2" target="#Hl_14.lnote.de.2"/> wird, entgelte er demselben Manne dessen Sonderschutzrecht<ptr type="liebermannNote" n="3" target="#Hl_14.lnote.de.3"/> und dem Könige 50 Schill.<ptr type="liebermannNote" n="4" target="#Hl_14.lnote.de.4"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">if the house becomes bloodstained, let him pay that same man his special protection-right and 50 shillings to the king.</ab>
         <note type="comparedBy" source="#wormald-mel" n="105"><ref target="clause:Ine_36">Ine 36</ref></note>
         <note type="translator" source="#whitelock">The owner of the house.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Hl_14.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">22</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Laut der Wörter <hi rend="italic">þæt</hi> (noch demonstrativ) <hi rend="italic">flet</hi>, die sich auf das <hi rend="italic">o.</hi> 13 erwähnte Haus beziehen, ist dies Fortsetzung von 13.</seg><seg type="translation" xml:lang="en" source="#claude">According to the words <hi rend="italic">þæt</hi> (still demonstrative) <hi rend="italic">flet</hi>, which refer to the house mentioned <hi rend="italic">above</hi> 13, this is a continuation of 13.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Hl_14.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">22</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Blutig (<hi rend="italic">s. d. Gl</hi> 3c. 9) fechten bringt, mehr als Waffenzücken, dem Ortsherrn für voll gebrochenen Schutz volle Busse und dem König höchstes Strafgeld; Af 39, 1. Nach anderen Stellen stehen beide Friedensbrüche gleich; <hi rend="italic">s. Gl ebd.</hi> 3d. 5b. c</seg><seg type="translation" xml:lang="en" source="#claude">Fighting with bloodshed (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 3c. 9) brings, more than drawing weapons does, full compensation to the lord of the place for fully broken protection, and the highest fine to the king; Af 39, 1. According to other passages the two breaches of the peace are on an equal footing; see <hi rend="italic">Gl ibid.</hi> 3d. 5b. c</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Hl_14.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">22</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Im Königsgut 50, im Adelshof 12, im gemeinfreien Hause 6 Schill. laut Abt 8. 13ff</seg><seg type="translation" xml:lang="en" source="#claude">On the king’s estate 50, in a nobleman’s household 12, in a common freeman’s house 6 shill., according to Abt 8. 13ff</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Hl_14.lnote.de.4" n="4" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">22</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Strafe für Totschlag; Abt 6. Hinzuzudenken ist Busse an den Verwundeten, bzw. Wergeld an des Erschlagenen Sippe</seg><seg type="translation" xml:lang="en" source="#claude">Penalty for homicide; Abt 6. Compensation to the wounded man, or wergild to the slain man’s kindred, is to be understood in addition</seg></note>
       </div>
     </body>
   </text>
