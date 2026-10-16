@@ -103,12 +103,12 @@ scripts:
         textual: {
             subtypes: ['textual'],
             title: 'Liebermann’s textual notes',
-            intro: 'Liebermann’s footnotes to this text (Gesetze I, at the foot of the page), in his German, with an English translation by Claude. Numbers are his, counted afresh on each page; * marks an editor’s emendation.'
+            intro: 'Liebermann’s footnotes to this text (Gesetze I, at the foot of the page), in his German, with an English rendering made with an LLM (Claude). Numbers are his, counted afresh on each page; * marks an editor’s emendation.'
         },
         erklaerung: {
             subtypes: ['erklaerung', 'translationFootnote'],
             title: 'Liebermann’s Erklärungen',
-            intro: 'Liebermann’s explanatory notes and commentary on the clause (his Erklärungen), printed separately in Gesetze III (1916) and keyed to the numbers in his German translation, with an English translation by Claude. Liebermann puts an accent on some German words to mark emphasis (éin ‘one’, nách); the German keeps them as printed, the English does not. Scholarship has moved a long way since 1916 and much of this commentary is superseded; it is given here as part of the record of Liebermann’s edition.'
+            intro: 'Liebermann’s explanatory notes and commentary on the clause (his Erklärungen), printed separately in Gesetze III (1916) and keyed to the numbers in his German translation, with an English rendering made with an LLM (Claude). Liebermann puts an accent on some German words to mark emphasis (éin ‘one’, nách); the German keeps them as printed, the English does not. Scholarship has moved a long way since 1916 and much of this commentary is superseded; it is given here as part of the record of Liebermann’s edition.'
         }
     };
     const xmlId = n => n.getAttribute('xml:id') || n.getAttributeNS('http://www.w3.org/XML/1998/namespace', 'id') || '';
@@ -125,8 +125,6 @@ scripts:
         sup.appendChild(a);
         return sup;
     }
-    const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
-    const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) { /* no storage: fine */ } };
     // The notes of one group as a list: number, German as printed, English, where printed, remarks.
     function notesList(notes, group) {
         const box = el('div', 'lnotes small');
@@ -181,10 +179,9 @@ scripts:
         btn.addEventListener('click', () => {
             const on = btn.getAttribute('aria-pressed') !== 'true';
             set(on);
-            lsSet('lnotes:' + groupKey, on ? '1' : '0');
         });
-        // Remember the reader's choice from clause to clause; open by default when the link points at a note.
-        set(lsGet('lnotes:' + groupKey) === '1' || notes.some(n => location.hash === '#' + htmlId(xmlId(n))));
+        // Closed unless the reader opens them, clause by clause; open only when the link points at a note.
+        set(notes.some(n => location.hash === '#' + htmlId(xmlId(n))));
     }
 
     // The editions and translations a clause file names (new layout only):
@@ -196,14 +193,14 @@ scripts:
             if (!id) return;
             const name = tei(doc, 'name').find(n => n.getAttribute('ref') === '#' + id);
             const page = tei(b, 'biblScope').find(s => s.getAttribute('unit') === 'page');
-            out[id] = { id, bibl: b, type: b.getAttribute('type') || '', name: name ? plainText(name) : (SOURCE_NAMES[id] || id.charAt(0).toUpperCase() + id.slice(1)),
+            out[id] = { id, bibl: b, type: b.getAttribute('type') || '', name: id === 'claude' ? 'LLM' : name ? plainText(name) : (SOURCE_NAMES[id] || id.charAt(0).toUpperCase() + id.slice(1)),
                         page: page ? plainText(page) : '' };
         }));
         return out;
     }
 
     // Names for works a clause file lists without naming (e.g. Liebermann in Cn 1018).
-    const SOURCE_NAMES = { liebermann: 'Liebermann', 'wormald-mel': 'Wormald', 'wormald-ppmel': 'Wormald', 'rabin-doml': 'Rabin', 'whitelock-cs': 'Whitelock' };
+    const SOURCE_NAMES = { liebermann: 'Liebermann', 'liebermann-erkl': 'Liebermann', 'wormald-mel': 'Wormald', 'wormald-ppmel': 'Wormald', 'rabin-doml': 'Rabin', 'whitelock-cs': 'Whitelock' };
 
     // A translator's or editor's surname, linked to the full reference at the foot of the page.
     function sourceLink(src) {
@@ -231,7 +228,10 @@ scripts:
         const id = (a.getAttribute('corresp') || '').replace(/^#/, '');
         const w = wits[id];
         if (!id) return null;
-        const s = el('span', 'ms-label', (prefix || 'MS ') + (w ? w.abbr : id.replace(/^wit-/, '').toUpperCase()));
+        const abbr = w ? w.abbr : id.replace(/^wit-/, '').toUpperCase();
+        // The Quadripartitus is a Latin translation known from several manuscripts, not one manuscript: just "Q".
+        const isQuad = /^Q\b/.test(abbr);
+        const s = el('span', 'ms-label', (isQuad ? (prefix ? 'of ' : '') : (prefix || 'MS ')) + abbr);
         if (w && w.name) s.title = w.name;
         return s;
     }
@@ -286,7 +286,7 @@ scripts:
         const col = (title, cls) => { const c = el('div', 'clause-col ' + cls); c.appendChild(el('h3', null, title)); grid.appendChild(c); return c; };
         const abs = tei(div, 'ab');
         const texts = abs.filter(a => /^(liebermannText|editionText)$/.test(a.getAttribute('type')));
-        // Texts from the Quadripartitus (MS Q) have their own heading, unless
+        // Texts from the Quadripartitus (Q) have their own heading, unless
         // the clause survives only in Latin. Liebermann's texts come first, in
         // the order of his columns (his leftmost, main text first), then the
         // other editors'.
@@ -348,7 +348,7 @@ scripts:
         }
         const trans = abs.filter(a => a.getAttribute('type') === 'translation');
         const isGerman = a => a.getAttribute('xml:lang') === 'de' || a.getAttribute('ana') === '#fromGerman';
-        // Liebermann's German first, then Claude's English of it, then the other translations.
+        // Liebermann's German first, then the LLM's English of it (made with Claude), then the other translations.
         trans.filter(a => a.getAttribute('xml:lang') === 'de').forEach(a => add(right, a, ['German translation']));
         trans.filter(a => a.getAttribute('ana') === '#fromGerman').forEach(a => add(right, a, ['English of Liebermann’s German']));
         trans.filter(a => !isGerman(a)).forEach(a => {
@@ -660,7 +660,8 @@ scripts:
 
         // Editions and translations, then studies (only if there are any), without bullet points.
         const srcs = Object.values(allSrcs);
-        [['Editions and translations', srcs.filter(x => x.type !== 'study')],
+        // The LLM's English of Liebermann's German comes last.
+        [['Editions and translations', srcs.filter(x => x.type !== 'study' && x.id !== 'claude').concat(srcs.filter(x => x.id === 'claude'))],
          ['Studies', srcs.filter(x => x.type === 'study')]].forEach(([title, list]) => {
             if (!list.length) return;
             const s = el('section', 'entry-section clause-sources');
