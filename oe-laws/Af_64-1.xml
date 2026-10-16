@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -56,22 +59,31 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 515 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 515 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 84.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 84.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="64.1">
         <head><ref type="lawCode" target="law:Af">Af</ref> 64.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="64.1" corresp="#wit-h">Gif seo æftere tá sy ofaslægen, gesylle him mon XV scll' to bote.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="64.1" corresp="#wit-e">Gif hit sie sio æfterre ta, XV scill. to bote geselle him mon.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="64.1" corresp="#wit-h">Gif seo<ptr type="liebermannNote" n="5" target="#Af_64-1.lnote.oe.5"/> æftere tá sy<ptr type="liebermannNote" n="3" target="#Af_64-1.lnote.oe.3"/> ofaslægen, gesylle<ptr type="liebermannNote" n="3" target="#Af_64-1.lnote.oe.3"/> him mon<ptr type="liebermannNote" n="4" target="#Af_64-1.lnote.oe.4"/> XV scll' to bote.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="64.1" corresp="#wit-e">Gif hit sie<ptr type="liebermannNote" n="4" target="#Af_64-1.lnote.oe.4-2"/> sio æfterre ta, XV scill. to bote geselle<ptr type="liebermannNote" n="5" target="#Af_64-1.lnote.oe.5-2"/> him mon.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="64.1" corresp="#wit-b-no-prol">Gyf hit séo æftere tá sy, fiftene scill' to bote.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="64.1" corresp="#wit-q">Si secundus articulus sit, XV solid. emendetur;</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="67.1" corresp="#wit-e">Gif hit sie sio æfterre ta, XV scill to bote geselle him mon.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If it is the next toe, let him be given 15 shillings as compensation.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If it is the second toe [which is struck off], 15 shillings shall be given to him as compensation.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn es die zweite Zehe ist, gebe man ihm 15 Schill. zur Busse.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn es die zweite Zehe<ptr type="liebermannNote" n="1" target="#Af_64-1.lnote.de.1"/> ist, gebe man ihm 15 Schill. zur Busse.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If it is the second toe, let him be given 15 shillings as compensation.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_64-1.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">84</biblScope></bibl><seg type="original" xml:lang="de">eo <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">eo on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_64-1.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">84</biblScope></bibl><seg type="original" xml:lang="de">y <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">y on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_64-1.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">84</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_64-1.lnote.oe.4-2" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">84</biblScope></bibl><seg type="original" xml:lang="de">sy seo æftere tá, fiftyne <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">sy seo æftere tá, fiftyne Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_64-1.lnote.oe.5-2" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">84</biblScope></bibl><seg type="original" xml:lang="de">g. h. m. <hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">g. h. m. lacking in Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_64-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">62</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">‘abgehauen’ fügt H hinzu</seg><seg type="translation" xml:lang="en" source="#claude">H adds ‘cut off’</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Af_64-1.attnote.fn.2" n="2" source="#attenborough"><bibl><biblScope unit="page">90</biblScope></bibl><label>ta</label><seg type="original" xml:lang="en"><hi rend="italic">Gif seo æftere ta sy ofaslægen</hi>. H.</seg></note>
       </div>
     </body>
   </text>

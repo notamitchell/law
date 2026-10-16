@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -56,22 +59,35 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 494 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 494 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 80.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 80.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="49.2">
         <head><ref type="lawCode" target="law:Af">Af</ref> 49.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="49.2" corresp="#wit-h">Monnes tux bið XV scll' weorð.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="49.2" corresp="#wit-e">Monnes tux bið XV scill. weorð.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="49.2" corresp="#wit-q">Molares dentes (id est tux) hominis XV solid. estimantur.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="49.2" corresp="#wit-h">Monnes<ptr type="liebermannNote" n="4" target="#Af_49-2.lnote.oe.4"/> tux bið XV scll' weorð.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="49.2" corresp="#wit-e">Monnes tux<ptr type="liebermannNote" n="18" target="#Af_49-2.lnote.oe.18"/> bið XV<ptr type="liebermannNote" n="19" target="#Af_49-2.lnote.oe.19"/> scill. weorð.<ptr type="liebermannNote" n="20" target="#Af_49-2.lnote.oe.20"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="49.2" corresp="#wit-b-no-prol">Monnes tux biþ syxtyne scill' weorð.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="49.2" corresp="#wit-q">Molares dentes (id<ptr type="liebermannNote" n="4" target="#Af_49-2.lnote.oe.4-2"/> est tux) hominis<ptr type="liebermannNote" n="16" target="#Af_49-2.lnote.oe.16"/> XV solid. estimantur.<ptr type="liebermannNote" n="17" target="#Af_49-2.lnote.oe.17"/></ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="52.2" corresp="#wit-e">Monnes tux bið XV scil weorð.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">A person’s canine tooth is worth 15 shillings.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">A man's canine tooth shall be valued at 15 shillings.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Eines Menschen Augenzahn ist 15 Schill. werth.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">A man's canine tooth<ptr type="editorNote" n="1" target="#Af_49-2.attnote.n.1"/> shall be valued at 15 shillings.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Eines Menschen Augenzahn<ptr type="liebermannNote" n="1" target="#Af_49-2.lnote.de.1"/> ist 15<ptr type="liebermannNote" n="2" target="#Af_49-2.lnote.de.2"/> Schill. werth.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">A person’s eye-tooth is worth 15 shillings.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_49-2.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">80</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_49-2.lnote.oe.4-2" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">81</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">nur Co übergeschr.; fehlt übrigen</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above only in Co; lacking in the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_49-2.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">81</biblScope></bibl><seg type="original" xml:lang="de">ad <hi rend="italic">fügt zu Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">ad added by Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_49-2.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">81</biblScope></bibl><seg type="original" xml:lang="de">-mentur <hi rend="italic">Brti</hi></seg><seg type="translation" xml:lang="en" source="#claude">-mentur Brti</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_49-2.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">80</biblScope></bibl><seg type="original" xml:lang="de">tus <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">tus Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_49-2.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">80</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="spaced">syxtyne</hi> <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">syxtyne</hi> Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_49-2.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">80</biblScope></bibl><seg type="original" xml:lang="de">-rþe <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-rþe Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_49-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">61</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Q und Inst., danach die Modernen missverstehen: ‘Backenzahn’, wie schon Agsächs. Glossare <hi rend="italic">tusc</hi> mit <hi rend="italic">genuino</hi> fälschlich erklären; Toller <hi rend="italic">Dict.;</hi> Sweet <hi rend="italic">Oldest texts</hi> 66f. [Freilich meint Sievers, der Agsachse konnte den ‘Backenzahn’ auch <hi rend="italic">tusc</hi> nennen; <hi rend="italic">Anglia</hi> XIII 309; auch Thöne: ‘Backenzahn’.] <hi rend="italic">Vgl. Gl</hi> Zahn 4a</seg><seg type="translation" xml:lang="en" source="#claude">Q and Inst., and following them the moderns, misunderstand: ‘molar’, just as Anglo-Saxon glossaries already wrongly explain <hi rend="italic">tusc</hi> by <hi rend="italic">genuino</hi>; Toller <hi rend="italic">Dict.;</hi> Sweet <hi rend="italic">Oldest texts</hi> 66f. [Sievers, it is true, thinks the Anglo-Saxon could also call the ‘molar’ <hi rend="italic">tusc</hi>; <hi rend="italic">Anglia</hi> XIII 309; Thöne too: ‘molar’.] <hi rend="italic">Cf. Gl</hi> Zahn 4a</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_49-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">61</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">‘16’ B; allein Af braucht 15 gern in Gliederbussen; <hi rend="italic">s. d. Gl</hi> 13b</seg><seg type="translation" xml:lang="en" source="#claude">‘16’ B; but Af likes to use 15 in compensations for limbs; <hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 13b</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="Af_49-2.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">199</biblScope></bibl><seg type="original" xml:lang="en">Note the different relative values in Abt. cap. 51. Quadr. mistranslates <hi rend="italic">wongtoð</hi> as <hi rend="italic">caninos</hi> and <hi rend="italic">tux</hi> as <hi rend="italic">molares dentes.</hi></seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Af_49-2.attnote.fn.15" n="15" source="#attenborough"><bibl><biblScope unit="page">86</biblScope></bibl><label>xv</label><seg type="original" xml:lang="en"><hi rend="italic">syxtyne</hi>. B.</seg></note>
       </div>
     </body>
   </text>

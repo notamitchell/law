@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -56,8 +59,9 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 509 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 509 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 82.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 82.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -65,13 +69,24 @@
       <div type="clause" n="61.1">
         <head><ref type="lawCode" target="law:Af">Af</ref> 61.1</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="61.1" corresp="#wit-h">Gif he þurhwund bið, æt ægðrum muðe XX scll'.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="61.1" corresp="#wit-e">Gif he ðurhwund bið, æt gehweðerum muðe XX scill.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="61.1" corresp="#wit-q">Si transforatus sit, ad utrumque os emendetur uiginti sol.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="61.1" corresp="#wit-e">Gif he ðurhwund bið, æt gehweðerum<ptr type="liebermannNote" n="22" target="#Af_61-1.lnote.oe.22"/> muðe XX<ptr type="liebermannNote" n="23" target="#Af_61-1.lnote.oe.23"/> scill.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="61.1" corresp="#wit-b-no-prol">Gyf he ðurhwund bið, æt ægðran muðe twentig scill'.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="61.1" corresp="#wit-q">Si transforatus<ptr type="liebermannNote" n="22" target="#Af_61-1.lnote.oe.22-2"/> sit, ad<ptr type="liebermannNote" n="23" target="#Af_61-1.lnote.oe.23-2"/> utrumque os emendetur uiginti<ptr type="liebermannNote" n="24" target="#Af_61-1.lnote.oe.24"/> sol.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="64.1" corresp="#wit-e">Gif he ðurhwund bið, æt gehweðerum muðe XX scill.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If the wound goes through it, at each opening 20 shillings.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If he is pierced right through, 20 shillings [shall be paid as compensation] for each orifice.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn er durchbohrt ist, [dass die Waffe herausfährt], für jede der beiden Öffnungen 20 Schill.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn er<ptr type="liebermannNote" n="1" target="#Af_61-1.lnote.de.1"/> durchbohrt<ptr type="liebermannNote" n="2" target="#Af_61-1.lnote.de.2"/> ist, [dass die Waffe herausfährt], für jede der beiden<ptr type="liebermannNote" n="3" target="#Af_61-1.lnote.de.3"/> Öffnungen<ptr type="liebermannNote" n="4" target="#Af_61-1.lnote.de.4"/> 20 Schill.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If he is pierced through [so that the weapon comes out], for each of the two openings 20 shillings.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_61-1.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">83</biblScope></bibl><seg type="original" xml:lang="de">-tum <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">-tum T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_61-1.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">83</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt HkBr</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in HkBr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_61-1.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">83</biblScope></bibl><seg type="original" xml:lang="de">XXX <hi rend="italic">LondTHkBr</hi></seg><seg type="translation" xml:lang="en" source="#claude">XXX LondTHkBr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_61-1.lnote.oe.22-2" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">82</biblScope></bibl><seg type="original" xml:lang="de">ægþrum <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">ægþrum Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_61-1.lnote.oe.23-2" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">82</biblScope></bibl><seg type="original" xml:lang="de">tweontig <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">tweontig Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_61-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">62</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Nicht ‘der Bauch’, weil im Agsä. Neutrum</seg><seg type="translation" xml:lang="en" source="#claude">Not ‘the belly’, because it is neuter in Anglo-Saxon</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_61-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">62</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Beeinflusst durch Abt 61a. Zum Wort <hi rend="italic">vgl. þurhhat</hi> ‘durch und durch heiss’</seg><seg type="translation" xml:lang="en" source="#claude">Influenced by Abt 61a. On the word <hi rend="italic">cf. þurhhat</hi> ‘hot through and through’</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_61-1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">62</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">hb modernisiert</seg><seg type="translation" xml:lang="en" source="#claude">hb modernizes</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_61-1.lnote.de.4" n="4" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">62</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl.</hi> Gliederbussen 10; <hi rend="italic">u.</hi> 67, 2</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf.</hi> Gliederbussen 10; <hi rend="italic">below</hi> 67, 2</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Af_61-1.attnote.fn.16" n="16" source="#attenborough"><bibl><biblScope unit="page">88</biblScope></bibl><label>gehweðerum</label><seg type="original" xml:lang="en"><hi rend="italic">ægðran</hi>. B. <hi rend="italic">ægðrum</hi>. H.</seg></note>
       </div>
     </body>
   </text>

@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -28,6 +29,7 @@
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">254</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -57,8 +59,9 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 349 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 349 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 38.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 38.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -66,16 +69,26 @@
       <div type="clause" n="El. 33">
         <head><ref type="lawCode" target="law:Af">Af</ref> El. 33</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 33" corresp="#wit-h">Utan cumene ⁊ ælþeodige ne geswænc þu ðone, forþam ðe ge wæron ælþeodige on Egypta lande.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 33" corresp="#wit-e">Utan cumene ⁊ elðeodige ne geswenc ðu no, forðon ðe ge wæron giu elðeodige on Egipta londe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 33" corresp="#wit-e">Utan cumene ⁊ elðeodige<ptr type="liebermannNote" n="20" target="#Af_El-to-33.lnote.oe.20"/> ne geswenc ðu no<ptr type="liebermannNote" n="21" target="#Af_El-to-33.lnote.oe.21"/>, forðon ðe ge wæron giu<ptr type="liebermannNote" n="22" target="#Af_El-to-33.lnote.oe.22"/> elðeodige<ptr type="liebermannNote" n="20" target="#Af_El-to-33.lnote.oe.20"/> on Egipta<ptr type="liebermannNote" n="23" target="#Af_El-to-33.lnote.oe.23"/> londe.<ptr type="liebermannNote" n="24" target="#Af_El-to-33.lnote.oe.24"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 33" corresp="#wit-g-prol-only">Útan cumene ⁊ ǽlðeodige ne geswenc ðu þá<ptr type="liebermannNote" n="5" target="#Af_El-to-33.lnote.oe.5"/>, forðon ðe ge wæron iú ǽlðeodige ón Egypta lande.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 33" corresp="#wit-q">Aduenam non contristabis neque affliges eum; aduenæ enim et ipsi fuistis in terra Egypti.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="MP 33" corresp="#wit-e">Utan cumene ⁊ elðeodige ne geswenc ðu no, forðon ðe ge wæron giu elðeodige on Egipta londe.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Do not oppress those come from afar and foreigners, because you were once foreigners in the land of Egypt.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Von auswärts gekommene und Fremde bedrücke du nicht; weil ihr einst Fremde waret im Ägypter Lande.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Von auswärts gekommene und Fremde<ptr type="liebermannNote" n="1" target="#Af_El-to-33.lnote.de.1"/> bedrücke du nicht<ptr type="liebermannNote" n="2" target="#Af_El-to-33.lnote.de.2"/>; weil ihr<ptr type="liebermannNote" n="3" target="#Af_El-to-33.lnote.de.3"/> einst Fremde waret im Ägypter Lande.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Do not oppress those who have come from outside and strangers; for you were once strangers in the land of the Egyptians.</ab>
         <note type="passageSource">Exodus 22,21</note>
         <note type="comparison" source="#liebermann" n="39">Exodus 22.21</note>
         <note type="comparisonPrinted" source="#liebermann">[22, 21]</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VIAtr_48">VI Atr 48</ref>; <ref target="clause:IICn_35-1">II Cn 35.1</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-33.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">38</biblScope></bibl><seg type="original" xml:lang="de">na no, <hi rend="italic">darüber von mod. Hd.</hi></seg><seg type="translation" xml:lang="en" source="#claude">na no, written above by a modern hand</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-33.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">38</biblScope></bibl><seg type="original" xml:lang="de">ælð. <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">ælð. So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-33.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">38</biblScope></bibl><seg type="original" xml:lang="de">na <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">na So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-33.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">38</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-33.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">38</biblScope></bibl><seg type="original" xml:lang="de">Æg. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">Æg. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-33.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">38</biblScope></bibl><seg type="original" xml:lang="de">lond <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">lond So</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-33.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">46</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gt</hi> Fremde 3—4a; <hi rend="italic">u.</hi> El 47, wo Af diesen noch mehr eigene Wendungen widmet</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Fremde 3—4a; <hi rend="italic">below</hi> El 47, where Af devotes still more phrases of his own to them</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-33.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">46</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">‘die’ G; ‘den’ unpassend H, vielleicht verlesen aus <hi rend="italic">ða no</hi></seg><seg type="translation" xml:lang="en" source="#claude">‘them’ G; ‘him’ H, which does not fit, perhaps misread from <hi rend="italic">ða no</hi></seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-33.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">46</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. o.</hi> El Pro³</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See above</hi> El Pro³</seg></note>
       </div>
     </body>
   </text>

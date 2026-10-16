@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">410</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -58,8 +61,10 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 383 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 383 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 48.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 48: “Gif he losige, sie he áfliemed ⁊ sie ámænsumod óf eallum Cristes ciricum.” → “Gif he losige, sie he áfliemed ⁊ sie ámænsumod óf eallum Cristes ciricum. (expanded letters in italics: m)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s Latin text corrected against Gesetze I, p. 48: “ecclesiis.” → “ęcclesiis.”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -67,14 +72,24 @@
       <div type="clause" n="1.7">
         <head><ref type="lawCode" target="law:Af">Af</ref> 1.7</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.7" corresp="#wit-h">Gif he þonne losie, sy he aflymed ⁊ sy he amansemod of eallum Cristes cyricu<hi rend="italic">m</hi>.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.7" corresp="#wit-e">Gif he losige, sie he áfliemed ⁊ sie ámænsumod óf eallum Cristes ciricum.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.7" corresp="#wit-q">Si amittatur, sit forsbannitus et excommunicatus ab omnibus Christi ecclesiis.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.7" corresp="#wit-e">Gif he losige, sie<ptr type="liebermannNote" n="3" target="#Af_1-7.lnote.oe.3"/> he áfliemed<ptr type="liebermannNote" n="23" target="#Af_1-7.lnote.oe.23"/> ⁊ sie<ptr type="liebermannNote" n="3" target="#Af_1-7.lnote.oe.3"/> ámænsumod<ptr type="liebermannNote" n="24" target="#Af_1-7.lnote.oe.24"/> óf eallum Cristes ciricu<hi rend="italic">m</hi>.<ptr type="liebermannNote" n="25" target="#Af_1-7.lnote.oe.25"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.7" corresp="#wit-q">Si amittatur, sit forsbannitus<ptr type="liebermannNote" n="13" target="#Af_1-7.lnote.oe.13"/> et excommunicatus ab omnibus Christi ęcclesiis.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="1.7" corresp="#wit-e">Gif he losige, sie he afliemed ⁊ sie ámænsumod óf eallum Cristes ciricu<hi rend="italic">m</hi>.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If he escapes, let him be banished and excommunicated from all churches of Christ.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If he succeeds in making his escape, he shall be banished, and excommunicated from all the churches of Christ.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">If he gets clear, he is to be outlawed, and to be excommunicated from all the churches of Christ.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn er entkommt, werde er geächtet und werde excommunicirt aus allen Kirchen Christi.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn er<ptr type="liebermannNote" n="1" target="#Af_1-7.lnote.de.1"/> entkommt, werde er geächtet und werde excommunicirt<ptr type="liebermannNote" n="2" target="#Af_1-7.lnote.de.2"/> aus<ptr type="liebermannNote" n="3" target="#Af_1-7.lnote.de.3"/> allen Kirchen Christi.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If he gets away, let him be outlawed and excommunicated from all the churches of Christ.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_1-7.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">49</biblScope></bibl><seg type="original" xml:lang="de">forisb. <hi rend="italic">R Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">forisb. R Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_1-7.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">48</biblScope></bibl><seg type="original" xml:lang="de">sy <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">sy Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_1-7.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">48</biblScope></bibl><seg type="original" xml:lang="de">aflymed <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">aflymed So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_1-7.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">48</biblScope></bibl><seg type="original" xml:lang="de">amans. <hi rend="italic">Ld;</hi> amas. <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">amans. Ld; amas. So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_1-7.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">48</biblScope></bibl><seg type="original" xml:lang="de">cyr. <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">cyr. So Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_1-7.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">50</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">‘aber’ fügt H zu. — <hi rend="italic">Vgl. Gl</hi> friedlos 3b. 9</seg><seg type="translation" xml:lang="en" source="#claude">H adds ‘but’. — <hi rend="italic">Cf. Gl</hi> friedlos 3b. 9</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_1-7.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">50</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Exkommunikation (<hi rend="italic">s. d. Gl</hi> 11) trifft den Brecher des Versprechens als einer z. T. kirchlichen Pflicht; <hi rend="italic">s. o.</hi> 1, 2⁷</seg><seg type="translation" xml:lang="en" source="#claude">Excommunication (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 11) falls on the breaker of the promise as of a partly ecclesiastical obligation; <hi rend="italic">see above</hi> 1, 2⁷</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_1-7.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">50</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">‘in’ ungenau Schmid</seg><seg type="translation" xml:lang="en" source="#claude">‘in’ Schmid, inaccurately</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Af_1-7.attnote.fn.3" n="3" source="#attenborough"><bibl><biblScope unit="page">64</biblScope></bibl><label>losige</label><seg type="original" xml:lang="en"><hi rend="italic">þonne losie</hi>. H.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Af_1-7.attnote.fn.4" n="4" source="#attenborough"><bibl><biblScope unit="page">64</biblScope></bibl><label>ámænsumod</label><seg type="original" xml:lang="en"><hi rend="italic">sy he amansemod</hi>. H.</seg></note>
       </div>
     </body>
   </text>

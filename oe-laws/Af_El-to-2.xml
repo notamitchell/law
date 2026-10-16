@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -28,6 +29,7 @@
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">226</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -56,7 +58,7 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 318 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 318 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 26.</change>
     </revisionDesc>
   </teiHeader>
@@ -64,17 +66,23 @@
     <body>
       <div type="clause" n="El. 2">
         <head><ref type="lawCode" target="law:Af">Af</ref> El. 2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 2" corresp="#wit-h">Ne minne naman ne cig þu on ydelnesse; forðam þu ne byst unscyldig wið me, gif þu on idelnesse (ge)cygst minne naman.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 2" corresp="#wit-e">Ne minne noman ne cig ðu on idelnesse; forðon þe ðu ne bist unscyldig wið me, gif ðu on idelnesse cigst minne noman.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 2" corresp="#wit-h">Ne minne naman ne cig þu on ydelnesse; forðam þu ne byst unscyldig wið me, gif þu on idelnesse (ge)cygst<ptr type="liebermannNote" n="8" target="#Af_El-to-2.lnote.oe.8"/> minne naman.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 2" corresp="#wit-e">Ne minne noman ne cig ðu on idelnesse; forðon þe ðu ne bist unscyldig<ptr type="liebermannNote" n="24" target="#Af_El-to-2.lnote.oe.24"/> wið me, gif ðu on idelnesse cigst<ptr type="liebermannNote" n="25" target="#Af_El-to-2.lnote.oe.25"/> minne noman.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 2" corresp="#wit-g-prol-only">Ne minne naman ne cig ðu on idelnesse; forðon ðe þu ne byst unscyldig wið me, gif ðu on idelnesse cigst minne naman.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 2" corresp="#wit-q">Non assumes nomen domini Dei tui in uanum. Nec enim habebit Dominus insontem eum qui assumpserit nomen domini Dei frustra.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 2" corresp="#wit-q">Non assumes<ptr type="liebermannNote" n="22" target="#Af_El-to-2.lnote.oe.22"/> nomen domini Dei tui in uanum. Nec enim habebit Dominus insontem eum qui assumpserit<ptr type="liebermannNote" n="22" target="#Af_El-to-2.lnote.oe.22"/> nomen domini Dei frustra.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="MP 2" corresp="#wit-e">Ne minne noman ne cig ðu on idelnesse; forðon þe ðu ne bist unscyldig wið me, gif ðu on idelnesse cigst minne noman.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">You will not invoke my name idly: for you will not be guiltless with me, if you take my name idly.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Meinen Namen rufe du nicht zur Nichtigkeit an, weil du nicht ohne Schuld mir gegenüber bist, wenn du zur Nichtigkeit meinen Namen anrufst.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Meinen<ptr type="liebermannNote" n="1" target="#Af_El-to-2.lnote.de.1"/> Namen rufe<ptr type="liebermannNote" n="2" target="#Af_El-to-2.lnote.de.2"/> du nicht zur Nichtigkeit an, weil du nicht ohne Schuld mir gegenüber bist, wenn du zur Nichtigkeit meinen Namen anrufst.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Do not call upon my name for vanity, because you are not without guilt towards me if you call upon my name for vanity.</ab>
         <note type="passageSource">Exodus 20,7</note>
         <note type="comparison" source="#liebermann" n="27">Exodus 20.7</note>
         <note type="comparisonPrinted" source="#liebermann">[20, 7]</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-2.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">27</biblScope></bibl><seg type="original" xml:lang="de">ge <hi rend="italic">übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">ge written above</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-2.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">27</biblScope></bibl><seg type="original" xml:lang="de">ads. <hi rend="italic">Dm</hi></seg><seg type="translation" xml:lang="en" source="#claude">ads. Dm</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-2.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">26</biblScope></bibl><seg type="original" xml:lang="de">-scil- <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-scil- Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-2.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">26</biblScope></bibl><seg type="original" xml:lang="de">cygest <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">cygest So</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">43</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Vielleicht erklärt sich diese Abweichung aus <hi rend="italic">non periurabis in nomine meo</hi> Levit. 19, 12. — Agsä. Zitate aus Ex. 20, 7—21, 17 in Ælfrics Homilien sammelt Cooke <hi rend="italic">Bibl. quotations</hi> 90f.</seg><seg type="translation" xml:lang="en" source="#claude">Perhaps this departure is to be explained from <hi rend="italic">non periurabis in nomine meo</hi> Levit. 19, 12. — A.-S. quotations from Ex. 20, 7—21, 17 in Ælfric’s homilies are collected by Cooke <hi rend="italic">Bibl. quotations</hi> 90f.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">43</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">‘sprich eitel, utter idly’ Frühere, dem Hebräischen gemäss; allein <hi rend="italic">cigan</hi> heisst (<hi rend="italic">in</hi>)<hi rend="italic">vocare, clamare</hi></seg><seg type="translation" xml:lang="en" source="#claude">‘speak vainly, utter idly’ earlier scholars, in accordance with the Hebrew; but <hi rend="italic">cigan</hi> means (<hi rend="italic">in</hi>)<hi rend="italic">vocare, clamare</hi></seg></note>
       </div>
     </body>
   </text>

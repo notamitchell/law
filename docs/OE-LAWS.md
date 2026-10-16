@@ -59,7 +59,7 @@ Where later editors divide one of Liebermann's clauses, the spreadsheet gives ea
 
 ## The editors' notes, and the check of October 2026
 
-Liebermann's edition has two sets of notes that the plain texts leave out, and Attenborough's has two more. They are in the clause files for the codes done so far: **Æthelberht** (Abt; Liebermann only, the pilot) and, from the check of October 2026 (one code, one pull request at a time, Hlothhere onwards), **Hlothhere and Eadric** (Hl).
+Liebermann's edition has two sets of notes that the plain texts leave out, and Attenborough's has two more. They are in the clause files for the codes done so far: **Æthelberht** (Abt; Liebermann only, the pilot) and, from the check of October 2026 (one code, one pull request at a time, Hlothhere onwards), **Hlothhere and Eadric** (Hl), **Wihtred** (Wi), the rubrics to Alfred and Ine (**Af Rb**, **Ine Rb**) and **Alfred** (Af, with the Introduction, Af El).
 
 - **Liebermann's textual notes on his texts**: the footnotes at the foot of the page in *Gesetze* I (manuscript readings, erasures, other inks, editors' emendations). Numbered afresh on each page; `*`, `**`, `†` mark an editor's emendation. They stand on any of his texts (columns K, N, AF, O).
 - **Liebermann's Erklärungen on his German translation**: the numbers in the German refer to notes printed separately in *Gesetze* III (1916), numbered afresh in each of Liebermann's clauses (all of Abt 1 is one clause there, though the database divides it into 1[a]–1[g]). A few notes have no number in the text and are on the clause as a whole.

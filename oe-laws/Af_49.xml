@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -56,22 +59,38 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 492 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 492 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 80.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 80.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="49">
         <head><ref type="lawCode" target="law:Af">Af</ref> 49</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="49" corresp="#wit-h">Gif mon oþrum ðone toð ofaslea onforan heafde, gebete ðæt mid VIII scll'.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="49" corresp="#wit-e">Gif mon oðrum ðone toð onforan heafde ófaslea, gebete þæt mid VIII scill.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="49" corresp="#wit-q">Si quis alteri (homini) teþ onforen heued (primos dentes id est precisores) excusserit, VIII solid. culpa sit.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="49" corresp="#wit-h">Gif mon<ptr type="liebermannNote" n="4" target="#Af_49.lnote.oe.4"/> oþrum ðone toð ofaslea onforan heafde, gebete<ptr type="liebermannNote" n="8" target="#Af_49.lnote.oe.8"/> ðæt mid VIII scll'.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="49" corresp="#wit-e">Gif mon oðrum ðone toð<ptr type="liebermannNote" n="13" target="#Af_49.lnote.oe.13"/> onforan<ptr type="liebermannNote" n="14" target="#Af_49.lnote.oe.14"/> heafde ófaslea, gebete þæt mid VIII<ptr type="liebermannNote" n="15" target="#Af_49.lnote.oe.15"/> scill.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="49" corresp="#wit-b-no-prol">Gyf man oðrum ðone toð onforen heafde ofaslea, gebetað<ptr type="liebermannNote" n="4" target="#Af_49.lnote.oe.4-2"/> þ<hi rend="italic">æt</hi> mid eahta scill'.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="49" corresp="#wit-q">Si quis alteri<ptr type="liebermannNote" n="11" target="#Af_49.lnote.oe.11"/> (homini) teþ<ptr type="liebermannNote" n="12" target="#Af_49.lnote.oe.12"/> onforen heued (primos dentes id est precisores) excusserit, VIII solid. culpa sit.<ptr type="liebermannNote" n="13" target="#Af_49.lnote.oe.13-2"/></ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="52" corresp="#wit-e">Gif mon oðrum ðone toð onforan heafde ófaslea, gebete þæt mid VIII scill.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If someone strikes out from another the tooth in the front of the head, let him compensate that with 8 shillings.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If anyone knocks out another's front tooth, he shall pay 8 shillings as compensation for it.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand einem anderen den Zahn vorn am Kopf ausschlägt, büsse [er] das mit 8 Schill.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If anyone knocks out another's front tooth<ptr type="editorNote" n="1" target="#Af_49.attnote.n.1"/>, he shall pay 8 shillings as compensation for it.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn<ptr type="liebermannNote" n="1" target="#Af_49.lnote.de.1"/> jemand einem anderen den Zahn<ptr type="liebermannNote" n="2" target="#Af_49.lnote.de.2"/> vorn<ptr type="liebermannNote" n="3" target="#Af_49.lnote.de.3"/> am Kopf ausschlägt, büsse [er] das mit 8 Schill.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If someone knocks out another’s tooth at the front of the head, let him pay for it with 8 shillings.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_49.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">80</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_49.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">80</biblScope></bibl><seg type="original" xml:lang="de">ge <hi rend="italic">übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">ge written above</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_49.lnote.oe.4-2" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">80</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_49.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">81</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">nur</hi> alt. <hi rend="italic">Lond; nur</hi> ho. <hi rend="italic">übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">only alt. Lond; only ho. the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_49.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">81</biblScope></bibl><seg type="original" xml:lang="de">t. o. h. <hi rend="italic">nur Co übergeschr.; fehlt übrigen</hi></seg><seg type="translation" xml:lang="en" source="#claude">t. o. h. written above only in Co; lacking in the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_49.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">81</biblScope></bibl><seg type="original" xml:lang="de">fit <hi rend="italic">R</hi></seg><seg type="translation" xml:lang="en" source="#claude">fit R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_49.lnote.oe.13-2" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">80</biblScope></bibl><seg type="original" xml:lang="de">toþe <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">toþe Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_49.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">80</biblScope></bibl><seg type="original" xml:lang="de">onf. <hi rend="italic">ein Wort E</hi></seg><seg type="translation" xml:lang="en" source="#claude">onf. as one word E</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_49.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">80</biblScope></bibl><seg type="original" xml:lang="de">eahta <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">eahta Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_49.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">61</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Q verstand die Lateinischen Zahnnamen richtig laut Hn 93, 6</seg><seg type="translation" xml:lang="en" source="#claude">Q understood the Latin names of the teeth correctly, according to Hn 93, 6</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_49.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">61</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Gemäss Abt 51, mit anderer Klassifikation und Busszahl. <hi rend="italic">Vgl. Gl</hi> Zahn 4</seg><seg type="translation" xml:lang="en" source="#claude">In accordance with Abt 51, with a different classification and amount of compensation. <hi rend="italic">Cf. Gl</hi> Zahn 4</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_49.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">61</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Nicht zu trennen <hi rend="italic">on foran</hi> oder gar <hi rend="italic">foranheafod:</hi> ‘Vorderkopf’ zu verstehen. Letzteres heisst ‘Stirn’. Gemeint ist einer der 8 <hi rend="italic">incisores,</hi> ein Schneide-, Mittelzahn</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">on foran</hi> is not to be separated, still less is <hi rend="italic">foranheafod:</hi> ‘forepart of the head’ to be understood. The latter means ‘forehead’. What is meant is one of the 8 <hi rend="italic">incisores,</hi> a cutting or middle tooth</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="Af_49.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">199</biblScope></bibl><seg type="original" xml:lang="en">For a different classification of the teeth see Abt. cap. 51.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Af_49.attnote.fn.12" n="12" source="#attenborough"><bibl><biblScope unit="page">86</biblScope></bibl><label>gebete</label><seg type="original" xml:lang="en"><hi rend="italic">gebetað</hi>. B.</seg></note>
       </div>
     </body>
   </text>

@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -28,6 +29,7 @@
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">242</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -55,8 +57,9 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 335 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 335 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 32.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 32.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -64,15 +67,28 @@
       <div type="clause" n="El. 19">
         <head><ref type="lawCode" target="law:Af">Af</ref> El. 19</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 19" corresp="#wit-h">Gif hwa oþru<hi rend="italic">m</hi> hys eage ofdo, sylle his agen fore: toþ for toþ, handa wiþ handa, fett for fett, bærning for bærninge, wund wið wunde, læl wið læle.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 19" corresp="#wit-e">Gif hwa oðrum his eage oðdo, selle his agen fore: toð fore teð, honda wið honda, fet fore fét, bærning for bærninge, wund wið wunde, læl wið læle.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 19" corresp="#wit-q">oculum pro oculo, dentem pro dente, manum pro manu, pedem pro pede, adustionem pro adustione, uulnus pro uulnere, liuorem pro liuore.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 19" corresp="#wit-e">Gif hwa oðrum his eage oðdo<ptr type="liebermannNote" n="22" target="#Af_El-to-19.lnote.oe.22"/>, selle<ptr type="liebermannNote" n="21" target="#Af_El-to-19.lnote.oe.21"/> his agen fore:<ptr type="liebermannNote" n="23" target="#Af_El-to-19.lnote.oe.23"/> toð fore<ptr type="liebermannNote" n="24" target="#Af_El-to-19.lnote.oe.24"/> teð<ptr type="liebermannNote" n="25" target="#Af_El-to-19.lnote.oe.25"/>, honda wið<ptr type="liebermannNote" n="24" target="#Af_El-to-19.lnote.oe.24"/> honda, fet fore<ptr type="liebermannNote" n="24" target="#Af_El-to-19.lnote.oe.24"/> fét, bærning<ptr type="liebermannNote" n="26" target="#Af_El-to-19.lnote.oe.26"/> for bærninge<ptr type="liebermannNote" n="26" target="#Af_El-to-19.lnote.oe.26"/>, wund wið wunde<ptr type="liebermannNote" n="27" target="#Af_El-to-19.lnote.oe.27"/>, læl wið læle.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 19" corresp="#wit-g-prol-only">Gyf hwá oðru<hi rend="italic">m</hi> hys eage oðdó, sylle his agen fore: toð for toð, handa for handa, fet for fet, bærninge for bærninge, wund wið wunde, læle wið læle.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 19" corresp="#wit-q">oculum pro oculo, dentem pro dente, manum pro manu, pedem pro pede, adustionem<ptr type="liebermannNote" n="7" target="#Af_El-to-19.lnote.oe.7"/> pro adustione, uulnus pro uulnere, liuorem pro liuore.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="MP 19" corresp="#wit-e">Gif hwa oðrum his eage oðdo, selle his agen fore: toð fore teð, honda wið honda, fet fore fet, bærning for bærninge, wund wið wunde, læl wið læle.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If someone should put out another’s eye, let him give his own for it: tooth for tooth, hand for hand, feet for feet, burning for burning, wound for wound, bruise for bruise.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand einem anderen sein Auge ausstösst, gebe er sein eigenes [Auge] dafür: Zahn für Zahn, Hände gegen Hände, Füsse für Füsse, Brandmal für Brandmal, Wunde gegen Wunde, Strieme gegen Strieme.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn<ptr type="liebermannNote" n="1" target="#Af_El-to-19.lnote.de.1"/> jemand einem anderen sein Auge ausstösst, gebe er sein eigenes [Auge] dafür: Zahn für Zahn, Hände<ptr type="liebermannNote" n="2" target="#Af_El-to-19.lnote.de.2"/> gegen Hände, Füsse<ptr type="liebermannNote" n="2" target="#Af_El-to-19.lnote.de.2"/> für Füsse, Brandmal<ptr type="liebermannNote" n="3" target="#Af_El-to-19.lnote.de.3"/> für Brandmal, Wunde gegen Wunde, Strieme<ptr type="liebermannNote" n="4" target="#Af_El-to-19.lnote.de.4"/> gegen Strieme.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If someone puts out another’s eye, let him give his own [eye] for it: tooth for tooth, hands for hands, feet for feet, burn for burn, wound for wound, weal for weal.</ab>
         <note type="passageSource">Exodus 21,24–25</note>
         <note type="comparison" source="#liebermann" n="33">Exodus 21.24; Exodus 21.25</note>
         <note type="comparisonPrinted" source="#liebermann">[21, 24] | [21, 25]</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-19.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">33</biblScope></bibl><seg type="original" xml:lang="de">abust. <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">abust. Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-19.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">32</biblScope></bibl><seg type="original" xml:lang="de">oþdó <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">oþdó So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-19.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">32</biblScope></bibl><seg type="original" xml:lang="de">sylle <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">sylle Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-19.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">32</biblScope></bibl><seg type="original" xml:lang="de">for <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">for Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-19.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">32</biblScope></bibl><seg type="original" xml:lang="de">for <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">for So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-19.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">32</biblScope></bibl><seg type="original" xml:lang="de">toð <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">toð So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-19.lnote.oe.26" n="26" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">32</biblScope></bibl><seg type="original" xml:lang="de">berning <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">berning So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-19.lnote.oe.27" n="27" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">32</biblScope></bibl><seg type="original" xml:lang="de">wund <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">wund So Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-19.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">45</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S.</hi> vor. Erkl. und die Widersprüche Af 47. 49. 71</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See</hi> the preceding note and the contradictions Af 47. 49. 71</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-19.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">45</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Nicht ‘Hand-Fuss’, wie Thorpe aus Vulg. emendiert und Schmid übersetzt</seg><seg type="translation" xml:lang="en" source="#claude">Not ‘hand-foot’, as Thorpe emends from the Vulg. and Schmid translates</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-19.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">45</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">‘Brandwunde’ Vulg., Wülfing <hi rend="italic">Syntax</hi> II 234</seg><seg type="translation" xml:lang="en" source="#claude">‘burn’ Vulg., Wülfing <hi rend="italic">Syntax</hi> II 234</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-19.lnote.de.4" n="4" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">45</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">‘Beule’ Schmid; glossiert auch <hi rend="italic">pernio, oidema</hi></seg><seg type="translation" xml:lang="en" source="#claude">‘bump’ Schmid; it also glosses <hi rend="italic">pernio, oidema</hi></seg></note>
       </div>
     </body>
   </text>

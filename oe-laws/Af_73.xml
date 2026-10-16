@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -56,24 +59,35 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 532 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 532 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 86.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 86.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="73">
         <head><ref type="lawCode" target="law:Af">Af</ref> 73</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="73" corresp="#wit-h">Gif mon oþrum þa sculdru forslea, gesylle him mon XX scll' to bote.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="73" corresp="#wit-e">Gif mon oðrum ða sculdru forslea, geselle him mon XX scill. to bote.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="73" corresp="#wit-q">Si quis alii (homini) scapulam truncauerit, XX sol. multetur.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="73" corresp="#wit-h">Gif mon<ptr type="liebermannNote" n="1" target="#Af_73.lnote.oe.1"/> oþrum þa sculdru<ptr type="liebermannNote" n="8" target="#Af_73.lnote.oe.8"/> forslea, gesylle<ptr type="liebermannNote" n="2" target="#Af_73.lnote.oe.2"/> him mon XX scll' to bote.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="73" corresp="#wit-e">Gif mon oðrum ða sculdru forslea, geselle<ptr type="liebermannNote" n="2" target="#Af_73.lnote.oe.2-2"/> him mon XX scill. to bote.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="73" corresp="#wit-b-no-prol">Gyf man oðru<hi rend="italic">m</hi> ða sculdru forslea, gesylle him mon XX scill' to bote.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="73" corresp="#wit-q">Si quis alii<ptr type="liebermannNote" n="7" target="#Af_73.lnote.oe.7"/> (homini) scapulam truncauerit, XX sol.<ptr type="liebermannNote" n="8" target="#Af_73.lnote.oe.8-2"/> multetur.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="77" corresp="#wit-e">Gif mon oðrum ða sculdru forslea, geselle him mon mid XX scill to bote.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If someone injures another in the shoulder, let him be paid 20 shillings as compensation.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If anyone smashes another's shoulder, 20 shillings shall be given to him as compensation.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand einem anderen die Schultern zerschlägt, gebe er ihm 20 Schill. zur Busse.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If anyone smashes another's shoulder<ptr type="editorNote" n="1" target="#Af_73.attnote.n.1"/>, 20 shillings shall be given to him as compensation.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn<ptr type="liebermannNote" n="1" target="#Af_73.lnote.de.1"/> jemand einem anderen die Schultern<ptr type="liebermannNote" n="2" target="#Af_73.lnote.de.2"/> zerschlägt, gebe er ihm 20 Schill. zur Busse.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If someone smashes another’s shoulders, let him give him 20 shillings as compensation.</ab>
         <note type="comparedBy" source="#jurasinski-and-oliver" n="355"><ref target="clause:Af_53">Af 53</ref></note>
         <note type="comparedBy" source="#jurasinski-and-oliver" n="361"><ref target="clause:Af_68">Af 68</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_73.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">86</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geändert in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_73.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">86</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">letztes</hi> u <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">last u on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_73.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">86</biblScope></bibl><seg type="original" xml:lang="de">y <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">y on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_73.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">87</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">nur</hi> al. <hi rend="italic">Lond Hn</hi> 93, 33; <hi rend="italic">nur</hi> ho. <hi rend="italic">übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">only al. Lond Hn 93, 33; only ho. the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_73.lnote.oe.8-2" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">87</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt R</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_73.lnote.oe.2-2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">86</biblScope></bibl><seg type="original" xml:lang="de">gesylle <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gesylle Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_73.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">62</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Schulter</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Schulter</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_73.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">62</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Der Plural des Or. wird von Inst. als Pl. ‘Schultern’ verstanden. Dieser Sinn ist auch sonst nachweisbar. Doch wird auch der Sing. <hi rend="italic">scapula</hi> durch den Plural <hi rend="italic">sculdra</hi> glossiert (Toller, <hi rend="italic">Dict.</hi>, Ælfric ed. Zupitza 298) und daher hier verstanden von Q und den Neueren. Da regelmässig ein Mensch nur an Einer Schulter verwundet wird, Af 74 vom Herausziehen Eines Knochens redet und nirgends von Verwundung beider rechts und links befindlicher Glieder spricht, scheint Af zu verstehen: ‘eine der beiden Schultern’</seg><seg type="translation" xml:lang="en" source="#claude">The plural of the Or. is understood by Inst. as a plural, ‘shoulders’. This sense is attested elsewhere too. But the singular <hi rend="italic">scapula</hi> is also glossed by the plural <hi rend="italic">sculdra</hi> (Toller, <hi rend="italic">Dict.</hi>, Ælfric ed. Zupitza 298), and it is therefore understood in that way here by Q and the moderns. Since as a rule a man is wounded in only one shoulder, and Af 74 speaks of the extraction of one bone and nowhere speaks of wounding of both limbs, right and left, Af seems to mean: ‘one of the two shoulders’</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="Af_73.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">200</biblScope></bibl><seg type="original" xml:lang="en">For the use of the plural (<hi rend="italic">ða sculdru</hi>), see Liebermann’s note (<hi rend="smallcaps">iii</hi>. p. 62).</seg></note>
       </div>
     </body>
   </text>

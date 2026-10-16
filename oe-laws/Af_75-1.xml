@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -56,22 +59,36 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 535 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 535 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 86.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 86.</change>
+      <change when="2026-10" type="checked">The second translation corrected against Attenborough, p. None: “a; to him [as compensation].” → “the; [to him] as compensation.”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="75.1">
         <head><ref type="lawCode" target="law:Af">Af</ref> 75.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="75.1" corresp="#wit-h">Gif se mon healt sy for ðære sinwe wunde, ⁊ hine mon gelacnian ne mæge, gesylle XXX scll' to bote.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="75.1" corresp="#wit-e">Gif se mon healt sie for þære sinwe wunde, ⁊ hine mon gelacnian ne mæge, geselle XXX scill. to bote.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="75.1" corresp="#wit-q">Si homo claudicet pro uulneribus neruorum, et medicamentum sanationis non admittant, XXX sol. emendetur.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="75.1" corresp="#wit-h">Gif se<ptr type="liebermannNote" n="12" target="#Af_75-1.lnote.oe.12"/> mon<ptr type="liebermannNote" n="1" target="#Af_75-1.lnote.oe.1"/> healt sy<ptr type="liebermannNote" n="2" target="#Af_75-1.lnote.oe.2"/> for ðære sinwe wunde, ⁊ hine mon<ptr type="liebermannNote" n="1" target="#Af_75-1.lnote.oe.1"/> gelacnian<ptr type="liebermannNote" n="11" target="#Af_75-1.lnote.oe.11"/> ne mæge, gesylle<ptr type="liebermannNote" n="2" target="#Af_75-1.lnote.oe.2-2"/> XXX scll' to bote.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="75.1" corresp="#wit-e">Gif se mon healt sie<ptr type="liebermannNote" n="16" target="#Af_75-1.lnote.oe.16"/> for þære sinwe wunde, ⁊ hine mon gelacnian ne mæge, geselle<ptr type="liebermannNote" n="2" target="#Af_75-1.lnote.oe.2-2"/> XXX scill. to bote.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="75.1" corresp="#wit-b-no-prol">Gyf se mon healt sy for ðære synewe wunde, ⁊ hine mon gelacnian ne mæge, gesylle XX<ptr type="liebermannNote" n="6" target="#Af_75-1.lnote.oe.6"/> scill' to bote.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="75.1" corresp="#wit-q">Si homo claudicet pro uulneribus neruorum, et medicamentum<ptr type="liebermannNote" n="15" target="#Af_75-1.lnote.oe.15"/> sanationis non admittant<ptr type="liebermannNote" n="16" target="#Af_75-1.lnote.oe.16-2"/>, XXX sol. emendetur.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="78.1" corresp="#wit-e">Gif se mon healt sie for þære sinwe wunde, ⁊ hine mon gelacnian ne mæge, geselle XXX scill to bote.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If the man is lame due to the wound to the sinew, and he cannot be healed, let him pay 30 shillings as compensation.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If a man becomes lame as a result of the damage to the sinew, and if he cannot be cured, 30 shillings shall be given to him [as compensation].</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If the man becomes lame as a result of the damage to the sinew, and if he cannot be cured, 30 shillings shall be given [to him] as compensation.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">Wenn der [verletzte] Mann lahm bleibt wegen der Sehnenwunde, und man ihn nicht heilen kann, gebe [jener] 30 Schill. zur Busse.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If the [injured] man remains lame on account of the sinew-wound, and he cannot be healed, let [the other] give 30 shillings as compensation.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_75-1.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">86</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_75-1.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">86</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geändert in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_75-1.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">86</biblScope></bibl><seg type="original" xml:lang="de">y <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">y on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_75-1.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">86</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Rasur vor</hi> an</seg><seg type="translation" xml:lang="en" source="#claude">erasure before an</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_75-1.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">86</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">am Rande im</hi> 16. <hi rend="italic">Jh.:</hi> XXX scill'.</seg><seg type="translation" xml:lang="en" source="#claude">in the margin in the 16th cent.: XXX scill'.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_75-1.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">87</biblScope></bibl><seg type="original" xml:lang="de">indicamentum <hi rend="italic">RT</hi></seg><seg type="translation" xml:lang="en" source="#claude">indicamentum RT</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_75-1.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">87</biblScope></bibl><seg type="original" xml:lang="de">am. <hi rend="italic">Or</hi></seg><seg type="translation" xml:lang="en" source="#claude">am. Or</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_75-1.lnote.oe.16-2" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">86</biblScope></bibl><seg type="original" xml:lang="de">sy <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">sy Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_75-1.lnote.oe.2-2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">86</biblScope></bibl><seg type="original" xml:lang="de">gesylle <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gesylle Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_75-1.lnote.de.0" n="0" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">63</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Lähmung. Vielleicht beeinflusst durch Abt 64a</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Lähmung. Perhaps influenced by Abt 64a</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Af_75-1.attnote.fn.7" n="7" source="#attenborough"><bibl><biblScope unit="page">92</biblScope></bibl><label>sinwe</label><seg type="original" xml:lang="en"><hi rend="italic">synewe</hi>. B.</seg></note>
       </div>
     </body>
   </text>

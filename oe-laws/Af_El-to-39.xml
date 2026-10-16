@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -28,6 +29,7 @@
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">256</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -55,25 +57,35 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 355 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 355 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 40.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 40.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="El. 39">
         <head><ref type="lawCode" target="law:Af">Af</ref> El. 39</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 39" corresp="#wit-h">Eall þæt flæsc ðæt wylddeor læfan né etan ge þæt, ac syllað hit hundum.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 39" corresp="#wit-e">Eal ðæt flǽsc þæt wildeor læfen ne eten ge þæt, ac sellað hit hundu<hi rend="italic">m</hi>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 39" corresp="#wit-h">Eall þæt flæsc ðæt wylddeor<ptr type="liebermannNote" n="3" target="#Af_El-to-39.lnote.oe.3"/> læfan né etan ge þæt, ac syllað hit hundum.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 39" corresp="#wit-e">Eal<ptr type="liebermannNote" n="6" target="#Af_El-to-39.lnote.oe.6"/> ðæt flǽsc<ptr type="liebermannNote" n="7" target="#Af_El-to-39.lnote.oe.7"/> þæt<ptr type="liebermannNote" n="8" target="#Af_El-to-39.lnote.oe.8"/> wildeor læfen ne eten<ptr type="liebermannNote" n="9" target="#Af_El-to-39.lnote.oe.9"/> ge þæt, ac sellað<ptr type="liebermannNote" n="10" target="#Af_El-to-39.lnote.oe.10"/> hit hundu<hi rend="italic">m</hi>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 39" corresp="#wit-g-prol-only">Éal þ<hi rend="italic">æt</hi> flæsc ðæt wildeor læfen ne eten ge þ<hi rend="italic">æt</hi>, ac syllað hit hundu<hi rend="italic">m</hi>.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 39" corresp="#wit-q">Carnem quæ a bestiis fuerit pregustata non comedetis, sed proicietis canibus.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="MP 39" corresp="#wit-e">Eal ðæt flǽsc þæt wildeor læfen ne eten ge þæt, ac sellað hit hundu<hi rend="italic">m</hi>.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">All the flesh that wild animals have left – do not eat it, but give it to dogs.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">All das Fleisch, das wilde Thiere übrig lassen, nicht sollt ihr das essen, sondern gebt es Hunden.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">All<ptr type="liebermannNote" n="1" target="#Af_El-to-39.lnote.de.1"/> das Fleisch, das wilde Thiere übrig lassen, nicht sollt ihr das essen<ptr type="liebermannNote" n="2" target="#Af_El-to-39.lnote.de.2"/>, sondern gebt es Hunden.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">All the flesh that wild beasts leave over, you shall not eat it, but give it to dogs.</ab>
         <note type="passageSource">Exodus 22,31</note>
         <note type="comparison" source="#liebermann" n="41">Exodus 22.31</note>
         <note type="comparisonPrinted" source="#liebermann">[22, 31]</note>
         <note type="comparedBy" source="#jurasinski-and-oliver" n="251"><ref target="clause:Af_El-to-28">Af El 28</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-39.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">41</biblScope></bibl><seg type="original" xml:lang="de">wyld <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">wyld on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-39.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">40</biblScope></bibl><seg type="original" xml:lang="de">Ealle <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">Ealle So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-39.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">40</biblScope></bibl><seg type="original" xml:lang="de">flæsce <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">flæsce So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-39.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">40</biblScope></bibl><seg type="original" xml:lang="de">ðe <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">ðe Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-39.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">40</biblScope></bibl><seg type="original" xml:lang="de">æten <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">æten So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-39.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">40</biblScope></bibl><seg type="original" xml:lang="de">gesellað <hi rend="italic">So;</hi> syllaþ <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gesellað So; syllaþ Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-39.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">47</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Die Darbringung der Erstgeburt und die Forderung der Heiligkeit vom Volke liess Af absichtlich fort: letzteres drohte wohl, Laien zu sehr dem Klerus anzunähern</seg><seg type="translation" xml:lang="en" source="#claude">Af deliberately left out the offering of the first-born and the demand for holiness from the people: the latter probably threatened to bring laymen too close to the clergy</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-39.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">47</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Speiseverbot; <hi rend="italic">u.</hi> El 49, 5. Erzbischof Theodor hat aus Griech. Kirche Speiseobservanzen in die Agsächs. eingeführt; Böckenhoff <hi rend="italic">Speisesatz.</hi> 90. 112</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Speiseverbot; <hi rend="italic">below</hi> El 49, 5. Archbishop Theodore introduced dietary observances from the Greek Church into the Anglo-Saxon one; Böckenhoff <hi rend="italic">Speisesatz.</hi> 90. 112</seg></note>
       </div>
     </body>
   </text>

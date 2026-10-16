@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -28,6 +29,7 @@
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">230</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -56,8 +58,9 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 325 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 325 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 28.</change>
+      <change when="2026-10" type="checked">Liebermann’s Latin text corrected against Gesetze I, p. 28: “que” → “quę”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -65,16 +68,21 @@
       <div type="clause" n="El. 9">
         <head><ref type="lawCode" target="law:Af">Af</ref> El. 9</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 9" corresp="#wit-h">Ne gewylna þu ðines nyhstan yrfes mid unryhte.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 9" corresp="#wit-e">Ne wilna ðu þines nehstan ierfes mid unryhte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 9" corresp="#wit-e">Ne wilna ðu þines nehstan ierfes<ptr type="liebermannNote" n="12" target="#Af_El-to-9.lnote.oe.12"/> mid unryhte.<ptr type="liebermannNote" n="13" target="#Af_El-to-9.lnote.oe.13"/></ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 9" corresp="#wit-g-prol-only">Ne wilna ðu þines niehstan ierfes mid unrihte.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 9" corresp="#wit-q">Non concupisces domum proximi tui nec desiderabis uxorem eius, non seruum, non ancillam, non bouem non asinum nec omnia que illius sunt.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 9" corresp="#wit-q">Non concupisces domum proximi tui nec desiderabis uxorem eius, non seruum, non ancillam, non bouem non asinum nec<ptr type="liebermannNote" n="3" target="#Af_El-to-9.lnote.oe.3"/> omnia quę illius sunt.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="MP 9" corresp="#wit-e">Ne wilna ðu þines nehstan ierfes mid unryhte.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Do not wrongfully covet the possessions of your neighbor.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Begehre du nicht deines Nächsten Habe mit Unrecht.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Begehre du nicht deines Nächsten Habe<ptr type="liebermannNote" n="1" target="#Af_El-to-9.lnote.de.1"/> mit Unrecht.<ptr type="liebermannNote" n="2" target="#Af_El-to-9.lnote.de.2"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Do not covet your neighbour’s property wrongfully.</ab>
         <note type="passageSource">Exodus 20,17</note>
         <note type="comparison" source="#liebermann" n="29">Exodus 20.17</note>
         <note type="comparisonPrinted" source="#liebermann">[20, 17]</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-9.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">29</biblScope></bibl><seg type="original" xml:lang="de">non <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">non Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-9.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">28</biblScope></bibl><seg type="original" xml:lang="de">yrfes <hi rend="italic">Ld;</hi> m. u. <hi rend="italic">doppelt So</hi></seg><seg type="translation" xml:lang="en" source="#claude">yrfes Ld; m. u. twice So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-9.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">28</biblScope></bibl><seg type="original" xml:lang="de">-riht <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-riht So Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-9.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">43</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Voran steht im Dekalog der Kirche als 9. Gebot <hi rend="italic">Non concupisces uxorem proximi tui.</hi> Ælfred liess dies fort, vermutlich als in 6 schon enthalten. — Haus, Sklaven und Vieh fasst als ‘Eigentum’ zusammen auch Ælfrics Dekalog; <hi rend="italic">Hom.</hi> 208</seg><seg type="translation" xml:lang="en" source="#claude">In the Church’s Decalogue this is preceded, as the 9th commandment, by <hi rend="italic">Non concupisces uxorem proximi tui.</hi> Ælfred omitted this, presumably as already contained in 6. — Ælfric’s Decalogue too groups house, slaves and cattle together as ‘property’; <hi rend="italic">Hom.</hi> 208</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-9.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">43</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Die folgenden Exodus-Verse lässt Ælfred fort als zur Hebräergeschichte, nicht zum Dekalog gehörig; <hi rend="italic">vgl. o.</hi> Einl. 31</seg><seg type="translation" xml:lang="en" source="#claude">Ælfred omits the following verses of Exodus as belonging to the history of the Hebrews, not to the Decalogue; <hi rend="italic">cf. above</hi> Introduction 31</seg></note>
       </div>
     </body>
   </text>

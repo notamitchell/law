@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -28,6 +29,7 @@
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">258</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -56,22 +58,32 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 361 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 361 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 40.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 40.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="El. 45">
         <head><ref type="lawCode" target="law:Af">Af</ref> El. 45</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 45" corresp="#wit-h">Soðfæstne mon ond unscyldigne ne acwel ðu ðone næfre.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 45" corresp="#wit-e">Soðfæstne man ⁊ unscyldigne ne ácwele ðu þone næfre.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 45" corresp="#wit-q">Insontem et iustum non occides; quia auorsor impium.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 45" corresp="#wit-h">Soðfæstne mon<ptr type="liebermannNote" n="2" target="#Af_El-to-45.lnote.oe.2"/> ond<ptr type="liebermannNote" n="2" target="#Af_El-to-45.lnote.oe.2-2"/> unscyldigne ne acwel<ptr type="liebermannNote" n="15" target="#Af_El-to-45.lnote.oe.15"/> ðu ðone næfre.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 45" corresp="#wit-e">Soðfæstne<ptr type="liebermannNote" n="37" target="#Af_El-to-45.lnote.oe.37"/> man ⁊ unscyldigne ne ácwele<ptr type="liebermannNote" n="38" target="#Af_El-to-45.lnote.oe.38"/> ðu<ptr type="liebermannNote" n="16" target="#Af_El-to-45.lnote.oe.16"/> þone næfre.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 45" corresp="#wit-g-prol-only">Soðfæstne mann ⁊ unscyldigne ne ácwelle þu ðæne<ptr type="liebermannNote" n="2" target="#Af_El-to-45.lnote.oe.2-2"/> næfre.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 45" corresp="#wit-q">Insontem et iustum non occides; quia auorsor<ptr type="liebermannNote" n="12" target="#Af_El-to-45.lnote.oe.12"/> impium.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="MP 45" corresp="#wit-e">Soðfæstne man ⁊ unscyldigne ne ácwele ðu þone næfre.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">A truthful and guiltless man – never slay him.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Einen gerechten und unschuldigen Mann, den tödte du niemals.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Einen gerechten<ptr type="liebermannNote" n="1" target="#Af_El-to-45.lnote.de.1"/> und unschuldigen Mann, den tödte du niemals.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">A righteous and innocent man, never kill him.</ab>
         <note type="passageSource">Exodus 23,7</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-45.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">41</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geändert in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-45.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">41</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">folgt Rasur eines Buchst.</hi></seg><seg type="translation" xml:lang="en" source="#claude">followed by an erasure of one letter</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-45.lnote.oe.2-2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">40</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">über</hi> æ</seg><seg type="translation" xml:lang="en" source="#claude">o above æ</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-45.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">41</biblScope></bibl><seg type="original" xml:lang="de">auersatur impio <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">auersatur impio T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-45.lnote.oe.37" n="37" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">40</biblScope></bibl><seg type="original" xml:lang="de">Suþf. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">Suþf. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-45.lnote.oe.38" n="38" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">40</biblScope></bibl><seg type="original" xml:lang="de">cwæle <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">cwæle So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-45.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">40</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-45.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">47</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">‘wahrhaften’ Schmid, silbenhaft richtig. Aber das Kompositum bezeichnet das Richtige im Handeln öfter als das im Reden und übersetzt häufig <hi rend="italic">justus</hi></seg><seg type="translation" xml:lang="en" source="#claude">‘truthful’ Schmid, literally correct. But the compound denotes rightness in action more often than in speech, and frequently translates <hi rend="italic">justus</hi></seg></note>
       </div>
     </body>
   </text>

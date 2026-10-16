@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -28,6 +29,7 @@
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">254</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -56,8 +58,9 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 347 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 347 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 38.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 38.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -65,15 +68,22 @@
       <div type="clause" n="El. 31">
         <head><ref type="lawCode" target="law:Af">Af</ref> El. 31</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 31" corresp="#wit-h">And se þe hæme mid nytene, swelte se deaþe.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 31" corresp="#wit-e">⁊ se ðe hæme mid netene, swelte he deaðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 31" corresp="#wit-e">⁊<ptr type="liebermannNote" n="11" target="#Af_El-to-31.lnote.oe.11"/> se ðe hæme mid netene<ptr type="liebermannNote" n="15" target="#Af_El-to-31.lnote.oe.15"/>, swelte<ptr type="liebermannNote" n="16" target="#Af_El-to-31.lnote.oe.16"/> he deaðe.<ptr type="liebermannNote" n="17" target="#Af_El-to-31.lnote.oe.17"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 31" corresp="#wit-g-prol-only">And se ðe hæme …<ptr type="liebermannNote" n="3" target="#Af_El-to-31.lnote.oe.3"/> nietene, swelte se deaðe.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 31" corresp="#wit-q">Qui coierit cum iumento, morte moriatur.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="MP 31" corresp="#wit-e">⁊ se ðe hæme mid netene, swelte he deaðe.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">He who lies with cattle, let him die [the] death.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und wer mit Vieh sich gattet, er sterbe Todes.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wer mit Vieh sich gattet, er sterbe Todes.<ptr type="liebermannNote" n="1" target="#Af_El-to-31.lnote.de.1"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And whoever couples with a beast, let him die the death.</ab>
         <note type="passageSource">Exodus 22,19</note>
         <note type="comparison" source="#liebermann" n="39">Exodus 22.19</note>
         <note type="comparisonPrinted" source="#liebermann">[22, 19]</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-31.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">38</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Loch; am Rande neu:</hi> mid</seg><seg type="translation" xml:lang="en" source="#claude">hole; in the margin, in a later hand: mid</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-31.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">38</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt So</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-31.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">38</biblScope></bibl><seg type="original" xml:lang="de">nyt. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">nyt. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-31.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">38</biblScope></bibl><seg type="original" xml:lang="de">swelt se <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">swelt se So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-31.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">38</biblScope></bibl><seg type="original" xml:lang="de">deaþ <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">deaþ So Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-31.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">46</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Bestialität</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Bestialität</seg></note>
       </div>
     </body>
   </text>

@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -28,6 +29,7 @@
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">238</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -56,7 +58,7 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 330 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 330 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 30.</change>
     </revisionDesc>
   </teiHeader>
@@ -65,16 +67,21 @@
       <div type="clause" n="El. 14">
         <head><ref type="lawCode" target="law:Af">Af</ref> El. 14</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 14" corresp="#wit-h">Se þe slea his fæder oððe his moder, swelte se deaþe.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 14" corresp="#wit-e">Se ðe slea his fæder oððe his modor, se sceal deaðe sweltan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 14" corresp="#wit-e">Se ðe slea his fæder oððe his modor, se sceal deaðe<ptr type="liebermannNote" n="24" target="#Af_El-to-14.lnote.oe.24"/> sweltan.<ptr type="liebermannNote" n="38" target="#Af_El-to-14.lnote.oe.38"/></ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 14" corresp="#wit-g-prol-only">Se ðe slea his fæder oððe his modor, se sceal deaðe swyltan.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 14" corresp="#wit-q">Qui percusserit patrem aut matrem, morte moriatur.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="MP 14" corresp="#wit-e">Se ðe slea his fæder oððe his modor, se sceal deaðe sweltan.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">He who strikes his father or his mother, he shall die [the] death.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wer seinen Vater oder seine Mutter schlägt, der soll Todes sterben.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wer seinen Vater oder seine Mutter schlägt<ptr type="liebermannNote" n="1" target="#Af_El-to-14.lnote.de.1"/>, der soll Todes<ptr type="liebermannNote" n="2" target="#Af_El-to-14.lnote.de.2"/> sterben.<ptr type="liebermannNote" n="3" target="#Af_El-to-14.lnote.de.3"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Whoever strikes his father or his mother shall die the death.</ab>
         <note type="passageSource">Exodus 21,15</note>
         <note type="comparison" source="#liebermann" n="31">Exodus 21.15</note>
         <note type="comparisonPrinted" source="#liebermann">[21, 15]</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-14.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">30</biblScope></bibl><seg type="original" xml:lang="de">deaþ <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">deaþ Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-14.lnote.oe.38" n="38" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">30</biblScope></bibl><seg type="original" xml:lang="de">-te <hi rend="italic">So, wo der zweitnächste Satz schon hier folgt</hi></seg><seg type="translation" xml:lang="en" source="#claude">-te So, where the next sentence but one already follows here</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-14.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">44</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">‘tötet’ Schmid, aber Af bewahrt den Doppelsinn der Vulg., ebenso ‘smiteth’ Price</seg><seg type="translation" xml:lang="en" source="#claude">‘kills’ Schmid, but Af preserves the double meaning of the Vulg., likewise ‘smiteth’ Price</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-14.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">44</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Selbst Verwandten<hi rend="spaced">mord</hi> (<hi rend="italic">s. d. Gl</hi>) fand nicht regelmässig staatliche Strafe. Ælfred wünscht Eltern (<hi rend="italic">s. d. Gl</hi> 2) geschützt; <hi rend="italic">s. u.</hi> El 15⁸</seg><seg type="translation" xml:lang="en" source="#claude">Even the <hi rend="italic">murder</hi> of kinsmen (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi>) did not regularly incur public punishment. Ælfred wishes parents (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 2) to be protected; see below El 15⁸</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-14.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">44</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Logischer Ordnung zuliebe lässt So den übernächsten Satz Ex 21, 17 schon hier folgen</seg><seg type="translation" xml:lang="en" source="#claude">For the sake of logical order So has the sentence after next, Ex 21, 17, follow already here</seg></note>
       </div>
     </body>
   </text>

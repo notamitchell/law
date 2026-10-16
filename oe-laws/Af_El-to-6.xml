@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -28,6 +29,7 @@
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">228</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -56,7 +58,7 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 322 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 322 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 28.</change>
     </revisionDesc>
   </teiHeader>
@@ -65,18 +67,20 @@
       <div type="clause" n="El. 6">
         <head><ref type="lawCode" target="law:Af">Af</ref> El. 6</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 6" corresp="#wit-h">Ne lige þu deornunga.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 6" corresp="#wit-e">Ne lige ðu dearnenga.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 6" corresp="#wit-e">Ne lige<ptr type="liebermannNote" n="9" target="#Af_El-to-6.lnote.oe.9"/> ðu dearnenga.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 6" corresp="#wit-g-prol-only">Ne lige ðu dearnunga.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 6" corresp="#wit-q">Non mechaberis.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="MP 6" corresp="#wit-e">Ne lige ðu dearnenga.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Do not fornicate.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Buhle du nicht ausserehelich.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Buhle du nicht ausserehelich.<ptr type="liebermannNote" n="1" target="#Af_El-to-6.lnote.de.1"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Do not fornicate outside marriage.</ab>
         <note type="passageSource">Exodus 20,14</note>
         <note type="comparison" source="#liebermann" n="29">Exodus 20.14</note>
         <note type="comparisonPrinted" source="#liebermann">[20, 14]</note>
         <note type="comparison" source="#jurasinski-and-oliver" n="229"><label>same idiom</label> <ref target="clause:Ine_27">Ine 27</ref> <quote>The sense here is certainly "do not commit adultery," conveyed with an idiom that occurs in §27 of Ine's laws.</quote></note>
         <note type="comparedBy" source="#jurasinski-and-oliver" n="269"><ref target="clause:Af_El-to-49-5">Af El 49.5</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-6.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">28</biblScope></bibl><seg type="original" xml:lang="de">ligge þu dearninga <hi rend="italic">So;</hi> licge ðu dearnunga <hi rend="italic">Ld, wo</hi> 7 <hi rend="italic">vor</hi> 6 <hi rend="italic">steht</hi></seg><seg type="translation" xml:lang="en" source="#claude">ligge þu dearninga So; licge ðu dearnunga Ld, where 7 stands before 6</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-6.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">43</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">‘ehebrecherisch’ Frühere. Allein <hi rend="italic">s. o.</hi> zu Ine Rb 27. Ælfric 209 verpönt ausdrücklich jeden unehelichen Beischlaf; <hi rend="italic">vgl. Gl</hi> Unzucht 6</seg><seg type="translation" xml:lang="en" source="#claude">‘adulterously’ earlier scholars. But <hi rend="italic">see above</hi> on Ine Rb 27. Ælfric 209 expressly proscribes all extramarital intercourse; <hi rend="italic">cf. Gl</hi> Unzucht 6</seg></note>
       </div>
     </body>
   </text>
