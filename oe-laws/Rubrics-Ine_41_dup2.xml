@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">24</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">208</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,8 +50,9 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 281 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 281 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 24.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 24.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -57,8 +60,9 @@
       <div type="clause" n="42">
         <head>Ine Rb 42</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="42" corresp="#wit-h">LXXXVI. Be ciorles gærstune.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="42" corresp="#wit-e">LXXXVI. Be ceorles gærstune.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="42" corresp="#wit-q">De compascuis uillanorum.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="42" corresp="#wit-e">LXXXVI. Be<ptr type="liebermannNote" n="*" target="#Rubrics-Ine_41_dup2.lnote.oe.star"/> ceorles gærstune.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="42" corresp="#wit-g-prol">LXXXVI. Be ceorles gærstune.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="42" corresp="#wit-q">De compascuis<ptr type="liebermannNote" n="3" target="#Rubrics-Ine_41_dup2.lnote.oe.3"/> uillanorum.<ptr type="liebermannNote" n="4" target="#Rubrics-Ine_41_dup2.lnote.oe.4"/></ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">LXXXVI Be ceorles gærstune</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-b">Be ðam þ<hi rend="italic">æt</hi> ceorlas habbað land gemæne gærstunas</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning a <hi rend="italic">ceorl</hi>’s common meadow</ab>
@@ -66,6 +70,10 @@
         <ab type="translation" xml:lang="de" source="#liebermann">Von des Bauern Wiesengehege.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of the peasant’s meadow-enclosure.</ab>
         <note type="editorial">Liebermann’s margin has [42].</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_41_dup2.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">24</biblScope></bibl><seg type="original" xml:lang="de">Be ceorla gemænum land <hi rend="italic">Ld</hi> [<hi rend="italic">nach B?</hi>]</seg><seg type="translation" xml:lang="en" source="#claude">Be ceorla gemænum land Ld [after B?]</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_41_dup2.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">25</biblScope></bibl><seg type="original" xml:lang="de">v. pascuis <hi rend="italic">Br</hi>; v. divisis <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">v. pascuis Br; v. divisis Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_41_dup2.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">25</biblScope></bibl><seg type="original" xml:lang="de">claudendis <hi rend="italic">fügt zu Hk Br. Dann</hi> [42,1] Si animal vicini sepes frangatur [<hi rend="italic">so</hi>] <hi rend="italic">Hk</hi>; De animalibus sepes vicinorum frangentibus <hi rend="italic">Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">claudendis added by Hk Br. Then [42,1] Si animal vicini sepes frangatur [sic] Hk; De animalibus sepes vicinorum frangentibus Br</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Ine_41_dup2.lnote.de.1" n="1" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">42</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">‘Davon dass Bauern Ackerland und Wiesen gemeinsam haben’ B, wovon einiges Ld</seg><seg type="translation" xml:lang="en" source="#claude">‘Of peasants having arable land and meadows in common’ B, part of which Ld</seg></note>
       </div>
     </body>
   </text>

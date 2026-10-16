@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">26</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">216</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,22 +50,32 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 309 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 309 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 26.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 26.</change>
+      <change when="2026-10" type="checked">Liebermann’s Latin text corrected against Gesetze I, p. 26: “tpyhyndi” → “tƿyhyndi”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="70">
         <head>Ine Rb 70</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="70" corresp="#wit-h">CXIIII. Be twyhyndum were.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="70" corresp="#wit-h">CXIIII. Be<ptr type="liebermannNote" n="**" target="#Rubrics-Ine_70.lnote.oe.star2"/> twyhyndum were.<ptr type="liebermannNote" n="7" target="#Rubrics-Ine_70.lnote.oe.7"/><ptr type="liebermannNote" n="***" target="#Rubrics-Ine_70.lnote.oe.star3"/></ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="70" corresp="#wit-e">CXIIII. Be twyhyndum were.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="70" corresp="#wit-q">De tpyhyndi wéra.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="70" corresp="#wit-g-prol">CXIIII. Be twyhyndum were.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="70" corresp="#wit-q">De tƿyhyndi<ptr type="liebermannNote" n="11" target="#Rubrics-Ine_70.lnote.oe.11"/> wéra.<ptr type="liebermannNote" n="12" target="#Rubrics-Ine_70.lnote.oe.12"/></ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">CXIIII Be twyhundum were</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-b">Be twyhindum were</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning a [man whose] wer [is] 200</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Über Wergeld von 200 [Schilling].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Über<ptr type="liebermannNote" n="1" target="#Rubrics-Ine_70.lnote.de.1"/> Wergeld<ptr type="liebermannNote" n="2" target="#Rubrics-Ine_70.lnote.de.2"/> von 200 [Schilling].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Concerning a wergeld of 200 [shillings].</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_70.lnote.oe.star2" n="**" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">26</biblScope></bibl><seg type="original" xml:lang="de">Be werum <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">Be werum Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_70.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">26</biblScope></bibl><seg type="original" xml:lang="de">fære <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">fære So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_70.lnote.oe.star3" n="***" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">26</biblScope></bibl><seg type="original" xml:lang="de">Be fostre <hi rend="italic">fügt zu Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">Be fostre added by Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_70.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">27</biblScope></bibl><seg type="original" xml:lang="de">w. t. <hi rend="italic">Br</hi>; tƿih. <hi rend="italic">T</hi>; þih. <hi rend="italic">Hk</hi>; hominis <hi rend="italic">fügt zu Hk Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">w. t. Br; tƿih. T; þih. Hk; hominis added by Hk Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_70.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">27</biblScope></bibl><seg type="original" xml:lang="de">vel VIhindi vel XIIhindi (v. VIh. v. XIIh. <hi rend="italic">fehlt Br</hi>) [70, 1] De X hidis [hind. <hi rend="italic">Hk Br</hi>] quod debeat reddi ad corredium <hi rend="italic">fügt zu Hk Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">vel VIhindi vel XIIhindi (v. VIh. v. XIIh. lacking in Br) [70, 1] De X hidis [hind. Hk Br] quod debeat reddi ad corredium added by Hk Br</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Ine_70.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">42</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">‘Von Wergeldern’ Ld; durch Schreibfehler ‘Reise, Fahrt’ So</seg><seg type="translation" xml:lang="en" source="#claude">‘Of wergilds’ Ld; through a scribal error ‘journey, travel’ So</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Ine_70.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">42</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Oder ‘einen Mann von 200 [Sch. Wergeld]’. — Als Rb für 70, 1: ‘Von Beköstigung, Naturalrente’ Ld, wohl aus Ine-Text</seg><seg type="translation" xml:lang="en" source="#claude">Or ‘a man of 200 [shill. wergild]’. — As Rb for 70, 1: ‘Of provisions, rent in kind’ Ld, probably from the text of Ine</seg></note>
       </div>
     </body>
   </text>

@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">24</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">208</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,8 +50,9 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 282 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 282 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 24.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 24.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -57,13 +60,19 @@
       <div type="clause" n="43">
         <head>Ine Rb 43</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="43" corresp="#wit-h">LXXXVII. Be wudubærnette.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="43" corresp="#wit-e">LXXXVII. Be wuda bærnette.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="43" corresp="#wit-q">De nemoris combustione.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="43" corresp="#wit-e">LXXXVII. Be wuda<ptr type="liebermannNote" n="2" target="#Rubrics-Ine_43.lnote.oe.2"/> bærnette.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="43" corresp="#wit-g-prol">LXXXVII. Be wuda<ptr type="liebermannNote" n="1" target="#Rubrics-Ine_43.lnote.oe.1"/> bærnette.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="43" corresp="#wit-q">De nemoris<ptr type="liebermannNote" n="5" target="#Rubrics-Ine_43.lnote.oe.5"/> combustione.<ptr type="liebermannNote" n="6" target="#Rubrics-Ine_43.lnote.oe.6"/></ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">LXXXVII Be wuda bærnette</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-b">Be wude bærnete</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning burning of wood</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Über Abbrennen von Waldholz.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Über Abbrennen von Waldholz.<ptr type="liebermannNote" n="1" target="#Rubrics-Ine_43.lnote.de.1"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Concerning the burning of timber.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_43.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">24</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">geänd. aus</hi> wudu</seg><seg type="translation" xml:lang="en" source="#claude">altered from wudu</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_43.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">24</biblScope></bibl><seg type="original" xml:lang="de">wudubærnete <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">wudubærnete Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_43.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">25</biblScope></bibl><seg type="original" xml:lang="de">-rum <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">-rum T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_43.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">25</biblScope></bibl><seg type="original" xml:lang="de">Si quis alterius nemus securi apprehenderit sine licentia [43,1] <hi rend="italic">fügt zu Hk</hi>; De succidentibus ligna in nemore alterius <hi rend="italic">fügt zu Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">Si quis alterius nemus securi apprehenderit sine licentia [43,1] added by Hk; De succidentibus ligna in nemore alterius added by Br</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Ine_43.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">42</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Q spät. Rez. vervollständigt die Rb aus seinem Text</seg><seg type="translation" xml:lang="en" source="#claude">The later recension of Q completes the Rb from its own text</seg><note type="remark" resp="#claude">On several rubrics: Ine Rb 40. 43f. 46—50. 54. 56f. 58. 61f. 67. 70f.</note></note>
       </div>
     </body>
   </text>

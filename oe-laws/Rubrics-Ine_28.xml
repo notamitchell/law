@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">22</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">206</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,23 +50,29 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 267 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 267 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 22.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 22.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="28">
         <head>Ine Rb 28</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28" corresp="#wit-h">LXXII. Be þeowes (mannes) onfenge æt þyfðe.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28" corresp="#wit-e">LXXII. Be ðeofes onfenge æt ðiefðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28" corresp="#wit-h">LXXII. Be þeowes<ptr type="liebermannNote" n="12" target="#Rubrics-Ine_28.lnote.oe.12"/> (mannes)<ptr type="liebermannNote" n="13" target="#Rubrics-Ine_28.lnote.oe.13"/> onfenge æt þyfðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28" corresp="#wit-e">LXXII. Be ðeofes onfenge<ptr type="liebermannNote" n="7" target="#Rubrics-Ine_28.lnote.oe.7"/> æt ðiefðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28" corresp="#wit-g-prol">LXXII. Be þeofes onfenge æt ðyfðe.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="28" corresp="#wit-q">De fure capto cum furto.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">LXXII Be ðeofes onfenge æt ðiefðe</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-b">Be ðeowes mannes onfenge æt ðyfðe</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning the capture of a thief in the act of theft</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-b">Concerning the capture of a slave in the act of theft</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Vom Einfangen eines Diebes beim Diebstahl [selbst].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Vom Einfangen eines Diebes<ptr type="liebermannNote" n="1" target="#Rubrics-Ine_28.lnote.de.1"/> beim Diebstahl [selbst].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of the catching of a thief in the [very] act of theft.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_28.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">22</biblScope></bibl><seg type="original" xml:lang="de">-ng <hi rend="italic">ohne</hi> æt ð. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-ng without æt ð. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_28.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">23</biblScope></bibl><seg type="original" xml:lang="de">w <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">w on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_28.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">23</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Ine_28.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">42</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">‘unfreien Menschen’ Hcor. B, vielleicht auf 29 blickend; derselbe Schreibfehler Af 9, 2 B⁴</seg><seg type="translation" xml:lang="en" source="#claude">‘unfree person’ Hcor. B, perhaps with an eye to 29; the same scribal error at Af 9, 2 B⁴</seg></note>
       </div>
     </body>
   </text>
