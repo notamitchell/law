@@ -13,6 +13,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -33,6 +34,7 @@
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="jurasinski-and-oliver" type="study">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -67,13 +69,15 @@
         <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If a man lies with the king’s maiden, let him pay 50 shillings.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If a man lies with a maiden belonging to the king, he shall pay 50 shillings compensation.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-h">If anyone lies with a maiden belonging to the king, he is to pay 50 shillings compensation.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand bei einem Mädchen des Königs liegt, büsse er [letzterem] 50 Schillinge;</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand bei einem Mädchen<ptr type="liebermannNote" n="1" target="#Abt_10.lnote.de.1"/> des Königs liegt, büsse er [letzterem<ptr type="liebermannNote" n="2" target="#Abt_10.lnote.de.2"/>] 50 Schillinge;</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If someone lies with a maiden of the king, let him pay [the latter] 50 shillings;</ab>
         <note type="comparedBy" source="#wormald-mel" n="281"><ref target="clause:Af_10">Af 10–11.5</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="281"><ref target="clause:Af_18-1">Af 18.1–18.3</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="281"><ref target="clause:Af_25">Af 25–25.1</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="281"><ref target="clause:Af_26">Af 26</ref></note>
         <note type="comparedBy" source="#jurasinski-and-oliver" n="391"><ref target="clause:Ine_23-3">Ine 23.3</ref></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_10.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">7</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Eine unverheiratete Sklavin höchsten Ranges, wahrscheinlich eine Jungfrau (<hi rend="italic">s. d. Gl</hi> 3. 4), vielleicht eine Schenkin; <hi rend="italic">s. Gl</hi> Mundschenk 1</seg><seg type="translation" xml:lang="en" source="#claude">An unmarried female slave of the highest rank, probably a virgin (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 3. 4), perhaps a cup-bearer; <hi rend="italic">see Gl</hi> Mundschenk 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_10.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">7</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">‘Königsschutz’ <hi rend="italic">o.</hi> 8. — Die Schändung der Dienerin gilt gleich dem Bruch des Hausfriedens durch Totschlag, auch <hi rend="italic">u.</hi> 13f. 16f.; sie wird also dem Herrn gebüsst, auch Af 25. — Dass neben der Busse für Bruch des herrschaftlichen Schutzes auch wie bei Af 25 eine öffentliche Strafe für Unzucht (<hi rend="italic">s. d. Gl</hi> 7) verfalle, hören wir auch bei der Schändung einer Freien nicht</seg><seg type="translation" xml:lang="en" source="#claude">‘King's protection’ <hi rend="italic">above</hi> 8. — The violation of the female servant counts the same as the breach of the house-peace by homicide, also <hi rend="italic">below</hi> 13f. 16f.; it is therefore compensated to the lord, also Af 25. — That besides the compensation for breach of the lord's protection a public penalty for fornication (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 7) is also incurred, as in Af 25, we do not hear even in the case of the violation of a free woman</seg></note>
       </div>
     </body>
   </text>

@@ -46,12 +46,27 @@ scripts:
     ];
 
     // TEI inline markup as HTML: <hi rend="italic"> and <title> in italic.
-    function inline(node) {
+    // With opts.notes, Liebermann's note numbers (<ptr type="liebermannNote">) are shown as superscripts
+    // linking to the notes; without it (the plain text) they are left out.
+    function inline(node, opts) {
         const frag = document.createDocumentFragment();
         node.childNodes.forEach(n => {
             if (n.nodeType === 3) { frag.appendChild(document.createTextNode(n.nodeValue)); return; }
             if (n.nodeType !== 1) return;
             const name = n.localName;
+            if (name === 'ptr' && n.getAttribute('type') === 'liebermannNote') {
+                if (opts && opts.notes) frag.appendChild(noteRef(n));
+                return;
+            }
+            if (name === 'note' && n.getAttribute('type') === 'remark') return;
+            if (name === 'lb') { frag.appendChild(el('br')); if (n.getAttribute('type') === 'paragraph') frag.appendChild(el('br')); return; }
+            const rend = name === 'hi' ? (n.getAttribute('rend') || '') : '';
+            if (/bold|spaced|smallcaps/.test(rend)) {
+                const out = el(/bold/.test(rend) ? 'strong' : 'span', /spaced/.test(rend) ? 'spaced' : /smallcaps/.test(rend) ? 'smallcaps' : null);
+                out.appendChild(inline(n, opts));
+                frag.appendChild(out);
+                return;
+            }
             const italic = (name === 'hi' && /italic/.test(n.getAttribute('rend') || '')) || name === 'title';
             const target = name === 'ref' ? (n.getAttribute('target') || '') : '';
             if (target.startsWith('clause:')) {
@@ -63,12 +78,103 @@ scripts:
                 return;
             }
             const out = el(italic ? (name === 'title' ? 'cite' : 'em') : 'span');
-            out.appendChild(inline(n));
+            out.appendChild(inline(n, opts));
             frag.appendChild(out);
         });
         return frag;
     }
     const plainText = node => node.textContent.replace(/\s+/g, ' ').trim();
+
+    // ---- Liebermann's notes ----
+    // Two kinds, each shown or hidden with its own button: his textual notes on the Old English
+    // (footnotes in Gesetze I) and his Erklärungen on his German translation (Gesetze III, 1916).
+    const NOTE_GROUPS = {
+        textual: {
+            subtypes: ['textual'],
+            title: 'Liebermann’s textual notes',
+            intro: 'Liebermann’s footnotes to this text (Gesetze I, at the foot of the page), in his German, with an English translation by Claude. Numbers are his, counted afresh on each page; * marks an editor’s emendation.'
+        },
+        erklaerung: {
+            subtypes: ['erklaerung', 'translationFootnote'],
+            title: 'Liebermann’s Erklärungen',
+            intro: 'Liebermann’s explanations of his German translation, printed separately in Gesetze III (1916), with an English translation by Claude. Scholarship has moved a long way since 1916 and much of this commentary is superseded; it is given here as part of the record of Liebermann’s edition.'
+        }
+    };
+    const xmlId = n => n.getAttribute('xml:id') || n.getAttributeNS('http://www.w3.org/XML/1998/namespace', 'id') || '';
+    const htmlId = id => 'ln-' + id.replace(/[^A-Za-z0-9_-]/g, '_');
+    function noteRef(ptr) {
+        const n = ptr.getAttribute('n') || '';
+        const rend = ptr.getAttribute('rend') || '';
+        const sup = el('sup', 'lnote-ref');
+        const a = el('a', null, rend === 'supplied' ? '[' + n + ']' : n);
+        a.href = '#' + htmlId((ptr.getAttribute('target') || '').replace(/^#/, ''));
+        a.title = rend === 'supplied' ? 'Note ' + n + ': not printed in Gesetze I; Liebermann says in vol. III where it belongs'
+            : /^printed-as-/.test(rend) ? 'Note ' + n + ': printed as ' + rend.slice(11) + ' in Gesetze I, corrected by Liebermann in vol. III'
+            : 'Liebermann’s note ' + n;
+        sup.appendChild(a);
+        return sup;
+    }
+    const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
+    const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) { /* no storage: fine */ } };
+    // The notes of one group as a list: number, German as printed, English, where printed, remarks.
+    function notesList(notes, group) {
+        const box = el('div', 'lnotes small');
+        box.appendChild(el('p', 'lnotes__intro muted', group.intro));
+        const ol = el('ol', 'lnotes__list');
+        notes.forEach(n => {
+            const li = el('li');
+            li.id = htmlId(xmlId(n));
+            const num = el('span', 'lnotes__num', (n.getAttribute('n') || '') + (/wholeClause/.test(n.getAttribute('rend') || '') ? '' : ')'));
+            li.appendChild(num);
+            if (/wholeClause/.test(n.getAttribute('rend') || '')) li.appendChild(el('span', 'muted', ' (on the clause as a whole, no number in the text) '));
+            const kids = Array.from(n.children);
+            const seg = type => kids.find(k => k.localName === 'seg' && k.getAttribute('type') === type);
+            const de = seg('original'), en = seg('translation');
+            if (de) { const p = el('span', 'lnotes__de'); p.lang = 'de'; p.appendChild(inline(de)); li.appendChild(p); }
+            if (en) { const p = el('span', 'lnotes__en'); p.lang = 'en'; p.appendChild(inline(en)); li.appendChild(p); }
+            const bibl = kids.find(k => k.localName === 'bibl');
+            const where = [];
+            if (bibl) {
+                const scope = u => { const s = tei(bibl, 'biblScope').find(b => b.getAttribute('unit') === u); return s ? plainText(s) : ''; };
+                where.push('Gesetze ' + ({ 1: 'I', 3: 'III' }[scope('volume')] || scope('volume')) + ', p. ' + scope('page') + (scope('column') ? ', col. ' + scope('column') : ''));
+            }
+            if (n.getAttribute('subtype') === 'translationFootnote') where.push('Liebermann’s footnote to his German translation');
+            const remark = kids.find(k => k.localName === 'note' && k.getAttribute('type') === 'remark');
+            const foot = el('span', 'lnotes__where muted', where.join(' · '));
+            if (remark) foot.appendChild(document.createTextNode((where.length ? ' · ' : '') + plainText(remark)));
+            li.appendChild(foot);
+            ol.appendChild(li);
+        });
+        box.appendChild(ol);
+        return box;
+    }
+    // Adds the "Liebermann's notes" button to a text's label line and the notes under its text.
+    function attachNotes(box, label, p, a, div, groupKey) {
+        const group = NOTE_GROUPS[groupKey];
+        const notes = tei(div, 'note').filter(n => n.getAttribute('type') === 'liebermannNote' && group.subtypes.includes(n.getAttribute('subtype')));
+        if (!notes.length) return;
+        const btn = el('button', 'chip lnotes-toggle', 'Liebermann’s notes');
+        btn.type = 'button';
+        btn.title = 'Show or hide ' + group.title + ' (' + notes.length + ')';
+        label.appendChild(document.createTextNode(' '));
+        label.appendChild(btn);
+        const list = notesList(notes, group);
+        box.appendChild(list);
+        const set = on => {
+            btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+            btn.textContent = (on ? 'Hide ' : 'Show ') + 'Liebermann’s notes';
+            list.hidden = !on;
+            p.textContent = '';
+            p.appendChild(inline(a, { notes: on }));
+        };
+        btn.addEventListener('click', () => {
+            const on = btn.getAttribute('aria-pressed') !== 'true';
+            set(on);
+            lsSet('lnotes:' + groupKey, on ? '1' : '0');
+        });
+        // Remember the reader's choice from clause to clause; open by default when the link points at a note.
+        set(lsGet('lnotes:' + groupKey) === '1' || notes.some(n => location.hash === '#' + htmlId(xmlId(n))));
+    }
 
     // The editions and translations a clause file names (new layout only):
     // { liebermann: {name, ref, page}, oliver: {...}, ... }
@@ -199,6 +305,9 @@ scripts:
             if (lang && lang !== 'und') p.lang = lang;
             p.appendChild(inline(a));
             box.appendChild(p);
+            // Liebermann's own notes, behind a button: textual notes on his text, Erklärungen on his German.
+            if (a === texts.find(x => x.getAttribute('type') === 'liebermannText')) attachNotes(box, label, p, a, div, 'textual');
+            else if (a.getAttribute('type') === 'translation' && a.getAttribute('xml:lang') === 'de' && id === 'liebermann') attachNotes(box, label, p, a, div, 'erklaerung');
             // The translator's own footnotes (Whitelock's, from EHD), under her translation.
             // (Rabin's textual notes go under his text, the readings of the other manuscripts.)
             const noteType = { translation: 'translator', editionText: 'textual' }[a.getAttribute('type')];

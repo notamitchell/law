@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -61,8 +63,11 @@
         <ab type="editionText" xml:lang="ang" source="#oliver" n="70.1" corresp="#wit-h">Æt þam oðrum taum gehwilcum, healfe gelde ealswa æt þam fingrum ys cwiden.</ab>
         <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">For each of the other toes let him pay half the amount already discussed for the fingers.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">For each of the other toes, [a sum] equal to half that laid down for the corresponding fingers shall be paid.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Bei den anderen Zehen allen zahle er [ebenfalls] je halb so [viel], wie bei den Fingern [oben] verkündet worden ist.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Bei den anderen Zehen allen zahle er [ebenfalls<ptr type="liebermannNote" n="1" target="#Abt_71.lnote.de.1"/>] je halb<ptr type="liebermannNote" n="2" target="#Abt_71.lnote.de.2"/> so [viel], wie bei den Fingern [oben<ptr type="liebermannNote" n="3" target="#Abt_71.lnote.de.3"/>] verkündet worden ist.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">For all the other toes let him pay [likewise] half as [much] each as has been declared [above] for the fingers.</ab>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_71.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">13</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. o.</hi> 70². Ebenso bei anderen Germanen; Wilda 770</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See above</hi> 70². Likewise among other Germanic peoples; Wilda 770</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_71.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">13</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">healfgelde</hi> ‘mit Halbersatz’ wäre ein mögliches, aber nicht nachgewiesenes Kompositum. <hi rend="italic">Healfswa</hi> ‘¹/₂ so viel’ bei Toller 940 n. II. Nicht etwa halbsoviel wie für die grosse Zehe kann gemeint sein laut des folgenden Zitats</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">healfgelde</hi> ‘with half-compensation’ would be a possible but unattested compound. <hi rend="italic">Healfswa</hi> ‘¹/₂ as much’ in Toller 940 n. II. Not, say, half as much as for the big toe can be meant, according to the following citation</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_71.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">13</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">c. 54ff.</seg><seg type="translation" xml:lang="en" source="#claude">c. 54ff.</seg></note>
       </div>
     </body>
   </text>

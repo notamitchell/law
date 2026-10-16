@@ -753,3 +753,22 @@ a.timeline-bar:focus-visible { outline: 2px solid var(--link-hover); outline-off
 .subject-list-head h2 { margin: 0; }
 .subject-code h3 { font-size: 1.15rem; margin: 1.4rem 0 0.2rem; }
 .subject-code .code-clauses { margin-top: 0.3rem; }
+
+/* Liebermann's notes on a clause page: note numbers in the text (hidden until the button is pressed), and the notes */
+.lnote-ref { font-size: 0.68em; line-height: 0; vertical-align: super; font-family: var(--sans, inherit); }
+.lnote-ref a { color: var(--muted); text-decoration: none; padding: 0 0.05em; }
+.lnote-ref a:hover, .lnote-ref a:focus { color: var(--link); text-decoration: underline; }
+.lnotes-toggle { margin-left: 0.3rem; vertical-align: 0.05em; }
+.lnotes-toggle[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--surface, #fff); }
+.lnotes { margin: 0.5rem 0 0; padding: 0.45rem 0.8rem; border-left: 3px solid var(--rule); }
+.lnotes__intro { margin: 0 0 0.4rem; font-style: italic; }
+.lnotes__list { list-style: none; padding: 0; margin: 0; }
+.lnotes__list li { margin: 0 0 0.55rem; line-height: 1.45; scroll-margin-top: 5rem; }
+.lnotes__list li:target { background: var(--highlight, #fff3c4); }
+.lnotes__num { font-weight: 600; margin-right: 0.35rem; }
+.lnotes__de, .lnotes__en { display: block; }
+.lnotes__num + .lnotes__de { display: inline; }
+.lnotes__en { color: var(--muted); margin-top: 0.1rem; }
+.lnotes__where { display: block; font-size: 0.85em; margin-top: 0.1rem; }
+.spaced { letter-spacing: 0.14em; }
+.smallcaps { font-variant: small-caps; }

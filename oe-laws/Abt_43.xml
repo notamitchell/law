@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -31,6 +32,7 @@
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -59,14 +61,18 @@
     <body>
       <div type="clause" n="43">
         <head><ref type="lawCode" target="law:Abt">Abt</ref> 43</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="43" corresp="#wit-h">Gif eage of weorð, L scillinga gebete.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="43" corresp="#wit-h">Gif eage of weorð, L scillinga<ptr type="liebermannNote" n="6" target="#Abt_43.lnote.oe.6"/> gebete.</ab>
         <ab type="editionText" xml:lang="ang" source="#oliver" n="42" corresp="#wit-h">Gif eage of weorð, L scilling<hi rend="italic">um</hi> gebete.</ab>
         <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If an eye becomes gouged out, let him pay [with] 50 shillings.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If an eye is knocked out, 50 shillings shall be paid as compensation.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Auge aus[geschlagen] wird, büsse er 50 Schillinge.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Auge aus[geschlagen<ptr type="liebermannNote" n="1" target="#Abt_43.lnote.de.1"/>] wird, büsse er 50<ptr type="liebermannNote" n="2" target="#Abt_43.lnote.de.2"/> Schillinge.<ptr type="liebermannNote" n="3" target="#Abt_43.lnote.de.3"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If an eye is [knocked] out, let him pay 50 shillings.</ab>
         <note type="comparedBy" source="#wormald-mel" n="281"><ref target="clause:Af_47">Af 47</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="281"><ref target="clause:Af_71">Af 71</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Abt_43.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">5</biblScope></bibl><seg type="original" xml:lang="de">scilling, <hi rend="italic">über</hi> g <hi rend="italic">kleines offenes</hi> a, <hi rend="italic">dessen letzter Strich in einen Punkt ausläuft.</hi></seg><seg type="translation" xml:lang="en" source="#claude">scilling; over g a small open a, whose last stroke runs out into a dot.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_43.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">11</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">of,</hi> adverbial (<hi rend="italic">s. d. Wb</hi> Sp. 2), erfordert nicht, <hi rend="italic">aslagen</hi> aus 40 zu ergänzen</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">of,</hi> adverbial (<hi rend="italic">see</hi> that word in <hi rend="italic">Wb</hi> col. 2), does not require <hi rend="italic">aslagen</hi> to be supplied from 40</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_43.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">11</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">s. Gl</hi> Gliederbussen 4c; Auge 2. a c</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">see Gl</hi> Gliederbussen 4c; Auge 2. a c</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_43.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">11</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Der Fehler <hi rend="italic">scillingum</hi> entstand, weil das in Punkt endende Schluß-<hi rend="italic">a</hi> verwechselt ward mit <hi rend="italic">ū</hi>. Jenes erscheint z. B. in <hi rend="italic">uoluntaria</hi> in <hi rend="italic">Facsim. anc. chart. Brit. Mus.</hi> I n. 5 Z. 3</seg><seg type="translation" xml:lang="en" source="#claude">The error <hi rend="italic">scillingum</hi> arose because the final <hi rend="italic">a</hi> ending in a dot was confused with <hi rend="italic">ū</hi>. The former appears e.g. in <hi rend="italic">uoluntaria</hi> in <hi rend="italic">Facsim. anc. chart. Brit. Mus.</hi> I n. 5 l. 3</seg></note>
       </div>
     </body>
   </text>
