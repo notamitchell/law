@@ -213,6 +213,7 @@ code, pre, textarea.code { font-family: var(--mono); font-size: 0.9em; }
     margin: 1rem 0 2rem;
 }
 .card-grid .card { margin: 0; }
+.card-grid--fill { grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); }
 .card-grid h3 { margin-top: 0; }
 .card-grid a.card { display: block; color: inherit; text-decoration: none; }
 .card-grid a.card:hover { border-color: var(--navy); }
@@ -724,11 +725,44 @@ a.chip { text-decoration: none; display: inline-block; }
 .guide-sections > li { margin: 0 0 1.2rem; }
 .guide-sections p[lang="de"] { margin-top: 0.3rem; }
 
-/* Liebermann's Forewords */
-.foreword p[lang="de"] { margin: 0.3rem 0 1.4rem; }
-.foreword-epigraph { margin: 1rem 0 1.6rem auto; max-width: 30rem; font-style: italic; border: none; padding: 0; }
-.foreword-epigraph p[lang="de"] { font-style: normal; }
-.foreword-signoff { margin-top: 1.4rem; }
+/* Liebermann's Forewords: German on the left, English on the right.
+   Each paragraph is a pair of grid cells in the same row, so the start of
+   every English paragraph lines up with the start of its German one. */
+.sperr { letter-spacing: 0.12em; }
+.fw-parallel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 2.5rem;
+    align-items: start;
+}
+.fw-parallel > * { margin: 0 0 1rem; }
+.fw-parallel .fw-de { font-family: var(--serif); font-size: 1.12rem; line-height: 1.55; }
+.fw-parallel .fw-en { font-size: 0.98rem; line-height: 1.6; }
+.fw-parallel h2.fw-de, .fw-parallel h2.fw-en { margin: 0.6rem 0 1rem; }
+.fw-parallel h2.fw-en { font-family: var(--serif); color: var(--muted); }
+.fw-colhead {
+    font-family: var(--sans); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--muted); border-bottom: 1px solid var(--rule); padding-bottom: 0.25rem;
+}
+.fw-subheading { text-align: center; font-style: italic; }
+.fw-titlepage, .fw-dedication { text-align: center; line-height: 2; letter-spacing: 0.04em; }
+.fw-dedication { margin-top: 1.5rem; }
+.fw-epigraph { text-align: right; font-size: 0.95rem !important; }
+.fw-signoff { margin-top: 0.8rem; }
+.fw-parallel sup.fn a { text-decoration: none; font-family: var(--sans); font-size: 0.75em; padding: 0 0.1em; }
+.fw-parallel sup.fn a:target, .fw-parallel :target { background: var(--highlight); }
+.fw-notes { margin-top: 2.5rem; border-top: 1px solid var(--rule); }
+.fw-notes .fw-parallel .fw-de, .fw-notes .fw-parallel .fw-en { font-size: 0.9rem; line-height: 1.45; margin-bottom: 0.55rem; }
+.fw-notepage { grid-column: 1 / -1; font-family: var(--sans); font-size: 0.8rem; color: var(--muted); margin: 0.8rem 0 0.4rem !important; border-bottom: 1px dotted var(--rule); }
+.fw-noteno { font-family: var(--sans); font-weight: 600; text-decoration: none; margin-right: 0.2em; }
+.fw-prevnext { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2.5rem; padding-top: 0.8rem; border-top: 1px solid var(--rule); }
+@media (max-width: 46rem) {
+    /* On a phone the columns stack: each German paragraph, then its English. */
+    .fw-parallel { grid-template-columns: minmax(0, 1fr); }
+    .fw-parallel > .fw-en { margin-bottom: 1.4rem; padding-left: 0.75rem; border-left: 3px solid var(--rule); }
+    .fw-parallel > .fw-de { margin-bottom: 0.4rem; }
+    .fw-colhead { display: none; }
+}
 
 /* Subjects: the index */
 .subject-tools { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; margin: 1rem 0 0.4rem; }
