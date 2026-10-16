@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -31,6 +33,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">400</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -39,7 +42,7 @@
           <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
-          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr> <note type="manuscript">London, British Library, Burney MS 277</note></witness>
           <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
       </sourceDesc>
@@ -60,22 +63,28 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 549 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 549 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 90.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Bu added from Gesetze I, p. 90.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 90: “∅” → “L.”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 90.</change>
+      <change when="2026-10" type="checked">Liebermann’s Latin text corrected against Gesetze I, p. 90: “pecunie sue” → “pecunię suę”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 6</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-h">Gif hwa on cyninges huse gefeohte, sy he scyldig ealles his yrfes, ⁊ sy on cyninges dome, hweþer he lif age ðe nage.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-e">L. Gif hwa gefeohte on cyninges huse, sie he scyldig ealles his ierfes, ⁊ sie on cyninges dome, hwæðer he líf age þe nage.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6" corresp="#wit-q">Si quis pugnet in domo regis, totius pecunie sue reus sit, et sit in arbitrio regis, utrum uitam habeat uel non habeat.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-h">L. Gif hwa on cyninges huse gefeohte<ptr type="liebermannNote" n="15" target="#Ine_6.lnote.oe.15"/>, sy<ptr type="liebermannNote" n="1" target="#Ine_6.lnote.oe.1"/> he scyldig ealles his<ptr type="liebermannNote" n="16" target="#Ine_6.lnote.oe.16"/> yrfes, ⁊ sy<ptr type="liebermannNote" n="1" target="#Ine_6.lnote.oe.1"/> on cyninges dome, hweþer he lif age ðe nage.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-e">L. Gif hwa gefeohte on cyninges huse<ptr type="liebermannNote" n="19" target="#Ine_6.lnote.oe.19"/>, sie<ptr type="liebermannNote" n="2" target="#Ine_6.lnote.oe.2"/> he scyldig ealles his ierfes<ptr type="liebermannNote" n="20" target="#Ine_6.lnote.oe.20"/>, ⁊ sie<ptr type="liebermannNote" n="2" target="#Ine_6.lnote.oe.2"/> on cyninges dome, hwæðer he líf<ptr type="liebermannNote" n="21" target="#Ine_6.lnote.oe.21"/> age þe nage.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-b-no-prol">Be gefeohtu<hi rend="italic">m</hi>. Gyf hwa gefeohte on cyninges huse, sy he scyldig ealles his yrfes, ⁊ sy on cyninges dome, hwæðer he lif age ðe nage.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-bu">L. Gif hwa gefeohte on kininges huse, sie he scyldig ealles . . ., hwæþ . . he lif hæbbe . . .</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6" corresp="#wit-q">Si quis pugnet in domo regis, totius pecunię suę reus sit, et sit in arbitrio regis, utrum uitam habeat uel<ptr type="liebermannNote" n="16" target="#Ine_6.lnote.oe.16-2"/> non habeat.<ptr type="liebermannNote" n="17" target="#Ine_6.lnote.oe.17"/></ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="6" corresp="#wit-e">{L} Gif hwa gefeohte on cyninges huse, sie he scyldig ealles his ierfes, ⁊ sie on cyninges dome, hwæðer he lif age þe nage.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If someone fights in the king’s house, let him be liable for all he owns, and let it be up to the king’s judgment whether he should keep his life or not.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If anyone fights in the king's house, he shall forfeit all his property, and it shall be for the king to decide whether he shall be put to death or not.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">If anyone fights in the king’s house, he is to forfeit all his possessions, and it is to be at the king’s judgment whether he is to keep his life or not.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand ficht im Hause des Königs, sei er [ihm] all seine Habe schuldig, und es stehe in des Königs Entscheidung, ob er sein Leben behalte oder verliere.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><ptr type="liebermannNote" n="1" target="#Ine_6.lnote.de.1"/>Wenn jemand ficht im Hause<ptr type="liebermannNote" n="2" target="#Ine_6.lnote.de.2"/> des Königs<ptr type="liebermannNote" n="3" target="#Ine_6.lnote.de.3"/>, sei er [ihm] all seine Habe<ptr type="liebermannNote" n="4" target="#Ine_6.lnote.de.4"/> schuldig, und es stehe in des Königs Entscheidung, ob er sein Leben<ptr type="liebermannNote" n="5" target="#Ine_6.lnote.de.5"/> behalte oder verliere.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If someone fights in the king’s house, let him be liable [to him] for all his property, and let it be at the king’s decision whether he keeps or loses his life.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IIEm_6">II Em 6</ref>; <ref target="clause:Grith_9">Grið 9</ref></note>
         <note type="comparison" source="#jurasinski-and-oliver" n="375"><label>compare</label> <ref target="clause:Abt_3">Abt 3</ref> <quote>Compare to Æthelberht §9 [L3]; also Hloþhere and Eadric §7 [L11] and §9 [L13].</quote></note>
@@ -92,6 +101,21 @@
         <note type="comparedBy" source="#wormald-mel" n="312"><ref target="clause:IIEm_6">II Em 6</ref></note>
         <note type="comparedBy" source="#jurasinski-and-oliver" n="367"><ref target="clause:IIEm_6">II Em 6</ref></note>
         <note type="comparedBy" source="#jurasinski-and-oliver" n="367"><ref target="clause:IICn_59">II Cn 59</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_6.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">91</biblScope></bibl><seg type="original" xml:lang="de">v. n. h. <hi rend="italic">fehlt MHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">v. n. h. lacking in MHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_6.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">91</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_6.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">90</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">mittleres</hi> e <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">middle e on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_6.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">90</biblScope></bibl><seg type="original" xml:lang="de">y <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">y on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_6.lnote.oe.16-2" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">90</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_6.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">90</biblScope></bibl><seg type="original" xml:lang="de">hus <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">hus Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_6.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">90</biblScope></bibl><seg type="original" xml:lang="de">sy <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">sy Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_6.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">90</biblScope></bibl><seg type="original" xml:lang="de">yrfes <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">yrfes Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_6.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">90</biblScope></bibl><seg type="original" xml:lang="de">life <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">life Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_6.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">69</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> blutig fechten 5a; Königsfrieden 4; Königshof 2. 7; Burg 1a. 3. Die Missetat ist als handhaft zu verstehen</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> blutig fechten 5a; Königsfrieden 4; Königshof 2. 7; Burg 1a. 3. The offence is to be understood as one caught in the act</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_6.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">69</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> blutig fechten 5a; Königsfrieden 4; Königshof 2. 7; Burg 1a. 3. Die Missetat ist als handhaft zu verstehen</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> blutig fechten 5a; Königsfrieden 4; Königshof 2. 7; Burg 1a. 3. The offence is to be understood as one caught in the act</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_6.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">69</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Benutzt in Af 7</seg><seg type="translation" xml:lang="en" source="#claude">Used in Af 7</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_6.lnote.de.4" n="4" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">69</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">‘Erbe’ Schmid, dagegen ‘Fahrnis’ Q (daraus Hn 80, 1?), wohl richtig; <hi rend="italic">s. Gl</hi> Vermögenseinziehung 9</seg><seg type="translation" xml:lang="en" source="#claude">‘Inheritance’ Schmid, but ‘chattels’ Q (whence Hn 80, 1?), probably rightly; see <hi rend="italic">Gl</hi> Vermögenseinziehung 9</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_6.lnote.de.5" n="5" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">69</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Todesstrafe 3b; Begnadigung 1. 6. 8. 11</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Todesstrafe 3b; Begnadigung 1. 6. 8. 11</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Ine_6.attnote.fn.2" n="2" source="#attenborough"><bibl><biblScope unit="page">38</biblScope></bibl><label>age</label><seg type="original" xml:lang="en"><hi rend="italic">hæbbe</hi>. Bu.</seg></note>
       </div>
     </body>
   </text>

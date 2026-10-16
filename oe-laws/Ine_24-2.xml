@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">402</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -57,8 +60,10 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 583 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 583 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 100.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 100.</change>
+      <change when="2026-10" type="checked">Liebermann’s Latin text corrected against Gesetze I, p. 100: “Wealh” → “ƿealh”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -66,17 +71,24 @@
       <div type="clause" n="24.2">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 24.2</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="24.2" corresp="#wit-h">Wealh, gif he hæfð fif hyda, he byþ syxhinde.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="24.2" corresp="#wit-e">Wealh, gif he hafað V hida, he bið syxhynde.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="24.2" corresp="#wit-q">Wealh si habeat quinque hidas, est sixhinde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="24.2" corresp="#wit-e">Wealh, gif he hafað<ptr type="liebermannNote" n="12" target="#Ine_24-2.lnote.oe.12"/> V hida, he bið syxhynde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="24.2" corresp="#wit-b-no-prol">Wealh, gyf he hæfð fif hida, he bið syxhynde.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="24.2" corresp="#wit-q">ƿealh<ptr type="liebermannNote" n="12" target="#Ine_24-2.lnote.oe.12-2"/> si habeat quinque hidas, est sixhinde.<ptr type="liebermannNote" n="13" target="#Ine_24-2.lnote.oe.13"/></ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="23.1" corresp="#wit-e">Wealh, gif he hafað V hida, he bið syxhynde.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">A Welshman, if he has five hides, is [due a wergild of] 600.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">The wergeld of a Welshman who holds five hides of land shall be 600 shillings.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">The wergeld of a Welshman who holds five hides of land shall be 600 shillings<ptr type="editorNote" n="1" target="#Ine_24-2.attnote.n.1"/>.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">A Welshman, if he has five hides, is a man of a six-hundred wergild.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Ein Wälscher, wenn er fünf Hiden besitzt, der ist 600 [Schilling Wergeld] werth.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><ptr type="liebermannNote" n="1" target="#Ine_24-2.lnote.de.1"/>Ein Wälscher, wenn er fünf Hiden<ptr type="liebermannNote" n="2" target="#Ine_24-2.lnote.de.2"/> besitzt, der ist 600 [Schilling Wergeld] werth.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">A Welshman, if he possesses five hides, is worth 600 [shillings’ wergeld].</ab>
         <note type="comparison" source="#jurasinski-and-oliver" n="390"><label>compare</label> <ref target="clause:Ine_32">Ine 32</ref> <quote>it has clearly been misplaced by scribal error [...] Compare §32.</quote></note>
         <note type="comparison" source="#jurasinski-and-oliver" n="391"><label>compare</label> <ref target="clause:Ine_32">Ine 32</ref> <quote>Compare §32.</quote></note>
         <note type="comparedBy" source="#jurasinski-and-oliver" n="398"><ref target="clause:Ine_32">Ine 32</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_24-2.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">101</biblScope></bibl><seg type="original" xml:lang="de">ƿeach <hi rend="italic">Lond; am Rande</hi> id est divitias <hi rend="italic">Co</hi></seg><seg type="translation" xml:lang="en" source="#claude">ƿeach Lond; in the margin id est divitias Co</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_24-2.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">101</biblScope></bibl><seg type="original" xml:lang="de">sixhynda <hi rend="italic">Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">sixhynda Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_24-2.lnote.oe.12-2" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">100</biblScope></bibl><seg type="original" xml:lang="de">hæfþ fif hyda <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">hæfþ fif hyda Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_24-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">72</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">In diesem Satze sah Maurer <hi rend="italic">Kr. Übsch.</hi> II 409 Ælfreds Interpolation, m. E. grundlos</seg><seg type="translation" xml:lang="en" source="#claude">Maurer <hi rend="italic">Kr. Übsch.</hi> II 409 saw in this sentence an interpolation by Ælfred, groundlessly in my opinion</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_24-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">72</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Fünf Hufen 1; Walliser 3a</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Fünf Hufen 1; Walliser 3a</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="Ine_24-2.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">186</biblScope></bibl><seg type="original" xml:lang="en">An Englishman who possessed 5 hides of land was, in later times at any rate, entitled to the privileges of a thegn, and consequently to a wergeld of 1200 shillings; cf. <hi rend="italic">Northleoda Laga</hi>, cap. 9 f., <hi rend="italic">Rect.</hi> cap. 2 f. For a discussion of the Social System see Chadwick, <hi rend="italic">Anglo-Saxon Institutions</hi>, Chap. <hi rend="smallcaps">iii</hi>.</seg></note>
       </div>
     </body>
   </text>

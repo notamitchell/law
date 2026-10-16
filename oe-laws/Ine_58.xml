@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">406</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -56,23 +59,35 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 634 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 634 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 114.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 114: “∅” → “CII.”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 114.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="58">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 58</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="58" corresp="#wit-h">Oxan horn bið teon peninga weorð.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="58" corresp="#wit-e">CII. Oxan horn bið X pæninga weorð.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="58" corresp="#wit-q">Bouis cornu ualet (debet emendari) decem denariis;</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="58" corresp="#wit-h">CII. Oxan horn bið teon peninga weorð.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="58" corresp="#wit-e">CII. Oxan horn bið<ptr type="liebermannNote" n="46" target="#Ine_58.lnote.oe.46"/> X<ptr type="liebermannNote" n="47" target="#Ine_58.lnote.oe.47"/> pæninga<ptr type="liebermannNote" n="48" target="#Ine_58.lnote.oe.48"/> weorð.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="58" corresp="#wit-b-no-prol">Oxan horn bið feowertyne penig<hi rend="italic">a<ptr type="liebermannNote" n="9" target="#Ine_58.lnote.oe.9"/></hi> wurð.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="58" corresp="#wit-q">Bouis cornu ualet<ptr type="liebermannNote" n="28" target="#Ine_58.lnote.oe.28"/> (debet emendari) decem<ptr type="liebermannNote" n="29" target="#Ine_58.lnote.oe.29"/> denariis;</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="62" corresp="#wit-e">{CII} Oxan horn bið X pæninga weorð.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">An ox horn is worth 10 pennies.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">The horn of an ox is worth 10 pence.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">The horn of an ox is valued at tenpence.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Eines Ochsen Horn ist 10 Pfennige werth.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Eines Ochsen Horn ist 10<ptr type="liebermannNote" n="1" target="#Ine_58.lnote.de.1"/> Pfennige<ptr type="liebermannNote" n="2" target="#Ine_58.lnote.de.2"/> werth.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">An ox’s horn is worth 10 pence.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_58.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">114</biblScope></bibl><seg type="original" xml:lang="de">penn., <hi rend="italic">aber letzter Strich neu</hi></seg><seg type="translation" xml:lang="en" source="#claude">penn., but the last stroke is new</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_58.lnote.oe.28" n="28" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">115</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">nur</hi> ua. <hi rend="italic">Lond; nur</hi> d. e. <hi rend="italic">übrige;</hi> ua. em. <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">only ua. Lond; only d. e. the others; ua. em. Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_58.lnote.oe.29" n="29" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">115</biblScope></bibl><seg type="original" xml:lang="de">V <hi rend="italic">TMHkBr</hi></seg><seg type="translation" xml:lang="en" source="#claude">V TMHkBr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_58.lnote.oe.46" n="46" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">114</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">übergeschr. E;</hi> beoð <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above in E; beoð So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_58.lnote.oe.47" n="47" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">114</biblScope></bibl><seg type="original" xml:lang="de">tyn <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">tyn Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_58.lnote.oe.48" n="48" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">114</biblScope></bibl><seg type="original" xml:lang="de">pen. <hi rend="italic">So;</hi> pening wyrþe <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">pen. So; pening wyrþe Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_58.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">78</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">‘14’ B falsch. — Keine Verkaufstaxe, sondern laut 59 Bussfixum bei Tierverletzung, wohl während der Miete (<hi rend="italic">s. d. Gl</hi> 1) als Spannvieh</seg><seg type="translation" xml:lang="en" source="#claude">‘14’ B, wrong. — Not a sale tariff but, according to 59, a fixed compensation for injury to an animal, probably while it was hired (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 1) as a draught animal</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_58.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">78</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">= 2 Schilling; <hi rend="italic">vgl. o.</hi> 44, 1⁵</seg><seg type="translation" xml:lang="en" source="#claude">= 2 shillings; <hi rend="italic">cf. above</hi> 44, 1⁵</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Ine_58.attnote.fn.3" n="3" source="#attenborough"><bibl><biblScope unit="page">56</biblScope></bibl><label>x</label><seg type="original" xml:lang="en"><hi rend="italic">feowertyne</hi>. B. <hi rend="italic">teon</hi>. H. <hi rend="italic">tyn</hi>. Ld.</seg></note>
       </div>
     </body>
   </text>

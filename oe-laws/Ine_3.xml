@@ -13,6 +13,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -33,6 +34,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -41,7 +43,7 @@
           <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
-          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr> <note type="manuscript">London, British Library, Burney MS 277</note></witness>
           <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
       </sourceDesc>
@@ -61,22 +63,27 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 543 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 543 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 90.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Bu added from Gesetze I, p. 90.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 90: “∅; wite” → “XLVII.; wite.”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 90.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 3</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-h">Gif ðeowmon wyrce on Sunnondæg be his hlafordes hæse, sy he freoh, ⁊ se hlaford gesylle XXX scll' to wite</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-e">XLVII. Gif ðeowmon wyrce on Sunnandæg be his hlafordes hæse, sie he frioh, ⁊ se hlaford geselle XXX scill. to wite.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-h">XLVII. Gif ðeowmon<ptr type="liebermannNote" n="4" target="#Ine_3.lnote.oe.4"/> wyrce on Sunnondæg be his hlafordes hæse, sy<ptr type="liebermannNote" n="1" target="#Ine_3.lnote.oe.1"/> he freoh, ⁊ se hlaford gesylle<ptr type="liebermannNote" n="1" target="#Ine_3.lnote.oe.1"/> XXX scll' to wite.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-e">XLVII. Gif ðeowmon wyrce on Sunnandæg be his hlafordes hæse, sie<ptr type="liebermannNote" n="2" target="#Ine_3.lnote.oe.2"/> he frioh<ptr type="liebermannNote" n="6" target="#Ine_3.lnote.oe.6"/>, ⁊ se hlaford geselle<ptr type="liebermannNote" n="7" target="#Ine_3.lnote.oe.7"/> XXX scill.<ptr type="liebermannNote" n="3" target="#Ine_3.lnote.oe.3"/> to wite.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-b-no-prol">Gyf ðeowmon wyrce on Sunnandæg be his hlafordes hǽse, sy he freo, ⁊ se hlaford gesylle XXX scill' to wite.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-bu">XLVII. Gif þeowmon werce on Sunnandæg be his hlafordes hæse, sie he freoh, ⁊ se hlaford ge . . . scill' . . .</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3" corresp="#wit-q">Si seruus operetur die dominica per preceptum domini sui, sit liber, et dominus emendet triginta sol. ad witam.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="3" corresp="#wit-e">{XLVII} Gif ðeowman wyrce on Sunnandæg be his hlafordes hæse, sie he freoh, ⁊ se hlaford geselle XXX sciƚƚ to wite</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If a slave works on Sunday at his lord’s command, let him be free, and the lord must pay 30 shillings as fine.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If a slave works on Sunday by his lord's command, he shall become free, and the lord shall pay a fine of 30 shillings.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">If a slave works on Sunday at his master’s command, he is to be free, and the master is to pay 30 shillings as a fine.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Sklav am Sonntag arbeitet auf seines Herrn Geheiss, werde er frei, und der Herr gebe 30 Schill. zur Strafe.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn<ptr type="liebermannNote" n="1" target="#Ine_3.lnote.de.1"/> ein Sklav am Sonntag arbeitet auf seines Herrn Geheiss, werde er frei<ptr type="liebermannNote" n="2" target="#Ine_3.lnote.de.2"/>, und der Herr gebe 30 Schill. zur Strafe.<ptr type="liebermannNote" n="3" target="#Ine_3.lnote.de.3"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a slave works on Sunday at his lord’s command, let him become free, and let the lord give 30 shillings as a fine.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IIEg_5">II Eg 5</ref>; <ref target="clause:IICn_45-3">II Cn 45.3</ref></note>
         <note type="comparison" source="#jurasinski-and-oliver" n="372"><label>compare</label> <ref target="clause:Wi_9">Wi 9–11</ref> <quote>Compare to Wihtred §8 [L9, 10, 11].</quote></note>
@@ -93,6 +100,15 @@
         <note type="comparedBy" source="#jurasinski-and-oliver" n="367"><ref target="clause:IIEg_5">II Eg 5</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="359"><ref target="clause:IICn_45-1">II Cn 45.1–46</ref></note>
         <note type="comparedBy" source="#whitelock" n="469"><ref target="clause:IICn_45-3">II Cn 45.3</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_3.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">90</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">geänd. in</hi> -man</seg><seg type="translation" xml:lang="en" source="#claude">altered to -man</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_3.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">90</biblScope></bibl><seg type="original" xml:lang="de">y <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">y on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_3.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">90</biblScope></bibl><seg type="original" xml:lang="de">sy <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">sy Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_3.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">90</biblScope></bibl><seg type="original" xml:lang="de">freo <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">freo Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_3.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">90</biblScope></bibl><seg type="original" xml:lang="de">sylle <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">sylle Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_3.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">90</biblScope></bibl><seg type="original" xml:lang="de">scillinges <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">scillinges Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_3.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">69</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Wiederum (wie Ine 2) wohl aus einem Synodaldekret. <hi rend="italic">Vgl.</hi> Wi 9ff.; <hi rend="italic">Gl</hi> unfrei 14c. 15; Sonntag 3</seg><seg type="translation" xml:lang="en" source="#claude">Again (as Ine 2) probably from a synodal decree. <hi rend="italic">Cf.</hi> Wi 9ff.; <hi rend="italic">Gl</hi> unfrei 14c. 15; Sonntag 3</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_3.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">69</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Befreiung der vom Herrn durch Unzucht geschädigten Unfreien <hi rend="italic">s. d.</hi> 11</seg><seg type="translation" xml:lang="en" source="#claude">On the freeing of unfree persons wronged by their lord through unchastity <hi rend="italic">see</hi> that word 11</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_3.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">69</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Wie <hi rend="italic">o.</hi> 2⁵</seg><seg type="translation" xml:lang="en" source="#claude">As <hi rend="italic">above</hi> 2⁵</seg></note>
       </div>
     </body>
   </text>

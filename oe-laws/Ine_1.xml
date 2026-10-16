@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">399</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -37,7 +40,7 @@
           <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
-          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr> <note type="manuscript">London, British Library, Burney MS 277</note></witness>
           <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
       </sourceDesc>
@@ -57,24 +60,42 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 539 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 539 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 88.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Bu added from Gesetze I, p. 88.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 88: “∅” → “XLV.”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 88.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-h">Ærest we bebeodað, þæt Godes ðeowas heora ryhtregol on riht healden.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-e">XLV. Ærest we bebeodað, þætte Godes ðeowas hiora ryhtregol on ryht healdan.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1" corresp="#wit-q">Inprimis precipimus, ut ministri Domini rectam discipline sancte regulam iuste custodiant.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-h">XLV. Ærest we bebeodað, þæt Godes ðeowas heora<ptr type="liebermannNote" n="15" target="#Ine_1.lnote.oe.15"/> ryhtregol on riht healden.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-e">XLV. Ærest we bebeodað<ptr type="liebermannNote" n="23" target="#Ine_1.lnote.oe.23"/>, þætte<ptr type="liebermannNote" n="18" target="#Ine_1.lnote.oe.18"/> Godes ðeowas hiora ryhtregol<ptr type="liebermannNote" n="24" target="#Ine_1.lnote.oe.24"/> on ryht healdan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-b-no-prol">Ærest we bebeodað, þ<hi rend="italic">æt</hi> Godas<ptr type="liebermannNote" n="4" target="#Ine_1.lnote.oe.4"/> þeowas héora rihtregol gyman ⁊ on riht healdon.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-bu">XLV. Ærest we . . . eodaþ, þ<hi rend="italic">æt</hi>te Godes ðeowas hiora ryhtregol on ryht healden.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1" corresp="#wit-q">Inprimis<ptr type="liebermannNote" n="18" target="#Ine_1.lnote.oe.18-2"/> precipimus<ptr type="liebermannNote" n="19" target="#Ine_1.lnote.oe.19"/>, ut ministri Domini rectam discipline<ptr type="liebermannNote" n="20" target="#Ine_1.lnote.oe.20"/> sancte regulam iuste custodiant.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="1" corresp="#wit-e">{XLIV} Ærest we bebeodað þætte Godes ðeowas hiora ryhtregol on ryht healdan.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">First we command that God’s servants hold their proper rule according to law.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">In the first place, we command that the servants of God heed, and duly observe, their proper 'rule.'</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">First we enjoin that the servants of God rightly observe their proper rule,</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Zuerst gebieten wir, dass Geistliche ihre Kanones richtig halten.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Zuerst<ptr type="liebermannNote" n="1" target="#Ine_1.lnote.de.1"/> gebieten wir, dass Geistliche<ptr type="liebermannNote" n="2" target="#Ine_1.lnote.de.2"/> ihre Kanones<ptr type="liebermannNote" n="3" target="#Ine_1.lnote.de.3"/><ptr type="liebermannNote" n="4" target="#Ine_1.lnote.de.4"/> richtig halten.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">First we command that clergy keep their canons properly.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VAtr_4-1">V Atr 4.1</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_1.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">89</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_1.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">89</biblScope></bibl><seg type="original" xml:lang="de">uolumus et <hi rend="italic">fügt zu T</hi></seg><seg type="translation" xml:lang="en" source="#claude">uolumus et added by T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_1.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">89</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt hier Lond, wo</hi> ut mi. — regulam prec.</seg><seg type="translation" xml:lang="en" source="#claude">lacking here in Lond, where ut mi. — regulam prec.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_1.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">89</biblScope></bibl><seg type="original" xml:lang="de">-nam <hi rend="italic">R;</hi> s. d. <hi rend="italic">Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">-nam R; s. d. Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_1.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">88</biblScope></bibl><seg type="original" xml:lang="de">eo <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">eo on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_1.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">88</biblScope></bibl><seg type="original" xml:lang="de">-dæþ <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-dæþ Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_1.lnote.oe.18-2" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">88</biblScope></bibl><seg type="original" xml:lang="de">þ' <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">þ' Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_1.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">88</biblScope></bibl><seg type="original" xml:lang="de">-le <hi rend="spaced">gyman</hi> ⁊ on <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-le <hi rend="italic">gyman</hi> ⁊ on Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">68</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Vorausstellung eines kirchlichen Satzes <hi rend="italic">s. Gl</hi> Kirchenstaatsrecht 22. b; Geistliche 27. Es fehlt hier Strafdrohung, weil Geistliches Gericht (<hi rend="italic">s. d. Gl</hi> 6ff.) eintritt. — ‘Wir’ = König und Witan; <hi rend="italic">s. o.</hi> Einl. 16</seg><seg type="translation" xml:lang="en" source="#claude">On the placing of an ecclesiastical provision first see <hi rend="italic">Gl</hi> Kirchenstaatsrecht 22. b; Geistliche 27. There is no threat of penalty here, because ecclesiastical jurisdiction (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 6ff.) applies. — ‘We’ = king and witan; see above Introduction 16</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">68</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Godas</hi> B, späte Form. <hi rend="italic">Vgl.</hi> Pro¹³</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Godas</hi> B, a late form. <hi rend="italic">Cf.</hi> Pro¹³</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">68</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">‘Mönchsregel’ zu eng; Glosse: <hi rend="italic">canones</hi></seg><seg type="translation" xml:lang="en" source="#claude">‘Monastic rule’ is too narrow; gloss: <hi rend="italic">canones</hi></seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_1.lnote.de.4" n="4" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">68</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">‘beobachten und’ homiletischer Zusatz B</seg><seg type="translation" xml:lang="en" source="#claude">‘observe and’ is a homiletic addition in B</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Ine_1.attnote.fn.6" n="6" source="#attenborough"><bibl><biblScope unit="page">36</biblScope></bibl><label>⁊</label><seg type="original" xml:lang="en">B.</seg></note>
       </div>
     </body>
   </text>

@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -31,6 +32,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">402</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -59,25 +61,37 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 581 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 581 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 100.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 100: “∅” → “LXVIII.”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 100.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="24">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 24</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="24" corresp="#wit-h">Gif witeþeow Ængliscman hine forstalie, hó hine man ⁊ ne gylde his hlaforde.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="24" corresp="#wit-e">LXVIII. Gif witeðeow Engliscmon hine forstalie, hó hine mon ⁊ ne gylde his hlaforde.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="24" corresp="#wit-q">Si Anglicus furetur, qui per forisfacturam inseruierit, suspendatur et non soluatur domino suo.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="24" corresp="#wit-h">LXVIII. Gif witeþeow Ængliscman hine forstalie, hó hine man ⁊<ptr type="liebermannNote" n="2" target="#Ine_24.lnote.oe.2"/> ne gylde his hlaforde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="24" corresp="#wit-e">LXVIII. Gif witeðeow Engliscmon hine forstalie<ptr type="liebermannNote" n="7" target="#Ine_24.lnote.oe.7"/>, hó hine mon ⁊ ne gylde his hlaforde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="24" corresp="#wit-b-no-prol"><ptr type="liebermannNote" n="4" target="#Ine_24.lnote.oe.4"/>Gyf witeðeow Engliscmon hine forstalie, hó hine mon ⁊ ne gylde his hlaforde.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="24" corresp="#wit-q"><ptr type="liebermannNote" n="6" target="#Ine_24.lnote.oe.6"/>Si Anglicus furetur<ptr type="liebermannNote" n="7" target="#Ine_24.lnote.oe.7-2"/>, qui per forisfacturam inseruierit, suspendatur et non soluatur domino<ptr type="liebermannNote" n="8" target="#Ine_24.lnote.oe.8"/> suo.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="24" corresp="#wit-e">{LXVIII} Gif witeðeow Engliscmon hine forstalie, hó hine mon ⁊ ne gylde his hlaforde.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If an English penal slave escapes [“steals himself”], he should be hanged and no payment is due his lord.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If an Englishman [living] in penal slavery absconds, he shall be hanged, and nothing shall be paid to his lord.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">If a penally enslaved Englishman runs away, he is to be hanged and nothing paid to his master.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein strafhöriger Engländer sich wegstiehlt, werde er gehängt und seinem Herrn nicht bezahlt.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein strafhöriger<ptr type="liebermannNote" n="1" target="#Ine_24.lnote.de.1"/> Engländer sich wegstiehlt<ptr type="liebermannNote" n="2" target="#Ine_24.lnote.de.2"/>, werde er gehängt und seinem Herrn nicht bezahlt.<ptr type="liebermannNote" n="3" target="#Ine_24.lnote.de.3"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If an Englishman enslaved as a penalty steals himself away, let him be hanged and not paid for to his lord.</ab>
         <note type="comparison" source="#jurasinski-and-oliver" n="390"><label>same term</label> <ref target="clause:VIAs_6-3">VI As 6.3</ref> <quote>This term used only here and in vi Æthelstan §6.3.</quote></note>
         <note type="comparedBy" source="#wormald-mel" n="290"><ref target="clause:IIEw_6">II Ew 6</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_24.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">100</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Raum für Rubrik offen</hi></seg><seg type="translation" xml:lang="en" source="#claude">space left blank for the rubric</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_24.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">101</biblScope></bibl><seg type="original" xml:lang="de">[I]tem <hi rend="italic">fügt zu R</hi></seg><seg type="translation" xml:lang="en" source="#claude">[I]tem added by R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_24.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">101</biblScope></bibl><seg type="original" xml:lang="de">qui per f. seruus sit, fur. <hi rend="italic">Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">qui per f. seruus sit, fur. Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_24.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">101</biblScope></bibl><seg type="original" xml:lang="de">dom. s. Si o. n. so. <hi rend="italic">überspringt K</hi></seg><seg type="translation" xml:lang="en" source="#claude">dom. s. Si o. n. so. skipped by K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_24.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">100</biblScope></bibl><seg type="original" xml:lang="de">ne — 24, 2 <hi rend="italic">Ende, im Text übersprungen, am unteren Rande</hi></seg><seg type="translation" xml:lang="en" source="#claude">ne — end of 24, 2, skipped in the text, in the lower margin</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_24.lnote.oe.7-2" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">100</biblScope></bibl><seg type="original" xml:lang="de">-lige <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-lige Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_24.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">72</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Zum Namen ‘Engländer’ für ‘Angelsachsen’ (<hi rend="italic">s. d. Gl</hi> 1a) ist dies zwar ein sehr früher Beleg, der aber nicht (wie Stevenson in <hi rend="italic">Engl. hist. rev.</hi> 1902, 627 meint) den Verdacht der Interpolation erregen muss</seg><seg type="translation" xml:lang="en" source="#claude">This is indeed a very early instance of the name ‘English’ for ‘Anglo-Saxons’ (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 1a), but it need not (as Stevenson in <hi rend="italic">Engl. hist. rev.</hi> 1902, 627 thinks) arouse suspicion of interpolation</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_24.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">72</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Q missversteht <hi rend="italic">hine forstalian</hi> (<hi rend="italic">s. Wb; vgl.</hi> ahd. <hi rend="italic">farstelan</hi>) — obwohl er <hi rend="italic">bestele</hi> richtig wiedergibt —, vielleicht durch Analogie mit <hi rend="italic">hine forlicgan. Vgl. Gl</hi> unfrei 5a. b. Der Sklave kann wie sich stehlen so ‘sich kaufen’, d. h. auslösen: <hi rend="italic">bohte hine silfne</hi> frei von W., dem Herrn; Earle <hi rend="italic">Landchar.</hi> 263f.</seg><seg type="translation" xml:lang="en" source="#claude">Q misunderstands <hi rend="italic">hine forstalian</hi> (<hi rend="italic">see Wb; cf.</hi> OHG <hi rend="italic">farstelan</hi>) — although he renders <hi rend="italic">bestele</hi> correctly —, perhaps by analogy with <hi rend="italic">hine forlicgan. Cf. Gl</hi> unfrei 5a. b. Just as the slave can steal himself, so he can ‘buy himself’, i.e. ransom himself: <hi rend="italic">bohte hine silfne</hi> free from W., his lord; Earle <hi rend="italic">Landchar.</hi> 263f.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_24.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">72</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Öffentliches Strafrecht siegt hier über Vermögensrecht des Herrn. <hi rend="italic">Vgl. Gl</hi> Rückfall 4; Todesstrafe 3h</seg><seg type="translation" xml:lang="en" source="#claude">Public criminal law here prevails over the lord’s rights of property. <hi rend="italic">Cf. Gl</hi> Rückfall 4; Todesstrafe 3h</seg></note>
       </div>
     </body>
   </text>

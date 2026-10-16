@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">407</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -56,8 +59,10 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 648 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 648 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 118.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Ot added from Gesetze I, p. 118.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 118.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -65,14 +70,27 @@
       <div type="clause" n="69">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 69</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="69" corresp="#wit-h">CXIII. Sceap sceal gongan mid his flyse oð midne sumor; oððe gilde ðæt flys mid II penegum.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="69" corresp="#wit-e">CXIII. Sceap sceal gongan mid his fliese oð midne sumor; oððe gilde þæt flies mid twam pæningum.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="69" corresp="#wit-q">Ouis debet ire cum uellere suo usque ad mediam estatem; aut persoluatur ipsum uellus II denariis.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="69" corresp="#wit-e">CXIII. Sceap<ptr type="liebermannNote" n="27" target="#Ine_69.lnote.oe.27"/> sceal gongan mid his fliese<ptr type="liebermannNote" n="28" target="#Ine_69.lnote.oe.28"/> oð midne sumor<ptr type="liebermannNote" n="29" target="#Ine_69.lnote.oe.29"/>; oððe gilde<ptr type="liebermannNote" n="30" target="#Ine_69.lnote.oe.30"/> þæt flies<ptr type="liebermannNote" n="31" target="#Ine_69.lnote.oe.31"/> mid twam pæningum.<ptr type="liebermannNote" n="32" target="#Ine_69.lnote.oe.32"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="69" corresp="#wit-b-no-prol">Be sceapes gange. Sceap sceal gongan mid his flyse oð midne sumor; oððe gylde þ<hi rend="italic">æt</hi> fleos mid twa<hi rend="italic">m</hi> penegu<hi rend="italic">m</hi>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="69" corresp="#wit-ot-frags">S....al gongan...; oþþe... þæt flys ...</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="69" corresp="#wit-q">Ouis debet ire cum uellere suo usque ad mediam estatem; aut<ptr type="liebermannNote" n="17" target="#Ine_69.lnote.oe.17"/> persoluatur ipsum<ptr type="liebermannNote" n="18" target="#Ine_69.lnote.oe.18"/> uellus II denariis.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="70" corresp="#wit-e">{CXIII} Sceap sceal gongan mid his fliese oð midne sumor; oððe gilde þæt flies mid twam pæningum.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">A sheep must go with its fleece until mid-summer, or the fleece must be recompensed with two pennies.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">A sheep shall retain its fleece until midsummer. [If it is sheared before then], 2 pence shall be paid for the fleece.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">A sheep shall retain its fleece until midsummer. [If it is sheared before then], 2 pence shall be paid for the fleece<ptr type="editorNote" n="1" target="#Ine_69.attnote.n.1"/>.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">A sheep must go with its fleece until midsummer, or else the fleece is to be paid for at twopence.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">Ein Schaf soll mit seinem Vliess bis Mittsommer gehen; oder [wer es geschoren veräussert] ersetze das Vliess mit 2 Pfennigen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">A sheep is to go with its fleece until midsummer; or [whoever sells it shorn] let him make good the fleece with 2 pence.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_69.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">119</biblScope></bibl><seg type="original" xml:lang="de">uel <hi rend="italic">Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">uel Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_69.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">119</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt M Hk Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in M Hk Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_69.lnote.oe.27" n="27" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">118</biblScope></bibl><seg type="original" xml:lang="de">-pe <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-pe So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_69.lnote.oe.28" n="28" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">118</biblScope></bibl><seg type="original" xml:lang="de">fleose <hi rend="italic">So;</hi> flyse <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">fleose So; flyse Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_69.lnote.oe.29" n="29" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">118</biblScope></bibl><seg type="original" xml:lang="de">-mer <hi rend="italic">So;</hi> somor <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-mer So; somor Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_69.lnote.oe.30" n="30" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">118</biblScope></bibl><seg type="original" xml:lang="de">gylde <hi rend="italic">So;</hi> gyld <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gylde So; gyld Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_69.lnote.oe.31" n="31" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">118</biblScope></bibl><seg type="original" xml:lang="de">fleos <hi rend="italic">Ld;</hi> fleose <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">fleos Ld; fleose So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_69.lnote.oe.32" n="32" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">118</biblScope></bibl><seg type="original" xml:lang="de">pen. <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">pen. So Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_69.lnote.de.0" n="0" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">80</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Schaf 4. Eine Art der Veräusserung kann Hingabe als Zins an Grundherrn, Staat oder Kirche sein; Leo <hi rend="italic">Rectitudines</hi> 210. 1 Pfund Wolle (<hi rend="italic">s. d. Gl</hi> 1) wertet also 1—²/₃ Pfennig, wenn man die Schur eines Schafes zu 2—3 Pfund annimmt</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Schaf 4. One kind of alienation may be handing it over as rent to a landlord, the state or the church; Leo <hi rend="italic">Rectitudines</hi> 210. 1 pound of wool (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 1) is therefore worth 1—²/₃ penny, if one takes the fleece of one sheep to be 2—3 pounds</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="Ine_69.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">192</biblScope></bibl><seg type="original" xml:lang="en"><hi rend="italic">i.e.</hi> by anyone who sells a sheep which has been shorn before that date. This would mean that two pence would be deducted from the price of the sheep.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Ine_69.attnote.fn.9" n="9" source="#attenborough"><bibl><biblScope unit="page">58</biblScope></bibl><label>pæningum</label><seg type="original" xml:lang="en"><hi rend="italic">penegum</hi>. B &amp; H.</seg></note>
       </div>
     </body>
   </text>

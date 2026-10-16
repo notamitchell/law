@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">406</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -56,8 +59,10 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 635 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 635 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 116.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 116.</change>
+      <change when="2026-10" type="checked">The second translation corrected against Attenborough, p. None: “cow's; pence:” → “cow’s; pence (5 pence, H):”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -65,15 +70,30 @@
       <div type="clause" n="59[a]">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 59[a]</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="59[a]" corresp="#wit-h">CIII. Cúhorn bið V peninga weorð;</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="59[a]" corresp="#wit-e">CIII. Cuuhorn bið twegea pæninga;</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="59[a]" corresp="#wit-q">uacce II den.;</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="59[a]" corresp="#wit-e">CIII. Cuuhorn<ptr type="liebermannNote" n="1" target="#Ine_59-a.lnote.oe.1"/> bið<ptr type="liebermannNote" n="2" target="#Ine_59-a.lnote.oe.2"/> twegea<ptr type="liebermannNote" n="3" target="#Ine_59-a.lnote.oe.3"/> pæninga<ptr type="liebermannNote" n="4" target="#Ine_59-a.lnote.oe.4"/>;</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="59[a]" corresp="#wit-b-no-prol">Cuhorn twegea peniga wurð; oxan tægl bið IIII<ptr type="liebermannNote" n="1" target="#Ine_59-a.lnote.oe.1-2"/> peonega wurð; cutægl bið fif penega wurð; oxan eage bið fif peonega wurð; cu<ptr type="liebermannNote" n="2" target="#Ine_59-a.lnote.oe.2-2"/> bið scill' weorð.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="59[a]" corresp="#wit-q">uacce II<ptr type="liebermannNote" n="1" target="#Ine_59-a.lnote.oe.1-3"/> den.;</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="62.1" corresp="#wit-e">{CIII} Cuuhorn \bið/ twegea pæninga;</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">A cow horn is worth 2 pennies.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">A cow's horn is worth 2 pence:</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">A cow’s horn is worth 2 pence (5 pence, H):</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">The horn of a cow [is valued at] twopence; the tail of an ox is valued at a shilling; that of a cow at fivepence; the eye of an ox is valued at fivepence, that of a cow at a shilling.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Ein Kuhhorn gilt 2 Pfennige;</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Ein Kuhhorn gilt 2<ptr type="liebermannNote" n="1" target="#Ine_59-a.lnote.de.1"/> Pfennige<ptr type="liebermannNote" n="2" target="#Ine_59-a.lnote.de.2"/>;</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">A cow’s horn is worth 2 pence;</ab>
         <note type="translator" source="#whitelock">Whitelock translates Ine 59 as one clause, which the sheet divides into rows 59[a], 59[b], 59[c]; her translation of the whole is given here, in the first row.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_59-a.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">116</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">spät auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">late, on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_59-a.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">116</biblScope></bibl><seg type="original" xml:lang="de">eage <hi rend="italic">im</hi> 16. <hi rend="italic">Jh. eingefügt</hi></seg><seg type="translation" xml:lang="en" source="#claude">eage inserted in the 16th cent.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_59-a.lnote.oe.1-2" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">117</biblScope></bibl><seg type="original" xml:lang="de">II <hi rend="italic">Lond; geänd.</hi> V <hi rend="italic">Co Or;</hi> V <hi rend="italic">übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">II Lond; altered: V Co Or; V the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_59-a.lnote.oe.1-3" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">116</biblScope></bibl><seg type="original" xml:lang="de">Cúhorn twega <hi rend="italic">ohne</hi> bið <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">Cúhorn twega without bið Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_59-a.lnote.oe.2-2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">116</biblScope></bibl><seg type="original" xml:lang="de">beoð <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">beoð So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_59-a.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">116</biblScope></bibl><seg type="original" xml:lang="de">twegra, <hi rend="italic">darüber</hi> V <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">twegra, above it V So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_59-a.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">116</biblScope></bibl><seg type="original" xml:lang="de">pen. weorð <hi rend="italic">So;</hi> pen. wyrþe <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">pen. weorð So; pen. wyrþe Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_59-a.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">78</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">H irrt, weil <hi rend="italic">II</hi> und <hi rend="italic">V</hi> (= 5) ähnelten</seg><seg type="translation" xml:lang="en" source="#claude">H errs because <hi rend="italic">II</hi> and <hi rend="italic">V</hi> (= 5) looked alike</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_59-a.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">78</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Die Zufügung und nachherige Auslassung von <hi rend="italic">weorð</hi> in hb bzw. H sind Schreiber-Willkür</seg><seg type="translation" xml:lang="en" source="#claude">The addition and subsequent omission of <hi rend="italic">weorð</hi> in hb and H respectively are arbitrary scribal changes</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Ine_59-a.attnote.fn.4" n="4" source="#attenborough"><bibl><biblScope unit="page">56</biblScope></bibl><label>twegea</label><seg type="original" xml:lang="en"><hi rend="italic"><hi rend="smallcaps">v</hi></hi>. H.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Ine_59-a.attnote.fn.5" n="5" source="#attenborough"><bibl><biblScope unit="page">56</biblScope></bibl><label>pæninga</label><seg type="original" xml:lang="en"><hi rend="italic">p. weorð</hi>. H. <hi rend="italic">wurð</hi>. B.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Ine_59-a.attnote.fn.6" n="6" source="#attenborough"><bibl><biblScope unit="page">56</biblScope></bibl><label>scill</label><seg type="original" xml:lang="en"><hi rend="italic"><hi rend="smallcaps">iiii</hi> peonega wurð</hi>. B.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Ine_59-a.attnote.fn.7" n="7" source="#attenborough"><bibl><biblScope unit="page">56</biblScope></bibl><label>fifa</label><seg type="original" xml:lang="en"><hi rend="italic"><hi rend="smallcaps">v</hi> peninga</hi>. H. <hi rend="italic">fif penega wurð</hi>. B.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Ine_59-a.attnote.fn.8" n="8" source="#attenborough"><bibl><biblScope unit="page">56</biblScope></bibl><label>p[eninga</label><seg type="original" xml:lang="en">H &amp; B.</seg></note>
       </div>
     </body>
   </text>

@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -56,7 +58,7 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 637 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 637 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 116.</change>
     </revisionDesc>
   </teiHeader>
@@ -65,13 +67,21 @@
       <div type="clause" n="59[c]">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 59[c]</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="59[c]" corresp="#wit-h">oxan eage bið V peninga weorð, cú bið scillinges.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="59[c]" corresp="#wit-e">oxan eage bið V p. weorð, cus bið scill. weorþ.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="59[c]" corresp="#wit-q">bouis oculus quinque den. componendus est, uacce I sol.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="59[c]" corresp="#wit-e">oxan eage bið<ptr type="liebermannNote" n="2" target="#Ine_59-c.lnote.oe.2"/> V<ptr type="liebermannNote" n="6" target="#Ine_59-c.lnote.oe.6"/> p.<ptr type="liebermannNote" n="7" target="#Ine_59-c.lnote.oe.7"/> weorð, cus<ptr type="liebermannNote" n="8" target="#Ine_59-c.lnote.oe.8"/> bið<ptr type="liebermannNote" n="2" target="#Ine_59-c.lnote.oe.2"/> scill. weorþ.<ptr type="liebermannNote" n="9" target="#Ine_59-c.lnote.oe.9"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="59[c]" corresp="#wit-q">bouis oculus quinque den. componendus est, uacce<ptr type="liebermannNote" n="4" target="#Ine_59-c.lnote.oe.4"/> I<ptr type="liebermannNote" n="5" target="#Ine_59-c.lnote.oe.5"/> sol.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="62.3" corresp="#wit-e">oxan eage bið V pæ<hi rend="italic">ninga</hi> weorð, cus bið sciƚƚ weorð.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">An ox eye is worth 5 shillings, a cow’s is worth a shilling.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">The eye of an ox is worth 5 pence and a cow's is worth a shilling.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">eines Ochsen Auge ist 5 Pfennig werth, das einer Kuh ist 1 Schill. werth.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">eines Ochsen Auge ist 5 Pfennig werth, das einer Kuh ist 1<ptr type="liebermannNote" n="5" target="#Ine_59-c.lnote.de.5"/> Schill. werth.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">an ox’s eye is worth 5 pence, that of a cow is worth 1 shilling.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_59-c.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">117</biblScope></bibl><seg type="original" xml:lang="de">V den.; bouis oculus V den. componendum est; uacce <hi rend="italic">wiederholt Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">V den.; bouis oculus V den. componendum est; uacce repeated by Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_59-c.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">117</biblScope></bibl><seg type="original" xml:lang="de">unum <hi rend="italic">Or; auf Rasur Co;</hi> VIII <hi rend="italic">K;</hi> XII den. <hi rend="italic">M Hk Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">unum Or; on an erasure Co; VIII K; XII den. M Hk Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_59-c.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">116</biblScope></bibl><seg type="original" xml:lang="de">beoð <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">beoð So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_59-c.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">116</biblScope></bibl><seg type="original" xml:lang="de">fif <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">fif Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_59-c.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">116</biblScope></bibl><seg type="original" xml:lang="de">peninga <hi rend="italic">So;</hi> peninge wyrþe <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">peninga So; peninge wyrþe Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_59-c.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">116</biblScope></bibl><seg type="original" xml:lang="de">eage <hi rend="italic">fügt zu Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">eage added by Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_59-c.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">116</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt So;</hi> wyrþe <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in So; wyrþe Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_59-c.lnote.de.5" n="5" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">78</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Weshalb wechselt Ine im Ausdruck Eines Wertes zwischen 1 Schill. und 5 Pf.? — Die Lex Ribuaria verlangt, wo Wergeld in Ochsen bezahlt wird, diese ungeblendet. Verstümmelten die barbarischen Viehhalter ihr Arbeitsvieh im Zorn, wie das Strafrecht kalten Blutes den Menschen?</seg><seg type="translation" xml:lang="en" source="#claude">Why does Ine, in expressing one and the same value, alternate between 1 shill. and 5 pence? — Where wergild is paid in oxen, the Lex Ribuaria requires them not to have been blinded. Did the barbarian stock-keepers mutilate their working animals in anger, as the criminal law mutilated human beings in cold blood?</seg></note>
       </div>
     </body>
   </text>
