@@ -58,7 +58,7 @@
             html += `<section class="bib-work" id="${esc(anchor)}">
                 <h2>${esc(r0['Short Title'])}</h2>
                 <p class="bib-full">${italics(r0['Full Citation'])}</p>
-                <p class="small"><span class="muted">As printed in the Wörterbuch:</span> ${forms.map(f => `<span class="term">${esc(f)}</span>`).join(' · ')}</p>
+                <p class="small"><span class="muted">As printed in the Gesetze:</span> ${forms.map(f => `<span class="term">${esc(f)}</span>`).join(' · ')}</p>
                 ${note ? `<p class="small bib-note"><span class="muted">Note:</span> ${italics(note)}</p>` : ''}
             </section>`;
         });
