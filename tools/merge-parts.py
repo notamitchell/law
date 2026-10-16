@@ -164,19 +164,10 @@ def merge(code, base, entries, bid):
             div.remove(child)
 
     abs_, notes, numbers = OrderedDict(), [], OrderedDict()
-    # each part's numbers in the editions that number it (Oliver 22.1 …): editionText with n, not Liebermann's own
-    ed_num, default_src = {}, None
-    for let, d in docs:
-        for ab in d.findall('.//t:body/t:div/t:ab', NS):
-            if ab.get('type') == 'editionText' and ab.get('n'):
-                ed_num.setdefault(let, {}).setdefault(ab.get('source'), ab.get('n'))
-                default_src = default_src or ab.get('source')
+    # Only an editor who divides the clause numbers its parts, and only in that editor's own edited text
+    # (Oliver's Old English: 22, 22.1, 22.2). Other texts are not marked.
     def number(let, ab):
-        """The number shown before a part in this text: its own editor's, else the dividing edition's, else the letter."""
-        if ab.get('n') and ab.get('type') != 'liebermannText':
-            return ab.get('n')
-        nums = ed_num.get(let, {})
-        return nums.get(ab.get('source')) or (nums.get(default_src) if default_src else None) or let or ''
+        return ab.get('n') if ab.get('type') == 'editionText' and ab.get('n') else ''
     for let, d in docs:
         ddiv = d.find('.//t:body/t:div', NS)
         for ab in ddiv.findall('t:ab', NS):
@@ -193,10 +184,12 @@ def merge(code, base, entries, bid):
             if prev is not None and let and ' '.join(text_of(prev).split()) == ' '.join(text_of(ab).split()):
                 # the same words given for two parts (one translation covering both): show them once, for both
                 prev.set('corresp', prev.get('corresp') + ' #part-' + let)
-                first = prev.get('n').split('–')[0]
-                prev.set('n', first + '–' + number(let, ab))
+                first, last = (prev.get('n') or '').split('–')[0], number(let, ab)
+                prev.set('n', first + '–' + last if first and last else first or last)
                 continue
-            seg = etree.SubElement(abs_[key], T('seg'), type='part', n=number(let, ab))
+            seg = etree.SubElement(abs_[key], T('seg'), type='part')
+            if number(let, ab):
+                seg.set('n', number(let, ab))
             if let:
                 seg.set('corresp', '#part-' + let)
             seg.text = ab.text
@@ -208,6 +201,11 @@ def merge(code, base, entries, bid):
             if n.get('type') in PART_NOTES and let:
                 n.set('target', '#part-' + let)
             notes.append(n)
+    for (typ, lang, src, corr, ana), ab in abs_.items():
+        if typ == 'editionText':
+            nums = [x for seg in ab for x in (seg.get('n') or '').split('–') if x]
+            if nums:
+                ab.set('n', nums[0] if nums[0] == nums[-1] else nums[0] + '–' + nums[-1])
     for ab in abs_.values():
         if len(ab):
             ab[-1].tail = None
@@ -218,8 +216,6 @@ def merge(code, base, entries, bid):
     names = {r.find('t:name', NS).get('ref', '').lstrip('#'): r.findtext('t:name', namespaces=NS)
              for r in root.findall('.//t:titleStmt/t:respStmt', NS) if r.find('t:name', NS) is not None}
     conc = etree.SubElement(div, T('note'), type='concordance')
-    if default_src:
-        conc.set('source', default_src)
     bits = []
     for (typ, src), ns in numbers.items():
         src = (src or '').lstrip('#')
