@@ -28,7 +28,7 @@ scripts:
     <button type="button" class="hide-lang" data-hide="la" aria-pressed="false">Hide Latin</button>
     <button type="button" class="hide-lang" data-hide="fro" aria-pressed="false">Hide French</button>
     <button type="button" class="hide-lang" data-hide="de" aria-pressed="false">Hide Grammatical Terms</button>
-    <button type="button" class="hide-lang" data-hide="prop" aria-pressed="false">Hide Proper Nouns</button>
+    <button type="button" class="hide-lang" data-hide="prop" aria-pressed="false">Hide OE Proper Nouns</button>
 </div>
 
 <ul class="letter-index" id="letters"></ul>
@@ -55,7 +55,7 @@ const ENTRY_FILES = [{% for f in entry_files %}"{{ f.basename }}"{% unless forlo
     // so the entry pages' Previous and Next links and the search suggestions follow them.
     let hidden = ELieb.hiddenLanguages();
     const hideButtons = [...document.querySelectorAll('[data-hide]')];
-    const NAMES = { ang: 'Old English', la: 'Latin', fro: 'French', de: 'Grammatical Terms', prop: 'Proper Nouns' };
+    const NAMES = { ang: 'Old English', la: 'Latin', fro: 'French', de: 'Grammatical Terms', prop: 'OE Proper Nouns' };
     function showButtons() {
         hideButtons.forEach(b => {
             const on = hidden.has(b.dataset.hide);
@@ -97,7 +97,7 @@ const ENTRY_FILES = [{% for f in entry_files %}"{{ f.basename }}"{% unless forlo
         // Only letters that begin at least one headword (X has none), whatever the search.
         document.getElementById('letters').innerHTML = ELieb.ALPHABET.filter(l => present.has(l)).map(l =>
             byLetter[l] ? `<li><a href="#letter-${l}">${l}</a></li>` : `<li><span>${l}</span></li>`).join('');
-        const hiddenNames = ['ang', 'la', 'fro', 'de', 'prop'].filter(l => hidden.has(l)).map(l => l === 'de' ? 'grammatical term' : l === 'prop' ? 'proper noun' : NAMES[l]);
+        const hiddenNames = ['ang', 'la', 'fro', 'de', 'prop'].filter(l => hidden.has(l)).map(l => l === 'de' ? 'grammatical term' : l === 'prop' ? 'OE proper noun' : NAMES[l]);
         const joined = hiddenNames.length > 1 ? hiddenNames.slice(0, -1).join(', ') + ' and ' + hiddenNames[hiddenNames.length - 1] : hiddenNames[0];
         document.getElementById('count').textContent = `${list.length} of ${entries.length} entries`
             + (hiddenNames.length ? ` (${joined} entries hidden)` : '');
