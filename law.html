@@ -65,7 +65,7 @@ scripts:
                 const letters = (n.getAttribute('corresp') || '').split(/\s+/).map(x => x.replace(/^#part-/, '')).filter(x => /^[a-z]$/.test(x));
                 const span = el('span', ['part'].concat(letters.map(x => 'part-' + x)).join(' '));
                 const num = n.getAttribute('n') || '';
-                if (num && num !== '–') span.appendChild(el('sup', 'part-mark', num));
+                if (num) span.appendChild(el('sup', 'part-mark', num));
                 span.appendChild(inline(n, opts));
                 frag.appendChild(span);
                 return;
@@ -337,7 +337,7 @@ scripts:
             const lieb = a.getAttribute('type') === 'liebermannText';
             const n = a.getAttribute('n');
             add(left, a, [msLabel(a, wits),
-                lieb ? (src.page ? 'Gesetze I, p. ' + src.page : '') : (n ? '§ ' + n : ''),
+                lieb ? (src.page ? 'Gesetze I, p. ' + src.page : '') : (n && n !== div.getAttribute('n') ? '§ ' + n : ''),
                 !lieb && src.page ? 'p. ' + src.page : '',
                 showLatin && a.getAttribute('xml:lang') === 'la' ? 'Latin' : '']);
         };
@@ -533,35 +533,27 @@ scripts:
 
     // A clause of Liebermann's that later editors divide (Abt 1 = Oliver 1–7): the texts mark the parts with
     // the editions' clause numbers; say so, and list them (the concordance note written by tools/merge-parts.py).
-    // a note on one part: that part's number, as shown in the dividing edition's text
+    // a note on one part of a divided clause: which part, by the dividing editor's number
     const partLabel = n => {
         const m = (n.getAttribute('target') || '').match(/^#part-([a-z])$/);
         if (!m) return document.createTextNode('');
         const doc = n.ownerDocument;
-        const conc = tei(doc, 'note').find(x => x.getAttribute('type') === 'concordance');
-        const src = conc ? conc.getAttribute('source') : '';
-        const seg = tei(doc, 'seg').find(x => x.getAttribute('type') === 'part'
-            && (x.getAttribute('corresp') || '').split(/\s+/).includes('#part-' + m[1])
-            && (!src || x.parentNode.getAttribute('source') === src));
-        return el('sup', 'part-mark', seg ? seg.getAttribute('n') : m[1]);
+        const seg = tei(doc, 'seg').find(x => x.getAttribute('type') === 'part' && x.getAttribute('n')
+            && (x.getAttribute('corresp') || '').split(/\s+/).includes('#part-' + m[1]));
+        if (!seg) return document.createTextNode('');
+        const who = (sources(doc)[(seg.parentNode.getAttribute('source') || '').replace(/^#/, '')] || {}).name || '';
+        return el('span', 'muted', '[' + (who ? who + ' ' : '') + seg.getAttribute('n') + '] ');
     };
 
     function partsNote(row, doc) {
         if (!row.parts || row.parts.length < 2) return null;
         const p = el('p', 'clause-parts small');
         const conc = tei(doc, 'note').find(n => n.getAttribute('type') === 'concordance');
-        const srcId = conc ? (conc.getAttribute('source') || '').replace(/^#/, '') : '';
-        const name = srcId ? (sources(doc)[srcId] || {}).name || srcId : '';
-        const editions = conc ? tei(conc, 'seg').length : 0;
-        p.appendChild(document.createTextNode('Liebermann prints this as one clause; later editors divide it. '
-            + (name ? (editions > 1
-                ? 'The small numbers in each text are its own editor’s clause numbers, or else ' + name + '’s'
-                : 'The small numbers in the texts below are ' + name + '’s clause numbers')
-              : 'The small letters in the texts below mark the divisions')));
+        p.appendChild(document.createTextNode('Liebermann prints this as one clause'));
         if (conc && plainText(conc)) {
-            p.appendChild(document.createTextNode(' ('));
+            p.appendChild(document.createTextNode('; later editors divide it ('));
             p.appendChild(el('span', 'clause-parts__conc', plainText(conc)));
-            p.appendChild(document.createTextNode(')'));
+            p.appendChild(document.createTextNode('), and their numbers are marked in their own texts'));
         }
         p.appendChild(document.createTextNode('.'));
         return p;
