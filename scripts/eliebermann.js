@@ -40,8 +40,24 @@
     }
     // An Old English headword that begins with a capital letter (after any
     // bracket or hyphen) is a proper noun: Ine, Cent, [E]aldred, Æðel-.
+    // Capitalised by Liebermann but not proper nouns (decided by the editor,
+    // October 2026): adjectives of nationality, common nouns built from a
+    // name, names of weekdays and months, and two prayers.
+    const NOT_PROPER = new Set([
+        // adjectives
+        'Englisc', 'Denisc', 'Frencisc', 'Fræncisc', 'Wi[e]lisc', 'Wealisc', 'Wilisc', 'Norðmandiscere', 'Cristen',
+        // common nouns built from a name
+        'Wi[e]liscmonn', 'Wi[e]liscealoð', 'Cristendom', 'Romfeoh', 'Angolwitena',
+        // weekdays and months
+        'Sunnandæg', 'Sunnanæfen', 'Sunnanniht', 'Tiwesdæg', 'Wodnesdæg', 'Frigedæg', 'Sæternesdæges', 'Lunae',
+        'A[u]gust', 'Agust', 'Septembri', 'Iunio', 'Mæge', 'Mai[us]', 'Martige', 'Rugernes',
+        // prayers
+        'Credo', 'Pater noster'
+    ]);
+
     function isProperNoun(headword, lang) {
         if ((lang || 'ang') !== 'ang') return false;
+        if (NOT_PROPER.has(String(headword || '').trim())) return false;
         const first = String(headword || '').replace(/^[\s\[\(\-~]+/, '').charAt(0);
         return first !== '' && first !== first.toLowerCase() && first === first.toUpperCase();
     }
