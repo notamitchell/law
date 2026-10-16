@@ -59,6 +59,17 @@ scripts:
                 return;
             }
             if (name === 'note' && n.getAttribute('type') === 'remark') return;
+            if (name === 'seg' && n.getAttribute('type') === 'part') {
+                // one part of a clause the later editors divide (tools/merge-parts.py): the editor's clause
+                // number for it, then its text
+                const letters = (n.getAttribute('corresp') || '').split(/\s+/).map(x => x.replace(/^#part-/, '')).filter(x => /^[a-z]$/.test(x));
+                const span = el('span', ['part'].concat(letters.map(x => 'part-' + x)).join(' '));
+                const num = n.getAttribute('n') || '';
+                if (num && num !== '–') span.appendChild(el('sup', 'part-mark', num));
+                span.appendChild(inline(n, opts));
+                frag.appendChild(span);
+                return;
+            }
             if (name === 'lb') { frag.appendChild(el('br')); if (n.getAttribute('type') === 'paragraph') frag.appendChild(el('br')); return; }
             const rend = name === 'hi' ? (n.getAttribute('rend') || '') : '';
             if (/bold|spaced|smallcaps/.test(rend)) {
@@ -315,7 +326,7 @@ scripts:
             if (own.length) {
                 const ol = el('ol', 'clause-reading-notes small');
                 ol.setAttribute('aria-label', src.name + (noteType === 'textual' ? '’s textual notes' : '’s notes'));
-                own.forEach(n => { const li = el('li'); li.appendChild(inline(n)); ol.appendChild(li); });
+                own.forEach(n => { const li = el('li'); li.appendChild(partLabel(n)); li.appendChild(inline(n)); ol.appendChild(li); });
                 box.appendChild(ol);
             }
             column.appendChild(box);
@@ -437,6 +448,7 @@ scripts:
             if (type !== 'passageSource' && type !== 'editorial') return;
             const p = el('p', 'clause-note small');
             p.appendChild(el('strong', null, type === 'passageSource' ? 'Source of the passage: ' : 'Notes: '));
+            p.appendChild(partLabel(n));
             p.appendChild(inline(n));
             wrap.appendChild(p);
         });
@@ -519,22 +531,39 @@ scripts:
         return box.children.length ? box : null;
     }
 
-    // A clause of Liebermann's that the database divides with letters in square brackets (Abt 1 as 1[a]–1[g])
-    // to match later editors' numbering: say so, and link the parts.
-    function subdivision(row) {
-        const m = (row.clause || '').match(/^(.*?)\[([a-z])\]$/);
-        if (!m) return null;
-        const base = m[1];
-        const parts = catalogue.filter(c => c.code === row.code && (c.clause === base || (c.clause.startsWith(base + '[') && /^\[[a-z]\]$/.test(c.clause.slice(base.length)))));
-        if (parts.length < 2) return null;
-        const p = el('p', 'clause-subdivision small');
-        p.appendChild(document.createTextNode('Liebermann prints ' + row.code + ' ' + base + ' as one clause. Here it is divided into '));
-        parts.forEach((c, i) => {
-            if (i) p.appendChild(document.createTextNode(i === parts.length - 1 ? ' and ' : ', '));
-            if (c.id === row.id) p.appendChild(el('strong', null, c.clause));
-            else { const a = el('a', null, c.clause); a.href = '?id=' + encodeURIComponent(c.id); p.appendChild(a); }
-        });
-        p.appendChild(document.createTextNode(' (the letters in square brackets are not Liebermann’s), to match the numbering of later editors.'));
+    // A clause of Liebermann's that later editors divide (Abt 1 = Oliver 1–7): the texts mark the parts with
+    // the editions' clause numbers; say so, and list them (the concordance note written by tools/merge-parts.py).
+    // a note on one part: that part's number, as shown in the dividing edition's text
+    const partLabel = n => {
+        const m = (n.getAttribute('target') || '').match(/^#part-([a-z])$/);
+        if (!m) return document.createTextNode('');
+        const doc = n.ownerDocument;
+        const conc = tei(doc, 'note').find(x => x.getAttribute('type') === 'concordance');
+        const src = conc ? conc.getAttribute('source') : '';
+        const seg = tei(doc, 'seg').find(x => x.getAttribute('type') === 'part'
+            && (x.getAttribute('corresp') || '').split(/\s+/).includes('#part-' + m[1])
+            && (!src || x.parentNode.getAttribute('source') === src));
+        return el('sup', 'part-mark', seg ? seg.getAttribute('n') : m[1]);
+    };
+
+    function partsNote(row, doc) {
+        if (!row.parts || row.parts.length < 2) return null;
+        const p = el('p', 'clause-parts small');
+        const conc = tei(doc, 'note').find(n => n.getAttribute('type') === 'concordance');
+        const srcId = conc ? (conc.getAttribute('source') || '').replace(/^#/, '') : '';
+        const name = srcId ? (sources(doc)[srcId] || {}).name || srcId : '';
+        const editions = conc ? tei(conc, 'seg').length : 0;
+        p.appendChild(document.createTextNode('Liebermann prints this as one clause; later editors divide it. '
+            + (name ? (editions > 1
+                ? 'The small numbers in each text are its own editor’s clause numbers, or else ' + name + '’s'
+                : 'The small numbers in the texts below are ' + name + '’s clause numbers')
+              : 'The small letters in the texts below mark the divisions')));
+        if (conc && plainText(conc)) {
+            p.appendChild(document.createTextNode(' ('));
+            p.appendChild(el('span', 'clause-parts__conc', plainText(conc)));
+            p.appendChild(document.createTextNode(')'));
+        }
+        p.appendChild(document.createTextNode('.'));
         return p;
     }
 
@@ -575,7 +604,7 @@ scripts:
         header.appendChild(meta);
         const dated = datePlace(doc, allSrcs);
         if (dated) header.appendChild(dated);
-        const parts = subdivision(row);
+        const parts = partsNote(row, doc);
         if (parts) header.appendChild(parts);
         target.appendChild(header);
 
@@ -712,9 +741,18 @@ scripts:
         .then(r => r.json())
         .then(list => {
             catalogue = list;
-            const row = list.find(c => c.id === id);
+            // a part of a clause that is shown whole (Abt_1-c): the whole clause, with that part marked
+            const row = list.find(c => c.id === id) || list.find(c => (c.parts || []).some(p => p.id === id));
             if (!row) throw new Error('missing');
-            return Promise.all([fetchXml(row.file), loadSigla()]).then(([doc]) => render(row, doc));
+            const part = row.id === id ? '' : ((row.parts.find(p => p.id === id).clause.match(/\[([a-z])\]$/) || [])[1] || '');
+            return Promise.all([fetchXml(row.file), loadSigla()]).then(([doc]) => {
+                render(row, doc);
+                if (part) {
+                    const marked = target.querySelectorAll('.part-' + part);
+                    marked.forEach(e => e.classList.add('part-active'));
+                    if (marked[0]) marked[0].scrollIntoView({ block: 'center' });
+                }
+            });
         })
         .catch(() => {
             target.innerHTML = '';
