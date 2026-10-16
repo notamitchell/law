@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -62,8 +64,9 @@
         <ab type="editionText" xml:lang="ang" source="#oliver" n="2" corresp="#wit-h">Biscopes feoh XI gylde.</ab>
         <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">A bishop’s property [is to be compensated] with 11[-fold] compensation.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">a bishop’s property eleven fold;</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Bischofs Gut 11fach,</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Bischofs Gut 11fach<ptr type="liebermannNote" n="6" target="#Abt_1-b.lnote.de.6"/>,</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">a bishop’s property 11-fold,</ab>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_1-b.lnote.de.6" n="6" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">4</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Dies und Abt 4 oder ihre Inhalte werden im XI. Jh. benutzt von Grið 7, wo <hi rend="italic">biscop</hi> mit Recht als Erzb. von Canterbury gedeutet wird; Augustin hiess so auch nach Empfang des erzbischöflichen Palliums. Es waren wohl noch nicht andere Bischöfe vorhanden; <hi rend="italic">s. o.</hi> Einl. 7. So ist <hi rend="italic">biscop</hi> hier genau singularisch zu verstehen. Über den Vorrang vor dem König <hi rend="italic">s. Gl</hi> Bischof</seg><seg type="translation" xml:lang="en" source="#claude">This and Abt 4, or their contents, are used in the 11th cent. by Grið 7, where <hi rend="italic">biscop</hi> is rightly interpreted as archbishop of Canterbury; Augustine was so called even after receiving the archiepiscopal pallium. There were probably not yet other bishops present; see above Introd. 7. Thus <hi rend="italic">biscop</hi> is here to be understood strictly in the singular. On the precedence over the king see <hi rend="italic">Gl</hi> Bischof</seg></note>
       </div>
     </body>
   </text>

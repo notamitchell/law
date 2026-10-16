@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -61,8 +63,12 @@
         <ab type="editionText" xml:lang="ang" source="#oliver" n="45" corresp="#wit-h">Gif nasu ælcor sceard weorð, gehwylc VI sciƚƚ gebete.</ab>
         <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If a nose becomes gashed otherwise, let him pay [with] 6 shillings for each [gash].</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If the nose is lacerated otherwise [than by piercing], 6 shillings shall be paid as compensation, for each laceration.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn die Nase anderweitig schartig wird, büsse er jede [Scharte mit] 6 Schill.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn die Nase anderweitig<ptr type="liebermannNote" n="1" target="#Abt_48.lnote.de.1"/> schartig<ptr type="liebermannNote" n="2" target="#Abt_48.lnote.de.2"/> wird, büsse er jede<ptr type="liebermannNote" n="3" target="#Abt_48.lnote.de.3"/> [Scharte<ptr type="liebermannNote" n="4" target="#Abt_48.lnote.de.4"/> mit] 6 Schill.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If the nose is notched in some other way, let him pay [for] each [notch] 6 shillings.</ab>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_48.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">11</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Als durch Durchbohrung</seg><seg type="translation" xml:lang="en" source="#claude">As by piercing through</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_48.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">11</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">s. o.</hi> 42²</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">see above</hi> 42²</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_48.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">11</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">gehwilc</hi> Lesefehler; voriges hinzuzudenken ist auch <hi rend="italic">u.</hi> 60</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">gehwilc</hi> misreading; the preceding is to be supplied mentally also <hi rend="italic">below</hi> 60</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_48.lnote.de.4" n="4" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">11</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">‘Nasenloch’ Price. Zwar bed. <hi rend="italic">gehwilc</hi> <hi rend="italic">u.</hi> 67 ‘jeder von beiden’, und wird <hi rend="italic">nasu</hi> bisweilen <hi rend="italic">naris</hi> glossiert, aber hier bed. es sonst eindeutig ‘Nase’; auch müsste <hi rend="italic">gehwýlce</hi> stehen</seg><seg type="translation" xml:lang="en" source="#claude">‘Nostril’ Price. True, <hi rend="italic">gehwilc</hi> <hi rend="italic">below</hi> 67 means ‘each of the two’, and <hi rend="italic">nasu</hi> is sometimes glossed <hi rend="italic">naris</hi>, but here it otherwise means unambiguously ‘nose’; also <hi rend="italic">gehwýlce</hi> would have to stand [there]</seg></note>
       </div>
     </body>
   </text>

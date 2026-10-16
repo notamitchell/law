@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -61,8 +63,9 @@
         <ab type="editionText" xml:lang="ang" source="#oliver" n="54" corresp="#wit-h">Gif ðuman nægl of weorðeþ, III sciƚƚ gebete.</ab>
         <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If a thumbnail becomes off, let him pay [with] 3 shillings.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If a thumb nail is knocked off, 3 shillings shall be paid as compensation.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Daumennagel ab[gehauen] wird, büsse er 3 Schill.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Daumennagel<ptr type="liebermannNote" n="1" target="#Abt_54-1.lnote.de.1"/> ab[gehauen] wird, büsse er 3 Schill.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a thumbnail is [cut] off, let him pay 3 shillings.</ab>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_54-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">11</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Dass der Fingernagel (<hi rend="italic">s. d. Gl</hi>) ohne Fleisch in zornigem Hiebe mit barbarischen Waffen abgehauen werden konnte, ist schwer vorstellbar. Mindestens hierin waren die Gliederbussentafeln, bei vielen Völkern, wohl nur juristische Theorie</seg><seg type="translation" xml:lang="en" source="#claude">That the fingernail (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi>) could be cut off without flesh in an angry blow with barbaric weapons is hard to imagine. At least in this, the tariffs of compensation for limbs were, among many peoples, probably only juristic theory</seg></note>
       </div>
     </body>
   </text>

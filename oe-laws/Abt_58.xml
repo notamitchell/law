@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -61,8 +63,10 @@
         <ab type="editionText" xml:lang="ang" source="#oliver" n="61.1" corresp="#wit-h">Gif dynt sie, scilling.</ab>
         <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If it should be a blow, a shilling.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If it leaves a bruise, 1 shilling [shall be paid as compensation].</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn es ein Streich ist, [1] Schilling.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn<ptr type="liebermannNote" n="1" target="#Abt_58.lnote.de.1"/> es ein Streich<ptr type="liebermannNote" n="2" target="#Abt_58.lnote.de.2"/> ist, [1] Schilling.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If it is a blow, [1] shilling.</ab>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_58.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">12</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Zusatz zum Vorhergehenden, wie 37. 46. 47. 60</seg><seg type="translation" xml:lang="en" source="#claude">Addition to the preceding, as 37. 46. 47. 60</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_58.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">12</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">‘Schlag offener Hand’, im Ggs. zu 57. <hi rend="italic">Mid fystum vel dyntum geslaa</hi> übersetzt <hi rend="italic">colaphis caedere;</hi> Toller <hi rend="italic">Suppl.</hi> 162. Dagegen versteht Toller ‘mark [Strieme]’. Diese Bed. passt <hi rend="italic">u.</hi> 59. Hier aber wäre sie mit 59f. unvereinbar</seg><seg type="translation" xml:lang="en" source="#claude">‘Blow of the open hand’, in contrast to 57. <hi rend="italic">Mid fystum vel dyntum geslaa</hi> translates <hi rend="italic">colaphis caedere;</hi> Toller <hi rend="italic">Suppl.</hi> 162. Toller, on the other hand, understands ‘mark [weal]’. This meaning fits <hi rend="italic">below</hi> 59. Here, however, it would be incompatible with 59f.</seg></note>
       </div>
     </body>
   </text>

@@ -46,6 +46,42 @@ In the outer margin beside his German translation, Liebermann prints short notes
 
 `tools/laws-from-database.py` (`vgl_links`) resolves each reference in BB to a clause file and writes `<note type="comparison">` (the references, linked with `<ref target="clause:ID">`), `<note type="comparisonPrinted">` (BA) and, where needed, `<note type="comparisonIncomplete">`. It also collects the reverse links: a clause that other clauses compare with it gets `<note type="comparedBy">`. The clause page shows both, as *Compare (Liebermann, Gesetze I p. …)* and *Liebermann compares this clause at*.
 
+## Liebermann's notes (Æthelberht, October 2026)
+
+Liebermann's edition has two sets of notes that the plain texts leave out. Both are now in the clause files for **Æthelberht** (Abt), as a pilot; the other codes can follow in the same way.
+
+- **Textual notes on his Old English (or Latin) text**: the footnotes at the foot of the column in *Gesetze* I (manuscript readings, erasures, other inks, editors' emendations). Numbered afresh on each page; `*` marks an editor's emendation. For Abt: *Gesetze* I pp. 3–8, 43 notes.
+- **Erklärungen on his German translation**: the numbers in the German refer to notes printed separately in *Gesetze* III (1916), numbered afresh in each of Liebermann's clauses (all of Abt 1 is one clause there, though the database divides it into 1[a]–1[g]). For Abt: *Gesetze* III pp. 3–17, 288 notes, plus Liebermann's own footnote on the German at Abt Inscr (vol. I p. 3).
+
+Each note is given in Liebermann's German exactly as printed (his spelling, italics, letter-spacing) and in a semi-literal English translation by Claude. They were transcribed from the page images (not the OCR), and each Erklärung was then proofread against the page in a second, independent pass.
+
+**Where the data lives.** In the workbook *Liebermann_notes_Abt.xlsx* (kept with the main spreadsheet, not in this repository):
+
+- sheet *Texts with note markers*: columns K and L of the main spreadsheet with the note numbers in curly brackets after their word: `{4}`, `{*}`, `{+1}` (a number Liebermann forgot to print and in vol. III says where to put), `{2/4}` (note 2, misprinted 4 in vol. I and corrected by Liebermann in vol. III). Take out the brackets and you have K and L exactly; the script checks this.
+- sheet *Liebermann notes*: one line per note per clause row: where printed, number, German, English, remarks, readings to check.
+
+Later these can become columns of the main spreadsheet (K and L with markers) and a sheet of it (the notes); the script would then read them from there.
+
+**In the clause file**, the note numbers are empty pointers inside the existing texts, so the plain text is unchanged and there is no second copy of it to keep in step:
+
+```xml
+<ab type="liebermannText" …>Godes<ptr type="liebermannNote" n="4" target="#Abt_1-a.lnote.oe.4"/> feoh …</ab>
+<ab type="translation" xml:lang="de" source="#liebermann">Gottes<ptr type="liebermannNote" n="1" target="#Abt_1-a.lnote.de.1"/> und …</ab>
+```
+
+`rend="supplied"` marks a number supplied from Liebermann's correction, `rend="printed-as-4"` one he corrected. The notes follow at the end of the clause, `<note type="liebermannNote">` with `subtype="textual"` (vol. I, on the Old English), `"erklaerung"` (vol. III) or `"translationFootnote"` (vol. I, on the German), each with the volume and page in `<bibl>`, the German in `<seg type="original" xml:lang="de">` and the English in `<seg type="translation" xml:lang="en" source="#claude">`. Italic is `<hi rend="italic">`, letter-spacing `<hi rend="spaced">`, small capitals `<hi rend="smallcaps">`, and a paragraph break inside a note `<lb type="paragraph"/>`. Notes with no number in the text (Abt 54.3, 64.1, whose notes are on the whole clause) have `rend="wholeClause"`.
+
+**On the clause page**, Liebermann's text and his German translation each get a small button, *Show Liebermann's notes*. It shows the note numbers in the text as grey superscripts (each a link to its note) and lists the notes under the text: German, English, and where printed. The Erklärungen carry a line saying that much of them is superseded. The reader's choice is remembered from clause to clause (in their own browser).
+
+**Making them again.** `tools/laws-from-database.py` rebuilds the clause files without the notes, so run the notes script after it:
+
+```
+python3 tools/liebermann-notes.py "path/to/Liebermann_notes_Abt.xlsx" --dry-run
+python3 tools/liebermann-notes.py "path/to/Liebermann_notes_Abt.xlsx"
+```
+
+It needs `pip install openpyxl lxml`. It removes any notes it added before, so it can be run any number of times, and it leaves a file alone (and says so) if the text in the workbook no longer matches the file.
+
 ## Other scholars' cross-references
 
 Places where other scholars say that one clause repeats, revises, derives from, or should be compared with another were collected in October 2026 from Whitelock's footnotes (*EHD* I), Rabin's notes to his translations (DOML 66), Wormald's *Making of English Law* I (including his tables of sources) and *Papers Preparatory*, Jurasinski and Oliver's *Laws of Alfred*, and Kennedy's edition of Cnut's code of 1018 (*ASE* 11, 1983: his table of the code's sources in VI Æthelred and its reuse in I–II Cnut, and his discussion). Only links between two law clauses were taken, not lists of clauses on the same topic. Clause numbers are Liebermann's: Jurasinski and Oliver's own numbering of Alfred, Ine and Wihtred was converted using the Liebermann numbers they print in brackets.
@@ -99,6 +135,8 @@ python3 tools/laws-from-database.py "path/to/OE_Laws_Database - Updated by Claud
 python3 tools/laws-from-database.py "path/to/OE_Laws_Database - Updated by Claude.xlsx"
 python3 tools/laws-from-database.py "path/to/…xlsx" --code Ine                                      # one law code only
 ```
+
+**Then run `tools/liebermann-notes.py`** (see "Liebermann's notes" above), or Liebermann's notes will be missing from the rebuilt files.
 
 The script finds the columns by their headings in row 1, so columns can be moved but not renamed. It reads the sheet called *Sheet1* (the *Read me* and *corrections* sheets are ignored).
 

@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -57,12 +59,17 @@
     <body>
       <div type="clause" n="70">
         <head><ref type="lawCode" target="law:Abt">Abt</ref> 70</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="70" corresp="#wit-h">Gif seo micle ta of weorðeþ, X scll' forgelden.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="70" corresp="#wit-h">Gif seo micle<ptr type="liebermannNote" n="3" target="#Abt_70.lnote.oe.3"/> ta of weorðeþ, X scll'<ptr type="liebermannNote" n="2" target="#Abt_70.lnote.oe.2"/> forgelden.<ptr type="liebermannNote" n="*" target="#Abt_70.lnote.oe.star"/></ab>
         <ab type="editionText" xml:lang="ang" source="#oliver" n="70" corresp="#wit-h">Gif seo micle ta of weorðeþ, X scƚƚ forgelde(n).</ab>
         <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If the big toe becomes [struck] off, let him pay [with] 10 shillings.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If the big toe is struck off, 10 shillings shall be paid for it.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn die grosse Zehe ab[gehauen] wird, entgelte er 10 Schll.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn die grosse<ptr type="liebermannNote" n="1" target="#Abt_70.lnote.de.1"/> Zehe ab[gehauen] wird, entgelte er 10 Schll.<ptr type="liebermannNote" n="2" target="#Abt_70.lnote.de.2"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If the big toe is [cut] off, let him pay 10 shillings.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Abt_70.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">7</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">geändert in</hi> mycle</seg><seg type="translation" xml:lang="en" source="#claude">altered to mycle</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Abt_70.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">7</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so ohne</hi> i</seg><seg type="translation" xml:lang="en" source="#claude">so, without i</seg><note type="remark" resp="#claude">One footnote serves four places on p. 7: Abt 67.1, 70, 73 and 75.1.</note></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Abt_70.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">7</biblScope></bibl><seg type="original" xml:lang="de">forgelde <hi rend="italic">bessern Edd.</hi></seg><seg type="translation" xml:lang="en" source="#claude">forgelde, the editors correct</seg><note type="remark" resp="#claude">One footnote serves Abt 69 and Abt 70.</note></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_70.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">13</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Korrektor ändert öfter früheres <hi rend="italic">i</hi> in <hi rend="italic">y;</hi> <hi rend="italic">s.</hi> 74. 76 <hi rend="italic">sy</hi></seg><seg type="translation" xml:lang="en" source="#claude">The corrector often changes earlier <hi rend="italic">i</hi> to <hi rend="italic">y;</hi> <hi rend="italic">see</hi> 74. 76 <hi rend="italic">sy</hi></seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_70.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">13</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Halbsoviel wie der Daumen <hi rend="italic">o.</hi> 54; <hi rend="italic">vgl. Gl</hi> Fuss 2b. Die Summe der Zehenbussen macht 25 Schill., also bleibt für den Fussstumpf 25 Schill., ‘was sich mit der physiologischen Bedeutung des Metatarsus erklärt’ (Schreuer 21) und bei anderen Germanen wiederfindet</seg><seg type="translation" xml:lang="en" source="#claude">Half as much as the thumb <hi rend="italic">above</hi> 54; <hi rend="italic">cf. Gl</hi> Fuss 2b. The sum of the compensations for the toes makes 25 shillings, so 25 shillings remain for the stump of the foot, ‘which is explained by the physiological importance of the metatarsus’ (Schreuer 21) and is found again among other Germanic peoples</seg></note>
       </div>
     </body>
   </text>

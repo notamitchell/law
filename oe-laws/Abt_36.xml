@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -31,6 +32,7 @@
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
           <bibl xml:id="jurasinski-and-oliver" type="study">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021)</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -59,13 +61,15 @@
     <body>
       <div type="clause" n="36">
         <head><ref type="lawCode" target="law:Abt">Abt</ref> 36</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="36" corresp="#wit-h">Gif sio uterre hion gebrocen worðeþ; X scillingum gebete.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="36" corresp="#wit-h">Gif sio uterre hion<ptr type="liebermannNote" n="2" target="#Abt_36.lnote.oe.2"/> gebrocen worðeþ; X scillingum gebete.</ab>
         <ab type="editionText" xml:lang="ang" source="#oliver" n="36" corresp="#wit-h">Gif sio uterre hion gebrocen weorðeþ, X scillingum gebete.</ab>
         <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If the outer hion [?=covering of the skull] becomes broken, let him pay with 10 shillings.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If the outer covering of the skull is broken, 10 shillings shall be paid as compensation.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn die äussere Hirn[..?] gebrochen wird, büsse er mit 10 Schillingen;</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn die äussere Hirn[..?]<ptr type="liebermannNote" n="1" target="#Abt_36.lnote.de.1"/> gebrochen wird, büsse er mit 10 Schillingen;</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If the outer brain-[..?] is broken, let him pay 10 shillings;</ab>
         <note type="comparedBy" source="#jurasinski-and-oliver" n="351"><ref target="clause:Af_44">Af 44–44.1</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Abt_36.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">5</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">verderbt?</hi></seg><seg type="translation" xml:lang="en" source="#claude">corrupt?</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_36.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">10</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Hirn; <hi rend="italic">Archiv neu. Spra.</hi> 115 (1905) S. 177; Thöne <hi rend="italic">Namen d. Körpert. bei Agsa.</hi> 64. Nordisch und Friesisch gibt es dafür ein Wort derselben Wurzel. Die Wundentafeln der Festlandsgermanen scheiden Blosslegung der Hirnschale, Verletzung ihrer äusseren Knochen, der Hirnhaut, des Gehirns; Günther, <hi rend="italic">Hauptstadien der Körperverletzung</hi> 52. — Vom ‘Brechen’ einer Haut spricht auch Af 70, 1</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Hirn; <hi rend="italic">Archiv neu. Spra.</hi> 115 (1905) p. 177; Thöne <hi rend="italic">Namen d. Körpert. bei Agsa.</hi> 64. In Norse and Frisian there is a word of the same root for it. The wound-tariffs of the continental Germans distinguish laying bare of the skull, injury of its outer bone, of the brain membrane, of the brain; Günther, <hi rend="italic">Hauptstadien der Körperverletzung</hi> 52. — Of the ‘breaking’ of a skin Af 70, 1 also speaks</seg></note>
       </div>
     </body>
   </text>
