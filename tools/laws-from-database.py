@@ -115,8 +115,7 @@ NEEDED = ['code', 'clause', 'kText', 'german', 'english', 'nText', 'kSig', 'tSig
 
 LIEBERMANN_REF = ('<author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, '
                   'vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)')
-CLAUDE_REF = ('Claude (an AI model made by Anthropic), semi-literal English translation of '
-              'Liebermann’s German, made for this database in 2026')
+CLAUDE_REF = ('A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation')
 
 # Translators named in the original spreadsheet's sub-header rows for the law
 # codes that have no modern editor (column T there is Liebermann's text).

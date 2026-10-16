@@ -63,14 +63,14 @@ const summary = xml => {
         oeLang = attr(t.attrs, 'xml:lang');
         const ed = attr(t.attrs, 'source').replace(/^#/, '');
         const sig = wits[attr(t.attrs, 'corresp').replace(/^#/, '')];
-        oeLabel = (eds[ed] || ed || 'Unknown') + (sig ? ', MS ' + sig : '');
+        oeLabel = (eds[ed] || ed || 'Unknown') + (sig ? (/^Q\b/.test(sig) ? ', ' : ', MS ') + sig : '');
     }
     const fromGerman = [...xml.matchAll(/<ab type="translation"([^>]*)>([\s\S]*?)<\/ab>/g)]
         .filter(m => /ana="#fromGerman"/.test(m[1])).map(m => decode(m[2])).filter(Boolean);
     let gloss = '', glossLabel = '';
     if (fromGerman.length) {
         gloss = fromGerman[0];
-        glossLabel = 'Claude, from Liebermann’s German';
+        glossLabel = 'LLM, from Liebermann’s German';
     } else {
         const other = [...xml.matchAll(/<ab type="translation"([^>]*)>([\s\S]*?)<\/ab>/g)]
             .filter(m => !/xml:lang="de"/.test(m[1])).find(m => decode(m[2]));

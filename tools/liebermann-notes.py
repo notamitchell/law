@@ -63,8 +63,7 @@ ERKL_BIBL = ('<bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Lie
              '<title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: '
              '<title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> '
              '(Halle: Niemeyer, 1916)</bibl>')
-CLAUDE_BIBL = ('<bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal '
-               'English translation of Liebermann’s German, made for this database in 2026</bibl>')
+CLAUDE_BIBL = ('<bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>')
 RESP = ('<respStmt><resp>Transcription and English translation of Liebermann’s notes</resp>'
         '<name ref="#claude">Claude</name></respStmt>')
 

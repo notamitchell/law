@@ -204,7 +204,7 @@ scripts:
                 <h2>The clauses</h2>
                 <a class="button" href="${root}laws.html?kw=${encodeURIComponent(k)}">Search within these clauses</a>
             </div>
-            <p class="small muted">Each clause gives the text of the first manuscript in Liebermann’s edition and Claude’s semi-literal English of Liebermann’s German, as on the law code pages. Click a clause number, or <em>All texts and translations</em>, for all its texts, manuscripts and translations.</p>
+            <p class="small muted">Each clause gives the text of the first manuscript in Liebermann’s edition and a semi-literal English rendering (made with an LLM, Claude) of Liebermann’s German, as on the law code pages. Click a clause number, or <em>All texts and translations</em>, for all its texts, manuscripts and translations.</p>
             ${list}`;
         if (location.hash) { const el = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (el) el.scrollIntoView(); }
     }
