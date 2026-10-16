@@ -357,6 +357,13 @@ scripts:
         const cmp = cmpAll.find(n => srcId(n) === 'liebermann'), back = backAll.find(n => srcId(n) === 'liebermann');
         const others = cmpAll.filter(n => srcId(n) !== 'liebermann'), othersBack = backAll.filter(n => srcId(n) !== 'liebermann');
         const scholar = id => (srcs[id] || {}).name || id;
+        // The scholar's name, linked to the work in "Editions and translations" or "Studies" below.
+        const scholarLink = id => {
+            if (!srcs[id]) return document.createTextNode(scholar(id));
+            const a = sourceLink(srcs[id]);
+            a.className = 'scholar-link';
+            return a;
+        };
         const childOf = (n, name) => Array.from(n.childNodes).find(c => c.localName === name);
         if (cmp || back || others.length || othersBack.length) {
             const box = el('div', 'clause-compare small');
@@ -412,17 +419,27 @@ scripts:
                 });
                 box.appendChild(p);
             });
+            // Links pointing TO this clause: "Liebermann compares Grið 7 to this clause." The scholar's
+            // name links (subtly) to the work in the list at the foot of the page.
             if (back) {
                 const p = el('p');
-                p.appendChild(el('strong', null, 'Liebermann compares this clause at: '));
+                const lead = el('strong');
+                lead.appendChild(scholarLink('liebermann'));
+                lead.appendChild(document.createTextNode(' compares '));
+                p.appendChild(lead);
                 p.appendChild(inline(back));
+                p.appendChild(el('strong', null, ' to this clause.'));
                 box.appendChild(p);
             }
             const backBySource = {};
             othersBack.forEach(n => (backBySource[srcId(n)] = backBySource[srcId(n)] || []).push(n));
             Object.entries(backBySource).forEach(([id, ns]) => {
                 const p = el('p');
-                p.appendChild(el('strong', null, 'Compared with this clause (' + scholar(id) + '): '));
+                // "Jurasinski and Oliver compare with this clause: Af 2.1 (p. 290); …"
+                const lead = el('strong');
+                lead.appendChild(scholarLink(id));
+                lead.appendChild(document.createTextNode((/ and /.test(scholar(id)) ? ' compare' : ' compares') + ' with this clause: '));
+                p.appendChild(lead);
                 ns.forEach((n, i) => {
                     if (i) p.appendChild(document.createTextNode('; '));
                     p.appendChild(inline(n));
