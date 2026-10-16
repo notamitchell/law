@@ -286,7 +286,8 @@ def ensure_sources(doc, notes):
 
 def candidates(div, col, used):
     """The <ab> elements a column of the spreadsheet can be, in the clause file."""
-    abs_ = [a for a in div.findall('t:ab', NS) if id(a) not in used]
+    tree = div.getroottree()
+    abs_ = [a for a in div.findall('t:ab', NS) if tree.getpath(a) not in used]
     src = lambda a: (a.get('source') or '').lstrip('#')
     lang = lambda a: a.get('{%s}lang' % XML) or ''
     if col in LIEB_TEXT:
@@ -351,7 +352,7 @@ def main():
             else:
                 key, ptr = 'attenborough' + ('-T' if col == 'T' else '-tr'), 'editorNote'
             new = insert_markers(cands[0], marked, ptr, target(key))
-            used.add(id(new))
+            used.add(doc.getpath(new))
         if not ok:
             continue
         for note in ns_:
