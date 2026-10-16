@@ -97,7 +97,7 @@ scripts:
         erklaerung: {
             subtypes: ['erklaerung', 'translationFootnote'],
             title: 'Liebermann’s Erklärungen',
-            intro: 'Liebermann’s explanations of his German translation, printed separately in Gesetze III (1916), with an English translation by Claude. Scholarship has moved a long way since 1916 and much of this commentary is superseded; it is given here as part of the record of Liebermann’s edition.'
+            intro: 'Liebermann’s explanatory notes and commentary on the clause (his Erklärungen), printed separately in Gesetze III (1916) and keyed to the numbers in his German translation, with an English translation by Claude. Liebermann puts an accent on some German words to mark emphasis (éin ‘one’, nách); the German keeps them as printed, the English does not. Scholarship has moved a long way since 1916 and much of this commentary is superseded; it is given here as part of the record of Liebermann’s edition.'
         }
     };
     const xmlId = n => n.getAttribute('xml:id') || n.getAttributeNS('http://www.w3.org/XML/1998/namespace', 'id') || '';
@@ -519,6 +519,25 @@ scripts:
         return box.children.length ? box : null;
     }
 
+    // A clause of Liebermann's that the database divides with letters in square brackets (Abt 1 as 1[a]–1[g])
+    // to match later editors' numbering: say so, and link the parts.
+    function subdivision(row) {
+        const m = (row.clause || '').match(/^(.*?)\[([a-z])\]$/);
+        if (!m) return null;
+        const base = m[1];
+        const parts = catalogue.filter(c => c.code === row.code && (c.clause === base || (c.clause.startsWith(base + '[') && /^\[[a-z]\]$/.test(c.clause.slice(base.length)))));
+        if (parts.length < 2) return null;
+        const p = el('p', 'clause-subdivision small');
+        p.appendChild(document.createTextNode('Liebermann prints ' + row.code + ' ' + base + ' as one clause. Here it is divided into '));
+        parts.forEach((c, i) => {
+            if (i) p.appendChild(document.createTextNode(i === parts.length - 1 ? ' and ' : ', '));
+            if (c.id === row.id) p.appendChild(el('strong', null, c.clause));
+            else { const a = el('a', null, c.clause); a.href = '?id=' + encodeURIComponent(c.id); p.appendChild(a); }
+        });
+        p.appendChild(document.createTextNode(' (the letters in square brackets are not Liebermann’s), to match the numbering of later editors.'));
+        return p;
+    }
+
     function render(row, doc) {
         const h1 = el('h1');
         h1.appendChild(codeLink(row));
@@ -556,6 +575,8 @@ scripts:
         header.appendChild(meta);
         const dated = datePlace(doc, allSrcs);
         if (dated) header.appendChild(dated);
+        const parts = subdivision(row);
+        if (parts) header.appendChild(parts);
         target.appendChild(header);
 
         const sec = el('section', 'entry-section');

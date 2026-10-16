@@ -8,9 +8,9 @@
         <respStmt><resp>Edition of the text</resp><name ref="#oliver">Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#oliver">Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
@@ -28,8 +28,9 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">4</biblScope></bibl>
           <bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002), p. <biblScope unit="page">66</biblScope></bibl>
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">391</biblScope></bibl>
           <bibl xml:id="claude" type="translation">Claude (an AI model made by Anthropic), semi-literal English translation of Liebermann’s German, made for this database in 2026</bibl>
-          <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -52,7 +53,7 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 30 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-16">Generated from row 29 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 4.</change>
     </revisionDesc>
   </teiHeader>
@@ -60,12 +61,14 @@
     <body>
       <div type="clause" n="17[b]">
         <head><ref type="lawCode" target="law:Abt">Abt</ref> 17[b]</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="17[b]" corresp="#wit-h">siððan gehwylc scilling.</ab>
-        <ab type="editionText" xml:lang="ang" source="#oliver" n="22.2" corresp="#wit-h">Siððan gehwylc scilling.</ab>
-        <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">Afterwards, each a shilling.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">and afterwards each one shall pay a shilling.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">jeder späterhin [Eindringende 1] Schilling.</ab>
-        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">each one [forcing his way in] later, [1] shilling.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="17[b]" corresp="#wit-h">se þe æfter irneþ: III scillingas,</ab>
+        <ab type="editionText" xml:lang="ang" source="#oliver" n="22.1" corresp="#wit-h">Se þe æfter irneþ, III scillingas.</ab>
+        <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">He who breaks in next, 3 shillings.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">He who comes next shall pay 3 shillings compensation;</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-h">he who enters next, three shillings;</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">der, welcher [gleich] nachher<ptr type="liebermannNote" n="5" target="#Abt_17-b.lnote.de.5"/> [hinein] dringt, 3 Schillinge,</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">the one who forces his way [in] [immediately] after, 3 shillings;</ab>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Abt_17-b.lnote.de.5" n="5" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">7</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Der erste Verbrecher büsst mehr als das Gefolge; <hi rend="italic">vgl.</hi> Osenbrüggen <hi rend="italic">Stud. Dt. u. Schweiz. RG</hi> 264</seg><seg type="translation" xml:lang="en" source="#claude">The first offender pays more compensation than his followers; <hi rend="italic">cf.</hi> Osenbrüggen <hi rend="italic">Stud. Dt. u. Schweiz. RG</hi> 264</seg></note>
       </div>
     </body>
   </text>
