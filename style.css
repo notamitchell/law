@@ -396,18 +396,27 @@ td.term { font-weight: 600; color: var(--navy-dark); white-space: nowrap; }
 .liebermann-text a { text-decoration: none; border-bottom: 1px dotted var(--link); }
 /* Links in entries have a colour for each kind of place they lead:
    law codes (brown), clause numbers (a brighter red, solid underline),
-   manuscripts (purple), grammatical abbreviations (blue). */
-:root { --law-code: #7a2e0e; --clause: #b8401f; --manuscript: #5b3a8e; --abbreviation: var(--link); }
+   manuscripts (purple), grammatical abbreviations (blue), authors and
+   works cited (green). */
+:root { --law-code: #7a2e0e; --clause: #b8401f; --manuscript: #5b3a8e; --abbreviation: var(--link); --work-cited: #2e6b45; }
 .liebermann-text a.ref-lawCode, .entry-section a.ref-lawCode { color: var(--law-code); border-bottom-color: var(--law-code); }
 .liebermann-text a.ref-manuscript, .entry-section a.ref-manuscript { color: var(--manuscript); border-bottom-color: var(--manuscript); }
 .liebermann-text a.ref-abbreviation { color: var(--abbreviation); border-bottom-color: var(--abbreviation); }
+.liebermann-text a.ref-bibl { color: var(--work-cited); border-bottom-color: var(--work-cited); }
 .link-key { white-space: nowrap; border-bottom: 1px dotted currentColor; }
 .link-key--law { color: var(--law-code); }
 .link-key--ms { color: var(--manuscript); }
 .link-key--gram { color: var(--abbreviation); }
+.link-key--bib { color: var(--work-cited); }
 .law-popup--law .law-popup-code { color: var(--law-code); }
 .law-popup--ms .law-popup-code { color: var(--manuscript); }
 .law-popup--gram .law-popup-code { color: var(--abbreviation); }
+.law-popup--bib .law-popup-code { color: var(--work-cited); }
+/* Authors and works cited (bibAbb.html) */
+.bib-work { margin: 0 0 1.5rem; }
+.bib-work h2 { font-size: 1.15rem; margin: 0 0 0.25rem; }
+.bib-work .bib-full { margin: 0 0 0.25rem; padding-left: 1.5rem; text-indent: -1.5rem; }
+.bib-work p.small { margin: 0 0 0.2rem; }
 .liebermann-text a.ref-clause { color: var(--clause); border-bottom: 1px solid currentColor; }
 .liebermann-text a.ref-clause:hover, .liebermann-text a.ref-clause:focus-visible { background: var(--highlight); }
 .link-key--clause { color: var(--clause); border-bottom-style: solid; }

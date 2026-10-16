@@ -4,10 +4,11 @@
  * Every law code, manuscript siglum and grammatical abbreviation in an entry
  * is a link to its heading on a list: the law code list (lawAbb.html#Abt,
  * which also takes manuscript sigla such as lawAbb.html#H and sends them on to
- * msAbb.html) or the grammatical abbreviations (gramAbb.html#Plural). This
+ * msAbb.html), the grammatical abbreviations (gramAbb.html#Plural) or the
+ * authors and works Liebermann cites (bibAbb.html#CitToller). This
  * script turns a click on one of those links into a small popup that shows
- * what it stands for, taken from data/markLaw.json, data/manuscripts.json or
- * data/markforward.json: the German
+ * what it stands for, taken from data/markLaw.json, data/manuscripts.json,
+ * data/markforward.json or data/bibliography.json: the German
  * expansion and the English translation, and for a grammatical abbreviation
  * its note, if it has one.
  *
@@ -24,14 +25,15 @@
 (function () {
     'use strict';
 
-    const LINK = 'a[href*="lawAbb.html#"], a[href*="msAbb.html#"], a[href*="gramAbb.html#"]';
+    const LINK = 'a[href*="lawAbb.html#"], a[href*="msAbb.html#"], a[href*="gramAbb.html#"], a[href*="bibAbb.html#"]';
     // The two lists: where the data is, and what the popup calls things.
     const KINDS = {
         law: { file: 'data/markLaw.json', list: 'lawAbb.html', noun: 'Law code', more: 'Full list of law codes' },
         // Manuscript sigla are linked to lawAbb.html like law codes (lawAbb.html
         // sends them on to msAbb.html); their data is in a file of their own.
         ms: { file: 'data/manuscripts.json', list: 'msAbb.html', noun: 'Manuscript', more: 'Full list of manuscripts' },
-        gram: { file: 'data/markforward.json', list: 'gramAbb.html', noun: 'Abbreviation', more: 'Full list of grammatical abbreviations' }
+        gram: { file: 'data/markforward.json', list: 'gramAbb.html', noun: 'Abbreviation', more: 'Full list of grammatical abbreviations' },
+        bib: { file: 'data/bibliography.json', list: 'bibAbb.html', noun: 'Work cited', more: 'Full list of authors and works cited' }
     };
     const HOVER_DELAY = 220;   // ms of rest before a hover preview opens
     const LEAVE_DELAY = 280;   // ms before a hover preview closes
@@ -53,6 +55,7 @@
     const kindOf = link => {
         const href = link.getAttribute('href') || '';
         if (href.indexOf('gramAbb.html#') >= 0) return 'gram';
+        if (href.indexOf('bibAbb.html#') >= 0) return 'bib';
         if (href.indexOf('msAbb.html#') >= 0) return 'ms';
         return groups.ms && groups.ms[anchorOf(link)] ? 'ms' : 'law';
     };
@@ -76,6 +79,7 @@
     function ready(link) {
         const href = link.getAttribute('href') || '';
         if (href.indexOf('gramAbb.html#') >= 0) return load('gram');
+        if (href.indexOf('bibAbb.html#') >= 0) return load('bib');
         return Promise.all([load('ms'), load('law')]);
     }
 
@@ -105,6 +109,17 @@
         return el;
     }
 
+    // Text with <i>…</i> marking titles: the italics become <i> elements,
+    // everything else stays text (never inserted as HTML).
+    function withItalics(el, text) {
+        String(text == null ? '' : text).split(/(<i>[\s\S]*?<\/i>)/).forEach(part => {
+            const m = part.match(/^<i>([\s\S]*)<\/i>$/);
+            if (m) el.appendChild(element('i', null, m[1]));
+            else if (part) el.appendChild(document.createTextNode(part));
+        });
+        return el;
+    }
+
     function build(link, row) {
         const printed = norm(link.textContent) || norm(row['Gesetze Text']);
         const box = element('div', 'law-popup law-popup--' + kindOf(link));
@@ -122,6 +137,23 @@
         box.appendChild(element('p', 'law-popup-code', printed));
 
         const list = element('dl');
+        if (kindOf(link) === 'bib') {
+            // A work cited: its full citation, with titles in italics.
+            list.appendChild(element('dt', null, 'Full citation'));
+            list.appendChild(withItalics(element('dd'), row['Full Citation']));
+            const bibNote = norm(row['Notes']);
+            if (bibNote) {
+                list.appendChild(element('dt', null, 'Note'));
+                list.appendChild(withItalics(element('dd', 'law-popup-note'), bibNote));
+            }
+            box.appendChild(list);
+            const moreBib = element('a', 'law-popup-more', kind.more);
+            moreBib.href = root() + kind.list + '#' + encodeURIComponent(anchorOf(link));
+            box.appendChild(moreBib);
+            box.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+            box.addEventListener('mouseleave', () => { if (!pinned) scheduleHide(); });
+            return box;
+        }
         const german = norm(row['German Expansion']);
         const english = norm(row['English Translation']);
         if (german) {
