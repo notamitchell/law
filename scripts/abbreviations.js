@@ -1,9 +1,11 @@
 /*
- * eLiebermann: the lists of law codes, manuscripts and grammatical
- * abbreviations (lawAbb.html, msAbb.html and gramAbb.html). The pages share
- * this code; each loads its own data file, named by data-source on
- * #content-container (data/markLaw.json, data/manuscripts.json or
- * data/markforward.json).
+ * eLiebermann: the lists of law codes, manuscripts, grammatical
+ * abbreviations and authors and works cited (lawAbb.html, msAbb.html,
+ * gramAbb.html and bibAbb.html). The pages share this code; each loads its
+ * own data file, named by data-source on #content-container
+ * (data/markLaw.json, data/manuscripts.json, data/markforward.json or
+ * data/bibliography.json). The works cited are drawn as a bibliography
+ * (data-layout="works"), one entry per work, not as tables.
  *
  * Rows with the same Anchor are variant spellings of one abbreviation and
  * share a heading, which is what entry pages link to (lawAbb.html#Ine).
@@ -22,7 +24,7 @@
         { field: 'Notes', label: 'Notes' },
         { field: 'Liebermann I, page', label: 'Gesetze I, p.' }
     ];
-    const FIELDS = ['Gesetze Text', 'German Expansion', 'English Translation'].concat(EXTRA.map(c => c.field));
+    const FIELDS = ['Gesetze Text', 'German Expansion', 'English Translation', 'Short Title', 'Full Citation'].concat(EXTRA.map(c => c.field));
     let groups = {};
     // The first three column heads; a page can name them with data-heads="A|B|C" on #content-container.
     function heads() {
@@ -32,6 +34,36 @@
 
     function esc(s) {
         return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    // Text with <i>…</i> for titles (data/bibliography.json): escaped, then
+    // only the italics let through.
+    function italics(s) {
+        return esc(s).replace(/&lt;i&gt;/g, '<i>').replace(/&lt;\/i&gt;/g, '</i>');
+    }
+    const plainText = s => String(s == null ? '' : s).replace(/<\/?i>/g, '');
+
+    // The bibliography: one entry per work, with its full citation, the
+    // forms in which the Wörterbuch cites it, and any note.
+    function drawWorks(term, scope, container) {
+        let html = '';
+        let shown = 0;
+        Object.keys(groups).forEach(anchor => {
+            const rows = groups[anchor];
+            if (term && !rows.some(r => matches(r, term, scope))) return;
+            shown++;
+            const r0 = rows[0];
+            const forms = [...new Set(rows.map(r => String(r['Gesetze Text']).trim()))];
+            const note = (rows.find(r => r['Notes']) || {})['Notes'];
+            html += `<section class="bib-work" id="${esc(anchor)}">
+                <h2>${esc(r0['Short Title'])}</h2>
+                <p class="bib-full">${italics(r0['Full Citation'])}</p>
+                <p class="small"><span class="muted">As printed in the Wörterbuch:</span> ${forms.map(f => `<span class="term">${esc(f)}</span>`).join(' · ')}</p>
+                ${note ? `<p class="small bib-note"><span class="muted">Note:</span> ${italics(note)}</p>` : ''}
+            </section>`;
+        });
+        document.getElementById('count').textContent = `${shown} of ${Object.keys(groups).length} works`;
+        container.innerHTML = html || `<p>Nothing matches “${esc(term)}”.</p>`;
     }
 
     function load(rows) {
@@ -63,13 +95,14 @@
 
     function matches(row, term, scope) {
         const fields = scope === 'all' ? FIELDS : [scope];
-        return fields.some(f => row[f] && String(row[f]).toLowerCase().includes(term));
+        return fields.some(f => row[f] && plainText(row[f]).toLowerCase().includes(term));
     }
 
     function draw() {
         const term = document.getElementById('searchInput').value.trim().toLowerCase();
         const scope = document.getElementById('searchScope').value;
         const container = document.getElementById('content-container');
+        if (container.dataset.layout === 'works') return drawWorks(term, scope, container);
         const oneTable = document.getElementById('oneTable');
         if (oneTable && oneTable.checked) return drawOneTable(term, scope, container);
         let html = '';

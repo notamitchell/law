@@ -124,7 +124,7 @@ scripts:
     const FACSIMILE = {{ site.facsimile_url | jsonify }};
     const esc = ELieb.escapeXml;
 
-    // Law codes, manuscripts and abbreviations to link, from data/markLaw.json, data/manuscripts.json and data/markforward.json.
+    // Law codes, manuscripts, abbreviations and works cited to link, from data/markLaw.json, data/manuscripts.json, data/markforward.json and data/bibliography.json.
     const abbreviations = ELieb.loadAbbreviations(root);
 
     // A page break inside an entry, shown as [p. 4] and kept when a change is
@@ -199,7 +199,7 @@ scripts:
     let currentXml = '', currentFile = '';
 
     async function processEntry() {
-        const { markLaw, markforward } = await abbreviations;
+        const { markLaw, markforward, bibliography } = await abbreviations;
         const entryHtml = quill.root.innerHTML;
         const checks = [];
         if (ELieb.isEmptyHtml(entryHtml)) {
@@ -218,8 +218,8 @@ scripts:
             lang: $('language').value,
             page: $('page_number').value.trim(),
             facsimile: $('archivePageLink').value.trim(),
-            entryHtml: ELieb.linkAbbreviations(entryHtml, markLaw, markforward),
-            definitionHtml: ELieb.linkAbbreviations(quillDefinition.root.innerHTML, markLaw, markforward),
+            entryHtml: ELieb.linkAbbreviations(entryHtml, markLaw, markforward, bibliography),
+            definitionHtml: ELieb.linkAbbreviations(quillDefinition.root.innerHTML, markLaw, markforward, bibliography),
             translationHtml: quillEnglish.root.innerHTML,
             seeAlso: rows('see').map(l => ({ text: l.text, slug: l.slug || ELieb.slugify(l.text) })),
             links: { bt: rows('bt'), doe: rows('doe'), wiktionary: rows('wiktionary'), lawCode: rows('lawCode') },

@@ -7,7 +7,7 @@
 > This page is the technical documentation for the people who build and maintain the site.
 >
 > - **Look up a word:** [Dictionary](https://notamitchell.github.io/law/dictionary.html)
-> - **Abbreviations:** [Law codes and manuscripts](https://notamitchell.github.io/law/lawAbb.html) · [Grammatical abbreviations](https://notamitchell.github.io/law/gramAbb.html)
+> - **Abbreviations:** [Law codes and manuscripts](https://notamitchell.github.io/law/lawAbb.html) · [Grammatical abbreviations](https://notamitchell.github.io/law/gramAbb.html) · [Authors and works cited](https://notamitchell.github.io/law/bibAbb.html)
 > - **Suggest an entry or a change:** [Suggest an entry](https://notamitchell.github.io/law/contribute.html), or *Suggest a change* at the foot of any entry
 
 ---
@@ -58,7 +58,7 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 
 - **Entry pages** (`entry.html?id=abbod`) fetch `entries/abbod.xml` and render it with `ELieb.renderTei()`. The `id` can also be a headword (`entry.html?id=æbære`). If there is no file, the page offers to start one.
 - **The Dictionary page** reads `data/entries.json`, which `tools/build-index.js` writes on every deploy from the files in `entries/`. If it's missing (for example in a local build where you didn't run the script), the page falls back to a plain list of file names.
-- **Abbreviation links.** When an entry is made, `ELieb.linkAbbreviations()` links every law code, manuscript siglum and abbreviation listed in `data/markLaw.json`, `data/manuscripts.json` and `data/markforward.json`, longest match first, and stores the links in the TEI. Law codes are only linked in roman type, since Liebermann's italics are German.
+- **Abbreviation links.** When an entry is made, `ELieb.linkAbbreviations()` links every law code, manuscript siglum and abbreviation listed in `data/markLaw.json`, `data/manuscripts.json` and `data/markforward.json`, and every author or work in `data/bibliography.json`, longest match first, and stores the links in the TEI. Law codes are only linked in roman type, since Liebermann's italics are German.
 - **Clause numbers.** In Liebermann's text on an entry page, the number of a cited clause (the *8* of *Ine 8*) links to that clause in the laws database, as the citation list under the entry does; the law code before it keeps its own link and popup. The numbers are found by the same rules as the citation list (`ELieb.scanCitations`, used by `extractCitations` and `linkClauseNumbers`), and only numbers that the list links to a clause are linked.
 - **Abbreviation popups.** On an entry page, clicking a law code, manuscript siglum or grammatical abbreviation opens a small popup with its German expansion and English translation (and, for a grammatical abbreviation, its note), read by the link's Anchor from `data/markLaw.json` or `data/markforward.json` (`scripts/lawpopup.js`). Hovering previews it on a computer. Ctrl/Cmd-click, or any failure to load the data, still goes to the list. Fix a wrong popup by fixing its row in the data file.
 - **Site pages are TEI too.** The text of Home and About is in `pages/Home.xml` and `pages/About.xml`, so it can be edited like an entry.
@@ -78,11 +78,11 @@ Nothing is published until it is committed to `main`. GitHub Pages rebuilds the 
 | `entry.html` | Shows one entry. |
 | `contribute.html` | *Suggest an entry*: makes, previews and downloads one entry's TEI file. `?id=` suggests a change to an existing entry, with the form filled in from its file. |
 | `import.html` | Bulk import of a Word document in the browser. Not on the site for now (`published: false`); see [docs/IMPORT.md](docs/IMPORT.md). |
-| `abbreviations.html`, `lawAbb.html`, `msAbb.html`, `gramAbb.html` | The abbreviation lists: law codes, manuscripts and grammatical abbreviations (`scripts/abbreviations.js`). |
+| `abbreviations.html`, `lawAbb.html`, `msAbb.html`, `gramAbb.html`, `bibAbb.html` | The abbreviation lists: law codes, manuscripts, grammatical abbreviations, and authors and works cited (`scripts/abbreviations.js`). |
 | `guide.html` | How to read an entry: Liebermann's own explanation of the dictionary (vol. II.1, p. IV) in English, with a key to his citations. |
 | `entries/*.xml` | **The dictionary.** One TEI file per entry. See [docs/SCHEMA.md](docs/SCHEMA.md). |
 | `pages/*.xml` | Text of the site pages, as TEI. |
-| `data/markLaw.json`, `data/manuscripts.json`, `data/markforward.json` | Law codes; manuscript sigla; grammatical abbreviations. Edit these to add a spelling that isn't linked. Manuscript sigla are linked like law codes (`law:H`, to `lawAbb.html#H`), and `lawAbb.html` sends a manuscript's link on to `msAbb.html`. |
+| `data/markLaw.json`, `data/manuscripts.json`, `data/markforward.json`, `data/bibliography.json` | Law codes; manuscript sigla; grammatical abbreviations; authors and works cited (Full Citation, with titles between `<i>` and `</i>`). Edit these to add a spelling that isn't linked. Manuscript sigla are linked like law codes (`law:H`, to `lawAbb.html#H`), and `lawAbb.html` sends a manuscript's link on to `msAbb.html`. |
 | `scripts/eliebermann.js` | Shared code: file names, linking, building TEI from the form, rendering TEI. |
 | `scripts/docx-import.js` | Splits a Word document into entries. See [docs/IMPORT.md](docs/IMPORT.md). |
 | `scripts/lawpopup.js`                               | The abbreviation popups (law codes, manuscripts, grammatical) on entry pages.                                                                                                                            |

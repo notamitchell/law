@@ -1,0 +1,31 @@
+---
+title: Authors and Works Cited
+section: abbreviations
+scripts:
+  - "ROOT/scripts/abbreviations.js"
+---
+<h1>Authors and Works Cited</h1>
+
+<p class="lede">The modern scholars and editions Liebermann cites in the Wörterbuch (Toller, Sievers, Birch, His, Chadwick…), with the full citation of each work. Entries link here when they cite one.</p>
+
+<p class="small">Liebermann never printed a bibliography for the Wörterbuch: he cites by author and a short title, often abbreviated in several ways (“Birch Cart. Sax.”, “Birch Cartul.”). The full citations here are reconstructed from his short titles and the pages and dates he gives, and checked against the published works where possible. Where he does not say which edition he used, the one current when the Wörterbuch appeared (1906) is given, and the note says so. Anything still uncertain is marked <em>to check</em>.</p>
+
+<div class="notice warn">
+    <p><span class="wip-badge">Under construction</span> Not every citation has been checked against the book itself yet; journal articles in particular are given as Liebermann cites them, by journal, volume, year and page.</p>
+</div>
+
+<div class="search-bar" role="search">
+    <input type="search" id="searchInput" placeholder="Search…" aria-label="Search">
+    <select id="searchScope" aria-label="Search in">
+        <option value="all">All fields</option>
+        <option value="Gesetze Text">As printed</option>
+        <option value="Short Title">Author and short title</option>
+        <option value="Full Citation">Full citation</option>
+        <option value="Notes">Notes</option>
+    </select>
+</div>
+<p id="count" class="muted small"></p>
+
+<div id="content-container" data-source="data/bibliography.json" data-layout="works"><p class="loading">Loading…</p></div>
+
+<p class="small muted">The list comes from <a href="https://github.com/notamitchell/law/blob/main/data/bibliography.json">data/bibliography.json</a>. Each row is one way the Wörterbuch prints a work; rows with the same Anchor are the same work. In the Full Citation, titles go between &lt;i&gt; and &lt;/i&gt;.</p>

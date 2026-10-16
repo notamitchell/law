@@ -45,6 +45,7 @@ async function main() {
     // Manuscript sigla are linked like law codes.
     const markLaw = loadJson('data/markLaw.json').concat(loadJson('data/manuscripts.json'));
     const markforward = loadJson('data/markforward.json');
+    const bibliography = loadJson('data/bibliography.json');
 
     const entriesDir = path.join(repo, 'entries');
     const existing = fs.readdirSync(entriesDir).filter(f => f.endsWith('.xml')).map(f => f.replace(/\.xml$/, ''));
@@ -62,7 +63,7 @@ async function main() {
             lang: e.lang,
             page: e.page,
             facsimile: e.page ? `https://archive.org/details/diegesetzederang02liebuoft/page/${e.page}/mode/2up` : '',
-            entryHtml: ELieb.linkAbbreviations(e.html, markLaw, markforward),
+            entryHtml: ELieb.linkAbbreviations(e.html, markLaw, markforward, bibliography),
             seeAlso: e.seeAlso,
             change: { when: today, text: `Imported from ${source}.` }
         });

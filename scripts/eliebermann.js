@@ -2,7 +2,7 @@
  * eLiebermann: shared code for dictionary entries.
  *
  * - ELieb.slugify()        headword -> file name (entries/<slug>.xml)
- * - ELieb.linkAbbreviations() adds links to law codes and abbreviations
+ * - ELieb.linkAbbreviations() adds links to law codes, abbreviations and works cited
  * - ELieb.buildEntryXml()  builds an entry as TEI from the contribution form
  * - ELieb.renderTei()      turns TEI into HTML for entry pages and previews
  * - ELieb.readEntry()      reads the main fields of an entry (dictionary list)
@@ -153,18 +153,22 @@
     // ------------------------------------------------------------------
 
     /**
-     * Wraps known law codes (markLaw) and abbreviations (markforward) in
-     * links. Works on text only, so it never links inside an existing link,
+     * Wraps known law codes (markLaw), abbreviations (markforward) and the
+     * authors and works Liebermann cites (bibliography) in links. Works on text only, so it never links inside an existing link,
      * never nests links, and leaves the superscript language marker (L, F)
      * at the start of an entry alone.
      */
-    function linkAbbreviations(html, markLaw, markforward) {
+    function linkAbbreviations(html, markLaw, markforward, bibliography) {
         const terms = [];
         // Sigla marked "Link automatically": "no" (single letters such as L or S, and sigla spelled like a
         // law code, e.g. Wi) are linked by hand only: in running text they are mostly something else.
         (markLaw || []).filter(t => t['Link automatically'] !== 'no')
             .forEach(t => terms.push({ text: t['Gesetze Text'].trim(), anchor: t['Anchor'], type: 'law' }));
         (markforward || []).forEach(t => terms.push({ text: t['Gesetze Text'].trim(), anchor: t['Anchor'], type: 'gram' }));
+        // Authors and works cited (data/bibliography.json). A bare name shared by
+        // several works (Sweet, Thorpe) is marked "Link automatically": "no".
+        (bibliography || []).filter(t => t['Link automatically'] !== 'no')
+            .forEach(t => terms.push({ text: t['Gesetze Text'].trim(), anchor: t['Anchor'], type: 'bib' }));
         const byText = new Map();
         terms.filter(t => t.text).forEach(t => { if (!byText.has(t.text)) byText.set(t.text, t); });
         const sorted = [...byText.values()].sort((a, b) => b.text.length - a.text.length);
@@ -176,7 +180,8 @@
         // Law codes and manuscript sigla are printed in roman type; italic is
         // Liebermann's German, where "Abt" means abbot, not Æthelberht.
         const allTerms = makeRegex(sorted);
-        const italicTerms = makeRegex(sorted.filter(t => t.type === 'gram'));
+        // Author names are often in italic too.
+        const italicTerms = makeRegex(sorted.filter(t => t.type === 'gram' || t.type === 'bib'));
         const lookup = text => byText.get(text.replace(/\s+/g, ' '));
 
         const container = parseHtml(html);
@@ -203,6 +208,9 @@
                 const a = DOM.document.createElement('a');
                 if (term.type === 'law') {
                     a.setAttribute('href', 'lawAbb.html#' + encodeURIComponent(term.anchor));
+                    a.textContent = m[1];
+                } else if (term.type === 'bib') {
+                    a.setAttribute('href', 'bibAbb.html#' + encodeURIComponent(term.anchor));
                     a.textContent = m[1];
                 } else {
                     a.setAttribute('href', 'gramAbb.html#' + encodeURIComponent(term.anchor));
@@ -315,6 +323,9 @@
                 let m;
                 if ((m = href.match(/lawAbb\.html#(.+)$/))) {
                     out += '<ref type="lawCode" target="law:' + escapeXml(decodeURIComponent(m[1])) + '">';
+                    flat(); out += '</ref>';
+                } else if ((m = href.match(/bibAbb\.html#(.+)$/))) {
+                    out += '<ref type="bibl" target="bib:' + escapeXml(decodeURIComponent(m[1])) + '">';
                     flat(); out += '</ref>';
                 } else if ((m = href.match(/gramAbb\.html#(.+)$/))) {
                     out += '<ref type="abbreviation" target="gram:' + escapeXml(decodeURIComponent(m[1])) + '"><abbr>';
@@ -681,6 +692,7 @@
       <listPrefixDef>
         <prefixDef ident="law" matchPattern="(.+)" replacementPattern="lawAbb.html#$1"/>
         <prefixDef ident="gram" matchPattern="(.+)" replacementPattern="gramAbb.html#$1"/>
+        <prefixDef ident="bib" matchPattern="(.+)" replacementPattern="bibAbb.html#$1"/>
         <prefixDef ident="entry" matchPattern="(.+)" replacementPattern="entry.html?id=$1"/>
       </listPrefixDef>
     </encodingDesc>
@@ -726,10 +738,11 @@ ${translation}
 
     function resolveTarget(target, root) {
         if (!target) return '';
-        const m = target.match(/^(law|gram|entry|clause):(.+)$/);
+        const m = target.match(/^(law|gram|bib|entry|clause):(.+)$/);
         if (m) {
             if (m[1] === 'law') return root + 'lawAbb.html#' + encodeURIComponent(m[2]);
             if (m[1] === 'gram') return root + 'gramAbb.html#' + encodeURIComponent(m[2]);
+            if (m[1] === 'bib') return root + 'bibAbb.html#' + encodeURIComponent(m[2]);
             if (m[1] === 'clause') return root + 'law.html?id=' + encodeURIComponent(m[2]);
             return root + 'entry.html?id=' + encodeURIComponent(m[2]);
         }
@@ -832,9 +845,9 @@ ${translation}
 
     /**
      * Loads the law codes (data/markLaw.json), manuscript sigla
-     * (data/manuscripts.json) and abbreviations (data/markforward.json) for
-     * linkAbbreviations(), once per page.
-     * Resolves to { markLaw, markforward }; a file that can't be read gives [].
+     * (data/manuscripts.json), abbreviations (data/markforward.json) and works
+     * cited (data/bibliography.json) for linkAbbreviations(), once per page.
+     * Resolves to { markLaw, markforward, bibliography }; a file that can't be read gives [].
      */
     let abbreviations = null;
     function loadAbbreviations(root) {
@@ -844,8 +857,8 @@ ${translation}
         if (!abbreviations) {
             // Manuscript sigla (data/manuscripts.json) are linked like law codes,
             // so they are added to markLaw here.
-            abbreviations = Promise.all([get('markLaw.json'), get('manuscripts.json'), get('markforward.json')])
-                .then(([markLaw, manuscripts, markforward]) => ({ markLaw: markLaw.concat(manuscripts), markforward }));
+            abbreviations = Promise.all([get('markLaw.json'), get('manuscripts.json'), get('markforward.json'), get('bibliography.json')])
+                .then(([markLaw, manuscripts, markforward, bibliography]) => ({ markLaw: markLaw.concat(manuscripts), markforward, bibliography }));
         }
         return abbreviations;
     }

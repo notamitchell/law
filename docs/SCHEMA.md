@@ -29,6 +29,7 @@ The files are made by the [Suggest an entry](../contribute.html) form, the bulk 
       <listPrefixDef>
         <prefixDef ident="law" matchPattern="(.+)" replacementPattern="lawAbb.html#$1"/>
         <prefixDef ident="gram" matchPattern="(.+)" replacementPattern="gramAbb.html#$1"/>
+        <prefixDef ident="bib" matchPattern="(.+)" replacementPattern="bibAbb.html#$1"/>
         <prefixDef ident="entry" matchPattern="(.+)" replacementPattern="entry.html?id=$1"/>
       </listPrefixDef>
     </encodingDesc>
@@ -57,7 +58,7 @@ The files are made by the [Suggest an entry](../contribute.html) form, the bulk 
 | `titleStmt/title` | The headword. |
 | `idno type="slug"` | The file name without `.xml`. |
 | `sourceDesc/bibl` | Where the entry is printed: `biblScope unit="page"` is the page of the *Wörterbuch* as printed (not the page of a PDF), and `ptr type="facsimile"` links to the scan of that page. |
-| `listPrefixDef` | Says what the short link targets below (`law:`, `gram:`, `entry:`) point to. The same in every file. |
+| `listPrefixDef` | Says what the short link targets below (`law:`, `gram:`, `bib:`, `entry:`) point to. The same in every file. |
 | `revisionDesc/change` | One line per change, with its date: created, imported, edited. The form adds a line when a change is suggested. |
 
 ## The entry
@@ -92,6 +93,7 @@ The text inside `dictScrap` keeps the formatting of the printed page, because it
 | superscript (footnote numbers, manuscript variants) | `<hi rend="superscript">` |
 | a law code, text or manuscript siglum | `<ref type="lawCode" target="law:IICn">II Cn</ref>`, where `IICn` is its Anchor in `data/markLaw.json` |
 | a German abbreviation | `<ref type="abbreviation" target="gram:Plural"><abbr>pl</abbr></ref>`, where `Plural` is its Anchor in `data/markforward.json` |
+| an author or work Liebermann cites | `<ref type="bibl" target="bib:CitToller">Toller</ref>`, where `CitToller` is its Anchor in `data/bibliography.json`. Usually only the author's name is linked; the short title and page follow as plain text. |
 | an entry that runs over a page | `<pb n="4"/>` where page 4 begins |
 | a line break the editor wants kept | `<lb/>` |
 

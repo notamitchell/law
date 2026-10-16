@@ -83,7 +83,7 @@ scripts:
         try {
             const zip = await JSZip.loadAsync(file);
             const xml = await zip.file('word/document.xml').async('string');
-            const { markLaw, markforward } = await ELieb.loadAbbreviations(root);
+            const { markLaw, markforward, bibliography } = await ELieb.loadAbbreviations(root);
             const parsed = DocxImport.parse(xml);
             entries = DocxImport.prepare(parsed.entries, SITE_ENTRIES, ELieb);
             const today = new Date().toISOString().slice(0, 10);
@@ -94,7 +94,7 @@ scripts:
                     lang: e.lang,
                     page: e.page,
                     facsimile: e.page ? FACSIMILE.replace('{page}', e.page) : '',
-                    entryHtml: ELieb.linkAbbreviations(e.html, markLaw, markforward),
+                    entryHtml: ELieb.linkAbbreviations(e.html, markLaw, markforward, bibliography),
                     seeAlso: e.seeAlso,
                     change: { when: today, text: `Imported from ${sourceName}.` }
                 });
