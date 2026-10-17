@@ -267,8 +267,9 @@ scripts:
         const w = wits[id];
         if (!id) return null;
         const abbr = (w ? w.abbr : id.replace(/^wit-/, '').toUpperCase()).replace(/\s*\([^)]*\)\s*$/, '');
-        // The Quadripartitus is a Latin translation known from several manuscripts, not one manuscript: just "Q".
-        const isQuad = /^Q\b/.test(abbr);
+        // The Quadripartitus, the Instituta Cnuti and the Consiliatio Cnuti are Latin translations known from
+        // several manuscripts, not one manuscript: just "Q", "Inst. Cn.", "Cons. Cn.".
+        const isQuad = LATIN_VERSION.test(abbr);
         const s = el('span', 'ms-label', (isQuad ? (prefix ? 'of ' : '') : (prefix || 'MS ')) + abbr);
         if (w && w.name) s.title = w.name;
         return s;
@@ -279,6 +280,7 @@ scripts:
     let siglumIndex = null;
     const sigKey = s => s.replace(/[\s.]/g, '');
     const SIGLUM_ALIASES = { 'InstCn': 'In(Cn)' };
+    const LATIN_VERSION = /^(Q|In|Inst\.? ?Cn\.?|Cons\.?(?: ?Cn\.?)?)(?![\w])/;
     function loadSigla() {
         const get = f => fetch(root + 'data/' + f).then(r => r.json()).catch(() => []);
         return Promise.all([get('manuscripts.json'), get('markLaw.json')]).then(([ms, law]) => {
@@ -329,7 +331,8 @@ scripts:
         // the order of his columns (his leftmost, main text first), then the
         // other editors'.
         const witOf = a => wits[(a.getAttribute('corresp') || '').replace(/^#/, '')] || {};
-        const isQ = a => /^Q\b/.test(witOf(a).abbr || '');
+        const isQ = a => LATIN_VERSION.test(witOf(a).abbr || '');
+        const onlyQ = list => list.every(a => /^Q\b/.test(witOf(a).abbr || ''));
         const hasOE = texts.some(a => a.getAttribute('xml:lang') === 'ang');
         const hasFrench = texts.some(a => a.getAttribute('xml:lang') === 'xno');
         const main = texts.filter(a => !(hasOE && isQ(a)));
@@ -407,7 +410,7 @@ scripts:
         };
         byEditor(main).forEach(a => addText(a, hasOE));
         if (quad.length) {
-            left.appendChild(el('h3', 'clause-subhead', 'Quadripartitus'));
+            left.appendChild(el('h3', 'clause-subhead', onlyQ(quad) ? 'Quadripartitus' : 'Latin versions'));
             byEditor(quad).forEach(a => addText(a, false));
         }
         // Liebermann's textual notes: each of his texts gets the notes whose numbers stand in it (his footnotes

@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -61,24 +64,43 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1666 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 298.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 298: “We wyllað ⁊ we biddað for Godas lufan, þæt ælc Cristen man understande georne his agene ðearfe.” → “We wyllað ⁊ we biddað for Godas lufan, þæt ælc Cristen man understande georne his agene ðearfe. (expanded letters in italics: æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 298: “And we biddað for Godes lufan, þæt ælc Cristen man understande georne his agene þærfe.” → “And we biddað for Godes lufan, þæt ælc Cristen man understande georne his agene þærfe. (expanded letters in italics: æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 299: “(Wir wünschen B) und wir bitten aus Liebe zu Gott, dass jeder christliche Mensch ernstlich begreife seinen eigenen Vortheil:” → “(Wir wünschen B) und wir bitten aus Liebe zu Gott, dass jeder christliche Mensch ernstlich begreife seinen eigenen Vortheil: (expanded letters in italics: B)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="18">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 18</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18" corresp="#wit-g-a"><pb n="298" ed="#liebermann"/>And we biddað for Godes lufan, þ<hi rend="italic">æt</hi> ælc Cristen mann understande georne his agene þearfe.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18" corresp="#wit-a"><pb n="298" ed="#liebermann"/>And we biddað for Godes lufan, þæt ælc Cristen man understande georne his agene þærfe.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18" corresp="#wit-b"><pb n="298" ed="#liebermann"/>We wyllað ⁊ we biddað for Godas lufan, þæt ælc Cristen man understande georne his agene ðearfe.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="18" corresp="#wit-q"><pb n="299" ed="#liebermann"/>Et in Dei dilectione petimus, ut quicumque Christianus suam ipsius benefaciendi necessitatem intelligat,</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="18" corresp="#wit-b"><pb n="168" ed="#robertson"/>We wyllað ⁊ we biddað for God[e]s lufan, þæt ælc Cristen man understande georne his agene ðearfe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18" corresp="#wit-g-a"><pb n="298" ed="#liebermann"/>And we biddað for Godes lufan, þ<hi rend="italic">æt</hi> ælc Cristen mann<ptr type="liebermannNote" n="9" target="#ICn_18.lnote.oe.9"/> understande georne his agene þearfe.<ptr type="liebermannNote" n="10" target="#ICn_18.lnote.oe.10"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18" corresp="#wit-b"><pb n="298" ed="#liebermann"/>We wyllað ⁊ we biddað for Godas<ptr type="liebermannNote" n="2" target="#ICn_18.lnote.oe.2"/> lufan, þ<hi rend="italic">æt</hi> ælc Cristen man understande georne his agene ðearfe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18" corresp="#wit-a"><pb n="298" ed="#liebermann"/>And we biddað for Godes lufan, þ<hi rend="italic">æt</hi> ælc Cristen man understande georne his agene þærfe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="18" corresp="#wit-q"><pb n="299" ed="#liebermann"/>Et in Dei<ptr type="liebermannNote" n="4" target="#ICn_18.lnote.oe.4-2"/> dilectione petimus, ut quicumque<ptr type="liebermannNote" n="5" target="#ICn_18.lnote.oe.5"/> Christianus suam ipsius benefaciendi<ptr type="liebermannNote" n="6" target="#ICn_18.lnote.oe.6"/> necessitatem intelligat<ptr type="liebermannNote" n="7" target="#ICn_18.lnote.oe.7"/>,</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="18" corresp="#wit-cons-cn"><pb n="299" ed="#liebermann"/>Postulamus etiam pro Dei amore, ut quisque Christianus diligenter attendat ad suam propriam utilitatem,</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="18" corresp="#wit-b"><pb n="168" ed="#robertson"/>We wyllað<ptr type="editorNote" n="4" target="#ICn_18.robnote.fn.4"/> ⁊ we biddað for God[e]s<ptr type="editorNote" n="5" target="#ICn_18.robnote.fn.5"/> lufan, þæt ælc Cristen man understande georne his agene ðearfe.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="246" ed="#rabin-doml"/>And we biddað for Godes lufan, þæt ælc Cristen mann understande georne his agene þearfe.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="299" ed="#liebermann"/>(Wir wünschen B) und wir bitten aus Liebe zu Gott, dass jeder christliche Mensch ernstlich begreife seinen eigenen Vortheil:</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><ptr type="liebermannNote" n="1" target="#ICn_18.lnote.de.1"/><pb n="299" ed="#liebermann"/>(Wir wünschen<ptr type="liebermannNote" n="2" target="#ICn_18.lnote.de.2"/> <hi rend="italic">B</hi>) und wir bitten aus Liebe zu Gott, dass jeder christliche Mensch ernstlich begreife seinen eigenen Vortheil:</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(We wish, B) and we ask for the love of God that every Christian man earnestly understand his own good:</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="169" ed="#robertson"/>We desire and we pray, for the love of God, that every Christian man should readily understand what is for his own good.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="247" ed="#rabin-doml"/>And for the love of God, we pray that every Christian fully understand what is expected of him.</ab>
-        <note type="editorial">B's ‘We wyllað’ is written in red.; Robertson (p. 139) takes I Cn from B, which begins at ‘mæssedæg’ in 14.2, the earlier clauses being supplied from G</note>
+        <note type="editorial">B's ‘We wyllað’ is written in red.; Robertson (p. 139) takes I Cn from B, which begins at ‘mæssedæg’ in 14.2, the earlier clauses being supplied from G; BR: added from Gesetze I p. 299, October 2026 (MS Cons); AY: corrected against Rabin p. 246, October 2026 (was “∅”, now “| þonne us: þæt us B | þæt we: þær we GB | awohtonaworhtan: a worhton G”)</note>
         <note type="textual" source="#rabin-doml">biddað: willað B</note>
+        <note type="textual" source="#rabin-doml">þonne us: þæt us B</note>
+        <note type="textual" source="#rabin-doml">þæt we: þær we GB</note>
+        <note type="textual" source="#rabin-doml">awohtonaworhtan: a worhton G</note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_18.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">I Cn</hi> 18 — <hi rend="italic">II Cn.</hi> 2 <hi rend="italic">fehlt Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">I Cn 18 — II Cn. 2 lacking in Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_18.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">298</biblScope></bibl><seg type="original" xml:lang="de">man <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">man Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_18.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">298</biblScope></bibl><seg type="original" xml:lang="de">þærf <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">þærf Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_18.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">298</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_18.lnote.oe.4-2" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="de">di. D. <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">di. D. T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_18.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="de">quisque <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">quisque Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_18.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="de">b. n. <hi rend="italic">zweimal K</hi></seg><seg type="translation" xml:lang="en" source="#claude">b. n. twice K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_18.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">verbessert aus</hi> -git <hi rend="italic">Dm</hi></seg><seg type="translation" xml:lang="en" source="#claude">corrected from -git Dm</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_18.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">200</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">18—18b benutzt durch <hi rend="italic">Hom. n</hi>. Wulfstan 118. 208</seg><seg type="translation" xml:lang="en" source="#claude">18—18b used by <hi rend="italic">Hom. n</hi>. Wulfstan 118. 208</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_18.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">200</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Nicht authentisch; fehlt auch den Hom.</seg><seg type="translation" xml:lang="en" source="#claude">Not authentic; also absent from the Hom.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="ICn_18.robnote.fn.4" n="4" source="#robertson"><bibl><biblScope unit="page">168</biblScope></bibl><label>wyllað</label><seg type="original" xml:lang="en"><hi rend="italic">w. w.</hi> only in B.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="ICn_18.robnote.fn.5" n="5" source="#robertson"><bibl><biblScope unit="page">168</biblScope></bibl><label>God[e]s</label><seg type="original" xml:lang="en">G, A; <hi rend="italic">Godas</hi> B.</seg></note>
       </div>
     </body>
   </text>

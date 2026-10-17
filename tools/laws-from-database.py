@@ -93,6 +93,9 @@ HEADERS = [
     ("manuscript of liebermann's fourth ms", 'bfName'),
     ("liebermann's fifth ms", 'biText'),
     ("siglum of liebermann's fifth ms", 'biSig'),
+    ("liebermann's sixth ms", 'brText'),
+    ("siglum of liebermann's sixth ms", 'brSig'),
+    ("manuscript of liebermann's sixth ms", 'brName'),
     ("manuscript of liebermann's fifth ms", 'biName'),
     ('source of the passage', 'passageSource'),
     ('notes on this row', 'notes'),
@@ -238,8 +241,10 @@ def sig_key(s):
 
 
 def same_sig(a, b):
-    """'Cons.Cn.' and 'Cons. Cn.' are the same siglum."""
-    return re.sub(r'[\s.]', '', a).lower() == re.sub(r'[\s.]', '', b).lower()
+    """'Cons.Cn.' and 'Cons. Cn.' are the same siglum; so are 'Cons' and 'Cons. Cn.', 'In' and 'Inst. Cn.' (Liebermann's sigla for the
+    Consiliatio and Instituta Cnuti, and the forms the spreadsheet's list of manuscripts uses)."""
+    k = lambda s: {'conscn': 'cons', 'instcn': 'in'}.get(re.sub(r'[\s.]', '', s).lower(), re.sub(r'[\s.]', '', s).lower())
+    return k(a) == k(b)
 
 
 def pages(cell):
@@ -389,12 +394,12 @@ def read_rows(path, only=None):
         for name in ('codeName', 'king', 'promulgation', 'liebermannMS', 'page', 'liebermannNumber', 'editor',
                      'editorMS', 'editorNumber', 'editorPage', 'secondPage', 'offence', 'people', 'locations',
                      'nSig', 'afSig', 'kSig', 'tSig', 'kName', 'nName', 'afName', 'tName', 'notes', 'passageSource',
-                     'bfSig', 'bfName', 'biSig', 'biName',
+                     'bfSig', 'bfName', 'biSig', 'biName', 'brSig', 'brName',
                      'thirdRef', 'thirdMS', 'thirdPage', 'translatorNotes', 'rabinRef', 'rabinPage', 'rabinTextNotes', 'rabinNotes',
                      'vglPrinted', 'vglRefs', 'vglRemark', 'attPage', 'attSig', 'attName', 'liebOrder', 'liebPages'):
             row[name] = get(name)
         for name in ('kText', 'german', 'english', 'nText', 'latin', 'tText', 'translation',
-                     'secondTranslation', 'supplementaryTranslation', 'afText', 'bfText', 'biText', 'thirdTranslation', 'rabinText', 'rabinTranslation', 'attText'):
+                     'secondTranslation', 'supplementaryTranslation', 'afText', 'bfText', 'biText', 'brText', 'thirdTranslation', 'rabinText', 'rabinTranslation', 'attText'):
             row[name + 'Xml'] = xml(name)
             row[name] = get(name)
         row['passageSourceXml'] = xml('passageSource')
@@ -635,7 +640,7 @@ def build(row, today, source_name, refs):
         texts.append(('liebermannText', language(row['afText']), lie, pb(lpage(row['afSig']), lie) + row['afTextXml'], row['liebermannNumber'],
                       witness(row['afSig'], row['afName'])))
         shown.add(sig_key(row['afSig']))
-    for t in ('bf', 'bi'):      # Liebermann's fourth and fifth texts (columns BF-BH, BI-BK; October 2026)
+    for t in ('bf', 'bi', 'br'):      # Liebermann's fourth, fifth and sixth texts (columns BF-BH, BI-BK, BR-BT; October 2026)
         if row[t + 'TextXml']:
             texts.append(('liebermannText', language(row[t + 'Text']), lie, pb(lpage(row[t + 'Sig']), lie) + row[t + 'TextXml'], row['liebermannNumber'],
                           witness(row[t + 'Sig'], row[t + 'Name'])))
@@ -1016,10 +1021,10 @@ def write_codes(rows, catalogue, find_anchor, path):
             name = (name or '').replace(' C&S', '')
             if name and name not in c['editors']:
                 c['editors'].append(name)
-        for sig in (r['kSig'], r['nSig'], r['afSig'], r['bfSig'], r['biSig'], r['tSig']):
+        for sig in (r['kSig'], r['nSig'], r['afSig'], r['bfSig'], r['biSig'], r['brSig'], r['tSig']):
             for k in ([sig] if sig in MS_NAMES else [sig_key(x) for x in re.split(r'[;,]\s*', sig or '')]):
                 k = k.strip()
-                if k and (k in MS_NAMES or re.fullmatch(r'[A-Z][a-z]?\d?', k)) and k not in c['manuscripts']:
+                if k and (k in MS_NAMES or re.fullmatch(r'[A-Z][a-z]?\d?', k)) and k not in c['manuscripts'] and k not in ('In', 'Cons'):
                     c['manuscripts'].append(k)
     with open(path, 'w', encoding='utf-8', newline='\n') as f:
         f.write('[\n' + ',\n'.join(json.dumps(c, ensure_ascii=False, separators=(',', ':')) for c in codes.values()) + '\n]\n')

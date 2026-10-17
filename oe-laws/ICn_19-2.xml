@@ -14,6 +14,8 @@
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#kennedy">Kennedy</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -34,6 +36,7 @@
           <bibl xml:id="kennedy" type="study">A. G. Kennedy, ‘Cnut’s Law Code of 1018’, <title>Anglo-Saxon England</title> 11 (1983), 57–81</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -69,20 +72,25 @@
     <body>
       <div type="clause" n="19.2">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 19.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="19.2" corresp="#wit-g-a"><pb n="300" ed="#liebermann"/>⁊ æghwylc unriht aweorpe man georne of þysu<hi rend="italic">m</hi> earde, þæs þe man don mæge,</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="19.2" corresp="#wit-a"><pb n="300" ed="#liebermann"/>And æghwylc unriht aweorpe mann georne of þissum earde, þæs þe man don mage.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="19.2" corresp="#wit-g-a"><pb n="300" ed="#liebermann"/>⁊ æghwylc unriht aweorpe man georne of þysu<hi rend="italic">m<ptr type="liebermannNote" n="16" target="#ICn_19-2.lnote.oe.16"/></hi> earde, þæs þe man don<ptr type="liebermannNote" n="17" target="#ICn_19-2.lnote.oe.17"/> mæge,</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="19.2" corresp="#wit-b"><pb n="300" ed="#liebermann"/>⁊ æghwylc unriht aworpe man georne of ðisson earde, ðæs ðe man don mæge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="19.2" corresp="#wit-a"><pb n="300" ed="#liebermann"/>And æghwylc unriht aweorpe mann georne of þissum earde, þæs þe man don mage.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="19.2" corresp="#wit-q"><pb n="301" ed="#liebermann"/>Omnis iniusticia de finibus nostris, quantum possumus, expellatur.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="19.2" corresp="#wit-cons-cn"><pb n="301" ed="#liebermann"/>et omnem iniusticiam, in quantum quis poterit, ab hac patria eiciat;</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="19.2" corresp="#wit-b"><pb n="170" ed="#robertson"/>⁊ æghwylc unriht aworpe man georne of ðisson earde, ðæs ðe man don mæge.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="248" ed="#rabin-doml"/>And æghwylc unriht aweorpe man georne of þysum earde, þæs þe man don mæge</ab>
         <ab type="translation" xml:lang="de" source="#liebermann"><pb n="301" ed="#liebermann"/>Und jedes Unrecht entferne man eifrig aus diesem Lande, so weit als man es zu thun vermag;</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let every injustice be eagerly cast out of this country, as far as it can be done;</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="171" ed="#robertson"/>And every injustice shall be zealously cast out from this land, as far as it is possible to do so.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><ptr type="editorNote" n="1" target="#ICn_19-2.robnote.n.1"/><pb n="171" ed="#robertson"/>And every injustice shall be zealously cast out from this land, as far as it is possible to do so.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="249" ed="#rabin-doml"/>And all injustice is to be banished from this land as much as possible.</ab>
         <note type="comparison" source="#liebermann" n="301"><ref target="clause:VIAtr_28-1">VI Atr 28.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 28, 1</note>
         <note type="comparedBy" source="#kennedy" n="59"><ref target="clause:Cn-1018_part-054">Cn 1018 19</ref></note>
-        <note type="editorial">Liebermann compares VI Atr 28.1.; Robertson (p. 139) takes I Cn from B, which begins at ‘mæssedæg’ in 14.2, the earlier clauses being supplied from G</note>
+        <note type="editorial">Liebermann compares VI Atr 28.1.; Robertson (p. 139) takes I Cn from B, which begins at ‘mæssedæg’ in 14.2, the earlier clauses being supplied from G; BR: added from Gesetze I p. 301, October 2026 (MS Cons)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_19-2.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">300</biblScope></bibl><seg type="original" xml:lang="de">þissū <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">þissū Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_19-2.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">300</biblScope></bibl><seg type="original" xml:lang="de">done <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">done Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_19-2.lnote.de.1" n="1" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">201</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Den Gedanken wiederholt II 1. <hi rend="italic">Vgl</hi>. Cnuts Lob: <hi rend="italic">leges oppressit iniquas, iustitiam et equitatem extulit</hi> im Encom. Emmae (ed. <hi rend="italic">Mon. Germ., SS</hi>. XIX 520)</seg><seg type="translation" xml:lang="en" source="#claude">II 1 repeats the thought. <hi rend="italic">Cf</hi>. the praise of Cnut: <hi rend="italic">leges oppressit iniquas, iustitiam et equitatem extulit</hi> in the Encom. Emmae (ed. <hi rend="italic">Mon. Germ., SS</hi>. XIX 520)</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="ICn_19-2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">350</biblScope></bibl><seg type="original" xml:lang="en">Cf. VI Atr. 28, 1; II Cn. 1; <hi rend="italic">En. Emmae</hi>, <hi rend="italic">Mon. Germ. SS.</hi> <hi rend="smallcaps">xix</hi>. p. 520.</seg></note>
       </div>
     </body>
   </text>

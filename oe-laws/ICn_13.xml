@@ -14,6 +14,8 @@
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -34,6 +36,7 @@
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -42,7 +45,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -65,20 +68,24 @@
       <change when="2026-10-18">Generated from row 1652 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 294.</change>
       <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 166.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 294: “And saulsceat is rihtast, þæt man symle geleste á æt openum græfe.” → “And saulsceat is rihtast, þæt man symle geleste á æt openum græfe. (expanded letters in italics: m)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 295.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="13">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 13</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13" corresp="#wit-g-a"><pb n="294" ed="#liebermann"/>And sawlsceat is rihtast, þ<hi rend="italic">æt</hi> man symle gelæste á æt openum græfe.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13" corresp="#wit-a"><pb n="294" ed="#liebermann"/>And saulsceat is rihtast, þæt man symle geleste á æt openum græfe.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="13" corresp="#wit-q"><pb n="294" ed="#liebermann"/>Pecunia sepulturę iustum est, ut aperta terra reddatur.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13" corresp="#wit-g-a"><pb n="294" ed="#liebermann"/>And sawlsceat is rihtast<ptr type="liebermannNote" n="15" target="#ICn_13.lnote.oe.15"/>, þ<hi rend="italic">æt</hi> man symle gelæste<ptr type="liebermannNote" n="16" target="#ICn_13.lnote.oe.16"/> á æt openum græfe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13" corresp="#wit-a"><pb n="294" ed="#liebermann"/>And saulsceat is rihtast, þæt man symle geleste á æt openu<hi rend="italic">m</hi> græfe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="13" corresp="#wit-q"><pb n="294" ed="#liebermann"/>Pecunia<ptr type="liebermannNote" n="10" target="#ICn_13.lnote.oe.10"/> sepulturę iustum est, ut aperta terra reddatur.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="13" corresp="#wit-inst-cn"><pb n="295" ed="#liebermann"/>Si quis corpus<ptr type="liebermannNote" n="18" target="#ICn_13.lnote.oe.18"/> parentis aut amici sui de propria parrochia alias portare ad<ptr type="liebermannNote" n="19" target="#ICn_13.lnote.oe.19"/> sepeliendum uoluerit, faciat prius rectitudinem parrochię, ad quam pertinet, scilicet redditus, quod Angli saulescot<ptr type="liebermannNote" n="20" target="#ICn_13.lnote.oe.20"/> uocant, quod recte<ptr type="liebermannNote" n="21" target="#ICn_13.lnote.oe.21"/> (iuste) persolui debet<ptr type="liebermannNote" n="22" target="#ICn_13.lnote.oe.22"/> ad apertum sepulchrum.<ptr type="liebermannNote" n="*" target="#ICn_13.lnote.oe.star"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="13" corresp="#wit-cons-cn"><pb n="295" ed="#liebermann"/>Et anime simbola soluatur adhuc aperto sepulcro.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="13" corresp="#wit-g-a"><pb n="166" ed="#robertson"/>And sawlsceat is rihtast þæt man symle gelæste á æt openum græfe.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="244" ed="#rabin-doml"/>And sawlsceat is rihtast þæt man symle gelæste a æt openum græfe.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="295" ed="#liebermann"/>Und Seelengeld ist am richtigsten, dass man immer sofort entrichte beim offenen Grabe.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="295" ed="#liebermann"/>Und<ptr type="liebermannNote" n="1" target="#ICn_13.lnote.de.1"/> Seelengeld ist am richtigsten, dass man immer sofort entrichte beim offenen Grabe.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And as for soul-scot, it is most right that it always be paid at once at the open grave.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a"><pb n="167" ed="#robertson"/>And it is best that payment for the souls of the dead should always be rendered before the grave is closed.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a"><ptr type="editorNote" n="1" target="#ICn_13.robnote.n.1"/><pb n="167" ed="#robertson"/>And it is best that payment for the souls of the dead should always be rendered before the grave is closed.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="245" ed="#rabin-doml"/>And it is most appropriate that dues for the souls of the dead always be paid while the grave is yet open.</ab>
         <note type="comparison" source="#liebermann" n="295"><ref target="clause:VIAtr_20">VI Atr 20</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 20</note>
@@ -90,7 +97,18 @@
         <note type="comparison" source="#wormald-ppmel" n="24"><label>parallel versions</label> <ref target="clause:VI-Atr-Latin-Paraphrase_20">VI Atr Lat 20</ref> <quote>the apparently chronological order of the laws of Æthelred and Cnut as cited above may conceal the stages whereby Wulfstan's ideas evolved</quote></note>
         <note type="comparison" source="#wormald-ppmel" n="24"><label>parallel versions</label> <ref target="clause:VIIIAtr_13">VIII Atr 13</ref> <quote>the apparently chronological order of the laws of Æthelred and Cnut as cited above may conceal the stages whereby Wulfstan's ideas evolved</quote></note>
         <note type="comparison" source="#wormald-ppmel" n="24"><label>parallel versions</label> <ref target="clause:Cn-1018_part-036">Cn 1018 13.6–7</ref> <quote>the apparently chronological order of the laws of Æthelred and Cnut as cited above may conceal the stages whereby Wulfstan's ideas evolved</quote></note>
-        <note type="editorial">Liebermann compares VI Atr 20.</note>
+        <note type="editorial">Liebermann compares VI Atr 20.; BR: added from Gesetze I p. 295, October 2026 (MS Cons)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_13.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">294</biblScope></bibl><seg type="original" xml:lang="de">-tæst <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-tæst Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_13.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">294</biblScope></bibl><seg type="original" xml:lang="de">-leste <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-leste Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_13.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">295</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">eine Lage ausgerissen; folgt II Cn.</hi> 15, 1 <hi rend="italic">Di</hi></seg><seg type="translation" xml:lang="en" source="#claude">a gathering torn out; followed by II Cn. 15, 1 Di</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_13.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">295</biblScope></bibl><seg type="original" xml:lang="de">u. ad s. <hi rend="italic">Lb S</hi></seg><seg type="translation" xml:lang="en" source="#claude">u. ad s. Lb S</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_13.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">295</biblScope></bibl><seg type="original" xml:lang="de">u..s. <hi rend="italic">Cb T</hi>; <hi rend="spaced">saulgescot</hi> <hi rend="italic">H</hi></seg><seg type="translation" xml:lang="en" source="#claude">u..s. Cb T; <hi rend="italic">saulgescot</hi> H</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_13.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">295</biblScope></bibl><seg type="original" xml:lang="de">iu. <hi rend="italic">nur Cb</hi>; r. <hi rend="italic">übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">iu. only Cb; r. the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_13.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">295</biblScope></bibl><seg type="original" xml:lang="de">deberet <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">deberet T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_13.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">295</biblScope></bibl><seg type="original" xml:lang="de">et etiam de substantia sua honoret ecclesiam suam, secundum quod ipse est; et sic cum licentia proprii presbyteri transferatur quo uoluerit <hi rend="italic">fügt zu Cb. Erster Satz von c.</hi> 14 <hi rend="italic">fehlt Inst.</hi></seg><seg type="translation" xml:lang="en" source="#claude">et etiam de substantia sua honoret ecclesiam suam, secundum quod ipse est; et sic cum licentia proprii presbyteri transferatur quo uoluerit added by Cb. The first sentence of c. 14 is missing in Inst.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_13.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">294</biblScope></bibl><seg type="original" xml:lang="de">13 <hi rend="italic">fehlt K</hi></seg><seg type="translation" xml:lang="en" source="#claude">13 missing in K</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_13.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">200</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Vielleicht benutzt durch <hi rend="italic">Hom. n</hi>. Wulfstan 118 = 208</seg><seg type="translation" xml:lang="en" source="#claude">Perhaps used by <hi rend="italic">Hom. n</hi>. Wulfstan 118 = 208</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="ICn_13.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="en">Cf. Wulfstan, pp. 118, 208.</seg></note>
       </div>
     </body>
   </text>

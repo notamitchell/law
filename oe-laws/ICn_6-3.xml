@@ -14,6 +14,8 @@
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#kennedy">Kennedy</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -34,6 +36,7 @@
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="kennedy" type="study">A. G. Kennedy, ‘Cnut’s Law Code of 1018’, <title>Anglo-Saxon England</title> 11 (1983), 57–81</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -42,7 +45,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -64,21 +67,24 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1636 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 290.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 291.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6.3">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 6.3</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.3" corresp="#wit-g-a"><pb n="290" ed="#liebermann"/>And æghwylc Cristen mann eac for his Drihtenes ege unrihthæmed georne forbuge ⁊ godcunde lage rihtlice healde.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.3" corresp="#wit-a"><pb n="290" ed="#liebermann"/>And æghwylc Cristen man eac for his Drihtnes ege unrihthamed georne forbuge ⁊ godcunda lage rihtlice healdæn.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.3" corresp="#wit-g-a"><pb n="290" ed="#liebermann"/>And æghwylc<ptr type="liebermannNote" n="3" target="#ICn_6-3.lnote.oe.3"/> Cristen mann<ptr type="liebermannNote" n="4" target="#ICn_6-3.lnote.oe.4"/> eac<ptr type="liebermannNote" n="5" target="#ICn_6-3.lnote.oe.5"/> for his Drihtenes<ptr type="liebermannNote" n="6" target="#ICn_6-3.lnote.oe.6"/> ege unrihthæmed georne forbuge ⁊ godcunde lage rihtlice healde.<ptr type="liebermannNote" n="7" target="#ICn_6-3.lnote.oe.7"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.3" corresp="#wit-a"><pb n="290" ed="#liebermann"/>And æghwylc Cristen man eac for<ptr type="liebermannNote" n="1" target="#ICn_6-3.lnote.oe.1"/> his Drihtnes ege unrihthamed georne forbuge ⁊ godcunda lage rihtlice healdæn.<ptr type="liebermannNote" n="2" target="#ICn_6-3.lnote.oe.2"/></ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.3" corresp="#wit-d-frags"><pb n="290" ed="#liebermann"/>And æghwilc Cristen man eac for his Drihtenes ege unrihthæmed georne forbuge ⁊ godcunde laga rihtlice healde.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.3" corresp="#wit-q"><pb n="290" ed="#liebermann"/>Et omnis Christianus pro timore sui Creatoris iniustum concubitum uitet et Dei legem teneat.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.3" corresp="#wit-q"><pb n="290" ed="#liebermann"/>Et omnis Christianus pro timore sui Creatoris iniustum concubitum uitet et Dei<ptr type="liebermannNote" n="6" target="#ICn_6-3.lnote.oe.6-2"/> legem teneat.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.3" corresp="#wit-inst-cn"><pb n="291" ed="#liebermann"/>Omnem etiam Christianum obnixe precamur, fornicationem deuitare, leges et praecepta Dei diligenter custodire.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.3" corresp="#wit-cons-cn"><pb n="291" ed="#liebermann"/>Omnis etiam Christianus pro timore Domini iniustum coitum diligenter uitet et diuinam legem recte custodiat.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="6a.3" corresp="#wit-g-a"><pb n="162" ed="#robertson"/>And æghwylc Cristen mann eac for his Drihtenes ege unrihthæmed georne forbuge ⁊ godcunde lage rihtlice healde.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="240" ed="#rabin-doml"/>And æghwylc Cristen mann eac for his Drihtenes ege unrihthæmed georne forbuge and godcunde lage rihtlice healde.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="291" ed="#liebermann"/>Und auch jeder [andere] Christenmensch meide aus Furcht vor seinem Herr[gott] willig gesetzwidrigen Beischlaf und halte gesetzlich geistliche Rechtsordnung(en?).</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="291" ed="#liebermann"/>Und auch jeder [andere] Christenmensch meide aus<ptr type="liebermannNote" n="1" target="#ICn_6-3.lnote.de.1"/> Furcht vor seinem Herr[gott] willig gesetzwidrigen<ptr type="liebermannNote" n="2" target="#ICn_6-3.lnote.de.2"/> Beischlaf und halte gesetzlich geistliche Rechtsordnung(en?).</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let every [other] Christian man also, for fear of his Lord, eagerly avoid unlawful intercourse and keep the law(s?) of God rightly.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a"><pb n="163" ed="#robertson"/>All Christian men likewise through the fear of God shall strictly avoid illicit unions and duly observe the laws of the church.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a"><ptr type="editorNote" n="1" target="#ICn_6-3.robnote.n.1"/><pb n="163" ed="#robertson"/>All Christian men likewise through the fear of God<ptr type="editorNote" n="2" target="#ICn_6-3.robnote.n.2"/> shall strictly avoid illicit unions<ptr type="editorNote" n="3" target="#ICn_6-3.robnote.n.3"/> and duly observe the laws of the church.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="241" ed="#rabin-doml"/>And for fear of God, every Christian must diligently avoid unlawful intercourse and rightly uphold the divine law.</ab>
         <note type="comparison" source="#liebermann" n="291"><ref target="clause:VAtr_10">V Atr 10</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 10</note>
@@ -87,7 +93,20 @@
         <note type="comparedBy" source="#wormald-mel" n="346"><ref target="clause:Cn-1018_part-024">Cn 1018 11.3</ref></note>
         <note type="comparedBy" source="#kennedy" n="59"><ref target="clause:Cn-1018_part-024">Cn 1018 11.3–12.2</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="373"><ref target="clause:Ymb-Aewbricas_Not-known-to-Liebermann">Ymb Æwbricas</ref></note>
-        <note type="editorial">Liebermann compares V Atr 10.</note>
+        <note type="editorial">Liebermann compares V Atr 10.; BR: added from Gesetze I p. 291, October 2026 (MS Cons)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6-3.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de">-wilc <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-wilc Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6-3.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de">man <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">man Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6-3.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6-3.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de">-tnes <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-tnes Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6-3.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de">-den <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-den Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6-3.lnote.oe.6-2" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de">l. D. <hi rend="italic">R</hi></seg><seg type="translation" xml:lang="en" source="#claude">l. D. R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6-3.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">zweimal</hi></seg><seg type="translation" xml:lang="en" source="#claude">twice</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6-3.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_6-3.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">199</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">= <hi rend="italic">for Godes cge</hi> 4, 3</seg><seg type="translation" xml:lang="en" source="#claude">= <hi rend="italic">for Godes cge</hi> 4, 3</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_6-3.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">199</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl</hi>. gegen Unzucht 7, 2f. 24. II 50—54; Cn 1020, 15f.</seg><seg type="translation" xml:lang="en" source="#claude">Against unchastity <hi rend="italic">cf</hi>. 7, 2f. 24. II 50—54; Cn 1020, 15f.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="ICn_6-3.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="en">Cf. V Atr. 10.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="ICn_6-3.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="en">Cf. cap. 4, 3.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="ICn_6-3.robnote.n.3" n="3" source="#robertson"><bibl><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="en">Cf. caps. 7, 2 f.; 24; Procl. of 1020, cap. 15 f.; II Cn. 50–52, 1; 54–5.</seg></note>
       </div>
     </body>
   </text>

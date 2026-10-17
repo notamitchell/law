@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -40,7 +42,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -62,26 +64,38 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1621 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 284.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 284: “And æt þryfealdre sprace ladige, gif he durre, eac on þam husle mid twam his gehádan.” → “And æt þryfealdre sprace ladige, gif he durre, eac on þam husle mid twam his gehádan. (expanded letters in italics: m)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 285.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5a">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 5a</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5a" corresp="#wit-g-a"><pb n="284" ed="#liebermann"/>⁊ æt þryfealdre spæce ladige he, gyf he durre, eac on þa<hi rend="italic">m</hi> husle mid twam his gehádan.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5a" corresp="#wit-a"><pb n="284" ed="#liebermann"/>And æt þryfealdre sprace ladige, gif he durre, eac on þam husle mid twam his gehádan.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5a" corresp="#wit-q"><pb n="284" ed="#liebermann"/>in triplici calumpnia: cum duobus sui ordinis.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="5a" corresp="#wit-g-a"><pb n="158" ed="#robertson"/>⁊ æt þryfealdre spæce ladige he, gyf he durre, eac on þam husle mid twam his gehádan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5a" corresp="#wit-g-a"><pb n="284" ed="#liebermann"/>⁊ æt þryfealdre spæce<ptr type="liebermannNote" n="21" target="#ICn_5a.lnote.oe.21"/> ladige he<ptr type="liebermannNote" n="22" target="#ICn_5a.lnote.oe.22"/>, gyf<ptr type="liebermannNote" n="17" target="#ICn_5a.lnote.oe.17"/> he durre, eac on þa<hi rend="italic">m</hi> husle mid twam his gehádan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5a" corresp="#wit-a"><pb n="284" ed="#liebermann"/>And æt þryfealdre sprace ladige, gif he durre, eac on þa<hi rend="italic">m</hi> husle mid twam his gehádan.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5a" corresp="#wit-q"><ptr type="liebermannNote" n="11" target="#ICn_5a.lnote.oe.11"/><pb n="284" ed="#liebermann"/>in triplici calumpnia: cum duobus sui ordinis.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5a" corresp="#wit-inst-cn"><pb n="285" ed="#liebermann"/>Et si tres appellationes fuerint, secum acceptis duobus<ptr type="liebermannNote" n="32" target="#ICn_5a.lnote.oe.32"/> presbyteris, purget se, sicut prędiximus<ptr type="liebermannNote" n="33" target="#ICn_5a.lnote.oe.33"/>, si audet . . . .<ptr type="liebermannNote" n="*" target="#ICn_5a.lnote.oe.star"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5a" corresp="#wit-cons-cn"><pb n="285" ed="#liebermann"/>si uero triplex, eodem modo cum aliis duobus sibi paribus ipse tertius se purget.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="5a" corresp="#wit-g-a"><pb n="158" ed="#robertson"/>⁊ æt þryfealdre spæce ladige he<ptr type="editorNote" n="5" target="#ICn_5a.robnote.fn.5"/>, gyf he durre, eac on þam husle mid twam his gehádan.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="238" ed="#rabin-doml"/>And æt þryfealdre spæce ladige he, gyf he durre, eac on þam husle mid twam his gehadan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="285" ed="#liebermann"/>Und von dreifacher Anklage reinige er sich, wenn er es wagt, ebenfalls durch den Abendmahlsgenuss mit zweien seiner Standesgenossen.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="285" ed="#liebermann"/>Und von dreifacher Anklage reinige er sich, wenn er es wagt, ebenfalls durch den Abendmahlsgenuss mit zweien seiner Standesgenossen.<ptr type="liebermannNote" n="1" target="#missing"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And from a threefold accusation let him clear himself, if he dares, likewise by [taking] the sacrament, with two of his fellow-clergy.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a"><pb n="159" ed="#robertson"/>And in the case of a triple accusation he shall also clear himself, if he dares, by the Holy Communion with two supporters of the same ecclesiastical rank as himself.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="239" ed="#rabin-doml"/>And if it is a threefold accusation, he shall, if he dares, exonerate himself through the sacrament and the oaths of two clerics of his rank.</ab>
         <note type="comparison" source="#liebermann" n="285"><ref target="clause:VIIIAtr_19-1">VIII Atr 19.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 19, 1</note>
         <note type="comparison" source="#wormald-mel" n="356"><label>quoted verbatim (bold in Wormald's table)</label> <ref target="clause:VIIIAtr_19-1">VIII Atr 19.1–23</ref> <quote>Table 5.4, I Cn 5a-5:2b: II Can Eg 68e-i  VIII Atr 19:1-23</quote></note>
-        <note type="editorial">The Instituta Cnuti add 5aa: the priest is to be held until the bishop's judgment (compare II Cn 42). Liebermann compares VIII Atr 19.1.</note>
+        <note type="editorial">The Instituta Cnuti add 5aa: the priest is to be held until the bishop's judgment (compare II Cn 42). Liebermann compares VIII Atr 19.1.; BR: added from Gesetze I p. 285, October 2026 (MS Cons)</note>
         <note type="textual" source="#rabin-doml">ladige he: A omits he</note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_5a.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">284</biblScope></bibl><seg type="original" xml:lang="de">spræce <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">spræce Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_5a.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">284</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_5a.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">284</biblScope></bibl><seg type="original" xml:lang="de">gif <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gif Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_5a.lnote.oe.32" n="32" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">285</biblScope></bibl><seg type="original" xml:lang="de">fratribus <hi rend="italic">fügt zu Lb S</hi></seg><seg type="translation" xml:lang="en" source="#claude">fratribus added by Lb S</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_5a.lnote.oe.33" n="33" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">285</biblScope></bibl><seg type="original" xml:lang="de">dix. <hi rend="italic">Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">dix. Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_5a.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">285</biblScope></bibl><seg type="original" xml:lang="de">[5<hi rend="italic">aa</hi>] Ipse tamen presbiter [si calumpniatur <hi rend="italic">Cb</hi>] teneatur usque ad iudicium episcopi [u. ad i. e. t. <hi rend="italic">Cb; dieser Anfang fehlt hier, steht hinter</hi> 4,2 <hi rend="italic">Cb T</hi>]; uel [et <hi rend="italic">Cb</hi>] ista tamen fiant secundum iudicium episcopi <hi rend="italic">fügt Inst. zu; vgl. II</hi> 42.</seg><seg type="translation" xml:lang="en" source="#claude">[5aa] Ipse tamen presbiter [si calumpniatur Cb] teneatur usque ad iudicium episcopi [u. ad i. e. t. Cb; this beginning is omitted here, and stands after 4,2 in Cb T]; uel [et Cb] ista tamen fiant secundum iudicium episcopi added by Inst.; cf. II 42.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_5a.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">284</biblScope></bibl><seg type="original" xml:lang="de">et <hi rend="italic">fügt zu T</hi></seg><seg type="translation" xml:lang="en" source="#claude">et added by T</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="ICn_5a.robnote.fn.5" n="5" source="#robertson"><bibl><biblScope unit="page">158</biblScope></bibl><label>halige</label><seg type="original" xml:lang="en">Om. A, Ld.</seg></note>
       </div>
     </body>
   </text>

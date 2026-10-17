@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +43,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -62,26 +65,41 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1684 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 302.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 302: “hine; inwardlice” → “hinc; inweardlice”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 303: “Aber wie kann nun jemand jemals innig zu Gott beten, wenn er nicht innig (wahre Liebe und G) rechten Glauben zu Gott hat?” → “Aber wie kann nun jemand jemals innig zu Gott beten, wenn er nicht innig (wahre Liebe und G) rechten Glauben zu Gott hat? (expanded letters in italics: G)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 303.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="22.4">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 22.4</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="22.4" corresp="#wit-g-a"><pb n="302" ed="#liebermann"/>Ac hu mæg þonne æfre ænig mann hine inweardlice to Gode gebiddan, butan he hæbbe inwardlice (soðe lufe ⁊) rihtne geleafan to Gode?</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="22.4" corresp="#wit-a"><pb n="302" ed="#liebermann"/>Ac hu mæg þonne æfre ænig man hyne inweardlice to Gode gebiddan, buton he on Godd habbe inweardilice rihtne geleafan?</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="22.4" corresp="#wit-g-a"><pb n="302" ed="#liebermann"/>Ac hu mæg þonne æfre ænig mann<ptr type="liebermannNote" n="20" target="#ICn_22-4.lnote.oe.20"/> hinc inweardlice to Gode gebiddan<ptr type="liebermannNote" n="21" target="#ICn_22-4.lnote.oe.21"/>, butan he hæbbe inweardlice (soðe<ptr type="liebermannNote" n="***" target="#ICn_22-4.lnote.oe.star3"/> lufe ⁊) rihtne geleafan to Gode?</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="22.4" corresp="#wit-b"><pb n="302" ed="#liebermann"/>Ac hu mæg ðonne æfre ænig man hine inweardlice to Gode gebiddan, buton he on God hæbbe inwardlice rihtne geleafan?</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="22.4" corresp="#wit-q"><pb n="303" ed="#liebermann"/>Sed quomodo potest aliquis deuotas ad Deum preces effundere, qui non habet intime rectam fidem in eo?</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="22.4" corresp="#wit-b"><pb n="172" ed="#robertson"/>Ac hu mæg ðonne æfre ænig man hine inweardlice to Gode gebiddan, buton he on God hæbbe inwardlice rihtne geleafan?</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="22.4" corresp="#wit-a"><pb n="302" ed="#liebermann"/>Ac hu mæg þonne æfre ænig man hyne inweardlice to Gode gebiddan, buton he on Godd habbe inweardilice<ptr type="liebermannNote" n="1" target="#ICn_22-4.lnote.oe.1"/> rihtne geleafan?</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="22.4" corresp="#wit-q"><pb n="303" ed="#liebermann"/>Sed<ptr type="liebermannNote" n="10" target="#ICn_22-4.lnote.oe.10"/> quomodo potest aliquis deuotas ad<ptr type="liebermannNote" n="11" target="#ICn_22-4.lnote.oe.11"/> Deum preces effundere, qui non habet intime rectam fidem in eo?</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="22.4" corresp="#wit-inst-cn"><pb n="303" ed="#liebermann"/>[22, 4] Sed quomodo potest aliquis intimo corde Deum rogare, nisi habeat rectam credulitatem?</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="22.4" corresp="#wit-cons-cn"><pb n="303" ed="#liebermann"/>Quomodo poterit quisquam intime pro se Deum orare, qui erga Deum rectam fidem non habet?</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="22.4" corresp="#wit-b"><pb n="172" ed="#robertson"/>Ac hu mæg ðonne æfre ænig man hine inweardlice to Gode gebiddan, buton he on God hæbbe inwardlice rihtne geleafan?<ptr type="editorNote" n="1" target="#ICn_22-4.robnote.fn.1"/></ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="250" ed="#rabin-doml"/>Ac hu mæg þonne æfre ænig mann hine inweardlice to Gode gebiddan butan he hæbbe inweardlice soðe lufe and rihtne geleafan to Gode?</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="303" ed="#liebermann"/>Aber wie kann nun jemand jemals innig zu Gott beten, wenn er nicht innig (wahre Liebe und G) rechten Glauben zu Gott hat?</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="303" ed="#liebermann"/>Aber<ptr type="liebermannNote" n="1" target="#ICn_22-4.lnote.de.1"/> wie<ptr type="liebermannNote" n="2" target="#ICn_22-4.lnote.de.2"/> kann nun jemand jemals innig zu Gott beten, wenn er nicht innig (wahre Liebe und <hi rend="italic">G</hi>) rechten Glauben zu Gott hat?</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But how can anyone ever pray inwardly to God unless he has inwardly (true love and, G) true faith in God?</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="173" ed="#robertson"/>But how then can any man ever pray from the depths of his heart to God, unless he have true belief in God in the depths of his heart?</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><ptr type="editorNote" n="1" target="#ICn_22-4.robnote.n.1"/><pb n="173" ed="#robertson"/>But how then can any man ever pray from the depths of his heart to God, unless he have true belief in God in the depths of his heart?</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="251" ed="#rabin-doml"/>But how then can anyone ever pray to God in his soul unless he has true love for and faith in God in his soul?</ab>
         <note type="comparison" source="#liebermann" n="303">Wulfstan p. 21</note>
         <note type="comparisonPrinted" source="#liebermann">ebd.</note>
-        <note type="editorial">‘soðe lufe ⁊’ only in G. Liebermann compares Wulfstan p. 21.; Robertson (p. 139) takes I Cn from B, which begins at ‘mæssedæg’ in 14.2, the earlier clauses being supplied from G</note>
+        <note type="editorial">‘soðe lufe ⁊’ only in G. Liebermann compares Wulfstan p. 21.; Robertson (p. 139) takes I Cn from B, which begins at ‘mæssedæg’ in 14.2, the earlier clauses being supplied from G; BR: added from Gesetze I p. 303, October 2026 (MS Cons)</note>
         <note type="textual" source="#rabin-doml">butan . . . Gode: buton he on God hæbbe inwardlice rihtne geleafan AB</note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_22-4.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">302</biblScope></bibl><seg type="original" xml:lang="de">man <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">man Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_22-4.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">302</biblScope></bibl><seg type="original" xml:lang="de">-idan, buton he on Gode habbe i. rihtten g.? <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-idan, buton he on Gode habbe i. rihtten g.? Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_22-4.lnote.oe.star3" n="***" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">302</biblScope></bibl><seg type="original" xml:lang="de">s. l. ⁊ <hi rend="italic">nur G</hi></seg><seg type="translation" xml:lang="en" source="#claude">s. l. ⁊ only G</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_22-4.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">303</biblScope></bibl><seg type="original" xml:lang="de">Si <hi rend="italic">R</hi></seg><seg type="translation" xml:lang="en" source="#claude">Si R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_22-4.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">303</biblScope></bibl><seg type="original" xml:lang="de">p. ad D. <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">p. ad D. K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_22-4.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">302</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_22-4.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">201</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">G weicht hier von der Quelle unlogisch ab</seg><seg type="translation" xml:lang="en" source="#claude">G departs illogically from the source here</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_22-4.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">201</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Rhetorische Frage auch Ap AGu 8. Grið 27</seg><seg type="translation" xml:lang="en" source="#claude">Rhetorical question also in Ap AGu 8. Grið 27</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="ICn_22-4.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">350</biblScope></bibl><seg type="original" xml:lang="en">This clause is in the form of a rhetorical question, cf. <hi rend="italic">Be Griðe</hi>, 27.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="ICn_22-4.robnote.fn.1" n="1" source="#robertson"><bibl><biblScope unit="page">172</biblScope></bibl><label>geleafan?</label><seg type="original" xml:lang="en"><hi rend="italic">b. he h. inweardlice soðe lufe</hi> ⁊ <hi rend="italic">r. g. to Gode</hi> G.</seg></note>
       </div>
     </body>
   </text>

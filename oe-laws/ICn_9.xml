@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +43,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -61,27 +64,46 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1644 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 292.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 293.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 293: “Und Romgeld zu Petri Festtag (am 1. August Quadr., Inst.);” → “Und Romgeld zu Petri Festtag (am 1. August Quadr., Inst.); (expanded letters in italics: Quadr., Inst)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="9">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 9</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9" corresp="#wit-g-a"><pb n="292" ed="#liebermann"/>And Romfeoh be Petres mæssan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9" corresp="#wit-g-a"><pb n="292" ed="#liebermann"/>And Romfeoh<ptr type="liebermannNote" n="14" target="#ICn_9.lnote.oe.14"/> be Petres mæssan.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9" corresp="#wit-a"><pb n="292" ed="#liebermann"/>And Romfeoh be Peteres mæssan;</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="9" corresp="#wit-q"><pb n="292" ed="#liebermann"/>Et Romfeoh, id est Romę census, quem Beato Petro singulis annis reddendum ad laudem (et gloriam) Dei regis nostri larga benignitas semper instituit, in festo sancti Petri reddatur ad Uincula.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="9" corresp="#wit-q"><pb n="292" ed="#liebermann"/>Et Romfeoh<ptr type="liebermannNote" n="12" target="#ICn_9.lnote.oe.12"/>, id est Romę census, quem Beato Petro singulis annis reddendum ad laudem (et<ptr type="liebermannNote" n="13" target="#ICn_9.lnote.oe.13"/> gloriam) Dei regis nostri larga benignitas semper instituit, in<ptr type="liebermannNote" n="14" target="#ICn_9.lnote.oe.14-2"/> festo sancti Petri reddatur ad<ptr type="liebermannNote" n="15" target="#ICn_9.lnote.oe.15"/> Uincula.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="9" corresp="#wit-inst-cn"><pb n="293" ed="#liebermann"/>Pecunia autem<ptr type="liebermannNote" n="18" target="#ICn_9.lnote.oe.18"/> (sancti<ptr type="liebermannNote" n="11" target="#ICn_9.lnote.oe.11"/>) Petri, quam<ptr type="liebermannNote" n="19" target="#ICn_9.lnote.oe.19"/> Angli uocant<ptr type="liebermannNote" n="20" target="#ICn_9.lnote.oe.20"/> Romescot, sit persoluta in festo sancti Petri in principio Augusti mensis . . .<ptr type="liebermannNote" n="*" target="#ICn_9.lnote.oe.star"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="9" corresp="#wit-cons-cn"><pb n="293" ed="#liebermann"/>Et Rome census soluatur ad festum sancti Petri;</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="9" corresp="#wit-g-a"><pb n="164" ed="#robertson"/>And Romfeoh be Petres mæssan.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="242" ed="#rabin-doml"/>And Romfeoh be Petres mæssan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="293" ed="#liebermann"/>Und Romgeld zu Petri Festtag (am 1. August Quadr., Inst.);</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="293" ed="#liebermann"/>Und<ptr type="liebermannNote" n="1" target="#ICn_9.lnote.de.1"/> Romgeld<ptr type="liebermannNote" n="2" target="#ICn_9.lnote.de.2"/> zu Petri Festtag (am 1.<ptr type="liebermannNote" n="3" target="#ICn_9.lnote.de.3"/> August <hi rend="italic">Quadr., Inst</hi>.);</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And Rome-money at St Peter's day (1 August, Quadr., Inst.);</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a"><pb n="165" ed="#robertson"/>And Peter's Pence [shall be rendered] by St Peter's Day.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a"><ptr type="editorNote" n="1" target="#ICn_9.robnote.n.1"/><pb n="165" ed="#robertson"/>And Peter's Pence [shall be rendered] by St Peter's Day<ptr type="editorNote" n="2" target="#ICn_9.robnote.n.2"/>.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="243" ed="#rabin-doml"/>And the dues to Rome are to be paid by the Feast of Saint Peter.</ab>
         <note type="comparison" source="#liebermann" n="293"><ref target="clause:VIIIAtr_10">VIII Atr 10</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 10</note>
         <note type="comparison" source="#wormald-mel" n="356"><label>quoted verbatim (bold in Wormald's table)</label> <ref target="clause:VIAtr_18">VI Atr 18</ref> <quote>Table 5.4, I Cn 9: Cn 1018 13:4  VI Atr 18</quote></note>
         <note type="comparison" source="#wormald-mel" n="356"><label>quoted verbatim (bold in Wormald's table)</label> <ref target="clause:Cn-1018_part-034">Cn 1018 13.4</ref> <quote>Table 5.4, I Cn 9: Cn 1018 13:4  VI Atr 18</quote></note>
-        <note type="editorial">Liebermann compares VIII Atr 10.</note>
+        <note type="editorial">Liebermann compares VIII Atr 10.; BR: added from Gesetze I p. 293, October 2026 (MS Cons)</note>
         <note type="translator" source="#rabin-doml">Feast of Saint Peter: June 29.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_9.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">292</biblScope></bibl><seg type="original" xml:lang="de">Romef. be Peteres <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">Romef. be Peteres Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_9.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">293</biblScope></bibl><seg type="original" xml:lang="de">h' <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">h' T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_9.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">293</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_9.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">293</biblScope></bibl><seg type="original" xml:lang="de">quod <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">quod T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_9.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">293</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so Cb</hi>; R. u. <hi rend="italic">übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">thus Cb; R. u. the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_9.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">293</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">folgt II Eg.</hi> 4,1—3 [<hi rend="italic">o. S.</hi> 199]; <hi rend="italic">I Cn.</hi> 12; 11; 11,1; <hi rend="italic">II Eg.</hi> 1,1; <hi rend="italic">I Cn.</hi> 10</seg><seg type="translation" xml:lang="en" source="#claude">followed by II Eg. 4,1—3 [above p. 199]; I Cn. 12; 11; 11,1; II Eg. 1,1; I Cn. 10</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_9.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">292</biblScope></bibl><seg type="original" xml:lang="de">-fech <hi rend="italic">T</hi>; romsech <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">-fech T; romsech Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_9.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">292</biblScope></bibl><seg type="original" xml:lang="de">et g. <hi rend="italic">fehlt K</hi></seg><seg type="translation" xml:lang="en" source="#claude">et g. missing in K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_9.lnote.oe.14-2" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">292</biblScope></bibl><seg type="original" xml:lang="de">r. in f. s. P. <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">r. in f. s. P. K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_9.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">292</biblScope></bibl><seg type="original" xml:lang="de">ad U. <hi rend="italic">fehlt R</hi>; <hi rend="italic">später unterstr. Dm</hi></seg><seg type="translation" xml:lang="en" source="#claude">ad U. missing in R; later underlined Dm</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_9.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">200</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Der Satz, benutzt durch Hn 11, 3, folgt derselben Quelle wie das Vorige und Folgende, hängt also nicht mit Cnuts Romreise 1027 zusammen. <hi rend="italic">Vgl. o</hi>. Einl. 13; <hi rend="italic">Gl</hi> Peterspfennig 5a</seg><seg type="translation" xml:lang="en" source="#claude">The sentence, used by Hn 11, 3, follows the same source as what precedes and what follows, and is therefore not connected with Cnut’s journey to Rome in 1027. <hi rend="italic">Cf. above</hi> Introduction 13; <hi rend="italic">Gl</hi> Peterspfennig 5a</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_9.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">200</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Romscot</hi> (<hi rend="italic">ebd</hi>. 1) führt Inst aus eigener Kenntnis ein.—Der Zusatz in Q, in dessen bezeichnendem Stile (<hi rend="italic">o</hi>. I 533{b}), preist Heinrich den 1., für dessen Auge er schrieb</seg><seg type="translation" xml:lang="en" source="#claude">Inst introduces <hi rend="italic">Romscot</hi> (<hi rend="italic">ibid</hi>. 1) from its own knowledge. — The addition in Q, in his characteristic style (<hi rend="italic">above</hi> I 533{b}), praises Henry I, for whose eyes he was writing</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_9.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">200</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Gl ebd</hi>. 15; Petersfest 4</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Gl ibid</hi>. 15; Petersfest 4</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="ICn_9.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="en">With this clause and the two following, cf. VIII Atr. 10–11, 1.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="ICn_9.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="en">Q reads: <hi rend="italic">in festo sancti Petri ad vincula</hi>, <hi rend="italic">i.e.</hi> August 1st (cf. <hi rend="italic">in principio Augusti mensis</hi>, Inst.), as distinct from the general festival of St Peter celebrated on June 29th, see Hastings, <hi rend="italic">Encycl. of Religion and Ethics</hi>, Vol. <hi rend="smallcaps">v</hi>. p. 850.</seg></note>
       </div>
     </body>
   </text>

@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +43,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -62,27 +65,44 @@
       <change when="2026-10-18">Generated from row 1654 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 294.</change>
       <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 166.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 295.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 295: “Und alle Kirchengerechtsame fördere (schütze A) man willig, wie es nöthig ist.” → “Und alle Kirchengerechtsame fördere (schütze A) man willig, wie es nöthig ist. (expanded letters in italics: A)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="14">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 14</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14" corresp="#wit-g-a"><pb n="294" ed="#liebermann"/>And ealle Godes gerihta fyrðrige man georne, ealswa hit þearf is.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14" corresp="#wit-g-a"><pb n="294" ed="#liebermann"/>And ealle Godes gerihta fyrðrige<ptr type="liebermannNote" n="19" target="#ICn_14.lnote.oe.19"/> man georne, ealswa<ptr type="liebermannNote" n="20" target="#ICn_14.lnote.oe.20"/> hit þearf is.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14" corresp="#wit-a"><pb n="294" ed="#liebermann"/>⁊ ealle Godes gerihta friðige man georne, ealswa hit þearf is.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="14" corresp="#wit-q"><pb n="294" ed="#liebermann"/>Et omnes rectitudines et sanctę Dei cerimonię, sicut omnibus opus est, totis desideriis obseruentur</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="14" corresp="#wit-g-a"><pb n="166" ed="#robertson"/>And ealle Godes gerihta fyrðrige man georne, ealswa hit þearf is.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="14" corresp="#wit-inst-cn"><pb n="295" ed="#liebermann"/>Solempnitates<ptr type="liebermannNote" n="23" target="#ICn_14.lnote.oe.23"/> sanctorum diligenter (ab<ptr type="liebermannNote" n="24" target="#ICn_14.lnote.oe.24"/> omnibus) celebrentur. Et Dominici dies a pręcedentis Sabbati hora<ptr type="liebermannNote" n="25" target="#ICn_14.lnote.oe.25"/> nona usque ad lucem sequentis ferię<ptr type="liebermannNote" n="26" target="#ICn_14.lnote.oe.26"/> secundę feriantur; alię autem<ptr type="liebermannNote" n="27" target="#ICn_14.lnote.oe.27"/> festiuitates et ieiunia districte custodiantur, sicut (in<ptr type="liebermannNote" n="28" target="#ICn_14.lnote.oe.28"/> domo<ptr type="liebermannNote" n="29" target="#ICn_14.lnote.oe.29"/> statutum est et preceptum) praecipitur.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="14" corresp="#wit-cons-cn"><pb n="295" ed="#liebermann"/>Et omnes rectitudines Dei conseruentur, sicut expedit.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="14" corresp="#wit-g-a"><pb n="166" ed="#robertson"/>And ealle Godes gerihta fyrðrige<ptr type="editorNote" n="1" target="#ICn_14.robnote.fn.1"/> man georne, ealswa hit þearf is.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="244" ed="#rabin-doml"/>And ealle Godes gerihta fyrðrige man georne, ealswa hit þearf is.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="295" ed="#liebermann"/>Und alle Kirchengerechtsame fördere (schütze A) man willig, wie es nöthig ist.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="295" ed="#liebermann"/>Und alle Kirchengerechtsame fördere (schütze<ptr type="liebermannNote" n="1" target="#ICn_14.lnote.de.1"/> <hi rend="italic">A</hi>) man willig, wie es nöthig ist.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let all God's dues be eagerly promoted (protected, A), as is needful.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a"><pb n="167" ed="#robertson"/>And all God's dues shall be promptly rendered, as the occasion requires.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a"><pb n="167" ed="#robertson"/>And all God's dues shall be promptly rendered<ptr type="editorNote" n="1" target="#ICn_14.robnote.n.1"/>, as the occasion requires.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="245" ed="#rabin-doml"/>And all God’s dues are to be given willingly, just as is required.</ab>
         <note type="comparison" source="#liebermann" n="295"><ref target="clause:VIAtr_21-1">VI Atr 21.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 21, 1</note>
         <note type="comparison" source="#wormald-mel" n="356"><label>quoted verbatim (bold in Wormald's table)</label> <ref target="clause:VIAtr_21-1">VI Atr 21.1–22</ref> <quote>Table 5.4, I Cn 14-14:1: Cn 1018 14-14:1 (Hom N L) VI Atr 21:1-22</quote></note>
         <note type="comparison" source="#wormald-mel" n="356"><label>quoted verbatim (bold in Wormald's table)</label> <ref target="clause:Cn-1018_part-038">Cn 1018 14–14.1</ref> <quote>Table 5.4, I Cn 14-14:1: Cn 1018 14-14:1 (Hom N L) VI Atr 21:1-22</quote></note>
-        <note type="editorial">Liebermann compares VI Atr 21.1.</note>
+        <note type="editorial">Liebermann compares VI Atr 21.1.; BR: added from Gesetze I p. 295, October 2026 (MS Cons)</note>
         <note type="textual" source="#rabin-doml">fyrðrige: friðige A</note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_14.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">294</biblScope></bibl><seg type="original" xml:lang="de">friþige <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">friþige Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_14.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">294</biblScope></bibl><seg type="original" xml:lang="de">ealls. h. ðeorf <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">ealls. h. ðeorf Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_14.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">295</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">davon</hi> te <hi rend="italic">später Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">of this, te later Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_14.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">295</biblScope></bibl><seg type="original" xml:lang="de">ab o. <hi rend="italic">nur Cb</hi>; <hi rend="italic">fehlt übrigen</hi></seg><seg type="translation" xml:lang="en" source="#claude">ab o. only Cb; missing in the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_14.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">295</biblScope></bibl><seg type="original" xml:lang="de">n. h. <hi rend="italic">HLb</hi></seg><seg type="translation" xml:lang="en" source="#claude">n. h. HLb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_14.lnote.oe.26" n="26" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">295</biblScope></bibl><seg type="original" xml:lang="de">s. f. <hi rend="italic">HLb</hi></seg><seg type="translation" xml:lang="en" source="#claude">s. f. HLb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_14.lnote.oe.27" n="27" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">295</biblScope></bibl><seg type="original" xml:lang="de">etiam <hi rend="italic">Cb Lb</hi></seg><seg type="translation" xml:lang="en" source="#claude">etiam Cb Lb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_14.lnote.oe.28" n="28" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">295</biblScope></bibl><seg type="original" xml:lang="de">in — preceptum <hi rend="italic">nur Cb</hi>; praecipitur <hi rend="italic">übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">in — preceptum only Cb; praecipitur the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_14.lnote.oe.29" n="29" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">295</biblScope></bibl><seg type="original" xml:lang="de">Domino <hi rend="italic">zu bessern oder</hi> Domini <hi rend="italic">zu ergänzen schlägt vor Kolderup</hi></seg><seg type="translation" xml:lang="en" source="#claude">Kolderup proposes correcting to Domino or supplying Domini</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_14.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">200</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Dieselbe Variante <hi rend="italic">o</hi>. V Atr 12, 2. VI 21, 1; mit <hi rend="italic">fyrðrige</hi> auch <hi rend="italic">Hom. n</hi>. Wulfstan 311.—Inhalt von 14—16 schon Cn 1020, 8. 19. Cn 1027, 16</seg><seg type="translation" xml:lang="en" source="#claude">The same variant <hi rend="italic">above</hi> V Atr 12, 2. VI 21, 1; with <hi rend="italic">fyrðrige</hi> also <hi rend="italic">Hom. n</hi>. Wulfstan 311.—The content of 14—16 already in Cn 1020, 8. 19. Cn 1027, 16</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="ICn_14.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="en"><hi rend="italic">fyrðrige</hi>, G, cf. Wulfstan, p. 311; <hi rend="italic">friðige</hi>, A; cf. V Atr. 12, 2; VI, 21, 1.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="ICn_14.robnote.n.0" n="0" source="#robertson" rend="wholeClause"><bibl><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="en">With caps 14–16, cf. Procl. of 1020, caps. 8; 19; Procl. of 1027, cap. 16.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="ICn_14.robnote.fn.1" n="1" source="#robertson"><bibl><biblScope unit="page">166</biblScope></bibl><label>fyrðrige</label><seg type="original" xml:lang="en"><hi rend="italic">friðige</hi> A, Ld.</seg></note>
       </div>
     </body>
   </text>
