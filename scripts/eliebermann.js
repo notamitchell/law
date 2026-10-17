@@ -642,7 +642,9 @@
      * data: { headword, n, lang, page, facsimile, entryHtml, definitionHtml,
      *         translationHtml, seeAlso: [{text, slug}], links: {bt, doe,
      *         wiktionary, lawCode: [{text, url}]}, change: {when, text},
-     *         earlierChanges: [{when, text}], xref }
+     *         earlierChanges: [{when, text}], xref, spelling }
+     * spelling: true for a spelling entry (a letter or letters, not a word),
+     * written as <usg type="dom">spelling</usg>.
      * xref: true for a cross-reference entry (one that only points to another
      * headword), written as <entry type="xref">.
      */
@@ -707,7 +709,8 @@ ${changes.map(c => `      <change when="${escapeXml(c.when)}">${escapeXml(c.text
       <entry xml:lang="${lang}"${entryAttrs}>
         <form type="lemma">
           <orth>${escapeXml(data.headword)}</orth>
-        </form>
+        </form>${data.spelling ? `
+        <usg type="dom">spelling</usg>` : ''}
         <dictScrap type="liebermann">${entryTei}</dictScrap>${numbered ? `
         ${numbered}` : ''}${definition ? `
         <sense type="liebermann" xml:lang="de">
@@ -832,6 +835,8 @@ ${translation}
             n: entry.getAttribute('n') || '',
             // A cross-reference entry: it only points to another headword.
             xref: entry.getAttribute('type') === 'xref',
+            // A spelling entry: a letter or letters, not a word (<usg type="dom">spelling</usg>).
+            spelling: childrenNamed(entry, 'usg').some(u => u.getAttribute('type') === 'dom' && u.textContent.trim() === 'spelling'),
             slug: idno ? idno.textContent.trim() : '',
             lang,
             language: LANGUAGES[lang] || lang,

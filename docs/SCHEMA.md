@@ -74,6 +74,7 @@ Inside it, in this order:
 | Element | Required | What it holds |
 |---|---|---|
 | `form type="lemma"/orth` | yes | The headword as printed, with any brackets or hyphens (`[-abeden]`, `-a-`). |
+| `usg type="dom"` | no | `spelling` for a spelling entry: a letter or letters rather than a word (ā, aa, -cgg-, þ, ł), where Liebermann notes how the scribes write it and lists the entries that show it. The page shows a "Spelling" badge and a line saying so. The list is kept in `tools/spelling-entries.py`. |
 | `dictScrap type="liebermann"` | yes | Liebermann's whole entry as printed. See [Liebermann's text](#liebermanns-text). |
 | `dictScrap type="senses"` | no | Liebermann's numbered meanings, taken from the full text: one `<sense n="2">` for each bold "2)", holding the text from after the ")" up to the next number, marked up as in the full text. The text before "1)" (headword and forms) stays only in the full text. The form and `tools/update-entries.js` remake this from the full text, so correct the full text rather than this. |
 | `sense type="liebermann" xml:lang="de"` | no | Liebermann's definition. Either one `<def>`, or numbered `<sense n="1"><def>…</def></sense>` for numbered senses. |
