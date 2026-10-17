@@ -824,7 +824,13 @@ ${translation}
                 const rend = attr('rend');
                 if (rend === 'bold') return '<strong>' + inner() + '</strong>';
                 if (rend === 'italic') return '<em>' + inner() + '</em>';
-                if (rend === 'superscript') return '<sup>' + inner() + '</sup>';
+                if (rend === 'superscript') {
+                    // A raised number after a citation ("Hn 29,4³⁹") is the number of
+                    // Liebermann's footnote at that passage in vol. I, usually a manuscript reading.
+                    const n = node.textContent.trim();
+                    if (/^\d+$/.test(n)) return `<sup class="fn-ref" title="Liebermann’s footnote ${n} at this passage in vol. I, where he discusses the manuscript readings">` + inner() + '</sup>';
+                    return '<sup>' + inner() + '</sup>';
+                }
                 if (rend === 'subscript') return '<sub>' + inner() + '</sub>';
                 return '<span>' + inner() + '</span>';
             }
