@@ -88,8 +88,17 @@ RESP = ('<respStmt><resp>Transcription and English translation of Liebermann’s
 RESP_ATT = ('<respStmt><resp>Transcription of Attenborough’s notes</resp>'
             '<name ref="#claude">Claude</name></respStmt>')
 
+# Sheets of editors' notes -> the source id of the editor
+EDITOR_SHEETS = {'Attenborough notes': 'attenborough', 'Robertson notes': 'robertson', 'Whitelock notes': 'whitelock'}
+EDITOR_BIBL = {
+    'attenborough': ATT_BIBL,
+    'robertson': '<bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925)</bibl>',
+    'whitelock': '<bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>',
+}
+EDITOR_NAME = {'attenborough': 'Attenborough', 'robertson': 'Robertson', 'whitelock': 'Whitelock'}
+
 # Columns of "Texts with note markers" (0-based) -> the spreadsheet column they copy
-TEXT_COLS = {5: 'K', 6: 'L', 8: 'N', 9: 'AF', 10: 'O', 11: 'T', 12: 'U', 13: 'W', 14: 'BF', 15: 'BI', 16: 'BL'}
+TEXT_COLS = {5: 'K', 6: 'L', 8: 'N', 9: 'AF', 10: 'O', 11: 'T', 12: 'U', 13: 'W', 14: 'BF', 15: 'BI', 16: 'BL', 17: 'AP'}
 LIEB_TEXT = ('K', 'N', 'AF', 'BF', 'BI', 'O')
 
 
@@ -120,13 +129,18 @@ def read_workbook(path):
         slug, on, where, n, printed, de, en, remark = row[1], row[4] or '', row[5] or '', str(row[6] if row[6] is not None else ''), row[7] or '', row[8], row[9], row[10] or ''
         kind = 'oe' if not on.startswith('German') else ('de1' if where.startswith('Gesetze I p.') else 'de')
         notes.setdefault(slug, []).append(dict(owner='liebermann', kind=kind, n=n or '0', where=where, printed=printed,
-                                               de=de, en=en, remark=remark, whole=on.endswith('whole clause')))
-    if 'Attenborough notes' in wb.sheetnames:
-        for row in list(wb['Attenborough notes'].iter_rows(values_only=True))[1:]:
+                                               de=de, en=en, remark=remark, whole=on.endswith('whole clause'),
+                                               col=re.search(r'\((\w+)\)', on).group(1) if re.search(r'\((\w+)\)', on) else ''))
+    for sheet, owner in EDITOR_SHEETS.items():
+        if sheet not in wb.sheetnames:
+            continue
+        for row in list(wb[sheet].iter_rows(values_only=True))[1:]:
             if not row or not row[1]:
                 continue
             slug, on, where, n, word, text, remark = row[1], row[4] or '', row[5] or '', str(row[6] if row[6] is not None else ''), row[7] or '', row[8], row[9] or ''
-            notes.setdefault(slug, []).append(dict(owner='attenborough', kind='footnote' if on.startswith('Old English') else 'endnote',
+            kind = ('footnote' if on.startswith(('Old English', 'Latin', 'Text')) else
+                    'translationFootnote' if 'footnote' in where and not on.startswith(('Old English', 'Latin', 'Text')) else 'endnote')
+            notes.setdefault(slug, []).append(dict(owner=owner, kind=kind,
                                                    n=n or '0', where=where, word=word, text=text, remark=remark,
                                                    whole=on.endswith('whole clause'), col=re.search(r'\((\w+)\)', on).group(1) if re.search(r'\((\w+)\)', on) else ''))
     return texts, notes
@@ -274,14 +288,17 @@ def ensure_sources(doc, notes):
         _append(lb, etree.fromstring(wrap % (TEI, ERKL_BIBL))[0])
     if lieb and 'claude' not in ids:
         _append(lb, etree.fromstring(wrap % (TEI, CLAUDE_BIBL))[0])
-    if any(n['owner'] == 'attenborough' for n in notes) and 'attenborough' not in ids:
-        _append(lb, etree.fromstring(wrap % (TEI, ATT_BIBL))[0])
+    for owner in sorted({n['owner'] for n in notes} - {'liebermann'}):
+        if owner not in ids:
+            _append(lb, etree.fromstring(wrap % (TEI, EDITOR_BIBL[owner]))[0])
     ts = doc.find('.//t:titleStmt', NS)
     resps = [r.findtext('t:resp', namespaces=NS) or '' for r in ts.findall('t:respStmt', NS)]
     if lieb and not any('Liebermann’s notes' in r for r in resps):
         _append(ts, etree.fromstring('<titleStmt xmlns="%s">%s</titleStmt>' % (TEI, RESP))[0])
-    if any(n['owner'] == 'attenborough' for n in notes) and not any('Attenborough’s notes' in r for r in resps):
-        _append(ts, etree.fromstring('<titleStmt xmlns="%s">%s</titleStmt>' % (TEI, RESP_ATT))[0])
+    for owner in sorted({n['owner'] for n in notes} - {'liebermann'}):
+        who = EDITOR_NAME[owner]
+        if not any(who + '’s notes' in r for r in resps):
+            _append(ts, etree.fromstring('<titleStmt xmlns="%s"><respStmt><resp>Transcription of %s’s notes</resp><name ref="#claude">Claude</name></respStmt></titleStmt>' % (TEI, who))[0])
 
 
 def candidates(div, col, used):
@@ -329,13 +346,29 @@ def main():
                 key = note['owner'] + ('-T' if note['kind'] == 'footnote' else '-tr')
             queues.setdefault((key, note['n']), []).append(note['id'])
 
-        def target(key):
+        byid = {x['id']: x for x in ns_}
+        last, taken = {}, set()
+
+        def target(key, col=''):
             def f(n):
                 q = queues.get((key, n))
-                if not q and key == 'attenborough-tr' and n == '1':
+                if q and col and key == 'lieb-text':
+                    # Liebermann's footnotes are numbered per column: take the next note of this column; a number
+                    # printed twice in a column (one footnote) points to the same note again
+                    mine = [i for i in q if byid[i].get('col') == col and i not in taken]
+                    if mine:
+                        taken.add(mine[0]); last[(col, n)] = mine[0]
+                        return mine[0]
+                    if (col, n) in last:
+                        return last[(col, n)]
+                    rest = [i for i in q if i not in taken]
+                    if rest:
+                        taken.add(rest[0]); return rest[0]
+                    return q[-1]
+                if not q and key.endswith('-tr') and n == '1':
                     # Attenborough sometimes prints the note to a clause without its number (II As 12,
                     # III As Inscr.): the marker {1} in his translation goes to that one unnumbered note
-                    whole = [x for x in ns_ if x['owner'] == 'attenborough' and x['kind'] == 'endnote' and x['whole']]
+                    whole = [x for x in ns_ if x['owner'] == key[:-3] and x['kind'] == 'endnote' and x['whole']]
                     if len(whole) == 1:
                         whole[0]['whole'] = False
                         return whole[0]['id']
@@ -359,11 +392,17 @@ def main():
             elif col == 'L':
                 key, ptr = 'lieb-de', 'liebermannNote'
             else:
-                key, ptr = 'attenborough' + ('-T' if col in ('T', 'BL') else '-tr'), 'editorNote'
-            new = insert_markers(cands[0], marked, ptr, target(key))
+                owners = [x['owner'] for x in ns_ if x['owner'] != 'liebermann' and x.get('col') == col]
+                owner = owners[0] if owners else ('whitelock' if col == 'AP' else 'attenborough')
+                key, ptr = owner + ('-T' if col in ('T', 'BL') else '-tr'), 'editorNote'
+            new = insert_markers(cands[0], marked, ptr, target(key, col))
             used.add(doc.getpath(new))
         if not ok:
             continue
+        if any(x['owner'] == 'whitelock' for x in ns_):
+            # her footnotes, now linked to her numbers, replace the plain list from column AT
+            for old in div.xpath('t:note[@type="translator" and @source="#whitelock"]', namespaces=NS):
+                div.remove(old)
         for note in ns_:
             div.append(note_xml(note))
         ensure_sources(doc, ns_)
