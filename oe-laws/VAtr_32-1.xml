@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -28,6 +30,7 @@
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">88</biblScope></bibl>
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">156</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -51,6 +54,8 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1200 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 244.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 244.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 88: “[D only]” → “∅”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -58,16 +63,23 @@
       <div type="clause" n="32.1">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 32.1</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="32.1" corresp="#wit-d">Ðæt is þonne án ærest æt ðam ætfengan, þe swicigende manswican lufedan be westan, þe mænigne man geswæncton ⁊ on unriht gedrehtan.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="32.1" corresp="#wit-d">Ðæt is þonne án ærest æt ðam ætfengan þe swicigende manswican lufedan be westan, þe mænigne man geswænctan ⁊ on unriht gedrehtan. [D only]</ab>
-        <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g">Đæt is þonne an ærest æt ðam ætfengan, þe swicigen manswican lufedan be westan, þe mænigne man geswænctan and on unriht gedrehtan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Das ist nämlich zuerst eines in den Anefang-Processen, das arglistige Betrüger im Westen gerne thaten, welche manchen Mann belästigten und unrechtmässig bedrängten.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="32.1" corresp="#wit-d">Ðæt is þon<hi rend="italic">ne</hi> án ærest æt ða<hi rend="italic">m</hi> ætfengan, þe swicigende manswican lufedan be westan, þe mænigne man geswænctan ⁊ on unriht gedrehtan.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="32.1" corresp="#wit-d"><ptr type="editorNote" n="5" target="#VAtr_32-1.robnote.fn.5"/>Ðæt is þonne án ærest æt ðam ætfengan þe swicigende manswican lufedan be westan, þe mænigne man geswænctan ⁊ on unriht gedrehtan.</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g">Ðæt is þonne an ærest æt ðam ætfengan, þe swicigen manswican lufedan be westan, þe mænigne man geswænctan and on unriht gedrehtan.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Das ist nämlich zuerst eines in den Anefang-Processen, das arglistige Betrüger<ptr type="liebermannNote" n="1" target="#VAtr_32-1.lnote.de.1"/> im Westen gerne thaten, welche manchen Mann belästigten<ptr type="liebermannNote" n="2" target="#VAtr_32-1.lnote.de.2"/> und unrechtmässig bedrängten.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Namely, the first is one in suits of attachment, which deceitful frauds in the west liked to commit, who harassed many a man and oppressed him unjustly.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">Firstly, with regard to the process of attaching property, to which crafty rogues in the west have been much addicted and by which many people have been harassed and unjustly oppressed.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VAtr_32-1.robnote.n.1"/>Firstly, with regard to the process of attaching property, to which crafty rogues in the west<ptr type="editorNote" n="2" target="#VAtr_32-1.robnote.n.2"/> have been much addicted and by which many people have been harassed and unjustly oppressed.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g">First of all, concerning the property seizures loved by lying swindlers in the west, which have distressed and wrongfully afflicted many people.</ab>
         <note type="comparison" source="#liebermann" n="245"><ref target="clause:IIAtr_9">II Atr 9</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. II Atr. 9</note>
-        <note type="editorial">32.1–32.5 survive only in D; K now gives D's text from Gesetze I p. 244 (it previously held a placeholder). Liebermann compares II Atr 9.</note>
+        <note type="editorial">32.1–32.5 survive only in D; K now gives D's text from Gesetze I p. 244 (it previously held a placeholder). Liebermann compares II Atr 9.; AU: corrected against Rabin p. 156 / 157, October 2026 (was “Đæt”, now “Ðæt”); AY: added from Rabin p. 156 / 157, October 2026 (Rabin’s note to the text)</note>
+        <note type="textual" source="#rabin-doml">32.1–5: These clauses are found only in D.</note>
         <note type="translator" source="#rabin-doml">in the west: It is unknown what Wulfstan is referring to here and in his reference to “the north” in 32.4.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_32-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Wb: mannswica</hi>.—In folg. Z. lies: ‘gar manchen M., viele Leute’</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Wb: mannswica</hi>.—In the following line read: ‘full many a m., many people’</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_32-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Anefang 5c</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Anefang 5c</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_32-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">331</biblScope></bibl><seg type="original" xml:lang="en">Cf. I Edw. 1, 5; II Atr. 9.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_32-1.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">331</biblScope></bibl><seg type="original" xml:lang="en">The allusions to the west and the north (§ 4) are obscure. For the latter Liebermann refers to <hi rend="italic">Be Griðe</hi>, 13; 13, 2.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VAtr_32-1.robnote.fn.5" n="5" source="#robertson"><bibl><biblScope unit="page">88</biblScope></bibl><label>Ðæt</label><seg type="original" xml:lang="en">§§ 1–5 are found only in D.</seg></note>
       </div>
     </body>
   </text>

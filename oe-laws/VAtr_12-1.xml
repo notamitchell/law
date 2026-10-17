@@ -14,6 +14,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -34,6 +36,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -59,19 +62,21 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1169 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 241.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 241.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="12.1">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 12.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12.1" corresp="#wit-g">⁊ gyf man ænig lic of rihtscriftscire elles hwar lecge, gelæste man saulsceat swa þeh into þam mynstre, þe hit to hyrde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12.1" corresp="#wit-g">⁊ gyf man ænig lic of rihtscriftscire elles hwar lecge<ptr type="liebermannNote" n="3" target="#VAtr_12-1.lnote.oe.3"/>, gelæste man saulsceat swa þeh into þam mynstre, þe hit to hyrde.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12.1" corresp="#wit-g2">⁊ gif man ænig lic of rihtscriftscire elles hwær lecge, gelæste man saulsceat swa þeh into þam mynstre, þe hit to hyrde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12.1" corresp="#wit-d">⁊ gif man ænig lic of rihtscriftscire elles hwar lecge, gelæste man sawlsceat swa ðeah into ða<hi rend="italic">m</hi> mynstre, þe hit to hirde.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="12.1" corresp="#wit-d">⁊ gif man ænig lic of rihtscriftscire elles hwar lecge, gelæste man sawlsceat swa ðeah into ðam mynstre þe hit to hirde.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g">And gyf man ænig lic of rihtscriftscire elles hwar lecge, gelæste man saulsceat swa þeh into þam mynstre þe hit to hyrde.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn man eine Leiche ausserhalb ihres gesetzlichen Beichtsprengels anderswo bestattet, zahle man Seelengeld [für sie] dennoch in die Kirche, zu der sie gehört hat.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und<ptr type="liebermannNote" n="1" target="#VAtr_12-1.lnote.de.1"/> wenn man eine Leiche ausserhalb ihres gesetzlichen Beichtsprengels anderswo bestattet, zahle man Seelengeld [für sie] dennoch in die Kirche, zu der sie gehört<ptr type="liebermannNote" n="2" target="#VAtr_12-1.lnote.de.2"/> hat.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if any body is buried elsewhere, outside its proper parish, let soul-scot [for it] nevertheless be paid to the minster to which it belonged.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And if any body is buried elsewhere than in the parish to which it properly belongs, the payment shall nevertheless be made to the church to which the deceased belonged.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VAtr_12-1.robnote.n.1"/>And if any body is buried elsewhere than in the parish to which it properly belongs, the payment shall nevertheless be made to the church to which the deceased belonged.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-g">And if any body is buried elsewhere, outside the proper parish, the payment for the soul is nevertheless to be paid to the minster to which it belonged.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g">And if any person’s body is buried other than in its proper parish, the dues should still be paid to the church to which he belonged.</ab>
         <note type="comparison" source="#liebermann" n="241"><ref target="clause:IIEg_5-2">II Eg 5.2</ref></note>
@@ -84,6 +89,10 @@
         <note type="comparedBy" source="#whitelock" n="435"><ref target="clause:IIEg_5-2">II Eg 5.2</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="314"><ref target="clause:IIIEg_8-1">III Eg 8.1–3</ref></note>
         <note type="editorial">Liebermann compares II Eg 5.2.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VAtr_12-1.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">240</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">verb. aus</hi> lege</seg><seg type="translation" xml:lang="en" source="#claude">corr. from lege</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_12-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">172</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">= VI 21 = I Cn 13, 1</seg><seg type="translation" xml:lang="en" source="#claude">= VI 21 = I Cn 13, 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_12-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">172</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Nicht ‘er [der Seelschatz] zukommt’; <hi rend="italic">hit</hi> bezieht sich auf <hi rend="italic">lic</hi>, und <hi rend="italic">hyrde</hi> ist Vergangenheit</seg><seg type="translation" xml:lang="en" source="#claude">Not ‘to which it [the soul-scot] is due’; <hi rend="italic">hit</hi> refers to <hi rend="italic">lic</hi>, and <hi rend="italic">hyrde</hi> is past tense</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_12-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">328</biblScope></bibl><seg type="original" xml:lang="en">Cf. II Edg. 5, 2; VI Atr. 21; I Cn. 13, 1; Anselm (1102): <hi rend="italic">ne corpora defunctorum extra parochiam suam sepelienda portentur ut presbyter parochiae perdat quod inde illi juste debetur</hi>.</seg></note>
       </div>
     </body>
   </text>

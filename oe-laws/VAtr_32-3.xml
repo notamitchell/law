@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">452</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -56,6 +59,8 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1202 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 244.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 244.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 88: “[D only]” → “∅”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -63,17 +68,22 @@
       <div type="clause" n="32.3">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 32.3</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="32.3" corresp="#wit-d">Ðridde is æt swigean, þæt man wolde sweogian ⁊ on æftergængan eft siððan sprecan, þæt man on forgængan næfre becliopode,</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="32.3" corresp="#wit-d">Ðridde is æt swigean, þæt man wolde sweogian ⁊ on æftergængan eft siððan sprecan þæt man on forgængan næfre becliopode. [D only]</ab>
-        <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g">Đridde is æt swigean, þæt man wolde sweogian and on æftergængan eft siððan sprecan, þæt man on forgængan næfre becliopode.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Das dritte betrifft Schweigen: dass man [Klagen] zu verschweigen pflegte und nachher gegen Nachfolger das einzuklagen, was man niemals gegen den Vorgänger eingeklagt hatte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="32.3" corresp="#wit-d">Ðridde is æt swigean, þ<hi rend="italic">æt</hi> man wolde sweogian ⁊ on æft<hi rend="italic">er</hi>gængan eft siððan sprecan, þ<hi rend="italic">æt</hi> man on forgængan næfre becliopode,</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="32.3" corresp="#wit-d">Ðridde is æt swigean, þæt man wolde sweogian ⁊ on æftergængan eft siððan sprecan þæt man on forgængan næfre becliopode.</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g">Ðridde is æt swigean, þæt man wolde sweogian and on æftergængan eft siððan sprecan, þæt man on forgængan næfre becliopode.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Das<ptr type="liebermannNote" n="1" target="#VAtr_32-3.lnote.de.1"/> dritte betrifft Schweigen<ptr type="liebermannNote" n="2" target="#VAtr_32-3.lnote.de.2"/>: dass man [Klagen] zu verschweigen pflegte und nachher gegen Nachfolger das einzuklagen, was man niemals gegen den Vorgänger<ptr type="liebermannNote" n="3" target="#VAtr_32-3.lnote.de.3"/> eingeklagt hatte.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">The third concerns silence: that people would keep silent [about claims] and afterwards sue successors for what they had never sued the predecessor for.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">Thirdly, with regard to the practice of bringing forward, after long silence, claims against an heir which had never been made against his predecessor.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VAtr_32-3.robnote.n.1"/>Thirdly, with regard to the practice of bringing forward, after long silence, claims against an heir which had never been made against his predecessor.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-g">The third concerns silence, that a man would remain silent, and afterwards claim from a successor what had never been claimed from his predecessor.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g">Thirdly, concerning the bringing of lawsuits against an heir after remaining silent that were never brought against his predecessor.</ab>
         <note type="comparison" source="#liebermann" n="245"><ref target="clause:IIIAtr_14">III Atr 14</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 14</note>
         <note type="comparedBy" source="#wormald-mel" n="350"><ref target="clause:IICn_79">II Cn 79</ref></note>
-        <note type="editorial">Only in D. Liebermann compares III Atr 14.</note>
+        <note type="editorial">Only in D. Liebermann compares III Atr 14.; AU: corrected against Rabin p. 156 / 157, October 2026 (was “Đridde”, now “Ðridde”)</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_32-3.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Grundbesitz 14; Erbnehmer 2—c, wo zu ergänzen II Cn 72f. Hier steht dasselbe Wort <hi rend="italic">beclypod</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Grundbesitz 14; Erbnehmer 2—c, where II Cn 72f. should be added. The same word <hi rend="italic">beclypod</hi> occurs here</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_32-3.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">‘sich verschweigen’ im Dt. Recht: Wichtiges gerichtlich nicht sprechen</seg><seg type="translation" xml:lang="en" source="#claude">‘sich verschweigen’ in German law: not raising important matters in court</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_32-3.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Besonderen erbrechtlichen Sinn belegt Toller</seg><seg type="translation" xml:lang="en" source="#claude">Toller attests a special meaning in the law of inheritance</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_32-3.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">331</biblScope></bibl><seg type="original" xml:lang="en">Cf. III Atr. 14; <hi rend="italic">Liber Eliensis</hi>, ed. Stewart, pp. 133, 138 ff., 145, 151.</seg></note>
       </div>
     </body>
   </text>

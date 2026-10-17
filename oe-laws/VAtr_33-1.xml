@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">156</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">452</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -55,6 +58,9 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1206 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 245.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 245: “Forþam þurh þæt hit sceal on earde godian to ahte, þe man unriht alecge ⁊ rihtwisnesse lufige for Gode ⁊ for worolde. Amen.” → “Forþam þurh þæt hit sceal on earde godian to ahte, þe man unriht alecge ⁊ rihtwisnesse lufige for Gode ⁊ for worolde. Amen. (expanded letters in italics: m, æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 245.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 245: “G2)” → “G2.)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -62,18 +68,28 @@
       <div type="clause" n="33.1">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 33.1</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="33.1" corresp="#wit-g">Forþam þurh þ<hi rend="italic">æt</hi> hit sceal on earde godian to ahte, þe man unriht alecge ⁊ rihtwisnesse lufie for Gode ⁊ for worolde.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="33.1" corresp="#wit-g2">Forþam þurh þæt hit sceal on earde godian to ahte, þe man unriht alecge ⁊ rihtwisnesse lufige for Gode ⁊ for worolde. Amen.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="33.1" corresp="#wit-d">Forðam þurh þæt hit sceal on earde godian to ahte, þæt man unriht alecge ⁊ rihtwisnesse lufige for Gode ⁊ for worlde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="33.1" corresp="#wit-g2">Forþa<hi rend="italic">m</hi> þurh þ<hi rend="italic">æt</hi> hit sceal on earde godian to ahte, þe man unriht alecge ⁊ rihtwisnesse lufige for Gode ⁊ for worolde. Amen.<ptr type="liebermannNote" n="8" target="#VAtr_33-1.lnote.oe.8"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="33.1" corresp="#wit-d">Forða<hi rend="italic">m</hi> þurh<ptr type="liebermannNote" n="3" target="#VAtr_33-1.lnote.oe.3"/> þ<hi rend="italic">æt</hi> hit sceal on earde godian to ahte, þ<hi rend="italic">æt</hi> man unriht alecge ⁊ rihtwisnesse lufige for Gode ⁊ for worlde.<ptr type="liebermannNote" n="4" target="#VAtr_33-1.lnote.oe.4"/></ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="33.1" corresp="#wit-d">Forðam þurh þæt hit sceal on earde godian to ahte, þæt<ptr type="editorNote" n="7" target="#VAtr_33-1.robnote.fn.7"/> man unriht alecge ⁊ rihtwisnesse lufige for Gode ⁊ for worlde<ptr type="editorNote" n="8" target="#VAtr_33-1.robnote.fn.8"/>.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g">Forþam þurh þæt hit sceal on earde godian to ahte, þe man unriht alecge and rihtwisnesse lufie for Gode and for worolde.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Denn um etwas [Bedeutendes] besser werden im Lande wird es dadurch, dass man Unrecht beseitige und Gerechtigkeit achte im Geistlichen und Weltlichen. (Amen. G2)</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Denn<ptr type="liebermannNote" n="1" target="#VAtr_33-1.lnote.de.1"/> um etwas<ptr type="liebermannNote" n="2" target="#VAtr_33-1.lnote.de.2"/> [Bedeutendes] besser werden im Lande wird es dadurch, dass man Unrecht beseitige und Gerechtigkeit achte im Geistlichen und Weltlichen. (Amen.<ptr type="liebermannNote" n="3" target="#VAtr_33-1.lnote.de.3"/> <hi rend="italic">G2</hi>.)</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">For things will become considerably better in the land through putting down injustice and loving righteousness in matters spiritual and secular. (Amen. G2)</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">For it is only by the suppression of injustice and the love of righteousness, in matters both religious and secular, that any improvement shall be obtained in the condition of our country.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VAtr_33-1.robnote.n.1"/>For it is only by the suppression of injustice and the love of righteousness, in matters both religious and secular, that any improvement shall be obtained in the condition of our country.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-g">For [only] as a result of suppressing wrong and loving righteousness will there be improvement at all in the country in religious and secular concerns.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g">Because it is by purging injustice and embracing righteousness before God and the world that improvement shall be brought to the land.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VIAtr_40-1">VI Atr 40.1</ref></note>
         <note type="comparedBy" source="#whitelock" n="463"><ref target="clause:IICn_8-2">II Cn 8.2</ref></note>
         <note type="textual" source="#rabin-doml">þe man: þæt man D</note>
         <note type="textual" source="#rabin-doml">worolde: G2 adds Amen</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VAtr_33-1.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">244</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Absatz</hi></seg><seg type="translation" xml:lang="en" source="#claude">new paragraph</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VAtr_33-1.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">245</biblScope></bibl><seg type="original" xml:lang="de">ꝥ urh <hi rend="italic">Hs.</hi></seg><seg type="translation" xml:lang="en" source="#claude">ꝥ urh MS</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VAtr_33-1.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">245</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">folgt ohne Absatz in derselben Hand sog.</hi> Polity c. XXIV, <hi rend="italic">ed. Thorpe</hi> Ancient laws 438</seg><seg type="translation" xml:lang="en" source="#claude">there follows, without a paragraph break and in the same hand, the so-called Polity c. XXIV, ed. Thorpe Ancient laws 438</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_33-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">= VI 40, 1 = II Cn 11, 1. Ähnliche Hoffnung auf Gott aus Volkstugend VII Atr 1, 1</seg><seg type="translation" xml:lang="en" source="#claude">= VI 40, 1 = II Cn 11, 1. A similar hope in God on account of the people’s virtue VII Atr 1, 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_33-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Nicht ‘dem Lande zu gute’ Schmid</seg><seg type="translation" xml:lang="en" source="#claude">Not ‘for the good of the land’ Schmid</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_33-1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Rudiment einstigen Schlusses; <hi rend="italic">s. o</hi>. Einl. 11</seg><seg type="translation" xml:lang="en" source="#claude">Rudiment of a former conclusion; <hi rend="italic">see above</hi> Introduction 11</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_33-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">331</biblScope></bibl><seg type="original" xml:lang="en">Cf. VI, 40, 1; II Cn. 11, 1.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VAtr_33-1.robnote.fn.7" n="7" source="#robertson"><bibl><biblScope unit="page">88</biblScope></bibl><label>þæt</label><seg type="original" xml:lang="en"><hi rend="italic">þe</hi> G, G₂.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VAtr_33-1.robnote.fn.8" n="8" source="#robertson"><bibl><biblScope unit="page">88</biblScope></bibl><label>worlde</label><seg type="original" xml:lang="en"><hi rend="italic">f. w. Amen</hi> G₂.</seg></note>
       </div>
     </body>
   </text>

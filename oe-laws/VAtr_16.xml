@@ -14,6 +14,9 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#kennedy">Kennedy</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -34,6 +37,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="kennedy" type="study">A. G. Kennedy, ‘Cnut’s Law Code of 1018’, <title>Anglo-Saxon England</title> 11 (1983), 57–81</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -59,27 +63,40 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1177 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 241.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 241: “gecoran,” → “gecoren,”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 241: “⁊ sancte Eadweardes mæssedæg witan habbað gecoren, þæt man freolsian sceal ofer eal Englaland on XV kl. Aprilis,” → “⁊ sancte Eadweardes mæssedæg witan habbað gecoren, þæt man freolsian sceal ofer eal Englaland on XV kl. Aprilis, (expanded letters in italics: anct, æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 241.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="16">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 16</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16" corresp="#wit-g">⁊ s<hi rend="italic">anct</hi>e Eadwerdes mæssedæg witan habbað gecoran, þ<hi rend="italic">æt</hi> man freolsian sceal ofer eal Englaland on XV kl. Aprilis,</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16" corresp="#wit-g2">⁊ sancte Eadweardes mæssedæg witan habbað gecoren, þæt man freolsian sceal ofer eal Englaland on XV kl. Aprilis,</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="16" corresp="#wit-d">⁊ sancte Eadwardes mæssedæg witan habbað gecoran þæt man freolsian sceal ofer eal Englaland on XV kl. Apr'.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16" corresp="#wit-g">⁊ s<hi rend="italic">anct</hi>e Eadwerdes mæssedæg witan habbað gecoren, þ<hi rend="italic">æt</hi> man freolsian sceal ofer eal Englaland on XV kl. Aprilis,</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16" corresp="#wit-g2">⁊ s<hi rend="italic">anct</hi>e Eadweardes mæssedæg witan habbað gecoren, þ<hi rend="italic">æt</hi> man freolsian sceal ofer eal Englaland<ptr type="liebermannNote" n="5" target="#VAtr_16.lnote.oe.5"/> on XV kl. Aprilis,</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16" corresp="#wit-d">⁊ s<hi rend="italic">anct</hi>e Eadwardes mæssedæg witan habbað gecoran<ptr type="liebermannNote" n="1" target="#VAtr_16.lnote.oe.1"/>, þ<hi rend="italic">æt</hi> man freolsian sceal ofer eal Englaland on XV kl. Apr',</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="16" corresp="#wit-d">⁊ sancte Eadwardes mæssedæg witan habbað gecoran<ptr type="editorNote" n="5" target="#VAtr_16.robnote.fn.5"/> þæt man freolsian sceal ofer eal Englaland on XV kl. Apr'.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g">And sancte Eadwerdes mæssedæg witan habbað gecoren, þæt man freolsian sceal ofer eal Englaland on XV kalendas Aprilis.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und des heiligen [König] Eadward [des Märtyrers] Fest haben die Witan entschieden, dass man über ganz England am 18. März feiern soll.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und<ptr type="liebermannNote" n="1" target="#VAtr_16.lnote.de.1"/> des heiligen [König] Eadward [des Märtyrers<ptr type="liebermannNote" n="2" target="#VAtr_16.lnote.de.2"/>] Fest haben die Witan entschieden, dass man über ganz England am 18. März feiern soll.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And the witan have decided that the feast of St Edward [the Martyr, king] is to be celebrated throughout all England on 18 March,</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And the authorities have decided that St Edward's festival shall be celebrated throughout England on the 18th of March.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-g">And the councillors have decreed that St Edward’s festival is to be celebrated over all England on 18 March.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VAtr_16.robnote.n.1"/>And the authorities have decided that St Edward's<ptr type="editorNote" n="2" target="#VAtr_16.robnote.n.2"/> festival shall be celebrated throughout England on the 18th of March.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-g">And the councillors have decreed that St Edward’s<ptr type="editorNote" n="8" target="#VAtr_16.whinote.n.8"/> festival is to be celebrated over all England on 18 March.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g">And the council has determined that the Feast of Saint Edward shall be celebrated throughout England on the fifteenth day before the kalends of April.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VIAtr_23-1">VI Atr 23.1</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="335"><ref target="clause:Cn-1018_part-044">Cn 1018 14.6</ref></note>
         <note type="comparedBy" source="#kennedy" n="59"><ref target="clause:Cn-1018_part-044">Cn 1018 14.6</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="357"><ref target="clause:ICn_17-1">I Cn 17.1</ref></note>
-        <note type="translator" source="#whitelock">Ethelred’s murdered brother; see No. 1, pp. 230f., No. 236, pp. 915f. This chapter is omitted in VI Ethelred, perhaps because it was not acceptable in the north.</note>
-        <note type="translator" source="#rabin-doml">Feast of Saint Edward: October 13. kalends: The first day of the month. In this case, “fifteen days before the kalends of April” refers to March 18.</note>
+        <note type="editorial">AZ: corrected against Rabin p. 152 / 153, October 2026 (was “∅”, now “|”)</note>
+        <note type="translator" source="#rabin-doml">Feast of Saint Edward: October 13.</note>
+        <note type="translator" source="#rabin-doml">kalends: The first day of the month. In this case, “fifteen days before the kalends of April” refers to March 18.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VAtr_16.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">240</biblScope></bibl><seg type="original" xml:lang="de">Engla <hi rend="italic">übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">Engla written above</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VAtr_16.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">241</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_16.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">172</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">= VI 23, 1 nur D. I Cn 17, 1</seg><seg type="translation" xml:lang="en" source="#claude">= VI 23, 1 only D. I Cn 17, 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_16.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">172</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl</hi>. Einl. Schluss; <hi rend="italic">Gl</hi> Eadward II. Über den Kult durch Reichstagsbeschluss <hi rend="italic">s. Gl</hi> Feiertag 2</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf</hi>. Introduction, end; <hi rend="italic">Gl</hi> Eadward II. On the establishment of the cult by decree of the national assembly see <hi rend="italic">Gl</hi> Feiertag 2</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_16.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">329</biblScope></bibl><seg type="original" xml:lang="en">Cf. VI, 23, 1 D; I Cn. 17, 1.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_16.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">329</biblScope></bibl><seg type="original" xml:lang="en">Edward the Martyr, the elder son of Edgar, was elected king in succession to his father (see <hi rend="italic">Sax. Chr.</hi> ann. 975 E). In 978 he was assassinated at Corfe (see <hi rend="italic">Sax. Chr.</hi> A, C; ann. 979 E). In the earliest detailed account of the deed it is said to have taken place when he was visiting his young step-brother, Æthelred, and to have been committed by the thegns belonging to the household and party of his step-mother, Ælfthryth (see <hi rend="italic">Vita S. Oswaldi</hi>, p. 449 f.). Osbern, writing about 1090, directly attributes the murder to the instigation of Ælfthryth (see <hi rend="italic">Mem. of St Dunstan</hi>, p. 114), and later writers generally ascribe it to her (see Eadmer, <hi rend="italic">Mem. of St Dunstan</hi>, p. 215; Fl. of Worcester, <hi rend="smallcaps">i</hi>. p. 145; Henry of Huntingdon, Rolls Series, p. 167; Wm of Malmesbury, <hi rend="italic">Gesta Reg.</hi>, Lib. <hi rend="smallcaps">ii</hi>. § 162, Rolls Series, <hi rend="smallcaps">i</hi>. p. 183). In 980 the body of Edward was removed from Wareham by Ælfhere and buried with all ceremony at Shaftesbury (see <hi rend="italic">Sax. Chr.</hi> E). Thereafter many miracles were wrought at his tomb (see <hi rend="italic">Vita S. Oswaldi</hi>, p. 452), and he was regarded both as a saint and a martyr.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VAtr_16.robnote.fn.5" n="5" source="#robertson"><bibl><biblScope unit="page">84</biblScope></bibl><label>gecoran</label><seg type="original" xml:lang="en"><hi rend="italic">-en</hi> G, G₂.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="VAtr_16.whinote.n.8" n="8" source="#whitelock"><bibl><biblScope unit="page">450</biblScope></bibl><label>Edward’s</label><seg type="original" xml:lang="en">Ethelred’s murdered brother; <hi rend="italic">see</hi> No. 1, pp. 230f., No. 236, pp. 915f. This chapter is omitted in VI Ethelred, perhaps because it was not acceptable in the north.</seg></note>
       </div>
     </body>
   </text>

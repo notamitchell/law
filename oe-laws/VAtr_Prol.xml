@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">146</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">447</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -57,26 +60,37 @@
       <change when="2026-10-17">Generated from row 1146 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 237.</change>
       <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 79.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 237.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 237: “Prolog.” → “∅”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Prol.">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> Prol.</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol." corresp="#wit-g">Ðis is seo gerædnes, þe Engla cyng ⁊ ægðer ge gehadode ge læwede witan gecuran and geræddan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol." corresp="#wit-g">Ðis is seo gerædnes, þe<ptr type="liebermannNote" n="***" target="#VAtr_Prol.lnote.oe.star3"/> Engla cyng ⁊ ægðer ge gehadode ge læwede witan gecuran and geræddan.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol." corresp="#wit-g2">Ðis is seo gerædnes, þe Engla cyng ⁊ ægþer ge gehadode ge læwede witan gecuran and geræddan.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="[Prol.]" corresp="#wit-d">Ðis is seo gerædnes, þe Engla cyningc [⁊] ægðer [ge] gehadode ge læwede witan gecuron ⁊ geræddon.</ab>
-        <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g"><hi rend="italic">In nomine Domini, anno Dominicae incarnationis mviii</hi>: Ðis is seo gerædnes þe Engla cyng and ægðer ge gehadode ge læwede witan gecuran and geræddan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Prolog. Dies ist die Satzung, die der König der Engländer und sowohl geweihte wie Laien-Witan erkoren und bestimmt haben.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol." corresp="#wit-d">Ðis is seo gerædnes, þe Engla cyningc<ptr type="liebermannNote" n="2" target="#VAtr_Prol.lnote.oe.2"/> ægðer<ptr type="liebermannNote" n="3" target="#VAtr_Prol.lnote.oe.3"/> gehadode ge læwede witan gecuron ⁊ geræddon.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="[Prol.]" corresp="#wit-d">Ðis is seo gerædnes, þe Engla cyningc [⁊]<ptr type="editorNote" n="6" target="#VAtr_Prol.robnote.fn.6"/> ægðer [ge]<ptr type="editorNote" n="6" target="#VAtr_Prol.robnote.fn.6"/> gehadode ge læwede witan gecuron ⁊ geræddon.</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g">Ðis is seo gerædnes þe Engla cyng and ægðer ge gehadode ge læwede witan gecuran and geræddan.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Dies<ptr type="liebermannNote" n="1" target="#VAtr_Prol.lnote.de.1"/> ist die Satzung, die der König<ptr type="liebermannNote" n="2" target="#VAtr_Prol.lnote.de.2"/> der Engländer und sowohl geweihte<ptr type="liebermannNote" n="3" target="#VAtr_Prol.lnote.de.3"/> wie Laien-Witan erkoren und bestimmt haben.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Prologue. This is the ordinance which the king of the English and both the ecclesiastical and lay witan have chosen and decided.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">This is the ordinance which has been determined upon and enacted by the king of England and his councillors, both ecclesiastic and lay.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">This is the ordinance which has been determined upon and enacted by the king of England<ptr type="editorNote" n="1" target="#VAtr_Prol.robnote.n.1"/> and his councillors, both ecclesiastic and lay<ptr type="editorNote" n="2" target="#VAtr_Prol.robnote.n.2"/>.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-g">This is the ordinance which the king of the English and both ecclesiastical and lay councillors have approved and decreed.</ab>
-        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g"><hi rend="italic">In the name of the Lord, 1008 years since the incarnation of the Lord</hi>: This is the decree which the king of the English and both his ecclesiastical and secular councilors have approved and proclaimed.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g">This is the decree which the king of the English and both his ecclesiastical and secular councilors have approved and proclaimed.</ab>
         <note type="comparison" source="#liebermann" n="237"><ref target="clause:EGu_Prol">EGu Pr.</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. E Gu. Pr.</note>
-        <note type="editorial">‘Æþelred’ is missing after ‘þe’, already in the archetype, but hardly in the original prologue, which perhaps also named the place, Enham (Liebermann, after X Atr Prol. 3). Liebermann compares EGu Prol.</note>
-        <note type="textual" source="#rabin-doml">Manuscripts: D = Cambridge, Corpus Christi College MS 201, pp. 48–51; G1 = London, British Library, Cotton MS Nero A.i, fols. 89v–92r; G2 = London, British Library, Cotton MS Nero A.i, fols. 116v–19r. In . . . MVIII: Be Angolwitena gerednesse G2; In nomine domini D</note>
+        <note type="editorial">‘Æþelred’ is missing after ‘þe’, already in the archetype, but hardly in the original prologue, which perhaps also named the place, Enham (Liebermann, after X Atr Prol. 3). Liebermann compares EGu Prol.; AU: corrected against Rabin p. 146 / 147, October 2026 (was “In nomine Domini, anno Dominicae incarnationis mviii:”, now “∅”); AV: corrected against Rabin p. 146 / 147, October 2026 (was “In the name of the Lord, 1008 years since the incarnation of the Lord:”, now “∅”); AY: corrected against Rabin p. 146 / 147, October 2026 (was “Manuscripts: D = Cambridge, Corpus Christi College MS 201, pp. 48–51; G1 = London, British Library, Cotton MS Nero A.i, fols. 89v–92r; G2 = London, British Library, Cotton MS Nero A.i, fols. 116v–19r. In . . . MVIII: Be Angolwitena gerednesse G2; In nomine domini D |”, now “∅”)</note>
         <note type="textual" source="#rabin-doml">cyng . . . gehadode: cyningc ægðer gehadode D</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VAtr_Prol.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">237</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">ergänze</hi> ⁊</seg><seg type="translation" xml:lang="en" source="#claude">supply ⁊</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VAtr_Prol.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">237</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">ergänze</hi> ge</seg><seg type="translation" xml:lang="en" source="#claude">supply ge</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VAtr_Prol.lnote.oe.star3" n="***" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">236</biblScope></bibl><seg type="original" xml:lang="de">Æþelred <hi rend="italic">fehlt</hi> [<hi rend="italic">schon Archetyp, aber schwerlich dem originalen Prolog, der vielleicht auch den Ort</hi> Eanham (<hi rend="italic">laut X Atr. Prol.</hi> 3) <hi rend="italic">nannte</hi>].</seg><seg type="translation" xml:lang="en" source="#claude">Æþelred is missing [already in the archetype, but hardly in the original prologue, which perhaps also named the place Eanham (according to X Atr. Prol. 3)].</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_Prol.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">171</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Die Eingangsformel wird in Norwegen unter Olaf d. Heil. benutzt; Taranger <hi rend="italic">Angelsaks. Kirk</hi>. 211</seg><seg type="translation" xml:lang="en" source="#claude">The opening formula is used in Norway under Olaf the Saint; Taranger <hi rend="italic">Angelsaks. Kirk</hi>. 211</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_Prol.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">171</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Æthelreds Name fehlt; <hi rend="italic">s. o</hi>. Einl. 13; <hi rend="italic">Gl</hi> Gesetze 12f.</seg><seg type="translation" xml:lang="en" source="#claude">Æthelred's name is missing; <hi rend="italic">see above</hi> Introduction 13; <hi rend="italic">Gl</hi> Gesetze 12f.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_Prol.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">171</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Witan 7; <hi rend="italic">o</hi>. Einl. 14</seg><seg type="translation" xml:lang="en" source="#claude">Cf. <hi rend="italic">Gl</hi> Witan 7; <hi rend="italic">above</hi> Introduction 14</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_Prol.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">326</biblScope></bibl><seg type="original" xml:lang="en">The king’s name is not mentioned. Cf. I Edg.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_Prol.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">326</biblScope></bibl><seg type="original" xml:lang="en">Cf. I Edm. Pre.; II Edm. Pre.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VAtr_Prol.robnote.fn.6" n="6" source="#robertson"><bibl><biblScope unit="page">78</biblScope></bibl><label>⁊</label><seg type="original" xml:lang="en">G, G₂; om. D.</seg></note>
       </div>
     </body>
   </text>
