@@ -411,6 +411,16 @@
      * start and end are where its number stands in the flat text.
      */
     function scanCitations(flat, found) {
+        // A bracket with no number in it, such as a manuscript reading
+        // ("Af 5,4 (geänd. aus noman H). 43 B"), does not end a run of
+        // citations: it is read as spaces, so "43" is still Af 43. (Its
+        // manuscript letter would otherwise stop the run.) The text keeps its
+        // length, so the positions passed to found() stay right.
+        // A bracket that cites a law code ("(mide- I Cn Pro)") is kept.
+        flat = flat.replace(/\([^()\d]*\)/g, m => {
+            const codes = [...m.matchAll(/\u0001([^\u0002]*)\u0002/g)].map(c => c[1]);
+            return codes.every(a => SIGLA.has(a)) ? ' '.repeat(m.length) : m;
+        });
         let code = null, last = null, open = false;   // open: only spaces since the last passage
         const add = (text, start, end) => {
             last = { text: text.replace(/\s+/g, ' ').trim(), anchor: code.anchor };
@@ -427,7 +437,7 @@
             } else if (code && code.fresh && !/^\s*$/.test(rest)) {
                 code = null;   // a code with no passage after it, e.g. "VI As" in a sentence
             }
-            while (code && last && (m = new RegExp(`^(?:\\s*\\([^()]*\\))?\\.?\\s+(${PASSAGE})(?![\\p{L}\\d)])`, 'u').exec(rest))) {
+            while (code && last && (m = new RegExp(`^(?:\\s*\\([^()]*\\))?\\s*\\.?\\s+(${PASSAGE})(?![\\p{L}\\d)])`, 'u').exec(rest))) {
                 const n = m[1].replace(/\.$/, ''), s = at + m[0].length - m[1].length;
                 // after a line ("Z. 6. 9"), a bare number is another line
                 const line = /^\d+$/.test(n) && / Z\. ?\d+$/.test(last.text) ? 'Z. ' : '';
@@ -447,7 +457,9 @@
             // full in the list: "IV Atr", "Iud Dei VII", "VIIa Atr".
             let label = m[2].trim();
             if (/^(?:VIIa|[IVX]+)$/.test(label) && anchor !== label) {
-                label = anchor.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/^(VIIa|[IVX]+)(?=[A-Z][a-z])/, '$1 ');
+                label = anchor.replace(/([a-z])([A-Z])/g, '$1 $2');
+                // "VIAtr" -> "VI Atr"; "VIIa Atr" already has its space (not "VI Ia Atr")
+                if (!/\s/.test(label)) label = label.replace(/^(VIIa|[IVX]+)(?=[A-Z][a-z])/, '$1 ');
             }
             const pos = m.index + m[0].length;
             const next = re.exec(flat);

@@ -25,6 +25,7 @@ A citation finds its clause in three steps, and the report says which:
   ms-letter   the same, once a manuscript letter after the number is ignored ("9 Q")
   subclause   the number has no file of its own but its parts do ("Abt 1" goes
               to 1[a]); it goes to the first part
+  and-following  "Swer 7ff." or "7 f." (and following): to the first clause, Swer 7
 
 Writes docs/oe-laws-link-report.md (use --no-report to skip) and needs only
 Python 3.
@@ -142,6 +143,9 @@ class Clauses:
         key = norm_clause(rest)
         if key in files:
             return 'exact', files[key]
+        ff = re.match(r'^(\S*?\d+[a-z]??)\s*ff?\.?$', rest)    # "Swer 7ff.", "7 f.": and following; to the first
+        if ff and norm_clause(ff.group(1)) in files:
+            return 'and-following', files[norm_clause(ff.group(1))]
         z = re.match(r'^Z\.?\s*(\d+)$', rest)      # "Nor grið Z. 6": line 6 of a text numbered by lines
         if z:
             for k in (z.group(1), 'line' + z.group(1)):
@@ -209,7 +213,7 @@ def main():
             results_here += ['already linked'] * already
         if results_here:
             entries_with_citations += 1
-            if all(r in ('exact', 'ms-letter', 'subclause', 'already linked') for r in results_here):
+            if all(r in ('exact', 'ms-letter', 'subclause', 'and-following', 'already linked') for r in results_here):
                 entries_fully_linked += 1
         if changed_here:
             if 'ident="clause"' not in new:
@@ -224,14 +228,14 @@ def main():
                     f.write(new)
 
     total = sum(outcome.values())
-    linked = sum(outcome[k] for k in ('exact', 'ms-letter', 'subclause', 'already linked'))
+    linked = sum(outcome[k] for k in ('exact', 'ms-letter', 'subclause', 'and-following', 'already linked'))
     with_clause = linked + outcome['clause not found'] + outcome['citation not understood']
     lines = []
     out = lines.append
     scope = 'All entries' if args.letter.lower() == 'all' else 'Entries filed under %s' % args.letter.upper()
     out('%s: %d (with a law code citation list: %d)' % (scope, entries_seen, entries_with_citations))
     out('Citations in their lists: %d' % total)
-    for k in ('exact', 'ms-letter', 'subclause', 'already linked'):
+    for k in ('exact', 'ms-letter', 'subclause', 'and-following', 'already linked'):
         if outcome[k]:
             out('  linked, %-14s %6d' % (k, outcome[k]))
     out('  LINKED TO A CLAUSE:      %6d  (%.0f%% of all citations; %.0f%% of those with a clause number to a code in the database)'
