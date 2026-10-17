@@ -228,7 +228,8 @@ scripts:
                 : undefined,
             earlierChanges: editing ? earlierChanges : [],
             xref: editing ? editingXref : false,
-            spelling: editing ? editingSpelling : false
+            spelling: editing ? editingSpelling : false,
+            editorNotes: editing ? editingNotes : []
         });
         currentFile = slug + '.xml';
 
@@ -270,7 +271,7 @@ scripts:
     // contribute.html?id=abbod suggests a change to an existing entry, with the
     // form filled in from its file; contribute.html?headword=… starts a new one.
     const params = new URLSearchParams(location.search);
-    let editing = '', earlierChanges = [], editingXref = false, editingSpelling = false;
+    let editing = '', earlierChanges = [], editingXref = false, editingSpelling = false, editingNotes = [];
     if (params.get('headword')) { $('headword').value = params.get('headword'); headwordEdited = true; }
     if (params.get('id')) loadEntry(params.get('id'));
 
@@ -281,6 +282,8 @@ scripts:
             earlierChanges = e.changes;
             editingXref = e.xref;
             editingSpelling = e.spelling;
+            // Editorial notes are kept as they are (the form has no field for them).
+            editingNotes = e.editorNotes.map(n => new XMLSerializer().serializeToString(n).replace(/ xmlns="[^"]*"/g, ''));
             $('form-title').textContent = 'Suggest a change to ' + e.headword;
             $('form-lede').innerHTML = `The form below is filled in from <a href="${root}entry.html?id=${encodeURIComponent(id)}">the entry as it is now</a>. Change what's wrong or add what's missing, make the file, and send it to an editor, who checks it and replaces the entry.`;
             document.title = 'Suggest a change to ' + e.headword + ' · eLiebermann';

@@ -664,6 +664,8 @@
      *         translationHtml, seeAlso: [{text, slug}], links: {bt, doe,
      *         wiktionary, lawCode: [{text, url}]}, change: {when, text},
      *         earlierChanges: [{when, text}], xref, spelling }
+     * editorNotes: editorial notes kept as they are, each a TEI string
+     * '<note type="editorial">…</note>'.
      * spelling: true for a spelling entry (a letter or letters, not a word),
      * written as <usg type="dom">spelling</usg>.
      * xref: true for a cross-reference entry (one that only points to another
@@ -733,7 +735,7 @@ ${changes.map(c => `      <change when="${escapeXml(c.when)}">${escapeXml(c.text
         </form>${data.spelling ? `
         <usg type="dom">spelling</usg>` : ''}
         <dictScrap type="liebermann">${entryTei}</dictScrap>${numbered ? `
-        ${numbered}` : ''}${definition ? `
+        ${numbered}` : ''}${(data.editorNotes || []).map(n => '\n        ' + n).join('')}${definition ? `
         <sense type="liebermann" xml:lang="de">
 ${definition}
         </sense>` : ''}${translation ? `
@@ -858,6 +860,8 @@ ${translation}
             xref: entry.getAttribute('type') === 'xref',
             // A spelling entry: a letter or letters, not a word (<usg type="dom">spelling</usg>).
             spelling: childrenNamed(entry, 'usg').some(u => u.getAttribute('type') === 'dom' && u.textContent.trim() === 'spelling'),
+            // Notes by the eLiebermann editors (<note type="editorial">), e.g. where Liebermann's pointer needs correcting.
+            editorNotes: childrenNamed(entry, 'note').filter(n => n.getAttribute('type') === 'editorial'),
             slug: idno ? idno.textContent.trim() : '',
             lang,
             language: LANGUAGES[lang] || lang,

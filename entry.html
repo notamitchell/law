@@ -182,6 +182,7 @@ scripts:
         <section class="entry-section">
             <h2>Liebermann's entry</h2>
             <div class="liebermann-text">${e.original ? paragraphs(ELieb.renderTei(e.original, root)) : ''}</div>
+            ${e.editorNotes.map(n => `<p class="editor-note"><span class="editor-note__label">Editor’s note.</span> ${ELieb.renderTei(n, root)}</p>`).join('')}
             ${e.spelling ? `<p class="spelling-note">This headword refers to a scribal spelling: the entry is Liebermann's note on how scribes of the legal MSS write a certain sound or letter combination.</p>` : ''}
             ${e.xref ? '' : `<p class="small muted">Click a <span class="link-key link-key--law">law code</span>, <span class="link-key link-key--ms">manuscript</span> or <span class="link-key link-key--gram">German term or abbreviation</span> or <span class="link-key link-key--bib">author or work cited</span> to see what it stands for, or a <span class="link-key link-key--clause">clause number</span> to read that clause. The lists of <a href="${root}lawAbb.html">law codes</a>, <a href="${root}msAbb.html">manuscripts</a> and <a href="${root}gramAbb.html">grammatical abbreviations</a> and <a href="${root}bibAbb.html">authors and works cited</a> have them all. Liebermann's tilde &lt;~&gt; repeats the headword (or a preceding word), or as much of that word as stays the same: e.g. under <i>abbod</i>, ~des is <i>abbodes</i>. <a href="${root}guide.html">How to read an entry</a>.</p>`}
         </section>
