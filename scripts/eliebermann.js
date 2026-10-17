@@ -489,6 +489,8 @@
                 // "VIAtr" -> "VI Atr"; "VIIa Atr" already has its space (not "VI Ia Atr")
                 if (!/\s/.test(label)) label = label.replace(/^(VIIa|[IVX]+)(?=[A-Z][a-z])/, '$1 ');
             }
+            // "Quadr Ded 11. Arg 3": a part of the Quadripartitus named alone is listed in full
+            if (anchor === 'Quadr' + label) label = 'Quadr ' + label;
             const pos = m.index + m[0].length;
             const next = re.exec(flat);
             const text = flat.slice(pos, next ? next.index : flat.length);
