@@ -383,7 +383,11 @@
     // passage they name the reading cited (Af 41 B); they are not codes, and
     // they are left out of the citation list.
     const SIGLA = new Set(['MsA', 'B', 'Bu', 'C', 'D', 'E', 'F', 'G', 'G2', 'H', 'Hk', 'I', 'K', 'Ld', 'O', 'Ot',
-        'So', 'Vt', 'Io', 'Isp', 'Quadr', 'InCn', 'ConsCn', 'WlEdmr', 'Wb']);
+        'So', 'Vt', 'Io', 'Isp', 'Quadr', 'InCn', 'ConsCn', 'WlEdmr', 'Wb', 'LatVersion']);
+    // "L" after a passage (msAbb: LatVersion) is the Latin version Liebermann prints
+    // beside the text. Where the laws database has that version as a text of its
+    // own, the citation goes to it: "VI Atr 2 L" is VI Atr Lat 2.
+    const LATIN_VERSION = { VIAtr: { of: 'VI Atr', anchor: 'VIAtrLat', label: 'VI Atr Lat' } };
     // Parts of a code: Af El 49 (Introduction), Af Rb 41 (rubric).
     const QUALIFIERS = new Set(['El', 'Rb', 'retr']);
     // A passage: 41, 2,1, 70,21a, Insc., Prol., or a line (Zeile) of a text
@@ -407,8 +411,11 @@
             .replace(/<ref type="lawCode" target="law:([^"]*)">([\s\S]*?)<\/ref>/g, (m, a, l) => `\u0001${a}\u0002${l.replace(/<[^>]*>/g, '')}\u0003`)
             .replace(/<[^>]*>/g, '');
         const out = [], seen = new Set();
-        scanCitations(unescape(flat), (text, anchor) => {
-            if (!seen.has(text)) { seen.add(text); out.push({ text, anchor }); }
+        let lastNew = -1;   // where the last citation went in out, if it was new there
+        scanCitations(unescape(flat), (text, anchor, start, end, replaces) => {
+            if (replaces && lastNew >= 0) { out[lastNew] = { text, anchor }; seen.add(text); return; }
+            lastNew = -1;
+            if (!seen.has(text)) { seen.add(text); lastNew = out.push({ text, anchor }) - 1; }
         });
         return out;
     }
@@ -432,7 +439,7 @@
         });
         let code = null, last = null, open = false;   // open: only spaces since the last passage
         const add = (text, start, end) => {
-            last = { text: text.replace(/\s+/g, ' ').trim(), anchor: code.anchor };
+            last = { text: text.replace(/\s+/g, ' ').trim(), anchor: code.anchor, start, end };
             found(last.text, last.anchor, start, end);
         };
         const passages = (text, pos) => {
@@ -474,11 +481,26 @@
             const next = re.exec(flat);
             const text = flat.slice(pos, next ? next.index : flat.length);
             m = next;
+            if (anchor === 'LatVersion' && code && code.fresh) {
+                // "VI Atr L 3,1. 4", "Leis Wl L 21,3": L before the numbers, so they
+                // are passages of the Latin version (for VI Atr, VI Atr Lat 3,1).
+                const lv = LATIN_VERSION[code.anchor];
+                if (lv && code.label === lv.of) code = { anchor: lv.anchor, label: lv.label, fresh: true };
+                passages(text.replace(/^:/, ' '), pos);
+                continue;
+            }
             if (SIGLA.has(anchor)) {
                 // "Af 41 B": the reading of manuscript B. The citation list names the
                 // passage (Af 41), not the manuscript, so the letter is not added to it.
                 const attached = open && last && !/^\s*:/.test(text);
                 if (anchor === 'ConsCn' || anchor === 'Quadr' && /^\s*:/.test(text) || anchor === 'InCn' && /^\s*:/.test(text)) code = null;
+                // "VI Atr 2 L": the citation just found is the Latin version's (VI Atr Lat 2);
+                // found() is told it replaces the one before (fifth argument).
+                const latin = anchor === 'LatVersion' && attached && LATIN_VERSION[last.anchor];
+                if (latin && last.text.startsWith(latin.of + ' ')) {
+                    last = { text: latin.label + last.text.slice(latin.of.length), anchor: latin.anchor, start: last.start, end: last.end };
+                    found(last.text, last.anchor, last.start, last.end, true);
+                }
                 // keep the run going so "Af 41 B. 43" still reads as Af 43
                 open = attached && /^\s*$/.test(text);
                 if (code && last && /^\.\s+\d/.test(text)) { passages(text, pos); } else if (!/^\s*$/.test(text)) { code = code && /^[\s.]*$/.test(text) ? code : null; }
@@ -533,12 +555,14 @@
         };
         walk(container);
         const hits = [];
-        scanCitations(flat, (text, anchor, start, end) => {
+        scanCitations(flat, (text, anchor, start, end, replaces) => {
+            // a citation that replaces the one just found (VI Atr 2 L): drop that one's link
+            if (replaces && hits.length && hits[hits.length - 1].text !== text && hits[hits.length - 1].flatStart === start) hits.pop();
             const href = clauses[text];
             // "Z. 6" (line 6): "Z." keeps its own link; the number is linked.
             if (/^Z\./.test(flat.slice(start, end))) start += flat.slice(start, end).search(/\d/);
             const a = from[start], b = from[end - 1];
-            if (href && a && b && a[0] === b[0]) hits.push({ node: a[0], start: a[1], end: b[1] + 1, href, text });
+            if (href && a && b && a[0] === b[0]) hits.push({ node: a[0], start: a[1], end: b[1] + 1, href, text, flatStart: start });
         });
         // Wrap from the last to the first, so earlier offsets stay right.
         hits.reverse().forEach(h => {
