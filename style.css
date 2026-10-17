@@ -405,6 +405,8 @@ td.term { font-weight: 600; color: var(--navy-dark); white-space: nowrap; }
 .liebermann-text a.ref-lawCode, .entry-section a.ref-lawCode { color: var(--law-code); border-bottom-color: var(--law-code); }
 .liebermann-text a.ref-manuscript, .entry-section a.ref-manuscript { color: var(--manuscript); border-bottom-color: var(--manuscript); }
 .liebermann-text a.ref-abbreviation { color: var(--abbreviation); border-bottom-color: var(--abbreviation); }
+/* The sic mark "!" is one narrow character: widen the area that opens its popup on hover, without moving the text. */
+.liebermann-text a.ref-abbreviation[href$="#sic"] { padding: 0 0.3em; margin: 0 -0.3em; position: relative; }
 .liebermann-text a.ref-bibl { color: var(--work-cited); border-bottom-color: var(--work-cited); }
 .link-key { white-space: nowrap; border-bottom: 1px dotted currentColor; }
 .link-key--law { color: var(--law-code); }
