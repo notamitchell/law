@@ -7,6 +7,8 @@
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -22,6 +24,7 @@
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">170</biblScope></bibl>
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
@@ -43,21 +46,30 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 804 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 804 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 170.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Attenborough, p. 145: “∅; for” → “also; from”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4.1">
         <head><ref type="lawCode" target="law:IIIAs">III As</ref> 4.1</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.1" corresp="#wit-q">et etiam ne dominus libero homini hlafordsoknam interdicat, si eum recte custodierit.</ab>
-        <ab type="editionText" xml:lang="la" source="#attenborough" n="4.1" corresp="#wit-q">et etiam ne dominus libero homini hlafordsoknam interdicat, si eum recte custodierit.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-q">And a lord shall not prohibit a free man for seeking for himself a [new] lord, if he has conducted himself rightly.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.1" corresp="#wit-q">et etiam<ptr type="liebermannNote" n="25" target="#IIIAs_4-1.lnote.oe.25"/> ne<ptr type="liebermannNote" n="a" target="#IIIAs_4-1.lnote.oe.a"/> dominus libero homini hlafordsoknam<ptr type="liebermannNote" n="35" target="#IIIAs_4-1.lnote.oe.35"/> interdicat, si eum<ptr type="liebermannNote" n="36" target="#IIIAs_4-1.lnote.oe.36"/><ptr type="liebermannNote" n="b" target="#IIIAs_4-1.lnote.oe.b"/> recte custodierit.</ab>
+        <ab type="editionText" xml:lang="la" source="#attenborough" n="4.1" corresp="#wit-q">et etiam ne dominus libero homini hlafordsoknam<ptr type="editorNote" n="9" target="#IIIAs_4-1.attnote.fn.9"/> interdicat, si eum recte custodierit.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-q">And a lord also shall not prohibit a free man from seeking for himself a [new] lord<ptr type="editorNote" n="1" target="#IIIAs_4-1.attnote.n.1"/>, if he has conducted himself<ptr type="editorNote" n="2" target="#IIIAs_4-1.attnote.n.2"/> rightly.</ab>
         <note type="comparison" source="#liebermann" n="170">V As [?]</note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. V As. [?]</note>
         <note type="comparisonIncomplete">Some of Liebermann’s notes here are cut off in the gutter of the scan used, and are still to be completed.</note>
         <note type="editorial">Latin only; no German translation in Liebermann. Liebermann compares V As 1.1.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIAs_4-1.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">170</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Jl</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Jl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIAs_4-1.lnote.oe.35" n="35" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">170</biblScope></bibl><seg type="original" xml:lang="de">laf. <hi rend="italic">Co Or Jl;</hi> hlasocn. <hi rend="italic">MHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">laf. Co Or Jl; hlasocn. MHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIAs_4-1.lnote.oe.36" n="36" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">170</biblScope></bibl><seg type="original" xml:lang="de">r. cu. e. <hi rend="italic">M</hi></seg><seg type="translation" xml:lang="en" source="#claude">r. cu. e. M</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIAs_4-1.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">111</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Den Satz wiederholt IV As 5. Die Herrensuche (<hi rend="italic">s. d. Gl</hi> 3a) stand nicht auch dem Freigelassenen frei</seg><seg type="translation" xml:lang="en" source="#claude">The sentence is repeated in IV As 5. The seeking of a lord (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 3a) was not open to the freedman as well</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIAs_4-1.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">111</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">aus <hi rend="italic">hine heolde</hi> ‘sich betrug’; <hi rend="italic">s. Wb: healdan</hi> 15; <hi rend="italic">he hine heold swa he sceolde</hi> Toller 518a IV; Q hat das Reflexivum verkannt</seg><seg type="translation" xml:lang="en" source="#claude">from <hi rend="italic">hine heolde</hi> ‘conducted himself’; <hi rend="italic">see Wb: healdan</hi> 15; <hi rend="italic">he hine heold swa he sceolde</hi> Toller 518a IV; Q has failed to recognize the reflexive</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIIAs_4-1.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">209</biblScope></bibl><seg type="original" xml:lang="en">Cf. V As. cap. 1 § 1.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIIAs_4-1.attnote.n.2" n="2" source="#attenborough"><bibl><biblScope unit="page">209</biblScope></bibl><seg type="original" xml:lang="en"><hi rend="italic">eum</hi>, apparently for <hi rend="italic">se</hi>, probably through a misunderstanding of <hi rend="italic">hine</hi>.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IIIAs_4-1.attnote.fn.9" n="9" source="#attenborough"><bibl><biblScope unit="page">144</biblScope></bibl><label>hlafordsoknam</label><seg type="original" xml:lang="en"><hi rend="italic">hlasocnam</hi>. Br, M.</seg></note>
       </div>
     </body>
   </text>

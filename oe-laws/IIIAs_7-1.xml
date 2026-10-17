@@ -7,6 +7,8 @@
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -22,6 +24,7 @@
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">170</biblScope></bibl>
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
@@ -44,7 +47,7 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 808 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 808 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 170.</change>
     </revisionDesc>
   </teiHeader>
@@ -52,10 +55,17 @@
     <body>
       <div type="clause" n="7.1">
         <head><ref type="lawCode" target="law:IIIAs">III As</ref> 7.1</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="7.1" corresp="#wit-q">Si tunc sit aliquis qui tot homines habeat, quod non sufficiat omnes custodire, preponat sibi singulis uillis prepositum unum (talem prepositum), qui credibilis ei sit et qui concredat hominibus.</ab>
-        <ab type="editionText" xml:lang="ang" source="#attenborough" n="7.1" corresp="#wit-q">Si tunc sit aliquis qui tot homines habeat, quod non sufficiat omnes custodire, præponat sibi singulis villis præpositum unum, [talem prepositum] qui credibilis ei sit, et qui concredat hominibus.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="7.1" corresp="#wit-q">Si tunc sit aliquis qui tot homines habeat, quod non sufficiat omnes custodire, preponat<ptr type="liebermannNote" n="44" target="#IIIAs_7-1.lnote.oe.44"/> sibi singulis uillis prepositum<ptr type="liebermannNote" n="a" target="#IIIAs_7-1.lnote.oe.a"/> unum<ptr type="liebermannNote" n="5" target="#IIIAs_7-1.lnote.oe.5"/> (talem prepositum), qui credibilis<ptr type="liebermannNote" n="b" target="#IIIAs_7-1.lnote.oe.b"/> ei<ptr type="liebermannNote" n="45" target="#IIIAs_7-1.lnote.oe.45"/> sit et qui concredat<ptr type="liebermannNote" n="c" target="#IIIAs_7-1.lnote.oe.c"/> hominibus.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="7.1" corresp="#wit-q">Si tunc sit aliquis qui tot homines habeat, quod non sufficiat omnes custodire, præponat sibi singulis villis præpositum unum, [talem prepositum]<ptr type="editorNote" n="15" target="#IIIAs_7-1.attnote.fn.15"/> qui credibilis ei sit, et qui concredat hominibus.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-q">If, however, there is anyone who has so many men, that he is not able to control them, he shall place each estate in charge of a reeve, whom he can trust, and who will trust the men.</ab>
         <note type="editorial">Latin only; no German translation in Liebermann.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIAs_7-1.lnote.oe.44" n="44" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">170</biblScope></bibl><seg type="original" xml:lang="de">prepositum ta. preponat s. s. u., qui <hi rend="italic">M</hi></seg><seg type="translation" xml:lang="en" source="#claude">prepositum ta. preponat s. s. u., qui M</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIAs_7-1.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">170</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vor der Klammer Lond; (eingeklammertes) übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">before the bracket Lond; (the bracketed words) the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIAs_7-1.lnote.oe.45" n="45" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">170</biblScope></bibl><seg type="original" xml:lang="de">sit ei <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">sit ei K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIAs_7-1.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">112</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Herrschaftsgut 5; Vogt 13a. Offenbar besteht hier noch keine Zehnerschaft (<hi rend="italic">s. d. Gl</hi> 9a) mit Freibürgschaft. Dass die <hi rend="italic">homines</hi> noch keine Gruppe mit gegenseitiger Haftung bilden, beweist die Verbürgung Verdächtiger durch die Sippe</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Herrschaftsgut 5; Vogt 13a. Evidently there is as yet no tithing (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 9a) with frankpledge here. That the <hi rend="italic">homines</hi> do not yet form a group with mutual liability is proved by the suretyship for suspects being provided by the kindred</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIAs_7-1.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">112</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">aus <hi rend="italic">getriewe</hi> ‘vertrauenswert’</seg><seg type="translation" xml:lang="en" source="#claude">from <hi rend="italic">getriewe</hi> ‘trustworthy’</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIAs_7-1.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">112</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">aus <hi rend="italic">getreowian</hi> ‘trauen’</seg><seg type="translation" xml:lang="en" source="#claude">from <hi rend="italic">getreowian</hi> ‘to trust’</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IIIAs_7-1.attnote.fn.15" n="15" source="#attenborough"><bibl><biblScope unit="page">144</biblScope></bibl><label>prepositum</label><seg type="original" xml:lang="en">K.</seg></note>
       </div>
     </body>
   </text>
