@@ -8,6 +8,8 @@
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +26,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">191</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">14</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
@@ -45,7 +48,7 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 916 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 916 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 191.</change>
       <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 15.</change>
     </revisionDesc>
@@ -54,14 +57,24 @@
     <body>
       <div type="clause" n="7.2">
         <head><ref type="lawCode" target="law:IIIEm">III Em</ref> 7.2</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="7.2" corresp="#wit-q">Et prepositus uel tainus, comes uel uillanus, qui hoc facere nolet aut disperdet, emendet CXX sol. et sit dignus eorum que supra dicta sunt.</ab>
-        <ab type="editionText" xml:lang="la" source="#robertson" n="7.2" corresp="#wit-q">Et praepositus vel tainus, comes vel villanus, qui hoc facere nolet aut disperdet, emendet CXX sol. et sit dignus eorum quae supra dicta sunt.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">And the reeve or the thegn, the noble or commoner who refuses to do this, or disregards it, shall pay a fine of 120 shillings, and incur the penalties which have been stated above.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="7.2" corresp="#wit-q">Et prepositus<ptr type="liebermannNote" n="a" target="#IIIEm_7-2.lnote.oe.a"/> uel tainus, comes uel uillanus, qui hoc facere nolet<ptr type="liebermannNote" n="16" target="#IIIEm_7-2.lnote.oe.16"/> aut<ptr type="liebermannNote" n="17" target="#IIIEm_7-2.lnote.oe.17"/> disperdet, emendet CXX sol. et sit dignus<ptr type="liebermannNote" n="b" target="#IIIEm_7-2.lnote.oe.b"/> eorum que<ptr type="liebermannNote" n="18" target="#IIIEm_7-2.lnote.oe.18"/> supra dicta sunt.</ab>
+        <ab type="editionText" xml:lang="la" source="#robertson" n="7.2" corresp="#wit-q">Et praepositus vel tainus, comes vel villanus, qui hoc facere nolet aut<ptr type="editorNote" n="13" target="#IIIEm_7-2.robnote.fn.13"/> disperdet, emendet CXX sol. et sit dignus eorum quae supra dicta<ptr type="editorNote" n="14" target="#IIIEm_7-2.robnote.fn.14"/> sunt.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q"><ptr type="editorNote" n="1" target="#IIIEm_7-2.robnote.n.1"/>And the reeve or the thegn, the noble or commoner<ptr type="editorNote" n="2" target="#IIIEm_7-2.robnote.n.2"/> who refuses to do this, or disregards it, shall pay a fine of 120 shillings, and incur the penalties which have been stated above<ptr type="editorNote" n="3" target="#IIIEm_7-2.robnote.n.3"/>.</ab>
         <note type="comparison" source="#liebermann" n="191"><ref target="clause:IVAs_7">IV As 7</ref>; <ref target="clause:IIAs_25">II As 25</ref>; <ref target="clause:VAs_1-2">V As 1.2</ref>; <ref target="clause:VAs_1-4">V As 1.4</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. IV As. 7 | Vgl. II As. 25; V 1, 2. 4</note>
         <note type="comparedBy" source="#wormald-mel" n="316"><ref target="clause:IIIEg_1-1">III Eg 1.1–4</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="316"><ref target="clause:IIIEg_5">III Eg 5–5.2</ref></note>
         <note type="editorial">Latin only; no German translation in Liebermann. ‘aut disperdet’ should perhaps be bracketed as a gloss, as in IV As 7. Liebermann compares IV As 7; II As 25; V As 1.2, 1.4.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEm_7-2.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">191</biblScope></bibl><seg type="original" xml:lang="de">nolit <hi rend="italic">Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">nolit <hi rend="italic">Br</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEm_7-2.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">191</biblScope></bibl><seg type="original" xml:lang="de">ac <hi rend="italic">T;</hi> ad <hi rend="italic">Hk;</hi> a. d. <hi rend="italic">vielleicht als Glosse einzuklammern wie</hi> IV As. 7</seg><seg type="translation" xml:lang="en" source="#claude">ac T; ad Hk; a. d. perhaps to be bracketed as a gloss, as in IV As. 7</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEm_7-2.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">191</biblScope></bibl><seg type="original" xml:lang="de">qui s. dicti <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">qui s. dicti <hi rend="italic">T</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEm_7-2.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">130</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">⁊ <hi rend="italic">se gerefa oððe þegn, ge eorl ge ceorl, þe þis don nylle oððe oferhebbe, bete cyninge 120 scil</hi>. las Or. laut II As 25. V 1, 2. 4; daraus IV 7. Das <hi rend="italic">hoc</hi> bezieht sich auf Verbürgung Bescholtener (in 7), wohl auch die Beihilfe zur Spurfolge (in 6) und vielleicht die Fernhaltung Bescholtener vom Gefolge (in 3)</seg><seg type="translation" xml:lang="en" source="#claude">⁊ <hi rend="italic">se gerefa oððe þegn, ge eorl ge ceorl, þe þis don nylle oððe oferhebbe, bete cyninge 120 scil</hi>. was the reading of the original, according to II As 25. V 1, 2. 4; and from this IV 7. The <hi rend="italic">hoc</hi> refers to the giving of surety for persons of ill repute (in 7), probably also to assistance in the pursuit of the trail (in 6), and perhaps to keeping persons of ill repute out of the retinue (in 3)</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEm_7-2.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">130</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Die Rechtsnachteile, mit denen hier gedroht wird, sind vermutlich Haftung für das Eingeklagte (in 3) und Friedlosigkeit in 2</seg><seg type="translation" xml:lang="en" source="#claude">The legal disadvantages threatened here are presumably liability for the object of the claim (in 3) and outlawry in 2</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIIEm_7-2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="en">Cf. IV As. 7; II As. 25; V As. 1, 2.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIIEm_7-2.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="en"><hi rend="italic">i.e. ge eorl ge ceorl</hi>, cf. Af. 4, 2.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIIEm_7-2.robnote.n.3" n="3" source="#robertson"><bibl><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="en">The penalties do not appear to be specified in the code as it has come down to us.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IIIEm_7-2.robnote.fn.13" n="13" source="#robertson"><bibl><biblScope unit="page">14</biblScope></bibl><label>aut</label><seg type="original" xml:lang="en"><hi rend="italic">ad</hi> M, Hk; <hi rend="italic">ac</hi> T.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IIIEm_7-2.robnote.fn.14" n="14" source="#robertson"><bibl><biblScope unit="page">14</biblScope></bibl><label>dicta</label><seg type="original" xml:lang="en"><hi rend="italic">qui s. dicti</hi> T.</seg></note>
       </div>
     </body>
   </text>
