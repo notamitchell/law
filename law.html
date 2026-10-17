@@ -557,8 +557,9 @@ scripts:
         return a;
     }
 
-    // "Date: 1018 (Whitelock, Kennedy, Wormald)" and "Place: Oxford", each on its own line. Each
+    // "Suggested dates: 1018 (Whitelock, Kennedy, Wormald) · …" and "Place: Oxford", each on its own line. Each
     // date or place is followed by the scholars who propose it, linked to their works at the foot of the page.
+    // Liebermann's date comes first, then the others in order of publication (as the database gives them).
     function datePlace(doc, srcs) {
         const creation = tei(doc, 'creation')[0];
         if (!creation) return null;
@@ -586,7 +587,7 @@ scripts:
             box.appendChild(p);
         };
         const kids = Array.from(creation.children);
-        line('Date', kids.filter(n => n.localName === 'date'));
+        line('Suggested dates', kids.filter(n => n.localName === 'date'));
         line('Place', kids.filter(n => n.localName === 'placeName'));
         if (!box.children.length) {
             // Older files: only the spreadsheet's wording.

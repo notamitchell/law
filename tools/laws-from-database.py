@@ -974,6 +974,9 @@ def write_codes(rows, catalogue, find_anchor, path):
                 'king': ' and '.join(p[0] for p in parts), 'reign': r['king'],
                 'group': GROUP_OVERRIDE.get(r['code']) or (GROUPS.get(key, key) if key else OTHER),
                 'date': r['promulgation'], 'clauses': counts[r['code']], 'first': first_ids.get(r['code'], ''),
+                # the suggested dates and places, each with the scholars who propose it (the first date is the database's)
+                'dates': [[d, who] for d, who in promulgation.parse(r['promulgation'])[0]],
+                'places': [[p, who] for p, who in promulgation.parse(r['promulgation'])[1]],
                 'editors': [], 'manuscripts': [],
             }
         u_by, aa_by = TRANSLATORS.get(r['code'], (None, None))

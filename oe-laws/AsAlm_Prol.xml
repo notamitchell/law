@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
@@ -27,6 +28,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">148</biblScope></bibl>
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
@@ -43,7 +45,7 @@
       </listPrefixDef>
     </encodingDesc>
     <profileDesc>
-      <creation><date>925–40</date><date>before c.1110 (Nowell’s ‘translation’ from Q?)</date><note type="promulgation">925–40; before c.1110 (Nowell 'translation' from Q?)</note></creation>
+      <creation><date source="#liebermann">925–40</date><date source="#wormald-mel">?Christmas 932–Jan. 933</date><date>before c.1110 (Nowell’s ‘translation’ from Q?)</date><note type="promulgation">925–40 (Liebermann); ?Christmas 932–Jan. 933 (Wormald); before c.1110 (Nowell’s ‘translation’ from Q?)</note></creation>
       <textClass>
         <keywords n="offence-legal-event"><term>Sacramental rites</term><term>Legal responsibility</term><term>Land</term><term>Legal principles</term><term>Administrative directives</term></keywords>
         <keywords n="people"><term>the Poor</term><term>Reeves</term><term>Bishops</term><term>Nobles</term><term>Ecclesiastical orders</term><term>Rank</term><term>Secular classes</term><term>Weorcmen</term><term>All people</term></keywords>
@@ -71,7 +73,7 @@
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-ld">I, King Æthelstan, with the advice of Wulfhelm<ptr type="editorNote" n="1" target="#AsAlm_Prol.attnote.n.1"/>, my archbishop, and of all my other bishops and ecclesiastics<ptr type="editorNote" n="2" target="#AsAlm_Prol.attnote.n.2"/>, for the forgiveness of my sins<ptr type="editorNote" n="3" target="#AsAlm_Prol.attnote.n.3"/>, make known to all my reeves within my kingdom, that it is my wish that you shall always provide a destitute Englishman with food, if you have such an one [in your district], or if you find one [elsewhere].</ab>
         <note type="comparison" source="#liebermann" n="149"><ref target="clause:IAs_Prol">I As Prol.</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. I As. Prol.</note>
-        <note type="editorial">Column The Latin is the Quadripartitus (Liebermann's right-hand column), corrected against Gesetze I p. 148. The Old English survives only in Lambarde's Archaionomia (1568), f. 57v (Ld), now in column N. Liebermann compares I As Prol.</note>
+        <note type="editorial">Column The Latin is the Quadripartitus (Liebermann's right-hand column), corrected against Gesetze I p. 148. The Old English survives only in Lambarde's Archaionomia (1568), f. 57v (Ld), now in column N. Liebermann compares I As Prol.; F: corrected against Liebermann, Gesetze I (date in the running heads); Wormald, Making of English Law I, October 2026 (was “925–40; before c.1110 (Nowell 'translation' from Q?)”, now “925–40 (Liebermann); ?Christmas 932–Jan. 933 (Wormald); before c.1110 (Nowell’s ‘translation’ from Q?)”)</note>
         <note type="liebermannNote" subtype="textual" xml:id="AsAlm_Prol.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">148</biblScope></bibl><seg type="original" xml:lang="de">III. Quas uouit Deo elemosinas <hi rend="italic">Rubrik M Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">III. Quas uouit Deo elemosinas rubric in M Hk</seg></note>
         <note type="liebermannNote" subtype="textual" xml:id="AsAlm_Prol.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">148</biblScope></bibl><seg type="original" xml:lang="de">Æþes. <hi rend="italic">R;</hi> Aels. <hi rend="italic">K Co Or</hi></seg><seg type="translation" xml:lang="en" source="#claude">Æþes. <hi rend="italic">R;</hi> Aels. <hi rend="italic">K Co Or</hi></seg></note>
         <note type="liebermannNote" subtype="textual" xml:id="AsAlm_Prol.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">148</biblScope></bibl><seg type="original" xml:lang="de">pr. m. o. <hi rend="italic">R T M Hk Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">pr. m. o. <hi rend="italic">R T M Hk Br</hi></seg></note>
