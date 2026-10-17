@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">170</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -54,24 +57,29 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1268 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 254.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 254.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="28">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 28</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28" corresp="#wit-k">K. ⁊ word ⁊ weorc freonda gehwilc fadige mid rihte ⁊ að ⁊ wedd wærlice healde.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28" corresp="#wit-d-incomplete">And word ⁊ weorc fréonda gehwilc fadige mid rihte ⁊ að ⁊ wed wærlice healde.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="28" corresp="#wit-k">⁊ word ⁊ weorc freonda gehwilc fadige mid rihte ⁊ að ⁊ wedd wærlice healde.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">And word and weorc freonda gehwilc fadige mid rihte, and að and wedd wærlice healde.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und ordne der Freunde jeglicher Wort und Werk gerecht und halte sorgsam Eid und Versprechen.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und ordne der <ptr type="liebermannNote" n="1" target="#VIAtr_28.lnote.de.1"/>Freunde jeglicher Wort und Werk gerecht und halte sorgsam Eid und Versprechen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let each of [our] friends order his words and deeds rightly and keep oath and pledge carefully.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And everyone of our friends shall order his words and deeds aright, and strictly abide by his oath and pledge.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#VIAtr_28.robnote.n.1"/>And everyone of our friends<ptr type="editorNote" n="2" target="#VIAtr_28.robnote.n.2"/> shall order his words and deeds aright, and strictly abide by his oath and pledge.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">And all of our friends must order their words and deeds properly, and carefully uphold their oath and pledge.</ab>
         <note type="comparison" source="#liebermann" n="255"><ref target="clause:VAtr_22-2">V Atr 22.2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 22, 2</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VIIIAtr_44-1">VIII Atr 44.1</ref>; <ref target="clause:ICn_19-1">I Cn 19.1</ref></note>
         <note type="comparison" source="#wormald-mel" n="342"><label>expanded</label> <ref target="clause:VAtr_23">V Atr 23–25</ref> <quote>V 23 – 25, VI 28 – 30 (again expanded)</quote></note>
         <note type="comparedBy" source="#wormald-mel" n="357"><ref target="clause:ICn_19-1">I Cn 19.1–2</ref></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_28.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">176</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. o</hi>. 6. Benutzt durch I Cn 19, 1</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. above</hi> 6. Used by I Cn 19, 1</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_28.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">333</biblScope></bibl><seg type="original" xml:lang="en">Cf. V, 22, 2; I Cn. 19, 1</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_28.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">333</biblScope></bibl><seg type="original" xml:lang="en">Cf. cap. 6.</seg></note>
       </div>
     </body>
   </text>

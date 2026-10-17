@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">174</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -54,18 +57,23 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1288 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 256.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 256.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 256: “[Not in D]” → “. . . . . . . . . . . . . . . .”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 256: “Appendix.” → “App.”.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Robertson, p. 103: “God's; prayers” → “God’s; prayers,”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="41">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 41</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="41">[Not in D]</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="41" corresp="#wit-k">Nu wille we eac læran Godes þeowas georne, þæt hy huru hy sylfe wærlice beþencan ⁊ þurh Godes fultum clænnesse lufian ⁊ georne heora bocum ⁊ gebedum fylgean ⁊ dæges ⁊ nihtes oft ⁊ gelome clypian to Christe ⁊ for eal Christen folc þingian georne.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="41"><ptr type="liebermannNote" n="*" target="#VIAtr_41.lnote.oe.star"/>. . . . . . . . . . . . . . . .</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="41" corresp="#wit-k">K. Nu wille we [eac<ptr type="liebermannNote" n="2" target="#VIAtr_41.lnote.oe.2"/>] læran Godes þeowas georne, þ<hi rend="italic">æt</hi> hy huru hy sylfe wærlice beþencan ⁊ þurh Godes fultum clænnesse lufian ⁊ georne heora bocum ⁊ gebedum fylgean ⁊ dæges ⁊ nihtes oft ⁊ gelome clypian to Chr<hi rend="italic">ist</hi>e ⁊ for eal Chr<hi rend="italic">ist</hi>en folc þingian georne.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="41" corresp="#wit-k"><ptr type="editorNote" n="2" target="#VIAtr_41.robnote.fn.2"/>Nu wille we eac læran Godes þeowas georne, þæt hy huru hy sylfe wærlice beþencan ⁊ þurh Godes fultum clænnesse lufian ⁊ georne heora bocum ⁊ gebedum fylgean ⁊ dæges ⁊ nihtes oft ⁊ gelome clypian to Christe ⁊ for eal Christen folc þingian georne.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">Nu wille we eac læran Godes þeowas georne þæt hy huru hy sylfe wærlice beþencan and þurh Godes fultum clænnesse lufian, and georne heora bocum and gebedum fylgean, and dæges and nihtes oft and gelome clypian to Christe and for eal Christen folc þingian georne.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Appendix. 41. Nun wollen wir auch die Gottesdiener ernstlich anweisen, dass sie wenigstens auf sich selbst sorgsam achten und mit Gottes Hilfe Keuschheit pflegen und eifrig ihren [Kanon-]Büchern und Gebeten Folge leisten und bei Tage und Nacht oft und eifrig Christus anrufen und eifrig Fürbitte thun für alles Christenvolk.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><hi rend="italic">App</hi>.<ptr type="liebermannNote" n="1" target="#VIAtr_41.lnote.de.1"/> 41. Nun wollen wir auch die Gottesdiener ernstlich anweisen, dass sie wenigstens auf sich selbst sorgsam achten und mit Gottes Hilfe Keuschheit pflegen und eifrig ihren [Kanon-]Büchern und Gebeten Folge leisten und bei Tage und Nacht oft und eifrig Christus anrufen und eifrig Fürbitte thun für alles Christenvolk.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Appendix. 41. Now we will also earnestly instruct the servants of God that they at least take careful heed of themselves and with God's help cherish chastity, and eagerly follow their [canonical] books and prayers, and by day and night often and eagerly call upon Christ, and pray eagerly for all Christian people.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">Now we desire likewise earnestly to enjoin upon the servants of God, that above all they carefully take thought for themselves, and by God's help practise celibacy, and diligently apply themselves to their books and prayers and day and night frequently and often call upon Christ, and zealously intercede for all Christian people.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#VIAtr_41.robnote.n.1"/>Now we desire likewise earnestly to enjoin upon the servants of God, that above all they carefully take thought for themselves, and by God’s help practise celibacy<ptr type="editorNote" n="2" target="#VIAtr_41.robnote.n.2"/>, and diligently apply themselves to their books and prayers, and day and night frequently and often call upon Christ, and zealously intercede for all Christian people.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">Now we likewise wish to earnestly instruct God’s servants to give thought to themselves with special care and with God’s help embrace celibacy, and attend diligently to their books and prayers, and call upon Christ often and frequently both day and night, and zealously intercede for all Christian people.</ab>
         <note type="comparison" source="#liebermann" n="257"><ref target="clause:VIAtr_5">VI Atr 5</ref>; <ref target="clause:VIAtr_2-2">VI Atr 2.2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. o. VI Atr. 5. 2, 2</note>
@@ -76,6 +84,12 @@
         <note type="comparedBy" source="#wormald-mel" n="356"><ref target="clause:ICn_6">I Cn 6–6a</ref></note>
         <note type="editorial">Only in K; instead of 41, D has II Cn 15.1–3 here. Liebermann compares VI Atr 5, 2.2.</note>
         <note type="textual" source="#rabin-doml">eac: added in Wulfstan’s handwriting K</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIAtr_41.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">256</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">spät übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above late</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIAtr_41.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">256</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">statt c.</hi> 41 <hi rend="italic">hat D hier II Cnut</hi> 15, 1—3</seg><seg type="translation" xml:lang="en" source="#claude">instead of c. 41, D has here II Cnut 15, 1—3</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_41.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">177</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Erster Anhang; <hi rend="italic">vgl</hi>. Einl. 11. 21; <hi rend="italic">Gl</hi> Kanones 2a</seg><seg type="translation" xml:lang="en" source="#claude">First appendix; <hi rend="italic">cf</hi>. Introduction 11. 21; <hi rend="italic">Gl</hi> Kanones 2a</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_41.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">335</biblScope></bibl><seg type="original" xml:lang="en">Cf. caps. 2; 5. With the section 41–9 cf. Wulfstan, pp. 179, 307 ff.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_41.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">335</biblScope></bibl><seg type="original" xml:lang="en">Lit. ‘love celibacy.’</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VIAtr_41.robnote.fn.2" n="2" source="#robertson"><bibl><biblScope unit="page">102</biblScope></bibl><label>Nu</label><seg type="original" xml:lang="en">Om D.</seg></note>
       </div>
     </body>
   </text>

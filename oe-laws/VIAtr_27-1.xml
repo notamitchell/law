@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -56,16 +59,19 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1267 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 254.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 254.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 254: “Und jeder bereite sich auch zum Abendmahl wenigstens dreimal im Jahre, wer seinen eigenen Nutzen verstehen will (kann D), so wie ihm noth thut.” → “Und jeder bereite sich auch zum Abendmahl wenigstens dreimal im Jahre, wer seinen eigenen Nutzen verstehen will (kann D), so wie ihm noth thut. (expanded letters in italics: D)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="27.1">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 27.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="27.1" corresp="#wit-d-incomplete">⁊ gearwige eac to huselgange huru þriwa on geare gehwa hine silfne, þe his agene þearfe understandan cunne, swa swa hi<hi rend="italic">m</hi> þearf sy.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="27.1" corresp="#wit-k">⁊ gearwige eac to huslgange huru þriwa on geare gehwa hine sylfne þe his agene þearfe wille understandan, swa swa him þearf is.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="27.1" corresp="#wit-k">⁊ gearwige eac to huslgange huru þriwa on geare gehwa hine sylfne, þe his agene þearfe wille understandan, swa swa him þearf is.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="27.1" corresp="#wit-d-incomplete">⁊ gearwige<ptr type="liebermannNote" n="1" target="#VIAtr_27-1.lnote.oe.1"/> eac to huselgange huru þriwa on geare gehwa hine silfne, þe his agene þearfe understandan cunne, swa swa hi<hi rend="italic">m</hi> þearf sy.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="27.1" corresp="#wit-k">⁊ gearwige eac to huslgange huru þriwa on geare gehwa hine sylfne þe his agene þearfe wille understandan<ptr type="editorNote" n="8" target="#VIAtr_27-1.robnote.fn.8"/>, swa swa him þearf is.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">And gearwige eac to huslgange huru þriwa on geare gehwa hine sylfne, þe his agene þearfe wille understandan, swa swa him þearf is.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und jeder bereite sich auch zum Abendmahl wenigstens dreimal im Jahre, wer seinen eigenen Nutzen verstehen will (kann D), so wie ihm noth thut.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und jeder bereite sich auch zum Abendmahl wenigstens<ptr type="liebermannNote" n="1" target="#VIAtr_27-1.lnote.de.1"/> dreimal im Jahre, wer seinen eigenen Nutzen verstehen will (kann <hi rend="italic">D</hi>), so wie ihm noth thut.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let everyone who will (can, D) understand his own good prepare himself to go to communion at least three times a year, as he needs to.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And everyone who seeks to understand what is for his own good shall also prepare himself for sacrament at least three times in the year, as is his duty.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">And anyone who wishes to understand his own obligations must prepare himself to receive the sacrament at least three times during the year, just as is required of him.</ab>
@@ -73,6 +79,9 @@
         <note type="comparisonPrinted" source="#liebermann">ebd. 22, 1</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:ICn_19">I Cn 19</ref></note>
         <note type="comparedBy" source="#whitelock" n="450"><ref target="clause:VAtr_22-1">V Atr 22.1</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIAtr_27-1.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">254</biblScope></bibl><seg type="original" xml:lang="de">hine <hi rend="italic">später hinzugefügt</hi></seg><seg type="translation" xml:lang="en" source="#claude">hine added later</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_27-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">176</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Benutzt durch I Cn 19.—<hi rend="italic">Vgl. Gl</hi> Abendmahl 1. 2</seg><seg type="translation" xml:lang="en" source="#claude">Used by I Cn 19.—<hi rend="italic">Cf. Gl</hi> Abendmahl 1. 2</seg><note type="remark" resp="#claude">On several rubrics: VI Atr 27. 27, 1</note></note>
+        <note type="editorNote" subtype="footnote" xml:id="VIAtr_27-1.robnote.fn.8" n="8" source="#robertson"><bibl><biblScope unit="page">98</biblScope></bibl><label>understandan</label><seg type="original" xml:lang="en"><hi rend="italic">und. cunne</hi> D.</seg></note>
       </div>
     </body>
   </text>

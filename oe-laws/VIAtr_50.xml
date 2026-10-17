@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">176</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -54,6 +57,7 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1301 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 258.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 258.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -61,16 +65,21 @@
       <div type="clause" n="50">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 50</head>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="50">[Not in D]</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="50" corresp="#wit-k">K. ⁊ se þe ahwar heonan forð rihte laga wyrde, Godes oþþon manna, gebete hit georne, swa hwæþer swa hit gebyrige, swa mid godcundre bote swa mid woroldcundre steore.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="50" corresp="#wit-k">⁊ se þe ahwar heonan forð rihte laga wyrde, Godes oþþon manna, gebete hit georne swa hwæþer swa hit gebyrige, swa mid godcundre bote, swa mid woroldcundre steore.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">And se þe ahwar heonan forð rihte laga wyrde, Godes oþþon manna, gebete hit georne, swa hwæþer swa hit gebyrige, swa mid godcundre bote swa mid woroldcundre steore.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und wer hinfort irgendwo echte Gesetze Gottes oder der Menschen verletzt, büsse es ernstlich, je wie es gebührt, sowohl durch geistliche Busse wie durch weltliche Strafe.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wer hinfort irgendwo echte<ptr type="liebermannNote" n="1" target="#VIAtr_50.lnote.de.1"/> Gesetze Gottes oder der Menschen verletzt<ptr type="liebermannNote" n="2" target="#VIAtr_50.lnote.de.2"/>, büsse es ernstlich, je wie es gebührt, sowohl durch geistliche Busse wie durch weltliche Strafe.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And whoever henceforth anywhere violates the just laws of God or of men, let him make amends for it earnestly, as is fitting, both by spiritual penance and by secular punishment.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And he who henceforth anywhere violates the just decrees of God or of men shall render full compensation in whatever way is fitting, whether by making the amends required by the ecclesiastical authority or by paying the penalty demanded by the secular law.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#VIAtr_50.robnote.n.1"/>And he who henceforth anywhere violates the just<ptr type="editorNote" n="2" target="#VIAtr_50.robnote.n.2"/> decrees of God or of men shall render full compensation in whatever way is fitting, whether by making the amends required by the ecclesiastical authority or by paying the penalty demanded by the secular law.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">And henceforth, those who anywhere violate the just laws of God or of men are to diligently make compensation in whichever manner is appropriate, either by spiritual penance or secular punishment.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:Northu_46">Northu 46</ref></note>
         <note type="comparison" source="#wormald-mel" n="334"><label>cf.</label> <ref target="clause:Northu_46">Northu 46</ref> <quote>Cf. also VI Atr 50, Northu. 46, 66 (with the proviso below, pp. 396-7)</quote></note>
         <note type="comparison" source="#wormald-mel" n="334"><label>cf.</label> <ref target="clause:Northu_66">Northu 66</ref> <quote>Cf. also VI Atr 50, Northu. 46, 66 (with the proviso below, pp. 396-7)</quote></note>
         <note type="editorial">50–53 only in K.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_50.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">177</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Nicht ‘gerecht’, da Göttliches nicht ungerecht sein kann, sondern ‘vollgiltig, wirklich’; <hi rend="italic">s. Wb: riht</hi> und die Komposita <hi rend="italic">rihthanddæda</hi>, <hi rend="italic">rihtlæce</hi>, <hi rend="italic">rihtlicettere</hi>, <hi rend="italic">rihtmunuc</hi> bei Toller; <hi rend="italic">s. Gl</hi> Pönitenz</seg><seg type="translation" xml:lang="en" source="#claude">Not ‘just’, since what is divine cannot be unjust, but ‘fully valid, real’; see <hi rend="italic">Wb: riht</hi> and the compounds <hi rend="italic">rihthanddæda</hi>, <hi rend="italic">rihtlæce</hi>, <hi rend="italic">rihtlicettere</hi>, <hi rend="italic">rihtmunuc</hi> in Toller; see <hi rend="italic">Gl</hi> Pönitenz</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_50.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">177</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Ähnlich <hi rend="italic">o</hi>. 11. 38</seg><seg type="translation" xml:lang="en" source="#claude">Similarly <hi rend="italic">above</hi> 11. 38</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_50.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">335</biblScope></bibl><seg type="original" xml:lang="en">The clauses from here to the end are found only in K.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_50.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">335</biblScope></bibl><seg type="original" xml:lang="en">Liebermann suggests that <hi rend="italic">rihte</hi> here means ‘authentic’ (echte), on the ground that <hi rend="italic">Godes laga</hi> cannot be regarded as unjust, but is it necessary to press the logical interpretation of the term?</seg></note>
       </div>
     </body>
   </text>

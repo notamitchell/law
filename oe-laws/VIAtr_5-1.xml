@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#kennedy">Kennedy</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -56,6 +58,7 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1223 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 248.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 248.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -63,11 +66,12 @@
       <div type="clause" n="5.1">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 5.1</head>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5.1">[Not in D]</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.1" corresp="#wit-k">Fulgeorne hi<ptr type="liebermannNote" n="5" target="#VIAtr_5-1.lnote.oe.5"/> witan, þ<hi rend="italic">æt</hi> hy nagon mid rihte þurh ænig hæmedþing wifes gemanan.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="5.1" corresp="#wit-k">Fulgeorne hi witan þæt hy nagon mid rihte þurh ænig hæmedþing wifes gemanan.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">Fulgeorne hi witan þæt hy nagon mid rihte þurh ænig hæmedþing wifes gemanan.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">Recht genau wissen sie, dass sie von Rechtswegen keine Gemeinschaft mit einer Frau durch Beischlaf haben dürfen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">They know full well that they may not lawfully have intercourse with a woman.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">They know full well that they have no right to marry.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#VIAtr_5-1.robnote.n.1"/>They know full well that they have no right to marry.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">They know full well that they may not rightfully engage in sexual relations with a woman.</ab>
         <note type="comparison" source="#liebermann" n="248">V Atr 9[?]</note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 9[?]</note>
@@ -77,6 +81,8 @@
         <note type="comparedBy" source="#wormald-mel" n="342"><ref target="clause:VIIIAtr_26">VIII Atr 26–30</ref></note>
         <note type="comparedBy" source="#kennedy" n="59"><ref target="clause:Cn-1018_part-021">Cn 1018 11–11.2</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="397"><ref target="clause:Northu_35">Northu 35</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIAtr_5-1.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">248</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">spät geändert</hi> hy</seg><seg type="translation" xml:lang="en" source="#claude">altered late to hy</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_5-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">332</biblScope></bibl><seg type="original" xml:lang="en">Cf. V, 9.</seg></note>
       </div>
     </body>
   </text>

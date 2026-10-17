@@ -14,6 +14,8 @@
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#kennedy">Kennedy</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -34,6 +36,7 @@
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
           <bibl xml:id="kennedy" type="study">A. G. Kennedy, ‘Cnut’s Law Code of 1018’, <title>Anglo-Saxon England</title> 11 (1983), 57–81</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -59,6 +62,7 @@
       <change when="2026-10-17">Generated from row 1235 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 250.</change>
       <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 94.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 250.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -66,11 +70,12 @@
       <div type="clause" n="10.2">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 10.2</head>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="10.2">[Not in D]</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10.2" corresp="#wit-k">Ac æghwilce dæde toscade man wærlice ⁊ dom æft<hi rend="italic">er</hi> dæde medemige be<ptr type="liebermannNote" n="2" target="#VIAtr_10-2.lnote.oe.2"/> mæþe<ptr type="liebermannNote" n="3" target="#VIAtr_10-2.lnote.oe.3"/>, swa for Gode sy gebeorhlic ⁊ for worolde aberendlic.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="10.1" corresp="#wit-k">Ac æghwilce dæde toscade man wærlice ⁊ dom æfter dæde medemige be mæþe, swa for Gode sy gebeorhlic ⁊ for worolde aberendlic.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">Ac æghwilce dæde toscade man wærlice and dom æfter dæde medemige be mæþe, swa for Gode sy gebeorhlic and for worolde aberendlic.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Sondern jede That unterscheide man vorsichtig und ermässige das Urtheil gemäss der That nach Verhältniss, wie es sich vor Gott verantworten und im Staat ertragen lässt.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Sondern jede<ptr type="liebermannNote" n="1" target="#VIAtr_10-2.lnote.de.1"/> That unterscheide man vorsichtig und ermässige das Urtheil gemäss der That nach Verhältniss, wie<ptr type="liebermannNote" n="2" target="#VIAtr_10-2.lnote.de.2"/> es sich vor Gott verantworten und im Staat ertragen lässt.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But let every deed be carefully distinguished, and the judgment moderated in proportion to the deed, as can be justified before God and tolerated in the world.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">But every deed shall be carefully distinguished and judgment meted out in proportion to the offence, as shall be justifiable in the sight of God and acceptable in the eyes of men.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#VIAtr_10-2.robnote.n.1"/>But every deed shall be carefully distinguished and judgment meted out in proportion to the offence, as shall be justifiable in the sight of God and acceptable in the eyes of men<ptr type="editorNote" n="2" target="#VIAtr_10-2.robnote.n.2"/>.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">But each deed is to be carefully weighed and judgment appropriate to the deed handed down in such a way as shall be justifiable before God and acceptable to the community.</ab>
         <note type="comparison" source="#liebermann" n="250">[?] Edg.[?]; [?]</note>
         <note type="comparisonPrinted" source="#liebermann">Vg[l. ?] Edg.[?] | Vgl. [?]</note>
@@ -82,6 +87,12 @@
         <note type="comparedBy" source="#kennedy" n="59"><ref target="clause:Cn-1018_part-009">Cn 1018 3–6</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="357"><ref target="clause:IICn_2">II Cn 2</ref></note>
         <note type="editorial">Liebermann compares III Eg 1.2.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIAtr_10-2.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">250</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIAtr_10-2.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">250</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">geändert aus</hi> mæne</seg><seg type="translation" xml:lang="en" source="#claude">altered from mæne</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_10-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">175</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Derselbe Gedanke ausführlicher ebendaher <hi rend="italic">u</hi>. 52f.</seg><seg type="translation" xml:lang="en" source="#claude">The same idea, more fully, from the same source <hi rend="italic">below</hi> 52f.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_10-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">175</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Benutzt in II Cn 2, obwohl vielleicht nur Schreiberzutat aus homiletischem Gemeingut; <hi rend="italic">s</hi>. Einl. 11</seg><seg type="translation" xml:lang="en" source="#claude">Used in II Cn 2, although perhaps only a scribal addition from common homiletic stock; <hi rend="italic">see</hi> Introduction 11</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_10-2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">332</biblScope></bibl><seg type="original" xml:lang="en">Cf. 52–3.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_10-2.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">332</biblScope></bibl><seg type="original" xml:lang="en">Cf. III Edg. 1, 2.</seg></note>
       </div>
     </body>
   </text>

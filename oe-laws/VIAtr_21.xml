@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -56,18 +58,21 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1251 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 252.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 252.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 252: “Sprengels” → “sprengels”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="21">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 21</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="21" corresp="#wit-k">K. ⁊ gif man ænig lic of rihtscire<ptr type="liebermannNote" n="*" target="#VIAtr_21.lnote.oe.star"/> elles hwar lecge, gelæste man þone saulsceat swa þeh into þam mynstre, þe hit to hyrde.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="21" corresp="#wit-d-incomplete">And gif man ænig lic of rihtre scriftscire elles hwar lecge, gelæste man þone sawlsceat swa ðeah into ða<hi rend="italic">m</hi> mynstre, þe hit to hyrde.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="21" corresp="#wit-k">⁊ gif man ænig lic of riht[scrift]scire elles hwar lecge, gelæste man þone saulsceat swa þeh into þam mynstre þe hit to hyrde.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="21" corresp="#wit-k">⁊ gif man ænig lic of riht[scrift]scire<ptr type="editorNote" n="5" target="#VIAtr_21.robnote.fn.5"/> elles hwar lecge, gelæste man þone saulsceat swa þeh into þam mynstre þe hit to hyrde.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">And gif man ænig lic of rihtscire elles hwar lecge, gelæste man þone saulsceat swa þeh into þam mynstre, þe hit to hyrde.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn man eine Leiche ausserhalb ihres gesetzlichen (Beicht- D) Sprengels anderswo bestattet, zahle man Seelengeld [für sie] dennoch in die Kirche, zu der sie gehört hat.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn man eine Leiche ausserhalb ihres gesetzlichen (Beicht- <hi rend="italic">D</hi>) sprengels anderswo bestattet, zahle man Seelengeld [für sie] dennoch in die Kirche, zu der sie gehört hat.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if any body is buried elsewhere, outside its proper (confessional, D) district, let soul-scot [for it] nevertheless be paid to the minster to which it belonged.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And if any body is buried elsewhere than in the parish to which it properly belongs, the payment shall nevertheless be made to the church to which the deceased belonged.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#VIAtr_21.robnote.n.1"/>And if any body is buried elsewhere than in the parish to which it properly belongs, the payment shall nevertheless be made to the church to which the deceased belonged.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">And if any person’s body is buried other than in its proper parish, the dues should still be paid to the church to which he belonged.</ab>
         <note type="comparison" source="#liebermann" n="253"><ref target="clause:VAtr_12-1">V Atr 12.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 12, 1</note>
@@ -79,6 +84,9 @@
         <note type="comparedBy" source="#wormald-mel" n="340"><ref target="clause:VAtr_12-1">V Atr 12.1</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="356"><ref target="clause:ICn_13-1">I Cn 13.1</ref></note>
         <note type="editorial">K's ‘rihtscire’ should be corrected to ‘rihtscriftscire’ from D (Liebermann).</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIAtr_21.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">252</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">bessere</hi> rihtscriftscire <hi rend="italic">laut D; V Atr.</hi> 12, 1; <hi rend="italic">I Cnut</hi> 13, 1</seg><seg type="translation" xml:lang="en" source="#claude">read rihtscriftscire, as in D; V Atr. 12, 1; I Cnut 13, 1</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_21.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">333</biblScope></bibl><seg type="original" xml:lang="en">Cf. V, 12, 1.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VIAtr_21.robnote.fn.5" n="5" source="#robertson"><bibl><biblScope unit="page">96</biblScope></bibl><label>riht[scrift]scire</label><seg type="original" xml:lang="en"><hi rend="italic">rihtscire</hi> K; <hi rend="italic">rihtre scriftscire</hi> D.</seg></note>
       </div>
     </body>
   </text>

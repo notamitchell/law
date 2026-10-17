@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +31,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">166</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -53,12 +55,14 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1247 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 252.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 252.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="18">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 18</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18" corresp="#wit-k">K. ⁊ Romfeoh be Petres mæssan</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18" corresp="#wit-d-incomplete">⁊ Romfeoh be Petres mæssan</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="18" corresp="#wit-k">⁊ Romfeoh be Petres mæssan.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">and Romfeoh be Petres mæssan,</ab>
@@ -70,6 +74,7 @@
         <note type="comparisonPrinted" source="#liebermann">ebd.</note>
         <note type="comparedBy" source="#wormald-mel" n="356"><ref target="clause:ICn_9">I Cn 9</ref></note>
         <note type="translator" source="#rabin-doml">Feast of Saint Peter: June 29.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_18.lnote.de.a__b" n="a. b" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">176</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Anderer Termin als sonst für Peterspfennig; <hi rend="italic">s. d. Gl</hi> 11ff. 15a</seg><seg type="translation" xml:lang="en" source="#claude">A different date from the usual one for Peter’s Pence; <hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 11ff. 15a</seg></note>
       </div>
     </body>
   </text>

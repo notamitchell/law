@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">164</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -54,6 +57,7 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1227 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 248.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 248.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -61,15 +65,22 @@
       <div type="clause" n="6">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 6</head>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6">[Not in D]</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-k">K. ⁊ la gyt we willað biddan freonda gehwylcne ⁊ eal folc eac læran georne, þ<hi rend="italic">æt</hi> hy inwerdre heortan ænne God lufian ⁊ ælcne hæþendom georne ascunian.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="6" corresp="#wit-k">⁊ la gyt we willað biddan freonda gehwylcne ⁊ eal folc eac læran georne, þæt hy inwerdre heortan ænne God lufian ⁊ ælcne hæþendom georne ascunian.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">And la, gyt we willað biddan freonda gehwylcne and eal folc eac læran georne þæt hy inwerdre heortan ænne God lufian and ælcne hæþendom georne ascunian.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und wohl wollen wir der Freunde jeglichen ferner bitten und auch alles Volk eifrig anweisen, dass sie von innerstem Herzen Einen Gott lieben und jedes Heidenthum eifrig vermeiden.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wohl wollen wir der Freunde<ptr type="liebermannNote" n="1" target="#VIAtr_6.lnote.de.1"/> jeglichen ferner bitten und auch alles Volk eifrig anweisen, dass sie von innerstem Herzen Einen<ptr type="liebermannNote" n="2" target="#VIAtr_6.lnote.de.2"/> Gott lieben und jedes Heidenthum eifrig vermeiden.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And indeed we will further ask each of our friends, and also eagerly instruct all the people, to love one God from their inmost hearts and eagerly shun all heathenism.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And now behold, we will beseech all our friends and likewise earnestly enjoin upon the whole nation, to love one God from their inmost heart, and zealously shun all heathen practices.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#VIAtr_6.robnote.n.1"/>And now behold, we will beseech all our friends<ptr type="editorNote" n="2" target="#VIAtr_6.robnote.n.2"/> and likewise earnestly enjoin upon the whole nation, to love one God from their inmost heart, and zealously shun all heathen practices.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">And indeed, we entreat all our friends and likewise zealously instruct all the people that they love the one God with their innermost hearts and vehemently renounce all heathen practices.</ab>
         <note type="comparison" source="#liebermann" n="248">V Atr 34[?]</note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 34[?]</note>
         <note type="comparisonIncomplete">Some of Liebermann’s notes here are cut off in the gutter of the scan used, and are still to be completed.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_6.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">175</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Hier ‘lieber Landsmann’; <hi rend="italic">s. Gl freond</hi> 5</seg><seg type="translation" xml:lang="en" source="#claude">Here ‘dear fellow-countryman’; <hi rend="italic">see Gl freond</hi> 5</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_6.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">175</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. o</hi>. 1. Auch aus EGu Pro 1?</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See above</hi> 1. Also from EGu Pro 1?</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_6.lnote.de.0" n="0" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">175</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Bis 10, 3 Zusatz; <hi rend="italic">s</hi> Einl. 2 C. 4.</seg><seg type="translation" xml:lang="en" source="#claude">Addition as far as 10, 3; <hi rend="italic">see</hi> Introduction 2 C. 4.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_6.lnote.de.a" n="a" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">175</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. o</hi>. 1, 2{a}. Es ist das orthodoxe katholische Symbol benutzt</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See above</hi> 1, 2{a}. The orthodox Catholic creed is used</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_6.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">332</biblScope></bibl><seg type="original" xml:lang="en">Cf. V, 34.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_6.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">332</biblScope></bibl><seg type="original" xml:lang="en">Liebermann translates this phrase ‘Lieber Mitbürger, Landsmann.’ In style it is homiletic, cf. 28; 42.</seg></note>
       </div>
     </body>
   </text>

@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#kennedy">Kennedy</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="kennedy" type="study">A. G. Kennedy, ‘Cnut’s Law Code of 1018’, <title>Anglo-Saxon England</title> 11 (1983), 57–81</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -55,18 +58,20 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1274 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 254.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 254.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="31">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 31</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="31" corresp="#wit-d-incomplete">Wytan eac ealle ymbe friðes bote ⁊ ymbe féos bote smeagan swiðe georne:</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="31" corresp="#wit-k">K. Wutan eac ealle ymbe friþes bote ⁊ ymbe feos bote smeagean swyðe georne:</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="31" corresp="#wit-d-incomplete">Wytan<ptr type="liebermannNote" n="4" target="#VIAtr_31.lnote.oe.4"/> eac ealle ymbe friðes bote ⁊ ymbe féos bote smeagan swiðe georne:</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="31" corresp="#wit-k">Wutan eac ealle ymbe friþes bote ⁊ ymbe feos bote smeagean swyðe georne.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">Wutan eac ealle ymbe friþes bote and ymbe feos bote smeagean swyðe georne.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Lasst uns auch alle auf Besserung öffentlicher Sicherheit und auf Besserung der Münze recht ernsthaft bedacht sein:</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Lasst<ptr type="liebermannNote" n="1" target="#VIAtr_31.lnote.de.1"/> uns auch alle auf Besserung öffentlicher Sicherheit und auf Besserung der Münze recht ernsthaft bedacht sein:</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Let us also all very earnestly consider the improvement of public security and the improvement of the coinage:</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">Further, let us all earnestly take thought for the promotion of public security and the improvement of the coinage.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#VIAtr_31.robnote.n.1"/>Further, let us all earnestly take thought for the promotion of public security and the improvement of the coinage.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">Let us all also consider very carefully the enhancement of public safety and the improvement of the currency.</ab>
         <note type="comparison" source="#liebermann" n="255"><ref target="clause:VAtr_26-1">V Atr 26.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 26, 1</note>
@@ -74,6 +79,9 @@
         <note type="comparison" source="#wormald-mel" n="344"><label>parallel (VI version)</label> <ref target="clause:VAtr_26-1">V Atr 26.1–30</ref> <quote>n. 374: V Atr 26:1 – 30 (VI 31 – 37, 34 on damage to ships is new)</quote></note>
         <note type="comparedBy" source="#kennedy" n="59"><ref target="clause:Cn-1018_part-055">Cn 1018 20–20.2</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="357"><ref target="clause:IICn_8">II Cn 8</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIAtr_31.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">254</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">grosse Initiale</hi></seg><seg type="translation" xml:lang="en" source="#claude">large initial</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_31.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">176</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">benutzt durch II Cn 8—10; und 31—32, 2 durch <hi rend="italic">Hom. n</hi>. Wulfstan 271f.</seg><seg type="translation" xml:lang="en" source="#claude">used by II Cn 8—10; and 31—32, 2 by <hi rend="italic">Hom. n</hi>. Wulfstan 271f.</seg><note type="remark" resp="#claude">On several rubrics: VI Atr 31—32, 3</note></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_31.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">334</biblScope></bibl><seg type="original" xml:lang="en">Cf. V, 26, 1; II Cn. 8.</seg></note>
       </div>
     </body>
   </text>

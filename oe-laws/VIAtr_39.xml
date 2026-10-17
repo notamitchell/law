@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="jurasinski-and-oliver" type="study">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -56,6 +59,7 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1285 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 256.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 256.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -63,16 +67,21 @@
       <div type="clause" n="39">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 39</head>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="39">[Not in D]</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="39" corresp="#wit-k">K. ⁊ gif hwa nunnan gewemme oþþe wydewan nydnæme, gebete þ<hi rend="italic">æt</hi> deope for Gode ⁊ for worolde.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="39" corresp="#wit-k">⁊ gif hwa nunnan gewemme oþþe wydewan nydnæme, gebete þæt deope for Gode ⁊ for worolde.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">And gif hwa nunnan gewemme oþþe wydewan nydnæme, gebete þæt deope for Gode and for worolde.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn einer eine Nonne schändet oder eine Wittwe gewaltsam [sich zur Frau] nimmt, büsse er das tief in geistlicher und in bürgerlicher [Busse].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn einer eine Nonne<ptr type="liebermannNote" n="1" target="#VIAtr_39.lnote.de.1"/> schändet oder eine Wittwe gewaltsam [sich zur Frau] nimmt<ptr type="liebermannNote" n="2" target="#VIAtr_39.lnote.de.2"/>, büsse er das tief in geistlicher und in bürgerlicher<ptr type="liebermannNote" n="3" target="#VIAtr_39.lnote.de.3"/> [Busse].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if anyone violates a nun or takes a widow [as wife] by force, let him atone for it deeply, in spiritual and secular [penance].</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And if anyone injures a nun or does violence to a widow, he shall make amends to the utmost of his ability both towards church and state.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#VIAtr_39.robnote.n.1"/>And if anyone injures a nun or does violence to a widow, he shall make amends to the utmost of his ability both towards church and state.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">And if anyone defiles a nun or assaults a widow, he must solemnly repent before God and the world.</ab>
         <note type="comparison" source="#liebermann" n="257"><ref target="clause:VIAtr_12-1">VI Atr 12.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. 12, 1</note>
         <note type="comparedBy" source="#jurasinski-and-oliver" n="376"><ref target="clause:Ine_10">Ine 10</ref></note>
         <note type="editorial">Only in K. Liebermann compares VI Atr 12.1.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_39.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">177</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. Gl</hi> Nonne 1. 5. 12c. 13f.—Unter der Witwe (<hi rend="italic">s. d</hi>. 3) ist die zur Keuschheit eingesegnete verstanden.—Æthelreds Thronfolger Eadmund Eisenseite heiratete gegen des Vaters Willen eine erst kurz Verwitwete 1015 (Ann. Agsax.)</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See Gl</hi> Nonne 1. 5. 12c. 13f.—By the widow (<hi rend="italic">see</hi> that word 3) is meant one consecrated to chastity.—Æthelred’s successor to the throne, Eadmund Ironside, married against his father’s will a woman only recently widowed, in 1015 (Ann. Agsax.)</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_39.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">177</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Der Agsä. Text meint Entführung (‘raubt’ Schmid) zur Eheschliessung (<hi rend="italic">s. d. Gl</hi> 2h. m. 16l), dagegen Paraphrast (ebenso Price-Thorpe, Toller: ‘force, ravish’) Notzucht; <hi rend="italic">s. d</hi>. 9. Wahrscheinlich lässt dieser, kanonistischer gesinnt, Raubehe nicht gelten. Dass der Text zwei verschiedene Verben braucht, deren erstes die Unzucht allein bed., spricht dafür, dass das zweite etwas anderes als blossen Geschlechtsgenuss ausdrückt</seg><seg type="translation" xml:lang="en" source="#claude">The A.-S. text means abduction (‘raubt’ Schmid) for the purpose of marriage (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 2h. m. 16l), whereas the paraphrast (likewise Price-Thorpe, Toller: ‘force, ravish’) means rape; <hi rend="italic">see</hi> that word 9. Probably the latter, being more canonistically minded, does not recognize marriage by abduction. The fact that the text uses two different verbs, the first of which means fornication alone, suggests that the second expresses something other than mere sexual gratification</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_39.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">177</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Vermögenseinziehung füge zu <hi rend="italic">Gl</hi> Nonne 13f. aus L hinzu. Sie übernimmt Cn 1020, 16, vielleicht auch unter Wulfstans Einfluss</seg><seg type="translation" xml:lang="en" source="#claude">Add confiscation of property from L to <hi rend="italic">Gl</hi> Nonne 13f. Cn 1020, 16 takes it over, perhaps also under Wulfstan’s influence</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_39.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">334</biblScope></bibl><seg type="original" xml:lang="en">Neither this clause nor the one following is found in V Atr.</seg></note>
       </div>
     </body>
   </text>

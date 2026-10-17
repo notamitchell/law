@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#kennedy">Kennedy</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="kennedy" type="study">A. G. Kennedy, ‘Cnut’s Law Code of 1018’, <title>Anglo-Saxon England</title> 11 (1983), 57–81</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -56,6 +59,7 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1241 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 250.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 250.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -63,11 +67,12 @@
       <div type="clause" n="13">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 13</head>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="13">[Not in D]</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13" corresp="#wit-k">K. ⁊ sy ælc cyrice on Godes griþe ⁊ on þæs cynges ⁊ on ealles Cristenes folces.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="13" corresp="#wit-k">⁊ sy ælc cyrice on Godes griþe ⁊ on þæs cynges ⁊ on ealles Cristenes folces.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">And sy ælc cyrice on Godes griþe and on þæs cynges and on ealles Cristenes folces.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und jede Kirche stehe im Friedensschutze Gottes und des Königs und alles christlichen Volkes.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und jede<ptr type="liebermannNote" n="1" target="#VIAtr_13.lnote.de.1"/> Kirche stehe im Friedensschutze Gottes und des Königs und alles christlichen Volkes.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let every church be under the protection of God and of the king and of all Christian people.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And every church shall be under the special protection of God and of the king and of all Christian people.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#VIAtr_13.robnote.n.1"/>And every church shall be under the special protection of God and of the king and of all Christian people.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">And each church shall be under the protection of God and of the king and of all Christian people.</ab>
         <note type="comparison" source="#liebermann" n="250">V Atr [?]</note>
         <note type="comparisonPrinted" source="#liebermann">V Atr[?]</note>
@@ -76,6 +81,8 @@
         <note type="comparedBy" source="#wormald-mel" n="342"><ref target="clause:VIIIAtr_18">VIII Atr 18–25</ref></note>
         <note type="comparedBy" source="#kennedy" n="59"><ref target="clause:Cn-1018_part-007">Cn 1018 2.1–2.2</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="356"><ref target="clause:ICn_2-1">I Cn 2.1</ref></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_13.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">175</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Benutzt durch I Cn 2, 1 und Polity 25 ed. Thorpe <hi rend="italic">Anc. laws</hi> 439</seg><seg type="translation" xml:lang="en" source="#claude">Used by I Cn 2, 1 and Polity 25 ed. Thorpe <hi rend="italic">Anc. laws</hi> 439</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_13.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">333</biblScope></bibl><seg type="original" xml:lang="en">Cf. V, 10, 1; I Cn. 2, 1; <hi rend="italic">Insts. of Polity</hi>, 25, ed. Thorpe, <hi rend="italic">Anc. Laws</hi>, <hi rend="smallcaps">ii</hi>. p. 338.</seg></note>
       </div>
     </body>
   </text>

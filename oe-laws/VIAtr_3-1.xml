@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">162</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -56,6 +59,7 @@
       <change when="2026-10-17">Generated from row 1219 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 248.</change>
       <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 93.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 248.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -63,16 +67,21 @@
       <div type="clause" n="3.1">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 3.1</head>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.1">[Not in D]</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.1" corresp="#wit-k">⁊ se munuc, þe mynster næbbe, cume to scireb<hi rend="italic">iscop</hi> ⁊ trywsige hine sylfne wið God ⁊ wið men, þ<hi rend="italic">æt</hi> he huru þreo þing þanon forð healdan wille, þ<hi rend="italic">æt</hi> is: his clænnesse ⁊ munuclice scrudware ⁊ þeowian<ptr type="liebermannNote" n="2" target="#VIAtr_3-1.lnote.oe.2"/> his Drihtne, swa wel swa he betst mæge.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="3.1[a]" corresp="#wit-k">⁊ se munuc, þe mynster næbbe, cume to scirebiscop ⁊ trywsige hine sylfne wið God ⁊ wið men, þæt he huru þreo þing þanon forð healdan wille, þæt is his clænnesse ⁊ munuclice scrudware ⁊ þeowian his Drihtne swa wel swa he betst mæge;</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">And se munuc þe mynster næbbe, cume to scirebiscop and trywsige hine sylfne wið God and wið men þæt he huru þreo þing þanon forð healdan wille, þæt is: his clænnesse and munuclice scrudware and þeowian his Drihtne, swa wel swa he betst mæge.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">Und ein solcher Mönch, welcher kein Kloster hat, komme zum Bischofe des Sprengels und verpflichte sich gegenüber Gott und Menschen, dass er wenigstens drei Dinge hinfort halten wolle, nämlich seine Keuschheit und mönchisches Gewand und seinem Herr[gott] dienen, so gut wie er bestens vermag.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And a monk who has no monastery, let him come to the diocesan bishop and pledge himself before God and men that from then on he will keep at least three things, namely his chastity and his monastic dress, and to serve his Lord as well as he best can.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And the monk who has no monastery shall come to the bishop of the diocese, and shall vow to God and to men henceforth to observe three things at least, namely, celibacy, and the wearing of the monastic habit, and the service of his Lord to the best of his ability.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#VIAtr_3-1.robnote.n.1"/>And the monk who has no monastery<ptr type="editorNote" n="2" target="#VIAtr_3-1.robnote.n.2"/> shall come to the bishop of the diocese, and shall vow to God and to men henceforth to observe three things at least, namely, celibacy, and the wearing of the monastic habit, and the service of his Lord to the best of his ability.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">And the monk who does not have a monastery shall come to the bishop of the diocese and commit himself before God and men to especially observe three things thenceforth: that is, his celibacy, his monastic habit, and his service to God as best he can.</ab>
         <note type="comparison" source="#liebermann" n="248">V Atr 6[?]</note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 6[?]</note>
         <note type="comparisonIncomplete">Some of Liebermann’s notes here are cut off in the gutter of the scan used, and are still to be completed.</note>
         <note type="comparedBy" source="#wormald-mel" n="340"><ref target="clause:VAtr_6">V Atr 6–6.1</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIAtr_3-1.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">248</biblScope></bibl><seg type="original" xml:lang="de">e <hi rend="italic">übergeschr.; vgl.</hi> 15</seg><seg type="translation" xml:lang="en" source="#claude">e written above; cf. 15</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_3-1.lnote.de.a" n="a" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">175</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Der Untergang vieler Klöster (<hi rend="italic">s. d. Gl</hi> 3) in Dänenzeit wird häufig berichtet. Die später wieder hergestellten fielen mehrfach Weltgeistlichen oder dem anderen Geschlechte als bisher anheim</seg><seg type="translation" xml:lang="en" source="#claude">The destruction of many monasteries (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 3) in the Danish period is frequently reported. Those later restored fell in several cases to secular clergy or to the opposite sex from before</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_3-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">332</biblScope></bibl><seg type="original" xml:lang="en">Cf. V, 6.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_3-1.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">332</biblScope></bibl><seg type="original" xml:lang="en">The explanation given by the Latin paraphrase is: <hi rend="italic">si cuiuspiam monachorum monasterium…cum canonicis vel cum sanctimonialibus</hi> (<hi rend="italic">i.e.</hi> nuns) <hi rend="italic">constitutum sit</hi>. After the death of Edgar monks were ejected from many Mercian religious houses in which they had been installed during his reign, see <hi rend="italic">Sax. Chr.</hi> ann. 975 A, E and note, Plummer, <hi rend="smallcaps">ii</hi>. p. 163. The reference might also be to monks belonging to monasteries destroyed during the Danish raids.</seg></note>
       </div>
     </body>
   </text>
