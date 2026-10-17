@@ -14,6 +14,9 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -34,6 +37,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -42,7 +46,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -64,31 +68,50 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1832 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 348.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 348.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 348: “Ælþeodige menn, gif hig heora hæmed rihtan nillan, of lande mid heora æhtum ⁊ synnan gewitan.” → “Ælþeodige menn, gif hig heora hæmed rihtan nillan, of lande mid heora æhtum ⁊ synnan gewitan. (expanded letters in italics: m)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 349.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 349: “Fremde Männer, wenn sie ihren Geschlechtsverkehr nicht rechtmässig machen wollen, sollen (treibe man sie B) aus dem Lande mit ihren Gütern und (in B) Sünden weichen.” → “Fremde Männer, wenn sie ihren Geschlechtsverkehr nicht rechtmässig machen wollen, sollen (treibe man sie B) aus dem Lande mit ihren Gütern und (in B) Sünden weichen. (expanded letters in italics: B, B)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="55">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 55</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="55" corresp="#wit-g-a"><pb n="348" ed="#liebermann"/>Ælþeodige men, gif hig heora hæmed rihtan nellan, of lande mid heora æhtu<hi rend="italic">m</hi> ⁊ synnan gewitan.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="55" corresp="#wit-a"><pb n="348" ed="#liebermann"/>Ælþeodige menn, gif hig heora hæmed rihtan nillan, of lande mid heora æhtum ⁊ synnan gewitan.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="55" corresp="#wit-q"><pb n="349" ed="#liebermann"/>Alienigenę si concubitus suos dirigere nolint, extra patriam cum pecunia et peccatis recedant.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="55" corresp="#wit-b"><pb n="202" ed="#robertson"/>Ælðeodige men, gif hig heora hemed rihtan nellað, [driue hi man of] lande mid heora æhtan ⁊ on synnan gewitan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="55" corresp="#wit-g-a"><pb n="348" ed="#liebermann"/>Ælþeodige men, gif hig heora hæmed rihtan nellan<ptr type="liebermannNote" n="*" target="#IICn_55.lnote.oe.star"/>, of lande<ptr type="liebermannNote" n="18" target="#IICn_55.lnote.oe.18"/> mid heora æhtu<hi rend="italic">m</hi> ⁊ synnan gewitan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="55" corresp="#wit-b"><pb n="348" ed="#liebermann"/>Ælðeodige men, gif hig heora hemed rihtan nellað, [driuc<ptr type="liebermannNote" n="4" target="#IICn_55.lnote.oe.4"/> hi man of] lande mid heora æhtan ⁊ on synnan gewitan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="55" corresp="#wit-a"><pb n="348" ed="#liebermann"/>Ælþeodige menn, gif hig heora hæmed rihtan nillan, of lande mid heora æhtu<hi rend="italic">m</hi> ⁊ synnan gewitan.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="55" corresp="#wit-q"><pb n="349" ed="#liebermann"/>Alienigenę si concubitus<ptr type="liebermannNote" n="13" target="#IICn_55.lnote.oe.13"/> suos dirigere<ptr type="liebermannNote" n="14" target="#IICn_55.lnote.oe.14"/> nolint, extra patriam cum pecunia<ptr type="liebermannNote" n="15" target="#IICn_55.lnote.oe.15"/> et peccatis recedant.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="55" corresp="#wit-inst-cn"><pb n="349" ed="#liebermann"/>Alieni nisi legale<ptr type="liebermannNote" n="9" target="#IICn_55.lnote.oe.9"/> coniugium custodierint, expellantur de terra cum substantia et peccatis.<ptr type="liebermannNote" n="10" target="#IICn_55.lnote.oe.10"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="55" corresp="#wit-cons-cn"><pb n="349" ed="#liebermann"/>[55] Alienigene qui suam uenerem corrigere neggligunt, a patria cum sua substantia et peccato discedant.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="55" corresp="#wit-b"><pb n="202" ed="#robertson"/>Ælðeodige men, gif hig heora hemed rihtan nellað, [driue hi man of]<ptr type="editorNote" n="10" target="#IICn_55.robnote.fn.10"/> lande mid heora æhtan ⁊ on<ptr type="editorNote" n="3" target="#IICn_55.robnote.fn.3"/> synnan gewitan.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="284" ed="#rabin-doml"/>Ælþeodige men, gif hig heora hæmed rihtan nellan, driue hi man of lande mid heora æhtum and synnan gewitan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="349" ed="#liebermann"/>Fremde Männer, wenn sie ihren Geschlechtsverkehr nicht rechtmässig machen wollen, sollen (treibe man sie B) aus dem Lande mit ihren Gütern und (in B) Sünden weichen.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="349" ed="#liebermann"/>Fremde<ptr type="liebermannNote" n="1" target="#IICn_55.lnote.de.1"/> Männer, wenn sie ihren Geschlechtsverkehr nicht rechtmässig machen wollen, sollen (treibe man sie <hi rend="italic">B</hi>) aus dem Lande mit ihren Gütern und (in <hi rend="italic">B</hi>) Sünden weichen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Foreign men, if they will not make their sexual relations lawful, shall depart (let them be driven, B) from the land with their goods and (in, B) sins.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="203" ed="#robertson"/>Foreigners, if they will not regularise their unions, shall be driven from the land with their possessions, and shall depart in sin.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="470" ed="#whitelock"/>Foreigners, if they will not regularise their marriages, are to depart from the land with their goods and their sins.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><ptr type="editorNote" n="1" target="#IICn_55.robnote.n.1"/><pb n="203" ed="#robertson"/>Foreigners, if they will not regularise their unions, shall be driven from the land with their possessions, and shall depart in sin.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock"><ptr type="editorNote" n="1" target="#IICn_55.whinote.n.1"/><pb n="470" ed="#whitelock"/>Foreigners, if they will not regularise their marriages, are to depart from the land with their goods and their sins.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="285" ed="#rabin-doml"/>If foreigners will not make their marriages conform to the law, they shall be expelled from the realm with their possessions and leave with their sins.</ab>
         <note type="comparison" source="#liebermann" n="349"><ref target="clause:Wi_4">Wi 4</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. Wi. 4</note>
         <note type="comparison" source="#wormald-mel" n="353"><label>virtual quotation</label> <ref target="clause:Wi_4">Wi 4</ref> <quote>A virtual quotation is II Cn 55/Wi 4 (note B's unease with early Kentish syntax)</quote></note>
         <note type="comparison" source="#wormald-mel" n="359"><label>quoted verbatim (bold in Wormald's table)</label> <ref target="clause:Wi_4">Wi 4</ref> <quote>Table 5.4, II Cn 55: Wi 4</quote></note>
         <note type="comparison" source="#wormald-ppmel" n="67"><label>verbal quotation</label> <ref target="clause:Wi_4">Wi 4</ref> <quote>II Cn 50 – 55 (this last clause is a verbal quotation from Wi 4)</quote></note>
-        <note type="editorial">Liebermann compares Wi 4.</note>
-        <note type="translator" source="#whitelock">This clause is taken unchanged from the laws of the Kentish king, Wihtred (4). It is probably the influx of Scandinavians in the reign of Cnut that caused the revival of this ancient statute.</note>
+        <note type="editorial">Liebermann compares Wi 4.; BR: added from Gesetze I p. 349, October 2026 (MS Cons)</note>
         <note type="textual" source="#rabin-doml">driue hi man of: omitted GA, added in B in a sixteenth-century hand</note>
         <note type="textual" source="#rabin-doml">and synnan: and on synnan B</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_55.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="de">legalē <hi rend="italic">H</hi></seg><seg type="translation" xml:lang="en" source="#claude">legalē H</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_55.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="de">peccuniis <hi rend="italic">LbS</hi></seg><seg type="translation" xml:lang="en" source="#claude">peccuniis LbS</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_55.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="de">s. c. <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">s. c. K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_55.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="de">dimitere <hi rend="italic">auf Rasur Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">dimitere on an erasure Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_55.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so K;</hi> pecca. et pecu. <hi rend="italic">übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">thus K; pecca. et pecu. the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_55.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">348</biblScope></bibl><seg type="original" xml:lang="de">nillaþ <hi rend="italic">Ld;</hi> nyllað <hi rend="italic">Wihtræd</hi> 4</seg><seg type="translation" xml:lang="en" source="#claude">nillaþ Ld; nyllað Wihtræd 4</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_55.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">348</biblScope></bibl><seg type="original" xml:lang="de">-nd <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-nd Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_55.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">348</biblScope></bibl><seg type="original" xml:lang="de">[<hi rend="italic">eingeklammertes</hi>] <hi rend="italic">am Rande im</hi> 16. <hi rend="italic">Jh.</hi></seg><seg type="translation" xml:lang="en" source="#claude">[the bracketed words] in the margin in the 16th cent.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_55.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">210</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Steenstrup (<hi rend="italic">Normannerne</hi> III 372) denkt an vorübergehend in England anwesende Händler.—Eine Parallele zur elektiven Umwandelung der Busse in Verbannung sieht Rosenthal (<hi rend="italic">Rechtsfolgen d. Ehebr</hi>. 57) hierin mit Unrecht.—<hi rend="italic">Vgl</hi>. Wi 4¹·³</seg><seg type="translation" xml:lang="en" source="#claude">Steenstrup (<hi rend="italic">Normannerne</hi> III 372) thinks of traders temporarily present in England.—Rosenthal (<hi rend="italic">Rechtsfolgen d. Ehebr</hi>. 57) wrongly sees in this a parallel to the elective commutation of compensation into banishment.—<hi rend="italic">Cf</hi>. Wi 4¹·³</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IICn_55.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">357</biblScope></bibl><seg type="original" xml:lang="en">Cf. Wi. 4.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_55.robnote.fn.3" n="3" source="#robertson"><bibl><biblScope unit="page">202</biblScope></bibl><label>his</label><seg type="original" xml:lang="en">Om. G, A, Ld.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_55.robnote.fn.10" n="10" source="#robertson"><bibl><biblScope unit="page">202</biblScope></bibl><label>of</label><seg type="original" xml:lang="en">Written in the margin in 16th cent. in B; om. G, A, Ld.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IICn_55.whinote.n.1" n="1" source="#whitelock"><bibl><biblScope unit="page">470</biblScope></bibl><seg type="original" xml:lang="en">This clause is taken unchanged from the laws of the Kentish king, Wihtred (4). It is probably the influx of Scandinavians in the reign of Cnut that caused the revival of this ancient statute.</seg></note>
       </div>
     </body>
   </text>

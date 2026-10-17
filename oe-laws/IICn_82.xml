@@ -13,6 +13,7 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +33,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">474</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +42,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -62,18 +64,24 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1896 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 366.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 366.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 366: “⁊ ic wille, þæt ælc man sy griðes wyrðe to gemote ⁊ fram gemote, buton he æbære þeof sy.” → “⁊ ic wille, þæt ælc man sy griðes wyrðe to gemote ⁊ fram gemote, buton he æbære þeof sy. (expanded letters in italics: æt, m)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 367.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="82">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 82</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="82" corresp="#wit-g-a"><pb n="366" ed="#liebermann"/>⁊ ic wylle, þ<hi rend="italic">æt</hi> ælc man si griðes wyrðe to gemote ⁊ fram gemote, butan he si æbǽre þeof.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="82" corresp="#wit-a"><pb n="366" ed="#liebermann"/>⁊ ic wille, þæt ælc man sy griðes wyrðe to gemote ⁊ fram gemote, buton he æbære þeof sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="82" corresp="#wit-g-a"><pb n="366" ed="#liebermann"/>⁊ ic wylle<ptr type="liebermannNote" n="10" target="#IICn_82.lnote.oe.10"/>, þ<hi rend="italic">æt</hi> ælc man si<ptr type="liebermannNote" n="5" target="#IICn_82.lnote.oe.5"/> griðes<ptr type="liebermannNote" n="11" target="#IICn_82.lnote.oe.11"/> wyrðe to gemote ⁊ fram gemote, butan<ptr type="liebermannNote" n="12" target="#IICn_82.lnote.oe.12"/> he si<ptr type="liebermannNote" n="13" target="#IICn_82.lnote.oe.13"/> æbǽre þeof.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="82" corresp="#wit-b"><pb n="366" ed="#liebermann"/>And ic wille, þ<hi rend="italic">æt</hi> ælc man beo griðes wyrðe to gemote ⁊ fram gemote, buton he æbere ðeof beo.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="82" corresp="#wit-a"><pb n="366" ed="#liebermann"/>⁊ ic wille, þ<hi rend="italic">æt</hi> ælc man sy griðes wyrðe to gemote ⁊ fra<hi rend="italic">m</hi> gemote, buton he æbære þeof sy.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="82" corresp="#wit-q"><pb n="367" ed="#liebermann"/>Et uolo, ut omnis homo pacem habeat eundo ad gemotum uel rediens de gemoto (id est placito), nisi probatus fur sit.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="82" corresp="#wit-inst-cn"><pb n="367" ed="#liebermann"/>Pręcipimus etiam, ut omnis homo<ptr type="liebermannNote" n="8" target="#IICn_82.lnote.oe.8"/> habeat pacem et securitatem eundo et redeundo ad placitum, nisi sit latro publicus<ptr type="liebermannNote" n="9" target="#IICn_82.lnote.oe.9"/> omnino.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="82" corresp="#wit-cons-cn"><pb n="367" ed="#liebermann"/>[82] (De pace domini regis et eius preceptis.) Precipio quoque, ut omnis homo pacem habeat placitum adeundo et a placito redeundo, nisi sit manifestus fur.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="82" corresp="#wit-b"><pb n="216" ed="#robertson"/>And ic wille þæt ælc man beo griðes wyrðe to gemote ⁊ fram gemote, buton he æbere ðeof beo.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="296" ed="#rabin-doml"/>And ic wylle þæt ælc man si griðes wyrðe to gemote and fram gemote, butan he si æbære þeof.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="366" ed="#liebermann"/>Und ich will, dass jedermann besonderen Friedensschutzes theilhaftig sei [auf dem Wege] zum Gericht und vom Gericht, wenn er nicht ein unleugbarer Dieb ist.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="366" ed="#liebermann"/>Und<ptr type="liebermannNote" n="1" target="#IICn_82.lnote.de.1"/> ich will, dass jedermann besonderen Friedensschutzes theilhaftig sei [auf dem Wege] zum Gericht<ptr type="liebermannNote" n="2" target="#IICn_82.lnote.de.2"/> und vom Gericht, wenn er nicht ein unleugbarer<ptr type="liebermannNote" n="3" target="#IICn_82.lnote.de.3"/> Dieb ist.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And I will that every man be entitled to special peace-protection [on the way] to the court and from the court, unless he is an undeniable thief.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="217" ed="#robertson"/>And it is my will that every man shall be entitled to protection in going to and from assemblies, unless he be a notorious thief.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock"><pb n="474" ed="#whitelock"/>And it is my will that every man is to be entitled to peace, going to a meeting and from a meeting, unless he is a manifest thief.</ab>
@@ -90,7 +98,19 @@
         <note type="comparedBy" source="#wormald-mel" n="401"><ref target="clause:CHnCor_11">CHn cor 11</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="401"><ref target="clause:CHnCor_12">CHn cor 12</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="401"><ref target="clause:CHnCor_13">CHn cor 13</ref></note>
-        <note type="editorial">Liebermann compares III Atr 1.</note>
+        <note type="editorial">Liebermann compares III Atr 1.; BR: added from Gesetze I p. 367, October 2026 (MS Cons)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_82.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">367</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_82.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">367</biblScope></bibl><seg type="original" xml:lang="de">o. p. <hi rend="italic">HDi</hi>; publicatus <hi rend="italic">ohne</hi> om. <hi rend="italic">Lb S</hi></seg><seg type="translation" xml:lang="en" source="#claude">o. p. HDi; publicatus without om. Lb S</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_82.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">366</biblScope></bibl><seg type="original" xml:lang="de">wille <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">wille Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_82.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">366</biblScope></bibl><seg type="original" xml:lang="de">sẏ <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">sẏ Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_82.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">366</biblScope></bibl><seg type="original" xml:lang="de">gryþes wyrþ <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gryþes wyrþ Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_82.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">366</biblScope></bibl><seg type="original" xml:lang="de">buton <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">buton Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_82.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">366</biblScope></bibl><seg type="original" xml:lang="de">æbere ðeof sy <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">æbere ðeof sy Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_82.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">367</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Überschrift fehlt Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">Heading lacking in Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_82.lnote.oe.5-2" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">367</biblScope></bibl><seg type="original" xml:lang="de">h. pa. ad. pl. et r., <hi rend="italic">ohne</hi> a pl. <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">h. pa. ad. pl. et r., without a pl. Hk</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_82.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">214</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Benutzt aus Q durch Lond ECf 32 B 6.—Der Plural in Inst meint entweder die Witan mit oder ist Pl. majestatis</seg><seg type="translation" xml:lang="en" source="#claude">Used, from Q, by Lond ECf 32 B 6.—The plural in Inst either includes the witan or is a plural of majesty</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_82.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">214</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Gerichtsfrieden 5</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Gerichtsfrieden 5</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_82.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">214</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ebd</hi>. handhaft [...]es Rec[...]</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Ibid</hi>. handhaft [...]es Rec[...]</seg></note>
       </div>
     </body>
   </text>

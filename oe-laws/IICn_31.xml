@@ -13,6 +13,9 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +35,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">466</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +44,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -63,28 +67,45 @@
       <change when="2026-10-18">Generated from row 1776 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 334.</change>
       <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 192.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 334: “ægenum” → “agenum”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 334.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 335.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 335: “(Von Hausleuten. B) Und jeder Herr halte seine Hausleute unter seiner eigenen Verbürgung.” → “(Von Hausleuten. B) Und jeder Herr halte seine Hausleute unter seiner eigenen Verbürgung. (expanded letters in italics: B)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="31">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 31</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="31" corresp="#wit-g-a"><pb n="334" ed="#liebermann"/>And hæbbe ælc hlaford his hiredmen on his ægenu<hi rend="italic">m</hi> borge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="31" corresp="#wit-g-a"><pb n="334" ed="#liebermann"/>And<ptr type="liebermannNote" n="21" target="#IICn_31.lnote.oe.21"/> hæbbe<ptr type="liebermannNote" n="22" target="#IICn_31.lnote.oe.22"/> ælc hlaford his hiredmen<ptr type="liebermannNote" n="23" target="#IICn_31.lnote.oe.23"/> on his agenu<hi rend="italic">m<ptr type="liebermannNote" n="24" target="#IICn_31.lnote.oe.24"/></hi> borge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="31" corresp="#wit-b"><pb n="334" ed="#liebermann"/>Be hiredmonnu<hi rend="italic">m</hi>. ⁊ hæbbe ælc laford his hiredmen on his agenum [borhge<ptr type="liebermannNote" n="5" target="#IICn_31.lnote.oe.5"/>].</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="31" corresp="#wit-a"><pb n="334" ed="#liebermann"/>And habbe alc hlaford his hirdmen on his aganan borge.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="31" corresp="#wit-q"><pb n="335" ed="#liebermann"/>Et habeat omnis dominus familiam suam in plegio suo.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="31" corresp="#wit-b"><pb n="192" ed="#robertson"/>Be hiredmonnum. ⁊ hæbbe ælc laford his hiredmen on his agenum borhge.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="31" corresp="#wit-inst-cn"><pb n="335" ed="#liebermann"/>Omnis dominus habeat familiam suam in proprio plegio (suo<ptr type="liebermannNote" n="9" target="#IICn_31.lnote.oe.9"/>), ut, si aliquis illorum calumniatus fuerit, respondeat hundredo, in quo calumniatus est, sicut iustum sit.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="31" corresp="#wit-cons-cn"><pb n="335" ed="#liebermann"/>Omnis etiam dominus habeat suos domesticos in sua propria fideiussione.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="31" corresp="#wit-b"><pb n="192" ed="#robertson"/>Be hiredmonnum. ⁊ hæbbe ælc laford his hiredmen on his agenum borhge<ptr type="editorNote" n="4" target="#IICn_31.robnote.fn.4"/>.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="272" ed="#rabin-doml"/>And hæbbe ælc hlaford his hiredmen on his agenum borge.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="335" ed="#liebermann"/>(Von Hausleuten. B) Und jeder Herr halte seine Hausleute unter seiner eigenen Verbürgung.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="335" ed="#liebermann"/>(Von Hausleuten. <hi rend="italic">B</hi>) Und<ptr type="liebermannNote" n="1" target="#IICn_31.lnote.de.1"/> jeder Herr halte seine Hausleute unter seiner eigenen Verbürgung.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of household men. B) And let every lord keep his household men under his own surety.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="193" ed="#robertson"/>Concerning the men belonging to a household. And every lord shall be personally responsible as surety for the men of his own household.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="466" ed="#whitelock"/>And each lord is to have the men of his household under his own surety.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock"><ptr type="editorNote" n="3" target="#IICn_31.whinote.n.3"/><pb n="466" ed="#whitelock"/>And each lord is to have the men of his household under his own surety.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="273" ed="#rabin-doml"/>And every lord shall himself serve as surety for his followers.</ab>
         <note type="comparison" source="#liebermann" n="335"><ref target="clause:IAtr_1-1_dup2">I Atr 1.10</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 1, 10</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:LeisWl_52">Leis Wl 52</ref></note>
-        <note type="editorial">In B, ‘borhge’ was written above in the 12th century. Liebermann compares I Atr 1.10.</note>
-        <note type="translator" source="#whitelock">The following section is from I Ethelred also (1.10–1.13), except that 31a is new.</note>
+        <note type="editorial">In B, ‘borhge’ was written above in the 12th century. Liebermann compares I Atr 1.10.; BR: added from Gesetze I p. 335, October 2026 (MS Cons); AY: corrected against Rabin p. 272, October 2026 (was “∅”, now “| rihtlagu: lagu B”)</note>
         <note type="textual" source="#rabin-doml">B adds rubric Be hiredmannum</note>
+        <note type="textual" source="#rabin-doml">rihtlagu: lagu B</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_31.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">335</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so Cb Lb; fehlt übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">so Cb Lb; omitted in the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_31.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">334</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_31.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">334</biblScope></bibl><seg type="original" xml:lang="de">habbe <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">habbe Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_31.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">334</biblScope></bibl><seg type="original" xml:lang="de">hyrdmen <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">hyrdmen Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_31.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">334</biblScope></bibl><seg type="original" xml:lang="de">-nan <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-nan Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_31.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">334</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">im</hi> 12. <hi rend="italic">Jh. übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above in the 12th cent.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_31.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">335</biblScope></bibl><seg type="original" xml:lang="de">enim d. s. habet <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">enim d. s. habet Hk</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_31.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">207</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Dies und folgendes wiederholt Hn 41, 6, und fasst zusammen Hn 8, 3; 31—31, 2 übersetzt Leis Wl 52</seg><seg type="translation" xml:lang="en" source="#claude">This and what follows is repeated by Hn 41, 6 and summarised by Hn 8, 3; 31—31, 2 is translated by Leis Wl 52</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_31.robnote.fn.4" n="4" source="#robertson"><bibl><biblScope unit="page">192</biblScope></bibl><label>borhge</label><seg type="original" xml:lang="en">Written above in 12th cent. in B.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IICn_31.whinote.n.3" n="3" source="#whitelock"><bibl><biblScope unit="page">466</biblScope></bibl><seg type="original" xml:lang="en">The following section is from I Ethelred also (1.10–1.13), except that 31<hi rend="italic">a</hi> is new.</seg></note>
       </div>
     </body>
   </text>

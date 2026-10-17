@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">468</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +43,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -62,24 +65,40 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1797 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 340.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 340.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 340: “⁊ binnan ðrittigum nihtan aginne bote ægðer ge wið Godd ge wið menn be allum þam he age.” → “⁊ binnan ðrittigum nihtan aginne bote ægðer ge wið Godd ge wið menn be allum þam he age. (expanded letters in italics: m, m)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 341.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="39.1">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 39.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="39.1" corresp="#wit-g-a"><pb n="340" ed="#liebermann"/>⁊ binnon XXX nihton aginne bote ægþer ge wið God ge wið menn be eallum þam þe he age.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="39.1" corresp="#wit-a"><pb n="340" ed="#liebermann"/>⁊ binnan ðrittigum nihtan aginne bote ægðer ge wið Godd ge wið menn be allum þam he age.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="39.1" corresp="#wit-q"><pb n="341" ed="#liebermann"/>Et infra XXX noctes hoc incipiat apud Deum et homines super omne quod habet.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="39.1" corresp="#wit-b"><pb n="196" ed="#robertson"/>⁊ binnon XXX nihta aginne þa bote ægðer ge wið God ge wið men be eallum ðam ðe he age.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="39.1" corresp="#wit-g-a"><pb n="340" ed="#liebermann"/>⁊ binnon XXX nihton aginne bote ægþer ge wið God ge wið menn<ptr type="liebermannNote" n="7" target="#IICn_39-1.lnote.oe.7"/> be eallum þam þe he age.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="39.1" corresp="#wit-b"><pb n="340" ed="#liebermann"/>⁊ binnon XXX nihta aginne þa bote ægðer ge wið God ge wið men be eallu<hi rend="italic">m</hi> ðam ðe he age.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="39.1" corresp="#wit-a"><pb n="340" ed="#liebermann"/>⁊ binnan ðrittigu<hi rend="italic">m</hi> nihtan aginne bote ægðer ge wið Godd ge wið menn be allu<hi rend="italic">m</hi> þam<ptr type="liebermannNote" n="1" target="#IICn_39-1.lnote.oe.1"/> he age.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="39.1" corresp="#wit-q"><pb n="341" ed="#liebermann"/>Et infra XXX noctes hoc incipiat<ptr type="liebermannNote" n="3" target="#IICn_39-1.lnote.oe.3"/> apud Deum et homines super omne quod habet.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="39.1" corresp="#wit-inst-cn"><pb n="341" ed="#liebermann"/>Et infra triginta dies incipiat pęnitentiam et emendationem contra Deum et homines.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="39.1" corresp="#wit-cons-cn"><pb n="341" ed="#liebermann"/>Satisfactionem autem suscipiat infra XXX dies tam erga Deum quam erga homines supra omnia que sunt.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="39.1" corresp="#wit-b"><pb n="196" ed="#robertson"/>⁊ binnon XXX nihta aginne þa<ptr type="editorNote" n="2" target="#IICn_39-1.robnote.fn.2"/> bote ægðer ge wið God ge wið men be eallum ðam ðe he age.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="276" ed="#rabin-doml"/>And binnon XXX nihton aginne bote ægþer ge wið God ge wið menn be eallum þam þe he age.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="340" ed="#liebermann"/>und binnen 30 Nächten beginne er die Busse sowohl vor Kirche wie Staat, bei [Strafe des Verlustes von] allem was er hat.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="340" ed="#liebermann"/>und<ptr type="liebermannNote" n="1" target="#IICn_39-1.lnote.de.1"/> binnen<ptr type="liebermannNote" n="2" target="#IICn_39-1.lnote.de.2"/> 30 Nächten beginne er die Busse sowohl vor Kirche wie Staat, bei [Strafe des Verlustes von] allem was<ptr type="liebermannNote" n="3" target="#IICn_39-1.lnote.de.3"/> er hat.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">and within thirty nights let him begin to make amends both to God and to men, on [pain of losing] all that he has.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="197" ed="#robertson"/>And he shall begin to make amends both to God and men within 30 days, under pain of forfeiting all that he possesses.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="197" ed="#robertson"/>And he shall begin to make amends both to God and men within 30 days<ptr type="editorNote" n="1" target="#IICn_39-1.robnote.n.1"/>, under pain of forfeiting all that he possesses.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock"><pb n="468" ed="#whitelock"/>And he is to begin to make amends both to God and to men within 30 days, on pain of losing all that he owns.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="277" ed="#rabin-doml"/>And he must start to make amends within thirty days to both God and the community or forfeit all that he owns.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IICn_41-2">II Cn 41.2</ref></note>
+        <note type="editorial">BR: added from Gesetze I p. 341, October 2026 (MS Cons)</note>
         <note type="textual" source="#rabin-doml">bote: þa bote B</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_39-1.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">341</biblScope></bibl><seg type="original" xml:lang="de">-piet <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">-piet Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_39-1.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Attraction des</hi> þe <hi rend="italic">wie</hi> 40, 2; 43 <hi rend="italic">und G</hi> 45, 2</seg><seg type="translation" xml:lang="en" source="#claude">attraction of þe, as in 40, 2; 43 and G 45, 2</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_39-1.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="de">men <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">men Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_39-1.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">341</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">bessere aus</hi> 25<hi rend="italic">a</hi> habet <hi rend="italic">oder ergänze</hi> sua</seg><seg type="translation" xml:lang="en" source="#claude">emend to habet from 25<hi rend="italic">a</hi>, or supply sua</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_39-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">208</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Benutzt durch Hn 66, 1</seg><seg type="translation" xml:lang="en" source="#claude">Used by Hn 66, 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_39-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">208</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Ähnlich <hi rend="italic">u</hi>. 41, 2</seg><seg type="translation" xml:lang="en" source="#claude">Similarly <hi rend="italic">below</hi> 41, 2</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_39-1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">208</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Ellipse des Relativs (<hi rend="italic">s. Wb</hi> 183 Sp. 1) in A</seg><seg type="translation" xml:lang="en" source="#claude">Ellipsis of the relative (<hi rend="italic">see Wb</hi> 183 col. 1) in A</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IICn_39-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">356</biblScope></bibl><seg type="original" xml:lang="en">Cf. 41, 2.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_39-1.robnote.fn.2" n="2" source="#robertson"><bibl><biblScope unit="page">196</biblScope></bibl><label>þa</label><seg type="original" xml:lang="en">Om. G, A.</seg></note>
       </div>
     </body>
   </text>

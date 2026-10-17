@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -40,7 +42,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -62,26 +64,44 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1754 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 328.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 328.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 328: “Gif he ne mage, þonne gewylde man hine, swa hwæðer man mage, swa cucne swa deadne, ⁊ niman eall þæt he age.” → “Gif he ne mage, þonne gewylde man hine, swa hwæðer man mage, swa cucne swa deadne, ⁊ niman eall þæt he age. (expanded letters in italics: æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 328: “man sich seiner,; ∅” → “man,; sich seiner”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 329.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="25a">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 25a</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25a" corresp="#wit-g-a"><pb n="328" ed="#liebermann"/>Gif he þonne ne mage, gewylde man hine, swa hwæðer swa man mæge, swa cucne swa deadne, ⁊ niman eall þ<hi rend="italic">æt</hi> he ahte.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25a" corresp="#wit-a"><pb n="328" ed="#liebermann"/>Gif he ne mage, þonne gewylde man hine, swa hwæðer man mage, swa cucne swa deadne, ⁊ niman eall þæt he age.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25a" corresp="#wit-g-a"><pb n="328" ed="#liebermann"/>Gif he þonne<ptr type="liebermannNote" n="13" target="#IICn_25a.lnote.oe.13"/> ne mage, gewylde man hine, swa hwæðer swa<ptr type="liebermannNote" n="14" target="#IICn_25a.lnote.oe.14"/> man mæge<ptr type="liebermannNote" n="12" target="#IICn_25a.lnote.oe.12"/>, swa cucne swa deadne, ⁊ niman eall<ptr type="liebermannNote" n="15" target="#IICn_25a.lnote.oe.15"/> þ<hi rend="italic">æt</hi> he ahte.<ptr type="liebermannNote" n="*" target="#IICn_25a.lnote.oe.star"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25a" corresp="#wit-b"><pb n="328" ed="#liebermann"/>Gyf he ðonne ne mæge, gewylde man hine, swa hwæðer swa man mæge, swa cwicne swa deadne, ⁊ nimen eall þ<hi rend="italic">æt</hi> he ah.<ptr type="liebermannNote" n="5" target="#IICn_25a.lnote.oe.5-2"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25a" corresp="#wit-a"><pb n="328" ed="#liebermann"/>Gif he ne mage, þonne gewylde man hine, swa hwæðer<ptr type="liebermannNote" n="5" target="#IICn_25a.lnote.oe.5"/> man mage, swa cucne swa deadne, ⁊ niman eall þ<hi rend="italic">æt</hi> he age.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="25a" corresp="#wit-q"><pb n="329" ed="#liebermann"/>Si non possit, exuperetur, sicut alterutrum poterit, siue uiuus siue mortuus, et capiatur omne quod habebit.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="25a" corresp="#wit-b"><pb n="186" ed="#robertson"/>Gyf he ðonne ne mæge, gewylde man hine swa hwæðer swa man mæge, swa cwicne swa deadne, ⁊ nimen eall þæt he ah.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="25a" corresp="#wit-inst-cn"><pb n="329" ed="#liebermann"/>Quodsi non potuerit aut noluerit, capiatur aut<ptr type="liebermannNote" n="6" target="#IICn_25a.lnote.oe.6"/> uiuus aut mortuus et omnia quę habet.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="25a" corresp="#wit-cons-cn"><pb n="329" ed="#liebermann"/>Quodsi fideiussores inuenire nequiuerint, uincant illum utrum poterunt, siue uiuum siue mortuum, et accipiant quicquid habet.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="25a" corresp="#wit-b"><pb n="186" ed="#robertson"/>Gyf he ðonne ne mæge, gewylde man hine swa hwæðer swa man mæge, swa cwicne swa deadne, ⁊ nimen eall þæt he ah<ptr type="editorNote" n="14" target="#IICn_25a.robnote.fn.14"/>.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="266" ed="#rabin-doml"/>Gif he þonne ne mage, gewylde man hine swa hwæðer swa man mæge, swa cucne swa deadne, and niman eall þæt he ahte.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="328" ed="#liebermann"/>Wenn er [dies] aber nicht kann, (dann A) bemächtige man sich seiner, wie man kann, entweder lebend oder todt; und sie sollen alles was er hat(te G) fortnehmen.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="328" ed="#liebermann"/>Wenn er [dies] aber nicht kann, (dann <hi rend="italic">A</hi>) bemächtige man, wie man kann, sich seiner entweder lebend oder todt; und sie sollen alles was er hat(te <hi rend="italic">G</hi>) fortnehmen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But if he cannot [do this], (then, A) let him be overpowered however one can, alive or dead; and let them take everything he has (had, G).</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="187" ed="#robertson"/>If, however, he cannot [do so], they shall seize him as they can, either alive or dead, and they shall take all that he has.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="267" ed="#rabin-doml"/>If he cannot do so, they are to capture him however they can, either alive or dead, and seize all that he owns.</ab>
         <note type="comparison" source="#liebermann" n="328"><ref target="clause:IIIEg_7-1">III Eg 7.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 7, 1</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:LeisWl_47-1">Leis Wl 47.1</ref></note>
-        <note type="editorial">A and Ld's ‘age’ is better than G's ‘ahte’ (compare III Eg 7.1). Liebermann compares III Eg 7.1.</note>
+        <note type="editorial">A and Ld's ‘age’ is better than G's ‘ahte’ (compare III Eg 7.1). Liebermann compares III Eg 7.1.; BR: added from Gesetze I p. 329, October 2026 (MS Cons)</note>
         <note type="textual" source="#rabin-doml">ahte: ah B; age A</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_25a.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">329</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt HDi Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in HDi Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_25a.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">328</biblScope></bibl><seg type="original" xml:lang="de">hwæder <hi rend="italic">A</hi></seg><seg type="translation" xml:lang="en" source="#claude">hwæder A</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_25a.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">328</biblScope></bibl><seg type="original" xml:lang="de">ne m. ð. g. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">ne m. ð. g. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_25a.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">328</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_25a.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">328</biblScope></bibl><seg type="original" xml:lang="de">mage <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">mage Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_25a.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">328</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">übergeschr. G</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above G</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_25a.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">328</biblScope></bibl><seg type="original" xml:lang="de">age <hi rend="italic">A Ld, besser laut III Eg.</hi> 7, 1</seg><seg type="translation" xml:lang="en" source="#claude">age A Ld, better, according to III Eg. 7, 1</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_25a.lnote.oe.5-2" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">328</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl. Inst. Cons.</hi></seg><seg type="translation" xml:lang="en" source="#claude">cf. Inst. Cons.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_25a.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">329</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">bessere</hi> -rit</seg><seg type="translation" xml:lang="en" source="#claude">read -rit</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_25a.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">329</biblScope></bibl><seg type="original" xml:lang="de">-piunt <hi rend="italic">Hr</hi></seg><seg type="translation" xml:lang="en" source="#claude">-piunt Hr</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_25a.robnote.fn.14" n="14" source="#robertson"><bibl><biblScope unit="page">186</biblScope></bibl><label>ah</label><seg type="original" xml:lang="en"><hi rend="italic">ahte</hi> G; <hi rend="italic">age</hi> A, Ld.</seg></note>
       </div>
     </body>
   </text>

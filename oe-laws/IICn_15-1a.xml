@@ -14,6 +14,9 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#kennedy">Kennedy</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -34,6 +37,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="kennedy" type="study">A. G. Kennedy, ‘Cnut’s Law Code of 1018’, <title>Anglo-Saxon England</title> 11 (1983), 57–81</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -42,7 +46,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -64,25 +68,46 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1727 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 318.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 318.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 318: “⁊ on Dena laga lahslites scyldig, buton he hine geladige, þæt he na bet ne cuðe.” → “⁊ on Dena laga lahslites scyldig, buton he hine geladige, þæt he na bet ne cuðe. (expanded letters in italics: æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 318.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 319.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 319: “BA)” → “B A)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="15.1a">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 15.1a</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15.1a" corresp="#wit-g-a"><pb n="318" ed="#liebermann"/>And on Dena lage lahslites scyldig, butan he geladige, þ<hi rend="italic">æt</hi> he na bet ne cuðe.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15.1a" corresp="#wit-a"><pb n="318" ed="#liebermann"/>⁊ on Dena laga lahslites scyldig, buton he hine geladige, þæt he na bet ne cuðe.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="15.1a" corresp="#wit-q"><pb n="319" ed="#liebermann"/>In Denalaga láhslichtes reus sit, nisi se allegiet (si non iuret), quod melius nesciuit.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="15a.1a" corresp="#wit-b"><pb n="182" ed="#robertson"/>⁊ on Dena laga lahslites scyldig, buton he híne geladige, þæt he na bet ne cuðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15.1a" corresp="#wit-g-a"><pb n="318" ed="#liebermann"/>And on Dena lage lahslites scyldig, butan<ptr type="liebermannNote" n="21" target="#IICn_15-1a.lnote.oe.21"/> he geladige, þ<hi rend="italic">æt</hi> he na bet ne cuðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15.1a" corresp="#wit-b"><pb n="318" ed="#liebermann"/>⁊ on Dena laga lahslites scyldig, buton he híne geladige, þ<hi rend="italic">æt</hi> he na bet ne cuðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15.1a" corresp="#wit-a"><pb n="318" ed="#liebermann"/>⁊ on Dena laga lahslites scyldig, buton he hine geladige, þ<hi rend="italic">æt</hi> he na bet ne cuðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15.1a" corresp="#wit-d-frags"><pb n="318" ed="#liebermann"/>buton he geladige, þ<hi rend="italic">æt</hi> he na bet ne cuðe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="15.1a" corresp="#wit-q"><pb n="319" ed="#liebermann"/>In Denalaga<ptr type="liebermannNote" n="25" target="#IICn_15-1a.lnote.oe.25"/> láhslichtes<ptr type="liebermannNote" n="26" target="#IICn_15-1a.lnote.oe.26"/> reus<ptr type="liebermannNote" n="27" target="#IICn_15-1a.lnote.oe.27"/> sit, nisi<ptr type="liebermannNote" n="28" target="#IICn_15-1a.lnote.oe.28"/> se allegiet (si non iuret), quod melius nesciuit.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="15.1a" corresp="#wit-inst-cn"><pb n="319" ed="#liebermann"/>In lege Danorum erit reus forisfacturę, quam Dani uocant lahslit . . .<ptr type="liebermannNote" n="*" target="#IICn_15-1a.lnote.oe.star"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15.1a" corresp="#wit-cons-cn"><pb n="319" ed="#liebermann"/>Secundum legem uero Danorum legis fracture reus, nisi iurauerit, se melius nescisse.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="15a.1a" corresp="#wit-b"><pb n="182" ed="#robertson"/>⁊ on Dena laga lahslites scyldig, buton he híne<ptr type="editorNote" n="1" target="#IICn_15-1a.robnote.fn.1"/> geladige, þæt he na bet ne cuðe.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="260" ed="#rabin-doml"/>And on Dena lage lahslites scyldig, butan he geladige þæt he na bet ne cuðe.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="318" ed="#liebermann"/>Und im Dänen-Rechtsgebiete [sei jener Richter] Rechtsbruchbusse schuldig, ausser wenn er (sich BA) ausweist, dass er [es] nicht besser wusste.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="319" ed="#liebermann"/>Und im Dänen-Rechtsgebiete [sei jener Richter] Rechtsbruchbusse<ptr type="liebermannNote" n="1" target="#IICn_15-1a.lnote.de.1"/> schuldig, ausser wenn er (sich<ptr type="liebermannNote" n="2" target="#IICn_15-1a.lnote.de.2"/> <hi rend="italic">B A</hi>) ausweist, dass er [es] nicht besser wusste.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And in the Danelaw [let that judge] be liable for lahslit, unless he clears (himself, B A) [by showing] that he did not know better.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="183" ed="#robertson"/>And in the Danelaw he shall forfeit <hi rend="italic">lahslit</hi>, unless he clear himself, asserting that he did not know any better verdict.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="464" ed="#whitelock"/>And in the Danelaw he is to forfeit lahslit, unless he clear himself—that he knew no better.</ab>
-        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="261" ed="#rabin-doml"/>In the Danelaw, he shall be liable for his lahslit, unless he can exonerate himself by proving that he did not know any better.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="183" ed="#robertson"/>And in the Danelaw he shall forfeit <hi rend="italic">lahslit<ptr type="editorNote" n="1" target="#IICn_15-1a.robnote.n.1"/></hi>, unless he clear himself, asserting that he did not know any better verdict.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="464" ed="#whitelock"/>And in the Danelaw he is to forfeit <hi rend="italic">lahslit</hi>,<ptr type="editorNote" n="11" target="#IICn_15-1a.whinote.n.11"/> unless he clear himself—that he knew no better.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="261" ed="#rabin-doml"/>In the Danelaw, he shall be liable for his <hi rend="italic">lahslit</hi>, unless he can exonerate himself by proving that he did not know any better.</ab>
         <note type="comparedBy" source="#kennedy" n="59"><ref target="clause:Cn-1018_part-062">Cn 1018 25</ref></note>
-        <note type="translator" source="#whitelock">see p. 446, n. 6. The lahslit for a king’s thegn was 10 half-marks, rather higher than 120 West Saxon shillings.</note>
+        <note type="editorial">BR: added from Gesetze I p. 319, October 2026 (MS Cons); AV: corrected against Rabin p. 260, October 2026 (was “In the Danelaw, he shall be liable for his lahslit, unless he can exonerate himself by proving that he did not know any better.”, now “In the Danelaw, he shall be liable for his lahslit, unless he can exonerate himself by proving that he did not know any better. (expanded letters in italics: lahslit)”); AP: corrected against Whitelock p. 464, October 2026 (was “And in the Danelaw he is to forfeit lahslit, unless he clear himself—that he knew no better.”, now “And in the Danelaw he is to forfeit lahslit, unless he clear himself—that he knew no better. (expanded letters in italics: lahslit)”)</note>
         <note type="textual" source="#rabin-doml">he geladige: he hine geladige AB</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_15-1a.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">319</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">folgen vier Zeilen, vielleicht aus Northu. Priestergesetz</hi> 51 <hi rend="italic">ff., wo vgl.</hi></seg><seg type="translation" xml:lang="en" source="#claude">four lines follow, perhaps from Northu. Priests’ Law 51 ff.; cf. there</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_15-1a.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">319</biblScope></bibl><seg type="original" xml:lang="de">Denel. <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">Denel. Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_15-1a.lnote.oe.26" n="26" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">319</biblScope></bibl><seg type="original" xml:lang="de">-slites <hi rend="italic">R;</hi> -ihtes <hi rend="italic">übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">-slites R; -ihtes the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_15-1a.lnote.oe.27" n="27" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">319</biblScope></bibl><seg type="original" xml:lang="de">r. s. <hi rend="italic">fehlt K</hi></seg><seg type="translation" xml:lang="en" source="#claude">r. s. lacking in K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_15-1a.lnote.oe.28" n="28" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">319</biblScope></bibl><seg type="original" xml:lang="de">n. se a. <hi rend="italic">K;</hi> si n. i. <hi rend="italic">übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">n. se a. K; si n. i. the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_15-1a.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">318</biblScope></bibl><seg type="original" xml:lang="de">buton he hine g. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">buton he hine g. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_15-1a.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">319</biblScope></bibl><seg type="original" xml:lang="de">nececisse <hi rend="italic">Hr</hi></seg><seg type="translation" xml:lang="en" source="#claude">nececisse Hr</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_15-1a.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">204</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Rechtsbruchbusse Z. 2; n. 3f. 5b</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Rechtsbruchbusse l. 2; n. 3f. 5b</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_15-1a.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">204</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">hine</hi> kann fehlen; <hi rend="italic">s. Wb; ladian</hi> 2.—Die letzte Z. wiederholt 15, 1; <hi rend="italic">s. Gl</hi> Gefährdeeid 4</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">hine</hi> may be omitted; <hi rend="italic">see Wb; ladian</hi> 2.—The last l. repeats 15, 1; <hi rend="italic">see Gl</hi> Gefährdeeid 4</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IICn_15-1a.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">354</biblScope></bibl><seg type="original" xml:lang="en">Judging from <hi rend="italic">N.P.L.</hi> 51–53, the amount paid as <hi rend="italic">lahslit</hi> depended upon the rank of the delinquent, viz. a king’s thegn paid 10 half-marks, a landowner 6 half-marks, and an ordinary freeman 12 ores. Caps. 51–53 of <hi rend="italic">N.P.L.</hi> are used by Inst. at this point.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_15-1a.robnote.fn.1" n="1" source="#robertson"><bibl><biblScope unit="page">182</biblScope></bibl><label>híne</label><seg type="original" xml:lang="en">Om. G.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IICn_15-1a.whinote.n.11" n="11" source="#whitelock"><bibl><biblScope unit="page">464</biblScope></bibl><label>lahslit</label><seg type="original" xml:lang="en"><hi rend="italic">see</hi> p. 446, n. 6. The <hi rend="italic">lahslit</hi> for a king’s thegn was 10 half-marks, rather higher than 120 West Saxon shillings.</seg></note>
       </div>
     </body>
   </text>

@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">463</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +43,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -62,26 +65,48 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1721 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 316.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 316: “habbe,” → “hæbbe,”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 316.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 317.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="13.1">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 13.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13.1" corresp="#wit-g-a"><pb n="316" ed="#liebermann"/>And gyf he bocland habbe, þ<hi rend="italic">æt</hi> sy forworht þa<hi rend="italic">m</hi> cingce to handa, si ðæs mannes man, þe he sig.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13.1" corresp="#wit-a"><pb n="316" ed="#liebermann"/>And gyf he bocland hæbbe, sy þæt forworht þam cyningce to handa, sy þæs mannes man, þe he sy.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="13.1" corresp="#wit-q"><pb n="317" ed="#liebermann"/>Et si terram testamentalem habeat (quę Anglice dicitur bócland), ipsa in manum regis transeat, sit eius homo cuius sit.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13.1" corresp="#wit-g-a"><pb n="316" ed="#liebermann"/>And gyf<ptr type="liebermannNote" n="16" target="#IICn_13-1.lnote.oe.16-2"/> he bocland hæbbe, þ<hi rend="italic">æt<ptr type="liebermannNote" n="17" target="#IICn_13-1.lnote.oe.17-2"/></hi> sy forworht þa<hi rend="italic">m</hi> cingce<ptr type="liebermannNote" n="10" target="#IICn_13-1.lnote.oe.10"/> to handa, si<ptr type="liebermannNote" n="18" target="#IICn_13-1.lnote.oe.18"/> ðæs mannes man, þe he sig.<ptr type="liebermannNote" n="18" target="#IICn_13-1.lnote.oe.18"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13.1" corresp="#wit-b"><pb n="316" ed="#liebermann"/>⁊ gyf he bócland habbe, sy þ<hi rend="italic">æt</hi> forworht ðam cynge to hánde, sy ðæs mannes man, ðe he sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13.1" corresp="#wit-a"><pb n="316" ed="#liebermann"/>And gyf he bocland hæbbe, sy þæt forworht þam cyningce<ptr type="liebermannNote" n="7" target="#IICn_13-1.lnote.oe.7"/> to handa, sy þæs mannes man, þe he sy.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="13.1" corresp="#wit-q"><pb n="317" ed="#liebermann"/>Et si terram testamentalem habeat (quę Anglice dicitur bócland<ptr type="liebermannNote" n="11" target="#IICn_13-1.lnote.oe.11"/>), ipsa in manum<ptr type="liebermannNote" n="12" target="#IICn_13-1.lnote.oe.12"/> regis<ptr type="liebermannNote" n="13" target="#IICn_13-1.lnote.oe.13"/> transeat, sit eius homo cuius sit.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="13.1" corresp="#wit-inst-cn"><pb n="317" ed="#liebermann"/>Uerum si ipse habet alodium (bocland<ptr type="liebermannNote" n="15" target="#IICn_13-1.lnote.oe.15"/>), (suum<ptr type="liebermannNote" n="16" target="#IICn_13-1.lnote.oe.16"/>) totum sit regis, cuiuscumque homo<ptr type="liebermannNote" n="17" target="#IICn_13-1.lnote.oe.17"/> sit.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="13.1" corresp="#wit-cons-cn"><pb n="317" ed="#liebermann"/>Si autem liberam terram habeat, sit forisfacta in manu regis, cuiuscunque homo sit.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="13.1" corresp="#wit-b"><pb n="180" ed="#robertson"/>⁊ gyf he bócland habbe, sy þæt forworht ðam cynge to hánde, sy ðæs mannes man ðe he sy.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="260" ed="#rabin-doml"/>And gyf he bocland hæbbe, þæt sy forworht þam cingce to handa, si ðæs mannes man, þe he sig.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="317" ed="#liebermann"/>Und wenn jener ein kraft [Königs-]Urkunde [besessenes] Land hat, so sei dieses dem König zur Hand verwirkt, sei er welches Mannes Vasall er auch sei.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="317" ed="#liebermann"/>Und wenn jener ein kraft [Königs-]Urkunde [besessenes] Land<ptr type="liebermannNote" n="1" target="#IICn_13-1.lnote.de.1"/> hat, so sei dieses dem König zur Hand verwirkt<ptr type="liebermannNote" n="2" target="#IICn_13-1.lnote.de.2"/>, sei er welches Mannes<ptr type="liebermannNote" n="3" target="#IICn_13-1.lnote.de.3"/> Vasall er auch sei.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if he has bookland, let it be forfeited into the king's hand, whosever man he may be.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="181" ed="#robertson"/>And if he has land held by title-deed, it shall be forfeited into the hands of the king without regard to the question whose vassal he is.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><ptr type="editorNote" n="1" target="#IICn_13-1.robnote.n.1"/><pb n="181" ed="#robertson"/>And if he has land held by title-deed, it shall be forfeited into the hands of the king without regard to the question whose vassal he is.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock"><pb n="463" ed="#whitelock"/>And if he has bookland, it is to be forfeited into the king’s possession, no matter whose man he be.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="261" ed="#rabin-doml"/>And if he holds land by charter, it shall be forfeited into the king’s hand, no matter which lord he serves.</ab>
         <note type="comparison" source="#liebermann" n="317"><ref target="clause:IAtr_1-14">I Atr 1.14</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. I Atr. 1, 14</note>
         <note type="comparison" source="#wormald-mel" n="358"><label>source (roman)</label> <ref target="clause:IAtr_1-14">I Atr 1.14</ref> <quote>Table 5.4, II Cn 13:1: I Atr 1:14</quote></note>
-        <note type="editorial">Liebermann compares I Atr 1.14.</note>
+        <note type="editorial">Liebermann compares I Atr 1.14.; BR: added from Gesetze I p. 317, October 2026 (MS Cons)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_13-1.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">317</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">gleichzeitig übergeschr. nur H; fehlt übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above by a contemporary hand, only H; lacking in the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_13-1.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">317</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">aus Cb; fehlt HLbS</hi></seg><seg type="translation" xml:lang="en" source="#claude">from Cb; lacking in HLbS</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_13-1.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">317</biblScope></bibl><seg type="original" xml:lang="de">s. h. <hi rend="italic">Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">s. h. Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_13-1.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">317</biblScope></bibl><seg type="original" xml:lang="de">-lond <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">-lond K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_13-1.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">317</biblScope></bibl><seg type="original" xml:lang="de">manu <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">manu T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_13-1.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">317</biblScope></bibl><seg type="original" xml:lang="de">eius <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">eius K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_13-1.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">316</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">oder</hi> cynnigce</seg><seg type="translation" xml:lang="en" source="#claude">or cynnigce</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_13-1.lnote.oe.16-2" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">316</biblScope></bibl><seg type="original" xml:lang="de">gif <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gif Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_13-1.lnote.oe.17-2" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">316</biblScope></bibl><seg type="original" xml:lang="de">sy þæt <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">sy þæt Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_13-1.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">316</biblScope></bibl><seg type="original" xml:lang="de">cyning <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">cyning Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_13-1.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">316</biblScope></bibl><seg type="original" xml:lang="de">sy <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">sy Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_13-1.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">317</biblScope></bibl><seg type="original" xml:lang="de">-ctura <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">-ctura Hk</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_13-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">204</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl: bocland</hi> 1 D. 1a. 17a. b. 18. 23</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl: bocland</hi> 1 D. 1a. 17a. b. 18. 23</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_13-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">204</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ebd</hi>. Vermögenseinziehung 8 = <hi rend="italic">u</hi>. 77, 1</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Ibid</hi>. Vermögenseinziehung 8 = <hi rend="italic">below</hi> 77, 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_13-1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">204</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Auch wenn er einen Adligen als Gefolgsherrn und—vielleicht einen andern—als Gerichtsherrn über sich hat</seg><seg type="translation" xml:lang="en" source="#claude">Even if he has over him a nobleman as his lord and—perhaps a different one—as his lord of jurisdiction</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IICn_13-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">353</biblScope></bibl><seg type="original" xml:lang="en">Cf. I Atr. 1, 14.</seg></note>
       </div>
     </body>
   </text>

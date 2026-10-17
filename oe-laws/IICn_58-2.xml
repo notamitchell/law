@@ -13,6 +13,9 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +35,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">470</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +44,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -63,29 +67,48 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1838 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 350.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 350.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 350: “Gif hwa leodbiscopes oððe ealdormannes burg abrece, gebete þæt mid twam pundum.” → “Gif hwa leodbiscopes oððe ealdormannes burg abrece, gebete þæt mid twam pundum. (expanded letters in italics: æt, m)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 350: “Wenn einer eines Diöcesanbischofs oder eines Ealdorman Schutzgewähr (Burg A) verletzt, büsse er das [diesem] mit 2 Pfund.” → “Wenn einer eines Diöcesanbischofs oder eines Ealdorman Schutzgewähr (Burg A) verletzt, büsse er das [diesem] mit 2 Pfund. (expanded letters in italics: A)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 351.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="58.2">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 58.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="58.2" corresp="#wit-g-a"><pb n="350" ed="#liebermann"/>Gif hwa leodbisceopes oððe ealdormannes borh abrece, gebete þ<hi rend="italic">æt</hi> mid II pundan.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="58.2" corresp="#wit-a"><pb n="350" ed="#liebermann"/>Gif hwa leodbiscopes oððe ealdormannes burg abrece, gebete þæt mid twam pundum.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="58.2" corresp="#wit-q"><pb n="351" ed="#liebermann"/>Si quis episcopi uel aldremanni (id est comitis) plegium frangat, II lib. emendet.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="58.2" corresp="#wit-b"><pb n="204" ed="#robertson"/>Gyf hwa leodbisceopes oððe ealdormannes borh abrece, gebete mid twam pundum.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="58.2" corresp="#wit-g-a"><pb n="350" ed="#liebermann"/>Gif hwa leodbisceopes<ptr type="liebermannNote" n="5" target="#IICn_58-2.lnote.oe.5"/> oððe ealdormannes borh abrece, gebete þ<hi rend="italic">æt</hi> mid II<ptr type="liebermannNote" n="8" target="#IICn_58-2.lnote.oe.8-3"/> pundan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="58.2" corresp="#wit-b"><pb n="350" ed="#liebermann"/>Gyf hwa leodbisceopes oððe ealdormannes borh abrece, gebete mid twam pundu<hi rend="italic">m</hi>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="58.2" corresp="#wit-a"><pb n="350" ed="#liebermann"/>Gif hwa leodbiscopes oððe ealdormannes burg<ptr type="liebermannNote" n="2" target="#IICn_58-2.lnote.oe.2"/> abrece, gebete þ<hi rend="italic">æt</hi> mid twa<hi rend="italic">m</hi> pundum.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="58.2" corresp="#wit-q"><pb n="351" ed="#liebermann"/>Si<ptr type="liebermannNote" n="6" target="#IICn_58-2.lnote.oe.6-2"/> quis episcopi uel aldremanni<ptr type="liebermannNote" n="7" target="#IICn_58-2.lnote.oe.7-2"/> (id<ptr type="liebermannNote" n="8" target="#IICn_58-2.lnote.oe.8-2"/> est comitis) plegium frangat, II lib. emendet.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="58.2" corresp="#wit-inst-cn"><pb n="351" ed="#liebermann"/>episcopi<ptr type="liebermannNote" n="6" target="#IICn_58-2.lnote.oe.6"/> aut<ptr type="liebermannNote" n="7" target="#IICn_58-2.lnote.oe.7"/> comitis II<ptr type="liebermannNote" n="8" target="#IICn_58-2.lnote.oe.8"/> libr. emendet.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="58.2" corresp="#wit-cons-cn"><pb n="351" ed="#liebermann"/>[58, 2] qui uero plebei episcopi aut principis, duas libras soluat.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="58.2" corresp="#wit-b"><pb n="204" ed="#robertson"/>Gyf hwa leodbisceopes oððe ealdormannes borh<ptr type="editorNote" n="3" target="#IICn_58-2.robnote.fn.3"/> abrece, gebete<ptr type="editorNote" n="4" target="#IICn_58-2.robnote.fn.4"/> mid twam pundum.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="284" ed="#rabin-doml"/>Gif hwa leodbisceopes oððe ealdormannes borh abrece, gebete þæt mid II pundan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="350" ed="#liebermann"/>Wenn einer eines Diöcesanbischofs oder eines Ealdorman Schutzgewähr (Burg A) verletzt, büsse er das [diesem] mit 2 Pfund.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="350" ed="#liebermann"/>Wenn einer eines Diöcesanbischofs<ptr type="liebermannNote" n="1" target="#IICn_58-2.lnote.de.1"/> oder eines Ealdorman Schutzgewähr (Burg <hi rend="italic">A</hi>) verletzt, büsse er das [diesem] mit 2 Pfund.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If anyone violates the protection (stronghold, A) of a diocesan bishop or of an ealdorman, let him atone for it [to him] with 2 pounds.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="205" ed="#robertson"/>If anyone violates the protection of the bishop of a diocese or of an ealdorman, he shall pay £2 as compensation.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="470" ed="#whitelock"/>If anyone violates a diocesan bishop’s or an ealdorman’s surety, he is to compensate for it with two pounds.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock"><ptr type="editorNote" n="6" target="#IICn_58-2.whinote.n.6"/><pb n="470" ed="#whitelock"/>If anyone violates a diocesan bishop’s or an ealdorman’s surety, he is to compensate for it with two pounds.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="285" ed="#rabin-doml"/>If anyone violates the protection of a diocesan bishop or an ealdorman, he shall be penalized two pounds.</ab>
         <note type="comparison" source="#liebermann" n="350"><ref target="clause:Af_3">Af 3</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd.</note>
         <note type="comparison" source="#whitelock" n="470"><label>from</label> <ref target="clause:Af_3">Af 3</ref> <quote>from Alfred 3</quote></note>
-        <note type="editorial">Liebermann thinks A's ‘burg’ is perhaps only a scribal error for ‘borh’.</note>
-        <note type="translator" source="#whitelock">from Alfred 3</note>
+        <note type="editorial">Liebermann thinks A's ‘burg’ is perhaps only a scribal error for ‘borh’.; BR: added from Gesetze I p. 351, October 2026 (MS Cons)</note>
         <note type="textual" source="#rabin-doml">borh: burg A</note>
         <note type="textual" source="#rabin-doml">þæt: omitted B</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_58-2.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">351</biblScope></bibl><seg type="original" xml:lang="de">episcopo aut comiti <hi rend="italic">Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">episcopo aut comiti Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_58-2.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">351</biblScope></bibl><seg type="original" xml:lang="de">autem uel <hi rend="italic">S</hi></seg><seg type="translation" xml:lang="en" source="#claude">autem uel S</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_58-2.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">351</biblScope></bibl><seg type="original" xml:lang="de">duobus libris <hi rend="italic">HDi</hi></seg><seg type="translation" xml:lang="en" source="#claude">duobus libris HDi</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_58-2.lnote.oe.6-2" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">351</biblScope></bibl><seg type="original" xml:lang="de">58, 2 <hi rend="italic">überspringt R</hi></seg><seg type="translation" xml:lang="en" source="#claude">R omits 58, 2</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_58-2.lnote.oe.7-2" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">351</biblScope></bibl><seg type="original" xml:lang="de">alām <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">alām Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_58-2.lnote.oe.8-2" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">351</biblScope></bibl><seg type="original" xml:lang="de">i. e. c. <hi rend="italic">übergeschr. Dm; fehlt übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">i. e. c. written above Dm; lacking in the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_58-2.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">350</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">viell. nur Schreibfehler für</hi> borh; <hi rend="italic">doch vgl. oben S.</hi> 51, <hi rend="italic">Sp.</hi> 2⁴ burhbote</seg><seg type="translation" xml:lang="en" source="#claude">perhaps merely a scribal error for borh; but cf. above p. 51, col. 2⁴ burhbote</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_58-2.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">350</biblScope></bibl><seg type="original" xml:lang="de">-cop. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-cop. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_58-2.lnote.oe.8-3" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">350</biblScope></bibl><seg type="original" xml:lang="de">twam pundum <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">twam pundum Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_58-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">210</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">In ältestem Kirchenlatein heisst <hi rend="italic">plebes</hi> Diözese (Ducange); wohl daher <hi rend="italic">plebeius</hi> C.—Der Fehler A's ist häufig; <hi rend="italic">s. Wb: burg</hi>, viertletzte Z., dazu <hi rend="italic">an burge</hi> ‘on surety’ Earle <hi rend="italic">Landchar</hi>. 256</seg><seg type="translation" xml:lang="en" source="#claude">In the earliest Church Latin <hi rend="italic">plebes</hi> means diocese (Ducange); probably hence <hi rend="italic">plebeius</hi> C.—A's error is frequent; <hi rend="italic">see Wb: burg</hi>, fourth line from the end, and also <hi rend="italic">an burge</hi> ‘on surety’ Earle <hi rend="italic">Landchar</hi>. 256</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_58-2.robnote.fn.3" n="3" source="#robertson"><bibl><biblScope unit="page">204</biblScope></bibl><label>borh</label><seg type="original" xml:lang="en"><hi rend="italic">burg</hi> A.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_58-2.robnote.fn.4" n="4" source="#robertson"><bibl><biblScope unit="page">204</biblScope></bibl><label>gebete</label><seg type="original" xml:lang="en"><hi rend="italic">g. þæt</hi> G, A, Ld.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IICn_58-2.whinote.n.6" n="6" source="#whitelock"><bibl><biblScope unit="page">470</biblScope></bibl><seg type="original" xml:lang="en">from Alfred 3</seg></note>
       </div>
     </body>
   </text>

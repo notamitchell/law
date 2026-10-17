@@ -13,6 +13,7 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +33,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">468</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +42,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -62,25 +64,40 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1803 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 340.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 340.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 340: “⁊ buton he binnan þrittigum nihton bote onginne wið God ⁊ wið men, þonne sy he utlah.” → “⁊ buton he binnan þrittigum nihton bote onginne wið God ⁊ wið men, þonne sy he utlah. (expanded letters in italics: m)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 341.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="41.2">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 41.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="41.2" corresp="#wit-g-a"><pb n="340" ed="#liebermann"/>⁊ butan he binnan XXX nihton bote aginne wið God ⁊ wið men, þonne si he utlah.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="41.2" corresp="#wit-a"><pb n="340" ed="#liebermann"/>⁊ buton he binnan þrittigum nihton bote onginne wið God ⁊ wið men, þonne sy he utlah.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="41.2" corresp="#wit-q"><pb n="341" ed="#liebermann"/>Et nisi (si non) infra XXX noctes hoc incipiat erga Deum et homines, extra legem habeatur.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="41.2" corresp="#wit-g-a"><pb n="340" ed="#liebermann"/>⁊ butan<ptr type="liebermannNote" n="3" target="#IICn_41-2.lnote.oe.3"/> he binnan XXX<ptr type="liebermannNote" n="24" target="#IICn_41-2.lnote.oe.24"/> nihton bote aginne<ptr type="liebermannNote" n="25" target="#IICn_41-2.lnote.oe.25"/> wið God ⁊ wið men, þonne si<ptr type="liebermannNote" n="26" target="#IICn_41-2.lnote.oe.26"/> he utlah.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="41.2" corresp="#wit-b"><pb n="340" ed="#liebermann"/>⁊ buton he binnon XXX nihta bote agynne wið God ⁊ wið men, ðonne sy he utlaga.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="41.2" corresp="#wit-a"><pb n="340" ed="#liebermann"/>⁊ buton he binnan þrittigu<hi rend="italic">m</hi> nihton bote onginne wið God ⁊ wið men, þonne sy he utlah.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="41.2" corresp="#wit-q"><pb n="341" ed="#liebermann"/>Et nisi<ptr type="liebermannNote" n="12" target="#IICn_41-2.lnote.oe.12"/> (si non) infra<ptr type="liebermannNote" n="13" target="#IICn_41-2.lnote.oe.13"/> XXX noctes hoc incipiat erga Deum et homines, extra<ptr type="liebermannNote" n="14" target="#IICn_41-2.lnote.oe.14"/> legem habeatur.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="41.2" corresp="#wit-inst-cn"><pb n="341" ed="#liebermann"/>Et nisi infra triginta dies emendationem inceperit et Deo et hominibus satisfecerit, expellatur a terra et sit exul.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="41.2" corresp="#wit-cons-cn"><pb n="341" ed="#liebermann"/>Et nisi infra XXX dies satisfactionem inceperit, sit exlex tam erga Deum quam aput homines.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="41.2" corresp="#wit-b"><pb n="196" ed="#robertson"/>⁊ buton he binnon XXX nihta bote agynne wið God ⁊ wið men, ðonne sy he utlaga.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="278" ed="#rabin-doml"/>And butan he binnan XXX nihton bote aginne wið God and wið men, þonne si he utlah.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="341" ed="#liebermann"/>Und wenn er nicht binnen 30 Nächten Busse gegenüber Kirche und Staat beginnt, dann sei er friedlos.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="341" ed="#liebermann"/>Und<ptr type="liebermannNote" n="1" target="#IICn_41-2.lnote.de.1"/> wenn er nicht binnen 30 Nächten Busse gegenüber<ptr type="liebermannNote" n="2" target="#IICn_41-2.lnote.de.2"/> Kirche und Staat beginnt, dann sei er friedlos.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And unless he begins to make amends to God and men within thirty nights, let him be an outlaw.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="197" ed="#robertson"/>And unless he begins to make amends both to God and men within 30 days, he shall be outlawed.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock"><pb n="468" ed="#whitelock"/>And unless he begins to make amends to God and to men within 30 days, he is to be an outlaw.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="279" ed="#rabin-doml"/>And unless he starts to make amends within thirty days to both God and the community, he will become an outlaw.</ab>
         <note type="comparison" source="#liebermann" n="341"><ref target="clause:IICn_39-1">II Cn 39.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. o. 39, 1</note>
-        <note type="editorial">Liebermann compares II Cn 39.1.</note>
+        <note type="editorial">Liebermann compares II Cn 39.1.; BR: added from Gesetze I p. 341, October 2026 (MS Cons)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_41-2.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">341</biblScope></bibl><seg type="original" xml:lang="de">n. <hi rend="italic">KHn</hi> 66, 21<hi rend="italic">;</hi> si n. <hi rend="italic">übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">n. KHn 66, 21; si n. the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_41-2.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">341</biblScope></bibl><seg type="original" xml:lang="de">hoc i. triginta n. <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">hoc i. triginta n. K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_41-2.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">341</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="spaced">utlaga</hi> sit <hi rend="italic">Hn</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">utlaga</hi> sit Hn</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_41-2.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="de">buton <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">buton Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_41-2.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="de">þrittigum <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">þrittigum Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_41-2.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="de">ang. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">ang. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_41-2.lnote.oe.26" n="26" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="de">sy <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">sy Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_41-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">208</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Benutzt durch Hn 66, 2</seg><seg type="translation" xml:lang="en" source="#claude">Used by Hn 66, 2</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_41-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">208</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">C (und Q?) zieht ‘friedlos’ zu ‘Kirche und Staat’, was sich durch den Satz gleichen Inhalts 39, 1 widerlegt</seg><seg type="translation" xml:lang="en" source="#claude">C (and Q?) connects ‘outlawed’ with ‘church and state’, which is refuted by the sentence of the same content in 39, 1</seg></note>
       </div>
     </body>
   </text>
