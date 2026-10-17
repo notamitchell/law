@@ -10,6 +10,8 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +29,7 @@
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">72</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
@@ -56,11 +59,18 @@
     <body>
       <div type="clause" n="3.1">
         <head><ref type="lawCode" target="law:IVAtr">IV Atr</ref> 3.1</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.1" corresp="#wit-q">Si appellet, quod tolneum dedit, inueniat cui dedit et sit quietus.</ab>
-        <ab type="editionText" xml:lang="la" source="#robertson" n="3.1" corresp="#wit-q">Si appellet quod tolneum dedit, inveniat cui dedit et sit quietus.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn er sich beruft darauf, dass er Zoll gezahlt hat, so finde er den, dem er gezahlt hat, und sei frei.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.1" corresp="#wit-q">Si appellet, quod tolneum<ptr type="liebermannNote" n="28" target="#IVAtr_3-1.lnote.oe.28"/> dedit<ptr type="liebermannNote" n="29" target="#IVAtr_3-1.lnote.oe.29"/>, inueniat cui dedit et sit<ptr type="liebermannNote" n="30" target="#IVAtr_3-1.lnote.oe.30"/> quietus.</ab>
+        <ab type="editionText" xml:lang="la" source="#robertson" n="3.1" corresp="#wit-q">Si appellet quod tolneum<ptr type="editorNote" n="21" target="#IVAtr_3-1.robnote.fn.21"/> dedit<ptr type="editorNote" n="22" target="#IVAtr_3-1.robnote.fn.22"/>, inveniat cui dedit et sit quietus.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn er sich beruft<ptr type="liebermannNote" n="1" target="#IVAtr_3-1.lnote.de.1"/> darauf, dass er Zoll gezahlt hat, so finde er den, dem er gezahlt hat, und sei frei.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If he claims that he has paid toll, let him find the one to whom he paid it, and be free.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">If he declares that he has paid toll, he shall produce the man to whom he paid it, and shall be quit of the charge.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">If he declares<ptr type="editorNote" n="1" target="#IVAtr_3-1.robnote.n.1"/> that he has paid toll, he shall produce the man to whom he paid it, and shall be quit of the charge.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAtr_3-1.lnote.oe.28" n="28" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">234</biblScope></bibl><seg type="original" xml:lang="de">toln. <hi rend="italic">T;</hi> telon. <hi rend="italic">MHkBr</hi></seg><seg type="translation" xml:lang="en" source="#claude">toln. T; telon. MHkBr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAtr_3-1.lnote.oe.29" n="29" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">234</biblScope></bibl><seg type="original" xml:lang="de">dederit <hi rend="italic">Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">dederit Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAtr_3-1.lnote.oe.30" n="30" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">234</biblScope></bibl><seg type="original" xml:lang="de">q. sit <hi rend="italic">TMHkBr</hi></seg><seg type="translation" xml:lang="en" source="#claude">q. sit TMHkBr</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVAtr_3-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">165</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Orig. hatte wohl <hi rend="italic">tieman</hi> (<hi rend="italic">s. d. Wb</hi>) oder <hi rend="italic">cennan</hi>. <hi rend="italic">Vgl. Gl</hi> Gewährleisten 1</seg><seg type="translation" xml:lang="en" source="#claude">The orig. probably had <hi rend="italic">tieman</hi> (<hi rend="italic">see</hi> that word in <hi rend="italic">Wb</hi>) or <hi rend="italic">cennan</hi>. <hi rend="italic">Cf. Gl</hi> Gewährleisten 1</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IVAtr_3-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">324</biblScope></bibl><seg type="original" xml:lang="en"><hi rend="italic">i.e.</hi> A.S. <hi rend="italic">tieman</hi> or <hi rend="italic">cennan</hi>.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IVAtr_3-1.robnote.fn.21" n="21" source="#robertson"><bibl><biblScope unit="page">72</biblScope></bibl><label>tolneum</label><seg type="original" xml:lang="en">R, T; <hi rend="italic">telon.</hi> M, Hk; <hi rend="italic">thel.</hi> Br.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IVAtr_3-1.robnote.fn.22" n="22" source="#robertson"><bibl><biblScope unit="page">72</biblScope></bibl><label>dedit</label><seg type="original" xml:lang="en"><hi rend="italic">dederit</hi> Br.</seg></note>
       </div>
     </body>
   </text>

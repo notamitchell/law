@@ -10,6 +10,8 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +29,7 @@
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">72</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
@@ -51,17 +54,26 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1116 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 232.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Robertson, p. 73: “of” → “from”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2.6">
         <head><ref type="lawCode" target="law:IVAtr">IV Atr</ref> 2.6</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2.6" corresp="#wit-q">Flandrenses et Ponteienses et Normannia et Francia monstrabant res suas et extolneabant.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2.6" corresp="#wit-q">Flandrenses et Ponteienses et Normannia et Francia monstrabant res suas et extolneabant.<ptr type="liebermannNote" n="28" target="#IVAtr_2-6.lnote.oe.28"/></ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="2.6" corresp="#wit-q">Flandrenses et Ponteienses et Normannia et Francia monstrabant res suas et extolneabant.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Die Flandrer und die von Ponthieu und Normandie und Francien legten ihre Waaren [gleich in London] zur Schau und zahlten Zoll.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Die Flandrer<ptr type="liebermannNote" n="1" target="#IVAtr_2-6.lnote.de.1"/> und die von Ponthieu und Normandie<ptr type="liebermannNote" n="2" target="#IVAtr_2-6.lnote.de.2"/> und Francien<ptr type="liebermannNote" n="3" target="#IVAtr_2-6.lnote.de.3"/> legten ihre Waaren [gleich<ptr type="liebermannNote" n="4" target="#IVAtr_2-6.lnote.de.4"/> in London] zur Schau und zahlten<ptr type="liebermannNote" n="5" target="#IVAtr_2-6.lnote.de.5"/> Zoll.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">The Flemings and those from Ponthieu and Normandy and the Île-de-France displayed their goods [at once in London] and paid toll.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">Men of Flanders and Ponthieu and Normandy and the Isle of France exhibited their goods and paid toll.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">Men from Flanders<ptr type="editorNote" n="1" target="#IVAtr_2-6.robnote.n.1"/> and Ponthieu and Normandy and the Isle of France exhibited their goods and paid toll<ptr type="editorNote" n="2" target="#IVAtr_2-6.robnote.n.2"/>.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAtr_2-6.lnote.oe.28" n="28" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">232</biblScope></bibl><seg type="original" xml:lang="de">exton. <hi rend="italic">MHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">exton. MHk</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVAtr_2-6.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">164</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Erste Engl. Verträge mit Flandern datieren 1101. 1103; Varenbergh <hi rend="italic">Relat. diplom. entre Flandre et Anglet</hi>. 62</seg><seg type="translation" xml:lang="en" source="#claude">The first English treaties with Flanders date from 1101 and 1103; Varenbergh <hi rend="italic">Relat. diplom. entre Flandre et Anglet</hi>. 62</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVAtr_2-6.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">164</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Ausser Rouen; <hi rend="italic">s. o</hi>. 2, 5</seg><seg type="translation" xml:lang="en" source="#claude">Except Rouen; <hi rend="italic">see above</hi> 2, 5</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVAtr_2-6.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">164</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Francien</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Francien</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVAtr_2-6.lnote.de.4" n="4" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">164</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ebd</hi>. London 34 im Ggs. zu 35</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Ibid</hi>. London 34, in contrast to 35</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVAtr_2-6.lnote.de.5" n="5" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">164</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Nicht, wie Nicolas will, ‘frei von Zoll’, aber frei von 2, 7⁵</seg><seg type="translation" xml:lang="en" source="#claude">Not, as Nicolas would have it, ‘free of toll’, but free of 2, 7⁵</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IVAtr_2-6.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">323</biblScope></bibl><seg type="original" xml:lang="en">Commercial relations between England and Flanders were early established and greatly influenced the industrial development of both countries (see Varenbergh, <hi rend="italic">Hist. des relations diplomatiques entre le comté de Flandre et l’Angleterre</hi>, pp. 9–12). In the reign of Edgar, according to William of Malmesbury, many foreigners were attracted by his fame to visit England, with evil results for the inhabitants. From the men of Flanders they learned <hi rend="italic">corporum enervem mollitiem</hi> (see <hi rend="italic">Gesta Reg.</hi> <hi rend="smallcaps">i</hi>. p. 165).</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IVAtr_2-6.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">323</biblScope></bibl><seg type="original" xml:lang="en">Liebermann takes this to mean that they paid toll but no other duty, cf. the clause included among the twelfth-century rules for foreign merchants (Bateson, <hi rend="italic">E.H.R.</hi>, 1902, pp. 497–8, 500–1): § 8. ‘Lorrainers who remain on board their boats and sell their goods there and do not pass Thames Street or the wharves to take up quarters in the city, shall give no other custom (or shewage) except the wine custom, <hi rend="italic">i.e.</hi> the ‘cornage’ or pence on every tun.’</seg></note>
       </div>
     </body>
   </text>
