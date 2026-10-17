@@ -14,6 +14,9 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -34,6 +37,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -59,6 +63,8 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1160 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 239.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 239: “Fulgeorne hy witan, þæt hy nagon mid rihte þurh hæmedþing wifes gemanan.” → “Fulgeorne hy witan, þæt hy nagon mid rihte þurh hæmedþing wifes gemanan. (expanded letters in italics: æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 239.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -66,13 +72,14 @@
       <div type="clause" n="9">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 9</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9" corresp="#wit-g">Fulgeorne hy witan, þ<hi rend="italic">æt</hi> hy nagon mid rihte þurh hæmedþing wifes gemanan.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9" corresp="#wit-g2">Fulgeorne hy witan, þæt hy nagon mid rihte þurh hæmedþing wifes gemanan.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="9" corresp="#wit-d">Fulgeorne hi wi[t]an þæt hi nagan mid rihte þurh hæmedþingc wifes gemanan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9" corresp="#wit-g2">Fulgeorne hy witan, þ<hi rend="italic">æt</hi> hy nagon mid rihte þurh hæmedþing wifes gemanan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9" corresp="#wit-d">Fulgeorne hi wican<ptr type="liebermannNote" n="4" target="#VAtr_9.lnote.oe.4"/>, þ<hi rend="italic">æt</hi> hi nagan mid rihte þurh hæmedþingc wifes gemanan.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="9" corresp="#wit-d">Fulgeorne hi wi[t]an<ptr type="editorNote" n="1" target="#VAtr_9.robnote.fn.1"/> þæt hi nagan mid rihte þurh hæmedþingc wifes gemanan.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g">Fulgeorne hy witan þæt hy nagon mid rihte þurh hæmedþing wifes gemanan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Recht genau wissen sie, dass sie von Rechtswegen keine Gemeinschaft mit einer Frau durch Beischlaf haben dürfen.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Recht<ptr type="liebermannNote" n="1" target="#VAtr_9.lnote.de.1"/> genau wissen sie, dass sie von Rechtswegen keine Gemeinschaft mit einer Frau durch Beischlaf haben dürfen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">They know full well that they may not lawfully have intercourse with a woman.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">They know full well that they have no right to marry.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-g">They know full well that they may not rightly have sexual intercourse with a woman.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VAtr_9.robnote.n.1"/>They know full well<ptr type="editorNote" n="2" target="#VAtr_9.robnote.n.2"/> that they have no right to marry.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-g">They know full well that they may not rightly have sexual intercourse with a woman.<ptr type="editorNote" n="2" target="#VAtr_9.whinote.n.2"/></ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g">They know full well that they may not rightfully engage in sexual relations with a woman.</ab>
         <note type="comparison" source="#liebermann" n="239"><ref target="clause:IEm_1">I Em 1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. I Em. 1</note>
@@ -85,7 +92,12 @@
         <note type="comparison" source="#whitelock" n="449"><label>expanded in</label> <ref target="clause:VIAtr_5-2">VI Atr 5.2</ref> <quote>VI Ethelred 5.2 adds that some have two wives or more, and some desert one and take another.</quote></note>
         <note type="comparedBy" source="#wormald-mel" n="342"><ref target="clause:VIIIAtr_26">VIII Atr 26–30</ref></note>
         <note type="editorial">Liebermann compares I Em 1.</note>
-        <note type="translator" source="#whitelock">VI Ethelred 5.2 adds that some have two wives or more, and some desert one and take another.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VAtr_9.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">239</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">bessere</hi> witan</seg><seg type="translation" xml:lang="en" source="#claude">read witan</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_9.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">172</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">= VI Atr 5, 1 = I Cn 6, 2. Den Zusatz VI 5, 2 übernimmt jener Homilet. <hi rend="italic">Fulgeorne witan</hi> ist Homilien-Redensart; <hi rend="italic">Hom. n</hi>. Wulfstan 157. 161. <hi rend="italic">Vgl. Gl</hi> Cölibat</seg><seg type="translation" xml:lang="en" source="#claude">= VI Atr 5, 1 = I Cn 6, 2. The addition VI 5, 2 is taken over by that homilist. <hi rend="italic">Fulgeorne witan</hi> is a homiletic turn of phrase; <hi rend="italic">Hom. n</hi>. Wulfstan 157. 161. Cf. <hi rend="italic">Gl</hi> Cölibat</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_9.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">328</biblScope></bibl><seg type="original" xml:lang="en">Cf. I Edm. 1; IV Edg. 1, 7; VI Atr. 5, 1; VIII, 30; I Cn. 6, 2; Wulfstan, p. 269.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_9.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">328</biblScope></bibl><seg type="original" xml:lang="en">A homiletic phrase. The verb may be either indic. or subj. so that it might also be translated, ‘let them know full well.’</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VAtr_9.robnote.fn.1" n="1" source="#robertson"><bibl><biblScope unit="page">82</biblScope></bibl><label>wi[t]an</label><seg type="original" xml:lang="en">G, G₂; <hi rend="italic">wican</hi> D.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="VAtr_9.whinote.n.2" n="2" source="#whitelock"><bibl><biblScope unit="page">449</biblScope></bibl><label>woman</label><seg type="original" xml:lang="en">VI Ethelred 5.2 adds that some have two wives or more, and some desert one and take another.</seg></note>
       </div>
     </body>
   </text>

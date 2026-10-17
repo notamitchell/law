@@ -14,6 +14,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -34,6 +36,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -59,24 +62,31 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1182 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 243.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 243: “si” → “sy”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 243.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="21">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 21</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="21" corresp="#wit-g">⁊ si ælc wydewe, þe hy sylfe mid rihte gehealde, on Godes griðe ⁊ on þæs cynges.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="21" corresp="#wit-g">⁊ sy ælc wydewe, þe hy sylfe mid rihte gehealde, on Godes griðe ⁊ on þæs cynges.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="21" corresp="#wit-g2">⁊ sy ælc wydewe, þe hy sylfe mid rihte gehealde, on Godes griðe ⁊ on þæs cynges.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="21" corresp="#wit-d">⁊ si ælc wuduwe þe hi silfe mid rihte healde on Godes griðe ⁊ on ðæs cynges.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="21" corresp="#wit-d">⁊ si ælc wuduwe, þe hi silfe mid rihte healde, on Godes griðe ⁊ on ðæs cynges.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="21" corresp="#wit-d">⁊ si ælc wuduwe þe hi silfe mid rihte healde<ptr type="editorNote" n="11" target="#VAtr_21.robnote.fn.11"/> on Godes griðe ⁊ on ðæs cynges.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g">And sy ælc wydewe, þe hy sylfe mid rihte gehealde, on Godes griðe and on þæs cynges.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und jede Wittwe, die sich ehrlich hält, stehe unter Friedensschutz der Kirche und des Königs.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und<ptr type="liebermannNote" n="1" target="#VAtr_21.lnote.de.1"/> jede Wittwe<ptr type="liebermannNote" n="2" target="#VAtr_21.lnote.de.2"/>, die sich ehrlich hält, stehe unter Friedensschutz der Kirche und des Königs.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let every widow who conducts herself rightly be under the protection of God and of the king.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And all widows who lead a respectable life shall enjoy the special protection of God and of the king.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VAtr_21.robnote.n.1"/>And all widows who lead a respectable life shall enjoy the special protection of God and of the king.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-g">And every widow who conducts herself rightly is to be under the protection of God and the king.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g">And all widows who comport themselves properly shall be under the protection of God and the king.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VIAtr_26">VI Atr 26</ref></note>
         <note type="comparison" source="#wormald-mel" n="340"><label>parallel (VI version)</label> <ref target="clause:VIAtr_26">VI Atr 26</ref> <quote>n. 352: V Atr 21 (VI 26)</quote></note>
         <note type="comparison" source="#wormald-ppmel" n="70"><label>parallel</label> <ref target="clause:VIAtr_26">VI Atr 26–26.1</ref> <quote>V Atr 21 – 21:1 (VI 26 – 26:1)</quote></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_21.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">173</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">= VI 26 = <hi rend="italic">Hom. n</hi>. Wulfstan 271</seg><seg type="translation" xml:lang="en" source="#claude">= VI 26 = <hi rend="italic">Hom. n</hi>. Wulfstan 271</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_21.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">173</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Witwe 7; Königsfrieden 9a</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Witwe 7; Königsfrieden 9a</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_21.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">329</biblScope></bibl><seg type="original" xml:lang="en">Cf. VI, 26; Wulfstan, p. 271.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VAtr_21.robnote.fn.11" n="11" source="#robertson"><bibl><biblScope unit="page">84</biblScope></bibl><label>healde</label><seg type="original" xml:lang="en"><hi rend="italic">gehealde</hi> G, G₂.</seg></note>
       </div>
     </body>
   </text>

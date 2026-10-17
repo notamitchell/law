@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">452</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -56,6 +59,8 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1203 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 244.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 244.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 88: “[D only]” → “∅”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -63,16 +68,20 @@
       <div type="clause" n="32.4">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 32.4</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="32.4" corresp="#wit-d">⁊ be norðan stod seo unlagu, þæt man moste banweorc on unsacne secgan; ⁊ þæt scolde standan, gif hit wurde swa gecyðed ydæges sona.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="32.4" corresp="#wit-d">⁊ be norðan stod seo unlagu, þæt man moste banweorc on unsacne secgan, ⁊ þæt scolde standan, gif hit wurde swa gecyðed ydæges sona. [D only]</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="32.4" corresp="#wit-d">⁊ be norðan stod seo unlagu, þ<hi rend="italic">æt</hi> man moste banweorc on unsacne secgan; ⁊ þ<hi rend="italic">æt</hi> scolde standan, gif hit wurde swa gecyðed ydæges sona.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="32.4" corresp="#wit-d">⁊ be norðan stod seo unlagu, þæt man moste banweorc on unsacne secgan, ⁊ þæt scolde standan, gif hit wurde swa gecyðed ydæges sona.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g">And be norðan stod seo unlagu þæt man moste banweorc on unsacne secgan, and þæt scolde standan gif hit wurde swa gecyðed ydæges sona.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und im Norden galt der Rechtsmissbrauch, dass man gegen einen Unschuldigen Todtschlag aussagen durfte, und diese [Aussage als erwiesen] gelten sollte, wenn sie so alsbald am Tage [des Todtschlags] selbst erklärt wurde.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und im Norden galt der Rechtsmissbrauch, dass man gegen einen Unschuldigen<ptr type="liebermannNote" n="1" target="#VAtr_32-4.lnote.de.1"/> Todtschlag<ptr type="liebermannNote" n="2" target="#VAtr_32-4.lnote.de.2"/> aussagen durfte, und diese [Aussage als erwiesen] gelten sollte, wenn sie so alsbald am Tage [des Todtschlags] selbst erklärt wurde.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And in the north there was the abuse that one could charge an innocent man with a killing, and that [charge] was to stand [as proven] if it was declared at once on the same day [as the killing].</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And in the north there has prevailed the unjust practice of bringing accusations of homicide against a guiltless man, and such an accusation was held to be valid, if it was made at once on the very day [of the homicide].</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And in the north there has prevailed the unjust practice of bringing accusations of homicide against a guiltless<ptr type="editorNote" n="1" target="#VAtr_32-4.robnote.n.1"/> man, and such an accusation was held to be valid, if it was made at once on the very day [of the homicide].</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-g">And in the North the abuse was current, that homicide might be laid to the charge of a guiltless person, and that should be held valid if it were announced thus at once on the same day.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g">And in the north there has been the unlawful practice that one can level an accusation of murder against an innocent person and it shall be permitted to stand if it was made immediately on the same day.</ab>
         <note type="comparedBy" source="#wormald-ppmel" n="153"><ref target="clause:IICn_69-1">II Cn 69.1–69.2</ref></note>
         <note type="editorial">Only in D.</note>
         <note type="translator" source="#rabin-doml">on the same day: That is, on the day of the crime.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_32-4.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. sacleas</hi> III Atr 3, 1⁶</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See sacleas</hi> III Atr 3, 1⁶</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_32-4.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Das Wort fehlt Wbb. Erklärung aus <hi rend="italic">bán</hi> ‘Knochen’ oder <hi rend="italic">bann</hi> ist unmöglich. Im Agsä. heisst zwar <hi rend="italic">bana</hi> nur ‘Mörder, Totschläger’; dagegen mengl. <hi rend="italic">ban</hi>(<hi rend="italic">e</hi>) daneben: ‘Verderben, Tod, Totschlag’ (wie mhd., nord.). Und Sweet erklärt aus diesem Sinne: <hi rend="italic">bangar</hi> ‘tödlicher Speer’, <hi rend="italic">bansnaca</hi> [dagegen Toller <hi rend="italic">Suppl.: bán-</hi>] ‘Giftschlange’.—Der Missbrauch besteht in der zu weiten Ausdehnung der Notorietät, die dem Kläger Beweisnähe verleiht und Beklagten in den aus Handhaftigkeit (<hi rend="italic">s. d. Gl</hi> 7) folgenden Rechtsnachteil versetzt, sich nicht verteidigen zu dürfen; <hi rend="italic">vgl. Gl</hi> Kundmachung 4</seg><seg type="translation" xml:lang="en" source="#claude">The word is missing from the dictionaries. An explanation from <hi rend="italic">bán</hi> ‘bone’ or from <hi rend="italic">bann</hi> is impossible. In A.-S., it is true, <hi rend="italic">bana</hi> means only ‘murderer, slayer’; but Middle English <hi rend="italic">ban</hi>(<hi rend="italic">e</hi>) also has, alongside this, the sense ‘ruin, death, killing’ (as in Middle High German and Norse). And Sweet explains from this sense: <hi rend="italic">bangar</hi> ‘deadly spear’, <hi rend="italic">bansnaca</hi> [against this Toller <hi rend="italic">Suppl.: bán-</hi>] ‘poisonous snake’.—The abuse consists in extending notoriety too far, which gives the plaintiff the nearer right to proof and places the defendant under the legal disadvantage that follows from being taken in the act (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 7), namely that he may not defend himself; <hi rend="italic">cf. Gl</hi> Kundmachung 4</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_32-4.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">331</biblScope></bibl><seg type="original" xml:lang="en">Cf. <hi rend="italic">sacleas</hi>, III Atr. 3, 1.</seg></note>
       </div>
     </body>
   </text>

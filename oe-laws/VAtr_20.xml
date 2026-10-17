@@ -14,6 +14,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -34,6 +36,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -58,6 +61,8 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1181 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 243.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 243: “⁊ gif hwa oðrum sceale borh oððon bote æt woroldlican þingan, gelæste hit georne ær oððon æfter.” → “⁊ gif hwa oðrum sceale borh oððon bote æt woroldlican þingan, gelæste hit georne ær oððon æfter. (expanded letters in italics: m, er)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 243.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -65,17 +70,23 @@
       <div type="clause" n="20">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 20</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20" corresp="#wit-g">⁊ gyf hwa oðrum scyle borh oððon bote æt woroldlican þingan, gelæste hit georne ǽr oððon æfter.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20" corresp="#wit-g2">⁊ gif hwa oðrum sceale borh oððon bote æt woroldlican þingan, gelæste hit georne ær oððon æfter.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20" corresp="#wit-g2">⁊ gif hwa oðru<hi rend="italic">m</hi> sceale<ptr type="liebermannNote" n="1" target="#VAtr_20.lnote.oe.1"/> borh oððon bote æt woroldlican þingan, gelæste hit georne ær oððon æft<hi rend="italic">er</hi>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20" corresp="#wit-d">⁊ gif hwa oðru<hi rend="italic">m</hi> scule borh oððe bote æt worldlican þingan, gelæste hit georne ær oððe æfter.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="20" corresp="#wit-d">⁊ gif hwa oðrum scule borh oððe bote æt worldlican þingan, gelæste hit georne ær oððe æfter.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g">And gyf hwa oðrum scyle borh oððon bote æt woroldlican þingan, gelæste hit georne ær oððon æfter.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn einer dem andern Geborgtes oder Bussgeld aus weltlichen Beziehungen schuldet, zahle er es willig vor oder nach [dem Feste].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und<ptr type="liebermannNote" n="1" target="#VAtr_20.lnote.de.1"/> wenn einer dem andern Geborgtes<ptr type="liebermannNote" n="2" target="#VAtr_20.lnote.de.2"/> oder Bussgeld aus<ptr type="liebermannNote" n="3" target="#VAtr_20.lnote.de.3"/> weltlichen Beziehungen schuldet, zahle er es willig vor oder nach [dem Feste].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if anyone owes another a loan or compensation in secular matters, let him pay it willingly before or after [the feast].</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And if anyone owes another a debt or compensation in connection with secular matters, he shall render it readily either before or after [the festival].</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VAtr_20.robnote.n.1"/>And if anyone owes another a debt or compensation in connection with secular matters, he shall render it readily either before or after [the festival].</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-g">And if anyone owes another a debt or compensation concerning secular matters, he is to pay it readily before or after [these seasons].</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g">And if anyone must pay a debt or compensation to another because of a worldly matter, he is to do so promptly before or after the feast.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VIAtr_25-2">VI Atr 25.2</ref></note>
         <note type="comparison" source="#wormald-mel" n="340"><label>parallel (VI version)</label> <ref target="clause:VIAtr_25-2">VI Atr 25.2</ref> <quote>n. 352: V Atr 20 (VI 25.2)</quote></note>
         <note type="comparedBy" source="#wormald-ppmel" n="159"><ref target="clause:ICn_17-3">I Cn 17.3</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VAtr_20.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">242</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_20.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">173</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">= VI 25, 2 = I Cn 17, 3 = Hn 62, 2</seg><seg type="translation" xml:lang="en" source="#claude">= VI 25, 2 = I Cn 17, 3 = Hn 62, 2</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_20.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">173</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">‘Bürgschaft’ zu Cnut Q Cons, weil diese Bed. für <hi rend="italic">borh</hi> im 12. Jh. die häufigere wurde (doch erhielt sich ‘Borg’ im Mittelengl.; Mätzner), und neuere, auch hier, irrig; <hi rend="italic">vgl. Gl</hi> Darlehn 7 und <hi rend="italic">borggylda</hi> ‘a debtor’; Napier <hi rend="italic">Lex</hi>. 75. Richtig <hi rend="italic">debet pecuniam</hi> Cn In; <hi rend="italic">qui debitor est</hi> Hn. Für einen Tag ist wohl Zahlungsaufschub oder Vorherzahlung, aber nicht Bürgschaftsaufhebung denkbar</seg><seg type="translation" xml:lang="en" source="#claude">‘Surety’ in Cnut Q Cons, because this meaning of <hi rend="italic">borh</hi> became the more frequent one in the 12th cent. (though ‘loan’ survived in Middle English; Mätzner), and modern scholars, here too, wrongly; <hi rend="italic">cf. Gl</hi> Darlehn 7 and <hi rend="italic">borggylda</hi> ‘a debtor’; Napier <hi rend="italic">Lex</hi>. 75. Correctly <hi rend="italic">debet pecuniam</hi> Cn In; <hi rend="italic">qui debitor est</hi> Hn. For a single day a postponement of payment, or payment in advance, is probably conceivable, but not the cancellation of a surety</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_20.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">173</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Der Zusatz schliesst vielleicht nur die Bed. ‘Pönitenz’ für <hi rend="italic">bot</hi> aus</seg><seg type="translation" xml:lang="en" source="#claude">The addition perhaps merely excludes the meaning ‘penance’ for <hi rend="italic">bot</hi></seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_20.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">329</biblScope></bibl><seg type="original" xml:lang="en">Cf. VI, 25, 2; I Cn. 17, 3; <hi rend="italic">Eccles. Insts.</hi> 42.</seg></note>
       </div>
     </body>
   </text>

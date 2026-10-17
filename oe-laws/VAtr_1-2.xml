@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">146</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">448</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -54,6 +57,9 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1149 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 239.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 239: “⁊ þæt man frið ⁊ freondscype rihtlice healde innan þysan earde for Gode ⁊ for worolde.” → “⁊ þæt man frið ⁊ freondscype rihtlice healde innan þysan earde for Gode ⁊ for worolde. (expanded letters in italics: æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 239.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 78: “worolde.]” → “worolde].”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -61,12 +67,13 @@
       <div type="clause" n="1.2">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 1.2</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-g">⁊ þ<hi rend="italic">æt</hi> man frið ⁊ freondscype rihtlice healde innan þysan earde for Gode ⁊ for worolde.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-g2">⁊ þæt man frið ⁊ freondscype rihtlice healde innan þysan earde for Gode ⁊ for worolde.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="1.1[b]" corresp="#wit-d">⁊ [þæt] man frið ⁊ freondscipe rihtlice healde [innan þysan earde for Gode ⁊ for worolde.]</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-g2">⁊ þ<hi rend="italic">æt</hi> man frið ⁊ freondscype rihtlice healde innan þysan earde for Gode ⁊ for worolde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-d">⁊ man frið ⁊ freondscipe rihtlice healde.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="1.1[b]" corresp="#wit-d">⁊ [þæt]<ptr type="editorNote" n="6" target="#VAtr_1-2.robnote.fn.6"/> man frið ⁊ freondscipe rihtlice healde [innan þysan earde for Gode ⁊ for worolde]<ptr type="editorNote" n="6" target="#VAtr_1-2.robnote.fn.6"/>.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g">And þæt man frið and freondscype rihtlice healde innan þysan earde for Gode and for worolde.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">und dass man Frieden und Freundschaft innerhalb dieses Landes in Geistlichem und Weltlichem rechtlich halte.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">und dass man Frieden<ptr type="liebermannNote" n="1" target="#VAtr_1-2.lnote.de.1"/> und Freundschaft innerhalb dieses Landes in<ptr type="liebermannNote" n="2" target="#VAtr_1-2.lnote.de.2"/> Geistlichem und Weltlichem rechtlich halte.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">and that peace and friendship be lawfully maintained within this country in matters both spiritual and secular.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">and that peace and good-will shall be duly maintained [within this land in matters both religious and secular].</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">and that peace and good-will<ptr type="editorNote" n="3" target="#VAtr_1-2.robnote.n.3"/> shall be duly maintained [within this land in matters both religious and secular<ptr type="editorNote" n="4" target="#VAtr_1-2.robnote.n.4"/>].</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-g">and that peace and friendship are to be rightly maintained in both religious and secular concerns within this country.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g">And that peace and friendship be justly preserved in this land before God and the world.</ab>
         <note type="comparison" source="#liebermann" n="239"><ref target="clause:IIEm_Prol-to-1">II Em Pr. 1</ref></note>
@@ -75,6 +82,11 @@
         <note type="editorial">Liebermann compares II Em Prol. 1.</note>
         <note type="textual" source="#rabin-doml">þæt: omitted D</note>
         <note type="textual" source="#rabin-doml">innan . . . worolde: omitted D</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_1-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">171</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">= VI 8, 2 = X 2, 1. Im Ggs. zu EGu Pr. I Cn Insc D ist hier wohl nicht besonders das Verhältnis zwischen Engländern und Dena lagu, sondern nur allgemein <hi rend="italic">sib ⁊ som</hi> (<hi rend="italic">u</hi>. 19) zwischen allen Staatsbürgern gemeint, wie denn VI Atr 1 auch auf diesen Zusammenhang ‘unter uns’ bezieht.—Diese Alliteration (<hi rend="italic">s. Wb</hi>) kommt sehr häufig vor, auch <hi rend="italic">som ⁊ sibb</hi> Toller 894b</seg><seg type="translation" xml:lang="en" source="#claude">= VI 8, 2 = X 2, 1. In contrast to EGu Pr. I Cn Insc D, what is meant here is probably not specifically the relationship between the English and the Dena lagu, but only <hi rend="italic">sib ⁊ som</hi> (<hi rend="italic">below</hi> 19) in general among all members of the state, just as VI Atr 1 also refers it to this association ‘among us’.—This alliteration (see <hi rend="italic">Wb</hi>) occurs very frequently, also <hi rend="italic">som ⁊ sibb</hi> Toller 894b</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_1-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">171</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Nicht ‘vor Gott und Welt’ (Schmid), als wäre der Gegensatz ‘Gewissen und objektives Recht’, sondern ‘in Kirche und Staat’</seg><seg type="translation" xml:lang="en" source="#claude">Not ‘before God and the world’ (Schmid), as if the contrast were ‘conscience and objective law’, but ‘in church and state’</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_1-2.robnote.n.3" n="3" source="#robertson"><bibl><biblScope unit="page">342</biblScope></bibl><seg type="original" xml:lang="en">Cf. VI. 8, 2; X. 2, 1.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_1-2.robnote.n.4" n="4" source="#robertson"><bibl><biblScope unit="page">342</biblScope></bibl><seg type="original" xml:lang="en">This phrase is of frequent occurrence; cf. 4; 9, 2 etc.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VAtr_1-2.robnote.fn.6" n="6" source="#robertson"><bibl><biblScope unit="page">78</biblScope></bibl><label>⁊</label><seg type="original" xml:lang="en">G, G₂; om. D.</seg></note>
       </div>
     </body>
   </text>

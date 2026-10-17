@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">152</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">449</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -55,23 +58,34 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1174 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 241.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 241: “⁊ sancte Marian freolstida ealle weorðie man georne ærest mid fæstene ⁊ syððan mid freolse.” → “⁊ sancte Marian freolstida ealle weorðie man georne ærest mid fæstene ⁊ syððan mid freolse. (expanded letters in italics: anct)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 241: “⁊ sancte Marian freolstida ealle weorðige man georne ærest mid fæstene ⁊ syððan mid freolse.” → “⁊ sancte Marian freolstida ealle weorðige man georne ærest mid fæstene ⁊ syððan mid freolse. (expanded letters in italics: anct)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 241.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="14">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 14</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14" corresp="#wit-g">⁊ s<hi rend="italic">ancte</hi> Marian freolstida ealle weorðie man georne ærest mid fæstene ⁊ syððan mid freolse.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14" corresp="#wit-g2">⁊ sancte Marian freolstida ealle weorðige man georne ærest mid fæstene ⁊ syððan mid freolse.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="14" corresp="#wit-d">And sancta Marian freolstide ealle wurðian man georne, ærest mid fæstene ⁊ siððan mid freolse.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14" corresp="#wit-g">⁊ s<hi rend="italic">anct</hi>e Marian freolstida ealle weorðie man georne ærest mid fæstene ⁊ syððan mid freolse.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14" corresp="#wit-g2">⁊ s<hi rend="italic">anct</hi>e Marian freolstida ealle weorðige man georne ærest mid fæstene ⁊ syððan mid freolse.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14" corresp="#wit-d">And s<hi rend="italic">anct</hi>a Marian freolstida ealle wurðian<ptr type="liebermannNote" n="1" target="#VAtr_14.lnote.oe.1"/> man georne, ærest mid fæstene ⁊ siððan mid freolse.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="14" corresp="#wit-d">And sancta Marian freolstide ealle wurðian<ptr type="editorNote" n="1" target="#VAtr_14.robnote.fn.1"/> man georne, ærest mid fæstene ⁊ siððan mid freolse.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g">And sancte Marian freolstida ealle weorðie man georne, ærest mid fæstene and syððan mid freolse.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und alle Festzeiten der heiligen Maria ehre man willig, zuerst durch Fasten und dann durch Festfeier.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und<ptr type="liebermannNote" n="1" target="#VAtr_14.lnote.de.1"/> alle Festzeiten der heiligen Maria<ptr type="liebermannNote" n="2" target="#VAtr_14.lnote.de.2"/> ehre man willig, zuerst<ptr type="liebermannNote" n="3" target="#VAtr_14.lnote.de.3"/> durch Fasten und dann durch Festfeier.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let all the festivals of St Mary be eagerly honoured, first with fasting and then with feasting.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And all St Mary's festivals shall be zealously honoured, first with fasting and afterwards with festivity.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VAtr_14.robnote.n.1"/>And all St Mary's festivals<ptr type="editorNote" n="2" target="#VAtr_14.robnote.n.2"/> shall be zealously honoured, first with fasting and afterwards with festivity.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-g">And all the festivals of St Mary are to be diligently observed, first with a fast and afterwards with a festival.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g">And each of the Feasts of Saint Mary is to be celebrated faithfully, first with fasting and then with a holiday.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VIAtr_22-2">VI Atr 22.2</ref></note>
         <note type="textual" source="#rabin-doml">weorðie: wurðian D</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VAtr_14.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">241</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_14.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">172</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">= VI 22, 3, kürzer I Cn 16</seg><seg type="translation" xml:lang="en" source="#claude">= VI 22, 3, more briefly I Cn 16</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_14.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">172</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Maria 6; Verkündigung: Piper <hi rend="italic">Kalend. Agsa</hi>. 91. 94</seg><seg type="translation" xml:lang="en" source="#claude">Cf. <hi rend="italic">Gl</hi> Maria 6; Annunciation: Piper <hi rend="italic">Kalend. Agsa</hi>. 91. 94</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_14.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">172</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Vorabend; Fasten 7a</seg><seg type="translation" xml:lang="en" source="#claude">Cf. <hi rend="italic">Gl</hi> Vorabend; Fasten 7a</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_14.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">328</biblScope></bibl><seg type="original" xml:lang="en">Cf. Wulfstan, pp. 117, 208.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_14.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">329</biblScope></bibl><seg type="original" xml:lang="en">Cf. VI, 22, 2; I Cn. 16 <hi rend="italic">a</hi>. The dates on which these festivals fell were Feb. 2nd, March 25th, August 15th, Sept. 8th (see Piper, <hi rend="italic">Kalend. Agsa.</hi>, pp. 91, 94).</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VAtr_14.robnote.fn.1" n="1" source="#robertson"><bibl><biblScope unit="page">84</biblScope></bibl><label>wurðian</label><seg type="original" xml:lang="en"><hi rend="italic">weorðie</hi> G; <hi rend="italic">weorðige</hi> G₂.</seg></note>
       </div>
     </body>
   </text>

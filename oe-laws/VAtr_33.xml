@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">452</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -53,6 +56,7 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1205 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 244.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 88: “[G]” → “∅”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -61,16 +65,20 @@
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> 33</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="33" corresp="#wit-g">⁊ æghwylce unlaga alecge man georne.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="33" corresp="#wit-g2">⁊ æghwilce unlaga alecge man georne.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="33" corresp="#wit-d">[⁊ æghwylce unlaga alecge man georne.] [G]</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="33" corresp="#wit-d"><ptr type="editorNote" n="6" target="#VAtr_33.robnote.fn.6"/>[⁊ æghwylce unlaga alecge man georne.]</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g">And æghwylce unlaga alecge man georne.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und jegliches Unrecht beseitige man eifrig.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und<ptr type="liebermannNote" n="1" target="#VAtr_33.lnote.de.1"/> jegliches Unrecht<ptr type="liebermannNote" n="2" target="#VAtr_33.lnote.de.2"/> beseitige man eifrig.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let every abuse be eagerly put down.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">[And injustice of every kind shall be zealously suppressed.]</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VAtr_33.robnote.n.1"/>[And injustice of every kind shall be zealously suppressed.]</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-g">And every abuse is to be zealously suppressed.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g">And all injustice is to be utterly eradicated.</ab>
         <note type="comparison" source="#wormald-mel" n="333"><label>repeats</label> <ref target="clause:VAtr_32-5">V Atr 32.5</ref> <quote>the G texts ... at once repeat the same point in more or less the same words, V Atr 33, cf. 32:5</quote></note>
         <note type="editorial">Clause number standardised from ‘[33]’.</note>
         <note type="textual" source="#rabin-doml">omitted D</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_33.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">= VI 40 = II Cn 11</seg><seg type="translation" xml:lang="en" source="#claude">= VI 40 = II Cn 11</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_33.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Schon <hi rend="italic">o</hi>. 1, 1. 23. 32</seg><seg type="translation" xml:lang="en" source="#claude">Already <hi rend="italic">above</hi> 1, 1. 23. 32</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_33.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">331</biblScope></bibl><seg type="original" xml:lang="en">Cf. 1, 1; 23; 32; VI, 40; II Cn. 11. This clause is omitted in D.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VAtr_33.robnote.fn.6" n="6" source="#robertson"><bibl><biblScope unit="page">88</biblScope></bibl><label>⁊</label><seg type="original" xml:lang="en">G, G₂.</seg></note>
       </div>
     </body>
   </text>

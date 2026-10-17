@@ -6,10 +6,14 @@
         <title>V Atr Inscr.</title>
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -25,8 +29,10 @@
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">237</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">78</biblScope></bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -52,22 +58,41 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1145 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 237.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 237: “MVIII” → “MVIII.”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 237.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 237: “G2)” → “G2).”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 78: “Domini” → “Domini.”.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Robertson, p. 78: “[G1: anno dominicae incarnationis MVIII; G2: Angolwitena gerednesse]” → “∅”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Inscr.">
         <head><ref type="lawCode" target="law:VAtr">V Atr</ref> Inscr.</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="V Atr. Inscr." corresp="#wit-g">In nomine Do<hi rend="italic">mi</hi>ni, an<hi rend="italic">no</hi> do<hi rend="italic">mi</hi>nic<hi rend="italic">ae</hi> incarn<hi rend="italic">ationis</hi> MVIII</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="V Atr. Inscr." corresp="#wit-g2">Be Angolwitena gerednesse.</ab>
-        <ab type="editionText" xml:lang="la" source="#robertson" corresp="#wit-d">In nomine Domini</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Im Namen des Herrn, im Jahre der Fleischwerdung des Herrn 1008. (Vom Beschlusse der Englischen Witan. G2)</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="V Atr. Inscr." corresp="#wit-g"><ptr type="liebermannNote" n="**" target="#VAtr_Inscr.lnote.oe.star2"/>In nomine D<hi rend="italic">omi</hi>ni, an<hi rend="italic">no</hi> d<hi rend="italic">omi</hi>nic<hi rend="italic">ae</hi> incarn<hi rend="italic">ationis</hi> MVIII.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="V Atr. Inscr." corresp="#wit-g2">Be<ptr type="liebermannNote" n="1" target="#VAtr_Inscr.lnote.oe.1"/> Angolwitena gerednesse.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="V Atr. Inscr." corresp="#wit-d"><ptr type="liebermannNote" n="1" target="#VAtr_Inscr.lnote.oe.1-2"/>In nomine Domini.</ab>
+        <ab type="editionText" xml:lang="la" source="#robertson" corresp="#wit-d">In nomine Domini<ptr type="editorNote" n="5" target="#VAtr_Inscr.robnote.fn.5"/>.</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml"><hi rend="italic">In nomine Domini, anno Dominicae incarnationis MVIII</hi>:</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><ptr type="liebermannNote" n="1" target="#VAtr_Inscr.lnote.de.1"/>Im<ptr type="liebermannNote" n="2" target="#VAtr_Inscr.lnote.de.2"/> Namen des Herrn, im Jahre der Fleischwerdung des Herrn 1008.<ptr type="liebermannNote" n="3" target="#VAtr_Inscr.lnote.de.3"/> (Vom Beschlusse der Englischen<ptr type="liebermannNote" n="4" target="#VAtr_Inscr.lnote.de.4"/> Witan. <hi rend="italic">G2</hi>).</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">In the name of the Lord, in the year of the Lord's incarnation 1008. (Of the decision of the English witan. G2)</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">In the name of the Lord. [G1: anno dominicae incarnationis MVIII; G2: Angolwitena gerednesse]</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">In the name of the Lord<ptr type="editorNote" n="1" target="#VAtr_Inscr.robnote.n.1"/>.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml"><hi rend="italic">In the name of the Lord, 1008 years since the incarnation of the Lord</hi>:</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VIAtr_Inscr">VI Atr Inscr.</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="340"><ref target="clause:VIIIAtr_6">VIII Atr 6–15</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="337"><ref target="clause:XAtr_Prol">X Atr</ref></note>
-        <note type="editorial">Base text K = G (Cotton Nero A I f. 89, after III Eg, c. 1060); N = G2 (Cotton Nero A I f. 116v, after a homily attributed to Wulfstan, c. 1070); D (CCCC 201 p. 48) is also given here. Liebermann suggests VI Atr (‘at Enham’) may be a private reworking of the draft of V Atr. G2 inserts and omits matter as in X Atr 1–2.1.</note>
+        <note type="editorial">Base text K = G (Cotton Nero A I f. 89, after III Eg, c. 1060); N = G2 (Cotton Nero A I f. 116v, after a homily attributed to Wulfstan, c. 1070); D (CCCC 201 p. 48) is also given here. Liebermann suggests VI Atr (‘at Enham’) may be a private reworking of the draft of V Atr. G2 inserts and omits matter as in X Atr 1–2.1.; AU: added from Rabin p. None, October 2026 (Rabin’s text); AV: added from Rabin p. None, October 2026 (Rabin’s translation); AY: added from Rabin p. None, October 2026 (Rabin’s note to the text)</note>
+        <note type="textual" source="#rabin-doml">Manuscripts: D = Cambridge, Corpus Christi College MS 201, pp. 48–51; G1 = London, British Library, Cotton MS Nero A.i, fols. 89v–92r; G2 = London, British Library, Cotton MS Nero A.i, fols. 116v–19r.</note>
+        <note type="textual" source="#rabin-doml">In . . . MVIII: Be Angolwitena gerednesse G2; In nomine domini D</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VAtr_Inscr.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">236</biblScope></bibl><seg type="original" xml:lang="de">B. A. g. <hi rend="italic">roth verziert.</hi></seg><seg type="translation" xml:lang="en" source="#claude">B. A. g. decorated in red.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VAtr_Inscr.lnote.oe.1-2" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">237</biblScope></bibl><seg type="original" xml:lang="de">In n. D. <hi rend="italic">roth</hi></seg><seg type="translation" xml:lang="en" source="#claude">In n. D. in red</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VAtr_Inscr.lnote.oe.star2" n="**" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">236</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vielleicht ist VI Atr.</hi> ‘zu Enham’ <hi rend="italic">eine private Bearbeitung der Vorlage von V Atr., lautet aber bisweilen weniger ursprünglich als V Atr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">perhaps VI Atr. ‘at Enham’ is a private revision of the exemplar of V Atr., but its wording is sometimes less original than V Atr.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_Inscr.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">171</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. o</hi>. Einl. 4. 12</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. above</hi> Introduction 4. 12</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_Inscr.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">171</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. o</hi>. Einl. 4. 12</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. above</hi> Introduction 4. 12</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_Inscr.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">171</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. o</hi>. Einl. 4. 12</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. above</hi> Introduction 4. 12</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VAtr_Inscr.lnote.de.4" n="4" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">171</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Das Wort, Toller fehlend, erregt kein Bedenken angesichts von <hi rend="italic">Angelcyning</hi>, <hi rend="italic">-cynn</hi>, <hi rend="italic">-cyrice</hi>, <hi rend="italic">-þeod</hi>, <hi rend="italic">Angulscaxe</hi></seg><seg type="translation" xml:lang="en" source="#claude">The word, which is missing from Toller, raises no doubts in view of <hi rend="italic">Angelcyning</hi>, <hi rend="italic">-cynn</hi>, <hi rend="italic">-cyrice</hi>, <hi rend="italic">-þeod</hi>, <hi rend="italic">Angulscaxe</hi></seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VAtr_Inscr.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">326</biblScope></bibl><seg type="original" xml:lang="en">The difference in the headings as preserved in the three MSS is noticeable. That in G is the fullest and is probably authentic. It is analogous in form to the heading of VIII Atr. and is specially important as giving the date of the ordinance.<lb type="paragraph"/>The form <hi rend="italic">Angolwitena</hi> in G₂ is unusual and is not quoted in BT. Liebermann accepts it as genuine however and parallel to such compounds as <hi rend="italic">Angelcyning</hi>, <hi rend="italic">-cynn</hi>, <hi rend="italic">-cyrice</hi>, <hi rend="italic">-þeod</hi>, and <hi rend="italic">Angulseaxe</hi>.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VAtr_Inscr.robnote.fn.5" n="5" source="#robertson"><bibl><biblScope unit="page">78</biblScope></bibl><label>Domini</label><seg type="original" xml:lang="en"><hi rend="italic">I. n. D., anno dominicae incarnationis</hi> <hi rend="smallcaps">mviii</hi> G; <hi rend="italic">Be Angolwitena gerednesse</hi> G₂.</seg></note>
       </div>
     </body>
   </text>
