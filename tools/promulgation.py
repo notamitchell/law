@@ -98,6 +98,160 @@ TABLE = {
     "1009–1016; ?as for V&VI Atr: 1008 (Wormald); ?King's Enham (Wormald)": ([('1009–1016', []), ('?as for V & VI Atr: 1008', [WM])], [('?King’s Enham', [WM])]),
 }
 
+# October 2026: the dates with Liebermann’s (from the running heads of Gesetze I) credited or added, and
+# Wormald’s (The Making of English Law I, 1999) where the database had none from him. The first date stays the
+# database’s own; see docs/OE-LAWS.md.
+TABLE.update({
+    '601–4 (Liebermann); 597–616, perhaps 602–3 (Whitelock); ?614 or just after (Wormald)':
+        ([('601–4', [L]), ('597–616, perhaps 602–3', [W]), ('?614 or just after', [WM])], []),
+    '685–6 (Liebermann); 673–85? (Whitelock)':
+        ([('685–6', [L]), ('673–85?', [W])], []),
+    '695–6 (Liebermann); 6 Sept. 695 (Attenborough, Whitelock, Wormald)':
+        ([('695–6', [L]), ('6 Sept. 695', [A, W, WM])], []),
+    '890–901; 885–899 (Whitelock); 871 (after 890?)–901 (Liebermann); after 893 (Wormald)':
+        ([('890–901', []), ('885–899', [W]), ('871 (after 890?)–901', [L]), ('after 893', [WM])], []),
+    '688–95 (Liebermann); 688–94 (Whitelock); 688×92 (Wormald)':
+        ([('688–95', [L]), ('688–94', [W]), ('688×92', [WM])], []),
+    '880–90 (Liebermann); 886–90 (Whitelock); before 890, perhaps by over a decade (Wormald)':
+        ([('880–90', [L]), ('886–90', [W]), ('before 890, perhaps by over a decade', [WM])], []),
+    'Nov. 921–938? (Liebermann); 1002–4 (Wormald, Rabin)':
+        ([('Nov. 921–938?', [L]), ('1002–4', [WM, RB])], []),
+    '901–24 (Liebermann); before 918 (Attenborough); well before 916 (Wormald)':
+        ([('901–24', [L]), ('before 918', [A]), ('well before 916', [WM])], []),
+    '924–5 (Liebermann); before 918 (Attenborough); before 916 (Wormald); Exeter':
+        ([('924–5', [L]), ('before 918', [A]), ('before 916', [WM])], [('Exeter', [])]),
+    '925–c.936 (Liebermann); before III As (Attenborough); early in the reign, before II As (Wormald)':
+        ([('925–c.936', [L]), ('before III As', [A]), ('early in the reign, before II As', [WM])], []),
+    "925–40 (Liebermann); before c.1110 (Nowell 'translation' from Q?); ?Christmas 932–Jan. 933 (Wormald)":
+        ([('925–40', [L]), ('before c.1110 (Nowell’s ‘translation’ from Q?)', []), ('?Christmas 932–Jan. 933', [WM])], []),
+    '925–c.935 (Liebermann); before III–VI As (Attenborough); Grately; c.926–c.930 (Whitelock); not before 928 (Wormald)':
+        ([('925–c.935', [L]), ('before III–VI As', [A]), ('c.926–c.930', [W]), ('not before 928', [WM])], [('Grately', [])]),
+    'c.928–c.938 (Liebermann); after I & V As (Attenborough); after V As, before VI As 12 (Wormald)':
+        ([('c.928–c.938', [L]), ('after I & V As', [A]), ('after V As, before VI As 12', [WM])], []),
+    'c.929–c.939 (Liebermann); before VI As (Attenborough); after III As, before VI As 12 (Wormald); Ðunresfeld':
+        ([('c.929–c.939', [L]), ('before VI As', [A]), ('after III As, before VI As 12', [WM])], [('Ðunresfeld', [])]),
+    'c.927–937 (Liebermann); before III, IV & VI As (Attenborough); Christmas 930, 931 or 934 (Wormald); Exeter':
+        ([('c.927–937', [L]), ('before III, IV & VI As', [A]), ('Christmas 930, 931 or 934', [WM])], [('Exeter', [])]),
+    'c.930–940 (Liebermann); after II & V As (Attenborough); after IV As, cl. 12 in 934 or 936×7 (Wormald); London':
+        ([('c.930–940', [L]), ('after II & V As', [A]), ('after IV As, cl. 12 in 934 or 936×7', [WM])], [('London', [])]),
+    'Easter; Apr. 942–Mar. 946 (Liebermann); 942 or 944–6 (Robertson); Easter 945 or 946 (Wormald); London':
+        ([('Easter, Apr. 942–Mar. 946', [L]), ('942 or 944–6', [R]), ('Easter 945 or 946', [WM])], [('London', [])]),
+    'c.943–46 (Liebermann); no evidence of exact date (Robertson); 939–46 (Whitelock); after I Em: 945 or 946 (Wormald)':
+        ([('c.943–46', [L]), ('no evidence of exact date', [R]), ('939–46', [W]), ('after I Em: 945 or 946', [WM])], []),
+    '940–6 (Liebermann); no evidence of date (Robertson); Culinton: ?Colyton, Devonshire':
+        ([('940–6', [L]), ('no evidence of date', [R])], [('Culinton (?Colyton, Devonshire)', [])]),
+    "946–c.961 (Liebermann, Robertson); 939–c.961 (Whitelock); during or soon after Edmund's reign (Wormald)":
+        ([('946–c.961', [L, R]), ('939–c.961', [W]), ("during or soon after Edmund's reign", [WM])], []),
+    '959–c.962 (Liebermann); after IV Edg (Robertson); Andover; 959–63 (Whitelock)':
+        ([('959–c.962', [L]), ('after IV Eg', [R]), ('959–63', [W])], [('Andover', [])]),
+    '962–963 (Liebermann); 962 or 963 (Robertson); Wihtbordesstan; 962–3 (Whitelock); ?970s (Wormald)':
+        ([('962–963', [L]), ('962 or 963', [R]), ('962–3', [W]), ('?970s', [WM])], [('Wihtbordesstan', [])]),
+    '980–1013 (Liebermann); ?same time as III Atr (Robertson); ?mid-990s (Wormald); Woodstock, Mercia':
+        ([('980–1013', [L]), ('?same time as III Atr', [R]), ('?mid-990s', [WM])], [('Woodstock, Mercia', [])]),
+    "991 (Liebermann); mid-990's (Wormald); 991 or 994 (Whitelock)":
+        ([('991', [L]), ('mid-990s', [WM]), ('991 or 994', [W])], []),
+    "991 (Liebermann); 991 or 994 (Whitelock); mid-990's (Wormald)":
+        ([('991', [L]), ('991 or 994', [W]), ('mid-990s', [WM])], []),
+    "c.1000 (Liebermann); (Robertson is silent); mid-990's (Wormald); 991 or 994 (Whitelock)":
+        ([('c.1000', [L]), ('mid-990s', [WM]), ('991 or 994', [W])], []),
+    "981–1012 or ?997 (Liebermann); probably 997 (Whitelock); ?mid–990's (Wormald); Wantage, Wessex":
+        ([('981–1012 or ?997', [L]), ('probably 997', [W]), ('?mid-990s', [WM])], [('Wantage, Wessex', [])]),
+    "c.991–c.1002 (Liebermann); ?mid-990's (Wormald)":
+        ([('c.991–c.1002', [L]), ('?mid-990s', [WM])], []),
+    '1008 (Liebermann); Pentecost 1008 (Wormald); Enham':
+        ([('1008', [L]), ('Pentecost 1008', [WM])], [('Enham', [])]),
+    '16 May 1008–13 May 1011 (Liebermann); 1008 (Robertson, Wormald); Enham':
+        ([('16 May 1008–13 May 1011', [L]), ('1008', [R, WM])], [('Enham', [])]),
+    '16 May 1008–13 May 1011 (Liebermann); 1008 (Wormald); Enham':
+        ([('16 May 1008–13 May 1011', [L]), ('1008', [WM])], [('Enham', [])]),
+    '992–1011 (Liebermann); no evidence of exact date (Robertson); 1009 (Whitelock, Wormald); Bath':
+        ([('992–1011', [L]), ('no evidence of exact date', [R]), ('1009', [W, WM])], [('Bath', [])]),
+    '1014, after Feb. (Liebermann); 1014 (Wormald)':
+        ([('1014, after Feb.', [L]), ('1014', [WM])], []),
+    'c.980–1016 (Liebermann); ? as for VIII Atr (Wormald); Woodstock':
+        ([('c.980–1016', [L]), ('?as for VIII Atr', [WM])], [('Woodstock', [])]),
+    "1009–1016 (Liebermann); ?as for V&VI Atr: 1008 (Wormald); ?King's Enham (Wormald)":
+        ([('1009–1016', [L]), ('?as for V & VI Atr: 1008', [WM])], [('?King’s Enham', [WM])]),
+    '1020, Feb.–July (Liebermann); 1019/1020 (Robertson, Wormald); issued in England (Robertson).; end of 1019 or very beginning of 1020, probably written from Denmark (Whitelock)':
+        ([('1020, Feb.–July', [L]), ('1019/1020', [R, WM]), ('end of 1019 or very beginning of 1020', [W])], [('England', [R]), ('probably written from Denmark', [W])]),
+    '1027, c. May (Liebermann); 1027 (Wormald); ?en route from Rome to Denmark (Robertson)':
+        ([('1027, c. May', [L]), ('1027', [WM])], [('?en route from Rome to Denmark', [R])]),
+    'Christmas, 1027–34 (Liebermann); 1020/21 (Wormald); Winchester; 1020–23 (Whitelock)':
+        ([('Christmas, 1027–34', [L]), ('1020/21', [WM]), ('1020–23', [W])], [('Winchester', [])]),
+    "975 or 978, 14 April (Liebermann); 978 or 979 (Robertson); at Æthelred's consecration (Wormald); Kingston, if 978–9 (Robertson)":
+        ([('975 or 978, 14 April', [L]), ('978 or 979', [R]), ("at Æthelred's consecration", [WM])], [('Kingston, if 978–9', [R])]),
+    'c.926–c.1000, ?c.935 (Liebermann); c.930, ?Archenfield, on the Wye (Wormald)':
+        ([('c.926–c.1000, ?c.935', [L]), ('c.930', [WM])], [('?Archenfield, on the Wye', [WM])]),
+    '1028–c.1060 (Liebermann); probably 1020–23 (Whitelock); after 1023 (Wormald)':
+        ([('1028–c.1060', [L]), ('probably 1020–23', [W]), ('after 1023', [WM])], []),
+    'c.936–58, or c.1000 (Liebermann); ?c. 930 (Wormald)':
+        ([('c.936–58, or c.1000', [L]), ('?c.930', [WM])], []),
+    "c.930–75 (Liebermann); ?mid 990's (Wormald)":
+        ([('c.930–75', [L]), ('?mid-990s', [WM])], []),
+    "c.900–c.1000, c. ?960 (Liebermann); ?mid 990's (Wormald)":
+        ([('c.900–c.1000, c. ?960', [L]), ('?mid-990s', [WM])], []),
+    "c.910–c.1060 (Liebermann); ?mid-990's (Wormald)":
+        ([('c.910–c.1060', [L]), ('?mid-990s', [WM])], []),
+    '944–c.1060 (Liebermann); c.945 (Wormald)':
+        ([('944–c.1060', [L]), ('c.945', [WM])], []),
+    "c.920–c.1050 (Liebermann); early 900's (Wormald)":
+        ([('c.920–c.1050', [L]), ('early 900s', [WM])], []),
+    'c.1020–c.1060 (Liebermann); c.990–c.1020 (Wormald)':
+        ([('c.1020–c.1060', [L]), ('c.990–c.1020', [WM])], []),
+    'c.970 (1030?)–c.1060 (Liebermann); 1008–1020 (Wormald); no clear indication of date; probably not early (Whitelock)':
+        ([('c.970 (1030?)–c.1060', [L]), ('1008–1020', [WM]), ('no clear indication of date; probably not early', [W])], []),
+    '960 (c.1025?)–1060 (Liebermann); ?Bath Abbey (Wormald)':
+        ([('960 (c.1025?)–1060', [L])], [('?Bath Abbey', [WM])]),
+    '960 (c.1025)–1060 (Liebermann); ?Bath Abbey (Wormald)':
+        ([('960 (c.1025)–1060', [L])], [('?Bath Abbey', [WM])]),
+    '1002–23 (Whitelock); 1006–8 (Rabin); c.1029–c.1060 (Liebermann)':
+        ([('1002–23', [W]), ('1006–8', [RB]), ('c.1029–c.1060', [L])], []),
+    '1002–23 (Whitelock); 1006–8 (Rabin); c.920–954 (Liebermann)':
+        ([('1002–23', [W]), ('1006–8', [RB]), ('c.920–954', [L])], []),
+    '1002–23 (Whitelock); 1006–8 (Rabin); c.920–c.970 (Liebermann)':
+        ([('1002–23', [W]), ('1006–8', [RB]), ('c.920–c.970', [L])], []),
+    '1002–23 (Whitelock); 1006–8 (Rabin); c.950–c.1050 (Liebermann)':
+        ([('1002–23', [W]), ('1006–8', [RB]), ('c.950–c.1050', [L])], []),
+    '1002–23 (Whitelock); 1006–8 (Rabin); c.1030–c.1050 (Liebermann); before 1014 (Wormald)':
+        ([('1002–23', [W]), ('1006–8', [RB]), ('c.1030–c.1050', [L]), ('before 1014', [WM])], []),
+    '1028–1070 (Liebermann); before 1014 (Wormald); 1006–8 (Rabin)':
+        ([('1028–1070', [L]), ('before 1014', [WM]), ('1006–8', [RB])], []),
+    'c.1015–c.1050 (Liebermann); post–1023 (Wormald); ?1014 (Rabin)':
+        ([('c.1015–c.1050', [L]), ('after 1023', [WM]), ('?1014', [RB])], []),
+    'c.1050 (Liebermann); before 959 (Wormald)':
+        ([('c.1050', [L]), ('before 959', [WM])], []),
+    'c.980–c.1050 (Liebermann); ?960 (Wormald)':
+        ([('c.980–c.1050', [L]), ('?960', [WM])], []),
+    'c.1000–1050 (Liebermann); ??(Whitelock); 1002x1008 (Rabin)':
+        ([('c.1000–1050', [L]), ('1002×1008', [RB])], []),
+    'c.950–1050 (Liebermann)':
+        ([('c.950–1050', [L])], []),
+    'c.890–c.940 (Liebermann)':
+        ([('c.890–c.940', [L])], []),
+    'c.945, the work excerpted (Wormald)':
+        ([('c.945, the work excerpted', [WM])], []),
+    '1066–75 (Robertson); Dec. 1066–75 (Liebermann); 1066/7, within months of the coronation (Wormald); London':
+        ([('1066–75', [R]), ('Dec. 1066–75', [L]), ('1066/7, within months of the coronation', [WM])], [('London', [])]),
+    '1068–77 (Robertson); 1067–77 (Liebermann)':
+        ([('1068–77', [R]), ('1067–77', [L])], []),
+    '1070–76, perhaps April 1072 (Liebermann, Robertson); after 1070 (Wormald)':
+        ([('1070–76, perhaps April 1072', [L, R]), ('after 1070', [WM])], []),
+    "compiled 1110–35 (Liebermann, Robertson); late in William I's reign (Wormald)":
+        ([('compiled 1110–35', [L, R]), ("late in William I's reign", [WM])], []),
+    'c.1210 (Liebermann, Robertson)':
+        ([('c.1210', [L, R])], []),
+    '1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)':
+        ([('1090–1135', [L, R]), ('mid-12th century', [WM])], []),
+    '5 August 1100 (Liebermann); Westminster (Robertson)':
+        ([('5 August 1100', [L])], [('Westminster', [R])]),
+    'Christmas 1100; 1100–3 (Liebermann); Westminster (Robertson)':
+        ([('Christmas 1100', []), ('1100–3', [L])], [('Westminster', [R])]),
+    '1109–11 (Liebermann); 1108 (Wormald); Reading (Robertson)':
+        ([('1109–11', [L]), ('1108', [WM])], [('Reading', [R])]),
+    "1115–33, probably 1131 (Liebermann); very late in Henry I's reign (Wormald); Westminster (Robertson)":
+        ([('1115–33, probably 1131', [L]), ("very late in Henry I's reign", [WM])], [('Westminster', [R])]),
+})
+
 KNOWN = {W, WM, R, A, RB, K, L}
 
 

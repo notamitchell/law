@@ -24,9 +24,16 @@ scripts:
         const lawAbb = code.anchor ? `<a href="${root}lawAbb.html#${encodeURIComponent(code.anchor)}" title="On the list of law codes and manuscripts">${esc(code.code)}</a>` : esc(code.code);
         const bits = [
             `<span class="code-abbr">${lawAbb}</span>`,
-            code.reign ? esc(code.reign.replace(/^\[|\]$/g, '')) : '',
-            code.date ? 'Promulgated: ' + esc(code.date) : ''
+            code.reign ? esc(code.reign.replace(/^\[|\]$/g, '')) : ''
         ].filter(Boolean);
+        // "Suggested dates: 601–4 (Liebermann) · 597–616, perhaps 602–3 (Whitelock) · …": the first is the
+        // database's own date (the most likely), a little heavier; then the places, as on the clause pages.
+        const who = names => names.length ? ' (' + names.map(esc).join(', ') + ')' : '';
+        const dateLine = (label, items, main) => items && items.length ? `<p><span class="clause-dates__label">${label}: </span>${
+            items.map(([text, names], k) => (main && !k ? `<span class="clause-dates__main">${esc(text)}</span>` : esc(text)) + who(names))
+                .join('<span class="clause-dates__sep"> · </span>')}</p>` : '';
+        const dates = code.dates ? dateLine('Suggested dates', code.dates, true) + dateLine('Place', code.places)
+            : (code.date ? `<p><span class="clause-dates__label">Suggested dates: </span>${esc(code.date)}</p>` : '');
         const sources = ['Liebermann'].concat(code.editors || []);
         // Column headings name the source most of this code's clauses use;
         // a clause from another source carries its own small label.
@@ -51,6 +58,7 @@ scripts:
             <header class="entry-header">
                 <h1>${esc(code.name)}</h1>
                 <div class="meta">${bits.map(b => `<span>${b}</span>`).join('')}</div>
+                ${dates ? `<div class="clause-dates">${dates}</div>` : ''}
             </header>
             <p>${mine.length} clauses.
                ${code.manuscripts && code.manuscripts.length ? `Manuscripts: ${code.manuscripts.map(esc).join(', ')}.` : ''}
