@@ -258,6 +258,9 @@ def language(text):
 # ---------------------------------------------------------------- notes
 CHECK = re.compile(r'^K: (checked against|corrected against|added from) Gesetze I p\. ?([^\s;(]+)(?: \(was: ".*?"\))?(?=;|$)')
 ROB = re.compile(r'^([TU]): corrected against Robertson p\. ?([^\s;(]+) \((?:was: ".*?"|(?:"[^"]*" → "[^"]*"(?:; )?)+)\)(?=;|$)')
+# The check of October 2026 against the printed editions (spreadsheet stage lcheck_stage.py):
+# 'K: corrected against Gesetze I p. 10, October 2026 (was “tithte”, now “tihte”)'
+OCT = re.compile(r'^(K|L|M|N|AF|O|T|U|W): corrected against (Gesetze I+|Attenborough|Robertson|Oliver|Jurasinski and Oliver|Whitelock) p\. ?([^\s,;]+), October 2026 \(was “(.*?)”, now “(.*?)”\)(?=;|$)')
 MINOR = re.compile(r'^(?:[RE]: was "[^"]*"|T: ‘[^’]*’ corrected to ‘[^’]*’[^;]*|C: was [^;]*?(?= \(|;|$)(?: \([^)]*\))?|I: Gesetze page added|'
                    r'K: (?:a |the )?(?:double space|doubled|stray|spacing|line break)[^.;]*?(?:removed|corrected)\.?)(?=;|$|\s)')
 
@@ -294,6 +297,11 @@ def split_notes(text):
     for p in pieces:
         p = p.strip()
         while p:
+            m = OCT.match(p)
+            if m:
+                checks.append(('oct2026', m.group(1), m.groups()[1:]))
+                p = p[m.end():].lstrip('; ').strip()
+                continue
             m = CHECK.match(p)
             if m:
                 verb = {'checked against': 'checked against', 'corrected against': 'corrected against',
@@ -743,6 +751,13 @@ def build(row, today, source_name, refs):
         if (who, verb, page) in done:
             continue
         done.add((who, verb, page))
+        if who == 'oct2026':
+            col, (book, page, was, now) = verb, page
+            what = {'K': 'Liebermann’s text', 'N': 'Liebermann’s text', 'AF': 'Liebermann’s text', 'O': 'Liebermann’s Latin text',
+                    'L': 'Liebermann’s German translation', 'M': 'The English of Liebermann’s German',
+                    'T': 'The modern editor’s text', 'U': 'The modern editor’s translation', 'W': 'The second translation'}[col]
+            w('      <change when="2026-10" type="checked">%s corrected against %s, p. %s: “%s” → “%s”.</change>' % (what, esc(book), esc(page), esc(was), esc(now)))
+            continue
         if who == 'liebermann':
             what = {'checked against': 'checked against', 'corrected against': 'checked and corrected against',
                     'added from': 'added from'}[verb]

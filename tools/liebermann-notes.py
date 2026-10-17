@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
-Adds Liebermann's notes to the clause files in oe-laws/ from the workbook
-"Liebermann_notes_<code>.xlsx" (first made for Æthelberht, October 2026).
+Adds the editors' notes to the clause files in oe-laws/ from the main spreadsheet
+(OE_Laws_Database - Updated by Claude.xlsx), sheets "Texts with note markers",
+"Liebermann notes" and (from October 2026) "Attenborough notes".
 
-    python3 tools/liebermann-notes.py Liebermann_notes_Abt.xlsx --dry-run
-    python3 tools/liebermann-notes.py Liebermann_notes_Abt.xlsx
+    python3 tools/liebermann-notes.py "OE_Laws_Database - Updated by Claude.xlsx" --dry-run
+    python3 tools/liebermann-notes.py "OE_Laws_Database - Updated by Claude.xlsx"
 
 Needs Python 3, openpyxl and lxml (pip install openpyxl lxml).
 
@@ -12,24 +13,31 @@ Run it AFTER tools/laws-from-database.py: that script rebuilds the clause files
 from the main spreadsheet and so takes the notes out again. Running this one
 twice does no harm: it first removes the notes it added before.
 
-Two kinds of note (see docs/OE-LAWS.md, "Liebermann's notes"):
+The notes (see docs/OE-LAWS.md, "Liebermann's notes" and "Attenborough's notes"):
 
-- textual notes on his Old English (or Latin) text, printed at the foot of the
-  column in Gesetze I;
-- his Erklärungen, the notes to his German translation, printed in Gesetze III.
+- Liebermann's textual notes on his Old English (or Latin) texts, printed at the
+  foot of the page in Gesetze I (columns K, N, AF, O of the spreadsheet);
+- his Erklärungen, the notes to his German translation, printed in Gesetze III
+  (column L), and his own footnotes to the German in Gesetze I;
+- Attenborough's notes (The Laws of the Earliest English Kings, 1922): the notes
+  at the back of the book, keyed to numbers in his translation (column W, or U
+  where he is the modern editor), and his footnotes to his Old English text
+  (column T where he is the editor; otherwise his text is not in the database
+  and the note gives the word it stands on).
 
-In the workbook, sheet "Texts with note markers" holds columns K and L of the
-main spreadsheet with each note number in curly brackets after its word:
-{4}, {*}, {+1} (a number Liebermann forgot to print and supplies in vol. III),
-{2/4} (number 2, misprinted 4 in vol. I). Taking out the brackets must give
-the texts now in the clause file exactly; if not, the file is left alone and
-the difference reported. Sheet "Liebermann notes" holds the notes, one line per
-note per clause row: German as printed, Claude's English, remarks.
+Sheet "Texts with note markers" holds the texts with each note number in curly
+brackets after its word: {4}, {*}, {+1} (a number Liebermann forgot to print and
+supplies in vol. III), {2/4} (number 2, misprinted 4 in vol. I). Columns: A row,
+B clause file, C code, D clause, E Gesetze I page, F column K, G column L,
+H remarks, I column N, J column AF, K column O, L column T, M column U, N column W.
+Taking out the brackets must give the texts now in the clause file exactly; if
+not, the file is left alone and the difference reported.
 
-In the clause file the numbers become empty pointers inside the text, which
-the plain view of the clause page ignores:
+In the clause file the numbers become empty pointers inside the text, which the
+plain view of the clause page ignores:
 
     <ab type="liebermannText" …>Godes<ptr type="liebermannNote" n="4" target="#Abt_1-a.lnote.oe.4"/> feoh …</ab>
+    <ab type="translation" source="#attenborough" …>… a number<ptr type="editorNote" n="1" target="#Hl_5-a.anote.1"/> of …</ab>
 
 and the notes go at the end of the clause:
 
@@ -38,9 +46,17 @@ and the notes go at the end of the clause:
       <seg type="original" xml:lang="de">Godes feoh ⁊ ci <hi rend="italic">in Capitalschrift</hi></seg>
       <seg type="translation" xml:lang="en" source="#claude">Godes feoh ⁊ ci in capital letters</seg>
     </note>
+    <note type="editorNote" subtype="endnote" xml:id="Hl_5-a.anote.1" n="1" source="#attenborough">
+      <bibl><biblScope unit="page">179</biblScope></bibl>
+      <seg type="original" xml:lang="en">For the ‘number’ we may possibly compare Wiht. cap. 21.</seg>
+    </note>
 
-subtype "textual" (vol. I, on the Old English), "erklaerung" (vol. III, on the
-German) or "translationFootnote" (vol. I's own footnote to the German).
+Liebermann's subtypes: "textual" (vol. I, on his texts), "erklaerung" (vol. III, on
+the German) or "translationFootnote" (vol. I's own footnote to the German).
+Attenborough's: "endnote" (at the back of the book) or "footnote" (on his Old
+English text; with <label> = the word it stands on, when his text is not given).
+A note on the clause as a whole, with no number in the text, has rend="wholeClause"
+(and n="0" when it has no number at all).
 """
 import argparse
 import os
@@ -57,15 +73,23 @@ LAWS = os.path.join(ROOT, 'oe-laws')
 TEI = 'http://www.tei-c.org/ns/1.0'
 XML = 'http://www.w3.org/XML/1998/namespace'
 NS = {'t': TEI}
-MARK = re.compile(r'\{(\+?)([0-9a-z*]+)(?:/([0-9*]+))?\}')
+MARK = re.compile(r'\{(\+?)([0-9a-z*†‡§]+)(?:/([0-9*]+))?\}')
 
 ERKL_BIBL = ('<bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, '
              '<title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: '
              '<title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> '
              '(Halle: Niemeyer, 1916)</bibl>')
 CLAUDE_BIBL = ('<bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>')
+ATT_BIBL = ('<bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> '
+            '(Cambridge: Cambridge University Press, 1922)</bibl>')
 RESP = ('<respStmt><resp>Transcription and English translation of Liebermann’s notes</resp>'
         '<name ref="#claude">Claude</name></respStmt>')
+RESP_ATT = ('<respStmt><resp>Transcription of Attenborough’s notes</resp>'
+            '<name ref="#claude">Claude</name></respStmt>')
+
+# Columns of "Texts with note markers" (0-based) -> the spreadsheet column they copy
+TEXT_COLS = {5: 'K', 6: 'L', 8: 'N', 9: 'AF', 10: 'O', 11: 'T', 12: 'U', 13: 'W'}
+LIEB_TEXT = ('K', 'N', 'AF', 'O')
 
 
 def tags_to_tei(s):
@@ -77,8 +101,8 @@ def tags_to_tei(s):
     return s
 
 
-def note_id(slug, kind, n):
-    return '%s.lnote.%s.%s' % (slug, kind, 'star' if n == '*' else n)
+def safe(n):
+    return {'*': 'star', '**': 'star2', '***': 'star3', '†': 'dagger', '††': 'dagger2', '‡': 'ddagger'}.get(n, re.sub(r'[^A-Za-z0-9]', '_', n))
 
 
 def read_workbook(path):
@@ -87,15 +111,23 @@ def read_workbook(path):
     for row in list(wb['Texts with note markers'].iter_rows(values_only=True))[1:]:
         if not row or not row[1]:
             continue
-        texts[row[1]] = {'K': row[5] or '', 'L': row[6] or '', 'page': row[4]}
+        texts[row[1]] = {col: (row[i] or '') for i, col in TEXT_COLS.items() if i < len(row) and row[i]}
     notes = {}
     for row in list(wb['Liebermann notes'].iter_rows(values_only=True))[1:]:
         if not row or not row[1]:
             continue
-        slug, on, where, n, printed, de, en, remark = row[1], row[4] or '', row[5] or '', str(row[6]), row[7] or '', row[8], row[9], row[10] or ''
-        kind = 'oe' if on.startswith('Old English') else ('de1' if where.startswith('Gesetze I p.') else 'de')
-        notes.setdefault(slug, []).append(dict(kind=kind, n=n, where=where, printed=printed, de=de, en=en,
-                                               remark=remark, whole=on.endswith('whole clause')))
+        slug, on, where, n, printed, de, en, remark = row[1], row[4] or '', row[5] or '', str(row[6] if row[6] is not None else ''), row[7] or '', row[8], row[9], row[10] or ''
+        kind = 'oe' if not on.startswith('German') else ('de1' if where.startswith('Gesetze I p.') else 'de')
+        notes.setdefault(slug, []).append(dict(owner='liebermann', kind=kind, n=n or '0', where=where, printed=printed,
+                                               de=de, en=en, remark=remark, whole=on.endswith('whole clause')))
+    if 'Attenborough notes' in wb.sheetnames:
+        for row in list(wb['Attenborough notes'].iter_rows(values_only=True))[1:]:
+            if not row or not row[1]:
+                continue
+            slug, on, where, n, word, text, remark = row[1], row[4] or '', row[5] or '', str(row[6] if row[6] is not None else ''), row[7] or '', row[8], row[9] or ''
+            notes.setdefault(slug, []).append(dict(owner='attenborough', kind='footnote' if on.startswith('Old English') else 'endnote',
+                                                   n=n or '0', where=where, word=word, text=text, remark=remark,
+                                                   whole=on.endswith('whole clause'), col=re.search(r'\((\w+)\)', on).group(1) if re.search(r'\((\w+)\)', on) else ''))
     return texts, notes
 
 
@@ -117,34 +149,31 @@ def char_positions(xml):
     return ends
 
 
-def insert_markers(ab, marked, slug, kind):
-    """Put <ptr> elements into <ab> where the {n} codes stand in `marked`. Returns an error or None."""
-    current = re.sub(r'\s+', ' ', ab.xpath('string()')).strip()
-    plain = MARK.sub('', marked)
-    if plain != current:
-        return 'text differs from the clause file:\n   file:     %s\n   workbook: %s' % (current, plain)
-    # offsets of the markers in the plain text
+def plain_of(ab):
+    return re.sub(r'\s+', ' ', ab.xpath('string()')).strip()
+
+
+def insert_markers(ab, marked, ptr_type, target_for):
+    """Put <ptr> elements into <ab> where the {n} codes stand in `marked`.
+    target_for(n) gives the note id for number n. Returns the new element."""
     found, offset, last = [], 0, 0
     for m in MARK.finditer(marked):
         offset += m.start() - last
         last = m.end()
         found.append((offset, m.group(1) == '+', m.group(2), m.group(3)))
     if not found:
-        return None
+        return ab
     head = (ab.text or '')
     body = etree.tostring(ab, encoding='unicode', with_tail=False)
     start = body.index('>') + 1
     end = body.rindex('</')
     inner = body[start:end]
-    # leading whitespace in the file is not in `current`
-    lead = len(head) - len(head.lstrip())
+    lead = len(head) - len(head.lstrip())     # leading whitespace in the file is not in the plain text
     ends = char_positions(inner)
     pieces, prev = [], 0
     for off, supplied, n, printed in found:
-        pos = 0 if off == 0 else ends[lead + off - 1]
-        if off == 0:
-            pos = lead and ends[lead - 1] or 0
-        attrs = 'type="liebermannNote" n="%s" target="#%s"' % (n, note_id(slug, kind if n != '*' or kind == 'oe' else 'de1', n))
+        pos = (lead and ends[lead - 1] or 0) if off == 0 else ends[lead + off - 1]
+        attrs = 'type="%s" n="%s" target="#%s"' % (ptr_type, n, target_for(n))
         if supplied:
             attrs += ' rend="supplied"'
         elif printed:
@@ -156,11 +185,11 @@ def insert_markers(ab, marked, slug, kind):
     new = etree.fromstring(body[:start] + ''.join(pieces) + body[end:])
     ab.getparent().replace(ab, new)
     new.tail = ab.tail
-    return None
+    return new
 
 
 def strip_old(doc):
-    for p in doc.xpath('//t:ptr[@type="liebermannNote"]', namespaces=NS):
+    for p in doc.xpath('//t:ptr[@type="liebermannNote" or @type="editorNote"]', namespaces=NS):
         parent = p.getparent()
         prev = p.getprevious()
         if p.tail:
@@ -169,28 +198,57 @@ def strip_old(doc):
             else:
                 parent.text = (parent.text or '') + p.tail
         parent.remove(p)
-    for n in doc.xpath('//t:note[@type="liebermannNote"]', namespaces=NS):
+    for n in doc.xpath('//t:note[@type="liebermannNote" or @type="editorNote"]', namespaces=NS):
         n.getparent().remove(n)
 
 
-def note_xml(slug, note):
-    kind = note['kind']
-    nid = note_id(slug, kind, note['n'])
-    m = re.search(r'Gesetze (I+) p\. (\d+)(?:, col\. (\d))?', note['where'])
-    vol = {'I': '1', 'III': '3'}[m.group(1)] if m else ''
-    subtype = {'oe': 'textual', 'de': 'erklaerung', 'de1': 'translationFootnote'}[kind]
-    source = '#liebermann-erkl' if kind == 'de' else '#liebermann'
-    attrs = 'type="liebermannNote" subtype="%s" xml:id="%s" n="%s" source="%s"' % (subtype, nid, note['n'], source)
-    if note['whole']:
-        attrs += ' rend="wholeClause"'
-    if note['printed'] and note['printed'] not in ('not printed', 'no number'):
-        attrs += ' rend="printed-as-%s"' % note['printed']
-    out = ['<note xmlns="%s" %s>' % (TEI, attrs)]
-    if m:
-        out.append('<bibl><biblScope unit="volume">%s</biblScope><biblScope unit="page">%s</biblScope>%s</bibl>'
-                   % (vol, m.group(2), '<biblScope unit="column">%s</biblScope>' % m.group(3) if m.group(3) else ''))
-    out.append('<seg type="original" xml:lang="de">%s</seg>' % tags_to_tei(note['de']))
-    out.append('<seg type="translation" xml:lang="en" source="#claude">%s</seg>' % tags_to_tei(note['en']))
+def assign_ids(slug, notes):
+    """Give every note an xml:id, unique in the clause (a page's footnote numbers can repeat on the next page)."""
+    seen = set()
+    for note in notes:
+        if note['owner'] == 'liebermann':
+            base = '%s.lnote.%s.%s' % (slug, note['kind'], safe(note['n']))
+        else:
+            base = '%s.%s.%s.%s' % (slug, note['owner'][:3] + 'note', 'fn' if note['kind'] == 'footnote' else 'n', safe(note['n']))
+        nid, k = base, 2
+        while nid in seen:
+            nid, k = '%s-%d' % (base, k), k + 1
+        seen.add(nid)
+        note['id'] = nid
+
+
+def note_xml(note):
+    if note['owner'] == 'liebermann':
+        kind = note['kind']
+        m = re.search(r'Gesetze (I+) p\. (\d+)(?:, col\. (\d))?', note['where'])
+        vol = {'I': '1', 'III': '3'}[m.group(1)] if m else ''
+        subtype = {'oe': 'textual', 'de': 'erklaerung', 'de1': 'translationFootnote'}[kind]
+        source = '#liebermann-erkl' if kind == 'de' else '#liebermann'
+        attrs = 'type="liebermannNote" subtype="%s" xml:id="%s" n="%s" source="%s"' % (subtype, note['id'], note['n'], source)
+        rend = []
+        if note['whole']:
+            rend.append('wholeClause')
+        if note['printed'] and note['printed'] not in ('not printed', 'no number', 'not in the text'):
+            rend.append('printed-as-%s' % note['printed'])
+        if rend:
+            attrs += ' rend="%s"' % ' '.join(rend)
+        out = ['<note xmlns="%s" %s>' % (TEI, attrs)]
+        if m:
+            out.append('<bibl><biblScope unit="volume">%s</biblScope><biblScope unit="page">%s</biblScope>%s</bibl>'
+                       % (vol, m.group(2), '<biblScope unit="column">%s</biblScope>' % m.group(3) if m.group(3) else ''))
+        out.append('<seg type="original" xml:lang="de">%s</seg>' % tags_to_tei(note['de']))
+        out.append('<seg type="translation" xml:lang="en" source="#claude">%s</seg>' % tags_to_tei(note['en']))
+    else:
+        attrs = 'type="editorNote" subtype="%s" xml:id="%s" n="%s" source="#%s"' % (note['kind'], note['id'], note['n'], note['owner'])
+        if note['whole']:
+            attrs += ' rend="wholeClause"'
+        out = ['<note xmlns="%s" %s>' % (TEI, attrs)]
+        m = re.search(r'p\. (\d+)', note['where'])
+        if m:
+            out.append('<bibl><biblScope unit="page">%s</biblScope></bibl>' % m.group(1))
+        if note.get('word'):
+            out.append('<label>%s</label>' % tags_to_tei(note['word']))
+        out.append('<seg type="original" xml:lang="en">%s</seg>' % tags_to_tei(note['text']))
     if note['remark']:
         out.append('<note type="remark" resp="#claude">%s</note>' % tags_to_tei(note['remark']))
     out.append('</note>')
@@ -206,17 +264,37 @@ def _append(parent, el):
     parent.append(el)
 
 
-def ensure_sources(doc, has_erkl):
+def ensure_sources(doc, notes):
     lb = doc.find('.//t:listBibl[@type="sources"]', NS)
     ids = {b.get('{%s}id' % XML) for b in lb.findall('t:bibl', NS)}
     wrap = '<listBibl xmlns="%s">%s</listBibl>'
-    if has_erkl and 'liebermann-erkl' not in ids:
+    lieb = [n for n in notes if n['owner'] == 'liebermann']
+    if any(n['kind'] == 'de' for n in lieb) and 'liebermann-erkl' not in ids:
         _append(lb, etree.fromstring(wrap % (TEI, ERKL_BIBL))[0])
-    if 'claude' not in ids:
+    if lieb and 'claude' not in ids:
         _append(lb, etree.fromstring(wrap % (TEI, CLAUDE_BIBL))[0])
+    if any(n['owner'] == 'attenborough' for n in notes) and 'attenborough' not in ids:
+        _append(lb, etree.fromstring(wrap % (TEI, ATT_BIBL))[0])
     ts = doc.find('.//t:titleStmt', NS)
-    if not any('Liebermann’s notes' in (r.findtext('t:resp', namespaces=NS) or '') for r in ts.findall('t:respStmt', NS)):
+    resps = [r.findtext('t:resp', namespaces=NS) or '' for r in ts.findall('t:respStmt', NS)]
+    if lieb and not any('Liebermann’s notes' in r for r in resps):
         _append(ts, etree.fromstring('<titleStmt xmlns="%s">%s</titleStmt>' % (TEI, RESP))[0])
+    if any(n['owner'] == 'attenborough' for n in notes) and not any('Attenborough’s notes' in r for r in resps):
+        _append(ts, etree.fromstring('<titleStmt xmlns="%s">%s</titleStmt>' % (TEI, RESP_ATT))[0])
+
+
+def candidates(div, col, used):
+    """The <ab> elements a column of the spreadsheet can be, in the clause file."""
+    abs_ = [a for a in div.findall('t:ab', NS) if id(a) not in used]
+    src = lambda a: (a.get('source') or '').lstrip('#')
+    lang = lambda a: a.get('{%s}lang' % XML) or ''
+    if col in LIEB_TEXT:
+        return [a for a in abs_ if a.get('type') == 'liebermannText']
+    if col == 'L':
+        return [a for a in abs_ if a.get('type') == 'translation' and lang(a) == 'de']
+    if col == 'T':
+        return [a for a in abs_ if a.get('type') == 'editionText']
+    return [a for a in abs_ if a.get('type') == 'translation' and lang(a) != 'de' and src(a) != 'claude']
 
 
 def main():
@@ -231,36 +309,55 @@ def main():
         if not os.path.exists(path):
             problems.append('%s: no clause file' % slug)
             continue
-        parser = etree.XMLParser(remove_blank_text=False)
-        doc = etree.parse(path, parser)
+        doc = etree.parse(path, etree.XMLParser(remove_blank_text=False))
         strip_old(doc)
         div = doc.find('.//t:div[@type="clause"]', NS)
-        t = texts.get(slug, {})
-        ok = True
-        for col, xp, kind in (('K', 't:ab[@type="liebermannText"]', 'oe'),
-                              ('L', 't:ab[@type="translation"][@xml:lang="de"]', 'de')):
-            if not t.get(col):
+        ns_ = notes.get(slug, [])
+        assign_ids(slug, ns_)
+        # number -> note ids, per group of columns, in order
+        queues = {}
+        for note in ns_:
+            if note['whole']:
                 continue
-            ab = div.find(xp, {'t': TEI, 'xml': XML}) if col == 'K' else div.xpath(xp, namespaces={'t': TEI})
-            if isinstance(ab, list):
-                ab = ab[0] if ab else None
-            if ab is None:
-                problems.append('%s: no text for column %s' % (slug, col))
+            if note['owner'] == 'liebermann':
+                key = 'lieb-text' if note['kind'] == 'oe' else 'lieb-de'
+            else:
+                key = note['owner'] + ('-T' if note['kind'] == 'footnote' else '-tr')
+            queues.setdefault((key, note['n']), []).append(note['id'])
+
+        def target(key):
+            def f(n):
+                q = queues.get((key, n))
+                if not q:
+                    problems.append('%s: no note %s for marker {%s}' % (slug, key, n))
+                    return 'missing'
+                return q.pop(0) if len(q) > 1 else q[0]
+            return f
+        ok, used = True, set()
+        for col, marked in texts.get(slug, {}).items():
+            if not MARK.search(marked):
+                continue
+            want = MARK.sub('', marked).strip()
+            cands = [a for a in candidates(div, col, used) if plain_of(a) == want]
+            if not cands:
+                problems.append('%s, column %s: no text in the clause file matches:\n   workbook: %s' % (slug, col, want))
                 ok = False
                 continue
-            err = insert_markers(ab, t[col], slug, kind)
-            if err:
-                problems.append('%s, column %s: %s' % (slug, col, err))
-                ok = False
+            if col in LIEB_TEXT:
+                key, ptr = 'lieb-text', 'liebermannNote'
+            elif col == 'L':
+                key, ptr = 'lieb-de', 'liebermannNote'
+            else:
+                key, ptr = 'attenborough' + ('-T' if col == 'T' else '-tr'), 'editorNote'
+            new = insert_markers(cands[0], marked, ptr, target(key))
+            used.add(id(new))
         if not ok:
             continue
-        ns_ = notes.get(slug, [])
-        # notes go after the texts and any notes already there
         for note in ns_:
-            div.append(note_xml(slug, note))
-        ensure_sources(doc, any(n['kind'] == 'de' for n in ns_))
+            div.append(note_xml(note))
+        ensure_sources(doc, ns_)
         out = etree.tostring(doc, encoding='unicode')
-        out = re.sub(r'\s*(<note type="liebermannNote")', r'\n        \1', out)
+        out = re.sub(r'\s*(<note type="(?:liebermannNote|editorNote)")', r'\n        \1', out)
         out = re.sub(r'</note>\s*</div>', '</note>\n      </div>', out)
         out = '<?xml version="1.0" encoding="UTF-8"?>\n' + out + '\n'
         if not args.dry_run:

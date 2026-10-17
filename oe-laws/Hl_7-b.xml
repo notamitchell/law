@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922), p. <biblScope unit="page">19</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -50,7 +52,7 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 140 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 140 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 10.</change>
     </revisionDesc>
   </teiHeader>
@@ -62,8 +64,9 @@
         <ab type="editionText" xml:lang="ang" source="#oliver" n="5.1" corresp="#wit-h">Gif he þ<hi rend="italic">æt</hi> ne mæge, læte án ⁊ fo se agend to.</ab>
         <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If he is not able [to do] that, let him relinquish [it], and the owner take possession.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If he cannot do that, he shall surrender it, and the owner shall take possession [of it].</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">wenn er das nicht kann, lasse er [es] los und greife der Eigenthümer zu.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">wenn er das nicht kann, lasse<ptr type="liebermannNote" n="4" target="#Hl_7-b.lnote.de.4"/> er [es] los und greife der Eigenthümer zu.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">if he cannot do that, let him let [it] go and let the owner take hold of it.</ab>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Hl_7-b.lnote.de.4" n="4" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">20</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">‘give up, relax’ Toller 613 Sp. 1 letzte Z., <hi rend="italic">vgl.</hi> dort <hi rend="italic">onlætan.</hi> — Jedenfalls ist Strafe und wohl auch Busse hinzuzudenken, da mit Diebstahl der Satz begann</seg><seg type="translation" xml:lang="en" source="#claude">‘give up, relax’ Toller 613 col. 1 last l., <hi rend="italic">cf.</hi> there <hi rend="italic">onlætan.</hi> — In any case a penalty, and probably compensation too, is to be understood in addition, since the clause began with theft</seg></note>
       </div>
     </body>
   </text>
