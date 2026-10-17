@@ -14,6 +14,7 @@
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -35,6 +36,7 @@
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="jurasinski-and-oliver" type="study">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021)</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -56,7 +58,7 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 189 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 189 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 14.</change>
     </revisionDesc>
   </teiHeader>
@@ -69,13 +71,16 @@
         <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">If a person kills a man in the act of theft, let him lie without <hi rend="italic">wergild</hi>.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If anyone slays a man in the act of thieving, no wergeld shall be paid for him.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-h">If anyone kill a man who is in the act of thieving, he is to lie without wergild.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn man einen Menschen bei [dessen] Diebstahl erschlägt, so liege dieser [todt], ohne Wergeld.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn<ptr type="liebermannNote" n="1" target="#Wi_25.lnote.de.1"/> man einen Menschen<ptr type="liebermannNote" n="2" target="#Wi_25.lnote.de.2"/> bei [dessen] Diebstahl erschlägt, so liege dieser [todt], ohne Wergeld.<ptr type="liebermannNote" n="3" target="#Wi_25.lnote.de.3"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If someone slays a man in the act of [his] theft, let the latter lie [dead] without wergeld.</ab>
         <note type="comparison" source="#wormald-mel" n="102"><label>textual borrowings</label> <ref target="clause:Ine_12">Ine 12</ref> <quote>finishes with a set of clauses on the killing or capture of thieves with no obvious rationale in this setting save as textual borrowings from Ine</quote></note>
         <note type="comparison" source="#wormald-mel" n="102"><label>textual borrowings</label> <ref target="clause:Ine_20">Ine 20</ref> <quote>finishes with a set of clauses on the killing or capture of thieves with no obvious rationale in this setting save as textual borrowings from Ine</quote></note>
         <note type="comparison" source="#wormald-mel" n="103"><label>cf.</label> <ref target="clause:Ine_12">Ine 12</ref> <quote>and cf. also (e.g.) ... Wi 25/Ine 12</quote></note>
         <note type="comparison" source="#jurasinski-and-oliver" n="49"><label>echoes (per Wormald; doubted)</label> <ref target="clause:Ine_12">Ine 12</ref> <quote>How Ine §12 and Wihtred §20 [L25] entered this list is unclear, as they seem at odds with one another and show no similarities in phrasing.</quote></note>
         <note type="comparedBy" source="#wormald-ppmel" n="127"><ref target="clause:Ine_28">Ine 28</ref></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Wi_25.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">29</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Die letzten Sätze bilden Einen Abschnitt: über handhaften Diebstahl; die bisherigen Sätze betrafen dagegen die <hi rend="italic">tiht</hi>: erst nachträglich gegen nicht Ertappte erhobene Klage</seg><seg type="translation" xml:lang="en" source="#claude">The last clauses form a single section: on theft where the thief is caught in the act; the preceding clauses, by contrast, concerned the <hi rend="italic">tiht</hi>: a charge brought only afterwards against those not caught in the act</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Wi_25.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">29</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">leud</hi> ist nicht etwa in ein ‘Laie’ bedeutendes Wort zu emendieren oder so zu verstehen, sondern ist die archaische Form für <hi rend="italic">leod</hi> ‘[freier] Mann’</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">leud</hi> is not to be emended into a word meaning ‘layman’, nor so understood, but is the archaic form of <hi rend="italic">leod</hi> ‘[free] man’</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Wi_25.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">29</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Bei handhaftem Diebstahl (<hi rend="italic">s. d. Gl</hi> 11a) kann man den Dieb buss- und straflos töten; <hi rend="italic">vgl. Gl</hi> Wergeld 17a</seg><seg type="translation" xml:lang="en" source="#claude">In theft where the thief is caught in the act (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 11a) one may kill the thief without compensation or penalty; cf. <hi rend="italic">Gl</hi> Wergeld 17a</seg></note>
       </div>
     </body>
   </text>

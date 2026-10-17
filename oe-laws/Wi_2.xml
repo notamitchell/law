@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -31,6 +33,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">397</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -52,7 +55,7 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 158 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 158 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 12.</change>
     </revisionDesc>
   </teiHeader>
@@ -63,13 +66,15 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-h">Ciricean mundbyrd sie L scll' swa cinges.</ab>
         <ab type="editionText" xml:lang="ang" source="#oliver" n="2" corresp="#wit-h">Ciricean mundbyrd sie L scƚƚ, swa cinges.</ab>
         <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">[Violation of the] protection of the church shall be 50 shillings, as the king’s.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">The <hi rend="italic">mundbyrd</hi> of the Church shall be 50 shillings like the king’s.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">The <hi rend="italic">mundbyrd<ptr type="editorNote" n="1" target="#Wi_2.attnote.n.1"/></hi> of the Church shall be 50 shillings like the king’s.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-h">The [breach of] the Church’s protection is to be 50 shillings like the king’s.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Der Kirche Sonderschutz sei [von seinem Verletzer ihr zu büssen mit] 50 Schll., wie der des Königs.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Der Kirche Sonderschutz sei [von seinem Verletzer ihr zu büssen mit] 50 Schll., wie der des Königs.<ptr type="liebermannNote" n="1" target="#Wi_2.lnote.de.1"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">The Church’s special protection is to be [compensated to it by the one who violates it with] 50 shillings, like the king’s.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:Grith_6">Grið 6</ref>; <ref target="clause:Grith_8">Grið 8</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="340"><ref target="clause:VIIIAtr_5-1">VIII Atr 5.1</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="281"><ref target="clause:Grith_6">Grið 6–8</ref></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Wi_2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">26</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. Gl</hi> Königsschutz 2a. 5a; Kirchenfrieden 1a. b. 4a. b. 6. Mir scheint vor 2 <hi rend="italic">Cristes</hi> aus Grið 6. 8 ergänzbar, m. a. W. nur Canterburys Kathedrale so hoch privilegiert. Denn selbst das 10. Jh. stellte doch nur die Hauptkirche oder den Raum innerhalb der Kirchenwände, nicht die ganze Kirche in höchsten Frieden; freilich gehen allgemeine Phrasen seit Æthelred und Cnut predigend weiter. — Die Stelle scheint benutzt in den Worten <hi rend="italic">defensio sit sicut regum</hi> der Fälschung <hi rend="italic">o.</hi> S. 25 Z. 1</seg><seg type="translation" xml:lang="en" source="#claude">See <hi rend="italic">Gl</hi> Königsschutz 2a. 5a; Kirchenfrieden 1a. b. 4a. b. 6. It seems to me that <hi rend="italic">Cristes</hi> can be supplied before 2 from Grið 6. 8; in other words, that only Canterbury’s cathedral was so highly privileged. For even the 10th cent. placed only the principal church, or the space within the church walls, not the whole church, under the highest peace; general phrases, it is true, go further in a homiletic vein from Æthelred and Cnut onwards. — The passage seems to have been used in the words <hi rend="italic">defensio sit sicut regum</hi> of the forgery <hi rend="italic">above</hi> p. 25 l. 1</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="Wi_2.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">180</biblScope></bibl><seg type="original" xml:lang="en">See note on Abt. cap. 8.</seg></note>
       </div>
     </body>
   </text>

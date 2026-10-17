@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922), p. <biblScope unit="page">25</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">397</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -50,7 +53,7 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 159 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 159 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 12.</change>
     </revisionDesc>
   </teiHeader>
@@ -58,14 +61,18 @@
     <body>
       <div type="clause" n="3">
         <head><ref type="lawCode" target="law:Wi">Wi</ref> 3</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-h">Unrihthæmde mæn to rihtum life mid synna hreowe tofon oþþe of ciricean genaman ascadene sien.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-h">Unrihthæmde mæn to rihtum life mid synna hreowe tofon oþþe of ciricean genaman<ptr type="liebermannNote" n="**" target="#Wi_3.lnote.oe.star2"/> ascadene sien.</ab>
         <ab type="editionText" xml:lang="ang" source="#oliver" n="3" corresp="#wit-h">Unrihthæmde mæn to rihtum life mid synna hreowe tofon oþþe of ciricean ge[m]a[n]an ascadene sien.</ab>
         <ab type="translation" xml:lang="en" source="#oliver" corresp="#wit-h">Men in an unlawful union shall take up a just life with repentance of sins, or be separated from the community of the church.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">Men living in illicit unions shall turn to a righteous life repenting of their sins, or they shall be excluded from the communion of the Church.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-h">Men living in illicit cohabitation are to turn to a right life with repentance of sins, or to be excluded from the fellowship of the Church.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Ungesetzlich beweibte Männer sollen ein rechtliches Leben unter Sündenbereuung beginnen oder aus Kirchengemeinschaft ausgeschieden sein.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Ungesetzlich<ptr type="liebermannNote" n="1" target="#Wi_3.lnote.de.1"/> beweibte Männer sollen ein rechtliches Leben unter Sündenbereuung beginnen<ptr type="liebermannNote" n="2" target="#Wi_3.lnote.de.2"/> oder aus Kirchengemeinschaft ausgeschieden sein.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Men living in unlawful marriage are to begin a lawful life with repentance of sins or be separated from the communion of the Church.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VAtr_10">V Atr 10</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Wi_3.lnote.oe.star2" n="**" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">12</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">bessere</hi> gemanan</seg><seg type="translation" xml:lang="en" source="#claude">read gemanan</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Wi_3.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">26</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Lesung <hi rend="italic">-hæmede</hi> war ungenau; mit <hi rend="italic">mæn</hi> kann es nicht éin Wort bilden; solch Kompositum lautet <hi rend="italic">hæmedceorl</hi>. — Der Satz bedeutet die Einführung des vom vorigen Erzbischof gegebenen Synodalkanon ins weltliche Recht; <hi rend="italic">s. Gl</hi> Konkubinat 3. Dieser ist gemeint, die Heirat gegen kanonisches Eheverbot (<hi rend="italic">s. d. Gl</hi>), das Kebsweib (<hi rend="italic">s. d. Gl</hi>), aber nicht allein Ehebruch (<hi rend="italic">s. d. Gl</hi> 2c ff.), auch nicht gelegentlicher ausserehelicher Beischlaf, den nicht Exkommunikation, halbes Wergeld oder gar Landesverweisung traf, den auch der Pfarrer nicht ‘erlauben’ konnte: <hi rend="italic">si quis fornicaverit cum virgine I anno poeniteat</hi>; Theodor <hi rend="italic">Poenit.</hi> I 2, 1. Exkommunikation durch einen Englischen Bischof für <hi rend="italic">inlicitum coniugium</hi> kennt Beda III 22 schon zu a. 653. Nur im Ggs. zum Konkubinat erklärt sich die Bildung des Kompositums <hi rend="italic"><hi rend="spaced">riht</hi>gesamhiwan</hi> ‘Eheleute’; <hi rend="italic">s. Wb</hi></seg><seg type="translation" xml:lang="en" source="#claude">The reading <hi rend="italic">-hæmede</hi> was inaccurate; it cannot form a single word with <hi rend="italic">mæn</hi>; such a compound takes the form <hi rend="italic">hæmedceorl</hi>. — The clause signifies the introduction into secular law of the synodal canon issued by the previous archbishop; see <hi rend="italic">Gl</hi> Konkubinat 3. It is this that is meant, marriage contrary to the canonical prohibition of marriage (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi>), the concubine (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi>), but not adultery alone (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 2c ff.), nor occasional extramarital intercourse, which was not punished by excommunication, half wergild or even banishment, and which the parish priest could not ‘permit’ either: <hi rend="italic">si quis fornicaverit cum virgine I anno poeniteat</hi>; Theodor <hi rend="italic">Poenit.</hi> I 2, 1. Excommunication by an English bishop for <hi rend="italic">inlicitum coniugium</hi> is known to Beda III 22 as early as a. 653. Only in contrast to concubinage can the formation of the compound <hi rend="italic">rihtgesamhiwan</hi> ‘married couple’ be explained; see <hi rend="italic">Wb</hi></seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Wi_3.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">26</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl.</hi> die Verlöbnisformel <hi rend="italic">weddian to wife ⁊ to rihtlife</hi>; Wif 6. — Die Emendation <hi rend="italic">gemanan</hi> aus 4, 1</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf.</hi> the betrothal formula <hi rend="italic">weddian to wife ⁊ to rihtlife</hi>; Wif 6. — The emendation <hi rend="italic">gemanan</hi> is from 4, 1</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Wi_3.attnote.fn.3" n="3" source="#attenborough"><bibl><biblScope unit="page">24</biblScope></bibl><label>gemanan</label><seg type="original" xml:lang="en">em. Wilkins. <hi rend="italic">genaman</hi>. H.</seg></note>
       </div>
     </body>
   </text>
