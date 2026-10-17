@@ -2,13 +2,13 @@
 {%- comment -%}
   The whole site is eLiebermann. Each section has its own logo: Laws
   "lawcodes database", Guides "guide to the Gesetze", Dictionary
-  "legal dictionary"; Home, About and Make a suggestion show the name
+  "legal dictionary"; Home, Editorial Principles, About and Make a suggestion show the name
   alone.
 {%- endcomment -%}
 {%- assign brand = "eLiebermann" -%}
 {%- if page.section == "home" -%}
 {%- assign tagline = "A Database of Early English Laws and Legal Language, after Felix Liebermann" -%}
-{%- elsif page.section == "about" or page.section == "contribute" -%}
+{%- elsif page.section == "about" or page.section == "contribute" or page.section == "editorial" -%}
 {%- assign tagline = "A Database of Early English Laws and Legal Language, after Felix Liebermann" -%}
 {%- elsif page.section == "laws" -%}
 {%- assign tagline = "The Lawcodes of Early England: Texts and Translations" -%}
@@ -65,7 +65,7 @@
         <a class="site-brand" href="{{ root }}abbreviations.html">
             <img class="site-lockup" src="{{ root }}images/eliebermann-guides.svg" alt="eLiebermann: guide to the Gesetze" width="511" height="112">
         </a>
-        {%- elsif page.section == "about" or page.section == "contribute" %}
+        {%- elsif page.section == "about" or page.section == "contribute" or page.section == "editorial" %}
         <a class="site-brand" href="{{ root }}index.html">
             <img class="site-lockup site-lockup--name" src="{{ root }}images/eliebermann.svg" alt="eLiebermann" width="510" height="74">
         </a>
