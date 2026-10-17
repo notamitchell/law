@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">26</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">218</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,22 +50,32 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 313 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 313 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 26.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 26.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="74">
         <head>Ine Rb 74</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="74" corresp="#wit-h">CXVIII. Be ðam þe ðeowwealh frigne mon ofslea.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="74" corresp="#wit-e">CXVIII. Be ðon ðe ðeowwealh frione mon ófslea.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="74" corresp="#wit-q">Si seruus Wáliscus liberum occidat.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="74" corresp="#wit-h">CXVIII. Be ðam<ptr type="liebermannNote" n="5" target="#Rubrics-Ine_74.lnote.oe.5"/> þe ðeowwealh frigne mon<ptr type="liebermannNote" n="1" target="#Rubrics-Ine_74.lnote.oe.1"/> ofslea.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="74" corresp="#wit-e">CXVIII. Be ðon<ptr type="liebermannNote" n="11" target="#Rubrics-Ine_74.lnote.oe.11"/> ðe ðeowwealh frione<ptr type="liebermannNote" n="12" target="#Rubrics-Ine_74.lnote.oe.12"/> mon ófslea.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="74" corresp="#wit-g-prol">CXVIII. Be þan ðe þeofwealh<ptr type="liebermannNote" n="1" target="#Rubrics-Ine_74.lnote.oe.1-2"/> freonne m<hi rend="italic">an<ptr type="liebermannNote" n="2" target="#Rubrics-Ine_74.lnote.oe.2"/></hi> ofslea.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="74" corresp="#wit-q">Si<ptr type="liebermannNote" n="17" target="#Rubrics-Ine_74.lnote.oe.17"/> seruus Wáliscus liberum occidat.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">CXVIII Be ðon ðe ðeowwealh frione mon ófslea</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-b">Be þam þe ðeowwalh frigne man ofslea</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning when a Welsh slave kills a freeman</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Darüber, dass ein [Welscher?] Unfreier einen freien Mann erschlägt.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Darüber, dass ein [Welscher<ptr type="liebermannNote" n="1" target="#Rubrics-Ine_74.lnote.de.1"/>?] Unfreier einen freien Mann erschlägt.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Concerning a [Welsh?] unfree man slaying a free man.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_74.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">26</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_74.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">26</biblScope></bibl><seg type="original" xml:lang="de">m̃</seg><seg type="translation" xml:lang="en" source="#claude">m̃</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_74.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">26</biblScope></bibl><seg type="original" xml:lang="de">þonne þe þeofwealh freone forslyhð <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">þonne þe þeofwealh freone forslyhð So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_74.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">26</biblScope></bibl><seg type="original" xml:lang="de">frigne man <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">frigne man Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_74.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">27</biblScope></bibl><seg type="original" xml:lang="de">De servo Walisco Anglicum occidente <hi rend="italic">Hk Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">De servo Walisco Anglicum occidente Hk Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_74.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">27</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_74.lnote.oe.1-2" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">27</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Ine_74.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">42</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Die Lesart ‘Diebsknecht’ in G So ist falsch, als dem Text widerstreitend. Ein Kompositum <hi rend="italic">þeowwealh</hi>, das also im 11. Jh. richtig erschien, mit bisherigen Editoren, analog zu <hi rend="italic">þeowmennen</hi>, anzusetzen, scheint nicht nötig; es fehlt Sweet, Toller; und 23, 3 ist [vor zu ergänzendem <hi rend="italic">Wealh</hi>] <hi rend="italic">þeowne</hi> als Adjektiv dekliniert. Da in Ine 74 der Erschlagene Engländer heisst, ist unter <hi rend="italic">Wealh</hi> wie in 23, 3. 33 ‘Walliser’ gemeint. So gegen Price’s Text Thorpe’s Index, auch Rieger (<hi rend="italic">Altsächs. Leseb.</hi>), Sweet (<hi rend="italic">Ags. reader</hi> 291). Aber Schmid 673 hält ‘Strafhöriger’ daneben für möglich und Kluge (<hi rend="italic">Agsä. Leseb.</hi> 187) übs. ‘Leibeigener’. Letzterer Auslegung folgt der Rubrikator um 900, da er als Gegner nicht wie Ine einen Engländer, sondern einen Freien setzt. Die Bed. ‘Knecht’ hatte in den 2 Jahrhunderten seit Ine sich gefestigt</seg><seg type="translation" xml:lang="en" source="#claude">The reading ‘thief-slave’ in G So is wrong, as it conflicts with the text. It does not seem necessary to posit, with previous editors and on the analogy of <hi rend="italic">þeowmennen</hi>, a compound <hi rend="italic">þeowwealh</hi>, which thus appeared correct in the 11th cent.; it is absent from Sweet and Toller; and in 23, 3 <hi rend="italic">þeowne</hi> [before <hi rend="italic">Wealh</hi>, which is to be supplied] is declined as an adjective. Since in Ine 74 the slain man is called an Englishman, <hi rend="italic">Wealh</hi> means ‘Welshman’ here, as in 23, 3. 33. So, against Price’s text, Thorpe’s Index, also Rieger (<hi rend="italic">Altsächs. Leseb.</hi>) and Sweet (<hi rend="italic">Ags. reader</hi> 291). But Schmid 673 considers ‘penal slave’ possible as well, and Kluge (<hi rend="italic">Agsä. Leseb.</hi> 187) translates ‘serf’. The latter interpretation is followed by the rubricator c. 900, since he makes the other party not an Englishman, as Ine does, but a freeman. The meaning ‘servant’ had become established in the 2 centuries since Ine</seg></note>
       </div>
     </body>
   </text>

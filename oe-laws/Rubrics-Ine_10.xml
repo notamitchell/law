@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">20</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">200</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,8 +50,9 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 249 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 249 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 20.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 20.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -58,12 +61,15 @@
         <head>Ine Rb 10</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10" corresp="#wit-h">LIIII. Be reaflace.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10" corresp="#wit-e">LIIII. Be reaflace.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="10" corresp="#wit-q">De robaria.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10" corresp="#wit-g-prol">LIIII. Be reaflace.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="10" corresp="#wit-q">De robaria.<ptr type="liebermannNote" n="15" target="#Rubrics-Ine_10.lnote.oe.15"/></ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">LIIII Be reaflace</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-b">Be reaflace</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning robbery</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Vom Raub.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Vom Raub.<ptr type="liebermannNote" n="1" target="#Rubrics-Ine_10.lnote.de.1"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of robbery.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_10.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">21</biblScope></bibl><seg type="original" xml:lang="de">roboraria <hi rend="italic">Hk;</hi> et violenta captione <hi rend="italic">fügt zu Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">roboraria Hk; et violenta captione added by Br</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Ine_10.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">41</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Q spät. Rez. ergänzt aus seinem Texte die Rb</seg><seg type="translation" xml:lang="en" source="#claude">The later recension of Q supplies the Rb from its own text</seg></note>
       </div>
     </body>
   </text>

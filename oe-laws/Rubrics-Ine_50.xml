@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">24</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">210</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,22 +50,29 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 289 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 289 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 24.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 24.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="50">
         <head>Ine Rb 50</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="50" corresp="#wit-h">XCIIII. Be gesiþcundes monnes geþinge.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="50" corresp="#wit-e">XCIIII. Be gesiðcundes monnes geþinge.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="50" corresp="#wit-q">De compositione syðcundi hominis, id est nobilis.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="50" corresp="#wit-h">XCIIII. Be gesiþcundes monnes<ptr type="liebermannNote" n="2" target="#Rubrics-Ine_50.lnote.oe.2"/> geþinge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="50" corresp="#wit-e">XCIIII. Be gesiðcundes<ptr type="liebermannNote" n="8" target="#Rubrics-Ine_50.lnote.oe.8"/> monnes geþinge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="50" corresp="#wit-g-prol">XCIIII. Be gesiðcundes mannes geðinge.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="50" corresp="#wit-q">De compositione syðcundi hominis, id<ptr type="liebermannNote" n="15" target="#Rubrics-Ine_50.lnote.oe.15"/> est nobilis.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">XCIIII Be gesiðcundes monnes geþinge</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-b">Be gesiðcundes mannes geðinge</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning a nobly born man’s legal settlement</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Von Abmachung [über Strafgeld] durch jemand aus Gefolgsstande.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Von<ptr type="liebermannNote" n="1" target="#Rubrics-Ine_50.lnote.de.1"/> Abmachung [über Strafgeld] durch jemand aus Gefolgsstande.<ptr type="liebermannNote" n="2" target="#Rubrics-Ine_50.lnote.de.2"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of a settlement [concerning a fine] by someone of the retainer class.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_50.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">24</biblScope></bibl><seg type="original" xml:lang="de">siþc. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">siþc. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_50.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">25</biblScope></bibl><seg type="original" xml:lang="de">i. e. n. <hi rend="italic">fehlt Hk Br, wo aber</hi> cum rege vel aldremanno [alderm. <hi rend="italic">Br</hi>] regis pro familia sua vel cum domino suo pro servo vel libero <hi rend="italic">zugefügt</hi></seg><seg type="translation" xml:lang="en" source="#claude">i. e. n. lacking in Hk Br, where, however, cum rege vel aldremanno [alderm. Br] regis pro familia sua vel cum domino suo pro servo vel libero is added</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_50.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">25</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Ine_50.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">42</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Q spät. Rez. vervollständigt die Rb aus seinem Text</seg><seg type="translation" xml:lang="en" source="#claude">The later recension of Q completes the Rb from its own text</seg><note type="remark" resp="#claude">On several rubrics: Ine Rb 40. 43f. 46—50. 54. 56f. 58. 61f. 67. 70f.</note></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Ine_50.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">42</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Gefolgsadel 6. Das Wort ward laut Q um 1110 nicht mehr sofort verstanden</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Gefolgsadel 6. As Q shows, the word was no longer immediately understood c. 1110</seg></note>
       </div>
     </body>
   </text>

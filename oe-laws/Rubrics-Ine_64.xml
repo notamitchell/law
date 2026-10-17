@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">26</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">214</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,22 +50,32 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 303 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 303 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 26.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 26.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="64">
         <head>Ine Rb 64</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="64" corresp="#wit-h">CVIII. Be þon ðe hæfð XX hida londes.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="64" corresp="#wit-e">CVIII. Be þon þe hæfð XX hida londes.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="64" corresp="#wit-q">De eo qui habet XX hidas.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="64" corresp="#wit-h">CVIII. Be þon<ptr type="liebermannNote" n="2" target="#Rubrics-Ine_64.lnote.oe.2"/> ðe hæfð XX hida londes.<ptr type="liebermannNote" n="1" target="#Rubrics-Ine_64.lnote.oe.1"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="64" corresp="#wit-e">CVIII.<ptr type="liebermannNote" n="2" target="#Rubrics-Ine_64.lnote.oe.2-2"/> Be<ptr type="liebermannNote" n="*" target="#Rubrics-Ine_64.lnote.oe.star"/> þon þe hæfð XX hida londes.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="64" corresp="#wit-g-prol">CVIII. Be ðan þe hæfð XX hida landes.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="64" corresp="#wit-q">De<ptr type="liebermannNote" n="2" target="#Rubrics-Ine_64.lnote.oe.2-3"/><ptr type="liebermannNote" n="3" target="#Rubrics-Ine_64.lnote.oe.3"/> eo qui habet XX hidas.<ptr type="liebermannNote" n="4" target="#Rubrics-Ine_64.lnote.oe.4"/></ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">C\V/III Be þon þe hæfð .XX. hida londes</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-b">Be ðam þe hafð XX hida</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning one who has twenty hides of land</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Über den, welcher 20 Hiden Landes hat.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Über den, welcher 20 Hiden Landes hat.<ptr type="liebermannNote" n="1" target="#Rubrics-Ine_64.lnote.de.1"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Concerning one who has 20 hides of land.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_64.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">26</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">corr. aus</hi> CIII <hi rend="italic">E</hi></seg><seg type="translation" xml:lang="en" source="#claude">corrected from CIII E</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_64.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">26</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Statt Rb.</hi> 64—67: Be lond[land- <hi rend="italic">Ld</hi>]hæbbendum <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">Instead of Rb. 64—67: Be lond[land- Ld]hæbbendum So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_64.lnote.oe.2-2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">27</biblScope></bibl><seg type="original" xml:lang="de">De habente XX h. et mutante mansionem <hi rend="italic">Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">De habente XX h. et mutante mansionem Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_64.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">27</biblScope></bibl><seg type="original" xml:lang="de">Et de <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">Et de T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_64.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">27</biblScope></bibl><seg type="original" xml:lang="de">vel X vel III <hi rend="italic">fügt zu statt Rb.</hi> 65. 66 <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">vel X vel III added by Hk instead of Rb. 65. 66</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_64.lnote.oe.2-3" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">27</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">geänd. in</hi> þam</seg><seg type="translation" xml:lang="en" source="#claude">altered to þam</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_64.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">27</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Ine_64.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">42</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Für 64—67: ‘Von Landbesitzern’ Ld So</seg><seg type="translation" xml:lang="en" source="#claude">For 64—67: ‘Of landholders’ Ld So</seg></note>
       </div>
     </body>
   </text>

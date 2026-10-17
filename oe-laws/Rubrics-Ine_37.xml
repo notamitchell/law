@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">22</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">208</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,23 +50,31 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 276 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 276 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 22.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 22.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="37">
         <head>Ine Rb 37</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="37" corresp="#wit-h">LXXXI. Be cierlisces monnes æt þyfðe betogenisse.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="37" corresp="#wit-e">LXXXI. Be cirlisces monnes ontygnesse æt ðiefðe.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="37" corresp="#wit-q">De culpa cyrlisci hominis suspecti de furto.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="37" corresp="#wit-h">LXXXI. Be cierlisces monnes<ptr type="liebermannNote" n="2" target="#Rubrics-Ine_37.lnote.oe.2"/> æt þyfðe betogenisse.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="37" corresp="#wit-e">LXXXI. Be cirlisces<ptr type="liebermannNote" n="14" target="#Rubrics-Ine_37.lnote.oe.14"/> monnes ontygnesse<ptr type="liebermannNote" n="15" target="#Rubrics-Ine_37.lnote.oe.15"/> æt ðiefðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="37" corresp="#wit-g-prol">LXXXI. Be cyrlisces mannes ontygnesse æt ðyfðe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="37" corresp="#wit-q">De<ptr type="liebermannNote" n="28" target="#Rubrics-Ine_37.lnote.oe.28"/> culpa cyrlisci hominis suspecti<ptr type="liebermannNote" n="29" target="#Rubrics-Ine_37.lnote.oe.29"/> de furto.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">LXXXI Be cirlisces monnes ontygnesse æt ðiefðe</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-b">Be ceorlisces monnes betogenesse</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning the accusation of a <hi rend="italic">ceorl</hi>-rank man of theft</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-b">Concerning the accusation of a <hi rend="italic">ceorl</hi></ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Von Bescholtenheit eines gemeinfreien Mannes beim Diebstahl.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Von Bescholtenheit<ptr type="liebermannNote" n="1" target="#Rubrics-Ine_37.lnote.de.1"/> eines gemeinfreien Mannes beim Diebstahl.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of a common freeman’s being of ill repute in a theft.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_37.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">22</biblScope></bibl><seg type="original" xml:lang="de">cyrl. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">cyrl. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_37.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">22</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="spaced">betogennysse</hi> <hi rend="italic">ohne</hi> æt ð. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">betogennysse</hi> without æt ð. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_37.lnote.oe.28" n="28" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">23</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Dm T</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Dm T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_37.lnote.oe.29" n="29" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">23</biblScope></bibl><seg type="original" xml:lang="de">de f. s. <hi rend="italic">Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">de f. s. Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Ine_37.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">23</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Ine_37.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">42</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Nach Price’s Fehler <hi rend="italic">ontynesse</hi> denkt Toller s. v. <hi rend="italic">ontynnesse</hi> an ‘discovery’. ‘Bezichtigung’ (Schmid), etymologisch entsprechend, passt nicht laut Textes, der vom früher <hi rend="italic">oft betygen</hi> also nunmehr schon Bescholtenen (<hi rend="italic">s. d. Gl</hi>) spricht. H freilich verbindet das Abstraktum mit jetzigem Diebstahl. H B modernisiert das Wort</seg><seg type="translation" xml:lang="en" source="#claude">Following Price’s erroneous <hi rend="italic">ontynesse</hi>, Toller s. v. <hi rend="italic">ontynnesse</hi> thinks of ‘discovery’. ‘Accusation’ (Schmid), though etymologically corresponding, does not fit the text, which speaks of a man <hi rend="italic">oft betygen</hi> in the past and thus by now already of ill repute (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi>). H, it is true, connects the abstract noun with a present theft. H B modernises the word</seg></note>
       </div>
     </body>
   </text>
