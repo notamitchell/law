@@ -40,6 +40,13 @@ it read "s. d." as "see d". (They were all mistakes.)
 The other kinds of cross-reference (s. o. "siehe oben", s. u. "siehe unten",
 s. n., s. z., s. d. u., s. d. n.) are counted in the report but not linked.
 
+With --compare it makes the "Compare" links instead, from Liebermann's
+"vgl." / "Vgl." (vergleiche, compare): the headword or comma-separated
+headwords straight after it ("vgl. heafod n. 3", "Vgl. soinus, sonet"),
+matched in the same way, become <xr type="compare">…</xr>, listed after the
+See links. A pointer to a section ("n. 3", "n. II") after the word is not
+part of the headword. Report: docs/compare-report.md.
+
 Writes docs/see-also-report.md (use --no-report to skip). Needs only Python 3.
 Safe to run again.
 """
@@ -56,9 +63,12 @@ SIEHE = {'siehe': 'after', 'sieheDort': 'before'}      # kinds that are linked, 
 OTHER = ('sieheOben', 'sieheUnten', 'sieheNummer', 'sieheZu', 'sieheDN', 'sieheDortUnter')
 
 ABBR = re.compile(r'(?P<open><hi rend="italic">)?<ref type="abbreviation" target="gram:(?P<kind>siehe\w*)"><abbr>(?P<text>[^<]*)</abbr></ref>')
+XRTYPE = 'see'
+COMPARE = False
 ORTH = re.compile(r'<orth>(.*?)</orth>', re.S)
 SCRAP = re.compile(r'(<dictScrap type="liebermann">)(.*?)(</dictScrap>)', re.S)
 SEE = re.compile(r'^[ \t]*<xr type="see"><ref target="entry:([^"]*)">.*?</ref></xr>[ \t]*\n', re.M)
+SEE_ANY = re.compile(r'^[ \t]*<xr type="see"><ref target="entry:[^"]*">.*?</ref></xr>[ \t]*\n', re.M)
 WORD = re.compile(r"[^\s,;:|(){}\[\]*_«»⟦⟧<>=+/]+")
 
 
@@ -378,6 +388,8 @@ def targets(scrap, entry_id, index):
         after = ''
         if SIEHE[kind] == 'after':
             tail = scrap[m.end():]
+            if COMPARE and tail.startswith('.'):
+                tail = tail[1:]                 # "vgl</abbr></ref>.": the full stop is outside the link
             if tail.startswith('</hi>'):
                 tail = tail[5:]
             node = re.split(r'<', tail, maxsplit=1)[0]
@@ -398,6 +410,13 @@ def targets(scrap, entry_id, index):
                 toks = toks[1:]     # "hereditaria terra, bocland": terra belongs to the headword
         # "s. ure n. II", "s. riht II": which of several entries
         plain_after = html.unescape(re.sub(r'<[^>]+>', '', after))
+        if COMPARE:
+            # "vgl. heafod n. 3", "vgl. oð (n. I C) þæt": a pointer to a section is not part of the word
+            sec = re.match(r'\s*\(?n\.\s*[IVX\d][\w ,]*\)?', plain_after)
+            if sec and toks:
+                words.right = re.sub(r'^\s*\(?n\.\s*[IVX\d][\w ,]*\)?', '', html.unescape(re.sub(r'<[^>]+>', '', words.right)))
+                nm2 = re.match(r'\s*\(?n\.\s*(I{1,3}|IV|V)\b', plain_after)
+                plain_after = (' ' + nm2.group(1)) if nm2 else ''
         nm = re.match(r'\s*(?:n\.\s*)?(I{1,3}|IV|V)\b(?!\s*\))', plain_after)
         numeral = nm.group(1) if nm else ''
         if nm:
@@ -411,9 +430,18 @@ def targets(scrap, entry_id, index):
         elif phrase:
             found.append((kind, ' '.join(toks), [], 'part of a longer phrase, not a single headword'))
             toks = []
+        if COMPARE and toks:
+            right = html.unescape(re.sub(r'<[^>]+>', '', words.right))
+            if re.match(r'\s+\d', right) or right.startswith('('):
+                # "vgl. Ine 75": a citation; "ma(a)nsceaða": the word goes on
+                found.append((kind, ' '.join(toks), [], 'a citation or a longer word, not a headword'))
+                toks = []
         for i, tok in enumerate(toks):
             word = clean(html.unescape(tok))
             if not word:
+                continue
+            if COMPARE and len(word.strip('-')) <= 1:
+                found.append((kind, word, [], 'a single letter, not a headword'))
                 continue
             ids, why, shown = resolve(word, index, lang, numeral if i == len(toks) - 1 else '', heads, entry_id)
             if any((entry_id, x) in SKIP for x in ids):
@@ -438,7 +466,7 @@ def labels(final, index):
 
 
 def block_labels_ok(text, final, index):
-    shown = re.findall(r'<xr type="see"><ref target="entry:[^"]*">(.*?)</ref></xr>', text)
+    shown = re.findall(r'<xr type="%s"><ref target="entry:[^"]*">(.*?)</ref></xr>' % XRTYPE, text)
     return shown == labels(final, index)
 
 
@@ -462,8 +490,29 @@ def update(path, index, write):
     final = want + [x for x in kept if x not in want]
     if final == existing and block_labels_ok(text, final, index):
         return False, [], [], found
-    block = ''.join('        <xr type="see"><ref target="entry:%s">%s</ref></xr>\n' % (i, l) for i, l in zip(final, labels(final, index)))
+    block = ''.join('        <xr type="%s"><ref target="entry:%s">%s</ref></xr>\n' % (XRTYPE, i, l) for i, l in zip(final, labels(final, index)))
     new = SEE.sub('', text)
+    if COMPARE:
+        # after the See links, before the rest
+        sees = list(SEE_ANY.finditer(new))
+        first_xr = re.search(r'^[ \t]*<xr (?!type="see")', new[sees[-1].end():] if sees else new, re.M)
+        if first_xr and sees:
+            at = sees[-1].end() + first_xr.start()
+            new = new[:at] + block + new[at:]
+            first_xr = None
+        elif sees:
+            at = sees[-1].end(); new = new[:at] + block + new[at:]; first_xr = None
+        elif first_xr:
+            new = new[:first_xr.start()] + block + new[first_xr.start():]; first_xr = None
+        else:
+            end = re.search(r'^[ \t]*</entry>', new, re.M)
+            if not end:
+                return False, [], [], found
+            new = new[:end.start()] + block + new[end.start():]
+        if write:
+            with open(path, 'w', encoding='utf-8', newline='') as f:
+                f.write(new)
+        return True, [x for x in want if x not in existing], removed, found
     first_xr = re.search(r'^[ \t]*<xr ', new, re.M)
     if first_xr:
         new = new[:first_xr.start()] + block + new[first_xr.start():]
@@ -486,7 +535,15 @@ def main():
     ap.add_argument('--report', default='docs/see-also-report.md')
     ap.add_argument('--no-report', action='store_true')
     ap.add_argument('--show', action='store_true', help='print what was found in each entry')
+    ap.add_argument('--compare', action='store_true', help='make the Compare links from "vgl." instead of the See links')
     args = ap.parse_args()
+    if args.compare:
+        global SIEHE, OTHER, ABBR, SEE, XRTYPE, COMPARE
+        SIEHE, OTHER, XRTYPE, COMPARE = {'vergleiche': 'after'}, (), 'compare', True
+        ABBR = re.compile(r'(?P<open><hi rend="italic">)?<ref type="abbreviation" target="gram:(?P<kind>vergleiche)"><abbr>(?P<text>[^<]*)</abbr></ref>')
+        SEE = re.compile(r'^[ \t]*<xr type="compare"><ref target="entry:([^"]*)">.*?</ref></xr>[ \t]*\n', re.M)
+        if args.report == 'docs/see-also-report.md':
+            args.report = 'docs/compare-report.md'
 
     index = Index(args.entries)
     paths = [os.path.join(args.entries, i + '.xml') for i in args.only] if args.only else sorted(glob.glob(os.path.join(args.entries, '*.xml')))
@@ -520,7 +577,7 @@ def main():
 
     if not args.no_report and not args.only:
         with open(args.report, 'w', encoding='utf-8', newline='\n') as f:
-            f.write('# See also links made from Liebermann\'s cross-references\n\n')
+            f.write('# %s links made from Liebermann\'s cross-references\n\n' % ('Compare' if COMPARE else 'See also'))
             f.write('Made by `tools/see-also.py`. It is replaced each time the tool runs.\n\n```\n%s\n```\n\n' % '\n'.join(lines))
             for key, items in sorted(problems.items(), key=lambda kv: -len(kv[1])):
                 if 'this entry' in key:
@@ -529,7 +586,7 @@ def main():
                 shown = items
                 for entry_id, word, why in shown:
                     extra = why.split(': ', 1)[1] if ': ' in why else ''
-                    f.write('- **%s**: s. %s%s\n' % (entry_id, word, ' (' + extra + ')' if extra else ''))
+                    f.write('- **%s**: %s %s%s\n' % (entry_id, 'vgl.' if COMPARE else 's.', word, ' (' + extra + ')' if extra else ''))
                 if len(shown) < len(items):
                     f.write('- … and %d more\n' % (len(items) - len(shown)))
                 f.write('\n')
