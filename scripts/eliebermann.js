@@ -164,7 +164,9 @@
         // law code, e.g. Wi) are linked by hand only: in running text they are mostly something else.
         (markLaw || []).filter(t => t['Link automatically'] !== 'no')
             .forEach(t => terms.push({ text: t['Gesetze Text'].trim(), anchor: t['Anchor'], type: 'law' }));
-        (markforward || []).forEach(t => terms.push({ text: t['Gesetze Text'].trim(), anchor: t['Anchor'], type: 'gram' }));
+        // "Link automatically": "roman only" (the sic mark "!") is not linked in
+        // Liebermann's German, where "!" is an ordinary exclamation mark.
+        (markforward || []).forEach(t => terms.push({ text: t['Gesetze Text'].trim(), anchor: t['Anchor'], type: 'gram', romanOnly: t['Link automatically'] === 'roman only' }));
         // Authors and works cited (data/bibliography.json). A bare name shared by
         // several works (Sweet, Thorpe) is marked "Link automatically": "no".
         (bibliography || []).filter(t => t['Link automatically'] !== 'no')
@@ -174,14 +176,21 @@
         const sorted = [...byText.values()].sort((a, b) => b.text.length - a.text.length);
         if (!sorted.length) return html;
 
-        const makeRegex = list => list.length ? new RegExp('(?<![\\p{L}\\p{N}])(' + list
-            .map(t => t.text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+'))
-            .join('|') + ')(?![\\p{L}\\p{N}])', 'gu') : null;
+        // A term that begins and ends with a letter or digit must stand as a
+        // word of its own; a sign such as "!" (sic) follows a word directly.
+        const makeRegex = list => list.length ? new RegExp('(' + list
+            .map(t => {
+                const body = t.text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+');
+                const before = /^[\p{L}\p{N}]/u.test(t.text) ? '(?<![\\p{L}\\p{N}])' : '';
+                const after = /[\p{L}\p{N}]$/u.test(t.text) ? '(?![\\p{L}\\p{N}])' : '';
+                return before + body + after;
+            })
+            .join('|') + ')', 'gu') : null;
         // Law codes and manuscript sigla are printed in roman type; italic is
         // Liebermann's German, where "Abt" means abbot, not Æthelberht.
         const allTerms = makeRegex(sorted);
         // Author names are often in italic too.
-        const italicTerms = makeRegex(sorted.filter(t => t.type === 'gram' || t.type === 'bib'));
+        const italicTerms = makeRegex(sorted.filter(t => (t.type === 'gram' && !t.romanOnly) || t.type === 'bib'));
         const lookup = text => byText.get(text.replace(/\s+/g, ' '));
 
         const container = parseHtml(html);
