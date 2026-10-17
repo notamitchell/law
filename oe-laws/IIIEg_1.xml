@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">435</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -59,20 +62,24 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 952 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 200.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 200: “Ðis is þonne seo woroldcunde gerædnes, þe ic wille, þæt man healde.” → “Ðis is þonne seo woroldcunde gerædnes, þe ic wille, þæt man healde. (expanded letters in italics: ne, æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 200.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 24: “[Ld]” → “∅”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
         <head><ref type="lawCode" target="law:IIIEg">III Eg</ref> 1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-g-a">Ðis is þon<hi rend="italic">ne</hi> seo woruldcunde gerædnes, þe ic wille, þ<hi rend="italic">æt</hi> man ealde.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-a">Ðis is þonne seo woroldcunde gerædnes, þe ic wille, þæt man healde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-g-a"><ptr type="liebermannNote" n="*" target="#IIIEg_1.lnote.oe.star"/>Ðis is þon<hi rend="italic">ne</hi> seo woruldcunde<ptr type="liebermannNote" n="1" target="#IIIEg_1.lnote.oe.1"/> gerædnes<ptr type="liebermannNote" n="2" target="#IIIEg_1.lnote.oe.2"/>, þe ic wille, þ<hi rend="italic">æt</hi> man<ptr type="liebermannNote" n="3" target="#IIIEg_1.lnote.oe.3"/> ealde.<ptr type="liebermannNote" n="4" target="#IIIEg_1.lnote.oe.4"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-a">Ðis is þon<hi rend="italic">ne</hi> seo woroldcunde gerædnes, þe ic wille, þ<hi rend="italic">æt</hi> man healde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-d">Þis is ðon<hi rend="italic">ne</hi> seo worldcunde gerædnes, þe ic wille, þ<hi rend="italic">æt</hi> man healde.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1" corresp="#wit-q">Hec est institutio secularis, quam uolo per omnia teneri.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="1" corresp="#wit-d">[Weoruldcund gerædnysse.] [Ld] Þis is ðonne seo worldcunde gerædnes þe ic wille þæt man healde.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="1" corresp="#wit-d">[Weoruldcund gerædnysse.]<ptr type="editorNote" n="2" target="#IIIEg_1.robnote.fn.2"/> Þis is ðonne seo worldcunde gerædnes þe ic wille þæt man healde.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a">Ðis is þonne seo woruldcunde gerædnes þe ic wille þæt man healde.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Dies ist nun die weltliche Verordnung, die ich will, dass man halte.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Dies<ptr type="liebermannNote" n="1" target="#IIIEg_1.lnote.de.1"/> ist nun die weltliche Verordnung, die ich will, dass man halte.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">This, then, is the secular ordinance which I will that men keep.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">My will is further that the following be observed as a secular ordinance.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">My will is further<ptr type="editorNote" n="1" target="#IIIEg_1.robnote.n.1"/> that the following be observed as a secular ordinance.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">This now is the secular ordinance which I wish to be observed.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a">This is the secular decree that I command my subjects to obey.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VAtr_1-1">V Atr 1.1</ref>; <ref target="clause:IICn_Prol">II Cn Prol.</ref></note>
@@ -81,6 +88,14 @@
         <note type="textual" source="#rabin-doml">D adds rubric Eadgares cynincges gerædnes</note>
         <note type="textual" source="#rabin-doml">healde: ealde G1</note>
         <note type="translator" source="#rabin-doml">This is the secular decree: Although it is editorial convention to divide these texts into two separate pieces of legislation, no such division is indicated in the manuscripts, where 2 Edgar continues on to 3 Edgar without a break.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_1.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">200</biblScope></bibl><seg type="original" xml:lang="de">Weoruldcund gerædnysse <hi rend="italic">Rb. Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">Weoruldcund gerædnysse rubric Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_1.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">200</biblScope></bibl><seg type="original" xml:lang="de">-nd <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-nd So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_1.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">200</biblScope></bibl><seg type="original" xml:lang="de">-esse <hi rend="italic">So;</hi> -nysse <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-esse So; -nysse Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_1.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">200</biblScope></bibl><seg type="original" xml:lang="de">mon <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">mon Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_1.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">200</biblScope></bibl><seg type="original" xml:lang="de">h <hi rend="italic">vorgesetzt G;</hi> healde <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">h prefixed G; healde So Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIIEg_1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">136</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Ebenso beginnt II Cn</seg><seg type="translation" xml:lang="en" source="#claude">II Cn begins in the same way</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIIEg_1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">303</biblScope></bibl><seg type="original" xml:lang="en">In all the MSS there is no break between this code and the preceding one. That they were promulgated at the same meeting of the king and his councillors is apparent, as Liebermann points out, from the absence of any preamble or any mention of the king’s name, and from the use of the word <hi rend="italic">þonne</hi>. A similar arrangement is found in I and II Cn. where the secular part (II Cn.) opens with almost the same formula.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IIIEg_1.robnote.fn.2" n="2" source="#robertson"><bibl><biblScope unit="page">24</biblScope></bibl><label>gerædnysse</label><seg type="original" xml:lang="en">The rubrics are found in Ld only.</seg></note>
       </div>
     </body>
   </text>
