@@ -89,7 +89,7 @@ RESP_ATT = ('<respStmt><resp>Transcription of Attenborough’s notes</resp>'
             '<name ref="#claude">Claude</name></respStmt>')
 
 # Columns of "Texts with note markers" (0-based) -> the spreadsheet column they copy
-TEXT_COLS = {5: 'K', 6: 'L', 8: 'N', 9: 'AF', 10: 'O', 11: 'T', 12: 'U', 13: 'W', 14: 'BF', 15: 'BI'}
+TEXT_COLS = {5: 'K', 6: 'L', 8: 'N', 9: 'AF', 10: 'O', 11: 'T', 12: 'U', 13: 'W', 14: 'BF', 15: 'BI', 16: 'BL'}
 LIEB_TEXT = ('K', 'N', 'AF', 'BF', 'BI', 'O')
 
 
@@ -296,6 +296,8 @@ def candidates(div, col, used):
         return [a for a in abs_ if a.get('type') == 'translation' and lang(a) == 'de']
     if col == 'T':
         return [a for a in abs_ if a.get('type') == 'editionText']
+    if col == 'BL':   # Attenborough's own text, where T is another editor's
+        return [a for a in abs_ if a.get('type') == 'editionText' and src(a) == 'attenborough']
     return [a for a in abs_ if a.get('type') == 'translation' and lang(a) != 'de' and src(a) != 'claude']
 
 
@@ -330,6 +332,13 @@ def main():
         def target(key):
             def f(n):
                 q = queues.get((key, n))
+                if not q and key == 'attenborough-tr' and n == '1':
+                    # Attenborough sometimes prints the note to a clause without its number (II As 12,
+                    # III As Inscr.): the marker {1} in his translation goes to that one unnumbered note
+                    whole = [x for x in ns_ if x['owner'] == 'attenborough' and x['kind'] == 'endnote' and x['whole']]
+                    if len(whole) == 1:
+                        whole[0]['whole'] = False
+                        return whole[0]['id']
                 if not q:
                     problems.append('%s: no note %s for marker {%s}' % (slug, key, n))
                     return 'missing'
@@ -350,7 +359,7 @@ def main():
             elif col == 'L':
                 key, ptr = 'lieb-de', 'liebermannNote'
             else:
-                key, ptr = 'attenborough' + ('-T' if col == 'T' else '-tr'), 'editorNote'
+                key, ptr = 'attenborough' + ('-T' if col in ('T', 'BL') else '-tr'), 'editorNote'
             new = insert_markers(cands[0], marked, ptr, target(key))
             used.add(doc.getpath(new))
         if not ok:

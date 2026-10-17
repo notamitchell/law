@@ -116,6 +116,10 @@ HEADERS = [
     ('liebermann’s marginal cross-references', 'vglPrinted'),
     ('liebermann’s cross-references written out', 'vglRefs'),
     ('cross-references: page in gesetze', 'vglRemark'),
+    ('edition 3 (attenborough)', 'attText'),
+    ('page number of attenborough', 'attPage'),
+    ('siglum of the manuscript attenborough prints', 'attSig'),
+    ('manuscript attenborough prints', 'attName'),
 ]
 NEEDED = ['code', 'clause', 'kText', 'german', 'english', 'nText', 'kSig', 'tSig', 'notes']
 
@@ -355,10 +359,10 @@ def read_rows(path, only=None):
                      'nSig', 'afSig', 'kSig', 'tSig', 'kName', 'nName', 'afName', 'tName', 'notes', 'passageSource',
                      'bfSig', 'bfName', 'biSig', 'biName',
                      'thirdRef', 'thirdMS', 'thirdPage', 'translatorNotes', 'rabinRef', 'rabinPage', 'rabinTextNotes', 'rabinNotes',
-                     'vglPrinted', 'vglRefs', 'vglRemark'):
+                     'vglPrinted', 'vglRefs', 'vglRemark', 'attPage', 'attSig', 'attName'):
             row[name] = get(name)
         for name in ('kText', 'german', 'english', 'nText', 'latin', 'tText', 'translation',
-                     'secondTranslation', 'supplementaryTranslation', 'afText', 'bfText', 'biText', 'thirdTranslation', 'rabinText', 'rabinTranslation'):
+                     'secondTranslation', 'supplementaryTranslation', 'afText', 'bfText', 'biText', 'thirdTranslation', 'rabinText', 'rabinTranslation', 'attText'):
             row[name + 'Xml'] = xml(name)
             row[name] = get(name)
         row['passageSourceXml'] = xml('passageSource')
@@ -642,6 +646,11 @@ def build(row, today, source_name, refs):
             return srcs.add(ident(name), name, refs[name], 'translation')
         return srcs.add('unattributed', 'Translator not recorded',
                         'Translation from the original OE Laws Database spreadsheet; the translator is not recorded', 'translation')
+
+    if row['attTextXml']:
+        # Attenborough's own Old English text (columns BL-BO), where column T is another editor's
+        a_src = srcs.add('attenborough', 'Attenborough', ATTENBOROUGH_REF, 'edition', row['attPage'])
+        texts.append(('editionText', 'ang', a_src, row['attTextXml'], '', witness(row['attSig'], row['attName'])))
 
     rabin_translation = None
     if row['rabinTextXml'] or row['rabinTranslationXml']:
