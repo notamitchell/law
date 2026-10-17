@@ -100,14 +100,22 @@ class Clauses:
         self.order = defaultdict(list)           # anchor -> clause keys in file order
         # texts in the database that have no Anchor of their own in the catalogue
         CODE_ANCHOR = {'VI Atr Lat': 'VIAtrLat'}
+        # the rubrics of Alfred and Ine: catalogued as "Af Rb" / "Ine Rb" with no
+        # anchor; cited "Af Rb 44", which is Af (the code) + "Rb 44"
+        RUBRICS = {'Af Rb': 'Af', 'Ine Rb': 'Ine'}
         for c in json.load(open(catalogue_path, encoding='utf-8')):
+            if not c['anchor'] and c.get('code') in RUBRICS:
+                c = dict(c, anchor=RUBRICS[c['code']])
+                if re.match(r'^Af Einl', c['clause']):
+                    # the rubric to the Introduction (Af El 49,6), cited "Af Rb El 49,6"
+                    c = dict(c, clause='Rb El 49.6', citationKeys=['Af Rb El 49.6'])
             if not c['anchor'] and c.get('code') in CODE_ANCHOR:
                 c = dict(c, anchor=CODE_ANCHOR[c['code']])
                 c['citationKeys'] = [c['code'].replace(' ', '') + ' ' + k[len(c['code']) + 1:] if k.startswith(c['code'] + ' ') else k for k in c['citationKeys']]
             if not c['anchor']:
                 continue
             keys = [k[len(c['anchor']) + 1:] for k in c['citationKeys']]
-            if re.match(r'^[A-Za-z]', c['clause']):
+            if re.match(r'^[A-Za-z]', c['clause']) and not c['clause'].startswith('Rb '):
                 # A clause numbered after a word, such as Alfred's Introduction
                 # ("Af El. 49,1") or a prologue ("XAtr Prol. 1"): the catalogue
                 # splits "Prol. 1" into the keys "prol" and "1", and "1" would
