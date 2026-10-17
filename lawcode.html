@@ -26,13 +26,13 @@ scripts:
             `<span class="code-abbr">${lawAbb}</span>`,
             code.reign ? esc(code.reign.replace(/^\[|\]$/g, '')) : ''
         ].filter(Boolean);
-        // "Suggested dates: 601–4 (Liebermann) · 597–616, perhaps 602–3 (Whitelock) · …": the first is the
-        // database's own date (the most likely), a little heavier; then the places, as on the clause pages.
+        // "Suggested dates: 601–4 (Liebermann) · 597–616, perhaps 602–3 (Whitelock) · …": Liebermann's first, then the
+        // others in order of publication (as the database gives them); then the places, as on the clause pages.
         const who = names => names.length ? ' (' + names.map(esc).join(', ') + ')' : '';
-        const dateLine = (label, items, main) => items && items.length ? `<p><span class="clause-dates__label">${label}: </span>${
-            items.map(([text, names], k) => (main && !k ? `<span class="clause-dates__main">${esc(text)}</span>` : esc(text)) + who(names))
+        const dateLine = (label, items) => items && items.length ? `<p><span class="clause-dates__label">${label}: </span>${
+            items.map(([text, names]) => esc(text) + who(names))
                 .join('<span class="clause-dates__sep"> · </span>')}</p>` : '';
-        const dates = code.dates ? dateLine('Suggested dates', code.dates, true) + dateLine('Place', code.places)
+        const dates = code.dates ? dateLine('Suggested dates', code.dates) + dateLine('Place', code.places)
             : (code.date ? `<p><span class="clause-dates__label">Suggested dates: </span>${esc(code.date)}</p>` : '');
         const sources = ['Liebermann'].concat(code.editors || []);
         // Column headings name the source most of this code's clauses use;

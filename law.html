@@ -559,18 +559,18 @@ scripts:
 
     // "Suggested dates: 1018 (Whitelock, Kennedy, Wormald) · …" and "Place: Oxford", each on its own line. Each
     // date or place is followed by the scholars who propose it, linked to their works at the foot of the page.
-    // The first date is the database's own (the most likely), set a little heavier.
+    // Liebermann's date comes first, then the others in order of publication (as the database gives them).
     function datePlace(doc, srcs) {
         const creation = tei(doc, 'creation')[0];
         if (!creation) return null;
         const box = el('div', 'clause-dates');
-        const line = (label, items, main) => {
+        const line = (label, items) => {
             if (!items.length) return;
             const p = el('p');
             p.appendChild(el('span', 'clause-dates__label', label + ': '));
             items.forEach((it, i) => {
                 if (i) p.appendChild(el('span', 'clause-dates__sep', ' · '));
-                p.appendChild(main && !i ? el('span', 'clause-dates__main', plainText(it)) : document.createTextNode(plainText(it)));
+                p.appendChild(document.createTextNode(plainText(it)));
                 const ids = (it.getAttribute('source') || '').split(/\s+/).map(x => x.replace(/^#/, '')).filter(Boolean);
                 if (ids.length) {
                     p.appendChild(document.createTextNode(' ('));
@@ -587,7 +587,7 @@ scripts:
             box.appendChild(p);
         };
         const kids = Array.from(creation.children);
-        line('Suggested dates', kids.filter(n => n.localName === 'date'), true);
+        line('Suggested dates', kids.filter(n => n.localName === 'date'));
         line('Place', kids.filter(n => n.localName === 'placeName'));
         if (!box.children.length) {
             // Older files: only the spreadsheet's wording.
