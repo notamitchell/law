@@ -19,12 +19,14 @@
     <encodingDesc>
       <listPrefixDef>
         <prefixDef ident="law" matchPattern="(.+)" replacementPattern="lawAbb.html#$1"/>
+        <prefixDef ident="clause" matchPattern="(.+)" replacementPattern="law.html?id=$1"/>
         <prefixDef ident="gram" matchPattern="(.+)" replacementPattern="gramAbb.html#$1"/>
         <prefixDef ident="entry" matchPattern="(.+)" replacementPattern="entry.html?id=$1"/>
       </listPrefixDef>
     </encodingDesc>
     <revisionDesc>
       <change when="2026-10-13">Transcribed by Claude from the page scan; not yet checked against the print.</change>
+      <change when="2026-10-18">Abbreviations and law code (Norðleod) linked; see the pull request “þæt: indecl., Einl., Folg., Urkk.-Sprache, Norðleod”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -33,7 +35,9 @@
         <form type="lemma">
           <orth>gewelegod</orth>
         </form>
-        <dictScrap type="liebermann"><hi rend="bold">gewelegod</hi> sie, <hi rend="italic"><ref type="abbreviation" target="gram:Praeteritum"><abbr>ptt</abbr></ref> <ref type="abbreviation" target="gram:Particip"><abbr>pc</abbr></ref>, reich geworden ist</hi> Norðleod 7. 9 <ref type="lawCode" target="law:Ld">Ld</ref>; geþeo <ref type="lawCode" target="law:D">D</ref> <ref type="lawCode" target="law:H">H</ref></dictScrap>
+        <dictScrap type="liebermann"><hi rend="bold">gewelegod</hi> sie, <hi rend="italic"><ref type="abbreviation" target="gram:Praeteritum"><abbr>ptt</abbr></ref> <ref type="abbreviation" target="gram:Particip"><abbr>pc</abbr></ref>, reich geworden ist</hi> <ref type="lawCode" target="law:Northleoda">Norðleod</ref> 7. 9 <ref type="lawCode" target="law:Ld">Ld</ref>; geþeo <ref type="lawCode" target="law:D">D</ref> <ref type="lawCode" target="law:H">H</ref></dictScrap>
+        <xr type="lawCode"><ref target="clause:Northleoda_7">Norðleod 7</ref></xr>
+        <xr type="lawCode"><ref target="clause:Northleoda_9">Norðleod 9</ref></xr>
       </entry>
     </body>
   </text>

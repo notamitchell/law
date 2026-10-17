@@ -19,6 +19,7 @@
     <encodingDesc>
       <listPrefixDef>
         <prefixDef ident="law" matchPattern="(.+)" replacementPattern="lawAbb.html#$1"/>
+        <prefixDef ident="clause" matchPattern="(.+)" replacementPattern="law.html?id=$1"/>
         <prefixDef ident="gram" matchPattern="(.+)" replacementPattern="gramAbb.html#$1"/>
         <prefixDef ident="bib" matchPattern="(.+)" replacementPattern="bibAbb.html#$1"/>
         <prefixDef ident="entry" matchPattern="(.+)" replacementPattern="entry.html?id=$1"/>
@@ -27,6 +28,7 @@
     <revisionDesc>
       <change when="2026-10-13">Transcribed by Claude from the page scan; not yet checked against the print.</change>
       <change when="2026-10-17">“Vgl.” (vergleiche, compare) linked to the abbreviations list.</change>
+      <change when="2026-10-18">Abbreviations and law code (Norðleod) linked; see the pull request “þæt: indecl., Einl., Folg., Urkk.-Sprache, Norðleod”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -35,8 +37,10 @@
         <form type="lemma">
           <orth>Norðleoda</orth>
         </form>
-        <dictScrap type="liebermann"><hi rend="bold">Norðleoda</hi>, <hi rend="italic"><ref type="abbreviation" target="gram:Plural"><abbr>pl</abbr></ref> <ref type="abbreviation" target="gram:Genitiv"><abbr>gn</abbr></ref>, Nordleute = Anglo-Skandinaven in Nordengland</hi> Norðleod Insc. 1. [<hi rend="italic"><ref type="abbreviation" target="gram:vergleiche"><abbr>Vgl</abbr></ref>. </hi><ref type="bibl" target="bib:CitChadwickASI"><hi rend="italic">Chadwick</hi> Anglo-S. instit. 77</ref>: not Northumbrians, more likely Scandinavians, equivalent to ‘Norðmenn’]</dictScrap>
+        <dictScrap type="liebermann"><hi rend="bold">Norðleoda</hi>, <hi rend="italic"><ref type="abbreviation" target="gram:Plural"><abbr>pl</abbr></ref> <ref type="abbreviation" target="gram:Genitiv"><abbr>gn</abbr></ref>, Nordleute = Anglo-Skandinaven in Nordengland</hi> <ref type="lawCode" target="law:Northleoda">Norðleod</ref> Insc. 1. [<hi rend="italic"><ref type="abbreviation" target="gram:vergleiche"><abbr>Vgl</abbr></ref>. </hi><ref type="bibl" target="bib:CitChadwickASI"><hi rend="italic">Chadwick</hi> Anglo-S. instit. 77</ref>: not Northumbrians, more likely Scandinavians, equivalent to ‘Norðmenn’]</dictScrap>
         <xr type="bosworthToller"><ref target="https://bosworthtoller.com/23897">norþ-leóde</ref></xr>
+        <xr type="lawCode"><ref target="clause:Northleoda_Nordleod-Inscr">Norðleod Insc</ref></xr>
+        <xr type="lawCode"><ref target="clause:Northleoda_1">Norðleod 1</ref></xr>
       </entry>
     </body>
   </text>
