@@ -6,20 +6,24 @@
         <title>VI Atr Lat 25</title>
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">VI-Atr-Latin-Paraphrase_25</idno>
         <idno type="citation">VI Atr Lat 25</idno>
         <idno type="lawCode">VI Atr Lat</idno>
+        <idno type="lawCodeAnchor">VIAtrLat</idno>
         <idno type="clause">25</idno>
-        <idno type="citationKey">VI Atr Lat 25</idno>
+        <idno type="citationKey">VIAtrLat 25</idno>
       </publicationStmt>
       <sourceDesc>
         <bibl type="legalText"><title>VI Æthelred, Latin paraphrase</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">253</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -40,15 +44,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 1348 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 1348 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 253.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="25">
-        <head>VI Atr Lat 25</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="25" corresp="#wit-k">Iudicium quippe quod Anglice ordal dicitur et iuramenta uulgaria festiuis temporibus et legitimis ieiuniis, sed et ab Aduentu Domini usque post octabas Epiphanie et a Septuagessima usque XV dies post pascha minime exerceantur.</ab>
-        <note type="editorial">Latin paraphrase of VI Atr (early 11th c.; K = Cotton Claudius A III f. 30, perhaps by Archbishop Wulfstan). Liebermann gives no German translation for it: for the meaning see the matching Old English chapter of VI Atr above, which it paraphrases (Liebermann prints in small type the words that correspond exactly to the Old English).</note>
+        <head><ref type="lawCode" target="law:VIAtrLat">VI Atr Lat</ref> 25</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="25" corresp="#wit-k">K. Iudicium quippe quod Anglice ordal dicitur et iuramenta uulgaria<ptr type="liebermannNote" n="a" target="#VI-Atr-Latin-Paraphrase_25.lnote.oe.a"/> festiuis temporibus et legitimis ieiuniis, sed et ab Aduentu Domini usque post octabas Epiphanię et a Septuagessima<ptr type="liebermannNote" n="3" target="#VI-Atr-Latin-Paraphrase_25.lnote.oe.3"/> usque XV dies post pascha minime exerceantur.</ab>
+        <note type="editorial">Latin paraphrase of VI Atr (early 11th c.; K = Cotton Claudius A III f. 30, perhaps by Archbishop Wulfstan), text in column K (Liebermann’s text; until October 2026 in column T). Liebermann gives no German translation for it: for the meaning see the matching Old English chapter of VI Atr above, which it paraphrases (Liebermann prints in small type the words that correspond exactly to the Old English).; T: corrected against Gesetze I, October 2026 (was “(Liebermann’s Latin Paraphrase)”, now “∅ (moved to K)”)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VI-Atr-Latin-Paraphrase_25.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">253</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VI-Atr-Latin-Paraphrase_25.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">176</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">‘laiengerichtlich, volksrechtlich’</seg><seg type="translation" xml:lang="en" source="#claude">‘pertaining to lay courts, to folk-law’</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VI-Atr-Latin-Paraphrase_25.lnote.de.1" n="1" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">176</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Benutzt durch I Cn 17 = <hi rend="italic">Homil. n</hi>. Wulfstan 117 (wo aber ein Schreiber <hi rend="italic">wifunga</hi> einführt, so dass er VI Atr Text K gekannt haben muss); <hi rend="italic">s. Gl</hi> Eheschliessung 13a; eheliche Enthaltsamkeit 3. Unter Missetaten in der Kirche, die deren Frieden verletzen, also ihr zu büssen sind, setzt Unzucht ein VIII Atr 4 Hs. D</seg><seg type="translation" xml:lang="en" source="#claude">Used by I Cn 17 = <hi rend="italic">Homil. n</hi>. Wulfstan 117 (where, however, a scribe introduces <hi rend="italic">wifunga</hi>, so that he must have known VI Atr text K); <hi rend="italic">see Gl</hi> Eheschliessung 13a; eheliche Enthaltsamkeit 3. Among misdeeds in church that break its peace and must therefore be compensated to it, VIII Atr 4 MS D inserts unchastity</seg></note>
       </div>
     </body>
   </text>

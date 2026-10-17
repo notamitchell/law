@@ -6,20 +6,24 @@
         <title>VI Atr Lat 23</title>
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">VI-Atr-Latin-Paraphrase_23</idno>
         <idno type="citation">VI Atr Lat 23</idno>
         <idno type="lawCode">VI Atr Lat</idno>
+        <idno type="lawCodeAnchor">VIAtrLat</idno>
         <idno type="clause">23</idno>
-        <idno type="citationKey">VI Atr Lat 23</idno>
+        <idno type="citationKey">VIAtrLat 23</idno>
       </publicationStmt>
       <sourceDesc>
         <bibl type="legalText"><title>VI Æthelred, Latin paraphrase</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">253</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -41,15 +45,19 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 1346 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 1346 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 253.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="23">
-        <head>VI Atr Lat 23</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="23" corresp="#wit-k">Ieiunia uero Quattuor temporum nos obseruare oportet, ut sanctus Gregorius nobis constituit, quamuis alie gentes aliter exercuerint.</ab>
-        <note type="editorial">Latin paraphrase of VI Atr (early 11th c.; K = Cotton Claudius A III f. 30, perhaps by Archbishop Wulfstan). Liebermann gives no German translation for it: for the meaning see the matching Old English chapter of VI Atr above, which it paraphrases (Liebermann prints in small type the words that correspond exactly to the Old English).</note>
+        <head><ref type="lawCode" target="law:VIAtrLat">VI Atr Lat</ref> 23</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="23" corresp="#wit-k">K. Ieiunia uero Quattuor temporum nos obseruare oportet, ut sanctus Gregorius nobis constituit, quamuis<ptr type="liebermannNote" n="a" target="#VI-Atr-Latin-Paraphrase_23.lnote.oe.a"/> alię gentes aliter exercuerint.</ab>
+        <note type="editorial">Latin paraphrase of VI Atr (early 11th c.; K = Cotton Claudius A III f. 30, perhaps by Archbishop Wulfstan), text in column K (Liebermann’s text; until October 2026 in column T). Liebermann gives no German translation for it: for the meaning see the matching Old English chapter of VI Atr above, which it paraphrases (Liebermann prints in small type the words that correspond exactly to the Old English).; T: corrected against Gesetze I, October 2026 (was “(Liebermann’s Latin Paraphrase)”, now “∅ (moved to K)”)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VI-Atr-Latin-Paraphrase_23.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">176</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Die Paraphrase weiss also, dass der Fränkische Brauch abwich; <hi rend="italic">vgl</hi>. Ducange s. v. <hi rend="italic">ieiunium</hi>; Augusti <hi rend="italic">Christl. Archaeol</hi>. III 487</seg><seg type="translation" xml:lang="en" source="#claude">The paraphrase is thus aware that Frankish custom differed; <hi rend="italic">cf</hi>. Ducange s. v. <hi rend="italic">ieiunium</hi>; Augusti <hi rend="italic">Christl. Archaeol</hi>. III 487</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VI-Atr-Latin-Paraphrase_23.lnote.de.1" n="1" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">176</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Benutzt durch <hi rend="italic">Hom. n</hi>. Wulfstan 272. <hi rend="italic">Vgl. Gl</hi> Quatember 1</seg><seg type="translation" xml:lang="en" source="#claude">Used by <hi rend="italic">Hom. n</hi>. Wulfstan 272. <hi rend="italic">Cf. Gl</hi> Quatember 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VI-Atr-Latin-Paraphrase_23.lnote.de.2" n="2" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">176</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Ein <hi rend="italic">exemplar iuxta ritum ecclesiae Romanae</hi> zitierte dafür Synode Clovesho a. 747, vielleicht eines der angeblich durch Gregor I. nach England gesandten Kanones-Bücher. Eine Burchard-Hs. enthält eine Vorschrift: <hi rend="italic">Haec sunt ieiunia quae s. Gregorius genti Anglorum predicari præcepit</hi>; es liegt also nicht etwa (Jaffé-Löw. <hi rend="italic">Reg. pont. Rom</hi>. n. 1989) eine Verwechselung mit Gregor VII. vor</seg><seg type="translation" xml:lang="en" source="#claude">The Synod of Clovesho of 747 cited for this an <hi rend="italic">exemplar iuxta ritum ecclesiae Romanae</hi>, perhaps one of the books of canons allegedly sent to England by Gregory I. A Burchard MS contains a rule: <hi rend="italic">Haec sunt ieiunia quae s. Gregorius genti Anglorum predicari præcepit</hi>; it is thus not, say, a case of confusion with Gregory VII (Jaffé-Löw. <hi rend="italic">Reg. pont. Rom</hi>. n. 1989)</seg></note>
       </div>
     </body>
   </text>

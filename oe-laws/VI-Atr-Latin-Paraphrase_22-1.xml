@@ -7,14 +7,16 @@
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">VI-Atr-Latin-Paraphrase_22-1</idno>
         <idno type="citation">VI Atr Lat 22.1</idno>
         <idno type="lawCode">VI Atr Lat</idno>
+        <idno type="lawCodeAnchor">VIAtrLat</idno>
         <idno type="clause">22.1</idno>
-        <idno type="citationKey">VI Atr Lat 22.1</idno>
+        <idno type="citationKey">VIAtrLat 22.1</idno>
       </publicationStmt>
       <sourceDesc>
         <bibl type="legalText"><title>VI Æthelred, Latin paraphrase</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
@@ -22,6 +24,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">253</biblScope></bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -43,16 +46,18 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 1343 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 1343 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 253.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="22.1">
-        <head>VI Atr Lat 22.1</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="22.1" corresp="#wit-k">Dominice sollempnia diei cum summo honore magnopere celebranda sunt; nec quicquam in eadem operis agatur seruilis; negotia quoque secularia questionesque publice in eadem deponantur die.</ab>
+        <head><ref type="lawCode" target="law:VIAtrLat">VI Atr Lat</ref> 22.1</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="22.1" corresp="#wit-k">K. Dominicę sollempnia diei cum summo honore magnopere celebranda sunt; nec quicquam in eadem operis agatur seruilis<ptr type="liebermannNote" n="a" target="#VI-Atr-Latin-Paraphrase_22-1.lnote.oe.a"/>; negotia quoque secularia questionesque publice in eadem deponantur die.</ab>
         <note type="comparedBy" source="#wormald-ppmel" n="56"><ref target="clause:VAtr_13">V Atr 13–13.1</ref></note>
-        <note type="editorial">Latin paraphrase of VI Atr (early 11th c.; K = Cotton Claudius A III f. 30, perhaps by Archbishop Wulfstan). Liebermann gives no German translation for it: for the meaning see the matching Old English chapter of VI Atr above, which it paraphrases (Liebermann prints in small type the words that correspond exactly to the Old English).</note>
+        <note type="editorial">Latin paraphrase of VI Atr (early 11th c.; K = Cotton Claudius A III f. 30, perhaps by Archbishop Wulfstan), text in column K (Liebermann’s text; until October 2026 in column T). Liebermann gives no German translation for it: for the meaning see the matching Old English chapter of VI Atr above, which it paraphrases (Liebermann prints in small type the words that correspond exactly to the Old English).; T: corrected against Gesetze I, October 2026 (was “(Liebermann’s Latin Paraphrase)”, now “∅ (moved to K)”)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VI-Atr-Latin-Paraphrase_22-1.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">176</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Weltliche, namentlich wohl landwirtschaftliche, Arbeit gilt also dem Lateiner als unfrei; <hi rend="italic">vgl. Gl</hi> Fron 12</seg><seg type="translation" xml:lang="en" source="#claude">Secular work, probably agricultural work in particular, is thus regarded by the Latin writer as servile; <hi rend="italic">cf. Gl</hi> Fron 12</seg><note type="remark" resp="#claude">On several rubrics: VI Atr 22. 22, 1</note></note>
       </div>
     </body>
   </text>

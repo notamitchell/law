@@ -6,20 +6,24 @@
         <title>VI Atr Lat 1</title>
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">VI-Atr-Latin-Paraphrase_1</idno>
         <idno type="citation">VI Atr Lat 1</idno>
         <idno type="lawCode">VI Atr Lat</idno>
+        <idno type="lawCodeAnchor">VIAtrLat</idno>
         <idno type="clause">1</idno>
-        <idno type="citationKey">VI Atr Lat 1</idno>
+        <idno type="citationKey">VIAtrLat 1</idno>
       </publicationStmt>
       <sourceDesc>
         <bibl type="legalText"><title>VI Æthelred, Latin paraphrase</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">247</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -41,15 +45,22 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 1309 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 1309 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 247.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
-        <head>VI Atr Lat 1</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1" corresp="#wit-k">Denique in eorundem synodalis exordio sermocinationis episcopi semetipsos primitus fidei speique et caritatis quattuorque principalium uirtutum (prudentie uidelicet et iustitie, fortitudinis quoque et temperantie) decore adornari, mutuis colloquiorum instructionibus salubrium inuicem cohortabantur, statueruntque pro inuicem cotidianam interuentionem, atque pactam pacis et concordie fideliter firmiterque inter se confirmabant.</ab>
-        <note type="editorial">Latin paraphrase of VI Atr (early 11th c.; K = Cotton Claudius A III f. 30). This passage has no Old English equivalent; Liebermann gives no German translation.</note>
+        <head><ref type="lawCode" target="law:VIAtrLat">VI Atr Lat</ref> 1</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1" corresp="#wit-k">Denique in eorundem synodalis exordio sermocinationis episcopi semetipsos primitus fidei<ptr type="liebermannNote" n="a" target="#VI-Atr-Latin-Paraphrase_1.lnote.oe.a"/> speique et caritatis quattuorque principalium uirtutum (prudentię uidelicet et iustitie, fortitudinis quoque et temperantię) decore adornari, mutuis colloquiorum instructionibus salubrium inuicem cohortabantur, statueruntque pro inuicem cotidianam interuentionem, atque pactum pacis et concordie fideliter firmiterque inter se confirmabant.</ab>
+        <note type="editorial">Latin paraphrase of VI Atr (early 11th c.; K = Cotton Claudius A III f. 30), text in column K (Liebermann’s text; until October 2026 in column T). This passage has no Old English equivalent; Liebermann gives no German translation.; T: corrected against Gesetze I, October 2026 (was “(Liebermann’s Latin Paraphrase)”, now “∅ (moved to K)”)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VI-Atr-Latin-Paraphrase_1.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">175</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Paraphrast hat I Cor. 13, 13 im Sinne. Glaube, Liebe, Hoffnung und die 4 Kardinaltugenden (<hi rend="italic">s. d. Gl</hi>) werden damals häufig gefordert</seg><seg type="translation" xml:lang="en" source="#claude">The paraphraser has I Cor. 13, 13 in mind. Faith, love, hope and the 4 cardinal virtues (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi>) are frequently enjoined at that time</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VI-Atr-Latin-Paraphrase_1.lnote.de.1" n="1" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Frühere Drucke ändern grundlos <hi rend="italic">biscopa</hi>; der Mittelvokal fehlt auch sonst; <hi rend="italic">s. Wb</hi></seg><seg type="translation" xml:lang="en" source="#claude">Earlier editions alter it without reason to <hi rend="italic">biscopa</hi>; the middle vowel is missing elsewhere too; <hi rend="italic">see Wb</hi></seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VI-Atr-Latin-Paraphrase_1.lnote.de.2" n="2" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Dieselben Worte <hi rend="italic">u</hi>. 6. Benutzt durch I Cn 1</seg><seg type="translation" xml:lang="en" source="#claude">The same words <hi rend="italic">below</hi> 6. Used by I Cn 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VI-Atr-Latin-Paraphrase_1.lnote.de.3" n="3" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Der Paraphrast fasst die Fürbitte als täglich auf. Die Gebetsverbrüderung zwischen geistlichen Stiftern kann, aber muss nicht, darunter gemeint sein</seg><seg type="translation" xml:lang="en" source="#claude">The paraphraser takes the intercession to be daily. The confraternity of prayer between religious foundations may, but need not, be meant by it</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VI-Atr-Latin-Paraphrase_1.lnote.de.4" n="4" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">frið ⁊ freondscipe</hi> synonym V 1, 2; <hi rend="italic">sibb ⁊ som</hi> V 19</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">frið ⁊ freondscipe</hi> used synonymously in V 1, 2; <hi rend="italic">sibb ⁊ som</hi> in V 19</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VI-Atr-Latin-Paraphrase_1.lnote.de.5" n="5" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">175</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Benutzt mit folg. Zeile durch <hi rend="italic">Homil. n</hi>. Wulfstan 272</seg><seg type="translation" xml:lang="en" source="#claude">Used, together with the following line, by <hi rend="italic">Homil. n</hi>. Wulfstan 272</seg></note>
       </div>
     </body>
   </text>
