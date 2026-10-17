@@ -8,6 +8,8 @@
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +26,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">191</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">14</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
@@ -46,22 +49,29 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 914 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 914 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 191.</change>
       <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 14.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 191: “∅” → “[VII.]”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7">
         <head><ref type="lawCode" target="law:IIIEm">III Em</ref> 7</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="7" corresp="#wit-q">Et omnis homo credibiles faciat homines suos et omnes qui in pace et terra sua sunt.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="7" corresp="#wit-q">[VII.<ptr type="liebermannNote" n="15" target="#IIIEm_7.lnote.oe.15"/>] Et omnis homo credibiles<ptr type="liebermannNote" n="a" target="#IIIEm_7.lnote.oe.a"/> faciat homines suos et omnes qui in pace<ptr type="liebermannNote" n="b" target="#IIIEm_7.lnote.oe.b"/> et terra<ptr type="liebermannNote" n="c" target="#IIIEm_7.lnote.oe.c"/> sua sunt.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="7" corresp="#wit-q">Et omnis homo credibiles faciat homines suos et omnes qui in pace et terra sua sunt.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">And every man shall act as surety for his men and for all those who are under his protection and on his estate.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q"><ptr type="editorNote" n="1" target="#IIIEm_7.robnote.n.1"/>And every man shall act as surety for his men and for all those who are under his protection and on his estate<ptr type="editorNote" n="2" target="#IIIEm_7.robnote.n.2"/>.</ab>
         <note type="comparison" source="#liebermann" n="191"><ref target="clause:IIIAs_7">III As 7</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. III As. 7</note>
         <note type="comparedBy" source="#wormald-mel" n="316"><ref target="clause:IIIEg_6">III Eg 6–7.3</ref></note>
         <note type="editorial">Latin only; no German translation in Liebermann. Liebermann compares III As 7.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEm_7.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">191</biblScope></bibl><seg type="original" xml:lang="de">VI <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">VI <hi rend="italic">Hk</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEm_7.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">130</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">⁊ <hi rend="italic">ælc man getriewe gedo his men</hi> ⁊ <hi rend="italic">ealle þa þe beon on his munde</hi> ⁊ <hi rend="italic">lande</hi> las Or. laut Hu 4. I Atr 4 (= II Cn 33). II Cn 22. <hi rend="italic">Vgl. Gl</hi> Haftung 7d</seg><seg type="translation" xml:lang="en" source="#claude">⁊ <hi rend="italic">ælc man getriewe gedo his men</hi> ⁊ <hi rend="italic">ealle þa þe beon on his munde</hi> ⁊ <hi rend="italic">lande</hi> was the reading of the original, according to Hu 4. I Atr 4 (= II Cn 33). II Cn 22. <hi rend="italic">Cf. Gl</hi> Haftung 7d</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEm_7.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">130</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Schutzgewalt des Herrn übers Gefolge scheint hier gemeint; <hi rend="italic">vgl</hi>. I Atr 1, 10; <hi rend="italic">his hiredmen on his agenon borge</hi> = II Cn 31, 1. Leis Wl 52. Hn 8, 3. 41, 6 = 59, 6</seg><seg type="translation" xml:lang="en" source="#claude">The lord’s power of protection over his retinue seems to be meant here; <hi rend="italic">cf</hi>. I Atr 1, 10; <hi rend="italic">his hiredmen on his agenon borge</hi> = II Cn 31, 1. Leis Wl 52. Hn 8, 3. 41, 6 = 59, 6</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEm_7.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">130</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Herrschaftsgut; <hi rend="italic">s. d. Gl</hi> 8c</seg><seg type="translation" xml:lang="en" source="#claude">Lordship estate; <hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 8c</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIIEm_7.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="en">Cf. III As. 7, and with regard to similar responsibility on the part of the lord among other Teutonic peoples see Brunner, <hi rend="smallcaps">ii</hi>. pp. 551–4.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIIEm_7.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="en">Is this a definition of <hi rend="italic">homines suos</hi>?</seg></note>
       </div>
     </body>
   </text>
