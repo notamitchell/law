@@ -9,6 +9,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +28,7 @@
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">108</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
@@ -47,19 +50,24 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 1371 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 1371 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 260.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 260: “I. Ut; sancte; ecclesie,; habet.; ∅; sancte; ecclesie.; ecclesie.” → “(Ut; sanctę; ecclesię,; habet [De denario s. e. dando et decimatione thaynorum Br].; [Q. regi Br]; sanctę; ecclesię [De cons. s. Dei e. r. Br].; ecclesię.)”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 108: “[In M, Hk, Br of Q]” → “∅”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Rubr.">
         <head><ref type="lawCode" target="law:VIIAtr">VII Atr</ref> Rubr.</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="VII Atr. Rubr." corresp="#wit-q">I. Ut de omni caruca detur denarius sancte Dei ecclesie, et tainus decimet quicquid habet. II. De ieiunio et feriatione III dierum ante festum sancti Michaelis. III. Quid pro rege et populo omni die sit cantandum. IIII. De reddendis omnibus consuetudinibus sancte Dei ecclesie. V. Ne quis uendatur extra patriam. VI. De robaria. VII [8]. De elemosinis et rectitudinibus ecclesie.</ab>
-        <ab type="editionText" xml:lang="la" source="#robertson" corresp="#wit-q">[I. Ut de omni caruca detur denarius sanctae Dei ecclesiae, et tainus decimet quicquid habet. II. De ieiunio et feriatione III dierum ante festum sancti Michaelis. III. Quid pro rege et populo omni die sit cantandum. IIII. De reddendis omnibus consuetudinibus sanctae Dei ecclesiae. V. Ne quis vendatur extra patriam. VI. De robaria. VII. De elemosinis et rectitudinibus ecclesiae.] [In M, Hk, Br of Q]</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="VII Atr. Rubr." corresp="#wit-q">(<ptr type="liebermannNote" n="**" target="#VIIAtr_Rubr.lnote.oe.star2"/>Ut de omni caruca detur denarius sanctę Dei ecclesię, et tainus decimet quicquid habet [De denario s. e. dando et decimatione thaynorum <hi rend="italic">Br</hi>]. II. De ieiunio et feriatione III dierum ante festum sancti Michaelis. III. Quid pro rege [Q. regi <hi rend="italic">Br</hi>] et populo omni die sit cantandum. IIII. De reddendis omnibus consuetudinibus sanctę Dei ecclesię [De cons. s. Dei e. r. <hi rend="italic">Br</hi>]. V. Ne quis uendatur extra patriam. VI. De robaria. VII [8]. De elemosinis et rectitudinibus ecclesię.)</ab>
+        <ab type="editionText" xml:lang="la" source="#robertson" corresp="#wit-q"><ptr type="editorNote" n="1" target="#VIIAtr_Rubr.robnote.fn.1"/>[I. Ut de omni caruca detur denarius sanctae Dei ecclesiae, et tainus decimet quicquid habet<ptr type="editorNote" n="2" target="#VIIAtr_Rubr.robnote.fn.2"/>. II. De ieiunio et feriatione III dierum ante festum sancti Michaelis. III. Quid pro rege et populo omni die sit cantandum. IIII. De reddendis omnibus consuetudinibus sanctae Dei ecclesiae. V. Ne quis vendatur extra patriam. VI. De robaria. VII. De elemosinis et rectitudinibus ecclesiae.]</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">[I.That a penny should be given to the holy church of God from every plough-land, and a tenth of whatever he has. II. Of the fast for 3 days before the holy feast of St. Michael. III.What should be sung every day for the king and the people. IIII. On paying all customary dues of the holy church of God. V. Let no one be sold abroad. VI. On theft. VII. On almsgiving and the rightful dues of the church.]</ab>
         <note type="comparedBy" source="#wormald-mel" n="331"><ref target="clause:VIIaAtr_1">VIIa Atr 1–5</ref></note>
         <note type="editorial">Latin only (Quadripartitus, after Dunsæte; text from T, spelling from M, compared with HkBr). The rubric list is missing from T, so perhaps drawn only from the Latin text and added in the latest Quadripartitus edition (MHkBr). No German translation. VII Atr dates 992–1011 (issued at Bath); its Old English wording can be reconstructed from VIIa Atr (below).</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIIAtr_Rubr.lnote.oe.star2" n="**" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">260</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Rubrikenliste fehlt T [ist also vielleicht ohne Angelsächsische Vorlage nur dem Lateinischen Texte entflossen und nur der jüngsten Quadripartitus-Ausgabe (MHkBr) hinzugefügt</hi>].</seg><seg type="translation" xml:lang="en" source="#claude">List of rubrics missing in T [it therefore perhaps derives, without an Anglo-Saxon original, solely from the Latin text and was added only to the latest edition of the Quadripartitus (MHkBr)].</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VIIAtr_Rubr.robnote.fn.1" n="1" source="#robertson"><bibl><biblScope unit="page">108</biblScope></bibl><label>I</label><seg type="original" xml:lang="en">The table of contents is found in M, Hk, Br but not in T.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VIIAtr_Rubr.robnote.fn.2" n="2" source="#robertson"><bibl><biblScope unit="page">108</biblScope></bibl><label>habet</label><seg type="original" xml:lang="en"><hi rend="italic">De denario s. e. dando et decimatione thaynorum</hi> Br.</seg></note>
       </div>
     </body>
   </text>

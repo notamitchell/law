@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
@@ -56,23 +59,28 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1381 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 260.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 260: “∅” → “et”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2.2b">
         <head><ref type="lawCode" target="law:VIIAtr">VII Atr</ref> 2.2b</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2.2b" corresp="#wit-q">Et apparetur III diebus corredium uniuscuiusque sine carne; in cibo et potu, sicut idem comedere deberet, diuidatur hoc totum pauperibus.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2.2b" corresp="#wit-q">Et apparetur III diebus corredium uniuscuiusque sine carne; in cibo et potu, sicut idem comedere deberet, et<ptr type="liebermannNote" n="13" target="#VIIAtr_2-2b.lnote.oe.13"/> diuidatur hoc totum pauperibus.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="2.2b" corresp="#wit-q">Et apparetur III diebus corredium uniuscuiusque sine carne; in cibo et potu, sicut idem comedere deberet, (et) dividatur hoc totum pauperibus.</ab>
-        <ab type="editionText" xml:lang="la" source="#rabin-doml" corresp="#wit-t">Et apparetur iii diebus corredium uniuscuiusque sine carne; in cibo et potu, sicut idem comedere deberet, et dividatur hoc totum pauperibus.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und an den drei Tagen werde eines jeden Kost ohne Fleisch zugerüstet; an Essen und Trinken, wie er geniessen würde [wenn kein Fasten wäre], das alles vertheile man Armen.</ab>
+        <ab type="editionText" xml:lang="la" source="#rabin-doml" corresp="#wit-t">Et apparetur III diebus corredium uniuscuiusque sine carne; in cibo et potu, sicut idem comedere deberet, et dividatur hoc totum pauperibus.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und an den drei Tagen werde eines jeden<ptr type="liebermannNote" n="1" target="#VIIAtr_2-2b.lnote.de.1"/> Kost ohne Fleisch zugerüstet; an Essen und Trinken<ptr type="liebermannNote" n="2" target="#VIIAtr_2-2b.lnote.de.2"/>, wie er geniessen würde [wenn kein Fasten wäre], das alles vertheile man Armen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And on the three days let everyone's food be prepared without meat; and all the food and drink that he would have consumed [if there were no fast], let it be distributed to the poor.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">And everyone shall have his food served during the three days without meat, and whatever he would have consumed in food and drink shall be distributed among the poor.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q"><ptr type="editorNote" n="1" target="#VIIAtr_2-2b.robnote.n.1"/>And everyone shall have his food served during the three days without meat, and whatever he would have consumed in food and drink shall be distributed among the poor.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-t">And for three days everyone is to be served meals without meat; and food and drink in the amount that would have been eaten is to be shared out among the poor.</ab>
         <note type="comparison" source="#liebermann" n="260"><ref target="clause:VIIaAtr_4-1">VIIa Atr 4.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 4, 1</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VIIaAtr_4-1">VIIa Atr 4.1</ref></note>
-        <note type="editorial">The Latin's ‘et’ before ‘diuidatur’ is to be struck (Liebermann). Liebermann compares VIIa Atr 4.1.</note>
+        <note type="editorial">The Latin's ‘et’ before ‘diuidatur’ is to be struck (Liebermann). Liebermann compares VIIa Atr 4.1.; AU: corrected against Rabin p. None, October 2026 (was “iii”, now “III”)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIIAtr_2-2b.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">260</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">zu streichen</hi></seg><seg type="translation" xml:lang="en" source="#claude">to be deleted</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIAtr_2-2b.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">180</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Schmid verbindet 2, 2a und 2, 2b, bezieht also das Fasten nur auf Kleriker. Dagegen VIIa bezieht 2, 2b auf das von allen Fastenden Ersparte. Deutlicher: <hi rend="italic">manna gehwilc dæle jorne Godes þearfan þone sylfan mete, þe he wolde brucan, gif him þæt fæsten swa geboden nære</hi>; Hom. 174. In Norwegen wird die durchs Fasten ansässiger Leute ersparte Speise Armen verteilt, und zwar (wie <hi rend="italic">u</hi>. 2, 5) unter Aufsicht des Vogts bzw. des Priesters; Maurer <hi rend="italic">Armenn</hi> in <hi rend="italic">SB Münch. Ak</hi>. 1879, 104. <hi rend="italic">Vgl. Gl</hi> Armenpflege 8b. 5</seg><seg type="translation" xml:lang="en" source="#claude">Schmid connects 2, 2a and 2, 2b, and so refers the fasting to clerics only. VIIa, on the other hand, refers 2, 2b to what has been saved by all who fast. More clearly: <hi rend="italic">manna gehwilc dæle jorne Godes þearfan þone sylfan mete, þe he wolde brucan, gif him þæt fæsten swa geboden nære</hi>; Hom. 174. In Norway the food saved through the fasting of settled people is distributed to the poor, and that (as <hi rend="italic">below</hi> 2, 5) under the supervision of the reeve or of the priest respectively; Maurer <hi rend="italic">Armenn</hi> in <hi rend="italic">SB Münch. Ak</hi>. 1879, 104. <hi rend="italic">Cf. Gl</hi> Armenpflege 8b. 5</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIAtr_2-2b.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">180</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Bier; <hi rend="italic">s. Gl</hi> Biergelage 1b</seg><seg type="translation" xml:lang="en" source="#claude">Beer; <hi rend="italic">see Gl</hi> Biergelage 1b</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIAtr_2-2b.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">336</biblScope></bibl><seg type="original" xml:lang="en">Cf. VII Atr. A.S. 4, 1; Wulfstan, p. 174.</seg></note>
       </div>
     </body>
   </text>

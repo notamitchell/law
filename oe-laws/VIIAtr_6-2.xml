@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
@@ -56,20 +59,26 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1395 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 261.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Robertson, p. 113: “amends” → “amends,”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6.2">
         <head><ref type="lawCode" target="law:VIIAtr">VII Atr</ref> 6.2</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.2" corresp="#wit-q">Et reddatur omnis robaria, si quis aliquam fecerit, et emendet, sicut prius et postea stetit.</ab>
-        <ab type="editionText" xml:lang="la" source="#robertson" n="6.2" corresp="#wit-q">Et reddatur omnis robaria, si quis aliquam fecerit, et emendet, sicut prius et postea stetit.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.2" corresp="#wit-q">Et reddatur omnis robaria, si quis aliquam fecerit, et emendet, sicut prius et postea stetit.<ptr type="liebermannNote" n="18" target="#VIIAtr_6-2.lnote.oe.18"/></ab>
+        <ab type="editionText" xml:lang="la" source="#robertson" n="6.2" corresp="#wit-q">Et reddatur omnis robaria, si quis aliquam fecerit, et emendet, sicut prius et postea stetit<ptr type="editorNote" n="6" target="#VIIAtr_6-2.robnote.fn.6"/>.</ab>
         <ab type="editionText" xml:lang="la" source="#rabin-doml" corresp="#wit-t">Et reddatur omnis robaria, si quis aliquam fecerit et emendet, sicut prius et postea stetit.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und man gebe jeden Raub zurück, wenn einer welchen begangen hat, und büsse, wie es früher und später galt.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und man gebe jeden Raub zurück, wenn einer welchen begangen hat, und büsse, wie es früher und später<ptr type="liebermannNote" n="1" target="#VIIAtr_6-2.lnote.de.1"/> galt.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let every robbery be restored, if anyone has committed one, and let him make amends, as it stood formerly and afterwards.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">And if anyone has committed theft, he shall restore all that he has stolen and make amends as has always been the rule.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q"><ptr type="editorNote" n="1" target="#VIIAtr_6-2.robnote.n.1"/>And if anyone has committed theft, he shall restore all that he has stolen and make amends, as has always<ptr type="editorNote" n="2" target="#VIIAtr_6-2.robnote.n.2"/> been the rule.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-t">And if anyone has committed theft, let him return all that has been stolen and make amends, as was the practice before and will be afterward.</ab>
         <note type="textual" source="#rabin-doml">stetit: fecit Br</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIIAtr_6-2.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">261</biblScope></bibl><seg type="original" xml:lang="de">stet <hi rend="italic">MHk;</hi> fecit <hi rend="italic">Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">stet MHk; fecit Br</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIAtr_6-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">180</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Q las wohl <hi rend="italic">ær ⁊ æfter</hi>. Heisst das hier: ‘stets, immer’?</seg><seg type="translation" xml:lang="en" source="#claude">Q probably read <hi rend="italic">ær ⁊ æfter</hi>. Does this mean here ‘always, at all times’?</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIAtr_6-2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">337</biblScope></bibl><seg type="original" xml:lang="en">Cf. In. 10.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIAtr_6-2.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">337</biblScope></bibl><seg type="original" xml:lang="en">Liebermann suggests that the original may have read <hi rend="italic">ær</hi> ⁊ <hi rend="italic">æfter</hi>.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VIIAtr_6-2.robnote.fn.6" n="6" source="#robertson"><bibl><biblScope unit="page">112</biblScope></bibl><label>stetit</label><seg type="original" xml:lang="en"><hi rend="italic">stet</hi> Hk; <hi rend="italic">fecit</hi> Br.</seg></note>
       </div>
     </body>
   </text>
