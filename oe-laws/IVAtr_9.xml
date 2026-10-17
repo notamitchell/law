@@ -10,6 +10,8 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +29,7 @@
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">76</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
@@ -58,14 +61,20 @@
     <body>
       <div type="clause" n="9">
         <head><ref type="lawCode" target="law:IVAtr">IV Atr</ref> 9</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="9" corresp="#wit-q">Et ut monetarii pauciores sint quam antea fuerint: in omni summo portu III, et in omni alio portu sit unus monetarius.</ab>
-        <ab type="editionText" xml:lang="la" source="#robertson" n="9" corresp="#wit-q">Et ut monetarii pauciores sint quam antea fuerint: in omni summo portu III, et in omni alio portu sit unus monetarius.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="9" corresp="#wit-q">Et ut monetarii pauciores sint quam antea fuerint<ptr type="liebermannNote" n="13" target="#IVAtr_9.lnote.oe.13"/>: in omni summo portu III<ptr type="liebermannNote" n="14" target="#IVAtr_9.lnote.oe.14"/>, et in omni alio portu sit unus monetarius.</ab>
+        <ab type="editionText" xml:lang="la" source="#robertson" n="9" corresp="#wit-q">Et ut monetarii pauciores sint quam antea fuerint<ptr type="editorNote" n="14" target="#IVAtr_9.robnote.fn.14"/>: in omni summo portu III<ptr type="editorNote" n="15" target="#IVAtr_9.robnote.fn.15"/>, et in omni alio portu sit unus monetarius.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">Und es seien weniger Münzmeister, als bisher gewesen sind: in jeder Grossstadt drei, und in jeder anderen Stadt sei Ein Münzer.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let there be fewer moneyers than there have been hitherto: in every major town three, and in every other town let there be one moneyer.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">And moneyers shall be fewer in number than they have been in the past. In every principal town [there shall be] three, and in every other town [there shall be] one.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">And moneyers shall be fewer in number than they have been in the past. In every principal town<ptr type="editorNote" n="1" target="#IVAtr_9.robnote.n.1"/> [there shall be] three, and in every other town [there shall be] one.</ab>
         <note type="comparison" source="#liebermann" n="237"><ref target="clause:IIAs_14-2">II As 14.2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">*Vgl. II As. 14, 2</note>
         <note type="editorial">Liebermann compares II As 14.2.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAtr_9.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">236</biblScope></bibl><seg type="original" xml:lang="de">-runt <hi rend="italic">Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">-runt Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAtr_9.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">236</biblScope></bibl><seg type="original" xml:lang="de">sint tres monetarii <hi rend="italic">Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">sint tres monetarii Br</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVAtr_9.lnote.de.1" n="1" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">166</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">In London, Winchester, Canterbury setzte As mehr als 3 Münzer, in 6 ferneren mehr als einen. Jene Städte (<hi rend="italic">s. d. Gl</hi> 15), wohl neben anderen, waren unter den ‘principal cities’, wie Kemble <hi rend="italic">Saxons</hi> II 357 übersetzt</seg><seg type="translation" xml:lang="en" source="#claude">In London, Winchester and Canterbury As established more than 3 moneyers, in 6 further towns more than one. Those towns (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 15), probably along with others, were among the ‘principal cities’, as Kemble <hi rend="italic">Saxons</hi> II 357 translates</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IVAtr_9.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">326</biblScope></bibl><seg type="original" xml:lang="en">It is uncertain what towns are meant by the expression <hi rend="italic">summus portus</hi>, but Liebermann suggests that those named in II As. 14, 2 which had more than one moneyer were probably included among them.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IVAtr_9.robnote.fn.14" n="14" source="#robertson"><bibl><biblScope unit="page">76</biblScope></bibl><label>fuerint</label><seg type="original" xml:lang="en"><hi rend="italic">-runt</hi> Br.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IVAtr_9.robnote.fn.15" n="15" source="#robertson"><bibl><biblScope unit="page">76</biblScope></bibl><label>iii</label><seg type="original" xml:lang="en"><hi rend="italic">sint tres monetarii</hi> Br.</seg></note>
       </div>
     </body>
   </text>
