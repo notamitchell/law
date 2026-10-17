@@ -10,6 +10,9 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +30,7 @@
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">36</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">440</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-c" rend="bold"><abbr>C</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
@@ -53,23 +57,30 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1005 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 212.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 212: “⁊ ðæs wilnige, þæt ðes án dom on swylcere smeagunge sy ús eallon gemæne, to gebeorge ⁊ to friðe eallum leodscype.” → “⁊ ðæs wilnige, þæt ðes án dom on swylcere smeagunge sy ús eallon gemæne, to gebeorge ⁊ to friðe eallum leodscype. (expanded letters in italics: æt, m)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="12.1">
         <head><ref type="lawCode" target="law:IVEg">IV Eg</ref> 12.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12.1" corresp="#wit-f">⁊ þæs wilnige, þ<hi rend="italic">æt</hi> þes án dóm on swylcere smeagunge sy ús eallon gemæne, to gebeorge ⁊ to friðe eallum leodscipe.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12.1" corresp="#wit-c">⁊ ðæs wilnige, þæt ðes án dom on swylcere smeagunge sy ús eallon gemæne, to gebeorge ⁊ to friðe eallum leodscype.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12.1" corresp="#wit-f">⁊ þæs<ptr type="liebermannNote" n="2" target="#IVEg_12-1.lnote.oe.2"/> wilnige, þ<hi rend="italic">æt</hi> þes án dóm on swylcere smeagunge sy ús eallon gemæne, to gebeorge ⁊ to friðe eallum leodscipe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12.1" corresp="#wit-c">⁊ ðæs wilnige, þ<hi rend="italic">æt</hi> ðes án dom on swylcere smeagunge sy ús eallon gemæne, to gebeorge ⁊ to friðe eallu<hi rend="italic">m</hi> leodscype.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="12.1" corresp="#wit-c">⁊ ðæs wilnige þæt ðes án dom on swylcere smeagunge sy ús eallon gemæne, to gebeorge ⁊ to friðe eallum leodscype.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Jedoch das wünsch ich, dass dies eine [obige] Gesetz über solche Untersuchung uns allen gemeinsam sei, zu Schutz und zu Sicherheit allem Volke.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Jedoch das wünsch ich, dass dies eine [obige] Gesetz über solche Untersuchung<ptr type="liebermannNote" n="1" target="#IVEg_12-1.lnote.de.1"/> uns allen<ptr type="liebermannNote" n="2" target="#IVEg_12-1.lnote.de.2"/> gemeinsam sei, zu Schutz<ptr type="liebermannNote" n="3" target="#IVEg_12-1.lnote.de.3"/> und zu Sicherheit allem Volke.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But this I desire, that this one [above] law on such inquiry be common to us all, for the protection and security of all the people.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">But I desire that this one decree relating to investigations such as these shall apply equally to us all, for the protection and security of the whole population.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock">And I desire that this one decree concerning such an investigation shall be common to us all, for the protection and security of all the nation.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">But I desire that this one decree relating to investigations such as these<ptr type="editorNote" n="1" target="#IVEg_12-1.robnote.n.1"/> shall apply equally to us all<ptr type="editorNote" n="2" target="#IVEg_12-1.robnote.n.2"/>, for the protection and security of the whole population.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock"><ptr type="editorNote" n="2" target="#IVEg_12-1.whinote.n.2"/>And I desire that this one decree concerning such an investigation shall be common to us all, for the protection and security of all the nation.</ab>
         <note type="comparison" source="#liebermann" n="213"><ref target="clause:IVEg_2-2">IV Eg 2.2ff.</ref></note>
         <note type="comparisonPrinted" source="#liebermann">*Vgl. 2, 2 ff.</note>
         <note type="editorial">Not in the Latin Versio. In F, ‘þæs’ was changed by the scribe from ‘þæt’. Liebermann compares IV Eg 2.2 ff.</note>
-        <note type="translator" source="#whitelock">id. omits these chapters</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVEg_12-1.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">212</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vom Schreiber geändert aus</hi> þæt</seg><seg type="translation" xml:lang="en" source="#claude">altered by the scribe from þæt</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_12-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">143</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Nicht ‘search for stolen (lost) cattle’ [Toller], sondern nach dem unbekannten Eigentümer ertappten, verdächtigen Viehs</seg><seg type="translation" xml:lang="en" source="#claude">Not ‘search for stolen (lost) cattle’ [Toller], but search for the unknown owner of suspicious cattle that has been detected</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_12-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">143</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Samt Nordleuten; also wie 1, 6. 2, 2. 14, 2</seg><seg type="translation" xml:lang="en" source="#claude">Including the Northmen; thus as in 1, 6. 2, 2. 14, 2</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_12-1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">143</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. o</hi>. 2. 2, 1a; <hi rend="italic">u</hi>. 14, 1</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. above</hi> 2. 2, 1a; <hi rend="italic">below</hi> 14, 1</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IVEg_12-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">309</biblScope></bibl><seg type="original" xml:lang="en">This is interpreted as referring to the search for the stolen cattle (see BT. p. 887, <hi rend="italic">s.v. smeagung</hi>) or else to the inquiry for the unknown owner of the suspected cattle which have been seized (Liebermann). Does it not refer to the whole process of investigation with regard to cattle which have not been reported?</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IVEg_12-1.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">309</biblScope></bibl><seg type="original" xml:lang="en">Cf. cap. 2, 2.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IVEg_12-1.whinote.n.2" n="2" source="#whitelock"><bibl><biblScope unit="page">440</biblScope></bibl><seg type="original" xml:lang="en">id. omits these chapters</seg></note>
       </div>
     </body>
   </text>

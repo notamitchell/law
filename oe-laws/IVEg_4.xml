@@ -10,6 +10,8 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,12 +29,12 @@
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">34</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">439</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-c" rend="bold"><abbr>C</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
           <witness xml:id="wit-f"><abbr>F</abbr> <note type="manuscript">London, British Library, Cotton Nero E.i</note></witness>
           <witness xml:id="wit-c-latin"><abbr>C (Latin)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
-          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -62,14 +64,19 @@
       <div type="clause" n="4">
         <head><ref type="lawCode" target="law:IVEg">IV Eg</ref> 4</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-f">To ælcere byrig XXXVI syn gecorone to gewitnesse;</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-c">To ælcere byrig XXXIII syn gecorene to gewytnesse;</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4" corresp="#wit-q">Et ad hoc procurandum et tutandum uiri triginta sex legitimi,</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="4" corresp="#wit-c">To ælcere byrig XXXVI syn gecorene to gewytnesse.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">zu jeder Stadt seien 36 als Zeugenschaft erkoren,</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-c">To ælcere byrig XXXIII<ptr type="liebermannNote" n="4" target="#IVEg_4.lnote.oe.4"/> syn gecorene to gewytnesse;</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4" corresp="#wit-c-latin">Et ad hoc procurandum et tutandum uiri triginta sex legitimi,</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="4" corresp="#wit-c">To ælcere byrig XXXVI<ptr type="editorNote" n="1" target="#IVEg_4.robnote.fn.1"/> syn gecorene to gewytnesse.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">zu jeder Stadt seien 36<ptr type="liebermannNote" n="1" target="#IVEg_4.lnote.de.1"/> als Zeugenschaft erkoren<ptr type="liebermannNote" n="2" target="#IVEg_4.lnote.de.2"/>,</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">for every borough let 36 be chosen as witnesses,</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">36 persons shall be chosen as witnesses for every borough.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">36<ptr type="editorNote" n="1" target="#IVEg_4.robnote.n.1"/> persons shall be chosen as witnesses for every borough.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">Thirty-six are to be chosen as witness for each borough;</ab>
-        <note type="editorial">C's ‘XXXIII’ is a misreading of ‘XXXVI’ (the u = V looks similar in F too).</note>
+        <note type="editorial">C's ‘XXXIII’ is a misreading of ‘XXXVI’ (the u = V looks similar in F too).; BF: added from Gesetze I p. 210, October 2026 (MS C (Latin)); O: corrected against Gesetze I, October 2026 (was “(Latin version of C)”, now “∅ (moved to BF)”)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVEg_4.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">210</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so,</hi> II <hi rend="italic">verlesen statt</hi>·u (<hi rend="italic">d. i.</hi> V), <hi rend="italic">welches auch in F ähnlich wie</hi> <hi rend="italic">ıı aussieht</hi></seg><seg type="translation" xml:lang="en" source="#claude">thus; II misread for ·u (i.e. V), which in F too looks similar to ıı</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_4.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">142</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Diese von Schmid trotz C's Fehler vermutete Zahl 36 bestätigt F und Versio 10 nochmals</seg><seg type="translation" xml:lang="en" source="#claude">This number 36, conjectured by Schmid despite C's error, is confirmed once more by F and Versio 10</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_4.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">142</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Wohl aus den Bürgern, durch Obrigkeit (Richter), vielleicht in Gemeinschaft mit der Gerichtsgemeinde</seg><seg type="translation" xml:lang="en" source="#claude">Probably from among the burgesses, by the authorities (judge), perhaps jointly with the community of the court</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IVEg_4.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">308</biblScope></bibl><seg type="original" xml:lang="en">There is little doubt that the reading <hi rend="smallcaps">xxxvi</hi> in F and the Latin version is correct. III and VI are often confused in MSS.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IVEg_4.robnote.fn.1" n="1" source="#robertson"><bibl><biblScope unit="page">34</biblScope></bibl><label>xxxvi</label><seg type="original" xml:lang="en">F; <hi rend="italic"><hi rend="smallcaps">xxxiii</hi>.</hi> C.</seg></note>
       </div>
     </body>
   </text>
