@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">206</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-thesaurus-linguarum-septentrionalium"><abbr>Thesaurus Linguarum Septentrionalium</abbr></witness>
@@ -56,6 +59,8 @@
       <change when="2026-10-17">Generated from row 1479 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 269.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 269.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 269: “IX Atr. Prol.” → “∅”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 130: “[Wanley]; seo; Wudestoce” → “∅; sio; Wudustoce”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -63,19 +68,25 @@
       <div type="clause" n="Prol.">
         <head><ref type="lawCode" target="law:IXAtr">IX Atr</ref> Prol.</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol." corresp="#wit-wanley">Ðis is sio gerædnes, þe Æþelred cyning and ealle his ƿitan æt Ƿudustoce geræddan.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" corresp="#wit-wanley">(<hi rend="italic">Incip</hi>.) [Wanley] Ðis is seo gerædnes þe Æþelred cyning and ealle his witan æt Wudestoce geræddan.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" corresp="#wit-wanley">(<hi rend="italic">Incip</hi>.)<ptr type="editorNote" n="1" target="#IXAtr_Prol.robnote.fn.1"/> Ðis is sio gerædnes þe Æþelred cyning and ealle his witan æt Wudustoce geræddan.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml">Ðis is sio gerædnes þe Æþelred cyning and ealle his witan æt Wudustoce geræddan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">IX Atr. Prol. Dies ist die Verordnung, die König Aethelred und alle seine Witan zu Woodstock beschlossen haben.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><ptr type="liebermannNote" n="1" target="#IXAtr_Prol.lnote.de.1"/>Dies ist die Verordnung, die König Aethelred und alle seine Witan zu Woodstock<ptr type="liebermannNote" n="2" target="#IXAtr_Prol.lnote.de.2"/> beschlossen haben.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">IX Atr. Prologue. This is the ordinance which King Æthelred and all his witan decided at Woodstock.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-wanley">This is the ordinance which King Æthelred and all his councillors have determined upon at Woodstock.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-wanley">This is the ordinance which King Æthelred and all his councillors have determined upon at Woodstock<ptr type="editorNote" n="1" target="#IXAtr_Prol.robnote.n.1"/>.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml">This is the decree which King Æthelred and his whole council proclaimed at Woodstock.</ab>
         <note type="comparison" source="#liebermann" n="269"><ref target="clause:IAtr_Prolog">I Atr Prol.</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. I Atr. Prol.</note>
         <note type="comparison" source="#wormald-mel" n="337"><label>very like</label> <ref target="clause:IAtr_Prolog">I Atr Prol.</ref> <quote>It is said, in terms very like those of 'I', to have been decreed at Woodstock</quote></note>
-        <note type="editorial">Only source: Cotton Otho A X (now burnt), known from Wanley's extract in Hickes, Thesaurus III 232 (Wanley writes wynn as þ). Dated c. 980–1016. Liebermann compares I Atr Prol.</note>
-        <note type="textual" source="#rabin-doml">Manuscripts: MS = London, British Library, Cotton MS Otho A.x. Since the manuscript was almost completely destroyed in the Ashburnam House fire of 1731, this edition relies on the text of Liebermann, Gesetze, vol. 1, p. 269. Exp And: An MS healdan: healed MS holdliche: Liebermann recommends emending to holdlice, though holdliche is a legitimate late form of the word</note>
-        <note type="translator" source="#rabin-doml">Due to damage to the manuscript, this text is based on that found in Lie bermann, Die Gesetze der Angelsachsen.</note>
+        <note type="editorial">Only source: Cotton Otho A X (now burnt), known from Wanley's extract in Hickes, Thesaurus III 232 (Wanley writes wynn as þ). Dated c. 980–1016. Liebermann compares I Atr Prol.; AY: corrected against Rabin p. 206 / 207, October 2026 (was “Exp And: An MS healdan: healed MS holdliche: Liebermann recommends emending to holdlice, though holdliche is a legitimate late form of the word”, now “∅”); AZ: corrected against Rabin p. 206 / 207, October 2026 (was “Lie bermann,”, now “Liebermann,”)</note>
+        <note type="textual" source="#rabin-doml">Manuscripts: MS = London, British Library, Cotton MS Otho A.x. Since the manuscript was almost completely destroyed in the Ashburnam House fire of 1731, this edition relies on the text of Liebermann, Gesetze, vol. 1, p. 269.</note>
+        <note type="translator" source="#rabin-doml">Due to damage to the manuscript, this text is based on that found in Liebermann, Die Gesetze der Angelsachsen.</note>
         <note type="translator" source="#rabin-doml">Woodstock: Woodstock, Oxfordshire, had been the site of an earlier meeting of the royal council in approximately 997, at which the legislation 1 Æthelred was issued. The meeting at which this text was compiled likely took place between 1008 and 1016.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IXAtr_Prol.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">185</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Die—auch in sonstigen Denkmälern nicht authentische—Überschrift fehlt hier</seg><seg type="translation" xml:lang="en" source="#claude">The heading — which is not authentic in the other records either — is missing here</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IXAtr_Prol.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">185</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. Gl</hi> Woodstock</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See Gl</hi> Woodstock</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IXAtr_Prol.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">342</biblScope></bibl><seg type="original" xml:lang="en">Cf. I Atr. Pre.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IXAtr_Prol.robnote.n.1-2" n="1" source="#robertson" rend="wholeClause"><bibl><biblScope unit="page">342</biblScope></bibl><seg type="original" xml:lang="en"><hi rend="italic">healde</hi> and <hi rend="italic">holdliche</hi> are both late forms.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IXAtr_Prol.robnote.n.2" n="2" source="#robertson" rend="wholeClause"><bibl><biblScope unit="page">342</biblScope></bibl><seg type="original" xml:lang="en">Cf. with this concluding sentence V Atr. 34; 35.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IXAtr_Prol.robnote.fn.1" n="1" source="#robertson"><bibl><biblScope unit="page">130</biblScope></bibl><label>Incip</label><seg type="original" xml:lang="en">Wanley.</seg></note>
       </div>
     </body>
   </text>
