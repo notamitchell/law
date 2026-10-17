@@ -46,6 +46,18 @@ scripts:
             showNeighbours();
         })
         .catch(err => {
+            // A file joined into another entry (e.g. þæt IV, once thaet-5, is now
+            // part of thaet-2): send the reader to the entry it is part of.
+            if (err.message === 'missing') {
+                return fetch(root + 'data/entry-redirects.json')
+                    .then(r => r.ok ? r.json() : {})
+                    .then(map => { if (map[slug]) location.replace(root + 'entry.html?id=' + encodeURIComponent(map[slug])); else throw err; })
+                    .catch(() => showError(err));
+            }
+            showError(err);
+        });
+
+    function showError(err) {
             if (err.message !== 'missing' && err.message !== 'parse') console.error(err);
             target.innerHTML = err.message === 'missing'
                 ? `<h1>${esc(id)}</h1>
@@ -53,7 +65,7 @@ scripts:
                    You can <a href="${root}contribute.html?headword=${encodeURIComponent(id)}">suggest it</a>,
                    or look for it in the <a href="${root}dictionary.html?q=${encodeURIComponent(id)}">Dictionary</a>.</p>`
                 : `<h1>${esc(id)}</h1><p class="notice error">This entry's file couldn't be read. Its XML may be malformed: <a href="${root}entries/${encodeURIComponent(slug)}.xml">view the file</a>.</p>`;
-        });
+    }
 
     function senses(el) {
         if (!el) return '';

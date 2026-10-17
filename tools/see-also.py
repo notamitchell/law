@@ -80,8 +80,7 @@ SKIP = {
     ('maector', 'mete'),                                         # mæte is not mete
     ('fiht', 'f-re-ht'), ('fyht', 'f-re-ht'),                    # feoht is not freht
     ('Fremdwort-Declination', 'tu-sc'), ('Fremdwort-Declination', 'te'),
-    ('cs', 'g-o-s'), ('gar', 'war-u'),
-    ('aa', 'nam-2'),                                             # aa: nááme is under nam I
+    ('cs', 'g-o-s'), ('gar', 'waru'),
 }
 
 ROMAN = {'I': 1, 'II': 2, 'III': 3, 'IV': 4, 'V': 5}
