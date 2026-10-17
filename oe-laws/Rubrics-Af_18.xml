@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">16</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">190</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,23 +50,32 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 211 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 211 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 16.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Ot added from Gesetze I, p. 16.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 16.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="18">
         <head>Af Rb 18</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18" corresp="#wit-h">XVI. Be nunnena onfengū.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18" corresp="#wit-e">XVI. Be nunnena onfenge.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="18" corresp="#wit-q">De apprehensione nunne (sanctimonialis).</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18" corresp="#wit-h">XVI. Be nunnena onfengū.<ptr type="liebermannNote" n="13" target="#Rubrics-Af_18.lnote.oe.13"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18" corresp="#wit-e">XVI. Be nunnena onfenge.<ptr type="liebermannNote" n="24" target="#Rubrics-Af_18.lnote.oe.24"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18" corresp="#wit-g-prol">XVI. Be nunnena onfénge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18" corresp="#wit-ot-frag">… nunnena onfenge.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="18" corresp="#wit-q">De apprehensione<ptr type="liebermannNote" n="17" target="#Rubrics-Af_18.lnote.oe.17"/> nunne<ptr type="liebermannNote" n="18" target="#Rubrics-Af_18.lnote.oe.18"/> (sanctimonialis).</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">XVI Be nunnena onfenge</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-b">Be nunnena andfencgu<hi rend="italic">m</hi></ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning seizing nuns</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-b">Concerning seizings of nuns</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Über Antastung von Nonnen.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Über Antastung<ptr type="liebermannNote" n="1" target="#Rubrics-Af_18.lnote.de.1"/> von Nonnen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Concerning the seizing of nuns.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_18.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">17</biblScope></bibl><seg type="original" xml:lang="de">appressione <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">appressione Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_18.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">17</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">nur</hi> nu. <hi rend="italic">Hk Br;</hi> <hi rend="italic">nur</hi> sa. [<hi rend="italic">Glosse</hi>] <hi rend="italic">Dm T</hi></seg><seg type="translation" xml:lang="en" source="#claude">only nu. Hk Br; only sa. [gloss] Dm T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_18.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">16</biblScope></bibl><seg type="original" xml:lang="de">-ng <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-ng So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_18.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">17</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">geänd.</hi> anf. <hi rend="italic">und</hi> ū <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">altered anf., and ū on an erasure</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Af_18.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">40</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">‘Antastungen’ Hcor</seg><seg type="translation" xml:lang="en" source="#claude">‘Molestations’ Hcor</seg></note>
       </div>
     </body>
   </text>

@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">18</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">192</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,23 +50,33 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 215 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 215 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 18.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Ot added from Gesetze I, p. 18.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 18.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="22">
         <head>Af Rb 22</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="22" corresp="#wit-h">XX. Be ðeofes ondettan.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="22" corresp="#wit-e">XX. Be eofetes andetlan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="22" corresp="#wit-h">XX. Be ðeofes<ptr type="liebermannNote" n="9" target="#Rubrics-Af_22.lnote.oe.9"/> ondettan.<ptr type="liebermannNote" n="2" target="#Rubrics-Af_22.lnote.oe.2"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="22" corresp="#wit-e">XX. Be eofetes<ptr type="liebermannNote" n="5" target="#Rubrics-Af_22.lnote.oe.5"/> andetlan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="22" corresp="#wit-g-prol">XX. Be eofetes <hi rend="italic">and</hi>dettlan.<ptr type="liebermannNote" n="3" target="#Rubrics-Af_22.lnote.oe.3"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="22" corresp="#wit-ot-frag">… Be eofetes andetlan.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="22" corresp="#wit-q">De proclamatione ostensa.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">XX Be eofetes andetlan</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-b">Be cynincges gerefan ðyfðe</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning the admission of an offense</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-b">Concerning theft by a king’s reeve</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Über Anzeige einer Missethat.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Über Anzeige<ptr type="liebermannNote" n="1" target="#Rubrics-Af_22.lnote.de.1"/> einer Missethat.<ptr type="liebermannNote" n="2" target="#Rubrics-Af_22.lnote.de.2"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Concerning the confession of a crime.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_22.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de">eofotes ond. <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">eofotes ond. So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_22.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">y <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">y on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_22.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_22.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">zweites</hi> t <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">second t on an erasure</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Af_22.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">41</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">‘Eingeständnis’, wie Frühere übersetzen, stimmt hier nicht zum Sinne, wie schon Price bemerkte. Das Verb <hi rend="italic">andet(ti)an</hi> bedeutet aber neben ‘bekennen’ auch ‘verheissen‘ geloben, verkünden’ (Toller <hi rend="italic">Suppl.</hi>; Sweet <hi rend="italic">Old. texts</hi> 467) wie ad. <hi rend="italic">anthaizan</hi>, ndd. <hi rend="italic">entheten</hi>. Hier ist gemeint das in Aussichtstellen von Strafgeld für den Richter. Das Verb steht mit <hi rend="italic">geyppan</hi> synonym laut Af 5, 4. 22. Quadr versteht richtig. <hi rend="italic">Andetla</hi> scheint nur hier belegt</seg><seg type="translation" xml:lang="en" source="#claude">‘Confession’, as earlier translators render it, does not fit the sense here, as Price already observed. The verb <hi rend="italic">andet(ti)an</hi>, however, besides ‘confess’ also means ‘promise, vow, proclaim’ (Toller <hi rend="italic">Suppl.</hi>; Sweet <hi rend="italic">Old. texts</hi> 467), like OHG <hi rend="italic">anthaizan</hi>, Low German <hi rend="italic">entheten</hi>. What is meant here is the holding out of the prospect of a fine for the judge. The verb is synonymous with <hi rend="italic">geyppan</hi> according to Af 5, 4. 22. Quadr understands it correctly. <hi rend="italic">Andetla</hi> seems to be attested only here</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Af_22.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">41</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Da <hi rend="italic">eofot</hi> im 12. Jh. erstarb, setzt H hier <hi rend="italic">þeof</hi> ‘Dieb’, und verderbt das Wort in Af 22, wo auch B <hi rend="italic">þeofðe</hi> ‘Diebstahl’ mit danach erfundener Rubrik einführt. Auch Q versteht das Wort wohl nicht genau; doch kann <hi rend="italic">proclamatio</hi> ‘Klage’ bedeuten. Ælfred meinte weiteren Sinn. — Verbessere I 19 Sp. 1 XX <hi rend="italic">ðeofes</hi>⁸</seg><seg type="translation" xml:lang="en" source="#claude">Since <hi rend="italic">eofot</hi> died out in the 12th cent., H substitutes <hi rend="italic">þeof</hi> ‘thief’ here, and corrupts the word in Af 22, where B too introduces <hi rend="italic">þeofðe</hi> ‘theft’, with a rubric invented to match. Q too probably does not understand the word exactly; yet <hi rend="italic">proclamatio</hi> can mean ‘accusation’. Ælfred meant a wider sense. — Correct I 19 col. 1 XX <hi rend="italic">ðeofes</hi>⁸</seg></note>
       </div>
     </body>
   </text>

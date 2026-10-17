@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">16</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">186</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,21 +50,30 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 199 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 199 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 16.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Ot added from Gesetze I, p. 16.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 16.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 16: “burhbryce” → “burhbryce.”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3">
         <head>Af Rb 3</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-h">IIII. Be burhbryce</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-e">IIII. Be borgbryce.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3" corresp="#wit-q">De infractione plegii.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-h">IIII. Be burhbryce.<ptr type="liebermannNote" n="5" target="#Rubrics-Af_3.lnote.oe.5"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-e">IIII. Be borgbryce.<ptr type="liebermannNote" n="4" target="#Rubrics-Af_3.lnote.oe.4"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-g-prol">IIII. Be burhbryce.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-ot-frag">… rhbryce.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3" corresp="#wit-q">De infractione plegii.<ptr type="liebermannNote" n="3" target="#Rubrics-Af_3.lnote.oe.3"/></ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">IIII Be borgbryce</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning breach of security</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Von Verletzung des Bürgschaftsschutzes.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Von Verletzung des Bürgschaftsschutzes.<ptr type="liebermannNote" n="1" target="#Rubrics-Af_3.lnote.de.1"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of the violation of surety-protection.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_3.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">17</biblScope></bibl><seg type="original" xml:lang="de">regis <hi rend="italic">fügt zu Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">regis added by Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_3.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">16</biblScope></bibl><seg type="original" xml:lang="de">borhb. <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">borhb. So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_3.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">17</biblScope></bibl><seg type="original" xml:lang="de">urh <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">urh on an erasure</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Af_3.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">40</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Nicht der Bürge verletzt sein Wort, sondern er wird gekränkt, indem ein Dritter Verletzung an dem von ihm Verbürgten, Geschützten begeht. ‘Bürgschaftsbruch’ wäre zweideutig. Da <hi rend="italic">borg</hi> im Sinne von ‘Schutz’ im XI. Jh. selten wurde, missverstanden zwei Schreiber GH (ebenso zum Texte von Af 3 Schreiber von Q) <hi rend="italic">burg</hi>: ‘Einbruch (<hi rend="italic">s. d. Gl</hi> 2d) ins Haus’: ein häufiges Verbrechen</seg><seg type="translation" xml:lang="en" source="#claude">It is not the surety who breaks his word; rather, he is wronged, in that a third party commits an injury against the person whom he has guaranteed and protected. ‘Breach of surety’ would be ambiguous. Since <hi rend="italic">borg</hi> in the sense of ‘protection’ became rare in the 11th cent., two scribes, GH (and likewise the scribe of Q in the text of Af 3), misread it as <hi rend="italic">burg</hi>: ‘break-in (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 2d) at the house’: a common crime</seg></note>
       </div>
     </body>
   </text>

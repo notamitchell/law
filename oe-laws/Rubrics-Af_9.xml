@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">16</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">188</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,23 +50,33 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 205 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 205 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 16.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Ot added from Gesetze I, p. 16.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 16.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="9">
         <head>Af Rb 9</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="9" corresp="#wit-h">X. Be bearneacnu<hi rend="italic">m</hi> wife ofslagenum.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9" corresp="#wit-e">X. Be bearneacnum wífe ofslægenum.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="9" corresp="#wit-q">De puero in matre occiso.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="9" corresp="#wit-h">X. Be bearneacnu<hi rend="italic">m<ptr type="liebermannNote" n="9" target="#Rubrics-Af_9.lnote.oe.9"/></hi> wife ofslagenum.<ptr type="liebermannNote" n="10" target="#Rubrics-Af_9.lnote.oe.10"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9" corresp="#wit-e">X. Be bearneacnum<ptr type="liebermannNote" n="11" target="#Rubrics-Af_9.lnote.oe.11"/> wífe ofslægenum.<ptr type="liebermannNote" n="12" target="#Rubrics-Af_9.lnote.oe.12"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="9" corresp="#wit-g-prol">X. Be bearneacnu<hi rend="italic">m</hi> wife ofslagenum.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="9" corresp="#wit-ot-frag">… arneacnum wife ofslegenum.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="9" corresp="#wit-q">De puero in matre occiso.<ptr type="liebermannNote" n="8" target="#Rubrics-Af_9.lnote.oe.8"/></ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">X Be bearneacnum wife ofslægenum</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-b">Be ða<hi rend="italic">m</hi> ðæt man ofslea wif mid cilde</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning the killing of a pregnant woman</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-b">Concerning that one slays a woman with child</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Von erschlagenem schwangeren Weibe.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Von erschlagenem schwangeren<ptr type="liebermannNote" n="1" target="#Rubrics-Af_9.lnote.de.1"/> Weibe.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of a pregnant woman slain.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_9.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">17</biblScope></bibl><seg type="original" xml:lang="de">Nunc omnes vitas pares <hi rend="italic">fügt Hk zu;</hi> De paritate witarum <hi rend="italic">fügt Br zu</hi></seg><seg type="translation" xml:lang="en" source="#claude">Nunc omnes vitas pares added by Hk; De paritate witarum added by Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_9.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">16</biblScope></bibl><seg type="original" xml:lang="de">ðon ðe mon ofslea bearneacnend wif <hi rend="italic">Ld</hi> [<hi rend="italic">aus B?</hi>]</seg><seg type="translation" xml:lang="en" source="#claude">ðon ðe mon ofslea bearneacnend wif Ld [from B?]</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_9.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">16</biblScope></bibl><seg type="original" xml:lang="de">ofslig. <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">ofslig. So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_9.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">17</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">hinter</hi> c <hi rend="italic">Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">erasure after c</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_9.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">17</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">hinter</hi> a <hi rend="italic">Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">erasure after a</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Af_9.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">40</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Ld scheint B, E und G zu vermengen. — Quadr las wohl <hi rend="italic">bearne</hi> und fasst <hi rend="italic">eacnum wife</hi> als abl. absolutus</seg><seg type="translation" xml:lang="en" source="#claude">Ld seems to conflate B, E and G. — Quadr probably read <hi rend="italic">bearne</hi> and takes <hi rend="italic">eacnum wife</hi> as an ablative absolute</seg></note>
       </div>
     </body>
   </text>

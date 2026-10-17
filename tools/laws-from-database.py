@@ -88,6 +88,12 @@ HEADERS = [
     ("siglum of liebermann's second ms", 'nSig'),
     ("liebermann's third ms", 'afText'),
     ("siglum of liebermann's third ms", 'afSig'),
+    ("liebermann's fourth ms", 'bfText'),
+    ("siglum of liebermann's fourth ms", 'bfSig'),
+    ("manuscript of liebermann's fourth ms", 'bfName'),
+    ("liebermann's fifth ms", 'biText'),
+    ("siglum of liebermann's fifth ms", 'biSig'),
+    ("manuscript of liebermann's fifth ms", 'biName'),
     ('source of the passage', 'passageSource'),
     ('notes on this row', 'notes'),
     ("liebermann's siglum for the manuscript in column k", 'kSig'),
@@ -260,7 +266,8 @@ CHECK = re.compile(r'^K: (checked against|corrected against|added from) Gesetze 
 ROB = re.compile(r'^([TU]): corrected against Robertson p\. ?([^\s;(]+) \((?:was: ".*?"|(?:"[^"]*" → "[^"]*"(?:; )?)+)\)(?=;|$)')
 # The check of October 2026 against the printed editions (spreadsheet stage lcheck_stage.py):
 # 'K: corrected against Gesetze I p. 10, October 2026 (was “tithte”, now “tihte”)'
-OCT = re.compile(r'^(K|L|M|N|AF|O|T|U|W): corrected against (Gesetze I+|Attenborough|Robertson|Oliver|Jurasinski and Oliver|Whitelock) p\. ?([^\s,;]+), October 2026 \(was “(.*?)”, now “(.*?)”\)(?=;|$)')
+OCT = re.compile(r'^(K|L|M|N|AF|BF|BI|O|T|U|W): corrected against (Gesetze I+|Attenborough|Robertson|Oliver|Jurasinski and Oliver|Whitelock) p\. ?([^\s,;]+), October 2026 \(was “(.*?)”, now “(.*?)”\)(?=;|$)')
+ADDED = re.compile(r'^(K|L|N|AF|BF|BI|O): added from (Gesetze I+) p\. ?([^\s,;]+), October 2026 \(MS ([^)]*)\)(?=;|$)')
 MINOR = re.compile(r'^(?:[RE]: was "[^"]*"|T: ‘[^’]*’ corrected to ‘[^’]*’[^;]*|C: was [^;]*?(?= \(|;|$)(?: \([^)]*\))?|I: Gesetze page added|'
                    r'K: (?:a |the )?(?:double space|doubled|stray|spacing|line break)[^.;]*?(?:removed|corrected)\.?)(?=;|$|\s)')
 
@@ -297,6 +304,11 @@ def split_notes(text):
     for p in pieces:
         p = p.strip()
         while p:
+            m = ADDED.match(p)
+            if m:
+                checks.append(('oct2026-added', m.group(1), m.groups()[1:]))
+                p = p[m.end():].lstrip('; ').strip()
+                continue
             m = OCT.match(p)
             if m:
                 checks.append(('oct2026', m.group(1), m.groups()[1:]))
@@ -341,11 +353,12 @@ def read_rows(path, only=None):
         for name in ('codeName', 'king', 'promulgation', 'liebermannMS', 'page', 'liebermannNumber', 'editor',
                      'editorMS', 'editorNumber', 'editorPage', 'secondPage', 'offence', 'people', 'locations',
                      'nSig', 'afSig', 'kSig', 'tSig', 'kName', 'nName', 'afName', 'tName', 'notes', 'passageSource',
+                     'bfSig', 'bfName', 'biSig', 'biName',
                      'thirdRef', 'thirdMS', 'thirdPage', 'translatorNotes', 'rabinRef', 'rabinPage', 'rabinTextNotes', 'rabinNotes',
                      'vglPrinted', 'vglRefs', 'vglRemark'):
             row[name] = get(name)
         for name in ('kText', 'german', 'english', 'nText', 'latin', 'tText', 'translation',
-                     'secondTranslation', 'supplementaryTranslation', 'afText', 'thirdTranslation', 'rabinText', 'rabinTranslation'):
+                     'secondTranslation', 'supplementaryTranslation', 'afText', 'bfText', 'biText', 'thirdTranslation', 'rabinText', 'rabinTranslation'):
             row[name + 'Xml'] = xml(name)
             row[name] = get(name)
         row['passageSourceXml'] = xml('passageSource')
@@ -583,6 +596,11 @@ def build(row, today, source_name, refs):
         texts.append(('liebermannText', language(row['afText']), lie, row['afTextXml'], row['liebermannNumber'],
                       witness(row['afSig'], row['afName'])))
         shown.add(sig_key(row['afSig']))
+    for t in ('bf', 'bi'):      # Liebermann's fourth and fifth texts (columns BF-BH, BI-BK; October 2026)
+        if row[t + 'TextXml']:
+            texts.append(('liebermannText', language(row[t + 'Text']), lie, row[t + 'TextXml'], row['liebermannNumber'],
+                          witness(row[t + 'Sig'], row[t + 'Name'])))
+            shown.add(sig_key(row[t + 'Sig']))
     if row['latinXml']:
         texts.append(('liebermannText', 'la', lie, row['latinXml'], row['liebermannNumber'],
                       witness('Q', MS_NAMES['Q'])))
@@ -751,9 +769,13 @@ def build(row, today, source_name, refs):
         if (who, verb, page) in done:
             continue
         done.add((who, verb, page))
+        if who == 'oct2026-added':
+            book, page, ms = page
+            w('      <change when="2026-10" type="checked">Liebermann’s text of MS %s added from %s, p. %s.</change>' % (esc(ms), esc(book), esc(page)))
+            continue
         if who == 'oct2026':
             col, (book, page, was, now) = verb, page
-            what = {'K': 'Liebermann’s text', 'N': 'Liebermann’s text', 'AF': 'Liebermann’s text', 'O': 'Liebermann’s Latin text',
+            what = {'K': 'Liebermann’s text', 'N': 'Liebermann’s text', 'AF': 'Liebermann’s text', 'BF': 'Liebermann’s text', 'BI': 'Liebermann’s text', 'O': 'Liebermann’s Latin text',
                     'L': 'Liebermann’s German translation', 'M': 'The English of Liebermann’s German',
                     'T': 'The modern editor’s text', 'U': 'The modern editor’s translation', 'W': 'The second translation'}[col]
             w('      <change when="2026-10" type="checked">%s corrected against %s, p. %s: “%s” → “%s”.</change>' % (what, esc(book), esc(page), esc(was), esc(now)))
@@ -931,7 +953,7 @@ def write_codes(rows, catalogue, find_anchor, path):
             name = (name or '').replace(' C&S', '')
             if name and name not in c['editors']:
                 c['editors'].append(name)
-        for sig in (r['kSig'], r['nSig'], r['afSig'], r['tSig']):
+        for sig in (r['kSig'], r['nSig'], r['afSig'], r['bfSig'], r['biSig'], r['tSig']):
             for k in ([sig] if sig in MS_NAMES else [sig_key(x) for x in re.split(r'[;,]\s*', sig or '')]):
                 k = k.strip()
                 if k and (k in MS_NAMES or re.fullmatch(r'[A-Z][a-z]?\d?', k)) and k not in c['manuscripts']:

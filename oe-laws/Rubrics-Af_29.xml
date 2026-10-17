@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +25,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">18</biblScope></bibl>
           <bibl xml:id="jurasinski-and-oliver" type="edition">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021), p. <biblScope unit="page">192</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -48,23 +50,37 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 218 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 218 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 18.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 18: “XXIIII. Be twyhyndum men æt hloþslyhte.” → “XXIIII. Be twyhyndum men æt hloþslyhte. (expanded letters in italics: m)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Ot added from Gesetze I, p. 18.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 18.</change>
+      <change when="2026-10" type="checked">Liebermann’s Latin text corrected against Gesetze I, p. 18: “tpyhindo” → “tƿyhindo”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="29">
         <head>Af Rb 29</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="29" corresp="#wit-h">XXIII. Be twyhyndum men æt hloðslihte.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="29" corresp="#wit-e">XXIIII. Be twyhyndum men æt hloþslyhte.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="29" corresp="#wit-q">De homine tpyhindo (id est ducenteno) occiso a hloþ (id est á cohorte).</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="29" corresp="#wit-h">XXIII. Be twyhyndum<ptr type="liebermannNote" n="10" target="#Rubrics-Af_29.lnote.oe.10"/> men æt hloðslihte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="29" corresp="#wit-e">XXIIII.<ptr type="liebermannNote" n="*" target="#Rubrics-Af_29.lnote.oe.star"/> Be twyhyndu<hi rend="italic">m<ptr type="liebermannNote" n="10" target="#Rubrics-Af_29.lnote.oe.10-2"/></hi> men æt hloþslyhte.<ptr type="liebermannNote" n="11" target="#Rubrics-Af_29.lnote.oe.11"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="29" corresp="#wit-g-prol">XXIIII. Be twyhyndu<hi rend="italic">m</hi> men æt hloþslihte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="29" corresp="#wit-ot-frag">… e twyhindum<ptr type="liebermannNote" n="2" target="#Rubrics-Af_29.lnote.oe.2"/> men æt hloð …</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="29" corresp="#wit-q">De homine tƿyhindo<ptr type="liebermannNote" n="9" target="#Rubrics-Af_29.lnote.oe.9"/> (id est ducenteno) occiso a<ptr type="liebermannNote" n="10" target="#Rubrics-Af_29.lnote.oe.10-3"/> hloþ (id est á cohorte).</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-e">XXIII Be ceorles mennenes niedhæmede</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" corresp="#wit-b">Be ceorles me<hi rend="italic">n</hi>nenes nydhemede</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">Concerning the rape of a <hi rend="italic">ceorl</hi>’s female slave</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Über jemanden von 200 [Schilling Wergeld] bei [seiner] Erschlagung durch Bande;</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Über jemanden von 200 [Schilling<ptr type="liebermannNote" n="1" target="#Rubrics-Af_29.lnote.de.1"/> Wergeld] bei [seiner] Erschlagung durch Bande;</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Concerning someone of 200 [shillings’ wergeld] at [his] slaying by a band;</ab>
         <note type="editorial">H’s rubric XXIII belongs to Af 29 (Liebermann’s margin [29]).</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_29.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">geänd. von anderer Hd.</hi> twyhyn.</seg><seg type="translation" xml:lang="en" source="#claude">altered by another hand twyhyn.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_29.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">tƿih. <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">tƿih. T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_29.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de">a — coh. <hi rend="italic">fehlt Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">a — coh. lacking in Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_29.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de">[29—31] Be mansliht mid hloþe <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">[29—31] Be mansliht mid hloþe Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_29.lnote.oe.10-2" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de">-hin- <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">-hin- So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_29.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">18</biblScope></bibl><seg type="original" xml:lang="de">hloðes. <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">hloðes. So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rubrics-Af_29.lnote.oe.10-3" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">19</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">beide</hi> y <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">both y’s on an erasure</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rubrics-Af_29.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">41</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Die Erkl. des Quadr zu Rb 31 entstammt vielleicht Wer 1. Dass der alte Schilling nur 5 Pf. umfasste, bemerkt Q mehrfach. Zur Identifikation von <hi rend="italic">12hynde</hi> und <hi rend="italic">nobilis vgl. Gl</hi> Wergeld 4ff., Stand 11, Thegn 13a</seg><seg type="translation" xml:lang="en" source="#claude">Quadr’s explanation on Rb 31 perhaps derives from Wer 1. That the old shilling comprised only 5 pence Q notes more than once. On the identification of <hi rend="italic">12hynde</hi> and <hi rend="italic">nobilis cf. Gl</hi> Wergeld 4ff., Stand 11, Thegn 13a</seg></note>
       </div>
     </body>
   </text>
