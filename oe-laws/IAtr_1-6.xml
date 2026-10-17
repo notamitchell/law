@@ -9,6 +9,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -25,6 +27,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">218</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">52</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -51,21 +54,29 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1022 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 218.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 218: “heafod.” → “hlaford.”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 218: “And æt ðam oðran cyrre ne sy ðær nan oðer bot buton þæt heafod.” → “And æt ðam oðran cyrre ne sy ðær nan oðer bot buton þæt heafod. (expanded letters in italics: æt)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.6">
         <head><ref type="lawCode" target="law:IAtr">I Atr</ref> 1.6</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.6" corresp="#wit-h">⁊ æt þam oþran cyrre ne sy þær nan oðer bot butan þ<hi rend="italic">æt</hi> heafod.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.6" corresp="#wit-b">And æt ðam oðran cyrre ne sy ðær nan oðer bot buton þæt heafod.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.6" corresp="#wit-h">⁊ æt þam oþran cyrre ne sy þær nan oðer bot butan þ<hi rend="italic">æt</hi> hlaford.<ptr type="liebermannNote" n="**" target="#IAtr_1-6.lnote.oe.star2"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.6" corresp="#wit-b">And æt ðam<ptr type="liebermannNote" n="4" target="#IAtr_1-6.lnote.oe.4"/> oðran cyrre ne sy ðær<ptr type="liebermannNote" n="7" target="#IAtr_1-6.lnote.oe.7"/> nan oðer bot buton þ<hi rend="italic">æt</hi> heafod.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.6" corresp="#wit-q">Ad secundam uicem non sit alia emendatio nisi capud.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="1.6" corresp="#wit-b">And æt ðam oðran cyrre ne sy ðær nan oðer bot buton þæt heafod.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und beim zweiten Male gebe es keine andere Busse als den Kopf.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und beim zweiten Male gebe es keine andere Busse<ptr type="liebermannNote" n="1" target="#IAtr_1-6.lnote.de.1"/> als den Kopf.<ptr type="liebermannNote" n="2" target="#IAtr_1-6.lnote.de.2"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And the second time let there be no other compensation than the head.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">And on the second occasion he shall not be able to make any amends except by his head.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">And on the second occasion he shall not be able to make any amends except by his head<ptr type="editorNote" n="1" target="#IAtr_1-6.robnote.n.1"/>.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IAtr_2-1">I Atr 2.1</ref>; <ref target="clause:IICn_30-4">II Cn 30.4</ref></note>
         <note type="editorial">H reads ‘hlaford’ (lord); Liebermann corrects to ‘heafod’ (head) from B and Quadr.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1-6.lnote.oe.star2" n="**" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">bessere</hi> heafod <hi rend="italic">aus B Quadr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">read heafod from B Quadr.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1-6.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de">ðæm <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">ðæm Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1-6.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de">ðære nán oþre bote butan <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">ðære nán oþre bote butan Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_1-6.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">147</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Wie <hi rend="italic">bot</hi> (<hi rend="italic">s. d. Wb</hi> 7a) kann auch <hi rend="italic">compositio</hi> im weiteren Sinne Leibesstrafe umfassen</seg><seg type="translation" xml:lang="en" source="#claude">Like <hi rend="italic">bot</hi> (<hi rend="italic">see</hi> that word in <hi rend="italic">Wb</hi> 7a), <hi rend="italic">compositio</hi> too can in the wider sense include corporal punishment</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_1-6.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">147</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">‘Enthauptung’ Schmid; jedoch alternativ andere Todesstrafe; <hi rend="italic">s</hi>. 2, 1¹. IV Eg 11. Wie dort ist Vermögenseinziehung hinzuzudenken. Verstümmelung setzt dafür II Cn 30, 4f. Der Rückfall, wie früher nur die Handhaftigkeit, schliesst hier die Geldstrafe aus.—Der Satz wird 2, 1 vom Rückfall Unfreier wörtlich gleichlautend wiederholt</seg><seg type="translation" xml:lang="en" source="#claude">‘Beheading’ Schmid; but alternatively another form of death penalty; <hi rend="italic">see</hi> 2, 1¹. IV Eg 11. As there, confiscation of property is to be understood. II Cn 30, 4f. substitutes mutilation. Here a relapse, as formerly only being caught in the act, excludes a money fine.—The sentence is repeated word for word in 2, 1 concerning the relapse of the unfree</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IAtr_1-6.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">313</biblScope></bibl><seg type="original" xml:lang="en">The use of head’ for ‘life’ is also found in Norse, <hi rend="italic">e.g.</hi> <hi rend="italic">hætta höfði</hi>, to risk one’s life, <hi rend="italic">Hávamál</hi>, Str. 106. It is sometimes taken quite literally, as in the stories of Bragi Boddason and Egill Skallagrímsson (see <hi rend="italic">Egilssaga</hi>, Ch. 59 f.).<lb type="paragraph"/>In II Cn. 30, 4 we find mutilation instead of capital punishment, cf. In. 18; 37.</seg></note>
       </div>
     </body>
   </text>

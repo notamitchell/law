@@ -9,6 +9,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -25,6 +27,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">220</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">54</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -59,16 +62,24 @@
       <div type="clause" n="4.2">
         <head><ref type="lawCode" target="law:IAtr">I Atr</ref> 4.2</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.2" corresp="#wit-h">⁊ gif hwa hine forenne forstande, beon hy begen anes rihtes wyrðe.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.2" corresp="#wit-b">⁊ gyf hwá hine forne forstande, beon hi begen anes rihtes wyrðe.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.2" corresp="#wit-q">Si quis eum difforciet, sint ambo unius recti digni.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.2" corresp="#wit-b">⁊ gyf<ptr type="liebermannNote" n="5" target="#IAtr_4-2.lnote.oe.5"/> hwá<ptr type="liebermannNote" n="11" target="#IAtr_4-2.lnote.oe.11"/> hine forne<ptr type="liebermannNote" n="11" target="#IAtr_4-2.lnote.oe.11"/> forstande, beon hi begen anes rihtes wyrðe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.2" corresp="#wit-q">Si quis eum difforciet<ptr type="liebermannNote" n="2" target="#IAtr_4-2.lnote.oe.2"/>, sint ambo unius recti digni.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="4.2" corresp="#wit-b">⁊ gyf hwá hine forne forstande, beon hi begen anes rihtes wyrðe.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn jemand ihn [gewaltsam] vertheidigt, seien sie beide gleicher Rechtsstrafe theilhaftig.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und<ptr type="liebermannNote" n="1" target="#IAtr_4-2.lnote.de.1"/> wenn jemand ihn [gewaltsam] vertheidigt<ptr type="liebermannNote" n="2" target="#IAtr_4-2.lnote.de.2"/>, seien<ptr type="liebermannNote" n="3" target="#IAtr_4-2.lnote.de.3"/> sie beide gleicher Rechtsstrafe theilhaftig.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if anyone defends him [by force], let them both be subject to the same legal penalty.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">And if anyone interposes in his defence, they shall both incur the same punishment.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><ptr type="editorNote" n="1" target="#IAtr_4-2.robnote.n.1"/>And if anyone interposes in his defence<ptr type="editorNote" n="2" target="#IAtr_4-2.robnote.n.2"/>, they shall both incur the same punishment.</ab>
         <note type="comparison" source="#liebermann" n="221"><ref target="clause:IIAs_1-5">II As 1.5</ref>; <ref target="clause:VIAs_1-3">VI As 1.3</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. II As. 1, 5; VI 1, 3</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IIIAtr_13-1">III Atr 13.1</ref>; <ref target="clause:IICn_33-1a">II Cn 33.1a</ref></note>
         <note type="editorial">Liebermann compares II As 1.5; VI As 1.3.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_4-2.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">221</biblScope></bibl><seg type="original" xml:lang="de">disfortiet <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">disfortiet T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_4-2.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">220</biblScope></bibl><seg type="original" xml:lang="de">gif <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gif Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_4-2.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">220</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">doppelt, aber einmal unterstrichen B</hi></seg><seg type="translation" xml:lang="en" source="#claude">duplicated, but underlined once B</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_4-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">148</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Diese strengere Strafe für Begünstigung (<hi rend="italic">s. d. Gl</hi> 8. 9ff.) hat VI As</seg><seg type="translation" xml:lang="en" source="#claude">This stricter punishment for harbouring (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 8. 9ff.) is found in VI As</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_4-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">148</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Q versteht die Parallelen II Cn 53, 1 und II As 1, 5 richtig als <hi rend="italic">defendere presumat</hi> bzw. <hi rend="italic">obstabit</hi>. Vielleicht meint er hier ‘ihn [dem Strafvollzug] weigern, gewaltsam entreissen’. Die anderen Bedd. von <hi rend="italic">diffortiare</hi> (<hi rend="italic">s. d. Wb</hi>) liegen ferner</seg><seg type="translation" xml:lang="en" source="#claude">Q correctly understands the parallels II Cn 53, 1 and II As 1, 5 as <hi rend="italic">defendere presumat</hi> and <hi rend="italic">obstabit</hi> respectively. Here perhaps he means ‘withhold him [from the execution of the penalty], wrest him away by force’. The other meanings of <hi rend="italic">diffortiare</hi> (<hi rend="italic">see</hi> that word in <hi rend="italic">Wb</hi>) are more remote</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_4-2.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">148</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Dieselben 6 Worte III Atr 13 von dem neben dem Verletzer des Königsfriedens Betroffenen</seg><seg type="translation" xml:lang="en" source="#claude">The same 6 words in III Atr 13, of the person implicated together with the breaker of the king’s peace</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IAtr_4-2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">313</biblScope></bibl><seg type="original" xml:lang="en">Cf. II As. 1, 5; VI, 1, 3; III Atr. 13; 13, 1.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IAtr_4-2.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">313</biblScope></bibl><seg type="original" xml:lang="en">Cf. <hi rend="italic">forene forstande</hi>, VI As. 1, 4.</seg></note>
       </div>
     </body>
   </text>
