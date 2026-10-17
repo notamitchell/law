@@ -116,6 +116,17 @@ scripts:
             intro: 'Liebermann’s explanatory notes and commentary on the clause (his Erklärungen), printed separately in Gesetze III (1916) and linked, as in his original print edition, to the superscript numbers found in his German translation. These notes are given here with an English crib made with an LLM (Claude, 2026). Scholarship on the laws has moved a long way since 1916, and much of Liebermann’s commentary is superseded; it is given here as part of the record of Liebermann’s edition.'
         }
     };
+    // Modern editors and translators whose notes are linked to the numbers in their texts.
+    const EDITOR_GROUPS = {
+        attenborough: { name: 'Attenborough', intro: NOTE_GROUPS.attenborough.intro,
+            textIntro: 'Attenborough’s footnotes to his Old English text (The Laws of the Earliest English Kings, 1922).',
+            trIntro: 'Attenborough’s notes to his translation, printed at the back of his book (The Laws of the Earliest English Kings, 1922).' },
+        robertson: { name: 'Robertson', intro: 'Robertson’s notes (The Laws of the Kings of England from Edmund to Henry I, 1925): the notes at the back of his book, keyed to the numbers in his translation, and his footnotes to his text.',
+            textIntro: 'Robertson’s footnotes to his text (The Laws of the Kings of England from Edmund to Henry I, 1925), mostly the readings of the other manuscripts.',
+            trIntro: 'Robertson’s notes to his translation, printed at the back of his book (The Laws of the Kings of England from Edmund to Henry I, 1925).' },
+        whitelock: { name: 'Whitelock', intro: 'Whitelock’s footnotes to her translation (English Historical Documents I, 2nd edn, 1979).',
+            textIntro: '', trIntro: 'Whitelock’s footnotes to her translation (English Historical Documents I, 2nd edn, 1979).' }
+    };
     const xmlId = n => n.getAttribute('xml:id') || n.getAttributeNS('http://www.w3.org/XML/1998/namespace', 'id') || '';
     const htmlId = id => 'ln-' + id.replace(/[^A-Za-z0-9_-]/g, '_');
     function noteRef(ptr) {
@@ -146,7 +157,7 @@ scripts:
             const kids = Array.from(n.children);
             const label = kids.find(k => k.localName === 'label');
             if (n.getAttribute('subtype') === 'footnote' && group.textShown === false) {
-                const on = el('span', 'muted', 'On his Old English text (not given here)' + (label ? ', at ' : ': '));
+                const on = el('span', 'muted', 'On the text (not given here)' + (label ? ', at ' : ': '));
                 if (label) { const w = el('em', null, plainText(label)); on.appendChild(w); on.appendChild(document.createTextNode(': ')); }
                 li.appendChild(on);
             }
@@ -158,7 +169,7 @@ scripts:
             const where = [];
             if (bibl) {
                 const scope = u => { const s = tei(bibl, 'biblScope').find(b => b.getAttribute('unit') === u); return s ? plainText(s) : ''; };
-                if (n.getAttribute('type') === 'editorNote') where.push((group.name || '') + ', p. ' + scope('page') + (n.getAttribute('subtype') === 'footnote' ? ', footnote to his Old English text' : ''));
+                if (n.getAttribute('type') === 'editorNote') where.push((group.name || '') + ', p. ' + scope('page') + (n.getAttribute('subtype') === 'footnote' ? ', footnote to the text' : n.getAttribute('subtype') === 'translationFootnote' ? ', footnote' : ''));
                 else where.push('Gesetze ' + ({ 1: 'I', 3: 'III' }[scope('volume')] || scope('volume')) + ', p. ' + scope('page') + (scope('column') ? ', col. ' + scope('column') : ''));
             }
             if (n.getAttribute('subtype') === 'translationFootnote') where.push('Liebermann’s footnote to his German translation');
@@ -340,21 +351,38 @@ scripts:
             // text, for the numbers in all of them), Erklärungen on his German.
             if (a.getAttribute('type') === 'liebermannText') liebTexts.push([box, label, p, a]);
             else if (a.getAttribute('type') === 'translation' && a.getAttribute('xml:lang') === 'de' && id === 'liebermann') attachNotes(box, label, [[p, a]], div, 'erklaerung');
-            // Attenborough's notes: footnotes on his text (where it is given), the notes at the back on his translation.
-            if (id === 'attenborough') {
-                const attText = abs.some(x => x.getAttribute('type') === 'editionText' && (x.getAttribute('source') || '') === '#attenborough');
-                if (a.getAttribute('type') === 'editionText') attachNotes(box, label, [[p, a]], div, 'attenborough', n => n.getAttribute('subtype') === 'footnote', { name: 'Attenborough', textShown: true, intro: 'Attenborough’s footnotes to his Old English text (The Laws of the Earliest English Kings, 1922).' });
-                else if (a.getAttribute('type') === 'translation') attachNotes(box, label, [[p, a]], div, 'attenborough', attText ? (n => n.getAttribute('subtype') === 'endnote') : null,
-                    { name: 'Attenborough', textShown: attText, intro: attText ? 'Attenborough’s notes to his translation, printed at the back of his book (The Laws of the Earliest English Kings, 1922).' : NOTE_GROUPS.attenborough.intro });
+            // The modern editors' and translators' notes, each behind its own button: footnotes to an editor's text
+            // with his text, his notes at the back (and footnotes to a translation) with his translation.
+            const eg = EDITOR_GROUPS[id];
+            if (eg) {
+                const hasText = abs.some(x => x.getAttribute('type') === 'editionText' && (x.getAttribute('source') || '') === '#' + id);
+                const key = 'editor-' + id;
+                NOTE_GROUPS[key] = { type: 'editorNote', source: id, subtypes: ['endnote', 'footnote', 'translationFootnote'], who: eg.name + '’s', title: eg.name + '’s notes', intro: eg.intro };
+                if (a.getAttribute('type') === 'editionText') attachNotes(box, label, [[p, a]], div, key, n => n.getAttribute('subtype') === 'footnote', { name: eg.name, textShown: true, intro: eg.textIntro });
+                else if (a.getAttribute('type') === 'translation') attachNotes(box, label, [[p, a]], div, key, hasText ? (n => n.getAttribute('subtype') !== 'footnote') : null,
+                    { name: eg.name, textShown: hasText, intro: hasText ? eg.trIntro : eg.intro });
             }
-            // The translator's own footnotes (Whitelock's, from EHD), under her translation.
-            // (Rabin's textual notes go under his text, the readings of the other manuscripts.)
+            // Notes without numbers in the text (Rabin's notes to his text and to his translation, keyed to a word;
+            // Whitelock's footnotes where they are not yet linked to her numbers): a list behind a button.
             const noteType = { translation: 'translator', editionText: 'textual' }[a.getAttribute('type')];
             const own = noteType ? tei(div, 'note').filter(n => n.getAttribute('type') === noteType && (n.getAttribute('source') || '').replace(/^#/, '') === id) : [];
             if (own.length) {
                 const ol = el('ol', 'clause-reading-notes small');
                 ol.setAttribute('aria-label', src.name + (noteType === 'textual' ? '’s textual notes' : '’s notes'));
                 own.forEach(n => { const li = el('li'); li.appendChild(partLabel(n)); li.appendChild(inline(n)); ol.appendChild(li); });
+                const btn = el('button', 'chip lnotes-toggle', 'Show ' + src.name + '’s notes');
+                btn.type = 'button';
+                btn.title = 'Show or hide ' + src.name + '’s ' + (noteType === 'textual' ? 'notes to the text' : 'notes to the translation') + ' (' + own.length + ')';
+                label.appendChild(document.createTextNode(' '));
+                label.appendChild(btn);
+                ol.hidden = true;
+                btn.setAttribute('aria-pressed', 'false');
+                btn.addEventListener('click', () => {
+                    const on = btn.getAttribute('aria-pressed') !== 'true';
+                    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+                    btn.textContent = (on ? 'Hide ' : 'Show ') + src.name + '’s notes';
+                    ol.hidden = !on;
+                });
                 box.appendChild(ol);
             }
             column.appendChild(box);
