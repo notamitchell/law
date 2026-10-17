@@ -9,6 +9,8 @@
         <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +28,7 @@
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-q" rend="bold"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
@@ -48,23 +51,31 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 815 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 815 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 171.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 171: “que” → “quę”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Attenborough, p. 146: “observandis; fuerent.] [Q/Br]” → “observandis,; fuerunt.]”.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Attenborough, p. 147: “agreed; Grately,” → “established; Grately”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:IVAs">IV As</ref> 2</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2" corresp="#wit-q">Et hoc inprimis est, ut obseruentur omnia iudicia, que apud Grateleiam posita fuerunt, preter mercatum ciuitatis et diei dominice.</ab>
-        <ab type="editionText" xml:lang="ang" source="#attenborough" n="2" corresp="#wit-q">[De judiciis observandis quæ apud Greateleiam edita fuerent.] [Q/Br] Et hoc inprimis est, ut observentur omnia iudicia, quæ apud Greateleiam posita fuerunt, præter mercatum civitatis et diei Dominicæ.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-q">And first of all; all the decrees shall be observed, which were agreed at Grately, except those which relate to trading in a town and trading on Sunday.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2" corresp="#wit-q">Et hoc inprimis est, ut obseruentur omnia iudicia, quę apud Grateleiam<ptr type="liebermannNote" n="9" target="#IVAs_2.lnote.oe.9"/><ptr type="liebermannNote" n="a" target="#IVAs_2.lnote.oe.a"/> posita fuerunt, preter<ptr type="liebermannNote" n="b" target="#IVAs_2.lnote.oe.b"/> mercatum ciuitatis et diei dominice.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="2" corresp="#wit-q">[De judiciis observandis, quæ apud Greateleiam edita fuerunt.] Et hoc inprimis est, ut observentur omnia iudicia, quæ apud Greateleiam posita fuerunt, præter mercatum civitatis et diei Dominicæ.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-q">And first of all; all the decrees shall be observed, which were established at Grately except those which relate to trading in a town<ptr type="editorNote" n="1" target="#IVAs_2.attnote.n.1"/> and trading on Sunday<ptr type="editorNote" n="2" target="#IVAs_2.attnote.n.2"/>.</ab>
         <note type="comparison" source="#liebermann" n="171"><ref target="clause:IIAs_24-1">II As 24.1</ref>; <ref target="clause:IIAs_12">II As 12</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. II As. 24, 1; 12</note>
         <note type="comparison" source="#wormald-mel" n="291"><label>abrogates</label> <ref target="clause:IIAs_24-1">II As 24.1</ref> <quote>the clause ('24:1') banning Sunday trading, its absence logically connected with the deliberations at Thunderfield ('IV') that abrogated previous decisions about Sunday business</quote></note>
         <note type="comparison" source="#wormald-ppmel" n="54"><label>revises (lifts ban)</label> <ref target="clause:IIAs_24-1">II As 24.1</ref> <quote>Within a few more years, however, the king seems to have changed his mind. The ban on Sunday commerce was apparently lifted.</quote></note>
         <note type="comparedBy" source="#wormald-mel" n="291"><ref target="clause:VIAs_10">VI As 10</ref></note>
         <note type="editorial">Latin only; no German translation in Liebermann. Liebermann compares II As 24.1; 12.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_2.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">171</biblScope></bibl><seg type="original" xml:lang="de">Greatt. <hi rend="italic">RT;</hi> -leyam <hi rend="italic">Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">Greatt. RT; -leyam Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_2.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">113</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S.</hi> II As</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See</hi> II As</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_2.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">113</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">II As 12. 24, 1 hob also noch Æthelstan selbst auf, und VI 10 zitiert diese Aufhebung. Handel am Sonntag (<hi rend="italic">s. d. Gl</hi> 5) wird später wieder verboten, auch VIII Atr 17</seg><seg type="translation" xml:lang="en" source="#claude">II As 12. 24, 1 was thus repealed by Æthelstan himself, and VI 10 cites this repeal. Trading on Sunday (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 5) is later forbidden again, also VIII Atr 17</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IVAs_2.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">210</biblScope></bibl><seg type="original" xml:lang="en">See II As. cap. 12, 13 § 1.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IVAs_2.attnote.n.2" n="2" source="#attenborough"><bibl><biblScope unit="page">210</biblScope></bibl><seg type="original" xml:lang="en">See II As. cap. 24 § 1. In later times trading on Sunday was again forbidden (see VIII Athlr. cap. 17).</seg></note>
       </div>
     </body>
   </text>
