@@ -580,7 +580,8 @@ def build(row, today, source_name, refs):
         if not sig:
             return ''
         k = sig_key(sig)
-        for w in wits:
+        exact = [w for w in wits if w[1] == sig] if '(Latin)' in sig else []   # 'C (Latin)' is its own witness, not C
+        for w in exact or wits:
             if w[1] == sig or same_sig(sig_key(w[1]), k):
                 if name and not w[3]:
                     w[3] = name

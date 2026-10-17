@@ -11,6 +11,9 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,12 +32,12 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">439</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-c" rend="bold"><abbr>C</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
           <witness xml:id="wit-f"><abbr>F</abbr> <note type="manuscript">London, British Library, Cotton Nero E.i</note></witness>
           <witness xml:id="wit-c-latin"><abbr>C (Latin)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
-          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -56,6 +59,7 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 995 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 210.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 210: “bigcge” → “bicgcge”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -63,15 +67,23 @@
       <div type="clause" n="6">
         <head><ref type="lawCode" target="law:IVEg">IV Eg</ref> 6</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-f">⁊ ælc mon mid heora gewitnysse bigcge ⁊ sylle ælc þara ceapa, þe he bigcge oððe sylle aþer oððe burge oððe on wæpengetace.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-c">⁊ ælc mon mid heora gewytnyssa bigcge ⁊ sylle ælc þeora ceapa, þe he bigcge oððe sylle aþer oððe burge oððe wæpengetace.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6" corresp="#wit-q">Si quis uero ciuis aut peregrinus, poscente usu necessitatis humane, quid emere uoluerit aut uendere, secum (uel sibi) sumat testimonium in omni negotio, sit in ciuitate, rure aut hundrode.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="6" corresp="#wit-c">⁊ ælc mon mid heora gewytnysse bigcge ⁊ sylle ælc þeora ceapa þe he bicgcge oððe sylle aþer oððe burge oððe wæpengetace.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und jedermann kaufe und verkaufe unter ihrer Zeugenschaft jedes der Kaufgeschäfte, das er kauft oder verkauft, entweder in Stadt oder in Wapentake.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-c">⁊ ælc mon mid heora gewytnyssa bigcge ⁊ sylle ælc þeora<ptr type="liebermannNote" n="2" target="#IVEg_6.lnote.oe.2"/> ceapa, þe he bicgcge oððe sylle aþer oððe burge oððe wæpengetace.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6" corresp="#wit-c-latin">Si quis uero ciuis aut peregrinus, poscente usu necessitatis humane, quid emere uoluerit aut uendere, secum (uel<ptr type="liebermannNote" n="3" target="#IVEg_6.lnote.oe.3"/> sibi) sumat testimonium in omni negotio, sit in ciuitate, rure aut hundrode.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="6" corresp="#wit-c">⁊ ælc mon mid heora gewytnysse bigcge ⁊ sylle ælc þeora ceapa þe he bicgcge oððe sylle aþer oððe burge oððe wæpengetace<ptr type="editorNote" n="2" target="#IVEg_6.robnote.fn.2"/>.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und jedermann kaufe und verkaufe unter ihrer<ptr type="liebermannNote" n="1" target="#IVEg_6.lnote.de.1"/> Zeugenschaft jedes der Kaufgeschäfte, das er kauft oder verkauft, entweder in Stadt<ptr type="liebermannNote" n="2" target="#IVEg_6.lnote.de.2"/> oder in Wapentake.<ptr type="liebermannNote" n="3" target="#IVEg_6.lnote.de.3"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let every man buy and sell, with their witness, every one of the goods that he buys or sells, either in a borough or in a wapentake.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">And every man shall buy or sell in the presence of these witnesses all the goods which he buys or sells either in a borough or in a wapentake.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock">And every man is with their witness to buy and sell all goods that he buys and sells, in either a borough or a wapentake.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">And every man shall buy or sell in the presence of these witnesses all the goods which he buys or sells either in a borough or in a wapentake<ptr type="editorNote" n="1" target="#IVEg_6.robnote.n.1"/>.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock">And every man is with their witness to buy and sell all goods that he buys and sells, in either a borough or a wapentake.<ptr type="editorNote" n="6" target="#IVEg_6.whinote.n.6"/></ab>
         <note type="comparedBy" source="#wormald-mel" n="320"><ref target="clause:IIAtr_8">II Atr 8–9.4</ref></note>
-        <note type="translator" source="#whitelock">id., in civitate, rure, aut hundredo</note>
+        <note type="editorial">BF: added from Gesetze I p. 210, October 2026 (MS C (Latin)); O: corrected against Gesetze I, October 2026 (was “(Latin version of C)”, now “∅ (moved to BF)”)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVEg_6.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">211</biblScope></bibl><seg type="original" xml:lang="de">u. s. <hi rend="italic">vom Schreiber übergeschr. C</hi></seg><seg type="translation" xml:lang="en" source="#claude">u. s. written above by the scribe C</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVEg_6.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">210</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_6.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">142</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Noch nicht begegnet hier der Gewährbürge; <hi rend="italic">s. d. Gl</hi>; Handel 8a</seg><seg type="translation" xml:lang="en" source="#claude">The warrantor does not yet appear here; <hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi>; Handel 8a</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_6.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">142</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Wie <hi rend="italic">burge</hi> so kann <hi rend="italic">wæpengetace</hi> lokativer Instrumental sein, also das von F davor gesetzte <hi rend="italic">on</hi> ursprünglich fehlen</seg><seg type="translation" xml:lang="en" source="#claude">Like <hi rend="italic">burge</hi>, <hi rend="italic">wæpengetace</hi> can be a locative instrumental, so that the <hi rend="italic">on</hi> placed before it by F may originally have been absent</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_6.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">142</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. o</hi>. 3².—Da Versio das Wapentake unterdrückt, rührt sie nicht aus Denalagu her; <hi rend="italic">s. u</hi>. 12¹. Zu jenem steht <hi rend="italic">hundred</hi> synonym <hi rend="italic">o</hi>. 3, 1; <hi rend="italic">u</hi>. 10. Nicht bloss die Gerichtsversammlung, sondern das Bezirksterritorium muss gemeint sein, da Viehhandel nicht bloss alle vier Wochen vorkam, da zweitens, wenn das Volk doch bei jedem Handel versammelt wäre, es nicht erst eines Kaufzeugen-Ausschusses bedurft hätte, und drittens dann der Hundred-Vorsteher jeden Handel gekannt hätte, nicht erst, wie hier 10, von den Kaufzeugen darüber unterrichtet zu werden brauchte</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. above</hi> 3².—Since the Versio suppresses the wapentake, it does not originate from the Denalagu; <hi rend="italic">see below</hi> 12¹. <hi rend="italic">Hundred</hi> is used as synonymous with it <hi rend="italic">above</hi> 3, 1; <hi rend="italic">below</hi> 10. Not merely the court assembly but the territory of the district must be meant, since cattle-dealing did not take place only every four weeks; since, secondly, if the people were in any case assembled at every transaction, there would have been no need for a committee of purchase-witnesses; and since, thirdly, the head of the hundred would then have known of every transaction, and would not first have needed, as here in 10, to be informed of it by the purchase-witnesses</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IVEg_6.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">308</biblScope></bibl><seg type="original" xml:lang="en">The territorial division found in certain counties (the N. and W. Ridings of Yorkshire, Lincolnshire, Leicestershire, Nottinghamshire, Derbyshire and Rutland) corresponding more or less to the hundreds which are found in the southern counties. The term is generally explained from Ed. Conf. 30.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IVEg_6.robnote.fn.2" n="2" source="#robertson"><bibl><biblScope unit="page">34</biblScope></bibl><label>wæpengetace</label><seg type="original" xml:lang="en"><hi rend="italic">on w.</hi> F.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IVEg_6.whinote.n.6" n="6" source="#whitelock"><bibl><biblScope unit="page">439</biblScope></bibl><label>wapentake</label><seg type="original" xml:lang="en">id., <hi rend="italic">in civitate, rure, aut hundredo</hi></seg></note>
       </div>
     </body>
   </text>

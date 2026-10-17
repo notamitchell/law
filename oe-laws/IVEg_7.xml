@@ -10,6 +10,8 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,12 +29,12 @@
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">34</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">440</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-c" rend="bold"><abbr>C</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
           <witness xml:id="wit-f"><abbr>F</abbr> <note type="manuscript">London, British Library, Cotton Nero E.i</note></witness>
           <witness xml:id="wit-c-latin"><abbr>C (Latin)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
-          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -53,21 +55,28 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 998 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 210.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 210: “nehgeburum” → “nehgeburum,”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7">
         <head><ref type="lawCode" target="law:IVEg">IV Eg</ref> 7</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-f">⁊ se ðe æfter ænegum ceape ride, cyðe his nehgeburum ymbe hwæt he ride; ⁊ þonne he ham cume, cyðe eác, on hwæs gewitnysse he þone ceap gebohte.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-c">⁊ se ðe æfter agenum ceape ride, cyðe his neahgeburum, ymbe hwæt he ride; ⁊ ðonne he ham cume, cyðe eác, on ðæs gewitnysse he ðone ceap gebohte.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="7" corresp="#wit-q">Qui autem de loco ad locum causa emendi, ut prefati sumus, transierit, uicinis et amicorum suorum turbis insinuet, cuius rei instinctu proficissci uelit; et cum iterum domum redierit, palam faciat, in cuius testificatione eandem suam emptionem emerit.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="7" corresp="#wit-c">⁊ se ðe æfter ænegum ceape ride, cyðe his neahgeburum ymbe hwæt he ride; ⁊ ðonne he ham cume, cyðe eác on hwæs gewitnysse he ðone ceap gebohte.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und wer auf irgend welchen Kauf fortreist, melde seinen Nachbarn, wonach er reisen will; und sobald er heimkommt, melde er auch, unter wessen Zeugenschaft er die Waare gekauft hat.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-f">⁊ se ðe æfter ænegum ceape ride, cyðe his nehgeburum, ymbe hwæt he ride; ⁊ þonne he ham cume, cyðe eác, on hwæs gewitnysse he þone ceap gebohte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-c">⁊ se ðe æfter agenum<ptr type="liebermannNote" n="5" target="#IVEg_7.lnote.oe.5-2"/> ceape ride, cyðe his neahgeburum, ymbe hwæt he ride; ⁊ ðonne he ham cume, cyðe eác, on ðæs<ptr type="liebermannNote" n="5" target="#IVEg_7.lnote.oe.5-2"/> gewitnysse he ðone ceap gebohte.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="7" corresp="#wit-c-latin">Qui autem de loco ad locum causa emendi, ut prefati sumus, transierit, uicinis et amicorum suorum turbis insinuet, cuius rei instinctu proficissci<ptr type="liebermannNote" n="5" target="#IVEg_7.lnote.oe.5"/> uelit; et cum iterum domum redierit, palam faciat, in cuius testificatione eandem suam emptionem emerit.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="7" corresp="#wit-c">⁊ se ðe æfter ænegum<ptr type="editorNote" n="5" target="#IVEg_7.robnote.fn.5"/> ceape ride, cyðe his neahgeburum ymbe hwæt he ride; ⁊ ðonne he ham cume, cyðe eác on hwæs<ptr type="editorNote" n="6" target="#IVEg_7.robnote.fn.6"/> gewitnysse he ðone ceap gebohte.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wer auf irgend welchen Kauf<ptr type="liebermannNote" n="1" target="#IVEg_7.lnote.de.1"/> fortreist, melde seinen Nachbarn, wonach er reisen will; und sobald er heimkommt, melde er auch, unter wessen Zeugenschaft er die Waare gekauft hat.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And whoever rides out after any purchase, let him tell his neighbours what he is riding for; and when he comes home, let him also tell under whose witness he bought the goods.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">And he who sets out to make any purchase shall inform his neighbours of the object of his journey; and when he comes home, he shall also declare who was present as witness when he bought the goods.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">And he who sets out<ptr type="editorNote" n="1" target="#IVEg_7.robnote.n.1"/> to make any purchase shall inform his neighbours of the object of his journey; and when he comes home, he shall also declare who was present as witness when he bought the goods.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">And he who rides out to make any purchase is to inform his neighbours what he is going for; and when he comes home he is also to announce in whose witness he bought the goods.</ab>
-        <note type="editorial">C's ‘agenum’ and ‘ðæs’ should be corrected from F (‘ænegum’, ‘hwæs’).</note>
+        <note type="editorial">C's ‘agenum’ and ‘ðæs’ should be corrected from F (‘ænegum’, ‘hwæs’).; BF: added from Gesetze I p. 210, October 2026 (MS C (Latin)); O: corrected against Gesetze I, October 2026 (was “(Latin version of C)”, now “∅ (moved to BF)”)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVEg_7.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">211</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVEg_7.lnote.oe.5-2" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">210</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">bessere aus F</hi></seg><seg type="translation" xml:lang="en" source="#claude">correct from F</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_7.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">142</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">‘Nach Vieh ausreitet’ Schmid zu eng, der aber richtig gegen Thorpe bemerkt, nicht die Spursuche eigenen Viehs (wie C irrig liest) sei gemeint. Laut 8 ist <hi rend="italic">cuce orf</hi> (<hi rend="italic">vgl. on cucan ceape</hi> Urk. a. 956 Bi 972) nicht die einzige, wenn auch zunächst hier zu verstehende Fahrnis.—Die Versio verweist auf 6 zurück.—Mit <hi rend="italic">amici</hi> neben den Dorfgenossen meint sie wohl zunächst die Sippe.—<hi rend="italic">Vgl. Gl</hi> Kundmachung 2; Handel 8k.—Den letzten Satz wiederholt c. 9a. E.</seg><seg type="translation" xml:lang="en" source="#claude">‘Rides out after cattle’ Schmid, too narrowly; he rightly remarks, however, against Thorpe, that the tracking of one's own cattle (as C erroneously reads) is not meant. According to 8, <hi rend="italic">cuce orf</hi> (<hi rend="italic">cf. on cucan ceape</hi> charter a. 956 Bi 972) is not the only kind of movables, though it is the one to be understood here in the first instance.—The Versio refers back to 6.—By <hi rend="italic">amici</hi> alongside the fellow villagers it probably means primarily the kindred.—<hi rend="italic">Cf. Gl</hi> Kundmachung 2; Handel 8k.—The last sentence is repeated in c. 9 at the end.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IVEg_7.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">308</biblScope></bibl><seg type="original" xml:lang="en"><hi rend="italic">ride</hi>, cf. <hi rend="italic">utrad</hi>, cap. 8. The use of the verb <hi rend="italic">ridan</hi> in both clauses implies that the intending purchaser went on horseback.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IVEg_7.robnote.fn.5" n="5" source="#robertson"><bibl><biblScope unit="page">34</biblScope></bibl><label>ænegum</label><seg type="original" xml:lang="en">F; <hi rend="italic">agenum</hi> C.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IVEg_7.robnote.fn.6" n="6" source="#robertson"><bibl><biblScope unit="page">34</biblScope></bibl><label>hwæs</label><seg type="original" xml:lang="en">F; <hi rend="italic">ðæs</hi> C.</seg></note>
       </div>
     </body>
   </text>

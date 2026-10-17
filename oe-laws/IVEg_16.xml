@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,12 +31,12 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-c" rend="bold"><abbr>C</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
           <witness xml:id="wit-f"><abbr>F</abbr> <note type="manuscript">London, British Library, Cotton Nero E.i</note></witness>
           <witness xml:id="wit-c-latin"><abbr>C (Latin)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
-          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -55,22 +57,31 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1013 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 214.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 214: “Ic beo eow swyðe hold hlaford þa hwyle þe me lif gelæst, ⁊ eow eallum swyðe bliðe eom, for ði þe ge swa georne ymbe frið syndon.” → “Ic beo eow swyðe hold hlaford þa hwyle þe me lif gelæst, ⁊ eow eallum swyðe bliðe eom, for ði þe ge swa georne ymbe frið syndon. (expanded letters in italics: m)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="16">
         <head><ref type="lawCode" target="law:IVEg">IV Eg</ref> 16</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16" corresp="#wit-f">Ic beo eow swyðe hold hlaford þa hwile þe me lif gelæst, ⁊ eow eallum swyðe bliðe eom, for þý þe ge swa georne ymbe frið syndon.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16" corresp="#wit-c">Ic beo eow swyðe hold hlaford þa hwyle þe me lif gelæst, ⁊ eow eallum swyðe bliðe eom, for ði þe ge swa georne ymbe frið syndon.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="16" corresp="#wit-q">Quamdiu etenim comes fuerit uita, fidelis omnibus uobis perseuerabo. Et nunc omnes uos in uisceribus Christi commendo, ut magis ác magis abundetis in omni bonitate et scientia et opere bono. Ualete feliciter in Christo!</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16" corresp="#wit-f">Ic beo eow swyðe hold hlaford þa hwile þe me lif gelæst, ⁊ eow eallum swyðe bliðe eom, for þý þe ge swa georne ymbe frið syndon.<ptr type="liebermannNote" n="3" target="#IVEg_16.lnote.oe.3"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16" corresp="#wit-c">Ic beo eow swyðe hold hlaford þa hwyle þe me lif gelæst, ⁊ eow eallu<hi rend="italic">m</hi> swyðe bliðe eom, for ði þe ge swa georne ymbe frið syndon.<ptr type="liebermannNote" n="5" target="#IVEg_16.lnote.oe.5"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="16" corresp="#wit-c-latin">Quamdiu etenim comes fuerit uita, fidelis omnibus uobis perseuerabo. Et nunc omnes uos in uisceribus Christi commendo, ut magis ác magis abundetis in omni bonitate et scientia et opere bono.<ptr type="liebermannNote" n="4" target="#IVEg_16.lnote.oe.4"/> Ualete feliciter in Christo!</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="16" corresp="#wit-c">Ic beo eow swyðe hold hlaford þa hwyle þe me lif gelæst, ⁊ eow eallum swyðe bliðe eom, for ði þe ge swa georne ymbe frið syndon.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Ich bleibe euch ein sehr gnädiger Herr, so lange wie mir das Leben dauert, und bleibe euch allen recht gewogen, weil ihr so eifrig um die öffentliche Sicherheit [bemüht] seid.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Ich bleibe euch ein sehr gnädiger<ptr type="liebermannNote" n="1" target="#IVEg_16.lnote.de.1"/> Herr, so lange<ptr type="liebermannNote" n="2" target="#IVEg_16.lnote.de.2"/> wie mir das Leben dauert, und bleibe euch allen recht gewogen, weil<ptr type="liebermannNote" n="3" target="#IVEg_16.lnote.de.3"/> ihr so eifrig um die öffentliche Sicherheit [bemüht] seid.<ptr type="liebermannNote" n="4" target="#IVEg_16.lnote.de.4"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">I shall be a very gracious lord to you as long as my life lasts, and I am well disposed to you all, because you are so zealous for [public] peace.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">I will be a very gracious lord to you as long as my life lasts. I am very well pleased with you all, because you are so zealous for the preservation of the public peace.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">I will be a very gracious lord to you as long as my life lasts. I am very well pleased with you all<ptr type="editorNote" n="1" target="#IVEg_16.robnote.n.1"/>, because you are so zealous for the preservation of the public peace.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:Cn1020_2">Cn 1020 2</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="348"><ref target="clause:Cn1020_2">Cn 1020 2</ref></note>
-        <note type="editorial">In F, what follows was bound in later; in C, the Latin ‘Coena Domini’ follows. In C, the final sentence of the Versio is picked out in red-decorated uncials.</note>
+        <note type="editorial">In F, what follows was bound in later; in C, the Latin ‘Coena Domini’ follows. In C, the final sentence of the Versio is picked out in red-decorated uncials.; BF: added from Gesetze I p. 214, October 2026 (MS C (Latin)); O: corrected against Gesetze I, October 2026 (was “(Latin version of C)”, now “∅ (moved to BF)”)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVEg_16.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">214</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">das in F Folgende ist nachträglich hinzugebunden.</hi></seg><seg type="translation" xml:lang="en" source="#claude">what follows in F was bound in later.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVEg_16.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">215</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">In C zeichnen den Schlusssatz rothverzierte Uncialen aus; es folgt der Angelsächs. Text, oben S.</hi> 206. U. f. in C. <hi rend="italic">fehlt Hk.</hi></seg><seg type="translation" xml:lang="en" source="#claude">In C the closing sentence is marked out by uncials decorated in red; there follows the Anglo-Saxon text, above p. 206. U. f. in C. Missing in Hk.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVEg_16.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">214</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">folgt Lateinisch</hi> Coena Domini.</seg><seg type="translation" xml:lang="en" source="#claude">there follows in Latin Coena Domini.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_16.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">144</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. o</hi>. 12⁷. Die Versio braucht das Lateinische <hi rend="italic">fidelis</hi> in der Beziehung auch des Herrn zum Manne (für die ich es in den Wbb. nicht vermerkt finde), vielleicht nur weil <hi rend="italic">hold</hi> gegenseitig gilt</seg><seg type="translation" xml:lang="en" source="#claude">See above 12⁷. The Versio uses the Latin <hi rend="italic">fidelis</hi> also for the relation of the lord to his man (for which I do not find it recorded in the dictionaries), perhaps only because <hi rend="italic">hold</hi> applies reciprocally</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_16.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">144</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. o</hi>. 2a⁵. 12⁴</seg><seg type="translation" xml:lang="en" source="#claude">See above 2a⁵. 12⁴</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_16.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">144</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Hier redet Eadgar wie <hi rend="italic">o</hi>. 5² die Witan an; <hi rend="italic">s. d. Gl</hi> 3a; Frieden 1a</seg><seg type="translation" xml:lang="en" source="#claude">Here, as <hi rend="italic">above</hi> 5², Eadgar addresses the Witan; <hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 3a; Frieden 1a</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_16.lnote.de.4" n="4" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">144</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Die Versio schliesst homiletisch; mit <hi rend="italic">Valete in Christo</hi> enden aber auch Testamente; z. B. Earle <hi rend="italic">Landchar</hi>. 221</seg><seg type="translation" xml:lang="en" source="#claude">The Versio closes homiletically; but wills too end with <hi rend="italic">Valete in Christo</hi>; e.g. Earle <hi rend="italic">Landchar</hi>. 221</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IVEg_16.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">310</biblScope></bibl><seg type="original" xml:lang="en">Liebermann takes this to refer to Edgar’s councillors.</seg></note>
       </div>
     </body>
   </text>

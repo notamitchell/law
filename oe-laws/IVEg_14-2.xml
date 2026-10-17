@@ -10,6 +10,8 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,12 +29,12 @@
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">38</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">441</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-c" rend="bold"><abbr>C</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
           <witness xml:id="wit-f"><abbr>F</abbr> <note type="manuscript">London, British Library, Cotton Nero E.i</note></witness>
           <witness xml:id="wit-c-latin"><abbr>C (Latin)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
-          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -53,6 +55,8 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1010 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 214.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 214: “⁊ ðas eaca sy ús eallum gemæne, þe on ðissum iglandum wuniað.” → “⁊ ðas eaca sy ús eallum gemæne, þe on ðissum iglandum wuniað. (expanded letters in italics: m)”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 38: “ðæs” → “ðas”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -60,16 +64,22 @@
       <div type="clause" n="14.2">
         <head><ref type="lawCode" target="law:IVEg">IV Eg</ref> 14.2</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14.2" corresp="#wit-f">⁊ þes eaca sy ús eallum gemæne, þe on þissum íglandum wuniað.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14.2" corresp="#wit-c">⁊ ðas eaca sy ús eallum gemæne, þe on ðissum iglandum wuniað.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="14.2" corresp="#wit-q">Placet ętiam, ut hoc pactum inconcussum et inuiolabile in reliquum tempus conseruetur,</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="14.2" corresp="#wit-c">⁊ ðæs eaca sy ús eallum gemæne þe on ðissum iglandum wuniað.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Jedoch diese [obige] Ergänzung sei uns allen gemeinsam, die wir auf diesen Inseln wohnen.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14.2" corresp="#wit-c">⁊ ðas<ptr type="liebermannNote" n="2" target="#IVEg_14-2.lnote.oe.2"/> eaca sy ús eallu<hi rend="italic">m</hi> gemæne, þe on ðissum iglandum wuniað.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="14.2" corresp="#wit-c-latin">Placet ętiam, ut hoc pactum inconcussum et inuiolabile in reliquum tempus conseruetur,</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="14.2" corresp="#wit-c">⁊ ðas eaca sy ús eallum gemæne þe on ðissum iglandum wuniað.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><ptr type="liebermannNote" n="1" target="#IVEg_14-2.lnote.de.1"/>Jedoch diese [obige] Ergänzung<ptr type="liebermannNote" n="2" target="#IVEg_14-2.lnote.de.2"/> sei uns allen gemeinsam<ptr type="liebermannNote" n="3" target="#IVEg_14-2.lnote.de.3"/>, die wir auf diesen Inseln<ptr type="liebermannNote" n="4" target="#IVEg_14-2.lnote.de.4"/> wohnen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But let this [above] addition be common to all of us who live in these islands.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">But this addition shall apply generally to all of us who dwell in these islands.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">But this addition shall apply generally to all of us<ptr type="editorNote" n="1" target="#IVEg_14-2.robnote.n.1"/> who dwell in these islands.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">And this addition is to be common to all of us who inhabit these islands.</ab>
         <note type="comparison" source="#liebermann" n="215"><ref target="clause:IVEg_2-2">IV Eg 2.2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. 2, 2</note>
-        <note type="editorial">Liebermann compares IV Eg 2.2.</note>
+        <note type="editorial">Liebermann compares IV Eg 2.2.; BF: added from Gesetze I p. 214, October 2026 (MS C (Latin)); O: corrected against Gesetze I, October 2026 (was “(Latin version of C)”, now “∅ (moved to BF)”)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVEg_14-2.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">214</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_14-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">143</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Statt der Gemeinrechtlichkeit (<hi rend="italic">s. o</hi>. 2, 2), die nach Streichung von 14, 1 nicht in den Zusammenhang passte, hebt Versio nun die Unumstösslichkeit hervor</seg><seg type="translation" xml:lang="en" source="#claude">Instead of the general validity of the law (see above 2, 2), which no longer fitted the context after the deletion of 14, 1, the Versio now stresses its irrevocability</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_14-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">143</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. o</hi>. Einl. 2</seg><seg type="translation" xml:lang="en" source="#claude">See above Introduction 2</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_14-2.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">143</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Dies sagt nach 1, 6. 2, 2. 12 hier Eadgar zum vierten Male</seg><seg type="translation" xml:lang="en" source="#claude">Eadgar says this here for the fourth time, after 1, 6. 2, 2. 12</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_14-2.lnote.de.4" n="4" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">143</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Inseln 2</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Inseln 2</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IVEg_14-2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">309</biblScope></bibl><seg type="original" xml:lang="en">Cf. 2, 2; 12, 1.</seg></note>
       </div>
     </body>
   </text>

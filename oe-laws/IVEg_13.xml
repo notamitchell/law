@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,12 +28,12 @@
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">36</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">440</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-c" rend="bold"><abbr>C</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
           <witness xml:id="wit-f"><abbr>F</abbr> <note type="manuscript">London, British Library, Cotton Nero E.i</note></witness>
           <witness xml:id="wit-c-latin"><abbr>C (Latin)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
-          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -54,6 +55,7 @@
       <change when="2026-10-17">Generated from row 1006 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 212.</change>
       <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 37.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 212: “⁊ ic wille, þæt tunesmen ⁊ heora hyrdas habban þas ylcan smeagunge on minum cucum orfe ⁊ on minra þegena, ealswa hy habbað on heora agenum.” → “⁊ ic wille, þæt tunesmen ⁊ heora hyrdas habban þas ylcan smeagunge on minum cucum orfe ⁊ on minra þegena, ealswa hy habbað on heora agenum. (expanded letters in italics: æt, m, m)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -61,13 +63,17 @@
       <div type="clause" n="13">
         <head><ref type="lawCode" target="law:IVEg">IV Eg</ref> 13</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13" corresp="#wit-f">⁊ ic wille, þ<hi rend="italic">æt</hi> tunesmen ⁊ heora hyrdas habban þás ylcan smeagunge on minum cucum orfe ⁊ on minra þegena, ealswa hy habbað on heora ágenum.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13" corresp="#wit-c">⁊ ic wille, þæt tunesmen ⁊ heora hyrdas habban þas ylcan smeagunge on minum cucum orfe ⁊ on minra þegena, ealswa hy habbað on heora agenum.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="13" corresp="#wit-q">Ruricolis quoque ipsis hanc eandem statuo rectitudinem, ut in meis meorumque principum pecoribus et pascuis habeant exquisitionem.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13" corresp="#wit-c">⁊ ic wille, þ<hi rend="italic">æt</hi> tunesmen ⁊ heora hyrdas habban þas ylcan smeagunge on minu<hi rend="italic">m</hi> cucum orfe ⁊ on minra þegena, ealswa hy habbað on heora agenu<hi rend="italic">m</hi>.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="13" corresp="#wit-c-latin">Ruricolis quoque ipsis hanc eandem statuo rectitudinem, ut in meis meorumque principum pecoribus<ptr type="liebermannNote" n="7" target="#IVEg_13.lnote.oe.7"/> et pascuis habeant exquisitionem.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="13" corresp="#wit-c">⁊ ic wille þæt tunesmen ⁊ heora hyrdas habban þas ylcan smeagunge on minum cucum orfe ⁊ on minra þegena, ealswa hy habbað on heora agenum.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und ich will, dass die Dorfbauern und deren Hirten diese selbe Untersuchung [zu üben das Recht] haben an meinem und an meiner Thegnas lebendem Vieh [der Gutsdomäne], wie sie [es] an ihrem eigenen haben.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und ich will, dass die Dorfbauern<ptr type="liebermannNote" n="1" target="#IVEg_13.lnote.de.1"/> und deren Hirten diese selbe Untersuchung [zu üben das Recht] haben an meinem<ptr type="liebermannNote" n="2" target="#IVEg_13.lnote.de.2"/> und an meiner Thegnas lebendem Vieh [der Gutsdomäne], wie sie [es] an ihrem eigenen haben.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And I will that the villagers and their herdsmen have [the right to make] this same inquiry concerning my live cattle and my thegns' [on the demesne], just as they have concerning their own.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">And it is my will that villagers and their herdsmen shall have the same right of investigation with regard to my livestock and that of my thegns as they have with regard to their own.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">And it is my will that villagers and their herdsmen may hold the same investigation among my livestock and among that of my thegns, as they hold among their own.</ab>
+        <note type="editorial">BF: added from Gesetze I p. 212, October 2026 (MS C (Latin)); O: corrected against Gesetze I, October 2026 (was “(Latin version of C)”, now “∅ (moved to BF)”)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVEg_13.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">213</biblScope></bibl><seg type="original" xml:lang="de">pectoribus <hi rend="italic">CHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">pectoribus CHk</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_13.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">143</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. o</hi>. 8f.; <hi rend="italic">Gl</hi> Gemeinheit 10; die Domäne des Herrschaftsguts (<hi rend="italic">s. d. Gl</hi> 1a) unterliegt also denselben Kautelen des Handels (<hi rend="italic">s. d. Gl</hi> 8) wie der Bauer (<hi rend="italic">s. d. Gl</hi> 13f.). Doch waren Herr und Vogt regelmässig selbst Kaufzeugen, also die Formalitäten für sie leichter</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. above</hi> 8f.; <hi rend="italic">Gl</hi> Gemeinheit 10; the demesne of the manor (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 1a) is thus subject to the same safeguards in trade (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 8) as the peasant (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 13f.). The lord and the reeve, however, were regularly themselves witnesses to purchases, so that the formalities were easier for them</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_13.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">143</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Auch Cnut 1027, 12 mahnt, nicht etwa zugunsten königlicher Finanz Polizei und Recht zu verletzen</seg><seg type="translation" xml:lang="en" source="#claude">Cnut 1027, 12 too admonishes that public order and justice must not be violated, say, for the benefit of the royal finances</seg></note>
       </div>
     </body>
   </text>

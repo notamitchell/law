@@ -62,6 +62,7 @@ A note on the clause as a whole, with no number in the text, has rend="wholeClau
 import argparse
 import os
 import re
+import unicodedata
 import sys
 from xml.sax.saxutils import escape
 
@@ -165,7 +166,7 @@ def char_positions(xml):
 
 
 def plain_of(ab):
-    return re.sub(r'\s+', ' ', ab.xpath('string()')).strip()
+    return unicodedata.normalize('NFC', re.sub(r'\s+', ' ', ab.xpath('string()')).strip())
 
 
 def insert_markers(ab, marked, ptr_type, target_for):
@@ -381,7 +382,7 @@ def main():
         for col, marked in texts.get(slug, {}).items():
             if not MARK.search(marked):
                 continue
-            want = MARK.sub('', marked).strip()
+            want = unicodedata.normalize('NFC', MARK.sub('', marked).strip())
             cands = [a for a in candidates(div, col, used) if plain_of(a) == want]
             if not cands:
                 problems.append('%s, column %s: no text in the clause file matches:\n   workbook: %s' % (slug, col, want))

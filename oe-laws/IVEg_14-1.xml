@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +28,7 @@
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">38</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">441</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-c" rend="bold"><abbr>C</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 265</note></witness>
@@ -52,6 +54,9 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1009 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 214.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 214: “Þonne wille ic, þæt symble mid eow gehealden sý þæt ge to friðes bote gecoren hæfdon mid micclum wisdome ⁊ me swyðe gecwemlice.” → “Þonne wille ic, þæt symble mid eow gehealden sý þæt ge to friðes bote gecoren hæfdon mid micclum wisdome ⁊ me swyðe gecwemlice. (expanded letters in italics: æt, æt, m)”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 38: “symble” → “sýmble”.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Robertson, p. 39: “security” → “security,”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -59,15 +64,18 @@
       <div type="clause" n="14.1">
         <head><ref type="lawCode" target="law:IVEg">IV Eg</ref> 14.1</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14.1" corresp="#wit-f">Þonne wille ic, þ<hi rend="italic">æt</hi> symble mid eow gehealden sý þ<hi rend="italic">æt</hi> ge to friþes bote gecoren hæfdon mid miclum wisdome ⁊ me swyðe gecwemlice.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14.1" corresp="#wit-c">Þonne wille ic, þæt symble mid eow gehealden sý þæt ge to friðes bote gecoren hæfdon mid micclum wisdome ⁊ me swyðe gecwemlice.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="14.1" corresp="#wit-c">Þonne wille ic þæt symble mid eow gehealden sý þæt ge to friðes bote gecoren hæfdon mid micclum wisdome ⁊ me swyðe gecwemlice.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Zwar bei euch will ich, dass immerfort beobachtet werde, was ihr mit viel Weisheit und mir höchst wohlgefällig zur Besserung der öffentlichen Sicherheit [zum Recht] erwählt hattet.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14.1" corresp="#wit-c">Þonne wille ic, þ<hi rend="italic">æt</hi> symble mid eow gehealden sý þ<hi rend="italic">æt</hi> ge to friðes bote gecoren hæfdon mid micclu<hi rend="italic">m</hi> wisdome ⁊ me swyðe gecwemlice.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="14.1" corresp="#wit-c">Þonne wille ic þæt sýmble mid eow gehealden sý þæt ge to friðes bote gecoren hæfdon mid micclum wisdome ⁊ me swyðe gecwemlice.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Zwar bei euch<ptr type="liebermannNote" n="1" target="#IVEg_14-1.lnote.de.1"/> will ich, dass immerfort beobachtet werde, was ihr mit viel<ptr type="liebermannNote" n="2" target="#IVEg_14-1.lnote.de.2"/> Weisheit und mir höchst wohlgefällig zur Besserung der öffentlichen Sicherheit<ptr type="liebermannNote" n="3" target="#IVEg_14-1.lnote.de.3"/> [zum Recht] erwählt hattet.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Among you, indeed, I will that what you had chosen [as law] for the improvement of public security, with much wisdom and very pleasingly to me, be observed for ever.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">Further, it is my will that the provisions which you have made, with great wisdom and very acceptably to me, for the improvement of public security be continually observed among you.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-c">Further, it is my will that the provisions which you have made, with great wisdom and very acceptably to me, for the improvement of public security, be continually observed among you.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">It is, then, my will that what you have decided on for the improvement of public order, with great wisdom and in a way very pleasing to me, shall ever be observed among you.</ab>
         <note type="comparison" source="#liebermann" n="215"><ref target="clause:IVEg_2-1">IV Eg 2.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. 2, 1</note>
         <note type="editorial">Not in the Latin Versio. Liebermann compares IV Eg 2.1.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_14-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">143</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Dänen, <hi rend="italic">s. o</hi>. 2, 1³. 12²; <hi rend="italic">u</hi>. 15³. Wiederum lässt Versio dies Partikularrechtliche fort; <hi rend="italic">s. o</hi>. 12</seg><seg type="translation" xml:lang="en" source="#claude">The Danes; see above 2, 1³. 12²; <hi rend="italic">below</hi> 15³. Again the Versio omits this provision of particular law; see above 12</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_14-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">143</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Ein schwächliches Umschmeicheln der mehr durch Diplomatie Gewonnenen als durch Waffen Unterworfenen liegt wohl deutlich im Anpreisen eines fremden Partikularrechts (<hi rend="italic">s. d. Gl</hi> 5) durch die Staatsregierung</seg><seg type="translation" xml:lang="en" source="#claude">A feeble flattery of those who had been won more by diplomacy than subdued by arms is probably to be seen clearly in the government’s praise of a foreign particular law (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 5)</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVEg_14-1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">143</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Nicht ‘Friedensbusse’; richtig Schmid S. <hi rend="smallcaps">xlix</hi></seg><seg type="translation" xml:lang="en" source="#claude">Not ‘peace-compensation’; correctly Schmid p. <hi rend="smallcaps">xlix</hi></seg></note>
       </div>
     </body>
   </text>
