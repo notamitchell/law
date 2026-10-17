@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">401</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -37,7 +40,7 @@
           <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
-          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr> <note type="manuscript">London, British Library, Burney MS 277</note></witness>
           <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
       </sourceDesc>
@@ -57,8 +60,11 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 567 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 567 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 96.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Bu added from Gesetze I, p. 96.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 96.</change>
+      <change when="2026-10" type="checked">The second translation corrected against Attenborough, p. None: “shall be” → “∅”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -66,17 +72,26 @@
       <div type="clause" n="15.1">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 15.1</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15.1" corresp="#wit-h">Se að sceal beon healf be huslgengum.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15.1" corresp="#wit-e">Se að sceal bion healf be huslgengum.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="15.1" corresp="#wit-q">Et debet esse medietas (iurantium) per hulsgengas (id est duodecimhyndos).</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15.1" corresp="#wit-e">Se að sceal bion<ptr type="liebermannNote" n="4" target="#Ine_15-1.lnote.oe.4"/> healf be huslgengum.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15.1" corresp="#wit-b-no-prol">Se að sceal beon [half<ptr type="liebermannNote" n="1" target="#Ine_15-1.lnote.oe.1"/>] be huslgengu<hi rend="italic">m</hi>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15.1" corresp="#wit-bu">Se að sceal byon healf be huslgengum.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="15.1" corresp="#wit-q">Et debet esse medietas (iurantium<ptr type="liebermannNote" n="6" target="#Ine_15-1.lnote.oe.6"/>) per hulsgengas<ptr type="liebermannNote" n="7" target="#Ine_15-1.lnote.oe.7"/> (id est duodecimhyndos).</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="14.3" corresp="#wit-e">Se að sceal bion healf be huslgengum.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">The oath shall be half for a communicant.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">An oath equal in value to half the amount shall be shall be sufficient in the case of communicants.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">An oath equal in value to half the amount shall be sufficient in the case of communicants<ptr type="editorNote" n="1" target="#Ine_15-1.attnote.n.1"/>.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">With communicants, the oath shall be [only] half as much.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Der Eid soll halb [so stark] sein bei Abendmahlsgängern.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Der Eid soll halb [so stark<ptr type="liebermannNote" n="1" target="#Ine_15-1.lnote.de.1"/>] sein bei Abendmahlsgängern.<ptr type="liebermannNote" n="2" target="#Ine_15-1.lnote.de.2"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">The oath is to be half [as strong] in the case of communicants.</ab>
         <note type="comparison" source="#jurasinski-and-oliver" n="381"><label>same term (huslgenga)</label> <ref target="clause:Wi_23-a">Wi 23</ref> <quote>The term huslgenga also appears in §19, as well as in Wihtred §18 [L23], which suggests the existence in Kent of legal privileges [...] comparable</quote></note>
         <note type="comparison" source="#jurasinski-and-oliver" n="381"><label>same term (huslgenga)</label> <ref target="clause:Ine_19">Ine 19</ref> <quote>The term huslgenga also appears in §19, as well as in Wihtred §18 [L23], which suggests the existence in Kent of legal privileges [...] comparable</quote></note>
         <note type="comparedBy" source="#jurasinski-and-oliver" n="383"><ref target="clause:Ine_19">Ine 19</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_15-1.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">97</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">im</hi> 16. <hi rend="italic">Jh. eingefügt</hi></seg><seg type="translation" xml:lang="en" source="#claude">inserted in the 16th cent.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_15-1.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">97</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt K</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_15-1.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">97</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so Lond;</hi> -gonges <hi rend="italic">übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">thus Lond; -gonges the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_15-1.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">96</biblScope></bibl><seg type="original" xml:lang="de">beon <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">beon Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_15-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">70</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Die Zahl der Eideshufen, d. h. der sie vertretenden Schwörer</seg><seg type="translation" xml:lang="en" source="#claude">The number of oath-hides, i.e. of the swearers representing them</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_15-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">70</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> abendmahlsfähig. Der Plural beweist, dass auch die Helfer Kommunikanten sein müssen. Q’s falsche Deutung entstand wohl, weil er <hi rend="italic">u.</hi> 19 von einem Abendmahlsgänger dieses Standes las</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> abendmahlsfähig. The plural proves that the helpers too must be communicants. Q’s wrong interpretation probably arose because he read <hi rend="italic">below</hi> 19 of a communicant of this rank</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="Ine_15-1.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">185</biblScope></bibl><seg type="original" xml:lang="en">Cf. cap. 19 below, where the oath of a communicant appears to be of greater value than that of a non-communicant. For the privileged position of communicants see Wiht. cap. 23.</seg></note>
       </div>
     </body>
   </text>

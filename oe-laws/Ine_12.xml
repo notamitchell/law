@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -31,6 +33,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">401</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -39,7 +42,7 @@
           <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
-          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr> <note type="manuscript">London, British Library, Burney MS 277</note></witness>
           <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
       </sourceDesc>
@@ -59,28 +62,46 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 562 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 562 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 94.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Bu added from Gesetze I, p. 94.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 94: “∅; deaðe,” → “LVI.; deaðe”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 94.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="12">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 12</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12" corresp="#wit-h">Gif þeof sy gefongen, swylte he deaðe, oþþe his lif be his were alyse.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12" corresp="#wit-e">LVI. Gif ðeof sie gefongen, swelte he deaðe, oððe his lif be his were man aliese.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="12" corresp="#wit-q">Si fur capiatur, mortem patiatur uel uitam suam weregildo suo redimat.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12" corresp="#wit-h">LVI. Gif þeof sy<ptr type="liebermannNote" n="5" target="#Ine_12.lnote.oe.5"/> gefongen<ptr type="liebermannNote" n="1" target="#Ine_12.lnote.oe.1"/>, swylte<ptr type="liebermannNote" n="5" target="#Ine_12.lnote.oe.5"/> he deaðe oþþe his lif be his were alyse.<ptr type="liebermannNote" n="5" target="#Ine_12.lnote.oe.5"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12" corresp="#wit-e">LVI.<ptr type="liebermannNote" n="*" target="#Ine_12.lnote.oe.star"/> Gif ðeof sie<ptr type="liebermannNote" n="10" target="#Ine_12.lnote.oe.10"/> gefongen, swelte<ptr type="liebermannNote" n="11" target="#Ine_12.lnote.oe.11"/> he deaðe, oððe his lif be his were man<ptr type="liebermannNote" n="12" target="#Ine_12.lnote.oe.12"/> aliese.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12" corresp="#wit-b-no-prol">Be gefangenu<hi rend="italic">m</hi> ðeofu<hi rend="italic">m</hi>. Gyf ðeof sy gefongen, swylte he deaðe, oððe his lif be his were mon alyse.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12" corresp="#wit-bu">LVI. . . . sie gefongen, swelte he deaðe, oððe . . . be his were monn<ptr type="liebermannNote" n="1" target="#Ine_12.lnote.oe.1-2"/> aliese.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="12" corresp="#wit-q">Si<ptr type="liebermannNote" n="*" target="#Ine_12.lnote.oe.star-2"/> fur capiatur, mortem<ptr type="liebermannNote" n="14" target="#Ine_12.lnote.oe.14"/> patiatur uel<ptr type="liebermannNote" n="15" target="#Ine_12.lnote.oe.15"/> uitam suam weregildo suo<ptr type="liebermannNote" n="16" target="#Ine_12.lnote.oe.16"/> redimat.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="12" corresp="#wit-e">{LVI} Gif ðeof sie gefongen, swelte he deaðe, oððe his lif be his were man aliese.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If a thief is caught, let him suffer death, or his life can be redeemed by [payment of] his wergild.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If a thief is taken he shall die the death, or his life shall be redeemed by the payment of his wergeld.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If a thief is taken<ptr type="editorNote" n="1" target="#Ine_12.attnote.n.1"/> he shall die the death, or his life shall be redeemed by the payment of his wergeld.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">If a thief is caught [in the act], he is to die the death, or his life is to be redeemed by his wergild.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Dieb [handhaft] gefangen wird, erleide er den Tod, oder man löse sein Leben durch sein Wergeld aus.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Dieb [handhaft<ptr type="liebermannNote" n="1" target="#Ine_12.lnote.de.1"/>] gefangen wird, erleide er den Tod, oder man löse sein Leben durch sein Wergeld aus.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a thief is caught [red-handed], let him suffer death, or let his life be redeemed by his wergeld.</ab>
         <note type="comparison" source="#jurasinski-and-oliver" n="379"><label>cf.</label> <ref target="clause:Wi_26">Wi 26</ref> <quote>Wihtred §21 [L26] allows three options: death, redemption by monetary payment, and sale over the sea.</quote></note>
         <note type="comparison" source="#jurasinski-and-oliver" n="379"><label>prohibits (contrast)</label> <ref target="clause:Ine_11">Ine 11</ref> <quote>But Ine §11 prohibits the last for the kingdom of the West Saxons.</quote></note>
         <note type="comparedBy" source="#wormald-mel" n="102"><ref target="clause:Wi_25">Wi 25–28</ref></note>
         <note type="comparedBy" source="#jurasinski-and-oliver" n="49"><ref target="clause:Wi_25">Wi 25</ref></note>
         <note type="comparedBy" source="#jurasinski-and-oliver" n="394"><ref target="clause:Ine_28">Ine 28</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_12.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">95</biblScope></bibl><seg type="original" xml:lang="de">Si fur c., m. patiatur <hi rend="italic">auch App. A Gu.</hi> (<hi rend="italic">s. o. S.</hi> 93*) 2.</seg><seg type="translation" xml:lang="en" source="#claude">Si fur c., m. patiatur also App. A Gu. (see above p. 93*) 2.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_12.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">95</biblScope></bibl><seg type="original" xml:lang="de">m. p. <hi rend="italic">fehlt Brti</hi></seg><seg type="translation" xml:lang="en" source="#claude">m. p. lacking in Brti</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_12.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">95</biblScope></bibl><seg type="original" xml:lang="de">aut <hi rend="italic">Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">aut Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_12.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">95</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Lond MHkBr</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Lond MHkBr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_12.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">94</biblScope></bibl><seg type="original" xml:lang="de">monna l. <hi rend="italic">oder</hi> læse <hi rend="italic">Bu</hi></seg><seg type="translation" xml:lang="en" source="#claude">monna l. or læse Bu</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_12.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">94</biblScope></bibl><seg type="original" xml:lang="de">y <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">y on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_12.lnote.oe.1-2" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">94</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_12.lnote.oe.star-2" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">94</biblScope></bibl><seg type="original" xml:lang="de">12 <hi rend="italic">setzt hinter</hi> 13 <hi rend="italic">und vereint mit</hi> 13, 1 <hi rend="italic">zu einem Capitel Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">Ld places 12 after 13 and combines it with 13, 1 into one chapter</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_12.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">94</biblScope></bibl><seg type="original" xml:lang="de">sy <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">sy Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_12.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">94</biblScope></bibl><seg type="original" xml:lang="de">swelt <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">swelt Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_12.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">94</biblScope></bibl><seg type="original" xml:lang="de">mon alyse <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">mon alyse Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_12.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">70</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Wergeld 29; handhaft 13; Diebstahl 12; busslos 5C; Todesstrafe 3h</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Wergeld 29; handhaft 13; Diebstahl 12; busslos 5C; Todesstrafe 3h</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="Ine_12.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">184</biblScope></bibl><seg type="original" xml:lang="en"><hi rend="italic">i.e.</hi> taken in the act (cf. note 1 to cap. 7 above).</seg></note>
       </div>
     </body>
   </text>

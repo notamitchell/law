@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">403</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -57,23 +60,34 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 590 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 590 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 102.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 102: “ðam” → “þam”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 102.</change>
+      <change when="2026-10" type="checked">Liebermann’s Latin text corrected against Gesetze I, p. 102: “pecunie; wite.” → “pecunię; witę.”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="28.2">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 28.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28.2" corresp="#wit-h">Gif he onsacan wille, dó he ðæt be ðam (were) ⁊ be ðam wite.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28.2" corresp="#wit-e">Gif he onsacan wille, do he ðæt be ðam féo ⁊ be ðam wite.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="28.2" corresp="#wit-q">Si negare uelit, abneget secundum modum pecunie et wite.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28.2" corresp="#wit-h">Gif he onsacan wille, dó he ðæt be þam (were<ptr type="liebermannNote" n="1" target="#Ine_28-2.lnote.oe.1"/>) ⁊ be ðam wite.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28.2" corresp="#wit-e">Gif he onsacan<ptr type="liebermannNote" n="1" target="#Ine_28-2.lnote.oe.1-2"/> wille, do he ðæt be ðam féo ⁊ be ðam wite.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28.2" corresp="#wit-b-no-prol">Gyf he ætsacan wylle, do he þ<hi rend="italic">æt</hi> be ðam feo ⁊ be ðam wite.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="28.2" corresp="#wit-q">Si negare uelit, abneget<ptr type="liebermannNote" n="1" target="#Ine_28-2.lnote.oe.1-3"/> secundum modum pecunię et witę.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="28.2" corresp="#wit-e">Gif he onsacan wille, do he ðæt be ðam féo ⁊ be ðam wite.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If he wishes to deny [his culpability], let him do so [by swearing an oath in the amount of] the [stolen] property and the fine.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If he [the captor] wishes to deny his culpability, he must render an oath equivalent to the value of the stolen goods and the fine.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">If he wishes to deny it, he is to do so by [an oath corresponding to] the property and the fine.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Falls er [die Schuld an der Flucht des Diebes] leugnen will, thue er das [durch Eid] in Höhe des [gestohlenen] Gutes und in Höhe des Strafgeldes.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Falls er [die Schuld an der Flucht des Diebes] leugnen will, thue er das [durch Eid] in Höhe<ptr type="liebermannNote" n="1" target="#Ine_28-2.lnote.de.1"/> des [gestohlenen] Gutes<ptr type="liebermannNote" n="2" target="#Ine_28-2.lnote.de.2"/> und in Höhe des Strafgeldes.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If he wishes to deny [the blame for the thief’s escape], let him do so [by an oath] to the amount of the [stolen] goods and to the amount of the fine.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_28-2.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">103</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt T;</hi> sec. m. p. et w. abn. <hi rend="italic">R</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in T; sec. m. p. et w. abn. R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_28-2.lnote.oe.1-2" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">102</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_28-2.lnote.oe.1-3" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">102</biblScope></bibl><seg type="original" xml:lang="de">ætsacan <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">ætsacan Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_28-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">73</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Nach Maurer aaO. wäre die erste Klammer zu streichen und Subjekt der Dieb</seg><seg type="translation" xml:lang="en" source="#claude">According to Maurer loc. cit. the first bracket would have to be deleted and the thief would be the subject</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_28-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">73</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Eidesschwere 3. — ‘Wergeldes’ Hcor. falsch, wohl nach 36</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Eidesschwere 3. — ‘of the wergild’ Hcor., wrongly, probably after 36</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Ine_28-2.attnote.fn.9" n="9" source="#attenborough"><bibl><biblScope unit="page">44</biblScope></bibl><label>onsacan</label><seg type="original" xml:lang="en"><hi rend="italic">ætsacan</hi>. B.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Ine_28-2.attnote.fn.10" n="10" source="#attenborough"><bibl><biblScope unit="page">44</biblScope></bibl><label>féo</label><seg type="original" xml:lang="en"><hi rend="italic">were</hi>. H*. <hi rend="italic">secundum modum pecunię et witę</hi>. Quad.</seg></note>
       </div>
     </body>
   </text>

@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">400</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -37,7 +40,7 @@
           <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
-          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr> <note type="manuscript">London, British Library, Burney MS 277</note></witness>
           <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
       </sourceDesc>
@@ -57,23 +60,39 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 553 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 553 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 92.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Bu added from Gesetze I, p. 92.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 92.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 92: “120 [30]” → “120[30]”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6.4">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 6.4</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.4" corresp="#wit-h">⁊ þeah hit sy gefohten on middan felda, CXX scll' to wite sy agifen.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.4" corresp="#wit-e">⁊ þeah hit sie on middum felda gefohten, CXX scill. to wite sie agifen.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.4" corresp="#wit-q">Et licet sit in mediis campis dimicatum, centum uiginti sol. wite reddantur.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.4" corresp="#wit-h">⁊ þeah hit sy<ptr type="liebermannNote" n="3" target="#Ine_6-4.lnote.oe.3"/> gefohten<ptr type="liebermannNote" n="5" target="#Ine_6-4.lnote.oe.5"/> on middan felda, CXX scll' to wite sy<ptr type="liebermannNote" n="3" target="#Ine_6-4.lnote.oe.3"/> agifen.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.4" corresp="#wit-e">⁊ þeah hit sie<ptr type="liebermannNote" n="7" target="#Ine_6-4.lnote.oe.7"/> on middum<ptr type="liebermannNote" n="8" target="#Ine_6-4.lnote.oe.8"/> felda gefohten, CXX<ptr type="liebermannNote" n="9" target="#Ine_6-4.lnote.oe.9"/><ptr type="liebermannNote" n="**" target="#Ine_6-4.lnote.oe.star2"/> scill. to wite sie<ptr type="liebermannNote" n="7" target="#Ine_6-4.lnote.oe.7"/> agifen.<ptr type="liebermannNote" n="10" target="#Ine_6-4.lnote.oe.10"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.4" corresp="#wit-b-no-prol">⁊ ðeah hit sy on middan felda gefohtan, hundtwelftig scill' to wite sy agyfen.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.4" corresp="#wit-bu">⁊ þeah . . . dan felda gefeohtan, CXX . . . ag . . .</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.4" corresp="#wit-q">Et licet sit<ptr type="liebermannNote" n="10" target="#Ine_6-4.lnote.oe.10-2"/> in mediis campis dimicatum, centum uiginti sol. wite reddantur.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="6.4" corresp="#wit-e">⁊ þeah hit sie on middum felda gefohten cxx sciƚƚ to wite sie agifen.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">And even if the fight takes place in an open field, 120 shillings shall be paid as fine.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">And even if it [the fight] takes place in the open, a fine of 120 shillings shall be paid.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">And even if the fighting is in the midst of the open country, 120 shillings is to be given as a fine.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn selbst [nur] mitten auf dem Felde gefochten worden ist, werde [dem König doch] 120 [30] Schill. zur Strafe gegeben.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn selbst [nur] mitten auf dem Felde<ptr type="liebermannNote" n="1" target="#Ine_6-4.lnote.de.1"/> gefochten worden ist, werde [dem König doch] 120[30<ptr type="liebermannNote" n="2" target="#Ine_6-4.lnote.de.2"/>] Schill. zur Strafe gegeben.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And even if the fighting has taken place [only] in the middle of the open field, let 120 [30] shillings [nevertheless] be given [to the king] as a fine.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_6-4.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">93</biblScope></bibl><seg type="original" xml:lang="de">in m. c. sit <hi rend="italic">MHkBr</hi></seg><seg type="translation" xml:lang="en" source="#claude">in m. c. sit MHkBr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_6-4.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">92</biblScope></bibl><seg type="original" xml:lang="de">y <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">y on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_6-4.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">92</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">geänd. in</hi> gefeohten</seg><seg type="translation" xml:lang="en" source="#claude">altered to gefeohten</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_6-4.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">92</biblScope></bibl><seg type="original" xml:lang="de">sy <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">sy Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_6-4.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">92</biblScope></bibl><seg type="original" xml:lang="de">middan <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">middan Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_6-4.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">92</biblScope></bibl><seg type="original" xml:lang="de">hundtwelftig <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">hundtwelftig Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_6-4.lnote.oe.star2" n="**" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">92</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">bessere</hi> XXX</seg><seg type="translation" xml:lang="en" source="#claude">read XXX</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_6-4.lnote.oe.10-2" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">92</biblScope></bibl><seg type="original" xml:lang="de">agyfen <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">agyfen Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_6-4.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">69</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Wo also kein Schutz privaten Hauses oder adliger Anwesenheit gebrochen war</seg><seg type="translation" xml:lang="en" source="#claude">Where, therefore, no protection of a private house or of a noble’s presence had been broken</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_6-4.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">69</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Archetyp und jede Hs. las 120. Dennoch scheint mir Schmids Besserung richtig; <hi rend="italic">s. o.</hi> 6, 3³</seg><seg type="translation" xml:lang="en" source="#claude">The archetype and every MS read 120. Nevertheless Schmid’s emendation seems to me correct; see above 6, 3³</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Ine_6-4.attnote.fn.10" n="10" source="#attenborough"><bibl><biblScope unit="page">38</biblScope></bibl><label>middum</label><seg type="original" xml:lang="en"><hi rend="italic">middan</hi>. B &amp; H.</seg></note>
       </div>
     </body>
   </text>

@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -31,6 +33,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">402</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -60,26 +63,40 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 584 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 584 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 100.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 100: “∅” → “LXIX.”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 100.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="25">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 25</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25" corresp="#wit-h">Gif ceapmon uppe on folce ceapige, dó þæt beforan gewitnesse.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25" corresp="#wit-e">LXVIIII. Gif ciepemon uppe on folce ceapie, do þæt beforan gewitnessum.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="25" corresp="#wit-q">Si mercator in populo emat aliquid, faciat hoc coram testibus.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25" corresp="#wit-h">LXIX. Gif ceapmon<ptr type="liebermannNote" n="3" target="#Ine_25.lnote.oe.3"/> uppe<ptr type="liebermannNote" n="4" target="#Ine_25.lnote.oe.4"/> on folce ceapige, dó þæt beforan<ptr type="liebermannNote" n="5" target="#Ine_25.lnote.oe.5"/> gewitnesse.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25" corresp="#wit-e">LXVIIII. Gif ciepemon<ptr type="liebermannNote" n="13" target="#Ine_25.lnote.oe.13"/> uppe on folce<ptr type="liebermannNote" n="14" target="#Ine_25.lnote.oe.14"/> ceapie, do þæt beforan gewitnessum.<ptr type="liebermannNote" n="15" target="#Ine_25.lnote.oe.15"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25" corresp="#wit-b-no-prol">Be cypmanna fare uppe land. Gyf cepeman uppe on folce ceapige, do þ<hi rend="italic">æt</hi> beforan gewitnysse.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="25" corresp="#wit-q">Si mercator in populo<ptr type="liebermannNote" n="14" target="#Ine_25.lnote.oe.14-2"/> emat aliquid, faciat hoc coram testibus.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="25" corresp="#wit-e">{LXVIIII} Gif ciepemon uppe on folce ceapie, do þæt beforan gewitnessum.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If a merchant does trade out in the countryside, let him do it in the presence of witnesses.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If a trader [makes his way into] the interior of the country and [proceeds to] traffic, he shall do so before witnesses.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">If a trader buys among the people in the countryside, he is to do it before witnesses.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Kaufmann landeinwärts im Volke handelt, thue er das vor Zeugen.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Kaufmann landeinwärts<ptr type="liebermannNote" n="1" target="#Ine_25.lnote.de.1"/> im Volke handelt<ptr type="liebermannNote" n="2" target="#Ine_25.lnote.de.2"/>, thue er das vor Zeugen.<ptr type="liebermannNote" n="3" target="#Ine_25.lnote.de.3"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a merchant trades up-country among the people, let him do so before witnesses.</ab>
         <note type="comparedBy" source="#wormald-mel" n="280"><ref target="clause:Af_34">Af 34</ref></note>
         <note type="comparedBy" source="#jurasinski-and-oliver" n="299"><ref target="clause:Af_34">Af 34</ref></note>
         <note type="translator" source="#whitelock">uppe on folce. With up in this sense, cf. uplendisc “rural, rustic”.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_25.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">101</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so Lond;</hi> populis <hi rend="italic">übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">thus Lond; populis the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_25.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">100</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">hinter</hi> p <hi rend="italic">Rasur;</hi> o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">erasure after p; o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_25.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">100</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_25.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">100</biblScope></bibl><seg type="original" xml:lang="de">foran ge <hi rend="italic">übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">foran ge written above</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_25.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">100</biblScope></bibl><seg type="original" xml:lang="de">cypeman <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">cypeman Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_25.lnote.oe.14-2" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">100</biblScope></bibl><seg type="original" xml:lang="de">folc ceapige <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">folc ceapige Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_25.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">100</biblScope></bibl><seg type="original" xml:lang="de">-nisse <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-nisse Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_25.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">72</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Im Ggsatz zu Seehäfen und, laut Af 34, zu Verkehrsplätzen mit Gericht und Königsvogt. Zunächst ist nicht wie in 23 an Fremde, sondern an heimische Händler zu denken. Doch brauchen jene nicht ausgeschlossen zu sein</seg><seg type="translation" xml:lang="en" source="#claude">In contrast to seaports and, according to Af 34, to places of trade with a court and a king’s reeve. In the first instance one should think not, as in 23, of foreigners, but of native traders. The former, however, need not be excluded</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_25.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">72</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">‘einkauft’ zu eng und an sonstigen Stellen von Objekt begleitet</seg><seg type="translation" xml:lang="en" source="#claude">‘buys’ is too narrow, and in other passages is accompanied by an object</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_25.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">72</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">‘Zeugenschaft’ H cor. B; <hi rend="italic">vgl. Gl</hi> Kaufzeugen 1. 6; Handel 8c. 14b</seg><seg type="translation" xml:lang="en" source="#claude">‘witnessing’ H cor. B; <hi rend="italic">cf. Gl</hi> Kaufzeugen 1. 6; Handel 8c. 14b</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Ine_25.attnote.fn.1" n="1" source="#attenborough"><bibl><biblScope unit="page">44</biblScope></bibl><label>gewitnessum</label><seg type="original" xml:lang="en"><hi rend="italic">gewitnesse</hi>. H. <hi rend="italic">gewitnysse</hi>. B.</seg></note>
       </div>
     </body>
   </text>

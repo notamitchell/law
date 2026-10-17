@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">400</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -37,7 +39,7 @@
           <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
-          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr> <note type="manuscript">London, British Library, Burney MS 277</note></witness>
           <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
       </sourceDesc>
@@ -57,26 +59,40 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 544 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 544 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 90.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Bu added from Gesetze I, p. 90.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 90.</change>
+      <change when="2026-10" type="checked">The second translation corrected against Attenborough, p. None: “thereof” → “thereof.”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3.1">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 3.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.1" corresp="#wit-h">Gif þonne se þeowa buton his gewitnesse wyrce, ðolie his hyde (oððe hydgyld[<hi rend="italic">es</hi>]).</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.1" corresp="#wit-e">Gif þon<hi rend="italic">ne</hi> se ðeowa butan his gewitnesse wyrce, þolie his hyde.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.1" corresp="#wit-q">Si seruus sine testimonio domini sui operetur, corium perdat.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.1" corresp="#wit-h">Gif þonne se þeowa buton<ptr type="liebermannNote" n="2" target="#Ine_3-1.lnote.oe.2"/> his gewitnesse wyrce, ðolie his hyde (oððe<ptr type="liebermannNote" n="5" target="#Ine_3-1.lnote.oe.5"/> hydgyld[<hi rend="italic">es</hi>]).</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.1" corresp="#wit-e">Gif þon<hi rend="italic">ne</hi> se ðeowa butan his gewitnesse<ptr type="liebermannNote" n="8" target="#Ine_3-1.lnote.oe.8"/> wyrce, þolie<ptr type="liebermannNote" n="9" target="#Ine_3-1.lnote.oe.9"/> his hyde.<ptr type="liebermannNote" n="10" target="#Ine_3-1.lnote.oe.10"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.1" corresp="#wit-b-no-prol">Gyf þonne se ðeowa butan his gewitnysse wyrce, þolie his hyde oððe hydgyldes.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.1" corresp="#wit-bu">. . . þon<hi rend="italic">ne</hi> se þeowa . . . gewitnysse wyrce, þolie his hyd . . .</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.1" corresp="#wit-q">Si seruus sine<ptr type="liebermannNote" n="5" target="#Ine_3-1.lnote.oe.5-2"/> testimonio domini sui operetur, corium perdat.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="3.1" corresp="#wit-e">Gif þonne se ðeowa butan his gewitnesse wyrce, þolie his hyde.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If, however, the slave works without his [lord’s] knowledge, let [the slave] pay with his hide</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If, however, the slave works without the cognisance of his master, he shall undergo the lash or pay the fine in lieu thereof</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If, however, the slave works without the cognisance of his master, he shall undergo the lash or pay the fine in lieu thereof.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">If, however, the slave works without his knowledge, he is to be flogged.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn aber der Sklav ohne Mitwissen desselben arbeitet, verliere er seine Haut (oder Hautgeld).</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn aber der Sklav ohne Mitwissen<ptr type="liebermannNote" n="1" target="#Ine_3-1.lnote.de.1"/> desselben arbeitet, verliere er seine Haut<ptr type="liebermannNote" n="2" target="#Ine_3-1.lnote.de.2"/> (oder<ptr type="liebermannNote" n="3" target="#Ine_3-1.lnote.de.3"/> Hautgeld).</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But if the slave works without the knowledge of that [lord], let him lose his hide (or hide-money).</ab>
         <note type="comparison" source="#jurasinski-and-oliver" n="373"><label>cf.</label> <ref target="clause:Wi_10">Wi 10</ref> <quote>Wihtred §8.1 [L10] allows a payment to the esne's master of 6 shillings to avoid being whipped.</quote></note>
         <note type="comparedBy" source="#whitelock" n="469"><ref target="clause:IICn_45-2">II Cn 45.2</ref></note>
         <note type="translator" source="#whitelock">C.C.C.C., MS. 383, adds: “or (pay) the ‘hide-price’”, i.e. the sum to save him from being flogged.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_3-1.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">91</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt K</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_3-1.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">90</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_3-1.lnote.oe.5-2" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">90</biblScope></bibl><seg type="original" xml:lang="de">o. h. <hi rend="italic">am Rande, im</hi> 12. <hi rend="italic">Jh.;</hi> es <hi rend="italic">verschnitten</hi></seg><seg type="translation" xml:lang="en" source="#claude">o. h. in the margin, in the 12th cent.; es cut off in trimming</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_3-1.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">90</biblScope></bibl><seg type="original" xml:lang="de">-nysse <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-nysse Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_3-1.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">90</biblScope></bibl><seg type="original" xml:lang="de">þolige <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">þolige Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_3-1.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">90</biblScope></bibl><seg type="original" xml:lang="de">oþþe his hydgyldes <hi rend="italic">fügt Ld zu</hi></seg><seg type="translation" xml:lang="en" source="#claude">oþþe his hydgyldes added by Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_3-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">69</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Nicht ‘Zeugnis’, mehr ‘Erlaubnis, Aufsicht’, also fast = ‘Geheiss’ 3, 2; <hi rend="italic">vgl.</hi> Af 34³</seg><seg type="translation" xml:lang="en" source="#claude">Not ‘testimony’, rather ‘permission, supervision’, thus almost = ‘command’ 3, 2; <hi rend="italic">cf.</hi> Af 34³</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_3-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">69</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Prügel 4. 11b</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Prügel 4. 11b</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_3-1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">69</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Mildernder Zusatz in hb, also 10. 11. Jhs., auch in EGu 7, 1. II Cn 45, 1, wahrscheinlich in Ines Sinne, da Wi 10 6 Schill. fordert, allerdings höheren Geldwertes</seg><seg type="translation" xml:lang="en" source="#claude">Mitigating addition in hb, thus of the 10th–11th cent., also in EGu 7, 1. II Cn 45, 1; probably in accordance with Ine’s intention, since Wi 10 demands 6 shill., though of a higher money value</seg></note>
       </div>
     </body>
   </text>

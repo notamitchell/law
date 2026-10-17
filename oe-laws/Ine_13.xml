@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -31,6 +33,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">401</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -39,7 +42,7 @@
           <witness xml:id="wit-g-prol-only"><abbr>G (Prol. only)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
-          <witness xml:id="wit-bu"><abbr>Bu</abbr></witness>
+          <witness xml:id="wit-bu"><abbr>Bu</abbr> <note type="manuscript">London, British Library, Burney MS 277</note></witness>
           <witness xml:id="wit-ot-frags"><abbr>Ot (frags.)</abbr> <note type="manuscript">London, British Library, Cotton Otho B.xi (damaged by fire, 1731)</note></witness>
         </listWit>
       </sourceDesc>
@@ -59,24 +62,43 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 563 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 563 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 94.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Bu added from Gesetze I, p. 94.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 94: “∅” → “LVII.”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 94.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="13">
         <head><ref type="lawCode" target="law:Ine">Ine</ref> 13</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13" corresp="#wit-h">Gif hwa beforan biscope his gewitnesse ⁊ his wed aleoge, gebete mid CXX scillingum.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13" corresp="#wit-e">LVII. Gif hwa beforan biscepe his gewitnesse ⁊ his wed aleoge, gebete mid CXX scill.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="13" corresp="#wit-q">Si quis coram episcopo testimonium suum et uadium mentiatur, centum uiginti solid. emendet.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13" corresp="#wit-h">LVII. Gif hwa beforan<ptr type="liebermannNote" n="8" target="#Ine_13.lnote.oe.8"/> biscope his<ptr type="liebermannNote" n="6" target="#Ine_13.lnote.oe.6"/> gewitnesse ⁊ his wed<ptr type="liebermannNote" n="9" target="#Ine_13.lnote.oe.9"/> aleoge<ptr type="liebermannNote" n="10" target="#Ine_13.lnote.oe.10"/>, gebete mid CXX scillingum.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13" corresp="#wit-e">LVII. Gif hwa beforan biscepe<ptr type="liebermannNote" n="13" target="#Ine_13.lnote.oe.13"/> his gewitnesse<ptr type="liebermannNote" n="14" target="#Ine_13.lnote.oe.14"/> ⁊ his wed aleoge, gebete mid CXX<ptr type="liebermannNote" n="15" target="#Ine_13.lnote.oe.15"/> scill.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13" corresp="#wit-b-no-prol">Be þa<hi rend="italic">m</hi> þe heore gewitnesse geleogað. Gyf hwá beforan bisceope his gewitnysse ⁊ his wed aleoge, gebete mid hundtwelftig scill'.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13" corresp="#wit-bu">LVII. . . . beforan biscope his gewitnesse ⁊ his wed aleoge, gebete mid hundtwelftigum scill'.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="13" corresp="#wit-q">Si quis<ptr type="liebermannNote" n="17" target="#Ine_13.lnote.oe.17"/> coram episcopo testimonium suum et uadium<ptr type="liebermannNote" n="18" target="#Ine_13.lnote.oe.18"/> mentiatur, centum<ptr type="liebermannNote" n="19" target="#Ine_13.lnote.oe.19"/> uiginti solid. emendet.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="13" corresp="#wit-e">{LVII} Gif hwa biforan biscepe his gewitnesse ⁊ his wed aleoge, gebete mid CXX sciƚƚ.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If someone gives false witness or denies his pledge before the bishop, let him compensate with 120 shillings.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If anyone bears false witness in the presence of a bishop, or repudiates a pledge which he has given in his presence, he shall pay 120 shillings compensation.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">If anyone in the bishop’s presence bears false witness and breaks his pledge, he is to pay 120 shillings compensation.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand vor dem Bischofe sein Zeugniss falsch abgiebt und sein rechtsförmliches Versprechen [abgegeben vor ihm,] bricht, büsse er mit 120 Schill.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand vor dem Bischofe<ptr type="liebermannNote" n="1" target="#Ine_13.lnote.de.1"/> sein Zeugniss falsch<ptr type="liebermannNote" n="2" target="#Ine_13.lnote.de.2"/> abgiebt und sein rechtsförmliches Versprechen [abgegeben vor ihm,] bricht, büsse er mit 120 Schill.<ptr type="liebermannNote" n="3" target="#Ine_13.lnote.de.3"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If someone gives false testimony before the bishop and breaks his formal pledge [given before him], let him pay 120 shillings.</ab>
         <note type="comparedBy" source="#wormald-mel" n="280"><ref target="clause:Af_22">Af 22</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_13.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">95</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt RT</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in RT</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_13.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">95</biblScope></bibl><seg type="original" xml:lang="de">ponat et <hi rend="italic">fügt zu übergeschr. Co; im Texte Or</hi></seg><seg type="translation" xml:lang="en" source="#claude">ponat et added above the line by Co; in the text in Or</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_13.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">95</biblScope></bibl><seg type="original" xml:lang="de">XXX <hi rend="italic">MHkBr;</hi> VII <hi rend="italic">Co</hi></seg><seg type="translation" xml:lang="en" source="#claude">XXX MHkBr; VII Co</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_13.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">94</biblScope></bibl><seg type="original" xml:lang="de">a <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">a on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_13.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">94</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_13.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">94</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">geänd. in</hi> wedd</seg><seg type="translation" xml:lang="en" source="#claude">altered to wedd</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_13.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">94</biblScope></bibl><seg type="original" xml:lang="de">eo <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">eo on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_13.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">94</biblScope></bibl><seg type="original" xml:lang="de">-ceope <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-ceope Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_13.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">94</biblScope></bibl><seg type="original" xml:lang="de">-nysse <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-nysse Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ine_13.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">94</biblScope></bibl><seg type="original" xml:lang="de">hundtwelftig <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">hundtwelftig Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_13.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">70</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Meineid 2a. 12; Eidesform 5a. 7h; Zeugen 5. d. Keineswegs Geistliches Gericht, sondern nur die Teilnahme Geistlicher an der Abnahme von Eid und Versprechen (<hi rend="italic">s. d. Gl</hi> 6), die Einwirkung des Kirchenstaatsrechts (<hi rend="italic">s. d. Gl</hi> 17) darauf, folgt hieraus. Für Meineid <hi rend="italic">in manu episcopi</hi> diktiert 3 Jahre Kirchenbusse Theodor <hi rend="italic">Poenit.</hi> II 6, 3f. <hi rend="italic">Vgl. Gl</hi> Ungehorsam 15</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Meineid 2a. 12; Eidesform 5a. 7h; Zeugen 5. d. What follows from this is by no means an ecclesiastical court, but only the participation of clergy in the taking of oaths and pledges (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 6) and the influence of ecclesiastical public law (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 17) on it. For perjury <hi rend="italic">in manu episcopi</hi> Theodore <hi rend="italic">Poenit.</hi> II 6, 3f. prescribes 3 years of ecclesiastical penance. <hi rend="italic">Cf. Gl</hi> Ungehorsam 15</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_13.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">70</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">aleogan:</hi> ‘assertorisch oder promissorisch falsch sprechen’; <hi rend="italic">s.</hi> Af 1, 1⁴</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">aleogan:</hi> ‘to speak falsely, assertorily or promissorily’; <hi rend="italic">see</hi> Af 1, 1⁴</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ine_13.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">70</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Grosshundert, während ‘½ Wergeld = 100 Schill.’ II Cn 36 fordert</seg><seg type="translation" xml:lang="en" source="#claude">Long hundred, whereas II Cn 36 demands ‘½ wergild = 100 shill.’</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="Ine_13.attnote.n.0" n="0" source="#attenborough" rend="wholeClause"><bibl><biblScope unit="page">184</biblScope></bibl><seg type="original" xml:lang="en">This clause curiously breaks the connection between cap. 12 and 13 § 1.</seg></note>
       </div>
     </body>
   </text>
