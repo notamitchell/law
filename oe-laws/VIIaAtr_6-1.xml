@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -55,25 +57,28 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1412 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 262.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 262: “⁊ ælc mæssepreost mæssige for urne hlaford ⁊ for ealle his þeode.” → “⁊ ælc mæssepreost mæssige for urne hlaford ⁊ for ealle his þeode. (expanded letters in italics: ost)”.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Robertson, p. 117: “people” → “people.”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6.1">
         <head><ref type="lawCode" target="law:VIIaAtr">VIIa Atr</ref> 6.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.1" corresp="#wit-d">⁊ ælc mæssepreost mæssige for urne hlaford ⁊ for ealle his þeode.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.1" corresp="#wit-d">⁊ ælc mæssepre<hi rend="italic">ost</hi> mæssige for urne hlaford ⁊ for ealle his þeode.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="6.1" corresp="#wit-d">⁊ ælc mæssepreost mæssige for urne hlaford ⁊ for ealle his þeode.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">And ælc mæssepreost mæssige for urne hlaford and for ealle his þeode.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">Und jeder Priester lese Messe für unsern Herrn [König] und dessen ganzes Volk.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let every priest say mass for our lord [the king] and for all his people.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And every priest shall say mass for our lord and for all his people</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">And every mass-priest is to say mass for our lord and for all his people.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIaAtr_6-1.robnote.n.1"/>And every priest shall say mass for our lord and for all his people.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">And every mass-priest is to say mass for our lord and for all his people.<ptr type="editorNote" n="3" target="#VIIaAtr_6-1.whinote.n.3"/></ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">And each priest is to celebrate Mass for our lord and all of his people.</ab>
         <note type="comparison" source="#liebermann" n="262"><ref target="clause:VIIAtr_3-2">VII Atr 3.2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 3, 2</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VIIAtr_3-2">VII Atr 3.2</ref></note>
         <note type="editorial">Liebermann compares VII Atr 3.2.</note>
-        <note type="translator" source="#whitelock">see previous note</note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIaAtr_6-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">338</biblScope></bibl><seg type="original" xml:lang="en">Cf. VII, 3, 2.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="VIIaAtr_6-1.whinote.n.3" n="3" source="#whitelock"><bibl><biblScope unit="page">453</biblScope></bibl><label>people</label><seg type="original" xml:lang="en"><hi rend="italic">see</hi> previous note</seg></note>
       </div>
     </body>
   </text>
