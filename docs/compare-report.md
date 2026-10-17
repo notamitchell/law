@@ -1,0 +1,667 @@
+# Compare links made from Liebermann's cross-references
+
+Made by `tools/see-also.py`. It is replaced each time the tool runs.
+
+```
+Entries: 9091; changed: 611; links added: 760; wrong links removed: 0
+  vergleiche      found  1312, linked   770
+  not linked, no word found                                   171
+  not linked, no entry with this headword (yet)               165
+  not linked, part of a longer phrase, not a single headword    73
+  not linked, a citation or a longer word, not a headword      41
+  linked, ~ filled in from the headword                        33
+  not linked, a single letter, not a headword                  29
+  not linked, only the start or end of a word                  27
+  not linked, nothing follows                                  17
+  linked, linked by a near spelling                            16
+  not linked, a number, not a headword                         16
+  linked, linked to the word without the hyphen                 8
+  linked, several entries have this headword, all linked        3
+  not linked, linked by a near spelling                         2
+  not linked, no entry with this headword                       1
+```
+
+## Not linked, no word found (171)
+
+- **Artikel-2**: vgl. 
+- **Conjugation**: vgl. 
+- **Conjugation**: vgl. 
+- **Declination**: vgl. 
+- **Declination**: vgl. 
+- **Declination**: vgl. 
+- **Ellipse**: vgl. 
+- **Engle**: vgl. 
+- **Gleitlaut**: vgl. 
+- **God**: vgl. 
+- **Latein**: vgl. 
+- **Nordleoda**: vgl. 
+- **Particip**: vgl. 
+- **Pater-noster**: vgl. 
+- **Praeposition**: vgl. 
+- **Toteneis**: vgl. 
+- **Waerham**: vgl. 
+- **Wilhelm**: vgl. 
+- **Wortbildung**: vgl. 
+- **Wortschatz-variirt**: vgl. 
+- **Zahlwort**: vgl. 
+- **aet-2**: vgl. 
+- **aewda**: vgl. 
+- **amender**: vgl. 
+- **amicitia**: vgl. 
+- **an-3**: vgl. 
+- **angyld**: vgl. 
+- **angyld**: vgl. 
+- **animal**: vgl. 
+- **anlaetan**: vgl. 
+- **annus**: vgl. 
+- **assa-l-lire**: vgl. 
+- **aveir**: vgl. 
+- **befare**: vgl. 
+- **berebrytta**: vgl. 
+- **boteatan**: vgl. 
+- **ceose**: vgl. 
+- **cleroc**: vgl. 
+- **companagium**: vgl. 
+- **curia**: vgl. 
+- **cynedom**: vgl. 
+- **deintus**: vgl. 
+- **dierne**: vgl. 
+- **diht**: vgl. 
+- **dihtan**: vgl. 
+- **duner**: vgl. 
+- **duru**: vgl. 
+- **eahte**: vgl. 
+- **edor**: vgl. 
+- **ei**: vgl. 
+- **emplaider**: vgl. 
+- **equae**: vgl. 
+- **esne**: vgl. 
+- **estre**: vgl. 
+- **extopare**: vgl. 
+- **faemne**: vgl. 
+- **fah**: vgl. 
+- **faire**: vgl. 
+- **finger**: vgl. 
+- **finire**: vgl. 
+- **finis**: vgl. 
+- **flett**: vgl. 
+- **fliema**: vgl. 
+- **for-4**: vgl. 
+- **for-4**: vgl. 
+- **forefang**: vgl. 
+- **forstalian**: vgl. 
+- **forstandan**: vgl. 
+- **forsteall**: vgl. 
+- **gadiren**: vgl. 
+- **gan**: vgl. 
+- **geneatmanna**: vgl. 
+- **gethungen**: vgl. 
+- **gewintred**: vgl. 
+- **grin**: vgl. 
+- **h-a-mola**: vgl. 
+- **ham**: vgl. 
+- **hand**: vgl. 
+- **hion-ne**: vgl. 
+- **hrifwund**: vgl. 
+- **hundtwentig**: vgl. 
+- **in**: vgl. 
+- **intendere**: vgl. 
+- **laetan**: vgl. 
+- **lagu**: vgl. 
+- **lagu**: vgl. 
+- **leohtan**: vgl. 
+- **libra**: vgl. 
+- **malignare**: vgl. 
+- **man**: vgl. 
+- **man**: vgl. 
+- **mann**: vgl. 
+- **metan**: vgl. 
+- **mid**: vgl. 
+- **midd**: vgl. 
+- **middesumera**: vgl. 
+- **missaticum**: vgl. 
+- **monad**: vgl. 
+- **mortuus**: vgl. 
+- **murdre**: vgl. 
+- **n**: vgl. 
+- **n**: vgl. 
+- **n**: vgl. 
+- **n**: vgl. 
+- **observare**: vgl. 
+- **of**: vgl. 
+- **on**: vgl. 
+- **on**: vgl. 
+- **on**: vgl. 
+- **on**: vgl. 
+- **per-2**: vgl. 
+- **per**: vgl. 
+- **plegage**: vgl. 
+- **r-2**: vgl. 
+- **radcniht**: vgl. 
+- **riht**: vgl. 
+- **ringe**: vgl. 
+- **ryt**: vgl. 
+- **sc**: vgl. 
+- **sceard**: vgl. 
+- **scilling**: vgl. 
+- **scilling**: vgl. 
+- **se**: vgl. 
+- **sei**: vgl. 
+- **senz**: vgl. 
+- **sine**: vgl. 
+- **staef**: vgl. 
+- **streon**: vgl. 
+- **sude**: vgl. 
+- **sum**: vgl. 
+- **sum**: vgl. 
+- **summonere**: vgl. 
+- **swa**: vgl. 
+- **swelc**: vgl. 
+- **tenere**: vgl. 
+- **th**: vgl. 
+- **thegn**: vgl. 
+- **thenden**: vgl. 
+- **theowian**: vgl. 
+- **thes**: vgl. 
+- **thing**: vgl. 
+- **thridda**: vgl. 
+- **thy**: vgl. 
+- **tid**: vgl. 
+- **to**: vgl. 
+- **to**: vgl. 
+- **to**: vgl. 
+- **tun**: vgl. 
+- **tunesgerefa**: vgl. 
+- **tunscipes**: vgl. 
+- **u**: vgl. 
+- **u**: vgl. 
+- **ungewintred**: vgl. 
+- **uwel**: vgl. 
+- **vealter**: vgl. 
+- **vel**: vgl. 
+- **vicis**: vgl. 
+- **viginti**: vgl. 
+- **w-ae-lreaf**: vgl. 
+- **wedd**: vgl. 
+- **weg**: vgl. 
+- **weo**: vgl. 
+- **weotuma**: vgl. 
+- **wid-2**: vgl. 
+- **wid-2**: vgl. 
+- **wierde**: vgl. 
+- **wintersteal**: vgl. 
+- **wita**: vgl. 
+- **wite**: vgl. 
+- **wulfesheved**: vgl. 
+- **ymb**: vgl. 
+
+## Not linked, no entry with this headword (yet) (165)
+
+- **Adjectiv**: vgl. Genetiv
+- **Aegyptus**: vgl. Ags
+- **Cantuaria**: vgl. Cantwarabyrig
+- **Cent**: vgl. Centescir
+- **Cent**: vgl. Centland
+- **Comparativ**: vgl. ähnlich
+- **Conjugation**: vgl. motan
+- **Cordubiensis**: vgl. Cornubia?
+- **Dativ**: vgl. Instr
+- **Dativ**: vgl. Instrumental
+- **Declination**: vgl. Neutra
+- **Dene**: vgl. Norðengle
+- **Engle**: vgl. Angolwitan
+- **Indefinitum**: vgl. Relativ
+- **Iohannes**: vgl. middansumor
+- **Metathese**: vgl. sh
+- **Metathese**: vgl. Lincoln?
+- **Neutrum**: vgl. Personalprn
+- **Particip**: vgl. invictus
+- **Praeteritum**: vgl. Plusquampf
+- **Relativum**: vgl. Cynewulf
+- **Seaxe**: vgl. -nia
+- **Umlaut**: vgl. die
+- **Wortstellung**: vgl. ‘Praeposition’
+- **abjurare**: vgl. forisjurare
+- **andweorc**: vgl. andegawerc
+- **awoh**: vgl. älter
+- **be-2**: vgl. befiod
+- **be-2**: vgl. benæmed
+- **biernan**: vgl. biorn-
+- **bocland**: vgl. haereditas
+- **bot**: vgl. witu
+- **botl**: vgl. bold
+- **bry-g-dan**: vgl. bregdan
+- **burg**: vgl. burhgeat
+- **burg**: vgl. vorvor
+- **burg**: vgl. burgenses
+- **c**: vgl. nc
+- **caetus**: vgl. Matth
+- **cives**: vgl. burgenses
+- **cri**: vgl. uthesium
+- **cupere**: vgl. exopto
+- **daeg**: vgl. daga
+- **de-2**: vgl. des
+- **decimationarius**: vgl. -mus
+- **decimus**: vgl. vorvor
+- **decisio**: vgl. incisio
+- **demaine**: vgl. -nium
+- **dierne**: vgl. dearnunga
+- **ecclesia**: vgl. Jones
+- **essartum**: vgl. Turner
+- **exo-p-tare**: vgl. præcupio
+- **faehde**: vgl. werefactio
+- **feorcuman**: vgl. feorranc-
+- **flaesc**: vgl. geflæscnes
+- **fod-or**: vgl. fodder
+- **folcfry**: vgl. langobard
+- **forefang**: vgl. obdtsch
+- **friborg**: vgl. friðgild
+- **ful-l-borenra**: vgl. langbd
+- **g**: vgl. gw
+- **ga-f-olyrd**: vgl. gærsyrð
+- **gafolraeden**: vgl. rædegafol
+- **geleod**: vgl. gelonda
+- **gelic**: vgl. heafodgemaca
+- **geneat**: vgl. militans
+- **geogod**: vgl. iuventa
+- **gesid**: vgl. langob
+- **geth-y-ncdo**: vgl. langbd
+- **gewitnes**: vgl. testes
+- **gu**: vgl. gw
+- **gw**: vgl. gu
+- **habundantia**: vgl. superhab-
+- **ham**: vgl. Aldhelmglosse
+- **hamfaest**: vgl. hamsittend
+- **hand**: vgl. Salomo
+- **hand**: vgl. handseald
+- **handgrid**: vgl. handseald
+- **healle**: vgl. halimot
+- **heordfaest**: vgl. hamsittend
+- **hiered**: vgl. heall
+- **hlaford**: vgl. landagend
+- **hlafordswic-a**: vgl. das
+- **hlosan**: vgl. looze
+- **horswealh**: vgl. hundwealh
+- **hus**: vgl. heall
+- **husfaest**: vgl. hamsittend
+- **i**: vgl. ei
+- **i**: vgl. io
+- **isen**: vgl. irsebinn?
+- **l-a-ndstr-eo-n**: vgl. Streneshalc
+- **laedes**: vgl. leidgrevei
+- **land**: vgl. landagend
+- **land**: vgl. -hæbbend
+- **m-e-nigo**: vgl. manung
+- **m-i-xend-y-nge**: vgl. meox-
+- **macholum**: vgl. machalum
+- **maere**: vgl. Urk
+- **mannire**: vgl. submonere
+- **manutenere**: vgl. maintenir
+- **me-o-xscofl**: vgl. mixen-
+- **midd**: vgl. middesumor
+- **middanwinter**: vgl. Natalis
+- **mortificator**: vgl. latro-homicida
+- **mustrer**: vgl. -abilis
+- **mynster**: vgl. ciricgriðbrece
+- **n-2**: vgl. nb
+- **n-ie-dmage**: vgl. neahm-
+- **natale**: vgl. -licium
+- **natale**: vgl. nativitas
+- **neahmagon**: vgl. niedm-
+- **ng**: vgl. cyngban
+- **niht**: vgl. trinoctium
+- **nox**: vgl. trinoctium
+- **numer**: vgl. nemnan
+- **numer**: vgl. -atio
+- **o**: vgl. -or
+- **ofer**: vgl. unten
+- **ofer**: vgl. Östreichisch
+- **ofworpen**: vgl. Ulfilas
+- **on**: vgl. onniman
+- **perdere**: vgl. amitto
+- **plagiare**: vgl. plagare
+- **planum**: vgl. Fz
+- **praecupere**: vgl. exopto
+- **r-i-d**: vgl. mengl
+- **recoverer**: vgl. Stadtrecht
+- **ref**: vgl. -rf
+- **rf**: vgl. ref
+- **riht**: vgl. gerihta
+- **sar**: vgl. sarbot
+- **sarbote**: vgl. doppelte
+- **terra**: vgl. libera
+- **the**: vgl. Relativ
+- **thegn**: vgl. þegnland
+- **theof-e**: vgl. þiefe
+- **theofg-ie-ld**: vgl. þeofe
+- **theofscyldig**: vgl. morðorscyldig
+- **theowman**: vgl. Ld
+- **thes**: vgl. Demonstrativ
+- **thiefe**: vgl. þeofe
+- **thingian**: vgl. geþ-
+- **thuma**: vgl. þymele
+- **thurfan**: vgl. þearfiend
+- **timplean**: vgl. tum
+- **tut**: vgl. tuteveie
+- **twelfwintre**: vgl. seofonwintre
+- **unbeceasne**: vgl. Q’s
+- **unceases**: vgl. unbeceas
+- **unceases**: vgl. unfæhð
+- **ungestrodyne**: vgl. gestrod
+- **vicinium**: vgl. visuetum
+- **w**: vgl. -wi
+- **w**: vgl. -wu
+- **wer-2**: vgl. Übs
+- **werian**: vgl. scrudwaru
+- **wilde**: vgl. mndd
+- **wite**: vgl. zu
+- **wlite**: vgl. wliteweorð
+- **wreccena**: vgl. -csið
+- **wud-u-hewet**: vgl. wuduheawere
+- **wudubaernette**: vgl. Ortsnamen
+- **y**: vgl. -ya
+- **y**: vgl. yo-
+- **y**: vgl. terranico
+
+## Not linked, part of a longer phrase, not a single headword (73)
+
+- **Angelcynn**: vgl. mid
+- **Declination**: vgl. die
+- **Engle**: vgl. ‘missale
+- **Formeln**: vgl. þæne
+- **Passiv**: vgl. Unpersönliches
+- **Personalpronomen**: vgl. Af
+- **Scottus**: vgl. echtere
+- **Wealh**: vgl. 4
+- **accusatio**: vgl. infamatus
+- **agan**: vgl. landagend
+- **aseodan**: vgl. Urk.
+- **byrdenn**: vgl. in
+- **capritum**: vgl. Lex
+- **dom**: vgl. undom
+- **eallswa**: vgl. 22
+- **feowertyne**: vgl. fiftyne quindecim
+- **fiftyne**: vgl. feowertyne quindecim
+- **folc**: vgl. 5000
+- **folcland**: vgl. die
+- **fore**: vgl. Urk.
+- **foread**: vgl. iuret
+- **forhtian**: vgl. þone
+- **g-e-noh**: vgl. usque
+- **geweald**: vgl. on
+- **godspel**: vgl. Godes
+- **h-r-a-nhund**: vgl. im
+- **handgrid**: vgl. III
+- **healfmearc**: vgl. demi
+- **inveritare**: vgl. in
+- **land**: vgl. Engla
+- **liberalis**: vgl. plegium
+- **man**: vgl. EGu
+- **man**: vgl. 9?
+- **mann**: vgl. vir
+- **mann**: vgl. die
+- **mann**: vgl. die
+- **mearcgemot**: vgl. Beiblatt
+- **middesumera**: vgl. Iohannes
+- **minister**: vgl. episcopalis
+- **mis-c-enning**: vgl. Stephans
+- **ofermettan**: vgl. for
+- **onsprecan**: vgl. ic
+- **pestis**: vgl. Peior
+- **raed**: vgl. consiliatrix
+- **regiae**: vgl. placita
+- **rihthamscyld**: vgl. meinen
+- **robaria**: vgl. die
+- **scilling**: vgl. Urk.
+- **spere**: vgl. ǽr
+- **straet**: vgl. strata
+- **sul-u-ng**: vgl. X
+- **suschier**: vgl. Londoner
+- **swa**: vgl. IV
+- **swa**: vgl. Relativum
+- **thaet-is**: vgl. þæs
+- **thegn**: vgl. Cnuts
+- **theow**: vgl. þeowne
+- **thes**: vgl. þæt
+- **to**: vgl. IV
+- **to**: vgl. Salomo
+- **turba**: vgl. Af
+- **under**: vgl. Metra
+- **unfacne**: vgl. hyldo
+- **up**: vgl. uppan
+- **up**: vgl. uppan
+- **utlage**: vgl. Londoner
+- **vitulus**: vgl. Qui
+- **vivum**: vgl. vif
+- **waepentacgerefa**: vgl. on
+- **wegreaf**: vgl. hi
+- **wel**: vgl. ~
+- **woruld**: vgl. den
+- **yfel**: vgl. do
+
+## Not linked, a citation or a longer word, not a headword (41)
+
+- **Conjugation**: vgl. do
+- **Dativ**: vgl. þearf
+- **Dativ**: vgl. be
+- **Declination**: vgl. Ine
+- **Formeln**: vgl. Swer
+- **Formeln**: vgl. Swer
+- **Francigena**: vgl. Franc
+- **Hendiadyoin**: vgl. Wi
+- **Wealh**: vgl. þeoww~
+- **aegilde**: vgl. ungilde in
+- **bot**: vgl. 15.
+- **ceapmon**: vgl. ciep
+- **cunseil**: vgl. consilium
+- **curune**: vgl. corona
+- **francplegium**: vgl. plegium
+- **ge**: vgl. þu eow
+- **gefa**: vgl. gefah
+- **gesidcund**: vgl. gesið
+- **gieldan**: vgl. Grið
+- **huruthinga**: vgl. þing
+- **ic**: vgl. me min unc
+- **inland**: vgl. dominicus
+- **leng**: vgl. lang
+- **leodgeld**: vgl. leod
+- **man**: vgl. Hl
+- **man**: vgl. Hl
+- **man**: vgl. Hl
+- **man**: vgl. Wi
+- **mann**: vgl. 3.
+- **manswican**: vgl. ma
+- **mearc**: vgl. a.
+- **merci**: vgl. misericordia
+- **nemne**: vgl. ceose cyre
+- **nun**: vgl. si
+- **ofer**: vgl. A
+- **posse**: vgl. possibili
+- **thaet-2**: vgl. oð
+- **undeornunga**: vgl. Beowulf
+- **we**: vgl. ure us unc
+- **wid-2**: vgl. C
+- **winter**: vgl. -wintre
+
+## Linked, ~ filled in from the headword (33)
+
+- **abite**: vgl. onbite
+- **ciricgrid**: vgl. ciricfrið
+- **faederan**: vgl. gefæderan
+- **feohtan**: vgl. onfeohtan
+- **ferscipe**: vgl. geferscipe
+- **fierd**: vgl. fierdscip
+- **fierd**: vgl. fierdweard
+- **fliema**: vgl. fliemanfeorm
+- **forword**: vgl. geforword
+- **gebeodan**: vgl. bebeodan
+- **h-ie-rnes**: vgl. oferhiernes
+- **iudicium**: vgl. iudicialis
+- **laetania**: vgl. letania
+- **letania**: vgl. lætania
+- **mundare**: vgl. mundificare
+- **mundificare**: vgl. mundare
+- **niht**: vgl. Sunnanniht
+- **ofaceorfan**: vgl. ofceorfan
+- **ofceorfan**: vgl. ofaceorfan
+- **onbite**: vgl. abite
+- **orgilde**: vgl. ægilde
+- **orgilde**: vgl. ungilde
+- **pertenere**: vgl. pertinere
+- **pertinere**: vgl. pertenere
+- **probatio**: vgl. comprobatio
+- **querre**: vgl. requerre
+- **quiescere**: vgl. conquiescere
+- **scir**: vgl. scriftscir
+- **supersessio**: vgl. supersedere
+- **tenere**: vgl. manutenere
+- **thegn**: vgl. þegnlagu
+- **uncrafod**: vgl. unbecrafod
+- **witness**: vgl. gewitnes
+
+## Not linked, a single letter, not a headword (29)
+
+- **Conjugation**: vgl. n-
+- **Declination**: vgl. -e
+- **Declination**: vgl. n
+- **Formelhafte**: vgl. ‘
+- **Formelhafte**: vgl. 9
+- **Infinitiv**: vgl. 9
+- **bod**: vgl. 2
+- **ceorl**: vgl. 5
+- **con-tra-criminatio**: vgl. 5
+- **contracalumnia**: vgl. 3
+- **dominus**: vgl. L
+- **esnewyrhtan**: vgl. 9
+- **forbeodan**: vgl. 6
+- **g**: vgl. -i
+- **leod**: vgl. 4
+- **maere**: vgl. 7
+- **niht**: vgl. -
+- **o**: vgl. -
+- **parochianus**: vgl. 9
+- **quietus**: vgl. 8
+- **recognoscere**: vgl. d
+- **redemptio**: vgl. 2
+- **th**: vgl. 6
+- **th**: vgl. 7
+- **treowsian**: vgl. 4
+- **un-3**: vgl. o
+- **ure**: vgl. 4
+- **waelt**: vgl. æ
+- **weord**: vgl. 3
+
+## Not linked, only the start or end of a word (27)
+
+- **Hamtune**: vgl. North~ (no entry for it)
+- **alaier**: vgl. esl~ (no entry for it)
+- **eslajent**: vgl. ala~ (no entry for it)
+- **fridman**: vgl. unf~ (no entry for it)
+- **fridscipe**: vgl. unf~ (no entry for it)
+- **gyldne**: vgl. oferg~ (no entry for it)
+- **impersolutus**: vgl. inso~ (no entry for it)
+- **inbestingan**: vgl. onb~ (no entry for it)
+- **insolubilis**: vgl. imperso~ (no entry for it)
+- **n-ie-dmage**: vgl. gen~ (no entry for it)
+- **oferheald**: vgl. forh~ (no entry for it)
+- **oferhebban**: vgl. forh~ (no entry for it)
+- **oferhogian**: vgl. forh~ (no entry for it)
+- **portgerefa**: vgl. wicg~ (no entry for it)
+- **saisiare**: vgl. diss~ (no entry for it)
+- **simulari**: vgl. assi~ (no entry for it)
+- **sumor**: vgl. middes~ (no entry for it)
+- **thaer**: vgl. ~on (no entry for it)
+- **thaer**: vgl. ~æt (no entry for it)
+- **thaer**: vgl. ~inne (no entry for it)
+- **thaer**: vgl. ~mid (no entry for it)
+- **thaer**: vgl. ~on (no entry for it)
+- **thaer**: vgl. ~to (no entry for it)
+- **thegn**: vgl. ~nscipe (no entry for it)
+- **thegn**: vgl. ~nwer (no entry for it)
+- **undertheodd**: vgl. undergeþ~ (no entry for it)
+- **wanan**: vgl. gew~ (no entry for it)
+
+## Not linked, nothing follows (17)
+
+- **Alliteration**: vgl. 
+- **Nordrigena**: vgl. 
+- **decania**: vgl. 
+- **diffortiare**: vgl. 
+- **divadiare**: vgl. 
+- **fif**: vgl. 
+- **freondleas**: vgl. 
+- **geornian**: vgl. 
+- **hrif**: vgl. 
+- **mundbryce**: vgl. 
+- **ne**: vgl. 
+- **oferh-ie-rde**: vgl. 
+- **possibili**: vgl. 
+- **solidus**: vgl. 
+- **spraec**: vgl. 
+- **ungle**: vgl. 
+- **unmaga**: vgl. 
+
+## Linked, linked by a near spelling (16)
+
+- **Hendiadyoin**: vgl. forspekan (forsp[r]ecan)
+- **Relativum**: vgl. all (al)
+- **Wealh**: vgl. Walia (Wallia)
+- **ein**: vgl. -ei (-æi(g))
+- **forgieldan**: vgl. æftergield (æftergild)
+- **grid**: vgl. cyricgrið (ciricgrið)
+- **haettian**: vgl. pilare (pillare)
+- **heorde**: vgl. healm (helm)
+- **here**: vgl. fyrd (fierd)
+- **latrocinium**: vgl. hominicædium (hominic[a]edium)
+- **persolvere**: vgl. æftergield (æftergild)
+- **to**: vgl. natestohwy (natestohwí)
+- **twibote**: vgl. -gilde ([-gielde])
+- **wae-g-n**: vgl. byrðen (byrðenn)
+- **y**: vgl. ye (ie)
+- **y**: vgl. wy- (wie-)
+
+## Not linked, a number, not a headword (16)
+
+- **e-3**: vgl. 14
+- **g**: vgl. 14
+- **geferscipe**: vgl. 10
+- **gewyrcan**: vgl. 14
+- **grid**: vgl. 21
+- **hundredgerefa**: vgl. 42
+- **nam**: vgl. 12
+- **se**: vgl. 38
+- **thegnweres**: vgl. 29
+- **twelfhynde**: vgl. 14
+- **twelfhynde**: vgl. 15
+- **twelfhynde**: vgl. 18
+- **twelfhynde**: vgl. 21
+- **twelfhynde**: vgl. 25
+- **ure**: vgl. 10
+- **weard**: vgl. 19
+
+## Linked, linked to the word without the hyphen (8)
+
+- **Petrus**: vgl. -pening
+- **Petrus**: vgl. -scot
+- **hamfaest**: vgl. hus-
+- **land**: vgl. -hlaford
+- **mal**: vgl. -mæl
+- **mustrer**: vgl. -are
+- **profiteri**: vgl. -sor
+- **undergetheodedra**: vgl. underþeodd-
+
+## Linked, several entries have this headword, all linked (3)
+
+- **Conjugation**: vgl. beon (beon-2, beon)
+- **Verbum**: vgl. beon (beon-2, beon)
+- **thaer**: vgl. beon (beon-2, beon)
+
+## Not linked, linked by a near spelling (2)
+
+- **hw-ie-rfan**: vgl. hweorfan (hw[ie]rfan)
+- **ymbsp-r-ecan**: vgl. ymbsprécon (ymbsp[r]ecan)
+
+## Not linked, no entry with this headword (1)
+
+- **sc-ie-ld**: vgl. scyld (sc-ie-ld, scild)
+

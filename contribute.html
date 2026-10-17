@@ -229,7 +229,8 @@ scripts:
             earlierChanges: editing ? earlierChanges : [],
             xref: editing ? editingXref : false,
             spelling: editing ? editingSpelling : false,
-            editorNotes: editing ? editingNotes : []
+            editorNotes: editing ? editingNotes : [],
+            compare: editing ? editingCompare : []
         });
         currentFile = slug + '.xml';
 
@@ -271,7 +272,7 @@ scripts:
     // contribute.html?id=abbod suggests a change to an existing entry, with the
     // form filled in from its file; contribute.html?headword=… starts a new one.
     const params = new URLSearchParams(location.search);
-    let editing = '', earlierChanges = [], editingXref = false, editingSpelling = false, editingNotes = [];
+    let editing = '', earlierChanges = [], editingXref = false, editingSpelling = false, editingNotes = [], editingCompare = [];
     if (params.get('headword')) { $('headword').value = params.get('headword'); headwordEdited = true; }
     if (params.get('id')) loadEntry(params.get('id'));
 
@@ -284,6 +285,7 @@ scripts:
             editingSpelling = e.spelling;
             // Editorial notes are kept as they are (the form has no field for them).
             editingNotes = e.editorNotes.map(n => new XMLSerializer().serializeToString(n).replace(/ xmlns="[^"]*"/g, ''));
+            editingCompare = e.xr.filter(x => x.getAttribute('type') === 'compare').map(x => { const r = x.getElementsByTagName('ref')[0]; return { text: x.textContent.trim(), slug: ((r && r.getAttribute('target')) || '').replace(/^entry:/, '') }; });
             $('form-title').textContent = 'Suggest a change to ' + e.headword;
             $('form-lede').innerHTML = `The form below is filled in from <a href="${root}entry.html?id=${encodeURIComponent(id)}">the entry as it is now</a>. Change what's wrong or add what's missing, make the file, and send it to an editor, who checks it and replaces the entry.`;
             document.title = 'Suggest a change to ' + e.headword + ' · eLiebermann';

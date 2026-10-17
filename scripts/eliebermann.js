@@ -699,7 +699,7 @@
     /**
      * Builds an entry as a TEI document.
      * data: { headword, n, lang, page, facsimile, entryHtml, definitionHtml,
-     *         translationHtml, seeAlso: [{text, slug}], links: {bt, doe,
+     *         translationHtml, seeAlso: [{text, slug}], compare: [{text, slug}], links: {bt, doe,
      *         wiktionary, lawCode: [{text, url}]}, change: {when, text},
      *         earlierChanges: [{when, text}], xref, spelling }
      * editorNotes: editorial notes kept as they are, each a TEI string
@@ -722,6 +722,10 @@
         const xr = [];
         (data.seeAlso || []).filter(s => s.text).forEach(s => {
             xr.push(`<xr type="see"><ref target="entry:${escapeXml(s.slug || slugify(s.text))}">${escapeXml(s.text)}</ref></xr>`);
+        });
+        // Liebermann's "vgl." (compare): the headwords named after it
+        (data.compare || []).filter(s => s.text).forEach(s => {
+            xr.push(`<xr type="compare"><ref target="entry:${escapeXml(s.slug || slugify(s.text))}">${escapeXml(s.text)}</ref></xr>`);
         });
         const linkTypes = [['bt', 'bosworthToller'], ['doe', 'doe'], ['wiktionary', 'wiktionary']];
         linkTypes.forEach(([key, type]) => {
