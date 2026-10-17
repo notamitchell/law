@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">445</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -53,20 +56,27 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1086 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 230.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Robertson, p. 67: “(for; accused)—either” → “[for; accused]—either”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6">
         <head><ref type="lawCode" target="law:IIIAtr">III Atr</ref> 6</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6" corresp="#wit-q">Et omnis accusatus (uel qui alium impetit) habeat optionem, quid uelit, siue iudicium aque uel ferri.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-h">⁊ ælc tíond áge geweald, swa hwæðer he wille swa wæter swa ísen.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6" corresp="#wit-q">Et omnis accusatus<ptr type="liebermannNote" n="7" target="#IIIAtr_6.lnote.oe.7"/> (uel qui alium impetit) habeat optionem, quid uelit, siue iudicium aque uel<ptr type="liebermannNote" n="8" target="#IIIAtr_6.lnote.oe.8"/> ferri.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="6" corresp="#wit-h">⁊ ælc tíond áge geweald, swa hwæðer he wille, swa wæter swa ísen.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und jeder Kläger habe Entscheidung, welches [Ordal], entweder Wasser oder Eisen, er [vom Angeklagten erbracht haben] will.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und jeder Kläger<ptr type="liebermannNote" n="1" target="#IIIAtr_6.lnote.de.1"/> habe Entscheidung<ptr type="liebermannNote" n="2" target="#IIIAtr_6.lnote.de.2"/>, welches [Ordal<ptr type="liebermannNote" n="3" target="#IIIAtr_6.lnote.de.3"/>], entweder Wasser oder Eisen, er [vom Angeklagten erbracht haben] will.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let every plaintiff have the choice of which [ordeal] he wants [the accused to undergo], either water or iron.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h">And every accuser shall have the choice of whichever ordeal he desires (for the accused)—either ordeal by water or by iron.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><ptr type="editorNote" n="1" target="#IIIAtr_6.robnote.n.1"/>And every accuser shall have the choice of whichever ordeal he desires [for the accused]—either ordeal by water or by iron.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-h">And every accuser is to have the choice whether he wishes the ordeal to be of water or of iron.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:Blas_2">Blas 2</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIAtr_6.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">230</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so, durch Glosse corrigirt</hi></seg><seg type="translation" xml:lang="en" source="#claude">thus, corrected by the gloss</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIAtr_6.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">230</biblScope></bibl><seg type="original" xml:lang="de">siue <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">siue <hi rend="italic">T</hi></seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIIAtr_6.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">159</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Für den Sonderfall der Mörder und Brandstifter ebenso Blas 2</seg><seg type="translation" xml:lang="en" source="#claude">Likewise for the special case of murderers and incendiaries Blas 2</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIIAtr_6.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">159</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Synonym <hi rend="italic">cyre</hi>: ‘Wahl’ Blas.—Q hatte anfangs ‘Verklagter’ missverstanden, was Glosse bessert.—Über diese Wahl des Beweismittels durch den Kläger <hi rend="italic">s</hi>. Brunner II 404f.</seg><seg type="translation" xml:lang="en" source="#claude">Synonym <hi rend="italic">cyre</hi>: ‘choice’ Blas. — Q had at first misunderstood ‘defendant’, which a gloss corrects. — On this choice of the means of proof by the plaintiff <hi rend="italic">see</hi> Brunner II 404f.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIIAtr_6.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">159</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Ordal 18d; Q ergänzt richtig</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Ordal 18d; Q supplies it correctly</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIIAtr_6.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">320</biblScope></bibl><seg type="original" xml:lang="en">Cf. <hi rend="italic">Be Blas.</hi> 2.</seg></note>
       </div>
     </body>
   </text>

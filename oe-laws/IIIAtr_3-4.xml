@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">445</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -59,18 +62,22 @@
     <body>
       <div type="clause" n="3.4">
         <head><ref type="lawCode" target="law:IIIAtr">III Atr</ref> 3.4</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.4" corresp="#wit-h">⁊ ælc tihtbysig man gange to þryfeldan<ptr type="liebermannNote" n="2" target="#IIIAtr_3-4.lnote.oe.2"/> órdale oððe gilde feowergilde.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.4" corresp="#wit-q">Et omnis infamatus homo uadat ad triplex ordalium uel reddat quadruplum.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.4" corresp="#wit-h">⁊ ælc tihtbysig man gange to þryfeldan órdale oððe gilde feowergilde.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="3.4" corresp="#wit-h">⁊ ælc tihtbysig man gange to þryfeldan órdale oððe gilde feowergilde.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und jeder bescholtene Mann unterziehe sich [wiederum verklagt] dreifachem Ordale oder zahle vierfach.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><ptr type="liebermannNote" n="1" target="#IIIAtr_3-4.lnote.de.1"/>Und jeder bescholtene Mann unterziehe sich [wiederum verklagt] dreifachem Ordale oder<ptr type="liebermannNote" n="2" target="#IIIAtr_3-4.lnote.de.2"/> zahle vierfach.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let every man of bad repute [when accused again] undergo the threefold ordeal or pay fourfold.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h">And every man of bad repute shall go to the triple ordeal or pay fourfold [the value of the goods involved].</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><ptr type="editorNote" n="1" target="#IIIAtr_3-4.robnote.n.1"/>And every man of bad repute shall go to the triple ordeal or pay fourfold [the value of the goods involved].</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-h">And each man frequently accused is to go to the three-fold ordeal, or to pay four-fold.</ab>
         <note type="comparison" source="#liebermann" n="229"><ref target="clause:IAtr_1-1">I Atr 1.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. I Atr. 1, 1</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IAtr_1-1">I Atr 1.1</ref></note>
         <note type="comparison" source="#wormald-mel" n="329"><label>harsher application</label> <ref target="clause:IAtr_1-4">I Atr 1.4–1.6</ref> <quote>parts of 'III Æthelred' gave 'I' and 'IV' a harsher application (n. 301: I Atr 1:4–6; III Atr 3:4 – 4:1, 8; IV Atr 5 – 5:4, 7 – 7:1)</quote></note>
         <note type="editorial">Liebermann compares I Atr 1.1.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIAtr_3-4.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">228</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIIAtr_3-4.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">159</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Hier müsste neues Kapitel beginnen, wie denn Q <hi rend="smallcaps">ii</hi> hierher die Rubrik setzt; <hi rend="italic">s. o</hi>. I 541 Sp. 2</seg><seg type="translation" xml:lang="en" source="#claude">A new chapter ought to begin here, as indeed Q <hi rend="smallcaps">ii</hi> places the rubric here; <hi rend="italic">see above</hi> I 541 col. 2</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIIAtr_3-4.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">159</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Ordal 27a. Empfänger ist laut 4, 2 der Gerichtsherr, denn nur der strafrechtliche Charakter der Handlung, nicht des Klägers Schaden, ward erhöht durch die Bescholtenheit, die Ursache der Vervierfachung laut 4. Als Simplex ist das Eingeklagte (4, 1) zu denken, denn sonst stände die Bezeichnung eines Strafgeldes daneben. Ausserdem muss man die Befriedigung des Klägers durch einfachen Ersatz (<hi rend="italic">u</hi>. 4, 1³) hinzudenken. Diesen erklärt Schreuer (<hi rend="italic">Verbrechenskonk</hi>. 166) aus dem Nachgeben des Beklagten noch vor dem Beweis</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Ordal 27a. According to 4, 2 the recipient is the holder of jurisdiction, for it was only the penal character of the act, not the plaintiff's loss, that was increased by the ill repute, the cause of the fourfold payment according to 4. The simple amount is to be taken as the thing claimed (4, 1), for otherwise the designation of a fine would stand beside it. In addition, the satisfaction of the plaintiff by simple restitution (<hi rend="italic">below</hi> 4, 1³) must be understood. Schreuer (<hi rend="italic">Verbrechenskonk</hi>. 166) explains this by the defendant's giving way even before the proof</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIIAtr_3-4.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">320</biblScope></bibl><seg type="original" xml:lang="en">Cf. I Atr. 1, 1.</seg></note>
       </div>
     </body>
   </text>
