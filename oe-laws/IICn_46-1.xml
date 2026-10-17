@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">469</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +43,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -61,25 +64,42 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1813 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 344.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 344: “gefyle.” → “afyle.”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 344.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 344: “Yfel byð, þæt man fæstentide ær mæle ete, ⁊ git wyrse, þæt man mid flæscmete hine sylfne afyle.” → “Yfel byð, þæt man fæstentide ær mæle ete, ⁊ git wyrse, þæt man mid flæscmete hine sylfne afyle. (expanded letters in italics: æt, æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 344: “Schlimm ist es, dass jemand zur gesetzlichen Fastenzeit vor Essenszeit esse, und noch schlimmer (ist es B), dass sich jemand mit Fleischgenuss besudele.” → “Schlimm ist es, dass jemand zur gesetzlichen Fastenzeit vor Essenszeit esse, und noch schlimmer (ist es B), dass sich jemand mit Fleischgenuss besudele. (expanded letters in italics: B)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 345.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="46.1">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 46.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="46.1" corresp="#wit-g-a"><pb n="344" ed="#liebermann"/>Yfel byð, þ<hi rend="italic">æt</hi> man rihtfæstentide ær mæle ete, ⁊ gyt wyrse, þ<hi rend="italic">æt</hi> man mid flæscmete hine sylfne gefyle.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="46.1" corresp="#wit-a"><pb n="344" ed="#liebermann"/>Yfel byð, þæt man fæstentide ær mæle ete, ⁊ git wyrse, þæt man mid flæscmete hine sylfne afyle.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="46.1" corresp="#wit-g-a"><pb n="344" ed="#liebermann"/>Yfel byð<ptr type="liebermannNote" n="9" target="#IICn_46-1.lnote.oe.9"/>, þ<hi rend="italic">æt</hi> man rihtfæstentide<ptr type="liebermannNote" n="10" target="#IICn_46-1.lnote.oe.10"/> ær mæle ete, ⁊ gyt wyrse, þ<hi rend="italic">æt</hi> man mid flæscmete hine sylfne afyle.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="46.1" corresp="#wit-b"><pb n="344" ed="#liebermann"/>Yfel bið hit, þ<hi rend="italic">æt</hi> man fæstentide ær mæle éte, ⁊ gyt hit bið wyrse, þ<hi rend="italic">æt</hi> man mid flæscmete hine [sylfne<ptr type="liebermannNote" n="1" target="#IICn_46-1.lnote.oe.1"/>] gefyle.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="46.1" corresp="#wit-a"><pb n="344" ed="#liebermann"/>Yfel byð, þ<hi rend="italic">æt</hi> man fæstentide ær mæle ete, ⁊ git wyrse, þ<hi rend="italic">æt</hi> man mid flæscmete hine sylfne afyle.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="46.1" corresp="#wit-q"><pb n="345" ed="#liebermann"/>Malum est, ut tempore ieiuniorum ante horam comedat, et adhuc deterius, ut carnis cibo quis se ipsum inquinet.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="46.1" corresp="#wit-b"><pb n="198" ed="#robertson"/>Yfel bið hit þæt man fæstentide ær mæle éte, ⁊ gyt hit bið wyrse þæt man mid flæscmete hine sylfne gefyle.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="46.1" corresp="#wit-inst-cn"><pb n="345" ed="#liebermann"/>Si seruus ieiunium uiolauerit carnem manducando, uerberetur secundum modum culpę.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="46.1" corresp="#wit-cons-cn"><pb n="345" ed="#liebermann"/>[46, 1] Malum quidem est, ut quis die ieiunii ante horam commedit, peius uero, se ut escis carnium inquinet.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="46.1" corresp="#wit-b"><pb n="198" ed="#robertson"/>Yfel bið hit<ptr type="editorNote" n="1" target="#IICn_46-1.robnote.fn.1"/> þæt man fæstentide<ptr type="editorNote" n="11" target="#IICn_46-1.robnote.fn.11"/> ær mæle éte, ⁊ gyt hit<ptr type="editorNote" n="1" target="#IICn_46-1.robnote.fn.1"/> bið<ptr type="editorNote" n="1" target="#IICn_46-1.robnote.fn.1"/> wyrse þæt man mid flæscmete hine sylfne<ptr type="editorNote" n="10" target="#IICn_46-1.robnote.fn.10"/> gefyle.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="280" ed="#rabin-doml"/>Yfel byð, þæt man rihtfæstentide ær mæle ete, and gyt wyrse þæt man mid flæscmete hine sylfne afyle.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="344" ed="#liebermann"/>Schlimm ist es, dass jemand zur gesetzlichen Fastenzeit vor Essenszeit esse, und noch schlimmer (ist es B), dass sich jemand mit Fleischgenuss besudele.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="344" ed="#liebermann"/>Schlimm<ptr type="liebermannNote" n="1" target="#IICn_46-1.lnote.de.1"/> ist es, dass jemand zur gesetzlichen Fastenzeit<ptr type="liebermannNote" n="2" target="#IICn_46-1.lnote.de.2"/> vor Essenszeit esse, und noch schlimmer (ist es <hi rend="italic">B</hi>), dass sich jemand mit Fleischgenuss besudele.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">It is bad that anyone should eat before mealtime in a lawful fast, and still worse (is it, B) that anyone should defile himself with meat.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="199" ed="#robertson"/>It is wrong for anyone during a fast to eat before the appointed time, and it is still worse for anyone to defile himself with flesh.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock"><pb n="469" ed="#whitelock"/>It is wrong that one should eat during a legally appointed fasting-season before the mealtime, and still worse, that one should defile oneself with fleshmeat.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="281" ed="#rabin-doml"/>During a legally mandated fast, it is sinful for anyone to eat before the appropriate time, and still worse for anyone to befoul himself with flesh.</ab>
+        <note type="editorial">BR: added from Gesetze I p. 345, October 2026 (MS Cons); AY: corrected against Rabin p. 280 / 281, October 2026 (was “rihtomitted”, now “riht- omitted”)</note>
         <note type="textual" source="#rabin-doml">Yfel byð: Yfel bið hit B</note>
-        <note type="textual" source="#rabin-doml">rihtfæstentide: rihtomitted AB</note>
+        <note type="textual" source="#rabin-doml">rihtfæstentide: riht- omitted AB</note>
         <note type="textual" source="#rabin-doml">gyt: gyt hit bið B</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_46-1.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">344</biblScope></bibl><seg type="original" xml:lang="de">biþ <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">biþ Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_46-1.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">344</biblScope></bibl><seg type="original" xml:lang="de">fæst. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">fæst. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_46-1.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">344</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">im</hi> 16. <hi rend="italic">Jh. übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above in the 16th cent.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_46-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">208</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Stilist. Steigerung wie 50, 1.—<hi rend="italic">Vgl. Gl</hi> Fasten 3</seg><seg type="translation" xml:lang="en" source="#claude">Stylistic climax as in 50, 1. — <hi rend="italic">Cf. Gl</hi> Fasten 3</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_46-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">208</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Das Kompositum, das Toller fehlt, ist gebildet wie dort <hi rend="italic">rihtfæstendæg</hi></seg><seg type="translation" xml:lang="en" source="#claude">The compound, which is missing from Toller, is formed like <hi rend="italic">rihtfæstendæg</hi> there</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_46-1.robnote.fn.1" n="1" source="#robertson"><bibl><biblScope unit="page">198</biblScope></bibl><label>ðæs</label><seg type="original" xml:lang="en">Om. G, A, Ld.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_46-1.robnote.fn.10" n="10" source="#robertson"><bibl><biblScope unit="page">198</biblScope></bibl><label>riht</label><seg type="original" xml:lang="en">Written above in 16th cent. in B.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_46-1.robnote.fn.11" n="11" source="#robertson"><bibl><biblScope unit="page">198</biblScope></bibl><label>fæstentide</label><seg type="original" xml:lang="en"><hi rend="italic">rihtf.</hi> G.</seg></note>
       </div>
     </body>
   </text>

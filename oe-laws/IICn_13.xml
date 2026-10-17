@@ -14,6 +14,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -34,6 +36,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -42,7 +45,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -64,25 +67,42 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1720 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 316.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 316.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 317.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 317: “(Friedloser. B) Und wer Friedlosenwerk verübt: [da] verfüge der König über den Frieden [den jener sich wiederkaufe].” → “(Friedloser. B) Und wer Friedlosenwerk verübt: [da] verfüge der König über den Frieden [den jener sich wiederkaufe]. (expanded letters in italics: B)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="13">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 13</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13" corresp="#wit-g-a"><pb n="316" ed="#liebermann"/>⁊ se ðe utlages weorc gewyrce, wealde se cingc þæs friþes.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13" corresp="#wit-g-a"><pb n="316" ed="#liebermann"/>⁊ se ðe utlages weorc<ptr type="liebermannNote" n="15" target="#IICn_13.lnote.oe.15"/> gewyrce, wealde se cingc<ptr type="liebermannNote" n="10" target="#IICn_13.lnote.oe.10-2"/> þæs friþes.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13" corresp="#wit-b"><pb n="316" ed="#liebermann"/>Utlaga. Se ðe útlages weorc gewyrce, wealde se cyng ðæs friðes.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13" corresp="#wit-a"><pb n="316" ed="#liebermann"/>And se ðe útlages weorc gewyrce, wealde se cyningc þæs friðes.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="13" corresp="#wit-q"><pb n="317" ed="#liebermann"/>Et qui opus útlagii fecerit, eius reuocatio sit in misericordia regis (pacis emendatio in solius regis consistat imperio).</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="13" corresp="#wit-q"><pb n="317" ed="#liebermann"/>Et qui opus útlagii fecerit, eius<ptr type="liebermannNote" n="9" target="#IICn_13.lnote.oe.9"/> reuocatio sit in misericordia regis (pacis<ptr type="liebermannNote" n="10" target="#IICn_13.lnote.oe.10"/> emendatio in solius regis consistat imperio).</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13" corresp="#wit-inst-cn"><pb n="317" ed="#liebermann"/>Si quis fecerit opus expulsi, quod Angli uocant útlages ƿeorc<ptr type="liebermannNote" n="14" target="#IICn_13.lnote.oe.14"/>, uideat rex de pace.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="13" corresp="#wit-cons-cn"><pb n="317" ed="#liebermann"/>Et si quis exlegis factum fecerit, consideret rex de pace.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="13" corresp="#wit-b"><pb n="180" ed="#robertson"/>Utlaga. Se ðe útlages weorc gewyrce wealde se cyng ðæs friðes.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="260" ed="#rabin-doml"/>And se ðe utlages weorc gewyrce, wealde se cingc þæs friþes.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="317" ed="#liebermann"/>(Friedloser. B) Und wer Friedlosenwerk verübt: [da] verfüge der König über den Frieden [den jener sich wiederkaufe].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="317" ed="#liebermann"/>(Friedloser.<ptr type="liebermannNote" n="1" target="#IICn_13.lnote.de.1"/> <hi rend="italic">B</hi>) Und wer Friedlosenwerk<ptr type="liebermannNote" n="2" target="#IICn_13.lnote.de.2"/> verübt: [da] verfüge<ptr type="liebermannNote" n="3" target="#IICn_13.lnote.de.3"/> der König über den Frieden [den jener sich wiederkaufe].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Outlaw. B) And whoever commits a deed that incurs outlawry: let the king decide on his [being restored to the] peace.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="181" ed="#robertson"/>Outlawry. If anyone does the deed of an outlaw, the king alone shall have power to grant him security.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="181" ed="#robertson"/>Outlawry. If anyone does the deed of an outlaw<ptr type="editorNote" n="1" target="#IICn_13.robnote.n.1"/>, the king<ptr type="editorNote" n="2" target="#IICn_13.robnote.n.2"/> alone shall have power to grant him security.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock"><pb n="463" ed="#whitelock"/>And if anyone commits a deed punishable by outlawry, the king [alone] is to have power to grant him peace.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="261" ed="#rabin-doml"/>And the king has the power to grant clemency to those who engage in outlawry.</ab>
         <note type="comparedBy" source="#wormald-ppmel" n="219"><ref target="clause:IICn_77">II Cn 77</ref></note>
-        <note type="editorial">B's heading ‘Utlaga’ is red.</note>
+        <note type="editorial">B's heading ‘Utlaga’ is red.; BR: added from Gesetze I p. 317, October 2026 (MS Cons)</note>
         <note type="textual" source="#rabin-doml">B adds rubric Utlaga</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_13.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">317</biblScope></bibl><seg type="original" xml:lang="de">werc <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">werc Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_13.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">317</biblScope></bibl><seg type="original" xml:lang="de">misericordia et <hi rend="italic">fügt K zu</hi></seg><seg type="translation" xml:lang="en" source="#claude">misericordia et added by K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_13.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">317</biblScope></bibl><seg type="original" xml:lang="de">pa. — imp. <hi rend="italic">übergeschr. Dm; fehlt übrigen</hi></seg><seg type="translation" xml:lang="en" source="#claude">pa. — imp. written above Dm; lacking in the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_13.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">316</biblScope></bibl><seg type="original" xml:lang="de">worce <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">worce Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_13.lnote.oe.10-2" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">316</biblScope></bibl><seg type="original" xml:lang="de">cyning <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">cyning Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_13.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">317</biblScope></bibl><seg type="original" xml:lang="de">Hoc est: in uoluntate regis est, an illi pacem uoluerit annon; terram autem suam amittat <hi rend="italic">fügt zu Hk; s.</hi> 13, 1</seg><seg type="translation" xml:lang="en" source="#claude">Hoc est: in uoluntate regis est, an illi pacem uoluerit annon; terram autem suam amittat added by Hk; see 13, 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_13.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">203</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">utlagu</hi>, fm., setzt Toller, vielleicht nur hierher an. Ob -<hi rend="italic">a</hi>, wie Price-Thorpe annimmt, Plural bed., ist für c. 1125 nicht sicher. ‘Ächtungsvergehen’ Schmid. Den No. <hi rend="italic">utlaga</hi> (<hi rend="italic">s. d. Wb</hi>) hat B dem Text entnommen, wie <hi rend="italic">wiccean</hi> vor 4, 1</seg><seg type="translation" xml:lang="en" source="#claude">Toller posits <hi rend="italic">utlagu</hi>, fem., perhaps only on the basis of this passage. Whether -<hi rend="italic">a</hi> denotes a plural, as Price-Thorpe assume, is not certain for c. 1125. ‘Offence entailing outlawry’ Schmid. B took the nom. <hi rend="italic">utlaga</hi> (<hi rend="italic">see</hi> that word in <hi rend="italic">Wb</hi>) from the text, as with <hi rend="italic">wiccean</hi> before 4, 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_13.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">203</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Wb: utlah</hi>; die 2 Wörter sind Ein Nord. Begriff; Toller 1146b Z. 1</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Wb: utlah</hi>; the 2 words form a single Norse concept; Toller 1146b l. 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_13.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">204</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> friedlos 17; Misericordia 4, was nur Normann. Ausdruck für die Verfügung des Richters über Leben und Vermögen des Verbrechers</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> friedlos 17; Misericordia 4, which is only the Norman expression for the judge's power of disposal over the life and property of the criminal</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IICn_13.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">353</biblScope></bibl><seg type="original" xml:lang="en"><hi rend="italic">i.e.</hi> a deed which would legally involve outlawry; cf. the Norse phrase <hi rend="italic">göra utlaga verk</hi>.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IICn_13.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">353</biblScope></bibl><seg type="original" xml:lang="en">Probably we are to understand ‘no-one but the king,’ cf. one MS of Q which reads, <hi rend="italic">pacis emendatio in solius regis consistat imperio</hi>.</seg></note>
       </div>
     </body>
   </text>

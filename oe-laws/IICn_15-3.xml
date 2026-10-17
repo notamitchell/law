@@ -14,6 +14,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#kennedy">Kennedy</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -34,6 +36,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="kennedy" type="study">A. G. Kennedy, ‘Cnut’s Law Code of 1018’, <title>Anglo-Saxon England</title> 11 (1983), 57–81</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -42,7 +45,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -65,30 +68,45 @@
       <change when="2026-10-18">Generated from row 1729 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 320.</change>
       <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 182.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 320: “riht” → “rihte”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 320.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 320: “Und wer im Dänen-Rechtsgebiet richtige Satzung (-gen D?) bricht, der zahle Rechtsbruchbusse.” → “Und wer im Dänen-Rechtsgebiet richtige Satzung (-gen D?) bricht, der zahle Rechtsbruchbusse. (expanded letters in italics: D?)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 321.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="15.3">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 15.3</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15.3" corresp="#wit-g-a"><pb n="320" ed="#liebermann"/>And se ðe on Dena lage riht lage wyrde, gylde he lahslit.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15.3" corresp="#wit-d-frags"><pb n="318" ed="#liebermann"/>And se ðe<ptr type="liebermannNote" n="4" target="#IICn_15-3.lnote.oe.4"/> Dene<ptr type="liebermannNote" n="5" target="#IICn_15-3.lnote.oe.5"/> laga rihte laga wirde, gilde he lahslihte . . . .<ptr type="liebermannNote" n="6" target="#IICn_15-3.lnote.oe.6"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15.3" corresp="#wit-g-a"><ptr type="liebermannNote" n="†" target="#IICn_15-3.lnote.oe.dagger"/><pb n="320" ed="#liebermann"/>And se ðe on Dena lage rihte lage wyrde, gylde<ptr type="liebermannNote" n="7" target="#IICn_15-3.lnote.oe.7-2"/> he lahslit.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15.3" corresp="#wit-b"><pb n="320" ed="#liebermann"/>⁊ se ðe on Dena lage rihte lage wyrde, gylde hé lahslíte.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15.3" corresp="#wit-a"><pb n="320" ed="#liebermann"/>And se ðe on Dane laga rihte lage wyrde, gilde he lahslite.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15.3" corresp="#wit-d-frags"><pb n="318" ed="#liebermann"/>And se ðe Dene laga rihte laga wirde, gilde he lahslihte . . . .</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="15.3" corresp="#wit-q"><pb n="321" ed="#liebermann"/>In Denalaga lahslite.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="15.3" corresp="#wit-q"><pb n="321" ed="#liebermann"/>In Denalaga<ptr type="liebermannNote" n="7" target="#IICn_15-3.lnote.oe.7"/> lahslite.<ptr type="liebermannNote" n="8" target="#IICn_15-3.lnote.oe.8"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="15.3" corresp="#wit-inst-cn"><pb n="321" ed="#liebermann"/>Per legem Danorum lahslit reddat.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="15.3" corresp="#wit-cons-cn"><pb n="321" ed="#liebermann"/>In lege uero Danorum quisquis iustam legem detererit, soluat legis fracturam.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="15a.3" corresp="#wit-b"><pb n="182" ed="#robertson"/>⁊ se ðe on Dena lage rihte lage wyrde, gylde hé lahslíte.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="262" ed="#rabin-doml"/>And se ðe on Dena lage rihte lage wyrde, gylde he lahslit.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="320" ed="#liebermann"/>Und wer im Dänen-Rechtsgebiet richtige Satzung (-gen D?) bricht, der zahle Rechtsbruchbusse.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="320" ed="#liebermann"/>Und wer im Dänen-Rechtsgebiet richtige<ptr type="liebermannNote" n="1" target="#IICn_15-3.lnote.de.1"/> Satzung (-gen <hi rend="italic">D</hi>?) bricht, der zahle Rechtsbruchbusse.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And whoever in the Danelaw violates just law (laws, D?), let him pay lahslit.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="183" ed="#robertson"/>And he who violates justice in the Danelaw shall pay <hi rend="italic">lahslit</hi>.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="464" ed="#whitelock"/>And he who violates just law in the Danelaw is to pay lahslit….</ab>
-        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="263" ed="#rabin-doml"/>And in the Danelaw, anyone who rejects just law is to pay lahslit.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="464" ed="#whitelock"/>And he who violates just law in the Danelaw is to pay <hi rend="italic">lahslit</hi>….<ptr type="editorNote" n="1" target="#IICn_15-3.whinote.n.1"/></ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="263" ed="#rabin-doml"/>And in the Danelaw, anyone who rejects just law is to pay <hi rend="italic">lahslit</hi>.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:LeisWl_42-2">Leis Wl 42.2</ref></note>
         <note type="comparison" source="#whitelock" n="464"><label>inserts</label> <ref target="clause:IIIEg_2">III Eg 2</ref> <quote>Here the code inserts III Edgar, 2, 4, 5–5.2, with unimportant variations.</quote></note>
         <note type="comparison" source="#whitelock" n="464"><label>inserts</label> <ref target="clause:IIIEg_4">III Eg 4</ref> <quote>Here the code inserts III Edgar, 2, 4, 5–5.2, with unimportant variations.</quote></note>
         <note type="comparison" source="#whitelock" n="464"><label>inserts</label> <ref target="clause:IIIEg_5">III Eg 5–5.2</ref> <quote>Here the code inserts III Edgar, 2, 4, 5–5.2, with unimportant variations.</quote></note>
         <note type="comparedBy" source="#kennedy" n="59"><ref target="clause:Cn-1018_part-068">Cn 1018 27</ref></note>
-        <note type="editorial">In D, VI Atr 42 follows.</note>
-        <note type="translator" source="#whitelock">Here the code inserts III Edgar, 2, 4, 5–5.2, with unimportant variations.</note>
+        <note type="editorial">In D, VI Atr 42 follows.; BR: added from Gesetze I p. 321, October 2026 (MS Cons); AV: corrected against Rabin p. 262 / 263, October 2026 (was “And in the Danelaw, anyone who rejects just law is to pay lahslit.”, now “And in the Danelaw, anyone who rejects just law is to pay lahslit. (expanded letters in italics: lahslit)”); AP: corrected against Whitelock p. 464, October 2026 (was “And he who violates just law in the Danelaw is to pay lahslit….”, now “And he who violates just law in the Danelaw is to pay lahslit…. (expanded letters in italics: lahslit)”)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_15-3.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">321</biblScope></bibl><seg type="original" xml:lang="de">Denel. <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">Denel. Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_15-3.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">321</biblScope></bibl><seg type="original" xml:lang="de">-slyte <hi rend="italic">R;</hi> -slyhte <hi rend="italic">T;</hi> -slíthe <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">-slyte R; -slyhte T; -slíthe Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_15-3.lnote.oe.dagger" n="†" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">320</biblScope></bibl><seg type="original" xml:lang="de">15, 2 <hi rend="italic">f. in D s. S.</hi> 318§</seg><seg type="translation" xml:lang="en" source="#claude">15, 2 lacking in D; see p. 318§</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_15-3.lnote.oe.7-2" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">320</biblScope></bibl><seg type="original" xml:lang="de">gilde se lahslite <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gilde se lahslite Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_15-3.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">318</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">ergänze</hi> on</seg><seg type="translation" xml:lang="en" source="#claude">supply on</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_15-3.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">318</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl. VI Atr.</hi> 17 halgene</seg><seg type="translation" xml:lang="en" source="#claude">cf. VI Atr. 17 halgene</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_15-3.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">318</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">folgt VI Atr.</hi> 42</seg><seg type="translation" xml:lang="en" source="#claude">VI Atr. 42 follows</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_15-3.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">204</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Hier synonym mit <hi rend="italic">lage ⁊ dom forsace</hi> in 15, 2⁴ (ganz anderer Bed. als dieselben Worte <hi rend="italic">laga wyrde</hi> 83); <hi rend="italic">vgl. Gl</hi> Rechtsbruchbusse 9E</seg><seg type="translation" xml:lang="en" source="#claude">Here synonymous with <hi rend="italic">lage ⁊ dom forsace</hi> in 15, 2⁴ (of quite a different meaning from the same words <hi rend="italic">laga wyrde</hi> 83); <hi rend="italic">cf. Gl</hi> Rechtsbruchbusse 9E</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IICn_15-3.whinote.n.1" n="1" source="#whitelock"><bibl><biblScope unit="page">464</biblScope></bibl><label>lahslit…</label><seg type="original" xml:lang="en">Here the code inserts III Edgar, 2, 4, 5–5.2, with unimportant variations.</seg></note>
       </div>
     </body>
   </text>

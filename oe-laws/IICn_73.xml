@@ -15,6 +15,9 @@
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#kennedy">Kennedy</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -36,6 +39,7 @@
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="kennedy" type="study">A. G. Kennedy, ‘Cnut’s Law Code of 1018’, <title>Anglo-Saxon England</title> 11 (1983), 57–81</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -44,7 +48,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -66,21 +70,28 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1873 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 360.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 360.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 360: “And sitte ælc wuduwe werleas twelf monað, ceose siððan þæt hio silf wille.” → “And sitte ælc wuduwe werleas twelf monað, ceose siððan þæt hio silf wille. (expanded letters in italics: æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 360: “(Von der Wittwe, dass sie zwölf Monate gattenlos sitze. B) Und jede Wittwe sitze gattenlos zwölf Monate lang, (und B) wähle sie nachher, was sie selbst will.” → “(Von der Wittwe, dass sie zwölf Monate gattenlos sitze. B) Und jede Wittwe sitze gattenlos zwölf Monate lang, (und B) wähle sie nachher, was sie selbst will. (expanded letters in italics: B, B)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 361.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="73">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 73</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="73" corresp="#wit-g-a"><pb n="360" ed="#liebermann"/>⁊ sitte ælc wuduwe werleas XII monað, ceose syððan þ<hi rend="italic">æt</hi> heo sylf wylle.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="73" corresp="#wit-a"><pb n="360" ed="#liebermann"/>And sitte ælc wuduwe werleas twelf monað, ceose siððan þæt hio silf wille.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="73" corresp="#wit-q"><pb n="361" ed="#liebermann"/>Et sit omnis uidua sine marito XII mensibus; eligat postea, quem uelit.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="73" corresp="#wit-b"><pb n="210" ed="#robertson"/>Be wydewan, þæt heo sitte XII monðas ceorlæs. And sitte ælc wuduwe werleas twelf monað ⁊ ceose heo syððan þæt heo sylf wille.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="73" corresp="#wit-g-a"><pb n="360" ed="#liebermann"/>⁊ sitte ælc wuduwe werleas XII<ptr type="liebermannNote" n="2" target="#IICn_73.lnote.oe.2"/> monað, ceose syððan<ptr type="liebermannNote" n="3" target="#IICn_73.lnote.oe.3-2"/> þ<hi rend="italic">æt</hi> heo sylf wylle<ptr type="liebermannNote" n="4" target="#IICn_73.lnote.oe.4-2"/>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="73" corresp="#wit-b"><pb n="360" ed="#liebermann"/>Be wydewan, þ<hi rend="italic">æt</hi> heo sitte XII monðas ceorlæs. And sitte ælc wuduwe werleas twelf monað ⁊ ceose heo syððan þ<hi rend="italic">æt</hi> heo sylf wille.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="73" corresp="#wit-a"><pb n="360" ed="#liebermann"/>And sitte ælc wuduwe werleas twelf monað, ceose siððan þ<hi rend="italic">æt</hi> hio silf wille.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="73" corresp="#wit-q"><pb n="361" ed="#liebermann"/>Et sit omnis uidua sine marito XII mensibus<ptr type="liebermannNote" n="1" target="#IICn_73.lnote.oe.1"/>; eligat postea, quem uelit.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="73" corresp="#wit-inst-cn"><pb n="361" ed="#liebermann"/>Et<ptr type="liebermannNote" n="3" target="#IICn_73.lnote.oe.3"/> uidua per<ptr type="liebermannNote" n="4" target="#IICn_73.lnote.oe.4"/> integrum annum sine uiro permaneat.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="73" corresp="#wit-cons-cn"><pb n="361" ed="#liebermann"/>Uidua uero per spacium unius anni se contineat in uiduitate sua; post eligat quod sibi placeat.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="73" corresp="#wit-b"><pb n="210" ed="#robertson"/>Be wydewan, þæt heo sitte XII monðas ceorlæs. And sitte ælc wuduwe werleas twelf monað ⁊<ptr type="editorNote" n="7" target="#IICn_73.robnote.fn.7"/> ceose heo<ptr type="editorNote" n="7" target="#IICn_73.robnote.fn.7"/> syððan þæt heo sylf wille.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="290" ed="#rabin-doml"/>And sitte ælc wuduwe werleas XII monað, ceose syððan þæt heo sylf wylle.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="360" ed="#liebermann"/>(Von der Wittwe, dass sie zwölf Monate gattenlos sitze. B) Und jede Wittwe sitze gattenlos zwölf Monate lang, (und B) wähle sie nachher, was sie selbst will.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="360" ed="#liebermann"/>(Von der Wittwe, dass sie zwölf Monate gattenlos<ptr type="liebermannNote" n="1" target="#IICn_73.lnote.de.1"/> sitze. <hi rend="italic">B</hi>) Und<ptr type="liebermannNote" n="2" target="#IICn_73.lnote.de.2"/> jede<ptr type="liebermannNote" n="3" target="#IICn_73.lnote.de.3"/> Wittwe sitze gattenlos<ptr type="liebermannNote" n="4" target="#IICn_73.lnote.de.4"/> zwölf Monate lang, (und <hi rend="italic">B</hi>) wähle sie nachher, was<ptr type="liebermannNote" n="5" target="#IICn_73.lnote.de.5"/> sie selbst will.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of the widow, that she should remain twelve months without a husband. B) And let every widow remain without a husband for twelve months; (and, B) afterwards let her choose what she herself wishes.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="211" ed="#robertson"/>Concerning widows, that they remain for a year without a husband. And every widow shall remain twelve months without a husband, and she shall afterwards choose what she herself desires.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="472" ed="#whitelock"/>And each widow is to remain unmarried for 12 months; she is afterwards to choose what she herself will.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><ptr type="editorNote" n="1" target="#IICn_73.robnote.n.1"/><pb n="211" ed="#robertson"/>Concerning widows, that they remain for a year without a husband. And every widow shall remain twelve months without a husband, and she shall afterwards choose what she herself desires.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock"><ptr type="editorNote" n="2" target="#IICn_73.whinote.n.2"/><pb n="472" ed="#whitelock"/>And each widow is to remain unmarried for 12 months; she is afterwards to choose what she herself will.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="291" ed="#rabin-doml"/>And every widow shall remain without a husband for twelve months, and afterward she shall choose as she herself desires.</ab>
         <note type="comparison" source="#liebermann" n="360"><ref target="clause:VIAtr_26-1">VI Atr 26.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. VI Atr. 26, 1</note>
@@ -94,11 +105,27 @@
         <note type="comparedBy" source="#kennedy" n="59"><ref target="clause:Cn-1018_part-049">Cn 1018 16–16.1</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="386"><ref target="clause:Wif_4">Wif 4</ref></note>
         <note type="comparedBy" source="#wormald-ppmel" n="70"><ref target="clause:CHnCor_3-to-3-1">CHn cor 3–4</ref></note>
-        <note type="editorial">Liebermann compares VI Atr 26.1.</note>
-        <note type="translator" source="#whitelock">from VI Ethelred, 26.1 (= V Ethelred, 21.1)</note>
-        <note type="textual" source="#rabin-doml">B adds rubric Be wydewan þæt heo sitte xii monðas ceorlæs</note>
+        <note type="editorial">Liebermann compares VI Atr 26.1.; BR: added from Gesetze I p. 361, October 2026 (MS Cons); AY: corrected against Rabin p. 290, October 2026 (was “xii; ∅”, now “XII; | binnan: ðonne binnan ðæs B”); AZ: added from Rabin p. 290, October 2026 (Rabin’s note to the translation)</note>
+        <note type="textual" source="#rabin-doml">B adds rubric Be wydewan þæt heo sitte XII monðas ceorlæs</note>
         <note type="textual" source="#rabin-doml">monað: monað and B</note>
         <note type="textual" source="#rabin-doml">ceose: ceose heo B</note>
+        <note type="textual" source="#rabin-doml">binnan: ðonne binnan ðæs B</note>
+        <note type="translator" source="#rabin-doml">morning gift: A gift, often in the form of money or land, from a newly married husband to his wife, supposedly given the morning after their first night together. The gift was considered the woman’s property and, in theory at least, was kept separate from the other aspects of the couple’s finances overseen by the husband.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_73.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">361</biblScope></bibl><seg type="original" xml:lang="de">uxor eius <hi rend="italic">fügt zu Lb S</hi></seg><seg type="translation" xml:lang="en" source="#claude">uxor eius added by Lb S</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_73.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">361</biblScope></bibl><seg type="original" xml:lang="de">unum <hi rend="italic">statt</hi> p. i. <hi rend="italic">Lb S</hi></seg><seg type="translation" xml:lang="en" source="#claude">unum instead of p. i. Lb S</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_73.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">361</biblScope></bibl><seg type="original" xml:lang="de">et <hi rend="italic">fügt zu Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">et added by Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_73.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">360</biblScope></bibl><seg type="original" xml:lang="de">twelf <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">twelf Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_73.lnote.oe.3-2" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">360</biblScope></bibl><seg type="original" xml:lang="de">siþ. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">siþ. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_73.lnote.oe.4-2" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">360</biblScope></bibl><seg type="original" xml:lang="de">wille <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">wille Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_73.lnote.oe.2-2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">361</biblScope></bibl><seg type="original" xml:lang="de">73. 74 <hi rend="italic">fehlt Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">73. 74 lacking in Hk</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_73.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">212</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Das Wort <hi rend="italic">ceor[l]leas</hi> zitiert Toller <hi rend="italic">Suppl</hi>. nur hierher</seg><seg type="translation" xml:lang="en" source="#claude">Toller <hi rend="italic">Suppl</hi>. cites the word <hi rend="italic">ceor[l]leas</hi> only for this passage</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_73.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">212</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">73. 73, 1 benutzt durch Hn 11, 13, ohne 73a. <hi rend="italic">Vgl. Gl</hi> Ehe 3</seg><seg type="translation" xml:lang="en" source="#claude">73. 73, 1 used by Hn 11, 13, without 73a. <hi rend="italic">Cf. Gl</hi> Ehe 3</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_73.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">212</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Quelle kann auch V Atr 21, 1 sein</seg><seg type="translation" xml:lang="en" source="#claude">The source may also be V Atr 21, 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_73.lnote.de.4" n="4" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">212</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">C paraphrasiert homiletisch wie VI Atr L</seg><seg type="translation" xml:lang="en" source="#claude">C paraphrases homiletically, like VI Atr L</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_73.lnote.de.5" n="5" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">212</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Nicht mit Q ‘wen’; <hi rend="italic">vgl. Gl</hi> Eheschliessung 16g</seg><seg type="translation" xml:lang="en" source="#claude">Not ‘whom’, with Q; <hi rend="italic">cf. Gl</hi> Eheschliessung 16g</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IICn_73.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">358</biblScope></bibl><seg type="original" xml:lang="en">Cf. V Atr. 21, 1; VI, 26, 1.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_73.robnote.fn.7" n="7" source="#robertson"><bibl><biblScope unit="page">210</biblScope></bibl><label>⁊</label><seg type="original" xml:lang="en">Om. G, A, Ld.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IICn_73.whinote.n.2" n="2" source="#whitelock"><bibl><biblScope unit="page">472</biblScope></bibl><seg type="original" xml:lang="en">from VI Ethelred, 26.1 (= V Ethelred, 21.1)</seg></note>
       </div>
     </body>
   </text>

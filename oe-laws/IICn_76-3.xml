@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -40,7 +42,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -62,18 +64,24 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1888 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 364.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 364.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 364: “Aber ich verbiete dies hinfort ernstlich und solcherlei vieles (gar viele Dinge ferner B), die Gott höchst verhasst sind.” → “Aber ich verbiete dies hinfort ernstlich und solcherlei vieles (gar viele Dinge ferner B), die Gott höchst verhasst sind. (expanded letters in italics: B)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 365.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="76.3">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 76.3</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="76.3" corresp="#wit-g-a"><pb n="364" ed="#liebermann"/>Ac ic hit forbeode heonon forð eornostlice ⁊ swylce manege, þe Gode syndon swyðe laþe.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="76.3" corresp="#wit-a"><pb n="364" ed="#liebermann"/>Ac ic hit forbeode heonon forð eornostlice ⁊ swilce manage, þe Gode syndan laðe.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="76.3" corresp="#wit-q"><pb n="365" ed="#liebermann"/>Sed hoc ego prohibeo modis omnibus in eternum et talia multa, quę Deo sunt odiosa.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="76.3" corresp="#wit-b"><pb n="214" ed="#robertson"/>Ac ic hit forbeode heonon forð eornostlice ⁊ eac swyðe manega ðincg ðe Gode syndon swyðe laðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="76.3" corresp="#wit-g-a"><pb n="364" ed="#liebermann"/>Ac ic hit forbeode heonon forð eornostlice ⁊ swylce<ptr type="liebermannNote" n="10" target="#IICn_76-3.lnote.oe.10-2"/> manege, þe Gode syndon swyðe<ptr type="liebermannNote" n="11" target="#IICn_76-3.lnote.oe.11"/> laþe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="76.3" corresp="#wit-b"><pb n="364" ed="#liebermann"/>Ac ic hit forbeode heonon forð eornostlice ⁊ eac swyðe manega ðincg<ptr type="liebermannNote" n="5" target="#IICn_76-3.lnote.oe.5"/>, ðe Gode syndon swyðe laðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="76.3" corresp="#wit-a"><pb n="364" ed="#liebermann"/>Ac ic hit forbeode heonon forð eornostlice ⁊ swilce manage<ptr type="liebermannNote" n="3" target="#IICn_76-3.lnote.oe.3"/>, þe Gode syndan laðe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="76.3" corresp="#wit-q"><pb n="365" ed="#liebermann"/>Sed hoc<ptr type="liebermannNote" n="7" target="#IICn_76-3.lnote.oe.7"/> ego prohibeo modis omnibus in eternum et talia multa, quę Deo sunt odiosa.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="76.3" corresp="#wit-inst-cn"><pb n="365" ed="#liebermann"/>Sed ego hoc omnibus modis interdico et multa alia, quę ualde<ptr type="liebermannNote" n="9" target="#IICn_76-3.lnote.oe.9"/> sunt<ptr type="liebermannNote" n="10" target="#IICn_76-3.lnote.oe.10"/> Deo contraria.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="76.3" corresp="#wit-cons-cn"><pb n="365" ed="#liebermann"/>[76, 3] Sed amodo interdico hoc diligenter et multa similia, que sunt ualde odiosa Deo.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="76.3" corresp="#wit-b"><pb n="214" ed="#robertson"/>Ac ic hit forbeode heonon forð eornostlice ⁊ eac swyðe manega<ptr type="editorNote" n="8" target="#IICn_76-3.robnote.fn.8"/> ðincg<ptr type="editorNote" n="2" target="#IICn_76-3.robnote.fn.2"/> ðe Gode syndon swyðe<ptr type="editorNote" n="9" target="#IICn_76-3.robnote.fn.9"/> laðe.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="294" ed="#rabin-doml"/>Ac ic hit forbeode heonon forð eornostlice, and swylce manege þe Gode syndon swyðe laþe.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="364" ed="#liebermann"/>Aber ich verbiete dies hinfort ernstlich und solcherlei vieles (gar viele Dinge ferner B), die Gott höchst verhasst sind.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="364" ed="#liebermann"/>Aber ich verbiete dies hinfort ernstlich und solcherlei vieles (gar viele Dinge ferner <hi rend="italic">B</hi>), die Gott höchst verhasst sind.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But I forbid this earnestly henceforth, and many such things (very many things besides, B), which are most hateful to God.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="215" ed="#robertson"/>But I strictly forbid such a thing henceforth, and likewise very many things which are hateful to God.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock"><pb n="473" ed="#whitelock"/>But I earnestly forbid this henceforth, and likewise many things which are very hateful to God.</ab>
@@ -87,8 +95,22 @@
         <note type="comparedBy" source="#wormald-mel" n="401"><ref target="clause:CHnCor_11">CHn cor 11</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="401"><ref target="clause:CHnCor_12">CHn cor 12</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="401"><ref target="clause:CHnCor_13">CHn cor 13</ref></note>
+        <note type="editorial">BR: added from Gesetze I p. 365, October 2026 (MS Cons)</note>
         <note type="textual" source="#rabin-doml">swylce: eac swyðe B</note>
         <note type="textual" source="#rabin-doml">manege: manega ðincg B</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_76-3.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">365</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_76-3.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">365</biblScope></bibl><seg type="original" xml:lang="de">sint <hi rend="italic">Di</hi>; D. c. s. <hi rend="italic">Cb</hi>; D. s. <hi rend="italic">Lb S</hi></seg><seg type="translation" xml:lang="en" source="#claude">sint Di; D. c. s. Cb; D. s. Lb S</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_76-3.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">365</biblScope></bibl><seg type="original" xml:lang="de">ego p. h. fieri m. <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">ego p. h. fieri m. K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_76-3.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">364</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_76-3.lnote.oe.10-2" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">364</biblScope></bibl><seg type="original" xml:lang="de">swilce manige <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">swilce manige Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_76-3.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">364</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_76-3.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">364</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">nicht archetyp laut übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">not archetypal, according to the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_76-3.lnote.oe.7-2" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">365</biblScope></bibl><seg type="original" xml:lang="de">hoc interdicto di. <hi rend="italic">Hr</hi></seg><seg type="translation" xml:lang="en" source="#claude">hoc interdicto di. Hr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_76-3.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">365</biblScope></bibl><seg type="original" xml:lang="de">consi. <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">consi. Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_76-3.lnote.oe.9-2" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">365</biblScope></bibl><seg type="original" xml:lang="de">Deo od. <hi rend="italic">ohne</hi> ualde <hi rend="italic">Hk</hi>, <hi rend="italic">wo</hi> 77 <hi rend="italic">fehlt</hi></seg><seg type="translation" xml:lang="en" source="#claude">Deo od. without ualde Hk, where 77 is lacking</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_76-3.robnote.fn.2" n="2" source="#robertson"><bibl><biblScope unit="page">214</biblScope></bibl><label>cæge</label><seg type="original" xml:lang="en">Om. G, A, Ld.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_76-3.robnote.fn.8" n="8" source="#robertson"><bibl><biblScope unit="page">214</biblScope></bibl><label>manega</label><seg type="original" xml:lang="en">⁊ <hi rend="italic">swylce</hi> (<hi rend="italic">swilce</hi>) <hi rend="italic">manege</hi> (<hi rend="italic">manage, manige</hi>) G, A, Ld.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_76-3.robnote.fn.9" n="9" source="#robertson"><bibl><biblScope unit="page">214</biblScope></bibl><label>swyðe</label><seg type="original" xml:lang="en">Om. A, Ld.</seg></note>
       </div>
     </body>
   </text>

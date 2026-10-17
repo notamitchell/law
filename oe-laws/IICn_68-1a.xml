@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">471</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -62,29 +65,48 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1854 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 354.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 354.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 354: “forþamþe ne mæg, we witan fulgeorne, se unmaga þam magan gelice.” → “forþamþe ne mæg, we witan fulgeorne, se unmaga þam magan gelice. (expanded letters in italics: m)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 355: “weil der Kraftlose, [wie] wir recht wohl wissen (können B), nicht gleiche (grosse B) Bürde [mit] dem Kräftigen heben (tragen B) kann, noch der Kranke [eine] dem Gesunden gleiche.” → “weil der Kraftlose, [wie] wir recht wohl wissen (können B), nicht gleiche (grosse B) Bürde [mit] dem Kräftigen heben (tragen B) kann, noch der Kranke [eine] dem Gesunden gleiche. (expanded letters in italics: B, B, B)”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 206: “Forðamðe” → “forðamðe”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="68.1a">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 68.1a</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="68.1a" corresp="#wit-g-a"><pb n="354" ed="#liebermann"/>forþamðe ne mæg se unmaga þa<hi rend="italic">m</hi> magan, we witon fullgeorne, gelice byrðene ahebban, ne se unhala þam halan gelice.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="68.1a" corresp="#wit-a"><pb n="354" ed="#liebermann"/>forþamþe ne mæg, we witan fulgeorne, se unmaga þam magan gelice.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="68.1a" corresp="#wit-q"><pb n="355" ed="#liebermann"/>Sane possumus scire, non potest debilis cum strenuo pariter.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="68.1a" corresp="#wit-b"><pb n="206" ed="#robertson"/>Forðamðe we magon witan fulgeorne, þæt se unmaga ⁊ se mage ne mæg gelice mycele byrðene aberan, ne se unhala ðam halan gelice.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="68.1a" corresp="#wit-g-a"><pb n="354" ed="#liebermann"/>forþamðe ne mæg se<ptr type="liebermannNote" n="11" target="#IICn_68-1a.lnote.oe.11"/> unmaga þa<hi rend="italic">m</hi> magan, we witon fullgeorne, gelice byrðene<ptr type="liebermannNote" n="12" target="#IICn_68-1a.lnote.oe.12"/> ahebban, ne se unhala þam halan gelice.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="68.1a" corresp="#wit-b"><pb n="354" ed="#liebermann"/>forðamðe we magon witan fulgeorne, [<hi rend="italic">þæt<ptr type="liebermannNote" n="3" target="#IICn_68-1a.lnote.oe.3-2"/></hi>] se unmaga ⁊ se mage ne mæg gelice mycele byrðene aberan, ne se unhala ðam halan gelice.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="68.1a" corresp="#wit-a"><pb n="354" ed="#liebermann"/>forþa<hi rend="italic">m</hi>þe ne mæg, we witan fulgeorne, se unmaga þam magan gelice.<ptr type="liebermannNote" n="3" target="#IICn_68-1a.lnote.oe.3"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="68.1a" corresp="#wit-q"><pb n="355" ed="#liebermann"/>Sane possumus scire, <ptr type="liebermannNote" n="6" target="#IICn_68-1a.lnote.oe.6"/>non potest debilis cum strenuo pariter.<ptr type="liebermannNote" n="7" target="#IICn_68-1a.lnote.oe.7"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="68.1a" corresp="#wit-cons-cn"><pb n="355" ed="#liebermann"/>cum nequeat (quemadmodum indubitanter scimus) inualid[u]s et ualido, infirm[u]s et sano eque onus sustinere.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="68.1a" corresp="#wit-b"><pb n="206" ed="#robertson"/>forðamðe we magon witan fulgeorne, þæt se unmaga ⁊ se mage ne mæg<ptr type="editorNote" n="17" target="#IICn_68-1a.robnote.fn.17"/> gelice<ptr type="editorNote" n="18" target="#IICn_68-1a.robnote.fn.18"/> mycele<ptr type="editorNote" n="19" target="#IICn_68-1a.robnote.fn.19"/> byrðene aberan<ptr type="editorNote" n="20" target="#IICn_68-1a.robnote.fn.20"/>, ne se unhala ðam halan gelice.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="288" ed="#rabin-doml"/>Forþam ðe ne mæg se unmaga þam magan, we witon full georne, gelice byrðene ahebban, ne se unhala þam halan gelice.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="355" ed="#liebermann"/>weil der Kraftlose, [wie] wir recht wohl wissen (können B), nicht gleiche (grosse B) Bürde [mit] dem Kräftigen heben (tragen B) kann, noch der Kranke [eine] dem Gesunden gleiche.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="355" ed="#liebermann"/>weil<ptr type="liebermannNote" n="1" target="#IICn_68-1a.lnote.de.1"/> der Kraftlose, [wie] wir recht wohl wissen (können <hi rend="italic">B</hi>), nicht gleiche (grosse <hi rend="italic">B</hi>) Bürde [mit] dem Kräftigen heben (tragen <hi rend="italic">B</hi>) kann, noch der Kranke [eine] dem Gesunden gleiche.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">because the powerless man, [as] we know (can know, B) right well, cannot lift (bear, B) an equal (great, B) burden [with] the strong, nor the sick man [one] equal to the healthy.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="207" ed="#robertson"/>Because we may know full well that the weak and the strong cannot bear an equally heavy burden, nor can the sick man bear one equal to that borne by him who is sound.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock"><pb n="471" ed="#whitelock"/>for we know full well that the feeble cannot bear a burden like the strong, nor the sick man like the sound.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="289" ed="#rabin-doml"/>For we truly know that the weak cannot bear the same burden as the strong, nor the sick the same as the well.</ab>
         <note type="comparison" source="#liebermann" n="355">Can. Edg. Conf. 4</note>
         <note type="comparisonPrinted" source="#liebermann">Can. Edg. Conf. 4</note>
-        <note type="editorial">A (and the Quadripartitus) skip a line here. Liebermann compares Canons of Edgar, Confessional 4.</note>
+        <note type="editorial">A (and the Quadripartitus) skip a line here. Liebermann compares Canons of Edgar, Confessional 4.; BR: added from Gesetze I p. 355, October 2026 (MS Cons)</note>
         <note type="textual" source="#rabin-doml">Forþamðe . . . georne, gelice: Forðamðe we magon witan fulgeorne, þæt se unmaga and se mage ne mæg gelice B; Forþamþe</note>
         <note type="textual" source="#rabin-doml">gelice byrðene: gelice mycele byrðene B</note>
         <note type="textual" source="#rabin-doml">byrðene . . . gelice: omitted A</note>
         <note type="textual" source="#rabin-doml">ahebban: aberan B</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_68-1a.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">355</biblScope></bibl><seg type="original" xml:lang="de">quia <hi rend="italic">fügt zu T</hi></seg><seg type="translation" xml:lang="en" source="#claude">quia added by T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_68-1a.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">355</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl. Hs. A</hi></seg><seg type="translation" xml:lang="en" source="#claude">cf. MS A</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_68-1a.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">354</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Zeile übersprungen; vgl. Quadr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">line skipped; cf. Quadr.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_68-1a.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">354</biblScope></bibl><seg type="original" xml:lang="de">we witan fulg., se <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">we witan fulg., se Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_68-1a.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">354</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Zeile wie A</hi></seg><seg type="translation" xml:lang="en" source="#claude">line lacking, as in A</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_68-1a.lnote.oe.3-2" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">354</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">spät eingefügt</hi></seg><seg type="translation" xml:lang="en" source="#claude">inserted late</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_68-1a.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">355</biblScope></bibl><seg type="original" xml:lang="de">-dis <hi rend="italic">Hr</hi></seg><seg type="translation" xml:lang="en" source="#claude">-dis Hr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_68-1a.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">355</biblScope></bibl><seg type="original" xml:lang="de">-mis <hi rend="italic">Hr</hi></seg><seg type="translation" xml:lang="en" source="#claude">-mis Hr</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_68-1a.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">211</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Dieselbe Quellenstelle benutzt <hi rend="italic">o</hi>. 38, 1.—<hi rend="italic">Vgl. Gl</hi> krank 2; Strafe 11</seg><seg type="translation" xml:lang="en" source="#claude">The same passage of the source is used <hi rend="italic">above</hi> 38, 1.—<hi rend="italic">Cf. Gl</hi> krank 2; Strafe 11</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_68-1a.robnote.fn.17" n="17" source="#robertson"><bibl><biblScope unit="page">206</biblScope></bibl><label>mæg</label><seg type="original" xml:lang="en"><hi rend="italic">Forþamþe ne mæg se unmaga þam magan, w. witon fullgeorne, gelice</hi> G; <hi rend="italic">f. n. m., we witan f., se u. þ. m.</hi> A, Ld.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_68-1a.robnote.fn.18" n="18" source="#robertson"><bibl><biblScope unit="page">206</biblScope></bibl><label>gelice</label><seg type="original" xml:lang="en">The rest of the sentence is missing in both A, Ld.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_68-1a.robnote.fn.19" n="19" source="#robertson"><bibl><biblScope unit="page">206</biblScope></bibl><label>mycele</label><seg type="original" xml:lang="en">Om. G.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_68-1a.robnote.fn.20" n="20" source="#robertson"><bibl><biblScope unit="page">206</biblScope></bibl><label>aberan</label><seg type="original" xml:lang="en"><hi rend="italic">ahebban</hi> G.</seg></note>
       </div>
     </body>
   </text>

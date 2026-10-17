@@ -13,6 +13,9 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +35,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">466</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +44,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -62,27 +66,46 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1768 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 332.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 332.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 332: “⁊ ofga man þæt þrifealde ordal þus: nime fife ⁊ beo sylf sixta.” → “⁊ ofga man þæt þrifealde ordal þus: nime fife ⁊ beo sylf sixta. (expanded letters in italics: æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 332: “Und [Kläger] erzwinge (erreiche Inst. H) das dreifache Ordal folgendermassen: er wähle fünf [Eideshelfer] und sei selbst Sechster im [Anklage-]Eide.” → “Und [Kläger] erzwinge (erreiche Inst. H) das dreifache Ordal folgendermassen: er wähle fünf [Eideshelfer] und sei selbst Sechster im [Anklage-]Eide. (expanded letters in italics: Inst. H)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 333.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="30.3a">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 30.3a</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="30.3a" corresp="#wit-g-a"><pb n="332" ed="#liebermann"/>⁊ ofgá man þ<hi rend="italic">æt</hi> þryfealde ordal þus: nime fife ⁊ beo he sylf syxta.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="30.3a" corresp="#wit-a"><pb n="332" ed="#liebermann"/>⁊ ofga man þæt þrifealde ordal þus: nime fife ⁊ beo sylf sixta.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="30.3a" corresp="#wit-q"><pb n="333" ed="#liebermann"/>Et inducatur triplex ordalium hoc modo: sumat V et idem sit sextus.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="30.3a" corresp="#wit-b"><pb n="190" ed="#robertson"/>⁊ ofgá man þæt ðryfealde ordal ðus, nime fife ⁊ beo him sylf syxta.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="30.3a" corresp="#wit-g-a"><pb n="332" ed="#liebermann"/>⁊ ofgá man þ<hi rend="italic">æt</hi> þryfealde<ptr type="liebermannNote" n="15" target="#IICn_30-3a.lnote.oe.15"/> ordal<ptr type="liebermannNote" n="2" target="#IICn_30-3a.lnote.oe.2"/> þus: nime fife ⁊ beo he<ptr type="liebermannNote" n="16" target="#IICn_30-3a.lnote.oe.16"/> sylf syxta<ptr type="liebermannNote" n="17" target="#IICn_30-3a.lnote.oe.17"/>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="30.3a" corresp="#wit-b"><pb n="332" ed="#liebermann"/>⁊ ofgá man þ<hi rend="italic">æt</hi> ðryfealde ordal ðus: nime fife ⁊ beo him sylf syxta.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="30.3a" corresp="#wit-a"><pb n="332" ed="#liebermann"/>⁊ ofga man þ<hi rend="italic">æt</hi> þrifealde ordal þus: nime fife ⁊ beo sylf sixta.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="30.3a" corresp="#wit-q"><pb n="333" ed="#liebermann"/>Et inducatur<ptr type="liebermannNote" n="7" target="#IICn_30-3a.lnote.oe.7"/> triplex ordalium hoc modo: sumat V et idem sit sextus.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="30.3a" corresp="#wit-inst-cn"><pb n="333" ed="#liebermann"/>Ita<ptr type="liebermannNote" n="9" target="#IICn_30-3a.lnote.oe.9"/> autem adquiratur illud<ptr type="liebermannNote" n="10" target="#IICn_30-3a.lnote.oe.10"/> triplex iudicium (quod<ptr type="liebermannNote" n="11" target="#IICn_30-3a.lnote.oe.11"/> Angli dicunt ‘ofræce <hi rend="italic">þæt</hi> ordel'): accipiat secum quinque et sit ipse sextus; ita enim<ptr type="liebermannNote" n="12" target="#IICn_30-3a.lnote.oe.12"/> conquiritur triplex iudicium.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="30.3a" corresp="#wit-cons-cn"><pb n="333" ed="#liebermann"/>Quod calumpniator sic attingat: assumat V et ipse sit sextus.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="30.3a" corresp="#wit-b"><pb n="190" ed="#robertson"/>⁊ ofgá man þæt ðryfealde ordal ðus, nime fife ⁊ beo him<ptr type="editorNote" n="5" target="#IICn_30-3a.robnote.fn.5"/> sylf syxta.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="270" ed="#rabin-doml"/>And ofga man þæt þryfealde ordal þus: nime fife and beo he sylf syxta.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="332" ed="#liebermann"/>Und [Kläger] erzwinge (erreiche Inst. H) das dreifache Ordal folgendermassen: er wähle fünf [Eideshelfer] und sei selbst Sechster im [Anklage-]Eide.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="332" ed="#liebermann"/>Und [Kläger] erzwinge<ptr type="liebermannNote" n="1" target="#IICn_30-3a.lnote.de.1"/> (erreiche <hi rend="italic">Inst. H</hi>) das dreifache Ordal folgendermassen: er wähle fünf [Eideshelfer] und sei selbst<ptr type="liebermannNote" n="2" target="#IICn_30-3a.lnote.de.2"/> Sechster im [Anklage-]Eide.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let [the plaintiff] compel (obtain, Inst. H) the threefold ordeal as follows: let him take five [oath-helpers] and be himself the sixth in the [accusing] oath.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="191" ed="#robertson"/>And a case which involves the triple ordeal shall be opened as follows: five [compurgators] shall be selected by the accuser and he himself shall make a sixth.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="466" ed="#whitelock"/>And the three-fold ordeal is to be set on foot thus: he is to take five men and be himself the sixth.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="466" ed="#whitelock"/>And the three-fold ordeal is to be set on foot thus: he<ptr type="editorNote" n="1" target="#IICn_30-3a.whinote.n.1"/> is to take five men and be himself the sixth.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="271" ed="#rabin-doml"/>And the threefold ordeal is to be undertaken thus: the accuser shall choose five witnesses, and he himself shall be the sixth.</ab>
         <note type="comparison" source="#liebermann" n="332"><ref target="clause:IICn_22-1a">II Cn 22.1a</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. 22, 1a</note>
-        <note type="editorial">Liebermann compares II Cn 22.1a.</note>
-        <note type="translator" source="#whitelock">i.e. the accuser</note>
+        <note type="editorial">Liebermann compares II Cn 22.1a.; BR: added from Gesetze I p. 333, October 2026 (MS Cons)</note>
         <note type="textual" source="#rabin-doml">beo he: beo him B; beo A</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_30-3a.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">333</biblScope></bibl><seg type="original" xml:lang="de">Ita — iudicium <hi rend="italic">überspringt Di</hi></seg><seg type="translation" xml:lang="en" source="#claude">Ita — iudicium skipped by Di</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_30-3a.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">333</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_30-3a.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">333</biblScope></bibl><seg type="original" xml:lang="de">quod — ordel <hi rend="italic">nur H am Rande</hi></seg><seg type="translation" xml:lang="en" source="#claude">quod — ordel only H, in the margin</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_30-3a.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">333</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Lb S</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Lb S</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_30-3a.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">333</biblScope></bibl><seg type="original" xml:lang="de">-cantur <hi rend="italic">Dm</hi></seg><seg type="translation" xml:lang="en" source="#claude">-cantur Dm</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_30-3a.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">332</biblScope></bibl><seg type="original" xml:lang="de">-ld <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-ld Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_30-3a.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">332</biblScope></bibl><seg type="original" xml:lang="de">-le <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-le Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_30-3a.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">332</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_30-3a.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">332</biblScope></bibl><seg type="original" xml:lang="de">sixta <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">sixta Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_30-3a.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">206</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Nicht ‘bestehe’; <hi rend="italic">s. o</hi>. 22, 1a². In Inst, benutzt von Ps Cn for 11, ist <hi rend="italic">ofræce</hi> Mittelenglisch</seg><seg type="translation" xml:lang="en" source="#claude">Not ‘undergo’; <hi rend="italic">see above</hi> 22, 1a². In Inst, used by Ps Cn for 11, <hi rend="italic">ofræce</hi> is Middle English</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_30-3a.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">206</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">in ‘er selbst’ kann ‘er’ <hi rend="italic">he</hi> oder <hi rend="italic">him</hi> heissen; Toller s. v. <hi rend="italic">self</hi> II 1 <hi rend="italic">α. γ</hi>.—<hi rend="italic">Vgl. Gl</hi> Klageeid 9</seg><seg type="translation" xml:lang="en" source="#claude">in ‘he himself’ the ‘he’ may be <hi rend="italic">he</hi> or <hi rend="italic">him</hi>; Toller s. v. <hi rend="italic">self</hi> II 1 <hi rend="italic">α. γ</hi>.—<hi rend="italic">Cf. Gl</hi> Klageeid 9</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_30-3a.robnote.fn.5" n="5" source="#robertson"><bibl><biblScope unit="page">190</biblScope></bibl><label>him</label><seg type="original" xml:lang="en"><hi rend="italic">he</hi> G; om. A, Ld.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IICn_30-3a.whinote.n.1" n="1" source="#whitelock"><bibl><biblScope unit="page">466</biblScope></bibl><label>he</label><seg type="original" xml:lang="en">i.e. the accuser</seg></note>
       </div>
     </body>
   </text>

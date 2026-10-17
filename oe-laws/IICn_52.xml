@@ -14,6 +14,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -34,6 +36,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="jurasinski-and-oliver" type="study">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -42,7 +45,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -64,25 +67,44 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1826 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 346.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 346.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 346: “Gif hwa wudewan nydnæme, gebete þæt be were.” → “Gif hwa wudewan nydnæme, gebete þæt be were. (expanded letters in italics: æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s Latin text corrected against Gesetze I, p. 347: “∅” → “[52]”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 347.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 347: “(Von Wittwen. B) Wenn einer eine Wittwe gewaltsam ehelicht, büsse er das mit (seinem B) Wergeld.” → “(Von Wittwen. B) Wenn einer eine Wittwe gewaltsam ehelicht, büsse er das mit (seinem B) Wergeld. (expanded letters in italics: B, B)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="52">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 52</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="52" corresp="#wit-g-a"><pb n="346" ed="#liebermann"/>Gif hwa wudewan nydnæme, gebete þ<hi rend="italic">æt</hi> be were.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="52" corresp="#wit-a"><pb n="346" ed="#liebermann"/>Gif hwa wudewan nydnæme, gebete þæt be were.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="52" corresp="#wit-q"><pb n="347" ed="#liebermann"/>Si quis uiduam per uim capiat, wéra emendet.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="52" corresp="#wit-b"><pb n="202" ed="#robertson"/>Be wydewan. Gyf hwa wuduwan nydnæme, gebete þæt be his were.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="52" corresp="#wit-g-a"><pb n="346" ed="#liebermann"/>Gif hwa wudewan nydnæme<ptr type="liebermannNote" n="19" target="#IICn_52.lnote.oe.19"/>, gebete þ<hi rend="italic">æt</hi> be were.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="52" corresp="#wit-b"><pb n="346" ed="#liebermann"/>[Be<ptr type="liebermannNote" n="5" target="#IICn_52.lnote.oe.5"/>] wydewan. Gyf hwa wuduwan nydnæme, gebete þ<hi rend="italic">æt</hi> be his were.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="52" corresp="#wit-a"><pb n="346" ed="#liebermann"/>Gif hwa wudewan nydnæme, gebete þ<hi rend="italic">æt</hi> be were.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="52" corresp="#wit-q"><pb n="347" ed="#liebermann"/>[52] Si quis uiduam per<ptr type="liebermannNote" n="18" target="#IICn_52.lnote.oe.18"/> uim capiat, wéra emendet.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="52" corresp="#wit-inst-cn"><pb n="347" ed="#liebermann"/>[52] Uidua<ptr type="liebermannNote" n="21" target="#IICn_52.lnote.oe.21"/> etiam<ptr type="liebermannNote" n="22" target="#IICn_52.lnote.oe.22"/>, si ui rapta fuerit, et cum ea coitus factus sit, simili prętio persoluatur.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="52" corresp="#wit-cons-cn"><pb n="347" ed="#liebermann"/>[52] Si quis cum uidua inuita concumbit, corrigat hoc per redempcionem.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="52" corresp="#wit-b"><pb n="202" ed="#robertson"/>Be wydewan. Gyf hwa wuduwan nydnæme, gebete þæt be his<ptr type="editorNote" n="3" target="#IICn_52.robnote.fn.3"/> were.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="282" ed="#rabin-doml"/>Gif hwa wudewan nydnæme, gebete þæt be were.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="347" ed="#liebermann"/>(Von Wittwen. B) Wenn einer eine Wittwe gewaltsam ehelicht, büsse er das mit (seinem B) Wergeld.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="347" ed="#liebermann"/>(Von Wittwen. <hi rend="italic">B</hi>) Wenn einer eine Wittwe gewaltsam ehelicht<ptr type="liebermannNote" n="1" target="#IICn_52.lnote.de.1"/>, büsse er das mit (seinem<ptr type="liebermannNote" n="2" target="#IICn_52.lnote.de.2"/> <hi rend="italic">B</hi>) Wergeld.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of widows. B) If anyone takes a widow by force, let him make amends for it with (his, B) wergild.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="203" ed="#robertson"/>Concerning widows. If anyone does violence to a widow, he shall make amends by the payment of his wergeld.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><ptr type="editorNote" n="1" target="#IICn_52.robnote.n.1"/><pb n="203" ed="#robertson"/>Concerning widows. If anyone does violence to a widow, he shall make amends by the payment of his wergeld.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock"><pb n="470" ed="#whitelock"/>If anyone takes by force a widow, he is to compensate for it with the wergild.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="283" ed="#rabin-doml"/>If anyone rapes a widow, compensation shall be made through the payment of the offender’s wergild.</ab>
         <note type="comparedBy" source="#jurasinski-and-oliver" n="376"><ref target="clause:Ine_10">Ine 10</ref></note>
+        <note type="editorial">BR: added from Gesetze I p. 347, October 2026 (MS Cons)</note>
         <note type="textual" source="#rabin-doml">B adds rubric Be wydewan</note>
         <note type="textual" source="#rabin-doml">be were: be his were B</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_52.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">347</biblScope></bibl><seg type="original" xml:lang="de">52 <hi rend="italic">fehlt Lb S</hi></seg><seg type="translation" xml:lang="en" source="#claude">52 lacking in Lb S</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_52.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">347</biblScope></bibl><seg type="original" xml:lang="de">autem, si r. f. uí <hi rend="italic">Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">autem, si r. f. uí Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_52.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">347</biblScope></bibl><seg type="original" xml:lang="de">ui <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">ui K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_52.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">346</biblScope></bibl><seg type="original" xml:lang="de">nyden. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">nyden. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_52.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">346</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">verschnitten</hi></seg><seg type="translation" xml:lang="en" source="#claude">cropped</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_52.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">347</biblScope></bibl><seg type="original" xml:lang="de">52, 1 <hi rend="italic">übersprungen</hi></seg><seg type="translation" xml:lang="en" source="#claude">52, 1 omitted</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_52.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">209</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">‘ravish’ Price-Thorpe; Notzucht (<hi rend="italic">s. d. Gl</hi> 9. 10) versteht C; ‘gewaltsam entführt’ Schmid. Deutlich ergibt <hi rend="italic">u</hi>. 73, 2, dass Cnut Frauenraub, nicht zu einmaliger Unzucht, sondern zur Eheschliessung (<hi rend="italic">s. d. Gl</hi> 2h-m), meint; <hi rend="italic">s. o</hi>. VI Atr 39². Raub ohne Unzucht liegt bisweilen in den Wörtern <hi rend="italic">niednæm(an; s. Wb)</hi> und -<hi rend="italic">nimu</hi>, -<hi rend="italic">ma</hi> (Toller); <hi rend="italic">nede geniman</hi> bed. ‘zur Ehe rauben’ Abt 82</seg><seg type="translation" xml:lang="en" source="#claude">‘ravish’ Price-Thorpe; C understands rape (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 9. 10); ‘forcibly abducts’ Schmid. <hi rend="italic">Below</hi> 73, 2 shows clearly that Cnut means the abduction of women, not for a single act of unchastity but for marriage (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 2h-m); <hi rend="italic">see above</hi> VI Atr 39². Abduction without unchastity is sometimes implied in the words <hi rend="italic">niednæm(an; see Wb)</hi> and -<hi rend="italic">nimu</hi>, -<hi rend="italic">ma</hi> (Toller); <hi rend="italic">nede geniman</hi> means ‘to abduct for marriage’ Abt 82</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_52.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">209</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">B's Ergänzung ist richtig, aber unnötig; die in Inst, das Wergeld des Weibes, konnte nicht in der Ellipse des Archetyps stecken, sondern weicht von Cnuts Sinne ab. Das Wergeld des Täters kommt im German. Strafrecht für dieses Delikt auch sonst vor (Brunner II 668²⁸, auch <hi rend="italic">Savigny Zs. RG</hi>. 23, 253), allerdings anderswo das der Frau, das auch Moeller <hi rend="italic">Wergeld</hi> 23. 36 hierfür annimmt</seg><seg type="translation" xml:lang="en" source="#claude">B's addition is correct but unnecessary; that in Inst, the woman's wergild, cannot have lain in the ellipsis of the archetype, but departs from Cnut's meaning. The wergild of the offender is found for this offence elsewhere too in Germanic criminal law (Brunner II 668²⁸, also <hi rend="italic">Savigny Zs. RG</hi>. 23, 253), though elsewhere it is that of the woman, which Moeller <hi rend="italic">Wergeld</hi> 23. 36 also assumes here</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IICn_52.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">357</biblScope></bibl><seg type="original" xml:lang="en">Cf. VI Atr. 39.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_52.robnote.fn.3" n="3" source="#robertson"><bibl><biblScope unit="page">202</biblScope></bibl><label>his</label><seg type="original" xml:lang="en">Om. G, A, Ld.</seg></note>
       </div>
     </body>
   </text>

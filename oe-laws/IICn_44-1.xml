@@ -14,6 +14,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -34,6 +36,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -42,7 +45,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -64,29 +67,51 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1807 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 342.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 342: “[hine]:” → “hine:”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 342.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 342: “⁊ gif him hwa weorne, bete þæt wið cyningc mid hundtwentigum scyll'; oððe geladige hine: nime fif ⁊ beo sylf sixta.” → “⁊ gif him hwa weorne, bete þæt wið cyningc mid hundtwentigum scyll'; oððe geladige hine: nime fif ⁊ beo sylf sixta. (expanded letters in italics: æt, n, m, hine)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 343.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="44.1">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 44.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="44.1" corresp="#wit-g-a"><pb n="342" ed="#liebermann"/>⁊ gif him hwa wyrne, gebete þ<hi rend="italic">æt</hi> wið þone cing mid CXX scyll'; oðþe geladige [hine]: nime V ⁊ beo sylf syxta.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="44.1" corresp="#wit-a"><pb n="342" ed="#liebermann"/>⁊ gif him hwa weorne, bete þæt wið cyningc mid hundtwentigum scyll'; oððe geladige hine: nime fif ⁊ beo sylf sixta.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="44.1" corresp="#wit-q"><pb n="343" ed="#liebermann"/>Et si quis ei perneget, emendet regi CXX solidis; aut (uel) se adlegiet: sumat V et idem sit sextus.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="44.1" corresp="#wit-b"><pb n="198" ed="#robertson"/>⁊ gyf him man wyrne, gebete þæt wið ðone kyningc mid hundtwentig scyllinga oððe geladige hine—nime V men ⁊ beo him sylf VI-ta.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="44.1" corresp="#wit-g-a"><pb n="342" ed="#liebermann"/>⁊ gif him hwa wyrne, gebete<ptr type="liebermannNote" n="13" target="#IICn_44-1.lnote.oe.13"/> þ<hi rend="italic">æt</hi> wið þone<ptr type="liebermannNote" n="14" target="#IICn_44-1.lnote.oe.14"/> cing<ptr type="liebermannNote" n="15" target="#IICn_44-1.lnote.oe.15"/> mid CXX scyll'; oðþe geladige <hi rend="italic">hine<ptr type="liebermannNote" n="16" target="#IICn_44-1.lnote.oe.16"/></hi>: nime V<ptr type="liebermannNote" n="17" target="#IICn_44-1.lnote.oe.17"/> ⁊ beo sylf syxta.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="44.1" corresp="#wit-b"><pb n="342" ed="#liebermann"/>⁊ gyf him man wyrne, gebete þ<hi rend="italic">æt</hi> wið ðone kyningc mid hundtwentig scyllinga; oððe geladige hine: nime V men ⁊ beo him sylf VIta.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="44.1" corresp="#wit-a"><pb n="342" ed="#liebermann"/>⁊ gif him hwa weorne, bete þ<hi rend="italic">æt</hi> wið cyningc mid hu<hi rend="italic">n</hi>dtwentigu<hi rend="italic">m</hi> scyll'; oððe geladige <hi rend="italic">hine<ptr type="liebermannNote" n="3" target="#IICn_44-1.lnote.oe.3"/></hi>: nime fif ⁊ beo sylf sixta.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="44.1" corresp="#wit-q"><pb n="343" ed="#liebermann"/>Et si quis ei<ptr type="liebermannNote" n="6" target="#IICn_44-1.lnote.oe.6-2"/> perneget, emendet regi CXX solidis; aut<ptr type="liebermannNote" n="7" target="#IICn_44-1.lnote.oe.7"/> (uel) se adlegiet<ptr type="liebermannNote" n="8" target="#IICn_44-1.lnote.oe.8"/>: sumat V et idem sit sextus.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="44.1" corresp="#wit-inst-cn"><pb n="343" ed="#liebermann"/>Quod si quis fecerit, regi emendet<ptr type="liebermannNote" n="6" target="#IICn_44-1.lnote.oe.6"/>; aut purget se sexto.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="44.1" corresp="#wit-cons-cn"><pb n="343" ed="#liebermann"/>[44, 1] Qui autem prohibuerit, soluat regi CXX solidos; si uero inficiari uoluerit, sic se purget: producat V et ipse sit sextus.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="44.1" corresp="#wit-b"><pb n="198" ed="#robertson"/>⁊ gyf him man<ptr type="editorNote" n="3" target="#IICn_44-1.robnote.fn.3"/> wyrne, gebete þæt wið ðone<ptr type="editorNote" n="4" target="#IICn_44-1.robnote.fn.4"/> kyningc mid hundtwentig scyllinga oððe geladige hine—nime V men<ptr type="editorNote" n="5" target="#IICn_44-1.robnote.fn.5"/> ⁊ beo him<ptr type="editorNote" n="6" target="#IICn_44-1.robnote.fn.6"/> sylf VI-ta.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="278" ed="#rabin-doml"/>And gif him hwa wyrne, gebete þæt wið þone cing mid CXX scyllingum; oðþe geladige hine: nime V and beo sylf syxta.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="342" ed="#liebermann"/>Und wenn einer [sie] ihm weigert, büsse er das gegenüber dem König durch 120 Schill.; oder er schwöre sich rein: wähle fünf [Eideshelfer] und sei selbst Sechster [im Eide].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="342" ed="#liebermann"/>Und<ptr type="liebermannNote" n="1" target="#IICn_44-1.lnote.de.1"/> wenn einer [sie] ihm weigert, büsse er das gegenüber dem König durch 120 Schill.; oder er schwöre sich rein: wähle fünf [Eideshelfer] und sei selbst Sechster [im Eide].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if anyone refuses [it] him, let him pay the king 120 shillings in compensation for it; or let him clear himself: let him take five [oath-helpers] and be himself the sixth [in the oath].</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="199" ed="#robertson"/>And if anyone refuses it to him, he shall make amends for it to the king by the payment of 120 shillings, or he shall clear himself. He shall select five men and be himself a sixth.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock"><pb n="468" ed="#whitelock"/>And if anyone does refuse it to him, he is to pay 120 shillings compensation to the king; or, to clear himself, he is to take five men and be himself the sixth.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="279" ed="#rabin-doml"/>And if anyone denies him confession, he shall atone for that with a payment to the king of one hundred and twenty shillings; or he may exonerate himself: he may select five witnesses and himself be the sixth.</ab>
         <note type="comparison" source="#wormald-ppmel" n="58"><label>repeats</label> <ref target="clause:EGu_9-1">EGu 9.1</ref> <quote>II Cn 44:1 repeats EGu 9:1’s discouragement of executing criminals on Sunday</quote></note>
-        <note type="editorial">G's ‘hine’ is written with the abbreviation ·N· in G and A. B and A's ‘hundtwentig(um)’ = 120.</note>
+        <note type="editorial">G's ‘hine’ is written with the abbreviation ·N· in G and A. B and A's ‘hundtwentig(um)’ = 120.; BR: added from Gesetze I p. 343, October 2026 (MS Cons)</note>
         <note type="textual" source="#rabin-doml">hwa: man B</note>
         <note type="textual" source="#rabin-doml">þone: omitted A</note>
         <note type="textual" source="#rabin-doml">hine: omitted G</note>
         <note type="textual" source="#rabin-doml">V and: V men and B</note>
         <note type="textual" source="#rabin-doml">sylf: him sylf B</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_44-1.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">343</biblScope></bibl><seg type="original" xml:lang="de">emendationem det <hi rend="italic">Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">emendationem det Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_44-1.lnote.oe.6-2" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">343</biblScope></bibl><seg type="original" xml:lang="de">eam <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">eam T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_44-1.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">343</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vor der Klammer K; eingeklammertes übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">the words before the bracket K; the bracketed words the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_44-1.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">343</biblScope></bibl><seg type="original" xml:lang="de">a <hi rend="italic">über letztem</hi> e <hi rend="italic">Dm;</hi> alegiat <hi rend="italic">R</hi></seg><seg type="translation" xml:lang="en" source="#claude">a above the last e Dm; alegiat R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_44-1.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">342</biblScope></bibl><seg type="original" xml:lang="de">·N· <hi rend="italic">A</hi> [<hi rend="italic">vgl. G</hi>]</seg><seg type="translation" xml:lang="en" source="#claude">·N· A [cf. G]</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_44-1.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">342</biblScope></bibl><seg type="original" xml:lang="de">bete <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">bete Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_44-1.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">342</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Ld</hi> [<hi rend="italic">besser?</hi>]</seg><seg type="translation" xml:lang="en" source="#claude">lacking in Ld [better?]</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_44-1.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">342</biblScope></bibl><seg type="original" xml:lang="de">cyningc mid hundtwentigum <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">cyningc mid hundtwentigum Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_44-1.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">342</biblScope></bibl><seg type="original" xml:lang="de">·N· <hi rend="italic">G</hi></seg><seg type="translation" xml:lang="en" source="#claude">·N· G</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_44-1.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">342</biblScope></bibl><seg type="original" xml:lang="de">fif men ⁊ beo he sylf <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">fif men ⁊ beo he sylf Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_44-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">208</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Benutzt durch Hn 11, 9. 66, 4. Das Strafgeld für die rein geistliche Sünde behält sich doch die Krone vor; es stellt Ungehorsam (<hi rend="italic">s. d</hi>. 7) dar</seg><seg type="translation" xml:lang="en" source="#claude">Used by Hn 11, 9. 66, 4. The Crown nevertheless reserves to itself the fine for this purely spiritual sin; it represents disobedience (<hi rend="italic">see</hi> that word 7)</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_44-1.robnote.fn.3" n="3" source="#robertson"><bibl><biblScope unit="page">198</biblScope></bibl><label>man</label><seg type="original" xml:lang="en"><hi rend="italic">hwa</hi> G, A, Ld.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_44-1.robnote.fn.4" n="4" source="#robertson"><bibl><biblScope unit="page">198</biblScope></bibl><label>ðone</label><seg type="original" xml:lang="en">Om. A, Ld.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_44-1.robnote.fn.5" n="5" source="#robertson"><bibl><biblScope unit="page">198</biblScope></bibl><label>men</label><seg type="original" xml:lang="en">Om. G, A.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_44-1.robnote.fn.6" n="6" source="#robertson"><bibl><biblScope unit="page">198</biblScope></bibl><label>him</label><seg type="original" xml:lang="en">Om. G, A; <hi rend="italic">he</hi> Ld.</seg></note>
       </div>
     </body>
   </text>
