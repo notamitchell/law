@@ -121,6 +121,7 @@ HEADERS = [
     ('siglum of the manuscript attenborough prints', 'attSig'),
     ('manuscript attenborough prints', 'attName'),
     ('order of liebermann’s texts', 'liebOrder'),
+    ('pages of liebermann’s texts', 'liebPages'),
 ]
 NEEDED = ['code', 'clause', 'kText', 'german', 'english', 'nText', 'kSig', 'tSig', 'notes']
 
@@ -239,6 +240,27 @@ def sig_key(s):
 def same_sig(a, b):
     """'Cons.Cn.' and 'Cons. Cn.' are the same siglum."""
     return re.sub(r'[\s.]', '', a).lower() == re.sub(r'[\s.]', '', b).lower()
+
+
+def pages(cell):
+    """'4 / 5' -> ('4', '5'); '4' -> ('4', '4'): the page of a text and of its translation on the facing page."""
+    parts = [x.strip() for x in str(cell or '').split('/')]
+    return (parts[0], parts[-1]) if parts[0] else ('', '')
+
+
+def lieb_pages(cell):
+    """'E 16; G 16; H 17; Q 17; German 17' -> {'E': '16', …}: the page of each of Liebermann's texts and of his German."""
+    out = {}
+    for part in str(cell or '').split(';'):
+        m = re.match(r'\s*(.+?)\s+(\d+)\s*$', part)
+        if m:
+            out[re.sub(r'[\s.]', '', m.group(1)).lower()] = m.group(2)
+    return out
+
+
+def pb(page, sid):
+    """The page on which a text or translation begins, as <pb> at its start (the clause page shows it)."""
+    return '<pb n="%s" ed="#%s"/>' % (attr(page), sid) if page else ''
 
 
 def ident(text):
@@ -369,7 +391,7 @@ def read_rows(path, only=None):
                      'nSig', 'afSig', 'kSig', 'tSig', 'kName', 'nName', 'afName', 'tName', 'notes', 'passageSource',
                      'bfSig', 'bfName', 'biSig', 'biName',
                      'thirdRef', 'thirdMS', 'thirdPage', 'translatorNotes', 'rabinRef', 'rabinPage', 'rabinTextNotes', 'rabinNotes',
-                     'vglPrinted', 'vglRefs', 'vglRemark', 'attPage', 'attSig', 'attName', 'liebOrder'):
+                     'vglPrinted', 'vglRefs', 'vglRemark', 'attPage', 'attSig', 'attName', 'liebOrder', 'liebPages'):
             row[name] = get(name)
         for name in ('kText', 'german', 'english', 'nText', 'latin', 'tText', 'translation',
                      'secondTranslation', 'supplementaryTranslation', 'afText', 'bfText', 'biText', 'thirdTranslation', 'rabinText', 'rabinTranslation', 'attText'):
@@ -572,6 +594,8 @@ def build(row, today, source_name, refs):
     anchor = row['anchor']
     srcs = Sources()
     lie = srcs.add('liebermann', 'Liebermann', LIEBERMANN_REF, 'edition', row['page'])
+    lp = lieb_pages(row['liebPages'])
+    lpage = lambda sig: lp.get(re.sub(r'[\s.]', '', sig_key(sig or '')).lower(), '') or row['page']
 
     # Manuscripts: those in column G (bold = Liebermann's choice), then any
     # other manuscript a text comes from.
@@ -600,24 +624,24 @@ def build(row, today, source_name, refs):
     texts, translations = [], []      # (type, lang, source, xml, n, wit)
     shown = set()
     if row['kTextXml']:
-        texts.append(('liebermannText', language(row['kText']), lie, row['kTextXml'], row['liebermannNumber'],
+        texts.append(('liebermannText', language(row['kText']), lie, pb(lpage(row['kSig']), lie) + row['kTextXml'], row['liebermannNumber'],
                       witness(row['kSig'], row['kName'])))
         shown.add(sig_key(row['kSig']))
     if row['nTextXml']:
-        texts.append(('liebermannText', language(row['nText']), lie, row['nTextXml'], row['liebermannNumber'],
+        texts.append(('liebermannText', language(row['nText']), lie, pb(lpage(row['nSig']), lie) + row['nTextXml'], row['liebermannNumber'],
                       witness(row['nSig'], row['nName'])))
         shown.add(sig_key(row['nSig']))
     if row['afTextXml']:
-        texts.append(('liebermannText', language(row['afText']), lie, row['afTextXml'], row['liebermannNumber'],
+        texts.append(('liebermannText', language(row['afText']), lie, pb(lpage(row['afSig']), lie) + row['afTextXml'], row['liebermannNumber'],
                       witness(row['afSig'], row['afName'])))
         shown.add(sig_key(row['afSig']))
     for t in ('bf', 'bi'):      # Liebermann's fourth and fifth texts (columns BF-BH, BI-BK; October 2026)
         if row[t + 'TextXml']:
-            texts.append(('liebermannText', language(row[t + 'Text']), lie, row[t + 'TextXml'], row['liebermannNumber'],
+            texts.append(('liebermannText', language(row[t + 'Text']), lie, pb(lpage(row[t + 'Sig']), lie) + row[t + 'TextXml'], row['liebermannNumber'],
                           witness(row[t + 'Sig'], row[t + 'Name'])))
             shown.add(sig_key(row[t + 'Sig']))
     if row['latinXml']:
-        texts.append(('liebermannText', 'la', lie, row['latinXml'], row['liebermannNumber'],
+        texts.append(('liebermannText', 'la', lie, pb(lpage('Q'), lie) + row['latinXml'], row['liebermannNumber'],
                       witness('Q', MS_NAMES['Q'])))
 
     editor = row['editor']
@@ -625,7 +649,7 @@ def build(row, today, source_name, refs):
     ed_src = ''
     if editor:
         name, sid, ref = EDITOR_OVERRIDE.get(code, (editor, ident(editor), row['editionRefXml']))
-        ed_src = srcs.add(sid, name, ref, 'edition', row['editorPage'])
+        ed_src = srcs.add(sid, name, ref, 'edition', pages(row['editorPage'])[0])
         if row['tTextXml']:
             # Jurasinski and Oliver print MS B's rubric after MS E's in the same cell.
             e_text, b_text, e_trans, b_trans = rubrics.split(code, clause, row['tTextXml'], row['translationXml'])
@@ -633,15 +657,17 @@ def build(row, today, source_name, refs):
             if code in FRENCH_CODES:
                 # Anglo-Norman French, except the clauses Robertson supplies from the Latin version (MS L)
                 lang = 'la' if sig_key(row['tSig']) == 'L' else 'xno'
-            texts.append(('editionText', lang, ed_src, e_text, row['editorNumber'], t_wit))
+            texts.append(('editionText', lang, ed_src, pb(pages(row['editorPage'])[0], ed_src) + e_text, row['editorNumber'], t_wit))
             if b_text:
                 b_wit = witness('B', MS_NAMES['B'])
-                texts.append(('editionText', 'ang', ed_src, b_text, '', b_wit))
+                texts.append(('editionText', 'ang', ed_src, pb(pages(row['editorPage'])[0], ed_src) + b_text, '', b_wit))
                 row['translationXml'] = e_trans
                 row['bTranslationXml'] = b_trans
+            if b_text:
+                row['bTranslationXml'] = pb(pages(row['editorPage'])[1], ed_src) + row['bTranslationXml']
     elif row['tTextXml'] and sig_key(row['tSig']) not in shown:
         # No modern editor: column T is Liebermann's text of another manuscript.
-        texts.append(('liebermannText', language(row['tText']), lie, row['tTextXml'], row['liebermannNumber'], t_wit))
+        texts.append(('liebermannText', language(row['tText']), lie, pb(lpage(row['tSig']), lie) + row['tTextXml'], row['liebermannNumber'], t_wit))
 
     # Liebermann's texts (in the order of his columns: K, N, AF, O, T) before the modern edition.
     texts.sort(key=lambda t: t[0] == 'editionText')
@@ -660,8 +686,8 @@ def build(row, today, source_name, refs):
 
     if row['attTextXml']:
         # Attenborough's own Old English text (columns BL-BO), where column T is another editor's
-        a_src = srcs.add('attenborough', 'Attenborough', ATTENBOROUGH_REF, 'edition', row['attPage'])
-        texts.append(('editionText', 'ang', a_src, row['attTextXml'], '', witness(row['attSig'], row['attName'])))
+        a_src = srcs.add('attenborough', 'Attenborough', ATTENBOROUGH_REF, 'edition', pages(row['attPage'])[0])
+        texts.append(('editionText', 'ang', a_src, pb(pages(row['attPage'])[0], a_src) + row['attTextXml'], '', witness(row['attSig'], row['attName'])))
 
     rabin_translation = None
     if row['rabinTextXml'] or row['rabinTranslationXml']:
@@ -672,38 +698,40 @@ def build(row, today, source_name, refs):
         r_src = srcs.add('rabin-doml', 'Rabin', RABIN_DOML, 'edition', row['rabinPage'].split(' / ')[0])
         if row['rabinTextXml']:
             lang = 'la' if code == 'VII Atr' else 'ang'
-            texts.append(('editionText', lang, r_src, row['rabinTextXml'], '', r_wit))
+            texts.append(('editionText', lang, r_src, pb(pages(row['rabinPage'])[0], r_src) + row['rabinTextXml'], '', r_wit))
         if row['rabinTranslationXml']:
-            rabin_translation = ('translation', 'en', r_src, row['rabinTranslationXml'], r_wit)
+            rabin_translation = ('translation', 'en', r_src, pb(pages(row['rabinPage'])[1], r_src) + row['rabinTranslationXml'], r_wit)
     u_by, aa_by = TRANSLATORS.get(code, (None, None))
     if u_by == 'Whitelock' and NOT_WHITELOCK in row['notes']:
         u_by = None
     if row['translationXml']:
         src = ed_src or translator(u_by, row['editorPage'] if u_by == 'Whitelock' else '')
-        translations.append(('translation', 'en', src, row['translationXml'], t_wit))
+        tpage = pages(row['editorPage'])[1] if ed_src or u_by == 'Whitelock' else ''
+        translations.append(('translation', 'en', src, pb(tpage, src) + row['translationXml'], t_wit))
         if row.get('bTranslationXml'):
             translations.append(('translation', 'en', src, row['bTranslationXml'], witness('B')))
     if row['secondTranslationXml']:
         second = abt.surname(row['secondRef'])
         if second == 'Rabin' and 'Wulfstan' in row['secondRef'] and '2020' in row['secondRef']:
-            src = srcs.add('rabin-doml', 'Rabin', RABIN_DOML, 'translation', row['secondPage'])
+            src = srcs.add('rabin-doml', 'Rabin', RABIN_DOML, 'translation', pages(row['secondPage'])[0])
         elif second:
-            src = srcs.add(ident(second), second, row['secondRefXml'], 'translation', row['secondPage'])
+            src = srcs.add(ident(second), second, row['secondRefXml'], 'translation', pages(row['secondPage'])[0])
         else:
             src = translator(None)
-        translations.append(('translation', 'en', src, row['secondTranslationXml'], t_wit))
+        spage = pages(row['secondPage'])[0] or (pages(row['attPage'])[1] if src == 'attenborough' else '')
+        translations.append(('translation', 'en', src, pb(spage, src) + row['secondTranslationXml'], t_wit))
     if rabin_translation:
         translations.append(rabin_translation)       # after the editors' own translations
     if row['thirdTranslationXml']:
         # Whitelock's English Historical Documents (columns AP-AT)
         m = re.match(r'([A-Z][A-Za-z0-9]{0,3})\s+\(', row['thirdMS'])
-        translations.append(('translation', 'en', translator('Whitelock', row['thirdPage']), row['thirdTranslationXml'],
+        translations.append(('translation', 'en', translator('Whitelock', row['thirdPage']), pb(row['thirdPage'], 'whitelock') + row['thirdTranslationXml'],
                              witness(m.group(1), MS_NAMES.get(m.group(1), '')) if m else ''))
     if row['supplementaryTranslationXml']:
         translations.append(('translation', 'en', translator(aa_by), row['supplementaryTranslationXml'],
                              witness(row['kSig'], row['kName'])))
     if row['germanXml']:
-        translations.append(('translation', 'de', lie, row['germanXml'], ''))
+        translations.append(('translation', 'de', lie, pb(lpage('German'), lie) + row['germanXml'], ''))
     if row['englishXml']:
         cl = srcs.add('claude', 'Claude', CLAUDE_REF, 'translation')
         translations.append(('translation', 'en', cl, row['englishXml'], ''))
