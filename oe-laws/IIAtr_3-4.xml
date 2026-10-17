@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -31,6 +33,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -56,20 +59,32 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1050 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 222.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 222: “fugiat,” → “fugiat”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3.4">
         <head><ref type="lawCode" target="law:IIAtr">II Atr</ref> 3.4</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.4" corresp="#wit-q">Si friðman (id est homo pacis) fugiat, uel repugnet et se nolit indicare, si occidatur, iaceat ungilden (id est insolutus).</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.4" corresp="#wit-b">Gyf se friðman fleo oððon feohte ⁊ nelle hine cyðan: gif hine man ofslea, licge ungylde.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="3.4" corresp="#wit-b">Gyf se friðman fleo oððon feohte ⁊ nelle hine cyðan, gif hine man ofslea, licge ungylde.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jener Mann [Englischen] Friedensgebietes [aber] flieht oder [gegen dies Heer] kämpft und es unterlässt, sich zu erkennen zu geben: wenn er [hierbei] erschlagen wird, liege er ohne vergolten [zu werden durch Wergeld].</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.4" corresp="#wit-b">Gyf<ptr type="liebermannNote" n="8" target="#IIAtr_3-4.lnote.oe.8-2"/> se friðman fleo oððon<ptr type="liebermannNote" n="18" target="#IIAtr_3-4.lnote.oe.18-2"/> feohte ⁊ nelle hine cyðan: gif hine man<ptr type="liebermannNote" n="19" target="#IIAtr_3-4.lnote.oe.19"/> ofslea, licge ungylde.<ptr type="liebermannNote" n="20" target="#IIAtr_3-4.lnote.oe.20"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.4" corresp="#wit-q">Si friðman<ptr type="liebermannNote" n="8" target="#IIAtr_3-4.lnote.oe.8"/> (id est homo pacis) fugiat<ptr type="liebermannNote" n="17" target="#IIAtr_3-4.lnote.oe.17"/> uel repugnet et se nolit indicare, si occidatur, iaceat ungilden<ptr type="liebermannNote" n="18" target="#IIAtr_3-4.lnote.oe.18"/> (id est insolutus).</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="3.4" corresp="#wit-b">Gyf se friðman fleo oððon feohte ⁊ nelle hine cyðan, gif hine man ofslea, licge ungylde<ptr type="editorNote" n="1" target="#IIAtr_3-4.robnote.fn.1"/>.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jener Mann [Englischen<ptr type="liebermannNote" n="1" target="#IIAtr_3-4.lnote.de.1"/>] Friedensgebietes [aber] flieht oder [gegen dies Heer] kämpft und es unterlässt, sich zu erkennen zu geben: wenn er [hierbei] erschlagen wird, liege er ohne vergolten<ptr type="liebermannNote" n="2" target="#IIAtr_3-4.lnote.de.2"/> [zu werden durch Wergeld].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If that man from the [English] peace-area [however] flees or fights [against this army] and will not make himself known: if he is killed [in doing so], let him lie uncompensated [without wergild].</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">If a man included in the truce flees or fights and fails to make himself known, no compensation shall be paid for him, if he is slain.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">If a man included in the truce flees or fights and fails to make himself known, no compensation shall be paid for him<ptr type="editorNote" n="1" target="#IIAtr_3-4.robnote.n.1"/>, if he is slain.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-b">If the man to whom the truce applies flees or fights, and will not announce himself, he is to lie uncompensated for, if he is killed.</ab>
         <note type="comparedBy" source="#wormald-ppmel" n="124"><ref target="clause:Af_1-5">Af 1.5</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAtr_3-4.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">222</biblScope></bibl><seg type="original" xml:lang="de">fridm. <hi rend="italic">R</hi></seg><seg type="translation" xml:lang="en" source="#claude">fridm. R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAtr_3-4.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">222</biblScope></bibl><seg type="original" xml:lang="de">-iet <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">-iet Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAtr_3-4.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">222</biblScope></bibl><seg type="original" xml:lang="de">-gyl. <hi rend="italic">T;</hi> <hi rend="spaced">ungeld</hi> <hi rend="italic">MHk; bessere</hi> ungilde.</seg><seg type="translation" xml:lang="en" source="#claude">-gyl. T; <hi rend="italic">ungeld</hi> MHk; read ungilde.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAtr_3-4.lnote.oe.8-2" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">222</biblScope></bibl><seg type="original" xml:lang="de">gif <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gif Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAtr_3-4.lnote.oe.18-2" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">222</biblScope></bibl><seg type="original" xml:lang="de">oþþe <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">oþþe Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAtr_3-4.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">222</biblScope></bibl><seg type="original" xml:lang="de">mon <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">mon Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAtr_3-4.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">222</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="spaced">orgylde</hi> <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">orgylde</hi> Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIAtr_3-4.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">152</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Diese Spezialisierung erhellt aus 3, 1</seg><seg type="translation" xml:lang="en" source="#claude">This specialization is evident from 3, 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIAtr_3-4.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">152</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">orgilde</hi> in Ld ist archaischer. Vielleicht hatte Archetyp und lq diese Form im Text und (am Rande oder über der Zeile) daneben die Modernisierung zu <hi rend="italic">un</hi>-, und übernahm nur letztere sowohl B wie Q, während l der älteren Form treu blieb.—<hi rend="italic">Vgl. Gl</hi> Wergeld 17a</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">orgilde</hi> in Ld is more archaic. Perhaps the archetype and lq had this form in the text and beside it (in the margin or above the line) the modernization to <hi rend="italic">un</hi>-, and both B and Q adopted only the latter, while l remained faithful to the older form.—<hi rend="italic">Cf. Gl</hi> Wergeld 17a</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIAtr_3-4.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">316</biblScope></bibl><seg type="original" xml:lang="en">Cf. Wi. 25; Af. 1, 5; E. and G. 6, 7; also the Swedish phrase <hi rend="italic">liggi i ungildum akri</hi>.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IIAtr_3-4.robnote.fn.1" n="1" source="#robertson"><bibl><biblScope unit="page">58</biblScope></bibl><label>ungylde</label><seg type="original" xml:lang="en"><hi rend="italic">orgylde</hi> Ld.</seg></note>
       </div>
     </body>
   </text>

@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">442</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -54,19 +57,28 @@
       <change when="2026-10-17">Generated from row 1043 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 222.</change>
       <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 56.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Robertson, p. 57: “any” → “every”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.2">
         <head><ref type="lawCode" target="law:IIAtr">II Atr</ref> 1.2</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.2" corresp="#wit-q">Et omnis terra, quę aliquem eorum manuteneat, qui Angliam inquietant, sit exlex apud nos et omnem exercitum.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-b">⁊ ælc ðæra landa ðe ænigne friðige ðæra ðe Ænglaland hergie, beo hit utlah wið us ⁊ wið ealne here.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-b">⁊ ælc ðæra landa ðe ænigne friðige ðæra ðe Ænglaland<ptr type="liebermannNote" n="4" target="#IIAtr_1-2.lnote.oe.4-2"/> hergie, beo hit utlah wið us ⁊ wið ealne here.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.2" corresp="#wit-q">Et omnis terra, quę<ptr type="liebermannNote" n="3" target="#IIAtr_1-2.lnote.oe.3"/> aliquem eorum manuteneat, qui Angliam inquietant, sit<ptr type="liebermannNote" n="4" target="#IIAtr_1-2.lnote.oe.4"/> exlex apud nos et omnem exercitum.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="1.2" corresp="#wit-b">⁊ ælc ðæra landa ðe ænigne friðige ðæra ðe Ænglaland hergie, beo hit utlah wið us ⁊ wið ealne here.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und jedes der Länder, das irgend einem derer Friedensschutz gewährt, welche England verheeren, das gelte geächtet bei uns und beim ganzen Heere [der contrahirenden Nordleute].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und jedes der Länder<ptr type="liebermannNote" n="1" target="#IIAtr_1-2.lnote.de.1"/>, das irgend einem derer Friedensschutz gewährt<ptr type="liebermannNote" n="2" target="#IIAtr_1-2.lnote.de.2"/>, welche England verheeren, das gelte geächtet<ptr type="liebermannNote" n="3" target="#IIAtr_1-2.lnote.de.3"/> bei uns und beim ganzen Heere [der contrahirenden Nordleute].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And every one of the lands that gives protection to any of those who harry England, let it be outlawed by us and by the whole army [of the contracting Northmen].</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">And any region which affords protection to any of those who harry England shall be treated as an enemy [country] by us and all the aforesaid fleet.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">And every region<ptr type="editorNote" n="1" target="#IIAtr_1-2.robnote.n.1"/> which affords protection to any of those who harry England shall be treated as an enemy [country] by us and all the aforesaid fleet<ptr type="editorNote" n="2" target="#IIAtr_1-2.robnote.n.2"/>.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-b">And any region which gives asylum to any of those who are harrying England is to be treated as an enemy by us and the whole army.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAtr_1-2.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">222</biblScope></bibl><seg type="original" xml:lang="de">qeie <hi rend="italic">R</hi></seg><seg type="translation" xml:lang="en" source="#claude">qeie R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAtr_1-2.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">222</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAtr_1-2.lnote.oe.4-2" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">222</biblScope></bibl><seg type="original" xml:lang="de">En. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">En. Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIAtr_1-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">152</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Hierunter sind nicht nur Normandie, Wales, Irland, Schottland gedacht, sondern auch jede Englische Provinz, die eigenmächtig fremden (England feindlichen) Wikingern die Landung erlauben würde</seg><seg type="translation" xml:lang="en" source="#claude">By this are meant not only Normandy, Wales, Ireland and Scotland, but also any English province that might, on its own authority, allow foreign Vikings (hostile to England) to land</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIAtr_1-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">152</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. o</hi>. Einl. 9</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See above</hi> Introduction 9</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIAtr_1-2.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">152</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. Gl</hi> Dänen 14a; friedlos 8. a. Vermutlich dürfen solche Länder von beiden Kontrahenten bekriegt und dorther kommende Schiffe, Fremde und Waren gefangen werden</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See Gl</hi> Dänen 14a; friedlos 8. a. Presumably such countries may be made war upon by both contracting parties, and ships, foreigners and goods coming from there may be seized</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIAtr_1-2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">315</biblScope></bibl><seg type="original" xml:lang="en">It is not clear whether <hi rend="italic">landa</hi> here denotes English provinces or independent neighbouring kingdoms.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIAtr_1-2.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">315</biblScope></bibl><seg type="original" xml:lang="en">Does this mean, as Liebermann suggests, that such regions might be warred upon by either party to the truce and their ships and wares seized?</seg></note>
       </div>
     </body>
   </text>

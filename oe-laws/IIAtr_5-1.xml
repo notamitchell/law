@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">443</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -54,20 +57,26 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1053 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 222.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Robertson, p. 59: “Englishmean” → “Englishman”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5.1">
         <head><ref type="lawCode" target="law:IIAtr">II Atr</ref> 5.1</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.1" corresp="#wit-b">Gyf<ptr type="liebermannNote" n="8" target="#IIAtr_5-1.lnote.oe.8"/> Englisc man Deniscne ðræl ofslea, gylde hine mid punde, ⁊ se Denisca Engliscne ealswa, gif he hine ofslea.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5.1" corresp="#wit-q">Si Anglicus Dacum seruum occidat, reddat eum uiginti sol., et Dacus similiter Anglicum reddat, si occidat eum.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.1" corresp="#wit-b">Gyf Englisc man Deniscne ðræl ofslea, gylde hine mid punde, ⁊ se Denisca Engliscne ealswa, gif he hine ofslea.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="5.1" corresp="#wit-b">Gyf Englisc man Deniscne ðræl ofslea, gylde hine mid punde, ⁊ se Denisca Engliscne ealswa, gif he hine ofslea.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Englischer Mann einen Dänischen [Nordischen] Unfreien erschlägt, bezahle er ihn mit einem Pfunde [Silbers], und der Dänische einen Englischen [Unfreien] ebenso, wenn er ihn erschlägt.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><ptr type="liebermannNote" n="1" target="#IIAtr_5-1.lnote.de.1"/>Wenn ein Englischer Mann einen Dänischen [Nordischen] Unfreien erschlägt, bezahle er ihn mit einem Pfunde<ptr type="liebermannNote" n="2" target="#IIAtr_5-1.lnote.de.2"/> [Silbers], und der Dänische einen Englischen [Unfreien] ebenso, wenn er ihn erschlägt.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If an Englishman kills a Danish [Norse] slave, let him pay for him with a pound [of silver], and the Dane likewise for an English [slave], if he kills him.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">If an Englishmean slays a Danish slave, he shall pay one pound for him, and the Dane likewise for the English slave whom he slays.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">If an Englishman slays a Danish slave<ptr type="editorNote" n="1" target="#IIAtr_5-1.robnote.n.1"/>, he shall pay one pound<ptr type="editorNote" n="2" target="#IIAtr_5-1.robnote.n.2"/> for him, and the Dane likewise for the English slave whom he slays.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-b">If an Englishman slays a Danish slave, he is to pay for him with one pound, and the Dane the same for an English slave, if he slays one.</ab>
         <note type="editorial">The Latin's ‘uiginti sol.’ = one pound.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAtr_5-1.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">222</biblScope></bibl><seg type="original" xml:lang="de">gif <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gif Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIAtr_5-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">153</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Dies wiederholt Hn 70, 7 aus Q.—Das Nord. Wort <hi rend="italic">þræl</hi> kommt früher in den <hi rend="italic">Gesetzen</hi> nicht vor</seg><seg type="translation" xml:lang="en" source="#claude">This is repeated by Hn 70, 7 from Q.—The Norse word <hi rend="italic">þræl</hi> does not occur earlier in the <hi rend="italic">Laws</hi></seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIAtr_5-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">153</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Diese Bewertung auch sonst; <hi rend="italic">s. Gl</hi> unfrei 7a. b. c. Q rechnet das Pfund Normannisch um</seg><seg type="translation" xml:lang="en" source="#claude">This valuation occurs elsewhere too; <hi rend="italic">see Gl</hi> unfrei 7a. b. c. Q converts the pound into Norman reckoning</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIAtr_5-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">316</biblScope></bibl><seg type="original" xml:lang="en">A Scandinavian loan word which appears here for the first time in the Laws.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIAtr_5-1.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">316</biblScope></bibl><seg type="original" xml:lang="en">A pound was the value of a slave, cf. IV As. 6, 5 f.; Duns. 7. Q has xx sol., <hi rend="italic">i.e.</hi> shillings of twelve pence according to the Norman reckoning.</seg></note>
       </div>
     </body>
   </text>
