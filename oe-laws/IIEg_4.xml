@@ -13,6 +13,9 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +35,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">435</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -60,28 +64,40 @@
       <change when="2026-10-17">Generated from row 943 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 198.</change>
       <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 22.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 198.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 198: “(Von dem Herdpfennig. Ld) Und jeder Herdpfennig werde zu Petri Festtag [1. August] abgeliefert.” → “(Von dem Herdpfennig. Ld) Und jeder Herdpfennig werde zu Petri Festtag [1. August] abgeliefert. (expanded letters in italics: Ld)”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 22: “[Ld]” → “∅”.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Robertson, p. 23: “St. Peter's” → “St Peter’s”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4">
         <head><ref type="lawCode" target="law:IIEg">II Eg</ref> 4</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-g-a">⁊ sy ælc heorðpæning agyfen be Petres mæssedæg.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-g-a"><ptr type="liebermannNote" n="*" target="#IIEg_4.lnote.oe.star"/>⁊ sy ælc heorðpæning<ptr type="liebermannNote" n="9" target="#IIEg_4.lnote.oe.9"/> agyfen be Petres mæssedæg.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-a">⁊ sy ælc heorþpening agyfen be Petres mæssedæg.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4" corresp="#wit-q">Et omnis heorðpeni reddatur ad festum sancti Petri.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="4" corresp="#wit-d">[Be þon heorþpeninge.] [Ld] ⁊ sy ælc heorðpænig agifen be Petres mæssedæg.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-d">⁊ sy ælc heorðpænig agifen be Petres mæssedæg.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4" corresp="#wit-q">Et omnis heorðpeni<ptr type="liebermannNote" n="*" target="#IIEg_4.lnote.oe.star-2"/> reddatur ad festum sancti Petri.<ptr type="liebermannNote" n="**" target="#IIEg_4.lnote.oe.star2"/></ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="4" corresp="#wit-d">[Be þon heorþpeninge.] ⁊ sy ælc heorðpænig agifen be Petres mæssedæg.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a">And sy ælc heorðpæning agyfen be Petres mæssedæg.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">(Von dem Herdpfennig. Ld) Und jeder Herdpfennig werde zu Petri Festtag [1. August] abgeliefert.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Von dem Herdpfennig. <hi rend="italic">Ld</hi>) Und jeder Herdpfennig<ptr type="liebermannNote" n="1" target="#IIEg_4.lnote.de.1"/> werde zu Petri Festtag<ptr type="liebermannNote" n="2" target="#IIEg_4.lnote.de.2"/> [1. August] abgeliefert.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of the hearth-penny. Ld) And let every hearth-penny be paid by St Peter's day [1 August].</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And every hearth-penny shall be paid by St. Peter's Day.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock">And every hearth-penny is to be paid by St Peter’s day.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And every hearth-penny<ptr type="editorNote" n="1" target="#IIEg_4.robnote.n.1"/> shall be paid by St Peter’s Day.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock">And every hearth-penny<ptr type="editorNote" n="8" target="#IIEg_4.whinote.n.8"/> is to be paid by St Peter’s day.<ptr type="editorNote" n="9" target="#IIEg_4.whinote.n.9"/></ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a">And every hearth penny is to be paid by the Feast of Saint Peter.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VIIIAtr_10">VIII Atr 10</ref>; <ref target="clause:Cn1027_16">Cn 1027 16</ref></note>
         <note type="comparedBy" source="#wormald-ppmel" n="52"><ref target="clause:VIIIAtr_10">VIII Atr 10–10.1</ref></note>
         <note type="editorial">Co has ‘Rompeni’ and ‘Vincula’ in the lower margin of the Latin.</note>
-        <note type="translator" source="#whitelock">A penny from every house, by this time identical with Peter’s Pence.</note>
-        <note type="translator" source="#whitelock">Probably the feast of St Peter and St Paul, 29 June; see p. 444, n. 4.</note>
         <note type="translator" source="#rabin-doml">Feast of Saint Peter: June 29.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIEg_4.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">198</biblScope></bibl><seg type="original" xml:lang="de">Be ðon heorþpeninge <hi rend="italic">Rb. Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">Be ðon heorþpeninge rubric Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIEg_4.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">198</biblScope></bibl><seg type="original" xml:lang="de">-pen. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-pen. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIEg_4.lnote.oe.star-2" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">199</biblScope></bibl><seg type="original" xml:lang="de">Rompeni <hi rend="italic">am unteren Rande Co</hi></seg><seg type="translation" xml:lang="en" source="#claude">Rompeni in the lower margin Co</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIEg_4.lnote.oe.star2" n="**" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">199</biblScope></bibl><seg type="original" xml:lang="de">Vincula <hi rend="italic">ebd.</hi></seg><seg type="translation" xml:lang="en" source="#claude">Vincula ibid.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIEg_4.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">135</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Peterspfennig 1. 15; Herdpfennig 7. Beide sind identisch auch zu Glastonbury; Neilson <hi rend="italic">Custom. rents</hi> 201; dagegen bietet <hi rend="italic">Custumal of Battle</hi> p. 43 <hi rend="italic">herthgeld</hi> zu S. Thomas neben <hi rend="italic">Romscot</hi> zu Petri Kettenfeier</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Peterspfennig 1. 15; Herdpfennig 7. The two are identical at Glastonbury too; Neilson <hi rend="italic">Custom. rents</hi> 201; on the other hand the <hi rend="italic">Custumal of Battle</hi> p. 43 gives <hi rend="italic">herthgeld</hi> on St Thomas's day alongside <hi rend="italic">Romscot</hi> on the feast of St Peter's Chains</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIEg_4.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">135</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Peterspfennig 1. 15; Herdpfennig 7. Beide sind identisch auch zu Glastonbury; Neilson <hi rend="italic">Custom. rents</hi> 201; dagegen bietet <hi rend="italic">Custumal of Battle</hi> p. 43 <hi rend="italic">herthgeld</hi> zu S. Thomas neben <hi rend="italic">Romscot</hi> zu Petri Kettenfeier</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Peterspfennig 1. 15; Herdpfennig 7. The two are identical at Glastonbury too; Neilson <hi rend="italic">Custom. rents</hi> 201; on the other hand the <hi rend="italic">Custumal of Battle</hi> p. 43 gives <hi rend="italic">herthgeld</hi> on St Thomas's day alongside <hi rend="italic">Romscot</hi> on the feast of St Peter's Chains</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIEg_4.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">303</biblScope></bibl><seg type="original" xml:lang="en"><hi rend="italic">heorðpennig</hi> (cf. Wulfstan, pp. 116, 208) seems identical with <hi rend="italic">Romfeoh</hi>, <hi rend="italic">i.e.</hi> Peter’s Pence (cf. I Cn. 9; Wulfstan, pp. 272, 311), which was a tax of a penny levied on every household.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IIEg_4.whinote.n.8" n="8" source="#whitelock"><bibl><biblScope unit="page">435</biblScope></bibl><label>hearth-penny</label><seg type="original" xml:lang="en">A penny from every house, by this time identical with Peter’s Pence.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IIEg_4.whinote.n.9" n="9" source="#whitelock"><bibl><biblScope unit="page">435</biblScope></bibl><label>day</label><seg type="original" xml:lang="en">Probably the feast of St Peter and St Paul, 29 June; <hi rend="italic">see</hi> p. 444, n. 4.</seg></note>
       </div>
     </body>
   </text>
