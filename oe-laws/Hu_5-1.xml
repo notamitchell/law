@@ -10,6 +10,8 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +29,7 @@
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">18</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">433</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -59,14 +62,17 @@
     <body>
       <div type="clause" n="5.1">
         <head><ref type="lawCode" target="law:Hu">Hu</ref> 5.1</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5.1" corresp="#wit-q">Si hec supersederint, emendent (hoc pretermittat, emendet) regi XXX sol.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.1" corresp="#wit-b">Gyf he hit forsitte, gesylle ðam cynge ðrittig scill'.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5.1" corresp="#wit-q">Si hec<ptr type="liebermannNote" n="1" target="#Hu_5-1.lnote.oe.1"/> supersederint, emendent (hoc pretermittat, emendet) regi XXX sol.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5.1" corresp="#wit-cons-cn">Quod si recuset, det regi XXX solidos.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="5.1" corresp="#wit-b">Gyf he hit forsitte, gesylle ðam cynge ðrittig scill'.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn er es versäumt, zahle er dem König 30 Schilling.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn er es versäumt, zahle er dem König 30 Schilling.<ptr type="liebermannNote" n="1" target="#Hu_5-1.lnote.de.1"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If he neglects it, let him pay the king 30 shillings.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">If he neglects to do so, he shall pay 30 shillings to the king.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">If he neglects to do so, he shall pay 30 shillings<ptr type="editorNote" n="1" target="#Hu_5-1.robnote.n.1"/> to the king.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-b">If he neglects it, he is to pay 30 shillings to the king.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Hu_5-1.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">194</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vor der Klammer Lond;</hi> (<hi rend="italic">eingeklammertes</hi>) <hi rend="italic">übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">before the bracket Lond; (bracketed) the others</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Hu_5-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">132</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. u</hi>. 7, 1⁴; <hi rend="italic">Gl</hi> Amtsvergehen 1 Z. 10</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. below</hi> 7, 1⁴; <hi rend="italic">Gl</hi> Amtsvergehen 1 l. 10</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="Hu_5-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">301</biblScope></bibl><seg type="original" xml:lang="en">The fine payable by the <hi rend="italic">gerefa</hi> was 120 shillings, see VI As. 8, 4. Is it possible that the reeve had jurisdiction over a larger district, <hi rend="italic">i.e.</hi> several hundreds?</seg></note>
       </div>
     </body>
   </text>
