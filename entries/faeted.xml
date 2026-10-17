@@ -19,6 +19,7 @@
     <encodingDesc>
       <listPrefixDef>
         <prefixDef ident="law" matchPattern="(.+)" replacementPattern="lawAbb.html#$1"/>
+        <prefixDef ident="clause" matchPattern="(.+)" replacementPattern="law.html?id=$1"/>
         <prefixDef ident="gram" matchPattern="(.+)" replacementPattern="gramAbb.html#$1"/>
         <prefixDef ident="entry" matchPattern="(.+)" replacementPattern="entry.html?id=$1"/>
       </listPrefixDef>
@@ -26,6 +27,7 @@
     <revisionDesc>
       <change when="2026-10-13">Transcribed by Claude from the page scan; not yet checked against the print.</change>
       <change when="2026-10-17">Ordinary German words in Liebermann’s definitions unlinked from the abbreviations list (reviewed list, October 2026).</change>
+      <change when="2026-10-18">Abbreviations and law code (Norðleod) linked; see the pull request “þæt: indecl., Einl., Folg., Urkk.-Sprache, Norðleod”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -34,8 +36,9 @@
         <form type="lemma">
           <orth>fæted</orth>
         </form>
-        <dictScrap type="liebermann"><hi rend="bold">fæted</hi>, <hi rend="italic"><ref type="abbreviation" target="gram:Praeteritum"><abbr>ptt</abbr></ref> <ref type="abbreviation" target="gram:Particip"><abbr>pc</abbr></ref> <ref type="abbreviation" target="gram:neutrum"><abbr>nt</abbr></ref> <ref type="abbreviation" target="gram:accusativus"><abbr>ac</abbr></ref>;</hi> golde ~ sweord <hi rend="italic">mit Golde belegtes Schwert</hi> Norðleod 10; goldfæted <ref type="lawCode" target="law:H">H</ref></dictScrap>
+        <dictScrap type="liebermann"><hi rend="bold">fæted</hi>, <hi rend="italic"><ref type="abbreviation" target="gram:Praeteritum"><abbr>ptt</abbr></ref> <ref type="abbreviation" target="gram:Particip"><abbr>pc</abbr></ref> <ref type="abbreviation" target="gram:neutrum"><abbr>nt</abbr></ref> <ref type="abbreviation" target="gram:accusativus"><abbr>ac</abbr></ref>;</hi> golde ~ sweord <hi rend="italic">mit Golde belegtes Schwert</hi> <ref type="lawCode" target="law:Northleoda">Norðleod</ref> 10; goldfæted <ref type="lawCode" target="law:H">H</ref></dictScrap>
         <xr type="bosworthToller"><ref target="https://bosworthtoller.com/10044">fæted</ref></xr>
+        <xr type="lawCode"><ref target="clause:Northleoda_10">Norðleod 10</ref></xr>
       </entry>
     </body>
   </text>
