@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
@@ -56,18 +59,19 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1385 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 261.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 261: “hec” → “hęc”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2.5">
         <head><ref type="lawCode" target="law:VIIAtr">VII Atr</ref> 2.5</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2.5" corresp="#wit-q">Et sciat omnis presbiter et tungrauius et decimales homines, ut hec elemosina et ieiunium proueniat, sicut in sanctis iurare poterunt.</ab>
-        <ab type="editionText" xml:lang="la" source="#robertson" n="2.5" corresp="#wit-q">Et sciat omnis presbiter et tungravius et decimales homines, ut haec elemosina et ieiunium proveniat, sicut in sanctis iurare poterunt.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2.5" corresp="#wit-q">Et sciat omnis presbiter et tungrauius et decimales homines, ut hęc<ptr type="liebermannNote" n="1" target="#VIIAtr_2-5.lnote.oe.1"/> elemosina<ptr type="liebermannNote" n="2" target="#VIIAtr_2-5.lnote.oe.2"/> et ieiunium proueniat<ptr type="liebermannNote" n="3" target="#VIIAtr_2-5.lnote.oe.3"/>, sicut in sanctis iurare poterunt.</ab>
+        <ab type="editionText" xml:lang="la" source="#robertson" n="2.5" corresp="#wit-q">Et sciat omnis presbiter et tungravius et decimales homines, ut haec elemosina et ieiunium proveniat<ptr type="editorNote" n="1" target="#VIIAtr_2-5.robnote.fn.1"/>, sicut in sanctis iurare poterunt.</ab>
         <ab type="editionText" xml:lang="la" source="#rabin-doml" corresp="#wit-t">Et sciat omnis presbyter et tungravius et decimales homines, ut haec elemosina et ieiunium proveniat, sicut in sanctis iurare poterunt.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und jeder Pfarrer sei Zeuge und der Dorfvogt und die Zehntschaftsvorsteher, dass dies Almosen und Fasten zu Stande kommt, so wie sie auf die Heiligen[-Reliquien] werden beschwören können.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und jeder Pfarrer sei<ptr type="liebermannNote" n="1" target="#VIIAtr_2-5.lnote.de.1"/> Zeuge und der Dorfvogt und die Zehntschaftsvorsteher<ptr type="liebermannNote" n="2" target="#VIIAtr_2-5.lnote.de.2"/>, dass dies Almosen und Fasten zu Stande kommt, so wie sie auf die Heiligen[-Reliquien] werden beschwören können.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let every priest and the village-reeve and the tithing-men witness that this alms and fast is carried out, so that they will be able to swear to it on the relics.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">And every priest and the reeve of every village and the heads of the tithings shall be witnesses that this alms-giving and fasting is carried out, and shall be able to swear to it on the holy relics.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q"><ptr type="editorNote" n="1" target="#VIIAtr_2-5.robnote.n.1"/>And every priest and the reeve of every village<ptr type="editorNote" n="2" target="#VIIAtr_2-5.robnote.n.2"/> and the heads of the tithings<ptr type="editorNote" n="3" target="#VIIAtr_2-5.robnote.n.3"/> shall be witnesses that this alms-giving and fasting is carried out, and shall be able to swear to it on the holy relics<ptr type="editorNote" n="4" target="#VIIAtr_2-5.robnote.n.4"/>.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-t">And let every priest, town reeve, and tithingman oversee the almsgiving and fasting, so that they can swear to it on holy relics.</ab>
         <note type="comparison" source="#liebermann" n="261"><ref target="clause:VIIaAtr_2-3">VIIa Atr 2.3</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. VIIa Poen. 2, 3</note>
@@ -76,6 +80,16 @@
         <note type="textual" source="#rabin-doml">haec elemosina: hae elemosinae Br</note>
         <note type="textual" source="#rabin-doml">proueniat: perueniat HkBr</note>
         <note type="translator" source="#rabin-doml">tithingman: The head of a tithing, an administrative unit consisting of one tenth of a hundred.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIIAtr_2-5.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">261</biblScope></bibl><seg type="original" xml:lang="de">hae elemosinae <hi rend="italic">Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">hae elemosinae Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIIAtr_2-5.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">261</biblScope></bibl><seg type="original" xml:lang="de">elom. <hi rend="italic">M</hi></seg><seg type="translation" xml:lang="en" source="#claude">elom. M</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIIAtr_2-5.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">261</biblScope></bibl><seg type="original" xml:lang="de">peru. <hi rend="italic">MHkBr</hi></seg><seg type="translation" xml:lang="en" source="#claude">peru. MHkBr</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIAtr_2-5.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">180</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">be scriftes ⁊ tunes gerefan gewitnesse</hi> VIIa; auch hier ist ‘Aufsicht’ gemeint. <hi rend="italic">Vgl. Gl</hi> Vogt 15a. b. c; Kircheneinkünfte 5f.</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">be scriftes ⁊ tunes gerefan gewitnesse</hi> VIIa; here too ‘supervision’ is meant. <hi rend="italic">Cf. Gl</hi> Vogt 15a. b. c; Kircheneinkünfte 5f.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIAtr_2-5.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">180</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">teoðingmannes</hi> hatte wohl das Original; auch in Hu 4 setzt dafür irrig Plural Q. Er missversteht wohl auch hier Mitglieder der Zehnerschaft; <hi rend="italic">s. d. Gl</hi> 7b. c; Eidesform 7</seg><seg type="translation" xml:lang="en" source="#claude">The original probably had <hi rend="italic">teoðingmannes</hi>; in Hu 4 too Q wrongly puts the plural for it. Here too he probably misunderstands it as members of the tithing; <hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 7b. c; Eidesform 7</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIAtr_2-5.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">337</biblScope></bibl><seg type="original" xml:lang="en">Cf. VII Atr. A.S. 2, 3.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIAtr_2-5.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">337</biblScope></bibl><seg type="original" xml:lang="en">Cf. <hi rend="italic">tunesgerefa</hi>, VII Atr. A.S.; <hi rend="italic">gerefan</hi>, I As. 4; IV Edg. 1, 5.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIAtr_2-5.robnote.n.3" n="3" source="#robertson"><bibl><biblScope unit="page">337</biblScope></bibl><seg type="original" xml:lang="en">The heads of the tithings are not mentioned in the A.S. text. Perhaps here, as in I Edg. 2, Q has misunderstood a singular as plural.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIAtr_2-5.robnote.n.4" n="4" source="#robertson"><bibl><biblScope unit="page">337</biblScope></bibl><seg type="original" xml:lang="en">Cf. III Atr. 2, 1.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VIIAtr_2-5.robnote.fn.1" n="1" source="#robertson"><bibl><biblScope unit="page">110</biblScope></bibl><label>proveniat</label><seg type="original" xml:lang="en"><hi rend="italic">perv.</hi> H, Hk, Br.</seg></note>
       </div>
     </body>
   </text>

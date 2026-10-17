@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
@@ -56,21 +59,30 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1391 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 261.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 261: “∅; predecessores” → “(Deum); prędecessores”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4.2">
         <head><ref type="lawCode" target="law:VIIAtr">VII Atr</ref> 4.2</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.2" corresp="#wit-q">Et nemo auferat Deo quod ad eum pertinet et predecessores nostri concesserunt ei.</ab>
-        <ab type="editionText" xml:lang="la" source="#robertson" n="4.2" corresp="#wit-q">Et nemo auferat Deo quod ad eum pertinet et praedecessores nostri concesserunt ei.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.2" corresp="#wit-q">Et nemo auferat Deo quod ad eum (Deum<ptr type="liebermannNote" n="13" target="#VIIAtr_4-2.lnote.oe.13"/>) pertinet et prędecessores<ptr type="liebermannNote" n="14" target="#VIIAtr_4-2.lnote.oe.14"/> nostri concesserunt ei.<ptr type="liebermannNote" n="15" target="#VIIAtr_4-2.lnote.oe.15"/></ab>
+        <ab type="editionText" xml:lang="la" source="#robertson" n="4.2" corresp="#wit-q">Et nemo auferat Deo quod ad eum<ptr type="editorNote" n="1" target="#VIIAtr_4-2.robnote.fn.1"/> pertinet et praedecessores<ptr type="editorNote" n="2" target="#VIIAtr_4-2.robnote.fn.2"/> nostri concesserunt ei<ptr type="editorNote" n="3" target="#VIIAtr_4-2.robnote.fn.3"/>.</ab>
         <ab type="editionText" xml:lang="la" source="#rabin-doml" corresp="#wit-t">Et nemo auferat Deo quod ad eum pertinet et praedecessores nostri concesserunt ei.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und niemand nehme Gott fort, was ihm (Gott) gehört und unsere Vorgänger ihm gewährt haben.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und niemand nehme Gott fort, was ihm (Gott) gehört und unsere Vorgänger<ptr type="liebermannNote" n="1" target="#VIIAtr_4-2.lnote.de.1"/> ihm gewährt haben.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let no one take away from God what belongs to him and what our predecessors granted him.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">And no-one shall deprive God of what belongs to him and of what our ancestors granted him.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-q">And no-one shall deprive God of what belongs to him and of what our ancestors<ptr type="editorNote" n="1" target="#VIIAtr_4-2.robnote.n.1"/> granted him.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-t">And no one is to take from God that which belongs to him and which our forebears granted to him.</ab>
         <note type="textual" source="#rabin-doml">eum: Deum BrHkM</note>
         <note type="textual" source="#rabin-doml">ei: omitted Br</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIIAtr_4-2.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">261</biblScope></bibl><seg type="original" xml:lang="de">e. <hi rend="italic">T;</hi> D. <hi rend="italic">MHkBr</hi></seg><seg type="translation" xml:lang="en" source="#claude">e. T; D. MHkBr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIIAtr_4-2.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">261</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so M;</hi> prec. <hi rend="italic">Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">thus M; prec. Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIIAtr_4-2.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">261</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Br</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIAtr_4-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">180</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Reminiszenz an Mat. 22, 21. <hi rend="italic">S. Gl</hi> Gott Z. 5. Unter den Vorgängern (<hi rend="italic">s. o</hi>. 4²) werden neben Eadgar I Em 2, As, EGu 6 gedacht sein. <hi rend="italic">Vgl. þæt we eal gelæstan þæt ure yldran Gode behetan; Hom. n</hi>. Wulfstan 113</seg><seg type="translation" xml:lang="en" source="#claude">Reminiscence of Mat. 22, 21. <hi rend="italic">See Gl</hi> Gott l. 5. By the predecessors (<hi rend="italic">see above</hi> 4²) are probably meant, besides Eadgar, I Em 2, As and EGu 6. <hi rend="italic">Cf. þæt we eal gelæstan þæt ure yldran Gode behetan; Hom. n</hi>. Wulfstan 113</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIAtr_4-2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">337</biblScope></bibl><seg type="original" xml:lang="en"><hi rend="italic">i.e.</hi> Edward, Æthelstan, Edmund and Edgar, cf. E. and G. 6; I As. Pre. 1; I Edm. 2; II Edg. 3; 3, 1; IV, 1, 4 and 6; Wulfstan, p. 113.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VIIAtr_4-2.robnote.fn.1" n="1" source="#robertson"><bibl><biblScope unit="page">112</biblScope></bibl><label>eum</label><seg type="original" xml:lang="en"><hi rend="italic">Deum</hi> M, Hk, Br.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VIIAtr_4-2.robnote.fn.2" n="2" source="#robertson"><bibl><biblScope unit="page">112</biblScope></bibl><label>praedecessores</label><seg type="original" xml:lang="en"><hi rend="italic">praec.</hi> Br.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VIIAtr_4-2.robnote.fn.3" n="3" source="#robertson"><bibl><biblScope unit="page">112</biblScope></bibl><label>ei</label><seg type="original" xml:lang="en">Om. Br.</seg></note>
       </div>
     </body>
   </text>
