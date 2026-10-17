@@ -10,6 +10,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +29,7 @@
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -52,20 +55,28 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 737 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 737 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 150.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 150: “(Aethelstans Gesetze. H)” → “(Aethelstans Gesetze. H) (expanded letters in italics: H)”.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Attenborough, p. 127: “Æthelstan's ordinances.” → “Æthelstan’s Ordinances.”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Inscr.">
         <head><ref type="lawCode" target="law:IIAs">II As</ref> Inscr.</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="II As. Inscr." corresp="#wit-h">Æþelstanes gerænesse.</ab>
-        <ab type="editionText" xml:lang="ang" source="#attenborough" corresp="#wit-h">Æþelstanes gerædnesse.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">Æthelstan's ordinances.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">(Aethelstans Gesetze. H)</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="II As. Inscr." corresp="#wit-h"><ptr type="liebermannNote" n="1" target="#IIAs_Inscr.lnote.oe.1"/><ptr type="liebermannNote" n="*" target="#IIAs_Inscr.lnote.oe.star"/>Æþelstanes gerænesse.<ptr type="liebermannNote" n="1" target="#IIAs_Inscr.lnote.oe.1-2"/></ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" corresp="#wit-h">Æþelstanes gerædnesse<ptr type="editorNote" n="1" target="#IIAs_Inscr.attnote.fn.1"/>.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">Æthelstan’s Ordinances.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Aethelstans<ptr type="liebermannNote" n="1" target="#IIAs_Inscr.lnote.de.1"/> Gesetze.<ptr type="liebermannNote" n="2" target="#IIAs_Inscr.lnote.de.2"/> <hi rend="italic">H</hi>)</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Æthelstan's laws. H)</ab>
         <note type="editorial">Heading only in H (in red), after Walreaf; Liebermann would correct to ‘gerædn.’. B has no heading, so K is empty. Base text B = CCCC 383 (c. 1130); H = Textus Roffensis; Ot = Cotton Otho B XI (burnt; here mostly known from Somner's transcript, So).</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_Inscr.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">150</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">hinter</hi> Walreaf (<hi rend="italic">Schmids App. XV</hi>) Æ.g.<hi rend="italic">roth. Prol. fehlt; vgl. Epilog</hi></seg><seg type="translation" xml:lang="en" source="#claude">after Walreaf (Schmid's App. XV) Æ.g. in red. Prol. missing; cf. Epilogue</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_Inscr.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">150</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">bessere</hi> gerædn.; <hi rend="italic">wie o. S.</hi> 138</seg><seg type="translation" xml:lang="en" source="#claude">read gerædn.; as above p. 138</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_Inscr.lnote.oe.1-2" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">166</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">hinter</hi> II As. <hi rend="italic">nach Absatz, ohne Überschrift</hi></seg><seg type="translation" xml:lang="en" source="#claude">after II As., following a paragraph break, without a heading</seg><note type="remark" resp="#claude">Liebermann’s note on the head of the column (the manuscript)</note></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIAs_Inscr.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">101</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Die Überschrift ist nicht archetyp, da sie nur in H und Q <hi rend="smallcaps">ii</hi> vorkommt, und in ihnen nicht gleich, sondern ebenso verschieden wie die vor anderen Stücken derselben Kompilatoren lautet</seg><seg type="translation" xml:lang="en" source="#claude">The heading is not archetypal, since it occurs only in H and Q <hi rend="smallcaps">ii</hi>, and is not identical in them but differs just as the headings before other pieces by the same compilers do</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIAs_Inscr.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">101</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Die späte Zeit H's macht möglich, die Endung <hi rend="italic">-esse</hi> auch für Sing. zu halten. Ist es Plural, so meinte H entweder II As allein oder begriff vielleicht V As, das unmittelbar folgt, mit darunter. — Das <hi rend="italic">-d-</hi> fehlt H auch I Ew Insc¹</seg><seg type="translation" xml:lang="en" source="#claude">The late date of H makes it possible to take the ending <hi rend="italic">-esse</hi> as singular too. If it is plural, H meant either II As alone or perhaps included under it V As, which immediately follows. — H also lacks the <hi rend="italic">-d-</hi> at I Ew Insc¹</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IIAs_Inscr.attnote.fn.1" n="1" source="#attenborough"><bibl><biblScope unit="page">126</biblScope></bibl><label>gerædnesse</label><seg type="original" xml:lang="en"><hi rend="italic">gerænesse</hi>. H.</seg></note>
       </div>
     </body>
   </text>

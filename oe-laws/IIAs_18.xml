@@ -10,6 +10,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +29,7 @@
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -54,8 +57,13 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 771 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 771 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 158.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 158: “Seofoðe: þæt nan mon ne sylle nan hors ofer sǽ, buton he hit gifan wille.” → “Seofoðe: þæt nan mon ne sylle nan hors ofer sǽ, buton he hit gifan wille. (expanded letters in italics: æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 158: “…, …; …” → “. ., . .; . . . . .”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 158: “(Von Pferden. Ld) Siebentens: dass niemand ein Pferd über See veräussere, es sei denn, er wolle es verschenken.” → “(Von Pferden. Ld) Siebentens: dass niemand ein Pferd über See veräussere, es sei denn, er wolle es verschenken. (expanded letters in italics: Ld)”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Attenborough, p. 136: “[Ld]; sǽ,” → “∅; sǽ,”.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Attenborough, p. 137: “Seventhly” → “Seventhly:”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -63,13 +71,20 @@
       <div type="clause" n="18">
         <head><ref type="lawCode" target="law:IIAs">II As</ref> 18</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18" corresp="#wit-ld">Be horsum. Nán man ne sylle nan hors ofer sæ, butan he hit gyfan wille.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18" corresp="#wit-h">Seofoðe: þæt nan mon ne sylle nan hors ofer sǽ, buton he hit gifan wille.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18" corresp="#wit-ot">Seofoþ …, … n he hit g …</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="18" corresp="#wit-q">Septimum: (Diximus enim) ne quis uendat (dimittat) equum ultra mare, nisi uelit eum dare.</ab>
-        <ab type="editionText" xml:lang="ang" source="#attenborough" n="18" corresp="#wit-h">[Be horsum.] [Ld] Seofoðe: þæt nan mon ne sylle nan hors ofer sǽ, buton he hit gifan wille.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">Seventhly [we declare] that no man shall send any horse across the sea unless he wishes to make a present of it.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">(Von Pferden. Ld) Siebentens: dass niemand ein Pferd über See veräussere, es sei denn, er wolle es verschenken.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18" corresp="#wit-h">Seofoðe: þ<hi rend="italic">æt</hi> nan mon<ptr type="liebermannNote" n="3" target="#IIAs_18.lnote.oe.3"/> ne sylle<ptr type="liebermannNote" n="2" target="#IIAs_18.lnote.oe.2"/> nan hors ofer sǽ, buton<ptr type="liebermannNote" n="3" target="#IIAs_18.lnote.oe.3"/> he hit gifan wille.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="18" corresp="#wit-ot">Seofoþ . ., . . n he hit g . . . . .</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="18" corresp="#wit-q">Septimum<ptr type="liebermannNote" n="39" target="#IIAs_18.lnote.oe.39"/>: (Diximus enim) ne quis uendat<ptr type="liebermannNote" n="40" target="#IIAs_18.lnote.oe.40"/> (dimittat) equum ultra mare, nisi uelit eum dare.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="18" corresp="#wit-h">[Be horsum.]<ptr type="editorNote" n="9" target="#IIAs_18.attnote.fn.9"/> Seofoðe: þæt nan mon ne sylle nan hors ofer sǽ, buton he hit gifan wille.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">Seventhly: [we declare] that no man shall send any horse across the sea unless he wishes to make a present of it.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Von Pferden. <hi rend="italic">Ld</hi>) Siebentens: dass niemand ein Pferd<ptr type="liebermannNote" n="1" target="#IIAs_18.lnote.de.1"/> über See veräussere, es sei denn, er wolle es verschenken.<ptr type="liebermannNote" n="2" target="#IIAs_18.lnote.de.2"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of horses. Ld) Seventhly: that no one dispose of a horse across the sea, unless he wishes to give it away.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_18.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">158</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_18.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">158</biblScope></bibl><seg type="original" xml:lang="de">y <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">y on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_18.lnote.oe.39" n="39" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">159</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">nur</hi> Se. <hi rend="italic">RT; nur</hi> Di. e. <hi rend="italic">KOr; beides fehlt MHkBr, wo aber Rubrik:</hi> De equo [<hi rend="italic">ergänze</hi> non?] locando ultra mare.</seg><seg type="translation" xml:lang="en" source="#claude">only Se. RT; only Di. e. KOr; both lacking in MHkBr, which, however, have the rubric: De equo [supply non?] locando ultra mare.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_18.lnote.oe.40" n="40" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">159</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">nur</hi> u. <hi rend="italic">Lond; nur</hi> di. <hi rend="italic">übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">only u. Lond; only di. the others</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIAs_18.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">105</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Pferd 7. Über Verschiffung von Pferden durch die Wikinger <hi rend="italic">s.</hi> Steenstrup <hi rend="italic">Danelag</hi> 137. Die Normannen brachten 1066 ihre Pferde nach England hinüber</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Pferd 7. On the shipping of horses by the Vikings see Steenstrup <hi rend="italic">Danelag</hi> 137. The Normans brought their horses over to England in 1066</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIAs_18.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">105</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Ende des Einschiebsels; <hi rend="italic">s. o.</hi> 13</seg><seg type="translation" xml:lang="en" source="#claude">End of the interpolation; <hi rend="italic">see above</hi> 13</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IIAs_18.attnote.fn.9" n="9" source="#attenborough"><bibl><biblScope unit="page">136</biblScope></bibl><label>horsum</label><seg type="original" xml:lang="en">Ld.</seg></note>
       </div>
     </body>
   </text>

@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">422</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -55,8 +58,12 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 780 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 780 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 160.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 160: “h…; …h” → “h . . .; . . . . h”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 160: “Wenn (aber Ot Ld) jemand ihn rächen will oder einen von jenen [Rechtsvollstreckern] (ihn H) befehdet, der sei dann Feind [friedlos] gegenüber dem König und allen Freunden des letzteren.” → “Wenn (aber Ot Ld) jemand ihn rächen will oder einen von jenen [Rechtsvollstreckern] (ihn H) befehdet, der sei dann Feind [friedlos] gegenüber dem König und allen Freunden des letzteren. (expanded letters in italics: Ot Ld, H)”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Attenborough, p. 138: “fǽlæce,” → “fǽlæce,”.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Attenborough, p. 139: “him]” → “him],”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -64,16 +71,23 @@
       <div type="clause" n="20.7">
         <head><ref type="lawCode" target="law:IIAs">II As</ref> 20.7</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20.7" corresp="#wit-ld">Gif hine ðonne hwa awrecan wille oþþe heora ænigne falæce, ðonne sy he fah wiþ ðone cyng ⁊ wiþ ealle his freond.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20.7" corresp="#wit-h">Gif hwa hine wrecan wille oððe hine fǽlæce, þonne beo he fah wið ðone cyng ⁊ wið ealle his freond.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20.7" corresp="#wit-ot">Gif h… þonne wrecan wille oððe heora ænigne falæce, …h wið ðone cing ⁊ wið ealle his friend.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20.7" corresp="#wit-h">Gif hwa hine wrecan wille oððe hine<ptr type="liebermannNote" n="**" target="#IIAs_20-7.lnote.oe.star2"/> fǽlæce, þonne beo he fah wið ðone cyng ⁊ wið ealle his freond.<ptr type="liebermannNote" n="18" target="#IIAs_20-7.lnote.oe.18"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20.7" corresp="#wit-ot">Gif h . . . þon<hi rend="italic">ne</hi> wrecan wille oððe heora ænigne falæce, . . . . h wið ðone cing ⁊ wið ealle his friend.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="20.7" corresp="#wit-q">Si quis eum uindicare presumat uel aliquem perimat, sit inimicus regis et omnium amicorum eius.</ab>
-        <ab type="editionText" xml:lang="ang" source="#attenborough" n="20.7" corresp="#wit-h">Gif hwa hine wrecan wille oððe [heora ænigne] fǽlæce, þonne beo he fah wið ðone cyng ⁊ wið ealle his freond.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And if anyone tries to avenge him, or institutes a vendetta against any of them [who slew him] then he shall incur the hostility of the king and all his friends.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="20.7" corresp="#wit-h">Gif hwa hine wrecan<ptr type="editorNote" n="5" target="#IIAs_20-7.attnote.fn.5"/> wille oððe [heora ænigne]<ptr type="editorNote" n="6" target="#IIAs_20-7.attnote.fn.6"/> fǽlæce, þonne beo<ptr type="editorNote" n="7" target="#IIAs_20-7.attnote.fn.7"/> he fah wið ðone cyng ⁊ wið ealle his freond.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And if anyone tries to avenge him, or institutes a vendetta against any of them [who slew him], then he shall incur the hostility of the king and all his friends.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">If anyone wishes to avenge him or carry on a feud against any of them, he is to be at enmity with the king and all the king’s friends.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn (aber Ot Ld) jemand ihn rächen will oder einen von jenen [Rechtsvollstreckern] (ihn H) befehdet, der sei dann Feind [friedlos] gegenüber dem König und allen Freunden des letzteren.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn (aber <hi rend="italic">Ot Ld</hi>) jemand ihn rächen will oder einen von jenen [Rechtsvollstreckern] (ihn <hi rend="italic">H</hi>) befehdet<ptr type="liebermannNote" n="1" target="#IIAs_20-7.lnote.de.1"/>, der sei dann Feind<ptr type="liebermannNote" n="2" target="#IIAs_20-7.lnote.de.2"/> [friedlos] gegenüber dem König und allen Freunden des letzteren.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If (however, Ot Ld) anyone wishes to avenge him or attacks one of those [executing the law] (him, H), let him then be an enemy [outlaw] to the king and to all his friends.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IIIEm_2">III Em 2</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="312"><ref target="clause:IIIEm_2">III Em 2</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_20-7.lnote.oe.star2" n="**" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">160</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">besser</hi> heora ænigne <hi rend="italic">aus Ot Ld Quadr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">better heora ænigne from Ot Ld Quadr.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_20-7.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">160</biblScope></bibl><seg type="original" xml:lang="de">eo <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">eo on an erasure</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIAs_20-7.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">106</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Wahrscheinlich <hi rend="italic">falæce</hi> übs. durch <hi rend="italic">infaidiabit</hi> Q zu III Em 2; <hi rend="italic">perimat</hi> hier gibt den gewöhnlichen Erfolg der Fehde</seg><seg type="translation" xml:lang="en" source="#claude">Q probably translates <hi rend="italic">falæce</hi> by <hi rend="italic">infaidiabit</hi> on III Em 2; <hi rend="italic">perimat</hi> here gives the usual outcome of the feud</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIAs_20-7.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">106</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Schon <hi rend="italic">o.</hi> 6, 2 droht Friedlosigkeit dem blutigen Rächer des Verbrechers. Über diesen Ausdruck <hi rend="italic">s. Gl</hi> friedlos 1 n. 10 b; Blutrache 14 m</seg><seg type="translation" xml:lang="en" source="#claude">Already in 6, 2 <hi rend="italic">above</hi>, outlawry is threatened against anyone who takes bloody vengeance for the criminal. On this expression see <hi rend="italic">Gl</hi> friedlos 1 n. 10 b; Blutrache 14 m</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IIAs_20-7.attnote.fn.5" n="5" source="#attenborough"><bibl><biblScope unit="page">138</biblScope></bibl><label>wrecan</label><seg type="original" xml:lang="en"><hi rend="italic">Gif hine ðonne hwa awrecan</hi>. Ld.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IIAs_20-7.attnote.fn.6" n="6" source="#attenborough"><bibl><biblScope unit="page">138</biblScope></bibl><label>ænigne</label><seg type="original" xml:lang="en">Ld, Ot. <hi rend="italic">hine</hi>. H.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IIAs_20-7.attnote.fn.7" n="7" source="#attenborough"><bibl><biblScope unit="page">138</biblScope></bibl><label>beo</label><seg type="original" xml:lang="en"><hi rend="italic">sy</hi>. Ld.</seg></note>
       </div>
     </body>
   </text>

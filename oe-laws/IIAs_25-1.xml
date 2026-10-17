@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +28,7 @@
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">422</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -54,7 +56,7 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 792 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 792 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 164.</change>
     </revisionDesc>
   </teiHeader>
@@ -62,15 +64,24 @@
     <body>
       <div type="clause" n="25.1">
         <head><ref type="lawCode" target="law:IIAs">II As</ref> 25.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25.1" corresp="#wit-ld">⁊ se bisceope amanige ða oferhyrnysse æt ðæm gerefan, ðe on his folgoþe sy.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25.1" corresp="#wit-h">Ond se biscop amonige þa oferhyrnesse æt þam gerefan, þe hit on his folgoþe sy.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="25.1" corresp="#wit-q">Et episcopus admoneat ouerhyrnessam illam a preposito, in cuius hoc mannitione sit.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25.1" corresp="#wit-ld">⁊ se bisceope<ptr type="liebermannNote" n="1" target="#IIAs_25-1.lnote.oe.1"/> amanige ða oferhyrnysse æt ðæm gerefan, ðe on his folgoþe sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25.1" corresp="#wit-h">Ond<ptr type="liebermannNote" n="3" target="#IIAs_25-1.lnote.oe.3"/> se biscop amonige þa oferhyrnesse<ptr type="liebermannNote" n="8" target="#IIAs_25-1.lnote.oe.8"/> æt þam gerefan, þe hit on his folgoþe sy.<ptr type="liebermannNote" n="8" target="#IIAs_25-1.lnote.oe.8"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="25.1" corresp="#wit-q">Et episcopus admoneat<ptr type="liebermannNote" n="20" target="#IIAs_25-1.lnote.oe.20"/> ouerhyrnessam<ptr type="liebermannNote" n="17" target="#IIAs_25-1.lnote.oe.17"/> illam a preposito, in cuius hoc mannitione<ptr type="liebermannNote" n="21" target="#IIAs_25-1.lnote.oe.21"/> sit.</ab>
         <ab type="editionText" xml:lang="ang" source="#attenborough" n="25.1" corresp="#wit-h">Ond se biscop amonige þa oferhyrnesse æt þam gerefan, þe hit on his folgoþe sy.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And the fine for insubordination shall be exacted from the reeve by the bishop, within whose diocese the offence is perpetrated.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">And the bishop in whose diocese it lies is to exact the fine for disobedience from the reeve.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und derjenige Bischof treibe diese Ungehorsamsbusse von dem Vogte ein, der es in dessen Amtsbezirk ist.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und derjenige Bischof treibe diese Ungehorsamsbusse von dem Vogte<ptr type="liebermannNote" n="1" target="#IIAs_25-1.lnote.de.1"/> ein, der es in dessen<ptr type="liebermannNote" n="2" target="#IIAs_25-1.lnote.de.2"/> Amtsbezirk<ptr type="liebermannNote" n="3" target="#IIAs_25-1.lnote.de.3"/> ist.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let the bishop in whose district it is exact this disobedience-fine from the reeve.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IIIEg_3">III Eg 3</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_25-1.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">164</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_25-1.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">164</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_25-1.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">164</biblScope></bibl><seg type="original" xml:lang="de">y <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">y on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_25-1.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">165</biblScope></bibl><seg type="original" xml:lang="de">adm. — mans. sit <hi rend="italic">überspringt K;</hi> -net <hi rend="italic">Or;</hi> moneat <hi rend="italic">MHkBr</hi></seg><seg type="translation" xml:lang="en" source="#claude">K skips adm. — mans. sit; -net Or; moneat MHkBr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_25-1.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">165</biblScope></bibl><seg type="original" xml:lang="de">-hir- <hi rend="italic">R;</hi> -her- <hi rend="italic">KM</hi></seg><seg type="translation" xml:lang="en" source="#claude">-hir- R; -her- KM</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_25-1.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">165</biblScope></bibl><seg type="original" xml:lang="de">manit. <hi rend="italic">MHkBr;</hi> mansione <hi rend="italic">Or</hi></seg><seg type="translation" xml:lang="en" source="#claude">manit. MHkBr; mansione Or</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIAs_25-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">107</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Ebenso III Eg 3; <hi rend="italic">vgl. Gl</hi> Vogt 9. 24; Bischof 10 a. 8 c</seg><seg type="translation" xml:lang="en" source="#claude">Likewise III Eg 3; <hi rend="italic">cf. Gl</hi> Vogt 9. 24; Bischof 10 a. 8 c</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIAs_25-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">107</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Bessere Übs.: ‘in dessen Diözese es ist’ — ich hatte die Agsä. Redensart (<hi rend="italic">s. Wb</hi> 183 Sp. 1 D) verkannt — gegen Q (<hi rend="italic">mannitio,</hi> Frankolatein [Brunner II 330]: ‘weltlicher Amtsbezirk’) und Toller (‘reeve in whose service’). Es soll nämlich bestimmt werden, welcher <hi rend="spaced">Bischof</hi> fungiert, nicht welcher Vogt gestraft wird</seg><seg type="translation" xml:lang="en" source="#claude">A better translation is ‘in whose diocese it is’ — I had misunderstood the A.-S. idiom (see <hi rend="italic">Wb</hi> 183 col. 1 D) — against Q (<hi rend="italic">mannitio,</hi> Franco-Latin [Brunner II 330]: ‘secular administrative district’) and Toller (‘reeve in whose service’). For the purpose is to determine which <hi rend="italic">bishop</hi> acts, not which reeve is punished</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIAs_25-1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">107</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">folgoð</hi> ‘Amt eines Bischofs’: Urk. a. 967 Bi 1206</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">folgoð</hi> ‘office of a bishop’: charter a. 967 Bi 1206</seg></note>
       </div>
     </body>
   </text>

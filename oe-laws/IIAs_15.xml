@@ -10,6 +10,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +29,7 @@
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">421</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -53,23 +56,39 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 768 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 768 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 158.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 158: “…]; …; …” → “. . .]; . . .; . . .”.</change>
+      <change when="2026-10" type="checked">Liebermann’s Latin text corrected against Gesetze I, p. 158: “scyldpyrhta” → “scyldƿyrhta”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 158: “(Von Schildmachern. So Ld) Viertens (Wir bestimmten Ld): dass kein Schildmacher ein Schafsfell auf den Schild lege; und wenn er es thut, zahle er 30 Schill. [dem König].” → “(Von Schildmachern. So Ld) Viertens (Wir bestimmten Ld): dass kein Schildmacher ein Schafsfell auf den Schild lege; und wenn er es thut, zahle er 30 Schill. [dem König]. (expanded letters in italics: So Ld, Ld)”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Attenborough, p. 136: “[Ld]; ∅” → “∅; hit”.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Attenborough, p. 137: “Fourthly” → “Fourthly:”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="15">
         <head><ref type="lawCode" target="law:IIAs">II As</ref> 15</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15" corresp="#wit-ld">Be scyldwyrhtum. We cwædon, þ<hi rend="italic">æt</hi> nán scyldwyrhta ne lecge nán sceapes felle on scyld; ⁊ gif he hit dó, gylde XXX scill.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15" corresp="#wit-h">Feorðe: þæt nan scyldwyrhta ne lecge nan scepes fel on scyld; ⁊ gif he hit dó, gilde XXX scll'.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15" corresp="#wit-ot">[Be scyld …] Feorðe: þæt nan … ecgge nan scepes fell on sceld; ⁊ gif he hit …</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="15" corresp="#wit-q">De scuta facientibus. Et nullus scyldpyrhta (id est scutum faciens) ponat pellem ouis in scuto. Si quis hoc faciat, emendet XXX sol.</ab>
-        <ab type="editionText" xml:lang="ang" source="#attenborough" n="15" corresp="#wit-h">[Be scyldwyrhtum.] [Ld] Feorðe: þæt nan scyldwyrhta ne lecge nan scepes fel on scyld; ⁊ gif he dó, gilde XXX scll'.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">Fourthly [we declare] that no shield-maker shall cover a shield with sheepskin. If he does he shall pay 30 shillings.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15" corresp="#wit-ld">Be scyldwyrhtum. We cwædon, þ<hi rend="italic">æt</hi> nán scyldwyrhta ne lecge nán sceapes felle<ptr type="liebermannNote" n="1" target="#IIAs_15.lnote.oe.1"/> on scyld; ⁊ gif he hit dó, gylde XXX scill.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15" corresp="#wit-h">Feorðe: þæt nan scyldwyrhta ne lecge nan scepes fel<ptr type="liebermannNote" n="13" target="#IIAs_15.lnote.oe.13"/> on scyld; ⁊ gif he hit dó, gilde XXX scll'.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15" corresp="#wit-ot">[Be scyld<ptr type="liebermannNote" n="**" target="#IIAs_15.lnote.oe.star2"/> . . .] Feorðe: þ<hi rend="italic">æt</hi> nan . . . ecgge nan scepes fell on sceld; ⁊ gif he hit . . .</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="15" corresp="#wit-q">De<ptr type="liebermannNote" n="27" target="#IIAs_15.lnote.oe.27"/> scuta facientibus. Et nullus scyldƿyrhta<ptr type="liebermannNote" n="28" target="#IIAs_15.lnote.oe.28"/> (id est scutum faciens) ponat pellem ouis in<ptr type="liebermannNote" n="29" target="#IIAs_15.lnote.oe.29"/> scuto. Si quis hoc faciat, emendet XXX sol.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="15" corresp="#wit-h">[Be scyldwyrhtum.]<ptr type="editorNote" n="1" target="#IIAs_15.attnote.fn.1"/> Feorðe: þæt<ptr type="editorNote" n="2" target="#IIAs_15.attnote.fn.2"/> nan scyldwyrhta ne lecge nan scepes fel<ptr type="editorNote" n="3" target="#IIAs_15.attnote.fn.3"/> on scyld; ⁊ gif he hit dó, gilde XXX scll'.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">Fourthly: [we declare] that no shield-maker shall cover a shield with sheepskin. If he does he shall pay 30 shillings.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">Fourthly: that no shieldmaker is to put any sheepskin on a shield, and if he does so, he is to pay 30 shillings.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">(Von Schildmachern. So Ld) Viertens (Wir bestimmten Ld): dass kein Schildmacher ein Schafsfell auf den Schild lege; und wenn er es thut, zahle er 30 Schill. [dem König].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Von Schildmachern. <hi rend="italic">So Ld</hi>) Viertens (Wir bestimmten <hi rend="italic">Ld</hi>): dass kein Schildmacher ein Schafsfell<ptr type="liebermannNote" n="1" target="#IIAs_15.lnote.de.1"/> auf den Schild lege; und wenn er es thut, zahle er 30 Schill. [dem König<ptr type="liebermannNote" n="2" target="#IIAs_15.lnote.de.2"/>].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of shield-makers. So Ld) Fourthly (We determined, Ld): that no shield-maker put a sheepskin on a shield; and if he does it, let him pay 30 shillings [to the king].</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_15.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">158</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_15.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">158</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">geänd.</hi> fell</seg><seg type="translation" xml:lang="en" source="#claude">altered to fell</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_15.lnote.oe.27" n="27" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">159</biblScope></bibl><seg type="original" xml:lang="de">Et de, <hi rend="italic">kein neues Capitel T</hi></seg><seg type="translation" xml:lang="en" source="#claude">Et de, no new chapter T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_15.lnote.oe.28" n="28" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">159</biblScope></bibl><seg type="original" xml:lang="de">sceldpirhte <hi rend="italic">MHk;</hi> scildpircta <hi rend="italic">T;</hi> -pica <hi rend="italic">KOr</hi></seg><seg type="translation" xml:lang="en" source="#claude">sceldpirhte MHk; scildpircta T; -pica KOr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_15.lnote.oe.29" n="29" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">159</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt TMHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in TMHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIAs_15.lnote.oe.star2" n="**" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">158</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">hier bricht So ab</hi></seg><seg type="translation" xml:lang="en" source="#claude">So breaks off here</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIAs_15.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">105</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. Gl</hi> Fell 2; Schild 4. Die Rüstung des Volks soll dauerhaft sein. Auf diesen Satz bezieht sich III 8. Auch II 13. 16. 18 sorgen für die Wehrkraft. Über den Agsā. Schild in Funden <hi rend="italic">s.</hi> Fairholt <hi rend="italic">Costume in Engl.</hi> 49; Baye <hi rend="italic">Industrie Anglosax.</hi> 37</seg><seg type="translation" xml:lang="en" source="#claude">See <hi rend="italic">Gl</hi> Fell 2; Schild 4. The people’s armour is to be durable. III 8 refers to this sentence. II 13. 16. 18 also provide for military strength. On the Anglo-Saxon shield in finds see Fairholt <hi rend="italic">Costume in Engl.</hi> 49; Baye <hi rend="italic">Industrie Anglosax.</hi> 37</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIAs_15.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">105</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Das kleine Strafgeldfixum; <hi rend="italic">s. d. Gl</hi> 4. 7</seg><seg type="translation" xml:lang="en" source="#claude">The small fixed fine; <hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 4. 7</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IIAs_15.attnote.fn.1" n="1" source="#attenborough"><bibl><biblScope unit="page">136</biblScope></bibl><label>scyldwyrhtum</label><seg type="original" xml:lang="en">Ld.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IIAs_15.attnote.fn.2" n="2" source="#attenborough"><bibl><biblScope unit="page">136</biblScope></bibl><label>þæt</label><seg type="original" xml:lang="en"><hi rend="italic">we cwædon þæt</hi>. Ld.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IIAs_15.attnote.fn.3" n="3" source="#attenborough"><bibl><biblScope unit="page">136</biblScope></bibl><label>fel</label><seg type="original" xml:lang="en"><hi rend="italic">sceapes felle</hi>. Ld.</seg></note>
       </div>
     </body>
   </text>
