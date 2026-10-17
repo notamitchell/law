@@ -8,6 +8,8 @@
         <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +26,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">171</biblScope></bibl>
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-q" rend="bold"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
@@ -46,21 +49,37 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 818 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 818 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 171.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 171: “que” → “quę”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Attenborough, p. 148: “fuerent,” → “fuerunt,”.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Attenborough, p. 149: “continually” → “continuously”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3.2">
         <head><ref type="lawCode" target="law:IVAs">IV As</ref> 3.2</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.2" corresp="#wit-q">Hoc autem igitur est, quia iuramenta et uadia, que regi et sapientibus suis data fuerunt, superinfracta sunt et minus obseruata quam (pro) Deo et seculo conueniat.</ab>
-        <ab type="editionText" xml:lang="ang" source="#attenborough" n="3.2" corresp="#wit-q">Hoc autem igitur est quia iuramenta et vadia, quæ regi et sapientibus suis data fuerent, semper infracta sunt et minus observata quam pro Deo et seculo conveniat.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-q">And the reason for this is that the oaths and pledges which were given to the king and his councillors have been continually violated, or observed less strictly than is acceptable to God and to the secular authority.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.2" corresp="#wit-q">Hoc<ptr type="liebermannNote" n="27" target="#IVAs_3-2.lnote.oe.27"/><ptr type="liebermannNote" n="a" target="#IVAs_3-2.lnote.oe.a"/> autem igitur est, quia iuramenta et uadia, quę regi et sapientibus suis data fuerunt<ptr type="liebermannNote" n="28" target="#IVAs_3-2.lnote.oe.28"/>, superinfracta<ptr type="liebermannNote" n="29" target="#IVAs_3-2.lnote.oe.29"/><ptr type="liebermannNote" n="b" target="#IVAs_3-2.lnote.oe.b"/> sunt et minus obseruata quam (pro<ptr type="liebermannNote" n="30" target="#IVAs_3-2.lnote.oe.30"/>) Deo<ptr type="liebermannNote" n="c" target="#IVAs_3-2.lnote.oe.c"/> et<ptr type="liebermannNote" n="31" target="#IVAs_3-2.lnote.oe.31"/> seculo conueniat.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="3.2" corresp="#wit-q">Hoc autem igitur est quia iuramenta et vadia, quæ regi et sapientibus suis data fuerunt, semper infracta<ptr type="editorNote" n="1" target="#IVAs_3-2.attnote.fn.1"/> sunt et minus observata quam pro Deo<ptr type="editorNote" n="2" target="#IVAs_3-2.attnote.fn.2"/> et seculo conveniat.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-q">And the reason for this is that the oaths and pledges which were given to the king and his councillors have been continuously violated<ptr type="editorNote" n="1" target="#IVAs_3-2.attnote.n.1"/>, or observed<ptr type="editorNote" n="2" target="#IVAs_3-2.attnote.n.2"/> less strictly than is acceptable to God and to the secular authority.</ab>
         <note type="comparison" source="#liebermann" n="171"><ref target="clause:VAs_Prol-to-3">V As Pr. 3</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. ebd.</note>
         <note type="comparedBy" source="#wormald-ppmel" n="115"><ref target="clause:VAs_Prol-to-3">V As Prol.3</ref></note>
         <note type="editorial">Latin only; no German translation in Liebermann. Liebermann compares V As Prol. 3.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_3-2.lnote.oe.27" n="27" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">171</biblScope></bibl><seg type="original" xml:lang="de">3, 2 <hi rend="italic">fehlt Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">3, 2 lacking in Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_3-2.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">171</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Die Buchstabennoten beziehen sich auf die Erklärungen in Band II.</hi></seg><seg type="translation" xml:lang="en" source="#claude">The letter notes refer to the commentary in Volume II.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_3-2.lnote.oe.28" n="28" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">171</biblScope></bibl><seg type="original" xml:lang="de">-rint <hi rend="italic">Or</hi></seg><seg type="translation" xml:lang="en" source="#claude">-rint Or</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_3-2.lnote.oe.29" n="29" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">171</biblScope></bibl><seg type="original" xml:lang="de">semper infr. <hi rend="italic">RTMHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">semper infr. RTMHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_3-2.lnote.oe.30" n="30" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">171</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">aus RTMHk; fehlt Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">from RTMHk; lacking in Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_3-2.lnote.oe.31" n="31" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">171</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt MHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in MHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_3-2.lnote.oe.a-2" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">113</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Das Volk (<hi rend="italic">s. d. Gl</hi> 4b) schwört auf die Gesetze dem König und den Witan (<hi rend="italic">s. d. Gl</hi> 3), als der Regierung</seg><seg type="translation" xml:lang="en" source="#claude">The people (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 4b) swear an oath on the laws to the king and the witan (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 3), as the government</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_3-2.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">113</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Entweder verderbt aus <hi rend="italic">superexcepta et infracta</hi> V Pro 3; oder Vorlage hatte <hi rend="italic">oferbrocen</hi> ‘verletzt’, das von Abreden und Verträgen gesagt vorkommt; Toller aus Ælfreds <hi rend="italic">Orosius</hi></seg><seg type="translation" xml:lang="en" source="#claude">Either corrupted from <hi rend="italic">superexcepta et infracta</hi> V Pro 3; or the exemplar had <hi rend="italic">oferbrocen</hi> ‘violated’, which is found used of agreements and treaties; Toller, from Ælfred's <hi rend="italic">Orosius</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_3-2.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">113</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">aus <hi rend="italic">God ⁊ woruld</hi></seg><seg type="translation" xml:lang="en" source="#claude">from <hi rend="italic">God ⁊ woruld</hi></seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IVAs_3-2.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">210</biblScope></bibl><seg type="original" xml:lang="en">Liebermann suggests that <hi rend="italic">superinfracta</hi> (Lond.), which he adopts, is either a corruption of <hi rend="italic">superexcepta et infracta</hi>, V As. Pr. 3, Quadr., or that the original Anglo-Saxon MS had <hi rend="italic">oferbrocen</hi>. But may it not be a scribal error for <hi rend="italic">semper infracta</hi>?</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IVAs_3-2.attnote.n.2" n="2" source="#attenborough"><bibl><biblScope unit="page">210</biblScope></bibl><seg type="original" xml:lang="en">Cf. V As. Pr. § 3.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IVAs_3-2.attnote.fn.1" n="1" source="#attenborough"><bibl><biblScope unit="page">148</biblScope></bibl><label>infracta</label><seg type="original" xml:lang="en">R, T, M, Hk. <hi rend="italic">superinfracta</hi>. Lond.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IVAs_3-2.attnote.fn.2" n="2" source="#attenborough"><bibl><biblScope unit="page">148</biblScope></bibl><label>Deo</label><seg type="original" xml:lang="en"><hi rend="italic">quam Deo</hi>. Lond.</seg></note>
       </div>
     </body>
   </text>

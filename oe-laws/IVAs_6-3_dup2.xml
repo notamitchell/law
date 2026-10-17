@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -25,6 +26,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">171</biblScope></bibl>
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h-frag"><abbr>H (frag.)</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -46,20 +48,24 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 834 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 834 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 171.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Attenborough, p. 149: “thief” → “thief,”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6.3">
         <head><ref type="lawCode" target="law:IVAs">IV As</ref> 6.3</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.3" corresp="#wit-h-frag">⁊ se ðe hine ofer þæt feormige, sy ðæs ilcan wyrðe þæs ðe se ðeof, butan he hine ladian mæge, ðæt he him nan facn ne nane ðyfþe on nyste.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.3" corresp="#wit-h-frag">⁊ se ðe hine ofer þæt feormige, sy ðæs ilcan wyrðe þæs ðe se ðeof, butan he hine ladian<ptr type="liebermannNote" n="2" target="#IVAs_6-3_dup2.lnote.oe.2"/> mæge, ðæt he him nan facn ne nane ðyfþe on nyste.<ptr type="liebermannNote" n="3" target="#IVAs_6-3_dup2.lnote.oe.3"/></ab>
         <ab type="editionText" xml:lang="ang" source="#attenborough" n="6.5" corresp="#wit-h-frag">⁊ se ðe hine ofer þæt feormige sy ðæs ilcan wyrðe þæs ðe se ðeof, butan he hine ladian mæge, ðæt he him nan facn ne nane ðyfþe on nyste.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h-frag">And he who harbours him longer shall be liable to the same treatment as the thief unless he can clear himself, [by proving] that he was unaware of any crime or theft committed by him.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und wer ihn danach noch beherbergt, sei desselben [Looses] theilhaftig wie dieser Dieb, es sei denn, er könne sich reinigen, dass er an ihm keinen Trug und keinen Diebstahl kannte.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h-frag">And he who harbours him longer shall be liable to the same treatment as the thief, unless he can clear himself, [by proving] that he was unaware of any crime or theft committed by him.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wer ihn danach noch beherbergt, sei desselben [Looses<ptr type="liebermannNote" n="1" target="#IVAs_6-3_dup2.lnote.de.1"/>] theilhaftig wie dieser Dieb, es sei denn, er könne sich reinigen, dass er an ihm keinen Trug und keinen Diebstahl kannte.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And whoever harbours him after that, let him be subject to the same [fate] as the thief, unless he can clear himself [by showing] that he knew of no fraud and no theft in him.</ab>
         <note type="editorial">In H, ‘Þus feor’ (Pax, Schmid's App. XII) follows after a paragraph break.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_6-3_dup2.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">171</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">hinter</hi> i <hi rend="italic">ein Buchst.</hi> [g?] <hi rend="italic">radirt</hi></seg><seg type="translation" xml:lang="en" source="#claude">after i a letter [g?] erased</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_6-3_dup2.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">171</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Absatz; dann</hi> þus feor, <hi rend="italic">d. i.</hi> Pax (<hi rend="italic">Schmids App.</hi> XII).</seg><seg type="translation" xml:lang="en" source="#claude">New paragraph; then þus feor, i.e. Pax (Schmid's App. XII).</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IVAs_6-3_dup2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">113</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Vollere Form <hi rend="italic">s.</hi> Q 6, 3. <hi rend="italic">Vgl. Gl</hi> Begünstigung 5—12d; des Begünstigers Leben und Vermögen sind verwirkt. Zuletzt sind hier, deutlicher erkennbar in Q, wie 6, 2b³, Worte der Eidesformel benutzt</seg><seg type="translation" xml:lang="en" source="#claude">For the fuller form <hi rend="italic">see</hi> Q 6, 3. <hi rend="italic">Cf. Gl</hi> Begünstigung 5—12d; the harbourer's life and property are forfeit. At the end, as in 6, 2b³, words of the oath formula are used here, more clearly recognisable in Q</seg></note>
       </div>
     </body>
   </text>

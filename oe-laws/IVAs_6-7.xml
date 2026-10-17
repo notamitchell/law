@@ -7,6 +7,8 @@
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -22,6 +24,7 @@
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">172</biblScope></bibl>
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-q" rend="bold"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
@@ -44,18 +47,31 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 828 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 828 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 172.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 172: “sue,” → “suę,”.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Attenborough, p. 151: “and; six” → “or; sixty”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6.7">
         <head><ref type="lawCode" target="law:IVAs">IV As</ref> 6.7</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.7" corresp="#wit-q">Si serua ancilla sit et ipsa furetur alicubi preterquam domino suo et (uel) domine sue, adeant sexaginta et uiginti ancille et afferant singule tria ligna et comburant eam unam ancillam et conferant totidem denarios, quot serui deberent, aut uerberentur, sicut de seruis dictum est.</ab>
-        <ab type="editionText" xml:lang="ang" source="#attenborough" n="6.7" corresp="#wit-q">Si serva ancilla sit et ipsa furetur alicubi præterquam domino suo et dominæ suæ, adeant sexaginta et viginti ancillæ et afferant singulæ tria ligna et comburant eam unam ancillam, et conferant totidem denarios, quot servi deberent, aut verberentur, sicut de servis dictum est.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-q">In the case of a female slave who commits an act of theft anywhere except against her master and mistress, six and twenty female slaves shall go and bring three logs each and burn that one slave; and they shall pay as many pennies as male slaves would have to pay, or suffer scourging as has been stated above with reference to male slaves.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.7" corresp="#wit-q">Si serua ancilla sit et ipsa<ptr type="liebermannNote" n="47" target="#IVAs_6-7.lnote.oe.47"/> furetur alicubi preterquam<ptr type="liebermannNote" n="48" target="#IVAs_6-7.lnote.oe.48"/> domino suo<ptr type="liebermannNote" n="49" target="#IVAs_6-7.lnote.oe.49"/> et<ptr type="liebermannNote" n="1" target="#IVAs_6-7.lnote.oe.1"/> (uel) domine suę, adeant sexaginta et uiginti<ptr type="liebermannNote" n="a" target="#IVAs_6-7.lnote.oe.a"/> ancille et afferant<ptr type="liebermannNote" n="a" target="#IVAs_6-7.lnote.oe.a"/> singule tria ligna et comburant<ptr type="liebermannNote" n="b" target="#IVAs_6-7.lnote.oe.b"/> eam<ptr type="liebermannNote" n="50" target="#IVAs_6-7.lnote.oe.50"/> unam ancillam et conferant totidem denarios<ptr type="liebermannNote" n="c" target="#IVAs_6-7.lnote.oe.c"/>, quot serui deberent, aut uerberentur, sicut<ptr type="liebermannNote" n="c" target="#IVAs_6-7.lnote.oe.c"/> de seruis dictum est.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="6.7" corresp="#wit-q">Si serva ancilla sit et ipsa furetur alicubi præterquam domino suo et<ptr type="editorNote" n="6" target="#IVAs_6-7.attnote.fn.6"/> dominæ suæ, adeant sexaginta et viginti ancillæ et afferant singulæ tria ligna et comburant eam unam ancillam, et conferant totidem denarios, quot servi deberent, aut verberentur, sicut de servis dictum est.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-q">In the case of a female slave who commits an act of theft anywhere except against her master or mistress, sixty and twenty female slaves shall go and bring three logs each and burn that one slave; and they shall pay as many pennies as male slaves would have to pay<ptr type="editorNote" n="1" target="#IVAs_6-7.attnote.n.1"/>, or suffer scourging as has been stated above<ptr type="editorNote" n="2" target="#IVAs_6-7.attnote.n.2"/> with reference to male slaves.</ab>
         <note type="editorial">Latin only; no German translation in Liebermann.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_6-7.lnote.oe.47" n="47" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">172</biblScope></bibl><seg type="original" xml:lang="de">illa <hi rend="italic">TMHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">illa TMHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_6-7.lnote.oe.48" n="48" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">172</biblScope></bibl><seg type="original" xml:lang="de">preter <hi rend="italic">RTMHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">preter RTMHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_6-7.lnote.oe.49" n="49" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">172</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt RMBr</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in RMBr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_6-7.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">172</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vor der Klammer Lond; (eingeklammertes) übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">before the bracket Lond; (bracketed words) the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_6-7.lnote.oe.50" n="50" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">172</biblScope></bibl><seg type="original" xml:lang="de">ipsam <hi rend="italic">TMHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">ipsam TMHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_6-7.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">114</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. o.</hi> 6, 5{b}</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See above</hi> 6, 5{b}</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_6-7.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">114</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">s. Gl</hi> Verbrennen</seg><seg type="translation" xml:lang="en" source="#claude">see <hi rend="italic">Gl</hi> Verbrennen</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_6-7.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">114</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. o.</hi> 6, 6</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See above</hi> 6, 6</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IVAs_6-7.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">211</biblScope></bibl><seg type="original" xml:lang="en">See note on § 6.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IVAs_6-7.attnote.n.2" n="2" source="#attenborough"><bibl><biblScope unit="page">211</biblScope></bibl><seg type="original" xml:lang="en">See Wiht. cap. 10, 13; Ine, cap. 3 § 1, etc.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IVAs_6-7.attnote.fn.6" n="6" source="#attenborough"><bibl><biblScope unit="page">150</biblScope></bibl><label>et</label><seg type="original" xml:lang="en"><hi rend="italic">vel</hi>.</seg></note>
       </div>
     </body>
   </text>

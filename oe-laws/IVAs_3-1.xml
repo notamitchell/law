@@ -8,6 +8,8 @@
         <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -24,6 +26,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">171</biblScope></bibl>
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-q" rend="bold"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
@@ -46,21 +49,32 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 817 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 817 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 171.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 171: “sue; que” → “suę; quę”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Attenborough, p. 146: “et” → “ad”.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Attenborough, p. 147: “∅; to” → “to; ∅”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3.1">
         <head><ref type="lawCode" target="law:IVAs">IV As</ref> 3.1</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.1" corresp="#wit-q">Et qui eum firmabit uel suorum aliquem mittet ad eum (su. quenquam mittat ad illum), pecunie sue reus sit in omnibus que habebit.</ab>
-        <ab type="editionText" xml:lang="ang" source="#attenborough" n="3.1" corresp="#wit-q">Et qui eum firmabit vel suorum aliquem mittet et eum, pecuniæ suæ reus sit in omnibus quæ habebit.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-q">And if anyone harbours him, or sends him to any of his men, he shall be liable to the confiscation of all his property.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.1" corresp="#wit-q">Et<ptr type="liebermannNote" n="a" target="#IVAs_3-1.lnote.oe.a"/> qui eum<ptr type="liebermannNote" n="25" target="#IVAs_3-1.lnote.oe.25"/> firmabit uel suorum<ptr type="liebermannNote" n="16" target="#IVAs_3-1.lnote.oe.16"/> aliquem<ptr type="liebermannNote" n="†" target="#IVAs_3-1.lnote.oe.dagger"/> mittet ad eum (su. quenquam<ptr type="liebermannNote" n="26" target="#IVAs_3-1.lnote.oe.26"/> mittat ad illum), pecunie<ptr type="liebermannNote" n="b" target="#IVAs_3-1.lnote.oe.b"/> suę reus sit in omnibus quę habebit.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="3.1" corresp="#wit-q">Et qui eum firmabit vel suorum aliquem mittet ad eum, pecuniæ suæ reus sit in omnibus quæ habebit.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-q">And if anyone harbours him, or sends to him any of his<ptr type="editorNote" n="1" target="#IVAs_3-1.attnote.n.1"/> men, he shall be liable to the confiscation of all his property.</ab>
         <note type="comparison" source="#liebermann" n="171"><ref target="clause:VAs_Prol-to-3">V As Pr. 3</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. V As. Pr. 3</note>
         <note type="comparedBy" source="#wormald-ppmel" n="128"><ref target="clause:VIAs_Prolog">VI As Prol.–1.4</ref></note>
         <note type="editorial">Latin only; no German translation in Liebermann. Liebermann would probably supply ‘uel quenquam’ after ‘aliquem’ from V As Prol. 3.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_3-1.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">171</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Die Buchstabennoten beziehen sich auf die Erklärungen in Band II.</hi></seg><seg type="translation" xml:lang="en" source="#claude">The letter notes refer to the commentary in Volume II.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_3-1.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">171</biblScope></bibl><seg type="original" xml:lang="de">f. e. <hi rend="italic">RTMHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">f. e. RTMHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_3-1.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">171</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vor der Klammer Lond; (eingeklammertes) übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">before the bracket Lond; (bracketed words) the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_3-1.lnote.oe.dagger" n="†" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">171</biblScope></bibl><seg type="original" xml:lang="de">uel quenquam <hi rend="italic">wahrscheinlich zu ergänzen laut V As. Pr.</hi> 3, <hi rend="italic">oben S.</hi> 166.</seg><seg type="translation" xml:lang="en" source="#claude">uel quenquam probably to be supplied, according to V As. Pr. 3, above p. 166.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_3-1.lnote.oe.26" n="26" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">171</biblScope></bibl><seg type="original" xml:lang="de">quempiam <hi rend="italic">MHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">quempiam MHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_3-1.lnote.oe.a-2" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">113</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Genauer V Pro 3</seg><seg type="translation" xml:lang="en" source="#claude">More precisely V Pro 3</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IVAs_3-1.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">113</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">pecunie</hi> sollte gross gedruckt stehen. Q setzt dies sonst für Fahrhabe. Er verlas vielleicht <hi rend="italic">sylfes ond</hi> als <hi rend="italic">yrfes on; in</hi> ist jedenfalls sinnwidrig; und es fehlt, wahrscheinlich auch nicht durch eine (Früherem und Späterem widersprechende) Milderung des Strafrechts für Begünstigung (<hi rend="italic">s. d. Gl</hi> 6—12d), die Lebensverwirkung des Begünstigers</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">pecunie</hi> should have been printed in large type. Q elsewhere uses this word for chattels. He perhaps misread <hi rend="italic">sylfes ond</hi> as <hi rend="italic">yrfes on; in</hi> is in any case contrary to the sense; and missing is the forfeiture of the harbourer's life, probably not owing to any mitigation (contradicting earlier and later law) of the penal law on harbouring (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 6—12d) either</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IVAs_3-1.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">210</biblScope></bibl><seg type="original" xml:lang="en">‘his’ refers to the subject of the sentence and not to the outlaw.<lb type="paragraph"/>Cf. V As. Pr. § 3.</seg></note>
       </div>
     </body>
   </text>
