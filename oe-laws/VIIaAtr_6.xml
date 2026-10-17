@@ -13,6 +13,9 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +35,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">453</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -65,13 +69,16 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-d">⁊ on æghwilcan mynstre singe eal geferræden ætgædere heora saltere þa ðry dagas.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="6" corresp="#wit-d">⁊ on æghwilcan mynstre singe eal geferræden ætgædere heora saltere þa ðry dagas.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">And on æghwilcan mynstre, singe eal geferræden ætgædere heora saltere þa ðry dagas.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und in jeder Kirche singe der ganze Convent zusammen ihren Psalter die drei Tage.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und in jeder Kirche singe der ganze Convent zusammen<ptr type="liebermannNote" n="1" target="#VIIaAtr_6.lnote.de.1"/> ihren Psalter die drei Tage.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And in every minster let the whole community sing their psalter together on the three days.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And in every religious foundation, on these three days, all the brotherhood in common shall chant [the psalms from] their psalters.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">And in every minster all the community are to sing their psalter together during those three days.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIaAtr_6.robnote.n.1"/>And in every religious foundation, on these three days, all the brotherhood in common shall chant [the psalms from] their psalters<ptr type="editorNote" n="2" target="#VIIaAtr_6.robnote.n.2"/>.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">And in every minster all the community are to sing their psalter together during those three days.<ptr type="editorNote" n="2" target="#VIIaAtr_6.whinote.n.2"/></ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">And in every monastery, the whole community is to chant from their psalters on these three days.</ab>
         <note type="editorial">Liebermann compares VII Atr 3.</note>
-        <note type="translator" source="#whitelock">id. (3.2) says that each priest is separately to celebrate 30 masses for this purpose, and each monk to say 30 psalters</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIaAtr_6.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">181</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Nur allgemein fordern Psalmen von den Mönchen jene Homilien</seg><seg type="translation" xml:lang="en" source="#claude">Those homilies require psalms of the monks only in general terms</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIaAtr_6.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">338</biblScope></bibl><seg type="original" xml:lang="en">Cf. VII, 3.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIaAtr_6.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">338</biblScope></bibl><seg type="original" xml:lang="en">Cf. VII, 3, 2.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="VIIaAtr_6.whinote.n.2" n="2" source="#whitelock"><bibl><biblScope unit="page">453</biblScope></bibl><label>days</label><seg type="original" xml:lang="en">id. (3.2) says that each priest is separately to celebrate 30 masses for this purpose, and each monk to say 30 psalters</seg></note>
       </div>
     </body>
   </text>

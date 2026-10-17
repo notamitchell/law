@@ -13,6 +13,9 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -55,25 +58,28 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1404 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 262.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 114: “pænige” → “pænig”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2.2">
         <head><ref type="lawCode" target="law:VIIaAtr">VIIa Atr</ref> 2.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.2" corresp="#wit-d">⁊ sceote man æghwilce hide pænig oððe pæniges weorð.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="2.2" corresp="#wit-d">⁊ sceote man æghwilce hide pænige oððe pæniges weorð.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.2" corresp="#wit-d">⁊ sceote man æghwilce<ptr type="liebermannNote" n="***" target="#VIIaAtr_2-2.lnote.oe.star3"/> hide pænig oððe pæniges weorð.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="2.2" corresp="#wit-d">⁊ sceote man æghwilce hide pænig oððe pæniges weorð.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">And sceote man æghwilce hide pænig oððe pæniges weorð.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">Und man steuere [von] jeder Hufe einen Pfennig oder Pfennigs Werth.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let a penny or a penny's worth be paid [from] every hide.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And from every hide a penny or the value of a penny shall be given as dues.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">And one penny or the value of one penny is to be paid from each hide.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIaAtr_2-2.robnote.n.1"/>And from every hide a penny or the value of a penny shall be given as dues.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">And one penny or the value of one penny is to be paid from each hide.<ptr type="editorNote" n="4" target="#VIIaAtr_2-2.whinote.n.4"/></ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">And a penny or the equivalent of a penny is to be paid by every hide.</ab>
         <note type="comparison" source="#liebermann" n="262"><ref target="clause:VIIAtr_1-2">VII Atr 1.2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 1, 2</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VIIAtr_1-2">VII Atr 1.2</ref></note>
         <note type="editorial">Napier corrects to ‘æt æghwilcre’. Liebermann compares VII Atr 1.2.</note>
-        <note type="translator" source="#whitelock">id. has carruca “plough”, instead of hide</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIIaAtr_2-2.lnote.oe.star3" n="***" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">262</biblScope></bibl><seg type="original" xml:lang="de">æt æghwilcre <hi rend="italic">bessert Napier</hi></seg><seg type="translation" xml:lang="en" source="#claude">æt æghwilcre emended by Napier</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIaAtr_2-2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">338</biblScope></bibl><seg type="original" xml:lang="en">Cf. VII, 1, 2.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="VIIaAtr_2-2.whinote.n.4" n="4" source="#whitelock"><bibl><biblScope unit="page">453</biblScope></bibl><label>hide</label><seg type="original" xml:lang="en">id. has <hi rend="italic">carruca</hi> “plough”, instead of hide</seg></note>
       </div>
     </body>
   </text>

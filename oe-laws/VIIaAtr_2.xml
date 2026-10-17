@@ -13,6 +13,9 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +35,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">453</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -56,25 +60,28 @@
       <change when="2026-10-17">Generated from row 1402 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 262.</change>
       <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 114.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 262: “⁊ cume manna gehwilc bærefot to circan buton golde ⁊ glæncgum, ⁊ ga man to scrifte.” → “⁊ cume manna gehwilc bærefot to circan buton golde ⁊ glæncgum, ⁊ ga man to scrifte. (expanded letters in italics: m)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:VIIaAtr">VIIa Atr</ref> 2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-d">⁊ cume manna gehwilc bærefot to circan buton golde ⁊ glæncgum, ⁊ ga man to scrifte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-d">⁊ cume manna gehwilc bærefot to circan buton golde ⁊ glæncgu<hi rend="italic">m</hi>, ⁊ ga man to scrifte.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="2" corresp="#wit-d">⁊ cume manna gehwilc bærefot to circan buton golde ⁊ glæncgum ⁊ ga man to scrifte.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">And cume manna gehwilc bærefot to circan, buton golde and glæncgum, and ga man to scrifte.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und es komme jedermann barfuss zur Kirche ohne Gold und Schmucksachen, und man gehe zur Beichte.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und es komme jedermann barfuss zur Kirche ohne<ptr type="liebermannNote" n="1" target="#VIIaAtr_2.lnote.de.1"/> Gold und Schmucksachen, und man gehe zur Beichte.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let everyone come barefoot to church without gold and ornaments, and let people go to confession.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And everyone shall come barefoot to church without gold or ornaments and shall go to confession.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">And every man is to come barefoot to church, without gold and ornaments, and to go to confession.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIaAtr_2.robnote.n.1"/>And everyone shall come barefoot to church without gold or ornaments and shall go to confession.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">And every man is to come barefoot to church, without gold and ornaments,<ptr type="editorNote" n="2" target="#VIIaAtr_2.whinote.n.2"/> and to go to confession.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">And everyone is to come to church barefoot, without gold or ornaments, and they are to go to confession.</ab>
         <note type="comparison" source="#liebermann" n="262"><ref target="clause:VIIAtr_2-1">VII Atr 2.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 2, 1</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VIIAtr_2-1">VII Atr 2.1</ref></note>
         <note type="editorial">Liebermann compares VII Atr 2.1.</note>
-        <note type="translator" source="#whitelock">Gold and ornaments are not in the Latin, but in Napier, No. XXXV.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIaAtr_2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">180</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">gold ⁊ glencga alecge man; Homil. n</hi>. Wulfstan 170, also im Archetyp des Bussedikts. Vielleicht aber nur ein Zusatz zum Gesetz, beeinflusst durch Exod. 33, 5. <hi rend="italic">Vgl. Gl</hi> Kirchgang 1</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">gold ⁊ glencga alecge man; Homil. n</hi>. Wulfstan 170, and therefore in the archetype of the penitential edict. Perhaps, however, only an addition to the law, influenced by Exod. 33, 5. <hi rend="italic">Cf. Gl</hi> Kirchgang 1</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIaAtr_2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">338</biblScope></bibl><seg type="original" xml:lang="en">Cf. VII, 2, 1; Wulfstan, pp. 170, 173.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="VIIaAtr_2.whinote.n.2" n="2" source="#whitelock"><bibl><biblScope unit="page">453</biblScope></bibl><label>ornaments</label><seg type="original" xml:lang="en">Gold and ornaments are not in the Latin, but in Napier, No. XXXV.</seg></note>
       </div>
     </body>
   </text>
