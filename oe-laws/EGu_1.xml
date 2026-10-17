@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#kennedy">Kennedy</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="kennedy" type="study">A. G. Kennedy, ‘Cnut’s Law Code of 1018’, <title>Anglo-Saxon England</title> 11 (1983), 57–81</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -57,8 +60,9 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 673 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 673 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 128.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 128: “⁊ þæt is þonon ærest, þæt hig gecwædon, þæt cyricgrið binnan wagum ⁊ cyninges handgrið stande efne unwemme.” → “⁊ þæt is þonon ærest, þæt hig gecwædon, þæt cyricgrið binnan wagum ⁊ cyninges handgrið stande efne unwemme. (expanded letters in italics: æt, æt, m)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -66,13 +70,13 @@
       <div type="clause" n="1">
         <head><ref type="lawCode" target="law:EGu">EGu</ref> 1</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-b">⁊ þ<hi rend="italic">æt</hi> is þonon ærest, þ<hi rend="italic">æt</hi> hig gecwædon, þ<hi rend="italic">æt</hi> cyricgrið binnan wagu<hi rend="italic">m</hi> ⁊ cyninges handgrið stande efne unwemne.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-h">⁊ þæt is þonon ærest, þæt hig gecwædon, þæt cyricgrið binnan wagum ⁊ cyninges handgrið stande efne unwemme.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1" corresp="#wit-q">Et hoc est primum edictum, ut ecclesie pax inter parietes suos et regis handgrið semper inuiolata (inconuulsa) permaneat.</ab>
-        <ab type="editionText" xml:lang="ang" source="#attenborough" n="1" corresp="#wit-h">⁊ þæt is þonon ærest, þæt hig gecwædon, þæt cyricgrið binnan wagum ⁊ cyninges handgrið stande efne unwemme.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-h">⁊<ptr type="liebermannNote" n="2" target="#EGu_1.lnote.oe.2"/> þ<hi rend="italic">æt</hi> is þonon ærest, þæt hig gecwædon<ptr type="liebermannNote" n="8" target="#EGu_1.lnote.oe.8"/>, þ<hi rend="italic">æt</hi> cyricgrið binnan wagu<hi rend="italic">m</hi> ⁊ cyninges handgrið stande efne unwemme.<ptr type="liebermannNote" n="17" target="#EGu_1.lnote.oe.17"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1" corresp="#wit-q">Et hoc est primum edictum, ut<ptr type="liebermannNote" n="21" target="#EGu_1.lnote.oe.21"/> ecclesie<ptr type="liebermannNote" n="22" target="#EGu_1.lnote.oe.22"/> pax inter<ptr type="liebermannNote" n="23" target="#EGu_1.lnote.oe.23"/> parietes suos et<ptr type="liebermannNote" n="24" target="#EGu_1.lnote.oe.24"/> regis handgrið<ptr type="liebermannNote" n="25" target="#EGu_1.lnote.oe.25"/> semper inuiolata<ptr type="liebermannNote" n="26" target="#EGu_1.lnote.oe.26"/> (inconuulsa) permaneat.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="1" corresp="#wit-h">⁊ þæt is þonon ærest, þæt hig gecwædon, þæt cyricgrið binnan wagum ⁊ cyninges handgrið stande efne unwemme<ptr type="editorNote" n="11" target="#EGu_1.attnote.fn.11"/>.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-h">And þæt is þonon ærest þæt hig gecwædon, þæt cyricgrið binnan wagum and cyninges handgrið stande efne unwemme.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">Next after this, they declared that sanctuary within the walls of a church, and the protection granted by the king in person, shall remain equally inviolate.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h">Next, they also agreed that sanctuary within church walls and sanctuary received from the king’s hand shall remain equally inviolable.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und nämlich zuerst nun, dass sie bestimmten, dass Kirchenfrieden innerhalb der Mauern und des Königs Handfriede gleich unverletzlich bestehe.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und nämlich zuerst nun, dass<ptr type="liebermannNote" n="1" target="#EGu_1.lnote.de.1"/> sie bestimmten, dass Kirchenfrieden<ptr type="liebermannNote" n="2" target="#EGu_1.lnote.de.2"/> innerhalb der Mauern<ptr type="liebermannNote" n="3" target="#EGu_1.lnote.de.3"/> und des Königs Handfriede<ptr type="liebermannNote" n="4" target="#EGu_1.lnote.de.4"/> gleich unverletzlich bestehe.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And namely first, that they determined that church-peace within the walls and the king’s hand-given peace should stand equally inviolable.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VAtr_10-1">V Atr 10.1</ref></note>
         <note type="comparedBy" source="#kennedy" n="59"><ref target="clause:Cn-1018_part-008">Cn 1018 2.2</ref></note>
@@ -80,6 +84,20 @@
         <note type="comparedBy" source="#kennedy" n="59"><ref target="clause:ICn_2-2">I Cn 2.2</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="391"><ref target="clause:Grith_13">Grið 13–14</ref></note>
         <note type="translator" source="#rabin-doml">sanctuary: The right of a church to protect an individual within its walls or other forms of boundary marker from secular prosecution. Sometimes also referred to by Wulfstan as “church sanctuary.”</note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_1.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">129</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt MHkBr</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in MHkBr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_1.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">129</biblScope></bibl><seg type="original" xml:lang="de">p. e. <hi rend="italic">Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">p. e. Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_1.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">129</biblScope></bibl><seg type="original" xml:lang="de">intra <hi rend="italic">TMBr;</hi> par. intra <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">intra TMBr; par. intra Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_1.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">129</biblScope></bibl><seg type="original" xml:lang="de">ut <hi rend="italic">TMHkBr</hi></seg><seg type="translation" xml:lang="en" source="#claude">ut TMHkBr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_1.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">129</biblScope></bibl><seg type="original" xml:lang="de">hang. <hi rend="italic">MHk</hi> [<hi rend="italic">in Rubrik:</hi> hang. <hi rend="italic">M;</hi> hamg. <hi rend="italic">Hk</hi>]</seg><seg type="translation" xml:lang="en" source="#claude">hang. MHk [in the rubric: hang. M; hamg. Hk]</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_1.lnote.oe.26" n="26" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">129</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">nur</hi> inui. <hi rend="italic">Lond; nur</hi> inco. <hi rend="italic">übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">only inui. Lond; only inco. the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_1.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">128</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_1.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">128</biblScope></bibl><seg type="original" xml:lang="de">cwædon <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">cwædon Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_1.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">128</biblScope></bibl><seg type="original" xml:lang="de">-emne <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-emne Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="EGu_1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">90</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Nicht ‘was’; <hi rend="italic">s.</hi> Pro, 1². Den Satz benutzt VI Atr 14 = I Cn 2, 2 = Grið 2</seg><seg type="translation" xml:lang="en" source="#claude">Not ‘was’ [what]; <hi rend="italic">see</hi> Pro, 1². The sentence is used by VI Atr 14 = I Cn 2, 2 = Grið 2</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="EGu_1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">90</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. Gl</hi> Kirchenfrieden 6. a</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See Gl</hi> Kirchenfrieden 6. a</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="EGu_1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">90</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">bessere Übs.: ‘Wände’</seg><seg type="translation" xml:lang="en" source="#claude">better translation: ‘Wände’ [walls]</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="EGu_1.lnote.de.4" n="4" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">90</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. Gl</hi> Handfrieden 7</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See Gl</hi> Handfrieden 7</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="EGu_1.attnote.fn.11" n="11" source="#attenborough"><bibl><biblScope unit="page">102</biblScope></bibl><label>unwemme</label><seg type="original" xml:lang="en"><hi rend="italic">unwemne</hi>. B, Ld.</seg></note>
       </div>
     </body>
   </text>

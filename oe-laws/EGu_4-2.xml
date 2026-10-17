@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">4</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -55,7 +58,7 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 680 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 680 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 130.</change>
     </revisionDesc>
   </teiHeader>
@@ -64,17 +67,26 @@
       <div type="clause" n="4.2">
         <head><ref type="lawCode" target="law:EGu">EGu</ref> 4.2</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.2" corresp="#wit-b">⁊ gyf gehadod man hine forwyrce mid deaðscylde, gewylde hine man ⁊ healde to bisceopes dome.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.2" corresp="#wit-h">Gif gehadod man hine forwyrce mid deaþscylde, gewilde hine man ⁊ healde to bisceopes dome.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.2" corresp="#wit-q">Et si ordinatus homo se forisfaciat in morte puniendis (plectendis) actibus, exsuperetur et episcopi iudicio reseruetur.</ab>
-        <ab type="editionText" xml:lang="ang" source="#attenborough" n="4.2" corresp="#wit-h">Gif gehadod man hine forwyrce mid deaþscylde, gewilde hine man ⁊ healde to bisceopes dome.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.2" corresp="#wit-h">Gif gehadod man hine forwyrce mid deaþscylde<ptr type="liebermannNote" n="29" target="#EGu_4-2.lnote.oe.29"/>, gewilde<ptr type="liebermannNote" n="30" target="#EGu_4-2.lnote.oe.30"/> hine man<ptr type="liebermannNote" n="28" target="#EGu_4-2.lnote.oe.28"/> ⁊ healde to bisceopes dome.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.2" corresp="#wit-q">Et si ordinatus homo se forisfaciat in morte puniendis<ptr type="liebermannNote" n="26" target="#EGu_4-2.lnote.oe.26"/> (plectendis) actibus, exsuperetur et episcopi iudicio reseruetur.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="4.2" corresp="#wit-h">Gif<ptr type="editorNote" n="14" target="#EGu_4-2.attnote.fn.14"/> gehadod man hine forwyrce mid deaþscylde, gewilde hine man ⁊ healde to bisceopes dome.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-h">Gif gehadod man hine forwyrce mid deaþscylde, gewilde hine man and healde to bisceopes dome.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If a man in orders places his life in jeopardy by committing a capital crime, he shall be arrested, and his case shall be reserved for the bishop's decision.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h">If a man in orders compromises himself with a capital crime, he is to be arrested and held for the bishop’s judgment.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein geweihter Mann sich [sein Leben] verwirkt durch Todes [würdige] Schuld, ergreife und bewahre man ihn für des Bischofs Urtheilspruch.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn<ptr type="liebermannNote" n="1" target="#EGu_4-2.lnote.de.1"/> ein geweihter Mann sich [sein Leben] verwirkt<ptr type="liebermannNote" n="2" target="#EGu_4-2.lnote.de.2"/> durch Todes [würdige<ptr type="liebermannNote" n="3" target="#EGu_4-2.lnote.de.3"/>] Schuld, ergreife<ptr type="liebermannNote" n="4" target="#EGu_4-2.lnote.de.4"/> und bewahre man ihn für des Bischofs Urtheilspruch.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If an ordained man forfeits [his life] by a crime [deserving] death, let him be seized and kept for the bishop’s judgment.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IICn_43">II Cn 43</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="359"><ref target="clause:IICn_43">II Cn 43–44</ref></note>
         <note type="textual" source="#rabin-doml">Gif: And B</note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_4-2.lnote.oe.26" n="26" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">131</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vor der Klammer Lond;</hi> (<hi rend="italic">eingeklammertes</hi>) <hi rend="italic">übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">before the bracket Lond; (the bracketed words) the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_4-2.lnote.oe.29" n="29" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">130</biblScope></bibl><seg type="original" xml:lang="de">deaþe sc. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">deaþe sc. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_4-2.lnote.oe.30" n="30" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">130</biblScope></bibl><seg type="original" xml:lang="de">gewylde <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gewylde Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_4-2.lnote.oe.28" n="28" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">130</biblScope></bibl><seg type="original" xml:lang="de">mon <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">mon Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="EGu_4-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">90</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Wiederholt (mit hier unpassendem Zusatze, aus 4, 1 Ende?) II Cn 43</seg><seg type="translation" xml:lang="en" source="#claude">Repeated in II Cn 43 (with an addition unsuited to this place, from the end of 4, 1?)</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="EGu_4-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">90</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Wb forwyrcan</hi> 2</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Wb forwyrcan</hi> 2</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="EGu_4-2.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">90</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">heafodgylt</hi> Northu 2</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">heafodgylt</hi> Northu 2</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="EGu_4-2.lnote.de.4" n="4" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">90</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">verhafte, <hi rend="italic">s. Wb gewieldan.</hi> — Statt letzten Wortes der Übs. ‘Urteilspruch’ bessere: ‘Entscheidung’, nämlich zwischen möglichen Strafarten; <hi rend="italic">vgl. Gl</hi> Bischof 9n; Geistliches Gericht 9. g</seg><seg type="translation" xml:lang="en" source="#claude">verhafte [arrest], <hi rend="italic">see Wb gewieldan.</hi> — For the last word of the translation, ‘Urteilspruch’ [judgment], read instead: ‘Entscheidung’ [decision], namely between possible kinds of punishment; <hi rend="italic">cf. Gl</hi> Bischof 9n; Geistliches Gericht 9. g</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="EGu_4-2.attnote.fn.14" n="14" source="#attenborough"><bibl><biblScope unit="page">104</biblScope></bibl><label>Gif</label><seg type="original" xml:lang="en"><hi rend="italic">⁊ gyf</hi>. B.</seg></note>
       </div>
     </body>
   </text>
