@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">190</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">455</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -61,16 +64,22 @@
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:VIIIAtr">VIII Atr</ref> 2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-d">And þ<hi rend="italic">æt</hi> is þon<hi rend="italic">ne</hi> ærest, þ<hi rend="italic">æt</hi> he his agenne wer gesille þa<hi rend="italic">m</hi> cyninge ⁊ Chr<hi rend="italic">ist</hi>e ⁊ mid þa<hi rend="italic">m</hi> hine silfne inlagige to bote.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-d">And þ<hi rend="italic">æt</hi> is þon<hi rend="italic">ne</hi> ærest, þ<hi rend="italic">æt</hi> he his agenne wer gesille þa<hi rend="italic">m<ptr type="liebermannNote" n="4" target="#VIIIAtr_2.lnote.oe.4"/></hi> cyninge ⁊ Chr<hi rend="italic">ist</hi>e ⁊ mid þa<hi rend="italic">m</hi> hine silfne inlagige to bote.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-g-a-part">⁊ þ<hi rend="italic">æt</hi> is þon<hi rend="italic">ne</hi> ærest, þ<hi rend="italic">æt</hi> he his agenne wer Chr<hi rend="italic">ist</hi>e ⁊ þam cyninge gesylle ⁊ mid þam hine sylfne inlagie to bote.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="2" corresp="#wit-d">And þæt is þonne ærest, þæt he his agenne wer gesille þam cyninge ⁊ Christe ⁊ mid þam hine silfne inlagige to bote.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">And þæt is þonne ærest: þæt he his agenne wer gesille þam cyninge and Christe and mid þam hine silfne inlagige to bote.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">und nämlich zuerst nun, dass er sein eigenes Wergeld Christo [der Kirche] und dem König zahle und hiermit sich selbst in den Friedensgenuss einkaufe zur Bussfähigkeit.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">und<ptr type="liebermannNote" n="1" target="#VIIIAtr_2.lnote.de.1"/> nämlich zuerst nun, dass er sein eigenes Wergeld<ptr type="liebermannNote" n="2" target="#VIIIAtr_2.lnote.de.2"/> Christo [der Kirche] und dem König zahle und hiermit sich selbst in den Friedensgenuss einkaufe zur Bussfähigkeit.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">and namely, first, that he pay his own wergild to Christ [the Church] and to the king, and thereby buy himself back into the law so as to be allowed to make amends.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And the first condition is, that he shall give his own wergeld to the king and to Christ, and by that means obtain the legal right to offer compensation.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And the first condition is, that he shall give his own wergeld<ptr type="editorNote" n="1" target="#VIIIAtr_2.robnote.n.1"/> to the king and to Christ<ptr type="editorNote" n="2" target="#VIIIAtr_2.robnote.n.2"/>, and by that means obtain the legal right<ptr type="editorNote" n="3" target="#VIIIAtr_2.robnote.n.3"/> to offer compensation.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">And namely, first that he is to give his own wergild to the king and Christ, and with it buy for himself the right to make compensation.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">And the first component of this shall be that he is to pay his own wergild to the king and to Christ, and thereby restore for himself the right to offer compensation.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:ICn_2-4">I Cn 2.4</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIIIAtr_2.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">263</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">umgestellt</hi> C. ⁊ þ. cy. <hi rend="italic">wie G auch I Cnut</hi> 2, 4</seg><seg type="translation" xml:lang="en" source="#claude">transposed C. ⁊ þ. cy., as in G, also I Cnut 2, 4</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">183</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Wiederholt I Cn 2, 4 = Hn 79, 5. 11, 1</seg><seg type="translation" xml:lang="en" source="#claude">Repeated in I Cn 2, 4 = Hn 79, 5. 11, 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">183</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Wergeld (<hi rend="italic">s. d. Gl</hi> 29. 30c) für <hi rend="italic">homicidium in ecclesia</hi> fordert Hn 12, 3. 87, 6. <hi rend="italic">Vgl. Gl</hi> Geistliches Gericht 12a; busslos 6</seg><seg type="translation" xml:lang="en" source="#claude">Wergild (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 29. 30c) for <hi rend="italic">homicidium in ecclesia</hi> is demanded by Hn 12, 3. 87, 6. <hi rend="italic">Cf. Gl</hi> Geistliches Gericht 12a; busslos 6</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">339</biblScope></bibl><seg type="original" xml:lang="en">Cf. Wi. 26; In. 12; 15; Af. 7, 1; E. and G. 6, 5; II As. 1, 4; VI, 1, 4; 12, 2; III Edg. 4; IV Atr. 7, 1; V, 28; I Cn. 2, 4; II, 16; 61; <hi rend="italic">Be Griðe</hi>, 15.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_2.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">339</biblScope></bibl><seg type="original" xml:lang="en">Cf. 38; E. and G. Pre. 2.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_2.robnote.n.3" n="3" source="#robertson"><bibl><biblScope unit="page">339</biblScope></bibl><seg type="original" xml:lang="en">Cf. <hi rend="italic">bicge him lage</hi> (<hi rend="italic">lah</hi>), III Atr. 3, 3; 8, 2.</seg></note>
       </div>
     </body>
   </text>

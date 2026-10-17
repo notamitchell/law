@@ -14,6 +14,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#kennedy">Kennedy</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -34,6 +36,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="kennedy" type="study">A. G. Kennedy, ‘Cnut’s Law Code of 1018’, <title>Anglo-Saxon England</title> 11 (1983), 57–81</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -68,14 +71,16 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="41" corresp="#wit-d">Gif munuc oððe mæssepr<hi rend="italic">eost</hi> wiðersaca wurðe mid ealle, he sy amansumod æfre, buton he þe rædlicor gebuge to his þearfe.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="41" corresp="#wit-d">Gif munuc oððe mæssepreost wiðersaca wurðe mid ealle, he sy amansumod æfre, buton he þe rædlicor gebuge to his þearfe.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">Gif munuc oððe mæssepreost wiðersaca wurðe mid ealle, he sy amansumod æfre, buton he þe rædlicor gebuge to his þearfe.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Mönch oder ein Priester gänzlich ein Abtrünniger wird, so werde er für immer excommunicirt, ausser wenn er um so bewusster sich dem, was ihm noth thut, unterwirft.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Mönch oder ein Priester gänzlich ein Abtrünniger<ptr type="liebermannNote" n="1" target="#VIIIAtr_41.lnote.de.1"/> wird, so werde er für immer excommunicirt, ausser wenn er um so bewusster sich dem, was ihm noth thut, unterwirft.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a monk or a priest becomes a complete apostate, let him be excommunicated for ever, unless he submits all the more readily to what he needs to do.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">If a monk or a priest becomes an utter apostate, he shall be excommunicated for ever, unless he is wise enough to return to his duty.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIIAtr_41.robnote.n.1"/>If a monk or a priest becomes an utter apostate, he shall be excommunicated for ever, unless he is wise enough to return to his duty.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">And if a monk or a mass-priest becomes altogether an apostate, he is ever to be excommunicated, unless he more sensibly return to his duty.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">If a monk or a priest turns entirely to apostasy, he is to be excommunicated forever, unless he resumes his duty with greater prudence.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IICn_4-1">II Cn 4.1</ref></note>
         <note type="comparedBy" source="#kennedy" n="59"><ref target="clause:Cn-1018_part-016">Cn 1018 8</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="357"><ref target="clause:IICn_4-1">II Cn 4.1</ref></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_41.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">185</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Vielleicht benutzt durch II Cn 4, 1, der aber Abtrünnige (<hi rend="italic">s. d. Gl</hi>; Exkommunikation 11) austreibt.—<hi rend="italic">Vgl. Wb wiðersaca</hi>, wofür auch Toller 1252 die Bed. <hi rend="italic">apostata</hi> belegt. Vermutlich sind nur die bewusst und fortgesetzt die Pflicht der Weihe bzw. Regel Ablehnenden gemeint, nicht Ketzer; <hi rend="italic">s. d. Gl</hi>; Geistliche 22</seg><seg type="translation" xml:lang="en" source="#claude">Perhaps used by II Cn 4, 1, which, however, expels apostates (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi>; Exkommunikation 11).—<hi rend="italic">Cf. Wb wiðersaca</hi>, for which Toller 1252 also attests the meaning <hi rend="italic">apostata</hi>. Presumably only those are meant who knowingly and persistently reject the duty of their orders or of their rule respectively, not heretics; <hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi>; Geistliche 22</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_41.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">341</biblScope></bibl><seg type="original" xml:lang="en">Cf. II Cn. 4, 1.</seg></note>
       </div>
     </body>
   </text>

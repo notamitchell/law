@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">455</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -65,16 +68,19 @@
       <div type="clause" n="5">
         <head><ref type="lawCode" target="law:VIIIAtr">VIII Atr</ref> 5</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-d">Ne syn ealle cyrcan na gelicre mæðe worldlice wirðe, þeah hi godcundlice habban halgunge gelice.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-g-a-part">Ne syn ealle cyrican ná gelicre mæðe woroldlice wyrðe, þe hi godcundlice habban halgunge gelice.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-g-a-part">Ne syn ealle cyrican ná gelicre mæðe woroldlice wyrðe, þe<ptr type="liebermannNote" n="3" target="#VIIIAtr_5.lnote.oe.3"/> hi godcundlice habban halgunge gelice.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="5" corresp="#wit-d">Ne syn ealle cyrcan na gelicre mæðe worldlice wirðe, þeah hi godcundlice habban halgunge gelice.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">Ne syn ealle cyrcan na gelicre mæðe worldlice wirðe, þeah hi godcundlice habban halgunge gelice.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Keineswegs sind alle Kirchen im bürgerlichen Recht gleichen Ranges theilhaftig, obwohl sie kanonisch die Weihe gleich haben:</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Keineswegs<ptr type="liebermannNote" n="1" target="#VIIIAtr_5.lnote.de.1"/> sind alle Kirchen im bürgerlichen Recht gleichen Ranges theilhaftig, obwohl sie kanonisch die Weihe gleich haben:</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">By no means are all churches entitled to the same rank in secular law, although they have the same consecration in ecclesiastical terms:</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">Not all churches are to be regarded as possessing the same status in civil law, though from the side of religion they all possess the same sanctity.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIIAtr_5.robnote.n.1"/>Not all churches are to be regarded as possessing the same status in civil law, though from the side of religion they all possess the same sanctity.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">All churches are not entitled to the same status in a temporal sense, although they have the same consecration in regard to religion.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">Not all churches are to be considered alike in worldly status, although they all possess the same spiritual sanctity.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:ICn_3-1">I Cn 3.1</ref>; <ref target="clause:ICn_3-2">I Cn 3.2</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="388"><ref target="clause:ICn_3-1">I Cn 3.1</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIIIAtr_5.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">264</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_5.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">183</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Wiederholt I Cn 3, 1. Derselbe Gedanke Grið 3</seg><seg type="translation" xml:lang="en" source="#claude">Repeated in I Cn 3, 1. The same idea in Grið 3</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_5.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">339</biblScope></bibl><seg type="original" xml:lang="en">Cf. <hi rend="italic">Be Griðe</hi>, 3.</seg></note>
       </div>
     </body>
   </text>

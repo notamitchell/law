@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">457</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -65,13 +68,15 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="39" corresp="#wit-d">And git mæg ðeah bot cuman, wille hit man georne on eornost aginnan.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="39" corresp="#wit-d">And git mæg ðeah bot cuman, wille hit man georne on eornost aginnan.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">And git mæg ðeah bot cuman, wille hit man georne on eornost aginnan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und doch kann wohl noch Besserung kommen, wolle man es [nur] eifrig im Ernste beginnen.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und doch kann wohl noch Besserung kommen<ptr type="liebermannNote" n="1" target="#VIIIAtr_39.lnote.de.1"/>, wolle man es [nur] eifrig im Ernste beginnen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And yet amendment may still come, if only it is eagerly begun in earnest.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And yet nevertheless improvement can come, if there is the zealous desire to begin it in earnest.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIIAtr_39.robnote.n.1"/>And yet nevertheless improvement can come, if there is the zealous desire to begin it in earnest.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">And yet improvement can still come, if one will begin it zealously and in earnest.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">And improvement may still come, assuming there is a sincere desire to act upon it in earnest.</ab>
         <note type="comparison" source="#wormald-mel" n="340"><label>compared</label> <ref target="clause:VAtr_23">V Atr 23–25</ref> <quote>39 – 42, as compared with V 23 – 25 (VI 28:1–3)</quote></note>
         <note type="comparison" source="#wormald-mel" n="340"><label>compared</label> <ref target="clause:VIAtr_28-1">VI Atr 28.1–3</ref> <quote>39 – 42, as compared with V 23 – 25 (VI 28:1–3)</quote></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_39.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">185</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Gyf we bote gebidan sculan . ., mid swyðe miclan earnungan we þa bote motan æt Gode geræcan, gyf hit sceal godiende wurðan</hi> predigt Wulfstan 157. Und Æthelred II. versprach den ihn aufnehmenden Witan: <hi rend="italic">he wolde ælc þæra þinga betan, þe hi ealle ascunedon</hi>; Ann. Anglosax. 1014</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Gyf we bote gebidan sculan . ., mid swyðe miclan earnungan we þa bote motan æt Gode geræcan, gyf hit sceal godiende wurðan</hi>, Wulfstan preaches, 157. And Æthelred II promised the Witan who received him: <hi rend="italic">he wolde ælc þæra þinga betan, þe hi ealle ascunedon</hi>; Ann. Anglosax. 1014</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_39.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">341</biblScope></bibl><seg type="original" xml:lang="en">Cf. Wulfstan, p. 157.</seg></note>
       </div>
     </body>
   </text>
