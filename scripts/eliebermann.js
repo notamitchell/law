@@ -453,12 +453,24 @@
             } else if (code && code.fresh && !/^\s*$/.test(rest)) {
                 code = null;   // a code with no passage after it, e.g. "VI As" in a sentence
             }
-            while (code && last && (m = new RegExp(`^(?:\\s*\\([^()]*\\))?\\s*\\.?\\s+(${PASSAGE})(?![\\p{L}\\d])(?<!(?:^|[^\\d,])\\d{1,2}[a-z]?(?=\\)))`, 'u').exec(rest))) {
-                const n = m[1].replace(/\.$/, ''), s = at + m[0].length - m[1].length;
-                // after a line ("Z. 6. 9"), a bare number is another line
-                const line = /^\d+$/.test(n) && / Z\. ?\d+$/.test(last.text) ? 'Z. ' : '';
-                add(code.label + ' ' + line + n, s, s + n.length);
-                rest = rest.slice(m[0].length); at += m[0].length;
+            for (;;) {
+                while (code && last && (m = new RegExp(`^(?:\\s*\\([^()]*\\))?\\s*\\.?\\s+(${PASSAGE})(?![\\p{L}\\d])(?<!(?:^|[^\\d,])\\d{1,2}[a-z]?(?=\\)))`, 'u').exec(rest))) {
+                    const n = m[1].replace(/\.$/, ''), s = at + m[0].length - m[1].length;
+                    // after a line ("Z. 6. 9"), a bare number is another line
+                    const line = /^\d+$/.test(n) && / Z\. ?\d+$/.test(last.text) ? 'Z. ' : '';
+                    add(code.label + ' ' + line + n, s, s + n.length);
+                    rest = rest.slice(m[0].length); at += m[0].length;
+                }
+                // Liebermann's "58,1; 2" is 58,1 and 58,2: after a clause with a comma, a
+                // semicolon and a bare number name another subsection of the same clause.
+                const sub = code && last && last.anchor === code.anchor && /^(.* )(\d+[a-z]{0,2}),\d+[a-z]{0,2}$/.exec(last.text);
+                if (sub && (m = /^(\s*;\s*)(\d+[a-z]{0,2})(?![\p{L}\d,)])(?=\.?\s*(?:$|[.;|‖=(\[\u0001\u0004\d]|ff?\.))/u.exec(rest))) {
+                    const n = m[2], s = at + m[1].length;
+                    add(sub[1] + sub[2] + ',' + n, s, s + n.length);
+                    rest = rest.slice(m[0].length); at += m[0].length;
+                    continue;
+                }
+                break;
             }
             open = !!last && !(code && code.fresh) && /^\s*$/.test(rest);
             if (!open && !(code && code.fresh)) code = code && /^[\s.]*$/.test(rest) ? code : null;
