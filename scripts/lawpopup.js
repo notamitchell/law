@@ -160,6 +160,9 @@
             list.appendChild(element('dt', null, 'German'));
             const dd = element('dd', null, german);
             dd.lang = 'de';
+            // Liebermann's spelling first; the modern one underneath where it differs.
+            const modern = norm(row['Modern German'] || '');
+            if (modern) dd.appendChild(element('span', 'modern-german', 'today: ' + modern));
             list.appendChild(dd);
         }
         if (english) {
