@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +43,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -62,25 +65,45 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1638 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 290.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 290: “Ne” → “ne”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 291.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 291: “gehalgodre” → “gehalgodrę”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 162: “Ne” → “ne”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7.1">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 7.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7.1" corresp="#wit-g-a"><pb n="290" ed="#liebermann"/>Ne on his gefæderan, ne on gehalgodre nunnan, ne on ælætan ænig Cristen mann æfre ne gewifige;</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7.1" corresp="#wit-a"><pb n="290" ed="#liebermann"/>ne on his gefederan, ne on gehalgodre nunnan, ne on ælæten ænig Cristen man ne wifige afre;</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7.1" corresp="#wit-d-frags"><pb n="290" ed="#liebermann"/>ne on his gefæderan, ne on gehalgodre nunnan, ne on ǽlǽtan ænig Cristen man ne wifige æfre;</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="7.1" corresp="#wit-q"><pb n="290" ed="#liebermann"/>nec commatrem uel filiolam suam nec sanctimonialem nec repudiatam aliquis ducat uxorem;</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="7.1" corresp="#wit-g-a"><pb n="162" ed="#robertson"/>Ne on his gefæderan, ne on gehalgodre nunnan, ne on ælætan ænig Cristen mann æfre ne gewifige;</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7.1" corresp="#wit-g-a"><pb n="290" ed="#liebermann"/>ne<ptr type="liebermannNote" n="14" target="#ICn_7-1.lnote.oe.14"/> on his gefæderan<ptr type="liebermannNote" n="15" target="#ICn_7-1.lnote.oe.15"/>, ne on gehalgodre nunnan, ne on ælætan<ptr type="liebermannNote" n="16" target="#ICn_7-1.lnote.oe.16"/> ænig Cristen mann<ptr type="liebermannNote" n="17" target="#ICn_7-1.lnote.oe.17"/> æfre ne gewifige;</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7.1" corresp="#wit-a"><pb n="290" ed="#liebermann"/>ne on his gefederan, ne on gehalgodre nunnan, ne on ælæten ænig Cristen<ptr type="liebermannNote" n="4" target="#ICn_7-1.lnote.oe.4"/> man ne wifige afre;</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="7.1" corresp="#wit-q"><pb n="290" ed="#liebermann"/>nec commatrem uel<ptr type="liebermannNote" n="9" target="#ICn_7-1.lnote.oe.9-2"/> filiolam suam nec sanctimonialem nec repudiatam aliquis ducat uxorem;</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7.1" corresp="#wit-d-frags"><pb n="291" ed="#liebermann"/>ne on his gefæderan, ne on gehalgodrę nunnan, ne on ǽlǽtan ænig Cristen man ne wifige æfre;</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7.1" corresp="#wit-inst-cn"><pb n="291" ed="#liebermann"/>nec in compatra<ptr type="liebermannNote" n="9" target="#ICn_7-1.lnote.oe.9"/> sua nec in consecrata sanctimoniali aut nonna nec in alterius relicta, quam Angli uocant oþres<ptr type="liebermannNote" n="10" target="#ICn_7-1.lnote.oe.10"/> mannes ælǽte<ptr type="liebermannNote" n="11" target="#ICn_7-1.lnote.oe.11"/>: talibus, ut diximus, nemo Christianus se iungat;</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7.1" corresp="#wit-cons-cn"><pb n="291" ed="#liebermann"/>neque commatrem suam neque sanctimonialem neque desertiuam,</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="7.1" corresp="#wit-g-a"><pb n="162" ed="#robertson"/>ne on his gefæderan, ne on gehalgodre nunnan, ne on ælætan ænig Cristen mann æfre ne gewifige<ptr type="editorNote" n="8" target="#ICn_7-1.robnote.fn.8"/>;</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="240" ed="#rabin-doml"/>Ne on his gefæderan, ne on gehalgodre nunnan, ne on ælætan ænig Cristen mann æfre ne gewifige.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="291" ed="#liebermann"/>noch verheirathe sich ein christlicher Mann je mit seiner Gevatterin, noch mit einer eingesegneten Nonne, noch mit einer Geschiedenen;</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="291" ed="#liebermann"/>noch verheirathe sich ein christlicher Mann je mit seiner Gevatterin<ptr type="liebermannNote" n="1" target="#ICn_7-1.lnote.de.1"/>, noch mit einer eingesegneten Nonne<ptr type="liebermannNote" n="2" target="#ICn_7-1.lnote.de.2"/>, noch mit einer Geschiedenen<ptr type="liebermannNote" n="3" target="#ICn_7-1.lnote.de.3"/>;</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">nor let any Christian man ever marry his godmother [co-sponsor], or a consecrated nun, or a divorced woman;</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a"><pb n="163" ed="#robertson"/>And no Christian man shall ever marry his god-mother or a professed nun or a divorced woman.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a"><pb n="163" ed="#robertson"/>And no Christian man shall ever marry his god-mother<ptr type="editorNote" n="1" target="#ICn_7-1.robnote.n.1"/> or a professed nun or a divorced woman.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="241" ed="#rabin-doml"/>Nor may a Christian man ever marry his godmother, a professed nun, or a divorced woman.</ab>
         <note type="comparison" source="#liebermann" n="291"><ref target="clause:VIAtr_12-1">VI Atr 12.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 12, 1</note>
-        <note type="editorial">Liebermann compares VI Atr 12.1.</note>
+        <note type="editorial">Liebermann compares VI Atr 12.1.; BR: added from Gesetze I p. 291, October 2026 (MS Cons)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_7-1.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de">na <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">na Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_7-1.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de">gefed. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gefed. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_7-1.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de">-ten <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-ten Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_7-1.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de">mā ne wifige æfre <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">mā ne wifige æfre Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_7-1.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">291</biblScope></bibl><seg type="original" xml:lang="de">commatre <hi rend="italic">Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">commatre Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_7-1.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">291</biblScope></bibl><seg type="original" xml:lang="de">oþeres <hi rend="italic">Di</hi>; other <hi rend="italic">Lb Jo</hi></seg><seg type="translation" xml:lang="en" source="#claude">oþeres Di; other Lb Jo</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_7-1.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">291</biblScope></bibl><seg type="original" xml:lang="de">ælete <hi rend="italic">T</hi>; eðlete <hi rend="italic">Cb</hi>; lete <hi rend="italic">Lb Jo</hi></seg><seg type="translation" xml:lang="en" source="#claude">ælete T; eðlete Cb; lete Lb Jo</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_7-1.lnote.oe.9-2" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de">nec <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">nec K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_7-1.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de">crsten <hi rend="italic">A</hi></seg><seg type="translation" xml:lang="en" source="#claude">crsten A</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_7-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">199</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">‘noch Patentochter’ Q, verdeutlichend, was Atr. Cn, wohl auch Inst Cons, mit meinen; <hi rend="italic">s. Gl</hi> Taufverwandte 2</seg><seg type="translation" xml:lang="en" source="#claude">‘nor goddaughter’ Q, making explicit what Atr, Cn, and probably Inst Cons too, mean by it; <hi rend="italic">see Gl</hi> Taufverwandte 2</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_7-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">199</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Richtig, laut <hi rend="italic">Gl</hi> Nonne 12b, versteht Inst den Text im weiteren Sinne, der auch (<hi rend="italic">s. d</hi>. 1d), neben der klösterlichen Mönchin, die zur Keuschheit Eingesegnete umfasst, während <hi rend="italic">o</hi>. 6a nur diese, im engeren Sinne, weil neben Mönchin, gemeint war. Q Cons scheinen nur die Mönchin zu verstehen</seg><seg type="translation" xml:lang="en" source="#claude">Inst correctly, according to <hi rend="italic">Gl</hi> Nonne 12b, understands the text in the wider sense, which (<hi rend="italic">see</hi> that word 1d), besides the cloistered nun, also includes the woman consecrated to chastity, whereas <hi rend="italic">above</hi> 6a only the latter was meant, in the narrower sense, because she stands beside the cloistered nun. Q Cons seem to understand only the cloistered nun</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_7-1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">199</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Hier bewahrt Inst ausnahmsweise einen Agsächs. Terminus, offenbar aus eigener Rechtskunde</seg><seg type="translation" xml:lang="en" source="#claude">Here, exceptionally, Inst preserves an Anglo-Saxon term, evidently from its own legal knowledge</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="ICn_7-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="en"><hi rend="italic">commatrem vel filiolam</hi>, Q.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="ICn_7-1.robnote.fn.8" n="8" source="#robertson"><bibl><biblScope unit="page">162</biblScope></bibl><label>gewifige</label><seg type="original" xml:lang="en"><hi rend="italic">n. wifige afre</hi> A; <hi rend="italic">n. w. æfre</hi> D, Ld.</seg></note>
       </div>
     </body>
   </text>

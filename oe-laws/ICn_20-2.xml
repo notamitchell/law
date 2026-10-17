@@ -13,6 +13,9 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +35,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">462</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -62,25 +66,38 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1678 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 302.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 302: “⁊” → “And”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 302: “⁊ eac ah laforda gehwylc ðæs formyccle ðearfe, þæt he his men rihtlice healde.” → “⁊ eac ah laforda gehwylc ðæs formyccle ðearfe, þæt he his men rihtlice healde. (expanded letters in italics: æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 302: “And eac ah hlaforda gehwylc þæs formicele þearfe, þæt he his menn rihtlice heolde.” → “And eac ah hlaforda gehwylc þæs formicele þearfe, þæt he his menn rihtlice heolde. (expanded letters in italics: æt)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="20.2">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 20.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20.2" corresp="#wit-g-a"><pb n="302" ed="#liebermann"/>⁊ eac ah hlaforda gehwylc þæs formycle þearfe, þ<hi rend="italic">æt</hi> he his men rihtlice healde.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20.2" corresp="#wit-a"><pb n="302" ed="#liebermann"/>And eac ah hlaforda gehwylc þæs formicele þearfe, þæt he his menn rihtlice heolde.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20.2" corresp="#wit-b"><pb n="302" ed="#liebermann"/>⁊ eac ah laforda gehwylc ðæs formyccle ðearfe, þæt he his men rihtlice healde.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="20.2" corresp="#wit-q"><pb n="303" ed="#liebermann"/>Et unicuique domino magnum opus est, ut hominem suum recte deducat.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20.2" corresp="#wit-g-a"><pb n="302" ed="#liebermann"/>And eac ah hlaforda<ptr type="liebermannNote" n="1" target="#ICn_20-2.lnote.oe.1"/> gehwylc þæs formycle<ptr type="liebermannNote" n="2" target="#ICn_20-2.lnote.oe.2"/> þearfe, þ<hi rend="italic">æt</hi> he his men rihtlice healde.<ptr type="liebermannNote" n="3" target="#ICn_20-2.lnote.oe.3"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20.2" corresp="#wit-b"><pb n="302" ed="#liebermann"/>⁊ eac ah laforda gehwylc ðæs formyccle ðearfe, þ<hi rend="italic">æt</hi> he his men rihtlice healde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="20.2" corresp="#wit-a"><pb n="302" ed="#liebermann"/>And eac ah hlaforda gehwylc þæs formicele þearfe, þ<hi rend="italic">æt</hi> he his menn rihtlice heolde.<ptr type="liebermannNote" n="1" target="#ICn_20-2.lnote.oe.1-3"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="20.2" corresp="#wit-q"><pb n="303" ed="#liebermann"/>Et unicuique domino magnum opus est, ut hominem suum recte deducat.<ptr type="liebermannNote" n="1" target="#ICn_20-2.lnote.oe.1-2"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="20.2" corresp="#wit-cons-cn"><pb n="303" ed="#liebermann"/>Sic et dominum quemque suos homines recte seruare oportet.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="20.2" corresp="#wit-b"><pb n="170" ed="#robertson"/>⁊ eac ah laforda gehwylc ðæs formyccle ðearfe þæt he his men rihtlice healde.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="248" ed="#rabin-doml"/>And eac ah hlaforda gehwylc þæs formycle þearfe þæt he his men rihtlice healde.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="303" ed="#liebermann"/>Und auch jeder der Herren hat dazu gar starke Verpflichtung, dass er seine Untergebenen rechtlich halte.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="303" ed="#liebermann"/>Und auch jeder der Herren<ptr type="liebermannNote" n="1" target="#ICn_20-2.lnote.de.1"/> hat dazu gar<ptr type="liebermannNote" n="2" target="#ICn_20-2.lnote.de.2"/> starke Verpflichtung, dass er seine Untergebenen rechtlich halte.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And also every lord has very great need to treat his men rightly.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="171" ed="#robertson"/>And likewise it is the great duty of every lord to treat his men justly.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="462" ed="#whitelock"/>And also every lord has very great benefit from treating his men justly.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><ptr type="editorNote" n="1" target="#ICn_20-2.robnote.n.1"/><pb n="171" ed="#robertson"/>And likewise it is the great<ptr type="editorNote" n="2" target="#ICn_20-2.robnote.n.2"/> duty of every lord to treat his men justly.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="462" ed="#whitelock"/>And also every lord has very great benefit from treating his men justly.<ptr type="editorNote" n="2" target="#ICn_20-2.whinote.n.2"/></ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="249" ed="#rabin-doml"/>And likewise the principal obligation of every lord is to treat his people justly.</ab>
-        <note type="editorial">Robertson (p. 139) takes I Cn from B, which begins at ‘mæssedæg’ in 14.2, the earlier clauses being supplied from G</note>
-        <note type="translator" source="#whitelock">I omit the rest of this code</note>
+        <note type="editorial">Robertson (p. 139) takes I Cn from B, which begins at ‘mæssedæg’ in 14.2, the earlier clauses being supplied from G; BR: added from Gesetze I p. 303, October 2026 (MS Cons)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_20-2.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">302</biblScope></bibl><seg type="original" xml:lang="de">-rd <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-rd Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_20-2.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">302</biblScope></bibl><seg type="original" xml:lang="de">-micele <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-micele Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_20-2.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">302</biblScope></bibl><seg type="original" xml:lang="de">heolde <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">heolde Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_20-2.lnote.oe.1-2" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">303</biblScope></bibl><seg type="original" xml:lang="de">edu. <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">edu. K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_20-2.lnote.oe.1-3" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">302</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_20-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">201</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">beo hlaforda gehwylc milde his mannum ond hy næfre ne swence on unriht to swyðe</hi>; <hi rend="italic">Hom. n</hi>. Wulfstan 74. Zu Milde gegen die Leute mahnt geistlich den Herrn Episc. 10, <hi rend="italic">o</hi>. I 478; <hi rend="italic">vgl. Gl</hi> Gefolge 14a</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">beo hlaforda gehwylc milde his mannum ond hy næfre ne swence on unriht to swyðe</hi>; <hi rend="italic">Hom. n</hi>. Wulfstan 74. Episc. 10, <hi rend="italic">above</hi> I 478, exhorts the lord, on religious grounds, to mildness towards his people; <hi rend="italic">cf. Gl</hi> Gefolge 14a</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_20-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">201</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Komponiert wie <hi rend="italic">formanig</hi> ‘sehr viele’ (Toller), <hi rend="italic">foroft</hi> (<hi rend="italic">s. Wb</hi>)</seg><seg type="translation" xml:lang="en" source="#claude">Compounded like <hi rend="italic">formanig</hi> ‘very many’ (Toller), <hi rend="italic">foroft</hi> (<hi rend="italic">see Wb</hi>)</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="ICn_20-2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">350</biblScope></bibl><seg type="original" xml:lang="en">Liebermann compares this with <hi rend="italic">Episcopus</hi>, 10 (see <hi rend="smallcaps">i</hi>. p. 478).</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="ICn_20-2.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">350</biblScope></bibl><seg type="original" xml:lang="en">Cf. <hi rend="italic">formanig</hi>, <hi rend="italic">foroft</hi>, BT., p. 315.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="ICn_20-2.whinote.n.2" n="2" source="#whitelock"><bibl><biblScope unit="page">462</biblScope></bibl><label>justly</label><seg type="original" xml:lang="en">I omit the rest of this code</seg></note>
       </div>
     </body>
   </text>

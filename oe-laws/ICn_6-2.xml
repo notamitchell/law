@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -40,7 +42,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -63,25 +65,40 @@
       <change when="2026-10-18">Generated from row 1634 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 288.</change>
       <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 162.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 288: “hæmedþingc” → “hæmedþinge”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 289.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 289: “Recht genau wissen sie (wir D), dass sie von Rechts wegen keine Gemeinschaft mit einer Frau durch Beischlaf haben dürfen.” → “Recht genau wissen sie (wir D), dass sie von Rechts wegen keine Gemeinschaft mit einer Frau durch Beischlaf haben dürfen. (expanded letters in italics: D)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 289: “hæmedþingc” → “hæmedþinge”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6.2">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 6.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.2" corresp="#wit-g-a"><pb n="288" ed="#liebermann"/>Fullgeorne hig witan, þ<hi rend="italic">æt</hi> hig nagon mid rihte þurh hæmedþingc wifes gemanan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.2" corresp="#wit-g-a"><pb n="288" ed="#liebermann"/>Fullgeorne hig<ptr type="liebermannNote" n="18" target="#ICn_6-2.lnote.oe.18"/> witan, þ<hi rend="italic">æt</hi> hig nagon mid rihte þurh hæmedþinge<ptr type="liebermannNote" n="19" target="#ICn_6-2.lnote.oe.19"/> wifes gemanan.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.2" corresp="#wit-a"><pb n="288" ed="#liebermann"/>Fullgeorne hi witan, þæt hig nagon mid rihte þurh hæmedþinge wifes gemanan.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.2" corresp="#wit-d-frags"><pb n="288" ed="#liebermann"/>Fulgeorne we witan, þæt hi nagan mid rihte þurh hæmedþingc wifes gemánan.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.2" corresp="#wit-q"><pb n="288" ed="#liebermann"/>quia perfecte sciunt: non est rectum, ut causa cohabitandi cum mulieribus habitent.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="6a.2" corresp="#wit-g-a"><pb n="162" ed="#robertson"/>Fullgeorne hig witan þæt hig nagon mid rihte þurh hæmedþingc wifes gemanan.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.2" corresp="#wit-q"><pb n="288" ed="#liebermann"/>quia perfecte sciunt<ptr type="liebermannNote" n="12" target="#ICn_6-2.lnote.oe.12"/>: non est<ptr type="liebermannNote" n="13" target="#ICn_6-2.lnote.oe.13"/> rectum, ut causa cohabitandi cum mulieribus habitent.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.2" corresp="#wit-d-frags"><pb n="289" ed="#liebermann"/>Fulgeorne we witan, þ<hi rend="italic">æt</hi> hi nagan mid rihte þurh hæmedþinge wifes gemánan.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.2" corresp="#wit-inst-cn"><pb n="289" ed="#liebermann"/>Optime enim norunt<ptr type="liebermannNote" n="18" target="#ICn_6-2.lnote.oe.18-2"/> episcopi et cęteri ordines, quos supra memoraui<ptr type="liebermannNote" n="19" target="#ICn_6-2.lnote.oe.19-2"/> (nominaui), quod illis nullo modo licet communionem<ptr type="liebermannNote" n="20" target="#ICn_6-2.lnote.oe.20"/> mulierum habere nec cum illis coire.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.2" corresp="#wit-cons-cn"><pb n="289" ed="#liebermann"/>Satis enim certe sciunt, quod non debent recte communitatem mulieris secundum carnalem conuersacionem habere.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="6a.2" corresp="#wit-g-a"><pb n="162" ed="#robertson"/>Fullgeorne hig<ptr type="editorNote" n="4" target="#ICn_6-2.robnote.fn.4"/> witan þæt hig nagon mid rihte þurh hæmedþingc wifes gemanan.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="240" ed="#rabin-doml"/>Fullgeorne hig witan þæt hig nagon mid rihte þurh hæmedþingc wifes gemanan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="289" ed="#liebermann"/>Recht genau wissen sie (wir D), dass sie von Rechts wegen keine Gemeinschaft mit einer Frau durch Beischlaf haben dürfen.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="289" ed="#liebermann"/>Recht genau wissen sie (wir <hi rend="italic">D</hi>), dass sie von Rechts wegen keine Gemeinschaft mit einer Frau durch Beischlaf haben dürfen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">They (we, D) know full well that they may not lawfully have intercourse with a woman.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a"><pb n="163" ed="#robertson"/>They know full well that they have no right to marry.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a"><ptr type="editorNote" n="1" target="#ICn_6-2.robnote.n.1"/><pb n="163" ed="#robertson"/>They know full well that they have no right to marry.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="241" ed="#rabin-doml"/>They know full well that they may not rightfully engage in sexual relations with a woman.</ab>
         <note type="comparison" source="#liebermann" n="289"><ref target="clause:VAtr_9">V Atr 9</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. V Atr. 9</note>
-        <note type="editorial">Liebermann compares V Atr 9.</note>
+        <note type="editorial">Liebermann compares V Atr 9.; BR: added from Gesetze I p. 289, October 2026 (MS Cons)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6-2.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">288</biblScope></bibl><seg type="original" xml:lang="de">hi <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">hi Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6-2.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">288</biblScope></bibl><seg type="original" xml:lang="de">-ge <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-ge Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6-2.lnote.oe.18-2" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">289</biblScope></bibl><seg type="original" xml:lang="de">monentur <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">monentur T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6-2.lnote.oe.19-2" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">289</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vor der Klammer Cb; eingeklammertes übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">the text before the bracket Cb; the bracketed text the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6-2.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">289</biblScope></bibl><seg type="original" xml:lang="de">ha. co. ma. <hi rend="italic">Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">ha. co. ma. Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6-2.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">288</biblScope></bibl><seg type="original" xml:lang="de">sciant, quod n. <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">sciant, quod n. T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6-2.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">288</biblScope></bibl><seg type="original" xml:lang="de">esse <hi rend="italic">auf Rasur K</hi></seg><seg type="translation" xml:lang="en" source="#claude">esse on an erasure K</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="ICn_6-2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="en">With this clause and the next, cf. V Atr. 9 f.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="ICn_6-2.robnote.fn.4" n="4" source="#robertson"><bibl><biblScope unit="page">162</biblScope></bibl><label>hig</label><seg type="original" xml:lang="en"><hi rend="italic">we</hi> D.</seg></note>
       </div>
     </body>
   </text>

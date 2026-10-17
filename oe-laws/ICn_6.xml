@@ -14,6 +14,8 @@
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#kennedy">Kennedy</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -34,6 +36,7 @@
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="kennedy" type="study">A. G. Kennedy, ‘Cnut’s Law Code of 1018’, <title>Anglo-Saxon England</title> 11 (1983), 57–81</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -42,7 +45,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -63,21 +66,27 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1631 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 288.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 288: “gebugan” → “gebugan,”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 288: “And witena gerædnes is, þæt hi willað, þæt ælces hades men georne gebugan, ælc to ðam rihte þe him to gebyrige.” → “And witena gerædnes is, þæt hi willað, þæt ælces hades men georne gebugan, ælc to ðam rihte þe him to gebyrige. (expanded letters in italics: æt, æt, en, m, m)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 289.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 289: “Und wir (der Witan Verordnung ist, dass sie D) wünschen, dass die Menschen jedes Standes, jeder der Rechtspflicht, die ihm gebührt, sich willig unterwerfen,” → “Und wir (der Witan Verordnung ist, dass sie D) wünschen, dass die Menschen jedes Standes, jeder der Rechtspflicht, die ihm gebührt, sich willig unterwerfen, (expanded letters in italics: D)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 6</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-g-a"><pb n="288" ed="#liebermann"/>And we wyllað, þ<hi rend="italic">æt</hi> ælces hades menn georne gebugan ælc to þa<hi rend="italic">m</hi> rihte þe him to gebyrige.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-a"><pb n="288" ed="#liebermann"/>And we wyllað, þæt ælces hades menn georne gebugan, ælc to þam rihte þe him to gebyrige.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-d-frags"><pb n="288" ed="#liebermann"/>And witena gerædnes is, þæt hi willað, þæt ælces hades men georne gebugan, ælc to ðam rihte þe him to gebyrige.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6" corresp="#wit-q"><pb n="288" ed="#liebermann"/>Et uolumus, ut quicumque sunt in ordine clericatus constituti, puris mentibus inclinentur singulariter ad eam rectitudinem quę ipsis pertinet.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="6" corresp="#wit-g-a"><pb n="162" ed="#robertson"/>And we wyllað þæt ælces hades menn georne gebugan ælc to þam rihte þe him to gebyrige.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-g-a"><pb n="288" ed="#liebermann"/>And we wyllað<ptr type="liebermannNote" n="10" target="#ICn_6.lnote.oe.10"/>, þ<hi rend="italic">æt</hi> ælces hades menn<ptr type="liebermannNote" n="4" target="#ICn_6.lnote.oe.4"/> georne gebugan, ælc to þa<hi rend="italic">m</hi> rihte<ptr type="liebermannNote" n="11" target="#ICn_6.lnote.oe.11"/> þe him to gebyrige.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-a"><ptr type="liebermannNote" n="†" target="#missing"/><pb n="288" ed="#liebermann"/>And we wyllað, þæt ælces hades menn georne gebugan, ælc to þam rihte þe him to gebyrige.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-d-frags"><pb n="288" ed="#liebermann"/>And witena gerædnes is, þ<hi rend="italic">æt</hi> hi willað, þ<hi rend="italic">æt</hi> ælces hades m<hi rend="italic">en</hi> georne gebugan, ælc to ða<hi rend="italic">m</hi> rihte þe hi<hi rend="italic">m</hi> to gebyrige.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6" corresp="#wit-q"><pb n="288" ed="#liebermann"/>Et uolumus, ut quicumque sunt in ordine clericatus constituti, puris mentibus inclinentur singulariter ad eam rectitudinem quę ipsis pertinet.<ptr type="liebermannNote" n="7" target="#ICn_6.lnote.oe.7"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6" corresp="#wit-inst-cn"><pb n="289" ed="#liebermann"/>Hoc etiam statuimus, ut unusquisque<ptr type="liebermannNote" n="11" target="#ICn_6.lnote.oe.11-2"/>, cuiuscumque<ptr type="liebermannNote" n="12" target="#ICn_6.lnote.oe.12"/> ordinis aut<ptr type="liebermannNote" n="13" target="#ICn_6.lnote.oe.13"/> sexus sit<ptr type="liebermannNote" n="14" target="#ICn_6.lnote.oe.14"/>, seruet ordinem suum.<ptr type="liebermannNote" n="15" target="#ICn_6.lnote.oe.15"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6" corresp="#wit-cons-cn"><pb n="289" ed="#liebermann"/>Uolumus etiam, ut omnis ordinis homines diligenter attendant, quisque ad hoc quod suum ordinem attinet.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="6" corresp="#wit-g-a"><pb n="162" ed="#robertson"/>And<ptr type="editorNote" n="3" target="#ICn_6.robnote.fn.3"/> we wyllað þæt ælces hades menn georne gebugan ælc to þam rihte þe him to gebyrige.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="240" ed="#rabin-doml"/>And we wyllað þæt ælces hades menn georne gebugan, ælc to þam rihte þe him to gebyrige.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="289" ed="#liebermann"/>Und wir (der Witan Verordnung ist, dass sie D) wünschen, dass die Menschen jedes Standes, jeder der Rechtspflicht, die ihm gebührt, sich willig unterwerfen,</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="289" ed="#liebermann"/>Und<ptr type="liebermannNote" n="1" target="#ICn_6.lnote.de.1"/> wir (der<ptr type="liebermannNote" n="2" target="#ICn_6.lnote.de.2"/> Witan Verordnung ist, dass sie <hi rend="italic">D</hi>) wünschen, dass die Menschen jedes Standes<ptr type="liebermannNote" n="3" target="#ICn_6.lnote.de.3"/>, jeder der Rechtspflicht, die ihm gebührt, sich willig unterwerfen,</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And we will (it is the ordinance of the witan that they will, D) that people of every order eagerly submit, each to the duty that belongs to him,</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a"><pb n="163" ed="#robertson"/>And we desire that men of every estate readily submit to the duty which befits them.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-g-a"><ptr type="editorNote" n="1" target="#ICn_6.robnote.n.1"/><pb n="163" ed="#robertson"/>And we desire that men of every estate<ptr type="editorNote" n="2" target="#ICn_6.robnote.n.2"/> readily submit to the duty which befits them.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="241" ed="#rabin-doml"/>And we desire that those of every rank shall faithfully submit to the duty most appropriate for them.</ab>
         <note type="comparison" source="#liebermann" n="289"><ref target="clause:VIAtr_2">VI Atr 2</ref>; <ref target="clause:VAtr_4">V Atr 4</ref></note>
         <note type="comparisonPrinted" source="#liebermann">(* VI Atr. 2) | Vgl. V Atr. 4</note>
@@ -85,7 +94,22 @@
         <note type="comparison" source="#wormald-mel" n="356"><label>source (roman)</label> <ref target="clause:VIAtr_41">VI Atr 41</ref> <quote>Table 5.4, I Cn 6-6a: Cn 1018 11 (HomN L) VI Atr 2:1-2, 41</quote></note>
         <note type="comparison" source="#wormald-mel" n="356"><label>quoted verbatim (bold in Wormald's table)</label> <ref target="clause:Cn-1018_part-021">Cn 1018 11</ref> <quote>Table 5.4, I Cn 6-6a: Cn 1018 11 (HomN L) VI Atr 2:1-2, 41</quote></note>
         <note type="comparedBy" source="#kennedy" n="59"><ref target="clause:Cn-1018_part-021">Cn 1018 11–11.2</ref></note>
-        <note type="editorial">D (p. 127, after II Cn 7) has 6–6.2 again. Liebermann compares V Atr 4; VI Atr 2.</note>
+        <note type="editorial">D (p. 127, after II Cn 7) has 6–6.2 again. Liebermann compares V Atr 4; VI Atr 2.; BR: added from Gesetze I p. 289, October 2026 (MS Cons)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">288</biblScope></bibl><seg type="original" xml:lang="de">wil. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">wil. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">288</biblScope></bibl><seg type="original" xml:lang="de">men <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">men Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">288</biblScope></bibl><seg type="original" xml:lang="de">riht <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">riht Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6.lnote.oe.11-2" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">289</biblScope></bibl><seg type="original" xml:lang="de">cu. u. <hi rend="italic">Di</hi></seg><seg type="translation" xml:lang="en" source="#claude">cu. u. Di</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">289</biblScope></bibl><seg type="original" xml:lang="de">cui'q; <hi rend="italic">Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">cui'q; Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">289</biblScope></bibl><seg type="original" xml:lang="de">uel <hi rend="italic">Lb</hi>; sit aut <hi rend="spaced">cuiuslibet</hi> sexus, ser. <hi rend="italic">Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">uel Lb; sit aut <hi rend="italic">cuiuslibet</hi> sexus, ser. Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">289</biblScope></bibl><seg type="original" xml:lang="de">aut <hi rend="italic">fügt zu Lb</hi></seg><seg type="translation" xml:lang="en" source="#claude">aut added by Lb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">289</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="spaced">aut degradetur</hi> <hi rend="italic">fügt zu Lb S</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">aut degradetur</hi> added by Lb S</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_6.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">288</biblScope></bibl><seg type="original" xml:lang="de">-nent <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">-nent K</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_6.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">199</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">VIII Atr 31 nur sinnverwandt</seg><seg type="translation" xml:lang="en" source="#claude">VIII Atr 31 only related in sense</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_6.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">199</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">D vermengt Cn und Atr wie <hi rend="italic">o</hi>. 1</seg><seg type="translation" xml:lang="en" source="#claude">D conflates Cn and Atr, as <hi rend="italic">above</hi> 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_6.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">199</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">‘Klerus’ zu eng Q, denn von diesem handelt 6a gesondert</seg><seg type="translation" xml:lang="en" source="#claude">‘clergy’ Q too narrow, for 6a deals with them separately</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="ICn_6.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="en">Cf. V Atr. 4; VIII, 31.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="ICn_6.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="en">Q reads <hi rend="italic">quicumque in ordine clericatus constituti</hi>; Inst. <hi rend="italic">unusquisque, cuiuscumque ordinis aut sexus sit</hi>.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="ICn_6.robnote.fn.3" n="3" source="#robertson"><bibl><biblScope unit="page">162</biblScope></bibl><label>And</label><seg type="original" xml:lang="en"><hi rend="italic">And witena gerædnes is þæt hi w.</hi> D.</seg></note>
       </div>
     </body>
   </text>

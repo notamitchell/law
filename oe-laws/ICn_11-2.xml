@@ -13,6 +13,7 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -61,15 +62,17 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1650 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 294.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 294: “⁊ ga ælc cyricsceat into þam ealdan mynstre be ælcan frigean heorðe.” → “⁊ ga ælc cyricsceat into þam ealdan mynstre be ælcan frigean heorðe. (expanded letters in italics: m, n)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="11.2">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 11.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="11.2" corresp="#wit-g-a"><pb n="294" ed="#liebermann"/>⁊ gá ælc cyricsceat into þam ealdan mynstre be ælcon frigan heorðe.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="11.2" corresp="#wit-a"><pb n="294" ed="#liebermann"/>⁊ ga ælc cyricsceat into þam ealdan mynstre be ælcan frigean heorðe.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="11.2" corresp="#wit-q"><pb n="294" ed="#liebermann"/>Et eat omnis cyricsceat ad matrem ęcclesiam per omnes liberas domos.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="11.2" corresp="#wit-g-a"><pb n="294" ed="#liebermann"/>⁊ gá ælc cyricsceat into þam ealdan mynstre be ælcon<ptr type="liebermannNote" n="8" target="#ICn_11-2.lnote.oe.8"/> frigan heorðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="11.2" corresp="#wit-a"><pb n="294" ed="#liebermann"/>⁊ ga ælc cyricsceat into þa<hi rend="italic">m</hi> ealda<hi rend="italic">n</hi> mynstre be ælcan frigean heorðe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="11.2" corresp="#wit-q"><pb n="294" ed="#liebermann"/>Et eat omnis cyricsceat<ptr type="liebermannNote" n="5" target="#ICn_11-2.lnote.oe.5"/> ad matrem ęcclesiam per omnes liberas domos.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="11.2" corresp="#wit-cons-cn"><pb n="295" ed="#liebermann"/>Omnisque census ecclesiasticus contingat monasterio ueteri secundum unumquemque liberum focum.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="11.2" corresp="#wit-g-a"><pb n="164" ed="#robertson"/>⁊ gá ælc cyricsceat into þam ealdan mynstre be ælcon frigan heorðe.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="244" ed="#rabin-doml"/>And ga ælc cyricsceat into þam ealdan mynstre be ælcon frigan heorðe.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann"><pb n="295" ed="#liebermann"/>Und jede Kirchensteuer von jedem freien Herde gehe in die alte Pfarrkirche.</ab>
@@ -78,8 +81,11 @@
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="245" ed="#rabin-doml"/>And all Church dues from every free household are to go to the old minster.</ab>
         <note type="comparison" source="#liebermann" n="295"><ref target="clause:IIEg_2-2">II Eg 2.2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 2, 2</note>
-        <note type="editorial">Liebermann compares II Eg 2.2.</note>
+        <note type="editorial">Liebermann compares II Eg 2.2.; BR: added from Gesetze I p. 295, October 2026 (MS Cons)</note>
         <note type="translator" source="#rabin-doml">old minster: That is, the principal church in a region to which the smaller (and newer) parish churches are subordinate.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_11-2.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">295</biblScope></bibl><seg type="original" xml:lang="de">unamq. <hi rend="italic">Hr</hi></seg><seg type="translation" xml:lang="en" source="#claude">unamq. Hr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_11-2.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">294</biblScope></bibl><seg type="original" xml:lang="de">-can frigean <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-can frigean Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_11-2.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">294</biblScope></bibl><seg type="original" xml:lang="de">cir. <hi rend="italic">R</hi></seg><seg type="translation" xml:lang="en" source="#claude">cir. R</seg></note>
       </div>
     </body>
   </text>

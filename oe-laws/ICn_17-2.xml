@@ -14,6 +14,8 @@
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#kennedy">Kennedy</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -34,6 +36,7 @@
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="kennedy" type="study">A. G. Kennedy, ‘Cnut’s Law Code of 1018’, <title>Anglo-Saxon England</title> 11 (1983), 57–81</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -42,7 +45,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -64,28 +67,45 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1664 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 298.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 298: “⁊; ðam” → “And; þam”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 298: “⁊ beo ðam halgum tidum eallum Cristenum mannum, ealswa hit riht is, sib ⁊ sóm gemǽne ⁊ ælc sacu totwæmed.” → “⁊ beo ðam halgum tidum eallum Cristenum mannum, ealswa hit riht is, sib ⁊ sóm gemǽne ⁊ ælc sacu totwæmed. (expanded letters in italics: m, m, m, m)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 298: “syb” → “śyb”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 299: “Und an den heiligen Festen sei, wie es recht ist, allen christlichen Menschen Friede und Eintracht gemeinsam und jeder Rechtsstreit (Trug Ld) eingestellt.” → “Und an den heiligen Festen sei, wie es recht ist, allen christlichen Menschen Friede und Eintracht gemeinsam und jeder Rechtsstreit (Trug Ld) eingestellt. (expanded letters in italics: Ld)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 299.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="17.2">
         <head><ref type="lawCode" target="law:ICn">I Cn</ref> 17.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="17.2" corresp="#wit-g-a"><pb n="298" ed="#liebermann"/>⁊ beo ða<hi rend="italic">m</hi> halgu<hi rend="italic">m</hi> tidum, ealswa hit riht is, eallu<hi rend="italic">m</hi> Cristenu<hi rend="italic">m</hi> mannu<hi rend="italic">m</hi> sib ⁊ som gemǽne ⁊ ælc sacu totwæmed.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="17.2" corresp="#wit-a"><pb n="298" ed="#liebermann"/>And beo þam halgan tidum, ealswa hit riht is, eallum Cristenum mannum syb ⁊ sóm geméne ⁊ ælc sacu totwæmed.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="17.2" corresp="#wit-b"><pb n="298" ed="#liebermann"/>⁊ beo ðam halgum tidum eallum Cristenum mannum, ealswa hit riht is, sib ⁊ sóm gemǽne ⁊ ælc sacu totwæmed.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="17.2" corresp="#wit-g-a"><pb n="298" ed="#liebermann"/>And beo þa<hi rend="italic">m</hi> halgu<hi rend="italic">m<ptr type="liebermannNote" n="2" target="#ICn_17-2.lnote.oe.2-2"/></hi> tidum, ealswa hit riht is, eallu<hi rend="italic">m</hi> Cristenu<hi rend="italic">m</hi> mannu<hi rend="italic">m</hi> sib<ptr type="liebermannNote" n="3" target="#ICn_17-2.lnote.oe.3"/> ⁊ som gemǽne<ptr type="liebermannNote" n="4" target="#ICn_17-2.lnote.oe.4"/> ⁊ ælc sacu<ptr type="liebermannNote" n="5" target="#ICn_17-2.lnote.oe.5"/> totwæmed.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="17.2" corresp="#wit-b"><pb n="298" ed="#liebermann"/>⁊ beo ðam halgum tidu<hi rend="italic">m</hi> eallu<hi rend="italic">m</hi> Cristenu<hi rend="italic">m</hi> mannu<hi rend="italic">m</hi>, ealswa hit riht is, sib ⁊ sóm gemǽne ⁊ ælc sacu totwæmed.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="17.2" corresp="#wit-a"><pb n="298" ed="#liebermann"/>And beo þa<hi rend="italic">m</hi> halgan tidu<hi rend="italic">m</hi>, ealswa hit riht is, eallum Cristenu<hi rend="italic">m</hi> mannum śyb ⁊ sóm geméne ⁊ ælc sacu totwæmed.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="17.2" corresp="#wit-q"><pb n="299" ed="#liebermann"/>Et sit in his sanctis obseruationibus, sicut uere iustum est, Christianis omnibus pax et concordia, et omnis ira tollatur.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="17.2" corresp="#wit-b"><pb n="168" ed="#robertson"/>⁊ beo ðam halgum tidum eallum Cristenum mannum, ealswa hit riht is, sib ⁊ sóm gemǽne ⁊ ælc sacu totwæmed.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="17.2" corresp="#wit-inst-cn"><pb n="299" ed="#liebermann"/>[17, 2] In his diebus sit pax et securitas omnibus Christianis, et lis et contentio<ptr type="liebermannNote" n="6" target="#ICn_17-2.lnote.oe.6"/> destruatur.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="17.2" corresp="#wit-cons-cn"><pb n="299" ed="#liebermann"/>Sitque in sanctis temporibus omnibus Christianis, ueluti iustissimum est, pax et concordia communis omnisque inimicitia segregata.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="17.2" corresp="#wit-b"><pb n="168" ed="#robertson"/>⁊ beo ðam halgum tidum eallum Cristenum mannum, ealswa hit riht is, sib ⁊ sóm gemǽne ⁊ ælc sac<ptr type="editorNote" n="3" target="#ICn_17-2.robnote.fn.3"/>u totwæmed.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="246" ed="#rabin-doml"/>And beo þam halgum tidum, ealswa hit riht is, eallum Cristenum mannum sib and som gemæne, and ælc sacu totwæmed.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="299" ed="#liebermann"/>Und an den heiligen Festen sei, wie es recht ist, allen christlichen Menschen Friede und Eintracht gemeinsam und jeder Rechtsstreit (Trug Ld) eingestellt.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="299" ed="#liebermann"/>Und<ptr type="liebermannNote" n="1" target="#ICn_17-2.lnote.de.1"/> an den heiligen Festen sei, wie es recht ist, allen christlichen Menschen Friede und Eintracht gemeinsam und jeder Rechtsstreit (Trug<ptr type="liebermannNote" n="2" target="#ICn_17-2.lnote.de.2"/> <hi rend="italic">Ld</hi>) eingestellt.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And at the holy seasons, as is right, let there be peace and concord among all Christian people, and every lawsuit (fraud, Ld) suspended.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="169" ed="#robertson"/>And at the holy festivals, as is fitting, there shall be peace and concord among all Christian men, and every dispute shall be laid aside.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><ptr type="editorNote" n="1" target="#ICn_17-2.robnote.n.1"/><pb n="169" ed="#robertson"/>And at the holy festivals, as is fitting, there shall be peace and concord among all Christian men, and every dispute shall be laid aside.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="247" ed="#rabin-doml"/>And at holy times, just as is proper, there is to be peace and friendship among all Christians, and each dispute is to be resolved.</ab>
         <note type="comparison" source="#liebermann" n="299"><ref target="clause:VIAtr_25-1">VI Atr 25.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 25, 1</note>
         <note type="comparison" source="#wormald-mel" n="357"><label>quoted verbatim (bold in Wormald's table)</label> <ref target="clause:VIAtr_25-1">VI Atr 25.1–2</ref> <quote>Table 5.4, I Cn 17:2-3: Cn 1018 15:1-2  VI Atr 25:1-2</quote></note>
         <note type="comparison" source="#wormald-mel" n="357"><label>quoted verbatim (bold in Wormald's table)</label> <ref target="clause:Cn-1018_part-047">Cn 1018 15.1–2</ref> <quote>Table 5.4, I Cn 17:2-3: Cn 1018 15:1-2  VI Atr 25:1-2</quote></note>
         <note type="comparedBy" source="#kennedy" n="59"><ref target="clause:Cn-1018_part-046">Cn 1018 15–15.2</ref></note>
-        <note type="editorial">Liebermann compares VI Atr 25.1.; Robertson (p. 139) takes I Cn from B, which begins at ‘mæssedæg’ in 14.2, the earlier clauses being supplied from G</note>
+        <note type="editorial">Liebermann compares VI Atr 25.1.; Robertson (p. 139) takes I Cn from B, which begins at ‘mæssedæg’ in 14.2, the earlier clauses being supplied from G; BR: added from Gesetze I p. 299, October 2026 (MS Cons)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_17-2.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="de">omnis <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">omnis Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_17-2.lnote.oe.2-2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">298</biblScope></bibl><seg type="original" xml:lang="de">-gan <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-gan Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_17-2.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">298</biblScope></bibl><seg type="original" xml:lang="de">syb <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">syb Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_17-2.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">298</biblScope></bibl><seg type="original" xml:lang="de">gemene <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gemene Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_17-2.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">298</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="spaced">facn</hi> <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">facn</hi> Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="ICn_17-2.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="de">in omnibus <hi rend="italic">fügt zu Lb S</hi></seg><seg type="translation" xml:lang="en" source="#claude">in omnibus added by Lb S</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_17-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">200</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Die folgenden Sätze bis 18b, doch ohne 17, 3, wiederholt <hi rend="italic">Hom. n</hi>. Wulfstan 118</seg><seg type="translation" xml:lang="en" source="#claude">The following sentences up to 18b, but without 17, 3, are repeated by <hi rend="italic">Hom. n</hi>. Wulfstan 118</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="ICn_17-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">200</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Vermutlich ein Agsächs. Lesefehler in Ld, <hi rend="italic">s</hi>. Einl. 8</seg><seg type="translation" xml:lang="en" source="#claude">Presumably an Anglo-Saxon misreading in Ld; <hi rend="italic">see</hi> Introduction 8</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="ICn_17-2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">350</biblScope></bibl><seg type="original" xml:lang="en">With this clause and the next, cf. VI Atr. 25, 1 f.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="ICn_17-2.robnote.fn.3" n="3" source="#robertson"><bibl><biblScope unit="page">168</biblScope></bibl><label>sacu</label><seg type="original" xml:lang="en"><hi rend="italic">facn</hi> Ld.</seg></note>
       </div>
     </body>
   </text>
