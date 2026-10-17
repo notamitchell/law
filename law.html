@@ -172,7 +172,7 @@ scripts:
                 if (n.getAttribute('type') === 'editorNote') where.push((group.name || '') + ', p. ' + scope('page') + (n.getAttribute('subtype') === 'footnote' ? ', footnote to the text' : n.getAttribute('subtype') === 'translationFootnote' ? ', footnote' : ''));
                 else where.push('Gesetze ' + ({ 1: 'I', 3: 'III' }[scope('volume')] || scope('volume')) + ', p. ' + scope('page') + (scope('column') ? ', col. ' + scope('column') : ''));
             }
-            if (n.getAttribute('subtype') === 'translationFootnote') where.push('Liebermann’s footnote to his German translation');
+            if (n.getAttribute('type') !== 'editorNote' && n.getAttribute('subtype') === 'translationFootnote') where.push('Liebermann’s footnote to his German translation');
             const remark = kids.find(k => k.localName === 'note' && k.getAttribute('type') === 'remark');
             const foot = el('span', 'lnotes__where muted', where.join(' · '));
             if (remark) foot.appendChild(document.createTextNode((where.length ? ' · ' : '') + plainText(remark)));
