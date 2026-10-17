@@ -19,12 +19,14 @@
     <encodingDesc>
       <listPrefixDef>
         <prefixDef ident="law" matchPattern="(.+)" replacementPattern="lawAbb.html#$1"/>
+        <prefixDef ident="clause" matchPattern="(.+)" replacementPattern="law.html?id=$1"/>
         <prefixDef ident="gram" matchPattern="(.+)" replacementPattern="gramAbb.html#$1"/>
         <prefixDef ident="entry" matchPattern="(.+)" replacementPattern="entry.html?id=$1"/>
       </listPrefixDef>
     </encodingDesc>
     <revisionDesc>
       <change when="2026-10-13">Transcribed by Claude from the page scan; not yet checked against the print.</change>
+      <change when="2026-10-17">L (Latin version) after VI Atr, IV Eg and Leis Wl citations linked.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -33,7 +35,8 @@
         <form type="lemma">
           <orth>emunitas</orth>
         </form>
-        <dictScrap type="liebermann"><lbl type="language">L</lbl> <hi rend="bold">emunitas</hi> <hi rend="italic"><ref type="abbreviation" target="gram:fur"><abbr>für</abbr></ref></hi> imm~ <ref type="lawCode" target="law:LeisWl">Leis Wl</ref> L 1</dictScrap>
+        <dictScrap type="liebermann"><lbl type="language">L</lbl> <hi rend="bold">emunitas</hi> <hi rend="italic"><ref type="abbreviation" target="gram:fur"><abbr>für</abbr></ref></hi> imm~ <ref type="lawCode" target="law:LeisWl">Leis Wl</ref> <ref type="lawCode" target="law:LatVersion">L</ref> 1</dictScrap>
+        <xr type="lawCode"><ref target="clause:LeisWl_1">Leis Wl 1</ref></xr>
       </entry>
     </body>
   </text>

@@ -98,7 +98,12 @@ class Clauses:
     def __init__(self, catalogue_path, mark_law_path):
         self.by_anchor = defaultdict(dict)       # anchor -> {clause key: clause id}
         self.order = defaultdict(list)           # anchor -> clause keys in file order
+        # texts in the database that have no Anchor of their own in the catalogue
+        CODE_ANCHOR = {'VI Atr Lat': 'VIAtrLat'}
         for c in json.load(open(catalogue_path, encoding='utf-8')):
+            if not c['anchor'] and c.get('code') in CODE_ANCHOR:
+                c = dict(c, anchor=CODE_ANCHOR[c['code']])
+                c['citationKeys'] = [c['code'].replace(' ', '') + ' ' + k[len(c['code']) + 1:] if k.startswith(c['code'] + ' ') else k for k in c['citationKeys']]
             if not c['anchor']:
                 continue
             keys = [k[len(c['anchor']) + 1:] for k in c['citationKeys']]
