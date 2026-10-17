@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">192</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">455</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -54,23 +57,32 @@
       <change when="2026-10-17">Generated from row 1426 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 264.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 264.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 264: “büsse er (immer D) zuerst an die [verletzte] Kirche den Bruch des Sonderfriedens, je nachdem die Missethat ist und je nachdem der Rang dieser Kirche ist.” → “büsse er (immer D) zuerst an die [verletzte] Kirche den Bruch des Sonderfriedens, je nachdem die Missethat ist und je nachdem der Rang dieser Kirche ist. (expanded letters in italics: D)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4.1">
         <head><ref type="lawCode" target="law:VIIIAtr">VIII Atr</ref> 4.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.1" corresp="#wit-d">bete man æfre ærest þone griðbryce into ðare circan, be þam þe seo dæd sy ⁊ be þa<hi rend="italic">m</hi> þe þare circan mæð sy.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.1" corresp="#wit-g-a-part">gebete man ærest þæne griðbryce into ðære cyrcan, be þam þe seo dæd sy ⁊ be ðam þe ðære cyrcan mæð sy.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="4.1" corresp="#wit-d">Bete man æfre ærest þone griðbryce into ðare circan be þam þe seo dæd sy ⁊ be þam þe þare circan mæð sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.1" corresp="#wit-d">bete man æfre<ptr type="liebermannNote" n="2" target="#VIIIAtr_4-1.lnote.oe.2-2"/> ærest þone griðbryce into ðare circan, be þam þe seo dæd sy ⁊ be þa<hi rend="italic">m</hi> þe þare circan mæð sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.1" corresp="#wit-g-a-part">gebete man ærest þæne griðbryce into ðære cyrcan, be þam þe seo dæd sy ⁊ be ðam þe ðære cyrcan<ptr type="liebermannNote" n="2" target="#VIIIAtr_4-1.lnote.oe.2"/> mæð sy.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="4.1" corresp="#wit-d">Bete<ptr type="editorNote" n="7" target="#VIIIAtr_4-1.robnote.fn.7"/> man æfre<ptr type="editorNote" n="2" target="#VIIIAtr_4-1.robnote.fn.2"/> ærest þone griðbryce into ðare circan be þam þe seo dæd sy ⁊ be þam þe þare circan mæð sy.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">Bete man æfre ærest þone griðbryce into ðare circan be þam þe seo dæd sy and be þam þe þare circan mæð sy.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">büsse er (immer D) zuerst an die [verletzte] Kirche den Bruch des Sonderfriedens, je nachdem die Missethat ist und je nachdem der Rang dieser Kirche ist.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">büsse<ptr type="liebermannNote" n="1" target="#VIIIAtr_4-1.lnote.de.1"/> er (immer <hi rend="italic">D</hi>) zuerst an die [verletzte] Kirche den Bruch des Sonderfriedens, je nachdem die Missethat ist und je nachdem der Rang<ptr type="liebermannNote" n="2" target="#VIIIAtr_4-1.lnote.de.2"/> dieser Kirche ist.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">let him (always, D) first pay compensation to the [violated] church for the breach of protection, according to what the deed is and according to the rank of that church.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And in the first instance, amends for breach of its protection shall always be made to the church, in accordance with the nature of the offence and also in proportion to the status of the church.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIIAtr_4-1.robnote.n.1"/>And in the first instance, amends for breach of its protection shall always be made to the church, in accordance with the nature of the offence and also in proportion to the status<ptr type="editorNote" n="2" target="#VIIIAtr_4-1.robnote.n.2"/> of the church.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">Always first the church is to be compensated for the violation of sanctuary, in proportion to the deed and in proportion to the status of that church.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">Compensation for the violation of a church’s sanctuary must always be paid first to that church according to the nature of the crime and the status of the church.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:NorGrith_Line-1">Nor Grið Line 1</ref></note>
         <note type="textual" source="#rabin-doml">æfre: omitted G</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIIIAtr_4-1.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">264</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">geändert</hi> cyrican</seg><seg type="translation" xml:lang="en" source="#claude">altered cyrican</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIIIAtr_4-1.lnote.oe.2-2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">264</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt G Cn</hi></seg><seg type="translation" xml:lang="en" source="#claude">missing in G Cn</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_4-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">183</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Wiederholt I Cn 3 = Northu 19</seg><seg type="translation" xml:lang="en" source="#claude">Repeated in I Cn 3 = Northu 19</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_4-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">183</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Kirchenrang 1; -friede 4c. d; -weihe 2</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Kirchenrang 1; -friede 4c. d; -weihe 2</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_4-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">339</biblScope></bibl><seg type="original" xml:lang="en">Cf. <hi rend="italic">N.P.L.</hi> 19.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_4-1.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">339</biblScope></bibl><seg type="original" xml:lang="en">Cf. <hi rend="italic">Be Griðe</hi>, 3; 10.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VIIIAtr_4-1.robnote.fn.2" n="2" source="#robertson"><bibl><biblScope unit="page">118</biblScope></bibl><label>þæs</label><seg type="original" xml:lang="en">Om. G.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VIIIAtr_4-1.robnote.fn.7" n="7" source="#robertson"><bibl><biblScope unit="page">118</biblScope></bibl><label>Bete</label><seg type="original" xml:lang="en"><hi rend="italic">gebete</hi> G.</seg></note>
       </div>
     </body>
   </text>

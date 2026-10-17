@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -28,6 +30,7 @@
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">120</biblScope></bibl>
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">194</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -62,13 +65,16 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9" corresp="#wit-d">And sy ælc geoguðe teoðung gelæst be pentecosten be wite;</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="9[a]" corresp="#wit-d">And sy ælc geoguðe teoðung gelæst be pentecosten be wite,</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">And sy ælc geoguðe teoðung gelæst be Pentecosten be wite.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und jeder Zehnt von Jungvieh werde zu Pfingsten entrichtet, bei Strafgeld</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und jeder<ptr type="liebermannNote" n="1" target="#VIIIAtr_9.lnote.de.1"/> Zehnt von Jungvieh werde zu Pfingsten entrichtet, bei Strafgeld</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let every tithe of young stock be paid by Pentecost, on pain of a fine,</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And every tithe of young livestock shall be rendered by Pentecost, under pain of incurring the fine,</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIIAtr_9.robnote.n.1"/>And every tithe of young livestock shall be rendered by Pentecost, under pain of incurring the fine,</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">And each tithe of the young animals is to be paid by Pentecost or there will be a penalty.</ab>
         <note type="comparison" source="#liebermann" n="265"><ref target="clause:IIEg_3">II Eg 3</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 3</note>
-        <note type="editorial">Liebermann compares II Eg 3.</note>
+        <note type="editorial">Liebermann compares II Eg 3.; AZ: added from Rabin p. 194 / 195, October 2026 (Rabin’s note to the translation)</note>
+        <note type="translator" source="#rabin-doml">9–13: On the dues listed in these clauses, see the notes to The Laws of Edward and Guthrum 6.1–6.3, Canons 54, and 5 Æthelred 12.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_9.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">183</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Hieraus I Cn 8, 1</seg><seg type="translation" xml:lang="en" source="#claude">From this I Cn 8, 1</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_9.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="en">Cf. II Edg. 3; V Atr. 11, 1; VI, 17; I Cn. 8, 1; Wulfstan, p. 116 etc.; <hi rend="italic">Can. Edg.</hi> 54, ed. Thorpe, <hi rend="italic">op. cit.</hi> <hi rend="smallcaps">ii</hi>. p. 256.</seg></note>
       </div>
     </body>
   </text>

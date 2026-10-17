@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -28,6 +30,7 @@
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">122</biblScope></bibl>
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">196</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -53,6 +56,7 @@
       <change when="2026-10-17">Generated from row 1443 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 265.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 265.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 265: “Strafe:” → “Strafe;”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -62,14 +66,16 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15" corresp="#wit-d">And gif hwa þ<hi rend="italic">æt</hi> nelle, gewilde man hine to rihte mid worldlicre steore; ⁊ þ<hi rend="italic">æt</hi> si gemæne Criste ⁊ cyninge, ealswa hit iu wæs.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="15" corresp="#wit-d">And gif hwa þæt nelle, gewilde man hine to rihte mid worldlicre steore, ⁊ þæt si gemæne Criste ⁊ cyninge, ealswa hit iu wæs.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">And gif hwa þæt nelle, gewilde man hine to rihte mid worldlicre steore; and þæt si gemæne Criste and cyninge, ealswa hit iu wæs.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn einer dies weigert, zwinge man ihn zur Rechtserfüllung durch bürgerliche Strafe: und dies [Strafgeld] gehöre der Kirche und dem König gemeinsam, wie es früher gewesen ist.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn einer dies weigert, zwinge man ihn zur Rechtserfüllung durch bürgerliche Strafe; und dies [Strafgeld] gehöre der Kirche und dem König gemeinsam, wie<ptr type="liebermannNote" n="1" target="#VIIIAtr_15.lnote.de.1"/> es früher gewesen ist.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if anyone refuses this, let him be compelled to do right by secular punishment: and let this [fine] belong to Christ and the king jointly, as it was before.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And if anyone refuses to do so, he shall be brought to justice by a civil penalty, and this shall be divided between Christ and the king, in accordance with former custom.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIIAtr_15.robnote.n.1"/>And if anyone refuses to do so, he shall be brought to justice by a civil penalty, and this shall be divided between Christ and the king, in accordance with former custom.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">And if anyone will not do so, he is to be brought to justice by means of a civil penalty; and this shall be shared between Christ and the king, just as it was of old.</ab>
         <note type="comparison" source="#liebermann" n="265"><ref target="clause:EGu_Prol-to-2">EGu Prol. 2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. E Gu. Prol. 2</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VIIIAtr_36">VIII Atr 36</ref></note>
         <note type="editorial">Liebermann compares EGu Prol. 2.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_15.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">184</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. o</hi>. 8, <hi rend="italic">u</hi>. 36; VII Atr 4. 4, 2. <hi rend="italic">Vgl. Gl</hi> Kircheneinkünfte 6a; <hi rend="italic">o</hi>. Einl. 12</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. above</hi> 8, <hi rend="italic">below</hi> 36; VII Atr 4. 4, 2. <hi rend="italic">Cf. Gl</hi> Kircheneinkünfte 6a; <hi rend="italic">above</hi> Introduction 12</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_15.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="en">Cf. caps. 8 and 36; E. and G. Pre. § 2; 5, 1; 6–6, 4; II Cn. 48.</seg></note>
       </div>
     </body>
   </text>

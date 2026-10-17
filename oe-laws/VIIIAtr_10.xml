@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">194</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -63,9 +66,9 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10" corresp="#wit-d">And Ro<hi rend="italic">m</hi>feoh gelæste man æghwilce geare be Petres mæssan.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="10" corresp="#wit-d">And Romfeoh gelæste man æghwilce geare be Petres mæssan.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">And Romfeoh gelæste man æghwilce geare be Petres mæssan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und Romgeld werde in jedem Jahre zu Petri Festtag entrichtet.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und<ptr type="liebermannNote" n="1" target="#VIIIAtr_10.lnote.de.1"/> Romgeld<ptr type="liebermannNote" n="2" target="#VIIIAtr_10.lnote.de.2"/> werde in jedem Jahre zu Petri Festtag entrichtet.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let Rome-money be paid every year by St Peter's day.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And Peter's Pence shall be rendered every year by St Peter's Day.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIIAtr_10.robnote.n.1"/>And Peter's Pence shall be rendered every year by St Peter's Day.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">And the dues to Rome are to be paid each year by the Feast of Saint Peter.</ab>
         <note type="comparison" source="#liebermann" n="265"><ref target="clause:IIEg_4">II Eg 4</ref></note>
         <note type="comparisonPrinted" source="#liebermann">II Eg. 4</note>
@@ -74,6 +77,9 @@
         <note type="comparison" source="#wormald-ppmel" n="52"><label>contrast</label> <ref target="clause:IIEg_4">II Eg 4–4.3</ref> <quote>The thought of a recalcitrant solemnly setting off for Rome ... (2.) is difficult to take seriously. It is no surprise that Wulfstan envisaged something more sensible</quote></note>
         <note type="comparison" source="#wormald-ppmel" n="52"><label>returns to multiplier of</label> <ref target="clause:Romscot_Romscot-1">Romscot</ref> <quote>Wulfstan envisaged something more sensible (together with a return to the Ine/Romscot multiplier) in 'VIII' Æthelred (4.)</quote></note>
         <note type="editorial">Liebermann compares II Eg 4.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_10.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">183</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Wiederholt I Cn 9; <hi rend="italic">Hom. n</hi>. Wulfstan 272 = 311</seg><seg type="translation" xml:lang="en" source="#claude">Repeated in I Cn 9; <hi rend="italic">Hom. n</hi>. Wulfstan 272 = 311</seg><note type="remark" resp="#claude">On several rubrics: VIII Atr 10. 10, 1</note></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_10.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">183</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Peterspfennig 1. 15. 17a</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Peterspfennig 1. 15. 17a</seg><note type="remark" resp="#claude">On several rubrics: VIII Atr 10. 10, 1</note></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_10.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="en">Cf. II Edg. 4; V Atr. 11; VI, 18; I Cn. 9; <hi rend="italic">N.P.L.</hi> 57, 1; <hi rend="italic">Can. Edg.</hi> 54; Wulfstan, pp. 272, 311.</seg></note>
       </div>
     </body>
   </text>

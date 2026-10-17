@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -57,18 +60,19 @@
       <change when="2026-10-17">Generated from row 1431 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 264.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 264.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 264: “cyningc” → “cyninge”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7">
         <head><ref type="lawCode" target="law:VIIIAtr">VIII Atr</ref> 7</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-d">And wite Cristenra manna gehwilc, þ<hi rend="italic">æt</hi> he his Drihtene his teoþunge, a swa seo sulh þone teoðan æcer gegá, rihtlice gelæste be Godes miltse ⁊ be þa<hi rend="italic">m</hi> fullan wite, þe Eadgar cyningc gelagode.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-d">And wite Cristenra manna gehwilc, þ<hi rend="italic">æt</hi> he his Drihtene his teoþunge, a swa seo sulh þone teoðan æcer gegá, rihtlice gelæste be Godes miltse ⁊ be þa<hi rend="italic">m</hi> fullan wite, þe Eadgar cyninge gelagode.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="7" corresp="#wit-d">And wite Cristenra manna gehwilc, þæt he his Drihtene his teoþunge, a swa seo sulh þone teoðan æcer gegá, rihtlice gelæste be Godes miltse ⁊ be þam fullan wite þe Eadgar cyningc gelagode.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">And wite Cristenra manna gehwilc, þæt he his Drihtene his teoþunge—a swa seo sulh þone teoðan æcer gega—rihtlice gelæste be Godes miltse and be þam fullan wite þe Eadgar cyningc gelagode.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und beachte jeder der Christenmenschen, dass er seinem Herr[gott] seinen Zehnten rechtmässig, immer, sowie der Pflug den zehnten Acker überschreitet, leiste, bei der Gnade Gottes und bei der vollen Strafe, die König Eadgar gesetzlich angeordnet hat.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und<ptr type="liebermannNote" n="1" target="#VIIIAtr_7.lnote.de.1"/> beachte jeder der Christenmenschen, dass er seinem Herr[gott] seinen Zehnten rechtmässig, immer, sowie der Pflug den zehnten Acker überschreitet, leiste, bei der Gnade Gottes und bei der vollen Strafe, die König Eadgar gesetzlich angeordnet hat.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let every Christian man take heed that he pays his tithe to his Lord rightly, always as the plough passes over the tenth acre, on [pain of losing] God's favour and on the full penalty which King Edgar laid down.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And every Christian man, in order to obtain the mercy of God, shall see to it that he duly renders his tithes to his Lord, namely, in every case, the produce of every tenth acre traversed by the plough, or else he shall incur the full penalty which King Edgar instituted by law.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIIAtr_7.robnote.n.1"/>And every Christian man, in order to obtain the mercy of God, shall see to it that he duly renders his tithes to his Lord, namely, in every case, the produce of every tenth acre traversed by the plough, or else he shall incur the full penalty<ptr type="editorNote" n="2" target="#VIIIAtr_7.robnote.n.2"/> which King Edgar<ptr type="editorNote" n="3" target="#VIIIAtr_7.robnote.n.3"/> instituted by law.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">And for the grace of God, every Christian must understand that he is to offer up his tithes properly to the Lord— always to be a one-tenth yield of every acre traversed by the plow—or suffer the full penalty set forth by King Edgar.</ab>
         <note type="comparison" source="#liebermann" n="264, 265">VII Atr; <ref target="clause:IIEg_3-1">II Eg 3.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. VII Atr. [?] | *II 3, 1</note>
@@ -78,8 +82,12 @@
         <note type="comparison" source="#wormald-ppmel" n="38"><label>cites; more or less verbatim</label> <ref target="clause:IIEg_3-1">II Eg 3.1</ref> <quote>for fear of the full fine that King Edgar made lawful; that is, if anyone will not rightly pay tithes [more or less verbally as excerpt 3.]</quote></note>
         <note type="comparison" source="#rabin-doml" n="420"><label>see the penalties in</label> <ref target="clause:IIEg_3-1">II Eg 3.1</ref> <quote>King Edgar: See the penalties established in 2 Edgar 3.1.</quote></note>
         <note type="comparedBy" source="#wormald-mel" n="356"><ref target="clause:ICn_8-2">I Cn 8.2</ref></note>
-        <note type="editorial">Liebermann compares VII Atr 4; II Eg 3.1.</note>
-        <note type="translator" source="#rabin-doml">King Edgar: See the penalties established in 2 Edgar 3.1. These are also reiterated with slight modifications in the following clause. 9–13 On the dues listed in these clauses, see the notes to The Laws of Edward and Guthrum 6.1–6.3, Canons 54, and 5 Æthelred 12.</note>
+        <note type="editorial">Liebermann compares VII Atr 4; II Eg 3.1.; AZ: corrected against Rabin p. 192 / 193, October 2026 (was “9–13 On the dues listed in these clauses, see the notes to The Laws of Edward and Guthrum 6.1–6.3, Canons 54, and 5 Æthelred 12.”, now “∅”)</note>
+        <note type="translator" source="#rabin-doml">King Edgar: See the penalties established in 2 Edgar 3.1. These are also reiterated with slight modifications in the following clause.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_7.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">183</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Inhaltlich = <hi rend="italic">Hom. n</hi>. Wulfstan 116. 208; wörtlich samt Zitat aus Eadgar benutzt 272 = 310. Berufung auf Eadgar nochmals 37. 43</seg><seg type="translation" xml:lang="en" source="#claude">In content = <hi rend="italic">Hom. n</hi>. Wulfstan 116. 208; used verbatim, together with the quotation from Eadgar, 272 = 310. Eadgar is appealed to again in 37. 43</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_7.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="en">Cf. VII, 4 and note.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_7.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="en">Cf. II Edg. 3, 1.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_7.robnote.n.3" n="3" source="#robertson"><bibl><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="en">Cf. 37; 43.</seg></note>
       </div>
     </body>
   </text>

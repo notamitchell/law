@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">194</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -64,12 +67,14 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="11.1" corresp="#wit-d">⁊ se þe ðæt ne gelæste, forgilde hine mid twelffealdan, ⁊ þam cyninge CXX scill'.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="11.1" corresp="#wit-d">⁊ se þe ðæt ne gelæste, forgilde hine mid twelffealdan ⁊ þam cyninge CXX scill'.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">And se þe ðæt ne gelæste forgilde hine mid twelffealdan, and þam cyninge CXX scillinga.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">und wer das nicht leistet, vergelte sie mit Zwölffachem, und dem König 120 Schilling.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">und<ptr type="liebermannNote" n="1" target="#VIIIAtr_11-1.lnote.de.1"/> wer das nicht leistet, vergelte sie mit Zwölffachem, und dem König 120 Schilling.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">and whoever does not pay it, let him pay it twelvefold, and 120 shillings to the king.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And he who fails to do so shall pay them twelve-fold and [give] 120 shillings to the king.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIIAtr_11-1.robnote.n.1"/>And he who fails to do so shall pay them twelve-fold and [give] 120 shillings to the king.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">And anyone who does not pay them must render them twelvefold and pay one hundred and twenty shillings to the king.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:ICn_10-1">I Cn 10.1</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="356"><ref target="clause:ICn_10-1">I Cn 10.1</ref></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_11-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">183</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Vermutlich aus Ine 4, der aber nur 60 Schill. Strafgeld fordert</seg><seg type="translation" xml:lang="en" source="#claude">Presumably from Ine 4, which, however, demands a fine of only 60 shill.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_11-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="en">Cf. In. 4 (where the fine is only 60 sh.); I Cn. 10. The same offence is threatened with excommunication in I Edm. 2 and with incurring the wrath of God in IV Edg. 1, 3.</seg></note>
       </div>
     </body>
   </text>

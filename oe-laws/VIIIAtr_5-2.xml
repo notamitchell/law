@@ -12,6 +12,9 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +33,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">192</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">455</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -54,25 +58,32 @@
       <change when="2026-10-17">Generated from row 1429 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 264.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 264.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 264: “[G ends.]” → “∅”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5.2">
         <head><ref type="lawCode" target="law:VIIIAtr">VIII Atr</ref> 5.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.2" corresp="#wit-d">A sceal mid rihte do<hi rend="italic">m</hi> æft<hi rend="italic">er</hi> dæde ⁊ medmung be mǽþe.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.2" corresp="#wit-g-a-part">A sceal mid rihte dom æfter dæde ⁊ medemung be mæðe. [G ends.]</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="5.2" corresp="#wit-d">A sceal mid rihte dom æfter dæde ⁊ medmung be mǽþe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.2" corresp="#wit-d">A sceal mid rihte do<hi rend="italic">m</hi> æft<hi rend="italic">er</hi> dæde ⁊ medmung be mǽþe.<ptr type="liebermannNote" n="3" target="#VIIIAtr_5-2.lnote.oe.3"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.2" corresp="#wit-g-a-part">A sceal mid rihte dom æfter dæde ⁊ medemung be mæðe.<ptr type="liebermannNote" n="5" target="#VIIIAtr_5-2.lnote.oe.5"/></ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="5.2" corresp="#wit-d">A sceal mid rihte dom æfter dæde ⁊ medmung be mǽþ<ptr type="editorNote" n="1" target="#VIIIAtr_5-2.robnote.fn.1"/>e.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">A sceal mid rihte dom æfter dæde and medmung be mæþe.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Immer soll von Rechtswegen das Urtheil nach der That und die Abmessung [der Busse] nach dem Range [der Kirche erfolgen].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Immer<ptr type="liebermannNote" n="1" target="#VIIIAtr_5-2.lnote.de.1"/> soll von Rechtswegen das Urtheil nach der That und die Abmessung [der Busse] nach dem Range [der Kirche erfolgen<ptr type="liebermannNote" n="2" target="#VIIIAtr_5-2.lnote.de.2"/>].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Judgment must always rightly follow the deed, and assessment [of compensation] the rank [of the church].</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">Judgment, following the principles of justice, shall always be in accordance with the nature of the deed, and the penalty shall be proportionate to the offence.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">Ever by rights must judgment accord with the deed, and the amount of the fine with the status [of the church].</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIIAtr_5-2.robnote.n.1"/>Judgment, following the principles of justice, shall always be in accordance with the nature of the deed, and the penalty shall be proportionate to the offence.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">Ever by rights must judgment accord with the deed, and the amount of the fine with the status [of the church].<ptr type="editorNote" n="5" target="#VIIIAtr_5-2.whinote.n.5"/></ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">In accordance with justice, judgment must always reflect the nature of the deed and punishment the seriousness of the crime.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:Had_10">Had 10</ref></note>
-        <note type="editorial">In G, ‘⁊ [on?] Norðhymbra lage’ follows, barely legible. G ends here.</note>
-        <note type="translator" source="#whitelock">Agreeing with Liebermann that in this context mœ has the same sense as in the previous clauses, the status of the church, and is not in its vaguer sense of “moderation, due measure”. But cf. Hadbot (No. 53 (e)), 10.</note>
+        <note type="editorial">In G, ‘⁊ [on?] Norðhymbra lage’ follows, barely legible. G ends here.; AT: corrected against Whitelock p. 455, October 2026 (was “mœ”, now “mœþ”)</note>
         <note type="textual" source="#rabin-doml">mæþe: end of G</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIIIAtr_5-2.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">264</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">kaum lesbar. Es folgt</hi> ⁊ [on?] Norðhymbra lage; <hi rend="italic">vgl. Selborne</hi> Ancient facts conc. tithes 393.</seg><seg type="translation" xml:lang="en" source="#claude">barely legible. There follows ⁊ [on?] Norðhymbra lage; cf. Selborne Ancient facts conc. tithes 393.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIIIAtr_5-2.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">264</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">verbessert aus</hi> mæne</seg><seg type="translation" xml:lang="en" source="#claude">corrected from mæne</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_5-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">183</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Wiederholt Had 10; <hi rend="italic">vgl. u</hi>. 27, 1; <hi rend="italic">Gl</hi> Strafe 11a. 13</seg><seg type="translation" xml:lang="en" source="#claude">Repeated in Had 10; <hi rend="italic">cf. below</hi> 27, 1; <hi rend="italic">Gl</hi> Strafe 11a. 13</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_5-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">183</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Ellipse des Infinitivs; <hi rend="italic">s. d. Wb</hi> 3; <hi rend="italic">vgl</hi>. Toller 845b III 2</seg><seg type="translation" xml:lang="en" source="#claude">Ellipsis of the infinitive; <hi rend="italic">see</hi> that word in <hi rend="italic">Wb</hi> 3; <hi rend="italic">cf</hi>. Toller 845b III 2</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_5-2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">339</biblScope></bibl><seg type="original" xml:lang="en">Cf. <hi rend="italic">Had.</hi> 10 Liebermann takes this clause as referring particularly to what precedes, <hi rend="italic">i.e.</hi> the judgment shall be according to the deed, and the penalty according to the grade of the church, but its verbal agreement with VI, 53 suggests that it may be a general reflection.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VIIIAtr_5-2.robnote.fn.1" n="1" source="#robertson"><bibl><biblScope unit="page">120</biblScope></bibl><label>mǽþe</label><seg type="original" xml:lang="en">At this point the extract in G ends.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="VIIIAtr_5-2.whinote.n.5" n="5" source="#whitelock"><bibl><biblScope unit="page">455</biblScope></bibl><label>church]</label><seg type="original" xml:lang="en">Agreeing with Liebermann that in this context <hi rend="italic">mœþ</hi> has the same sense as in the previous clauses, the status of the church, and is not in its vaguer sense of “moderation, due measure”. But cf. <hi rend="italic">Hadbot</hi> (No. 53 (e)), 10.</seg></note>
       </div>
     </body>
   </text>

@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">194</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -63,14 +66,17 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12.1" corresp="#wit-d">⁊ leohtgescot gelæste man to candelmæssan; dó oftor se ðe wille.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="12.1" corresp="#wit-d">⁊ leohtgescot gelæste man to candelmæssan; dó oftor se ðe wille.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">And leohtgescot gelæste man to candelmæssan; do oftor se ðe wille.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und Lichtschoss werde zu Lichtmess [2. Febr.] entrichtet; thu es öfter wer will.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und Lichtschoss<ptr type="liebermannNote" n="1" target="#VIIIAtr_12-1.lnote.de.1"/> werde zu Lichtmess<ptr type="liebermannNote" n="2" target="#VIIIAtr_12-1.lnote.de.2"/> [2. Febr.] entrichtet; thu es öfter wer will.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let light-dues be paid at Candlemas [2 February]; let whoever wishes pay it more often.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And light-dues shall be rendered at Candlemas; he who so desires may give them more frequently.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIIAtr_12-1.robnote.n.1"/>And light-dues shall be rendered at Candlemas; he who so desires may give them more frequently.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">And the dues for the lighting of the church are to be paid by Candlemas, but may be rendered more often if one wishes.</ab>
         <note type="comparison" source="#liebermann" n="265"><ref target="clause:VIAtr_19">VI Atr 19</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. VI Atr. 19</note>
         <note type="comparedBy" source="#wormald-mel" n="356"><ref target="clause:ICn_12">I Cn 12</ref></note>
         <note type="editorial">Liebermann compares VI Atr 19.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_12-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">184</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Lichtschoss 2ff. Die Marginalien bis 17 zitieren zwar VI Atr; es kann aber ebensogut V Atr 12—13 benutzt sein</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Lichtschoss 2ff. The marginal notes up to 17 do cite VI Atr; but V Atr 12—13 may equally well have been used</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_12-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">184</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Lichtschoss 2ff. Die Marginalien bis 17 zitieren zwar VI Atr; es kann aber ebensogut V Atr 12—13 benutzt sein</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Lichtschoss 2ff. The marginal notes up to 17 do cite VI Atr; but V Atr 12—13 may equally well have been used</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_12-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="en">Cf. E. and G. 6, 2, where no set time is mentioned; V Atr. 11, 1; VI, 19; Wulfstan, pp. 116, 208, where light-dues are demanded three times a year; I Cn. 12, where the fixed times are given as Candlemas, Easter and All Hallows; Wulfstan, p. 311, where Christmas is substituted for All Hallows.</seg></note>
       </div>
     </body>
   </text>

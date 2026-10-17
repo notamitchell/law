@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,10 +34,12 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">457</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-g-a-part"><abbr>G(A) (part)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
+          <witness xml:id="wit-cons"><abbr>Cons</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation of Cnut's laws, early 12th c.), as printed by Liebermann</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -57,18 +61,21 @@
       <change when="2026-10-17">Generated from row 1465 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 267.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 267.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Cons added from Gesetze I, p. 267.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 126: “ænig” → “æníg”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="33">
         <head><ref type="lawCode" target="law:VIIIAtr">VIII Atr</ref> 33</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="33" corresp="#wit-d">And gif man gehadodne oððe ælþeodigne man þurh ænig þinc forræde æt feo oððe æt feore, oððe hine bænde oððe hine beate oððe gebismrige on ǽnige wisan, þon<hi rend="italic">ne</hi> sceal hi<hi rend="italic">m</hi> cyngc beon for mæg ⁊ for mundboran, buton he elles oðerne hæbbe.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="33" corresp="#wit-d">And gif man gehadodne oððe ælþeodigne man þurh ænig þinc forræde æt feo oððe æt feore, oððe hine bænde oððe hine beate oððe gebismrige on ǽnige wisan, þonne sceal him cyngc beon for mæg ⁊ for mundboran, buton he elles oðerne hæbbe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="33" corresp="#wit-d">And gif man gehadodne oððe ælþeodigne man þurh ænig þinc forræde æt feo oððe æt feore, oððe hine bænde oððe hine beate oððe gebismrige<ptr type="liebermannNote" n="2" target="#VIIIAtr_33.lnote.oe.2"/> on ǽnige wisan, þon<hi rend="italic">ne</hi> sceal hi<hi rend="italic">m</hi> cyngc beon for mæg ⁊ for mundboran, buton he elles oðerne hæbbe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="33" corresp="#wit-cons">[33 <hi rend="italic">f</hi>.] Et, si quis usquam ordinatum iniuriet, quisque Dei amicus satagat, ut ei satisfaciat . . . .</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="33" corresp="#wit-d">And gif man gehadodne oððe ælþeodigne man þurh æníg þinc forræde æt feo oððe æt feore, oððe hine bænde oððe hine beate oððe gebismrige on ǽnige wisan, þonne sceal him cyngc beon for mæg ⁊ for mundboran, buton he elles oðerne hæbbe.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">And gif man gehadodne oððe ælþeodigne man þurh ænig þinc forræde æt feo oððe æt feore, oððe hine bænde oððe hine beate oððe gebismrige on ænige wisan, þonne sceal him cyngc beon for mæg and for mundboran, buton he elles oðerne hæbbe.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn jemand einen geweihten oder fremden Mann durch irgend etwas an Besitz oder an Leben schädigt, oder ihn bindet oder ihn schlägt oder in irgend einer Weise beschimpft, dann soll diesem der König statt eines Verwandten und Beschützers sein, ausser wenn er sonst einen andern [Beschützer] hat.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn<ptr type="liebermannNote" n="1" target="#VIIIAtr_33.lnote.de.1"/> jemand einen geweihten oder fremden<ptr type="liebermannNote" n="2" target="#VIIIAtr_33.lnote.de.2"/> Mann durch irgend etwas an Besitz oder an Leben schädigt, oder ihn bindet<ptr type="liebermannNote" n="3" target="#VIIIAtr_33.lnote.de.3"/> oder ihn schlägt oder in irgend einer Weise beschimpft, dann soll diesem der König statt eines Verwandten und Beschützers sein, ausser wenn er sonst einen andern [Beschützer] hat.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if anyone in any way wrongs a man in holy orders or a foreigner, in property or in life, or binds or beats him or insults him in any way, then the king shall be to him in place of a kinsman and protector, unless he has another [protector].</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And if an attempt is made to deprive in any way a man in orders or a stranger of either his goods or his life, or if he is bound or beaten or insulted in any way, the king shall act as his kinsman and protector, if he has no other.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIIAtr_33.robnote.n.1"/>And if an attempt is made to deprive in any way a man in orders or a stranger of either his goods or his life, or if he is bound<ptr type="editorNote" n="2" target="#VIIIAtr_33.robnote.n.2"/> or beaten or insulted in any way, the king shall act as his kinsman and protector, if he has no other.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">And if a man in holy orders or a foreigner is for any reason defrauded of property or of life, or is bound or beaten or insulted in any way, the king shall then be for him in the place of a kinsman and protector, unless otherwise he has another.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">And if anyone conspires against the property or life of a cleric or a stranger, or if he is bound or beaten or humiliated in any way, then the king shall be his kinsman and protector, if he does not have another.</ab>
         <note type="comparison" source="#liebermann" n="267"><ref target="clause:EGu_12">EGu 12</ref></note>
@@ -79,6 +86,13 @@
         <note type="comparedBy" source="#wormald-mel" n="359"><ref target="clause:IICn_42">II Cn 42</ref></note>
         <note type="comparedBy" source="#whitelock" n="468"><ref target="clause:IICn_42">II Cn 42</ref></note>
         <note type="editorial">Liebermann compares EGu 12.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIIIAtr_33.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">267</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_33.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">184</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Wiederholt durch II Cn 40—40, 2. 42 = teilweise Geþyncðo 8</seg><seg type="translation" xml:lang="en" source="#claude">Repeated in II Cn 40—40, 2. 42 = partly Geþyncðo 8</seg><note type="remark" resp="#claude">On several rubrics: VIII Atr 33—35</note></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_33.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">184</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Die Wörter ‘durch irgend etwas’ und in 34 ‘je nachdem die Tat ist’ sollten klein gedruckt stehn</seg><seg type="translation" xml:lang="en" source="#claude">The words ‘durch irgend etwas’ and, in 34, ‘je nachdem die Tat ist’ should have been printed in small type</seg><note type="remark" resp="#claude">On several rubrics: VIII Atr 33—35</note></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_33.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">184</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Das Einschiebsel, aufgenommen in II Cn 42, will den Klerus auch gegen leichtere Injurien schirmen. Die drei Ehrenkränkungen (<hi rend="italic">s. d. Gl</hi> 6c) stehen beisammen auch Af 35—35, 6</seg><seg type="translation" xml:lang="en" source="#claude">The interpolation, taken up in II Cn 42, aims to protect the clergy against lesser insults too. The three affronts to honour (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 6c) also occur together in Af 35—35, 6</seg><note type="remark" resp="#claude">On several rubrics: VIII Atr 33—35</note></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_33.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">341</biblScope></bibl><seg type="original" xml:lang="en">With this clause and the two following, cf. II Cn. 40–40, 2</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_33.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">341</biblScope></bibl><seg type="original" xml:lang="en">Cf. Af. 35–35, 6.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_33.robnote.n.0" n="0" source="#robertson" rend="wholeClause"><bibl><biblScope unit="page">341</biblScope></bibl><seg type="original" xml:lang="en">With cap. 33, cf. E. and G. 12; II Cn. 42.</seg></note>
       </div>
     </body>
   </text>

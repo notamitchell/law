@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">194</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -63,15 +66,17 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="11" corresp="#wit-d">And ciricsceat gelæste man be Martinus mæssan.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="11" corresp="#wit-d">And ciricsceat gelæste man be Martinus mæssan.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">And ciricsceat gelæste man be Martinus mæssan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und Kirchensteuer sei zum Martinusfest entrichtet;</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und<ptr type="liebermannNote" n="1" target="#VIIIAtr_11.lnote.de.1"/> Kirchensteuer sei zum Martinusfest entrichtet;</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let church-scot be paid by Martinmas;</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And church dues shall be rendered by Martinmas.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIIAtr_11.robnote.n.1"/>And church dues shall be rendered by Martinmas.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">And Church dues are to be paid by the Feast of Saint Martin.</ab>
         <note type="comparison" source="#liebermann" n="265"><ref target="clause:IIEg_3">II Eg 3</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 3</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:ICn_10">I Cn 10</ref></note>
         <note type="comparison" source="#wormald-ppmel" n="29"><label>substantially repeats</label> <ref target="clause:IIEg_2-2">II Eg 2.2–3</ref> <quote>The references in Wulfstan's codes for Æthelred and Cnut substantially repeated what Edgar had said</quote></note>
         <note type="editorial">Liebermann compares II Eg 3.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_11.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">183</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Benutzt durch I Cn 10. 10, 1 = Hn 11, 4; genauer <hi rend="italic">Hom. n</hi>. Wulfstan 311. <hi rend="italic">Vgl. Gl</hi> Kirchenpfennig 8; Ungehorsam 7</seg><seg type="translation" xml:lang="en" source="#claude">Used by I Cn 10. 10, 1 = Hn 11, 4; more closely by <hi rend="italic">Hom. n</hi>. Wulfstan 311. <hi rend="italic">Cf. Gl</hi> Kirchenpfennig 8; Ungehorsam 7</seg><note type="remark" resp="#claude">On several rubrics: VIII Atr 11. 11, 1</note></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_11.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="en">Cf. II Edg. 3; I Cn. 10; Wulfstan, p. 311.</seg></note>
       </div>
     </body>
   </text>

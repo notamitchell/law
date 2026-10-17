@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">194</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -64,14 +67,16 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12" corresp="#wit-d">Sulhælmessan gebireð þ<hi rend="italic">æt</hi> man gelæste be wite æghwilce geare, þon<hi rend="italic">ne</hi> XV niht beoð agan ofer eastertid.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="12" corresp="#wit-d">Sulhælmessan gebireð þæt man gelæste be wite æghwilce geare, þonne XV niht beoð agan ofer eastertid.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">Sulhælmessan gebireð þæt man gelæste be wite æghwilce geare, þonne XV niht beoð agan ofer Eastertid.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Pflugalmosen gebührt sich, dass bei Strafe geleistet werde in jedem Jahre, wenn 14 Tage über Ostern vergangen sind.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Pflugalmosen<ptr type="liebermannNote" n="1" target="#VIIIAtr_12.lnote.de.1"/> gebührt sich, dass bei Strafe geleistet werde in jedem Jahre, wenn 14 Tage über Ostern vergangen sind.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">It is fitting that plough-alms be paid every year, on pain of a fine, when a fortnight has passed after Easter.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">Plough-alms ought to be rendered every year 15 days after Easter, under pain of incurring the fine.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIIAtr_12.robnote.n.1"/>Plough-alms ought to be rendered every year 15 days after Easter, under pain of incurring the fine.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">It is appropriate that plow dues be paid each year fifteen nights after Easter or there will be a penalty.</ab>
         <note type="comparison" source="#liebermann" n="265"><ref target="clause:IIEg_2-3">II Eg 2.3</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 2, 3</note>
         <note type="comparedBy" source="#whitelock" n="435"><ref target="clause:IIEg_2-3">II Eg 2.3</ref></note>
         <note type="editorial">Liebermann compares II Eg 2.3.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_12.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">184</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Benutzt durch <hi rend="italic">Hom. n</hi>. Wulfstan 311. V Atr 11 = VI 16 = Cn stehen ferner als Eg</seg><seg type="translation" xml:lang="en" source="#claude">Used by <hi rend="italic">Hom. n</hi>. Wulfstan 311. V Atr 11 = VI 16 = Cn are more remote than Eg</seg><note type="remark" resp="#claude">On several rubrics: VIII Atr 12. 12, 1</note></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_12.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="en">Cf. II Edg. 2, 3; V Atr. 11, 1; VI, 16; I Cn. 8, 1; Wulfstan, p. 116 etc.</seg></note>
       </div>
     </body>
   </text>

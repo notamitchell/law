@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">204</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">457</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -64,9 +67,9 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="43.1" corresp="#wit-d">⁊ utan God lufian innewerdre heortan ⁊ Godes laga gíman, swa wel swa we betst magon.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="43.1" corresp="#wit-d">⁊ utan God lufian innewerdre heortan ⁊ Godes laga gíman, swa wel swa we betst magon.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">And utan God lufian innewerdre heortan and Godes laga giman, swa wel swa we betst magon.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und lasst uns Gott aus innerstem Herzen lieben und Gottes Gesetze achten, so gut wie wir bestens können.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und lasst uns Gott aus innerstem<ptr type="liebermannNote" n="1" target="#VIIIAtr_43-1.lnote.de.1"/> Herzen lieben und Gottes Gesetze achten<ptr type="liebermannNote" n="2" target="#VIIIAtr_43-1.lnote.de.2"/>, so gut wie wir bestens können.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let us love God from our inmost hearts and heed God's laws as well as we best can.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And let us love God from our inmost heart and observe his laws to the best of our ability.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIIAtr_43-1.robnote.n.1"/>And let us love God from our inmost heart and observe his laws to the best of our ability.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">And let us love God with our inmost heart and heed God’s laws as well as ever we can.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">And let us love God with our innermost heart and heed his laws as best as we can.</ab>
         <note type="comparison" source="#liebermann" n="268">VI Atr; <ref target="clause:VIAtr_42">VI Atr 42</ref></note>
@@ -74,6 +77,9 @@
         <note type="comparisonIncomplete">Some of Liebermann’s notes here are cut off in the gutter of the scan used, and are still to be completed.</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:ICn_21">I Cn 21</ref></note>
         <note type="editorial">Liebermann compares VI Atr 1, 42.2.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_43-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">185</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Möglicherweise war V Atr 1. 34. VIIa 2, 1 ebenfalls von Einfluss. Vielleicht benutzt durch I Cn 21. <hi rend="italic">God lufjan inwerdre heortan</hi> predigt <hi rend="italic">Hom. n</hi>. Wulfstan 189</seg><seg type="translation" xml:lang="en" source="#claude">V Atr 1. 34. VIIa 2, 1 may possibly have been an influence as well. Perhaps used by I Cn 21. <hi rend="italic">God lufjan inwerdre heortan</hi>, preaches <hi rend="italic">Hom. n</hi>. Wulfstan 189</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_43-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">185</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Wie in V Atr 35 stand im Archetyp von VIII Atr vielleicht <hi rend="italic">ealmihtigne</hi>, da Consil. <hi rend="italic">omnipotentem</hi> bietet</seg><seg type="translation" xml:lang="en" source="#claude">As in V Atr 35, the archetype of VIII Atr perhaps read <hi rend="italic">ealmihtigne</hi>, since Consil. has <hi rend="italic">omnipotentem</hi></seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_43-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">342</biblScope></bibl><seg type="original" xml:lang="en">Cf. V Atr. 1; 34; VI, 1; 42; Wulfstan, p. 189.</seg></note>
       </div>
     </body>
   </text>

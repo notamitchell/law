@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -28,6 +29,7 @@
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">120</biblScope></bibl>
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">194</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -52,6 +54,7 @@
       <change when="2026-10-17">Generated from row 1434 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 265.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 265.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 265: “Aller-Heiligen-Fest.” → “Aller Heiligen-Fest.”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -61,13 +64,15 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9.1" corresp="#wit-d">and eorðwestma be emnihte oððe huru be ealra halgena mæssan.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="9[b]" corresp="#wit-d">and eorðwestma be emnihte, oððe huru be ealra halgena mæssan.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">And eorðwestma be emnihte oððe huru be Ealra Halgena mæssan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">und von Feldfrüchten zur Nachtgleiche oder wenigstens zum Aller-Heiligen-Fest.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">und von Feldfrüchten zur Nachtgleiche oder<ptr type="liebermannNote" n="1" target="#VIIIAtr_9-1.lnote.de.1"/> wenigstens zum<ptr type="liebermannNote" n="2" target="#VIIIAtr_9-1.lnote.de.2"/> Aller Heiligen-Fest.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">and of the fruits of the earth by the equinox, or at least by All Saints.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">and the tithe of the fruits of the earth by the equinox, or at least by the feast of All Saints.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">And the tithe of the fruits of the earth by the equinox, or at least by the Feast of All Saints.</ab>
         <note type="comparison" source="#liebermann" n="265"><ref target="clause:IIEg_3">II Eg 3</ref>; <ref target="clause:VIAtr_17">VI Atr 17</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. VI Atr. 17</note>
         <note type="editorial">Liebermann compares VI Atr 17.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_9-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">183</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Beide Termine <hi rend="italic">Hom. n</hi>. Wulfstan 116, wohl hierher; <hi rend="italic">cornteoðung be emnihte oððe latest be ealra halgena mæssan</hi>.—Zu allen folgenden Zitaten am Rande von I 265—68 setze man statt ‘VI Atr’ lieber ‘Enhamer Gesetz 1008’, denn die Übereinstimmung mit V Atr ist ebensogross; <hi rend="italic">s. o</hi>. S. 168 n. 8</seg><seg type="translation" xml:lang="en" source="#claude">Both dates <hi rend="italic">Hom. n</hi>. Wulfstan 116, probably with reference to this passage; <hi rend="italic">cornteoðung be emnihte oððe latest be ealra halgena mæssan</hi>.—In all the following references in the margin of I 265—68, ‘VI Atr’ should preferably be replaced by ‘Enhamer Gesetz 1008’, for the agreement with V Atr is just as great; <hi rend="italic">see above</hi> p. 168 n. 8</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_9-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">183</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Nur diesen Termin hat I Cn 8, 1, gemäss V. VI Atr. Es kann auch hier V Atr 11, 1 benutzt sein</seg><seg type="translation" xml:lang="en" source="#claude">I Cn 8, 1 has only this date, in accordance with V. VI Atr. Here too V Atr 11, 1 may have been used</seg></note>
       </div>
     </body>
   </text>

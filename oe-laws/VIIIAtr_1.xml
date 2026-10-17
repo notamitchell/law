@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">190</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">455</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -54,6 +57,7 @@
       <change when="2026-10-17">Generated from row 1420 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 263.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 263.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 263: “1.” → “∅”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -64,11 +68,14 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-g-a-part">Ðæt is ærest, þ<hi rend="italic">æt</hi> he wile, þ<hi rend="italic">æt</hi> ealle Godes cyrican beon fulles griðes wyrðe.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="1" corresp="#wit-d">Þæt is ærest, þæt he wile þæt ealle Godes circan beon fulles griðes wurðe.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d">Þæt is ærest, þæt he wile, þæt ealle Godes circan beon fulles griðes wurðe.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">1. Nämlich erstens, dass er will, dass alle Gotteskirchen vollen Sonderfrieden geniessen.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Nämlich erstens, dass<ptr type="liebermannNote" n="1" target="#VIIIAtr_1.lnote.de.1"/> er will, dass alle Gotteskirchen vollen Sonderfrieden<ptr type="liebermannNote" n="2" target="#VIIIAtr_1.lnote.de.2"/> geniessen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">1. Namely, first, that he wills that all God's churches be entitled to full protection.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">In the first place, it is his will that all the churches of God be entitled to exercise their right of protection to the full.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#VIIIAtr_1.robnote.n.1"/>In the first place, it is his will that all the churches of God be entitled to exercise their right of protection to the full.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d">First, namely, that it is his will that all God’s churches are to be entitled to full right of sanctuary.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d">First, he desires that all God’s churches be entitled to offer full sanctuary.</ab>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">183</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Die Kapitel 1—5, 2 bilden Einen Abschnitt; nur ihn bietet Hs. G; I Cn 2, 3—3, 2 übernimmt ihn im Zusammenhang.—Zu wörtlich: ‘Das ist das erste was er will’ Schmid; <hi rend="italic">vgl. Wb</hi> S. 217 Z. 1</seg><seg type="translation" xml:lang="en" source="#claude">Chapters 1—5, 2 form a single section; MS G gives only this; I Cn 2, 3—3, 2 takes it over as a connected whole.—Too literal: ‘That is the first that he wills’ Schmid; <hi rend="italic">cf. Wb</hi> p. 217 l. 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIIIAtr_1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">183</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Kirchenfrieden 1b</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Kirchenfrieden 1b</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIIIAtr_1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">339</biblScope></bibl><seg type="original" xml:lang="en">Cf. E. and G. 1; II Edg. 1; VI Atr. 14. The first section of the ordinance—the only part which is found in G—begins here and ends with cap. 5, 2; cf. I Cn. 2, 3–3, 2.</seg></note>
       </div>
     </body>
   </text>
