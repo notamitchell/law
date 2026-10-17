@@ -120,6 +120,7 @@ HEADERS = [
     ('page number of attenborough', 'attPage'),
     ('siglum of the manuscript attenborough prints', 'attSig'),
     ('manuscript attenborough prints', 'attName'),
+    ('order of liebermann’s texts', 'liebOrder'),
 ]
 NEEDED = ['code', 'clause', 'kText', 'german', 'english', 'nText', 'kSig', 'tSig', 'notes']
 
@@ -341,8 +342,17 @@ def split_notes(text):
 
 
 # ---------------------------------------------------------------- reading
+YEARS = {'attenborough': 1922, 'robertson': 1925, 'whitelock': 1955, 'whitelock-cs': 1981, 'kennedy': 1983,
+         'wormald': 1999, 'oliver': 2002, 'gobbitt': 2012, 'rabin': 2015, 'rabin-doml': 2020,
+         'jurasinski-and-oliver': 2021}     # first published; the sheet 'Editions and translations' overrides
+
+
 def read_rows(path, only=None):
     wb = openpyxl.load_workbook(path, rich_text=True)
+    if 'Editions and translations' in wb.sheetnames:
+        for r_ in wb['Editions and translations'].iter_rows(min_row=2, values_only=True):
+            if r_ and r_[0] and isinstance(r_[3], int):
+                YEARS[r_[0]] = r_[3]
     ws = wb['Sheet1'] if 'Sheet1' in wb.sheetnames else wb.active
     col = columns(ws)
     rows = []
@@ -359,7 +369,7 @@ def read_rows(path, only=None):
                      'nSig', 'afSig', 'kSig', 'tSig', 'kName', 'nName', 'afName', 'tName', 'notes', 'passageSource',
                      'bfSig', 'bfName', 'biSig', 'biName',
                      'thirdRef', 'thirdMS', 'thirdPage', 'translatorNotes', 'rabinRef', 'rabinPage', 'rabinTextNotes', 'rabinNotes',
-                     'vglPrinted', 'vglRefs', 'vglRemark', 'attPage', 'attSig', 'attName'):
+                     'vglPrinted', 'vglRefs', 'vglRemark', 'attPage', 'attSig', 'attName', 'liebOrder'):
             row[name] = get(name)
         for name in ('kText', 'german', 'english', 'nText', 'latin', 'tText', 'translation',
                      'secondTranslation', 'supplementaryTranslation', 'afText', 'bfText', 'biText', 'thirdTranslation', 'rabinText', 'rabinTranslation', 'attText'):
@@ -696,6 +706,18 @@ def build(row, today, source_name, refs):
     if row['englishXml']:
         cl = srcs.add('claude', 'Claude', CLAUDE_REF, 'translation')
         translations.append(('translation', 'en', cl, row['englishXml'], ''))
+
+    # Order on the page: Liebermann's texts left to right as he prints them (column BP), then the modern
+    # editions by the year they were first published; the translations: his German, the LLM's English of it,
+    # then the others by year (sheet 'Editions and translations').
+    sig_of = {w_[0]: sig_key(w_[1]) for w_ in wits}
+    order = [x.strip() for x in row['liebOrder'].split('|')] if row['liebOrder'] else []
+    lieb_t = [t for t in texts if t[0] == 'liebermannText']
+    if order:
+        lieb_t.sort(key=lambda t: order.index(sig_of.get(t[5], '')) if sig_of.get(t[5], '') in order else len(order))
+    texts = lieb_t + sorted([t for t in texts if t[0] != 'liebermannText'], key=lambda t: YEARS.get(t[2], 9999))
+    first = lambda t: 0 if t[2] == 'liebermann' else 1 if t[2] == 'claude' else 2
+    translations.sort(key=lambda t: (first(t), YEARS.get(t[2], 9999) if first(t) == 2 else 0))
 
     checks, notes = split_notes(row['notes'])
 
