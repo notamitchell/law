@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">160</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -55,6 +58,7 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1217 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 248.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 248.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -62,16 +66,21 @@
       <div type="clause" n="3">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 3</head>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3">[Not in D]</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-k">K. ⁊ witena gerædnes is, þ<hi rend="italic">æt</hi> muneca gehwilc, þe ute of mynstre sy, ⁊ regoles ne gyme, do swa him þearf is:</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="3[a]" corresp="#wit-k">⁊ witena gerædnes is, þæt muneca gehwilc þe ute of mynstre sy ⁊ regoles ne gyme, do swa him þearf is:</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">And witena gerædnes is, þæt muneca gehwilc, þe ute of mynstre sy, and regoles ne gyme, do swa him þearf is:</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">Und Verordnung der Witan ist, dass jeder Mönch, der ausserhalb des Klosters ist, indem er der Regel nicht achtet, handle, wie ihm noth thut:</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And it is the ordinance of the witan that every monk who is outside his monastery, paying no heed to his rule, do what he needs to:</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And the decree of the councillors is, that every monk who is out of a monastery and who is not observing a rule, shall do what is his duty, namely,</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#VIAtr_3.robnote.n.1"/>And the decree of the councillors is, that every monk who is out of a monastery<ptr type="editorNote" n="2" target="#VIAtr_3.robnote.n.2"/> and who is not observing a rule, shall do what is his duty, namely,</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">And the decree of the councilors is that each monk who is out of a monastery and not in compliance with his rule shall do what is necessary for him:</ab>
         <note type="comparison" source="#liebermann" n="248">V Atr [?]</note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. V A[?]</note>
         <note type="comparisonIncomplete">Some of Liebermann’s notes here are cut off in the gutter of the scan used, and are still to be completed.</note>
         <note type="comparedBy" source="#wormald-mel" n="340"><ref target="clause:VAtr_5">V Atr 5</ref></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_3.lnote.de.a" n="a" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">175</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Aus einem Befehl des Reichstags an die Mönche macht Paraphrast einen des Episkopats an die Klostervorsteher. Dem Worte <hi rend="italic">deliquium</hi> gibt er die Bed. von <hi rend="italic">delictum</hi></seg><seg type="translation" xml:lang="en" source="#claude">The paraphrast turns an order of the national assembly to the monks into one of the episcopate to the heads of monasteries. He gives the word <hi rend="italic">deliquium</hi> the meaning of <hi rend="italic">delictum</hi></seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_3.lnote.de.b" n="b" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">175</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. o</hi>. 1, 3{c}</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See above</hi> 1, 3{c}</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_3.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">332</biblScope></bibl><seg type="original" xml:lang="en">Cf. V, 5.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_3.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">332</biblScope></bibl><seg type="original" xml:lang="en">The explanation given by the Latin paraphrase is: <hi rend="italic">per proprium arbitrium egressus vel proprii reatu deliquii expulsus</hi>.</seg></note>
       </div>
     </body>
   </text>

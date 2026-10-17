@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">174</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -54,16 +57,20 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1290 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 256.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 256.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 256: “oþrum; stire,; Drihten.” → “oðrum; stire; Drihten,”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 256: “und dass er von Sünden willig umkehre und anderen Leuten Unrecht verwehre (und dass er vor allen anderen Dingen seinen Herr[gott] liebe D)” → “und dass er von Sünden willig umkehre und anderen Leuten Unrecht verwehre (und dass er vor allen anderen Dingen seinen Herr[gott] liebe D) (expanded letters in italics: D)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="42.1">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 42.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="42.1" corresp="#wit-d-incomplete">⁊ þæt he fram sinnum georne gecirre ⁊ oþrum mannum unrihtes stire, ⁊ he þ<hi rend="italic">æt</hi> ofer ealle oðre þinge lufige his Drihten.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="42[b]" corresp="#wit-k">⁊ þæt he fram synnan georne gecyrre ⁊ oþrum mannum unrihtes styre,</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="42.1" corresp="#wit-k">⁊ þ<hi rend="italic">æt</hi> he fra<hi rend="italic">m</hi> synnan georne gecyrre ⁊ oþrum mannum unrihtes styre,</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="42.1" corresp="#wit-d-incomplete">⁊ þ<hi rend="italic">æt</hi> he fra<hi rend="italic">m</hi> sinnu<hi rend="italic">m</hi> georne gecirre ⁊ oðru<hi rend="italic">m</hi> mannu<hi rend="italic">m</hi> unrihtes stire ⁊ he<ptr type="liebermannNote" n="***" target="#VIAtr_42-1.lnote.oe.star3"/> þ<hi rend="italic">æt</hi> ofer ealle oðre þinge lufige his Drihten,</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="42[b]" corresp="#wit-k">⁊ þæt he fram synnan georne gecyrre ⁊ oþrum mannum unrihtes styre<ptr type="editorNote" n="3" target="#VIAtr_42-1.robnote.fn.3"/>,</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">And þæt he fram synnan georne gecyrre and oþrum mannum unrihtes styre.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">und dass er von Sünden willig umkehre und anderen Leuten Unrecht verwehre (und dass er vor allen anderen Dingen seinen Herr[gott] liebe D)</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">und dass er von Sünden<ptr type="liebermannNote" n="1" target="#VIAtr_42-1.lnote.de.1"/> willig umkehre und anderen Leuten Unrecht verwehre (und<ptr type="liebermannNote" n="2" target="#VIAtr_42-1.lnote.de.2"/> dass er vor allen anderen Dingen seinen Herr[gott] liebe<ptr type="liebermannNote" n="3" target="#VIAtr_42-1.lnote.de.3"/> <hi rend="italic">D</hi>)</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">and that he turn eagerly from sins and restrain other people from wrongdoing (and that he love his Lord above all other things, D)</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">and eagerly to turn from sins, and to restrain other men from wrong-doing,</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">And they are to readily turn from sin, and to curb the injustice caused by others.</ab>
@@ -71,6 +78,11 @@
         <note type="comparisonPrinted" source="#liebermann">ebd. 1</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IXAtr_1">IX Atr 1</ref></note>
         <note type="editorial">D's ‘⁊ he þæt’ should be corrected to ‘þæt he’ (Liebermann).</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIAtr_42-1.lnote.oe.star3" n="***" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">256</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">bessere</hi> þ<hi rend="italic">æt</hi> he</seg><seg type="translation" xml:lang="en" source="#claude">read þ<hi rend="italic">æt</hi> he</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_42-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">177</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Der Gedanke kommt, auch in genau diesen Worten, so häufig bei damaligen Predigern vor, dass Benutzung von VI Atr 1 unsicher ist; <hi rend="italic">s. Gl</hi> Gerechtigkeit 5. b</seg><seg type="translation" xml:lang="en" source="#claude">The idea occurs, even in exactly these words, so frequently in the preachers of the time that use of VI Atr 1 is uncertain; see <hi rend="italic">Gl</hi> Gerechtigkeit 5. b</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_42-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">177</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">D's Zusatz auch in jener Homilie</seg><seg type="translation" xml:lang="en" source="#claude">D’s addition is also in that homily</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_42-1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">177</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">In anderen Worten VIII Atr 43, 1 = I Cn 21; auch <hi rend="italic">o</hi>. 1</seg><seg type="translation" xml:lang="en" source="#claude">In different words VIII Atr 43, 1 = I Cn 21; also <hi rend="italic">above</hi> 1</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VIAtr_42-1.robnote.fn.3" n="3" source="#robertson"><bibl><biblScope unit="page">104</biblScope></bibl><label>styre</label><seg type="original" xml:lang="en"><hi rend="italic">stire ⁊ þæt he</hi> (<hi rend="italic">he þæt</hi> MS.) <hi rend="italic">ofer ealle oðre þingc lufige his Drihten</hi> D.</seg></note>
       </div>
     </body>
   </text>

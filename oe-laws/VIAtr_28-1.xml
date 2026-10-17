@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#kennedy">Kennedy</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -55,18 +57,20 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1269 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 254.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 254.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="28.1">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 28.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28.1" corresp="#wit-d-incomplete">⁊ æghwilc unriht awurpe man geor[n]e of þisan earde, þæs ðe man don mæge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28.1" corresp="#wit-k">⁊ æghwilc unriht aweorpe man georne of þysan earde, þæs þe man don mæge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28.1" corresp="#wit-d-incomplete">⁊ æghwilc unriht awurpe man geor[n]e<ptr type="liebermannNote" n="2" target="#VIAtr_28-1.lnote.oe.2"/> of þisan earde, þæs ðe man don mæge.<ptr type="liebermannNote" n="3" target="#VIAtr_28-1.lnote.oe.3"/></ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="28.1" corresp="#wit-k">⁊ æghwilc unriht aweorpe man georne of þysan earde þæs þe man don mæge.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">And æghwilc unriht aweorpe man georne of þysan earde, þæs þe man don mæge.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">Und jedes Unrecht entferne man eifrig aus diesem Lande, so weit als man es zu thun vermag.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let every injustice be eagerly cast out of this country, as far as it can be done.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And every injustice shall be zealously cast out from this land, as far as it is possible to do so.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#VIAtr_28-1.robnote.n.1"/>And every injustice shall be zealously cast out from this land, as far as it is possible to do so.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">And all injustice is to be banished from this land as much as possible.</ab>
         <note type="comparison" source="#liebermann" n="255"><ref target="clause:VAtr_23">V Atr 23</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 23</note>
@@ -74,6 +78,9 @@
         <note type="comparedBy" source="#wormald-mel" n="340"><ref target="clause:VIIIAtr_39">VIII Atr 39–42</ref></note>
         <note type="comparedBy" source="#kennedy" n="59"><ref target="clause:Cn-1018_part-054">Cn 1018 19</ref></note>
         <note type="editorial">28.2–29 are missing from D.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIAtr_28-1.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">254</biblScope></bibl><seg type="original" xml:lang="de">geore</seg><seg type="translation" xml:lang="en" source="#claude">geore</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIAtr_28-1.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">254</biblScope></bibl><seg type="original" xml:lang="de">28, 2—29 <hi rend="italic">fehlen</hi></seg><seg type="translation" xml:lang="en" source="#claude">28, 2—29 missing</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_28-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">333</biblScope></bibl><seg type="original" xml:lang="en">Cf. V, 23.</seg></note>
       </div>
     </body>
   </text>

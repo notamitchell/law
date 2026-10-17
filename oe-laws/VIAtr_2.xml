@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">160</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -54,6 +57,7 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1214 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 246.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 246.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -61,16 +65,21 @@
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 2</head>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2">[Not in D]</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-k">K. ⁊ witena gerædnes is, þ<hi rend="italic">æt</hi> abbodas ⁊ abbodissan heora agen lif rihtlice fadian ⁊ eac heora heorda wislice healdan,</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="2[a]" corresp="#wit-k">⁊ witena gerædnes is, þæt abbodas ⁊ abbodissan heora agen lif rihtlice fadian ⁊ eac heora heorda wislice healdan</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">And witena gerædnes is, þæt abbodas and abbodissan heora agen lif rihtlice fadian and eac heora heorda wislice healdan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und Verordnung der Witan ist, dass Äbte und Äbtissinnen ihr eigenes Leben gesetzmässig ordnen und auch ihre Heerden weise halten,</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und Verordnung der Witan<ptr type="liebermannNote" n="1" target="#VIAtr_2.lnote.de.1"/> ist, dass Äbte und Äbtissinnen ihr eigenes Leben gesetzmässig ordnen und auch ihre Heerden weise halten,</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And it is the ordinance of the witan that abbots and abbesses order their own lives lawfully and also keep their flocks wisely,</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And the decree of the councillors is, that abbots and abbesses shall order their own lives aright, and also keep their flocks with wisdom,</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#VIAtr_2.robnote.n.1"/>And the decree of the councillors is<ptr type="editorNote" n="2" target="#VIAtr_2.robnote.n.2"/>, that abbots and abbesses shall order their own lives aright, and also keep their flocks with wisdom,</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">And the decree of the councilors is that abbots and abbesses are to order their own lives rightly and also oversee their flocks wisely.</ab>
         <note type="comparison" source="#liebermann" n="246">V Atr 4[?]</note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 4[?]</note>
         <note type="comparisonIncomplete">Some of Liebermann’s notes here are cut off in the gutter of the scan used, and are still to be completed.</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:ICn_6">I Cn 6</ref></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">175</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Die Einführungsworte entsprechen der Hs. G 2 von V Atr; <hi rend="italic">s. o</hi>. Einl. 14.—Zusatz zu V; <hi rend="italic">s</hi>. Einl. 2 D.—<hi rend="italic">Vgl. Gl</hi> Abt 1</seg><seg type="translation" xml:lang="en" source="#claude">The introductory words correspond to MS G 2 of V Atr; <hi rend="italic">see above</hi> Introduction 14.—Addition to V; <hi rend="italic">see</hi> Introduction 2 D.—<hi rend="italic">Cf. Gl</hi> Abt 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_2.lnote.de.a" n="a" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">175</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. Gl</hi> Benedictus A.—Zu <hi rend="italic">iugo Christi levissimo</hi> vgl. <hi rend="italic">u</hi>. 15</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See Gl</hi> Benedictus A.—On <hi rend="italic">iugo Christi levissimo</hi> cf. <hi rend="italic">below</hi> 15</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">331</biblScope></bibl><seg type="original" xml:lang="en">Cf. V, 4.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_2.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">331</biblScope></bibl><seg type="original" xml:lang="en">This introductory formula corresponds to that in MS G₂ of V Atr.</seg></note>
       </div>
     </body>
   </text>

@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">178</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -54,6 +57,7 @@
       <change when="2026-10-17">Generated from row 1304 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 258.</change>
       <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 106.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 258.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -61,15 +65,21 @@
       <div type="clause" n="52.1">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 52.1</head>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="52.1">[Not in D]</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="52.1" corresp="#wit-k">⁊ gif hit geweorþeð, þ<hi rend="italic">æt</hi> man unwilles oþþe ungewealdes ænig þing misdeð, na bið þ<hi rend="italic">æt</hi> na gelic þam þe willes ⁊ gewealdes sylfwilles misdeð; ⁊ eac se þe nydwyrhta bið þæs þe he misdeð, se bið gebeorhges ⁊ þy beteran domes symle wyrðe, þe he nydwyrhta wæs þæs þe he worhte.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="52.1" corresp="#wit-k">⁊ gif hit geweorþeð, þæt man unwilles oþþe ungewealdes ænig þing misdeð, na bið þæt na gelic þam þe willes ⁊ gewealdes sylfwilles misdeð; ⁊ eac se þe nydwyrhta bið þæs þe he misdeð, se bið gebeorhges ⁊ þy beteran domes symle wyrðe, þe he nydwyrhta wæs þæs þe he worhte.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">And gif hit geweorþeð þæt man unwilles oþþe ungewealdes ænig þing misdeð, na bið þæt na gelic þam þe willes and gewealdes sylfwilles misdeð: and eac se þe nydwyrhta bið þæs þe he misdeð, se bið gebeorhges and þy beteran domes symle wyrðe, þe he nydwyrhta wæs þæs þe he worhte.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn es vorkommt, dass jemand ohne Willen oder Absicht irgend eine Missethat verübt, so ist dies nicht gleich dem, der mit Willen und Absicht bewusst Missethat übt; und auch wer ein Ausführer dessen, was er verbricht, [nur] durch Zwang ist, der ist immer Schutzes werth und eines um so günstigeren Urtheils, als er [nur] durch Zwang Ausführer dessen, was er verübt hat, gewesen ist.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn es vorkommt, dass jemand ohne Willen<ptr type="liebermannNote" n="1" target="#VIAtr_52-1.lnote.de.1"/> oder Absicht<ptr type="liebermannNote" n="2" target="#VIAtr_52-1.lnote.de.2"/> irgend eine Missethat verübt, so ist dies nicht gleich<ptr type="liebermannNote" n="3" target="#VIAtr_52-1.lnote.de.3"/> dem, der mit Willen und Absicht bewusst Missethat übt; und auch wer ein Ausführer dessen, was er verbricht, [nur] durch Zwang ist, der ist immer Schutzes werth und eines um so günstigeren Urtheils, als er [nur] durch Zwang Ausführer dessen, was er verübt hat, gewesen ist.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if it happens that someone commits any misdeed involuntarily or unintentionally, that is not the same as one who does wrong wilfully and intentionally, of his own will; and also whoever is the doer of what he commits [only] under compulsion, he is always deserving of protection and of a more favourable judgment, in that he was [only] under compulsion the doer of what he did.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And if it happens that a man commits a misdeed, involuntarily or unintentionally, the case is different from that of one who offends of his own freewill, voluntarily and intentionally; and likewise he who is an involuntary agent in his misdeeds should always be entitled to clemency and to better terms, owing to the fact that he acted as an involuntary agent.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#VIAtr_52-1.robnote.n.1"/>And if it happens that a man commits a misdeed, involuntarily or unintentionally, the case is different from that of one who offends of his own freewill, voluntarily and intentionally<ptr type="editorNote" n="2" target="#VIAtr_52-1.robnote.n.2"/>; and likewise he who is an involuntary agent in his misdeeds should always be entitled to clemency and to better terms, owing to the fact that he acted as an involuntary agent.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">And if it befalls that someone commits a crime in any way unwillingly or unknowingly, that shall not be treated as if he intentionally committed a crime, willingly and knowingly; and accordingly, the person who is compelled so that he commits a crime is always to be deemed worthy of mercy and lighter judgments, because he acted out of compulsion.</ab>
         <note type="comparison" source="#liebermann" n="259">Can. Edg., Conf. 4</note>
         <note type="comparisonPrinted" source="#liebermann">ebd.</note>
         <note type="editorial">Only in K.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_52-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">177</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Aus derselben Quelle genauer II Cn 68, 2</seg><seg type="translation" xml:lang="en" source="#claude">From the same source, more exactly, II Cn 68, 2</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_52-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">177</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Absicht 1. 4. 5</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Absicht 1. 4. 5</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_52-1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">177</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ebd</hi>. Fahrlässigkeit; Zwang 1—2</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Ibid</hi>. Fahrlässigkeit; Zwang 1—2</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_52-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">336</biblScope></bibl><seg type="original" xml:lang="en">Cf. II Cn. 68, 2 f.; <hi rend="italic">Can. Edg.</hi>, <hi rend="italic">loc. cit.</hi>; <hi rend="italic">Eccles. Inst.</hi> 31, ed. Thorpe, <hi rend="italic">op. cit.</hi> <hi rend="smallcaps">ii</hi>. p. 428.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_52-1.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">336</biblScope></bibl><seg type="original" xml:lang="en">Cf. Af. 36, 1; II Edw. 4.</seg></note>
       </div>
     </body>
   </text>

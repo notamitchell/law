@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">168</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -53,23 +56,29 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1252 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 252.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 252.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 252: “Und alle Kirchengerechtsame fördere (schütze D) man willig, wie es nöthig ist.” → “Und alle Kirchengerechtsame fördere (schütze D) man willig, wie es nöthig ist. (expanded letters in italics: D)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="21.1">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 21.1</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="21.1" corresp="#wit-k">⁊ ealle Godes gerihta fyrþrige man georne, ealswa hit þearf is.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="21.1" corresp="#wit-d-incomplete">And ealle Godes gerihta friðige man georne, ealswa hit þearf is.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="21.1" corresp="#wit-k">⁊ ealle Godes gerihta fyrþrige man georne, ealswa hit þearf is.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="21.1" corresp="#wit-k">⁊ ealle Godes gerihta fyrþrige<ptr type="editorNote" n="6" target="#VIAtr_21-1.robnote.fn.6"/> man georne, ealswa hit þearf is.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">And ealle Godes gerihta fyrþrige man georne, ealswa hit þearf is.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und alle Kirchengerechtsame fördere (schütze D) man willig, wie es nöthig ist.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und alle Kirchengerechtsame fördere (schütze<ptr type="liebermannNote" n="1" target="#VIAtr_21-1.lnote.de.1"/> <hi rend="italic">D</hi>) man willig, wie es nöthig ist.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let all God's dues be eagerly promoted (protected, D), as is needful.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And all God's dues shall be promptly rendered, as the occasion requires.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#VIAtr_21-1.robnote.n.1"/>And all God's dues shall be promptly rendered, as the occasion requires.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">And all God’s dues are to be given willingly, just as is required.</ab>
         <note type="comparison" source="#liebermann" n="253"><ref target="clause:VAtr_12-2">V Atr 12.2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 12, 2</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VIAtr_43">VI Atr 43</ref>; <ref target="clause:VIIIAtr_14">VIII Atr 14</ref>; <ref target="clause:ICn_14">I Cn 14</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="356"><ref target="clause:ICn_14">I Cn 14–14.1</ref></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_21-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">176</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">friðige</hi> V 12, 2 D. I Cn 14 A, wo dies benutzt ist</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">friðige</hi> V 12, 2 D. I Cn 14 A, where this is used</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_21-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">333</biblScope></bibl><seg type="original" xml:lang="en">Cf. V, 12, 2; Wulfstan, pp. 272, 311.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="VIAtr_21-1.robnote.fn.6" n="6" source="#robertson"><bibl><biblScope unit="page">96</biblScope></bibl><label>fyrþrige</label><seg type="original" xml:lang="en"><hi rend="italic">friðige</hi> D.</seg></note>
       </div>
     </body>
   </text>

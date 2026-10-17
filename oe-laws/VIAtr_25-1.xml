@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -54,18 +55,21 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1262 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 252.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 252.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Robertson, p. 99: “men” → “men,”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="25.1">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 25.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25.1" corresp="#wit-d-incomplete">And beo þa<hi rend="italic">m</hi> halgan, ealswa hit riht is, eallu<hi rend="italic">m</hi> Cristenu<hi rend="italic">m</hi> mannu<hi rend="italic">m</hi> sibb ⁊ som gemæne, ⁊ ælc sacu totwǽmed.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25.1" corresp="#wit-k">⁊ beo þam halgan tidan, ealswa hit [riht<ptr type="liebermannNote" n="2" target="#VIAtr_25-1.lnote.oe.2"/>] is, eallum Cristenum mannum sibb ⁊ som gemæne, ⁊ ælc sacu totwæmed.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25.1" corresp="#wit-d-incomplete">And beo þa<hi rend="italic">m</hi> halgan<ptr type="liebermannNote" n="**" target="#VIAtr_25-1.lnote.oe.star2"/>, ealswa hit riht is, eallu<hi rend="italic">m</hi> Cristenu<hi rend="italic">m</hi> mannu<hi rend="italic">m</hi> sibb ⁊ som gemæne, ⁊ ælc sacu totwǽmed.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="25.1" corresp="#wit-k">And beo þam halgan tidan, ealswa hit riht is, eallum Cristenum mannum sibb ⁊ som gemæne ⁊ ælc sacu totwæmed.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">And beo þam halgan tidan, ealswa hit riht is, eallum Cristenum mannum sibb and som gemæne, and ælc sacu totwæmed.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">Und an den heiligen Festen sei, wie es recht ist, allen christlichen Menschen Friede und Eintracht gemeinsam und jeder Rechtsstreit eingestellt.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And at the holy festivals, as is right, let there be peace and concord among all Christian people, and every lawsuit suspended.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And at the holy festivals, as is fitting, there shall be peace and concord among all Christian men and every dispute shall be laid aside.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#missing"/>And at the holy festivals, as is fitting, there shall be peace and concord among all Christian men, and every dispute shall be laid aside.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">And at holy times, just as is proper, there is to be peace and friendship among all Christians, and each dispute is to be resolved.</ab>
         <note type="comparison" source="#liebermann" n="253"><ref target="clause:VAtr_19">V Atr 19</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 19</note>
@@ -73,6 +77,8 @@
         <note type="comparedBy" source="#wormald-mel" n="357"><ref target="clause:ICn_17-2">I Cn 17.2–3</ref></note>
         <note type="editorial">D lacks ‘tidan’ after ‘halgan’ (Liebermann supplies it).</note>
         <note type="textual" source="#rabin-doml">riht: added in Wulfstan’s handwriting K</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIAtr_25-1.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">252</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">spät übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above late</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIAtr_25-1.lnote.oe.star2" n="**" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">252</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">ergänze</hi> tidan</seg><seg type="translation" xml:lang="en" source="#claude">supply tidan</seg></note>
       </div>
     </body>
   </text>

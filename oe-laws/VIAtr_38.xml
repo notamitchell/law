@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -56,6 +59,7 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1284 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 256.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 256.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -63,11 +67,12 @@
       <div type="clause" n="38">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 38</head>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="38">[Not in D]</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="38" corresp="#wit-k">K. ⁊ gif hwa forsteal ongean lahriht Cristes oþþe cyninges ahwar gewyrce, gylde wer oþþe wite be þam þe seo dæd sy; ⁊ gif he geonbyrde ⁊ sylf gewyrce, þ<hi rend="italic">æt</hi> hine man afylle, licge ægylde.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="38" corresp="#wit-k">⁊ gif hwa forsteal ongean lahriht Cristes oþþe cyninges ahwar gewyrce, gylde wer oþþe wite be þam þe seo dæd sy; ⁊ gif he geonbyrde ⁊ sylf gewyrce þæt hine man afylle, licge ægylde.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">And gif hwa forsteal ongean lahriht Cristes oþþe cyninges ahwar gewyrce, gylde wer oþþe wite be þam þe seo dæd sy; and gif he geonbyrde and sylf gewyrce, þæt hine man afylle, licge ægylde.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann">Und wenn einer [Rechtsgang] sperrenden Angriff gegen gesetzliches Kirchen- oder Königsrecht irgendwo verübt, zahle er Wergeld oder Strafgeld, je nachdem die That ist; und wenn er ankämpft und selbst veranlasst, dass er erschlagen wird, liege er todt, nicht [durch Wergeld] entgolten.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if anyone anywhere commits obstruction [of legal process] against the law of Christ or of the king, let him pay wergild or fine according to what the deed is; and if he resists and himself brings it about that he is killed, let him lie uncompensated [by wergild].</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And if anyone is guilty of offering obstruction anywhere to the law of Christ or the king, he shall pay either wergeld or fine according to the nature of the offence, and if he offers resistance and so acts as to bring about his own death, no compensation shall be paid for him.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#VIAtr_38.robnote.n.1"/>And if anyone is guilty of offering obstruction anywhere to the law of Christ or the king, he shall pay either wergeld or fine<ptr type="editorNote" n="2" target="#VIAtr_38.robnote.n.2"/> according to the nature of the offence, and if he offers resistance and so acts as to bring about his own death, no compensation shall be paid for him.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">And if anyone anywhere acts to obstruct the legal prerogatives of Christ or the king, he shall pay either wergild or a fine, according to the nature of the crime; and if he resists the law with violence and, so doing, causes his own death, no wergild is to be paid for him.</ab>
         <note type="comparison" source="#liebermann" n="257"><ref target="clause:VAtr_31">V Atr 31</ref>; <ref target="clause:VAtr_31-1">V Atr 31.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 31 | ebd. 31, 1</note>
@@ -75,6 +80,9 @@
         <note type="comparedBy" source="#wormald-mel" n="340"><ref target="clause:VAtr_31">V Atr 31–31.1</ref></note>
         <note type="comparedBy" source="#wormald-ppmel" n="124"><ref target="clause:VAtr_31-1">V Atr 31.1</ref></note>
         <note type="editorial">Only in K. Liebermann compares V Atr 31, 31.1.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_38.lnote.de.1" n="1" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">177</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Laut Paraphrase las Archetyp von VI Atr hinter <hi rend="italic">wite</hi> mit V Atr 31: <hi rend="italic">oððe lahslite</hi>, was also nur K, vielleicht weil für Canterbury sinnlos, fortliess.—Sonst lautet VI Atr hier authentischer als V 31, 1¹</seg><seg type="translation" xml:lang="en" source="#claude">According to the paraphrase the archetype of VI Atr read, after <hi rend="italic">wite</hi>, with V Atr 31: <hi rend="italic">oððe lahslite</hi>, which therefore only K omitted, perhaps because it was meaningless for Canterbury.—Otherwise VI Atr reads more authentically here than V 31, 1¹</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_38.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">334</biblScope></bibl><seg type="original" xml:lang="en">Cf. V, 31.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_38.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">334</biblScope></bibl><seg type="original" xml:lang="en">In view of the Latin reading: <hi rend="italic">reddat quod debet legis desertor</hi>, Liebermann suggests that the archetype of VI Atr. may have read <hi rend="italic">oððe lahslit</hi> (cf. V, 31) and that it may have been consciously omitted by K (which is a Canterbury MS) as not applying to that part of the country.</seg></note>
       </div>
     </body>
   </text>

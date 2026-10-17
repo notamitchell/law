@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#kennedy">Kennedy</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="kennedy" type="study">A. G. Kennedy, ‘Cnut’s Law Code of 1018’, <title>Anglo-Saxon England</title> 11 (1983), 57–81</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -56,6 +59,9 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1236 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 250.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 250.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 250: “Und es bedenke recht ernstlich, wer anderen Urtheil spricht, was er selbst begehrt, wenn er folgendermassen spricht: Et dimitte nobis debita nostra u. s. w.” → “Und es bedenke recht ernstlich, wer anderen Urtheil spricht, was er selbst begehrt, wenn er folgendermassen spricht: Et dimitte nobis debita nostra u. s. w. (expanded letters in italics: Et dimitte nobis debita nostra)”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 94: “oðrum; "Et; nostra"” → “oþrum; “Et; nostra””.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -63,12 +69,13 @@
       <div type="clause" n="10.3">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 10.3</head>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="10.3">[Not in D]</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="10.2" corresp="#wit-k">⁊ geþence swyþe georne se þe oðrum deme, hwæs he sylf gyrne, þonne he þus cweðe: "Et dimitte nobis debita nostra" et reliqua.</ab>
-        <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">And geþence swyþe georne se þe oþrum deme, hwæs he sylf gyrne, þonne he þus cweðe: Et dimitte nobis debita nostra, et reliqua.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und es bedenke recht ernstlich, wer anderen Urtheil spricht, was er selbst begehrt, wenn er folgendermassen spricht: Et dimitte nobis debita nostra u. s. w.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10.3" corresp="#wit-k">⁊ geþence swyþe georne se þe oþrum deme, hwæs he sylf gyrne, þonne he þus cweðe: ‘Et dimitte nobis debita n<hi rend="italic">ostr</hi>a’ et reliqu<hi rend="italic">a</hi>.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="10.2" corresp="#wit-k">⁊ geþence swyþe georne se þe oþrum deme, hwæs he sylf gyrne, þonne he þus cweðe: “Et dimitte nobis debita nostra” et reliqua.</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">And geþence swyþe georne se þe oþrum deme, hwæs he sylf gyrne, þonne he þus cweðe: <hi rend="italic">Et dimitte nobis debita nostra, et reliqua</hi>.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und<ptr type="liebermannNote" n="1" target="#VIAtr_10-3.lnote.de.1"/> es bedenke recht ernstlich, wer anderen Urtheil spricht, was er selbst begehrt, wenn er folgendermassen spricht: <hi rend="italic">Et dimitte nobis debita nostra</hi> u. s. w.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let whoever passes judgment on others consider very earnestly what he himself desires when he says: ‘And forgive us our debts’, etc.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And he who judges another shall earnestly consider what he himself desires when he says: "Forgive us our trespasses" etc.</ab>
-        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">And the person who judges another shall reflect sincerely upon his own motivations when he recites: Forgive us our trespasses, etc.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#VIAtr_10-3.robnote.n.1"/>And he who judges another shall earnestly consider what he himself desires when he says: "Forgive us our trespasses" etc.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">And the person who judges another shall reflect sincerely upon his own motivations when he recites: <hi rend="italic">Forgive us our trespasses, etc</hi>.</ab>
         <note type="passageSource">Matt. 6:12</note>
         <note type="comparison" source="#liebermann" n="250">Matth. [?]</note>
         <note type="comparisonPrinted" source="#liebermann">Matt[h. ?]</note>
@@ -76,6 +83,9 @@
         <note type="comparedBy" source="#liebermann"><ref target="clause:IICn_2a">II Cn 2a</ref></note>
         <note type="comparedBy" source="#kennedy" n="59"><ref target="clause:Cn-1018_part-009">Cn 1018 3–6</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="357"><ref target="clause:IICn_2a">II Cn 2a</ref></note>
+        <note type="editorial">AU: corrected against Rabin p. 166 / 167, October 2026 (was “And geþence swyþe georne se þe oþrum deme, hwæs he sylf gyrne, þonne he þus cweðe: Et dimitte nobis debita nostra, et reliqua.”, now “And geþence swyþe georne se þe oþrum deme, hwæs he sylf gyrne, þonne he þus cweðe: Et dimitte nobis debita nostra, et reliqua. (expanded letters in italics: Et dimitte nobis debita nostra, et reliqua)”); AV: corrected against Rabin p. 166 / 167, October 2026 (was “And the person who judges another shall reflect sincerely upon his own motivations when he recites: Forgive us our trespasses, etc.”, now “And the person who judges another shall reflect sincerely upon his own motivations when he recites: Forgive us our trespasses, etc. (expanded letters in italics: Forgive us our trespasses, etc)”)</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_10-3.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">175</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Cnut II 2a setzt deutlicher ‘Justizgewalt des Richters’ (<hi rend="italic">s. d. Gl</hi> 1. 12), vielleicht im Ggs. zu der als vorhergegangen hinzuzudenkenden Urteilsfindung</seg><seg type="translation" xml:lang="en" source="#claude">Cnut II 2a puts it more clearly as ‘the judge’s judicial authority’ (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 1. 12), perhaps in contrast to the finding of the judgement, which is to be understood as having preceded</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_10-3.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">332</biblScope></bibl><seg type="original" xml:lang="en">This clause is not found in V Atr., cf. II Cn. 2 <hi rend="italic">a</hi>.</seg></note>
       </div>
     </body>
   </text>

@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">176</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k" rend="bold"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -54,22 +57,26 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1298 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 258.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 258.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="47">
         <head><ref type="lawCode" target="law:VIAtr">VI Atr</ref> 47</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="47" corresp="#wit-k">⁊ þ<hi rend="italic">æt</hi> hy wydewan ⁊ steopcild to oft ne ahwænan, ac georne hy gladian.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="47" corresp="#wit-d-incomplete">And þ<hi rend="italic">æt</hi> hi wuduwan ⁊ steopcild to oft ne ahwǽnan, ac georne hi gladian.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="47" corresp="#wit-k">⁊ þæt hy wydewan ⁊ steopcild to oft ne ahwænan ac georne hi gladian.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-k">And þæt hy wydewan and steopcild to oft ne ahwænan, ac georne hy gladian.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und dass sie Wittwen und Waisen nicht zu oft belästigen, sondern sie gerne erfreuen.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und dass sie Wittwen<ptr type="liebermannNote" n="1" target="#VIAtr_47.lnote.de.1"/> und Waisen nicht zu oft belästigen, sondern sie gerne erfreuen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And that they do not too often distress widows and orphans, but gladly make them happy.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k">And that they should not be constantly oppressing the widow and the orphan, but that they should diligently cheer them.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-k"><ptr type="editorNote" n="1" target="#VIAtr_47.robnote.n.1"/>And that they should not be constantly oppressing the widow and the orphan, but that they should diligently cheer them.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-k">And that widows and orphans are not to be continually persecuted, but instead uplifted.</ab>
         <note type="comparison" source="#liebermann" n="259"><ref target="clause:Af_El-to-34">Af El 34</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. Af. El. 34</note>
         <note type="editorial">Liebermann compares Af El. 34.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAtr_47.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">177</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Vielleicht direkt aus Exodus 22, 22; allein die Worte stimmen zu Ælfred; <hi rend="italic">vgl. Gl</hi> Witwe 1. 7. Jedenfalls stammt die Zusammenstellung mit Fremden (48) aus Bibel oder daraus Abgeleitetem. Als Vertreter der Volkspflicht schützt neben der Kirche der Königsfrieden (<hi rend="italic">s. d. Gl</hi> 9a) die Schwachen; <hi rend="italic">s. Gl</hi> Waise</seg><seg type="translation" xml:lang="en" source="#claude">Perhaps directly from Exodus 22, 22; but the words agree with Ælfred; <hi rend="italic">cf. Gl</hi> Witwe 1. 7. At any rate the association with strangers (48) comes from the Bible or from something derived from it. As representative of the public duty, the king’s peace (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 9a) protects the weak alongside the Church; see <hi rend="italic">Gl</hi> Waise</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAtr_47.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">335</biblScope></bibl><seg type="original" xml:lang="en">Liebermann suggests that this clause may have been derived from Exodus Ch. 22, v. 22; cf. Wulfstan, p. 119.</seg></note>
       </div>
     </body>
   </text>
