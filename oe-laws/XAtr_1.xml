@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">208</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-vr"><abbr>Vr</abbr> <note type="manuscript">Vatican, Biblioteca Apostolica, Reg. lat. 946</note></witness>
@@ -64,13 +67,15 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-vr">Ðæt is þonne ærest, þ<hi rend="italic">æt</hi> we ealle fram synnan georne gecyrran ⁊ ure misdæda geornlice betan ⁊ ænne God æfre lufian ⁊ weorðian ⁊ ænne Chr<hi rend="italic">ist</hi>endom georne healdan ⁊ ælcne hæðendom mid ealle aweorpan.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="1" corresp="#wit-vr">Ðæt is þonne ærest, þæt we ealle fram synnan georne gecyrran ⁊ ure misdæda geornlice betan ⁊ ænne God æfre lufian ⁊ weorðian ⁊ ænne Christendom georne healdan ⁊ ælcne hæðendom mid ealle aweorpan.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml">Ðæt is þonne ærest: þæt we ealle fram synnan georne gecyrran and ure misdæda geornlice betan and ænne God æfre lufian and weorðian and ænne Christendom georne healdan and ælcne hæðendom mid ealle aweorpan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Nämlich erstens nun, dass wir alle von Sünden eifrig umkehren und unsere Missethaten eifervoll büssen und Einen Gott stets lieben und ehren und Ein Christenthum eifrig halten und jedes Heidenthum durchaus verwerfen.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><ptr type="liebermannNote" n="1" target="#XAtr_1.lnote.de.1"/>Nämlich erstens nun, dass wir alle von Sünden eifrig umkehren und unsere Missethaten eifervoll büssen und Einen Gott stets lieben und ehren und Ein Christenthum eifrig halten und jedes Heidenthum durchaus verwerfen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Namely, first, that we all turn eagerly from sins and zealously atone for our misdeeds, and always love and honour one God, and eagerly hold one Christian faith and utterly reject all heathenism.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-vr">The first provision is, that all of us zealously turn from sins and zealously make amends for our misdeeds, and love and honour for all time one God, and zealously uphold one Christian faith, and utterly renounce all heathen practices.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-vr"><ptr type="editorNote" n="1" target="#XAtr_1.robnote.n.1"/>The first provision is, that all of us zealously turn from sins and zealously make amends for our misdeeds, and love and honour for all time one God, and zealously uphold one Christian faith, and utterly renounce all heathen practices.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml">This is foremost: that we all zealously turn from sin and sincerely repent for our misdeeds and love and praise the one God forever and fully abide by the one Christian faith and entirely reject all heathen practices.</ab>
         <note type="comparison" source="#liebermann" n="270">V Atr G 2</note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. V Atr. G 2</note>
         <note type="editorial">Liebermann compares V Atr 1 (G2).</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="XAtr_1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">186</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl</hi>. V Atr 1¹</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf</hi>. V Atr 1¹</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="XAtr_1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">342</biblScope></bibl><seg type="original" xml:lang="en">Cf. V, 1 G₂; VI, 1.</seg></note>
       </div>
     </body>
   </text>
