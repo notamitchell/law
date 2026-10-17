@@ -48,6 +48,13 @@ scripts:
     // TEI inline markup as HTML: <hi rend="italic"> and <title> in italic.
     // With opts.notes, Liebermann's note numbers (<ptr type="liebermannNote">) are shown as superscripts
     // linking to the notes; without it (the plain text) they are left out.
+    // The printed page a text or translation begins on: <pb n="5"/> at its start (tools/laws-from-database.py);
+    // older files have only the edition's page, in its <bibl>.
+    function pageOf(a, src) {
+        const pb = a.getElementsByTagNameNS('*', 'pb')[0];      // the first, also inside a part (Abt, merge-parts.py)
+        return pb ? pb.getAttribute('n') : (src && src.page) || '';
+    }
+
     function inline(node, opts) {
         const frag = document.createDocumentFragment();
         node.childNodes.forEach(n => {
@@ -70,6 +77,7 @@ scripts:
                 frag.appendChild(span);
                 return;
             }
+            if (name === 'pb') return;      // the page the text begins on: shown in its label (pageOf)
             if (name === 'lb') { frag.appendChild(el('br')); if (n.getAttribute('type') === 'paragraph') frag.appendChild(el('br')); return; }
             const rend = name === 'hi' ? (n.getAttribute('rend') || '') : '';
             if (/bold|spaced|smallcaps/.test(rend)) {
@@ -393,8 +401,8 @@ scripts:
             const lieb = a.getAttribute('type') === 'liebermannText';
             const n = a.getAttribute('n');
             add(left, a, [msLabel(a, wits),
-                lieb ? (src.page ? 'Gesetze I, p. ' + src.page : '') : (n && n !== div.getAttribute('n') ? '§ ' + n : ''),
-                !lieb && src.page ? 'p. ' + src.page : '',
+                lieb ? (pageOf(a, src) ? 'Gesetze I, p. ' + pageOf(a, src) : '') : (n && n !== div.getAttribute('n') ? '§ ' + n : ''),
+                !lieb && pageOf(a, src) ? 'p. ' + pageOf(a, src) : '',
                 showLatin && a.getAttribute('xml:lang') === 'la' ? 'Latin' : '']);
         };
         byEditor(main).forEach(a => addText(a, hasOE));
@@ -414,12 +422,12 @@ scripts:
         const trans = abs.filter(a => a.getAttribute('type') === 'translation');
         const isGerman = a => a.getAttribute('xml:lang') === 'de' || a.getAttribute('ana') === '#fromGerman';
         // Liebermann's German first, then the LLM's English of it (made with Claude), then the other translations.
-        trans.filter(a => a.getAttribute('xml:lang') === 'de').forEach(a => add(right, a, ['German translation']));
+        trans.filter(a => a.getAttribute('xml:lang') === 'de').forEach(a => add(right, a, ['German translation', pageOf(a) ? 'Gesetze I, p. ' + pageOf(a) : '']));
         trans.filter(a => a.getAttribute('ana') === '#fromGerman').forEach(a => add(right, a, ['English of Liebermann’s German']));
         trans.filter(a => !isGerman(a)).forEach(a => {
             const id = (a.getAttribute('source') || '').replace(/^#/, '');
             const src = srcs[id] || {};
-            add(right, a, [msLabel(a, wits, 'of MS '), src.page ? 'p. ' + src.page : '']);
+            add(right, a, [msLabel(a, wits, 'of MS '), pageOf(a, src) ? 'p. ' + pageOf(a, src) : '']);
         });
         if (!trans.length) { right.remove(); grid.classList.add('clause-grid--single'); }
         wrap.appendChild(grid);
