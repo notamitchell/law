@@ -149,9 +149,12 @@ scripts:
     }
 
     function render(e) {
+        // A cross-reference entry (<entry type="xref">) only sends the reader
+        // to another headword: it shows Liebermann's line and a "See" list,
+        // and nothing else.
         const see = xrList(e, 'see');
-        const links = dictionaryCards(e);
-        const citations = citationList(e);
+        const links = e.xref ? '' : dictionaryCards(e);
+        const citations = e.xref ? '' : citationList(e);
         const page = e.page ? `Liebermann, <cite>Gesetze</cite> II.1, p. ${esc(e.page)}` : '';
         const changes = e.changes.map(c => `${esc(c.when)}: ${esc(c.text.replace(/\.$/, ''))}`).join('; ');
         const scan = scanEmbed(e.facsimile);
@@ -168,7 +171,7 @@ scripts:
         <section class="entry-section">
             <h2>Liebermann's entry</h2>
             <div class="liebermann-text">${e.original ? paragraphs(ELieb.renderTei(e.original, root)) : ''}</div>
-            <p class="small muted">Click a <span class="link-key link-key--law">law code</span>, <span class="link-key link-key--ms">manuscript</span> or <span class="link-key link-key--gram">German term or abbreviation</span> or <span class="link-key link-key--bib">author or work cited</span> to see what it stands for, or a <span class="link-key link-key--clause">clause number</span> to read that clause. The lists of <a href="${root}lawAbb.html">law codes</a>, <a href="${root}msAbb.html">manuscripts</a> and <a href="${root}gramAbb.html">grammatical abbreviations</a> and <a href="${root}bibAbb.html">authors and works cited</a> have them all. ~ repeats the headword, or as much of it as stays the same: under <i>abbod</i>, ~des is <i>abbodes</i>. <a href="${root}guide.html">How to read an entry</a>.</p>
+            ${e.xref ? '' : `<p class="small muted">Click a <span class="link-key link-key--law">law code</span>, <span class="link-key link-key--ms">manuscript</span> or <span class="link-key link-key--gram">German term or abbreviation</span> or <span class="link-key link-key--bib">author or work cited</span> to see what it stands for, or a <span class="link-key link-key--clause">clause number</span> to read that clause. The lists of <a href="${root}lawAbb.html">law codes</a>, <a href="${root}msAbb.html">manuscripts</a> and <a href="${root}gramAbb.html">grammatical abbreviations</a> and <a href="${root}bibAbb.html">authors and works cited</a> have them all. ~ repeats the headword, or as much of it as stays the same: under <i>abbod</i>, ~des is <i>abbodes</i>. <a href="${root}guide.html">How to read an entry</a>.</p>`}
         </section>
 
         ${e.definition || e.translation ? `
@@ -177,7 +180,7 @@ scripts:
             ${e.translation ? `<section class="entry-section"><h2>English translation</h2>${senses(e.translation)}</section>` : ''}
         </div>` : ''}
 
-        ${see ? `<section class="entry-section"><h2>See also</h2><ul>${see}</ul></section>` : ''}
+        ${see ? `<section class="entry-section"><h2>${e.xref ? 'See' : 'See also'}</h2><ul>${see}</ul></section>` : ''}
         ${links ? `<section class="entry-section"><h2>Other dictionaries</h2><p class="small muted">The same word in other dictionaries. Each opens in a new tab.</p><div class="dict-cards">${links}</div></section>` : ''}
         ${citations ? `<section class="entry-section"><h2>Law code citations</h2><ul class="citations">${citations}</ul></section>` : ''}
 

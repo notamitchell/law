@@ -226,7 +226,8 @@ scripts:
             change: editing
                 ? { when: new Date().toISOString().slice(0, 10), text: 'Change suggested with the form.' }
                 : undefined,
-            earlierChanges: editing ? earlierChanges : []
+            earlierChanges: editing ? earlierChanges : [],
+            xref: editing ? editingXref : false
         });
         currentFile = slug + '.xml';
 
@@ -268,7 +269,7 @@ scripts:
     // contribute.html?id=abbod suggests a change to an existing entry, with the
     // form filled in from its file; contribute.html?headword=… starts a new one.
     const params = new URLSearchParams(location.search);
-    let editing = '', earlierChanges = [];
+    let editing = '', earlierChanges = [], editingXref = false;
     if (params.get('headword')) { $('headword').value = params.get('headword'); headwordEdited = true; }
     if (params.get('id')) loadEntry(params.get('id'));
 
@@ -277,6 +278,7 @@ scripts:
             const e = ELieb.readEntry(new DOMParser().parseFromString(text, 'application/xml'));
             editing = id;
             earlierChanges = e.changes;
+            editingXref = e.xref;
             $('form-title').textContent = 'Suggest a change to ' + e.headword;
             $('form-lede').innerHTML = `The form below is filled in from <a href="${root}entry.html?id=${encodeURIComponent(id)}">the entry as it is now</a>. Change what's wrong or add what's missing, make the file, and send it to an editor, who checks it and replaces the entry.`;
             document.title = 'Suggest a change to ' + e.headword + ' · eLiebermann';
