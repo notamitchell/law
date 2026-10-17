@@ -9,6 +9,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -25,6 +27,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">218</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">54</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -58,16 +61,23 @@
       <div type="clause" n="1.10">
         <head><ref type="lawCode" target="law:IAtr">I Atr</ref> 1.10</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.10" corresp="#wit-h">⁊ hæbbe ælc hlaford his hiredmen on his agenon borge.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.10" corresp="#wit-b">⁊ hæbbe ælc hlaford (his) hiredmen on his agenon borge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.10" corresp="#wit-b">⁊ hæbbe ælc hlaford (his<ptr type="liebermannNote" n="15" target="#IAtr_1-1_dup2.lnote.oe.15"/>) hiredmen<ptr type="liebermannNote" n="16" target="#IAtr_1-1_dup2.lnote.oe.16"/> on his agenon borge.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.10" corresp="#wit-q">Et habeat omnis dominus familiam suam in plegio suo.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="1.1" corresp="#wit-b">⁊ hæbbe ælc hlaford his hiredmen on his agenon borge.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und jeder Herr halte seine Hausleute unter seiner eigenen Verbürgung.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="1.1" corresp="#wit-b">⁊ hæbbe ælc hlaford his<ptr type="editorNote" n="1" target="#IAtr_1-1_dup2.robnote.fn.1"/> hiredmen on his agenon borge.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und<ptr type="liebermannNote" n="1" target="#IAtr_1-1_dup2.lnote.de.1"/> jeder<ptr type="liebermannNote" n="2" target="#IAtr_1-1_dup2.lnote.de.2"/> Herr<ptr type="liebermannNote" n="3" target="#IAtr_1-1_dup2.lnote.de.3"/> halte seine Hausleute unter seiner eigenen Verbürgung.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let every lord keep his household men under his own surety.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">And every lord shall be personally [responsible as] surety for the men of his own household.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><ptr type="editorNote" n="1" target="#IAtr_1-1_dup2.robnote.n.1"/>And every lord shall be personally [responsible as] surety for the men of his own household.</ab>
         <note type="comparison" source="#liebermann" n="219"><ref target="clause:IIIAs_7">III As 7</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. III As. 7</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IICn_31">II Cn 31</ref></note>
         <note type="editorial">Clause number corrected from ‘1.1’ to ‘1.10’ (it had been stored as a number, which dropped the final zero). Liebermann compares III As 7.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1-1_dup2.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">übergeschr. von spät. Hd. B</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above by a later hand B</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1-1_dup2.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de">hyr. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">hyr. Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_1-1_dup2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">148</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Dies und 1, 11f. wiederholt II Cn 31f. = Leis Wl 51. Hn 8, 3. 41, 6. 59, 6</seg><seg type="translation" xml:lang="en" source="#claude">This and 1, 11f. are repeated by II Cn 31f. = Leis Wl 51. Hn 8, 3. 41, 6. 59, 6</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_1-1_dup2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">148</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Bürgschaft 3f. g</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Bürgschaft 3f. g</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_1-1_dup2.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">148</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Der <hi rend="italic">pater familias</hi> büsst für den Diebstahls angeklagten <hi rend="italic">manupastus</hi>; Hn 66, 7. Über die Haftung (<hi rend="italic">s. d. Gl</hi> 7d; Haushalt 1) fürs Gesinde im 13. Jh. <hi rend="italic">vgl</hi>. Pol Mai II 529</seg><seg type="translation" xml:lang="en" source="#claude">The <hi rend="italic">pater familias</hi> pays compensation for the <hi rend="italic">manupastus</hi> accused of theft; Hn 66, 7. On liability (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 7d; Haushalt 1) for the household in the 13th cent. <hi rend="italic">cf.</hi> Pol Mai II 529</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IAtr_1-1_dup2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">313</biblScope></bibl><seg type="original" xml:lang="en">Cf. III As. 7; III Edm. 7.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IAtr_1-1_dup2.robnote.fn.1" n="1" source="#robertson"><bibl><biblScope unit="page">54</biblScope></bibl><label>his</label><seg type="original" xml:lang="en">Added above in later handwriting in B.</seg></note>
       </div>
     </body>
   </text>

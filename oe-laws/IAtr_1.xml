@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -55,25 +58,39 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1016 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 216.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 216: “ðæt” → “ðǽt”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 216: “(Von Bürgen. Ld) Nämlich, dass jeder Freie glaubwürdige Bürgschaft habe, damit der Bürge ihn zu jeder Rechtspflicht festhalte, falls jener angeklagt werden sollte.” → “(Von Bürgen. Ld) Nämlich, dass jeder Freie glaubwürdige Bürgschaft habe, damit der Bürge ihn zu jeder Rechtspflicht festhalte, falls jener angeklagt werden sollte. (expanded letters in italics: Ld)”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 52: “[Ld]” → “∅”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
         <head><ref type="lawCode" target="law:IAtr">I Atr</ref> 1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-h">Þ<hi rend="italic">æt</hi> is, þ<hi rend="italic">æt</hi> ælc freoman getreowne borh hæbbe, þ<hi rend="italic">æt</hi> se borh hine to ælcon rihte gehealde, gif he betyhtlad wurðe.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-b">Þæt is, ðæt ælc freoman getreowne borh hæbbe, þæt se borh hine to ælcon rihte gehealde, gyf he betyhtlad wurðe.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1" corresp="#wit-q">Hoc est, ut omnis liber homo habeat credibilem plegium, qui eum ad omne rectum presentet, si fuerit accusatus.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="1" corresp="#wit-b">[Be borgum.] [Ld] Þæt is, ðǽt ælc freoman getreowne borh hæbbe, þæt se borh hine to ælcon rihte gehealde, gyf he betyhtlad wurðe.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">(Von Bürgen. Ld) Nämlich, dass jeder Freie glaubwürdige Bürgschaft habe, damit der Bürge ihn zu jeder Rechtspflicht festhalte, falls jener angeklagt werden sollte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-h">Þ<hi rend="italic">æt</hi> is, þ<hi rend="italic">æt</hi> ælc freoman getreowne borh hæbbe, þ<hi rend="italic">æt</hi> se borh hine to ælcon rihte gehealde, gif he<ptr type="liebermannNote" n="2" target="#IAtr_1.lnote.oe.2"/> betyhtlad wurðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-b"><ptr type="liebermannNote" n="**" target="#IAtr_1.lnote.oe.star2"/>Þ<hi rend="italic">æt</hi> is, ðǽt ælc freoman getreowne borh hæbbe, þ<hi rend="italic">æt</hi> se borh hine to ælcon<ptr type="liebermannNote" n="6" target="#IAtr_1.lnote.oe.6"/> rihte gehealde, gyf<ptr type="liebermannNote" n="7" target="#IAtr_1.lnote.oe.7"/> he betyhtlad<ptr type="liebermannNote" n="8" target="#IAtr_1.lnote.oe.8"/> wurðe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1" corresp="#wit-q">Hoc est, ut omnis liber<ptr type="liebermannNote" n="4" target="#IAtr_1.lnote.oe.4"/> homo habeat credibilem<ptr type="liebermannNote" n="5" target="#IAtr_1.lnote.oe.5"/> plegium, qui eum ad omne rectum presentet, si fuerit accusatus.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="1" corresp="#wit-b">[Be borgum.]<ptr type="editorNote" n="3" target="#IAtr_1.robnote.fn.3"/> Þæt is, ðǽt ælc freoman getreowne borh hæbbe, þæt se borh hine to ælcon rihte gehealde, gyf he betyhtlad wurðe.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Von Bürgen. <hi rend="italic">Ld<ptr type="liebermannNote" n="1" target="#IAtr_1.lnote.de.1"/></hi>) Nämlich, dass<ptr type="liebermannNote" n="2" target="#IAtr_1.lnote.de.2"/> jeder Freie glaubwürdige Bürgschaft habe, damit der Bürge ihn zu jeder Rechtspflicht festhalte, falls jener angeklagt werden sollte.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of sureties. Ld) Namely, that every free man have a trustworthy surety, so that the surety may hold him to every legal obligation, if he should be accused.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">Namely, that every freeman shall have a trustworthy surety who shall hold him to the performance of every legal duty, if he has been accused.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">Namely, that every freeman shall have a trustworthy surety<ptr type="editorNote" n="1" target="#IAtr_1.robnote.n.1"/> who shall hold him to the performance of every legal duty, if he has been accused.</ab>
         <note type="comparison" source="#liebermann" n="217"><ref target="clause:IIIEg_6">III Eg 6</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. III Eg. 6</note>
         <note type="comparedBy" source="#wormald-ppmel" n="184"><ref target="clause:IIIAtr_3-1">III Atr 3.1–4.1</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="358"><ref target="clause:IICn_22">II Cn 22</ref></note>
         <note type="comparedBy" source="#wormald-ppmel" n="174"><ref target="clause:IICn_30">II Cn 30–31.2</ref></note>
         <note type="editorial">Liebermann compares III Eg 6.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">216</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">217</biblScope></bibl><seg type="original" xml:lang="de">h. l. <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">h. l. T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">217</biblScope></bibl><seg type="original" xml:lang="de">-le <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">-le T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1.lnote.oe.star2" n="**" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">216</biblScope></bibl><seg type="original" xml:lang="de">Be borgum <hi rend="italic">überschreibt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">Be borgum as heading Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">216</biblScope></bibl><seg type="original" xml:lang="de">-cum <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-cum Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">216</biblScope></bibl><seg type="original" xml:lang="de">gif <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gif Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">216</biblScope></bibl><seg type="original" xml:lang="de">-tyt. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-tyt. Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">147</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Dieselbe Überschrift III Eg 6, also vielleicht von Lambarde nur erfunden</seg><seg type="translation" xml:lang="en" source="#claude">The same heading at III Eg 6, so perhaps merely invented by Lambarde</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">147</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Bürgschaft 5. a. Es kann ein einzelner Bürge oder ein Bürgenverband gemeint sein.—‘Gemeinfrei’ (<hi rend="italic">s. d. Gl</hi> 2a) und ‘man’ steht oft völlig synonym</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Bürgschaft 5. a. A single surety or an association of sureties may be meant.—‘Common freeman’ (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 2a) and ‘man’ are often entirely synonymous</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IAtr_1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">312</biblScope></bibl><seg type="original" xml:lang="en">Cf. IV Edg. 3.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IAtr_1.robnote.fn.3" n="3" source="#robertson"><bibl><biblScope unit="page">52</biblScope></bibl><label>borgum</label><seg type="original" xml:lang="en">The rubrics are found only in Ld.</seg></note>
       </div>
     </body>
   </text>

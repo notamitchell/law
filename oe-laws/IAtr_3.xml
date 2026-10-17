@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -56,6 +59,9 @@
       <change when="2026-10-17">Generated from row 1034 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 220.</change>
       <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 55.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 220: “⁊ þæt nan man ne dó naðor: ne ne bycgge ne ne hwyrfe, buton he borh hæbbe ⁊ gewitnysse.” → “⁊ þæt nan man ne dó naðor: ne ne bycgge ne ne hwyrfe, buton he borh hæbbe ⁊ gewitnysse. (expanded letters in italics: æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 220: “(Davon, dass man nicht ohne Zeugniss Handel treibe. Ld) Und dass niemand keines von beiden unternehme, [nämlich] weder kaufe noch tausche, ohne dass er Bürgschaft und Zeugniss habe.” → “(Davon, dass man nicht ohne Zeugniss Handel treibe. Ld) Und dass niemand keines von beiden unternehme, [nämlich] weder kaufe noch tausche, ohne dass er Bürgschaft und Zeugniss habe. (expanded letters in italics: Ld)”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 54: “gewytnesse.] [Ld]” → “gewitnysse.]”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -63,18 +69,26 @@
       <div type="clause" n="3">
         <head><ref type="lawCode" target="law:IAtr">I Atr</ref> 3</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-h">⁊ þæt nan man ne dó naþor: ne ne bycge ne ne hwirfe, buton he borh hæbbe ⁊ gewitnesse.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-b">⁊ þæt nan man ne dó naðor: ne ne bycgge ne ne hwyrfe, buton he borh hæbbe ⁊ gewitnysse.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-b"><ptr type="liebermannNote" n="*" target="#IAtr_3.lnote.oe.star"/>⁊ þ<hi rend="italic">æt<ptr type="liebermannNote" n="3" target="#IAtr_3.lnote.oe.3"/></hi> nan man ne dó naðor: ne ne bycgge<ptr type="liebermannNote" n="4" target="#IAtr_3.lnote.oe.4"/> ne ne hwyrfe, buton he borh hæbbe ⁊ gewitnysse.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3" corresp="#wit-q">Et nemo alterutrum faciat: uel emat uel cambiet, nisi plegium habeat et testes.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="3" corresp="#wit-b">[Be ðon ðe mon ne ceapige buton gewytnesse.] [Ld] ⁊ þæt nan man ne dó naðor: ne ne bycgge ne ne hwyrfe, buton he borh hæbbe ⁊ gewitnysse.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">(Davon, dass man nicht ohne Zeugniss Handel treibe. Ld) Und dass niemand keines von beiden unternehme, [nämlich] weder kaufe noch tausche, ohne dass er Bürgschaft und Zeugniss habe.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="3" corresp="#wit-b">[Be ðon ðe mon ne ceapige buton gewitnysse.] ⁊ þæt<ptr type="editorNote" n="4" target="#IAtr_3.robnote.fn.4"/> nan man ne dó naðor: ne ne bycgge ne ne hwyrfe, buton he borh hæbbe ⁊ gewitnysse.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Davon, dass man nicht ohne Zeugniss Handel<ptr type="liebermannNote" n="1" target="#IAtr_3.lnote.de.1"/> treibe. <hi rend="italic">Ld</hi>) Und<ptr type="liebermannNote" n="2" target="#IAtr_3.lnote.de.2"/> dass niemand keines von beiden unternehme, [nämlich] weder kaufe noch tausche, ohne dass er Bürgschaft<ptr type="liebermannNote" n="3" target="#IAtr_3.lnote.de.3"/> und Zeugniss habe.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(That no one trade without witness. Ld) And that no one do either: neither buy nor exchange, unless he has a surety and witness.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">And no-one shall either buy or exchange anything, unless he have a surety and witnesses.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><ptr type="editorNote" n="1" target="#IAtr_3.robnote.n.1"/>And no-one shall either buy or exchange anything, unless he have a surety and witnesses.</ab>
         <note type="comparison" source="#liebermann" n="221"><ref target="clause:IIAs_10">II As 10</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. II As. 10</note>
         <note type="comparison" source="#wormald-ppmel" n="206"><label>cf.</label> <ref target="clause:IVEg_3">IV Eg 3–11</ref> <quote>4 k. I Æthelred 3: Let no man either buy or exchange unless he has surety and witness ... [cf. also IV Edgar 3 – 11]</quote></note>
         <note type="comparedBy" source="#wormald-mel" n="327"><ref target="clause:IIIAtr_5">III Atr 5</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="361"><ref target="clause:IICn_23">II Cn 23–24</ref></note>
         <note type="editorial">Liebermann compares II As 10.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_3.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">220</biblScope></bibl><seg type="original" xml:lang="de">Be ðon ðe mon ne ceapige buton gewitnysse <hi rend="italic">überschr. Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">Be ðon ðe mon ne ceapige buton gewitnysse as heading Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_3.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">220</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_3.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">220</biblScope></bibl><seg type="original" xml:lang="de">bycge <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">bycge Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_3.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">148</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Diese Rb erfand vielleicht nicht Lambarde; <hi rend="italic">s. o</hi>. Einl. 1. 9</seg><seg type="translation" xml:lang="en" source="#claude">This Rb was perhaps not invented by Lambarde; <hi rend="italic">see above</hi> Introduction 1. 9</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_3.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">148</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Kaufzeugen 6. 7</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Kaufzeugen 6. 7</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_3.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">148</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ebd</hi>. Gewährbürge 3. 4; auf diesen kommt Wilhelm I. zurück, nachdem wieder blosses Kaufzeugnis von II Cn 24 = Leis Wl 45 gefordert war</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Ibid</hi>. Gewährbürge 3. 4; William I returns to this, after mere witness to the purchase had again been required by II Cn 24 = Leis Wl 45</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IAtr_3.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">313</biblScope></bibl><seg type="original" xml:lang="en">Cf. In. 25; I Edw. 1; II As, 10; 12; VI As. 10.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IAtr_3.robnote.fn.4" n="4" source="#robertson"><bibl><biblScope unit="page">54</biblScope></bibl><label>þæt</label><seg type="original" xml:lang="en">Om. Ld.</seg></note>
       </div>
     </body>
   </text>

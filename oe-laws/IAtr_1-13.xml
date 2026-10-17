@@ -9,6 +9,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -25,6 +27,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">218</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">54</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -51,6 +54,7 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1030 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 218.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Robertson, p. 55: “fails; [own]” → “fail; (own)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -58,16 +62,24 @@
       <div type="clause" n="1.13">
         <head><ref type="lawCode" target="law:IAtr">I Atr</ref> 1.13</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.13" corresp="#wit-h">Gif him seo lad byrste, gylde þa<hi rend="italic">m</hi> cynge his were, ⁊ sy se man útlah.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.13" corresp="#wit-b">Gyf him seo lad byrste, gylde ðam cynge his were, ⁊ si se man utlah.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.13" corresp="#wit-q">Si lada frangat ei, reddat regi weram suam, et sit homo forsbannitus apud omnes (homines).</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.13" corresp="#wit-b">Gyf<ptr type="liebermannNote" n="1" target="#IAtr_1-13.lnote.oe.1"/> him seo lad byrste, gylde ðam<ptr type="liebermannNote" n="4" target="#IAtr_1-13.lnote.oe.4"/> cynge his were, ⁊ si<ptr type="liebermannNote" n="21" target="#IAtr_1-13.lnote.oe.21"/> se man utlah.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.13" corresp="#wit-q">Si lada frangat ei, reddat regi weram suam, et sit homo forsbannitus apud<ptr type="liebermannNote" n="9" target="#IAtr_1-13.lnote.oe.9"/> omnes (homines<ptr type="liebermannNote" n="10" target="#IAtr_1-13.lnote.oe.10"/>).</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="1.13" corresp="#wit-b">Gyf him seo lad byrste, gylde ðam cynge his were ⁊ si se man utlah.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ihm diese Reinigung misslingt, zahle er dem König sein Wergeld. Und jener [Untergebene] sei friedlos.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ihm diese Reinigung misslingt, zahle er dem König sein<ptr type="liebermannNote" n="1" target="#IAtr_1-13.lnote.de.1"/> Wergeld. Und<ptr type="liebermannNote" n="2" target="#IAtr_1-13.lnote.de.2"/> jener [Untergebene] sei friedlos.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If this clearing fails him, let him pay the king his wergild. And let that [dependant] be an outlaw.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">If he fails to clear himself, he shall pay his [own] wergeld to the king, and the man shall be an outlaw.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">If he fail to clear himself, he shall pay his (own)<ptr type="editorNote" n="1" target="#IAtr_1-13.robnote.n.1"/> wergeld to the king, and the man shall be an outlaw.</ab>
         <note type="comparison" source="#liebermann" n="219"><ref target="clause:IAtr_1-9a">I Atr 1.9a</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. 1, 9a</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IICn_31-2">II Cn 31.2</ref></note>
         <note type="editorial">Liebermann compares I Atr 1.9a.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1-13.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">219</biblScope></bibl><seg type="original" xml:lang="de">[<hi rend="italic">zugefügt aus</hi> 1, 9<hi rend="italic">a</hi>]</seg><seg type="translation" xml:lang="en" source="#claude">[added from 1, 9a]</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1-13.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">219</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">aus MHk; fehlt T</hi></seg><seg type="translation" xml:lang="en" source="#claude">from MHk; missing T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1-13.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de">gif <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gif Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1-13.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de">ðæm <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">ðæm Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1-13.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de">sy <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">sy Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_1-13.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">148</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Im Ggs. zu 1, 9a ist hier das Wergeld des Herrn gemeint, eine härtere Strafe, weil dieser nicht bloss wie dort Gefolgsherr war, sondern polizeilich verantwortlich für die Hausinsassen. Wäre nur des Diebes Wergeld gemeint, so litte ja der Begünstiger nicht mehr Schaden als nach 1, 11 der an der Flucht Unbeteiligte. Deutlich scheidend bestimmt Hn 41, 6 <hi rend="italic">weram illius</hi> bei Unachtsamkeit, <hi rend="italic">weram suam</hi> beim Verhelfen zur Flucht; <hi rend="italic">vgl</hi>. 12, 3; <hi rend="italic">Gl</hi> Begünstigung 2. 15a mit der Korrektur <hi rend="italic">o</hi>. zu 1, 9a². Richtig also versteht Q hier und zu II Cn 31, 2 (= Hn 41, 6. Leis Wl 52) sowie dort Inst Cn des Herrn Wergeld; nur Cons Cn missversteht dort das des Flüchtlings</seg><seg type="translation" xml:lang="en" source="#claude">In contrast to 1, 9a, the lord’s wergild is meant here, a harsher penalty, because he was not merely, as there, the lord of a follower, but was responsible in matters of police for the members of his household. If only the thief’s wergild were meant, the harbourer would suffer no more loss than, under 1, 11, the man who had no part in the flight. Hn 41, 6 clearly distinguishes <hi rend="italic">weram illius</hi> for negligence from <hi rend="italic">weram suam</hi> for aiding the escape; <hi rend="italic">cf.</hi> 12, 3; <hi rend="italic">Gl</hi> Begünstigung 2. 15a with the correction <hi rend="italic">above</hi> on 1, 9a². Q therefore rightly understands the lord’s wergild here and at II Cn 31, 2 (= Hn 41, 6. Leis Wl 52), as does Inst Cn there; only Cons Cn there misunderstands it as that of the fugitive</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_1-13.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">148</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">= 1, 9a³</seg><seg type="translation" xml:lang="en" source="#claude">= 1, 9a³</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IAtr_1-13.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">313</biblScope></bibl><seg type="original" xml:lang="en">Liebermann points out that the wergeld here is the lord’s own because, as distinct from the case treated in § 11, the lord in this instance has been an accessory to the man’s flight. He refers to Hn. 41, 6–11 where the distinction is clearly expressed, <hi rend="italic">e.g.</hi> in 41, 8: <hi rend="italic">Si accusetur et aufugiat, reddat dominus eius regi weram illius hominis</hi>, and 41, 10: <hi rend="italic">Si iuramentum frangat ei, reddat weram suam regi; et qui fugit utlaga sit</hi>.</seg></note>
       </div>
     </body>
   </text>

@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -56,6 +59,9 @@
       <change when="2026-10-17">Generated from row 1032 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 218.</change>
       <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 54.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 218: “And gyf ðeowman ful wurðe æt [þam ordale, mearcie man hine æt] ðam forman cyrran.” → “And gyf ðeowman ful wurðe æt [þam ordale, mearcie man hine æt] ðam forman cyrran. (expanded letters in italics: m)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 218: “(Vom Unfreien, der schuldig befunden wird. Ld) Und wenn ein Unfreier beim Ordal schuldig befunden wird, so werde er beim ersten Male gebrandmarkt.” → “(Vom Unfreien, der schuldig befunden wird. Ld) Und wenn ein Unfreier beim Ordal schuldig befunden wird, so werde er beim ersten Male gebrandmarkt. (expanded letters in italics: Ld)”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 54: “[Ld]; wyrðe” → “∅; wurðe”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -63,12 +69,12 @@
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:IAtr">I Atr</ref> 2</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-h">⁊ gif þeowman fúl wurðe æt þa<hi rend="italic">m</hi> ordale, mearcie man hine æt ðam forman cyrre.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-b">And gyf ðeowman ful wurðe æt [þam ordale, mearcie man hine æt] ðam forman cyrran.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-b"><ptr type="liebermannNote" n="*" target="#IAtr_2.lnote.oe.star"/>And<ptr type="liebermannNote" n="25" target="#IAtr_2.lnote.oe.25"/> gyf<ptr type="liebermannNote" n="1" target="#IAtr_2.lnote.oe.1"/> ðeowman ful wurðe<ptr type="liebermannNote" n="26" target="#IAtr_2.lnote.oe.26"/> æt [þa<hi rend="italic">m<ptr type="liebermannNote" n="27" target="#IAtr_2.lnote.oe.27"/></hi> ordale, mearcie man<ptr type="liebermannNote" n="28" target="#IAtr_2.lnote.oe.28"/> hine æt] ðam<ptr type="liebermannNote" n="4" target="#IAtr_2.lnote.oe.4"/> forman cyrran.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2" corresp="#wit-q">Et si seruus culpabilis appareat in ordalio, signetur in prima uice.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="2" corresp="#wit-b">[Be ðeowmen ðe ful wyrþe.] [Ld] And gyf ðeowman ful wyrðe æt þam ordale, mearcie man hine æt ðam forman cyrran.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">(Vom Unfreien, der schuldig befunden wird. Ld) Und wenn ein Unfreier beim Ordal schuldig befunden wird, so werde er beim ersten Male gebrandmarkt.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="2" corresp="#wit-b">[Be ðeowmen ðe ful wyrþe.] And gyf ðeowman ful wurðe æt þam ordale, mearcie man hine æt<ptr type="editorNote" n="3" target="#IAtr_2.robnote.fn.3"/> ðam forman cyrran.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Vom Unfreien, der schuldig befunden wird. <hi rend="italic">Ld</hi>) Und<ptr type="liebermannNote" n="1" target="#IAtr_2.lnote.de.1"/> wenn ein Unfreier beim Ordal schuldig befunden wird, so werde er beim ersten Male gebrandmarkt.<ptr type="liebermannNote" n="2" target="#IAtr_2.lnote.de.2"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of the slave who is found guilty. Ld) And if a slave is found guilty at the ordeal, let him be branded the first time.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">And if a slave is found guilty at the ordeal, he shall be branded on the first occasion.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">And if a slave is found guilty at the ordeal, he shall be branded<ptr type="editorNote" n="1" target="#IAtr_2.robnote.n.1"/> on the first occasion<ptr type="editorNote" n="2" target="#IAtr_2.robnote.n.2"/>.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IICn_32">II Cn 32</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="367"><ref target="clause:IICn_30-3b">II Cn 30.3b</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="367"><ref target="clause:IICn_30-4">II Cn 30.4</ref></note>
@@ -76,6 +82,18 @@
         <note type="comparedBy" source="#whitelock" n="467"><ref target="clause:IICn_32">II Cn 32</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="367"><ref target="clause:IICn_33">II Cn 33</ref></note>
         <note type="editorial">In B the bracketed words were added in the margin by a later hand.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_2.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de">Be ðeowmen ðe ful wyrþe <hi rend="italic">überschreibt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">Be ðeowmen ðe ful wyrþe as heading Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_2.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_2.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de">gif <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gif Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_2.lnote.oe.26" n="26" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de">wyrþe <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">wyrþe Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_2.lnote.oe.27" n="27" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de">þam — æt <hi rend="italic">spätere Hand am Rande B;</hi> ðæm <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">þam — æt in a later hand in the margin B; ðæm Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_2.lnote.oe.28" n="28" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de">mon <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">mon Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_2.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de">ðæm <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">ðæm Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">148</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Strenger als Æthelstan; <hi rend="italic">vgl. Gl</hi> Ordal 32e. f.; unfrei 19. 21k.—Den Satz wiederholt II Cn 32</seg><seg type="translation" xml:lang="en" source="#claude">Stricter than Æthelstan; <hi rend="italic">cf. Gl</hi> Ordal 32e. f.; unfrei 19. 21k.—The sentence is repeated by II Cn 32</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">148</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Brandmarken. Da der Unfreie vermögenslos, tritt sofort Leibesstrafe ein.—Zur Form <hi rend="italic">cyrran</hi> in B, die dieser Schreiber in II Cn 32, 1 wiederholt, <hi rend="italic">vgl. Wb</hi> S. 48 Sp. 2</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Brandmarken. Since the unfree man has no property, corporal punishment follows at once.—On the form <hi rend="italic">cyrran</hi> in B, which this scribe repeats in II Cn 32, 1, <hi rend="italic">cf. Wb</hi> p. 48 col. 2</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IAtr_2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">313</biblScope></bibl><seg type="original" xml:lang="en">The punishment, as Liebermann points out, is more severe than that inflicted by Æthelstan (see II As. 19). For later instances of branding see <hi rend="italic">E.H.R.</hi>, 1895, p. 726; Bateson, <hi rend="italic">Borough Customs</hi>, <hi rend="smallcaps">i</hi>. 77 f. and note.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IAtr_2.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">313</biblScope></bibl><seg type="original" xml:lang="en">Liebermann (<hi rend="smallcaps">ii</hi>. p. 48, Col. 2, No. 5) notes the occasional use of weak declension forms in MS B, <hi rend="italic">e.g.</hi> <hi rend="italic">cyrran</hi> here and in II Cn. 32, 1; <hi rend="italic">of eardan</hi>, II Cn. 3; <hi rend="italic">on wintran</hi>, In. 38.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IAtr_2.robnote.fn.3" n="3" source="#robertson"><bibl><biblScope unit="page">54</biblScope></bibl><label>æt</label><seg type="original" xml:lang="en"><hi rend="italic">þam ordale…æt.</hi> Added in margin in later handwriting in B.</seg></note>
       </div>
     </body>
   </text>

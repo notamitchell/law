@@ -10,6 +10,8 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +29,7 @@
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">52</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -55,25 +58,33 @@
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 216.</change>
       <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 53.</change>
       <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 52.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 216: “Gyf he ðonne tyhtbysig sy, gange to þam þryfealdan ordale.” → “Gyf he ðonne tyhtbysig sy, gange to þam þryfealdan ordale. (expanded letters in italics: m)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.1">
         <head><ref type="lawCode" target="law:IAtr">I Atr</ref> 1.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.1" corresp="#wit-h">Gyf he ðonne tyhtbysig sy, gange to þ<hi rend="italic">am</hi> þryfealdan ordale.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.1" corresp="#wit-b">Gyf he ðonne tyhtbysig sy, gange to ðam ðreofealdan ordale.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.1" corresp="#wit-h">Gyf he ðonne tyhtbysig sy, gange to þa<hi rend="italic">m</hi> þryfealdan ordale.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.1" corresp="#wit-b">Gyf<ptr type="liebermannNote" n="7" target="#IAtr_1-1.lnote.oe.7"/> he ðonne tyhtbysig sy, gange<ptr type="liebermannNote" n="9" target="#IAtr_1-1.lnote.oe.9"/> to ðam<ptr type="liebermannNote" n="10" target="#IAtr_1-1.lnote.oe.10"/> ðreofealdan ordale.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.1" corresp="#wit-q">Si tyhtbisi sit (id est accusationibus infamatus), ad triplex ordalium uadat.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="1.1" corresp="#wit-b">Gyf he ðonne tyhtbysig sy, gange to ðam ðreofealdan ordale.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn [Angeklagt]er nun oft bescholten ist, gehe er zum dreifachen Ordal.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><ptr type="liebermannNote" n="1" target="#IAtr_1-1.lnote.de.1"/>Wenn<ptr type="liebermannNote" n="2" target="#IAtr_1-1.lnote.de.2"/> [Angeklagt]er nun oft bescholten ist, gehe er zum dreifachen Ordal.<ptr type="liebermannNote" n="3" target="#IAtr_1-1.lnote.de.3"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If the [accused] is then of bad repute, let him go to the threefold ordeal.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">If, however, he is of bad reputation, he shall go to the triple ordeal.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><ptr type="editorNote" n="1" target="#IAtr_1-1.robnote.n.1"/>If, however, he is of bad reputation, he shall go to the triple ordeal.</ab>
         <note type="comparison" source="#liebermann" n="217"><ref target="clause:IIIAtr_3-4">III Atr 3.4</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. III Atr. 3, 4</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IIIAtr_3-4">III Atr 3.4</ref>; <ref target="clause:IICn_22">II Cn 22</ref>; <ref target="clause:IICn_30">II Cn 30</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="358"><ref target="clause:IICn_30">II Cn 30</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="367"><ref target="clause:IICn_30-1">II Cn 30.1</ref></note>
         <note type="editorial">Liebermann compares III Atr 3, 4.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1-1.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">216</biblScope></bibl><seg type="original" xml:lang="de">gif <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gif Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1-1.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">216</biblScope></bibl><seg type="original" xml:lang="de">gang <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gang Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1-1.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">216</biblScope></bibl><seg type="original" xml:lang="de">ðæm <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">ðæm Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_1-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">147</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Hier sollte neues Kapitel beginnen</seg><seg type="translation" xml:lang="en" source="#claude">A new chapter should begin here</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_1-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">147</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Das Folgende, ausser 1, 14. 3, nimmt II Cn 30—33 (= Hn 65, 3) auf, mit absichtlicher Änderung; Ordal (<hi rend="italic">s. d. Gl</hi> 22ff. 33a) fordert Cnut für einfache Reinigung überhaupt nicht (II 22 = Hn 64, 9) und dreifaches nur gegen 3 Kläger: letzteres vielleicht nur Begriffsverdeutlichung zu ‘bescholten’; <hi rend="italic">s. d. Gl</hi> 3. 5a</seg><seg type="translation" xml:lang="en" source="#claude">What follows, except 1, 14. 3, is taken up by II Cn 30—33 (= Hn 65, 3), with deliberate alteration; Cnut does not require ordeal (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 22ff. 33a) at all for simple exculpation (II 22 = Hn 64, 9), and requires the triple ordeal only against 3 accusers: the latter perhaps merely clarifies the concept ‘of ill repute’; <hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 3. 5a</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_1-1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">147</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Zu diesem Falle kehrt 1, 4 zurück, nachdem in 1, 2; 3 eine Ausnahme davon behandelt ist</seg><seg type="translation" xml:lang="en" source="#claude">1, 4 returns to this case, after an exception to it has been dealt with in 1, 2; 3</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IAtr_1-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">312</biblScope></bibl><seg type="original" xml:lang="en">With this clause and those following cf. II Cn. 30–3.</seg></note>
       </div>
     </body>
   </text>

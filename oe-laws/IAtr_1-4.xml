@@ -10,6 +10,8 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +29,7 @@
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">52</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -53,22 +56,30 @@
       <change when="2026-10-17">Generated from row 1020 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 218.</change>
       <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 53.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 218: “Gif hy þonne aþ syllan ne durron, gange to þam þryfealdan ordale.” → “Gif hy þonne aþ syllan ne durron, gange to þam þryfealdan ordale. (expanded letters in italics: m)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.4">
         <head><ref type="lawCode" target="law:IAtr">I Atr</ref> 1.4</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.4" corresp="#wit-h">Gif hy þonne aþ syllan ne durron, gange to þ<hi rend="italic">am</hi> þryfealdan ordale.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.4" corresp="#wit-b">Gyf hi ðonne að syllan ne durron, gange to ðam ðrifealdan ordale.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.4" corresp="#wit-h">Gif hy þonne aþ syllan ne durron, gange to þa<hi rend="italic">m</hi> þryfealdan ordale.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.4" corresp="#wit-b">Gyf<ptr type="liebermannNote" n="1" target="#IAtr_1-4.lnote.oe.1"/> hi<ptr type="liebermannNote" n="2" target="#IAtr_1-4.lnote.oe.2"/> ðonne að syllan ne durron, gange<ptr type="liebermannNote" n="3" target="#IAtr_1-4.lnote.oe.3"/> to ðam<ptr type="liebermannNote" n="4" target="#IAtr_1-4.lnote.oe.4"/> ðrifealdan<ptr type="liebermannNote" n="5" target="#IAtr_1-4.lnote.oe.5"/> ordale.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.4" corresp="#wit-q">Si iurare pro eo non audeant, uadat ad triplex ordalium.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="1.4" corresp="#wit-b">Gyf hi ðonne að syllan ne durron, gange to ðam ðrifealdan ordale.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn sie [Herr und Helfer] aber den Eid nicht zu leisten wagen, schreite [Verklagter] zum dreifachen Ordal.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn sie [Herr und Helfer] aber den Eid nicht<ptr type="liebermannNote" n="1" target="#IAtr_1-4.lnote.de.1"/> zu leisten wagen, schreite [Verklagter] zum dreifachen Ordal.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But if they [the lord and helpers] do not dare to give the oath, let [the accused] go to the threefold ordeal.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">If they dare not give the oath, he (the accused) shall go to the triple ordeal.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">If they dare not give the oath, he (the accused) shall go to the triple ordeal<ptr type="editorNote" n="1" target="#IAtr_1-4.robnote.n.1"/>.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IICn_30-3">II Cn 30.3</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="329"><ref target="clause:IIIAtr_3-4">III Atr 3.4–4.1</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="367"><ref target="clause:IICn_30-3">II Cn 30.3–30.3a</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1-4.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de">gif <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gif Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1-4.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de">he <hi rend="italic">Ld im Text;</hi> hy <hi rend="italic">unter ‘Errata’</hi></seg><seg type="translation" xml:lang="en" source="#claude">he Ld in the text; hy under ‘Errata’</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1-4.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de">gang <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gang Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1-4.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de">ðæm <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">ðæm Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_1-4.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">218</biblScope></bibl><seg type="original" xml:lang="de">ðreof. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">ðreof. Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_1-4.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">147</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Dann unterliegt Verklagter der Reinigungsschwere des Bescholtenen in 1, 1</seg><seg type="translation" xml:lang="en" source="#claude">The accused is then subject to the weight of exculpation required of the man of ill repute in 1, 1</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IAtr_1-4.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">312</biblScope></bibl><seg type="original" xml:lang="en">Cf. 1, 1.</seg></note>
       </div>
     </body>
   </text>

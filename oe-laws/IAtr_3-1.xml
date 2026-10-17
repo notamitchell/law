@@ -9,6 +9,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -25,6 +27,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">220</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">54</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -53,23 +56,32 @@
       <change when="2026-10-17">Generated from row 1035 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 220.</change>
       <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 55.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 220: “mon” → “man”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 220: “And gyf hit hwá do, fo se landhlaford to ⁊ healde þæt órf, oð þæt mon wite, hwa hit mid rihte áge.” → “And gyf hit hwá do, fo se landhlaford to ⁊ healde þæt órf, oð þæt mon wite, hwa hit mid rihte áge. (expanded letters in italics: æt, æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 220: “Jedoch (Und B) wenn das jemand thut, nehme der Grund-[und Immunitäts]herr und halte das Vieh, bis dass man weiss, wem es rechtmässig gehört.” → “Jedoch (Und B) wenn das jemand thut, nehme der Grund-[und Immunitäts]herr und halte das Vieh, bis dass man weiss, wem es rechtmässig gehört. (expanded letters in italics: B)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3.1">
         <head><ref type="lawCode" target="law:IAtr">I Atr</ref> 3.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.1" corresp="#wit-h">Gif hit þonne hwa dó, fo se landhlaford to ⁊ healde þ<hi rend="italic">æt</hi> orf, oð þæt mon wite, hwa hit age mid rihte.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.1" corresp="#wit-b">And gyf hit hwá do, fo se landhlaford to ⁊ healde þæt órf, oð þæt mon wite, hwa hit mid rihte áge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.1" corresp="#wit-h">Gif hit þonne hwa dó, fo se landhlaford to ⁊ healde þ<hi rend="italic">æt</hi> orf, oð þæt man wite, hwa hit age mid rihte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.1" corresp="#wit-b">And gyf<ptr type="liebermannNote" n="5" target="#IAtr_3-1.lnote.oe.5"/> hit hwá do, fo se landhlaford<ptr type="liebermannNote" n="6" target="#IAtr_3-1.lnote.oe.6"/> to ⁊ healde<ptr type="liebermannNote" n="7" target="#IAtr_3-1.lnote.oe.7"/> þ<hi rend="italic">æt</hi> órf, oð þ<hi rend="italic">æt</hi> mon wite, hwa hit mid rihte<ptr type="liebermannNote" n="8" target="#IAtr_3-1.lnote.oe.8"/> áge.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.1" corresp="#wit-q">Si quis hoc presumat, capiat illud terre dominus et custodiat pecus illud, donec sciatur, cuius sit secundum rectum.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="3.1" corresp="#wit-b">And gyf hit hwa do, fo se landhlaford to ⁊ healde þæt órf, oð þæt mon wite hwa hit mid rihte áge.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Jedoch (Und B) wenn das jemand thut, nehme der Grund-[und Immunitäts]herr und halte das Vieh, bis dass man weiss, wem es rechtmässig gehört.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Jedoch (Und <hi rend="italic">B</hi>) wenn das jemand thut, nehme der Grund-[und Immunitäts]herr<ptr type="liebermannNote" n="1" target="#IAtr_3-1.lnote.de.1"/> und halte das Vieh, bis dass man weiss, wem es rechtmässig gehört.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But (And, B) if anyone does it, let the [immunity-]landlord seize and keep the cattle until it is known to whom it rightfully belongs.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">And if anyone do so, the lord of the manor shall seize and keep the stock, until it is known who is the rightful owner.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b">And if anyone do so, the lord of the manor<ptr type="editorNote" n="1" target="#IAtr_3-1.robnote.n.1"/> shall seize and keep the stock, until it is known who is the rightful owner.</ab>
         <note type="comparison" source="#liebermann" n="221"><ref target="clause:IVEg_11">IV Eg 11</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. IV Eg. 11</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IIIAtr_5">III Atr 5</ref></note>
         <note type="editorial">Liebermann compares IV Eg 11.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_3-1.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">220</biblScope></bibl><seg type="original" xml:lang="de">gif <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gif Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_3-1.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">220</biblScope></bibl><seg type="original" xml:lang="de">-rde <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-rde Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_3-1.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">220</biblScope></bibl><seg type="original" xml:lang="de">heald <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">heald Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IAtr_3-1.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">220</biblScope></bibl><seg type="original" xml:lang="de">riht <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">riht Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IAtr_3-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">148</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Nur gestohlenes Vieh hatte der Herr so zu verwahren nach IV Eg 11</seg><seg type="translation" xml:lang="en" source="#claude">According to IV Eg 11 the lord had to keep in this way only stolen cattle</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IAtr_3-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">313</biblScope></bibl><seg type="original" xml:lang="en">Cf. IV Edg. 11, where the lord takes similar action with regard to stolen cattle.</seg></note>
       </div>
     </body>
   </text>
