@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">6</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -54,24 +57,36 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 688 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 688 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 132.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 132: “Und wenn er kämpft [gegen den Kirchensteuer-Eintreiber] und jemanden verwundet, sei er seines Wergeldes (Lebens Ld Quadr. II) schuldig.” → “Und wenn er kämpft [gegen den Kirchensteuer-Eintreiber] und jemanden verwundet, sei er seines Wergeldes (Lebens Ld Quadr. II) schuldig. (expanded letters in italics: Ld Quadr. II)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6.5">
         <head><ref type="lawCode" target="law:EGu">EGu</ref> 6.5</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.5" corresp="#wit-b">⁊ gyf he wigie ⁊ man gewundia, beo his weres scyldig.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.5" corresp="#wit-h">⁊ gif he wigie ⁊ man gewundie, beo his weres scyldig.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.5" corresp="#wit-q">Si contrastet, ut hominem uulneret (qui Dei rectitudines exigat), de hoc (uita) componat.</ab>
-        <ab type="editionText" xml:lang="ang" source="#attenborough" n="6.5" corresp="#wit-h">⁊ gif he wigie ⁊ man gewundie, beo his weres scyldig.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.5" corresp="#wit-b">⁊ gyf he wigie ⁊ man gewundia<ptr type="liebermannNote" n="1" target="#EGu_6-5.lnote.oe.1"/>, beo his weres scyldig.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.5" corresp="#wit-h">⁊<ptr type="liebermannNote" n="4" target="#EGu_6-5.lnote.oe.4"/> gif he wigie ⁊ man gewundie, beo his weres<ptr type="liebermannNote" n="*" target="#EGu_6-5.lnote.oe.star"/> scyldig.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.5" corresp="#wit-q">Si contrastet, ut hominem uulneret (qui<ptr type="liebermannNote" n="6" target="#EGu_6-5.lnote.oe.6"/> Dei rectitudines exigat), de hoc<ptr type="liebermannNote" n="7" target="#EGu_6-5.lnote.oe.7"/> (uita) componat.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="6.5" corresp="#wit-h">⁊ gif he wigie ⁊ man gewundie<ptr type="editorNote" n="1" target="#EGu_6-5.attnote.fn.1"/>, beo his weres<ptr type="editorNote" n="2" target="#EGu_6-5.attnote.fn.2"/> scyldig.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-h">And gif he wigie and man gewundie, beo his weres scyldig.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And if he fights and wounds anyone, he shall forfeit his wergeld.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And if he fights and wounds anyone<ptr type="editorNote" n="1" target="#EGu_6-5.attnote.n.1"/>, he shall forfeit his wergeld.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h">And if he fights and wounds anyone, he will be liable for his wergild.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn er kämpft [gegen den Kirchensteuer-Eintreiber] und jemanden verwundet, sei er seines Wergeldes (Lebens Ld Quadr. II) schuldig.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wenn er kämpft<ptr type="liebermannNote" n="1" target="#EGu_6-5.lnote.de.1"/> [gegen<ptr type="liebermannNote" n="2" target="#EGu_6-5.lnote.de.2"/> den Kirchensteuer-Eintreiber] und jemanden verwundet, sei er seines Wergeldes (Lebens<ptr type="liebermannNote" n="3" target="#EGu_6-5.lnote.de.3"/> <hi rend="italic">Ld Quadr. II</hi>) schuldig.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if he fights [against the collector of church dues] and wounds someone, let him be liable for his wergeld (life Ld Quadr. II).</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IICn_48-1">II Cn 48.1</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_6-5.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">133</biblScope></bibl><seg type="original" xml:lang="de">qui D. r. e. <hi rend="italic">aus Lond; fehlt übrigen</hi></seg><seg type="translation" xml:lang="en" source="#claude">qui D. r. e. from Lond; omitted in the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_6-5.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">133</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">nur</hi> hoc <hi rend="italic">Lond; nur</hi> uita [<hi rend="spaced">wita</hi> <hi rend="italic">MHkBr</hi> = II <hi rend="italic">Cnut</hi> 48, 1] <hi rend="italic">übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">only hoc Lond; only uita [<hi rend="italic">wita</hi> MHkBr = II Cnut 48, 1] the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_6-5.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">132</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_6-5.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">132</biblScope></bibl><seg type="original" xml:lang="de">feorhes <hi rend="italic">Ld; späterer Quadr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">feorhes Ld; later Quadr.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_6-5.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">132</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="EGu_6-5.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">91</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">‘mit Kampf’; Cn 48, <hi rend="italic">per vim</hi> Hn 11, 11a; er kann in diesem fallen; 6, 7</seg><seg type="translation" xml:lang="en" source="#claude">‘with fighting’; Cn 48, <hi rend="italic">per vim</hi> Hn 11, 11a; he may fall in this fight; 6, 7</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="EGu_6-5.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">91</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Kirchengeldeintreiber</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Kirchengeldeintreiber</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="EGu_6-5.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">91</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Rechtssperrung (<hi rend="italic">s. d. Gl</hi> 3) lag Q richtig im Sinne, denn mit <hi rend="italic">contrastatio</hi> übersetzt er <hi rend="italic">foresteal.</hi> — Die Todesstrafe für Verwundung kann nicht original sein, da erst auf Totschlag <hi rend="italic">u.</hi> 6, 6 Friedlosigkeit steht, und da Cnut nur Ablösung der Verstümmelung fordert. Erst lq führte diese Strenge ein</seg><seg type="translation" xml:lang="en" source="#claude">Q correctly had obstruction of justice (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 3) in mind, for he translates <hi rend="italic">foresteal</hi> by <hi rend="italic">contrastatio.</hi> — The death penalty for wounding cannot be original, since outlawry is first imposed only for homicide, <hi rend="italic">below</hi> 6, 6, and since Cnut demands only redemption of mutilation. It was lq who first introduced this severity</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="EGu_6-5.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">202</biblScope></bibl><seg type="original" xml:lang="en">According to Liebermann the reference here is to the man who uses violence against the person who is collecting the dues of the Church. Quadr. reads <hi rend="italic">Si contrastet, ut hominem uulneret qui Dei rectitudines exigat, de hoc uita componat</hi>.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="EGu_6-5.attnote.fn.1" n="1" source="#attenborough"><bibl><biblScope unit="page">106</biblScope></bibl><label>gewundie</label><seg type="original" xml:lang="en"><hi rend="italic">gewundia</hi>. B.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="EGu_6-5.attnote.fn.2" n="2" source="#attenborough"><bibl><biblScope unit="page">106</biblScope></bibl><label>weres</label><seg type="original" xml:lang="en"><hi rend="italic">feorhes</hi>. Ld. <hi rend="italic">uita</hi>. Quad.</seg></note>
       </div>
     </body>
   </text>

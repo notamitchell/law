@@ -6,13 +6,14 @@
         <title>EGu Prol., 1</title>
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#rabin-doml">Rabin</name></respStmt>
-        <respStmt><resp>Edition of the text</resp><name ref="#rabin-doml">Rabin</name></respStmt>
-        <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,9 +30,10 @@
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">128</biblScope></bibl>
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
+          <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">2</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
-          <bibl xml:id="rabin-doml" type="study">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">2</biblScope></bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -56,25 +58,40 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 671 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 671 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 128.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 128: “[is]” → “∅”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 128: “Ðæt is ærest, þæt hi gecwædon, þæt hí ænne God lufian woldan ⁊ ælcne hæðendom georne aworpen.” → “Ðæt is ærest, þæt hi gecwædon, þæt hí ænne God lufian woldan ⁊ ælcne hæðendom georne aworpen. (expanded letters in italics: æt, æt)”.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Attenborough, p. 103: “place,” → “place”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Prol., 1">
         <head><ref type="lawCode" target="law:EGu">EGu</ref> Prol., 1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol., 1" corresp="#wit-b">Ðæt is ærest, þæt hi gecwædon, þæt hí ænne God lufian woldan ⁊ ælcne hæðendom georne aworpen.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol., 1" corresp="#wit-h">Ðis [is] ærest, þæt hig gecwædon, þæt hí ænne God lufian woldon ⁊ ælcne hæþendom georne aworpen.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="Prol., 1" corresp="#wit-q">Inprimis est, quod dixerunt, ut unum Deum diligere uelint et omni paganismo renunciare sedulo.</ab>
-        <ab type="editionText" xml:lang="ang" source="#attenborough" n="§1" corresp="#wit-h">Ðæt is ærest, þæt hig gecwædon, þæt hí ænne God lufian woldon ⁊ ælcne hæþendom georne aworpen.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol., 1" corresp="#wit-b">Ðæt is ærest, þ<hi rend="italic">æt</hi> hi gecwædon, þ<hi rend="italic">æt</hi> hí ænne God lufian woldan ⁊ ælcne hæðendom georne aworpen.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol., 1" corresp="#wit-h">Ðis<ptr type="liebermannNote" n="***" target="#EGu_Prol-to-1.lnote.oe.star3"/> ærest, þ<hi rend="italic">æt</hi> hig<ptr type="liebermannNote" n="11" target="#EGu_Prol-to-1.lnote.oe.11"/> gecwædon, þ<hi rend="italic">æt</hi> hí ænne God lufian woldon ⁊ ælcne hæþendom<ptr type="liebermannNote" n="12" target="#EGu_Prol-to-1.lnote.oe.12"/> georne aworpen.<ptr type="liebermannNote" n="13" target="#EGu_Prol-to-1.lnote.oe.13"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="Prol., 1" corresp="#wit-q">Inprimis est, quod<ptr type="liebermannNote" n="13" target="#EGu_Prol-to-1.lnote.oe.13-2"/> dixerunt, ut unum Deum diligere uelint et omni paganismo renunciare<ptr type="liebermannNote" n="14" target="#EGu_Prol-to-1.lnote.oe.14"/> sedulo.<ptr type="liebermannNote" n="15" target="#EGu_Prol-to-1.lnote.oe.15"/></ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="§1" corresp="#wit-h">Ðæt is ærest<ptr type="editorNote" n="6" target="#EGu_Prol-to-1.attnote.fn.6"/>, þæt hig gecwædon, þæt hí ænne God lufian woldon ⁊ ælcne hæþendom georne aworpen.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-h">Pr.1 Ðæt is ærest þæt hig gecwædon: þæt hi ænne God lufian woldon and ælcne hæþendom georne aweorpen.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">In the first place, they declared they would love one God, and zealously renounce all heathen practices.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">In the first place they declared they would love one God, and zealously renounce all heathen practices.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h">Pr.1 This is foremost among those things which they agreed upon: that they would love the one God and wholeheartedly reject every heathen practice.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Das ist [nämlich] erstens, dass sie bestimmten, dass sie Einen Gott lieben wollten und jedes Heidenthum eifrig abwerfen.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Das<ptr type="liebermannNote" n="1" target="#EGu_Prol-to-1.lnote.de.1"/> ist [nämlich] erstens, dass<ptr type="liebermannNote" n="2" target="#EGu_Prol-to-1.lnote.de.2"/> sie bestimmten, dass sie Einen Gott lieben wollten und jedes Heidenthum<ptr type="liebermannNote" n="3" target="#EGu_Prol-to-1.lnote.de.3"/> eifrig abwerfen.<ptr type="liebermannNote" n="4" target="#EGu_Prol-to-1.lnote.de.4"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">That is [namely] first, that they determined that they would love one God and zealously cast off all heathenism.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VAtr_1">V Atr 1</ref>; <ref target="clause:VAtr_34">V Atr 34</ref>; <ref target="clause:IICn_5">II Cn 5</ref></note>
         <note type="textual" source="#rabin-doml">[Pr.1] Đæt is: Đis H</note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_Prol-to-1.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">129</biblScope></bibl><seg type="original" xml:lang="de">q. d. <hi rend="italic">aus Lond; fehlt übrigen</hi></seg><seg type="translation" xml:lang="en" source="#claude">q. d. from Lond; omitted in the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_Prol-to-1.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">129</biblScope></bibl><seg type="original" xml:lang="de">s. r. <hi rend="italic">MHkBr</hi></seg><seg type="translation" xml:lang="en" source="#claude">s. r. MHkBr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_Prol-to-1.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">129</biblScope></bibl><seg type="original" xml:lang="de">semper <hi rend="italic">Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">semper Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_Prol-to-1.lnote.oe.star3" n="***" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">128</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">bessere mit BLd</hi> Ðæt is; <hi rend="italic">hinter der Initiale vergisst H mehrfach den Haken, der Abkürzung bedeutet</hi></seg><seg type="translation" xml:lang="en" source="#claude">read with BLd Ðæt is; after the initial, H several times forgets the hook that indicates abbreviation</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_Prol-to-1.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">128</biblScope></bibl><seg type="original" xml:lang="de">hi <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">hi Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_Prol-to-1.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">128</biblScope></bibl><seg type="original" xml:lang="de">-dome <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-dome Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_Prol-to-1.lnote.oe.13-2" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">128</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">geänd. in</hi> aweor. <hi rend="italic">H;</hi> aworpan <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">altered to aweor. H; aworpan Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="EGu_Prol-to-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">90</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Denkt man sich diesen Satz und den folgenden fort, so erschiene die Anordnung geschlossener, wäre Doppelung des ‘Erstens’ und der Heidentum-Erwähnung vermieden, und fiele die Disharmonie dieses homiletischen Satzes mit den kurzen Strafdrohungen, die folgen, fort. Vielleicht also ward diese Einleitung nur nachträglich vorangestellt. Sie ist aber archetyp und lag schon Benutzern 10. Jhs. vor: V Atr 1. 34 = VI 1. 6. = VIII 44 = IX Expl. = X 1 = I Cn 1c D = Northu 47 = 67</seg><seg type="translation" xml:lang="en" source="#claude">If this sentence and the following one are imagined away, the arrangement would appear more compact, the doubling of ‘first’ and of the mention of heathendom would be avoided, and the discord between this homiletic sentence and the short threats of punishment that follow would disappear. Perhaps, then, this introduction was only prefixed later. It is, however, in the archetype and was already known to users in the 10th cent.: V Atr 1. 34 = VI 1. 6. = VIII 44 = IX Expl. = X 1 = I Cn 1c D = Northu 47 = 67</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="EGu_Prol-to-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">90</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Nicht ‘was’; <hi rend="italic">s. Wb</hi> 217 Sp. 3 Z. 1</seg><seg type="translation" xml:lang="en" source="#claude">Not ‘what’; <hi rend="italic">see Wb</hi> 217 col. 3 l. 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="EGu_Prol-to-1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">90</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Gott 4ff.; Heidentum 8. 10</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Gott 4ff.; Heidentum 8. 10</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="EGu_Prol-to-1.lnote.de.4" n="4" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">90</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Gott 4ff.; Heidentum 8. 10</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Gott 4ff.; Heidentum 8. 10</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="EGu_Prol-to-1.attnote.fn.6" n="6" source="#attenborough"><bibl><biblScope unit="page">102</biblScope></bibl><label>ærest</label><seg type="original" xml:lang="en">B. <hi rend="italic">Ðis ærest</hi>. H.</seg></note>
       </div>
     </body>
   </text>

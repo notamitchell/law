@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +31,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">6</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -54,8 +56,9 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 684 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 684 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 130.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 130: “Gif hwa Rómfeoh forhealde, gylde lahslit mid Denum, wíte mid Englum.” → “Gif hwa Rómfeoh forhealde, gylde lahslit mid Denum, wíte mid Englum. (expanded letters in italics: m, m)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -63,17 +66,22 @@
       <div type="clause" n="6.1">
         <head><ref type="lawCode" target="law:EGu">EGu</ref> 6.1</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.1" corresp="#wit-b">Gyf hwá Rómfeoh forhealde, gylde lahslitt mid Denu<hi rend="italic">m</hi>, wíte mid Englum.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.1" corresp="#wit-h">Gif hwa Rómfeoh forhealde, gylde lahslit mid Denum, wíte mid Englum.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.1" corresp="#wit-q">Si quis Romfeoh superteneat, reddat lahslit cum Dacis, witam cum Anglis.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.1" corresp="#wit-h">Gif hwa Rómfeoh forhealde<ptr type="liebermannNote" n="35" target="#EGu_6-1.lnote.oe.35"/>, gylde lahslit<ptr type="liebermannNote" n="18" target="#EGu_6-1.lnote.oe.18"/> mid Denu<hi rend="italic">m</hi>, wíte mid Englu<hi rend="italic">m</hi>.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.1" corresp="#wit-q">Si<ptr type="liebermannNote" n="27" target="#EGu_6-1.lnote.oe.27"/> quis Romfeoh<ptr type="liebermannNote" n="28" target="#EGu_6-1.lnote.oe.28"/> superteneat, reddat lahslit cum Dacis, witam cum Anglis.</ab>
         <ab type="editionText" xml:lang="ang" source="#attenborough" n="6.1" corresp="#wit-h">Gif hwa Rómfeoh forhealde, gylde lahslit mid Denum, wíte mid Englum.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-h">Gif hwa Romfeoh forhealde, gylde lahslit mid Denum, wite mid Englum.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">If anyone withholds Peter's Pence, he shall pay <hi rend="italic">lahslit</hi> in a Danish district, and a fine in an English district.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h">If anyone withholds the dues owed to Rome, he shall pay lahslit among the Danes or a penalty among the English.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand Romgeld [den Peterspfennig] vorenthält, zahle er Rechtsbruchbusse bei den Dänen, Strafgeld bei den Engländern.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand Romgeld<ptr type="liebermannNote" n="1" target="#EGu_6-1.lnote.de.1"/> [den Peterspfennig] vorenthält, zahle er Rechtsbruchbusse bei den Dänen, Strafgeld bei den Engländern.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If anyone withholds Rome-money [Peter’s Pence], let him pay the penalty for breach of law among the Danes, a fine among the English.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VAtr_11-1">V Atr 11.1</ref></note>
         <note type="comparedBy" source="#rabin-doml" n="426"><ref target="clause:Northu_57-1">Northu 57.1</ref></note>
         <note type="translator" source="#rabin-doml">dues to Rome: “Peter’s Pence,” a penny tax paid each Feast of Saint Peter to support the Holy See in Rome.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_6-1.lnote.oe.27" n="27" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">131</biblScope></bibl><seg type="original" xml:lang="de">6, 1 <hi rend="italic">fehlt KOr</hi></seg><seg type="translation" xml:lang="en" source="#claude">6, 1 omitted in KOr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_6-1.lnote.oe.28" n="28" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">131</biblScope></bibl><seg type="original" xml:lang="de">-fech <hi rend="italic">T;</hi> -sech <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">-fech T; -sech Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_6-1.lnote.oe.35" n="35" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">130</biblScope></bibl><seg type="original" xml:lang="de">-heolde <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-heolde Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="EGu_6-1.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">130</biblScope></bibl><seg type="original" xml:lang="de">-ite <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-ite Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="EGu_6-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">91</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Benutzt in Northu 59, der wieder 12 Ör nur für Gemeinfreie, mehr für höhere Stände fordert. <hi rend="italic">Vgl. Gl</hi> Peterspfennig; die Säumnisstrafe ist später viel höher; <hi rend="italic">ebd.</hi> 17. — <hi rend="italic">Contratenere</hi> kennt Ducange nur hierher; Q braucht es auch in Hn 13, 11</seg><seg type="translation" xml:lang="en" source="#claude">Used in Northu 59, which again demands 12 ores only from common freemen, and more from those of higher rank. <hi rend="italic">Cf. Gl</hi> Peterspfennig; the penalty for default is later much higher; <hi rend="italic">ibid.</hi> 17. — Ducange knows <hi rend="italic">Contratenere</hi> only from this passage; Q also uses it in Hn 13, 11</seg></note>
       </div>
     </body>
   </text>
