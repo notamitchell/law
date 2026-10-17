@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">352</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">435</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -57,23 +60,32 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 946 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 198.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 198: “Æt ðam ðriddan syðe gyf he þonne gyt nelle, ðolige ealles þæs þe he age.” → “Æt ðam ðriddan syðe gyf he þonne gyt nelle, ðolige ealles þæs þe he age. (expanded letters in italics: ne)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 198.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4.3">
         <head><ref type="lawCode" target="law:IIEg">II Eg</ref> 4.3</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.3" corresp="#wit-g-a">Æt þa<hi rend="italic">m</hi> þriddan cyrre gyf he þon<hi rend="italic">ne</hi> git nelle, þolie ealles þæs ðe he áge.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.3" corresp="#wit-a">Æt ðam ðriddan syðe gyf he þonne gyt nelle, ðolige ealles þæs þe he age.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.3" corresp="#wit-g-a">Æt þa<hi rend="italic">m<ptr type="liebermannNote" n="26" target="#IIEg_4-3.lnote.oe.26"/></hi> þriddan cyrre gyf<ptr type="liebermannNote" n="21" target="#IIEg_4-3.lnote.oe.21"/> he þon<hi rend="italic">ne</hi> git<ptr type="liebermannNote" n="27" target="#IIEg_4-3.lnote.oe.27"/> nelle, þolie<ptr type="liebermannNote" n="28" target="#IIEg_4-3.lnote.oe.28"/> ealles þæs ðe he áge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.3" corresp="#wit-a">Æt ðam ðriddan syðe gyf he þon<hi rend="italic">ne</hi> gyt nelle, ðolige ealles þæs þe he age.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.3" corresp="#wit-d">Æt þa<hi rend="italic">m</hi> þriddan siðe gif he þon<hi rend="italic">ne</hi> git nelle, þolige ealles ðæs þe he age.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.3" corresp="#wit-q">Ad tertiam uicem, si adhuc non reddiderit, perdat totum quod habebit.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="4.3" corresp="#wit-d">Æt þam þriddan siðe, gif he þonne git nelle, þolige ealles ðæs þe he age.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="4.3" corresp="#wit-d">Æt þam þriddan siðe<ptr type="editorNote" n="5" target="#IIEg_4-3.robnote.fn.5"/>, gif he þonne git nelle, þolige ealles ðæs þe he age.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a">Æt þam þriddan cyrre gyf he þonne git nelle, þolie ealles þæs ðe he age.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Beim dritten Male, wenn er dann noch sich weigert, verliere er alles was er hat.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Beim dritten Male, wenn er dann noch sich weigert, verliere er alles<ptr type="liebermannNote" n="1" target="#IIEg_4-3.lnote.de.1"/> was er hat.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">The third time, if he still refuses, let him lose everything he has.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And on the third occasion, if he still refuses, he shall suffer the loss of all that he possesses.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">On the third occasion, if he still will not pay, he is to forfeit all that he owns.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a">And if he still refuses to pay for a third time, he is to suffer the forfeiture of all that he owns.</ab>
         <note type="textual" source="#rabin-doml">cyrre: syðe A; siðe D</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIEg_4-3.lnote.oe.26" n="26" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">198</biblScope></bibl><seg type="original" xml:lang="de">þæm <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">þæm So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIEg_4-3.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">198</biblScope></bibl><seg type="original" xml:lang="de">gif <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gif So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIEg_4-3.lnote.oe.27" n="27" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">198</biblScope></bibl><seg type="original" xml:lang="de">gyt <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gyt So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIEg_4-3.lnote.oe.28" n="28" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">198</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">geändert in</hi> þolige <hi rend="italic">G;</hi> þolige <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">altered to þolige G; þolige So Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIEg_4-3.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">135</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Vermögenseinziehung 4. 10h; Kirchengeldeintreiber 1—2a. Schreuer meint, der Kirche entgehe damit die Busse, da Schuldiger friedlos (<hi rend="italic">s. d. Gl</hi> 13) sei. Eher erfolgt Halbteilung 3, 1⁴</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Vermögenseinziehung 4. 10h; Kirchengeldeintreiber 1—2a. Schreuer holds that the church thereby loses the compensation, since the guilty man is outlawed (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 13). More probably the halving of 3, 1⁴ takes place</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IIEg_4-3.robnote.fn.5" n="5" source="#robertson"><bibl><biblScope unit="page">22</biblScope></bibl><label>siðe</label><seg type="original" xml:lang="en"><hi rend="italic">cyrre</hi> G, Ld.</seg></note>
       </div>
     </body>
   </text>

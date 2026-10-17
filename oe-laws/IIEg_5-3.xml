@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">354</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">435</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -57,22 +60,29 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 950 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 200.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 200.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 200: “(Und es bestehe jeder Kirchen-Sonderfriede so [weiter], wie er am besten bestanden hat. A D)” → “(Und es bestehe jeder Kirchen-Sonderfriede so [weiter], wie er am besten bestanden hat. A D) (expanded letters in italics: A D)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5.3">
         <head><ref type="lawCode" target="law:IIEg">II Eg</ref> 5.3</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5.3">[Not in G]</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.3" corresp="#wit-a">⁊ stande ælc cyricgrið swa swa hit betst stod.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="5.3" corresp="#wit-d">⁊ stande ælc ciricgrið swa swa hit betst stod.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.3" corresp="#wit-d">⁊ stande ælc ciricgrið swa swa hit betst stod.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5.3">[Not in G]</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="5.3" corresp="#wit-d"><ptr type="editorNote" n="13" target="#IIEg_5-3.robnote.fn.13"/>⁊ stande ælc ciricgrið swa swa hit betst stod.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a">And stande ælc cyricgrið swa swa hit betst stod.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">(Und es bestehe jeder Kirchen-Sonderfriede so [weiter], wie er am besten bestanden hat. A D)</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Und<ptr type="liebermannNote" n="1" target="#IIEg_5-3.lnote.de.1"/> es bestehe jeder Kirchen-Sonderfriede so [weiter], wie er am besten bestanden hat. <hi rend="italic">A D</hi>)</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(And let every church's special protection continue as it best stood. A D)</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And every right of sanctuary possessed by the church shall be maintained according to the highest standards of the past.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And every right of sanctuary possessed by the church<ptr type="editorNote" n="1" target="#IIEg_5-3.robnote.n.1"/> shall be maintained according to the highest standards of the past<ptr type="editorNote" n="2" target="#IIEg_5-3.robnote.n.2"/>.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">And every right of sanctuary is to be maintained as it best has been.]</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a">And the right of holy sanctuary is to be upheld just as it was when it was most respected.</ab>
         <note type="editorial">Not in G or Quadr.; in A and D only.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIEg_5-3.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">136</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Hinter detaillierte Kirchensteuer- und Fastengebote der Hierarchie an die Laien scheint diese vage allgemeine Zusicherung des Staats an die Kirche nicht ursprünglich zu gehören. Auch fehlt der Satz dem Gebot gleichen Inhalts und Zusammenhangs V Atr 10, 1 = VI 13 (= I Cn 2, 1), das vielmehr EGu 1 benutzt. <hi rend="italic">Vgl. Gl</hi> Kirchenfriede 1.—Der höchste Grad wird bestimmt durch den besten Zustand früherer Zeit auch in Urkk. und III Atr 1. V 15 = VI 22, 3; die <hi rend="italic">cynescipes gerihta</hi> der Zeit seines Vaters fordert IV Eg 2a. Die Redensart <hi rend="italic">swa god (wel) swa (man) betst . . . mæg</hi> für ‘möglichst gut’ steht auch IV Eg 2. 2, 1. 12. V Atr 6 (= VI 3, 1). 35. VIII 43, 1. I Cn 1 D. II 67f.</seg><seg type="translation" xml:lang="en" source="#claude">This vague general assurance by the State to the Church does not seem originally to belong after detailed commands of the hierarchy to the laity concerning church dues and fasts. The sentence is also lacking in the command of the same content and context in V Atr 10, 1 = VI 13 (= I Cn 2, 1), which rather uses EGu 1. <hi rend="italic">Cf. Gl</hi> Kirchenfriede 1. — The highest degree is determined by the best state of former times in charters too, and in III Atr 1. V 15 = VI 22, 3; IV Eg 2a demands the <hi rend="italic">cynescipes gerihta</hi> of his father's time. The phrase <hi rend="italic">swa god (wel) swa (man) betst . . . mæg</hi> for ‘as well as possible’ also occurs in IV Eg 2. 2, 1. 12. V Atr 6 (= VI 3, 1). 35. VIII 43, 1. I Cn 1 D. II 67f.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIEg_5-3.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">303</biblScope></bibl><seg type="original" xml:lang="en">Cf. E. and G. 1.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIEg_5-3.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">303</biblScope></bibl><seg type="original" xml:lang="en">Cf. III Atr. 1; V. 15.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IIEg_5-3.robnote.fn.13" n="13" source="#robertson"><bibl><biblScope unit="page">22</biblScope></bibl><label>⁊</label><seg type="original" xml:lang="en">Om. G, Ld, Q.</seg></note>
       </div>
     </body>
   </text>
