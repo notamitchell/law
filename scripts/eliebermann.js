@@ -446,14 +446,14 @@
             let rest = text, at = pos, m;
             // The passage follows after a space (Af 41) or, for Liebermann's "Cn 1020,11"
             // and "Iud Dei X,17", straight after a comma.
-            if (code && (m = new RegExp(`^(\\s+|,(?=\\d))(${PASSAGE})(?![\\p{L}\\d)])`, 'u').exec(rest)) && (!last || !open || last.anchor !== code.anchor || code.fresh)) {
+            if (code && (m = new RegExp(`^(\\s+|,(?=\\d))(${PASSAGE})(?![\\p{L}\\d])(?<!(?:^|[^\\d,])\\d{1,2}[a-z]?(?=\\)))`, 'u').exec(rest)) && (!last || !open || last.anchor !== code.anchor || code.fresh)) {
                 const n = m[2].replace(/\.$/, ''), s = at + m[1].length;
                 add(code.label + (m[1] === ',' ? ',' : ' ') + n, s, s + n.length);
                 rest = rest.slice(m[0].length); at += m[0].length; code.fresh = false;
             } else if (code && code.fresh && !/^\s*$/.test(rest)) {
                 code = null;   // a code with no passage after it, e.g. "VI As" in a sentence
             }
-            while (code && last && (m = new RegExp(`^(?:\\s*\\([^()]*\\))?\\s*\\.?\\s+(${PASSAGE})(?![\\p{L}\\d)])`, 'u').exec(rest))) {
+            while (code && last && (m = new RegExp(`^(?:\\s*\\([^()]*\\))?\\s*\\.?\\s+(${PASSAGE})(?![\\p{L}\\d])(?<!(?:^|[^\\d,])\\d{1,2}[a-z]?(?=\\)))`, 'u').exec(rest))) {
                 const n = m[1].replace(/\.$/, ''), s = at + m[0].length - m[1].length;
                 // after a line ("Z. 6. 9"), a bare number is another line
                 const line = /^\d+$/.test(n) && / Z\. ?\d+$/.test(last.text) ? 'Z. ' : '';

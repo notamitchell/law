@@ -1,0 +1,768 @@
+# Series numerals linked after a quoted form (October 2026)
+
+Each line: the entry, the text just before, the numeral (in bold) and what follows it, and the law code it was linked to. Check any that look wrong.
+
+- Abdenago: …  A; Abdi’ **IV** 3,3  → Iud Dei IV
+- Abiron: …; Abyron **III** 2. XI 8 → Excom III
+- Abiron: … **XI** 8 → Excom XI
+- Abraham: …; Hab~ **V** 1;  → Iud Dei V
+- Abraham: …; gn: ~ **XI** 4; Hab~  → Iud Dei XI
+- Aedelred: … | dt: ~de **II** 1 ‖  → II Atr
+- Aegyptus: …; Eg~ **XIV** 3  → Iud Dei XIV
+- Alliteration: …, **VI** 28,3; freol → VI Atr
+- Chald-a-eus: …; Cal~ **V** 1 → Iud Dei V
+- Chaldaicus: …; Cal~ **V** 1,2 → Iud Dei V
+- Cherubim: … **VII** 23,1  → Iud Dei VII
+- Cherubim: …  A. **XIII** 13,2.  → Iud Dei XIII
+- Conjugation: …. V, z. B. gimetgadest **IV** 1; giþolade → Iud Dei IV
+- Conjugation: …; giþolades **V** 2,4; þerhen → Iud Dei V
+- Conjugation: …; þerhendade **V** 2,3  → Iud Dei V
+- Conjugation: …  B  A; afyllen **II** 11  → II Cn
+- Conjugation: …  A; ræden **II** 30,5  → II Cn
+- Conjugation: …. V: z. B. onfoa **IV** 3,1; givunn → Iud Dei IV
+- Conjugation: …; syllene **II** 79  → II Cn
+- Conjugation: …. V oft: z. B. gibloedsado **V** 2,5; þerhen → Iud Dei V
+- Crist: … = **VI** 38; -lage  → VI Atr
+- Crist: …lage kirchliche Gerechtsame (Einkünfte) **VIII** 37  → VIII Atr
+- Cristen: … (= Chr~ **VI** 2,2). VI 41 → VI Atr
+- Cristen: … **VI** 41.  → VI Atr
+- Cristen: … f. **VI** 9. 10 ‖  → VI Atr
+- Cristen: … **V** 10,1 = VI 1 → V Atr
+- Cristen: … = **VI** 13 =  → VI Atr
+- Cristen: … (= **VI** 9  → VI Atr
+- Cristen: … **VI** 12. 12,1. V → VI Atr
+- Cristen: … **VIII** 7.  → VIII Atr
+- Cristendom: … (= **VI** 1 = X 1 =  → VI Atr
+- Cristendom: … = **X** 1 =  → X Atr
+- Declination: … | þeofan **VI** 32  → VI Atr
+- Declination: … | sibbes **IV** 4 | totales → Iud Dei IV
+- Declination: … | þingan **VI** 25,2 | morð → VI Atr
+- Declination: … | morðweorcan **V** 25 |  → V Atr
+- Declination: … **V** 2,3 ‖  → Iud Dei V
+- Declination: … | swilce hordera **II** 3,2 |  → II As
+- Declination: …  A | anfealde lade **II** 22  → II Cn
+- Declination: … -ra für -re: ealra **II** 51  → II Cn
+- Declination: … | unscyldigo **V** 2,4 | gisen → Iud Dei V
+- Declination: … | frymðelicum synne **IV** 3,1, origin → Iud Dei IV
+- Declination: …also crimine glossirend | þrounge þinum **IV** 3,1  → Iud Dei IV
+- Eadweard: … Pro  Ld (-werd  H  B). **II** 1; ~wardus  → II Ew
+- Eanham: …; ad  E~ **VI** Pro L → VI Atr
+- Eaxanceaster: … (Eaxc-  Ld). **II** 14,2  → II As
+- Engla-lag-u: … (Æn-). **VIII** 5,1 =  → VIII Atr
+- Englaland: … **V** 16. VI 23  → V Atr
+- Englaland: … **VI** 23  → VI Atr
+- Engle: … Pro; - rædgifan **VI** Pro  → VI Atr
+- Faefresham: …; Fef~ **III** 2. IV 1 → III As
+- Faefresham: … **IV** 1 → IV As
+- Formelhafte: … | life libban **VIII** 31; regolli → VIII Atr
+- Formelhafte: …; ræd aredian **VI** 40.  → VI Atr
+- Gast: …; Fæder ⁊ Sunu ⁊ þone halegan ~ **VII** 13  → Iud Dei VII
+- Gast: …  A. **VIII** 1 → Iud Dei VIII
+- Gleitlaut: …  A; (? lithi(n)gescot **II** 12 In  → II Cn
+- Gleitlaut: …; swurud **II** 71,1  → II Cn
+- God: … Schicksalslenker, Weltregent **X** Pro; Godes  → X Atr
+- God: … = **VI** 2,1 (5,4).  → VI Atr
+- God: … **V** 33,1 = VI 4 → V Atr
+- God: … = **VI** 40,1 =  → VI Atr
+- Gomorra: …; Gamorra **V** 13 → Iud Dei V
+- Greatanleage: … Epil; ~lea **V** Pro (~læge  → V As
+- Greatanleage: … Epil; ~lea V Pro (~læge  Ld). **VI** Pro. 1,4. 1 → VI As
+- Iacob: … (Var. ~bes) = **VI** 22,3 = ~bi  → VI Atr
+- Iesus: …; gloss. und übs. durch hælend **IV** 2. 3. 4,1;  → Iud Dei IV
+- Iesus: … **V** 2,1. VII  → Iud Dei V
+- Iesus: … **VIII** 2. 2,3f. → Iud Dei VIII
+- Iudas: … | dt: mid Iudan, Drihtenes belewedan **VII** 5 → Excom VII
+- Loth: …; Loht **V** 1,3 → Iud Dei V
+- Maria: … | ac: ~an **VII** 12,1  → Iud Dei VII
+- Maria: … **XIII** 13,2. XIV 4 → Iud Dei XIII
+- Maria: … **XIV** 4. XVI 14.  → Iud Dei XIV
+- Maria: … **XVI** 14. 30,3.  → Iud Dei XVI
+- Maria: …; genitrix Dei **VIII** 1. IX 1; vi → Excom VIII
+- Maria: … **IX** 1; virgo VI → Excom IX
+- Maria: …; virgo **VIII** 9. X 1 |  → Excom VIII
+- Maria: … **X** 1 |  → Excom X
+- Numerus: …; gif mægð wyrnen ⁊ forstande **VI** 8,2; ælc ce → VI As
+- Plusquamperfect: …; namon **VI** 1,4; namode → VI As
+- Possessivprn: …; urne teonan Schädigung getan an uns **VI** 8,3  → VI As
+- Praeteritum: …; arærdon **VI** 6,3; 7. 10. → VI As
+- Praeteritum: …e (möge er tun) dæda þe dyde, þæt wræce **VI** 7  → VI As
+- Relativum: … (**VI** 8,2); þæs b → VI As
+- Simon: …; Symo **III** 2. XI 8 [ → Excom III
+- Simon: … **XI** 8 [ → Excom XI
+- Susanna: … (**IV** 3,3. 4,2; þ → Iud Dei IV
+- Susanna: …; þæt wif erklärt Glossator den Namen). **X** 19,3. XII 1 → Iud Dei X
+- Susanna: … **XII** 16,4. XIV 3 → Iud Dei XII
+- Susanna: … **XIV** 3 → Iud Dei XIV
+- Virgo: … II) sanctae virgines **VIII** 1. 16. X 1. → Iud Dei VIII
+- Virgo: … **X** 1. XI 1 [ → Iud Dei X
+- Virgo: … **XI** 1 [ → Iud Dei XI
+- Wortstellung: …: æ. u.  A b) se cing him gearian **II** 59: him se  → II Cn
+- ad-3: … f. **II** 5.  → II Ew
+- ad-3: … f. **V** 22,2. VI 28 → V Atr
+- ad-3: … **VI** 28.  → VI Atr
+- aercebisceop: …; ~pe **II** 62; arcebis → II Cn
+- aet: …; medsceat niman ~ **II** 17; ~ handa → II As
+- aewbryce: … (~rece  A). **II** 50,  → II Cn
+- agan: … f. **V** Pro 3.  → V As
+- agan: … f. **V** Pro 3.  → V As
+- agen: …; schw.: þam ~nan frian **III** 4,1 |  → III Atr
+- aliesan: …: alysde **VII** 12,1  → Iud Dei VII
+- aliesan: … **VII** 12,1  → Iud Dei VII
+- andettere: …; andyttra **VII** 12,2  → Iud Dei VII
+- andettere: …  A | ac: ~ras **VIII** 2; andetras → Iud Dei VIII
+- andettere: …; andetras **VII** 23,1  → Iud Dei VII
+- anfeald: … | ac: ~de lade **II** 22,1a; ~dne → II Cn
+- anweald: …  Ot (onw-  H). **VI** 11.  → VI As
+- aqua-benedicta: …; ~ctionis **XIV** 8,4 → Iud Dei XIV
+- arfaestnis: … | ac: ~se **V** 2,3 → Iud Dei V
+- aweorpan: … = IX Expl; beseitigen **X** Pro 2; awur → X Atr
+- aweorpan: … (awur~  D). **X** 1 |  → X Atr
+- baiulare: … Sündenlast **V** 2,3. XIII 1 → Iud Dei V
+- baiulare: … **XIII** 13,3 → Iud Dei XIII
+- beodern: … (refectorium  L) = beoddern **V** 7 → V Atr
+- beon-2: … (**IV** 1,3)  → IV Eg
+- beorgan: …; schonen **VI** 53.  → VI Atr
+- betan: … (= **VI** 1 = X 1). 5 → VI Atr
+- betan: … **VIII** 40.  → VIII Atr
+- betera: … **VI** 3,1. 22,3.  → VI Atr
+- betera: … **VIII** 43,1.  → VIII Atr
+- bethencan: …: ~ **VI** 41 |  → VI Atr
+- biddan: …; ceapgyldes **VI** 8,8; bote  → VI As
+- bisceop: … Alm Pro. **VI** 11.  → VI As
+- borg: … **II** 8. 9,1. III → II Cn
+- bot: … (bete  Ld). **III** 3.  → III Eg
+- bot: …; sculan **V** 20 = VI 25, → V Atr
+- bot: … = **VI** 25,2 =  → VI Atr
+- bot: …; inlagige to bote **VIII** 2 =  → VIII Atr
+- bringan: … (~ge .. in). **VIIa** 2,3.  → VIIa Atr
+- bringan: …; þider **IV** 8,1; to  → IV Eg
+- canonicas: … = **VI** 4. 2,2 =  → VI Atr
+- ceapgield: … **VI** 6,4; ~gyld  → VI As
+- ceapgield: …; ~gyld **VI** 1,1.  → VI As
+- cessare: …geswican übsnd; dies also lag vor für ~ **III** 6 → III As
+- cieping: … **VI** 10 |  → VI As
+- cieping: … (cip-  D) = **VI** 22,1 = 44 | → VI Atr
+- cieping: … | ac: ~ga **VIII** 17 → VIII Atr
+- ciricbote: …; cyr~ **VI** 51.  → VI Atr
+- ciricmangunge: … = cyr~ **VI** 15 → VI Atr
+- ciricthen: … = cyr~ **VI** 15,1 → VI Atr
+- claene: … (**II** 28,1;  → II Cn
+- claensian: …; þeof **III** 7;  → III Atr
+- clipian: …; clyp~ to **VI** 41 |  → VI Atr
+- cniht: … | ac: ~tas **VII** 23,2  → Iud Dei VII
+- cniht: …  A. **VIII** 2; cnæhtas  → Iud Dei VIII
+- cniht: …; cnæhtas **IV** 3,3; cnaiht → Iud Dei IV
+- comprobatio: … Prüfung (des Schuldverdachts) **XIII** 9. XIV 9 → Iud Dei XIII
+- comprobatio: … **XIV** 9 → Iud Dei XIV
+- consiliatio: …c (irrige Var.: conci-, consola-). Pro. **II** Pro. III 3 → II Cn
+- cuman: …: ~ **V** Pro 1 (~men → V As
+- curia: … **VI** Pro.  → VI As
+- cynehlaford: … | ac: ~ **V** 35. VIII 44 → V Atr
+- cynehlaford: … **VIII** 44,1. IX Ex → VIII Atr
+- cynescipe: … | dt: ~ **II** Pro. IV 2.  → II Eg
+- cynescipe: … | dt: ~ II Pro. **IV** 2.  → IV Eg
+- cyning: … **II** 58f.; cinyn → II Cn
+- cyning: … **III** 3. 7,2.  → III Eg
+- cyning: … **II** 17. 63. 83. → II Cn
+- cyning: … Pro. II Epi. **V** Pro. VI 10. → V As
+- cyning: … Pro. II Epi. V Pro. **VI** 10.  → VI As
+- daed: … (dade  A). **II** 30,4. 43. 4 → II Cn
+- daed: … f. = **VI** 28,2  → VI Atr
+- daed: … (= dæda **VI** 30  → VI Atr
+- dead-2: …; forrædan **VI** 10.  → VI Atr
+- deofol: …  A; divoles **IV** 2 |  → Iud Dei IV
+- deofol: … | dt: divole **V** 2,4 |  → Iud Dei V
+- deofol: …; diovl **V** 2,2 |  → Iud Dei V
+- deofollice: …  D (~flice übr.) = **VI** 28,3.  → VI Atr
+- dom: … f. **VIII** 5,2.  → VIII Atr
+- dom: … **VII** 23  → Iud Dei VII
+- dom: …  A. **VIII** 2.  → Iud Dei VIII
+- dom: … f. **VI** 52,1. 53. V → VI Atr
+- dom: … **VIII** 5,2.  → VIII Atr
+- dom: … **VII** 23  → Iud Dei VII
+- don: …; gerihta **II** 54,1; of:  → II Cn
+- don: …; slea man hine, swa man þa yldran dyde **VI** 12,2; gylde → VI As
+- dryhten: … ff. (**IV** 3. VI 1. VI → Iud Dei IV
+- dryhten: … **VI** 1. VIII 2,3 → Iud Dei VI
+- dryhten: … **VIII** 2,3  → Iud Dei VIII
+- eadmedo: … = eadmettum **V** 5 → V Atr
+- eald: … **VI** 12,2.  → VI As
+- eall: … **X** 1 ( → X Atr
+- eall: …; ealre **VI** 3; eallre  → VI As
+- eard: … | dt: ~de **V** 1,2. 23. 26 → V Atr
+- eard: … **VI** 7. 8,2. 9.  → VI Atr
+- eard: … **VIII** 40.  → VIII Atr
+- eard: … (hearde  A). **II** 3 (eardan  → II Cn
+- eastorlic: … = **VI** 22,3 (eastr → VI Atr
+- efen: … **II** 2,2  → II Cn
+- ege: … **II** 67. (lufe ⁊ → II Cn
+- elles: … **VIII** 26.  → VIII Atr
+- ende-2: … = **VI** 32,3.  → VI Atr
+- eom: …; ert **VII** 24,1  → Iud Dei VII
+- eorde: …  A; ofer earðe **IV** 4,1 → Iud Dei IV
+- eucharistia: …; eukaristiam sumpserit **XVI** 8,2; eucari → Iud Dei XVI
+- examen: … **II** 30,3, ordal → II Cn
+- exorcizare: … durch Beschwörung austreiben **XIV** 4 → Iud Dei XIV
+- facn: …  Ld  So (facen  Ot  H). **IV** 6,3.  → IV As
+- facn: … (Münzfälschung). **VI** 1,1  → VI As
+- fadian: …: ~ **VI** 2  → VI Atr
+- fadian: …: fadige dom **VI** 53. —  → VI Atr
+- faeder: …; Vater, Sohn u. h. Geist **VII** 13  → Iud Dei VII
+- faeder: …  A. **VIII** 1.  → Iud Dei VIII
+- faemne: … | Maria **VI** 1. VII 12,1 → Iud Dei VI
+- faemne: … **VII** 12,1  → Iud Dei VII
+- faest: … II) adv fæste **VIII** 32. X Pro 3 → VIII Atr
+- faest: … **X** Pro 3.  → X Atr
+- faesten: … (~ton!  B). **II** 46.  → II Cn
+- faestenbrycan: … = ~ricon **VI** 28,3 → VI Atr
+- feoh: …; ~ arise **VIIa** 4  → VIIa Atr
+- feorh: …| ymbe ~ sierwan nach jem's L. trachten **V** 30 = VI 37  → V Atr
+- feorh: … = **VI** 37 | feores → VI Atr
+- feower: …  A (feoro **V** 2,1); healf → Iud Dei V
+- feower: …; hundteontig ⁊ ~ ⁊ feowertig **VII** 23,2  → Iud Dei VII
+- feower: …  A. **VIII** 2 → Iud Dei VIII
+- feowertyne: …  D (XV übr. = **VI** 25 =  → VI Atr
+- fiftyne: … =) **VI** 16 = VIII 1 → VI Atr
+- fiftyne: … = **VIII** 12 (=  → VIII Atr
+- findan: …: fundon **II** 2  → II As
+- findan: …; einen Geleitsmann **VI** 4; him hlaf → VI As
+- findan: …; him hlaford ihm einen Herrn **II** 2; him fest → II As
+- fiond: … | ac: ~ **V** 2,2 [ → Iud Dei V
+- fleam: … instr: ~me in Verbannung **II** 13,2; flema → II Cn
+- folc: … übsnd, Beda **III** 24 → III As
+- folgian: … **V** 1; ~gade  → V As
+- for: … (dt  Ld?). **V** 2.  → V As
+- foran: …  So; ~ fehlt übr.; þone þeof **VI** 8,2,  → VI As
+- forbeodan: … **II** 2,1  → II Cn
+- ford: … (= **VI** 30 =  → VI Atr
+- forfaran: … = **VI** 9 =  → VI Atr
+- forg-ie-fan: … (~gyfan  Ld). **VI** 1,4;  → VI As
+- forg-ie-fnes: … (y  A). **IV** 1,5 (y  → IV Eg
+- forsittan: … | nicht befolgen: staatliche Pflicht **VI** 8,5.  → VI As
+- freolsbryce: …  G = ~ricon **VI** 28,3 → VI Atr
+- freondscipe: … Pro. (**VI** 11.)  → VI As
+- freondscipe: …; frið ⁊ ~ **VI** 8,2.  → VI Atr
+- frid: … **V** 1,2.  → V Atr
+- fridbena: …; daraus pl: ~an **VI** 36 → VI Atr
+- fridian: … ( D: **V** 12,2 = VI 2 → V Atr
+- fridian: … = **VI** 21,1; fyrðr → VI Atr
+- fridian: … | ptt pc: gefriðod **II** 80,1. —  → II Cn
+- from: … übertr. him ~ do von sich jagt **V** 1; tæce  → V As
+- from: …; tæce ~ him von sich weist **II** 22,2 | forb → II As
+- fulluht: …; þæne ~ **VII** 12,3  → Iud Dei VII
+- fyrmest: … Pro | bestens **III** 1 → III Atr
+- g-e-halsian: …adiuro te glossirend | ptt pc: gihalsad **IV** 2, exorciza → Iud Dei IV
+- gan: …; c. **II** 22,1. 35. 5 → II Cn
+- gan: …  A; weofode **VIII** 1,1; ordale → Iud Dei VIII
+- gangan: … = **II** 3,4 =  → II Atr
+- gangan: … = **II** 3,4 =  → II Atr
+- gangan: … gange to ⁊ oðsace **II** 4  → II Atr
+- gear-u: …; ~rawe **VI** 8,9 |  → VI As
+- gearwige: … ~ to sich vorbereite zu **V** 22,1 = VI 2 → V Atr
+- gearwige: … = **VI** 27,1 (hine  → VI Atr
+- geascian: … Pro; -acs-  Ld; geaxod **VI** 12,1. —  → VI As
+- gebetan: …; wið God gegenüber G. **VIII** 27 =  → VIII Atr
+- gebetan: … | Summe hinter mid: **VIIa** 3.  → VIIa Atr
+- gebugan: …: ~ **V** 4. VI 2,1.  → V Atr
+- gebugan: … **VI** 2,1. VIII 4 → VI Atr
+- gebugan: … **VIII** 40.  → VIII Atr
+- gebugan: … | ~ into mynstre **V** 5 = VI 3a.  → V Atr
+- gebugan: … = **VI** 3a. —  → VI Atr
+- gebyrian: …; him nan þing **VIII** 30; þam hit → VIII Atr
+- gebyrian: …; teoðung (þæt was) to cyrcan **VIII** 6 ( → VIII Atr
+- geci-e-rran: …: gecyr~ **V** 1  → V Atr
+- geci-e-rran: … = **VI** 1 = X 1 | 3 → VI Atr
+- geci-e-rran: … = **X** 1 | 3: geci → X Atr
+- gecwedan: …: gerædnessa gecwædan **VI** Pro; hig ge → VI Atr
+- gedafenad: …; swa his hade ~ **VIII** 30 → VIII Atr
+- gedihtan: …; cyning gerædnesse **VIII** Pro → VIII Atr
+- geearnian: …; swa hy ~ **V** 3  → V As
+- gefaran: …; gefære  Ld); þæt (was) he mæge **II** 35  → II Cn
+- gehwa: … (= **VI** 27,1 =  → VI Atr
+- gelaestan: …  D (læste  A). **IV** 1,4; 5.  → IV Eg
+- gelaestan: … f. **VI** 16. 21. VII → VI Atr
+- gelaestan: … **VIIa** 8. VIII 10. → VIIa Atr
+- gelaestan: … **VIII** 10.  → VIII Atr
+- gelaestan: … **II** 73,4; ~ta  → II Cn
+- gelaestan: … f. = **VI** 20  → VI Atr
+- gelaestan: … (= **VI** 16 =  → VI Atr
+- gelome: …; oft ⁊ ~ oft und häufig, eifrig, emsig **VI** 41. 53. X P → VI Atr
+- gelome: … **X** Pro 1.  → X Atr
+- geogod: …; ~guðe **VIII** 9.  → VIII Atr
+- georne: … (geore  D). **VIII** 3.  → VIII Atr
+- georne: … (~nnost  A). **II** 1.  → II Cn
+- geornlice: …  D | spla: ~cost ernstlichst **II** 38. —  → II Cn
+- geornlice: …  D; ersetzt durch rihtlice (richtig) **VI** 42,2  → VI Atr
+- gerad: … (~de  Ld). **II** 8;  → II As
+- gerad: …; so, dergestalt dass **V** Pro 1 → V As
+- geraedan: …: ~de **V** 3,1. VI 10, → V Atr
+- geraedan: … **VI** 10,1. 32,3. → VI Atr
+- gerihte: …; ~ **II** 48 Insc  → II Cn
+- gesaelig: … (-li  B; sælig  A). **II** 84,2; gesel → II Cn
+- gescead: … | ac: ~ witan Vernunft besitzen **II** 84,4a  → II Cn
+- gesceaft: … | ac: ~ **VII** 23  → Iud Dei VII
+- gesceaft: …  A; giscæft **IV** 2. 3,2 |  → Iud Dei IV
+- gesceaft: … | pl: ~ta **VII** 23,1  → Iud Dei VII
+- gesecan: … **IV** 9 (~  → IV Eg
+- geswencan: …: ~cte **II** 9  → II Atr
+- geswican: … (~cæ  G; pl: ~  B); dæda **II** 4. 54,1; cy → II Cn
+- geswican: …: ~ **IX** 1 | 3: ~  → IX Atr
+- geswican: … (swican  A). **II** 4a. 7. 54,1 → II Cn
+- gethafian: …: he ~fað þa geþingo **VI** 11 |  → VI As
+- gethafian: …; þæt (dies) ~fige **VIII** 3 =  → VIII Atr
+- getr-ie-we: … glaubwürdig, vertrauenswert; ~rywa man **II** 22 (16.  → II Cn
+- getri-e-wd: …; ~rywðan **VI** 1,1 =  → VI Atr
+- geunnan: …; þæt dass **VIIa** 8; feores - → VIIa Atr
+- geunnan: …eores - Leben (hades Weihegrad) belässt **VIII** 1,1 =  → VIII Atr
+- gewendan: … (gewænde  D) = **VI** 35 (discess → VI Atr
+- gewendan: … (discesserit L). **V** 28,1; ham  → V Atr
+- gewendan: …o rihte gewændan umkehren, sich bessern **VIII** 40 → VIII Atr
+- gewihte: …; gemeta ⁊ ~ta **VI** 32,2 =  → VI Atr
+- gewita: …; facnes **VI** 1,2.  → VI As
+- gewita: …; giwuta’ **V** 2,2, consci → Iud Dei V
+- gewitnes: … (-wittn-  A). **II** 79.  → II Cn
+- gewitnes: … = **VI** 28,2; ~nyss → VI Atr
+- gewitnes: … f. **II** 2.  → II Ew
+- gewitnes: … (?). **VI** 6,1. 8,7. 1 → VI As
+- gewitnes: …? **III** 2.  → III Atr
+- gewunian: …: ~ige **V** 29 = VI 39, → V Atr
+- gewunian: … = **VI** 39,  → VI Atr
+- gewyrcan: … (-wir-  D) = **VI** 38.  → VI Atr
+- gieldan: … **II** 5. V 31 = V → II Atr
+- gieldan: … **V** 31 = VI 38. → V Atr
+- gieldan: … = **VI** 38.  → VI Atr
+- giet: …  A (git  G). **III** 7 (git  → III Eg
+- gif: … **V** 30. 31.  → V Atr
+- glengum: …; woroldlican ~gan **VI** 51. —  → VI Atr
+- godcund: … (Ggs. woroldcundan steoran). **VIII** 36.  → VIII Atr
+- godcund: … | dt: ~dan **VI** 51; - rihtl → VI Atr
+- grid: … = **VI** 26;  → VI Atr
+- gridbryce: …; gryð~  A | der König ah ~ **II** 15  → II Cn
+- h-ago-st-ea-ld: … | pl gn: hehstaldra **V** 2, virginum → Iud Dei V
+- h-ordeaceus: …; ~cius **III** Insc → Iud Dei III
+- habban: … **II** 3. VIIa 5.  → II Atr
+- habban: … **VIIa** 5.  → VIIa Atr
+- hadbryce: … = ~rican **VI** 28,3 → VI Atr
+- haedendom: … = **VI** 1 (6) = VII → VI Atr
+- haedendom: … = **VIII** 44 = IX Exp → VIII Atr
+- haedendom: … = IX Expl = **X** 1 =  → X Atr
+- haedenscipe: …; hædenscype  A | dt: ~ **II** 5  → II Cn
+- haedenscipe: …  B; hæde~  Ld | ac: ~ **II** 5.  → II Cn
+- haelend: …; ~de Du; voc: ~ **IV** 2  → Iud Dei IV
+- haelend: … f. **VII** 24  → Iud Dei VII
+- haelend: …  A. **VIII** 2,3  → Iud Dei VIII
+- haelend: … f. | gn: ~des **IV** 4,1  → Iud Dei IV
+- haelend: … f. **V** 2,1. VII 23 → Iud Dei V
+- haelend: … **VII** 23  → Iud Dei VII
+- haelend: …  A. **VIII** 2 |  → Iud Dei VIII
+- haelend: … | dt: ~de **IV** 4,6 |  → Iud Dei IV
+- haelend: … | ac: ~dne **VII** 23,1  → Iud Dei VII
+- haelend: …  A ‖ oft Iesus glossirend (übsnd): **IV** 3. 4,1; 6.  → Iud Dei IV
+- haelend: … **V** 2,1. VI 1 ( → Iud Dei V
+- haelend: … **VI** 1 (VII 23.  → Iud Dei VI
+- haelend: … (**VII** 23. 24  → Iud Dei VII
+- haelend: …  A. **VIII** 2. 2,3  → Iud Dei VIII
+- haes: …, imperio glossirend | unfl. instr.: ~ **IV** 4,2, iussu  → Iud Dei IV
+- halig: …; northu: þa halga cirica (fm) **V** 2,2; ~igan  → Iud Dei V
+- halig: …; ~igan **VI** 1;  → Iud Dei VI
+- halig: …; masc halegan Gast **VII** 13  → Iud Dei VII
+- halig: …  A und fm: - rode **VII** 12,1 |  → Iud Dei VII
+- halig: … (~ene  D) = **VIII** 9,1 =  → VIII Atr
+- halig: …; fm: **VI** 1. VII 13  → Iud Dei VI
+- halig: … **VII** 13  → Iud Dei VII
+- halsian: …, adiuro übsnd; **VII** 12,2, obsec → Iud Dei VII
+- halsian: …, obsecro übsnd; ~ige **VI** 1. VII 12,3 → Iud Dei VI
+- halsian: … **VII** 12,3, obtes → Iud Dei VII
+- halsian: …: ~ie **VIII** Insc  → Iud Dei VIII
+- halsian: …: ic ~igo þec **IV** 2, exorcizo → Iud Dei IV
+- halsung: …; ~ncge! **VI** Insc  → Iud Dei VI
+- ham: … f. **IV** 7  → IV Eg
+- hamsocn: … **III** 58; causa m → III Em
+- hamsocn: …; causa mali **II** 12; invasio → II Em
+- hand: … (ahanda  B). **VIIa** 6,2.  → VIIa Atr
+- hand: … (dagegen wörtlich: in die Hand geben **III** 2,1. 3,1) | → III Atr
+- he-a-hsetl: …  A | pl ac: hehsedlo **V** 2 → Iud Dei V
+- he: …  A (he  G); hit! **II** 30,5  → II Cn
+- heafod: … **III** 9.  → III Atr
+- heahengel: …  A; hehangla **V** 2 |  → Iud Dei V
+- heahengel: … | ac: ~glas **VII** 23,1  → Iud Dei VII
+- heahengel: …  A. **VIII** 2 → Iud Dei VIII
+- heahfreolsdagum: …heah übergeschr.; freolsdagum  D gemäss **V** 18 → V Atr
+- heahfreolstida: …; freolstida  D gemäss **V** 14 → V Atr
+- healdan: … (op?). **VIII** 43 ( → VIII Atr
+- healdan: … (= IX Expl.). **VI** 1,1.  → VI Atr
+- healdan: … = IX Expl. **VIII** 30. 42.  → VIII Atr
+- healf-2: … (Var. ea~, ~fan). **III** 7,1  → III Eg
+- healic: …; misdæda schwere **II** 47 → II Cn
+- healsfang: … In. **II** 45,1  → II Cn
+- heofonlic: …  A; schw: þa ~can mægenþrymmas **VIII** 2 → Iud Dei VIII
+- heonon: … **VI** 8,1. 32,2.  → VI Atr
+- heonon: … **VIII** 1,1; henon  → VIII Atr
+- heonon: …  A; henan **II** 84,3  → II Cn
+- heord: …] Cons). **II** 84,2a.  → II Cn
+- here: …. **VIIa** Insc. —  → VIIa Atr
+- hieran: …  G (hiran  D; gehyrsumian  Ld). **VI** 11.  → VI As
+- hlaford: … (landh~ Var.). **IV** 1,2.  → IV Eg
+- hlaford: … **III** 4.  → III Atr
+- hlaford: …  D. **VIIa** 6,1 (rege  → VIIa Atr
+- hulc: … lat. hulcus Holk, Lastschiff **IV** 2,1 → IV Atr
+- hundteontig: …  A (ac); hunt~ **VIII** 2 |  → Iud Dei VIII
+- huru: … = **VI** 16. VIII 9, → VI Atr
+- huru: … **VIII** 9,1 | on hw → VIII Atr
+- huslgange: … (husel~  D) = **VI** 27,1; husel → VI Atr
+- hwaeder-2: … (hweðer). **III** 6 |  → III Atr
+- hwaer: …; hwar **VIII** 40  → VIII Atr
+- hwaer: …wa ~ swa wo (an welchem Ort) auch immer **II** 9; swa hwar → II Atr
+- hwelc: … f. **V** 2,2,  → Iud Dei V
+- hwonne: …; hwænne  I Pro. **II** 8.  → II Ew
+- ie-rfenuma: … (pl?); yrvenoman **II** 9,2 |  → II Atr
+- innoxiare: …, clænsian übsnd. **IV** 7,1.  → IV Atr
+- into: …, betan ~ **VIII** 3. 4,1.  → VIII Atr
+- into: … = **VI** 3a; hyrdan  → VI Atr
+- is: … (neben se; sy  A). **II** 30,4. 32,1. → II Cn
+- ladian: … **IV** 6,2b.  → IV As
+- ladian: … **II** 8,2 (mid  → II Cn
+- ladian: … **VIII** 22. 27,1 =  → VIII Atr
+- laeran: … = **VI** 5 (=  → VI Atr
+- laeran: … **II** 2;  → II Cn
+- laetania: …, let~ **X** 17,1. XVI 3 → Iud Dei X
+- laetania: … **XVI** 31  → Iud Dei XVI
+- lagbryce: … = lahbrican **VI** 28,3 → VI Atr
+- lagian: … Pro | ptt pc: gelagod **VIIa** 3. —  → VIIa Atr
+- lagu: …Ggs. unlaga (missbräuchl. Rechtspraxis) **V** 1 (=  → V Atr
+- lagu: …; godcunde ~ **V** 10 =  → V Atr
+- lahslit: …; anders aber **II** 15,1b  → II Cn
+- lar: … | dt: Godes larum ⁊ lagum **VI** 42,2; laran → VI Atr
+- lareow: … (~ewæs  Ld; larþeowas  B). **II** 84,4.  → II Cn
+- lecgan: … **II** 33,1 (lecgc → II Cn
+- leodscipe: …; ~scype **X** Pro |  → X Atr
+- libban: …; liofas **IV** 3,2 | 3 (vi → Iud Dei IV
+- libban: …; regollice **V** 4,1 = VI 2, → V Atr
+- libban: … = **VI** 2,2 = VIII  → VI Atr
+- libban: … = **VIII** 31,1 =  → VIII Atr
+- libban: …: be lifiendre þære bei deren Lebzeiten **VI** 5,2 |  → VI Atr
+- liberalitas: … **II** 15,1. 41. G → II Cn
+- lif: … **II** 70; on -  → II Cn
+- lif: …; on - ge legere **V** 9,1 = VI 5, → V Atr
+- lif: … = **VI** 5,3 = VIII  → VI Atr
+- lif: … = **VIII** 28; clænan  → VIII Atr
+- lof: …  A (love **VIII** 2,4), ad la → Iud Dei VIII
+- lufian: … = **VI** 30 (=  → VI Atr
+- lufian: … = IX Expl = **X** 1 =  → X Atr
+- lufian: … pflegen a) Tugenden achten **V** 26. VI 29;  → V Atr
+- lufian: … **VI** 29; riht VI → VI Atr
+- lufian: …; riht **VI** 30 =  → VI Atr
+- m-i-ht: …, potestatem glossirend | pl gn: mæhta **V** 2, potestat → Iud Dei V
+- m-i-ht: …, virtutes glossirend; halige ~ta **VII** 23,1  → Iud Dei VII
+- macian: … = ~ige **VI** 15 → VI Atr
+- maed: … (maðe  A). **II** 42. 49. 51. → II Cn
+- maegd: … (~ðe  Ld). **VI** 8,2. 12,2.  → VI As
+- maegen: … | gn: ~nes **V** 2,3, virtut → Iud Dei V
+- maegen: … Glosse über virtutes; ~genu **VII** 23,1  → Iud Dei VII
+- maesse: … | Petres **V** 11,1 = VI 1 → V Atr
+- maesse: … = **VI** 18 = VIII 1 → VI Atr
+- maesse: … = **VIII** 10 =  → VIII Atr
+- magan: … (a auf Rasur). **VI** 8,4. Wl lad → VI As
+- magan: … Pro; ~ **V** 35. VI 1. X → V Atr
+- magan: … **VI** 1. X Pro 2  → VI Atr
+- magan: … **X** Pro 2 | 2:  → X Atr
+- magan: …; smeadon, hu frið betere beon mæhte **II** 1; gecoren, → II Ew
+- man: …  H; do übr.; ~ sceoldan **VI** 10  → VI As
+- mann: … f. **VIIa** 4,1. VIII 4 → VIIa Atr
+- mann: … **VIII** 4.  → VIII Atr
+- mann: … f.  A. **VIII** 2 |  → Iud Dei VIII
+- manus: …; inter ~ **IV** 3;  → IV As
+- martyra: …; ~tira **VII** 23,2  → Iud Dei VII
+- medsceat: … (mets~  Ot). **V** 1,3 |  → V As
+- mete: … = cibus et potus **VII** 2,2b  → VII Atr
+- micel: … | dt subst.: æt (be) maran, æt læssan **VI** 12,1 ( → VI As
+- middangeard: …, mundum glossirend; **VI** 1, mundum  → Iud Dei VI
+- midstandan: …] **VI** 8,3 → VI As
+- milts: … (~se  B  A). **II** 84,4b (~sa  → II Cn
+- ministerium: …; ordo ~ii **X** 1; ~ baptis → Excom X
+- misdaed: … (~dada  A). **II** 47; ~de  → II Cn
+- mot-2: …; rihtes wyrðe beon **III** 2;  → III Eg
+- mot-2: …; styran **II** 7,1 | we mo → II Cn
+- mundbryce: … **VIII** 3 =  → VIII Atr
+- mynecenu: … (min-  D) = **VI** 2,2 =  → VI Atr
+- mynster: … f. = **VI** 3,1  → VI Atr
+- mynster: … f. | pl dt: ~trum **VIII** 32. —  → VIII Atr
+- mynster: … f. = **VI** 3  → VI Atr
+- mynster: … ff. **VIII** 32.  → VIII Atr
+- n: … Pro; siðcunda; seofoða; wille **II** 23,2  → II As
+- na: … | ne na ma hæbbe, þonne habe nur **VI** 12,2; ne te → VI Atr
+- neah: …pa: ner näher, eher rechtlich zustehend **II** 9,4 ‖  → II Atr
+- neahgebur: …; neh-  Ot; nehb-  Ld; neheb- **VI** 8,7 |  → VI As
+- nellan: … | hyran nelle ⁊ embe beon **VI** 11; non par → VI As
+- niht: … (ac: ~  B  A). **II** 39,1. 41,2  → II Cn
+- niman: …: nimð **VI** 5,2 |  → VI Atr
+- niman: …; eall þæt he (Verbrecher) age **II** 20,1; 4 =  → II As
+- niman: … **II** 30,3a. 44,1 → II Cn
+- nu: … | her nu hienieden **VI** 52 |  → VI Atr
+- nu: … (**IV** 3,5) |  → Iud Dei IV
+- nytan: …; nanum to getruwianne **V** Pro 3 |  → V As
+- octabas: … = -~-nige (-nia  D) **VI** 25 → VI Atr
+- ofer: …; ~ eall Englaland **V** 16 = VI 23, → V Atr
+- ofer: … = **VI** 23,1  → VI Atr
+- oferhiernes: … (**VI** 8,4) = supe → VI As
+- oferhiernes: … (**V** 1,2); amoni → V As
+- oferhiernes: …; amonige þa - æt (vom) gerefan **II** 25,1. —  → II As
+- offerre: … **XIII** 1,1 → Iud Dei XIII
+- on: … **IV** 2a.  → IV Eg
+- on: …; haligdome **II** 36.  → II Cn
+- on: … | neah on sibbe **VI** 12; gewifig → VI Atr
+- on: … (**IV** 1,5) | dwel → IV Eg
+- on: …; geþance **II** 84,4a |  → II Cn
+- on: … Pro | ofertruan on (zu) friðe **VI** 8,7 | deofl → VI As
+- on: …, in secula seculorum übsnd **VII** 24,1  → Iud Dei VII
+- on: …  A. **VIII** 2,4; on ecn → Iud Dei VIII
+- on: …; settan **II** 20,1; 4  → II As
+- on: … (**V** 32,3  → V Atr
+- on: …  H  Ot (dt: -hte  Ld). **VI** 1,1.  → VI As
+- onfon: … (**VII** 24  → Iud Dei VII
+- ordal: … **III** 4. 7. V 30. → III Atr
+- ordal: … **V** 30.  → V Atr
+- ordal: … **III** 4,1; 2. 6,2 → III Atr
+- ordal: … **VI** 25 (ordol  → VI Atr
+- pagani: … L. **VII** 3. 3,1  → VII Atr
+- perdonare: … prozessuale Leistung **II** 22,3 In (co → II Cn
+- placitum: … In, was auch für hundred **II** 17 In | ~ r → II Cn
+- plihtan: …: ~te **V** 28. 29 = VI → V Atr
+- plihtan: … = **VI** 35. VIII 42 → VI Atr
+- plihtan: … **VIII** 42 =  → VIII Atr
+- port: …; binnan ~te **II** 13,1  → II As
+- r: …  Ld; anfealdre **II** 22,1  → II Cn
+- raed: … **VIII** 43.  → VIII Atr
+- recitare: …; für gerædan **VI** 11 → VI As
+- regenerare: … | ~ationis lavacrum Taufe **XIII** 8 → Iud Dei XIII
+- regol: … b) der Mönche; gn: ~les **V** 5 = VI 3  → V Atr
+- regol: … = **VI** 3  → VI Atr
+- ricsian: …; ~sas **IV** 3,2 | 3: ~s → Iud Dei IV
+- ridan: …: ~ **II** 20,1. 4;  → II As
+- ridan: … **VI** 5 ( → VI As
+- riht-2: … (rihtten!  Ld). **II** 15,2 (~ → II Cn
+- riht-2: … f.) ist **V** 7 = VI 4. V → V Atr
+- riht-2: … = **VI** 4. V 19. VI → VI Atr
+- riht-2: … **V** 19. VIII 6. → V Atr
+- riht-2: … **VIII** 6.  → VIII Atr
+- riht-2: …; Cristendom **V** 42,2. VIII  → V Atr
+- riht-2: … **VIII** 44; geleafa → VIII Atr
+- riht-2: …; geleafa **V** 42,2.  → V Atr
+- riht-2: … = **VI** 20 = VIII 1 → VI Atr
+- riht-2: … = **VIII** 13 =  → VIII Atr
+- riht: … **VIII** 5,2. 15. 32 → VIII Atr
+- riht: …,a. **II** 20a. 33. 66 → II Cn
+- riht: … **V** 1,3. VI 8,2 → V As
+- riht: … **VI** 8,2. Geþync → VI As
+- riht: … | to ~te fylstan **VIII** 32.  → VIII Atr
+- riht: …; gewieldan **VIII** 36. 40 |  → VIII Atr
+- riht: … | recht, gehörig, ordnungsgemäss **VI** 12,2. VIII  → VI Atr
+- riht: … **VIII** 30.  → VIII Atr
+- riht: … f. **II** 1,5.  → II As
+- rihtlice: … = **VI** 22. 2. VIII → VI Atr
+- rihtlice: … **VIII** 7  → VIII Atr
+- rihtlice: … | echt innerlich **VI** 1;  → VI Atr
+- rihtlice: …; eifrig **VI** 42,2  → VI Atr
+- rihtnisse: …c oder instr dt: rehtnise Gerechtigkeit **IV** 4, æquitate → Iud Dei IV
+- rihtscire: … aus rihtscriftscire, dt, **V** 12,1 =  → V Atr
+- rihtymbrenum: …  K; rihtymbrendagum  D aus **V** 18,  → V Atr
+- rod: …n cruce redemisti glossirend | ac: rode **VII** 12,1  → Iud Dei VII
+- rod: …  A. **VIII** 1 | ~ Crist → Iud Dei VIII
+- sancte: … = **VI** 22,2 =  → VI Atr
+- scilling: … libras). **II** 30,2. 59b.  → II Cn
+- scrift: … (Criste verliest  D) = **VI** 27 (his -,  → VI Atr
+- scrift: … missverstehend,  D). **VIIa** 2.  → VIIa Atr
+- sculan: … **II** 38,1 (scæl  → II Cn
+- sculan: … **VI** 25,2.  → VI Atr
+- sculan: …; sceole  G; scule **II** 24,3; sceol → II Cn
+- sculan: …; gildan **VI** 3; domas he → VI As
+- sculan: …; gerihta dón **II** 54,1; weard → II Cn
+- se: … f. **II** 7.  → II Ew
+- se: … **II** 15,1  → II Cn
+- secan: …; seacean  A; fl.: to ~nne **II** 17,1  → II Cn
+- secan: …  Ot  Ld (ges-  H). **IV** 6,2a; c; V  → IV As
+- secan: …; c; **V** 1,1 (sæte → V As
+- secgan: … (sæcge  So). **VI** 6,1.  → VI As
+- secgan: … ~, þæt meinen, Ansicht äussern, dass **V** Pro.  → V As
+- self: …; sylf **II** 3,3.  → II Atr
+- self: … **II** 4.  → II Atr
+- sellan: … (sille  D). **IV** 6. 6,1.  → IV Eg
+- sellan: … **V** 2 = VI 9.  → V Atr
+- sellan: … = **VI** 9.  → VI Atr
+- sendan: …: ~ hinsenden **VI** 8,3 |  → VI As
+- sibb: … = sib **V** 19 =  → V Atr
+- sierwe: … (sirewe  D) = **VI** 37.  → VI Atr
+- slean: …: ~ **II** 7,1 |  → II Atr
+- slean: … | pc: geslagen **II** 3,2. —  → II Atr
+- slean: … (Vieh) schlachten **II** 7,1. III 9  → II Atr
+- slean: … **III** 9  → III Atr
+- slean: … aufschlagen: geteld Zelt **II** 3,2 | botl  → II Atr
+- smeagan: …; ~ ymbe Bedacht nehmen auf **VI** 31 (~gean  → VI Atr
+- sod-2: …  A, verus übsnd; dom **IV** 3,4, verus  → Iud Dei IV
+- sodlice: …, Amen glossnd | traun, wirklich **VII** 24,1  → Iud Dei VII
+- sona: …  D) = **VI** 30.  → VI Atr
+- spor: … **VI** 4. 8,4; 7  → VI As
+- sprecan: …; spræce Anspruch **VI** 8,8; on:  → VI As
+- standan: … f. **VIII** 27.  → VIII Atr
+- standan: … secgað **III** 13,2; stand → III Atr
+- steor: … Strafgeld, -Ertrag **VIII** 38.  → VIII Atr
+- strudungan: … (scrutungan  D) = **VI** 28,3 → VI Atr
+- swa: … | ~ longe, þæt (bis) man wiste **II** 9  → II Atr
+- swa: … | ~ cyninge ~ þam þe gebyrige **II** 1,5 | ~ mid → II As
+- swa: … | ~ ~ geþafian wille **III** 3  → III As
+- swerian: … **VI** 12,2.  → VI As
+- swide: … | ealles to swyðe gedrehte allzu sehr **II** 69; - - sel → II Cn
+- swide: …  D; swyðost unlaga aweorpan völligst **X** Pro 2 | -  → X Atr
+- synn: …, de (**IV** 3,3. 4,2 fa → Iud Dei IV
+- tacn: …; ~ settan **VII** 24  → Iud Dei VII
+- taecan: … = **VI** 4 (27). VII → VI Atr
+- taecan: … **VIII** 27 =  → VIII Atr
+- taecan: …; gerædnes **IV** 1,4  → IV Eg
+- teodung: … | dt: ~ge **VIII** 6 |  → VIII Atr
+- teodung: …; geogoðe ~ge **V** 11,1 = VI 1 → V Atr
+- teodung: … = **VI** 17 = VIII 7 → VI Atr
+- teodung: … = **VIII** 7 =  → VIII Atr
+- teon-2: … **III** 13.  → III Atr
+- teon-2: … **III** 13.  → III Atr
+- testamentum: …; N. ac Vetus **V** 2,1 → Iud Dei V
+- thaer: … f. **VIIa** 6,2. VIII 1 → VIIa Atr
+- thaer: … **VIII** 10,1. 36.  → VIII Atr
+- thaer: … | ~ mid ebenfalls, daneben, ausserdem **VI** 7 | ~ nehst → VI As
+- thaerinne: …(on carcerne übr.); in jenem Gutsbezirk **V** 2 → V As
+- thaerto: …; þarto  D. **VIII** 3 (þerto  → VIII Atr
+- thaet-5: …one we geaxian, ~ ful sy quem reum esse **VI** 1,1  → VI As
+- the-5: …; se  Ld | gn: **II** 13,1;  → II Cn
+- the-5: … **VIII** 7.  → VIII Atr
+- thearf: … Nutzen, Vorteil; ealra ~ is **II** 84,4; hit b → II Cn
+- thearf: … Pro]. **IV** 2,1a ( → IV Atr
+- thearfa: … | ac: Godes ~fan frefrian **VI** 46 → VI Atr
+- thegn: …; Jurisdictionsrecht **V** 1,4 = IV 7. → V As
+- thegn: … = **IV** 7.  → IV As
+- thegnweres: … (beide þegen~) = **VIII** 28 → VIII Atr
+- theod: …  D (leod übr.) = **VI** 9  → VI Atr
+- theod: …, wofür us  D; Cristenre ~de **VIII** 2,1.  → VIII Atr
+- theof: … **II** 6,2. VI 32  → II Cn
+- theow: … | ac: ~was **VI** 5 (=  → VI Atr
+- theowian: … = þowige **VI** 15  → VI Atr
+- thes: … | dt: innan þisre cyricean **VII** 13  → Iud Dei VII
+- thes: …  A; - wæteres **VIII** 2 |  → Iud Dei VIII
+- thes: …; to þys (! verbess. aus þus) husle **VI** 1 |  → Iud Dei VI
+- thiefd: … (þyfða  Ld; þifða  Ot für pl?). **IV** 6,3.  → IV As
+- thing: … Zustand; no: folces ~ byð þe betere **VI** 8,9  → VI As
+- thri-e: … (**IV** 3,3. 4,2) ‖ → Iud Dei IV
+- thrifeald: … (-lde!  A). **II** 8,2. 47,1 | → II Cn
+- thrifeald: … (þreof-  B; þryfeldan **III** 3,4). 1,4 ( → III Atr
+- thrinness: …; þrynnysse **VII** 23,1  → Iud Dei VII
+- thrinness: …  A. **VIII** 2; þrynysse → Iud Dei VIII
+- thrinness: …; þrynysse **VII** 13  → Iud Dei VII
+- throwere: …; þrovara **V** 2, martyrum → Iud Dei V
+- throwere: …, martyrum glossirend | ac: ~ras **VII** 23,1  → Iud Dei VII
+- throwere: …  A, martires übsnd. **VIII** 2 [ → Iud Dei VIII
+- throwian: …; ~wude **VII** 12,1  → Iud Dei VII
+- thurh: … **V** 2,1;  → Iud Dei V
+- thurh: …; geschr. ð' **IV** 4,6]  → Iud Dei IV
+- thurh: …, per agmina glossirend; ~ God **VII** 12,1 (per D → Iud Dei VII
+- thurh: …, per filium tuum glossirend; ~ blode **V** 2,1;  → Iud Dei V
+- thusend: … (alle) ~da þrowera **VIII** 2 (V 2); 14 → Iud Dei VIII
+- thusend: … ~du martira **VII** 23,2  → Iud Dei VII
+- thy-2: …; deoplicor **VIII** 27; gearuwr → VIII Atr
+- thy-2: …; gearuwre **VI** 30  → VI Atr
+- thy-2: …  D; lustlicor **VIIa** 5,1 |  → VIIa Atr
+- thyncan: …; hreowlic **VI** 12,1; þearf → VI As
+- tihtle: …  B (tyh-  H); mid ~lan belecge **VIII** 21  → VIII Atr
+- to: …  A; - - wiofode **VIII** 1,1; - - or → Iud Dei VIII
+- to: … | to ahte beträchlich **VI** 40,1 =  → VI Atr
+- to: …; to teame hæbbe borh **II** 9,1; læfdan → II Atr
+- to: …  A (**VIII** 2,4) | to þ → Iud Dei VIII
+- tocwedene: … (~eðen  G) = **VI** 25 → VI Atr
+- togebyrian: …; riht, þe him ~ige **V** 4 = VI 2,1  → V Atr
+- togebyrian: … = **VI** 2,1 =  → VI Atr
+- togebyrian: …; gilde þam, þe hit ~ige **II** 1,5; mynstr → II As
+- toridan: …: riden þa yldestan to **II** 20,2; 4; ri → II As
+- treowsian: … = -sige **VI** 3,1. —  → VI Atr
+- tunesgerefa: …; wird übers. tungravius **VII** 2,5  → VII Atr
+- twaeman: …t pc: getwæmed Rechtsstreit eingestellt **V** 19  → V Atr
+- udwitan: …  A; wuðwuto **V** 2, seniores → Iud Dei V
+- unascendedo: … (~dado **IV** 3,3), inlae → Iud Dei IV
+- underfon: … | pc: ~fangen **VII** 12,3  → Iud Dei VII
+- unforworhte: … aus ~ht **V** 2 → V Atr
+- unlagu: … (= **VI** 8 = X 2 =  → VI Atr
+- unlagu: … = **X** 2 =  → X Atr
+- unlagu: … = **VI** 28,2 |  → VI Atr
+- unnan-2: …; an **V** 1,1 | 3: an → V As
+- unnan-2: … | begnadigend schenken **III** 7,3  → III Eg
+- unriht-2: …; aweodian **II** 1 |  → II Cn
+- unriht: … (= **VI** 11 =  → VI Atr
+- untodaeledlican: …  A; -lend- **VIII** 2 → Iud Dei VIII
+- ure-2: … **V** 2,1 |  → Iud Dei V
+- ure: … (ura  Ld). **VI** 7. 8,4.  → VI As
+- villa: … **II** 8,2 [ → Excom II
+- vindicare: … (= **VI** 1,5 = furi  → VI As
+- vindicare: … = furi vindex esse **II** 6,3). 20,7  → II As
+- w-eo-rdmynt: … Epil; wyr~ **II** 84,5 → II Cn
+- w-ie-rnan: … (ind. wyrnð  Ld). **II** 1,2.  → II Ew
+- waeter: …; vætre **IV** 2 |  → Iud Dei IV
+- waeter: …; vætres **IV** 3,2 |  → Iud Dei IV
+- waeter: …  A; vætre! **IV** 4,3. —  → Iud Dei IV
+- waeter: … zum Gottesgericht a) siedendes W. **IV** 2—4,3  → Iud Dei IV
+- waeter: … f.  A. **VIII** 2—2,3. —  → Iud Dei VIII
+- we: … f. **II** 8.  → II Ew
+- wealdan: …: ~að **X** Pro 1 |  → X Atr
+- weallan: …  A (~lað!  G). **II** 84,3; ~lað → II Cn
+- wedd: … (wed  D). **VI** 3a. 28 (wed → VI Atr
+- wel: … **VIII** 43,1 (V 6) → VIII Atr
+- weofod: …; ~fude **VII** 13  → Iud Dei VII
+- weofodthegn: … (~  Ld). **II** 39; wef~  → II Cn
+- weord-2: …  Ot  Ld (wurðe  H). **V** 1,5. VI 6,1 → V As
+- weord-2: … **VI** 6,1 |  → VI As
+- weordan: … (wæorðe  A). **II** 30,3b (wurð → II Cn
+- weordan: … **VIII** 26. 41.  → VIII Atr
+- weordan: …: wurde **V** 32,4  → V Atr
+- weordan: …; milts gearuwre **VI** 30  → VI Atr
+- weordan: …  D; gesoðod **VI** 37 |  → VI Atr
+- weordian: … (~ie  G; pl: ~  D) = **VI** 22,2.  → VI Atr
+- weordian: … (wur-  D) = **VI** 1 = (wur-)  → VI Atr
+- weordian: … = (wur-) **VIII** 44 = X 1 |  → VIII Atr
+- weordian: … = **X** 1 | 2: ~ien → X Atr
+- weordian: … (= **VI** 1 = VIII 44 → VI Atr
+- weordian: … = **VIII** 44 = X 1).  → VIII Atr
+- weordscipe: … (~cype; wur~  D) = **VI** 5,4. VIII 2 → VI Atr
+- weordscipe: … **VIII** 29; wur~  → VIII Atr
+- wer: … **VI** 1,4.  → VI As
+- wer: … (= **III** 6,2)—11 =  → III Atr
+- wergield: … (~gilde  D). **VI** 51. Norðleo → VI Atr
+- wid-2: … = **VI** 3,1. VIII 1 → VI Atr
+- wid-2: … **VIII** 1,1 | geclæ → VIII Atr
+- wid-2: …; ealne here **II** 1,2; ~ hy ⁊ → II Cn
+- widuwe: … = **VI** 26  → VI Atr
+- wierde: … = weorðe **VI** 3,2 | swa h → VI Atr
+- wierde: …; beteran domes **VI** 52,1 | bote → VI Atr
+- wierde: … | þeowweorces **II** 6 | deaðes  → II Ew
+- wif: …; ~ hi forlicge **II** 53; ~ hyre  → II Cn
+- willan: … **VIIa** 1 | 3: hie  → VIIa Atr
+- willan: …  Ld (~að, ind.  H). **II** 23,2  → II As
+- wita: … c) sie heissen his (des Königs) ~an **VI** 10.  → VI As
+- wita: … **X** 2.  → X Atr
+- witan: … (wican!  D) = **VI** 5,1 =  → VI Atr
+- witan: …; witon **VII** 23,3  → Iud Dei VII
+- witan: …; scyld **VI** 1; facn  → Iud Dei VI
+- witan: …; hwæt **VII** 23,3  → Iud Dei VII
+- wite: … **V** 1.  → V As
+- woh-2: …  Ld (wo **V** 1,1); mid ~ → V As
+- word: … | ac: ~ ⁊ wedd **V** 15 = VI 3a  → V Atr
+- word: … = **VI** 3a  → VI Atr
+- woruld: … = **X** 2,1. VI 10, → X Atr
+- woruld: … **VI** 10,2. V 9,2 → VI Atr
+- woruld: … **V** 9,2 = VI 5, → V Atr
+- woruld: … = **VI** 5,4  → VI Atr
+- woruld: … = **VI** 2,1 (5,4).  → VI Atr
+- woruld: … **V** 33,1 = VI 4 → V Atr
+- woruld: … = **VI** 40,1 =  → VI Atr
+- woruldlic: …; woroldlican steoran **VI** 51 |  → VI Atr
+- woruldweordscipe: … (worldwurðscipe  D) = **VI** 5,3 = ~dwur → VI Atr
+- wrecan: … (aw~  Ld). **VI** 1,5.  → VI As
+- wrecan: … **VI** 1,5  → VI As
+- wuldor: …, gloriae glossirend | dt: ~dre **VIII** 2,4, honore → Iud Dei VIII
+- wuton: … **VIII** 43-44,1. IX → VIII Atr
+- yfel-2: …  Ld; ~les  H; he ~les geswice **VI** 1,4 = 12,2. → VI As
+- yfel: … | fm: ~ æwbryce schlimm **II** 50,1 |  → II Cn
