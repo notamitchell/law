@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -53,20 +55,21 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 713 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 713 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 142.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 142: “Ðæt is ðonne, ðæt nan man oðrum ryhtes ne wyrne.” → “Ðæt is ðonne, ðæt nan man oðrum ryhtes ne wyrne. (expanded letters in italics: m)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.2">
         <head><ref type="lawCode" target="law:IIEw">II Ew</ref> 1.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-b">Þ<hi rend="italic">æt</hi> is ðon<hi rend="italic">ne</hi>, þ<hi rend="italic">æt</hi> nan man oðru<hi rend="italic">m</hi> rihtes ne wyrne.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-h">Ðæt is ðonne, ðæt nan man oðrum ryhtes ne wyrne.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.2" corresp="#wit-q">Hoc est tunc, ne quisquam rectum disfortiet alicui.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-b">Þ<hi rend="italic">æt</hi> is ðon<hi rend="italic">ne<ptr type="liebermannNote" n="4" target="#IIEw_1-2.lnote.oe.4"/></hi>, þ<hi rend="italic">æt</hi> nan man<ptr type="liebermannNote" n="5" target="#IIEw_1-2.lnote.oe.5"/> oðru<hi rend="italic">m</hi> rihtes ne wyrne.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-h">Ðæt is ðonne, ðæt nan man oðru<hi rend="italic">m</hi> ryhtes ne wyrne.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.2" corresp="#wit-q">Hoc est tunc, ne quisquam rectum disfortiet<ptr type="liebermannNote" n="3" target="#IIEw_1-2.lnote.oe.3"/> alicui.</ab>
         <ab type="editionText" xml:lang="ang" source="#attenborough" n="§2" corresp="#wit-h">Ðæt is ðonne, ðæt nan man oðrum ryhtes ne wyrne.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">Now his concern is that no man shall withhold from another his rights.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Nämlich dann, dass niemand einem Anderen Rechtsgang weigere.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Nämlich dann, dass niemand<ptr type="liebermannNote" n="1" target="#IIEw_1-2.lnote.de.1"/> einem Anderen Rechtsgang weigere.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Namely then, that no one refuse another [his] legal process.</ab>
         <note type="comparison" source="#liebermann" n="143"><ref target="clause:IEw_2">I Ew 2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. I Ew. 2</note>
@@ -76,6 +79,10 @@
         <note type="comparedBy" source="#wormald-mel" n="316"><ref target="clause:IIIEg_5">III Eg 5–5.2</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="383"><ref target="clause:Iudex_Iudex-1">Iudex</ref></note>
         <note type="editorial">Liebermann compares I Ew 2.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIEw_1-2.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">143</biblScope></bibl><seg type="original" xml:lang="de">difforciat <hi rend="italic">MHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">difforciat MHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIEw_1-2.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">142</biblScope></bibl><seg type="original" xml:lang="de">ðon, <hi rend="italic">später überstrichen</hi> (<hi rend="italic">Abkürzung für</hi> ne?) <hi rend="italic">B</hi></seg><seg type="translation" xml:lang="en" source="#claude">ðon, later with a stroke above it (abbreviation for ne?) B</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIEw_1-2.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">142</biblScope></bibl><seg type="original" xml:lang="de">mon <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">mon Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIEw_1-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">94</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Dieser Satz hat mit dem Gefolgseide vorher nichts zu tun, weshalb Q neue Rubrik davor setzt. Er knüpft an die Worte 1: ‘früher geboten’ an</seg><seg type="translation" xml:lang="en" source="#claude">This sentence has nothing to do with the preceding oath of fealty, which is why Q puts a new rubric before it. It links up with the words ‘commanded earlier’ in 1</seg></note>
       </div>
     </body>
   </text>
