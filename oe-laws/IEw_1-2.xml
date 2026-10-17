@@ -10,6 +10,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +29,7 @@
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -51,22 +54,31 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 704 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 704 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 138.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 138: “Eac we cwædon: se ðe tyman scolde, þæt he hæfde ungeligene gewitnesse ðæs ðæt he hit on riht tymde, oððe þone að funde, ðe se gelyfan mihte ðe onsprece.” → “Eac we cwædon: se ðe tyman scolde, þæt he hæfde ungeligene gewitnesse ðæs ðæt he hit on riht tymde, oððe þone að funde, ðe se gelyfan mihte ðe onsprece. (expanded letters in italics: æt)”.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Attenborough, p. 115: “witnesses” → “witness”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.2">
         <head><ref type="lawCode" target="law:IEw">I Ew</ref> 1.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-b">Eac we cwædon: se ðe tyman scolde, þ<hi rend="italic">æt</hi> he hæfde ungeligene gewitnesse ðæs þ<hi rend="italic">æt</hi> he hit on riht tymde, oððe ðone að funde, ðe se gelyfan mæge ðe onspræce.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-h">Eac we cwædon: se ðe tyman scolde, þæt he hæfde ungeligene gewitnesse ðæs ðæt he hit on riht tymde, oððe þone að funde, ðe se gelyfan mihte ðe onsprece.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-b">Eac we cwædon: se ðe tyman scolde<ptr type="liebermannNote" n="16" target="#IEw_1-2.lnote.oe.16"/>, þ<hi rend="italic">æt</hi> he hæfde ungeligene gewitnesse<ptr type="liebermannNote" n="9" target="#IEw_1-2.lnote.oe.9"/> ðæs þ<hi rend="italic">æt</hi> he hit on riht tymde, oððe ðone að funde, ðe se gelyfan mæge ðe onspræce.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-h">Eac we cwædon: se ðe tyman scolde, þ<hi rend="italic">æt</hi> he hæfde ungeligene gewitnesse ðæs ðæt he hit on riht tymde, oððe þone að funde, ðe se gelyfan mihte ðe onsprece.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.2" corresp="#wit-q">Amplius diximus de illo, qui aduocare debet, ut habeat credibile testimonium de hoc, quod recte aduocat, uel iusiurandum inueniat, cui repetens credere debeat.</ab>
-        <ab type="editionText" xml:lang="ang" source="#attenborough" n="1.2" corresp="#wit-h">Eac we cwædon: se ðe tyman scolde, þæt he hæfde ungeligene gewitnesse ðæs ðæt he hit on riht tymde, oððe þone að funde, ðe se gelyfan mihte ðe onsprece.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">Further, we have declared that he who has to vouch [another man] to warranty, shall have trustworthy witnesses that he is doing so in accordance with the law; or he shall produce an oath which he who brings the accusation may place confidence in.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Auch bestimmten wir: wer [im Anefang angegriffen] zur Gewähr zu ziehen im Begriffe steht, dass er wahrhaftes Zeugniss dafür habe, dass er das [angegriffene Werthstück] rechtmässig zur Gewähr zieht, oder solchen Eid erbringe, dem der Kläger glauben könne.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="1.2" corresp="#wit-h">Eac we cwædon: se ðe tyman scolde, þæt he hæfde ungeligene gewitnesse ðæs ðæt he hit on riht tymde, oððe þone að funde, ðe se gelyfan mihte<ptr type="editorNote" n="8" target="#IEw_1-2.attnote.fn.8"/> ðe onsprece.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">Further, we have declared that he who has to vouch [another man] to warranty, shall have trustworthy witness that he is doing so in accordance with the law; or he shall produce an oath<ptr type="editorNote" n="1" target="#IEw_1-2.attnote.n.1"/> which he who brings the accusation may place confidence in.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Auch bestimmten wir: wer [im Anefang angegriffen] zur Gewähr zu ziehen im Begriffe steht<ptr type="liebermannNote" n="1" target="#IEw_1-2.lnote.de.1"/>, dass er wahrhaftes Zeugniss<ptr type="liebermannNote" n="2" target="#IEw_1-2.lnote.de.2"/> dafür habe, dass er das [angegriffene Werthstück] rechtmässig zur Gewähr zieht, oder<ptr type="liebermannNote" n="3" target="#IEw_1-2.lnote.de.3"/> solchen Eid erbringe, dem der Kläger glauben könne.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">We also determined: whoever [having been challenged by attachment] is about to vouch to warranty, that he should have truthful witness that he is rightfully vouching [the attached item] to warranty, or produce such an oath as the plaintiff can believe.</ab>
         <note type="comparedBy" source="#wormald-mel" n="358"><ref target="clause:IICn_23">II Cn 23</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IEw_1-2.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">138</biblScope></bibl><seg type="original" xml:lang="de">sceolde <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">sceolde Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IEw_1-2.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">138</biblScope></bibl><seg type="original" xml:lang="de">-nysse <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-nysse Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IEw_1-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">94</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Die redenden ‘wir’ sind König und Witan. — Praeteritum hängt von <hi rend="italic">cwædon</hi> ab; <hi rend="italic">sculan</hi> hier Hilfsverb; <hi rend="italic">s.</hi> Toller s. v. n. 12</seg><seg type="translation" xml:lang="en" source="#claude">The ‘we’ who speak are the king and the Witan. — The preterite depends on <hi rend="italic">cwædon</hi>; <hi rend="italic">sculan</hi> is here an auxiliary verb; <hi rend="italic">see</hi> Toller s. v. n. 12</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IEw_1-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">94</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Anefang 12. 10a, wo Q Bürgschaft ändert in <hi rend="italic">testimonium</hi>, vielleicht aus dieser Stelle</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Anefang 12. 10a, where Q changes surety to <hi rend="italic">testimonium</hi>, perhaps on the basis of this passage</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IEw_1-2.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">94</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ebd.</hi> 10. Der Eid geschieht also mit Helfern, wie 1, 3 Ende. Die Formel des Eides ist vielleicht Swer 3, 3</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Ibid.</hi> 10. The oath is thus taken with helpers, as at the end of 1, 3. The formula of the oath is perhaps Swer 3, 3</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IEw_1-2.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">204</biblScope></bibl><seg type="original" xml:lang="en">Liebermann suggests that the form of the oath is perhaps given in <hi rend="italic">The Formulæ for Oaths</hi>, cap. 3 § 3.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IEw_1-2.attnote.fn.8" n="8" source="#attenborough"><bibl><biblScope unit="page">114</biblScope></bibl><label>mihte</label><seg type="original" xml:lang="en"><hi rend="italic">mæge</hi>. B.</seg></note>
       </div>
     </body>
   </text>
