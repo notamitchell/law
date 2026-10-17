@@ -94,16 +94,21 @@ def fix_scrap(scrap, series, found):
     [new citations], numeral, anchor) to found."""
     out, pos, cur, last_cite = [], 0, None, None
     # The run: a clause number or more, then ". IV" and a clause number.
-    run = re.compile(r'(?:\.?\s+%s(?![\w)]))+(?:\.|\s=)\s+(?P<num>%s)(?=(?:\s+|,)%s(?![\w)]))' % (PASSAGE, ROMAN, PASSAGE))
+    # The first clause number may follow a comma, in Liebermann's style for
+    # Iud Dei ("Iud Dei VI,1. VII 24,1"). After a manuscript letter the run
+    # needs no clause number of its own ("VII 24,1 A. VIII 2").
+    run = re.compile(r'(?:(?:\.?\s+|,(?=\d))%s(?![\w)]))+(?:\.|\s=)\s+(?P<num>%s)(?=(?:\s+|,)%s(?![\w)]))' % (PASSAGE, ROMAN, PASSAGE))
+    run_after_letter = re.compile(r'(?:(?:\.?\s+|,(?=\d))%s(?![\w)]))*(?:\.|\s=)\s+(?P<num>%s)(?=(?:\s+|,)%s(?![\w)]))' % (PASSAGE, ROMAN, PASSAGE))
     tokens = list(REF.finditer(scrap))
     for i, ref in enumerate(tokens):
         out.append(scrap[pos:ref.end()])
         pos = ref.end()
         anchor, label = ref.group('anchor'), ' '.join(ref.group('text').split())
+        after_letter = False
         if anchor in series.of:
             cur = (anchor, label)
         elif anchor in series.sigla and cur:
-            pass                    # "Ine 42 B. 43": still Ine
+            after_letter = True     # "Ine 42 B. 43": still Ine
         else:
             cur = None
         end = tokens[i + 1].start() if i + 1 < len(tokens) else len(scrap)
@@ -111,7 +116,7 @@ def fix_scrap(scrap, series, found):
         cpos = 0
         while cur:
             sep, nums = passages_after(chunk[cpos:])
-            m = run.match(chunk, cpos)
+            m = (run_after_letter if after_letter and cpos == 0 else run).match(chunk, cpos)
             if nums:
                 last_cite = cur[1] + sep + nums[-1]
             if not m:
@@ -129,7 +134,7 @@ def fix_scrap(scrap, series, found):
         out.append(chunk[cpos:])
         pos = end
         # a code followed by anything but clause numbers ends the run
-        if cur and not re.fullmatch(r'(?:\.?\s+%s(?![\w)])|[\s.=])*' % PASSAGE, chunk[cpos:]):
+        if cur and not re.fullmatch(r'(?:(?:\.?\s+|,(?=\d))%s(?![\w)])|[\s.=])*' % PASSAGE, chunk[cpos:]):
             cur = None
     out.append(scrap[pos:])
     return ''.join(out)

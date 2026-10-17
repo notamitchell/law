@@ -111,7 +111,18 @@ scripts:
     // to the page of the whole code ("law:Ine"). They never open the
     // abbreviation popup; a code the database doesn't have yet is plain text.
     function citationList(e) {
-        return e.xr.filter(x => x.getAttribute('type') === 'lawCode').map(x => {
+        // Citations added by an editor (<xr type="lawCode" subtype="added">,
+        // e.g. the clauses Liebermann's "Swer 7ff." stands for) go after the
+        // last citation of the same law code, so "Swer 8" follows "Swer 7ff".
+        const codeOf = x => x.textContent.replace(/\s+/g, ' ').trim().replace(/[\s,]+[^\s,]+$/, '');
+        const all = e.xr.filter(x => x.getAttribute('type') === 'lawCode');
+        const xrs = all.filter(x => x.getAttribute('subtype') !== 'added');
+        all.filter(x => x.getAttribute('subtype') === 'added').forEach(x => {
+            let at = -1;
+            xrs.forEach((y, i) => { if (codeOf(y) === codeOf(x)) at = i; });
+            xrs.splice(at < 0 ? xrs.length : at + 1, 0, x);
+        });
+        return xrs.map(x => {
             const ref = [...x.children].find(c => c.localName === 'ref') || x;
             const text = esc(ref.textContent.replace(/\s+/g, ' ').trim());
             const m = /^(clause|law):(.+)$/.exec(ref.getAttribute('target') || '');

@@ -81,7 +81,7 @@ Inside it, in this order:
 | `sense type="translation" xml:lang="en"` | no | The English translation, in the same shape. |
 | `xr type="see"` | no | A cross-reference to another entry: `<ref target="entry:aebaere">æbære</ref>`. |
 | `xr type="bosworthToller"`, `"doe"`, `"wiktionary"` | no | Links to the Bosworth-Toller Anglo-Saxon Dictionary, the Dictionary of Old English and Wiktionary: `<ref target="https://…">boc-land</ref>`. One `xr` per link. |
-| `xr type="lawCode"` | no | A law code citation. One is made for every passage cited in the entry, such as `<ref target="law:VIAs">VI As 1,1</ref>`, linked to the code on the law code list; the form and `tools/update-entries.js` remake these from the text, so don't edit them by hand. Citations added by hand have no `law:` target, or a `target` to the passage online, and are kept. |
+| `xr type="lawCode"` | no | A law code citation. One is made for every passage cited in the entry, such as `<ref target="law:VIAs">VI As 1,1</ref>`, linked to the code on the law code list; the form and `tools/update-entries.js` remake these from the text, so don't edit them by hand. Citations added by hand have no `law:` target, or a `target` to the passage online, and are kept. A citation an editor adds that the text implies but doesn't print, such as the clauses after Liebermann's "Swer 7ff.", is `<xr type="lawCode" subtype="added"><ref target="clause:Swer_8">Swer 8</ref></xr>`: the tools leave it alone, and the page lists it after the last citation of the same law code. |
 
 ## Liebermann's text
 
@@ -96,6 +96,7 @@ The text inside `dictScrap` keeps the formatting of the printed page, because it
 | a law code, text or manuscript siglum | `<ref type="lawCode" target="law:IICn">II Cn</ref>`, where `IICn` is its Anchor in `data/markLaw.json` |
 | a German abbreviation | `<ref type="abbreviation" target="gram:Plural"><abbr>pl</abbr></ref>`, where `Plural` is its Anchor in `data/markforward.json` |
 | an author or work Liebermann cites | `<ref type="bibl" target="bib:CitToller">Toller</ref>`, where `CitToller` is its Anchor in `data/bibliography.json`. Usually only the author's name is linked; the short title and page follow as plain text. |
+| a clause number the citation tools can't attach to its law code ("Af 43; on G- ~an … 5,4", where 5,4 is Af 5,4) | `<ref type="clause" target="clause:Af_5-4">5,4</ref>`: a link to the clause, made by hand |
 | an entry that runs over a page | `<pb n="4"/>` where page 4 begins |
 | a line break the editor wants kept | `<lb/>` |
 
