@@ -6,20 +6,24 @@
         <title>VI Atr Lat Inscr.</title>
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">VI-Atr-Latin-Paraphrase_part-001</idno>
         <idno type="citation">VI Atr Lat Inscr.</idno>
         <idno type="lawCode">VI Atr Lat</idno>
+        <idno type="lawCodeAnchor">VIAtrLat</idno>
         <idno type="clause">Inscr.</idno>
-        <idno type="citationKey">VI Atr Lat inscr.</idno>
+        <idno type="citationKey">VIAtrLat inscr.</idno>
       </publicationStmt>
       <sourceDesc>
         <bibl type="legalText"><title>VI Æthelred, Latin paraphrase</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">247</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -40,15 +44,20 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 1306 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 1306 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 247.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Inscr.">
-        <head>VI Atr Lat Inscr.</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Inscr." corresp="#wit-k">Incipiunt sinodalia decreta.</ab>
-        <note type="editorial">Latin paraphrase of VI Atr (early 11th c.; K = Cotton Claudius A III f. 30). This passage has no Old English equivalent; Liebermann gives no German translation.</note>
+        <head><ref type="lawCode" target="law:VIAtrLat">VI Atr Lat</ref> Inscr.</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Inscr." corresp="#wit-k">Incipiunt sinodalia<ptr type="liebermannNote" n="a" target="#VI-Atr-Latin-Paraphrase_part-001.lnote.oe.a"/><ptr type="liebermannNote" n="**" target="#VI-Atr-Latin-Paraphrase_part-001.lnote.oe.star2"/> decreta.<ptr type="liebermannNote" n="***" target="#VI-Atr-Latin-Paraphrase_part-001.lnote.oe.star3"/></ab>
+        <note type="editorial">Latin paraphrase of VI Atr (early 11th c.; K = Cotton Claudius A III f. 30), text in column K (Liebermann’s text; until October 2026 in column T). This passage has no Old English equivalent; Liebermann gives no German translation.; T: corrected against Gesetze I, October 2026 (was “(Liebermann’s Latin Paraphrase)”, now “∅ (moved to K)”)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VI-Atr-Latin-Paraphrase_part-001.lnote.oe.star2" n="**" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">247</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Die Buchstabennoten beziehen sich auf die Sacherklärungen in Band II.</hi></seg><seg type="translation" xml:lang="en" source="#claude">The lettered notes refer to the explanatory notes in vol. II.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VI-Atr-Latin-Paraphrase_part-001.lnote.oe.star3" n="***" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">247</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Kleingedrucktes entspricht dem Angelsächsischen genau.</hi></seg><seg type="translation" xml:lang="en" source="#claude">Small print corresponds exactly to the Anglo-Saxon.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VI-Atr-Latin-Paraphrase_part-001.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">[Die Buchstabennoten beziehen sich auf die Lateinische Paraphrase.] <hi rend="italic">synodalis</hi> hier und 40, 2 nicht ‘geistlich-synodal’, sondern ‘reichstäglich’; <hi rend="italic">s</hi>. Einl. 15. 19</seg><seg type="translation" xml:lang="en" source="#claude">[The lettered notes refer to the Latin paraphrase.] <hi rend="italic">synodalis</hi> here and in 40, 2 means not ‘ecclesiastical, synodal’ but ‘of the national assembly’; <hi rend="italic">see</hi> Introduction 15. 19</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VI-Atr-Latin-Paraphrase_part-001.lnote.de.1__2" n="1. 2" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. o</hi>. Einl. 12ff.</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. above</hi> Introduction 12ff.</seg></note>
       </div>
     </body>
   </text>

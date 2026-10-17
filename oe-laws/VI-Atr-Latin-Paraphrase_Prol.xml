@@ -6,20 +6,24 @@
         <title>VI Atr Lat Prol.</title>
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
         <idno type="slug">VI-Atr-Latin-Paraphrase_Prol</idno>
         <idno type="citation">VI Atr Lat Prol.</idno>
         <idno type="lawCode">VI Atr Lat</idno>
+        <idno type="lawCodeAnchor">VIAtrLat</idno>
         <idno type="clause">Prol.</idno>
-        <idno type="citationKey">VI Atr Lat prol.</idno>
+        <idno type="citationKey">VIAtrLat prol.</idno>
       </publicationStmt>
       <sourceDesc>
         <bibl type="legalText"><title>VI Æthelred, Latin paraphrase</title> <note type="reign">Æthelred II, r. 978–1016</note></bibl>
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">247</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-k"><abbr>K</abbr> <note type="manuscript">London, British Library, Cotton Claudius A.iii</note></witness>
@@ -42,16 +46,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 1307 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 1307 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS K added from Gesetze I, p. 247.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Prol.">
-        <head>VI Atr Lat Prol.</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol." corresp="#wit-k">Quodam tempore contiget, ut regis Æþelredi edicto concrepante, archipresulumque Ælfeahi et Þulfstani hortatu instigante, uniuersi Anglorum optimates die sancto pentecosten ad locum ab indigenis Eanham nominatum acciti sunt conuenire.</ab>
+        <head><ref type="lawCode" target="law:VIAtrLat">VI Atr Lat</ref> Prol.</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Prol." corresp="#wit-k">Quodam tempore contigit, ut regis Æþelredi edicto concrepante<ptr type="liebermannNote" n="a" target="#VI-Atr-Latin-Paraphrase_Prol.lnote.oe.a"/>, archipresulumque Ælfeahi<ptr type="liebermannNote" n="b" target="#VI-Atr-Latin-Paraphrase_Prol.lnote.oe.b"/> et Þulfstani<ptr type="liebermannNote" n="c" target="#VI-Atr-Latin-Paraphrase_Prol.lnote.oe.c"/> hortatu instigante, uniuersi Anglorum optimates die sancto pentecosten ad locum ab indigenis Eanham<ptr type="liebermannNote" n="d" target="#VI-Atr-Latin-Paraphrase_Prol.lnote.oe.d"/> nominatum acciti sunt<ptr type="liebermannNote" n="1" target="#VI-Atr-Latin-Paraphrase_Prol.lnote.oe.1"/> conuenire.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:XAtr_Prol-to-3">X Atr Prol. 3</ref></note>
-        <note type="editorial">Latin paraphrase of VI Atr (early 11th c.; K = Cotton Claudius A III f. 30). This passage has no Old English equivalent; Liebermann gives no German translation.</note>
+        <note type="editorial">Latin paraphrase of VI Atr (early 11th c.; K = Cotton Claudius A III f. 30), text in column K (Liebermann’s text; until October 2026 in column T). This passage has no Old English equivalent; Liebermann gives no German translation.; T: corrected against Gesetze I, October 2026 (was “(Liebermann’s Latin Paraphrase)”, now “∅ (moved to K)”)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VI-Atr-Latin-Paraphrase_Prol.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">247</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VI-Atr-Latin-Paraphrase_Prol.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">conoperante</hi> bisheriger Texte war falsche Lesung. Ducange kennt <hi rend="italic">concrepare</hi> für <hi rend="italic">consentire</hi>. Nur hier ist, unzweifelhaft richtig, Æthelreds Name erwähnt; <hi rend="italic">s. o</hi>. Einl. 13</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">conoperante</hi> of earlier texts was a misreading. Ducange knows <hi rend="italic">concrepare</hi> in the sense of <hi rend="italic">consentire</hi>. Only here is Æthelred’s name mentioned, undoubtedly correctly; <hi rend="italic">see above</hi> Introduction 13</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VI-Atr-Latin-Paraphrase_Prol.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Von Canterbury; <hi rend="italic">s. o</hi>. Einl. 4</seg><seg type="translation" xml:lang="en" source="#claude">Of Canterbury; <hi rend="italic">see above</hi> Introduction 4</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VI-Atr-Latin-Paraphrase_Prol.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">von York; <hi rend="italic">s. ebd</hi>. 7. 19</seg><seg type="translation" xml:lang="en" source="#claude">of York; <hi rend="italic">see ibid</hi>. 7. 19</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VI-Atr-Latin-Paraphrase_Prol.lnote.oe.d" n="d" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Von Canterbury; <hi rend="italic">s. o</hi>. Einl. 4</seg><seg type="translation" xml:lang="en" source="#claude">Of Canterbury; <hi rend="italic">see above</hi> Introduction 4</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VI-Atr-Latin-Paraphrase_Prol.lnote.de.1" n="1" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">174</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Synonym für <hi rend="italic">witan; s. d. Gl</hi> 1 Z. 5. 10; Einl. 14f.</seg><seg type="translation" xml:lang="en" source="#claude">Synonym for <hi rend="italic">witan</hi>; <hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 1 ll. 5. 10; Introduction 14f.</seg></note>
       </div>
     </body>
   </text>
