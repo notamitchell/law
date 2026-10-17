@@ -66,6 +66,7 @@ The files are made by the [Suggest an entry](../contribute.html) form, the bulk 
 `<entry>` has:
 
 - `xml:lang`: the language of the headword. `ang` Old English, `la` Latin, `fro` French. Grammatical terms (Liebermann's articles on *Accusativ*, *Adjectiv* and so on) are `xml:lang="de"` with `type="grammatical"`.
+- `type="xref"`, optional: a cross-reference entry, one that only sends the reader to another headword ("abere s. æbære"). Its page shows Liebermann's line and a "See" list (not "See also"), and nothing else; it has no links to other dictionaries, since the headword it points to carries them. `tools/cross-reference-entries.py` finds these entries and marks them; the form keeps the mark when a change is suggested.
 - `n`, optional: the homograph number when Liebermann numbers headwords I), II).
 
 Inside it, in this order:

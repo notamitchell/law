@@ -24,6 +24,8 @@ for e, r in R.items():
 changed = added = 0
 for e, ids in plan.items():
     p = f'entries/{e}.xml'; s = open(p, encoding='utf-8').read()
+    # Cross-reference entries only point to another headword, which has the links.
+    if re.search(r'<entry [^>]*type="xref"', s): continue
     have = set(re.findall(r'<xr type="bosworthToller"><ref target="https://bosworthtoller.com/(\d+)"', s))
     mains = [i for i in ids if not bt[i][1]]
     dup = {bt[i][0] for i in mains if sum(bt[j][0] == bt[i][0] for j in mains) > 1}

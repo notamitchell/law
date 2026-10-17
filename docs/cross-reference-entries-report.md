@@ -1,0 +1,2122 @@
+# Cross-reference entries
+
+Made by `tools/cross-reference-entries.py`. It is replaced each time the tool runs.
+
+- Marked as cross-reference entries this time: **1735** (links to other dictionaries removed from 638 of them, 1683 links in all)
+- Already marked: 0
+- Close, but not changed (to check): 210
+
+## Bosworth-Toller links that the entry pointed to does not have
+
+These links were removed from a cross-reference entry, and the entry it points to has no link to the same Bosworth-Toller page. Usually the pointer's spelling matched a different Bosworth-Toller headword; if the link is wanted, it belongs on the entry pointed to.
+
+- **Alner** → Aelfred: [Ælfred](https://bosworthtoller.com/606)
+- **abutan** → on-butan: [a-bútan (prep.)](https://bosworthtoller.com/120)
+- **abutan** → on-butan: [a-bútan (adv.)](https://bosworthtoller.com/121)
+- **acenned** → ancenned: [a-cennan](https://bosworthtoller.com/159)
+- **acenned** → ancenned: [á-cennan (Supplement)](https://bosworthtoller.com/37420)
+- **ae-faest** → aewfaest: [ǽ-fæst](https://bosworthtoller.com/384)
+- **ael** → awel: [awel](https://bosworthtoller.com/2675)
+- **ael** → awel: [awel (Supplement)](https://bosworthtoller.com/39305)
+- **aghwaer** → ahwaer: [ág-hwǽr](https://bosworthtoller.com/1231)
+- **aghwaer** → ahwaer: [ǽg-hwǽr](https://bosworthtoller.com/512)
+- **aginnan** → onginnan: [a-ginnan](https://bosworthtoller.com/1245)
+- **aginnan** → onginnan: [á-ginnan (Supplement)](https://bosworthtoller.com/38283)
+- **baendan** → bendan: [bén](https://bosworthtoller.com/3643)
+- **baendan** → bendan: [ben (Supplement)](https://bosworthtoller.com/39923)
+- **baetan** → betan: [bet](https://bosworthtoller.com/4028)
+- **baetan** → betan: [bett](https://bosworthtoller.com/4097)
+- **behlidan** → belidens: [be-hlídan](https://bosworthtoller.com/3516)
+- **bewyddod** → beweddod: [be-wyddod](https://bosworthtoller.com/4195)
+- **byrden** → byrdenn: [byrden](https://bosworthtoller.com/5581)
+- **cliroc** → cleroc: [cliroc](https://bosworthtoller.com/6357)
+- **cyre** → ci-e-rr: [cyre](https://bosworthtoller.com/7194)
+- **cyre** → ci-e-rr: [cyre (Supplement)](https://bosworthtoller.com/42461)
+- **dri-g-hten** → dryhten: [drihten](https://bosworthtoller.com/7943)
+- **dri-g-hten** → dryhten: [dryhten](https://bosworthtoller.com/8045)
+- **dri-g-hten** → dryhten: [dryhten (Supplement)](https://bosworthtoller.com/43017)
+- **dryslic** → ondryslic: [drys-líc](https://bosworthtoller.com/8082)
+- **eawfaest** → ae-faest: [eáw-fæst](https://bosworthtoller.com/8801)
+- **eawfaest** → ae-faest: [ǽw-fæst](https://bosworthtoller.com/1051)
+- **edlean** → endlean: [ed-leán](https://bosworthtoller.com/8884)
+- **edlean** → endlean: [ed-leán (Supplement)](https://bosworthtoller.com/43648)
+- **edlean** → endlean: [æd-leán](https://bosworthtoller.com/370)
+- **edlean** → endlean: [ead-leán](https://bosworthtoller.com/8301)
+- **elboga** → elnboga: [el-boga](https://bosworthtoller.com/9180)
+- **emcristen** → e-fe-ncristen: [em-cristen](https://bosworthtoller.com/9332)
+- **ende** → and: [ende](https://bosworthtoller.com/9385)
+- **erere** → arere: [ár](https://bosworthtoller.com/2042)
+- **erere** → arere: [ár (Supplement)](https://bosworthtoller.com/38869)
+- **erere** → arere: [ár (Supplement)](https://bosworthtoller.com/38870)
+- **erere** → arere: [ár (Supplement)](https://bosworthtoller.com/38871)
+- **erere** → arere: [ár (Supplement)](https://bosworthtoller.com/61253)
+- **erere** → arere: [aar](https://bosworthtoller.com/10)
+- **fore-3** → feorh: [fóre](https://bosworthtoller.com/11290)
+- **fore-3** → feorh: [fore (Supplement)](https://bosworthtoller.com/45478)
+- **fore-3** → feorh: [fare](https://bosworthtoller.com/10120)
+- **fore-3** → feorh: [faru](https://bosworthtoller.com/10130)
+- **forefeng** → forefang: [fore-feng](https://bosworthtoller.com/11319)
+- **forfeng** → forefang: [for-feng](https://bosworthtoller.com/11444)
+- **forfeng** → forefang: [for-fang](https://bosworthtoller.com/11438)
+- **forfeng** → forefang: [for-fang (Supplement)](https://bosworthtoller.com/45665)
+- **forspeca** → forspreca: [for-speca](https://bosworthtoller.com/11724)
+- **fr-eo-wif** → friwif: [freó-wíf](https://bosworthtoller.com/62364)
+- **g-i-lda-2** → gafolgilda: [gilda](https://bosworthtoller.com/17054)
+- **g-i-lda-2** → gafolgilda: [gilda (Supplement)](https://bosworthtoller.com/50744)
+- **geanbyrdan** → ge-a-ndbyrdan: [ge-anbyrdan](https://bosworthtoller.com/13434)
+- **geanbyrdan** → ge-a-ndbyrdan: [ge-anbyrdan (Supplement)](https://bosworthtoller.com/47037)
+- **geanbyrdan** → ge-a-ndbyrdan: [ge-onbyrdan](https://bosworthtoller.com/15508)
+- **gederian-2** → gaderian: [ge-derian](https://bosworthtoller.com/14062)
+- **gederian-2** → gaderian: [ge-derian (Supplement)](https://bosworthtoller.com/47641)
+- **gemeleas** → giemeleas: [géme-leás](https://bosworthtoller.com/15190)
+- **gemeleas** → giemeleas: [gýmeleás](https://bosworthtoller.com/17736)
+- **gemeleas** → giemeleas: [gíme-leás](https://bosworthtoller.com/50777)
+- **hreafere** → reafere: [reáf](https://bosworthtoller.com/25603)
+- **hredinge** → hraedinge: [rǽd](https://bosworthtoller.com/25462)
+- **hredinge** → hraedinge: [rǽd (Supplement)](https://bosworthtoller.com/57051)
+- **hredinge** → hraedinge: [-rǽd (Supplement)](https://bosworthtoller.com/57052)
+- **hwilc** → hwelc: [hwilc](https://bosworthtoller.com/20153)
+- **hwilc** → hwelc: [hwilc (Supplement)](https://bosworthtoller.com/53577)
+- **hwylc** → hwelc: [hwilc](https://bosworthtoller.com/20153)
+- **hwylc** → hwelc: [hwilc (Supplement)](https://bosworthtoller.com/53577)
+- **leierwita** → legerwita: [leger](https://bosworthtoller.com/21338)
+- **leierwita** → legerwita: [leger (Supplement)](https://bosworthtoller.com/54439)
+- **lemian** → gelaemed: [lemian](https://bosworthtoller.com/21355)
+- **leodgeota** → le-a-dgeota: [leád](https://bosworthtoller.com/21242)
+- **leodgeota** → le-a-dgeota: [leád (Supplement)](https://bosworthtoller.com/54362)
+- **leof-2** → leaf-2, leaf: [leóf (n.)](https://bosworthtoller.com/21429)
+- **leof-2** → leaf-2, leaf: [leóf (Supplement)](https://bosworthtoller.com/54507)
+- **leof-2** → leaf-2, leaf: [leóf (Supplement)](https://bosworthtoller.com/54508)
+- **leof-2** → leaf-2, leaf: [leóf (adj., adv.)](https://bosworthtoller.com/21430)
+- **letan** → laetan: [læt](https://bosworthtoller.com/21006)
+- **letan** → laetan: [læt (Supplement)](https://bosworthtoller.com/54207)
+- **lyst** → hlyst: [list](https://bosworthtoller.com/21751)
+- **lyst** → hlyst: [list (Supplement)](https://bosworthtoller.com/54733)
+- **ma** → micel, man: [má (n., adj.)](https://bosworthtoller.com/22004)
+- **ma** → micel, man: [má (Supplement)](https://bosworthtoller.com/54902)
+- **ma** → micel, man: [má (adv.)](https://bosworthtoller.com/22005)
+- **ma** → micel, man: [má (Supplement)](https://bosworthtoller.com/54903)
+- **middewinter** → middanwinter: [midde-winter](https://bosworthtoller.com/22816)
+- **middewinter** → middanwinter: [midde-winter (Supplement)](https://bosworthtoller.com/55397)
+- **midwinter** → middanwinter: [mid-winter](https://bosworthtoller.com/22849)
+- **midwinter** → middanwinter: [mid-winter (Supplement)](https://bosworthtoller.com/55427)
+- **nam-2** → niman: [nám](https://bosworthtoller.com/23423)
+- **nam-2** → niman: [nám (Supplement)](https://bosworthtoller.com/55771)
+- **nyllan** → nellan: [nyllan](https://bosworthtoller.com/23953)
+- **nyllan** → nellan: [nyllan (Supplement)](https://bosworthtoller.com/56067)
+- **odde-2** → od-3, od-4: [oððe](https://bosworthtoller.com/25083)
+- **odde-2** → od-3, od-4: [oþþe (Supplement)](https://bosworthtoller.com/56833)
+- **oder-3** → awder: [óðer](https://bosworthtoller.com/25044)
+- **oder-3** → awder: [óþer (Supplement)](https://bosworthtoller.com/56822)
+- **oht** → owiht: [óht](https://bosworthtoller.com/24411)
+- **oht** → owiht: [óht (Supplement)](https://bosworthtoller.com/56409)
+- **oht** → owiht: [ǽht](https://bosworthtoller.com/548)
+- **oht** → owiht: [ǽht (Supplement)](https://bosworthtoller.com/37751)
+- **oht** → owiht: [ǽht (Supplement)](https://bosworthtoller.com/61072)
+- **ra-nhund** → h-r-a-nhund: [rá](https://bosworthtoller.com/25425)
+- **ream** → hream: [reám](https://bosworthtoller.com/25612)
+- **ream** → hream: [reám (Supplement)](https://bosworthtoller.com/57131)
+- **rieflac** → reaflac: [reáf](https://bosworthtoller.com/25603)
+- **sceawung** → ostensio: [sceáwung](https://bosworthtoller.com/26647)
+- **sceawung** → ostensio: [sceáwung (Supplement)](https://bosworthtoller.com/57709)
+- **scyldung** → scyldgung: [scildung](https://bosworthtoller.com/26788)
+- **seo** → se-2, se: [seó](https://bosworthtoller.com/27442)
+- **seo** → se-2, se: [seó (Supplement)](https://bosworthtoller.com/57987)
+- **sio-n** → is-2, is: [sió](https://bosworthtoller.com/27846)
+- **stepcild** → steopcild: [steáp](https://bosworthtoller.com/28817)
+- **stondan** → standan: [stán](https://bosworthtoller.com/28714)
+- **stondan** → standan: [stán (Supplement)](https://bosworthtoller.com/58460)
+- **straec** → strec: [stræc (adj.)](https://bosworthtoller.com/29092)
+- **straec** → strec: [stræc (Supplement)](https://bosworthtoller.com/58614)
+- **straec** → strec: [stræc (n.)](https://bosworthtoller.com/29093)
+- **straec** → strec: [stræc (Supplement)](https://bosworthtoller.com/58615)
+- **suster** → s-e-ster: [suster](https://bosworthtoller.com/29433)
+- **sweotolung** → swutulung: [sweotolung](https://bosworthtoller.com/29733)
+- **sweotolung** → swutulung: [sweotolung (Supplement)](https://bosworthtoller.com/58858)
+- **swilc** → swelc: [swilc](https://bosworthtoller.com/29802)
+- **swilc** → swelc: [swilc (Supplement)](https://bosworthtoller.com/58882)
+- **swylc** → sweltan: [swilc](https://bosworthtoller.com/29802)
+- **swylc** → sweltan: [swilc (Supplement)](https://bosworthtoller.com/58882)
+- **sym-b-le** → simle: [simble](https://bosworthtoller.com/27762)
+- **sym-b-le** → simle: [simble (Supplement)](https://bosworthtoller.com/58097)
+- **than-n-e** → thonne-2, thonne: [þanne](https://bosworthtoller.com/31535)
+- **than-n-e** → thonne-2, thonne: [þanne (Supplement)](https://bosworthtoller.com/59401)
+- **thes-2** → se: [þes](https://bosworthtoller.com/31816)
+- **thes-2** → se: [þes (Supplement)](https://bosworthtoller.com/59485)
+- **thiggum** → thing-2: [þing](https://bosworthtoller.com/31866)
+- **thiggum** → thing-2: [þing (Supplement)](https://bosworthtoller.com/59500)
+- **thriding** → thriding-2: [þridding](https://bosworthtoller.com/32050)
+- **thrihing** → thriding-2: [þrihing](https://bosworthtoller.com/32073)
+- **thu-2** → thy-2: [Þú](https://bosworthtoller.com/32215)
+- **triwian** → treowian: [treów](https://bosworthtoller.com/30998)
+- **triwian** → treowian: [treów (Supplement)](https://bosworthtoller.com/59256)
+- **triwian** → treowian: [treów (Supplement)](https://bosworthtoller.com/59257)
+- **ungerad** → unrad: [un-gerád (adj.)](https://bosworthtoller.com/33206)
+- **ungerad** → unrad: [un-gerád (n.)](https://bosworthtoller.com/33207)
+- **ungerad** → unrad: [un-gerǽd](https://bosworthtoller.com/33209)
+- **unraed-2** → hundred: [un-rǽd](https://bosworthtoller.com/33609)
+- **weder-2** → weder-3: [weþer](https://bosworthtoller.com/35485)
+- **weder-2** → weder-3: [-weþer (Supplement)](https://bosworthtoller.com/60470)
+- **weorold** → woruld: [weorold](https://bosworthtoller.com/35171)
+- **weorold** → woruld: [weorold (Supplement)](https://bosworthtoller.com/60387)
+- **wircan** → wyrcan, wyrhta: [wyrcan](https://bosworthtoller.com/36947)
+- **wittig** → gewittig: [witig](https://bosworthtoller.com/36291)
+- **wituma** → weotuma: [wituma](https://bosworthtoller.com/36318)
+- **wuduwe** → widuwe: [wíd](https://bosworthtoller.com/35535)
+- **wuduwe** → widuwe: [wíd (Supplement)](https://bosworthtoller.com/60479)
+- **wyddian** → weddian: [wídan](https://bosworthtoller.com/35536)
+- **wyddian** → weddian: [wídian](https://bosworthtoller.com/60491)
+- **wylen** → w-ie-l-e-n, Wi-e-lisc: [wyllen](https://bosworthtoller.com/36910)
+
+## Close, but not changed
+
+Entries with a "See" link and no citations or senses, but with something more in Liebermann's text than a pointer. The words that stopped them are after "Stopped by". A gloss or a note means the entry is not only a pointer and should stay as it is; a word pointed to that has no link yet means the "See" list is incomplete.
+
+- **Aeiel**: Æiel- , A (i)l- s. Æðel- — Stopped by: l-
+- **Anakoluth**: Anakoluth s. Accusativ ; Ellipse — Stopped by: Ellipse
+- **Angli**: Angli Orientales s. Eastengle — Stopped by: Orientales
+- **Assimilation**: Assimilation: brigguma s. brydguma; halffang s. healsfang; osside aus of side — Stopped by: osside of side
+- **Consonanten**: Consonanten - Verdoppelung s. cc, dd, gg, ll, mm, nn, pp, rr, ss, tt, þþ; — Vereinfachung s. c, d, g, l, m, n, r, s, t — Stopped by: Verdoppelung pp þþ Vereinfachung
+- **Distributivum**: Distributivum ersetzt durch a, æfre, æt s. d. — Fz: s. a n. 9 — Stopped by: Fz
+- **Fremdwort-Declination**: Fremdwort - Declination , s. August, Augustinus, Barnabas, Credo, Epiphania, Iohannes, Iulius, Maria, Martinus, Michaelis, Moyse, Nicholaus, Octobri, Paulus, Petrus, Philippus, sancta, -te, -tus, Septembri, Silam, Syria — Stopped by: Michaelis Moyse Nicholaus sancta -te
+- **Interrogativum**: Interrogativum s. hwa, hwelc; hu, hwær, hwanon, hwonne — Stopped by: hu
+- **Metathese**: Metathese s. -hs- (x) für sc [ vgl . sh für hs]; -hl für lh; -lef für elf; -nc, -ng für cn, gn ; -en für ne; -ear- für rea, -eor- für reo, -ir- (-yr-) für ry, -er für re, -ræ für ær, -re für er, -ri für ier, yr, -ro für or; -fer für r(e)f s. orf, gefer-, geref-; -sp für ps; -rode für odre; -gie für ige. | Lat. vgl . revelatio für relevatio | Fz. vgl . Lincoln? — Stopped by: sh -hl -lef -nc -ng -en -ear- -ir- -yr- -er -ræ -re -ri yr -ro -fer gefer- geref- -sp -rode -gie revelatio Lincoln?
+- **Nomen**: Nomen s. Accusativ, Adjectiv, Dativ, Declination, Genetiv, Genus, Instrumental, Neutrum, Nominativ, Numerus, Obliquus, Plural, Wortbildung — Stopped by: Instrumental Plural
+- **Numerus-2**: F Numerus : plurales Verb nach sing. Collectiv: s. aveir Vieh — Stopped by: plurales sing Collectiv Vieh
+- **Obliquus**: L Obliquus dient dem Verf. von Q und Hn zur Wortbildung; s. cupidinitas, hominic[a]edium, hominiplagium, latronicinium — Stopped by: dient dem Verf von Hn zur Wortbildung hominic edium hominiplagium latronicinium
+- **Pars**: Pars pro toto s. crocca, flet, hand, healm, heorð, hlafæta, side, lorica — Stopped by: toto healm heorð hlafæta
+- **Perfect-2**: L Perfect gebildet mit habere: s. d. — Stopped by: spelling note: gebildet
+- **Reflexiv**: Reflexiv ausgedrückt durch Personale: s. he, dt , ac | self ( s. d. n. 6) — Stopped by: spelling note: ausgedrückt
+- **Runen**: Runen [ ausser in meinen Text übernommenen ð, þ] s. w, mann — Stopped by: in Text übernommenen ð þ
+- **Singular**: Singular s. Numerus, Plural — Stopped by: Plural
+- **Sprichworter**: Sprichwörter: s. æx; andsæc; brecan; fyr; gewealdes; giest; spere; unlaga; Alliteration: laga. — Lat. : s. compendium; furari; gladius; pactum; pax; pestis; quod tibi; unus; vitulus — Stopped by: andsæc brecan fyr gewealdes giest spere unlaga Alliteration laga furari gladius pactum pax pestis quod tibi unus vitulus
+- **Substantivirung**: Substantivirung des prn und adj aufgehoben durch eingeführtes cierr, mann, þing s. d. , Adjectiv n. 2 und Infinitiv — Stopped by: des aufgehoben eingeführtes Adjectiv Infinitiv
+- **Suffix**: Suffix und zum ~ geschwächtes Nomen; Beispiele u. Bemerkungen s. -bære, -bete, -burg, -cund, -dom, -fæst, -feald, -full [ ergänze geornf-, gesundf-, wohf-], -gielde, -had, -ig, -ing [æðeling, cyning, feorðing, liesing, niðing, pening, scilling], -lac, -leas [ auch arl-], -lic [ auch ealdorlic, gastlic, gearlic, munuclic, ungedafenlic], -lice [ auch fæstl-, scandl-, synderl-], -ling [ auch niedl-, þeowetl-], -ræde, -ræden, -sceatte, -scipe [ auch cynes-, geburhs-, hæðens-, þeows-], -sl, -sp, -stre, -sum, -ung, -wis, -ware, -weard — Stopped by: zum geschwächtes Nomen ergänze geornf- gesundf- wohf- -gielde -had -ig -ing æðeling cyning liesing niðing pening scilling -lac -leas arl- -lic ealdorlic gastlic gearlic munuclic ungedafenlic -lice synderl- -ling niedl- þeowetl- -ræde -ræden -sceatte -scipe cynes- geburhs- hæðens- þeows- -sl -sp -stre -sum -ung -wis -ware
+- **Superlativ-2**: L Superlativ gebildet durch postremo s. d. — Stopped by: spelling note: gebildet
+- **Umlaut**: Umlaut . Wörter und Formen , die ( vielleicht ) durch ~ abweichen von den hier zum Stichwort gewählten, oder welche einen in Wessex in Aelfreds Jahrhundert seltenen ~ zeigen oder den damals dort regelmässigen ~ entbehren. Vgl. die Artikel über die Vocale a, æ, e, ea, eo, i, ie, io, o, oe, u, y A ) i~: s. ælmihtig, ænig, an, aneage, beodan, beorgan, beran, berstan, betweonan, betweox, brægd, brecan, brengan, Æðelbeorht, Centescyre, ciefes, ciepemon, cierlisc, (ge)cierran, cniht, (-)cuman, cweðan, dearr, Denalagu, deofol, dierne, dohtor, domeras, dræfe, duru, eft, elþeodig, Engle, esne, befæstan, forefang, faran, onfeng, (ge)feohtan, feorm, offiellan, fliema, flies, (-)fon, freond, gaderian, gan, geond, geong, geornesse, gieldan, giernan, giest(liðnes), Guðrum, hatan, heahfæder, gehealdan, gehelan, herian, -hynde, hwierfan, gehwyrfe, iecan, ierfe, (ge)iernan, ierre, lad, scinlæca, unlægen, leafnes, -least, inlendisc, licgan, liefan, unaliefed, magan, manig, metan, midslæpe, Mierce, miht, gemunan, nam, nan, nied(-), nieten, pening, reaflac, restedæg, sacerd, sceððan, scipforðunga, sculan, (hlaford)searo, secgan, self, sellan, sendan, sester, (-)slean, slege, slieht, -stæð, stalian, stalu, standan, stede, stefn, (for)steled, (ge)stieran, stodmiere, gestrienan, sylfrene, wæpengetæc, tæcan, tæl, teag, getiema, tieman, tien, (ge)treowian, (ge)treowsian, (ge)triewan, (-)triewe, truwa, undergeþeoded, (ge)þeof(ian), þider, þiestru, þrie, þrifeald, þymelum, þyrel, (ge)weorðian, weorð I und II, wielisc, (for)wiernan, gewyrcan, gewyrhta, wierding, wierðe, ymb? B ) u, o, a~: s. cearwund?, clipian, horcwenan, cwucu, edor, fela, fremu, he, heonon, hiwan, libban, gemedemian, pening, gerefa, sinoð, seofon, sweostor, swigian, swutulung, tilung, tuwa, þes, weorod, weotuma, widuwe, wita, woruld, wuton — Stopped by: die von zum Stichwort Aelfreds Jahrhundert damals regelmässigen Vgl die die Vocale oe cniht cuman dearr Denalagu dierne domeras dræfe duru eft elþeodig Engle esne forefang onfeng flies giest Guðrum -hynde ierre lad scinlæca unlægen -least inlendisc unaliefed magan midslæpe Mierce nam nied nieten reaflac restedæg sacerd sceððan scipforðunga hlaford slege slieht -stæð stalu standan stede for steled stodmiere sylfrene wæpengetæc tæcan tæl treowian treowsian triewe undergeþeoded þider þrie þrifeald þymelum þyrel for ymb?
+- **Vocalverdoppelung**: Vocalverdoppelung s. aa, ee, ii, oo, uu — Stopped by: ii oo
+- **Westmonasterium**: L Westmonasterium Westminster bei London; dort datirt CHn cor Test. Hn mon Test. Hn Lond Test | Abt von W.: s. Gilbertus — Stopped by: bei London dort datirt CHn cor Test Hn mon Test Hn Lond Test Abt von
+- **a-12**: F -a- für -ai- s. forfait(ure); ersetzt durch -e- s. d. ; -an- durch -en- s. d. — Stopped by: spelling note (inner letters)
+- **a-5**: -a- eingeführt zwischen -rw- s. Gleitlaut — Stopped by: spelling note (inner letters)
+- **a-7**: a- vor Nasalen oft geändert aus o in H : s. z. B. and, hand, land, mann, wamm, bes. in Af - Ine ; sonst häufig : s. þonne, þonon — Stopped by: hand land mann wamm Ine
+- **a-8**: -a- dafür abweichend : ea, o s. d. — Stopped by: spelling note (inner letters)
+- **ae-5**: -æ- für e, das dialectisch für ws. y: s. twelfhynde — Stopped by: spelling note (inner letters)
+- **ae-7**: (-) æ- , dafür abweichend e, ea s. d. — Stopped by: spelling note (inner letters)
+- **ae**: æ , geschrieben ae s. æt, maeht ( unter miht) — Stopped by: maeht unter miht
+- **aei-g**: -æi(g) für -æg s. hwæg; mæg(bot); (mæsse)dæg; wægpundern — Stopped by: mæg bot mæsse dæg wægpundern
+- **aende**: ænde I ) s. and II) s. ende — Stopped by: and
+- **ai-2**: F -ai- ; dafür -a-: s. d. — Stopped by: spelling note (inner letters)
+- **ai**: -ai- north. Diphthong s. cniht — Stopped by: spelling note (inner letters)
+- **ais**: -ais- , frühme. für ags. æs(c), s. flesmangeres — Stopped by: spelling note (inner letters)
+- **an-4**: F -an- ersetzt durch -en-, -ain-: s. d. — Stopped by: spelling note (inner letters)
+- **andfeng**: andfeng s. anf~, onf~ — Stopped by: anf~
+- **becrafod**: [-becrafod] Der. : unb~ [ lag vielleicht vor für ingravatus s. d. ] — Stopped by: unb~ lag
+- **bed**: [-bed-] s. I ) gebedræden II) unabeden — Stopped by: gebedræden unabeden
+- **buri**: -buri- , aus ags. dt von burg, s. Saresberiensis, Sceaftesbyrig — Stopped by: spelling note (inner letters)
+- **buro**: buro- , bur(u)h- s. burg- — Stopped by: h-
+- **byrig**: byrig s. beri, burg — Stopped by: beri
+- **cc-2**: L -cc- für c: s. accriter, paccare, pecculium, pecunia — Stopped by: spelling note (inner letters)
+- **cgc**: -cgc- abweichend für cg: s. lecgan — Stopped by: spelling note (inner letters)
+- **cgcg**: -cgcg- für cg: s. bycgan — Stopped by: spelling note (inner letters)
+- **cgg**: -cgg- abweichend für cg: s. be-, gebycgan, secgan, þicgan — Stopped by: spelling note (inner letters)
+- **ch-2**: -ch- unorg. zugefügt s. lahslit — Stopped by: spelling note (inner letters)
+- **chyric**: chyric(-) s. cir~ — Stopped by: cir~
+- **ci**: L -ci für -ti, vor Vocal, in England nach 1066 überall häufig , s. iusticia; ersetzt durch -ti: s. d. — Stopped by: Vocal England
+- **com**: L com-, con- = ags. ge- od . Gemeinschaft, Genossenschaft ausdrückend: s. competentia, compatra, concredere, condicere, congildo, coniectare, conlaudare, conpugnare, conquiescere, consentaneus, -tire, consociari, contradere, contubernalis — Stopped by: = ge- Gemeinschaft Genossenschaft ausdrückend -tire
+- **conte**: F conte , ~té s. cunte, ~té — Stopped by: ~té
+- **d-5**: ð s. þ, hinter tyr- — Stopped by: tyr-
+- **d**: F -ð- intervocal: s. fieðe — Stopped by: spelling note (inner letters)
+- **dag**: dag- s. dæg; (riht)andaga — Stopped by: riht andaga
+- **dd**: -dd abweichend für d: s. andetla, gebed, edor, foðor, god, God, modor, medrenmæg (gefer-, freond-, wite-)ræden, gerædnis — Stopped by: andetla freond- wite- ræden
+- **decalvatio**: L [decalvatio] Skalpirung, viell. zu verbessern für decomatio, s. d. — Stopped by: Skalpirung
+- **dyde**: dyde s. I ) diedan II) don — Stopped by: diedan don
+- **e-4**: L -e- für ae in Hss . nach 1200 fast stets ; im 11/12. Jh . teilweise; s. aeditui, aeger, Ægyptus, aequalis, Ebreus; ę s. æ — Stopped by: spelling note (inner letters)
+- **eafor**: [eafor] Arbeitsgaul s. aferian — Stopped by: Arbeitsgaul
+- **ear**: -ear- für -rea s. hream — Stopped by: spelling note (inner letters)
+- **ei-2**: F -ei-; dafür e, i: s. d. — Stopped by: spelling note (inner letters)
+- **ein**: F -ein für ags. -am s. hamfare [ vgl . -ei n. 3] — Stopped by: -ei
+- **eis**: -eis in ECf für ags. -æs(c) s. flesmangeres — Stopped by: in ECf
+- **eor**: -eor- für -reo- s. fremu — Stopped by: spelling note (inner letters)
+- **er**: -er- für re s. oðer; strec — Stopped by: spelling note (inner letters)
+- **eu**: -eu- alt, wo später eo, noch erhalten s. freo, leod(geld), þeow — Stopped by: spelling note (inner letters)
+- **f**: L f für ph s. fantasia, -sma, flebo- — Stopped by: -sma flebo-
+- **faciendum**: L ad faciendum s. faire n. 13 — Stopped by: ad
+- **fangen**: [fangen] s. fon. — Der. : infangenne þeof, utfangen — Stopped by: infangenne þeof utfangen
+- **fn**: -fn- s. Gleitlaut — Stopped by: spelling note (inner letters)
+- **forworht**: forworht s. forwyrcan. Der. : unf~ — Stopped by: unf~
+- **fratres**: L fratres Genossen s. coniurare n. 3 — Stopped by: Genossen
+- **gald**: -gald statt -geld s. Denagildum — Stopped by: spelling note: statt
+- **gean**: [-gean] s. ongean, tog~ — Stopped by: tog~
+- **gebeden**: gebeden s. biddan. — Der. : ung~ — Stopped by: ung~
+- **geboht**: geboht s. gebycgean. — Der. : ung~ — Stopped by: ung~
+- **geboren**: geboren s. beran. — Der. : ung~ — Stopped by: ung~
+- **gecoren**: gecoren s. geceosan. — Der. : ung~ — Stopped by: ung~
+- **gecyd**: [-gecyd] s. cyðan. — Der. : ung~ — Stopped by: ung~
+- **genga**: [-genga] s. æfterg~, foreg~, huslg~ — Stopped by: foreg~
+- **gerisnu**: [gerisnu] s. competentia. — Der. : ung~, woroldg~ — Stopped by: ung~ woroldg~
+- **gerysen**: gerysen to s. risan — Stopped by: to
+- **gesawen**: gesawen s. sawan; Der. : ung~ — Stopped by: ung~
+- **get**: get s. I ) giet, II) git — Stopped by: giet git
+- **gewor-o-ht-e**: gewor(o)ht(e) s. gewyrcan, wy- — Stopped by: wy-
+- **gewyte**: gewyte, -tnyssa s. gewita, -tnes — Stopped by: -tnes
+- **golden**: [-golden] s. gieldan. — Der. : fullg~ — Stopped by: fullg~
+- **gs**: -gs- für hs, cs ( aus sc): s. ascian — Stopped by: spelling note (inner letters)
+- **gt**: -gt- für ht: s. agte ( unter agan) — Stopped by: spelling note (inner letters)
+- **gu**: FL gu- für w-: s. Norwigensis, wage, warder, waiter, warans, - nt , -ntizare, weardgerefa, wer, werra, Wiht [ vgl . gw] — Stopped by: Norwigensis -ntizare werra gw
+- **gyld**: gyld(-) s. I ) gield- II) gylt — Stopped by: gield- gylt
+- **haefdon**: hæfdon s. I ) habban II) heafod — Stopped by: habban heafod
+- **haer**: hær s. I ) ær II) her — Stopped by: ær her
+- **hc**: -hc- für h: s. niht — Stopped by: spelling note (inner letters)
+- **heard**: heard- s. I ) heord II) eard III) Der. : aheardað — Stopped by: heord eard aheardað
+- **hebban**: hebban I ) Der. : ah~, oferh~ II) s. habban — Stopped by: ah~ oferh~
+- **heort**: [-heort-] s. hath~, mildh~ — Stopped by: hath~
+- **hg**: -hg für -g: s. beorgan, borg, godborg, inborg; (Dene)lagu — Stopped by: Dene lagu
+- **hie**: hie I ) s. he II ) verschr. für bie v. beon — Stopped by: verschr beon
+- **hir**: hir- s. hier-, hyr- — Stopped by: hier-
+- **hl**: hl- für l-: s. h 1a β — Stopped by: β
+- **hlafordsyrwungum**: hlafordsyrwungum , pl dt , s. ~searo — Stopped by: ~searo
+- **husbonda**: husbonda , -bunde Bauer, Hofstellenbesitzer, irrig synonym gesetzt mit twelfhynde und huslgenga; s. d. — Stopped by: Bauer Hofstellenbesitzer synonym gesetzt twelfhynde
+- **hybride**: hybride Wort-Composition s. eastintro, extoppare, forisfactoservus, furigildum, landhomo, landirectum, misdocere, -evenire, -facere, -locutio, norðintus, scyrehomo, werefactio, wereplegius (-um), witaservus — Stopped by: Wort-Composition extoppare forisfactoservus -evenire -facere scyrehomo werefactio wereplegius -um witaservus
+- **hyd-a**: hyd(a) Hufe s. hid — Stopped by: Hufe
+- **ii**: -ii- northu. für langes i: s. beseon, onseon, þri(e) — Stopped by: spelling note (inner letters)
+- **inleg-i-are**: L inleg(i)are s. inlagian [ Gegenteil, auch ~ geschr. , s. ill~] — Stopped by: inlagian Gegenteil
+- **intermundiciis**: L intermundiciis servilibus Quadr Ded 21, Reminiscenz aus Epicuri intermundiis ‘Zwischenreich der Götter’ [ bei Cicero ] im iron. Sinne von ‘geschäftlichem Frondienst’ | oder bessere immunditia s. d. — Stopped by: servilibus Quadr Ded Reminiscenz Epicuri ‘Zwischenreich der Götter’ bei Cicero iron von ‘geschäftlichem Frondienst’
+- **ir**: -ir- für -ri-: s. yr; für -re-: s. freht — Stopped by: spelling note (inner letters)
+- **is-2**: II ) is für his, gn poss msc u. nt ; s. he — Stopped by: msc
+- **lad-3**: III ) s. ladrinc; lædan — Stopped by: lædan
+- **laecan**: [-læcan] s. fal~, geneal~, geþristl~ — Stopped by: fal~
+- **les**: F les I ) pron, s. il, pl ac II ) Artikel s. li, pl — Stopped by: pron
+- **li-2**: II ) li , pron, ihm, s. il — Stopped by: pron ihm
+- **liber**: L I ) liber Buch s. iudicialis, poenitentialis — Stopped by: Buch
+- **lifad**: lifað , ~fde, ~fie(nd) s. libban — Stopped by: nd
+- **liht**: liht- s. I ) leoht- II) togeliht — Stopped by: leoht- togeliht
+- **ll-2**: L -ll- für l: s. calumniator, pillare, tollerare — Stopped by: spelling note (inner letters)
+- **lui**: F lui I ) prn , s. il dt ac II ) art, s. li no — Stopped by: art
+- **luy**: F luy I ) der, s. li II ) prn , s. il dt , ac — Stopped by: der
+- **mal**: [-mal] s. friðm~ [ vgl . -mæl; mallum] — Stopped by: -mæl mallum
+- **mb**: -mb- für -nb-: s. elnboga — Stopped by: spelling note (inner letters)
+- **mearc**: I ) mearc s. marca; Der. : healfm~ — Stopped by: healfm~
+- **mis-2**: mis- synonym mit for- (ofer-) s. misfare, misgime (mishyran) — Stopped by: synonym for- ofer-
+- **mm-2**: F -mm- variirt mit -m-: s. comander, hume, somme — Stopped by: spelling note: variirt
+- **mm-3**: L -mm- für -m-: s. comitatus — Stopped by: spelling note (inner letters)
+- **mm**: -mm- für -m-: s. fultum, geniman — Stopped by: spelling note (inner letters)
+- **monta**: L monta s. mund [ fz. Schreibung ] — Stopped by: Schreibung
+- **mucel**: mucel , muchimut s. micel(gemot) — Stopped by: muchimut gemot
+- **n-4**: -n̄ Sigle für nne: s. -ne — Stopped by: Sigle
+- **nb**: FL -nb für mb: s. membre; -rum — Stopped by: -rum
+- **neat-2**: II ) s. geneat, -tland, -tman, -triht — Stopped by: -tland -tman -triht
+- **nel**: F nel [ aus ne le] s. il, prn ; ne — Stopped by: le ne
+- **nes**: F nes [ aus ne les] s. il, prn ; ne — Stopped by: ne
+- **nycst**: nycst , ny(e)hsta s. neah — Stopped by: hsta
+- **octoginta**: L [octoginta] ausgedrückt durch 60 + 20 s. sexaginta — Stopped by: spelling note: ausgedrückt
+- **oe**: -oe- : s. metan | in Northumbr. Iud Dei IV . V: s. gebletsian, boc, (ge)dema(n), (ge)don, hwæðre und -woe — Stopped by: spelling note (inner letters)
+- **oo**: -oo- für o: s. fot, socn — Stopped by: spelling note (inner letters)
+- **pp-2**: L -pp- für b: s. publicus — Stopped by: spelling note (inner letters)
+- **pp-3**: F -pp- für p: s. chapele — Stopped by: spelling note (inner letters)
+- **pp**: -pp- für p: s. cynescipe, deop ( cpa ), gehelpe, up, upgang — Stopped by: spelling note (inner letters)
+- **qu**: qu für cw: s. cwalstow, cwideleas [ Französ. Einfluss; s. Hein, Eadwine's Sprache S. 23] — Stopped by: Französ Einfluss Hein Eadwine's Sprache
+- **que**: F I ) que , prn relat., s. qui — Stopped by: relat
+- **queons**: F queons, quens, no , Graf s. cunte — Stopped by: Graf
+- **rae**: -ræ- ersetzt durch er: s. gærsswin — Stopped by: spelling note (inner letters)
+- **raeda**: [ræda] s. ger~ = redan — Stopped by: = redan
+- **re-g-nhund**: re[g]nhund ; renh~, canis qui in pluvia vigilat S. 367*, um 1220, irrige Etymologie des Namens für den ‘Rentier-Jagdhund’; s. hranhund — Stopped by: canis qui in pluvia vigilat 367* um Etymologie des Namens ‘Rentier-Jagdhund’
+- **re**: -re- für -er-: s. ealdorman, gebierhtan, nawðer, oðer | dafür er: s. d. — Stopped by: spelling note (inner letters)
+- **revelatio**: L revelatio statt relevatio s. d. — Stopped by: spelling note: statt
+- **rf**: -rf- ; dafür -fer-: s. orf; vgl . ref — Stopped by: spelling note (inner letters)
+- **ri**: -ri- für ir, yr: s. frið ( verwechselt mit fierd), friðian, fyrmð, fyrðrian — Stopped by: spelling note (inner letters)
+- **ro**: -ro- für -or-: s. borgbryce, inheord, gewroht von wyrcan; -rode — Stopped by: spelling note (inner letters)
+- **rr-2**: -rr statt r: s. læran, orige, sibleger — Stopped by: spelling note: statt
+- **rr**: L rr statt r: s. parrochia, turribulum, werra unter wer(lad) — Stopped by: spelling note: statt
+- **rs**: -rs- für ser? s. irsebinn — Stopped by: spelling note (inner letters)
+- **ry**: -ry- für yr: s. fyrmð — Stopped by: spelling note (inner letters)
+- **s-4**: LF s- ; dafür es(s): s. scot, soinus | fz. escrites, eschuit, escud, espee, espouse, establir, estre, estreit, estuverad — Stopped by: LF escrites eschuit escud espee establir estre estreit estuverad
+- **saec**: [-sæc] s. ands~, bis~ — Stopped by: bis~
+- **scieppan**: scieppan s. sceapige; Der. ptt : gesceop — Stopped by: gesceop
+- **secus**: L [-secus] , adj !, s. intrins~ — Stopped by: !
+- **seon-2**: [-seon] Der. : s. bes~, ges~, ofers~ (overseunessa), ons~; ungesawen — Stopped by: ofers~ overseunessa ons~
+- **septuaginta**: L [septuaginta] ausgedr. durch 60 + 10; s. sexaginta — Stopped by: spelling note: ausgedr
+- **servare**: L servare placita = custodire, s. d. — Stopped by: placita =
+- **servus**: L servus ; forisfacto ~, necessario ~, testamentalis ~ s. wite-(nied)þeow — Stopped by: forisfacto necessario testamentalis nied þeow
+- **sie**: sie I ) s. is op II ) s. se msc no — Stopped by: msc
+- **sil**: F sil I ) = si le; s. il, ac II ) = cil — Stopped by: = le =
+- **sin-2**: II ) sin , sind (-) s. is, op , ind pl — Stopped by: ind
+- **sin-3**: F sin s. si n. II 3 + en — Stopped by: + en
+- **sio**: I ) sio die s. se — Stopped by: die
+- **sl**: -sl s. fædrencnosl, fedesl; byrgels, hydels; æfwerdelsa — Stopped by: fædrencnosl byrgels hydels
+- **starke**: starke Conjugation s. d. und ‘Verb’ — Stopped by: ‘Verb’
+- **stolen**: stolen s. stelan. — Der. : þeofs~ — Stopped by: þeofs~
+- **stre**: -stre Suffix s. smeremangestre — Stopped by: spelling note: Suffix
+- **super-2**: L super- übs . ofer- [ s. d. ], for-, ufera — Stopped by: for-
+- **swid**: [swið] s. ~ðe, ~ðere; Der. : oferswiðan — Stopped by: ~ðe oferswiðan
+- **th-3**: L th- für t-: s. Tamesis, telonium, -nearius, Teutonici, Tosti; attachiatus — Stopped by: -nearius attachiatus
+- **thaera**: þæra s. se I fm gn ; pl gn ; variirend mit þær; s. d. n. I 1a — Stopped by: variirend þær
+- **thaet-2**: þæt I ) Demonstrativ [ s. d. ], nt von se I [ s. d. ] | s. u. þæt is | verschmolzen mit vorhergeh. prp ( gemäss welcher bezw. Flexion zu þam, þon, þy eintritt ) a ) zu einem adv : s. æfter, ær, be, for, mid, ofer, to, þurh, wið aa ) und, falls diesen 2 Wörtern þe folgt, zu einer cj ; s. þe n. VII 7 b ) zu einer prp : s. oððæt. — Syntaktisch vgl . þis, nt sbstirt von þes, n. I B — Stopped by: von verschmolzen vorhergeh gemäss welcher Flexion zu þam þon þy eintritt zu einem Wörtern zu zu Syntaktisch þis von
+- **the-2**: II ) obwohl; s. þeah — Stopped by: obwohl
+- **the-o-f**: -the(o)f s. I ) þiefð II) infangeneþeof — Stopped by: þiefð infangeneþeof
+- **the**: þe I ) dir, dich; s. þu — Stopped by: dir dich
+- **theof-e**: [þeof(e?)] s. ~fgield, ~fscyldig, ~fstolen, ~fwrace; vgl . þiefe — Stopped by: þiefe
+- **theowu**: þeowu Sklavin; s. þeowa n. II; od . adj , fm no — Stopped by: Sklavin
+- **thiedan**: [-þiedan] s. under(ge)þeoded — Stopped by: ge þeoded
+- **thon-4**: þoñ , þonne statt þone s. se, ac — Stopped by: spelling note: statt
+- **thon**: I ) þon für þam Ld ; s. se n. I , pl dt — Stopped by: Ld
+- **thone**: þone I ) s. se, ac II ) ebd. instr . für þon nur Ld III ) s. þonne, 7 Z. weiter — Stopped by: Ld
+- **thwaere**: [-þwære] s. geþwærian, -rnes — Stopped by: -rnes
+- **thy**: I ) þy , indecl. relat., s. þe n. V Z. 4 — Stopped by: indecl relat
+- **to-2**: to- für æt-, be-: s. toforan, togædere | ersetzt durch wið-: s. tostande — Stopped by: be- wið-
+- **tt**: -tt (-) für t: s. bett, gebetan, forhttundan ( unter forhtian), fot, ongietan, Greatanleage, hit, hlutor, hwæt, forlætan, gemet, gemetan, ofermettan (?), (wæter)pytt, þreotteoða, ut(-), uterra, (ge)witnes, (ærend)gewrit — Stopped by: spelling note (inner letters)
+- **tu**: tu s. twegen, nt ; butu — Stopped by: butu
+- **ung**: -ung s. agnung, beweddung, bletsung, ciricmangung, (mynster)clænsung, fandung, feormung, ficung, (folc)leasung, (scip)fierdung, (-)forðung, (-)fyrðrung, freolsung, gebetung, gelaðung, geþafung, gitsung, glofung, gyltung, hadarung, halgung, halsung, ladung, manung, medemung, metsung, miltsung, mynegung, (ge)samnung, sceawung, scoung, scyldgung, (hlaford)sierwung, smeagung, sticung, strudung, tilung, torfung, (gear-, weofod-)þegnung, þrowung, weorðung, wiernung, wifung, (hengen)witnung, wunung | nt : fierdung, þrowung; ein gn : -es: beheafdung | mit unorg. -e im no (?): þancung ‖ wechselnd mit -ing s. o. S. 124, Sp. 3 und teoðung; ausserdem Abstracta auf -ing: bærning, byttfylling, fæsting, gylting, leorning, liehting, likning, miscenning, rihting, tæcing, ypping | -unga s. (un)deornunga, eallunga, eawunga, orceapunga, unmyndlunge! — Stopped by: beweddung ciricmangung mynster feormung ficung folc scip fierdung forðung fyrðrung freolsung gelaðung geþafung hadarung medemung mynegung ge sceawung scoung scyldgung hlaford sierwung sticung strudung tilung torfung gear- weofod- þrowung weorðung wiernung wifung hengen fierdung þrowung ein -es beheafdung -e im ‖ wechselnd -ing teoðung ausserdem Abstracta -ing bærning byttfylling fæsting gylting leorning likning miscenning rihting tæcing ypping un deornunga eallunga orceapunga unmyndlunge!
+- **ur**: F -ur- für -ru: s. purnele — Stopped by: spelling note (inner letters)
+- **w-ea-ld**: II ) w[ea]ld s. wælt; gew~, onw~, unwaldes — Stopped by: gew~ onw~ unwaldes
+- **w-i-ton**: w[i]ton lasst uns! s. wuton — Stopped by: lasst uns!
+- **wara**: wara , gn pl , northu. s. wer n. II A 1 — Stopped by: northu
+- **weard-2**: II ) in adj und adv : s. andw~, hindew~, innew~, tow~, ufanw~, inweardlic — Stopped by: ufanw~
+- **welf**: -welf- ersetzt durch -lef s. twelfhynde — Stopped by: spelling note (inner letters)
+- **wine**: [-wine] s. Aelfw~, Æðelw~, Godw~ — Stopped by: Aelfw~ Godw~
+- **wissige**: wissige s. wisian. — Der. : gew~, misw~ — Stopped by: gew~ misw~
+- **woe**: woe- für we- in northumbr. Iud Dei IV . V: s. hwelc, aweccan, yfelweorc, gewerian, wesan, wierdung, unawoerdedu | für wē: s. twegen — Stopped by: in northumbr Iud Dei yfelweorc wierdung
+- **worht-e**: worht (e) s. wyrcan, unforworht, unworht — Stopped by: unforworht unworht
+- **wreca**: I ) [-wreca] s. ærendw~ II ) s. wreccena — Stopped by: ærendw~
+- **y-2**: -y , alter Instr. erhalten, s. ceapi, folcy, þy — Stopped by: alter Instr erhalten ceapi folcy
+- **ya**: -ya- für ea-: s. ongietan — Stopped by: spelling note (inner letters)
+- **ye**: -ye- für ie: s. neah, spl — Stopped by: spelling note (inner letters)
+- **yr**: -yr- für -ry: s. bryne | für -ri: s. [riscbinn?], geþristlæcan, wrist | für -re: s. frehte(?) — Stopped by: spelling note (inner letters)
+- **z**: LF z- ; dafür g: s. gingiber — Stopped by: LF
+
+## Marked as cross-reference entries
+
+- [Adel](../entry.html?id=Adel): Aðel- s. Æðel-
+- [Adhelbertus](../entry.html?id=Adhelbertus): L Adhelbertus s. Æðelberht
+- [Aed](../entry.html?id=Aed): Æd- s. Ead-
+- [Aegel](../entry.html?id=Aegel): Ægel- s. Æðel-
+- [Ael](../entry.html?id=Ael): Æl- s. Æðel-
+- [Aexeceaster](../entry.html?id=Aexeceaster): Æxeceaster s. Eaxanceaster
+- [Agust](../entry.html?id=Agust): Agust s. Aug~
+- [Alner](../entry.html?id=Alner): Alner' s. Ælfred
+- [Analavus](../entry.html?id=Analavus): Analavus s. Anlaf
+- [Angl](../entry.html?id=Angl): Angl- , Anglicus s. Engle
+- [Anglia](../entry.html?id=Anglia): Anglia s. Englaland
+- [Brandona](../entry.html?id=Brandona): L Brandona s. Bromdun
+- [Brundona](../entry.html?id=Brundona): L Brundona s. Bromdun
+- [Brytannia](../entry.html?id=Brytannia): L Brytannia s. Brit~
+- [Caenred](../entry.html?id=Caenred): Cænred s. Cen~
+- [Caent](../entry.html?id=Caent): Cænt s. Cent
+- [Cantia](../entry.html?id=Cantia): L Cantia Kent; adj -ius, s. Cent
+- [Canutus](../entry.html?id=Canutus): L Canutus s. Cnut
+- [Chanutus](../entry.html?id=Chanutus): L Chanutus s. Cnut
+- [Chnutus](../entry.html?id=Chnutus): L Chnutus s. Cnut
+- [Christ](../entry.html?id=Christ): Christ s. Crist
+- [Coneis](../entry.html?id=Coneis): L Coneis s. Toteneis
+- [Daene](../entry.html?id=Daene): Dæne s. Dene.
+- [Denagild](../entry.html?id=Denagild): Denagild , ~alagu s. hinter Dene
+- [Densete](../entry.html?id=Densete): Densete s. Wents~
+- [Deona](../entry.html?id=Deona): Deona s. Dene, gn
+- [Dieu](../entry.html?id=Dieu): F [Dieu] s. Deu
+- [Earconberht](../entry.html?id=Earconberht): Earconberht s. Eorcanb~
+- [Ed](../entry.html?id=Ed): Ed- s. Ead-
+- [Egel](../entry.html?id=Egel): Egel- s. Æðel-
+- [Ei-e-l](../entry.html?id=Ei-e-l): Ei(e)l- s. Æðel-
+- [Eidesworter](../entry.html?id=Eidesworter): Eideswörter s. Formeln
+- [Essex](../entry.html?id=Essex): L Essex s. Eastseaxe
+- [Ethel](../entry.html?id=Ethel): Ethel- s. Æðel-
+- [Everwiche](../entry.html?id=Everwiche): Everwiche s. Eoforwic
+- [Exonia](../entry.html?id=Exonia): L Exonia s. Eaxanceaster
+- [Fefresham](../entry.html?id=Fefresham): Fefresham s. Fæfresham
+- [Flandria](../entry.html?id=Flandria): Flandria irrig für Estlandia s. d.
+- [Fraencisc](../entry.html?id=Fraencisc): Fræncisc s. Frenc~
+- [G-e-bmund](../entry.html?id=G-e-bmund): G[e]bmund s. Gybm~
+- [Gamorra](../entry.html?id=Gamorra): Gamorra s. Gom~
+- [Giraldus](../entry.html?id=Giraldus): L Giraldus , ~ardus s. Gerardus
+- [Godrinus](../entry.html?id=Godrinus): L Godrinus , Godrun s. Guðrum
+- [Gofridus](../entry.html?id=Gofridus): L Gofridus s. Gosfregð
+- [Grateleia](../entry.html?id=Grateleia): Grateleia s. Greatanleage
+- [Guith](../entry.html?id=Guith): Guith s. Wiht
+- [Gurth](../entry.html?id=Gurth): Gurth s. Wiht
+- [Gydrum](../entry.html?id=Gydrum): Gyðrum s. Guð~
+- [Haba](../entry.html?id=Haba): Haba s. Bada
+- [Habraham](../entry.html?id=Habraham): Habraham s. Abr~
+- [Hagulfus](../entry.html?id=Hagulfus): L Hagulfus s. Hascu~
+- [Hangulfus](../entry.html?id=Hangulfus): Hangulfus s. Hascu~
+- [Heliseus](../entry.html?id=Heliseus): L Heliseus s. Eliseus
+- [Hyne](../entry.html?id=Hyne): Hyne s. Ine
+- [Ieronymus](../entry.html?id=Ieronymus): L Ieronymus s. Hi~
+- [Iesaias](../entry.html?id=Iesaias): Iesaias s. Isa~
+- [Indefinitum-2](../entry.html?id=Indefinitum-2): L Indefinitum s. homo
+- [Kerendes](../entry.html?id=Kerendes): Kerendes s. Cenred
+- [Loht](../entry.html?id=Loht): Loht s. Loth
+- [Merc](../entry.html?id=Merc): Merc- , ~chene, ~cia s. Mierce
+- [Midlesex](../entry.html?id=Midlesex): Midlesex , midlest s. middel-
+- [Monfort](../entry.html?id=Monfort): Monfort s. Muntfort
+- [Mountfichet](../entry.html?id=Mountfichet): Mountfichet s. Muntf~
+- [Myrc](../entry.html?id=Myrc): Myrc- s. Mierc-
+- [Nicole](../entry.html?id=Nicole): FL Nicole- s. Lincoln-
+- [Norri](../entry.html?id=Norri): Norri s. Nori
+- [Ordasenses](../entry.html?id=Ordasenses): L Ordasenses s. Orcades
+- [Periphrastisch](../entry.html?id=Periphrastisch): Periphrastisch s. Particip n. 5
+- [Potentialis](../entry.html?id=Potentialis): Potentialis s. Optativ n. 7
+- [Reim](../entry.html?id=Reim): Reim s. Alliteration, Endreim
+- [Relativum-generale-2](../entry.html?id=Relativum-generale-2): F Relativum generale s. quel, qui n. 2
+- [Rofeceaster](../entry.html?id=Rofeceaster): Rofeceaster s. Hr~
+- [Rovecestria](../entry.html?id=Rovecestria): L Rovecestria s. Hrofeceaster
+- [Salebiriensis](../entry.html?id=Salebiriensis): L Salebiriensis s. Saresber~
+- [Siltre](../entry.html?id=Siltre): Siltre s. Chiltre
+- [Skeggi](../entry.html?id=Skeggi): [Skeggi?] s. Stegitan
+- [Subject](../entry.html?id=Subject): Subject s. Accusativ, Dativ, Ellipse
+- [Suevi](../entry.html?id=Suevi): L Suevi s. Sweon
+- [Swani](../entry.html?id=Swani): L Swani s. Sweon
+- [Symon](../entry.html?id=Symon): L Symon- s. Sim~
+- [Syon](../entry.html?id=Syon): L Syon s. Sion
+- [Teophania](../entry.html?id=Teophania): L Teophania s. Theo~
+- [Thamisia](../entry.html?id=Thamisia): Thamisia s. Tamesis
+- [Toneis](../entry.html?id=Toneis): L Toneis s. Toteneis
+- [Warham](../entry.html?id=Warham): Warham s. Wær~
+- [Wealisc](../entry.html?id=Wealisc): Wealisc s. Wiel~
+- [Weassexe](../entry.html?id=Weassexe): Weassexe s. Westseaxe
+- [Wessex](../entry.html?id=Wessex): Wessex- , -essia s. Westseaxe
+- [Wet-e-lingastraet](../entry.html?id=Wet-e-lingastraet): Wet(e)lingastræt s. Wætl~
+- [Wilisc](../entry.html?id=Wilisc): Wilisc s. Wiel~
+- [Willame](../entry.html?id=Willame): Willame , William s. Wilhelm
+- [Willelm-us](../entry.html?id=Willelm-us): Willelm(us) s. Wilhelm
+- [Winceaster](../entry.html?id=Winceaster): Winceaster s. Wintanc~
+- [Winton](../entry.html?id=Winton): L Winton- s. Wintanceaster
+- [Yne](../entry.html?id=Yne): Yne s. Ine
+- [Ysaac](../entry.html?id=Ysaac): Ysaac, Ysaia s. Isa~
+- [a](../entry.html?id=a): ā geschrieben aa s. d.
+- [aa](../entry.html?id=aa): aa für ā s. a, að, ladrinc, nam, ta.
+- [abeie](../entry.html?id=abeie): F abeie s. abb~
+- [abere](../entry.html?id=abere): abere s. æbære
+- [abicgan](../entry.html?id=abicgan): abicgan s. abyc~
+- [abilgd](../entry.html?id=abilgd): abilgð s. æbylgð
+- [abutan](../entry.html?id=abutan): abutan s. onbuton
+- [abyrige](../entry.html?id=abyrige): abyrige s. onbyrigan
+- [acenned](../entry.html?id=acenned): acenned s. anc~
+- [acer](../entry.html?id=acer): acer s. æcer
+- [acra](../entry.html?id=acra): L acra s. æcer
+- [acsian](../entry.html?id=acsian): acsian s. ascian
+- [acwaeint](../entry.html?id=acwaeint): acwæint s. acwencan
+- [acwyle](../entry.html?id=acwyle): acwyle s. acwelan
+- [ad-opus](../entry.html?id=ad-opus): L ad opus s. opus
+- [adaer](../entry.html?id=adaer): aðær s. awðer
+- [ae-2](../entry.html?id=ae-2): L ae ersetzt durch e s. d.
+- [ae-faest](../entry.html?id=ae-faest): [æ]fæst s. æwf~
+- [aebbe](../entry.html?id=aebbe): æbbe s. habban
+- [aebesne](../entry.html?id=aebesne): æbesne , æbreca s. æfe~, æwb~
+- [aecs](../entry.html?id=aecs): æcs s. æx
+- [aecton](../entry.html?id=aecton): æcton s. iecan
+- [aedeava](../entry.html?id=aedeava): ædeava s. ætiewan
+- [aedelu](../entry.html?id=aedelu): [æðelu] s. eðles
+- [aeder](../entry.html?id=aeder): æðer s. ægðer
+- [aeft](../entry.html?id=aeft): æft s. eft
+- [aefterra](../entry.html?id=aefterra): æfterra s. æfter n. B
+- [ael](../entry.html?id=ael): æl s. awel
+- [aelcor](../entry.html?id=aelcor): ælcor s. elcor
+- [aeltheodig](../entry.html?id=aeltheodig): ælþeodig s. el~
+- [aerest](../entry.html?id=aerest): ærest , ærost, ærra s. ær
+- [aerfe](../entry.html?id=aerfe): ærfe s. ierfe
+- [aerwyrd](../entry.html?id=aerwyrd): ærwyrð s. arwyrðe
+- [aesc](../entry.html?id=aesc): æsc s. æx
+- [aeten](../entry.html?id=aeten): æten s. etan
+- [aettan](../entry.html?id=aettan): ættan s. etan
+- [aew](../entry.html?id=aew): æw(-) s. æ(-)
+- [afangen](../entry.html?id=afangen): afangen s. onfon
+- [afier](../entry.html?id=afier): F afier- s. aferir
+- [afind](../entry.html?id=afind): afind- s. onfindan
+- [afre](../entry.html?id=afre): afre s. æfre
+- [aft](../entry.html?id=aft): aft- s. æfter-
+- [afyll](../entry.html?id=afyll): afyll- s. afiellan
+- [agev](../entry.html?id=agev): agev- s. agiefan
+- [aghon](../entry.html?id=aghon): aghon s. agan
+- [aghwaer](../entry.html?id=aghwaer): aghwær s. ahw~
+- [agilt](../entry.html?id=agilt): agilt- s. agyltan
+- [aginnan](../entry.html?id=aginnan): aginnan s. ong~
+- [agolden](../entry.html?id=agolden): agolden s. agieldan
+- [agsode](../entry.html?id=agsode): agsode s. ascian.
+- [agte](../entry.html?id=agte): agte s. agan
+- [agwait](../entry.html?id=agwait): F agwait s. await
+- [agyf](../entry.html?id=agyf): agyf- s. agiefan
+- [agyld](../entry.html?id=agyld): agyld- s. agieldan
+- [agynnan](../entry.html?id=agynnan): agynnan s. onginnan
+- [agyten](../entry.html?id=agyten): agyten s. agiten
+- [agyv](../entry.html?id=agyv): agyv- s. agiefan
+- [ahsian](../entry.html?id=ahsian): [-ahsian] s. geascian
+- [aht](../entry.html?id=aht): aht s. awiht
+- [ahte](../entry.html?id=ahte): ahte s. agan
+- [ahwaeder](../entry.html?id=ahwaeder): [ahwæðer] s. awðer
+- [ahylde](../entry.html?id=ahylde): ahylde s. ahieldan
+- [ai-e-t](../entry.html?id=ai-e-t): F ai(e)t s. aveir
+- [ain-2](../entry.html?id=ain-2): F -ain für -an s. mannbot; ersetzt durch en s. d.
+- [ain](../entry.html?id=ain): -ain für -egn s. þegn
+- [ainsi](../entry.html?id=ainsi): F [ainsi] s. issi
+- [al-2](../entry.html?id=al-2): al- s. eal-
+- [al](../entry.html?id=al): F al s. a, li
+- [alaene](../entry.html?id=alaene): alæne s. onlænan
+- [alc](../entry.html?id=alc): alc s. ælc
+- [ald](../entry.html?id=ald): ald(-) s. eald-
+- [ale](../entry.html?id=ale): ale s. awul
+- [alef](../entry.html?id=alef): alef s. aliefan
+- [aleier](../entry.html?id=aleier): F aleier s. alaier
+- [allmaehtig](../entry.html?id=allmaehtig): allmæhtig s. ælmih~
+- [alquens](../entry.html?id=alquens): F alquens s. alcun
+- [alt](../entry.html?id=alt): F alt s. aler
+- [amb](../entry.html?id=amb): amb s. am
+- [an-5](../entry.html?id=an-5): an- für and- : s. andbyrdnes, andsæc, andswarian, andweard
+- [an-6](../entry.html?id=an-6): ān- ersetzt durch and s. d.
+- [an](../entry.html?id=an): an I ) s. unnan II ) s. on
+- [anbyrdnes](../entry.html?id=anbyrdnes): anbyrdnes s. andbyrdnes
+- [andfeald](../entry.html?id=andfeald): andfeald s. anf~
+- [andyttra](../entry.html?id=andyttra): andyttra s. andettere
+- [ang-ie-ld](../entry.html?id=ang-ie-ld): ang[ie]ld s. angyld
+- [anig](../entry.html?id=anig): anig s. ænig
+- [ann](../entry.html?id=ann): ann s. unnan
+- [anweard](../entry.html?id=anweard): anweard s. andweard
+- [apref](../entry.html?id=apref): F apref s. aprof
+- [ar-ost](../entry.html?id=ar-ost): ar(ost) s. ær
+- [ard](../entry.html?id=ard): arð s. eom
+- [are](../entry.html?id=are): are I ) fm dt , einer s. an II ) s. ar
+- [ariere](../entry.html?id=ariere): F ariere s. arere
+- [as](../entry.html?id=as): F as s. a, li
+- [ascient](../entry.html?id=ascient): F ascient s. acient
+- [asoden](../entry.html?id=asoden): asoden s. aseoðan
+- [assailir](../entry.html?id=assailir): F assailir s. asa~
+- [assaltus](../entry.html?id=assaltus): L assaltus s. assul~
+- [at](../entry.html?id=at): at s. æt
+- [athemen](../entry.html?id=athemen): athemen s. æhteman, eahta
+- [atint](../entry.html?id=atint): F atint s. ateindre
+- [aucuns](../entry.html?id=aucuns): F aucuns s. alcun
+- [auht](../entry.html?id=auht): auht s. awuht
+- [aut](../entry.html?id=aut): F aut s. aler
+- [autre](../entry.html?id=autre): F autre s. altre
+- [avariare](../entry.html?id=avariare): L avariare s. aferian
+- [avec](../entry.html?id=avec): F avec s. ovoc
+- [averian](../entry.html?id=averian): averian ( lat. ~iare ) s. afe~
+- [aweg](../entry.html?id=aweg): aweg s. onweg
+- [awel](../entry.html?id=awel): awel s. awul
+- [awiht](../entry.html?id=awiht): awiht s. awuht
+- [awoeht](../entry.html?id=awoeht): awoeht- s. aweccan
+- [axian](../entry.html?id=axian): axian s. ascian
+- [baendan](../entry.html?id=baendan): bændan s. ben~
+- [baerstan](../entry.html?id=baerstan): bærstan s. ber~
+- [baerwan](../entry.html?id=baerwan): bærwan s. bearwe
+- [baetan](../entry.html?id=baetan): bætan s. bet~
+- [bann](../entry.html?id=bann): [-bann] s. geb~
+- [barnet](../entry.html?id=barnet): barnet s. bærnet
+- [bead](../entry.html?id=bead): bead s. beodan
+- [bebyred](../entry.html?id=bebyred): bebyreð s. beberan
+- [bedellus](../entry.html?id=bedellus): L bedellus s. bydel
+- [befangen](../entry.html?id=befangen): befangen, befehð s. befon
+- [begeate](../entry.html?id=begeate): begeate s. begietan
+- [behedian](../entry.html?id=behedian): behedian s. behætian
+- [behlidan](../entry.html?id=behlidan): [behlidan] s. belidens
+- [belamp](../entry.html?id=belamp): belamp s. belimpan
+- [belympan](../entry.html?id=belympan): belympan s. belim~
+- [bendform](../entry.html?id=bendform): bendform s. benfeorm
+- [benyrd](../entry.html?id=benyrd): benyrð s. benierð
+- [beodad](../entry.html?id=beodad): beodað s. biddan 3
+- [beot](../entry.html?id=beot): beot s. beodan
+- [ber-i-ga](../entry.html?id=ber-i-ga): ber(i)ga s. byrga
+- [beraeccean](../entry.html?id=beraeccean): beræccean s. berec~
+- [bernet](../entry.html?id=bernet): bernet, berning s. bær~
+- [beseon](../entry.html?id=beseon): beseon s. bisii
+- [besoin-g](../entry.html?id=besoin-g): F besoin(g) s. busun
+- [best](../entry.html?id=best): best(-) s. betera
+- [beswic](../entry.html?id=beswic): beswic s. biswic
+- [bet](../entry.html?id=bet): bet , adv , s. betera
+- [bete](../entry.html?id=bete): [-bete] s. twib~
+- [bethearf](../entry.html?id=bethearf): beþearf s. beþurfan
+- [betigen](../entry.html?id=betigen): betigen s. beteon
+- [betinan](../entry.html?id=betinan): betinan s. betynan
+- [betogen](../entry.html?id=betogen): betogen s. beteon
+- [bett](../entry.html?id=bett): bett s. betera
+- [betwygen](../entry.html?id=betwygen): betwygen , betygen, betyhð s. beteon
+- [betwynan](../entry.html?id=betwynan): betwynan s. betweonan
+- [bewepn-i-an](../entry.html?id=bewepn-i-an): bewepn(i)an s. bewæp~
+- [bewerdian](../entry.html?id=bewerdian): bewerdian s. bewear~
+- [bewyddod](../entry.html?id=bewyddod): bewyddod s. bewed~
+- [bi](../entry.html?id=bi): bi(-) s. be(-)
+- [bicgan](../entry.html?id=bicgan): bicgan s. byc~
+- [bid](../entry.html?id=bid): bið s. beon
+- [bige](../entry.html?id=bige): bige s. byge
+- [bigswic](../entry.html?id=bigswic): bigswic s. biswic
+- [bindelle](../entry.html?id=bindelle): bindelle s. byn~
+- [bion](../entry.html?id=bion): bion s. beon
+- [bir-i-g](../entry.html?id=bir-i-g): bir(i)g(-) s. burg, byrg(-)
+- [birne](../entry.html?id=birne): birne s. byrne
+- [bisen](../entry.html?id=bisen): bisen s. bysen
+- [bist](../entry.html?id=bist): bist s. beon
+- [blauhornum](../entry.html?id=blauhornum): blauhornum s. blowhorn, blæsh-
+- [bof](../entry.html?id=bof): F bof s. buf
+- [bohte](../entry.html?id=bohte): bohte s. bycgan
+- [borchbrege](../entry.html?id=borchbrege): borchbrege s. borgbryce
+- [boren](../entry.html?id=boren): boren s. beran
+- [borh](../entry.html?id=borh): borh(-) s. borg-
+- [bos](../entry.html?id=bos): F bos s. buf
+- [bre-g-d](../entry.html?id=bre-g-d): bre(g)d s. brægd
+- [brebis](../entry.html?id=brebis): F brebis s. berbiz
+- [brec-h-e](../entry.html?id=brec-h-e): [-brec(h)e] s. bryce
+- [bredguma](../entry.html?id=bredguma): bredguma s. bryd~
+- [bric-h-e](../entry.html?id=bric-h-e): [-bric(h)e] s. bryce
+- [brigguma](../entry.html?id=brigguma): brigguma s. brydguma
+- [brocen](../entry.html?id=brocen): brocen s. brecan
+- [brot](../entry.html?id=brot): [-brot] s. corngebrot
+- [brudgume](../entry.html?id=brudgume): brudgume s. brydguma
+- [brugbota](../entry.html?id=brugbota): brugbota s. brycgbot
+- [bry-g-de-2](../entry.html?id=bry-g-de-2): II ) s. brægd
+- [bryht](../entry.html?id=bryht): [-bryht] für beorht s. Æðelbeorht
+- [bryngan](../entry.html?id=bryngan): bryngan s. bring~
+- [bs](../entry.html?id=bs): -bs für -ps s. geclips
+- [budon](../entry.html?id=budon): budon s. beodan
+- [bugge](../entry.html?id=bugge): bugge s. bycgan
+- [bunda](../entry.html?id=bunda): bunda s. bonda
+- [bur-g-mot](../entry.html?id=bur-g-mot): bur[g]mot s. burggemot
+- [burc](../entry.html?id=burc): F burc s. burg
+- [burch](../entry.html?id=burch): burch- s. burg-
+- [burd](../entry.html?id=burd): [-burd] s. -byrd
+- [burgemot](../entry.html?id=burgemot): burgemot s. burggemot
+- [burgesmotus](../entry.html?id=burgesmotus): L burgesmotus s. burggemot
+- [burste](../entry.html?id=burste): burste s. berstan
+- [bute-n](../entry.html?id=bute-n): bute(n) s. buton
+- [by](../entry.html?id=by): by s. be
+- [byl-i-g](../entry.html?id=byl-i-g): [-byl(i)g] s. æbylgð
+- [byon](../entry.html?id=byon): byon s. beon
+- [byrd-3](../entry.html?id=byrd-3): [-byrd-] s. geandbyrdan, endebyrdnes
+- [byrd](../entry.html?id=byrd): byrð s. beran
+- [byrden](../entry.html?id=byrden): byrden s. byrðen
+- [byrele](../entry.html?id=byrele): byrele s. bir~
+- [byrht](../entry.html?id=byrht): -byrht s. -beorht
+- [byrne-2](../entry.html?id=byrne-2): II ) byrne s. bryne
+- [byrse](../entry.html?id=byrse): byrse s. byres
+- [byrst](../entry.html?id=byrst): byrst s. berstan
+- [bysmer](../entry.html?id=bysmer): bysmer s. bismer
+- [byst](../entry.html?id=byst): byst s. beon
+- [bysting](../entry.html?id=bysting): bysting s. biesting
+- [c-3](../entry.html?id=c-3): F c ersetzt durch s, ss, z: s. d.
+- [c-4](../entry.html?id=c-4): c , geschrieben k: s. d.
+- [c-w-om](../entry.html?id=c-w-om): c(w)om s. cuman.
+- [caennan](../entry.html?id=caennan): cænnan s. cennan
+- [caercern](../entry.html?id=caercern): cærcern s. car~
+- [camus](../entry.html?id=camus): L camus s. cha~
+- [can](../entry.html?id=can): can s. cunnan
+- [captale](../entry.html?id=captale): L captale s. capitale
+- [carisma](../entry.html?id=carisma): L carisma s. chrisma
+- [carta](../entry.html?id=carta): L carta s. charta
+- [ccg](../entry.html?id=ccg): -ccg für cg: s. bycgan, secgan
+- [cch](../entry.html?id=cch): -cch für cc: s. wiccecræft
+- [ce](../entry.html?id=ce): F ce s. ceo
+- [ceafes](../entry.html?id=ceafes): ceafes s. ciefes
+- [ceals](../entry.html?id=ceals): F ceals s. cel
+- [ceaping](../entry.html?id=ceaping): ceaping s. ceapung
+- [cefes](../entry.html?id=cefes): cefes s. ciefes
+- [cel-u-i](../entry.html?id=cel-u-i): F cel(u)i s. cel
+- [ceorlaes](../entry.html?id=ceorlaes): ceorlæs s. ceorlleas
+- [ceorlisc](../entry.html?id=ceorlisc): ceorlisc s. cierlisc
+- [cep](../entry.html?id=cep): cep(-) s. ceap(-)
+- [cer](../entry.html?id=cer): cer(-) s. cierr(-)
+- [ces](../entry.html?id=ces): F ces, cez s. cest
+- [cese](../entry.html?id=cese): cese s. ciese
+- [ch](../entry.html?id=ch): L ch ersetzt durch c, hh, s: s. d.
+- [cha-s-cur](../entry.html?id=cha-s-cur): F cha(s)cur s. chaceur
+- [chap](../entry.html?id=chap): chap(-) s. ceap(-)
+- [chascun](../entry.html?id=chascun): F chascun s. ca~
+- [checun](../entry.html?id=checun): checun s. cascun
+- [cheorl](../entry.html?id=cheorl): cheorl(-) s. ceorl(-)
+- [chep](../entry.html?id=chep): chep(-) s. ceap(-)
+- [cherc](../entry.html?id=cherc): cherc- s. ciric-
+- [chesc](../entry.html?id=chesc): F chesc(-) s. cascun
+- [chier](../entry.html?id=chier): F chier s. cher
+- [chiminus](../entry.html?id=chiminus): L chiminus s. chem~
+- [chirchschot](../entry.html?id=chirchschot): chirchschot s. ciricscot
+- [chival](../entry.html?id=chival): F chival s. cheval
+- [cho](../entry.html?id=cho): F cho s. ceo
+- [chs](../entry.html?id=chs): -chs für -sc: s. geascian
+- [cil](../entry.html?id=cil): F cil s. cel
+- [cine](../entry.html?id=cine): cine(-), cin(in)g s. cyn(-)
+- [ciorl](../entry.html?id=ciorl): ciorl(-) s. ceorl(-)
+- [ciping](../entry.html?id=ciping): ciping s. ciep~
+- [cirl](../entry.html?id=cirl): cirl(-) s. ceorl, cierl-
+- [cirr](../entry.html?id=cirr): cirr- s. cierr-
+- [cist](../entry.html?id=cist): F cist s. cest
+- [clamis](../entry.html?id=clamis): L clamis s. chlamys
+- [clips](../entry.html?id=clips): [-clips] s. gec~
+- [cliroc](../entry.html?id=cliroc): cliroc s. cleroc
+- [clyp](../entry.html?id=clyp): clyp- s. clipian
+- [cnaeht](../entry.html?id=cnaeht): cnæht- , cnaiht-, cneht- s. cniht
+- [co](../entry.html?id=co): F ço s. ceo
+- [coinistre](../entry.html?id=coinistre): F coinistre s. conustre
+- [colobicus](../entry.html?id=colobicus): L [colobicus] s. collificum
+- [com-e](../entry.html?id=com-e): F com(e) s. cum
+- [comenta](../entry.html?id=comenta): L comenta s. commenta
+- [commander](../entry.html?id=commander): F commander s. coma~
+- [comme](../entry.html?id=comme): F comme s. cum
+- [commitatus](../entry.html?id=commitatus): L commitatus s. comi~
+- [con](../entry.html?id=con): L con- s. com-
+- [conciliatio](../entry.html?id=conciliatio): L conciliatio s. consi~
+- [conoissant](../entry.html?id=conoissant): F conoissant s. cunui~
+- [conquest](../entry.html?id=conquest): F conquest s. cun~
+- [conseil](../entry.html?id=conseil): F conseil s. cun~
+- [coo](../entry.html?id=coo): F coo s. ceo
+- [cop](../entry.html?id=cop): [-cop] s. lahcop, landcop
+- [coroune](../entry.html?id=coroune): F coroune s. cur-
+- [corros](../entry.html?id=corros): F corros s. curruz
+- [cosin](../entry.html?id=cosin): F cosin s. cusin
+- [costume](../entry.html?id=costume): F costume s. cus~
+- [coun](../entry.html?id=coun): coun- s. cun-
+- [coupe](../entry.html?id=coupe): F coupe- s. colpe
+- [crapinum](../entry.html?id=crapinum): L crapinum s. crodinum
+- [creaft](../entry.html?id=creaft): creaft s. cræft
+- [crismarium](../entry.html?id=crismarium): L crismarium s. chr~
+- [cropp](../entry.html?id=cropp): [-cropp] s. hreacc~
+- [ct](../entry.html?id=ct): -ct für -ht: s. Eorcanberht, niht, scieldwyrhta, sehtan(?)
+- [cucu](../entry.html?id=cucu): cucu s. cwucu
+- [cude](../entry.html?id=cude): cuðe s. cunnan
+- [cuer](../entry.html?id=cuer): F cuer s. quor
+- [cuille](../entry.html?id=cuille): F cuille s. coille
+- [cwaed-an](../entry.html?id=cwaed-an): cwæð(an) s. cweðan
+- [cwaele](../entry.html?id=cwaele): cwæle s. cwellan
+- [cwed-raeden](../entry.html?id=cwed-raeden): [-cwed(ræden)] s. gecwydræddene
+- [cweme](../entry.html?id=cweme): [-cweme] , ~elice, ~mnes s. gec~
+- [cwicu](../entry.html?id=cwicu): cwicu s. cwucu
+- [cwide-2](../entry.html?id=cwide-2): cwiðe s. cwide.
+- [cwiden](../entry.html?id=cwiden): cwiden s. cweðan
+- [cwyd](../entry.html?id=cwyd): cwyð s. cweðan
+- [cwylmede](../entry.html?id=cwylmede): cwylmede s. cwielman
+- [cwyne](../entry.html?id=cwyne): cwyne s. cwene.
+- [cyd](../entry.html?id=cyd): cyð s. cyððo
+- [cyg](../entry.html?id=cyg): cyg s. ciegan
+- [cyme](../entry.html?id=cyme): [-cyme] s. toc~, ymbc~
+- [cyre](../entry.html?id=cyre): I ) cyre s. cierr
+- [d-2](../entry.html?id=d-2): L d für t: s. caput, detrimendum
+- [d-4](../entry.html?id=d-4): d' s. dener
+- [daed-2](../entry.html?id=daed-2): II ) dæd , adj , s. dead
+- [daeman](../entry.html?id=daeman): dæman s. deman
+- [daet](../entry.html?id=daet): dæt- s. dæd-
+- [dal-land](../entry.html?id=dal-land): [-dal(land)] s. ged~
+- [deacon](../entry.html?id=deacon): deacon s. diacon
+- [deap](../entry.html?id=deap): deap s. deop
+- [ded-2](../entry.html?id=ded-2): ded- s. dæd
+- [ded](../entry.html?id=ded): deð s. don sg 3
+- [deed](../entry.html?id=deed): deed s. dæd
+- [degle](../entry.html?id=degle): degle s. diegle
+- [dehter](../entry.html?id=dehter): dehter s. dohtor
+- [deivent](../entry.html?id=deivent): F deivent s. deveir
+- [demeine](../entry.html?id=demeine): F demeine s. demaine
+- [deod](../entry.html?id=deod): deoð- s. deað
+- [deorne](../entry.html?id=deorne): deorne s. dierne
+- [desimes](../entry.html?id=desimes): F desimes s. dire
+- [deust](../entry.html?id=deust): F deust s. deveir
+- [dient](../entry.html?id=dient): F dient s. dire
+- [diffrodiet](../entry.html?id=diffrodiet): L diffrodiet s. exfrediare
+- [diobul](../entry.html?id=diobul): diobul, dioful, diovl s. deofol
+- [discolus](../entry.html?id=discolus): L discolus s. dys~.
+- [dit](../entry.html?id=dit): F dit I ) für deit s. deveir 3 II ) s. dire
+- [divol](../entry.html?id=divol): divol- s. deofol-
+- [dixas](../entry.html?id=dixas): dixas s. disc
+- [doeme](../entry.html?id=doeme): doeme s. dema
+- [doest](../entry.html?id=doest): doest s. don
+- [dolor](../entry.html?id=dolor): F dolor s. dulur
+- [dorst](../entry.html?id=dorst): dorst- s. dearr ptt
+- [dourad](../entry.html?id=dourad): F dourad s. duner
+- [doust](../entry.html?id=doust): F doust s. deveir
+- [dri-g-hten](../entry.html?id=dri-g-hten): dri(g)hten s. dryh~.
+- [drim](../entry.html?id=drim): drim s. þrie
+- [drincelean](../entry.html?id=drincelean): drincelean s. dryn~
+- [drivan](../entry.html?id=drivan): drivan s. drifan
+- [droit](../entry.html?id=droit): F droit s. dreit
+- [dryslic](../entry.html?id=dryslic): [dryslic] s. ond~
+- [drywa](../entry.html?id=drywa): drywa s. þriwa
+- [duins](../entry.html?id=duins): F duins- s. duner
+- [dung](../entry.html?id=dung): dung- s. dynge
+- [dur-r-a-d](../entry.html?id=dur-r-a-d): F dur(r)a(d) s. duner
+- [durre](../entry.html?id=durre): durre , durst s. dearr
+- [dypan](../entry.html?id=dypan): dypan s. diepan
+- [dyrre](../entry.html?id=dyrre): dyrre s. dearr
+- [e-2](../entry.html?id=e-2): F e s. et
+- [e-ncore](../entry.html?id=e-ncore): F [e]ncore s. unc~
+- [ea-2](../entry.html?id=ea-2): F ea- für e [ aus ai] s. aveir
+- [eacan](../entry.html?id=eacan): eacan s. iecan
+- [eal](../entry.html?id=eal): eal- s. æl-
+- [eald-2](../entry.html?id=eald-2): eald- s. healdan
+- [eale](../entry.html?id=eale): eale s. awul.
+- [ealf](../entry.html?id=ealf): ealf- s. healf-
+- [eam](../entry.html?id=eam): eam s. eom
+- [earde](../entry.html?id=earde): earðe s. eorðe.
+- [easc](../entry.html?id=easc): easc s. æx
+- [eawfaest](../entry.html?id=eawfaest): eawfæst s. æf~
+- [ebaera](../entry.html?id=ebaera): ebæra s. æbære
+- [ecan](../entry.html?id=ecan): ecan s. iecan
+- [ecton](../entry.html?id=ecton): ecton s. iecan, ptt pl 3
+- [edel](../entry.html?id=edel): eðel s. æðel, eðles
+- [eder](../entry.html?id=eder): eder- s. edor
+- [edgelde](../entry.html?id=edgelde): eðgelde s. ægilde
+- [edlean](../entry.html?id=edlean): edlean s. end~
+- [efter](../entry.html?id=efter): efter s. æfter
+- [egal](../entry.html?id=egal): F [egal] s. uwel
+- [ege-2](../entry.html?id=ege-2): ege s. eage.
+- [egelde](../entry.html?id=egelde): egelde, egilde s. ægilde
+- [eglise](../entry.html?id=eglise): F eglise s. iglise
+- [egn](../entry.html?id=egn): -egn; dafür : -ein, -en, -ain, -an [ s. þegn
+- [eht](../entry.html?id=eht): eht(-) s. æht(-)
+- [einz](../entry.html?id=einz): F einz s. ainz
+- [eit](../entry.html?id=eit): F eit s. aveir
+- [eiward](../entry.html?id=eiward): eiward s. hægweard
+- [elboga](../entry.html?id=elboga): elboga s. elnb~
+- [elderman](../entry.html?id=elderman): elderman, eldra s. ealdorman, eald
+- [ele-s](../entry.html?id=ele-s): F ele(s) s. il
+- [eled](../entry.html?id=eled): eleð s. egleð
+- [elmboga](../entry.html?id=elmboga): elmboga s. elnboga.
+- [els](../entry.html?id=els): F els s. le, lui
+- [emcristen](../entry.html?id=emcristen): emcristen s. efenc~
+- [ende](../entry.html?id=ende): I ) ende und s. and
+- [energumenus](../entry.html?id=energumenus): L [energumenus] s. inerguminare
+- [enfuir](../entry.html?id=enfuir): F enfuir aus ent+fuir s. d.
+- [enig](../entry.html?id=enig): enig s. ænig
+- [enplaider](../entry.html?id=enplaider): F enplaider s. emp~
+- [enz](../entry.html?id=enz): F enz s. ainz
+- [eode](../entry.html?id=eode): eode s. gan
+- [eodor](../entry.html?id=eodor): eodor s. edor
+- [eora](../entry.html?id=eora): eora euer s. eower
+- [eorda](../entry.html?id=eorda): eorda s. eard
+- [eorre](../entry.html?id=eorre): eorre s. ierre
+- [eow](../entry.html?id=eow): I ) eow s. ewe
+- [erere](../entry.html?id=erere): erere s. ar~
+- [erfe](../entry.html?id=erfe): erfe s. ie~
+- [ert](../entry.html?id=ert): F ert, erunt s. estre
+- [esc-h-ot](../entry.html?id=esc-h-ot): F esc(h)ot s. scot
+- [escondire](../entry.html?id=escondire): F escondire s. escun~
+- [essoinus](../entry.html?id=essoinus): L essoinus s. soinus
+- [este-d](../entry.html?id=este-d): F este(d) s. estre
+- [estuper](../entry.html?id=estuper): F [estuper] s. extopare
+- [et-3](../entry.html?id=et-3): et s. æt
+- [etheman](../entry.html?id=etheman): etheman s. æhte~.
+- [eus](../entry.html?id=eus): F eus s. il
+- [ew-e-bryce](../entry.html?id=ew-e-bryce): ew(e)bryce , ~breca s. æw~
+- [f-ae-cne](../entry.html?id=f-ae-cne): f[æ]cne s. fac~
+- [f-ie-rmd](../entry.html?id=f-ie-rmd): f[ie]rmð s. fyrmð
+- [fa-l-s](../entry.html?id=fa-l-s): F fa[l]s s. faus
+- [fa](../entry.html?id=fa): [-fa] s. gefa
+- [face-nt](../entry.html?id=face-nt): F face ( nt ) s. faire
+- [fagman](../entry.html?id=fagman): fagman s. fahmon
+- [famme](../entry.html?id=famme): F famme s. femme
+- [fanc](../entry.html?id=fanc): fanc s. facn
+- [fang](../entry.html?id=fang): [-fang] s. feaxf~, feohf~, foref~, healsf~
+- [fare](../entry.html?id=fare): fare s. fære, fōr
+- [fasterman](../entry.html?id=fasterman): fasterman s. fest~
+- [faudrat](../entry.html?id=faudrat): F faudrat s. failir
+- [fe-i-ble](../entry.html?id=fe-i-ble): F fe[i]ble s. febles
+- [feala](../entry.html?id=feala): feala s. fela
+- [feald-2](../entry.html?id=feald-2): [-feald] s. anf~, manigf~, siexf~, twelff~, twif~, þrif~
+- [feald](../entry.html?id=feald): feald s. feld
+- [fearlic](../entry.html?id=fearlic): fearlic s. færlic
+- [fearm](../entry.html?id=fearm): fearm (-) s. feorm(-).
+- [fearr](../entry.html?id=fearr): fearr s. feorr
+- [fech](../entry.html?id=fech): fech s. feoh
+- [feire](../entry.html?id=feire): F feire , feisse, feit(e) s. faire
+- [feng](../entry.html?id=feng): [-feng] s. ætf~, andf~, foref~, onf~
+- [feodum](../entry.html?id=feodum): L feodum s. feudum
+- [feoht](../entry.html?id=feoht): [-feoht] s. flettgef~, gef~, infiht
+- [feola](../entry.html?id=feola): feola s. fela.
+- [feond](../entry.html?id=feond): feond s. fiond
+- [feortig](../entry.html?id=feortig): feortig s. feowertig
+- [feowerde](../entry.html?id=feowerde): feowerðe s. feorða
+- [fera](../entry.html?id=fera): [-fera] s. gef~; geferræden
+- [ferd](../entry.html?id=ferd): ferd (-) s. fierd(-)
+- [ferdingus](../entry.html?id=ferdingus): L ferdingus s. feorðing
+- [fere](../entry.html?id=fere): F fere s. faire
+- [ferm](../entry.html?id=ferm): ferm (-) s. feormian
+- [fes](../entry.html?id=fes): F fes s. feiz
+- [festan](../entry.html?id=festan): festan , ~ten s. fæst-
+- [fet-2](../entry.html?id=fet-2): F fet s. faire
+- [fet](../entry.html?id=fet): fet s. fot
+- [fewer](../entry.html?id=fewer): fewer s. feower
+- [fexh](../entry.html?id=fexh): fexh s. feax
+- [fi-ll-e](../entry.html?id=fi-ll-e): F fi[ll]e s. file
+- [fi](../entry.html?id=fi): F fi s. fiu
+- [fiee](../entry.html?id=fiee): F fiee s. fieðe
+- [fierran](../entry.html?id=fierran): [-fierran, -fiersian] s. af~, fyrsie
+- [fieu](../entry.html?id=fieu): F fieu s. fiu
+- [filigan](../entry.html?id=filigan): filigan s. fylgean
+- [filst-an](../entry.html?id=filst-an): filst(an) s. fyl~
+- [fio-h](../entry.html?id=fio-h): fio(h) s. feoh
+- [fiorh](../entry.html?id=fiorh): fiorh s. feorh
+- [fir](../entry.html?id=fir): fir s. fyr
+- [firht](../entry.html?id=firht): firht s. freht
+- [fist](../entry.html?id=fist): F fist s. faire
+- [flaem](../entry.html?id=flaem): flæm s. fleam
+- [flais](../entry.html?id=flais): flais- s. flesmangeres
+- [flean](../entry.html?id=flean): flean s. fleon
+- [flem](../entry.html?id=flem): flem (-) s. fliem-
+- [fleos](../entry.html?id=fleos): fleos , fles s. flies
+- [flihd](../entry.html?id=flihd): flihð s. fleon
+- [flys](../entry.html?id=flys): flys s. flies
+- [fodrum](../entry.html?id=fodrum): L fodrum s. foðor
+- [fois](../entry.html?id=fois): F fois , ~z s. feiz
+- [folcmot](../entry.html?id=folcmot): folcmot s. folcgemot
+- [foot](../entry.html?id=foot): foot s. fot
+- [for-e-spreca](../entry.html?id=for-e-spreca): for[e]spreca s. forspreca
+- [fora](../entry.html?id=fora): fora s. foran
+- [forad-2](../entry.html?id=forad-2): forað s. foreað
+- [forad](../entry.html?id=forad): forad s. forod
+- [fordor](../entry.html?id=fordor): forðor s. furðor
+- [fore-3](../entry.html?id=fore-3): C ) fore s. feorh, dt
+- [foreceap](../entry.html?id=foreceap): foreceap s. forc~
+- [fored](../entry.html?id=fored): fored s. forod
+- [forefehd](../entry.html?id=forefehd): forefehð s. forfon
+- [forefeng](../entry.html?id=forefeng): forefeng s. forefang
+- [foreiurare](../entry.html?id=foreiurare): L foreiurare s. forisi~
+- [foresteall](../entry.html?id=foresteall): foresteall s. forsteall
+- [forfang](../entry.html?id=forfang): forfang s. foref~
+- [forfeng](../entry.html?id=forfeng): forfeng s. forefang
+- [forfez](../entry.html?id=forfez): F forfez s. forfait
+- [forisfangium](../entry.html?id=forisfangium): L forisfangium s. forefang
+- [foristeallum](../entry.html?id=foristeallum): L foristeallum s. forsteall
+- [forleger](../entry.html?id=forleger): forleger s. forliger
+- [forne](../entry.html?id=forne): forne s. forene
+- [forspeca](../entry.html?id=forspeca): forspeca , -kan s. forspre~
+- [fortham](../entry.html?id=fortham): forþam denn, weil s. for
+- [forthon](../entry.html?id=forthon): forþon denn, weil s. for
+- [forthythe](../entry.html?id=forthythe): forþyþe s. for
+- [forvaiz](../entry.html?id=forvaiz): F forvaiz s. forfait
+- [forwaernan](../entry.html?id=forwaernan): forwærnan s. forwiernan
+- [forwand](../entry.html?id=forwand): [-forwand-] s. unforwandodlice
+- [forwercan](../entry.html?id=forwercan): forwercan s. forwyrcan
+- [forwyrnan](../entry.html?id=forwyrnan): forwyrnan s. forwiernan
+- [forze](../entry.html?id=forze): F forze s. force
+- [fr-eo-wif](../entry.html?id=fr-eo-wif): fr[eo]wif s. friwif
+- [fra](../entry.html?id=fra): F fra s. faire
+- [fraemde](../entry.html?id=fraemde): fræmde s. fremde
+- [fram](../entry.html?id=fram): fram s. from
+- [frendlesmanne](../entry.html?id=frendlesmanne): frendlesmanne s. freondleasman
+- [freoman](../entry.html?id=freoman): freoman s. freo, frigman
+- [freum](../entry.html?id=freum): freum s. freo
+- [fri-e-nd](../entry.html?id=fri-e-nd): fri(e)nd s. freond
+- [fridborg](../entry.html?id=fridborg): friðborg s. friborg
+- [fries](../entry.html?id=fries): fries , frig- s. freo
+- [frio](../entry.html?id=frio): frio (-) s. freo(-)
+- [froissier](../entry.html?id=froissier): F froissier s. fruisser
+- [fryd](../entry.html?id=fryd): fryð (-) s. frið(-)
+- [frymd](../entry.html?id=frymd): frymð s. fiermð
+- [frynd](../entry.html?id=frynd): frynd s. freond
+- [fuissent](../entry.html?id=fuissent): F fuissent , fuist s. estre
+- [fulhtere](../entry.html?id=fulhtere): fulhtere s. fulluhtere
+- [fullian](../entry.html?id=fullian): fullian s. fulwian
+- [funden](../entry.html?id=funden): funden , -don s. findan
+- [fut](../entry.html?id=fut): F fut s. estre
+- [fuul](../entry.html?id=fuul): fuul s. ful I
+- [fyllan](../entry.html?id=fyllan): fyllan s. fiellan
+- [fyr-2](../entry.html?id=fyr-2): II ) fyr s. feorr
+- [fyrd](../entry.html?id=fyrd): fyrd- s. fierd-
+- [fyrding](../entry.html?id=fyrding): fyrðing s. fierdung
+- [fyrht](../entry.html?id=fyrht): fyrht s. freht
+- [fyrm](../entry.html?id=fyrm): fyrm s. feorm
+- [fyrst](../entry.html?id=fyrst): fyrst s. fierst
+- [g-ea-ngang](../entry.html?id=g-ea-ngang): g[ea]ngang s. gængang
+- [g-et-t-er](../entry.html?id=g-et-t-er): F [g]et[t]er s. jeter
+- [g-i-lda-2](../entry.html?id=g-i-lda-2): II ) s. gafolg~
+- [gablum](../entry.html?id=gablum): L gablum s. gafol I
+- [gaedere](../entry.html?id=gaedere): [-gædere] s. ætg~, tog~
+- [gafol-ie-rd](../entry.html?id=gafol-ie-rd): gafol[ie]rð s. ~lyrð
+- [gaige](../entry.html?id=gaige): F gaige s. wage
+- [gavel](../entry.html?id=gavel): gavel- s. gafol I (-)
+- [ge-spraec](../entry.html?id=ge-spraec): [ge]spræc nt s. spræc
+- [geachs](../entry.html?id=geachs): geachs- s. geascian
+- [geaernian](../entry.html?id=geaernian): geærnian s. geearnian
+- [geafle](../entry.html?id=geafle): geafle s. gafol II
+- [geahsian](../entry.html?id=geahsian): geahsian s. geascian
+- [geald](../entry.html?id=geald): geald s. gieldan
+- [geanbyrdan](../entry.html?id=geanbyrdan): geanbyrdan s. geandbyrdan
+- [geate](../entry.html?id=geate): geate s. geotan
+- [geaxian](../entry.html?id=geaxian): geaxian s. geascian
+- [gebeah](../entry.html?id=gebeah): gebeah s. gebugan
+- [gebidan-2](../entry.html?id=gebidan-2): II ) s. gebiddan
+- [gebihd](../entry.html?id=gebihd): gebihð s. gebugan
+- [gebogen](../entry.html?id=gebogen): gebogen s. gebugan
+- [gebrocen](../entry.html?id=gebrocen): gebrocen s. brecan
+- [gebroht](../entry.html?id=gebroht): gebroht s. gebringan
+- [gebryid](../entry.html?id=gebryid): gebryid s. brygdan
+- [gebydan](../entry.html?id=gebydan): gebydan s. gebidan
+- [gebyred](../entry.html?id=gebyred): gebyreð s. geberan
+- [gebyrgan](../entry.html?id=gebyrgan): gebyrgan s. gebeorgan
+- [gebyt](../entry.html?id=gebyt): gebyt s. gebeodan
+- [gecedan](../entry.html?id=gecedan): geceðan s. gecyðan
+- [gecuron](../entry.html?id=gecuron): gecuron s. geceosan
+- [gecwaeden](../entry.html?id=gecwaeden): gecwæden s. gecweðan
+- [gecwime](../entry.html?id=gecwime): gecwime s. gecweman, op 3
+- [gecygst](../entry.html?id=gecygst): gecygst s. geciegan
+- [gecyrran](../entry.html?id=gecyrran): gecyrran s. gecierran
+- [gedaeled](../entry.html?id=gedaeled): gedæled s. dælan
+- [geded](../entry.html?id=geded): gedeð s. gedon
+- [gedemod](../entry.html?id=gedemod): gedemod s. deman
+- [gederian-2](../entry.html?id=gederian-2): II ) gederian s. gad~
+- [gedes](../entry.html?id=gedes): gedes s. gæd
+- [gedriven](../entry.html?id=gedriven): gedriven s. drifan
+- [gedyde](../entry.html?id=gedyde): gedyde s. gedon
+- [gedylegie](../entry.html?id=gedylegie): gedylegie s. gedil~
+- [gedyrnan](../entry.html?id=gedyrnan): gedyrnan s. gedier~
+- [geehtige](../entry.html?id=geehtige): geehtige s. geeaht~
+- [geeofot](../entry.html?id=geeofot): geeofot s. eofot
+- [gees](../entry.html?id=gees): gees s. gos
+- [gefaere](../entry.html?id=gefaere): gefære s. gefaran
+- [gefan](../entry.html?id=gefan): gefan s. giefan
+- [gefeara](../entry.html?id=gefeara): gefeara s. gefera
+- [gefeost](../entry.html?id=gefeost): gefeost- s. gefæstnian
+- [gefolgylda](../entry.html?id=gefolgylda): gefolgylda s. gafol-
+- [gefore](../entry.html?id=gefore): gefore s. gefaran
+- [gefullod](../entry.html?id=gefullod): gefullod s. fulwian
+- [gegemed](../entry.html?id=gegemed): gegemed s. gieman
+- [gegod](../entry.html?id=gegod): gegoð s. geoguð
+- [gehhol](../entry.html?id=gehhol): gehhol s. geohhol
+- [gehihtan](../entry.html?id=gehihtan): gehihtan s. geiecan
+- [gehuhtan](../entry.html?id=gehuhtan): gehuhtan s. geiecan
+- [gehwyrht](../entry.html?id=gehwyrht): gehwyrht s. gew~
+- [gehyhton](../entry.html?id=gehyhton): gehyhton s. geiecan
+- [gelaege](../entry.html?id=gelaege): gelæge s. gelicgan
+- [gelamp](../entry.html?id=gelamp): gelamp s. gelimpan
+- [geld](../entry.html?id=geld): geld- s. gield-
+- [geleast](../entry.html?id=geleast): geleast s. gelæstan
+- [gelecce](../entry.html?id=gelecce): gelecce s. gelæcce
+- [geleste](../entry.html?id=geleste): geleste s. gelæstan
+- [gelomp](../entry.html?id=gelomp): gelomp s. gelimpan
+- [gelyfan](../entry.html?id=gelyfan): gelyfan s. geliefan
+- [geman](../entry.html?id=geman): geman s. gieman
+- [gemane](../entry.html?id=gemane): gemane s. gemæne
+- [gemeanre](../entry.html?id=gemeanre): gemeanre s. gemæne
+- [gemedrian](../entry.html?id=gemedrian): gemeðrian s. gemæðrian
+- [gemeleas](../entry.html?id=gemeleas): gemeleas s. giem~
+- [gemene](../entry.html?id=gemene): gemene s. gemæne
+- [gemine](../entry.html?id=gemine): gemine s. gemunan
+- [gen-ea-h](../entry.html?id=gen-ea-h): gen[ea]h s. genyhe
+- [genaman](../entry.html?id=genaman): genaman s. gemana
+- [genamod](../entry.html?id=genamod): genamod s. namian
+- [geneoth](../entry.html?id=geneoth): geneoth s. geneat
+- [geowde](../entry.html?id=geowde): geowde s. geeo~
+- [geraefa](../entry.html?id=geraefa): geræfa s. gerefa
+- [geraeps](../entry.html?id=geraeps): geræps s. geresp
+- [gereafa](../entry.html?id=gereafa): gereafa s. gerefa
+- [gereht](../entry.html?id=gereht): gereht s. gereccean
+- [gerimedlic](../entry.html?id=gerimedlic): [-gerimedlic] s. ung~
+- [gers](../entry.html?id=gers): gers- s. gærs-
+- [gesaece](../entry.html?id=gesaece): gesæce s. gesecan
+- [gescift](../entry.html?id=gescift): gescift , gescyft s. sciftan
+- [gesemed](../entry.html?id=gesemed): gesemed s. seman
+- [gesidu](../entry.html?id=gesidu): [-gesidu] s. sulhg~
+- [geslagen](../entry.html?id=geslagen): geslagen s. slean
+- [gesohte](../entry.html?id=gesohte): gesohte s. gesecan
+- [gest](../entry.html?id=gest): gest- s. giest-
+- [gesungen](../entry.html?id=gesungen): gesungen s. gesingan
+- [gesyllan](../entry.html?id=gesyllan): gesyllan s. gesellan
+- [geteallan](../entry.html?id=geteallan): geteallan s. getellan
+- [geteama](../entry.html?id=geteama): geteama s. getiema
+- [getheah](../entry.html?id=getheah): geþeah s. geþeon
+- [gethincdo](../entry.html?id=gethincdo): geþincðo , -ngðo, -nð s. geþyncðo
+- [gethogen](../entry.html?id=gethogen): geþogen s. geþeon
+- [gethuge](../entry.html?id=gethuge): geþuge s. geþeon
+- [gethuht](../entry.html?id=gethuht): geþuht s. þyncan
+- [getigu](../entry.html?id=getigu): [-getigu] s. egeðg~
+- [getingnysse](../entry.html?id=getingnysse): getingnysse s. getyngnes
+- [getrymed](../entry.html?id=getrymed): getrymed s. trymman
+- [geweordod](../entry.html?id=geweordod): geweorðod s. weorðian
+- [gewha](../entry.html?id=gewha): gewha s. gehwa
+- [gewriten](../entry.html?id=gewriten): gewriten s. writan
+- [gewroht](../entry.html?id=gewroht): gewroht s. wyrcan
+- [gewyldan](../entry.html?id=gewyldan): gewyldan s. gewiel~
+- [gewyrdan-2](../entry.html?id=gewyrdan-2): gewyrðan I ) s. geweor~ II ) gewier-
+- [gewyrdan](../entry.html?id=gewyrdan): gewyrdan s. gewier~
+- [geypped](../entry.html?id=geypped): ~ped s. yppan
+- [geyrnan](../entry.html?id=geyrnan): geyrnan s. geier~
+- [giberne](../entry.html?id=giberne): giberne, gibrehtan, gidoen s. gebærnan, gebierhtan, gedon
+- [gielde](../entry.html?id=gielde): [-gielde] s. æg~, endlyfang~, feowerg~, nigong~, org~, siexg~, twelfg~, twig~, þrig~, ung~ [ vgl . twibete, twisceatte]
+- [gifan](../entry.html?id=gifan): gifan s. giefan
+- [gifrie](../entry.html?id=gifrie): gifrie s. gefreogean
+- [gihalden](../entry.html?id=gihalden): gihalden s. gehealdan
+- [giidlage](../entry.html?id=giidlage): giidlage s. geidlian
+- [gild](../entry.html?id=gild): gild- s. gield-
+- [gilef](../entry.html?id=gilef): gilef s. geliefan
+- [gilt](../entry.html?id=gilt): gilt- s. gylt-
+- [gind](../entry.html?id=gind): gind s. geond
+- [giraht](../entry.html?id=giraht): giraht- s. geræcan
+- [gird](../entry.html?id=gird): gird s. gierd
+- [gisene](../entry.html?id=gisene): gisene s. geseon
+- [giu](../entry.html?id=giu): giu s. geo
+- [giude](../entry.html?id=giude): giuðe s. geunnan
+- [givalla](../entry.html?id=givalla): givalla s. geweallan
+- [givunulice](../entry.html?id=givunulice): givunulice s. gewunel~
+- [giwoeria](../entry.html?id=giwoeria): giwoeria s. gewerian
+- [giwuta](../entry.html?id=giwuta): giwuta s. gewita
+- [gn](../entry.html?id=gn): F gn für sn: s. veisined, adregniare
+- [gong](../entry.html?id=gong): gong s. gang
+- [grauntat](../entry.html?id=grauntat): F grauntat s. grantad
+- [grentat](../entry.html?id=grentat): F grentat s. grantad
+- [gressvin](../entry.html?id=gressvin): gressvin s. gærsswin
+- [greve](../entry.html?id=greve): greve s. gerefa, grefe, maregrave
+- [gryd](../entry.html?id=gryd): gryd- s. grið
+- [guld](../entry.html?id=guld): guld- s. gieldan
+- [guma](../entry.html?id=guma): [-guma] s. brydg~
+- [gutfirma](../entry.html?id=gutfirma): L gutfirma s. gytfeorm
+- [gyf-t](../entry.html?id=gyf-t): gyf(t) s. gif(t)
+- [gynd](../entry.html?id=gynd): gynd s. geond
+- [gyng](../entry.html?id=gyng): gyng s. geong
+- [gyrd](../entry.html?id=gyrd): gyrd , gyrn- s. gierd, giern-
+- [gys-i-las](../entry.html?id=gys-i-las): gys(i)las s. gislas
+- [gyt-a](../entry.html?id=gyt-a): gyt(a) s. giet(a)
+- [gyte](../entry.html?id=gyte): [-gyte] s. blodgeote
+- [gywana](../entry.html?id=gywana): gywana s. gew~
+- [ha-in-e](../entry.html?id=ha-in-e): F ha[in]e s. hange
+- [ha](../entry.html?id=ha): ha s. a immer
+- [habbod](../entry.html?id=habbod): habbod s. ab~
+- [haebb](../entry.html?id=haebb): hæbb- , hæf- s. habban
+- [haentan](../entry.html?id=haentan): hæntan s. hen~
+- [haet](../entry.html?id=haet): hæt s. hatan
+- [haf](../entry.html?id=haf): haf- s. habban
+- [hage-n](../entry.html?id=hage-n): hage(n) s. ag~
+- [half](../entry.html?id=half): half- s. healf-
+- [haligrift](../entry.html?id=haligrift): haligrift s. rift
+- [halslit](../entry.html?id=halslit): halslit s. lahslit
+- [hama](../entry.html?id=hama): [-hama] s. lich~
+- [hamed](../entry.html?id=hamed): hamed s. hæmed
+- [hamgrid](../entry.html?id=hamgrid): hamgrið s. handg~
+- [hauberc](../entry.html?id=hauberc): F hauberc s. halb~
+- [headorhund](../entry.html?id=headorhund): headorhund s. heahdeor~
+- [heafde](../entry.html?id=heafde): heafde s. habban
+- [heal-swa](../entry.html?id=heal-swa): heal(swa) s. ea~
+- [hearr](../entry.html?id=hearr): hearr- s. heah
+- [hed-d-er](../entry.html?id=hed-d-er): hed(d)er- s. edor-
+- [heh](../entry.html?id=heh): heh- s. heah-
+- [hehstald](../entry.html?id=hehstald): hehstald s. hagos~
+- [heinfare](../entry.html?id=heinfare): heinfare s. hamf~
+- [heiward](../entry.html?id=heiward): heiward s. hægweard
+- [held](../entry.html?id=held): held- s. hyldo
+- [hele](../entry.html?id=hele): hele s. hole
+- [helf](../entry.html?id=helf): helf- s. healsfang
+- [helles](../entry.html?id=helles): helles s. elles
+- [hemed](../entry.html?id=hemed): hemed s. hæmed
+- [hemfare](../entry.html?id=hemfare): hemfare s. hamf~
+- [henan](../entry.html?id=henan): henan, henon s. heonon
+- [hende](../entry.html?id=hende): [-hende] s. geh~
+- [heo](../entry.html?id=heo): heo s. he
+- [heom](../entry.html?id=heom): heom s. he
+- [heora](../entry.html?id=heora): heora s. he
+- [heorm](../entry.html?id=heorm): heorm s. hearm
+- [heower](../entry.html?id=heower): heower s. eo~
+- [heowum](../entry.html?id=heowum): heowum s. hiwan, dt .
+- [her-2](../entry.html?id=her-2): her- s. hær-
+- [heran](../entry.html?id=heran): heran s. hieran
+- [hergripa](../entry.html?id=hergripa): hergripa s. hær~
+- [herian-2](../entry.html?id=herian-2): II ) herian s. er-
+- [heriate](../entry.html?id=heriate): heriate s. heregeat
+- [herige](../entry.html?id=herige): herige ( dt ) s. here
+- [hersyfe](../entry.html?id=hersyfe): hersyfe s. hær-
+- [hertoh](../entry.html?id=hertoh): hertoh s. heretoga
+- [het](../entry.html?id=het): het- s. hatan, ptt
+- [heved](../entry.html?id=heved): heved s. heafod
+- [hi](../entry.html?id=hi): hi s. he
+- [hidgield](../entry.html?id=hidgield): hidgield s. hyd-
+- [hiera](../entry.html?id=hiera): hiera s. he
+- [hig](../entry.html?id=hig): hig, him s. he
+- [hina](../entry.html?id=hina): hina , gn , s. hiwan
+- [hinde](../entry.html?id=hinde): [-hinde, -dus] s. -hynde
+- [hine-2](../entry.html?id=hine-2): II ) hine, hio, hiom, hiora s. he
+- [hira](../entry.html?id=hira): hira, hire, his, hit s. he
+- [hl-2](../entry.html?id=hl-2): -hl für -lh: s. sulh
+- [hl-e-da](../entry.html?id=hl-e-da): hl[e]da s. hlidan
+- [hleaf](../entry.html?id=hleaf): hleaf s. leaf
+- [hlehhen](../entry.html?id=hlehhen): hlehhen s. hliehhan
+- [hlif](../entry.html?id=hlif): hlif s. lif
+- [hlydan](../entry.html?id=hlydan): hlydan s. hlidan
+- [ho-u-re](../entry.html?id=ho-u-re): F ho(u)re s. hure
+- [ho](../entry.html?id=ho): ho s. hon
+- [hoem](../entry.html?id=hoem): F hoem s. hume
+- [hom-me](../entry.html?id=hom-me): F hom(me) s. hume
+- [homola](../entry.html?id=homola): homola, homsocn s. ham-
+- [hond](../entry.html?id=hond): hond s. hand
+- [hora](../entry.html?id=hora): hora s. ora
+- [hraed](../entry.html?id=hraed): hræd s. ræd
+- [hreafere](../entry.html?id=hreafere): hreafere s. reaf~
+- [hredinge](../entry.html?id=hredinge): hredinge s. hræd~
+- [hryder](../entry.html?id=hryder): hryðer s. hriðer
+- [hryman](../entry.html?id=hryman): hryman s. hrieman
+- [huit](../entry.html?id=huit): F huit s. uit
+- [hulsgonga](../entry.html?id=hulsgonga): hulsgonga s. huslgenga
+- [hunraed](../entry.html?id=hunraed): hunræd , hunteontig s. hund~
+- [hurdefest](../entry.html?id=hurdefest): hurðefest s. heorðfæst
+- [hwader](../entry.html?id=hwader): hwaðer s. hwæðer
+- [hwaeder](../entry.html?id=hwaeder): hwæder s. hwæðer
+- [hwaene](../entry.html?id=hwaene): hwæne s. hwa
+- [hwaenne](../entry.html?id=hwaenne): hwænne s. hwon~
+- [hwaet](../entry.html?id=hwaet): hwæt s. hwa
+- [hwamlice](../entry.html?id=hwamlice): [-hwamlice] s. dægh~
+- [hwar](../entry.html?id=hwar): hwar s. hwær
+- [hwat](../entry.html?id=hwat): hwat s. hwa
+- [hweder](../entry.html?id=hweder): hweðer s. hwæðer
+- [hweig](../entry.html?id=hweig): hweig s. hwæg
+- [hwerfe](../entry.html?id=hwerfe): hwerfe s. hwearfe
+- [hwilc](../entry.html?id=hwilc): hwilc , hwillc s. hwelc
+- [hwyder](../entry.html?id=hwyder): hwyder s. hwider
+- [hwylc](../entry.html?id=hwylc): hwylc s. hwelc
+- [hwyrfe](../entry.html?id=hwyrfe): hwyrfe s. hwear~, hwier~
+- [hy](../entry.html?id=hy): hy s. he
+- [hyde](../entry.html?id=hyde): [-hyde] s. ælh~
+- [hydig](../entry.html?id=hydig): [-hydig] s. oferh~
+- [hyeo](../entry.html?id=hyeo): hyeo s. he, fm
+- [hygd](../entry.html?id=hygd): [-hygd] s. ingeh~
+- [hyhd](../entry.html?id=hyhd): hyhð- s. hiehðo
+- [hylpan](../entry.html?id=hylpan): hylpan s. helpan
+- [hym](../entry.html?id=hym): hym s. he, dt
+- [hynde](../entry.html?id=hynde): [-hynde] s. siexh~, twih~, twelfh~
+- [hyndum](../entry.html?id=hyndum): hyndum für hid- s. d.
+- [hyne](../entry.html?id=hyne): hyne s. he, ac
+- [hyr](../entry.html?id=hyr): hyr s. her
+- [hyra](../entry.html?id=hyra): hyra , hyre ihr s. he
+- [hyrwan](../entry.html?id=hyrwan): hyrwan s. hier~
+- [hys](../entry.html?id=hys): hys s. he, gn
+- [ican](../entry.html?id=ican): ican s. iecan
+- [id-a](../entry.html?id=id-a): id(a) s. hid
+- [ie-d](../entry.html?id=ie-d): [ie]ð s. eaðe
+- [ie](../entry.html?id=ie): F ie ( e ); dafür i: s. dener
+- [iege](../entry.html?id=iege): [-iege] s. ani~, ori~
+- [ieldesta](../entry.html?id=ieldesta): ieldesta , -dra s. eald
+- [igilde](../entry.html?id=igilde): igilde s. ægielde
+- [imot](../entry.html?id=imot): [-imot] s. gemot
+- [inbespyrian](../entry.html?id=inbespyrian): inbespyrian s. besp~
+- [ince](../entry.html?id=ince): ince s. ynce
+- [ineode](../entry.html?id=ineode): ineode s. ingan
+- [inn](../entry.html?id=inn): inn s. in
+- [innian](../entry.html?id=innian): [-innian] s. gei~
+- [inweard](../entry.html?id=inweard): I ) inweard s. innew~
+- [ippingiren](../entry.html?id=ippingiren): ipping iren s. yp~
+- [irefa](../entry.html?id=irefa): irefa s. ger~
+- [iren](../entry.html?id=iren): iren s. isen
+- [irned](../entry.html?id=irned): irneð s. iernan
+- [it](../entry.html?id=it): it für hit: s. he, nt
+- [iu](../entry.html?id=iu): iu s. geo
+- [iusticia](../entry.html?id=iusticia): L iusticia s. iustitia
+- [j-o-ur](../entry.html?id=j-o-ur): F j(o)ur s. jurn
+- [jose](../entry.html?id=jose): F jose s. chose
+- [k-2](../entry.html?id=k-2): F k s. qu
+- [kirch](../entry.html?id=kirch): kirch- s. ciric-
+- [kirk](../entry.html?id=kirk): kirk- s. ciric-
+- [l-um](../entry.html?id=l-um): l'um , l'un s. hume
+- [la-S-Michel](../entry.html?id=la-S-Michel): F la S. Michel s. feste
+- [laad](../entry.html?id=laad): laad- s. lad-
+- [lad-2](../entry.html?id=lad-2): II ) lad s. lað
+- [laede](../entry.html?id=laede): læde s. lad
+- [laef](../entry.html?id=laef): læf s. leaf
+- [laefe](../entry.html?id=laefe): læfe s. liefan
+- [laeg-e](../entry.html?id=laeg-e): læg(e) s. licgan
+- [laegen](../entry.html?id=laegen): [-lægen] s. unl~
+- [laemed](../entry.html?id=laemed): [-læmed] s. gel~
+- [laeng](../entry.html?id=laeng): læng , cpa , s. lang
+- [laengten](../entry.html?id=laengten): længten s. lencten
+- [laer](../entry.html?id=laer): lær s. lar
+- [laeresta](../entry.html?id=laeresta): læresta , læs(se) s. lytel
+- [laes-2](../entry.html?id=laes-2): læs- s. liesan
+- [laest](../entry.html?id=laest): læst I ) s. lytel II ) s. -leas
+- [laford](../entry.html?id=laford): laford s. hl~
+- [laga](../entry.html?id=laga): laga s. lagu
+- [lan](../entry.html?id=lan): lan s. læn
+- [landesman](../entry.html?id=landesman): landesman s. landmann
+- [landhomo](../entry.html?id=landhomo): L landhomo s. landmann
+- [landod](../entry.html?id=landod): [-landod] s. gel~
+- [laslit](../entry.html?id=laslit): laslit s. lahs~
+- [launce](../entry.html?id=launce): F launce s. lance
+- [lava](../entry.html?id=lava): lava s. laf
+- [le](../entry.html?id=le): F le I ) s. il II ) Artikel s. li
+- [lea](../entry.html?id=lea): [-lea] s. -leah
+- [leaf-2](../entry.html?id=leaf-2): II ) s. laf
+- [leafast](../entry.html?id=leafast): leafast s. leof
+- [leaht](../entry.html?id=leaht): leaht s. leohtre
+- [leapan](../entry.html?id=leapan): leapan s. hl~
+- [leche](../entry.html?id=leche): leche- s. læce-
+- [lede](../entry.html?id=lede): lede, ptt , s. lecgan
+- [lef](../entry.html?id=lef): -lef für -elf s. twelfhynde
+- [lefnes](../entry.html?id=lefnes): lefnes s. leaf~
+- [leg](../entry.html?id=leg): leg- s. lieg-
+- [legan](../entry.html?id=legan): legan s. lecgan
+- [legian](../entry.html?id=legian): [-legian] s. gel~
+- [legius](../entry.html?id=legius): L legius s. lig~
+- [leierwita](../entry.html?id=leierwita): leierwita s. leger~
+- [lemian](../entry.html?id=lemian): [lemian] lähmen; s. gelæmed
+- [lenan](../entry.html?id=lenan): lenan s. lænan
+- [leng-c-ten](../entry.html?id=leng-c-ten): leng(c)ten s. lencten
+- [leodgeota](../entry.html?id=leodgeota): leodgeota s. lead~
+- [leof-2](../entry.html?id=leof-2): II ) leof, -fe, -fnes s. leaf-
+- [leofast](../entry.html?id=leofast): leofast (-fod) s. libban
+- [leope](../entry.html?id=leope): leope s. hleapan
+- [lep](../entry.html?id=lep): lep s. leap
+- [les-u](../entry.html?id=les-u): les(u, lesw-) s. lyso
+- [less](../entry.html?id=less): less- s. læs-
+- [lest](../entry.html?id=lest): F lest s. laisser
+- [lestagium](../entry.html?id=lestagium): L lestagium s. last~
+- [letan](../entry.html?id=letan): letan s. læt~
+- [leud](../entry.html?id=leud): leud s. leod
+- [lewed](../entry.html?id=lewed): lewed s. læwed
+- [leys](../entry.html?id=leys): F leys s. lei
+- [lez](../entry.html?id=lez): lez s. li I , pl
+- [liblac](../entry.html?id=liblac): liblac s. lybblac
+- [licht](../entry.html?id=licht): licht- s. leoht
+- [lid](../entry.html?id=lid): [-lið] s. giestliðnes
+- [liegne](../entry.html?id=liegne): [-liegne] s. ungeliegen
+- [lieu](../entry.html?id=lieu): F lieu s. liu
+- [liofas](../entry.html?id=liofas): liofas s. libban
+- [liofra](../entry.html?id=liofra): liofra , cpa , s. leof
+- [litlian](../entry.html?id=litlian): litlian s. lytl~
+- [liv](../entry.html?id=liv): liv- s. lif-, libban
+- [lodbot](../entry.html?id=lodbot): loðbot s. hlo~
+- [loins](../entry.html?id=loins): F [loins] s. luin
+- [lomb](../entry.html?id=lomb): lomb s. lamb
+- [lond](../entry.html?id=lond): lond s. land
+- [lor](../entry.html?id=lor): F lor s. lur
+- [lot](../entry.html?id=lot): lot , loth, lottum s. hlot
+- [lour](../entry.html?id=lour): F lour s. lur
+- [love](../entry.html?id=love): love s. lof
+- [lu](../entry.html?id=lu): F lu s. li
+- [lufa](../entry.html?id=lufa): lufa s. lufu
+- [lunc](../entry.html?id=lunc): F lunc s. lung
+- [lybban](../entry.html?id=lybban): lybban s. lib~
+- [lycian](../entry.html?id=lycian): lycian s. lic~
+- [lyfnes](../entry.html?id=lyfnes): lyfnes s. leaf~
+- [lygen](../entry.html?id=lygen): [-lygen] s. ungel~
+- [lyger](../entry.html?id=lyger): lyger s. liger
+- [lyhting](../entry.html?id=lyhting): lyhting s. lieht~
+- [lyst](../entry.html?id=lyst): lyst s. hl~
+- [m-2](../entry.html?id=m-2): L m ersetzt durch n: s. d. ; für -mm-: s. comenta
+- [m-3](../entry.html?id=m-3): F m ersetzt durch n: s. nb
+- [m-a-is](../entry.html?id=m-a-is): F m[a]is s. meis
+- [m](../entry.html?id=m): m̃ s. man, mann S. 139. 141
+- [ma](../entry.html?id=ma): ma I ) cpa s. micel II ) für man, s. d.
+- [mad](../entry.html?id=mad): mað s. mæð
+- [maeden](../entry.html?id=maeden): mæden s. mægden
+- [maedrenmaeg](../entry.html?id=maedrenmaeg): mædrenmæg s. med~
+- [maeg-2](../entry.html?id=maeg-2): II ) mæg s. magan
+- [maegd-2](../entry.html?id=maegd-2): II ) mægð- s. mægeð-
+- [maege](../entry.html?id=maege): mæge s. maga
+- [maeht](../entry.html?id=maeht): mæht s. miht
+- [maehte](../entry.html?id=maehte): mæhte , ptt , s. magan
+- [maei-g](../entry.html?id=maei-g): mæi(g)- s. mæg-
+- [maelda](../entry.html?id=maelda): mælda s. melda
+- [maen](../entry.html?id=maen): mæn für men s. mann
+- [maene-2](../entry.html?id=maene-2): II ) [-mæne] s. gem~
+- [maenig](../entry.html?id=maenig): mænig- s. man-
+- [maenio](../entry.html?id=maenio): mænio s. menigu
+- [maerc](../entry.html?id=maerc): mærc- s. Mierce
+- [maere-3](../entry.html?id=maere-3): III ) s. micel, cpa ; vgl . 7 Z. vorher
+- [maere-4](../entry.html?id=maere-4): IV ) s. miere
+- [maeri](../entry.html?id=maeri): mæri s. mearg
+- [maespreost](../entry.html?id=maespreost): mæspreost [?] s. mæssep~
+- [maest](../entry.html?id=maest): mæst , spla , s. micel
+- [maga](../entry.html?id=maga): I ) maga , -gas, -gum s. mæg-
+- [magborg](../entry.html?id=magborg): magborg s. mægburg
+- [magene](../entry.html?id=magene): magene , dt , s. mægen
+- [mainbot](../entry.html?id=mainbot): F mainbot s. manb~
+- [maindra](../entry.html?id=maindra): F maindra s. maneir
+- [mana](../entry.html?id=mana): [-mana , -māna] s. gem~
+- [manbot](../entry.html?id=manbot): manbot s. mannbot
+- [mara](../entry.html?id=mara): mara s. micel
+- [marca-2](../entry.html?id=marca-2): L II ) marca s. mearc II
+- [mare](../entry.html?id=mare): mare s. micel
+- [mars](../entry.html?id=mars): F mars , pl , s. marca
+- [masse](../entry.html?id=masse): masse- s. mæsse-
+- [masten](../entry.html?id=masten): masten s. mæs~
+- [mater](../entry.html?id=mater): L mater , matrix ecclesia s. ecclesia
+- [mean](../entry.html?id=mean): mean- s. mæn-
+- [mearn](../entry.html?id=mearn): mearn s. murnan
+- [med-2](../entry.html?id=med-2): með- s. mæð-
+- [meden](../entry.html?id=meden): meden s. mægden
+- [mederan](../entry.html?id=mederan): mederan s. mædere
+- [meggildare](../entry.html?id=meggildare): L meggildare s. mæggieldan
+- [meibot](../entry.html?id=meibot): meibot s. mægb~
+- [meimes](../entry.html?id=meimes): F meimes s. mesme
+- [mein](../entry.html?id=mein): mein s. main
+- [meindra](../entry.html?id=meindra): F meindra (-runt, -nent) s. maneir
+- [meinent](../entry.html?id=meinent): F meinent s. mener
+- [meist](../entry.html?id=meist): F meist s. metre
+- [men](../entry.html?id=men): men s. mann
+- [merca](../entry.html?id=merca): L merca s. mearc
+- [merchimot](../entry.html?id=merchimot): merchimot s. mearcgemot
+- [merra](../entry.html?id=merra): F merra s. mener
+- [mes](../entry.html?id=mes): F mes s. meis II; meins
+- [meskenning](../entry.html?id=meskenning): meskenning s. misce~
+- [messe](../entry.html?id=messe): messe- , mest s. mæs~
+- [metegyrd](../entry.html?id=metegyrd): metegyrd s. metgierd
+- [metfaest](../entry.html?id=metfaest): [-metfæst, -metgian] s. gem~
+- [metre](../entry.html?id=metre): metre, cpa ; s. mætre
+- [metsceat](../entry.html?id=metsceat): metsceat s. meds~
+- [metscipe](../entry.html?id=metscipe): metscipe s. metes~
+- [meuz](../entry.html?id=meuz): F meuz s. melz
+- [mid-2](../entry.html?id=mid-2): mið s. mid
+- [middewinter](../entry.html?id=middewinter): middewinter s. middanw~
+- [midwinter](../entry.html?id=midwinter): midwinter s. middanw~
+- [mieuz](../entry.html?id=mieuz): F mieuz s. melz
+- [mihte](../entry.html?id=mihte): mihte , ptt , s. magan
+- [milds](../entry.html?id=milds): milds s. milts
+- [miltheart](../entry.html?id=miltheart): miltheart s. mildheort
+- [mingian](../entry.html?id=mingian): mingian s. myndg~
+- [minster](../entry.html?id=minster): minster s. mynster
+- [mis](../entry.html?id=mis): F mis s. metre
+- [mislic](../entry.html?id=mislic): mislic s. missenlic
+- [misterium](../entry.html?id=misterium): L misterium s. mys~
+- [mistlic](../entry.html?id=mistlic): mistlic s. missenlic
+- [mo-e-te](../entry.html?id=mo-e-te): mo[e]te s. metan
+- [mogum](../entry.html?id=mogum): mogum s. mæg, pl dt
+- [mon-n](../entry.html?id=mon-n): mon(n)- s. man(n)-
+- [monn-a](../entry.html?id=monn-a): monn(a) s. man-
+- [mord-2](../entry.html?id=mord-2): mord- s. morð, murdrum
+- [most](../entry.html?id=most): most- s. mot
+- [mote](../entry.html?id=mote): mote , op 3, s. metan
+- [mp](../entry.html?id=mp): L -mp für -m: s. p
+- [mpt](../entry.html?id=mpt): L -mpt für - nt : s. intemptare
+- [munte](../entry.html?id=munte): F munte s. mund
+- [murd-rum](../entry.html?id=murd-rum): L murð(rum) s. morð
+- [murdra](../entry.html?id=murdra): L murdra ( fm ), ~rare, ~ator s. murdre, ~rire, ~ritor
+- [mycel](../entry.html?id=mycel): mycel- s. micel-
+- [myht](../entry.html?id=myht): myht s. miht
+- [myre](../entry.html?id=myre): myre s. miere
+- [mysdaed](../entry.html?id=mysdaed): mysdæd s. mis~
+- [na-2](../entry.html?id=na-2): II ) s. nan
+- [naam](../entry.html?id=naam): naam s. nam
+- [nader](../entry.html?id=nader): naðer s. nawðer
+- [naefde](../entry.html?id=naefde): næfde s. nabban
+- [naenne](../entry.html?id=naenne): nænne s. nan
+- [naht](../entry.html?id=naht): naht s. nawiht
+- [nales](../entry.html?id=nales): nales , nallæs, nalles s. nealles
+- [nam-2](../entry.html?id=nam-2): II ) nam s. niman
+- [nat](../entry.html?id=nat): nat s. nytan
+- [naudre](../entry.html?id=naudre): nauðre s. nawðer
+- [nauht](../entry.html?id=nauht): nauht s. nawiht
+- [nawar](../entry.html?id=nawar): nawar , ~wer s. nahwær
+- [nd](../entry.html?id=nd): -nd für -n(n): s. d n. 1a
+- [ne-4](../entry.html?id=ne-4): II ) s. ni
+- [nead](../entry.html?id=nead): nead- s. nied-
+- [neaht](../entry.html?id=neaht): neaht s. niht
+- [neaten](../entry.html?id=neaten): neaten s. nieten
+- [nech](../entry.html?id=nech): nech- s. neah-
+- [ned](../entry.html?id=ned): ned- s. nied-
+- [negl](../entry.html?id=negl): negl- s. nægl
+- [neh](../entry.html?id=neh): neh- s. neah-
+- [nen](../entry.html?id=nen): F nen s. nun
+- [nenes](../entry.html?id=nenes): nenes , nenne s. nan
+- [neod](../entry.html?id=neod): neod s. nied
+- [ner](../entry.html?id=ner): ner s. neah
+- [neten](../entry.html?id=neten): neten s. nieten
+- [niehsta](../entry.html?id=niehsta): niehsta s. neah
+- [nige](../entry.html?id=nige): nige s. niwe
+- [nille](../entry.html?id=nille): nille s. nellan
+- [nitan](../entry.html?id=nitan): nitan s. nytan
+- [nn-2](../entry.html?id=nn-2): L nn für mn: s. scamnum
+- [noht](../entry.html?id=noht): noht s. nawiht
+- [nolde](../entry.html?id=nolde): nolde s. nellan
+- [nom-er](../entry.html?id=nom-er): F nom(er) s. num(er)
+- [noma](../entry.html?id=noma): noma s. nama
+- [non](../entry.html?id=non): F non s. num, nun
+- [nosu](../entry.html?id=nosu): nosu s. nasu
+- [nourrit](../entry.html?id=nourrit): F [nourrit-] s. nureture
+- [nowiht](../entry.html?id=nowiht): nowiht s. nawiht
+- [nus](../entry.html?id=nus): F nus s. nous
+- [nyd](../entry.html?id=nyd): nyd- s. nied-
+- [nygon](../entry.html?id=nygon): nygon s. nigon
+- [nyht](../entry.html?id=nyht): nyht s. niht
+- [nyllan](../entry.html?id=nyllan): nyllan s. nellan
+- [nyman](../entry.html?id=nyman): nyman s. niman
+- [nyr](../entry.html?id=nyr): nyr s. neah
+- [nyten](../entry.html?id=nyten): nyten s. nieten
+- [oant](../entry.html?id=oant): F oant s. oir
+- [obfirmatus](../entry.html?id=obfirmatus): L obfirmatus s. off~
+- [obtimates](../entry.html?id=obtimates): L obtimates s. opt~
+- [occi](../entry.html?id=occi): F occi- s. ocire
+- [od-2](../entry.html?id=od-2): II ) od s. aveir
+- [od-4](../entry.html?id=od-4): II ) oð s. oððe
+- [odd](../entry.html?id=odd): oðð s. oð, oððe
+- [odde-2](../entry.html?id=odde-2): II ) oððe s. oð
+- [ode](../entry.html?id=ode): oðe s. oððe
+- [oder-3](../entry.html?id=oder-3): II ) oðer s. awðer
+- [oder](../entry.html?id=oder): oder s. awðer
+- [odirne](../entry.html?id=odirne): oðirne s. oðer, ac
+- [of-side](../entry.html?id=of-side): of side ersetzt durch osside s. d.
+- [ofad](../entry.html?id=ofad): ofað s. beho~
+- [oht](../entry.html?id=oht): oht s. owiht
+- [oit](../entry.html?id=oit): F oit s. uit
+- [om](../entry.html?id=om): F om s. hume
+- [on-2](../entry.html?id=on-2): F on s. hume
+- [ond](../entry.html?id=ond): ond- s. and-
+- [ondettan](../entry.html?id=ondettan): ondettan s. andettan
+- [ongeaton](../entry.html?id=ongeaton): ongeaton s. ongietan
+- [onhagie](../entry.html?id=onhagie): onhagie s. toonhagie
+- [oppa](../entry.html?id=oppa): oppa s. hoppe
+- [orat](../entry.html?id=orat): F orat s. oir
+- [ordel](../entry.html?id=ordel): ordel , ~dol s. ordal
+- [os-2](../entry.html?id=os-2): II ) s. oes
+- [otrei](../entry.html?id=otrei): F otrei s. altrui
+- [ou-2](../entry.html?id=ou-2): F ou s. u
+- [oud](../entry.html?id=oud): F oud , ou(s)t s. aveir
+- [ouer](../entry.html?id=ouer): ouer(-) s. ofer(-)
+- [owiht](../entry.html?id=owiht): owiht s. awuht
+- [p-2](../entry.html?id=p-2): p. abgekürzt : pening; s. d.
+- [p-u-rsivre](../entry.html?id=p-u-rsivre): F p[u]rsivre; pursoldrad s. pars~
+- [paen](../entry.html?id=paen): pæn. , pæng̃., pæni(n)g s. pening
+- [paienisme](../entry.html?id=paienisme): F paienisme s. paisnime
+- [parler](../entry.html?id=parler): F [parler] s. parolet
+- [peis](../entry.html?id=peis): F peis s. pais
+- [peoneg](../entry.html?id=peoneg): peoneg s. pening
+- [per-4](../entry.html?id=per-4): F I ) per (-) s. par(-), pur-
+- [pere](../entry.html?id=pere): F pere s. pedre, Piere
+- [perent](../entry.html?id=perent): F perent s. parent
+- [perhendinare](../entry.html?id=perhendinare): L perhendinare s. perend~
+- [persiur](../entry.html?id=persiur): F persiur s. parsivre
+- [pertir](../entry.html?id=pertir): F pertir s. par~
+- [pes](../entry.html?id=pes): F pes s. pais
+- [peuple](../entry.html?id=peuple): F peuple s. puple
+- [pl-a-in](../entry.html?id=pl-a-in): F pl[a]in s. plein
+- [plaez](../entry.html?id=plaez): F plaez s. plaiez
+- [pleinte](../entry.html?id=pleinte): F pleinte, pleisir s. plai~
+- [pochier](../entry.html?id=pochier): F pochier s. polcier
+- [poet](../entry.html?id=poet): F poet, poez s. podeir
+- [poin](../entry.html?id=poin): F poin, pois s. puing, puis
+- [pople](../entry.html?id=pople): F pople s. puple
+- [portus](../entry.html?id=portus): L portus, gn -i, neben -ūs, s. port
+- [pot](../entry.html?id=pot): F pot s. podeir
+- [poucer](../entry.html?id=poucer): F poucer, pouz s. polcier, polz
+- [praetium](../entry.html?id=praetium): L prætium s. pret~
+- [prepensed](../entry.html?id=prepensed): F prepensed s. purpenser
+- [priost](../entry.html?id=priost): priost s. preost
+- [pris-t](../entry.html?id=pris-t): F pris(t) s. prendre
+- [prunele](../entry.html?id=prunele): F prunele s. purn~
+- [prust](../entry.html?id=prust): prust s. prover
+- [pu-i-ssed](../entry.html?id=pu-i-ssed): F pu(i)ssed, ~ent s. podeir
+- [pup-p-licus](../entry.html?id=pup-p-licus): L pup(p)licus s. publ~
+- [purra](../entry.html?id=purra): F purra , put s. podeir
+- [pus](../entry.html?id=pus): F pus s. puis
+- [qe](../entry.html?id=qe): F qe, qi, qil s. que, qui
+- [qualstow](../entry.html?id=qualstow): L qualstow s. cwal~
+- [quer](../entry.html?id=quer): F quer s. quaer
+- [queur](../entry.html?id=queur): F queur s. quor
+- [queus](../entry.html?id=queus): queus s. quel
+- [quideles](../entry.html?id=quideles): L quideles s. cwideleas
+- [quiete](../entry.html?id=quiete): F quiete s. quite
+- [r-ie-t](../entry.html?id=r-ie-t): r[ie]t s. ryt
+- [ra-nhund](../entry.html?id=ra-nhund): ra[nhund] s. hr~
+- [rachater](../entry.html?id=rachater): F rachater s. reach~
+- [rad-2](../entry.html?id=rad-2): II ) rad s. ræd
+- [rad-3](../entry.html?id=rad-3): III ) s. ridan, ptt
+- [rad-5](../entry.html?id=rad-5): V ) s. gerad, nt
+- [rad-6](../entry.html?id=rad-6): rað- s. hraðe
+- [radan](../entry.html?id=radan): radan s. rædan
+- [raede](../entry.html?id=raede): [-ræde] s. anr~, oftr~
+- [raegl](../entry.html?id=raegl): rægl s. hrægl
+- [ream](../entry.html?id=ream): ream s. hr~
+- [rece](../entry.html?id=rece): rece s. wrecan
+- [recgan](../entry.html?id=recgan): recgan s. hrycg
+- [rechater](../entry.html?id=rechater): F rechater s. reach~
+- [red](../entry.html?id=red): red- s. ræd-
+- [redian](../entry.html?id=redian): [-redian] s. ar~
+- [redre](../entry.html?id=redre): redre s. hræd
+- [redter](../entry.html?id=redter): F redter s. reter
+- [refare](../entry.html?id=refare): L refare , refere s. reafian
+- [refscipe](../entry.html?id=refscipe): [-refscipe] s. ger~
+- [reht](../entry.html?id=reht): reht(-) s. riht-
+- [reman](../entry.html?id=reman): reman s. ryman
+- [remis](../entry.html?id=remis): F remis s. remaneir
+- [ren](../entry.html?id=ren): ren s. ran
+- [renhund](../entry.html?id=renhund): renhund s. regn~, hran~
+- [reol](../entry.html?id=reol): reol I ) s. hr~ II ) s. regol
+- [repere](../entry.html?id=repere): repere s. riep~
+- [reran](../entry.html?id=reran): reran s. ræran
+- [resp](../entry.html?id=resp): [-resp] s. ger~
+- [resun](../entry.html?id=resun): F resun s. raisun
+- [reves](../entry.html?id=reves): reves s. gerefa
+- [rey-s](../entry.html?id=rey-s): F rey(s) s. rei
+- [ric](../entry.html?id=ric): [-ric] s. Ælfric, Eadric, Henricus, Sigeric [ vgl . rice II]
+- [rieflac](../entry.html?id=rieflac): rieflac s. reaf~
+- [rif](../entry.html?id=rif): rif s. hrif
+- [rihta](../entry.html?id=rihta): rihta, pl , s. rihte n. I
+- [rihtast](../entry.html?id=rihtast): rihtast s. riht n. II, spla
+- [rihte-2](../entry.html?id=rihte-2): II ) s. riht n. II, adv , o. Z. 3
+- [rihtor](../entry.html?id=rihtor): rihtor, ~ost, rihtr- s. riht n. II
+- [rist](../entry.html?id=rist): [-rist] s. ær~
+- [rixian](../entry.html?id=rixian): rixian s. ricsian
+- [roi](../entry.html?id=roi): F roi s. rei
+- [ryder](../entry.html?id=ryder): ryðer s. hriðer
+- [ryman-2](../entry.html?id=ryman-2): II ) s. hrieman
+- [ryp](../entry.html?id=ryp): ryp s. rip
+- [rypere](../entry.html?id=rypere): rypere s. riep~
+- [rysen](../entry.html?id=rysen): -rysen s. risan
+- [s-3](../entry.html?id=s-3): F s' s. sa, si
+- [sa](../entry.html?id=sa): sa s. sun
+- [sac-2](../entry.html?id=sac-2): II ) sac , saca, sace, sacca s. sacu
+- [saca](../entry.html?id=saca): [-saca] s. ands~, wiðers~
+- [sacha](../entry.html?id=sacha): sacha , ~he s. sacu
+- [sacramentum](../entry.html?id=sacramentum): L sacramentum fractum s. frangere n. 2
+- [saecerd](../entry.html?id=saecerd): sæcerd s. sac~
+- [saeg](../entry.html?id=saeg): sæg- s. secgan
+- [saemend](../entry.html?id=saemend): sæmend s. sem~
+- [saencgan](../entry.html?id=saencgan): sæncgan , sændan s. sen~
+- [sait](../entry.html?id=sait): F sait s. estre
+- [sanz](../entry.html?id=sanz): F sanz s. senz
+- [savel](../entry.html?id=savel): savel , saul, sawl s. sawol
+- [scaeft](../entry.html?id=scaeft): scæft- s. sceaft-
+- [scaep](../entry.html?id=scaep): scæp- , scæt s. sceap-, sceatt
+- [scannum](../entry.html?id=scannum): L scannum s. scamn~
+- [scat](../entry.html?id=scat): scat , scað- s. sceatt, sceað~
+- [scawian](../entry.html?id=scawian): scawian s. scea~
+- [scead](../entry.html?id=scead): -scead- s. -scad-
+- [sceaddan](../entry.html?id=sceaddan): sceaððan s. sceð~
+- [sceal](../entry.html?id=sceal): sceal s. sculan
+- [sceale](../entry.html?id=sceale): sceale , sceamol , sceanca s. sca~
+- [sceare](../entry.html?id=sceare): sceare s. scaru
+- [sceawung](../entry.html?id=sceawung): [sceawung] s. ostensio
+- [scel](../entry.html?id=scel): scel s. sculan
+- [sceld](../entry.html?id=sceld): sceld s. scield
+- [sceol](../entry.html?id=sceol): sceol- s. sculan
+- [sceoma](../entry.html?id=sceoma): sceoma s. scamu
+- [scep](../entry.html?id=scep): scep- s. sceap-
+- [schapgelt](../entry.html?id=schapgelt): schapgelt s. ceapgield
+- [scheld](../entry.html?id=scheld): scheld- , schild- s. scyld
+- [schir](../entry.html?id=schir): schir- s. scir-
+- [schirlisc](../entry.html?id=schirlisc): schirlisc s. cierlisc
+- [schot](../entry.html?id=schot): schot s. scot
+- [scild](../entry.html?id=scild): scild I ) s. scield II ) s. scyld-
+- [sciran](../entry.html?id=sciran): sciran s. scieran
+- [scirmot](../entry.html?id=scirmot): scirmot s. scirgemot
+- [scolaris](../entry.html?id=scolaris): L scolaris s. scho~
+- [sconca](../entry.html?id=sconca): sconca s. scanca
+- [scorp](../entry.html?id=scorp): scorp s. sceorp
+- [scute](../entry.html?id=scute): scute s. sceotan
+- [scyddan](../entry.html?id=scyddan): scyððan s. sceððan
+- [scyl](../entry.html?id=scyl): scyl- s. sculan
+- [scyld-2](../entry.html?id=scyld-2): I ) scyld- s. scield
+- [scyldung](../entry.html?id=scyldung): scyldung s. scyldgung
+- [scype](../entry.html?id=scype): -scype s. -scipe
+- [scyr](../entry.html?id=scyr): scyr- s. scir-
+- [scyran](../entry.html?id=scyran): scyran, -rdan, -rpan s. scier~
+- [se-2](../entry.html?id=se-2): II ) se s. is, op 3
+- [se-4](../entry.html?id=se-4): F se s. sei, si, sun
+- [seald](../entry.html?id=seald): seald- s. sellan ptt
+- [sealf](../entry.html?id=sealf): sealf- s. self
+- [seat](../entry.html?id=seat): [-seat] s. -sceatt
+- [seatan](../entry.html?id=seatan): seatan s. settan
+- [secerd](../entry.html?id=secerd): secerd s. sac~
+- [sedere](../entry.html?id=sedere): sedere s. sæd~
+- [seia](../entry.html?id=seia): L seia s. seta
+- [sein](../entry.html?id=sein): F sein- s. saint
+- [seirvise](../entry.html?id=seirvise): F seirvise s. ser~
+- [seit](../entry.html?id=seit): F seit s. estre
+- [selonc](../entry.html?id=selonc): F selonc s. sulunc
+- [sem](../entry.html?id=sem): [-sem] s. gesem
+- [senio-u-r](../entry.html?id=senio-u-r): F senio(u)r s. seignur
+- [senod](../entry.html?id=senod): senoð s. sinoð
+- [seo-2](../entry.html?id=seo-2): III ) s. is, op 3
+- [seo](../entry.html?id=seo): II ) seo s. se, fm
+- [seoce](../entry.html?id=seoce): [-seoce] s. oðsceacan
+- [seolf](../entry.html?id=seolf): seolf s. self
+- [seolfrene](../entry.html?id=seolfrene): seolfrene s. syl~
+- [seon](../entry.html?id=seon): [seon] s. seo I
+- [seonod](../entry.html?id=seonod): seonoð- s. sinoð-
+- [ses](../entry.html?id=ses): F ses s. sun
+- [set-2](../entry.html?id=set-2): F II ) set s. saveir
+- [setla](../entry.html?id=setla): [-setla] s. cots~
+- [seurent](../entry.html?id=seurent): F seurent s. saveir
+- [seweard](../entry.html?id=seweard): seweard s. sæw~
+- [sex](../entry.html?id=sex): sex- s. siex-
+- [sh](../entry.html?id=sh): -sh für hs : s. lahslit
+- [si](../entry.html?id=si): si s. is, op 3
+- [sidman](../entry.html?id=sidman): siðman s. ges~
+- [sien-2](../entry.html?id=sien-2): F sien s. sun
+- [sien](../entry.html?id=sien): sien s. is, op pl
+- [sig](../entry.html?id=sig): sig s. is, op 3
+- [sign-e-ur](../entry.html?id=sign-e-ur): F sign(e)ur s. seign~
+- [sill](../entry.html?id=sill): sill~ s. sellan
+- [sinewan](../entry.html?id=sinewan): sinewan s. sinu
+- [sinn](../entry.html?id=sinn): sinn s. synn
+- [sint](../entry.html?id=sint): sint s. is, pl
+- [sio-n](../entry.html?id=sio-n): II ) sio(n) , op 3, s. is
+- [sir](../entry.html?id=sir): sir- s. scir-
+- [sire](../entry.html?id=sire): F sire s. seignur
+- [siring](../entry.html?id=siring): siring s. syr~
+- [six](../entry.html?id=six): six- s. siex-
+- [slaege](../entry.html?id=slaege): slæge, slæht, slæhð s. slege, slieht, slean
+- [slihd](../entry.html?id=slihd): slihð s. slean, 3
+- [slit-e](../entry.html?id=slit-e): [-slit(e)] s. lahs~
+- [slog](../entry.html?id=slog): slog, slyhð s. slean
+- [soc](../entry.html?id=soc): soc , soc(h)a, socca, soche(n) s. socn
+- [sohte](../entry.html?id=sohte): sohte s. secan
+- [soit](../entry.html?id=soit): F soit s. estre
+- [somor](../entry.html?id=somor): somor s. sumor
+- [son](../entry.html?id=son): F son s. sun
+- [sonius](../entry.html?id=sonius): L sonius s. soinus
+- [sor](../entry.html?id=sor): F sor s. sur
+- [sot](../entry.html?id=sot): F sot s. saveir
+- [sout](../entry.html?id=sout): F sout s. saveir
+- [souz](../entry.html?id=souz): F souz s. solz
+- [sp](../entry.html?id=sp): -sp für ps: s. geresp, geclips
+- [spelia](../entry.html?id=spelia): [-spelia] s. ges~; aspelian
+- [speow](../entry.html?id=speow): speow s. spowan
+- [spirian](../entry.html?id=spirian): spirian s. spyr~
+- [spraengan](../entry.html?id=spraengan): sprængan s. spren~
+- [spring](../entry.html?id=spring): [-spring] s. ofs~
+- [ssc](../entry.html?id=ssc): ssc- für sc: s. bisceop, sculan
+- [stael-e](../entry.html?id=stael-e): stæl(e) s. stelan
+- [staele](../entry.html?id=staele): stæle s. stalu
+- [staent](../entry.html?id=staent): stænt s. standan
+- [staf](../entry.html?id=staf): staf- s. stæf-
+- [stal-2](../entry.html?id=stal-2): [-stal] s. ons~
+- [stal](../entry.html?id=stal): stal- s. stæl-
+- [stala](../entry.html?id=stala): [-stala] s. ges~
+- [stale](../entry.html?id=stale): stale s. stelan
+- [stapas](../entry.html?id=stapas): stapas s. stæpe
+- [steald](../entry.html?id=steald): [-steald] s. hagos~
+- [stent](../entry.html?id=stent): stent s. standan
+- [steop](../entry.html?id=steop): steop s. steap
+- [steoran](../entry.html?id=steoran): steoran s. stieran
+- [stepcild](../entry.html?id=stepcild): stepcild s. steop~
+- [sterc](../entry.html?id=sterc): sterc- s. strec
+- [stiop](../entry.html?id=stiop): stiop- s. steop-
+- [stod](../entry.html?id=stod): stod s. standan
+- [stondan](../entry.html?id=stondan): stondan s. stan~
+- [straec](../entry.html?id=straec): stræc s. strec
+- [stram](../entry.html?id=stram): stram s. stream
+- [stret](../entry.html?id=stret): stret- s. stræt-
+- [stryn](../entry.html?id=stryn): [-stryn-] s. streon, strienan
+- [stuverad](../entry.html?id=stuverad): F stuverad s. estuveir
+- [styde](../entry.html?id=styde): styde s. stede
+- [styllan](../entry.html?id=styllan): styllan s. stiel~
+- [stylle](../entry.html?id=stylle): stylle s. stille
+- [sudfaest](../entry.html?id=sudfaest): suðfæst s. soð~
+- [suite](../entry.html?id=suite): F suite s. siwte
+- [sunt](../entry.html?id=sunt): F sunt s. estre
+- [superhabundare](../entry.html?id=superhabundare): L superhabundare s. superab~
+- [suster](../entry.html?id=suster): suster s. ses~
+- [swador](../entry.html?id=swador): swaðor s. swæðer
+- [swara](../entry.html?id=swara): [-swara] s. māns~
+- [sweogian](../entry.html?id=sweogian): sweogian s. swig~
+- [sweotolung](../entry.html?id=sweotolung): sweotolung s. swut~
+- [swicnan](../entry.html?id=swicnan): [-swicnan] s. geswicne
+- [swilc](../entry.html?id=swilc): swilc s. swelc
+- [swister](../entry.html?id=swister): swister s. sweostor
+- [switelung](../entry.html?id=switelung): switelung s. swutul~
+- [swor-e](../entry.html?id=swor-e): swor(e) s. swerian
+- [swur-u-d](../entry.html?id=swur-u-d): swur(u)d s. sweord
+- [swustor](../entry.html?id=swustor): swustor s. sweos~
+- [swyde](../entry.html?id=swyde): swyðe s. swiðe
+- [swylc](../entry.html?id=swylc): swylc, swyltan s. swel~
+- [swyn](../entry.html?id=swyn): swyn, swyngan s. swin-
+- [swyrd](../entry.html?id=swyrd): swyrd s. sweord
+- [swyrian](../entry.html?id=swyrian): swyrian s. swer~
+- [swytoling](../entry.html?id=swytoling): swytoling s. swutulung
+- [sy](../entry.html?id=sy): sy I ) s. se, fm II ) s. is, op
+- [sybb](../entry.html?id=sybb): sybb s. sibb
+- [syd](../entry.html?id=syd): syð- s. sið-
+- [syfa](../entry.html?id=syfa): syfa s. sife
+- [syhl](../entry.html?id=syhl): syhl, sylh s. sulh
+- [syhtig](../entry.html?id=syhtig): syhtig s. siextig
+- [sylf](../entry.html?id=sylf): sylf s. self
+- [syll](../entry.html?id=syll): syll- s. sellan
+- [sym-b-le](../entry.html?id=sym-b-le): sym(b)le s. simle
+- [synd](../entry.html?id=synd): synd , -den, -don, -dun s. is, pl
+- [synewe](../entry.html?id=synewe): synewe s. sinu
+- [synod](../entry.html?id=synod): synoð , lat. synodus, s. sinoð
+- [syo](../entry.html?id=syo): syo I ) s. se, fm II ) s. is, op
+- [syr](../entry.html?id=syr): syr- s. scir-
+- [syrwe](../entry.html?id=syrwe): syrwe s. searo
+- [syster](../entry.html?id=syster): syster s. sester
+- [syttan](../entry.html?id=syttan): syttan s. sittan
+- [syx](../entry.html?id=syx): syx- s. siex-
+- [tacan](../entry.html?id=tacan): tacan s. tæcan
+- [taem](../entry.html?id=taem): tæm- s. tieman
+- [taemes](../entry.html?id=taemes): tæmes- s. tem~
+- [tainus](../entry.html?id=tainus): L tainus s. þegn
+- [tanus](../entry.html?id=tanus): L tanus s. þegn
+- [te](../entry.html?id=te): te s. teon II
+- [teacan](../entry.html?id=teacan): teacan , teahte s. tæcan
+- [teaman](../entry.html?id=teaman): teaman s. tieman
+- [ted](../entry.html?id=ted): teð s. toð
+- [teding](../entry.html?id=teding): teðing- s. teoðung-
+- [teld](../entry.html?id=teld): [-teld] s. get~
+- [tem](../entry.html?id=tem): tem, teman s. team, tieman
+- [tendan](../entry.html?id=tendan): [-tendan] s. ont~
+- [teolung](../entry.html?id=teolung): teolung s. til~
+- [tere](../entry.html?id=tere): F tere s. terre
+- [tg](../entry.html?id=tg): -tg ; dafür teg s. gemetgian
+- [th-2](../entry.html?id=th-2): F th für tt: s. jetter
+- [th-e-am](../entry.html?id=th-e-am): th(e)am s. team
+- [tha-2](../entry.html?id=tha-2): II ) s. se, prn pl
+- [thae](../entry.html?id=thae): þæ s. þe n. V Z. 3
+- [thaegn](../entry.html?id=thaegn): þægn s. þegn
+- [thaem](../entry.html?id=thaem): þæm s. se, dt sg , pl
+- [thaencung](../entry.html?id=thaencung): þæncung s. þan~
+- [thaene](../entry.html?id=thaene): þæne s. se, ac
+- [thaenne](../entry.html?id=thaenne): þænne s. þonne n. I Z. 3
+- [thaere-2](../entry.html?id=thaere-2): II ) þære s. þær
+- [thaere](../entry.html?id=thaere): I ) þære s. se I fm gn ; dt ; pl gn
+- [thaerf-t](../entry.html?id=thaerf-t): þærf(t) s. þurfan
+- [thaerf](../entry.html?id=thaerf): þærf s. þearf
+- [thaes](../entry.html?id=thaes): þæs I ) s. þes no ; nt no , ac ; pl no , ac
+- [thain](../entry.html?id=thain): L thain s. þegn
+- [tham](../entry.html?id=tham): þam s. se I , sg dt masc ; nt dt ; pl dt
+- [than-2](../entry.html?id=than-2): II ) s. þon n. II
+- [than-n-e](../entry.html?id=than-n-e): þan(n)e s. þonne
+- [thane](../entry.html?id=thane): þane s. se I . ac
+- [thanon](../entry.html?id=thanon): þanon- s. þon~
+- [thar](../entry.html?id=thar): þar- s. þær-
+- [thara](../entry.html?id=thara): þara s. se n. I fm dt ; pl gn
+- [thare](../entry.html?id=thare): þare s. se n. I fm gn ; fm dt ; pl gn
+- [thas-2](../entry.html?id=thas-2): II ) s. þes no ; fm ac ; pl no ; ac
+- [the-3](../entry.html?id=the-3): III ) Artikel ; s. se, n. I no
+- [thea](../entry.html?id=thea): þea s. þeow n. I , pl ac
+- [theaht-endlic](../entry.html?id=theaht-endlic): [-þeaht(endlic)] s. geþ~
+- [thearf-2](../entry.html?id=thearf-2): II ) s. þurfan, 3
+- [thearto](../entry.html?id=thearto): þearto s. þærto
+- [thec](../entry.html?id=thec): þec s. þu, ac
+- [thed](../entry.html?id=thed): þed s. þeod
+- [theder](../entry.html?id=theder): þeder s. þider
+- [thef](../entry.html?id=thef): þef s. þiefð
+- [theign](../entry.html?id=theign): þeign, þein, þen- s. þegn-
+- [thein](../entry.html?id=thein): thein , thenus s. þegn
+- [thene](../entry.html?id=thene): þene s. se, ac
+- [theng](../entry.html?id=theng): þeng s. þegn
+- [theo](../entry.html?id=theo): þeo s. þe n. V, Z. 3
+- [theofan](../entry.html?id=theofan): þeofan s. þeof, pl no
+- [theofte](../entry.html?id=theofte): þeofte, þeofð s. þiefð
+- [theofwealh](../entry.html?id=theofwealh): þeofwealh irrig für þeoww~; s. d.
+- [theonon](../entry.html?id=theonon): þeonon s. þo~
+- [theora](../entry.html?id=theora): þeora s. se, pl gn
+- [theos](../entry.html?id=theos): þeos s. þes, fm
+- [theowet](../entry.html?id=theowet): þeowet- s. þeowot-
+- [ther](../entry.html?id=ther): þer- s. þær-
+- [therh](../entry.html?id=therh): þerh (-) s. þurh
+- [thes-2](../entry.html?id=thes-2): II ) þes s. se n. I , gn
+- [thet](../entry.html?id=thet): þet s. þæt n. IV
+- [theuw](../entry.html?id=theuw): þeuw s. þeow
+- [thi](../entry.html?id=thi): þi , instr , s. þy n. II
+- [thiefed](../entry.html?id=thiefed): [-þiefed] s. geþ~
+- [thifd](../entry.html?id=thifd): þifð s. þiefð
+- [thig](../entry.html?id=thig): þig s. þy n. II B
+- [thiggum](../entry.html?id=thiggum): þiggum s. þing-
+- [thillic](../entry.html?id=thillic): þillic s. þyl~
+- [thinc](../entry.html?id=thinc): þinc s. þing
+- [thincan](../entry.html?id=thincan): þincan s. þyn~
+- [thinctha](../entry.html?id=thinctha): [-þincþa] s. geþyncðo
+- [thing-2](../entry.html?id=thing-2): þing- s. dynge
+- [thiosne](../entry.html?id=thiosne): þiosne s. þes n. I , ac
+- [thiostru](../entry.html?id=thiostru): þiostru s. þiestru
+- [thirel](../entry.html?id=thirel): þirel- s. þyrel-
+- [this-um](../entry.html?id=this-um): þis(um) s. þes n. I
+- [thoht](../entry.html?id=thoht): [-þoht] s. geþ~
+- [thon-3](../entry.html?id=thon-3): III ) þon s. þonne n. I Z. 5
+- [thon-n-on](../entry.html?id=thon-n-on): þon(n)on s. þonne n. I Z. 10
+- [thonne-2](../entry.html?id=thonne-2): II ) þonne s. se n. I , ac , n. b
+- [thow](../entry.html?id=thow): þow- s. þeow-
+- [threo](../entry.html?id=threo): þreo- s. þri(e)-
+- [thri-i-m](../entry.html?id=thri-i-m): þri(i)m s. þrie, dt instr .
+- [thria](../entry.html?id=thria): þria s. þrie
+- [thriding](../entry.html?id=thriding): þriding s. þriðing
+- [thrige](../entry.html?id=thrige): þrige s. þriwa
+- [thrihing](../entry.html?id=thrihing): þrihing s. þriðing
+- [thrimfealdum](../entry.html?id=thrimfealdum): þrimfealdum s. þrifeald nt dt
+- [thrio](../entry.html?id=thrio): þrio s. þrie
+- [thristian](../entry.html?id=thristian): [-þristian, -þristlæcan] s. geþ~
+- [thrufeald](../entry.html?id=thrufeald): þrufeald s. þrif~
+- [thry](../entry.html?id=thry): þry- s. þri-, þrie
+- [thu-2](../entry.html?id=thu-2): II ) þu s. þy n. II B
+- [thuhte](../entry.html?id=thuhte): þuhte s. þyncan
+- [thungen](../entry.html?id=thungen): [-þungen] s. geþ~
+- [thurl](../entry.html?id=thurl): þurl s. þyrel
+- [thyncdo](../entry.html?id=thyncdo): [-þyncðo] s. geþ~
+- [thyrfe](../entry.html?id=thyrfe): þyrfe s. þurfan
+- [thys-um](../entry.html?id=thys-um): þys ( um ) s. þes I
+- [tidum](../entry.html?id=tidum): [-tidum] s. hwilt~
+- [tiema](../entry.html?id=tiema): [-tiema] s. get~
+- [tiers](../entry.html?id=tiers): F tiers s. terce
+- [tigu](../entry.html?id=tigu): [-tigu] s. egeðget~
+- [ting](../entry.html?id=ting): [-ting] s. husting
+- [tint](../entry.html?id=tint): F tint s. tenir
+- [tlef](../entry.html?id=tlef): tlef s. twelf
+- [toagens](../entry.html?id=toagens): L toagens lies coagens; s. d.
+- [togen](../entry.html?id=togen): [-togen] I ) s. teon II ) s. betogen
+- [toille](../entry.html?id=toille): F toille s. toldre
+- [topp](../entry.html?id=topp): [-topp] s. extopare
+- [tote](../entry.html?id=tote): F tote- s. tut
+- [trarad](../entry.html?id=trarad): F trarad s. traire
+- [tre-h-ing](../entry.html?id=tre-h-ing): tre(h)ing- s. þriðing-
+- [treowan](../entry.html?id=treowan): treowan s. triewan
+- [tres](../entry.html?id=tres): F tres s. treis
+- [triow](../entry.html?id=triow): triow s. treow
+- [triowan](../entry.html?id=triowan): triowan s. triewan
+- [triwe](../entry.html?id=triwe): triwe s. triewe
+- [triwian](../entry.html?id=triwian): triwian s. treow~
+- [tro-i-sse](../entry.html?id=tro-i-sse): F tro(i)sse , tro(u)ver, truse s. truver
+- [troveure](../entry.html?id=troveure): F troveure s. truv~
+- [truwian](../entry.html?id=truwian): [-truwian] s. get~
+- [tryw](../entry.html?id=tryw): tryw- s. treow-, triew-, truw-
+- [tuelf](../entry.html?id=tuelf): tuelf s. twelf
+- [tup](../entry.html?id=tup): F [tup] s. extopare
+- [tux-l](../entry.html?id=tux-l): tux(l) s. tusc
+- [twelftig](../entry.html?id=twelftig): [-twelftig] s. hundt~
+- [tweon](../entry.html?id=tweon): [-tweon] s. bet~
+- [twiaende](../entry.html?id=twiaende): twiænde s. twihynde
+- [twiga](../entry.html?id=twiga): twiga s. tuwa
+- [twuga](../entry.html?id=twuga): twuga , twywa s. tuwa
+- [tyge](../entry.html?id=tyge): [-tyge] s. oftige
+- [tyhd](../entry.html?id=tyhd): tyhð s. teon.
+- [tylung](../entry.html?id=tylung): tylung s. til~
+- [tyman](../entry.html?id=tyman): tyman s. tieman
+- [tymbrian](../entry.html?id=tymbrian): tymbrian s. tim~
+- [tyn](../entry.html?id=tyn): tyn s. tien
+- [tynan](../entry.html?id=tynan): I ) tynan s. tienan
+- [tyngnes](../entry.html?id=tyngnes): [-tyngnes] s. get~
+- [tyrian](../entry.html?id=tyrian): tyrian s. tiergan
+- [u-tmest](../entry.html?id=u-tmest): [u]tmest s. uterre
+- [udan](../entry.html?id=udan): uðan s. unnan
+- [uht](../entry.html?id=uht): [uht] s. wiht
+- [ulcus](../entry.html?id=ulcus): L ulcus s. hulc
+- [um](../entry.html?id=um): -um ersetzt durch -on, -an, -am, -en, -e: s. Declination, sbst pl dt masc ( fm , nt ); auch schwach ; adj sg dt masc ( nt ); pl
+- [ume](../entry.html?id=ume): F ume s. hume
+- [un-2](../entry.html?id=un-2): II ) un Var. für hum s. d.
+- [ungeld](../entry.html?id=ungeld): ungeld s. ungilde
+- [ungerad](../entry.html?id=ungerad): [ungerad] s. unrad
+- [unigablum](../entry.html?id=unigablum): unigablum s. huniggafol
+- [unraed-2](../entry.html?id=unraed-2): II ) unræd s. hundred n. C
+- [unsingian](../entry.html?id=unsingian): unsingian s. unsyn~
+- [unsodian](../entry.html?id=unsodian): [-unsoðian] s. geu~
+- [unwaemme](../entry.html?id=unwaemme): unwæmme s. unwemme
+- [unwaldes](../entry.html?id=unwaldes): unwaldes für ungewealdes; s. d.
+- [ure-3](../entry.html?id=ure-3): F ure s. hure
+- [us-2](../entry.html?id=us-2): us- s. ure n. II
+- [uses](../entry.html?id=uses): uses , usra, usum s. ure, n. II
+- [usig](../entry.html?id=usig): usig s. us, ac
+- [utt](../entry.html?id=utt): utt (-) s. ut
+- [uttre](../entry.html?id=uttre): uttre s. uterre
+- [v-2](../entry.html?id=v-2): L v ersetzt durch b; s. d.
+- [vaelle](../entry.html?id=vaelle): vælle s. willan
+- [valde](../entry.html?id=valde): valde s. willan
+- [valinvitni](../entry.html?id=valinvitni): [ valinvitni , nord. ] s. wallerwente
+- [vara](../entry.html?id=vara): vara [ north. ] s. wer
+- [veinged](../entry.html?id=veinged): F veinged s. venir
+- [velter](../entry.html?id=velter): L velter s. vealter
+- [venkeus](../entry.html?id=venkeus): F venkeus s. veintre
+- [vert](../entry.html?id=vert): F [vert] s. viridis
+- [vidve](../entry.html?id=vidve): F vidve s. vedve
+- [vienge-d](../entry.html?id=vienge-d): F vienge(d) , vient s. venir
+- [vigned](../entry.html?id=vigned): F vigned s. veisined
+- [visned](../entry.html?id=visned): F visned s. veisined
+- [vitni](../entry.html?id=vitni): [ -vitni , nord. ] s. wente
+- [vlex](../entry.html?id=vlex): vlex s. flæsc
+- [voere](../entry.html?id=voere): voere , vosa s. wesan
+- [w-2](../entry.html?id=w-2): FL w ersetzt durch gu-, gw-, s. d.
+- [waed-2](../entry.html?id=waed-2): II ) s. wedd
+- [waedu](../entry.html?id=waedu): [-wædu] s. wægngew~.
+- [waen](../entry.html?id=waen): wæn (-) s. wægn-
+- [waeordan](../entry.html?id=waeordan): wæorðan s. weo~
+- [waer](../entry.html?id=waer): wær (-) s. wer(-)
+- [waere](../entry.html?id=waere): wære , wæron s. wesan, ptt
+- [waernan](../entry.html?id=waernan): wærnan , -nung s. wiern~
+- [waernian](../entry.html?id=waernian): wærnian s. war~
+- [waes](../entry.html?id=waes): wæs s. wesan, ptt
+- [wald](../entry.html?id=wald): wald- s. weald-
+- [walh](../entry.html?id=walh): walh , Wali s. wealh; Walia s. Wallia; Waliscus s. Wielisc
+- [wapen](../entry.html?id=wapen): wapen (-) s. wæp~
+- [warans](../entry.html?id=warans): L warans s. warantus n. 1
+- [ward](../entry.html?id=ward): ward (-) s. weard-
+- [ware-2](../entry.html?id=ware-2): II. III ) s. waru
+- [ware-3](../entry.html?id=ware-3): IV ) s. wer
+- [ware-4](../entry.html?id=ware-4): V ) s. wesan, ptt
+- [water](../entry.html?id=water): water s. wæter
+- [we-a](../entry.html?id=we-a): -we(a)- , dafür wy-, s. d.
+- [wead](../entry.html?id=wead): wead s. wedd
+- [wealref](../entry.html?id=wealref): wealref s. wælreaf
+- [wearlic](../entry.html?id=wearlic): wearlic s. wær~
+- [weccan](../entry.html?id=weccan): [-weccan] s. aw~
+- [weder-2](../entry.html?id=weder-2): II ) s. weðer
+- [weder-3](../entry.html?id=weder-3): weðer s. hwæðer
+- [wega](../entry.html?id=wega): wega s. wæg n. I
+- [weilref](../entry.html?id=weilref): weilref s. wælreaf
+- [wemme](../entry.html?id=wemme): [-wemme] s. unw~
+- [wengtod](../entry.html?id=wengtod): wengtoð s. wan~
+- [weolde](../entry.html?id=weolde): [weolðe] s. Wealh Z. 3
+- [weoleg](../entry.html?id=weoleg): weoleg s. welig
+- [weor-2](../entry.html?id=weor-2): weor- s. weo- n. 3. 5 f.
+- [weor](../entry.html?id=weor): weor s. wer
+- [weorcan](../entry.html?id=weorcan): weorcan s. wyr~
+- [weorde](../entry.html?id=weorde): weorðe s. wierðe
+- [weorne](../entry.html?id=weorne): weorne s. wiernan n. 2a
+- [weorold](../entry.html?id=weorold): weorold s. woruld
+- [weotum](../entry.html?id=weotum): weotum s. wita, pl dt
+- [wep-e-n](../entry.html?id=wep-e-n): wep(e)n s. wæpen
+- [wera](../entry.html?id=wera): L wera (-) s. wer(-)
+- [werc](../entry.html?id=werc): werc s. weorc
+- [werdan](../entry.html?id=werdan): werdan s. wier~
+- [were](../entry.html?id=were): were (-) s. wer(-)
+- [wereplegium](../entry.html?id=wereplegium): L wereplegium , ~ius s. werborg
+- [werge](../entry.html?id=werge): werge s. wiergan
+- [werig](../entry.html?id=werig): werig s. wiergan
+- [werra](../entry.html?id=werra): L I ) werra (-), werre(-) s. wer
+- [weruld](../entry.html?id=weruld): weruld s. wor~
+- [wex](../entry.html?id=wex): wex s. weax
+- [wexan](../entry.html?id=wexan): wexan s. weax-
+- [wh](../entry.html?id=wh): wh- für hw- s. gehwa
+- [wid-3](../entry.html?id=wid-3): wið- Praefix für to-: s. wiðstandan
+- [widerian](../entry.html?id=widerian): [-widerian] s. gew~
+- [wido](../entry.html?id=wido): wido- s. wiðoban
+- [wier](../entry.html?id=wier): wier- ersetzt durch weor-, wer-: s.d.
+- [wierdan](../entry.html?id=wierdan): [wierðan] s. gew~
+- [wifed](../entry.html?id=wifed): wifed (-) s. weofod(-)
+- [wille](../entry.html?id=wille): wille s. wielle
+- [wintre](../entry.html?id=wintre): [-wintre] s. tienw~, twelfw~
+- [wiofod](../entry.html?id=wiofod): wiofod s. weo~
+- [wiotum](../entry.html?id=wiotum): wiotum s. wita n. 6b
+- [wir](../entry.html?id=wir): wir- s. wier-
+- [wircan](../entry.html?id=wircan): wircan, -cta (wirtha) s. wyr~, wyrhta
+- [wirt](../entry.html?id=wirt): wirt s. wyrt
+- [wita-2](../entry.html?id=wita-2): L wita s. wite
+- [witaservus](../entry.html?id=witaservus): L witaservus s. witeþeow
+- [witig](../entry.html?id=witig): [witig] s. gewittig
+- [wittig](../entry.html?id=wittig): [wittig] s. gew~
+- [wituma](../entry.html?id=wituma): wituma s. weot~
+- [wo](../entry.html?id=wo): wo- für weo-: s. wor-
+- [wom](../entry.html?id=wom): wom s. wamm
+- [wongtod](../entry.html?id=wongtod): wongtoð s. wang~
+- [wor](../entry.html?id=wor): wor- für weor- s. weorc, weorðian, weorðig
+- [wordig](../entry.html?id=wordig): worðig s. weor~
+- [wore](../entry.html?id=wore): wore s. woh I
+- [world](../entry.html?id=world): world- s. woruld-
+- [wr-ae-cca](../entry.html?id=wr-ae-cca): wr[æ]cca s. wreccena
+- [wuce](../entry.html?id=wuce): wuce s. wice
+- [wuduwe](../entry.html?id=wuduwe): wuduwe s. wid~
+- [wuht](../entry.html?id=wuht): wuht s. wiht
+- [wulcamb](../entry.html?id=wulcamb): wulcamb s. wullc~
+- [wurc](../entry.html?id=wurc): wurc s. weorc
+- [wurd-e](../entry.html?id=wurd-e): wurð (e), ~ðian , ~ðig s. weorð(-); wierðe
+- [wurd](../entry.html?id=wurd): wurd- , wurð- s. weorðan
+- [wycan](../entry.html?id=wycan): wycan s. wice
+- [wyd](../entry.html?id=wyd): wyð s. wið
+- [wyddian](../entry.html?id=wyddian): wyddian s. wed~
+- [wydewe](../entry.html?id=wydewe): wydewe s. widuwe
+- [wylen](../entry.html?id=wylen): wylen , -lisc s. wiel~
+- [wyllan](../entry.html?id=wyllan): wyllan , ~lnian s. wil~
+- [wyngeard](../entry.html?id=wyngeard): wyngeard s. win~
+- [wynter](../entry.html?id=wynter): wynter s. win~
+- [wyr](../entry.html?id=wyr): wyr- s. wer-
+- [wyrc](../entry.html?id=wyrc): wyrc- s. weorc-
+- [wyrce](../entry.html?id=wyrce): [-wyrce] s. gew~
+- [wyrd](../entry.html?id=wyrd): wyrð I ) s. weorð II ) s. weorðan, 3
+- [wyrdan](../entry.html?id=wyrdan): [-wyrdan] I ) s. andw~ II ) s. wierdan
+- [wyrde](../entry.html?id=wyrde): wyrðe I ) s. wierðe II ) weorðan, op 3
+- [wyrdmynt](../entry.html?id=wyrdmynt): wyrðmynt , ~ðung s. weorð~
+- [wyrg-e](../entry.html?id=wyrg-e): wyrg (e) s. wier-
+- [wyrgeld](../entry.html?id=wyrgeld): wyrgeld s. wergield
+- [wyrht](../entry.html?id=wyrht): [-wyrht] s. gew~
+- [wyri-g-e](../entry.html?id=wyri-g-e): wyri[g]e , wyrnan , wyrs- s. wier-
+- [wyrtha](../entry.html?id=wyrtha): wyrtha , wyrða s. wyrhta
+- [wys](../entry.html?id=wys): wys , wyssian s. wis, wis~
+- [wyta](../entry.html?id=wyta): wyta , -tan , -te s. wit~
+- [wytan](../entry.html?id=wytan): wytan s. wuton
+- [xp](../entry.html?id=xp): xp̄ für Christ-: s. Abkürzung
+- [y-4](../entry.html?id=y-4): F y- für i-: s. iglise
+- [yfl](../entry.html?id=yfl): yfl- s. yfel(-)
+- [yglise](../entry.html?id=yglise): F yglise s. egl~
+- [yhte](../entry.html?id=yhte): yhte s. iecan
+- [ylc](../entry.html?id=ylc): ylc- s. ilc-
+- [yldesta](../entry.html?id=yldesta): yldesta , -dra s. eald
+- [ymban](../entry.html?id=ymban): ymban, ymbe, ymbon s. ymb
+- [ymcyme](../entry.html?id=ymcyme): ymcyme s. ymbc~
+- [yo](../entry.html?id=yo): -yo für -io: s. se n. I , fm
+- [yrde](../entry.html?id=yrde): yrde s. ierð
+- [yrhde](../entry.html?id=yrhde): yrhðe s. iergðo
+- [ys](../entry.html?id=ys): ys s. is
+- [ysen](../entry.html?id=ysen): ysen s. isen

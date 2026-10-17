@@ -642,7 +642,9 @@
      * data: { headword, n, lang, page, facsimile, entryHtml, definitionHtml,
      *         translationHtml, seeAlso: [{text, slug}], links: {bt, doe,
      *         wiktionary, lawCode: [{text, url}]}, change: {when, text},
-     *         earlierChanges: [{when, text}] }
+     *         earlierChanges: [{when, text}], xref }
+     * xref: true for a cross-reference entry (one that only points to another
+     * headword), written as <entry type="xref">.
      */
     function buildEntryXml(data) {
         const slug = data.slug || slugify(data.headword, data.n);
@@ -669,7 +671,7 @@
 
         const page = data.page ? `<biblScope unit="page">${escapeXml(data.page)}</biblScope>` : '';
         const facs = data.facsimile ? `\n            <ptr type="facsimile" target="${escapeXml(data.facsimile)}"/>` : '';
-        const entryAttrs = (lang === 'de' ? ' type="grammatical"' : '') + (data.n ? ` n="${data.n}"` : '');
+        const entryAttrs = (data.xref ? ' type="xref"' : lang === 'de' ? ' type="grammatical"' : '') + (data.n ? ` n="${data.n}"` : '');
 
         return `<?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
@@ -828,6 +830,8 @@ ${translation}
         return {
             headword: orth ? orth.textContent.trim() : '',
             n: entry.getAttribute('n') || '',
+            // A cross-reference entry: it only points to another headword.
+            xref: entry.getAttribute('type') === 'xref',
             slug: idno ? idno.textContent.trim() : '',
             lang,
             language: LANGUAGES[lang] || lang,
