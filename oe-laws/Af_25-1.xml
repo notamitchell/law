@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">413</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -57,24 +60,37 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 437 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 437 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 64.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 64.</change>
+      <change when="2026-10" type="checked">Liebermann’s Latin text corrected against Gesetze I, p. 64: “∅” → “| cogat ad uiolentiam perferendam, castretur.”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="25.1">
         <head><ref type="lawCode" target="law:Af">Af</ref> 25.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25.1" corresp="#wit-h">Gif ðeowmon þeowne to nydhæmede genide, bete mid his hyde (al<hi rend="italic">ias</hi> eowede).</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25.1" corresp="#wit-e">Gif ðeowmon þeowne to nedhæmde genede, bete mid his eowende.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="25.1" corresp="#wit-q">Si seruus seruam ad uiolentum concubitum cogat, testiculos perdat.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25.1" corresp="#wit-h">Gif ðeowmon<ptr type="liebermannNote" n="13" target="#Af_25-1.lnote.oe.13"/> þeowne to nydhæmede<ptr type="liebermannNote" n="4" target="#Af_25-1.lnote.oe.4"/> genide, bete mid his hyde<ptr type="liebermannNote" n="14" target="#Af_25-1.lnote.oe.14"/> (al<hi rend="italic">ias</hi> eowede).</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25.1" corresp="#wit-e">Gif ðeowmon<ptr type="liebermannNote" n="4" target="#Af_25-1.lnote.oe.4-2"/> þeowne to nedhæmde<ptr type="liebermannNote" n="5" target="#Af_25-1.lnote.oe.5"/> genede, bete mid his eowende.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25.1" corresp="#wit-b-no-prol">Gyf ðeowman ðeowne to nydhæmede genyde, bete mid his eowende.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="25.1" corresp="#wit-q">Si seruus seruam ad<ptr type="liebermannNote" n="2" target="#Af_25-1.lnote.oe.2"/> uiolentum concubitum cogat, testiculos perdat. | cogat<ptr type="liebermannNote" n="2" target="#Af_25-1.lnote.oe.2"/> ad uiolentiam perferendam, castretur.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="29.1" corresp="#wit-e">Gif ðeowman þeowne to nedhæmde genede, bete mid his eowende.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If a slave rapes a slave, let him compensate with his ?testicles.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If a slave rapes a slave, castration shall be required as compensation.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">If a slave rape a slave-woman, he is to pay by suffering castration.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Sklav eine Sklavin zur Nothzucht zwingt, büsse er mit seinem Zeugungsgliede.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn ein Sklav eine Sklavin zur Nothzucht zwingt, büsse<ptr type="liebermannNote" n="1" target="#Af_25-1.lnote.de.1"/> er mit seinem Zeugungsgliede.<ptr type="liebermannNote" n="2" target="#Af_25-1.lnote.de.2"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a slave forces a slave woman to intercourse, let him pay with his genitals.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:LeisWl_18">Leis Wl 18</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_25-1.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">64</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">geänd.</hi> -man</seg><seg type="translation" xml:lang="en" source="#claude">altered to -man</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_25-1.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">64</biblScope></bibl><seg type="original" xml:lang="de">y <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">y on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_25-1.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">64</biblScope></bibl><seg type="original" xml:lang="de">hyde <hi rend="italic">im Text,</hi> al. eo. <hi rend="italic">am Rande</hi></seg><seg type="translation" xml:lang="en" source="#claude">hyde in the text, al. eo. in the margin</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_25-1.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">65</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">nur</hi> ad — perdat <hi rend="italic">Lond; nur</hi> cogat — castretur <hi rend="italic">übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">only ad — perdat Lond; only cogat — castretur the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_25-1.lnote.oe.4-2" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">64</biblScope></bibl><seg type="original" xml:lang="de">-man <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-man Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_25-1.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">64</biblScope></bibl><seg type="original" xml:lang="de">nydhæmed genyde, gebete <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">nydhæmed genyde, gebete Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_25-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">56</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Notzucht 7. 11; Entmannung 1—2b; spiegelnde Strafe 2</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Notzucht 7. 11; Entmannung 1—2b; spiegelnde Strafe 2</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_25-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">56</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">H ändert im Text bewusst: ‘Haut’ (<hi rend="italic">s. Gl</hi> Prügel 2—3b) und gibt Afs Lesung nur am Rande. Über das Wort <hi rend="italic">eowend:</hi> ‘penis’ <hi rend="italic">s.</hi> Thöne <hi rend="italic">Namen d. Körpert. b. Agsa.</hi> 42</seg><seg type="translation" xml:lang="en" source="#claude">H deliberately alters the text: ‘skin’ (<hi rend="italic">see Gl</hi> Prügel 2—3b), and gives Af’s reading only in the margin. On the word <hi rend="italic">eowend:</hi> ‘penis’ <hi rend="italic">see</hi> Thöne <hi rend="italic">Namen d. Körpert. b. Agsa.</hi> 42</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Af_25-1.attnote.fn.19" n="19" source="#attenborough"><bibl><biblScope unit="page">74</biblScope></bibl><label>nedhæmde</label><seg type="original" xml:lang="en"><hi rend="italic">nydhæmede</hi>. B &amp; H, as frequently.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Af_25-1.attnote.fn.20" n="20" source="#attenborough"><bibl><biblScope unit="page">74</biblScope></bibl><label>eowende</label><seg type="original" xml:lang="en"><hi rend="italic">hyde. alias eowede</hi> in the margin. H.</seg></note>
       </div>
     </body>
   </text>

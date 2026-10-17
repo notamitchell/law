@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +31,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">409</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -58,21 +60,23 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 356 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 356 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 40.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS G added from Gesetze I, p. 40.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="El. 40">
         <head><ref type="lawCode" target="law:Af">Af</ref> El. 40</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 40" corresp="#wit-h">Leases monnes word ne recce ðu þæs to gehiranne, ne his domas ne geðafa þu, ne nane gewitnesse æfter him ne saga ðu.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 40" corresp="#wit-e">Leases monnes word ne rec ðu no þæs to gehieranne, ne his domas ne geðafa ðu, ne nane gewitnesse æfter him ne saga ðu.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 40" corresp="#wit-q">Non suscipies uocem mendacii nec iunges manum tuam, ut pro impio dicas falsum testimonium.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 40" corresp="#wit-h">Leases monnes<ptr type="liebermannNote" n="2" target="#Af_El-to-40.lnote.oe.2"/> word ne recce ðu þæs<ptr type="liebermannNote" n="4" target="#Af_El-to-40.lnote.oe.4"/> to gehiranne, ne his domas ne geðafa þu, ne nane gewitnesse æfter him ne saga ðu.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 40" corresp="#wit-e">Leases monnes<ptr type="liebermannNote" n="11" target="#Af_El-to-40.lnote.oe.11"/> word ne rec ðu no<ptr type="liebermannNote" n="12" target="#Af_El-to-40.lnote.oe.12"/> þæs to gehieranne<ptr type="liebermannNote" n="13" target="#Af_El-to-40.lnote.oe.13"/>, ne his domas ne geðafa ðu, ne nane<ptr type="liebermannNote" n="14" target="#Af_El-to-40.lnote.oe.14"/> gewitnesse æfter him ne saga ðu.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="El. 40" corresp="#wit-g-prol-only">Leases mannes word ne rece þu na to gehyranne, ne his domas ne geðafa ðu, ne nane gewitnesse æfter him ne sege ðu.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="El. 40" corresp="#wit-q">Non suscipies uocem mendacii nec iunges<ptr type="liebermannNote" n="5" target="#Af_El-to-40.lnote.oe.5"/> manum tuam, ut pro impio dicas<ptr type="liebermannNote" n="6" target="#Af_El-to-40.lnote.oe.6"/> falsum testimonium.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="MP 40" corresp="#wit-e">Leases monnes word ne rec ðu no þæs to gehieranne, ne his domas ne geðafa ðu, ne nane gewitnesse æfter him ne saga ðu.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">You will not consider obeying the word of a dishonest man, nor will you consent to his judgments, nor will you repeat any of his testimony.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">Do not thou heed the word of the false man, to obey therefore, nor consent to his judgments, nor say any witness after him.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Falschen Mannes Wort beachte du nicht, um darauf zu horchen, noch seine Urtheile billige du, und sage du kein Zeugniss ihm [folgend] nach.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Falschen<ptr type="liebermannNote" n="1" target="#Af_El-to-40.lnote.de.1"/> Mannes Wort beachte du nicht, um darauf zu horchen, noch seine Urtheile<ptr type="liebermannNote" n="2" target="#Af_El-to-40.lnote.de.2"/> billige du, und sage du kein Zeugniss<ptr type="liebermannNote" n="3" target="#Af_El-to-40.lnote.de.3"/> ihm [folgend] nach.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Do not heed a false man’s word so as to listen to it, nor approve his judgments, and do not speak any testimony after him [following him].</ab>
         <note type="passageSource">Exodus 23,1</note>
         <note type="comparison" source="#liebermann" n="41">Exodus 23.1</note>
@@ -80,6 +84,17 @@
         <note type="comparedBy" source="#wormald-mel" n="283"><ref target="clause:Af_32">Af 32</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="383"><ref target="clause:Iudex_Iudex-1">Iudex</ref></note>
         <note type="translator" source="#whitelock">This and the next clause are from Exodus xxiii. 1, 2.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-40.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">41</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geändert in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-40.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">41</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-40.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">41</biblScope></bibl><seg type="original" xml:lang="de">unges uel uindes <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">unges uel uindes Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-40.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">41</biblScope></bibl><seg type="original" xml:lang="de">dices <hi rend="italic">R</hi></seg><seg type="translation" xml:lang="en" source="#claude">dices R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-40.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">40</biblScope></bibl><seg type="original" xml:lang="de">man. <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">man. So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-40.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">40</biblScope></bibl><seg type="original" xml:lang="de">na <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">na So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-40.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">40</biblScope></bibl><seg type="original" xml:lang="de">gehyr. <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gehyr. So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_El-to-40.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">40</biblScope></bibl><seg type="original" xml:lang="de">nan gewitnysse <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">nan gewitnysse Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-40.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">47</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Verleumdung; Zeuge 5a. Bessere die Übs.: ‘achte du dessen nicht’</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Verleumdung; Zeuge 5a. Correct the transl. to: ‘pay no heed to it’</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-40.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">47</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Laut des Folgenden (<hi rend="italic">s. u.</hi> 41) denkt Af ans Gericht, versteht also unter dem Falschen einen Urteilfinder, Zeugen (<hi rend="italic">o.</hi> El 8) oder Eideshelfer</seg><seg type="translation" xml:lang="en" source="#claude">According to what follows (<hi rend="italic">see below</hi> 41) Af is thinking of the court, and so understands by the false man a doomsman, a witness (<hi rend="italic">above</hi> El 8) or an oath-helper</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_El-to-40.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">47</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">æfter</hi> kann ‘gemäss’ heissen, oder ‘zeitlich oder im Range folgend nach’ wie im Lat. <hi rend="italic">testes <hi rend="spaced">post</hi> ipsum iurare,</hi> und ist dann von Eideshelfern (<hi rend="italic">s. d. Gl</hi> 2d) gemeint. ‘Für’ [Schmid, aus <hi rend="italic">pro impio</hi> der Vulg.?] geht nicht an</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">æfter</hi> can mean ‘according to’, or ‘following after in time or rank’, as in Latin <hi rend="italic">testes <hi rend="italic">post</hi> ipsum iurare,</hi> and is then meant of oath-helpers (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 2d). ‘For’ [Schmid, from <hi rend="italic">pro impio</hi> of the Vulg.?] will not do</seg></note>
       </div>
     </body>
   </text>

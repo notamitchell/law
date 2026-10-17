@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -56,26 +59,43 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 525 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 525 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 84.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 84.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="68">
         <head><ref type="lawCode" target="law:Af">Af</ref> 68</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="68" corresp="#wit-h">Gif mon bið on eaxle wund, gebete mid LXXX scll', gif se mon cwic sy.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="68" corresp="#wit-e">Gif mon bið in eaxle wund, gebete mid LXXX scill., gif se mon cwic sie.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="68" corresp="#wit-q">Si quis in humero plagietur, emendetur LXXX sol., si homo uiuus sit.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="68" corresp="#wit-h">Gif mon<ptr type="liebermannNote" n="4" target="#Af_68.lnote.oe.4"/> bið on eaxle wund<ptr type="liebermannNote" n="15" target="#Af_68.lnote.oe.15"/>, gebete mid LXXX scll', gif se mon<ptr type="liebermannNote" n="4" target="#Af_68.lnote.oe.4-2"/> cwic sy.<ptr type="liebermannNote" n="3" target="#Af_68.lnote.oe.3"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="68" corresp="#wit-e">Gif mon bið in<ptr type="liebermannNote" n="25" target="#Af_68.lnote.oe.25"/> eaxle wund, gebete mid LXXX scill., gif<ptr type="liebermannNote" n="26" target="#Af_68.lnote.oe.26"/> se mon cwic sie.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="68" corresp="#wit-b-no-prol">Gyf mon bið on eaxle gewundad, gebete mid hundeahtati<ptr type="liebermannNote" n="4" target="#Af_68.lnote.oe.4-2"/> scill', gyf se mon cwic sy.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="68" corresp="#wit-q">Si quis in humero plagietur, emendetur<ptr type="liebermannNote" n="16" target="#Af_68.lnote.oe.16"/> LXXX sol., si homo<ptr type="liebermannNote" n="17" target="#Af_68.lnote.oe.17"/> uiuus<ptr type="liebermannNote" n="18" target="#Af_68.lnote.oe.18"/> sit.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="72" corresp="#wit-e">Gif mon bið in eaxle wund, gebete mid LXXX scill, gif se mon cwic sie.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If someone is wounded on the shoulder, let him pay with 80 shillings, if the man is alive.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If a man is wounded in the shoulder, 80 shillings shall be paid as compensation, if he continues to live.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand an der Achsel verwundet ist, vorausgesetzt, der Mann ist lebendig, büsse [der Thäter] mit 80 Schill.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If a man is wounded in the shoulder<ptr type="editorNote" n="1" target="#Af_68.attnote.n.1"/>, 80 shillings shall be paid as compensation, if he continues to live.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn<ptr type="liebermannNote" n="1" target="#Af_68.lnote.de.1"/> jemand an<ptr type="liebermannNote" n="2" target="#Af_68.lnote.de.2"/> der Achsel<ptr type="liebermannNote" n="3" target="#Af_68.lnote.de.3"/> verwundet ist, vorausgesetzt, der Mann ist lebendig, büsse [der Thäter] mit 80 Schill.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If someone is wounded in the shoulder, provided the man is alive, let [the offender] pay 80 shillings.</ab>
         <note type="comparison" source="#jurasinski-and-oliver" n="361"><label>cf.</label> <ref target="clause:Af_53">Af 53</ref> <quote>Cf. §57; also §77, which requires 20 shillings for injuring the shoulder and another 15 if a bone is removed.</quote></note>
         <note type="comparison" source="#jurasinski-and-oliver" n="361"><label>cf.</label> <ref target="clause:Af_73">Af 73–74</ref> <quote>Cf. §57; also §77, which requires 20 shillings for injuring the shoulder and another 15 if a bone is removed.</quote></note>
         <note type="comparedBy" source="#jurasinski-and-oliver" n="355"><ref target="clause:Af_53">Af 53</ref></note>
         <note type="comparedBy" source="#jurasinski-and-oliver" n="363"><ref target="clause:Af_74">Af 74</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_68.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">84</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_68.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">84</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">geänd. in</hi> gewundod</seg><seg type="translation" xml:lang="en" source="#claude">altered to gewundod</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_68.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">84</biblScope></bibl><seg type="original" xml:lang="de">y <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">y on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_68.lnote.oe.4-2" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">84</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">im</hi> 16. <hi rend="italic">Jh. geänd. aus</hi> hundeahta</seg><seg type="translation" xml:lang="en" source="#claude">altered in the 16th cent. from hundeahta</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_68.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">85</biblScope></bibl><seg type="original" xml:lang="de">LXXX s. e. <hi rend="italic">Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">LXXX s. e. Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_68.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">85</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt THkBr</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in THkBr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_68.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">85</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so Lond;</hi> vivat <hi rend="italic">übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">thus Lond; vivat the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_68.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">84</biblScope></bibl><seg type="original" xml:lang="de">on e. <hi rend="spaced">gewundod</hi> <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">on e. <hi rend="italic">gewundod</hi> Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_68.lnote.oe.26" n="26" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">84</biblScope></bibl><seg type="original" xml:lang="de">gif — sie <hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gif — sie lacking in Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_68.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">62</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Achsel</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Achsel</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_68.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">62</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">hb modernisiert</seg><seg type="translation" xml:lang="en" source="#claude">hb modernizes</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_68.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">62</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Es scheinen im Archetyp hinter <hi rend="italic">wund</hi> Worte, angeregt durch Abt 38, des Sinnes ‘und gelähmt wird’ ausgefallen; sonst entstände Widerspruch zu 53</seg><seg type="translation" xml:lang="en" source="#claude">It seems that in the archetype words prompted by Abt 38, meaning ‘and is lamed’, have dropped out after <hi rend="italic">wund</hi>; otherwise there would be a contradiction with 53</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="Af_68.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">200</biblScope></bibl><seg type="original" xml:lang="en">There appears to be a discrepancy between this law and cap. 53. Either the word <hi rend="italic">eaxle</hi> is a mistake, or (as Liebermann suggests) some words may have been lost. The mistake, whatever it may be, is common to all MSS.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Af_68.attnote.fn.16" n="16" source="#attenborough"><bibl><biblScope unit="page">90</biblScope></bibl><label>in</label><seg type="original" xml:lang="en"><hi rend="italic">on</hi>. Ld, B &amp; H.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Af_68.attnote.fn.17" n="17" source="#attenborough"><bibl><biblScope unit="page">90</biblScope></bibl><label>wund</label><seg type="original" xml:lang="en"><hi rend="italic">gewundad</hi>. B. <hi rend="italic">-dod</hi>. Ld.</seg></note>
       </div>
     </body>
   </text>

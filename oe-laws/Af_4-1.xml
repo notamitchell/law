@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -31,6 +33,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">410</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -59,27 +62,35 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 389 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 389 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 50.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 50: “wille,” → “wylle,”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4.1">
         <head><ref type="lawCode" target="law:Af">Af</ref> 4.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.1" corresp="#wit-h">Gif he hine sylfne treowan wille, dó þ<hi rend="italic">æt</hi> be cyninges wergylde.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.1" corresp="#wit-e">Gif he hine selfne triowan wille, do þæt be cyninges wergelde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.1" corresp="#wit-h">Gif he hine sylfne treowan wylle, dó þ<hi rend="italic">æt</hi> be cyninges wergylde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.1" corresp="#wit-e">Gif he hine selfne<ptr type="liebermannNote" n="16" target="#Af_4-1.lnote.oe.16"/> triowan<ptr type="liebermannNote" n="17" target="#Af_4-1.lnote.oe.17"/> wille, do þæt be cyninges wergelde.<ptr type="liebermannNote" n="18" target="#Af_4-1.lnote.oe.18"/></ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.1" corresp="#wit-b-no-prol">Gyf he hine sylfne treowsian wylle, do þ<hi rend="italic">æt</hi> be cyninges wergylde.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.1" corresp="#wit-q">Si se uelit adlegiare, secundum regis weregildum hoc faciat.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="4.1" corresp="#wit-e">Gif he hine selfne triowan wille, do þæt be cyninges wergelde.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If he wishes to exculpate himself, let him do so by [an oath in the amount of] the king’s wergild.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If he wishes to clear himself [from such a charge], he shall do it by an oath equal to the king's wergeld.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If he wishes to clear himself [from such a charge], he shall do it by an oath equal to the king's wergeld<ptr type="editorNote" n="1" target="#Af_4-1.attnote.n.1"/>.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">If he wishes to clear himself, he is to do it by [an oath equivalent to] the king’s wergild.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn er sich reinschwören will, thue er das mit [Eid so hoch wie] Königs Wergeld.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn er sich reinschwören<ptr type="liebermannNote" n="1" target="#Af_4-1.lnote.de.1"/> will, thue er das mit [Eid<ptr type="liebermannNote" n="2" target="#Af_4-1.lnote.de.2"/> so hoch wie] Königs Wergeld.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If he wishes to clear himself by oath, let him do so with [an oath as high as] the king’s wergeld.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:VAtr_30">V Atr 30</ref></note>
         <note type="comparedBy" source="#jurasinski-and-oliver" n="151"><ref target="clause:VAtr_30">V Atr 30</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="393"><ref target="clause:IICn_57">II Cn 57</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_4-1.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">50</biblScope></bibl><seg type="original" xml:lang="de">sylfne <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">sylfne So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_4-1.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">50</biblScope></bibl><seg type="original" xml:lang="de">treowian <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">treowian Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_4-1.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">50</biblScope></bibl><seg type="original" xml:lang="de">-gylde <hi rend="italic">Ld;</hi> -gyld <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">-gylde Ld; -gyld So</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_4-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">52</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">B modernisiert; <hi rend="italic">vgl.</hi> zur Endung <hi rend="italic">-sian</hi> Kern in <hi rend="italic">Anglia</hi> 28, 394</seg><seg type="translation" xml:lang="en" source="#claude">B modernises; on the ending <hi rend="italic">-sian</hi> <hi rend="italic">cf.</hi> Kern in <hi rend="italic">Anglia</hi> 28, 394</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_4-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">52</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Eidesschwere 4a; Wergeld 11. Der Königsverrats Angeklagte musste sich nach diesem System mit 36 Gemeinfreien reinigen oder, falls <hi rend="italic">cynebot</hi> inbegriffen, mit 72</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Eidesschwere 4a; Wergeld 11. Under this system a man accused of treason against the king had to clear himself with 36 common freemen or, if <hi rend="italic">cynebot</hi> was included, with 72</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="Af_4-1.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">194</biblScope></bibl><seg type="original" xml:lang="en">The value of the wergeld of the King of Wessex is never stated in the laws. In the fragment <hi rend="italic">Be Myrcna Lage</hi>, cap. 2, the king’s (simple) wergeld is stated to be equal to the wergeld of six thegns, <hi rend="italic">i.e.</hi>, 30,000 sceattas or 120 pounds, while an equal amount, called <hi rend="italic">cynebot</hi>, has to be paid to the <hi rend="italic">leode</hi> (<hi rend="italic">i.e.</hi> the men in the personal service of the king). As this is the sum stated to have been paid for the West Saxon prince Mul (see <hi rend="italic">Sax. Chron.</hi> ann. 694), it would seem that the wergelds of the West Saxon and Mercian kings were originally identical. A different and somewhat larger sum is specified in the <hi rend="italic">Northleoda Laga</hi>, cap. 1 (see Chadwick, <hi rend="italic">Anglo-Saxon Institutions</hi>, p. 17 f.).</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Af_4-1.attnote.fn.21" n="21" source="#attenborough"><bibl><biblScope unit="page">64</biblScope></bibl><label>triowan</label><seg type="original" xml:lang="en"><hi rend="italic">treowsian</hi>. B.</seg></note>
       </div>
     </body>
   </text>

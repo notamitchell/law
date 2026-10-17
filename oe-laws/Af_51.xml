@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -56,22 +59,34 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 497 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 497 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 80.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 80.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="51">
         <head><ref type="lawCode" target="law:Af">Af</ref> 51</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="51" corresp="#wit-h">Gif monnes ðrotbolla byð þyrel, gebete ðæt mid XII scll'.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="51" corresp="#wit-e">Gif monnes ðrotbolla bið þyrel, gebete mid XII scill.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="51" corresp="#wit-q">Qui gurgulionem perforabit alicui, duodecim sol. emendet.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="51" corresp="#wit-h">Gif monnes<ptr type="liebermannNote" n="4" target="#Af_51.lnote.oe.4"/> ðrotbolla byð þyrel, gebete ðæt mid XII scll'.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="51" corresp="#wit-e">Gif monnes<ptr type="liebermannNote" n="28" target="#Af_51.lnote.oe.28"/> ðrotbolla bið<ptr type="liebermannNote" n="29" target="#Af_51.lnote.oe.29"/> þyrel, gebete mid XII<ptr type="liebermannNote" n="27" target="#Af_51.lnote.oe.27"/> scill.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="51" corresp="#wit-b-no-prol">Gyf mannes ðrotbolla bið ðyrl, gebete mid twelf scill'.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="51" corresp="#wit-q">Qui gurgulionem<ptr type="liebermannNote" n="25" target="#Af_51.lnote.oe.25"/> perforabit alicui, duodecim sol. emendet.<ptr type="liebermannNote" n="26" target="#Af_51.lnote.oe.26"/></ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="55" corresp="#wit-e">Gif monnes ðrotbolla bið þyrel, gebete mid XII scill.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If a man’s Adam’s apple is pierced, let him be paid 12 shillings.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If a man's throat is pierced, 12 shillings shall be paid as compensation.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemandes Kehle durchbohrt ist, büsse [der Verletzer] mit 12 Schill.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If a man's throat<ptr type="editorNote" n="1" target="#Af_51.attnote.n.1"/> is pierced, 12 shillings shall be paid as compensation.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn<ptr type="liebermannNote" n="1" target="#Af_51.lnote.de.1"/> jemandes Kehle<ptr type="liebermannNote" n="2" target="#Af_51.lnote.de.2"/> durchbohrt ist, büsse [der Verletzer] mit 12 Schill.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a person’s throat is pierced, let [the one who did it] pay 12 shillings.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_51.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">80</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_51.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">81</biblScope></bibl><seg type="original" xml:lang="de">purg. <hi rend="italic">Hk;</hi> uel <hi rend="spaced">þrotebolla</hi> <hi rend="italic">fügt zu Hn</hi></seg><seg type="translation" xml:lang="en" source="#claude">purg. Hk; uel <hi rend="italic">þrotebolla</hi> added by Hn</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_51.lnote.oe.26" n="26" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">81</biblScope></bibl><seg type="original" xml:lang="de">-detur <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">-detur Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_51.lnote.oe.28" n="28" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">80</biblScope></bibl><seg type="original" xml:lang="de">man. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">man. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_51.lnote.oe.29" n="29" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">80</biblScope></bibl><seg type="original" xml:lang="de">byþ ðyrl <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">byþ ðyrl Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_51.lnote.oe.27" n="27" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">80</biblScope></bibl><seg type="original" xml:lang="de">twelf <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">twelf Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_51.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">61</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Hn 93, 10 steht dem Or. näher als Q; er übernimmt das Agsä. Wort in den Text</seg><seg type="translation" xml:lang="en" source="#claude">Hn 93, 10 stands closer to the original than Q; he takes the Anglo-Saxon word over into his text</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_51.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">61</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Kehle. ‘<hi rend="italic">Gurgulio</hi> Luftröhre’ zu eng; <hi rend="italic">throat,</hi> dt. <hi rend="italic">drossel</hi> bed. den ganzen vorderen Hals</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Kehle. ‘<hi rend="italic">Gurgulio</hi> windpipe’ is too narrow; <hi rend="italic">throat,</hi> German <hi rend="italic">drossel</hi> means the whole front of the neck</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="Af_51.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">199</biblScope></bibl><seg type="original" xml:lang="en">Not merely the larynx. Thorpe translates ‘windpipe.’</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Af_51.attnote.fn.19" n="19" source="#attenborough"><bibl><biblScope unit="page">86</biblScope></bibl><label>gebete</label><seg type="original" xml:lang="en"><hi rend="italic">gebete ðæt</hi>. H.</seg></note>
       </div>
     </body>
   </text>

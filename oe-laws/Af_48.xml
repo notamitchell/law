@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="attenborough" type="translation">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -56,23 +59,37 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 491 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 491 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 80.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 80: “scill.” → “scill'.”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 80.</change>
+      <change when="2026-10" type="checked">The second translation corrected against Attenborough, p. None: “another's; as” → “another’s; ∅”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="48">
         <head><ref type="lawCode" target="law:Af">Af</ref> 48</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="48" corresp="#wit-h">Gif mon oðrum ðæt neb ófaslea, gebete him mid LX scll'.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="48" corresp="#wit-e">Gif mon oðrum þæt neb ófaslea, gebete him mid LX scill.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="48" corresp="#wit-q">Si quis alii neb (faciem siue maxillam) amputet, LX solid. multetur.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="48" corresp="#wit-h">Gif mon<ptr type="liebermannNote" n="4" target="#Af_48.lnote.oe.4"/> oðrum ðæt neb<ptr type="liebermannNote" n="7" target="#Af_48.lnote.oe.7"/> ófaslea, gebete him mid LX scll'.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="48" corresp="#wit-e"><ptr type="liebermannNote" n="12" target="#Af_48.lnote.oe.12"/>Gif mon oðrum þæt neb ófaslea, gebete him mid LX scill'.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="48" corresp="#wit-b-no-prol">[Gif<ptr type="liebermannNote" n="3" target="#Af_48.lnote.oe.3"/> mann oðru<hi rend="italic">m</hi> þ<hi rend="italic">æt</hi> nebb ofaslea, gebete hit mid feowertig scill'.]</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="48" corresp="#wit-q">Si quis alii neb<ptr type="liebermannNote" n="9" target="#Af_48.lnote.oe.9"/> (faciem siue<ptr type="liebermannNote" n="10" target="#Af_48.lnote.oe.10"/> maxillam) amputet, LX solid. multetur.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="51" corresp="#wit-e">Gif mon oðrum þæt neb ófaslea, gebete him mid LX scill.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If someone strikes the nose off another, let him compensate him with 60 shillings.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If anyone strikes off another's nose, he shall pay him 60 shillings as compensation.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand einem anderen den Gesichtsvorsprung abhaut, büsse [er] ihm mit 60 Schill.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If anyone strikes off another’s nose<ptr type="editorNote" n="1" target="#Af_48.attnote.n.1"/>, he shall pay him 60 shillings compensation.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn jemand einem anderen den Gesichtsvorsprung<ptr type="liebermannNote" n="1" target="#Af_48.lnote.de.1"/> abhaut, büsse [er] ihm mit 60<ptr type="liebermannNote" n="2" target="#Af_48.lnote.de.2"/> Schill.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If someone cuts off another’s nose [the projecting part of the face], let him pay him 60 shillings.</ab>
         <note type="comparison" source="#jurasinski-and-oliver" n="353"><label>cf.</label> <ref target="clause:Abt_44">Abt 44–45</ref> <quote>Æthelberht here has both nose and mouth (§§43–44 [L44–45]).</quote></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_48.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">80</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_48.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">80</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">geänd. in</hi> nebb</seg><seg type="translation" xml:lang="en" source="#claude">altered to nebb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_48.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">80</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">C.</hi> 48 <hi rend="italic">am Rande,</hi> 16. <hi rend="italic">Jh.</hi></seg><seg type="translation" xml:lang="en" source="#claude">C. 48 in the margin, 16th cent.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_48.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">81</biblScope></bibl><seg type="original" xml:lang="de">neb <hi rend="italic">über</hi> fa. <hi rend="italic">nur Co; fehlt übrigen</hi></seg><seg type="translation" xml:lang="en" source="#claude">neb above fa. only in Co; lacking in the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_48.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">81</biblScope></bibl><seg type="original" xml:lang="de">s. m. <hi rend="italic">aus T Co Or; fehlt K R Hk Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">s. m. from T Co Or; lacking in K R Hk Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_48.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">80</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Capitelziffern fehlen für Aelfred’s Rest</hi></seg><seg type="translation" xml:lang="en" source="#claude">chapter numbers are lacking for the rest of Aelfred</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_48.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">61</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">‘Nase’, wie Frühere erklären, versteht Af zwar mit, da er sie sonst nicht erwähnt und doch bei Abt 45. 48 berücksichtigt fand. <hi rend="italic">Neb</hi> kann auch ‘Nasenknorpel’ heissen, <hi rend="italic">nebgebræc</hi> ‘Rotz’; nordisch heisst <hi rend="italic">nef</hi> ‘Nase’. Allein afries. und ndd. heisst <hi rend="italic">snavel</hi> ‘Mund’, und für <hi rend="italic">nebb</hi> (Thöne <hi rend="italic">Namen Körpert. b. Agsa.</hi> 87) ist ‘Schnabel, Gesicht’ bezeugt. Also ist vielleicht hier ‘Mund’ mitgemeint. Er würde sonst bei Af ganz fehlen und wäre an dieser Stelle zwischen Auge und Kiefer zu erwarten; bei Abt stehen hier Mund und Nase. Auch spricht dafür die Übs. <hi rend="italic">maxilla,</hi> die, wohl aus einem ungenauen Glossar, Q und Inst. bringen. Nase und Oberlippe verbinden auch andere Germanen; Wilda <hi rend="italic">Strafr.</hi> 771²</seg><seg type="translation" xml:lang="en" source="#claude">Af does indeed include the ‘nose’, as earlier scholars explain, since he does not mention it otherwise and yet found it dealt with in Abt 45. 48. <hi rend="italic">Neb</hi> can also mean ‘cartilage of the nose’, <hi rend="italic">nebgebræc</hi> ‘mucus’; in Norse <hi rend="italic">nef</hi> means ‘nose’. But in Old Frisian and Low German <hi rend="italic">snavel</hi> means ‘mouth’, and for <hi rend="italic">nebb</hi> (Thöne <hi rend="italic">Namen Körpert. b. Agsa.</hi> 87) ‘beak, face’ is attested. So perhaps the ‘mouth’ is meant here as well. It would otherwise be entirely absent from Af and would be expected at this point between eye and jaw; in Abt mouth and nose stand here. The translation <hi rend="italic">maxilla,</hi> which Q and Inst. give, probably from an inexact glossary, also supports this. Other Germanic peoples too combine nose and upper lip; Wilda <hi rend="italic">Strafr.</hi> 771²</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_48.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">61</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">‘40’ B cor., <hi rend="italic">LX</hi> verlesend als <hi rend="italic">XL; vgl. o.</hi> 35, 6¹; <hi rend="italic">u.</hi> 69, 1². Ine 4³</seg><seg type="translation" xml:lang="en" source="#claude">‘40’ B cor., misreading <hi rend="italic">LX</hi> as <hi rend="italic">XL; cf. above</hi> 35, 6¹; <hi rend="italic">below</hi> 69, 1². Ine 4³</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="Af_48.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">199</biblScope></bibl><seg type="original" xml:lang="en">Liebermann points out that the word <hi rend="italic">neb</hi> may mean more than the nose, and that injury to the mouth is not elsewhere provided for.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Af_48.attnote.fn.11" n="11" source="#attenborough"><bibl><biblScope unit="page">86</biblScope></bibl><label>scill'</label><seg type="original" xml:lang="en"><hi rend="italic">hit mid feowertig</hi>. B. Cap. 48 is a 16th century addition in B.</seg></note>
       </div>
     </body>
   </text>

@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -31,6 +33,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">411</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-e" rend="bold"><abbr>E</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 173 (Parker Chronicle and Laws)</note></witness>
@@ -59,26 +62,38 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-15">Generated from row 398 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 398 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 52.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 52: “Gyf he ða hand lysan wylle, ⁊ him mon þæt geþafian wylle, gylde swa to his were belimpe.” → “Gyf he ða hand lysan wylle, ⁊ him mon þæt geþafian wylle, gylde swa to his were belimpe. (expanded letters in italics: æt, ge)”.</change>
+      <change when="2026-10" type="checked">The second translation corrected against Attenborough, p. None: “appropiate” → “appropriate”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6.1">
         <head><ref type="lawCode" target="law:Af">Af</ref> 6.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.1" corresp="#wit-h">Gif he ða hond alysan wille, ond him mon þæt geðafyan wille, gylde swa to his were belimpe.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.1" corresp="#wit-e">Gif he ða hand lesan wille, ⁊ him mon ðæt geðafian wille, gelde swa to his were belimpe.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.1" corresp="#wit-b-no-prol">Gyf he ða hand lysan wylle, ⁊ him mon þ<hi rend="italic">æt</hi> geþafian wylle, gylde swa to his were belimpe.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.1" corresp="#wit-q">Si manum redimere uelit, et hoc ei permittatur, componat sicut ad weram eius pertinebit.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.1" corresp="#wit-h">Gif he ða hond<ptr type="liebermannNote" n="3" target="#Af_6-1.lnote.oe.3"/> alysan<ptr type="liebermannNote" n="13" target="#Af_6-1.lnote.oe.13"/> wille, ond<ptr type="liebermannNote" n="3" target="#Af_6-1.lnote.oe.3"/> him mon þæt geðafyan<ptr type="liebermannNote" n="7" target="#Af_6-1.lnote.oe.7"/> wille, gylde<ptr type="liebermannNote" n="7" target="#Af_6-1.lnote.oe.7"/> swa to his were belimpe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.1" corresp="#wit-e">Gif he ða hand lesan<ptr type="liebermannNote" n="44" target="#Af_6-1.lnote.oe.44"/> wille, ⁊ him mon ðæt geðafian wille, gelde<ptr type="liebermannNote" n="45" target="#Af_6-1.lnote.oe.45"/> swa to his were belimpe.<ptr type="liebermannNote" n="41" target="#Af_6-1.lnote.oe.41"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.1" corresp="#wit-b-no-prol">Gyf he ða hand lysan wylle, ⁊ him mon þ<hi rend="italic">æt</hi> <hi rend="italic">ge</hi>þafian wylle, gylde swa to his were belimpe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.1" corresp="#wit-q">Si manum redimere uelit, et hoc ei permittatur, componat sicut<ptr type="liebermannNote" n="20" target="#Af_6-1.lnote.oe.20"/> ad weram eius pertinebit.</ab>
         <ab type="editionText" xml:lang="ang" source="#jurasinski-and-oliver" n="7.1" corresp="#wit-e">Gif he ða hand lesan wille, ⁊ him mon ðæt geðafian wille, gelde swa to his were belimpe.</ab>
         <ab type="translation" xml:lang="en" source="#jurasinski-and-oliver" corresp="#wit-e">If he wishes to redeem the hand, and it is permitted him, let him pay in accordance with his wergild.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If he wishes to redeem his hand, and if it is decided to give him permission to do so, he shall pay [such fine] as is appropiate to his wergeld.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-e">If he wishes to redeem his hand, and if it is decided to give him permission to do so, he shall pay [such fine] as is appropriate to his wergeld.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">And if he wishes to redeem the hand, and that is allowed to him, he is to pay in proportion to his wergild.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn er die Hand lösen will, und man ihm das gestatten will, zahle er [für sie so viel], wie sich nach seinem Wergeld gehört.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn er die Hand lösen will, und man<ptr type="liebermannNote" n="6" target="#Af_6-1.lnote.de.6"/> ihm das gestatten will, zahle er [für sie so viel], wie sich nach seinem Wergeld gehört.<ptr type="liebermannNote" n="7" target="#Af_6-1.lnote.de.7"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If he wishes to redeem the hand, and he is willing to be allowed that, let him pay [for it as much] as is fitting according to his wergeld.</ab>
         <note type="comparison" source="#wormald-mel" n="272"><label>cross-reference</label> <ref target="clause:Af_71">Af 71</ref> <quote>6:1 (ref. 71)</quote></note>
         <note type="comparison" source="#jurasinski-and-oliver" n="301"><label>cf.</label> <ref target="clause:Af_71">Af 71</ref> <quote>§75 sets the fine for striking off a hand at 66 shillings 6 and 1/3 pennies</quote></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_6-1.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">52</biblScope></bibl><seg type="original" xml:lang="de">o <hi rend="italic">geänd. in</hi> a</seg><seg type="translation" xml:lang="en" source="#claude">o altered to a</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_6-1.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">52</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">erstes</hi> a <hi rend="italic">übergeschr.,</hi> y <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">first a written above, y on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_6-1.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">52</biblScope></bibl><seg type="original" xml:lang="de">y <hi rend="italic">auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">y on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_6-1.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">53</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Brti</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Brti</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_6-1.lnote.oe.44" n="44" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">52</biblScope></bibl><seg type="original" xml:lang="de">lysan wylle <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lysan wylle Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_6-1.lnote.oe.45" n="45" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">52</biblScope></bibl><seg type="original" xml:lang="de">gylde <hi rend="italic">Ld;</hi> he <hi rend="italic">fügt zu So</hi></seg><seg type="translation" xml:lang="en" source="#claude">gylde Ld; he added by So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Af_6-1.lnote.oe.41" n="41" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">52</biblScope></bibl><seg type="original" xml:lang="de">-lym- <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-lym- So Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_6-1.lnote.de.6" n="6" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">53</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Das Gericht</seg><seg type="translation" xml:lang="en" source="#claude">The court</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Af_6-1.lnote.de.7" n="7" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">53</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Halbes Wergeld <hi rend="italic">s. Gl</hi> Hand 9. 10</seg><seg type="translation" xml:lang="en" source="#claude">Half the wergild, <hi rend="italic">see Gl</hi> Hand 9. 10</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Af_6-1.attnote.fn.4" n="4" source="#attenborough"><bibl><biblScope unit="page">68</biblScope></bibl><label>lesan</label><seg type="original" xml:lang="en"><hi rend="italic">alysan</hi>. H.</seg></note>
       </div>
     </body>
   </text>
