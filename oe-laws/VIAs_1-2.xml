@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -25,6 +26,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">173</biblScope></bibl>
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -47,8 +49,10 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 851 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 851 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 173.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 173: “⁊ se þe ðeof dearnunga feormige ⁊ þæs facnes ⁊ þæs fúles gewita sy, do him man þæt ilce.” → “⁊ se þe ðeof dearnunga feormige ⁊ þæs facnes ⁊ þæs fúles gewita sy, do him man þæt ilce. (expanded letters in italics: æt)”.</change>
+      <change when="2026-10" type="checked">The modern editor’s translation corrected against Attenborough, p. 157: “the” → “his”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -56,14 +60,15 @@
       <div type="clause" n="1.2">
         <head><ref type="lawCode" target="law:VIAs">VI As</ref> 1.2</head>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.2" corresp="#wit-q">Et qui furem occulte firmabit et facinoris et sordis eius conscius sit, fiat ei hoc idem.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-h">⁊ se þe ðeof dearnunga feormige ⁊ þæs facnes ⁊ þæs fúles gewita sy, do him man þæt ilce.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-h">⁊ se þe ðeof dearnunga feormige ⁊ þæs facnes ⁊ þæs fúles gewita sy, do him man þ<hi rend="italic">æt</hi> ilce.</ab>
         <ab type="editionText" xml:lang="ang" source="#attenborough" n="[1].2" corresp="#wit-h">⁊ se þe ðeof dearnunga feormige ⁊ ðæs facnes ⁊ ðæs fúles gewita sy, do him man þæt ilce.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And he who secretly harbours a thief and is accessory to the crime and guilt, shall receive the same treatment.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und wer einen Dieb heimlich beherbergt und der Missethat und der Schuld Mitwisser ist: ihm thue man das Gleiche [wie dem Diebe].</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And he who secretly harbours a thief and is accessory to his crime and guilt, shall receive the same treatment.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und wer einen Dieb heimlich beherbergt<ptr type="liebermannNote" n="1" target="#VIAs_1-2.lnote.de.1"/> und der Missethat und der Schuld Mitwisser ist: ihm thue man das Gleiche [wie dem Diebe].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And whoever secretly harbours a thief and is privy to the crime and the guilt: let the same be done to him [as to the thief].</ab>
         <note type="comparison" source="#liebermann" n="173"><ref target="clause:IVAs_6-3">IV As 6.3</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. IV As. 6, 3</note>
         <note type="editorial">Liebermann compares IV As 6.3.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAs_1-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">118</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Begünstigung 5—7; strenger als II As 2. 20, 8</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Begünstigung 5—7; stricter than II As 2. 20, 8</seg></note>
       </div>
     </body>
   </text>

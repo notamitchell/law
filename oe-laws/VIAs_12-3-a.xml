@@ -10,6 +10,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +29,7 @@
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">429</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -49,25 +52,33 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 878 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 878 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 183.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 183: “pænig” → “pæniḡ”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 183: “∅” → “—”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="12.3[a]">
         <head><ref type="lawCode" target="law:VIAs">VI As</ref> 12.3[a]</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="12.3[a]" corresp="#wit-q">Et rex etiam iussit (Precepit etiam rex), ne aliquis occidatur pro minori precio quam duodecim denarios ualens, nisi fugiat uel repugnet, ne dubitetur tunc, licet minus sit.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12.3[a]" corresp="#wit-h">⁊ se cyng cwæð eac, þæt man nænne ne sloge for læssan yrfe þonne XII pænig weorð, buton he fleon wille oððe hine werian, þæt man ne wándode þonne, þeah hit læsse wære.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="12.3[a]" corresp="#wit-q">Et<ptr type="liebermannNote" n="17" target="#VIAs_12-3-a.lnote.oe.17"/> rex etiam iussit (Precepit etiam rex), ne aliquis occidatur pro minori precio quam duodecim denarios ualens, nisi fugiat uel repugnet, ne<ptr type="liebermannNote" n="19" target="#VIAs_12-3-a.lnote.oe.19"/> dubitetur<ptr type="liebermannNote" n="20" target="#VIAs_12-3-a.lnote.oe.20"/> tunc, licet minus sit.<ptr type="liebermannNote" n="21" target="#VIAs_12-3-a.lnote.oe.21"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12.3[a]" corresp="#wit-h">⁊ se cyng cwæð eac, þæt man nænne ne sloge for læssan yrfe þonne XII pæniḡ weorð, buton he fleon wille oððe hine werian, þ<hi rend="italic">æt</hi> man ne wándode þonne, þeah hit læsse wære.</ab>
         <ab type="editionText" xml:lang="ang" source="#attenborough" n="[12].3" corresp="#wit-h">⁊ se cyng cwæð eac, þæt man nænne ne sloge for læssan yrfe þonne XII pæniḡ weorð, buton he fleon wille oððe hine werian, þæt man ne wándode þonne, þeah hit læsse wære.</ab>
-        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And the king has further declared, that no one shall be slain for the theft of property worth less than 12 pence unless he is minded to flee or defend himself. But in that case there shall be no hesitation, even if the property is of less value.</ab>
+        <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And the king has further declared, that no one shall be slain for the theft of property worth less than 12 pence<ptr type="editorNote" n="1" target="#VIAs_12-3-a.attnote.n.1"/> unless he is minded to flee or defend himself. But in that case there shall be no hesitation, even if the property is of less value.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-h">And the king said also, that no one was to be killed for a [theft of] property worth less than 12 pence, unless he tried to flee or defend himself; in that case one was not to hesitate, although the amount involved were less. If we maintain it thus, then I trust to God that our peace will be better than it was before.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und der König verordnete auch, dass man niemanden wegen geringeren Betrages als 12 Pfennig Werth hinrichte, es sei denn, der wolle fliehen oder sich wehren: dass man dann [freilich] nicht Bedenken trage, auch wenn es weniger ist.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und der König verordnete<ptr type="liebermannNote" n="1" target="#VIAs_12-3-a.lnote.de.1"/> auch, dass man niemanden wegen geringeren Betrages als 12 Pfennig Werth hinrichte, es sei denn, der wolle fliehen oder sich wehren: dass man dann [freilich] nicht Bedenken trage, auch wenn es weniger ist. —</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And the king also ordained that no one should be put to death for a smaller amount than 12 pence' worth, unless he will flee or defend himself: that then [indeed] one should not hesitate, even if it is less.</ab>
         <note type="comparison" source="#liebermann" n="183"><ref target="clause:VIAs_1-1">VI As 1.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. 1, 1</note>
         <note type="editorial">Liebermann compares VI As 1.1.</note>
         <note type="translator" source="#whitelock">Whitelock translates VI As 12.3 as one clause, which the sheet divides into rows 12.3[a], 12.3[b]; her translation of the whole is given here, in the first row.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIAs_12-3-a.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">183</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vor der Klammer Lond; (eingeklammertes) übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">before the bracket Lond; (the bracketed words) the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIAs_12-3-a.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">183</biblScope></bibl><seg type="original" xml:lang="de">nec <hi rend="italic">Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">nec Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIAs_12-3-a.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">183</biblScope></bibl><seg type="original" xml:lang="de">sub. <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">sub. K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="VIAs_12-3-a.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">183</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Hk;</hi> tuus, <hi rend="italic">aber unterpunctirt M</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Hk; tuus, but marked for deletion by dots beneath M</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="VIAs_12-3-a.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">123</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Dieser Satz bringt inhaltlich nichts Neues, er wiederholt 1, 1 und, z. T. mit denselben Worten, II 1, 2 = VI 12, 1⁷. Das zum Schluss redende Ich kann nur der König sein; die Gilde hat also ein Staatsgesetz nur abgeschrieben. — <hi rend="italic">Vgl. Gl</hi> Frieden 1a. e</seg><seg type="translation" xml:lang="en" source="#claude">This sentence adds nothing new in substance; it repeats 1, 1 and, partly in the same words, II 1, 2 = VI 12, 1⁷. The ‘I’ speaking at the end can only be the king; the guild has therefore merely copied a law of the State. — <hi rend="italic">Cf. Gl</hi> Frieden 1a. e</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="VIAs_12-3-a.attnote.n.1" n="1" source="#attenborough"><bibl><biblScope unit="page">216</biblScope></bibl><seg type="original" xml:lang="en">Cf. VI As. cap. 1 § 1, II As. cap. 1.</seg></note>
       </div>
     </body>
   </text>
