@@ -9,8 +9,9 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,9 +27,10 @@
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">230</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">68</biblScope></bibl>
+          <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
-          <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -53,18 +55,23 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 1096 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 230.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 230: “⁊ ælc flyma beo flyma on ælcum lande, þe on ánum sy.” → “⁊ ælc flyma beo flyma on ælcum lande, þe on ánum sy. (expanded letters in italics: m)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="10">
         <head><ref type="lawCode" target="law:IIIAtr">III Atr</ref> 10</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="10" corresp="#wit-q">Et omnis flima sit flima in omni terra, qui fuerit in una.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10" corresp="#wit-h">⁊ ælc flyma beo flyma on ælcum lande, þe on ánum sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10" corresp="#wit-h">⁊ ælc flyma beo flyma on ælcum lande, þe on ánu<hi rend="italic">m</hi> sy.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="10" corresp="#wit-q">Et omnis flima<ptr type="liebermannNote" n="22" target="#IIIAtr_10.lnote.oe.22"/> sit flima<ptr type="liebermannNote" n="22" target="#IIIAtr_10.lnote.oe.22"/> in omni terra, qui fuerit in una.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="10" corresp="#wit-h">⁊ ælc flyma beo flyma on ælcum lande þe on ánum sy.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und jeder Friedlose, der in Einer [Landschaft friedlos] ist, sei in jeder Landschaft friedlos.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und jeder Friedlose, der in Einer [Landschaft<ptr type="liebermannNote" n="1" target="#IIIAtr_10.lnote.de.1"/> friedlos] ist, sei in jeder Landschaft friedlos.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let every outlaw who is [an outlaw] in one [district] be an outlaw in every district.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h">And everyone who is an outlaw in one district shall be an outlaw everywhere.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock">And every fugitive, who is a fugitive in one district, is to be so in every district.</ab>
+        <note type="editorial">AP: added from Whitelock p. None, October 2026 (Whitelock’s translation)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIAtr_10.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">230</biblScope></bibl><seg type="original" xml:lang="de">flyma <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">flyma <hi rend="italic">T</hi></seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIIAtr_10.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">160</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">‘Land’ meint hier vielleicht den Sprengel Eines ordentlichen öffentlichen Gerichts; <hi rend="italic">s. d. Gl</hi> 3ff.; friedlos 4. 6. 17</seg><seg type="translation" xml:lang="en" source="#claude">‘Land’ here perhaps means the district of a single regular public court; <hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 3ff.; friedlos 4. 6. 17</seg></note>
       </div>
     </body>
   </text>

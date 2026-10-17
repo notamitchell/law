@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">446</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -59,16 +62,20 @@
     <body>
       <div type="clause" n="11">
         <head><ref type="lawCode" target="law:IIIAtr">III Atr</ref> 11</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="11" corresp="#wit-q">Et nemo socnam habeat super tainum regis nisi solus rex.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="11" corresp="#wit-h">⁊ nan man náge náne socne ofer cynges þegen buton cyng sylf.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="11" corresp="#wit-q">Et nemo socnam<ptr type="liebermannNote" n="19" target="#IIIAtr_11.lnote.oe.19"/> habeat super tainum regis nisi solus rex.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="11" corresp="#wit-h">⁊ nan man náge náne socne ofer cynges þegen buton cyng sylf.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und über einen Königsthegn habe niemand als der König selbst irgend eine Gerichtsbarkeit.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und über einen Königsthegn<ptr type="liebermannNote" n="1" target="#IIIAtr_11.lnote.de.1"/> habe niemand als der König selbst irgend eine Gerichtsbarkeit.<ptr type="liebermannNote" n="2" target="#IIIAtr_11.lnote.de.2"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let no one have any jurisdiction over a king's thegn except the king himself.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h">And no-one shall have jurisdiction over a thegn of the king except the king himself.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><ptr type="editorNote" n="1" target="#IIIAtr_11.robnote.n.1"/>And no-one shall have jurisdiction over a thegn of the king except the king himself.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-h">And no one is to have any jurisdiction over a king’s thegn except the king himself.</ab>
         <note type="comparison" source="#liebermann" n="231"><ref target="clause:IAtr_1-14">I Atr 1.14</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 1, 14</note>
         <note type="editorial">Liebermann compares I Atr 1.14.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIAtr_11.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">230</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt MHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in MHk</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIIAtr_11.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">160</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. Gl</hi> Thegn 16. Hier soll nicht, wie <hi rend="italic">o</hi>. 3, 1. 4; <hi rend="italic">u</hi>. 13, 2f.; 5, Thegn den weiteren Begriff, der auch die bloss Vollfreien einschliesst, ausdrücken</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See Gl</hi> Thegn 16. Here, unlike <hi rend="italic">above</hi> 3, 1. 4; <hi rend="italic">below</hi> 13, 2f.; 5, thegn is not meant to express the wider concept that also includes those who are merely fully free</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIIAtr_11.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">160</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Ich stimme Zinkeisen (<hi rend="italic">Lehnsgericht</hi> 71) bei gegen Adams (<hi rend="italic">Essays in Agsa. law</hi> 43), dass hier mehr als bloss Strafgeldempfang, aber nicht darin (<hi rend="italic">Polit. sci. quart</hi>. X 133), dass mit diesem Königsgericht (<hi rend="italic">s. d. Gl</hi> 8a) das Witena gemot gemeint ist. Ausgeschlossen werden soll private Gerichtsbarkeit, vermöge des <hi rend="italic">sylf</hi> aber auch das lokale Gericht vor Ealdorman oder Königsvogt</seg><seg type="translation" xml:lang="en" source="#claude">I agree with Zinkeisen (<hi rend="italic">Lehnsgericht</hi> 71), against Adams (<hi rend="italic">Essays in Agsa. law</hi> 43), that more than the mere receipt of fines is meant here, but not in holding (<hi rend="italic">Polit. sci. quart</hi>. X 133) that this king's court (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 8a) means the Witena gemot. What is to be excluded is private jurisdiction, but, by virtue of the <hi rend="italic">sylf</hi>, also the local court before the ealdorman or king's reeve</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIIAtr_11.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">321</biblScope></bibl><seg type="original" xml:lang="en">Cf. I Atr. 1, 14.</seg></note>
       </div>
     </body>
   </text>
