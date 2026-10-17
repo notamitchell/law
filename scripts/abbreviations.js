@@ -24,12 +24,18 @@
         { field: 'Notes', label: 'Notes' },
         { field: 'Liebermann I, page', label: 'Gesetze I, p.' }
     ];
-    const FIELDS = ['Gesetze Text', 'German Expansion', 'English Translation', 'Short Title', 'Full Citation'].concat(EXTRA.map(c => c.field));
+    const FIELDS = ['Gesetze Text', 'German Expansion', 'Modern German', 'English Translation', 'Short Title', 'Full Citation'].concat(EXTRA.map(c => c.field));
     let groups = {};
     // The first three column heads; a page can name them with data-heads="A|B|C" on #content-container.
     function heads() {
         const h = (document.getElementById('content-container').dataset.heads || 'As printed|German expansion|English').split('|');
         return h.map(t => `<th>${esc(t)}</th>`).join('');
+    }
+
+    // Liebermann's form, with the modern spelling underneath where it differs.
+    function german(r) {
+        const modern = r['Modern German'] ? `<span class="modern-german">today: ${esc(r['Modern German'])}</span>` : '';
+        return esc(r['German Expansion']) + modern;
     }
 
     function esc(s) {
@@ -119,7 +125,7 @@
                 <thead><tr>${heads()}${extra.map(head).join('')}</tr></thead>
                 <tbody>${rows.map(r => `<tr>
                     <td class="term">${esc(r['Gesetze Text'])}</td>
-                    <td>${esc(r['German Expansion'])}</td>
+                    <td>${german(r)}</td>
                     <td>${esc(r['English Translation'])}</td>
                     ${extra.map(c => cell(c, r)).join('')}
                 </tr>`).join('')}</tbody>
@@ -140,7 +146,7 @@
             <thead><tr>${heads()}${extra.map(c => `<th>${c.label}</th>`).join('')}</tr></thead>
             <tbody>${rows.map(r => `<tr>
                 <td class="term">${esc(r['Gesetze Text'])}</td>
-                <td>${esc(r['German Expansion'])}</td>
+                <td>${german(r)}</td>
                 <td>${esc(r['English Translation'])}</td>
                 ${extra.map(c => `<td>${esc(r[c.field])}</td>`).join('')}
             </tr>`).join('')}</tbody></table></div>` : `<p>Nothing matches “${esc(term)}”.</p>`;
