@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">356</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">436</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -58,24 +61,37 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 961 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 202.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 202.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5.1">
         <head><ref type="lawCode" target="law:IIIEg">III Eg</ref> 5.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.1" corresp="#wit-g-a">⁊ habbe man þriwa on geare burhgemot ⁊ tuwa scirgemot.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.1" corresp="#wit-g-a">⁊ habbe<ptr type="liebermannNote" n="14" target="#IIIEg_5-1.lnote.oe.14"/> man þriwa on geare<ptr type="liebermannNote" n="15" target="#IIIEg_5-1.lnote.oe.15"/> burhgemot<ptr type="liebermannNote" n="16" target="#IIIEg_5-1.lnote.oe.16"/> ⁊ tuwa<ptr type="liebermannNote" n="17" target="#IIIEg_5-1.lnote.oe.17"/> scirgemot.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.1" corresp="#wit-a">⁊ hæbbe man þriwa on geare burhgemót ⁊ tuwa scyrgemót.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.1" corresp="#wit-d">⁊ hæbbæ man þriwa on<ptr type="liebermannNote" n="1" target="#IIIEg_5-1.lnote.oe.1"/> geare buruhgemot<ptr type="liebermannNote" n="2" target="#IIIEg_5-1.lnote.oe.2"/> ⁊ tuwa scirgemot.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.1" corresp="#wit-g2">⁊ hæbbe man þriwa on geare burhgemot ⁊ tuwa scirgemot.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5.1" corresp="#wit-q">Et habeatur in anno burgmotus ter et scyremotus bis.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5.1" corresp="#wit-q">Et habeatur in anno burgmotus<ptr type="liebermannNote" n="4" target="#IIIEg_5-1.lnote.oe.4"/> ter et scyremotus bis.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="5.1" corresp="#wit-d">⁊ hæbbæ man þriwa on geare buruhgemot ⁊ tuwa scirgemot.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a">And habbe man þriwa on geare burhgemot and tuwa scirgemot.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und dreimal im Jahre werde Stadtgericht und zweimal Grafschaftsgericht gehalten.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und dreimal<ptr type="liebermannNote" n="1" target="#IIIEg_5-1.lnote.de.1"/> im Jahre werde Stadtgericht und zweimal<ptr type="liebermannNote" n="2" target="#IIIEg_5-1.lnote.de.2"/> Grafschaftsgericht gehalten.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let the borough-court be held three times a year and the shire-court twice.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And the borough court shall be held three times in the year and the county court twice.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d"><ptr type="editorNote" n="1" target="#IIIEg_5-1.robnote.n.1"/>And the borough court shall be held three times in the year and the county court twice<ptr type="editorNote" n="2" target="#IIIEg_5-1.robnote.n.2"/>.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">And the borough court is to be held thrice a year and the shire court twice.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a">And the borough court is to meet three times a year and the shire court twice.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IICn_18">II Cn 18</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_5-1.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">203</biblScope></bibl><seg type="original" xml:lang="de">burgim. <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">burgim. Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_5-1.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">202</biblScope></bibl><seg type="original" xml:lang="de">hæbbe mon <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">hæbbe mon Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_5-1.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">202</biblScope></bibl><seg type="original" xml:lang="de">gear <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gear So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_5-1.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">202</biblScope></bibl><seg type="original" xml:lang="de">-te <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-te Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_5-1.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">202</biblScope></bibl><seg type="original" xml:lang="de">twa <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">twa Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_5-1.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">202</biblScope></bibl><seg type="original" xml:lang="de">on g. <hi rend="italic">übergeschrieben</hi></seg><seg type="translation" xml:lang="en" source="#claude">on g. written above</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_5-1.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">202</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIIEg_5-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">136</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Dies und 5, 2 wiederholt II Cn 18f. <hi rend="italic">Vgl. Gl</hi> Stadt 12; Gericht 9d. e. f. l. 12—13</seg><seg type="translation" xml:lang="en" source="#claude">II Cn 18f. repeats this and 5, 2. <hi rend="italic">Cf. Gl</hi> Stadt 12; Gericht 9d. e. f. l. 12—13</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIIEg_5-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">136</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Hieraus, oder aus Cn, Hn 7, 4. 51, 2. <hi rend="italic">Vgl. Gl</hi> Grafschaftsgericht 2. 10f.</seg><seg type="translation" xml:lang="en" source="#claude">From this, or from Cn, Hn 7, 4. 51, 2. <hi rend="italic">Cf. Gl</hi> Grafschaftsgericht 2. 10f.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIIEg_5-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">304</biblScope></bibl><seg type="original" xml:lang="en">Cf. II Cn. 18.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIIEg_5-1.robnote.n.2" n="2" source="#robertson"><bibl><biblScope unit="page">304</biblScope></bibl><seg type="original" xml:lang="en">The meaning of this regulation seems to be that, where the county was divided into burghal districts, meetings of these took place three times a year. In districts not so divided county meetings were held twice a year. In all probability there was great local variation. See Ballard, <hi rend="italic">Domesday Boroughs</hi>, pp. 53, 121; Bateson, <hi rend="italic">E.H.R.</hi>, 1905, p. 146 ff.; Chadwick, <hi rend="italic">Anglo-Saxon Institutions</hi>, pp. 220–3.</seg></note>
       </div>
     </body>
   </text>

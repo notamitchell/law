@@ -14,6 +14,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -34,6 +36,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -64,21 +67,26 @@
       <change when="2026-10-17">Generated from row 963 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 202.</change>
       <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 27.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 202: “⁊ finde him ælc man, þæt he borh hæbbe; ⁊ se borh hine þonne to ælcon rihte gelæde ⁊ gehealde.” → “⁊ finde him ælc man, þæt he borh hæbbe; ⁊ se borh hine þonne to ælcon rihte gelæde ⁊ gehealde. (expanded letters in italics: m, æt, ne)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 202.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 202: “(Von Bürgen. Ld) Und jedermann versehe sich, dass er [für sich] Bürgschaft habe; und dieser Bürge stelle und halte ihn dann fest zu jeder Rechtspflicht.” → “(Von Bürgen. Ld) Und jedermann versehe sich, dass er [für sich] Bürgschaft habe; und dieser Bürge stelle und halte ihn dann fest zu jeder Rechtspflicht. (expanded letters in italics: Ld)”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 26: “[Ld]” → “∅”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6">
         <head><ref type="lawCode" target="law:IIIEg">III Eg</ref> 6</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-g-a">⁊ finde him ælc man, þ<hi rend="italic">æt</hi> he borh hæbbe; ⁊ se borh hine þon<hi rend="italic">ne</hi> to ælcu<hi rend="italic">m</hi> rihte gelæde ⁊ geealde.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-a">⁊ finde him ælc man, þæt he borh hæbbe; ⁊ se borh hine þonne to ælcon rihte gelæde ⁊ gehealde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-g-a"><ptr type="liebermannNote" n="†" target="#IIIEg_6.lnote.oe.dagger"/>⁊<ptr type="liebermannNote" n="4" target="#IIIEg_6.lnote.oe.4"/> finde him<ptr type="liebermannNote" n="4" target="#IIIEg_6.lnote.oe.4"/> ælc man<ptr type="liebermannNote" n="22" target="#IIIEg_6.lnote.oe.22"/>, þ<hi rend="italic">æt</hi> he borh hæbbe; ⁊ se borh hine þon<hi rend="italic">ne</hi> to ælcu<hi rend="italic">m</hi> rihte gelæde ⁊ geealde.<ptr type="liebermannNote" n="23" target="#IIIEg_6.lnote.oe.23"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-a">⁊ finde hi<hi rend="italic">m</hi> ælc man, þ<hi rend="italic">æt</hi> he borh hæbbe; ⁊ se borh hine þon<hi rend="italic">ne</hi> to ælcon rihte gelæde ⁊ gehealde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-d">⁊ finde hi<hi rend="italic">m</hi> ælc man, þ<hi rend="italic">æt</hi> he borh habbe; ⁊ se borh hine to ælcon rihte (ge)lǽde<ptr type="liebermannNote" n="3" target="#IIIEg_6.lnote.oe.3"/> ⁊ gehealde.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-g2">⁊ finde him ælc man, þ<hi rend="italic">æt</hi> he borh hæbbe; ⁊ se borh hine þon<hi rend="italic">ne</hi> to ælcon rihte gelæde ⁊ gehealde.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6" corresp="#wit-q">Et omnis homo inueniat sibi plegium; et idem custodiat et ducat eum ad omne rectum.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="6" corresp="#wit-d">[Be borgum.] [Ld] ⁊ finde him ælc man þæt he borh habbe; ⁊ se borh hine to ælcon rihte gelǽde ⁊ gehealde.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="6" corresp="#wit-d">[Be borgum.] ⁊ finde him ælc man þæt he borh habbe; ⁊ se borh hine<ptr type="editorNote" n="4" target="#IIIEg_6.robnote.fn.4"/> to ælcon rihte gelǽde ⁊ gehealde.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a">And finde him ælc man, þæt he borh hæbbe, and se borh hine þonne to ælcum rihte gelæde and gehealde.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">(Von Bürgen. Ld) Und jedermann versehe sich, dass er [für sich] Bürgschaft habe; und dieser Bürge stelle und halte ihn dann fest zu jeder Rechtspflicht.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(Von Bürgen. <hi rend="italic">Ld</hi>) Und jedermann versehe sich, dass er [für sich] Bürgschaft<ptr type="liebermannNote" n="1" target="#IIIEg_6.lnote.de.1"/> habe; und dieser Bürge stelle und halte ihn dann fest zu jeder Rechtspflicht.<ptr type="liebermannNote" n="2" target="#IIIEg_6.lnote.de.2"/></ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(Of sureties. Ld) And let every man provide himself so that he has a surety; and let that surety then bring and hold him to every legal obligation.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And every man shall see that he has a surety, and this surety shall bring and keep him to [the performance of] every lawful duty.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And every man shall see that he has a surety<ptr type="editorNote" n="1" target="#IIIEg_6.robnote.n.1"/>, and this surety shall bring and keep him to [the performance of] every lawful duty.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">And each man is to provide himself with a surety, and the surety is to produce and hold him to every legal duty.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a">And each person is to find a surety for himself, and this surety shall lead and hold him to each of his legal obligations.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:IVEg_3">IV Eg 3</ref>; <ref target="clause:IAtr_1">I Atr 1</ref>; <ref target="clause:IICn_20a">II Cn 20a</ref></note>
@@ -90,6 +98,15 @@
         <note type="comparedBy" source="#wormald-ppmel" n="174"><ref target="clause:IICn_25">II Cn 25–25a</ref></note>
         <note type="editorial">In G, ‘geealde’ was corrected to ‘gehealde’ in the 16th century.</note>
         <note type="textual" source="#rabin-doml">gehealde: geealde G1, corrected in a sixteenth-century hand</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_6.lnote.oe.dagger" n="†" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">202</biblScope></bibl><seg type="original" xml:lang="de">Be borgum <hi rend="italic">Rubrik Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">Be borgum rubric Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_6.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">202</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_6.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">202</biblScope></bibl><seg type="original" xml:lang="de">mon <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">mon So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_6.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">202</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">im</hi> 16. <hi rend="italic">Jh. verbessert</hi> gehealde <hi rend="italic">G;</hi> gehealde <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">corrected in the 16th cent. to gehealde G; gehealde So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_6.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">202</biblScope></bibl><seg type="original" xml:lang="de">ge <hi rend="italic">übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">ge written above</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIIEg_6.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">137</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Bürgschaft 5ff.; Zehnerschaft 9a. b. Der Satz wird gekürzt durch IV 3 und teilweise wiederholt von I Atr 1. II Cn 20</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Bürgschaft 5ff.; Zehnerschaft 9a. b. The sentence is abridged by IV 3 and partly repeated by I Atr 1. II Cn 20</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIIEg_6.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">137</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Prozessuale Verbindlichkeit, nicht etwa moralisches Verhalten, laut des Folgenden und I Atr 1. Kemble <hi rend="italic">Saxons</hi> II 249 und Waitz <hi rend="italic">Dt. Verfassg</hi>. I 444 übersetzen: ‘stelle vor Gericht’</seg><seg type="translation" xml:lang="en" source="#claude">Procedural obligation, not, say, moral conduct, as the following and I Atr 1 show. Kemble <hi rend="italic">Saxons</hi> II 249 and Waitz <hi rend="italic">Dt. Verfassg</hi>. I 444 translate: ‘bring before the court’</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIIEg_6.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">305</biblScope></bibl><seg type="original" xml:lang="en">Cf. III As. 7; IV Edg. 3; I Atr. 1; II Cn. 20.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IIIEg_6.robnote.fn.4" n="4" source="#robertson"><bibl><biblScope unit="page">26</biblScope></bibl><label>hine</label><seg type="original" xml:lang="en"><hi rend="italic">h. þonne</hi> G, A, G₂, Ld.</seg></note>
       </div>
     </body>
   </text>

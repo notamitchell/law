@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">354</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">436</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -59,22 +62,32 @@
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 200.</change>
       <change when="2026-10" type="checked">Robertson’s translation checked and corrected against her edition, p. 25.</change>
       <change when="2026-10" type="checked">Robertson’s text checked and corrected against her edition, p. 24.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 200: “⁊ æt nannum botwyrðum gylte ne forwyrce mon mare þonne his wer.” → “⁊ æt nannum botwyrðum gylte ne forwyrce mon mare þonne his wer. (expanded letters in italics: m, m, ne)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 200.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2.2">
         <head><ref type="lawCode" target="law:IIIEg">III Eg</ref> 2.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.2" corresp="#wit-g-a">⁊ æt nanu<hi rend="italic">m</hi> botwyrðum gylte ne forwyrce man mare þane his wer.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.2" corresp="#wit-a">⁊ æt nannum botwyrðum gylte ne forwyrce mon mare þonne his wer.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.2" corresp="#wit-g-a">⁊ æt nanu<hi rend="italic">m</hi> botwyrðum gylte<ptr type="liebermannNote" n="21" target="#IIIEg_2-2.lnote.oe.21"/> ne forwyrce man<ptr type="liebermannNote" n="22" target="#IIIEg_2-2.lnote.oe.22"/> mare þane<ptr type="liebermannNote" n="23" target="#IIIEg_2-2.lnote.oe.23"/> his wer.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.2" corresp="#wit-a">⁊ æt nannu<hi rend="italic">m<ptr type="liebermannNote" n="2" target="#IIIEg_2-2.lnote.oe.2"/></hi> botwyrðu<hi rend="italic">m</hi> gylte ne forwyrce mon mare þon<hi rend="italic">ne</hi> his wer.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.2" corresp="#wit-d">⁊ æt nanu<hi rend="italic">m</hi> botwyrðu<hi rend="italic">m</hi> gilte ne forwyrce man mare þonne his wer.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2.2" corresp="#wit-q">Et de nulla emendabili re forisfaciat homo plus quam weram suam.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="2.2" corresp="#wit-d">⁊ æt nanum botwyrðum gilte ne forwyrce man mare þonne his wer.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a">And æt nanum botwyrðum gylte ne forwyrce man mare þane his wer.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Und bei keiner [durch Geld] büssbaren Schuld verwirke jemand mehr als sein eigenes Wergeld.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Und bei keiner [durch Geld] büssbaren Schuld<ptr type="liebermannNote" n="1" target="#IIIEg_2-2.lnote.de.1"/> verwirke jemand mehr<ptr type="liebermannNote" n="2" target="#IIIEg_2-2.lnote.de.2"/> als sein eigenes Wergeld.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And for no offence that can be compensated [with money] let anyone forfeit more than his own wergild.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And no man shall forfeit more than his wergeld for any offence for which compensation may be paid.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">And no man shall forfeit more than his wergeld for any offence for which compensation may be paid<ptr type="editorNote" n="1" target="#IIIEg_2-2.robnote.n.1"/>.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">In crimes that admit of compensation, no one is to forfeit more than his wergild.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a">And no one is to be fined more than his wergild for any offense for which compensation can be paid.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_2-2.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">200</biblScope></bibl><seg type="original" xml:lang="de">gylt <hi rend="italic">So</hi></seg><seg type="translation" xml:lang="en" source="#claude">gylt So</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_2-2.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">200</biblScope></bibl><seg type="original" xml:lang="de">nán <hi rend="italic">So;</hi> mon <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">nán So; mon Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_2-2.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">200</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so G;</hi> þon̄e his were <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">thus G; þon̄e his were So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_2-2.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">200</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIIEg_2-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">136</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl Gl</hi> Strafgeldfixum 1a; busslos 1; Wergeld 26ff. Nur für je Eine Missetat ist das Strafgeld begrenzt; dass an eine Beschränkung der Bussenkumulation gedacht sei, lehnt Schreuer <hi rend="italic">Verbrechenskonk</hi>. mit Recht ab</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Strafgeldfixum 1a; busslos 1; Wergeld 26ff. The fine is limited only for each single offence; Schreuer <hi rend="italic">Verbrechenskonk</hi>. rightly rejects the view that a limitation on the cumulation of compensations is intended</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIIEg_2-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">136</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Ersatz und Busse für den Kläger besteht neben dem Straf-Wergeld für den Gerichtsherrn; I Atr 1, 5</seg><seg type="translation" xml:lang="en" source="#claude">Restitution and compensation for the plaintiff exist alongside the penal wergild for the lord of the court; I Atr 1, 5</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIIEg_2-2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">304</biblScope></bibl><seg type="original" xml:lang="en">As opposed to crimes which are <hi rend="italic">botleas</hi>, <hi rend="italic">i.e.</hi> for which no compensation can be paid; cf. III Atr. 1.</seg></note>
       </div>
     </body>
   </text>

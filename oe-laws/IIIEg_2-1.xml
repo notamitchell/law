@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +32,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">354</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">436</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -58,22 +61,36 @@
     <revisionDesc>
       <change when="2026-10-17">Generated from row 956 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 200.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 200: “Gyf þæt riht to hefig sy, sece syððan þa lyhtinge to þam cynge.” → “Gyf þæt riht to hefig sy, sece syððan þa lyhtinge to þam cynge. (expanded letters in italics: æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 200.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 200: “Wenn das [Land]recht zu streng ist, heische er (-en sie D) dann die Erleichterung vom König.” → “Wenn das [Land]recht zu streng ist, heische er (-en sie D) dann die Erleichterung vom König. (expanded letters in italics: D)”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Robertson, p. 24: “þam” → “ðam”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2.1">
         <head><ref type="lawCode" target="law:IIIEg">III Eg</ref> 2.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.1" corresp="#wit-g-a">Gyf þ<hi rend="italic">æt</hi> riht to hefig sy, sece siþþan ða lihtinge to þam cynge.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.1" corresp="#wit-a">Gyf þæt riht to hefig sy, sece syððan þa lyhtinge to þam cynge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.1" corresp="#wit-g-a">Gyf<ptr type="liebermannNote" n="15" target="#IIIEg_2-1.lnote.oe.15"/> þ<hi rend="italic">æt</hi> riht<ptr type="liebermannNote" n="16" target="#IIIEg_2-1.lnote.oe.16"/> to hefig sy, sece siþþan<ptr type="liebermannNote" n="17" target="#IIIEg_2-1.lnote.oe.17"/> ða lihtinge<ptr type="liebermannNote" n="18" target="#IIIEg_2-1.lnote.oe.18"/> to þam<ptr type="liebermannNote" n="19" target="#IIIEg_2-1.lnote.oe.19"/> cynge.<ptr type="liebermannNote" n="20" target="#IIIEg_2-1.lnote.oe.20"/></ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.1" corresp="#wit-a">Gyf þ<hi rend="italic">æt</hi> riht to hefig sy, sece syððan þa lyhtinge to þam cynge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.1" corresp="#wit-d">Gif þ<hi rend="italic">æt</hi> riht to hefig sy, secan siððan þa lihtinge to ða<hi rend="italic">m</hi> cynge.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2.1" corresp="#wit-q">Si rectum graue nimis est, postea querat inde ueniam apud regem.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="2.1" corresp="#wit-d">Gif þæt riht to hefig sy, secan siððan þa lihtinge to þam cynge.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="2.1" corresp="#wit-d">Gif þæt riht to hefig sy, secan<ptr type="editorNote" n="7" target="#IIIEg_2-1.robnote.fn.7"/> siððan þa lihtinge to ðam cynge.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a">Gyf þæt riht to hefig sy, sece siþþan ða lihtinge to þam cynge.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">Wenn das [Land]recht zu streng ist, heische er (-en sie D) dann die Erleichterung vom König.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">Wenn das [Land]recht zu streng ist, heische er (-en sie <hi rend="italic">D</hi>) dann die Erleichterung vom König.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If the [law of the land] is too severe, let him (them, D) then seek relief from the king.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">If the law is too oppressive, he shall apply to the king for mitigation.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-d">If the law is too oppressive, he shall apply to the king for mitigation<ptr type="editorNote" n="1" target="#IIIEg_2-1.robnote.n.1"/>.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock">If that law is too severe, he is then to apply to the king for alleviation.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a">If the law is too harsh, let him petition the king for mitigation.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_2-1.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">200</biblScope></bibl><seg type="original" xml:lang="de">Gif <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">Gif So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_2-1.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">200</biblScope></bibl><seg type="original" xml:lang="de">rihte <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">rihte So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_2-1.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">200</biblScope></bibl><seg type="original" xml:lang="de">syþ. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">syþ. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_2-1.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">200</biblScope></bibl><seg type="original" xml:lang="de">-ng <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-ng So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_2-1.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">200</biblScope></bibl><seg type="original" xml:lang="de">ðæm <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">ðæm So Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IIIEg_2-1.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">200</biblScope></bibl><seg type="original" xml:lang="de">cyng <hi rend="italic">So Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">cyng So Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IIIEg_2-1.lnote.de.1" n="1" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">136</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Billigkeit 2b—4. Eine unbeschränkte Dispensationsbefugnis des Königs sieht hierin v. Amira <hi rend="italic">Grundriss</hi>³ 155, wohl zu weitgehend. <hi rend="italic">Vgl</hi>. Vinogradoff <hi rend="italic">Early hist. of Engl. Equity</hi> (in <hi rend="italic">Essays in legal hist., Internat. congr</hi>. 1913) 261</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Billigkeit 2b—4. v. Amira, <hi rend="italic">Grundriss</hi>³ 155, sees in this an unlimited power of dispensation on the king’s part, probably going too far. <hi rend="italic">Cf</hi>. Vinogradoff <hi rend="italic">Early hist. of Engl. Equity</hi> (in <hi rend="italic">Essays in legal hist., Internat. congr</hi>. 1913) 261</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IIIEg_2-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">304</biblScope></bibl><seg type="original" xml:lang="en">See Brunner, <hi rend="smallcaps">ii</hi>. p. 136, for references to similar mitigation in continental codes of law. Liebermann is of opinion that in England this right probably rested, not with the king alone, but with a special royal court (see <hi rend="smallcaps">ii</hi>. p. 313, <hi rend="italic">s.v. Billigkeit</hi>, 4, and <hi rend="italic">The National Assembly in the A.S. Period</hi>, p. 68), but the evidence for such a court in the tenth century seems to be far from conclusive.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IIIEg_2-1.robnote.fn.7" n="7" source="#robertson"><bibl><biblScope unit="page">24</biblScope></bibl><label>secan</label><seg type="original" xml:lang="en"><hi rend="italic">sece</hi> G, A, Ld.</seg></note>
       </div>
     </body>
   </text>
