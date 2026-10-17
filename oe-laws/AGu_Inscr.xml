@@ -5,9 +5,13 @@
       <titleStmt>
         <title>AGu Inscr.</title>
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Edition of the text</resp><name ref="#attenborough">Attenborough</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -25,6 +29,7 @@
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b1" rend="bold"><abbr>B1</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383 (first copy)</note></witness>
@@ -45,18 +50,25 @@
       <creation><date>880–90</date><date source="#whitelock">886–90</date><note type="promulgation">880–90; 886–90 (Whitelock)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-14">Generated from row 662 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-17">Generated from row 662 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 126.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 126: “(König Aelfreds Recht B2.)” → “(König Aelfreds Recht B2.) (expanded letters in italics: B2)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Inscr.">
         <head><ref type="lawCode" target="law:AGu">AGu</ref> Inscr.</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="A Gu Inscr." corresp="#wit-b2">Ælfredes laga cyninges.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann">(König Aelfreds Recht B2.)</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="A Gu Inscr." corresp="#wit-b2">Ælfredes<ptr type="liebermannNote" n="1" target="#AGu_Inscr.lnote.oe.1"/> laga cyninges.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough">[Ælfredes laga cyninges.]<ptr type="editorNote" n="1" target="#AGu_Inscr.attnote.fn.1"/></ab>
+        <ab type="translation" xml:lang="en" source="#attenborough">[The Laws of King Alfred.]</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann">(König Aelfreds<ptr type="liebermannNote" n="1" target="#AGu_Inscr.lnote.de.1"/> Recht <hi rend="italic">B2</hi>.<ptr type="liebermannNote" n="2" target="#AGu_Inscr.lnote.de.2"/>)</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(King Alfred’s law B2.)</ab>
-        <note type="editorial">Heading in B2 only (in red).</note>
+        <note type="editorial">Heading in B2 only (in red).; T: added from Attenborough p. 98, October 2026 (MS ?); U: added from Attenborough p. 99, October 2026 (MS ?)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="AGu_Inscr.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">126</biblScope></bibl><seg type="original" xml:lang="de">Æ. l. c. <hi rend="italic">roth</hi></seg><seg type="translation" xml:lang="en" source="#claude">Æ. l. c. in red</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="AGu_Inscr.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">84</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Die Überschrift fehlt in B, und ist unecht in B2; Q nahm die seine wahrscheinlich aus dem Prolog, änderte sie aber in den verschiedenen Rezensionen</seg><seg type="translation" xml:lang="en" source="#claude">The heading is lacking in B and is spurious in B2; Q probably took his from the prologue, but altered it in the various recensions</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="AGu_Inscr.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">84</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">laga</hi>, sg. oder pl., ist Nordisches Lehnwort, also frühestens ein Menschenalter nách Ælfred eingeführt</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">laga</hi>, sg. or pl., is a Norse loan-word, and was therefore introduced a generation after Ælfred at the earliest</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="AGu_Inscr.attnote.fn.1" n="1" source="#attenborough"><bibl><biblScope unit="page">98</biblScope></bibl><label>cyninges</label><seg type="original" xml:lang="en">B 2.</seg></note>
       </div>
     </body>
   </text>
