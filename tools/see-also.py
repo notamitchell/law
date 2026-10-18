@@ -179,7 +179,9 @@ class Index:
                 body = html.unescape(re.sub(r'<[^>]+>', '', body)).strip(' ,')
                 if body.startswith('s.') and len(body) < 60:
                     self.pointer.add(id_)
-            if nm:
+            # an entry joined from Liebermann's numbered sections (þæt I–IV) is
+            # one entry: it is not labelled by its first section
+            if nm and not re.search(r'<hi rend="bold">(?:II|III|IV|V)</hi>\)', sm.group(2)[nm.end():]):
                 self.section[id_] = nm.group(1)
             hw = html.unescape(re.sub(r'<[^>]+>', '', m.group(1))).strip()
             self.hw[id_] = hw
