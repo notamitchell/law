@@ -149,6 +149,14 @@ scripts:
         sup.appendChild(a);
         return sup;
     }
+    // Names of the authors and works on the Authors and Works Cited list (Toller, Schmid, Turk …) become
+    // links to it, with the same popup as in the dictionary entries (scripts/lawpopup.js).
+    // In the English, "His" (Rudolf His) is far more often the pronoun, so it is linked in the German only.
+    function linkWorks(p, english) {
+        if (!bibliography.length || !window.ELieb || !window.ELieb.linkAbbreviations) return;
+        const works = english ? bibliography.filter(w => w['Gesetze Text'] !== 'His') : bibliography;
+        p.innerHTML = window.ELieb.linkAbbreviations(p.innerHTML, [], [], works);
+    }
     // The notes of one group as a list: number, German as printed, English, where printed, remarks.
     function notesList(notes, group) {
         const box = el('div', 'lnotes small');
@@ -171,8 +179,8 @@ scripts:
             }
             const seg = type => kids.find(k => k.localName === 'seg' && k.getAttribute('type') === type);
             const de = seg('original'), en = seg('translation');
-            if (de) { const p = el('span', 'lnotes__de'); p.lang = de.getAttribute('xml:lang') || 'de'; p.appendChild(inline(de)); li.appendChild(p); }
-            if (en) { const p = el('span', 'lnotes__en'); p.lang = 'en'; p.appendChild(inline(en)); li.appendChild(p); }
+            if (de) { const p = el('span', 'lnotes__de'); p.lang = de.getAttribute('xml:lang') || 'de'; p.appendChild(inline(de)); linkWorks(p); li.appendChild(p); }
+            if (en) { const p = el('span', 'lnotes__en'); p.lang = 'en'; p.appendChild(inline(en)); linkWorks(p, true); li.appendChild(p); }
             const bibl = kids.find(k => k.localName === 'bibl');
             const where = [];
             if (bibl) {
@@ -278,12 +286,14 @@ scripts:
     // Manuscript sigla link to the Manuscripts list (msAbb.html), or, for the Quadripartitus and the
     // other Latin versions, to the list of law codes (lawAbb.html).
     let siglumIndex = null;
+    let bibliography = [];    // authors and works Liebermann cites (data/bibliography.json), linked in his notes
     const sigKey = s => s.replace(/[\s.]/g, '');
     const SIGLUM_ALIASES = { 'InstCn': 'In(Cn)' };
     const LATIN_VERSION = /^(Q|Lat|In|Inst\.? ?Cn\.?|Cons\.?(?: ?Cn\.?)?)(?![\w])/;
     function loadSigla() {
         const get = f => fetch(root + 'data/' + f).then(r => r.json()).catch(() => []);
-        return Promise.all([get('manuscripts.json'), get('markLaw.json')]).then(([ms, law]) => {
+        return Promise.all([get('manuscripts.json'), get('markLaw.json'), get('bibliography.json')]).then(([ms, law, bib]) => {
+            bibliography = bib || [];
             siglumIndex = {};
             law.forEach(r => { if (r['Gesetze Text']) siglumIndex[sigKey(r['Gesetze Text'])] = 'lawAbb.html#' + encodeURIComponent(r.Anchor); });
             ms.forEach(r => { if (r['Gesetze Text']) siglumIndex[sigKey(r['Gesetze Text'])] = 'msAbb.html#' + encodeURIComponent(r.Anchor); });
