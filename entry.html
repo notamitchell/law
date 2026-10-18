@@ -97,25 +97,28 @@ scripts:
     // Links to the same word in other dictionaries (Bosworth-Toller and so
     // on), from <xr type="bosworthToller"> and the like, shown as cards.
     function dictionaryCards(e) {
+        // One group per dictionary, in this order, each with its own heading.
         const dictionaries = [
-            ['bosworthToller', 'Bosworth-Toller', 'An Anglo-Saxon Dictionary'],
-            ['doe', 'Dictionary of Old English', 'University of Toronto'],
-            ['wiktionary', 'Wiktionary', 'The free dictionary']
+            ['doe', 'The Dictionary of Old English', 'University of Toronto', 'DOE is subscription access. If you are logged in, this link will open the full entry for the headword.'],
+            ['bosworthToller', 'Bosworth-Toller', 'An Anglo-Saxon Dictionary', ''],
+            ['wiktionary', 'Wiktionary', 'The free dictionary', '']
         ];
-        return dictionaries.map(([type, name, sub]) => e.xr.filter(x => x.getAttribute('type') === type).map(x => {
-            const ref = [...x.children].find(c => c.localName === 'ref') || x;
-            const url = ref.getAttribute('target') || '';
-            const word = esc(ref.textContent.replace(/\s+/g, ' ').trim());
-            let host = '';
-            try { host = new URL(url).hostname.replace(/^www\./, ''); } catch (err) { /* no address */ }
-            const inner = `
-                <span class="dict-card__source">${esc(name)}</span>
-                <span class="dict-card__word">${word}</span>
-                <span class="dict-card__foot">${esc(sub)}${host ? ` · ${esc(host)}` : ''}${url ? ' <span aria-hidden="true">↗</span>' : ''}</span>`;
-            return url
-                ? `<a class="dict-card" href="${esc(url)}" target="_blank" rel="noopener" aria-label="${word} in ${esc(name)} (opens in a new tab)">${inner}</a>`
-                : `<div class="dict-card">${inner}</div>`;
-        }).join('')).join('');
+        return dictionaries.map(([type, name, sub, note]) => {
+            const cards = e.xr.filter(x => x.getAttribute('type') === type).map(x => {
+                const ref = [...x.children].find(c => c.localName === 'ref') || x;
+                const url = ref.getAttribute('target') || '';
+                const word = esc(ref.textContent.replace(/\s+/g, ' ').trim());
+                let host = '';
+                try { host = new URL(url).hostname.replace(/^www\./, ''); } catch (err) { /* no address */ }
+                const inner = `
+                    <span class="dict-card__word">${word}</span>
+                    <span class="dict-card__foot">${host ? esc(host) : esc(sub)}${url ? ' <span aria-hidden="true">↗</span>' : ''}</span>`;
+                return url
+                    ? `<a class="dict-card" href="${esc(url)}" target="_blank" rel="noopener" aria-label="${word} in ${esc(name)} (opens in a new tab)">${inner}</a>`
+                    : `<div class="dict-card">${inner}</div>`;
+            }).join('');
+            return cards ? `<div class="dict-group"><h3 class="dict-group__name">${esc(name)}</h3>${note ? `<p class="small muted">${esc(note)}</p>` : ''}<div class="dict-cards">${cards}</div></div>` : '';
+        }).join('');
     }
 
     // The law code citations listed under the entry go into the laws
@@ -208,7 +211,7 @@ scripts:
 
         ${see ? `<section class="entry-section"><h2>${e.xref ? 'See' : 'See also'}</h2><ul>${see}</ul></section>` : ''}
         ${compare ? `<section class="entry-section"><h2>Compare</h2><ul>${compare}</ul></section>` : ''}
-        ${links ? `<section class="entry-section"><h2>Other dictionaries</h2><p class="small muted">The same word in other dictionaries. Each opens in a new tab.</p><div class="dict-cards">${links}</div></section>` : ''}
+        ${links ? `<section class="entry-section"><h2>Other dictionaries</h2><p class="small muted">The same word in other dictionaries. Each opens in a new tab. The work of linking to external dictionaries is ongoing; a semi-automated process is used to guess Bosworth-Toller links in the first instance, so note that some words may be incorrectly linked until checked by the editor.</p>${links}</section>` : ''}
         ${citations ? `<section class="entry-section"><h2>Law code citations</h2><ul class="citations">${citations}</ul></section>` : ''}
 
         <nav class="entry-nav" aria-label="Previous and next entries" hidden></nav>
