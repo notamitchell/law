@@ -608,12 +608,15 @@ body.full-width .main-content { max-width: none; padding: 0; }
     td.term { white-space: normal; }
 }
 
-/* Law code citations on an entry: short items, so several columns */
-.citation-groups { columns: 9em; column-gap: 1.5em; font-size: 0.9rem; }
+/* Law code citations on an entry: one block per group of codes, each a
+   single column unless the group is long (then columns of short items) */
+.citation-groups { font-size: 0.9rem; }
+.citation-block { margin-bottom: 0.3rem; }
 ul.citations { padding-left: 1.2em; margin: 0.2rem 0 0; }
+ul.citations--cols { columns: 8em; column-gap: 1.5em; }
 /* the law code groups of laws.html, as quiet headings over the citations */
 .citation-group { font-family: var(--sans); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin: 0.9rem 0 0; opacity: 0.85; break-after: avoid; }
-.citation-groups > .citation-group:first-child { margin-top: 0.2rem; }
+.citation-groups > .citation-block:first-child .citation-group { margin-top: 0.2rem; }
 ul.citations li { break-inside: avoid; }
 
 /* Law clause pages (law.html) */
