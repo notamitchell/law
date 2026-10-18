@@ -655,6 +655,9 @@ def build(row, today, source_name, refs):
                       witness(lsig, lname)))
 
     editor = row['editor']
+    if editor == 'Liebermann':
+        # Column T reproduces Liebermann's own text (shown already as his text), and U's translator is not recorded
+        editor = ''
     t_wit = witness(row['tSig'], row['tName']) if row['tTextXml'] else ''
     ed_src = ''
     if editor:
