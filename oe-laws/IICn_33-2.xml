@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">467</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +43,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -62,26 +65,40 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1786 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 336.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 336.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 337.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="33.2">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 33.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="33.2" corresp="#wit-g-a"><pb n="336" ed="#liebermann"/>And se ðe þis forsitte ⁊ hit geforþian nelle, swa ure ealra cwyde is, sylle þa<hi rend="italic">m</hi> cingce CXX scill'.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="33.2" corresp="#wit-g-a"><pb n="336" ed="#liebermann"/>And se ðe þis forsitte ⁊ hit geforþian nelle<ptr type="liebermannNote" n="19" target="#IICn_33-2.lnote.oe.19"/>, swa ure ealra cwyde<ptr type="liebermannNote" n="20" target="#IICn_33-2.lnote.oe.20"/> is, sylle þa<hi rend="italic">m</hi> cingce<ptr type="liebermannNote" n="21" target="#IICn_33-2.lnote.oe.21"/> CXX scill'.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="33.2" corresp="#wit-b"><pb n="336" ed="#liebermann"/>⁊ se ðe ðis forsitte ⁊ hit geforðian nylle, swa ure cwide is, sylle ðam cynge hundtwelftig scill'.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="33.2" corresp="#wit-a"><pb n="336" ed="#liebermann"/>And se þe þis forsitte ⁊ hit geforðian nylle, swa ure eallre cwiðe ys, sylle þam cyninge hundtwelftig scill'.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="33.2" corresp="#wit-q"><pb n="337" ed="#liebermann"/>Quisquis hoc supersederit et facere noluerit, sicut omnium nostrum uerbum est, det regi CXX solid.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="33.2" corresp="#wit-b"><pb n="192" ed="#robertson"/>⁊ se ðe ðis forsitte ⁊ hit geforðian nylle, swa ure cwide is, sylle ðam cynge hundtwelftig scill'.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="33.2" corresp="#wit-q"><pb n="337" ed="#liebermann"/>Quisquis hoc<ptr type="liebermannNote" n="16" target="#IICn_33-2.lnote.oe.16"/> supersederit et facere noluerit, sicut omnium nostrum uerbum est, det regi CXX solid.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="33.2" corresp="#wit-inst-cn"><pb n="337" ed="#liebermann"/>Et qui hec supersederit et ista facere noluerit, sicut nos omnes simul<ptr type="liebermannNote" n="11" target="#IICn_33-2.lnote.oe.11"/> condiximus, det regi quadraginta<ptr type="liebermannNote" n="12" target="#IICn_33-2.lnote.oe.12"/> solidos.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="33.2" corresp="#wit-cons-cn"><pb n="337" ed="#liebermann"/>Et si quis hoc neglexerit et secundum omnium [nost]rum institutum perficere noluerit, det regi CXX solidos.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="33.2" corresp="#wit-b"><pb n="192" ed="#robertson"/>⁊ se ðe ðis forsitte ⁊ hit geforðian nylle, swa ure<ptr type="editorNote" n="13" target="#IICn_33-2.robnote.fn.13"/> cwide is, sylle ðam cynge hundtwelftig scill'.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="274" ed="#rabin-doml"/>And se ðe þis forsitte and hit geforþian nelle, swa ure ealra cwyde is, sylle þam cingce CXX scillinga.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="337" ed="#liebermann"/>Und wer dies vernachlässigt und es, wie unser aller Beschluss ist, zu fördern weigert, zahle dem König 120 Schill.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="337" ed="#liebermann"/>Und wer dies vernachlässigt und es, wie unser aller Beschluss ist, zu fördern weigert, zahle dem König 120<ptr type="liebermannNote" n="1" target="#IICn_33-2.lnote.de.1"/> Schill.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And whoever neglects this and will not further it, as is the decision of us all, let him pay the king 120 shillings.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="193" ed="#robertson"/>And he who ignores this and will not further what we have all determined upon shall pay 120 shillings to the king.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock"><pb n="467" ed="#whitelock"/>And he who neglects this and will not carry it out as it is decreed by us all, is to pay to the king 120 shillings.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="275" ed="#rabin-doml"/>And anyone who ignores this and refuses to uphold what we have all pronounced shall give to the king one hundred twenty shillings.</ab>
         <note type="comparison" source="#liebermann" n="337"><ref target="clause:IAtr_4-3">I Atr 4.3</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 4, 3</note>
-        <note type="editorial">Liebermann compares I Atr 4.3.</note>
+        <note type="editorial">Liebermann compares I Atr 4.3.; BR: added from Gesetze I p. 337, October 2026 (MS Cons)</note>
         <note type="textual" source="#rabin-doml">ealra: omitted B</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_33-2.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">337</biblScope></bibl><seg type="original" xml:lang="de">c. s. <hi rend="italic">Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">c. s. Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_33-2.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">337</biblScope></bibl><seg type="original" xml:lang="de">X <hi rend="italic">Di; vgl.</hi> 15, 1; 25, 2</seg><seg type="translation" xml:lang="en" source="#claude">X Di; cf. 15, 1; 25, 2</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_33-2.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">337</biblScope></bibl><seg type="original" xml:lang="de">hęc <hi rend="italic">R</hi></seg><seg type="translation" xml:lang="en" source="#claude">hęc R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_33-2.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">336</biblScope></bibl><seg type="original" xml:lang="de">nylle <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">nylle Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_33-2.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">336</biblScope></bibl><seg type="original" xml:lang="de">cwiþe <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">cwiþe Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_33-2.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">336</biblScope></bibl><seg type="original" xml:lang="de">cyning <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">cyning Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_33-2.lnote.oe.12-2" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">337</biblScope></bibl><seg type="original" xml:lang="de">rerum <hi rend="italic">Hr</hi></seg><seg type="translation" xml:lang="en" source="#claude">rerum Hr</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_33-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">207</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Über den Betrag in Inst <hi rend="italic">s. o</hi>. 25, 2²</seg><seg type="translation" xml:lang="en" source="#claude">On the amount in Inst <hi rend="italic">see above</hi> 25, 2²</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_33-2.robnote.fn.13" n="13" source="#robertson"><bibl><biblScope unit="page">192</biblScope></bibl><label>ure</label><seg type="original" xml:lang="en"><hi rend="italic">u. ealra</hi> (<hi rend="italic">eallre</hi>) G, A, Ld.</seg></note>
       </div>
     </body>
   </text>

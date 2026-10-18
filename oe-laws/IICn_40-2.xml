@@ -13,6 +13,9 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +35,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">468</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +44,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -62,28 +66,45 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1800 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 340.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 340: “Cristenum” → “Cristenan”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 340.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 340: “Cristenum cyninge gebyrað swiðe rihte, þe Godes æbylðe wrece swiðe deope, be þam seo dada sy.” → “Cristenum cyninge gebyrað swiðe rihte, þe Godes æbylðe wrece swiðe deope, be þam seo dada sy. (expanded letters in italics: m)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 341.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="40.2">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 40.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="40.2" corresp="#wit-g-a"><pb n="340" ed="#liebermann"/>Cristenum kyningce gebyrað swyðe rihte, þ<hi rend="italic">æt</hi> he Godes æbylgðe wrece swyðe deope, be ðam þe seo dæd si.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="40.2" corresp="#wit-a"><pb n="340" ed="#liebermann"/>Cristenum cyninge gebyrað swiðe rihte, þe Godes æbylðe wrece swiðe deope, be þam seo dada sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="40.2" corresp="#wit-g-a"><pb n="340" ed="#liebermann"/>Cristenan<ptr type="liebermannNote" n="13" target="#IICn_40-2.lnote.oe.13"/> kyningce<ptr type="liebermannNote" n="11" target="#IICn_40-2.lnote.oe.11"/> gebyrað swyðe rihte, þ<hi rend="italic">æt</hi> he Godes æbylgðe<ptr type="liebermannNote" n="14" target="#IICn_40-2.lnote.oe.14"/> wrece swyðe deope, be ðam þe<ptr type="liebermannNote" n="15" target="#IICn_40-2.lnote.oe.15"/> seo dæd<ptr type="liebermannNote" n="16" target="#IICn_40-2.lnote.oe.16"/> si.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="40.2" corresp="#wit-b"><pb n="340" ed="#liebermann"/>Cristenu<hi rend="italic">m</hi> kyninge gebyrað swyðe rihte, þ<hi rend="italic">æt</hi> he Godes æbylðe wrece swyðe deope, be ðam ðe seo dǽd sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="40.2" corresp="#wit-a"><pb n="340" ed="#liebermann"/>Cristenu<hi rend="italic">m</hi> cyninge gebyrað swiðe rihte, þe<ptr type="liebermannNote" n="2" target="#IICn_40-2.lnote.oe.2"/> Godes æbylðe wrece swiðe deope, be þam<ptr type="liebermannNote" n="1" target="#IICn_40-2.lnote.oe.1"/> seo dada<ptr type="liebermannNote" n="2" target="#IICn_40-2.lnote.oe.2"/> sy.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="40.2" corresp="#wit-q"><pb n="341" ed="#liebermann"/>Christiano regi iure pertinet, ut Deo factas uindicet iniurias, secundum quod acciderit.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="40.2" corresp="#wit-inst-cn"><pb n="341" ed="#liebermann"/>quia Christiano regi conuenit et decet, ut acriter<ptr type="liebermannNote" n="7" target="#IICn_40-2.lnote.oe.7"/> uindicet in eos qui leges Dei uiolant.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="40.2" corresp="#wit-cons-cn"><pb n="341" ed="#liebermann"/>Christianum regem oportet iustissime Dei offensionem ulcisci acerrime iuxta delicti qualitatem.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="40.2" corresp="#wit-b"><pb n="196" ed="#robertson"/>Cristenum kyninge gebyrað swyðe rihte þæt he Godes æbylðe wrece swyðe deope, be ðam ðe seo dǽd sy.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="276" ed="#rabin-doml"/>Cristenan kyningce gebyrað swyðe rihte þæt he Godes æbylgðe wrece swyðe deope, be ðam þe seo dæd si.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="341" ed="#liebermann"/>Einem christlichen König geziemt sehr mit Recht, dass er Beleidigung gegen Gott sehr hoch strafe, je nachdem die That ist.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="341" ed="#liebermann"/>Einem christlichen König<ptr type="liebermannNote" n="1" target="#IICn_40-2.lnote.de.1"/> geziemt sehr mit Recht, dass er Beleidigung gegen Gott sehr hoch strafe, je nachdem die That ist.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">It very rightly befits a Christian king to avenge offences against God very severely, according to what the deed is.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="197" ed="#robertson"/>It is the duty most incumbent upon a Christian king that he should avenge to the uttermost offences against God, in accordance with the nature of the deed.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="468" ed="#whitelock"/>It belongs very rightly to a Christian king to avenge very severely offences against God, in proportion to the deed.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><ptr type="editorNote" n="1" target="#IICn_40-2.robnote.n.1"/><pb n="197" ed="#robertson"/>It is the duty most incumbent upon a Christian king that he should avenge to the uttermost offences against God, in accordance with the nature of the deed.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="468" ed="#whitelock"/>It belongs very rightly to a Christian king<ptr type="editorNote" n="2" target="#IICn_40-2.whinote.n.2"/> to avenge very severely offences against God, in proportion to the deed.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="277" ed="#rabin-doml"/>It is most justly appropriate that a Christian king should avenge affronts to God with the greatest resolve, according to the nature of the offense.</ab>
         <note type="comparison" source="#liebermann" n="341"><ref target="clause:VIIIAtr_35">VIII Atr 35</ref>; <ref target="clause:VIIIAtr_34">VIII Atr 34</ref></note>
         <note type="comparisonPrinted" source="#liebermann">VIII Atr. 35 | *ebd. 34</note>
         <note type="comparison" source="#wormald-mel" n="359"><label>source (roman)</label> <ref target="clause:VIIIAtr_35">VIII Atr 35</ref> <quote>Table 5.4, II Cn 40:2: VIII Atr 35</quote></note>
         <note type="comparedBy" source="#whitelock" n="457"><ref target="clause:VIIIAtr_35">VIII Atr 35</ref></note>
-        <note type="editorial">G's ‘Cristenan’ for ‘Cristenum’ (Liebermann)? A's ‘þe’ is an attraction (compare 43, 45.2). Liebermann compares VIII Atr 34 f.</note>
-        <note type="translator" source="#whitelock">Ethelred’s code said “Christian man”.</note>
+        <note type="editorial">G's ‘Cristenan’ for ‘Cristenum’ (Liebermann)? A's ‘þe’ is an attraction (compare 43, 45.2). Liebermann compares VIII Atr 34 f.; BR: added from Gesetze I p. 341, October 2026 (MS Cons)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_40-2.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">341</biblScope></bibl><seg type="original" xml:lang="de">u. a. <hi rend="italic">Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">u. a. Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_40-2.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_40-2.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Attraction des</hi> þe <hi rend="italic">wie</hi> 40, 2; 43 <hi rend="italic">und G</hi> 45, 2</seg><seg type="translation" xml:lang="en" source="#claude">attraction of þe, as in 40, 2; 43 and G 45, 2</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_40-2.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="de">-num <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-num Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_40-2.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="de">cyning <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">cyning Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_40-2.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="de">æbyld w. swiþe <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">æbyld w. swiþe Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_40-2.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_40-2.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="de">dæda sy <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">dæda sy Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_40-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">208</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> König 6a. 14. Beleidigung Christi rächen ist seine Pflicht; VIII Atr 2, 1</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> König 6a. 14. It is his duty to avenge insult to Christ; VIII Atr 2, 1</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IICn_40-2.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">356</biblScope></bibl><seg type="original" xml:lang="en">Cf. VIII Atr. 2, 1; 35.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IICn_40-2.whinote.n.2" n="2" source="#whitelock"><bibl><biblScope unit="page">468</biblScope></bibl><label>king</label><seg type="original" xml:lang="en">Ethelred’s code said “Christian man”.</seg></note>
       </div>
     </body>
   </text>

@@ -13,6 +13,9 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +35,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">473</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +44,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -62,26 +66,42 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1875 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 360.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 360.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 360: “wið” → “wíð”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 360: “Und der [zweite Mann] sei sein Wergeld schuldig an den König oder an den, dem dieser es (Gerichtsbarkeit über ihn G) gewährt hat.” → “Und der [zweite Mann] sei sein Wergeld schuldig an den König oder an den, dem dieser es (Gerichtsbarkeit über ihn G) gewährt hat. (expanded letters in italics: G)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 361.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="73.1">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 73.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="73.1" corresp="#wit-g-a"><pb n="360" ed="#liebermann"/>⁊ si he his weres scyldig wið þone cingc oððe wið þone, þe he his socne geunnen hæbbe.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="73.1" corresp="#wit-a"><pb n="360" ed="#liebermann"/>⁊ sy he his weres scyldig wið þonne cyngc oððe wið þonne, þe he hit geunnan hæbbe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="73.1" corresp="#wit-g-a"><pb n="360" ed="#liebermann"/>⁊ si<ptr type="liebermannNote" n="11" target="#IICn_73-1.lnote.oe.11"/> he his weres scyldig wið þone cingc<ptr type="liebermannNote" n="12" target="#IICn_73-1.lnote.oe.12"/> oððe wið þone<ptr type="liebermannNote" n="13" target="#IICn_73-1.lnote.oe.13"/>, þe he his<ptr type="liebermannNote" n="*" target="#IICn_73-1.lnote.oe.star"/> socne geunnen hæbbe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="73.1" corresp="#wit-b"><pb n="360" ed="#liebermann"/>⁊ si he his] weres scyldig wið ðone kyning oððe wið ðone, ðe he hit geunnen hæbbe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="73.1" corresp="#wit-a"><pb n="360" ed="#liebermann"/>⁊ sy he his weres scyldig wíð þonne cyngc oððe wið þonne, þe he hit geunnan hæbbe.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="73.1" corresp="#wit-q"><pb n="361" ed="#liebermann"/>Et sit ipse maritus werę suę reus erga regem, uel cui rex concesserit.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="73a.1" corresp="#wit-b"><pb n="210" ed="#robertson"/>⁊ si he his] weres scyldig wið ðone kyning oððe wið ðone ðe he hit geunnen hæbbe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="73.1" corresp="#wit-inst-cn"><pb n="361" ed="#liebermann"/>Uir autem post acceptus sit reus prętii sui contra regem aut contra eum, cui hoc<ptr type="liebermannNote" n="7" target="#IICn_73-1.lnote.oe.7"/> rex concesserit.<ptr type="liebermannNote" n="8" target="#IICn_73-1.lnote.oe.8"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="73.1" corresp="#wit-cons-cn"><pb n="361" ed="#liebermann"/>Ipse autem posterior uir sit reus redempcionis sue erga regem aut erga illum, cui rex concessit, scilicet dominum, qui priuilegium habet in forefacturis suorum.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="73a.1" corresp="#wit-b"><pb n="210" ed="#robertson"/>⁊ si he his] weres scyldig wið ðone kyning oððe wið ðone ðe he hit<ptr type="editorNote" n="12" target="#IICn_73-1.robnote.fn.12"/> geunnen hæbbe.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="292" ed="#rabin-doml"/>And si he his weres scyldig wið þone cingc oððe wið þone þe he his socne geunnen hæbbe.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="360" ed="#liebermann"/>Und der [zweite Mann] sei sein Wergeld schuldig an den König oder an den, dem dieser es (Gerichtsbarkeit über ihn G) gewährt hat.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="360" ed="#liebermann"/>Und der [zweite Mann] sei sein Wergeld schuldig an den König oder an den, dem dieser es (Gerichtsbarkeit<ptr type="liebermannNote" n="1" target="#IICn_73-1.lnote.de.1"/> über ihn <hi rend="italic">G</hi>) gewährt hat.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let the [second husband] be liable for his wergild to the king or to the one to whom the king has granted it (jurisdiction over him, G).</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="211" ed="#robertson"/>And he (the second husband) shall forfeit his wergeld to the king or to the lord to whom it has been granted.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="473" ed="#whitelock"/>And he is to be liable to pay his wergild to the king or to him to whom he has granted it.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="473" ed="#whitelock"/>And he<ptr type="editorNote" n="3" target="#IICn_73-1.whinote.n.3"/> is to be liable to pay his wergild to the king or to him to whom he has granted it.<ptr type="editorNote" n="4" target="#IICn_73-1.whinote.n.4"/></ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="293" ed="#rabin-doml"/>And her new husband shall forfeit his wergild to the king or to the lord entitled to receive it.</ab>
-        <note type="editorial">Liebermann thinks ‘hit’ (in the other MSS) more original than G's ‘his socne’; compare II Cn 63.</note>
-        <note type="translator" source="#whitelock">the second husband</note>
-        <note type="translator" source="#whitelock">i.e. the right of private jurisdiction</note>
+        <note type="editorial">Liebermann thinks ‘hit’ (in the other MSS) more original than G's ‘his socne’; compare II Cn 63.; BR: added from Gesetze I p. 361, October 2026 (MS Cons)</note>
         <note type="textual" source="#rabin-doml">his socne: hit AB</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_73-1.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">361</biblScope></bibl><seg type="original" xml:lang="de">r. h. <hi rend="italic">Cb S</hi></seg><seg type="translation" xml:lang="en" source="#claude">r. h. Cb S</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_73-1.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">361</biblScope></bibl><seg type="original" xml:lang="de">consenserit <hi rend="italic">Lb S</hi></seg><seg type="translation" xml:lang="en" source="#claude">consenserit Lb S</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_73-1.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">360</biblScope></bibl><seg type="original" xml:lang="de">sy <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">sy Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_73-1.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">360</biblScope></bibl><seg type="original" xml:lang="de">cyning <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">cyning Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_73-1.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">360</biblScope></bibl><seg type="original" xml:lang="de">ðon<hi rend="italic">ne</hi>, ðe he hit geniman <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">ðonne, ðe he hit geniman Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_73-1.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">360</biblScope></bibl><seg type="original" xml:lang="de">hit <hi rend="italic">statt</hi> h. s. <hi rend="italic">übrige</hi> [<hi rend="italic">also originaler; vgl. Consil. und o.</hi> 63*]</seg><seg type="translation" xml:lang="en" source="#claude">hit instead of h. s. the others [therefore more original; cf. Consil. and above 63*]</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_73-1.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">361</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl. Hs. G</hi></seg><seg type="translation" xml:lang="en" source="#claude">cf. MS G</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_73-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">213</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Bloss ‘Justizertrag’ zu eng Adams <hi rend="italic">Essays</hi> 42.—<hi rend="italic">Vgl. Gl</hi> Gerichtsbarkeit 1a. e; Wergeld 30s</seg><seg type="translation" xml:lang="en" source="#claude">Merely ‘profits of justice’ Adams <hi rend="italic">Essays</hi> 42, too narrow.—<hi rend="italic">Cf. Gl</hi> Gerichtsbarkeit 1a. e; Wergeld 30s</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_73-1.robnote.fn.12" n="12" source="#robertson"><bibl><biblScope unit="page">210</biblScope></bibl><label>hit</label><seg type="original" xml:lang="en"><hi rend="italic">his socne</hi> G.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IICn_73-1.whinote.n.3" n="3" source="#whitelock"><bibl><biblScope unit="page">473</biblScope></bibl><label>he</label><seg type="original" xml:lang="en">the second husband</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IICn_73-1.whinote.n.4" n="4" source="#whitelock"><bibl><biblScope unit="page">473</biblScope></bibl><label>it</label><seg type="original" xml:lang="en">i.e. the right of private jurisdiction</seg></note>
       </div>
     </body>
   </text>

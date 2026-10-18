@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">473</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +43,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -63,24 +66,47 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1884 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 362.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 362.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 363.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 363: “Und wenn es nicht unter des Eheweibes Verschluss (Schlösser? so A) gebracht worden ist, stehe sie rein da.” → “Und wenn es nicht unter des Eheweibes Verschluss (Schlösser? so A) gebracht worden ist, stehe sie rein da. (expanded letters in italics: ? so A)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="76.1">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 76.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="76.1" corresp="#wit-g-a"><pb n="362" ed="#liebermann"/>⁊ butan hit under þæs wifes cæglocan gebroht wære, si heo clæne.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="76.1" corresp="#wit-g-a"><pb n="362" ed="#liebermann"/>⁊ butan<ptr type="liebermannNote" n="21" target="#IICn_76-1.lnote.oe.21"/> hit under þæs wifes cæglocan<ptr type="liebermannNote" n="22" target="#IICn_76-1.lnote.oe.22"/> gebroht wære, si<ptr type="liebermannNote" n="23" target="#IICn_76-1.lnote.oe.23"/> heo clæne.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="76.1" corresp="#wit-b"><pb n="362" ed="#liebermann"/>⁊ buton hit under ðæs wifes cæglocan gebroht wære, sy heo clæne.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="76.1" corresp="#wit-a"><pb n="362" ed="#liebermann"/>⁊ buton hit under þes wifes cæglocum gebroht wære, syo heo clæne.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="76.1" corresp="#wit-q"><pb n="363" ed="#liebermann"/>Et nisi sub custodia uxoris suę positum sit, ipsa innocens habeatur.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="76.1" corresp="#wit-q"><pb n="363" ed="#liebermann"/>Et nisi<ptr type="liebermannNote" n="17" target="#IICn_76-1.lnote.oe.17"/> sub custodia uxoris suę positum<ptr type="liebermannNote" n="18" target="#IICn_76-1.lnote.oe.18"/> sit, ipsa<ptr type="liebermannNote" n="19" target="#IICn_76-1.lnote.oe.19"/> innocens habeatur.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="76.1" corresp="#wit-inst-cn"><pb n="363" ed="#liebermann"/>Et nisi illud furtum inuentum fuerit<ptr type="liebermannNote" n="14" target="#IICn_76-1.lnote.oe.14"/> sub clauibus mulieris, sit<ptr type="liebermannNote" n="15" target="#IICn_76-1.lnote.oe.15"/> illa immunis.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="76.1" corresp="#wit-cons-cn"><pb n="363" ed="#liebermann"/>[76, 1] Et nisi sub seris marite locatum sit, immunis a crimine habeatur.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="76.1" corresp="#wit-b"><pb n="212" ed="#robertson"/>⁊ buton hit under ðæs wifes cæglocan gebroht wære, sy heo clæne.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="294" ed="#rabin-doml"/>And butan hit under þæs wifes cæglocan gebroht wære, si heo clæne.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="363" ed="#liebermann"/>Und wenn es nicht unter des Eheweibes Verschluss (Schlösser? so A) gebracht worden ist, stehe sie rein da.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="363" ed="#liebermann"/>Und wenn es nicht unter des Eheweibes<ptr type="liebermannNote" n="1" target="#IICn_76-1.lnote.de.1"/> Verschluss<ptr type="liebermannNote" n="2" target="#IICn_76-1.lnote.de.2"/> (Schlösser? <hi rend="italic">so A</hi>) gebracht worden ist<ptr type="liebermannNote" n="3" target="#IICn_76-1.lnote.de.3"/>, stehe sie rein da.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And unless it was brought under the wife's lock (locks?, so A), let her stand clean.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="213" ed="#robertson"/>And unless the goods had been put under the wife's lock and key, she shall be clear [of any charge of complicity].</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><ptr type="editorNote" n="1" target="#IICn_76-1.robnote.n.1"/><pb n="213" ed="#robertson"/>And unless the goods had been put under the wife's lock and key, she shall be clear [of any charge of complicity].</ab>
         <ab type="translation" xml:lang="en" source="#whitelock"><pb n="473" ed="#whitelock"/>And unless it has been brought under the wife’s lock and key, she is to be clear.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="295" ed="#rabin-doml"/>And unless the goods had been placed under the wife’s lock and key, she shall be considered innocent.</ab>
         <note type="comparison" source="#liebermann" n="363"><ref target="clause:Ine_57">Ine 57</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd.</note>
+        <note type="editorial">BR: added from Gesetze I p. 363, October 2026 (MS Cons); AY: added from Rabin p. 294, October 2026 (Rabin’s note to the text)</note>
+        <note type="textual" source="#rabin-doml">hordern: heddernes cæge B</note>
+        <note type="textual" source="#rabin-doml">cyste: cyste cæge B</note>
+        <note type="textual" source="#rabin-doml">þonne: þone B</note>
+        <note type="textual" source="#rabin-doml">gelogian: gelaðyan A</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_76-1.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">363</biblScope></bibl><seg type="original" xml:lang="de">sit <hi rend="italic">H Lb</hi></seg><seg type="translation" xml:lang="en" source="#claude">sit H Lb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_76-1.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">363</biblScope></bibl><seg type="original" xml:lang="de">s. i. i. <hi rend="italic">fehlt Lb S</hi></seg><seg type="translation" xml:lang="en" source="#claude">s. i. i. lacking in Lb S</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_76-1.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">363</biblScope></bibl><seg type="original" xml:lang="de">si non <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">si non Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_76-1.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">363</biblScope></bibl><seg type="original" xml:lang="de">ponatur <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">ponatur Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_76-1.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">363</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so K</hi>; <hi rend="italic">fehlt übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">thus K; lacking in the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_76-1.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">362</biblScope></bibl><seg type="original" xml:lang="de">buton <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">buton Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_76-1.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">362</biblScope></bibl><seg type="original" xml:lang="de">-cum <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-cum Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_76-1.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">362</biblScope></bibl><seg type="original" xml:lang="de">syo <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">syo Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_76-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">213</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Ehefrau 9ff. Vielleicht ist Ine benutzt; <hi rend="italic">ebd</hi>. 9. Auf den Fortschritt in der Selbständigkeit des Weibes weist hin Roeder <hi rend="italic">Familie bei Agsa</hi>. 85; <hi rend="italic">s. o</hi>. Einl. 21</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Ehefrau 9ff. Perhaps Ine has been used; <hi rend="italic">ibid</hi>. 9. The advance in the independence of woman is pointed out by Roeder <hi rend="italic">Familie bei Agsa</hi>. 85; <hi rend="italic">see above</hi> Introduction 21</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_76-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">213</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ebd</hi>. Schlüssel.—Toller <hi rend="italic">Suppl</hi>. nimmt <hi rend="italic">cæglocan</hi> als Plural: ‘repositories . . with key’, was aber nur für A sicher ist</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Ibid</hi>. Schlüssel.—Toller <hi rend="italic">Suppl</hi>. takes <hi rend="italic">cæglocan</hi> as a plural: ‘repositories . . with key’, which, however, is certain only for A</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_76-1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">213</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">76, 1. a in Inst-Version wird benutzt von Bracton III 32, 9, f. 151b. Nur diesem folgt das von Price als Benutzer angeführte Schott. Rechtsbuch 13 Jhs. <hi rend="italic">Quoniam attachiamenta</hi> XII 7, ed. <hi rend="italic">Acts of parliam. of Scotl</hi>. I 285</seg><seg type="translation" xml:lang="en" source="#claude">76, 1. a in the Inst version is used by Bracton III 32, 9, f. 151b. It is only Bracton that is followed by the Scottish law-book of the 13th cent. cited by Price as a borrower, <hi rend="italic">Quoniam attachiamenta</hi> XII 7, ed. <hi rend="italic">Acts of parliam. of Scotl</hi>. I 285</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IICn_76-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">359</biblScope></bibl><seg type="original" xml:lang="en">Cf. In. 7; 7, 1; 57.</seg></note>
       </div>
     </body>
   </text>
