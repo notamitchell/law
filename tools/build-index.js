@@ -42,6 +42,8 @@ const entries = fs.readdirSync(dir)
             page: pick(xml, /<biblScope unit="page">([^<]*)<\/biblScope>/),
             gloss: decode(translation) || snippet,
             en: !!translation,
+            // a spelling, not a word (<usg type="dom">spelling</usg>): badged in the list
+            spelling: /<usg type="dom">spelling<\/usg>/.test(xml),
             text
         };
     })
