@@ -438,8 +438,9 @@ td.term { font-weight: 600; color: var(--navy-dark); white-space: nowrap; }
 .entry-section ol { padding-left: 1.5rem; }
 /* Links to the same word in other dictionaries, as cards. */
 .dict-group { margin-top: 1rem; }
-.dict-group__name { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 0 0 0.35rem; }
-.dict-group > p.small { margin: 0 0 0.4rem; }
+.dict-group__name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; color: var(--navy); margin: 0 0 0.3rem; }
+.dict-group__note { font-size: 0.78rem; color: var(--muted); margin: -0.15rem 0 0.4rem; }
+.dict-notice { margin-bottom: 0.75rem; }
 .dict-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); gap: 0.5rem; }
 .dict-card {
     display: flex; flex-direction: column; gap: 0.05rem;
@@ -608,7 +609,11 @@ body.full-width .main-content { max-width: none; padding: 0; }
 }
 
 /* Law code citations on an entry: short items, so several columns */
-ul.citations { columns: 9em; column-gap: 1.5em; padding-left: 1.2em; }
+.citation-groups { columns: 9em; column-gap: 1.5em; font-size: 0.9rem; }
+ul.citations { padding-left: 1.2em; margin: 0.2rem 0 0; }
+/* the law code groups of laws.html, as quiet headings over the citations */
+.citation-group { font-family: var(--sans); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin: 0.9rem 0 0; opacity: 0.85; break-after: avoid; }
+.citation-groups > .citation-group:first-child { margin-top: 0.2rem; }
 ul.citations li { break-inside: avoid; }
 
 /* Law clause pages (law.html) */
