@@ -416,7 +416,42 @@ def read_rows(path, only=None):
             # not in Liebermann: Kennedy's numbering (column S), which Rabin follows
             row['clause'] = {'Prologue': 'Prol.'}.get(row['editorNumber'], row['editorNumber'])
         rows.append(row)
-    return rows
+    return in_clause_order(rows)
+
+
+def clause_order_key(clause):
+    """'Inscr.' < 'Prol.' < 1 < 1.1 < 2 < 2a < 2.1 < … < 'Epil.' < 'Test.' < 'Dat.' (Liebermann's numbering)"""
+    c = (clause or '').strip().rstrip('.').lower()
+    head = {'inscr': -3, 'rubr': -3, 'prol': -2, 'prot': -2}
+    tail = {'epil': 1e6, 'test': 1e6 + 1, 'dat': 1e6 + 2, 'add': 1e6 + 3}
+    if c in head: return (head[c],)
+    if c in tail: return (tail[c],)
+    key = []          # 2 < 2a < 2.1 < 2.2 < 2.2a < 2.3: a letter is a step between the number and its first sub-clause
+    for part in re.split(r'[.,]\s*', c.split(' ')[0]):
+        m = re.match(r'(\d+)([a-z]?)', part)
+        if m:
+            key.append(int(m.group(1)))
+            if m.group(2): key.append((ord(m.group(2)) - 96) / 100)
+    return (0, key)
+
+
+def in_clause_order(rows):
+    """Rows added at the end of Sheet1 for a code that is already higher up (October 2026: clauses Liebermann prints
+    that the edition the rows were made from leaves out) are put among that code's rows, in clause order."""
+    first, by_code, seen_end = {}, {}, {}
+    for i, r in enumerate(rows):
+        first.setdefault(r['code'], i); by_code.setdefault(r['code'], []).append(r)
+    split = {c for c, rs in by_code.items() if rows.index(rs[-1]) - first[c] + 1 != len(rs)}
+    if not split: return rows
+    out = []
+    for r in rows:
+        if r['code'] in split:
+            if r['code'] in seen_end: continue
+            seen_end[r['code']] = True
+            out.extend(sorted(by_code[r['code']], key=lambda x: clause_order_key(x['clause'])))
+        else:
+            out.append(r)
+    return out
 
 
 ROBERTSON_REF = ('A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> '
@@ -989,7 +1024,7 @@ OTHER = 'Other laws and legal texts'
 GROUP_OVERRIDE = {'Ine Rb': 'Ine of Wessex', 'App AGu': 'Alfred the Great', 'Duel': 'Ordeal rituals (Iudicia Dei)'}
 # The ordeal liturgies and excommunication formulae Liebermann prints (Gesetze I pp. 401–441; added October 2026)
 GROUP_OVERRIDE.update({'Iud Dei ' + n: 'Ordeal rituals (Iudicia Dei)' for n in 'I II III IV V VI VII VIII IX X XI XII XIII XIV XV XVI'.split()})
-OWN_MS_NAMES = {'Erc', 'App AGu', 'Duel'} | {'Iud Dei ' + n for n in 'I II III IV V VI VII IX X XI XII XIII XIV XV XVI'.split()} | {'Excom ' + n for n in 'I II III IV V VI VII VIII IX X XI XII XIII'.split()}
+OWN_MS_NAMES = {'Erc', 'App AGu', 'Duel', 'Wl lad', 'Wl ep', 'Wl Lond', 'Wl art', 'Wl art Frz', 'Wl art retr', 'Leis Wl', 'Wl Edmr', 'CHn cor', 'Hn mon', 'Hn com', 'Hn Lond'} | {'Iud Dei ' + n for n in 'I II III IV V VI VII IX X XI XII XIII XIV XV XVI'.split()} | {'Excom ' + n for n in 'I II III IV V VI VII VIII IX X XI XII XIII'.split()}
 GROUP_OVERRIDE.update({'Excom ' + n: 'Excommunication formulae' for n in 'I II III IV V VI VII VIII IX X XI XII XIII'.split()})
 
 
