@@ -50,9 +50,11 @@ h1, h2, h3 {
 }
 h1 { font-size: 2.2rem; margin: 0.4em 0 0.5em; }
 h2 { font-size: 1.55rem; margin: 1.6em 0 0.5em; }
-/* Home page: the law codes and dictionary introductions are equals, so the
-   first heading (made an h1 for the page outline) is sized like the second. */
-#site-page[data-page="Home"] h1 { font-size: 1.55rem; }
+/* Home page: the section headings link to the Laws, Dictionary and Guides
+   pages, but keep the heading colour, underlined only on hover. */
+#site-page[data-page="Home"] h2 a { color: inherit; text-decoration: none; }
+#site-page[data-page="Home"] h2 a:hover,
+#site-page[data-page="Home"] h2 a:focus-visible { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 h3 { font-size: 1.2rem; margin: 1.4em 0 0.4em; }
 h2:target, h3:target { background: var(--highlight); }
 
