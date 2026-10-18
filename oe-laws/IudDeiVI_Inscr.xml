@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="IudDeiVI_Inscr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Iud Dei VI Inscr.</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
+        <idno type="slug">IudDeiVI_Inscr</idno>
+        <idno type="citation">Iud Dei VI Inscr.</idno>
+        <idno type="lawCode">Iud Dei VI</idno>
+        <idno type="lawCodeAnchor">IudDeiVI</idno>
+        <idno type="clause">Inscr.</idno>
+        <idno type="citationKey">IudDeiVI inscr.</idno>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl type="legalText"><title>Iudicium Dei VI: adjuration of those going to the ordeal (Old English)</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">412</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+        </listBibl>
+        <listWit>
+          <witness xml:id="wit-du"><abbr>Du</abbr> <note type="manuscript">Durham, Cathedral Library, MS A. IV. 19 (Durham Ritual), f. 55</note></witness>
+          <witness xml:id="wit-vt"><abbr>Vt</abbr></witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <listPrefixDef>
+        <prefixDef ident="law" matchPattern="(.+)" replacementPattern="lawAbb.html#$1"/>
+        <prefixDef ident="gram" matchPattern="(.+)" replacementPattern="gramAbb.html#$1"/>
+        <prefixDef ident="entry" matchPattern="(.+)" replacementPattern="entry.html?id=$1"/>
+      </listPrefixDef>
+    </encodingDesc>
+    <profileDesc>
+      <creation><date source="#liebermann">c. 9th century</date><note type="promulgation">c. 9th century (Liebermann)</note></creation>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-18">Generated from row 2716 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="clause" n="Inscr.">
+        <head><ref type="lawCode" target="law:IudDeiVI">Iud Dei VI</ref> Inscr.</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Iud Dei VI Inscr." corresp="#wit-du"><pb n="412" ed="#liebermann"/>Halsuncge.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="412" ed="#liebermann"/>Beschwörung.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Adjuration.</ab>
+        <note type="editorial">New row (October 2026): Liebermann’s text and German translation transcribed from Gesetze I p. 412 (two independent readings of the page images, differences settled against the page); Liebermann’s heading: [VI.]</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IudDeiVI_Inscr.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">412</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Übersetzt aus gemeinsamer Quelle von</hi> I 2, 1 (<hi rend="italic">o. S.</hi> 401), <hi rend="italic">von Zeumer</hi> 697 (5) <hi rend="italic">und von unten</hi> X 13</seg><seg type="translation" xml:lang="en" source="#claude">Translated from the common source of I 2, 1 (above p. 401), of Zeumer 697 (5) and of X 13 below</seg></note>
+      </div>
+    </body>
+  </text>
+</TEI>
