@@ -13,6 +13,9 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +35,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">467</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +44,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -62,21 +66,28 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1781 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 336.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 336.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 336: “And gif þeofman æt þam ordale ful weorðe, mearcyge man hine æt þam forman cerre.” → “And gif þeofman æt þam ordale ful weorðe, mearcyge man hine æt þam forman cerre. (expanded letters in italics: m)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 336: “Und wenn ein Unfreier (Dieb B A?) beim Ordal schuldig befunden wird, so werde er (dann B) beim ersten Mal gebrandmarkt.” → “Und wenn ein Unfreier (Dieb B A?) beim Ordal schuldig befunden wird, so werde er (dann B) beim ersten Mal gebrandmarkt. (expanded letters in italics: B A?, B)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 337.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="32">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 32</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="32" corresp="#wit-g-a"><pb n="336" ed="#liebermann"/>And gyf þeowman æt þam ordale fúl weorðe, mearcie man hine æt þam forman cyrre.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="32" corresp="#wit-a"><pb n="336" ed="#liebermann"/>And gif þeofman æt þam ordale ful weorðe, mearcyge man hine æt þam forman cerre.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="32" corresp="#wit-g-a"><pb n="336" ed="#liebermann"/>And<ptr type="liebermannNote" n="6" target="#IICn_32.lnote.oe.6"/> gyf<ptr type="liebermannNote" n="1" target="#IICn_32.lnote.oe.1"/> þeowman æt þam ordale<ptr type="liebermannNote" n="7" target="#IICn_32.lnote.oe.7"/> fúl weorðe, mearcie man hine æt þam forman cyrre.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="32" corresp="#wit-b"><pb n="336" ed="#liebermann"/>⁊ gyf ðeofman<ptr type="liebermannNote" n="4" target="#IICn_32.lnote.oe.4-2"/> æt ðam ordale ful wurðe, mearcie<ptr type="liebermannNote" n="5" target="#IICn_32.lnote.oe.5"/> hine ðonne æt ðam forman cyrre.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="32" corresp="#wit-a"><pb n="336" ed="#liebermann"/>And gif þeofman æt þam ordale ful<ptr type="liebermannNote" n="3" target="#IICn_32.lnote.oe.3"/> weorðe, mearcyge man hine æt þa<hi rend="italic">m</hi> forman cerre.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="32" corresp="#wit-q"><pb n="337" ed="#liebermann"/>Si seruus in ordalio reus fuerit, signetur prima uice.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="32" corresp="#wit-b"><pb n="192" ed="#robertson"/>⁊ gyf þeo[w]man æt ðam ordale ful wurðe, mearcie [man] hine ðonne æt ðam forman cyrre.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="32" corresp="#wit-inst-cn"><pb n="337" ed="#liebermann"/>Si seruus ceciderit in iudicio ferri aut<ptr type="liebermannNote" n="4" target="#IICn_32.lnote.oe.4"/> aquę, criminis signum prima uice fiet ei.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="32" corresp="#wit-cons-cn"><pb n="337" ed="#liebermann"/>Seruus qui Dei iudicio nocens apparuerit, prima uice signetur.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="32" corresp="#wit-b"><pb n="192" ed="#robertson"/>⁊ gyf þeo[w]man<ptr type="editorNote" n="10" target="#IICn_32.robnote.fn.10"/> æt ðam ordale ful wurðe, mearcie [man]<ptr type="editorNote" n="3" target="#IICn_32.robnote.fn.3"/> hine ðonne<ptr type="editorNote" n="2" target="#IICn_32.robnote.fn.2"/> æt ðam forman cyrre.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="272" ed="#rabin-doml"/>And gyf þeowman æt þam ordale ful weorðe, mearcie man hine æt þam forman cyrre.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="336" ed="#liebermann"/>Und wenn ein Unfreier (Dieb B A?) beim Ordal schuldig befunden wird, so werde er (dann B) beim ersten Mal gebrandmarkt.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="336" ed="#liebermann"/>Und wenn ein Unfreier (Dieb<ptr type="liebermannNote" n="1" target="#IICn_32.lnote.de.1"/> <hi rend="italic">B A</hi>?) beim Ordal schuldig befunden wird, so werde er (dann <hi rend="italic">B</hi>) beim ersten Mal gebrandmarkt.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if a slave (thief, B A?) is found guilty at the ordeal, let him (then, B) be branded the first time.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="193" ed="#robertson"/>And if a slave is found guilty at the ordeal, he shall be branded on the first occasion.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="467" ed="#whitelock"/>And if a slave is convicted by the ordeal, on the first occasion he is to be branded.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="193" ed="#robertson"/>And if a slave<ptr type="editorNote" n="1" target="#IICn_32.robnote.n.1"/> is found guilty at the ordeal, he shall be branded on the first occasion.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock"><ptr type="editorNote" n="5" target="#IICn_32.whinote.n.5"/><pb n="467" ed="#whitelock"/>And if a slave<ptr type="editorNote" n="6" target="#IICn_32.whinote.n.6"/> is convicted by the ordeal, on the first occasion he is to be branded.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="273" ed="#rabin-doml"/>And if a slave is proven guilty by ordeal, the first time he is to be branded.</ab>
         <note type="comparison" source="#liebermann" n="336"><ref target="clause:IAtr_2">I Atr 2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 2</note>
@@ -87,12 +98,25 @@
         <note type="comparison" source="#whitelock" n="467"><label>source</label> <ref target="clause:IAtr_2">I Atr 2</ref> <quote>From here until 33.2, the source is still I Ethelred (2, 2.1, 4–4.3).</quote></note>
         <note type="comparison" source="#whitelock" n="467"><label>source</label> <ref target="clause:IAtr_2-1">I Atr 2.1</ref> <quote>From here until 33.2, the source is still I Ethelred (2, 2.1, 4–4.3).</quote></note>
         <note type="comparison" source="#whitelock" n="467"><label>source</label> <ref target="clause:IAtr_4">I Atr 4–4.3</ref> <quote>From here until 33.2, the source is still I Ethelred (2, 2.1, 4–4.3).</quote></note>
-        <note type="editorial">B and A's ‘þeofman’ (thief) is perhaps an error of the archetype. Liebermann compares I Atr 2.</note>
-        <note type="translator" source="#whitelock">From here until 33.2, the source is still I Ethelred (2, 2.1, 4–4.3). I Ethelred 3, which deals with security and witness at sales, is omitted, presumably because it breaks the sequence of ideas. With 4.3. I Ethelred comes to an end.</note>
-        <note type="translator" source="#whitelock">The Harley and Corpus texts have wrongly “a thief”.</note>
+        <note type="editorial">B and A's ‘þeofman’ (thief) is perhaps an error of the archetype. Liebermann compares I Atr 2.; BR: added from Gesetze I p. 337, October 2026 (MS Cons)</note>
         <note type="textual" source="#rabin-doml">þeowman: ðeofman AB</note>
         <note type="textual" source="#rabin-doml">man: omitted B</note>
         <note type="textual" source="#rabin-doml">hine: hine þonne B</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_32.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">337</biblScope></bibl><seg type="original" xml:lang="de">uel <hi rend="italic">Lb S</hi></seg><seg type="translation" xml:lang="en" source="#claude">uel Lb S</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_32.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">336</biblScope></bibl><seg type="original" xml:lang="de">wur <hi rend="italic">fügt A zu</hi> [<hi rend="italic">Beginn des folgenden Wortes doppelt</hi>]</seg><seg type="translation" xml:lang="en" source="#claude">A adds wur [the beginning of the following word written twice]</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_32.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">336</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_32.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">336</biblScope></bibl><seg type="original" xml:lang="de">gif <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gif Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_32.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">336</biblScope></bibl><seg type="original" xml:lang="de">-al f. weorþ, mearcige <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-al f. weorþ, mearcige Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_32.lnote.oe.4-2" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">336</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Fehler des Archetyps?</hi></seg><seg type="translation" xml:lang="en" source="#claude">error of the archetype?</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_32.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">336</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">ergänze</hi> man</seg><seg type="translation" xml:lang="en" source="#claude">supply man</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_32.lnote.oe.5-2" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">337</biblScope></bibl><seg type="original" xml:lang="de">perierat <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">perierat Hk</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_32.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">207</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Ähnlich kommt der Fehler <hi rend="italic">f</hi> statt <hi rend="italic">w</hi> in <hi rend="italic">þeofwealh</hi> Ine 74 vor und umgekehrt -<hi rend="italic">w</hi> statt -<hi rend="italic">f</hi> in <hi rend="italic">slodþeowe</hi> Af 9, 2; <hi rend="italic">s</hi>. Einl. 9a</seg><seg type="translation" xml:lang="en" source="#claude">The error <hi rend="italic">f</hi> for <hi rend="italic">w</hi> occurs similarly in <hi rend="italic">þeofwealh</hi> Ine 74, and conversely -<hi rend="italic">w</hi> for -<hi rend="italic">f</hi> in <hi rend="italic">slodþeowe</hi> Af 9, 2; <hi rend="italic">see</hi> Introduction 9a</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IICn_32.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">356</biblScope></bibl><seg type="original" xml:lang="en"><hi rend="italic">ðeofman</hi>, B, A; <hi rend="italic">ðeowman</hi>, G. Liebermann points out that a similar confusion of <hi rend="italic">w</hi> and <hi rend="italic">f</hi> in MS B occurs in the word <hi rend="italic">stodðeowe</hi> in Af. 9, 2.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_32.robnote.fn.2" n="2" source="#robertson"><bibl><biblScope unit="page">192</biblScope></bibl><label>men</label><seg type="original" xml:lang="en">Om. G, A, Ld.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_32.robnote.fn.3" n="3" source="#robertson"><bibl><biblScope unit="page">192</biblScope></bibl><label>heo</label><seg type="original" xml:lang="en">G, A, Ld; om. B.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_32.robnote.fn.10" n="10" source="#robertson"><bibl><biblScope unit="page">192</biblScope></bibl><label>þeo[w]man</label><seg type="original" xml:lang="en">G, Ld; <hi rend="italic">ðeofman</hi> B, A.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IICn_32.whinote.n.5" n="5" source="#whitelock"><bibl><biblScope unit="page">467</biblScope></bibl><seg type="original" xml:lang="en">From here until 33.2, the source is still I Ethelred (2, 2.1, 4–4.3). I Ethelred 3, which deals with security and witness at sales, is omitted, presumably because it breaks the sequence of ideas. With 4.3. I Ethelred comes to an end.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IICn_32.whinote.n.6" n="6" source="#whitelock"><bibl><biblScope unit="page">467</biblScope></bibl><label>slave</label><seg type="original" xml:lang="en">The Harley and Corpus texts have wrongly “a thief”.</seg></note>
       </div>
     </body>
   </text>

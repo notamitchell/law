@@ -13,6 +13,9 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +35,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">468</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +44,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -62,30 +66,48 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1802 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 340.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 340.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 340: “⁊ gif he ladian wylle, hine ladige mid þryfealdan.” → “⁊ gif he ladian wylle, hine ladige mid þryfealdan. (expanded letters in italics: hine)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 341.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="41.1">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 41.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="41.1" corresp="#wit-g-a"><pb n="340" ed="#liebermann"/>⁊ gyf he ladian wylle, ladige mid þryfealdan.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="41.1" corresp="#wit-a"><pb n="340" ed="#liebermann"/>⁊ gif he ladian wylle, hine ladige mid þryfealdan.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="41.1" corresp="#wit-q"><pb n="341" ed="#liebermann"/>Et si se purgare uelit, tripliciter hoc faciat.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="41.1" corresp="#wit-b"><pb n="196" ed="#robertson"/>⁊ gyf he ladian wylle, ladie hine mid ðryfealdan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="41.1" corresp="#wit-g-a"><pb n="340" ed="#liebermann"/>⁊ gyf<ptr type="liebermannNote" n="1" target="#IICn_41-1.lnote.oe.1"/> he ladian wylle<ptr type="liebermannNote" n="22" target="#IICn_41-1.lnote.oe.22"/>, ladige<ptr type="liebermannNote" n="23" target="#IICn_41-1.lnote.oe.23"/> mid þryfealdan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="41.1" corresp="#wit-b"><pb n="340" ed="#liebermann"/>⁊ gyf he ladian wylle, <ptr type="liebermannNote" n="3" target="#IICn_41-1.lnote.oe.3-2"/>ladie [hine<ptr type="liebermannNote" n="4" target="#IICn_41-1.lnote.oe.4"/>] mid ðryfealdan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="41.1" corresp="#wit-a"><pb n="340" ed="#liebermann"/>⁊ gif he ladian wylle, <hi rend="italic">hine<ptr type="liebermannNote" n="3" target="#IICn_41-1.lnote.oe.3"/></hi> ladige mid þryfealdan.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="41.1" corresp="#wit-q"><pb n="341" ed="#liebermann"/>Et<ptr type="liebermannNote" n="11" target="#IICn_41-1.lnote.oe.11"/> si se purgare uelit, tripliciter hoc faciat.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="41.1" corresp="#wit-inst-cn"><pb n="341" ed="#liebermann"/>Quodsi purgare se<ptr type="liebermannNote" n="12" target="#IICn_41-1.lnote.oe.12"/> uoluerit, triplici<ptr type="liebermannNote" n="13" target="#IICn_41-1.lnote.oe.13"/> sacramento se purget.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="41.1" corresp="#wit-cons-cn"><pb n="341" ed="#liebermann"/>Quodsi in[fi]cias geret, triplici purgamine se purget.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="41.1" corresp="#wit-b"><pb n="196" ed="#robertson"/>⁊ gyf he ladian wylle, ladie hine<ptr type="editorNote" n="6" target="#IICn_41-1.robnote.fn.6"/> mid ðryfealdan.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="276" ed="#rabin-doml"/>And gyf he ladian wylle, ladige mid þryfealdan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="341" ed="#liebermann"/>Wenn er sich jedoch rein schwören will, reinige er sich mit dreifachem [Beweise].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="341" ed="#liebermann"/>Wenn er sich jedoch rein schwören will, reinige er sich mit dreifachem [Beweise<ptr type="liebermannNote" n="1" target="#IICn_41-1.lnote.de.1"/>].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But if he wishes to clear himself, let him clear himself with the threefold [proof].</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="197" ed="#robertson"/>And if he seeks to clear himself, he shall do so by the triple mode of proof.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="468" ed="#whitelock"/>And if he wishes to clear himself, he is to clear himself with three-fold process of exculpation.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock"><ptr type="editorNote" n="4" target="#IICn_41-1.whinote.n.4"/><pb n="468" ed="#whitelock"/>And if he wishes to clear himself, he is to clear himself with three-fold process of exculpation.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="277" ed="#rabin-doml"/>And if he desires to exonerate himself, he must do so by the threefold oath.</ab>
         <note type="comparison" source="#liebermann" n="341"><ref target="clause:VIIIAtr_27-1">VIII Atr 27.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 27, 1</note>
         <note type="comparison" source="#wormald-mel" n="359"><label>source (roman)</label> <ref target="clause:VIIIAtr_27-1">VIII Atr 27.1</ref> <quote>Table 5.4, II Cn 41:1: VIII Atr 27:1</quote></note>
         <note type="comparison" source="#wormald-mel" n="367"><label>parallel</label> <ref target="clause:VIIIAtr_27-1">VIII Atr 27.1</ref> <quote>VIII Atr 27:1/II Cn 41:1</quote></note>
         <note type="comparison" source="#whitelock" n="468"><label>from</label> <ref target="clause:VIIIAtr_27-1">VIII Atr 27.1</ref> <quote>VIII Ethelred, 27.1 (27 is not used by Cnut’s law).</quote></note>
-        <note type="editorial">Liebermann compares VIII Atr 27.1.</note>
-        <note type="translator" source="#whitelock">VIII Ethelred, 27.1 (27 is not used by Cnut’s law). But Ethelred allowed either simple or triple oath according to the crime involved.</note>
+        <note type="editorial">Liebermann compares VIII Atr 27.1.; BR: added from Gesetze I p. 341, October 2026 (MS Cons)</note>
         <note type="textual" source="#rabin-doml">ladige mid: ladie hine mid B</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_41-1.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">341</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_41-1.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">341</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="spaced">iudicio uel</hi> <hi rend="italic">fügt zu S</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">iudicio uel</hi> added by S</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_41-1.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">341</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so K; fehlt übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">thus K; lacking in the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_41-1.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="de">·N· <hi rend="italic">A</hi> [<hi rend="italic">vgl.</hi> 44, 1]</seg><seg type="translation" xml:lang="en" source="#claude">·N· A [cf. 44, 1]</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_41-1.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="de">Gif <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">Gif Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_41-1.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="de">wille <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">wille Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_41-1.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="de">hine <hi rend="italic">fügt zu Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">hine added by Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_41-1.lnote.oe.3-2" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">davor</hi> [·N·?] <hi rend="italic">radirt</hi></seg><seg type="translation" xml:lang="en" source="#claude">[·N·?] erased before it</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_41-1.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">340</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">später auf Rasur</hi></seg><seg type="translation" xml:lang="en" source="#claude">later on an erasure</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_41-1.lnote.oe.4-2" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">341</biblScope></bibl><seg type="original" xml:lang="de">inimicicias <hi rend="italic">Hr; gebessert aus</hi> 44, 1</seg><seg type="translation" xml:lang="en" source="#claude">inimicicias Hr; emended from 44, 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_41-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">208</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Dieselbe Stelle benutzte schon <hi rend="italic">o</hi>. I 5, 4. Zu Inst¹³ fügt eine Hs. hinzu: ‘oder durch Ordal’, vielleicht geweihten (<hi rend="italic">s. d. Gl</hi> 2) Bissen meinend?</seg><seg type="translation" xml:lang="en" source="#claude">The same passage was already used <hi rend="italic">above</hi> I 5, 4. To Inst¹³ one MS adds: ‘or by ordeal’, perhaps meaning the consecrated (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 2) morsel?</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_41-1.robnote.fn.6" n="6" source="#robertson"><bibl><biblScope unit="page">196</biblScope></bibl><label>hine</label><seg type="original" xml:lang="en"><hi rend="italic">.N. ladige</hi> A; <hi rend="italic">hine</hi> in B added later on an erasure; om. G.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IICn_41-1.whinote.n.4" n="4" source="#whitelock"><bibl><biblScope unit="page">468</biblScope></bibl><seg type="original" xml:lang="en">VIII Ethelred, 27.1 (27 is not used by Cnut’s law). But Ethelred allowed either simple or triple oath according to the crime involved.</seg></note>
       </div>
     </body>
   </text>

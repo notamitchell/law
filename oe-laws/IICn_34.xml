@@ -13,6 +13,7 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +33,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">467</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +42,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -62,22 +64,34 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1787 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 336.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 336.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 337.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="34">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 34</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="34" corresp="#wit-g-a"><pb n="336" ed="#liebermann"/>And stande betux burgum an lágu æt ladunge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="34" corresp="#wit-g-a"><pb n="336" ed="#liebermann"/>And stande<ptr type="liebermannNote" n="22" target="#IICn_34.lnote.oe.22"/> betux burgum an lágu æt ladunge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="34" corresp="#wit-b"><pb n="336" ed="#liebermann"/>⁊ stande betwyx burgu<hi rend="italic">m</hi> an laga æt ladunge.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="34" corresp="#wit-a"><pb n="336" ed="#liebermann"/>And stande betwux burgum an lagu æt ladunge.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="34" corresp="#wit-q"><pb n="337" ed="#liebermann"/>Et stet inter burgos una lex in purgationibus (burga l. u. purgandi).</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="34" corresp="#wit-q"><pb n="337" ed="#liebermann"/>Et stet<ptr type="liebermannNote" n="17" target="#IICn_34.lnote.oe.17"/> inter burgos<ptr type="liebermannNote" n="5" target="#IICn_34.lnote.oe.5"/> una lex in purgationibus (burga l. u. purgandi).</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="34" corresp="#wit-inst-cn"><pb n="337" ed="#liebermann"/>Et sit<ptr type="liebermannNote" n="13" target="#IICn_34.lnote.oe.13"/> inter (omnes<ptr type="liebermannNote" n="14" target="#IICn_34.lnote.oe.14"/>) ciuitates una lex et una purgatio.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="34" corresp="#wit-cons-cn"><pb n="337" ed="#liebermann"/>Inter urbes quoque sit una lex in purgacione.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="34" corresp="#wit-b"><pb n="194" ed="#robertson"/>⁊ stande betwyx burgum an laga æt ladunge.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="274" ed="#rabin-doml"/>And stande betux burgum an lagu æt ladunge.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="337" ed="#liebermann"/>Und es gelte unter den Gerichtsstätten Ein [und dasselbe] Recht beim Reinigungsbeweise.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="337" ed="#liebermann"/>Und es gelte unter den Gerichtsstätten<ptr type="liebermannNote" n="1" target="#IICn_34.lnote.de.1"/> Ein [und dasselbe] Recht beim Reinigungsbeweise.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let there be one law of clearing among the boroughs.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="195" ed="#robertson"/>And the various boroughs shall have one common law with regard to exculpation.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock"><pb n="467" ed="#whitelock"/>And one and the same law is to be valid in boroughs as regards exculpation.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="275" ed="#rabin-doml"/>And within the boroughs there shall be one law establishing the means of exoneration.</ab>
+        <note type="editorial">BR: added from Gesetze I p. 337, October 2026 (MS Cons)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_34.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">337</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Cb, wo hinter</hi> purg. <hi rend="italic">später</hi> sit</seg><seg type="translation" xml:lang="en" source="#claude">omitted Cb, where sit has been added later after purg.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_34.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">337</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">nur Cb, wo</hi> uel ciuitates <hi rend="italic">über</hi> ciues<hi rend="italic">; fehlt übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">only Cb, where uel ciuitates is written above ciues; omitted in the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_34.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">337</biblScope></bibl><seg type="original" xml:lang="de">stetit <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">stetit Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_34.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">337</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vor der Klammer K; eingeklammertes übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">the words before the bracket K; the bracketed words the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_34.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">336</biblScope></bibl><seg type="original" xml:lang="de">stand betwux b. ane <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">stand betwux b. ane Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_34.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">207</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl Gl</hi> Reinigung 4c; Partikularrecht 7a. Die Krone hatte bisher Kirchenrecht, Münze, Mass, Gewicht zu vereinheitlichen gesucht.—Zu <hi rend="italic">burg vgl. o</hi>. 22, 1³</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Reinigung 4c; Partikularrecht 7a. The Crown had hitherto sought to make church law, coinage, measures and weights uniform. — On <hi rend="italic">burg cf. above</hi> 22, 1³</seg></note>
       </div>
     </body>
   </text>

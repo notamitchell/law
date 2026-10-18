@@ -13,6 +13,7 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +33,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">466</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -62,23 +64,34 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1763 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 330.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 330.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="29.1">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 29.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="29.1" corresp="#wit-g-a"><pb n="330" ed="#liebermann"/>And gyf hwa hream gehyre ⁊ hine forsitte, gylde þæs cingces oferhyrnesse oððe hine be fullan geladige.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="29.1" corresp="#wit-g-a"><pb n="330" ed="#liebermann"/>And gyf<ptr type="liebermannNote" n="15" target="#IICn_29-1.lnote.oe.15"/> hwa hream<ptr type="liebermannNote" n="21" target="#IICn_29-1.lnote.oe.21"/> gehyre ⁊ hine forsitte, gylde þæs cingces<ptr type="liebermannNote" n="22" target="#IICn_29-1.lnote.oe.22"/> oferhyrnesse oððe hine be fullan geladige.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="29.1" corresp="#wit-b"><pb n="330" ed="#liebermann"/>⁊ gyf hwa rea<hi rend="italic">m</hi> gehyre ⁊ hine forsitte, gylde ðæs cynges oferhyrnysse oððe hine be fullan geladige.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="29.1" corresp="#wit-a"><pb n="330" ed="#liebermann"/>And gif he hream gehyre ⁊ hine forsitte, gylde þæs cyninges oferhyrnysse oððe hine be fullan geladige.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="29.1" corresp="#wit-q"><pb n="331" ed="#liebermann"/>Si quis audito clamore supersederit, reddat ouerseunessam regis aut plene se ladiet.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="29.1" corresp="#wit-q"><pb n="331" ed="#liebermann"/>Si quis audito clamore supersederit, reddat ouerseunessam<ptr type="liebermannNote" n="14" target="#IICn_29-1.lnote.oe.14"/> regis aut plene se ladiet.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="29.1" corresp="#wit-cons-cn"><pb n="331" ed="#liebermann"/>Et qui exclamacionem audierit et accurrere neglexerit, soluat despectum regis uel plena lege se purget.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="29.1" corresp="#wit-b"><pb n="188" ed="#robertson"/>⁊ gyf hwa ream gehyre ⁊ hine forsitte, gylde ðæs cynges oferhyrnysse oððe hine be fullan geladige.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="268" ed="#rabin-doml"/>And gyf hwa hream gehyre and hine forsitte, gylde þæs cingces oferhyrnesse oððe hine be fullan geladige.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="331" ed="#liebermann"/>Und wenn einer Gerüfte hört und es [zu verfolgen] versäumt, zahle er Busse für Ungehorsam gegen den König oder reinige sich mit vollem [Eide].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="331" ed="#liebermann"/>Und<ptr type="liebermannNote" n="1" target="#IICn_29-1.lnote.de.1"/> wenn einer Gerüfte hört und es [zu verfolgen] versäumt, zahle er Busse für Ungehorsam<ptr type="liebermannNote" n="2" target="#IICn_29-1.lnote.de.2"/> gegen den König oder reinige sich mit vollem [Eide].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if anyone hears the hue and cry and neglects [to follow] it, let him pay [the fine for] disobedience to the king or clear himself fully.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="189" ed="#robertson"/>And if anyone hears the hue and cry and neglects it, he shall pay the fine for insubordination to the king, or clear himself by the full oath.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock"><pb n="466" ed="#whitelock"/>And if anyone hears the hue and cry and ignores it, he is to pay [the fine for] disobedience to the king or to clear himself fully.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="269" ed="#rabin-doml"/>And if anyone hears the alarm and ignores it, he is to pay the fine for disobedience to the king or exonerate himself with a full oath.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:LeisWl_50">Leis Wl 50</ref></note>
+        <note type="editorial">BR: added from Gesetze I p. 331, October 2026 (MS Cons)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_29-1.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">331</biblScope></bibl><seg type="original" xml:lang="de">oums. <hi rend="italic">R</hi></seg><seg type="translation" xml:lang="en" source="#claude">oums. R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_29-1.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">330</biblScope></bibl><seg type="original" xml:lang="de">gif <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gif Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_29-1.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">330</biblScope></bibl><seg type="original" xml:lang="de">-me <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-me Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_29-1.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">330</biblScope></bibl><seg type="original" xml:lang="de">cyninges <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">cyninges Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_29-1.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">331</biblScope></bibl><seg type="original" xml:lang="de">audit <hi rend="italic">Hr</hi></seg><seg type="translation" xml:lang="en" source="#claude">audit Hr</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_29-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">206</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Benutzt durch Hn 65, 2, übersetzt durch Leis Wl 50</seg><seg type="translation" xml:lang="en" source="#claude">Used by Hn 65, 2, translated by Leis Wl 50</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_29-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">206</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">d. i. 120 Schill.; Q setzt den im Normann. Latein fortlebenden Ausdruck</seg><seg type="translation" xml:lang="en" source="#claude">i.e. 120 shill.; Q uses the term that lived on in Norman Latin</seg></note>
       </div>
     </body>
   </text>

@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">470</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -40,7 +43,7 @@
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-d-frags"><abbr>D (frags.)</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
-          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr></witness>
+          <witness xml:id="wit-inst-cn"><abbr>Inst. Cn.</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
           <witness xml:id="wit-cons-cn"><abbr>Cons. Cn.</abbr> <note type="manuscript">Consiliatio Cnuti (Latin translation, early 12th c.)</note></witness>
         </listWit>
       </sourceDesc>
@@ -62,23 +65,42 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1829 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 348.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 348.</change>
+      <change when="2026-10" type="checked">Liebermann’s Latin text corrected against Gesetze I, p. 349: “misceueniat” → “miseueniat”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 349.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="53.1">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 53.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="53.1" corresp="#wit-g-a"><pb n="348" ed="#liebermann"/>⁊ gif hit tihtle sig, ⁊ lad forberste, bisceop þonne wealde ⁊ stiðlice deme.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="53.1" corresp="#wit-g-a"><pb n="348" ed="#liebermann"/>⁊ gif hit tihtle sig<ptr type="liebermannNote" n="9" target="#IICn_53-1.lnote.oe.9-2"/>, ⁊ lad forberste<ptr type="liebermannNote" n="10" target="#IICn_53-1.lnote.oe.10"/>, bisceop þonne wealde ⁊ stiðlice deme.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="53.1" corresp="#wit-b"><pb n="348" ed="#liebermann"/>And gyf hit tihtla beo, ⁊ lad forbersta, ðonne wealde se bisceop ⁊ stiðlice deme.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="53.1" corresp="#wit-a"><pb n="348" ed="#liebermann"/>And gif hit tihtle sy, ⁊ lad forberste, biscop þonne wealde ⁊ stiðlice deme.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="53.1" corresp="#wit-q"><pb n="349" ed="#liebermann"/>Et si compellatio sit, et in emundando misceueniat (probata fuerit), sit in episcopi potestate, et ipse grauiter iudicet.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="53.1" corresp="#wit-b"><pb n="202" ed="#robertson"/>And gyf hit tihtla beo ⁊ lad forbersta, ðonne wealde se bisceop ⁊ stiðlice deme.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="53.1" corresp="#wit-q"><pb n="349" ed="#liebermann"/>Et si compellatio sit, et in emundando<ptr type="liebermannNote" n="6" target="#IICn_53-1.lnote.oe.6"/> miseueniat (<ptr type="liebermannNote" n="7" target="#IICn_53-1.lnote.oe.7"/>probata<ptr type="liebermannNote" n="8" target="#IICn_53-1.lnote.oe.8"/> fuerit), sit in episcopi potestate, et<ptr type="liebermannNote" n="9" target="#IICn_53-1.lnote.oe.9"/> ipse grauiter iudicet.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="53.1" corresp="#wit-inst-cn"><pb n="349" ed="#liebermann"/>Si autem negauerit et purgare se uoluerit, et in iudicio ceciderit, episcopus uideat et districte iudicet<ptr type="liebermannNote" n="3" target="#IICn_53-1.lnote.oe.3"/>.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="53.1" corresp="#wit-cons-cn"><pb n="349" ed="#liebermann"/>[53, 1] Quodsi inficiata fuerit et purgamine defecerit, cadat in manus episcopi, qui inde acriter iudicet.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="53.1" corresp="#wit-b"><pb n="202" ed="#robertson"/>And gyf hit tihtla beo ⁊ lad forbersta, ðonne wealde se<ptr type="editorNote" n="3" target="#IICn_53-1.robnote.fn.3"/> bisceop ⁊ stiðlice deme.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="282" ed="#rabin-doml"/>And gif hit tihtle sig and lad forberste, bisceop þonne wealde and stiðlice deme.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="348" ed="#liebermann"/>Wenn es jedoch [nur] eine [leugbare] Anklage ist, und die Reinigung misslingt, dann verfüge der Bischof und richte streng.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="348" ed="#liebermann"/>Wenn es jedoch [nur] eine [leugbare] Anklage ist, und die Reinigung<ptr type="liebermannNote" n="1" target="#IICn_53-1.lnote.de.1"/> misslingt, dann verfüge der Bischof<ptr type="liebermannNote" n="2" target="#IICn_53-1.lnote.de.2"/> und richte<ptr type="liebermannNote" n="3" target="#IICn_53-1.lnote.de.3"/> streng.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If, however, it is [only] a [deniable] accusation, and the clearing [oath] fails, then let the bishop dispose and judge strictly.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="203" ed="#robertson"/>And if a charge is brought and the attempt to refute it fails, the decision shall then rest with the bishop, and his judgment shall be strict.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="203" ed="#robertson"/>And if a charge is brought and the attempt to refute it fails, the decision shall then rest with the bishop<ptr type="editorNote" n="1" target="#IICn_53-1.robnote.n.1"/>, and his judgment shall be strict.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock"><pb n="470" ed="#whitelock"/>And if an accusation is brought, and the exculpation fails, the bishop is then to take control and to judge sternly.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="283" ed="#rabin-doml"/>And if there is an accusation and the oath of exculpation fails, the bishop shall judge and he is to judge harshly.</ab>
+        <note type="editorial">BR: added from Gesetze I p. 349, October 2026 (MS Cons)</note>
         <note type="textual" source="#rabin-doml">bisceop: se bisceop B</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_53-1.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so S;</hi> uindicet <hi rend="italic">übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">thus S; uindicet the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_53-1.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="spaced">emendatione</hi> <hi rend="italic">K</hi> [<hi rend="italic">vgl. unten</hi> 56, 1]</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">emendatione</hi> K [cf. below 56, 1]</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_53-1.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="de">id est <hi rend="italic">fügt zu T</hi></seg><seg type="translation" xml:lang="en" source="#claude">id est added by T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_53-1.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="de">p. f. <hi rend="italic">übergeschr. Dm T; fehlt übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">p. f. written above Dm T; lacking in the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_53-1.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">349</biblScope></bibl><seg type="original" xml:lang="de">et i. g. i. <hi rend="italic">aus THkBr; fehlt KDmR</hi></seg><seg type="translation" xml:lang="en" source="#claude">et i. g. i. from THkBr; lacking in KDmR</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_53-1.lnote.oe.9-2" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">348</biblScope></bibl><seg type="original" xml:lang="de">sy <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">sy Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_53-1.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">348</biblScope></bibl><seg type="original" xml:lang="de">-rst, biscop <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-rst, biscop Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_53-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">210</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Ordal zur Probe ehelicher Treue kommt in Geschichte und Volkskunde zwar oft vor. Doch ist die Übs. von <hi rend="italic">lad</hi> durch <hi rend="italic">iudicium</hi> in Inst zu eng; jenes umfasst auch Reinigungseid</seg><seg type="translation" xml:lang="en" source="#claude">The ordeal as a test of marital fidelity does indeed occur often in history and folklore. Nevertheless the translation of <hi rend="italic">lad</hi> by <hi rend="italic">iudicium</hi> in Inst is too narrow; the former also includes the oath of exculpation</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_53-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">210</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. Gl</hi> Ehegericht 3, also ohne Leibesstrafe</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See Gl</hi> Ehegericht 3, thus without corporal punishment</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_53-1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">210</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ebd</hi>. Geistliches Gericht 14a. Das ‘Richten’ bed. nur ‘Bestimmen der Strafe’, nachdem weltlicher Prozess samt landrechtlichem Beweise und Schuldspruch durch bürgerliches Gericht veranging; ebenso <hi rend="italic">u</hi>. 56, 1</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Ibid</hi>. Geistliches Gericht 14a. ‘Judging’ means only ‘determining the punishment’, after a secular trial, together with proof according to the law of the land and verdict, had taken place before the civil court; likewise <hi rend="italic">below</hi> 56, 1</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IICn_53-1.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">357</biblScope></bibl><seg type="original" xml:lang="en">See P. and M. <hi rend="smallcaps">ii</hi>. p. 367.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_53-1.robnote.fn.3" n="3" source="#robertson"><bibl><biblScope unit="page">202</biblScope></bibl><label>his</label><seg type="original" xml:lang="en">Om. G, A, Ld.</seg></note>
       </div>
     </body>
   </text>

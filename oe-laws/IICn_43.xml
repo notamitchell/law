@@ -13,6 +13,9 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +35,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">468</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -62,29 +66,42 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1805 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 342.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 342.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 342: “ist.” → “ist..”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="43">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 43</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="43" corresp="#wit-g-a"><pb n="342" ed="#liebermann"/>Gyf gehadod man hine forwyrce mid deaðscylde, gewylde hine man ⁊ healde to bisceopes dome, be þa<hi rend="italic">m</hi> þe seo dæd si.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="43" corresp="#wit-a"><pb n="342" ed="#liebermann"/>Gif hadod man hine forwyrce mid deaðscylde, gewylde man hine ⁊ healde to byscopes dome, be þam syo dæde sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="43" corresp="#wit-g-a"><pb n="342" ed="#liebermann"/>Gyf<ptr type="liebermannNote" n="7" target="#IICn_43.lnote.oe.7"/> gehadod man hine forwyrce mid deaðscylde, gewylde hine<ptr type="liebermannNote" n="8" target="#IICn_43.lnote.oe.8"/> man ⁊ healde to bisceopes<ptr type="liebermannNote" n="9" target="#IICn_43.lnote.oe.9"/> dome, be þa<hi rend="italic">m<ptr type="liebermannNote" n="10" target="#IICn_43.lnote.oe.10"/></hi> þe seo dæd si.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="43" corresp="#wit-b"><pb n="342" ed="#liebermann"/>Gyf gehadod man hine forwyrce mid deaðscylde, gewylde man hine ⁊ healde to ðæs bisceopes dome, be ðam ðe seo dæd sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="43" corresp="#wit-a"><pb n="342" ed="#liebermann"/>Gif hadod man hine forwyrce mid deaðscylde, gewylde man hine ⁊ healde to byscopes dome, be þam<ptr type="liebermannNote" n="2" target="#IICn_43.lnote.oe.2"/> syo dæde sy.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="43" corresp="#wit-q"><pb n="343" ed="#liebermann"/>Si quis ordinatus se forisfaciat in morte plectendis actibus, capiatur et seruetur episcopi iudicio discutiendus, secundum quod factum sit.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="43" corresp="#wit-b"><pb n="198" ed="#robertson"/>Gyf gehadod man hine forwyrce mid deaðscylde, gewylde man hine ⁊ healde to ðæs bisceopes dome, be ðam ðe seo dæd sy.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="43" corresp="#wit-cons-cn"><pb n="343" ed="#liebermann"/>[43] Si ordinatus se forisfaciat crimine mortali, superetur et ad episcopi iudicium custodiatur iuxta facti qualitatem.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="43" corresp="#wit-b"><pb n="198" ed="#robertson"/>Gyf gehadod man hine forwyrce mid deaðscylde, gewylde man hine ⁊ healde to ðæs<ptr type="editorNote" n="1" target="#IICn_43.robnote.fn.1"/> bisceopes dome, be ðam ðe seo dæd sy.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="278" ed="#rabin-doml"/>Gyf gehadod man hine forwyrce mid deaðscylde, gewylde hine man and healde to bisceopes dome, be þam þe seo dæd si.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="342" ed="#liebermann"/>Wenn ein geweihter Mann sich [sein Leben] verwirkt durch Todes [würdige] Schuld, ergreife und bewahre man ihn für des Bischofs Urtheilsspruch, je nachdem die Missethat ist.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="342" ed="#liebermann"/>Wenn ein geweihter Mann sich [sein Leben] verwirkt durch Todes [würdige] Schuld, ergreife und bewahre man ihn für des Bischofs Urtheilsspruch, je<ptr type="liebermannNote" n="1" target="#IICn_43.lnote.de.1"/> nachdem die Missethat ist..</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a man in orders forfeits himself by a capital offence, let him be seized and held for the bishop's judgment, according to what the deed is.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="199" ed="#robertson"/>If a man in holy orders places his life in jeopardy by committing a capital crime, he shall be arrested, and his case shall be reserved for the bishop's decision, according to the nature of the deed.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="468" ed="#whitelock"/>If a man in holy orders commits a capital crime, he is to be seized and kept for the bishop’s judgment, according to the nature of the deed.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><ptr type="editorNote" n="1" target="#IICn_43.robnote.n.1"/><pb n="199" ed="#robertson"/>If a man in holy orders places his life in jeopardy by committing a capital crime, he shall be arrested, and his case shall be reserved for the bishop's decision, according to the nature of the deed.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock"><ptr type="editorNote" n="6" target="#IICn_43.whinote.n.6"/><pb n="468" ed="#whitelock"/>If a man in holy orders commits a capital crime, he is to be seized and kept for the bishop’s judgment, according to the nature of the deed.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="279" ed="#rabin-doml"/>If a person in orders compromises himself with a capital crime, he is to be arrested and held for the bishop’s judgment, according to the nature of the offense.</ab>
         <note type="comparison" source="#liebermann" n="342"><ref target="clause:EGu_4-2">EGu 4.2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. E Gu. 4, 2</note>
         <note type="comparison" source="#wormald-mel" n="353"><label>inspired by</label> <ref target="clause:EGu_Inscr">EGu</ref> <quote>passages from this tract had directly or indirectly inspired most of the clauses in the foregoing 'hadbryce' section (n. 427: ... II Cn 43 – 48:3)</quote></note>
         <note type="comparison" source="#wormald-mel" n="359"><label>quoted verbatim (bold in Wormald's table)</label> <ref target="clause:EGu_4-2">EGu 4.2–5</ref> <quote>Table 5.4, II Cn 43-44: EGu 4:2-5</quote></note>
-        <note type="editorial">Liebermann compares EGu 4.2.</note>
-        <note type="translator" source="#whitelock">from “Edward and Guthrum”, 4.2</note>
+        <note type="editorial">Liebermann compares EGu 4.2.; BR: added from Gesetze I p. 343, October 2026 (MS Cons)</note>
         <note type="textual" source="#rabin-doml">healde to: B adds ðæs</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_43.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">342</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl. o.</hi> 40, 2</seg><seg type="translation" xml:lang="en" source="#claude">cf. above 40, 2</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_43.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">342</biblScope></bibl><seg type="original" xml:lang="de">Gif <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">Gif Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_43.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">342</biblScope></bibl><seg type="original" xml:lang="de">m. h. <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">m. h. Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_43.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">342</biblScope></bibl><seg type="original" xml:lang="de">-co- <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-co- Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_43.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">342</biblScope></bibl><seg type="original" xml:lang="de">ðam seo dæde sy <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">ðam seo dæde sy Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_43.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">343</biblScope></bibl><seg type="original" xml:lang="de">auditum <hi rend="italic">Hr</hi></seg><seg type="translation" xml:lang="en" source="#claude">auditum Hr</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_43.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">208</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> geistliches Gericht 9g. Statt ‘Urteil’ berichtige ich <hi rend="italic">o</hi>. II 757 die Übs.: ‘Entscheidung über die Strafe’. Die Todeswürdigkeit ist vom Urteil weltlichen Gerichts festgestellt; die moralische Schwere und die wirkliche Strafe bestimmt der Bischof.—Der Nachsatz ‘je nach Tat’, oft bei Cnut wiederholt (<hi rend="italic">u</hi>. 45, 2), kann aus VIII Atr 34 oder EGu 2 entnommen sein; er will der rein formalen Beurteilung entgegenwirken zugunsten moralisch-psychologischer</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> geistliches Gericht 9g. For ‘judgement’ I correct the translation <hi rend="italic">above</hi> II 757 to: ‘decision on the penalty’. That he has deserved death is established by the judgement of the secular court; the moral gravity and the actual penalty are determined by the bishop. — The clause ‘according to the deed’, often repeated by Cnut (<hi rend="italic">below</hi> 45, 2), may be taken from VIII Atr 34 or EGu 2; it seeks to counteract purely formal assessment in favour of a moral and psychological one</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IICn_43.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">356</biblScope></bibl><seg type="original" xml:lang="en">Cf. E. and G. 4, 2.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_43.robnote.fn.1" n="1" source="#robertson"><bibl><biblScope unit="page">198</biblScope></bibl><label>ðæs</label><seg type="original" xml:lang="en">Om. G, A, Ld.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IICn_43.whinote.n.6" n="6" source="#whitelock"><bibl><biblScope unit="page">468</biblScope></bibl><seg type="original" xml:lang="en">from “Edward and Guthrum”, 4.2</seg></note>
       </div>
     </body>
   </text>

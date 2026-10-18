@@ -13,6 +13,8 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +34,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -62,6 +65,8 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1758 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 328.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 328.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 328: “. . .” → “∅”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -69,17 +74,27 @@
       <div type="clause" n="26.1">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 26.1</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="26.1" corresp="#wit-g-a"><pb n="328" ed="#liebermann"/>⁊ se ðe ofer þis stalige, gesece þ<hi rend="italic">æt</hi> he gesece, þ<hi rend="italic">æt</hi> he næfre þ<hi rend="italic">æt</hi> feorh ne gesece æt openre þyfðe.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="26.1" corresp="#wit-a"><pb n="328" ed="#liebermann"/>. . . gesece æt openere ðyfðe.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="26.1" corresp="#wit-q"><pb n="329" ed="#liebermann"/>Et qui deinceps furabitur, querat quicquid querat, numquam sibi uitam impetret de furto probato (ad apertum furtum).</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="26.1" corresp="#wit-b"><pb n="188" ed="#robertson"/>⁊ se ðe ofer ðis stalie, sece þæt he sece, þæt he næfre þæt feorh ne séce æt openre ðyfðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="26.1" corresp="#wit-b"><pb n="328" ed="#liebermann"/>⁊ se ðe ofer ðis stalie, sece þ<hi rend="italic">æt</hi> he sece, þ<hi rend="italic">æt</hi> he næfre þ<hi rend="italic">æt</hi> feorh ne séce æt openre ðyfðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="26.1" corresp="#wit-a"><pb n="328" ed="#liebermann"/>gesece æt openere<ptr type="liebermannNote" n="4" target="#IICn_26-1.lnote.oe.4"/> ðyfðe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="26.1" corresp="#wit-q"><pb n="329" ed="#liebermann"/>Et qui deinceps furabitur<ptr type="liebermannNote" n="17" target="#IICn_26-1.lnote.oe.17"/>, querat<ptr type="liebermannNote" n="18" target="#IICn_26-1.lnote.oe.18"/> quicquid querat<ptr type="liebermannNote" n="19" target="#IICn_26-1.lnote.oe.19"/>, numquam sibi uitam impetret de<ptr type="liebermannNote" n="20" target="#IICn_26-1.lnote.oe.20"/> furto probato<ptr type="liebermannNote" n="21" target="#IICn_26-1.lnote.oe.21"/> (ad<ptr type="liebermannNote" n="22" target="#IICn_26-1.lnote.oe.22"/> apertum furtum).</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="26.1" corresp="#wit-b"><pb n="188" ed="#robertson"/>⁊ se ðe ofer ðis stalie, sece þæt he sece, þæt he næfre þæt feorh ne<ptr type="editorNote" n="4" target="#IICn_26-1.robnote.fn.4"/> séce æt openre ðyfðe.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="268" ed="#rabin-doml"/>And se ðe ofer þis stalige, gesece þæt he gesece, þæt he næfre þæt feorh ne gesece æt openre þyfðe.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="329" ed="#liebermann"/>Und wer nach diesem [Zeitpunkt] stiehlt, mag [von Asylen] aufsuchen was er aufsuche: dass er niemals das Leben [gesichert] erlange bei offenkundigem Diebstahl.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><ptr type="liebermannNote" n="1" target="#IICn_26-1.lnote.de.1"/><pb n="329" ed="#liebermann"/>Und wer nach diesem [Zeitpunkt] stiehlt, mag [von Asylen] aufsuchen was er aufsuche: dass er niemals das Leben [gesichert] erlange bei offenkundigem Diebstahl.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And whoever steals after this, let him seek [sanctuary] wherever he may: he is never to obtain [security of] life in a case of open theft.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="189" ed="#robertson"/>And he who steals after this—if the case is one of open theft—shall never save his life, whatever sanctuary he seeks.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="269" ed="#rabin-doml"/>And anyone who commits theft after this shall not be able to save his life no matter where he hides, if his guilt is proven.</ab>
         <note type="comparison" source="#wormald-mel" n="358"><label>loose/partial source (in parentheses)</label> <ref target="clause:IVAs_6-2c">IV As 6.2c</ref> <quote>Table 5.4, II Cn 26:1: (IV As 6:2c)</quote></note>
         <note type="editorial">A skips a line here, so only its end survives.</note>
         <note type="textual" source="#rabin-doml">And . . . ne: omitted A</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_26-1.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">329</biblScope></bibl><seg type="original" xml:lang="de">-batur <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">-batur Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_26-1.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">329</biblScope></bibl><seg type="original" xml:lang="de">q. q. <hi rend="italic">überspringen RHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">q. q. skipped by RHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_26-1.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">329</biblScope></bibl><seg type="original" xml:lang="de">requirat <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">requirat K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_26-1.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">329</biblScope></bibl><seg type="original" xml:lang="de">de f. p. <hi rend="italic">nur Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">de f. p. only Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_26-1.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">329</biblScope></bibl><seg type="original" xml:lang="de">nisi predicto <hi rend="italic">fügt zu K</hi></seg><seg type="translation" xml:lang="en" source="#claude">nisi predicto added by K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_26-1.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">329</biblScope></bibl><seg type="original" xml:lang="de">ad a. f. <hi rend="italic">übergeschr. Dm; im Text T; fehlt übrigen</hi></seg><seg type="translation" xml:lang="en" source="#claude">ad a. f. written above Dm; in the text T; lacking in the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_26-1.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">328</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_26-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">206</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Dieser Paragraph ist von Inst Con fortgelassen, absichtlich, weil mit 26 inhaltsgleich. Dagegen A überspringt nur eine Zeile unachtsam.—<hi rend="italic">Vgl. Gl</hi> Asyl 18; handhaft 13a; Todesstrafe 3h</seg><seg type="translation" xml:lang="en" source="#claude">This paragraph is omitted by Inst Con, deliberately, because it is identical in content with 26. A, on the other hand, merely skips a line through carelessness.—<hi rend="italic">Cf. Gl</hi> Asyl 18; handhaft 13a; Todesstrafe 3h</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_26-1.robnote.fn.4" n="4" source="#robertson"><bibl><biblScope unit="page">188</biblScope></bibl><label>ne</label><seg type="original" xml:lang="en">From <hi rend="italic">gesecan</hi> to <hi rend="italic">ne</hi> om. A.</seg></note>
       </div>
     </body>
   </text>

@@ -13,6 +13,9 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -32,6 +35,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">467</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -62,29 +66,44 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1793 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 338.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS B added from Gesetze I, p. 338.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 339: “Nicht zu irgend einer Zeit ist Unrecht erlaubt; man soll aber zu Festzeiten (und Fastenzeiten G) und an Orten [kirchlicher] Feier sich doch am ernstlichsten [davor] hüten.” → “Nicht zu irgend einer Zeit ist Unrecht erlaubt; man soll aber zu Festzeiten (und Fastenzeiten G) und an Orten [kirchlicher] Feier sich doch am ernstlichsten [davor] hüten. (expanded letters in italics: G)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="38">
         <head><ref type="lawCode" target="law:IICn">II Cn</ref> 38</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="38" corresp="#wit-g-a"><pb n="338" ed="#liebermann"/>Nis on ænigne timan unriht alyfed; ⁊ þeah man sceal freolstidan ⁊ fæstentidan ⁊ on freolsstowan geornlicost beorgan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="38" corresp="#wit-g-a"><pb n="338" ed="#liebermann"/>Nis on ænigne<ptr type="liebermannNote" n="15" target="#IICn_38.lnote.oe.15"/> timan unriht alyfed; ⁊ þeah man sceal freolstidan ⁊<ptr type="liebermannNote" n="***" target="#IICn_38.lnote.oe.star3"/> fæstentidan ⁊ on freolsstowan geornlicost beorgan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="38" corresp="#wit-b"><pb n="338" ed="#liebermann"/>Nis on ænigne timan unriht alyfad; ⁊ ðeah man sceal freolstídan ⁊ on freolsstowan geornlicost gebyrgan.<ptr type="liebermannNote" n="2" target="#IICn_38.lnote.oe.2"/></ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="38" corresp="#wit-a"><pb n="338" ed="#liebermann"/>Nis on ænigne timan unriht alefed; ⁊ þeah man sceal freolstidan ⁊ on freolsstowan geornlicost beorgan.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="38" corresp="#wit-q"><pb n="339" ed="#liebermann"/>Non est in aliquo tempore concessa iniusticia; et tamen est festis diebus et sanctificatis locis propensius interdicta.</ab>
-        <ab type="editionText" xml:lang="ang" source="#robertson" n="38" corresp="#wit-b"><pb n="194" ed="#robertson"/>Nis on ænigne timan unriht alyfad, ⁊ ðeah man sceal freolstídan ⁊ on freolsstowan geornlicost bebyrgan.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="38" corresp="#wit-cons-cn"><pb n="339" ed="#liebermann"/>Nullo quidem tempore iniuria permissa est fieri; sed tamen festis diebus et sacratis locis debet quisque diligentissime parcere.</ab>
+        <ab type="editionText" xml:lang="ang" source="#robertson" n="38" corresp="#wit-b"><pb n="194" ed="#robertson"/>Nis on ænigne<ptr type="editorNote" n="3" target="#IICn_38.robnote.fn.3"/> timan unriht alyfad, ⁊ ðeah man sceal freolstídan<ptr type="editorNote" n="4" target="#IICn_38.robnote.fn.4"/> ⁊ on freolsstowan geornlicost bebyrgan<ptr type="editorNote" n="5" target="#IICn_38.robnote.fn.5"/>.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-g-a"><pb n="276" ed="#rabin-doml"/>Nis on ænigne timan unriht alyfed; and þeah man sceal freolstidan and fæstentidan and on freolsstowan geornlicost beorgan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="339" ed="#liebermann"/>Nicht zu irgend einer Zeit ist Unrecht erlaubt; man soll aber zu Festzeiten (und Fastenzeiten G) und an Orten [kirchlicher] Feier sich doch am ernstlichsten [davor] hüten.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="339" ed="#liebermann"/>Nicht<ptr type="liebermannNote" n="1" target="#IICn_38.lnote.de.1"/> zu irgend einer Zeit ist Unrecht erlaubt; man soll aber zu Festzeiten (und Fastenzeiten <hi rend="italic">G</hi>) und an Orten [kirchlicher<ptr type="liebermannNote" n="2" target="#IICn_38.lnote.de.2"/>] Feier sich doch am ernstlichsten [davor] hüten.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Wrong is permitted at no time; but one must guard against it most carefully at festivals (and fasts, G) and in holy places.</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><pb n="195" ed="#robertson"/>Lawlessness is not permitted at any time, yet at sacred seasons and in sacred places special care must be taken to prevent it.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock"><pb n="467" ed="#whitelock"/>Wrong-doing is not permitted at any time; and yet it should be especially guarded against at festival seasons and in sacred places.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-b"><ptr type="editorNote" n="1" target="#IICn_38.robnote.n.1"/><pb n="195" ed="#robertson"/>Lawlessness is not permitted at any time, yet at sacred seasons and in sacred places special care must be taken to prevent it.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock"><ptr type="editorNote" n="3" target="#IICn_38.whinote.n.3"/><pb n="467" ed="#whitelock"/>Wrong-doing is not permitted at any time; and yet it should be especially guarded against at festival seasons<ptr type="editorNote" n="4" target="#IICn_38.whinote.n.4"/> and in sacred places.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-a"><pb n="277" ed="#rabin-doml"/>Wrongdoing shall not be tolerated at any time; yet during holy seasons and at holy places it must be suppressed with the greatest diligence.</ab>
         <note type="comparison" source="#liebermann" n="339">Can. Edg. Conf. 4</note>
         <note type="comparisonPrinted" source="#liebermann">Can. Edg. Conf. 4</note>
-        <note type="editorial">G's ‘⁊ fæstentidan’ is missing from the others (perhaps added from the Canons of Edgar, Conf. 4). Liebermann compares the Canons of Edgar, Conf. 4.</note>
-        <note type="translator" source="#whitelock">This and the next clause are drawn from an ecclesiastical tract known as “Concerning Confession”.</note>
-        <note type="translator" source="#whitelock">The Nero text adds: “and fasting seasons”, which is also in the source.</note>
+        <note type="editorial">G's ‘⁊ fæstentidan’ is missing from the others (perhaps added from the Canons of Edgar, Conf. 4). Liebermann compares the Canons of Edgar, Conf. 4.; BR: added from Gesetze I p. 339, October 2026 (MS Cons); AT: corrected against Whitelock p. 467, October 2026 (was “The Nero text adds: “and fasting seasons”, which is also in; source.”, now “any man of; household”)</note>
         <note type="textual" source="#rabin-doml">and fæstentidan: omitted AB</note>
         <note type="textual" source="#rabin-doml">beorgan: bebyrgan B</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_38.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">338</biblScope></bibl><seg type="original" xml:lang="de">nanre [<hi rend="italic">bessere</hi> nanne] t. u. alefed <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">nanre [read nanne] t. u. alefed Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_38.lnote.oe.star3" n="***" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">338</biblScope></bibl><seg type="original" xml:lang="de">⁊ fæst. <hi rend="italic">fehlt übrigen [vielleicht aus Can. Edg., Conf.</hi> 4 <hi rend="italic">zugesetzt]</hi></seg><seg type="translation" xml:lang="en" source="#claude">⁊ fæst. omitted in the others [perhaps added from Can. Edg., Conf. 4]</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_38.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">338</biblScope></bibl><seg type="original" xml:lang="de">beorgan <hi rend="italic">Can. Edg.; vgl.</hi> 30, 5 <hi rend="italic">Hs. A</hi></seg><seg type="translation" xml:lang="en" source="#claude">beorgan Can. Edg.; cf. 30, 5 MS A</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_38.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">339</biblScope></bibl><seg type="original" xml:lang="de">38—43 <hi rend="italic">fehlt Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">38—43 omitted Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IICn_38.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">339</biblScope></bibl><seg type="original" xml:lang="de">cum <hi rend="italic">Hr</hi></seg><seg type="translation" xml:lang="en" source="#claude">cum Hr</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_38.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">208</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">u</hi>. 47 praktischer dasselbe</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">below</hi> 47 the same in more practical terms</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="IICn_38.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">208</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Nur hierher Toller; Bed. nur aus <hi rend="italic">freols</hi> und Zusammenhang erschliessbar</seg><seg type="translation" xml:lang="en" source="#claude">Toller cites only this passage; the meaning can only be inferred from <hi rend="italic">freols</hi> and the context</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="IICn_38.robnote.n.1" n="1" source="#robertson"><bibl><biblScope unit="page">356</biblScope></bibl><seg type="original" xml:lang="en">Cf. cap. 47.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_38.robnote.fn.3" n="3" source="#robertson"><bibl><biblScope unit="page">194</biblScope></bibl><label>ænigne</label><seg type="original" xml:lang="en"><hi rend="italic">nanre</hi> Ld.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_38.robnote.fn.4" n="4" source="#robertson"><bibl><biblScope unit="page">194</biblScope></bibl><label>freolstídan</label><seg type="original" xml:lang="en"><hi rend="italic">freolst.</hi> ⁊ <hi rend="italic">fæstentidan</hi> G.</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="IICn_38.robnote.fn.5" n="5" source="#robertson"><bibl><biblScope unit="page">194</biblScope></bibl><label>bebyrgan</label><seg type="original" xml:lang="en"><hi rend="italic">beorgan</hi> G, A, Ld.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IICn_38.whinote.n.3" n="3" source="#whitelock"><bibl><biblScope unit="page">467</biblScope></bibl><seg type="original" xml:lang="en">This and the next clause are drawn from an ecclesiastical tract known as “Concerning Confession”.</seg></note>
+        <note type="editorNote" subtype="translationFootnote" xml:id="IICn_38.whinote.n.4" n="4" source="#whitelock"><bibl><biblScope unit="page">467</biblScope></bibl><label>seasons</label><seg type="original" xml:lang="en">any man of the household</seg></note>
       </div>
     </body>
   </text>
