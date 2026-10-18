@@ -212,6 +212,10 @@ MS_NAMES = {
     'Vr': 'Vatican, Biblioteca Apostolica, Reg. lat. 946',
     'York Gospels': 'York, Minster Library, Add. 1 (York Gospels)',
 }
+# codes whose column O holds a Latin text other than Quadripartitus
+LATIN_OVERRIDE = {
+    'Prom. Reg.': ('Lat', 'Latin form of the coronation oath (the liturgical ordo), as printed by Liebermann'),
+}
 
 esc = escape
 attr = old.attr
@@ -646,8 +650,9 @@ def build(row, today, source_name, refs):
                           witness(row[t + 'Sig'], row[t + 'Name'])))
             shown.add(sig_key(row[t + 'Sig']))
     if row['latinXml']:
+        lsig, lname = LATIN_OVERRIDE.get(code, ('Q', MS_NAMES['Q']))
         texts.append(('liebermannText', 'la', lie, pb(lpage('Q'), lie) + row['latinXml'], row['liebermannNumber'],
-                      witness('Q', MS_NAMES['Q'])))
+                      witness(lsig, lname)))
 
     editor = row['editor']
     t_wit = witness(row['tSig'], row['tName']) if row['tTextXml'] else ''
