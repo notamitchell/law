@@ -285,8 +285,9 @@ OE = set('and þæt ðæt se he man ne gif gyf ðe þe beo sy to his hit mid swa
 FRENCH_CODES = {'Leis Wl'}
 
 
-def language(text):
-    if re.search('[⁊þðæÞÐÆƿ]', text):
+def language(text, code=''):
+    # the Latin ordeal and excommunication texts (October 2026) write 'æ' (aquæ, Ysaiæ): go by the words there
+    if re.search('[⁊þðÞÐƿ]' if code in OWN_MS_NAMES else '[⁊þðæÞÐÆƿ]', text):
         return 'ang'
     words = re.findall(r"[a-zę]+", text.lower())
     la = sum(w in LATIN for w in words)
@@ -628,25 +629,28 @@ def build(row, today, source_name, refs):
         wid = 'wit-' + ident(text)
         if any(w[0] == wid for w in wits):
             continue
-        wits.append([wid, text, selected, MS_NAMES.get(text) or MS_NAMES.get(sig_key(text), '')])
+        # the full name in column AK (AL, AM …) for this row's own text comes first: a siglum can mean
+        # different manuscripts in different texts (Q is the Quadripartitus, but in Excom XII a Cotton MS)
+        own = next((row[t + 'Name'] for t in ('k', 'n', 'af', 'bf', 'bi', 'br') if row[t + 'Sig'] == text and row[t + 'Name']), '') if code in OWN_MS_NAMES else ''
+        wits.append([wid, text, selected, own or MS_NAMES.get(text) or MS_NAMES.get(sig_key(text), '')])
 
     texts, translations = [], []      # (type, lang, source, xml, n, wit)
     shown = set()
     if row['kTextXml']:
-        texts.append(('liebermannText', language(row['kText']), lie, pb(lpage(row['kSig']), lie) + row['kTextXml'], row['liebermannNumber'],
+        texts.append(('liebermannText', language(row['kText'], code), lie, pb(lpage(row['kSig']), lie) + row['kTextXml'], row['liebermannNumber'],
                       witness(row['kSig'], row['kName'])))
         shown.add(sig_key(row['kSig']))
     if row['nTextXml']:
-        texts.append(('liebermannText', language(row['nText']), lie, pb(lpage(row['nSig']), lie) + row['nTextXml'], row['liebermannNumber'],
+        texts.append(('liebermannText', language(row['nText'], code), lie, pb(lpage(row['nSig']), lie) + row['nTextXml'], row['liebermannNumber'],
                       witness(row['nSig'], row['nName'])))
         shown.add(sig_key(row['nSig']))
     if row['afTextXml']:
-        texts.append(('liebermannText', language(row['afText']), lie, pb(lpage(row['afSig']), lie) + row['afTextXml'], row['liebermannNumber'],
+        texts.append(('liebermannText', language(row['afText'], code), lie, pb(lpage(row['afSig']), lie) + row['afTextXml'], row['liebermannNumber'],
                       witness(row['afSig'], row['afName'])))
         shown.add(sig_key(row['afSig']))
     for t in ('bf', 'bi', 'br'):      # Liebermann's fourth, fifth and sixth texts (columns BF-BH, BI-BK, BR-BT; October 2026)
         if row[t + 'TextXml']:
-            texts.append(('liebermannText', language(row[t + 'Text']), lie, pb(lpage(row[t + 'Sig']), lie) + row[t + 'TextXml'], row['liebermannNumber'],
+            texts.append(('liebermannText', language(row[t + 'Text'], code), lie, pb(lpage(row[t + 'Sig']), lie) + row[t + 'TextXml'], row['liebermannNumber'],
                           witness(row[t + 'Sig'], row[t + 'Name'])))
             shown.add(sig_key(row[t + 'Sig']))
     if row['latinXml']:
@@ -977,12 +981,16 @@ GROUPS = {
     'Æthelberht': 'Æthelberht of Kent', 'Hlothhere': 'Hlothhere and Eadric of Kent', 'Wihtred': 'Wihtred of Kent',
     'Alfred': 'Alfred the Great', 'Ine': 'Ine of Wessex', 'Edward': 'Edward the Elder', 'Æthelstan': 'Æthelstan',
     'Edmund': 'Edmund I', 'Edgar': 'Edgar', 'Æthelred': 'Æthelred II', 'Cnut': 'Cnut',
-    'William': 'William I', 'Henry': 'Henry I',
+    'William': 'William I', 'Henry': 'Henry I', 'Earconberht': 'Earconberht of Kent',
 }
 OTHER = 'Other laws and legal texts'
 # Codes listed under another king than the one who issued them: the rubrics
 # to Ine's laws were written for Alfred's Domboc but belong with Ine's laws.
-GROUP_OVERRIDE = {'Ine Rb': 'Ine of Wessex'}
+GROUP_OVERRIDE = {'Ine Rb': 'Ine of Wessex', 'App AGu': 'Alfred the Great', 'Duel': 'Ordeal rituals (Iudicia Dei)'}
+# The ordeal liturgies and excommunication formulae Liebermann prints (Gesetze I pp. 401–441; added October 2026)
+GROUP_OVERRIDE.update({'Iud Dei ' + n: 'Ordeal rituals (Iudicia Dei)' for n in 'I II III IV V VI VII VIII IX X XI XII XIII XIV XV XVI'.split()})
+OWN_MS_NAMES = {'Erc', 'App AGu', 'Duel'} | {'Iud Dei ' + n for n in 'I II III IV V VI VII IX X XI XII XIII XIV XV XVI'.split()} | {'Excom ' + n for n in 'I II III IV V VI VII VIII IX X XI XII XIII'.split()}
+GROUP_OVERRIDE.update({'Excom ' + n: 'Excommunication formulae' for n in 'I II III IV V VI VII VIII IX X XI XII XIII'.split()})
 
 
 def king_parts(king):

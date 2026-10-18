@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ExcomVII_13">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Excom VII 13</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
+        <idno type="slug">ExcomVII_13</idno>
+        <idno type="citation">Excom VII 13</idno>
+        <idno type="lawCode">Excom VII</idno>
+        <idno type="lawCodeAnchor">ExcomVII</idno>
+        <idno type="clause">13</idno>
+        <idno type="citationKey">ExcomVII 13</idno>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl type="legalText"><title>Excommunicatio VII: formula of excommunication</title></bibl>
+        <listBibl type="sources">
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">438</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+        </listBibl>
+        <listWit>
+          <witness xml:id="wit-cx"><abbr>Cx</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 303, p. 339, c. 1120</note></witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <listPrefixDef>
+        <prefixDef ident="law" matchPattern="(.+)" replacementPattern="lawAbb.html#$1"/>
+        <prefixDef ident="gram" matchPattern="(.+)" replacementPattern="gramAbb.html#$1"/>
+        <prefixDef ident="entry" matchPattern="(.+)" replacementPattern="entry.html?id=$1"/>
+      </listPrefixDef>
+    </encodingDesc>
+    <profileDesc>
+      <creation><date source="#liebermann">c. 950–c. 1100</date><note type="promulgation">c. 950–c. 1100 (Liebermann)</note></creation>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-18">Generated from row 3200 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="clause" n="13">
+        <head><ref type="lawCode" target="law:ExcomVII">Excom VII</ref> 13</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="Excom VII 13" corresp="#wit-cx"><pb n="438" ed="#liebermann"/>Beon hi awergode on wætere ⁊ on lande ⁊ on eallen steden!</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="438" ed="#liebermann"/>Seien sie verflucht zu Wasser<ptr type="liebermannNote" n="z" target="#ExcomVII_13.lnote.de1.z"/> und zu Lande und an<ptr type="liebermannNote" n="aa" target="#ExcomVII_13.lnote.de1.aa"/> allen Stätten!</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">May they be cursed on water and on land and in all places!</ab>
+        <note type="editorial">New row (October 2026): Liebermann’s text and German translation transcribed from Gesetze I p. 438 (two independent readings of the page images, differences settled against the page)</note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="ExcomVII_13.lnote.de1.z" n="z" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">438</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl.</hi> VI 7</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">cf.</hi> VI 7</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="ExcomVII_13.lnote.de1.aa" n="aa" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">438</biblScope></bibl><seg type="original" xml:lang="de">in omnibus locis V 4</seg><seg type="translation" xml:lang="en" source="#claude">in omnibus locis V 4</seg></note>
+      </div>
+    </body>
+  </text>
+</TEI>
