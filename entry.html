@@ -25,9 +25,10 @@ scripts:
     // own can still go to its code's page. If the list can't be loaded, those
     // citations are shown as plain text.
     let lawCodes = {};
+    let codeList = [];   // the codes in the order of the laws database (laws.html), with their group
     const codesLoaded = fetch(root + 'oe-laws/codes.json')
         .then(r => r.ok ? r.json() : [])
-        .then(list => { list.forEach(c => { if (c.anchor) lawCodes[c.anchor] = c.code; }); })
+        .then(list => { codeList = list; list.forEach(c => { if (c.anchor) lawCodes[c.anchor] = c.code; }); })
         .catch(() => {});
 
     Promise.all([
@@ -109,7 +110,7 @@ scripts:
                 const url = ref.getAttribute('target') || '';
                 const word = esc(ref.textContent.replace(/\s+/g, ' ').trim());
                 let host = '';
-                try { host = new URL(url).hostname.replace(/^www\./, ''); } catch (err) { /* no address */ }
+                try { host = new URL(url).hostname.replace(/^www\./, '').replace(/^indiv\.dictionary\./, ''); } catch (err) { /* no address */ }
                 const inner = `
                     <span class="dict-card__word">${word}</span>
                     <span class="dict-card__foot">${host ? esc(host) : esc(sub)}${url ? ' <span aria-hidden="true">↗</span>' : ''}</span>`;
@@ -117,7 +118,7 @@ scripts:
                     ? `<a class="dict-card" href="${esc(url)}" target="_blank" rel="noopener" aria-label="${word} in ${esc(name)} (opens in a new tab)">${inner}</a>`
                     : `<div class="dict-card">${inner}</div>`;
             }).join('');
-            return cards ? `<div class="dict-group"><h3 class="dict-group__name">${esc(name)}</h3>${note ? `<p class="small muted">${esc(note)}</p>` : ''}<div class="dict-cards">${cards}</div></div>` : '';
+            return cards ? `<div class="dict-group"><h3 class="dict-group__name">${esc(name)}</h3>${note ? `<p class="dict-group__note">${esc(note)}</p>` : ''}<div class="dict-cards">${cards}</div></div>` : '';
         }).join('');
     }
 
@@ -126,20 +127,9 @@ scripts:
     // to the page of the whole code ("law:Ine"). They never open the
     // abbreviation popup; a code the database doesn't have yet is plain text.
     function citationList(e) {
-        // Citations added by an editor (<xr type="lawCode" subtype="added">,
-        // e.g. the clauses Liebermann's "Swer 7ff." stands for) go after the
-        // last citation of the same law code, so "Swer 8" follows "Swer 7ff".
-        const codeOf = x => x.textContent.replace(/\s+/g, ' ').trim().replace(/[\s,]+[^\s,]+$/, '');
-        const all = e.xr.filter(x => x.getAttribute('type') === 'lawCode');
-        const xrs = all.filter(x => x.getAttribute('subtype') !== 'added');
-        all.filter(x => x.getAttribute('subtype') === 'added').forEach(x => {
-            let at = -1;
-            xrs.forEach((y, i) => { if (codeOf(y) === codeOf(x)) at = i; });
-            xrs.splice(at < 0 ? xrs.length : at + 1, 0, x);
-        });
-        return xrs.map(x => {
+        const items = e.xr.filter(x => x.getAttribute('type') === 'lawCode').map((x, n) => {
             const ref = [...x.children].find(c => c.localName === 'ref') || x;
-            const text = esc(ref.textContent.replace(/\s+/g, ' ').trim());
+            const raw = ref.textContent.replace(/\s+/g, ' ').trim();
             const m = /^(clause|law):(.+)$/.exec(ref.getAttribute('target') || '');
             let href = '', title = '';
             if (m && m[1] === 'clause') {
@@ -148,11 +138,71 @@ scripts:
                 href = root + 'lawcode.html?code=' + encodeURIComponent(lawCodes[m[2]]);
                 title = 'This clause is not yet in the laws database; this opens the whole of ' + lawCodes[m[2]];
             }
-            return href
-                ? `<li><a href="${esc(href)}"${title ? ` title="${esc(title)}"` : ''}>${text}</a></li>`
-                : `<li>${text}</li>`;
-        }).join('');
+            const at = codeIndex(raw, m);
+            const rest = at >= 0 ? raw.slice(codeList[at].code.length).trim() : raw;
+            const html = href
+                ? `<li><a href="${esc(href)}"${title ? ` title="${esc(title)}"` : ''}>${esc(raw)}</a></li>`
+                : `<li>${esc(raw)}</li>`;
+            return { at, key: clauseKey(rest), n, html };
+        });
+        // In the order of the list of law codes (laws.html), under its headings;
+        // codes not in the laws database last, in the order Liebermann cites them.
+        items.sort((a, b) => (a.at < 0 ? 1e6 : a.at) - (b.at < 0 ? 1e6 : b.at)
+            || (a.at < 0 ? a.n - b.n : compareKeys(a.key, b.key) || a.n - b.n));
+        const out = [];
+        let group = null;
+        items.forEach(it => {
+            const g = it.at >= 0 ? codeList[it.at].group : 'Not yet in the laws database';
+            if (g !== group) {
+                if (group !== null) out.push('</ul>');
+                out.push(`<h3 class="citation-group">${esc(g)}</h3><ul class="citations">`);
+                group = g;
+            }
+            out.push(it.html);
+        });
+        if (group !== null) out.push('</ul>');
+        return out.join('');
     }
+
+    // Which code of the laws database a citation belongs to: by the clause
+    // file's name (Ine_23-2 is Ine), or by the anchor, or else by the longest
+    // code name the citation starts with ("Af Rb 44" is Af Rb, not Af).
+    const ID_PREFIX = { 'Rubrics-Af': 'Af Rb', 'Rubrics-AF': 'Af Rb', 'Rubrics-Ine': 'Ine Rb' };
+    function codeIndex(text, m) {
+        if (!codeList.length) return -1;
+        if (m && m[1] === 'clause') {
+            const pre = m[2].split('_')[0];
+            const byId = codeList.findIndex(c => ID_PREFIX[pre] ? c.code === ID_PREFIX[pre] : (c.first || '').split('_')[0] === pre);
+            if (byId >= 0) return byId;
+        }
+        let best = -1;
+        codeList.forEach((c, i) => {
+            if ((text === c.code || text.startsWith(c.code + ' ') || text.startsWith(c.code + ','))
+                && (best < 0 || c.code.length > codeList[best].code.length)) best = i;
+        });
+        if (best < 0 && m && m[1] === 'law') best = codeList.findIndex(c => c.anchor === m[2]);
+        return best;
+    }
+    // A clause number as something to sort by: Insc and Pro first, then the
+    // numbers in order (2 before 10, 2,1 before 2,2), then anything else.
+    function clauseKey(rest) {
+        return rest.split(/[\s,.]+/).filter(Boolean).map(p => {
+            if (/^insc/i.test(p)) return [-2, ''];
+            if (/^pro/i.test(p)) return [-1, ''];
+            const d = /^(\d+)([a-z]*)$/.exec(p);
+            return d ? [Number(d[1]), d[2]] : [1e6, p];
+        });
+    }
+    function compareKeys(a, b) {
+        for (let i = 0; i < Math.max(a.length, b.length); i++) {
+            if (!a[i]) return -1;
+            if (!b[i]) return 1;
+            if (a[i][0] !== b[i][0]) return a[i][0] - b[i][0];
+            if (a[i][1] !== b[i][1]) return a[i][1] < b[i][1] ? -1 : 1;
+        }
+        return 0;
+    }
+
 
     // In Liebermann's text, the number of a cited clause ("8" in "Ine 8")
     // links to that clause, as in the citation list under the entry. The law
@@ -211,8 +261,8 @@ scripts:
 
         ${see ? `<section class="entry-section"><h2>${e.xref ? 'See' : 'See also'}</h2><ul>${see}</ul></section>` : ''}
         ${compare ? `<section class="entry-section"><h2>Compare</h2><ul>${compare}</ul></section>` : ''}
-        ${links ? `<section class="entry-section"><h2>Other dictionaries</h2><p class="small muted">The same word in other dictionaries. Each opens in a new tab. The work of linking to external dictionaries is ongoing; a semi-automated process is used to guess Bosworth-Toller links in the first instance, so note that some words may be incorrectly linked until checked by the editor.</p>${links}</section>` : ''}
-        ${citations ? `<section class="entry-section"><h2>Law code citations</h2><ul class="citations">${citations}</ul></section>` : ''}
+        ${links ? `<section class="entry-section"><div class="notice warn dict-notice"><p><span class="wip-badge">Under construction</span> The work of linking to external dictionaries is ongoing. A semi-automated process is used to guess Bosworth-Toller links in the first instance, so note that some words may be incorrectly linked to Bosworth-Toller entries until checked by the editor.</p></div><h2>Other dictionaries</h2>${links}</section>` : ''}
+        ${citations ? `<section class="entry-section"><h2>Law code citations</h2><div class="citation-groups">${citations}</div></section>` : ''}
 
         <nav class="entry-nav" aria-label="Previous and next entries" hidden></nav>
 
