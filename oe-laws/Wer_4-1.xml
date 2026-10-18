@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#wormald">Wormald</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +27,7 @@
           <bibl xml:id="wormald" type="translation">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -51,20 +53,26 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2052 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 392.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 392.</change>
+      <change when="2026-10" type="checked">Liebermann’s Latin text corrected against Gesetze I, p. 392: “ƿelfhindi” → “tƿelfhindi”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4.1">
         <head><ref type="lawCode" target="law:Wer">Wer</ref> 4.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.1" corresp="#wit-b"><pb n="392" ed="#liebermann"/>Of ðam dæge on XXI nihtan gylde man CXX scyll' to healsfange æt twelfhyndu<hi rend="italic">m</hi> wære.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.1" corresp="#wit-q"><pb n="393" ed="#liebermann"/>A die illa in XXI. noctem reddantur centum uiginti sol. pro healsfango de ƿelfhindi hominis weregildo.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.1" corresp="#wit-h"><pb n="392" ed="#liebermann"/>Of ðam dæge on XXI nihtan gylde man CXX scll' to healsfange æt twelfhyndum were.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="393" ed="#liebermann"/>Von diesem Tage ab in 21 Tagen zahle man [der Totschläger] 120 Schill. als ‘Halsfang’, bei 1200 [Schilling] Wergeld.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.1" corresp="#wit-b"><pb n="392" ed="#liebermann"/>Of ðam dæge on XXI nihtan gylde man CXX scyll' to healsfange æt twelfhyndu<hi rend="italic">m</hi> wære<ptr type="liebermannNote" n="3" target="#Wer_4-1.lnote.oe.3"/>.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.1" corresp="#wit-q"><pb n="393" ed="#liebermann"/>A die illa in XXI. noctem reddantur<ptr type="liebermannNote" n="14" target="#Wer_4-1.lnote.oe.14"/> centum uiginti sol. pro healsfango<ptr type="liebermannNote" n="15" target="#Wer_4-1.lnote.oe.15"/> de tƿelfhindi hominis weregildo.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="393" ed="#liebermann"/>Von diesem Tage ab in 21 Tagen zahle man [der Totschläger] 120<ptr type="liebermannNote" n="1" target="#Wer_4-1.lnote.de.1"/> Schill. als ‘Halsfang’, bei 1200 [Schilling] Wergeld.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Within 21 days from that day let one [the slayer] pay 120 shillings as healsfang, for a wergild of 1200 [shillings].</ab>
         <ab type="translation" xml:lang="en" source="#wormald" corresp="#wit-h">Twenty-one days from that day, let one pay <hi rend="italic">healsfang</hi> of 120 shillings for a twelve-hundred shilling wergeld:</ab>
         <note type="comparison" source="#liebermann" n="393"><ref target="clause:IIEm_7-3">II Em 7.3</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Wer_4-1.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">393</biblScope></bibl><seg type="original" xml:lang="de">redden. <hi rend="italic">M</hi></seg><seg type="translation" xml:lang="en" source="#claude">redden. M</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Wer_4-1.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">393</biblScope></bibl><seg type="original" xml:lang="de">ealf. <hi rend="italic">MHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">ealf. MHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Wer_4-1.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">392</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Absatz</hi></seg><seg type="translation" xml:lang="en" source="#claude">new paragraph</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Wer_4-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">232</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Wiederum eine dem 10. Jh. vermutlich nicht nötige Erklärung, dass Halsfang (<hi rend="italic">s. d. Gl</hi> 2—5b) ¹/¹⁰ Wergeld betrage.—Während die Königsgesetze als den regelmässigen Fall immer den annehmen, dass ein Gemeinfreier verletzt werde oder Strafgeld verwirke, wird hier und c. 7 vielmehr der 1200 Schilling-Mann der Berechnung zugrunde gelegt: sicher eine spätere Entwicklung</seg><seg type="translation" xml:lang="en" source="#claude">Again an explanation, presumably not needed in the 10th cent., that healsfang (<hi rend="italic">see</hi> Halsfang in <hi rend="italic">Gl</hi> 2—5b) amounts to ¹/¹⁰ of the wergild. — Whereas the kings’ laws always assume as the regular case that a common freeman is injured or incurs a fine, here and in c. 7 it is rather the 1200-shilling man who is taken as the basis of the calculation: certainly a later development</seg></note>
       </div>
     </body>
   </text>

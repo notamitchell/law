@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +28,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">24</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
@@ -50,18 +52,24 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2215 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 471.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 471: “7” → “⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="14">
         <head><ref type="lawCode" target="law:Grith">Grið</ref> 14</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14" corresp="#wit-g-b"><pb n="471" ed="#liebermann"/>7 frigman se ðe cwicne on þære mundbyrde geyfelige, sylle XXX scill'.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14" corresp="#wit-g-b"><pb n="471" ed="#liebermann"/>⁊ frigman se ðe cwicne<ptr type="liebermannNote" n="7" target="#Grith_14.lnote.oe.7"/> on þære mundbyrde geyfelige, sylle XXX scill'.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" n="14" corresp="#wit-g-b"><pb n="24" ed="#rabin-doml"/>And frigman se ðe cwicne on þære mundbyrde geyfelige, sylle XXX scillinga.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="471" ed="#liebermann"/>Und ein Freier [= jemand], der einen Lebenden [ohne Todtschlag] in dieser Schutzgewalt verletzt, zahle 30 Schill. [der Kirche].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><ptr type="liebermannNote" n="*" target="#Grith_14.lnote.de1.star"/><pb n="471" ed="#liebermann"/>Und ein Freier [= jemand], der einen Lebenden<ptr type="liebermannNote" n="1" target="#Grith_14.lnote.de.1"/> [ohne Todtschlag] in dieser<ptr type="liebermannNote" n="2" target="#Grith_14.lnote.de.2"/> Schutzgewalt verletzt, zahle 30 Schill.<ptr type="liebermannNote" n="3" target="#Grith_14.lnote.de.3"/> [der Kirche].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And a free man [= anyone] who injures a living person [without killing] within this protection shall pay 30 shillings [to the church].</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-b"><pb n="25" ed="#rabin-doml"/>And a freeman who injures a living person under protection is to give thirty shillings.</ab>
         <note type="editorial">Liebermann notes that 14–18 are also particular to the northern English.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Grith_14.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">471</biblScope></bibl><seg type="original" xml:lang="de">cwicna <hi rend="italic">Wi. Tho.</hi></seg><seg type="translation" xml:lang="en" source="#claude">cwicna Wi. Tho.</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Grith_14.lnote.de1.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">471</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">auch</hi> 14—18 <hi rend="italic">sind particular Nordenglisch</hi></seg><seg type="translation" xml:lang="en" source="#claude">14—18 too are specifically Northern English</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Grith_14.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">266</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. Gl</hi> Halbverletzung 3</seg><seg type="translation" xml:lang="en" source="#claude">See <hi rend="italic">Gl</hi> Halbverletzung 3</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Grith_14.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">266</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Nicht etwa ‘einen Lebenden an seinem Mundiburdium’ (Schmid nach Wilkins, Thorpe); <hi rend="italic">cwic</hi> bildet stets den Ggs. zum Totschlag</seg><seg type="translation" xml:lang="en" source="#claude">Not, say, ‘a living person in his mundiburdium’ (Schmid, following Wilkins, Thorpe); <hi rend="italic">cwic</hi> always forms the contrast to homicide</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Grith_14.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">266</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Diese Summe büsst den Bruch des Kirchenfriedens (<hi rend="italic">s. d. Gl</hi> 4c) einer Landkirche</seg><seg type="translation" xml:lang="en" source="#claude">This sum atones for breach of the church-peace (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 4c) of a country church</seg></note>
       </div>
     </body>
   </text>

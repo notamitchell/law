@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">484</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -58,7 +60,7 @@
     <body>
       <div type="clause" n="61">
         <head><ref type="lawCode" target="law:Northu">Northu</ref> 61</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="61" corresp="#wit-d"><pb n="384" ed="#liebermann"/>And we forbeodað on Godes forbode, þ<hi rend="italic">æt</hi> nan man na ma wifa næbbe buton I; ⁊ seo beo mid rihte beweddod ⁊ forgifen;</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="61" corresp="#wit-d"><pb n="384" ed="#liebermann"/>And we forbeodað on Godes forbode, þ<hi rend="italic">æt</hi> nan man na<ptr type="liebermannNote" n="1" target="#Northu_61.lnote.oe.1"/> ma wifa næbbe buton I; ⁊ seo beo mid rihte beweddod ⁊ forgifen;</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d"><pb n="312" ed="#rabin-doml"/>And we forbeodað on Godes forbode, þæt nan man na ma wifa næbbe buton I; and seo beo mid rihte beweddod and forgifen.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann"><pb n="384" ed="#liebermann"/>Und wir verbieten kraft Gottes Verbot, dass ein Mann nicht mehr Weiber als eines habe; und diese sei rechtmässig verlobt und angetraut;</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And we forbid, by God's prohibition, that any man have more wives than one; and let her be lawfully betrothed and given [in marriage];</ab>
@@ -68,6 +70,8 @@
         <note type="comparisonPrinted" source="#liebermann">I Cn. 7; [?]</note>
         <note type="comparisonIncomplete">Some of Liebermann’s notes here are cut off in the gutter of the scan used, and are still to be completed.</note>
         <note type="editorial">Another hand has drawn a stroke over ‘na’, making it ‘nan’, which editors adopt against Cnut. Liebermann compares I Cn 7.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Northu_61.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">384</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">darüber von anderer Hand Strich, also</hi> nan, <hi rend="italic">was Edd. gegen Cnut aufnehmen</hi></seg><seg type="translation" xml:lang="en" source="#claude">above it a stroke in another hand, hence nan, which the Edd. adopt against Cnut</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_61.lnote.de.0" n="0" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">225</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. Gl</hi> Ehebruch 3a; Eheschliessung 4. 8. Hier ist Kebsche, <hi rend="italic">u</hi>. 64 Bigamie verpönt</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See Gl</hi> Ehebruch 3a; Eheschliessung 4. 8. Here concubinage is forbidden, <hi rend="italic">below</hi> 64 bigamy</seg></note>
       </div>
     </body>
   </text>

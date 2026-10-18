@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +28,7 @@
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -50,19 +52,25 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2031 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 387.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 387: “…. 7” → “. . . . ⁊”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 387: “(Und Verklagter trinke Weihwasser, und damit werde seine Hand, mit der er das Ordal[eisen] tragen soll, besprengt fehlt H) und so trete er hin zu[r Ableistung].” → “(Und Verklagter trinke Weihwasser, und damit werde seine Hand, mit der er das Ordal[eisen] tragen soll, besprengt fehlt H) und so trete er hin zu[r Ableistung]. (expanded letters in italics: fehlt H)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5">
         <head><ref type="lawCode" target="law:Ordal">Ordal</ref> 5</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-h"><pb n="387" ed="#liebermann"/>…. 7 gá he tó.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5" corresp="#wit-q"><pb n="387" ed="#liebermann"/>Et bibat (accusatus) aquam benedictam, et inde conspergatur manus eius, qua iudicium portare debet; et sic adeat.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-h"><ptr type="liebermannNote" n="**" target="#Ordal_5.lnote.oe.star2"/><pb n="387" ed="#liebermann"/>. . . . ⁊ gá he tó.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5" corresp="#wit-q"><pb n="387" ed="#liebermann"/>Et bibat (accusatus<ptr type="liebermannNote" n="2" target="#Ordal_5.lnote.oe.2"/>) aquam benedictam, et inde conspergatur manus eius, qua<ptr type="liebermannNote" n="9" target="#Ordal_5.lnote.oe.9"/> iudicium portare debet; et sic adeat.</ab>
         <ab type="editionText" xml:lang="ang" source="#attenborough" corresp="#wit-h">[…. 7 gá he tó ….]</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="387" ed="#liebermann"/>(Und Verklagter trinke Weihwasser, und damit werde seine Hand, mit der er das Ordal[eisen] tragen soll, besprengt fehlt H) und so trete er hin zu[r Ableistung].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="387" ed="#liebermann"/>(Und Verklagter trinke Weihwasser, und damit werde seine Hand, mit der er das Ordal[eisen] tragen soll, besprengt <hi rend="italic">fehlt H</hi>) und so trete er<ptr type="liebermannNote" n="1" target="#Ordal_5.lnote.de.1"/> hin zu[r Ableistung].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(And let the accused drink holy water, and let his hand with which he is to carry the ordeal [iron] be sprinkled with it — lacking in H) and so let him go up to [perform it].</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">[And the accused shall go to the ordeal,]</ab>
         <note type="editorial">H lacks the beginning of 5; Liebermann supplies the sense from the Quadripartitus, printed in bold there.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_5.lnote.oe.star2" n="**" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">387</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ergänze aus Quadr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">Supply from Quadr.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_5.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">387</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_5.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">387</biblScope></bibl><seg type="original" xml:lang="de">qui <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">qui K</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ordal_5.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">227</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Noch kein Vertreter; <hi rend="italic">s. Gl</hi> Ordal 26; Weihwasser A.—Technisches <hi rend="italic">gan to</hi> auch <hi rend="italic">o</hi>. 1; Blas 1⁷</seg><seg type="translation" xml:lang="en" source="#claude">No representative as yet; <hi rend="italic">see Gl</hi> Ordal 26; Weihwasser A.—Technical <hi rend="italic">gan to</hi> also <hi rend="italic">above</hi> 1; Blas 1⁷</seg></note>
       </div>
     </body>
   </text>

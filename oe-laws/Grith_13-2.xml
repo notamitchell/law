@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +28,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">24</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
@@ -49,18 +51,23 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2214 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 471.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 471: “7” → “⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="13.2">
         <head><ref type="lawCode" target="law:Grith">Grið</ref> 13.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13.2" corresp="#wit-g-b"><pb n="471" ed="#liebermann"/>7 se þe man ofslehð binnan cyricderu<hi rend="italic">m</hi>, sylle þære cyrican CXX scill' be Norðengla lage.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13.2" corresp="#wit-g-b"><pb n="471" ed="#liebermann"/>⁊ se þe man ofslehð binnan cyricderu<hi rend="italic">m<ptr type="liebermannNote" n="1" target="#Grith_13-2.lnote.oe.1"/><ptr type="liebermannNote" n="††" target="#Grith_13-2.lnote.oe.dagger2"/></hi>, sylle þære cyrican<ptr type="liebermannNote" n="1" target="#Grith_13-2.lnote.oe.1"/> CXX scill' be Norðengla lage.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" n="13.2" corresp="#wit-g-b"><pb n="24" ed="#rabin-doml"/>And se þe man ofslehð binnan cyricderum, sylle þære cyrican CXX scillinga be Norðengla lage.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="471" ed="#liebermann"/>Und wer einen Menschen erschlägt innerhalb der Kirchenportale [Vorhalle], gebe der Kirche 120 Schill. nach Nordengländer Recht.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="471" ed="#liebermann"/>Und wer einen Menschen erschlägt innerhalb der Kirchenportale<ptr type="liebermannNote" n="1" target="#Grith_13-2.lnote.de.1"/> [Vorhalle], gebe der Kirche 120 Schill. nach Nordengländer<ptr type="liebermannNote" n="2" target="#Grith_13-2.lnote.de.2"/> Recht.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And whoever kills a person within the church doors [porch] shall give the church 120 shillings according to the law of the northern English.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-b"><pb n="25" ed="#rabin-doml"/>And anyone who slays a man within the church doors is to give to that church one hundred and twenty shillings according to northern English law.</ab>
         <note type="editorial">Liebermann suggests ‘e’ for ‘y’ in ‘cyricderum’ may be Kentish.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Grith_13-2.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">471</biblScope></bibl><seg type="original" xml:lang="de">i <hi rend="italic">statt</hi> y <hi rend="italic">Tho.</hi></seg><seg type="translation" xml:lang="en" source="#claude">i instead of y Tho.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Grith_13-2.lnote.oe.dagger2" n="††" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">471</biblScope></bibl><seg type="original" xml:lang="de">e <hi rend="italic">für</hi> y <hi rend="italic">Kentisch?</hi></seg><seg type="translation" xml:lang="en" source="#claude">e for y Kentish?</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Grith_13-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">266</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Stilistisch endet Nordenglisches hier. Allein der Zusammenhang von 14 mit 13, 2, der <hi rend="italic">friðstol</hi> 16 sowie die Trennung des C. 15 von 9 und des C. 16 von 3—5 trotz Behandlung desselben Falles beweist, dass Verf. hier das gegen <hi rend="italic">o</hi>. 3ff. 9 verschiedene Rechtsgebiet weiter behandeln will</seg><seg type="translation" xml:lang="en" source="#claude">Stylistically the Northern English material ends here. But the connection of 14 with 13, 2, the <hi rend="italic">friðstol</hi> in 16, and the separation of cap. 15 from 9 and of cap. 16 from 3—5 although they treat the same case, prove that the author intends here to go on dealing with the legal area that differs from that of <hi rend="italic">above</hi> 3ff. 9</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Grith_13-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">266</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Stilistisch endet Nordenglisches hier. Allein der Zusammenhang von 14 mit 13, 2, der <hi rend="italic">friðstol</hi> 16 sowie die Trennung des C. 15 von 9 und des C. 16 von 3—5 trotz Behandlung desselben Falles beweist, dass Verf. hier das gegen <hi rend="italic">o</hi>. 3ff. 9 verschiedene Rechtsgebiet weiter behandeln will</seg><seg type="translation" xml:lang="en" source="#claude">Stylistically the Northern English material ends here. But the connection of 14 with 13, 2, the <hi rend="italic">friðstol</hi> in 16, and the separation of cap. 15 from 9 and of cap. 16 from 3—5 although they treat the same case, prove that the author intends here to go on dealing with the legal area that differs from that of <hi rend="italic">above</hi> 3ff. 9</seg></note>
       </div>
     </body>
   </text>

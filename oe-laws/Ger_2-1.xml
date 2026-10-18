@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +31,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">332</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -54,20 +56,24 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2125 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 453.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 453: “7” → “⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2.1">
         <head><ref type="lawCode" target="law:Ger">Ger</ref> 2.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.1" corresp="#wit-b"><pb n="453" ed="#liebermann"/>[2.1] He sceal snotorlice smeagean 7 georne ðurhsmugan ealle ða ðing, ðe hlaforde magan to ræde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.1" corresp="#wit-b"><pb n="453" ed="#liebermann"/>[2.1] He sceal snotorlice smeagean ⁊ georne ðurhsmugan ealle ða ðing, ðe hlaforde magan to ræde.</ab>
         <ab type="editionText" xml:lang="ang" source="#gobbitt" n="22.3" corresp="#wit-b">He sceal snotorlice smeagean 7 geor|ne ðurhsmugan ealle ða ðing ðe hlaforde magan to ræde .</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-b"><pb n="332" ed="#rabin-doml"/>He sceal snotorlice smeagean and georne ðurhsmugan ealle ða ðing ðe hlaforde magan to ræde.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="453" ed="#liebermann"/>Er muss klüglich bedenken und eifrig im Geiste durchgehen alle die Dinge, die dem Gutsherrn zum Vortheil [sein] können.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="453" ed="#liebermann"/>Er muss<ptr type="liebermannNote" n="1" target="#Ger_2-1.lnote.de.1"/> klüglich bedenken und<ptr type="liebermannNote" n="g" target="#Ger_2-1.lnote.de1.g"/> eifrig im Geiste durchgehen alle die Dinge, die dem Gutsherrn zum Vortheil [sein<ptr type="liebermannNote" n="h" target="#Ger_2-1.lnote.de1.h"/>] können.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">He must wisely consider and eagerly go through in his mind all the things that can [be] of advantage to the lord.</ab>
         <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">He must wisely consider and eagerly think through all the things which may be of help to his lord.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-b"><pb n="333" ed="#rabin-doml"/>He is to wisely consider and assiduously reflect upon all those things that might be of help to his lord.</ab>
         <note type="editorial">‘smeagean ⁊ … ðurhsmugan’ is an alliterating pair; the infinitive ‘sein’ is understood (ellipsis).</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ger_2-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">252</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Riht is þæt gerefan geornlice tylian ⁊ symle heora hlafordan strynan</hi>; Polity 12.—‘<hi rend="italic">ðurhsmūgan</hi>: Kopf durchs Loch hemdartigen Kleidungsstückes (<hi rend="italic">smock</hi>) stecken, daher hineinblicken’ Sk-Wi</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Riht is þæt gerefan geornlice tylian ⁊ symle heora hlafordan strynan</hi>; Polity 12.—‘<hi rend="italic">ðurhsmūgan</hi>: to put one’s head through the hole of a shirt-like garment (<hi rend="italic">smock</hi>), hence to look into’ Sk-Wi</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Ger_2-1.lnote.de1.g" n="g" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">453</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Alliterationspaar</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">alliterative pair</hi></seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Ger_2-1.lnote.de1.h" n="h" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">453</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ellipse des Infinitivs</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">ellipsis of the infinitive</hi></seg></note>
       </div>
     </body>
   </text>

@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +27,7 @@
           <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -51,20 +53,28 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1941 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 378.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 378: “Eac Dunsæte beþyrfan, gif heom se cyning an, þæt man huru friðgislas to heom læte.” → “Eac Dunsæte beþyrfan, gif heom se cyning an, þæt man huru friðgislas to heom læte. (expanded letters in italics: æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 378: “friþgislas” → “friðgislas”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="9.1">
         <head><ref type="lawCode" target="law:Duns">Duns</ref> 9.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9.1" corresp="#wit-q"><pb n="379" ed="#liebermann"/>Et Dunsetis expedit, si rex concedat, ut saltem friþgislas (id est pacis obsides) habeant.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9.1" corresp="#wit-b"><pb n="378" ed="#liebermann"/>Eac Dunsæte beþyrfan, gif heom se cyning an, þæt man huru friðgislas to heom læte.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="379" ed="#liebermann"/>Auch die Dunsæte haben es [zur Grenzsicherung aber noch] nöthig, dass ihnen wenigstens Friedensgeiseln [aus Gwent], wenn ihnen der König [solche] zugestehen will, überlassen werden.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9.1" corresp="#wit-b"><pb n="378" ed="#liebermann"/>Eac Dunsæte beþyrfan, gif heom se cyning an, þ<hi rend="italic">æt</hi> man<ptr type="liebermannNote" n="5" target="#Duns_9-1.lnote.oe.5"/> huru friðgislas to heom læte<ptr type="liebermannNote" n="21" target="#Duns_9-1.lnote.oe.21"/>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9.1" corresp="#wit-q"><pb n="379" ed="#liebermann"/>Et Dunsetis expedit, si rex concedat, ut saltem friðgislas<ptr type="liebermannNote" n="22" target="#Duns_9-1.lnote.oe.22"/> (id est pacis<ptr type="liebermannNote" n="23" target="#Duns_9-1.lnote.oe.23"/> obsides) habeant<ptr type="liebermannNote" n="24" target="#Duns_9-1.lnote.oe.24"/>.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="379" ed="#liebermann"/>Auch die Dunsæte haben es [zur Grenzsicherung aber noch] nöthig, dass ihnen wenigstens Friedensgeiseln [aus Gwent], wenn ihnen der König [solche] zugestehen will, überlassen<ptr type="liebermannNote" n="1" target="#Duns_9-1.lnote.de.1"/> werden.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">The Dunsæte too have need [for the security of the border] that at least peace-hostages [from Gwent] be handed over to them, if the king will grant [them such].</ab>
         <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-b">The people of Dunsæte also need that peace-hostages at least be allowed, if the king grants them [the right].</ab>
         <note type="comparison" source="#wormald-mel" n="381"><label>compares with</label> <ref target="clause:AGu_5">AGu 5</ref> <quote>Duns. 9:1 makes a stipulation about 'hostages for peace (fridgislas)', which compares with AGu 5 (B)</quote></note>
         <note type="comparison" source="#wormald-mel" n="382"><label>compare</label> <ref target="clause:IVAtr_4-2">IV Atr 4.2</ref> <quote>'the Dunsæte too have peace-hostages, if the king will grant it to them' (compare London, above, sub-section (iv))</quote></note>
         <note type="editorial">In B the Rectitudines follow after a paragraph break.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_9-1.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">378</biblScope></bibl><seg type="original" xml:lang="de">mon <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">mon Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_9-1.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">378</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">nach Absatz folgt</hi> Rectitudines (<hi rend="italic">Schmids App. III</hi>) <hi rend="italic">B.</hi></seg><seg type="translation" xml:lang="en" source="#claude">after a paragraph break B continues with the Rectitudines (Schmid’s App. III).</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_9-1.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">379</biblScope></bibl><seg type="original" xml:lang="de">fryðgys. <hi rend="italic">T;</hi> -gysil. <hi rend="italic">M Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">fryðgys. T; -gysil. M Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_9-1.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">379</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt M Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">missing in M Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_9-1.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">379</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">folgt</hi> VII Atr., <hi rend="italic">o. S.</hi> 260.</seg><seg type="translation" xml:lang="en" source="#claude">followed by VII Atr., above p. 260.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Duns_9-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">219</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Nicht ‘bei ihnen zugelassen’; ‘be allowed them’ Thorpe, Toller s. v. <hi rend="italic">friðgisel</hi>. <hi rend="italic">Lætan</hi> (<hi rend="italic">s. d. Wb</hi> 1) <hi rend="italic">to</hi> heisst ‘tradere, committere’; Toller 613a II</seg><seg type="translation" xml:lang="en" source="#claude">Not ‘admitted among them’; ‘be allowed them’ Thorpe, Toller s. v. <hi rend="italic">friðgisel</hi>. <hi rend="italic">Lætan</hi> (<hi rend="italic">see</hi> that word in <hi rend="italic">Wb</hi> 1) <hi rend="italic">to</hi> means ‘tradere, committere’; Toller 613a II</seg></note>
       </div>
     </body>
   </text>

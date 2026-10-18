@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +27,7 @@
           <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -51,19 +53,25 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2070 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 398.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 398.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="10">
         <head><ref type="lawCode" target="law:Swer">Swer</ref> 10</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10" corresp="#wit-b"><pb n="398" ed="#liebermann"/>On lifiendes Godes naman, swa ic feos bidde, swa ic gywanan hæbbe ðæs, ðe me Ñ behet, ða ic him min sealde.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="10" corresp="#wit-q"><pb n="399" ed="#liebermann"/>In Dei uiuentis nomine, sic pecuniam exigo, sicut michi minus est de eo, quod N. in conuentione habuit, quando meum N. ei uendidi.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10" corresp="#wit-h"><pb n="398" ed="#liebermann"/>On lifiendes Godes naman, swa ic feos bidde, swa ic gywanan hæbbe ðæs, þe me N. behet, ða ic him min sealde.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="399" ed="#liebermann"/>Im Namen des lebendigen Gottes, só forder ich Geld, wie ich dessen [noch] ermangle, was mir N., als ich ihm meines verkaufte, versprochen hat.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10" corresp="#wit-h"><ptr type="liebermannNote" n="1" target="#Swer_10.lnote.oe.1"/><pb n="398" ed="#liebermann"/>On lifiendes Godes naman, swa ic feos bidde, swa ic gywanan hæbbe ðæs, þe me N. behet, ða ic him min sealde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10" corresp="#wit-b"><pb n="398" ed="#liebermann"/>On lifiendes Godes naman, swa ic feos bidde, swa ic gywanan<ptr type="liebermannNote" n="3" target="#Swer_10.lnote.oe.3"/> hæbbe ðæs, ðe me Ñ behet, ða ic him min sealde.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="10" corresp="#wit-q"><pb n="399" ed="#liebermann"/>In Dei uiuentis nomine, sic pecuniam exigo, sicut michi minus est de eo, quod N. in conuentione<ptr type="liebermannNote" n="11" target="#Swer_10.lnote.oe.11"/> habuit, quando meum N. ei uendidi.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="399" ed="#liebermann"/>Im Namen des lebendigen Gottes, só forder ich Geld, wie ich dessen [noch] ermangle<ptr type="liebermannNote" n="1" target="#Swer_10.lnote.de.1"/>, was mir N., als ich ihm meines<ptr type="liebermannNote" n="*" target="#Swer_10.lnote.de1.star"/> verkaufte, versprochen hat.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">In the name of the living God, I demand money just as I [still] lack what N. promised me when I sold him what was mine.</ab>
         <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-h">[I swear] in the name of the living God [that] I still lack what N. promised me, and demand payment for what I sold him.</ab>
         <note type="editorial">The Quadripartitus reads ‘mein [Vieh] N.’. In B ‘gy’ of ‘gywanan’ is erased, so ‘wanan’.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Swer_10.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">398</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Platz für Überschrift frei</hi></seg><seg type="translation" xml:lang="en" source="#claude">Space left free for a heading</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Swer_10.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">399</biblScope></bibl><seg type="original" xml:lang="de">-nem <hi rend="italic">R</hi></seg><seg type="translation" xml:lang="en" source="#claude">-nem R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Swer_10.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">398</biblScope></bibl><seg type="original" xml:lang="de">gy <hi rend="italic">radirt, also</hi> wanan</seg><seg type="translation" xml:lang="en" source="#claude">gy erased, hence wanan</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Swer_10.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">236</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">gewan</hi> ‘wanting’ Sweet; Toller 463b: Subst., aber 1164b: Adjectiv.—Zu Q's Bezeichnung des Viehs <hi rend="italic">s. o</hi>. 4⁴.—<hi rend="italic">Vgl. Gl</hi> Klageeid 2; Handelsschuld 1</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">gewan</hi> ‘wanting’ Sweet; Toller 463b: noun, but 1164b: adjective.—On Q’s designation of the cattle <hi rend="italic">see above</hi> 4⁴.—<hi rend="italic">Cf. Gl</hi> Klageeid 2; Handelsschuld 1</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Swer_10.lnote.de1.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">399</biblScope></bibl><seg type="original" xml:lang="de">mein [Vieh] N. <hi rend="italic">Quadr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">my [cattle] N. <hi rend="italic">Quadr.</hi></seg></note>
       </div>
     </body>
   </text>

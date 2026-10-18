@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -54,20 +55,25 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2134 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 454.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 454: “[7[c]] ne bið hit hlaforde ræd, þæt he þæt ðafige.” → “[7[c]] ne bið hit hlaforde ræd, þæt he þæt ðafige. (expanded letters in italics: æt, æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 454: “[der Vogt, oder der Gutsherr?]” → “∅”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7[c]">
         <head><ref type="lawCode" target="law:Ger">Ger</ref> 7[c]</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7[c]" corresp="#wit-b"><pb n="454" ed="#liebermann"/>[7[c]] ne bið hit hlaforde ræd, þæt he þæt ðafige.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7[c]" corresp="#wit-b"><pb n="454" ed="#liebermann"/>[7[c]] ne bið hit hlaforde ræd, þ<hi rend="italic">æt</hi> he þ<hi rend="italic">æt</hi> ðafige<ptr type="liebermannNote" n="2" target="#Ger_7-c.lnote.oe.2"/>.</ab>
         <ab type="editionText" xml:lang="ang" source="#gobbitt" n="22.12" corresp="#wit-b">Ne bið hit hlaforde ræd þæt he þæt ðafige .</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-b"><pb n="334" ed="#rabin-doml"/>Ne bið hit hlaforde ræd, þæt he þæt ðafige.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="454" ed="#liebermann"/>noch auch ist es dem Gutsherrn ein vortheilhafter Plan, dass er [der Vogt, oder der Gutsherr?] das erlaube.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="454" ed="#liebermann"/>noch auch ist es dem Gutsherrn<ptr type="liebermannNote" n="g" target="#Ger_7-c.lnote.de1.g"/> ein vortheilhafter Plan, dass er<ptr type="liebermannNote" n="h" target="#Ger_7-c.lnote.de1.h"/> das erlaube.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">nor is it an advantageous plan for the lord that he [the reeve, or the lord?] should allow it.</ab>
         <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">It will not be the wise lord that endures this.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-b"><pb n="335" ed="#rabin-doml"/>The lord is not wise who tolerates this.</ab>
         <note type="editorial">B's ‘ðafige’ stands so.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ger_7-c.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">454</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Zeile leer</hi></seg><seg type="translation" xml:lang="en" source="#claude">line blank</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Ger_7-c.lnote.de1.g" n="g" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">454</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl. o.</hi> 2, 1</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">cf. above</hi> 2, 1</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Ger_7-c.lnote.de1.h" n="h" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">454</biblScope></bibl><seg type="original" xml:lang="de">der Vogt (<hi rend="italic">oder</hi> der Gutsherr<hi rend="italic">?</hi>)</seg><seg type="translation" xml:lang="en" source="#claude">the bailiff (<hi rend="italic">or</hi> the lord of the manor<hi rend="italic">?</hi>)</seg></note>
       </div>
     </body>
   </text>

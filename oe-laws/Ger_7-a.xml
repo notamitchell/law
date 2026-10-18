@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +31,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">334</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -54,21 +56,24 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2132 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 454.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 454: “7” → “⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7[a]">
         <head><ref type="lawCode" target="law:Ger">Ger</ref> 7[a]</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7[a]" corresp="#wit-b"><pb n="454" ed="#liebermann"/>[7[a]] Ne læte he næfre his hyrmen hyne oferwealdan, ac wille he ælcne mid hlafordes creafte 7 mid folcrihte:</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7[a]" corresp="#wit-b"><pb n="454" ed="#liebermann"/>[7[a]] Ne læte he næfre his hyrmen hyne oferwealdan, ac wille he ælcne mid hlafordes creafte<ptr type="liebermannNote" n="1" target="#Ger_7-a.lnote.oe.1"/> ⁊ mid folcrihte:</ab>
         <ab type="editionText" xml:lang="ang" source="#gobbitt" n="22.1" corresp="#wit-b">Ne læte he næfre his hyrmen hyne of|erwealdan . ac wille he ælcne mid hlafor|des creafte . 7 mid folcrihte .</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-b"><pb n="334" ed="#rabin-doml"/>Ne læte he næfre his hyrmen hyne oferwealdan, ac wille he ælcne mid hlafordes creafte and mid folcrihte:</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="454" ed="#liebermann"/>Nicht lasse er jemals über sich seine [Guts-]unterthanen regieren, sondern er wolle jeden durch Herrenmacht und nach Volksrecht [regieren]:</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="454" ed="#liebermann"/>Nicht lasse er jemals über sich seine [Guts-]unterthanen regieren, sondern er wolle jeden durch Herrenmacht<ptr type="liebermannNote" n="1" target="#Ger_7-a.lnote.de.1"/> und nach Volksrecht [regieren]:</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Let him never let his [estate] dependants rule over him, but let him [rule] each one with the lord's authority and according to folk-right:</ab>
         <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">He should never let his retainers wield power over him, but he should direct each with the lord’s might and with folk custom.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-b"><pb n="335" ed="#rabin-doml"/>Nor must he ever permit his subordinates to manipulate him, but he should govern each of them according to his lord’s rule and the laws of the people;</ab>
         <note type="editorial">B's ‘creafte’ stands so. Liebermann's 7 is split here into three rows.; AX: pages in Rabin (text / translation), checked against Rabin (translation on the facing page), October 2026 (e.g. was “334”, now “334 / 335”; 11 rows of Ger)</note>
         <note type="translator" source="#rabin-doml">Rabin’s 7 covers the rows 7[a], 7[b], 7[c]; it is given here, in the first.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ger_7-a.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">454</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ger_7-a.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">253</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Verf. stellt in <hi rend="italic">cræft</hi> und <hi rend="italic">riht</hi> vermutlich polizeiliche Exekutive des Herrn und allgemeines Landrecht als einander ergänzend, vielleicht beschränkend, nebeneinander. Nicht etwa gilt <hi rend="italic">cræft</hi> gegen Unfreie, <hi rend="italic">riht</hi> über Freie</seg><seg type="translation" xml:lang="en" source="#claude">In <hi rend="italic">cræft</hi> and <hi rend="italic">riht</hi> the author presumably sets side by side the lord’s executive police power and the general law of the land as complementing, perhaps limiting, each other. It is not, say, that <hi rend="italic">cræft</hi> applies to the unfree and <hi rend="italic">riht</hi> to the free</seg></note>
       </div>
     </body>
   </text>

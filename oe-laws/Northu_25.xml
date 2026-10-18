@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">482</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -60,13 +62,14 @@
         <head><ref type="lawCode" target="law:Northu">Northu</ref> 25</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="25" corresp="#wit-d"><pb n="381" ed="#liebermann"/>Gif pr<hi rend="italic">eost</hi> circan miswurðige, þe eal his wurðscipe of sceal arisan, gebete þ<hi rend="italic">æt</hi>.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d"><pb n="306" ed="#rabin-doml"/>Gif preost circan miswurðige, þe eal his wurðscipe of sceal arisan, gebete þæt.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="381" ed="#liebermann"/>Wenn ein Priester [seine] Kirche missachtet, aus der all sein Ehrenrang entspringen soll, büsse er das.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="381" ed="#liebermann"/>Wenn ein Priester [seine] Kirche missachtet<ptr type="liebermannNote" n="1" target="#Northu_25.lnote.de.1"/>, aus der all sein Ehrenrang entspringen soll, büsse er das.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a priest dishonours [his] church, from which all his rank of honour should arise, let him atone for it.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d"><pb n="482" ed="#whitelock"/>If a priest treats disrespectfully the church from which all his dignity must spring, he is to compensate for it.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d"><pb n="307" ed="#rabin-doml"/>If a priest dishonors the Church, from which all his honor must come, he is to atone for that.</ab>
         <note type="comparison" source="#liebermann" n="381">Can. Eg. 26</note>
         <note type="comparisonPrinted" source="#liebermann">Can. Eg. 26</note>
         <note type="editorial">Liebermann compares Canons of Edgar 26.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_25.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">223</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">‘entehrt’ Schmid, besser ‘treat disrespectfuley’ Toller; gemeint ist wohl das Reinhalten der Kirche für den Gottesdienst allein, frei von weltlichem Reden, Tun, Trinken; das nennt Can. Edg. 26 <hi rend="italic">arwurðnesse</hi>.—Bis 44 enden die Bestimmungen mit ‘büsse er das’. Vielleicht ist überall ‘12 Ör’ hinzuzudenken, die 6—18 dastehen; <hi rend="italic">s. Gl</hi> Rechtsbruchbusse 4</seg><seg type="translation" xml:lang="en" source="#claude">‘dishonours’ Schmid, better ‘treat disrespectfully’ Toller; what is meant is probably keeping the church clean for divine service alone, free of worldly talk, action and drinking; Can. Edg. 26 calls this <hi rend="italic">arwurðnesse</hi>. — Up to 44 the provisions end with ‘let him make amends for it’. Perhaps the ‘12 ora’ that stand in 6—18 are to be understood throughout; see <hi rend="italic">Gl</hi> Rechtsbruchbusse 4</seg></note>
       </div>
     </body>
   </text>

@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">483</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -58,14 +60,17 @@
     <body>
       <div type="clause" n="49">
         <head><ref type="lawCode" target="law:Northu">Northu</ref> 49</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="49" corresp="#wit-d"><pb n="383" ed="#liebermann"/>Gif hit sy elles landagende man, gilde VIte healfmarc, healf Criste ⁊ healf landrican.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="49" corresp="#wit-d"><pb n="383" ed="#liebermann"/>Gif hit sy elles landagende man, gilde VIte<ptr type="liebermannNote" n="***" target="#Northu_49.lnote.oe.star3"/> healfmarc, healf Criste ⁊ healf landrican.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d"><pb n="310" ed="#rabin-doml"/>Gif hit sy elles landagende man, gilde VI healfmarc, healf Criste and healf landrican.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="383" ed="#liebermann"/>Wenn es sonst ein Mann ist mit Landeigen [ohne Hofdienstadel], zahle er 6 Halbmark, halb Christo [dem Bischofe] und halb dem Immunitätsherrn.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="383" ed="#liebermann"/>Wenn es sonst ein Mann ist mit Landeigen [ohne Hofdienstadel<ptr type="liebermannNote" n="1" target="#Northu_49.lnote.de.1"/>], zahle er 6 Halbmark, halb Christo [dem Bischofe] und halb dem Immunitätsherrn<ptr type="liebermannNote" n="2" target="#Northu_49.lnote.de.2"/>.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If it is otherwise a land-owning man [without court-service nobility], let him pay 6 half-marks, half to Christ [the bishop] and half to the lord with jurisdiction.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d"><pb n="483" ed="#whitelock"/>If it is otherwise a landowner, he is to pay six half-marks, half to Christ and half to the lord of the estate.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d"><pb n="311" ed="#rabin-doml"/>If he is a landholder of another kind, he is to pay six half-marks: half to Christ, half to the local lord.</ab>
-        <note type="editorial">D reads ‘VIte’ (sixte, i.e. 5½ marks), which Liebermann thinks wrong in view of 52 and 60; he would strike ‘te’.</note>
-        <note type="textual" source="#rabin-doml">vi: vite Y</note>
+        <note type="editorial">D reads ‘VIte’ (sixte, i.e. 5½ marks), which Liebermann thinks wrong in view of 52 and 60; he would strike ‘te’.; AY: corrected against Rabin p. 310 / 311, October 2026 (was “vi: vite Y”, now “VI: VIte ϒ”)</note>
+        <note type="textual" source="#rabin-doml">VI: VIte ϒ</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Northu_49.lnote.oe.star3" n="***" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">383</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">So</hi>, sixte [<hi rend="italic">d. h.</hi> 5½ Marc, <hi rend="italic">falsch laut</hi> 52. 60]; <hi rend="italic">streiche</hi> te</seg><seg type="translation" xml:lang="en" source="#claude">Sic, sixte [i.e. 5½ marks, wrong according to 52. 60]; delete te</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_49.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">224</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Hier, 52 u. 60, ist der in einem Immunitätsbezirk eingesessene Freie auf freiem Boden gemeint, der wohl ein Thegn, aber nicht Königsthegn, nicht Bocland-Eigentümer (laut I Atr 1, 14. III 11) sein kann. Wie 2 : 1 verhält sich <hi rend="italic">landagende</hi> zu <hi rend="italic">færbena</hi> hier wie <hi rend="italic">liber</hi> (Überfreier) zum <hi rend="italic">socman</hi> in Denalagu betreffend Mannbusse; ECf 12, 4.</seg><seg type="translation" xml:lang="en" source="#claude">Here, and in 52 and 60, what is meant is the freeman settled within a district of immunity on free land, who may well be a thegn, but cannot be a king’s thegn or an owner of bocland (according to I Atr 1, 14. III 11). The <hi rend="italic">landagende</hi> stands to the <hi rend="italic">færbena</hi> here in the ratio 2 : 1, as the <hi rend="italic">liber</hi> (superior freeman) does to the <hi rend="italic">socman</hi> in the Danelaw with regard to manbot; ECf 12, 4.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_49.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">224</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Über <hi rend="italic">landrica</hi> (auch <hi rend="italic">u</hi>. 54. 54, 1) <hi rend="italic">s. Gl</hi> Gerichtsbarkeit 3. 13a-c. <hi rend="italic">Vgl</hi>. Maitland <hi rend="italic">Domesday</hi> 288</seg><seg type="translation" xml:lang="en" source="#claude">On <hi rend="italic">landrica</hi> (also <hi rend="italic">below</hi> 54. 54, 1) <hi rend="italic">see Gl</hi> Gerichtsbarkeit 3. 13a-c. <hi rend="italic">Cf</hi>. Maitland <hi rend="italic">Domesday</hi> 288</seg></note>
       </div>
     </body>
   </text>

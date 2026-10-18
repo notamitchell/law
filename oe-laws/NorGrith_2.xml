@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +28,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">32</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
@@ -49,13 +51,14 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2239 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 473.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 473: “7; 7” → “⁊; ⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:NorGrith">Nor Grið</ref> 2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-g-b"><pb n="473" ed="#liebermann"/>[cyric]frið 7 s<hi rend="italic">anctu</hi>s Wilfriðus 7 s<hi rend="italic">anctu</hi>s</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-g-b"><pb n="473" ed="#liebermann"/>[cyric]frið<ptr type="liebermannNote" n="1" target="#NorGrith_2.lnote.oe.1"/> ⁊ s<hi rend="italic">anctu</hi>s Wilfriðus ⁊ s<hi rend="italic">anctu</hi>s</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" n="1[b]" corresp="#wit-g-b"><pb n="32" ed="#rabin-doml"/>cyricfrið and sanctus Wilfriðus and sanctus</ab>
         <ab type="translation" xml:lang="de" source="#liebermann"><pb n="473" ed="#liebermann"/>[Fortsetzung von 1]</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">[Continuation of clause 1; see line 1.]</ab>
@@ -63,6 +66,8 @@
         <note type="editorial">K: the line ends with ‘sanctus’ (the next line begins ‘[Iohann]es’); ‘Petrus’ had been repeated in error from line 1.</note>
         <note type="textual" source="#rabin-doml">cyricfrið: reconstructed by Liebermann</note>
         <note type="translator" source="#rabin-doml">Saint Peter’s, Saint Wilfrid’s, and within the walls of Saint John’s: The three churches specified are those at York, Ripon, and Beverly. Saint John’s . . . compensated: “John’s,” “hundred,” and “cannot be compensated” are all reconstructed.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="NorGrith_2.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">473</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl. Sievers Gramm.</hi> 198, 5 <hi rend="italic">A</hi>²</seg><seg type="translation" xml:lang="en" source="#claude">cf. Sievers <hi rend="italic">Gramm.</hi> 198, 5 A²</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="NorGrith_2.lnote.de.0" n="0" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">267</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Wohl durch gemeinsames Benutzen von VIII Atr 4f. = I Cn 3f. stimmt dies z. T. wörtlich zu Northu 19. <hi rend="italic">Vgl. Gl</hi> Kirchenrang 3</seg><seg type="translation" xml:lang="en" source="#claude">Probably through common use of VIII Atr 4f. = I Cn 3f., this agrees in part word for word with Northu 19. <hi rend="italic">Cf. Gl</hi> Kirchenrang 3</seg></note>
       </div>
     </body>
   </text>

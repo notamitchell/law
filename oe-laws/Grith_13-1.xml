@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +28,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">24</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
@@ -49,18 +51,20 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2213 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 471.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 471: “7” → “⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="13.1">
         <head><ref type="lawCode" target="law:Grith">Grið</ref> 13.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13.1" corresp="#wit-g-b"><pb n="471" ed="#liebermann"/>7 se ðe gewundað, se bið handscyldig.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="13.1" corresp="#wit-g-b"><pb n="471" ed="#liebermann"/>⁊ se ðe gewundað, se bið handscyldig.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" n="13.1" corresp="#wit-g-b"><pb n="24" ed="#rabin-doml"/>And se ðe gewundað, se bið handscyldig.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="471" ed="#liebermann"/>und wer verwundet, der ist die Hand schuldig.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="471" ed="#liebermann"/>und wer verwundet<ptr type="liebermannNote" n="1" target="#Grith_13-1.lnote.de.1"/>, der ist die Hand schuldig.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">and whoever wounds is liable [to lose] his hand.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-b"><pb n="25" ed="#rabin-doml"/>And anyone who wounds shall lose his hand.</ab>
         <note type="translator" source="#rabin-doml">This is the only instance of the loss of a hand serving as a penalty for assault.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Grith_13-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">266</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Halbverletzung; Hand 10—11c</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Halbverletzung; Hand 10—11c</seg></note>
       </div>
     </body>
   </text>

@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +31,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">322</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -54,22 +56,29 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2097 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 448.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 448: “7” → “⁊”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 448: “[vgl. Ger. 2. 18]” → “∅”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4.6">
         <head><ref type="lawCode" target="law:Rect">Rect</ref> 4.6</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.6" corresp="#wit-b"><pb n="448" ed="#liebermann"/>[4.6] Hede se ðe scire healde, þ<hi rend="italic">æt</hi> he wite á, hwæt ealdlandræden sy 7 hwæt ðeode ðeaw.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.6" corresp="#wit-q"><pb n="448" ed="#liebermann"/>Uideat qui scyram tenet, ut semper sciat, que sit antiqua terrarum institutio uel populi consuetudo.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.6" corresp="#wit-b"><pb n="448" ed="#liebermann"/>[4.6] Hede se ðe scire healde, þ<hi rend="italic">æt</hi> he wite á, hwæt ealdlandræden sy ⁊ hwæt<ptr type="liebermannNote" n="3" target="#Rect_4-6.lnote.oe.3"/> ðeode ðeaw.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.6" corresp="#wit-q"><pb n="448" ed="#liebermann"/>Uideat qui scyram<ptr type="liebermannNote" n="3" target="#Rect_4-6.lnote.oe.3-2"/> tenet, ut semper sciat, que sit antiqua terrarum institutio uel populi consuetudo.</ab>
         <ab type="editionText" xml:lang="ang" source="#gobbitt" n="5.3" corresp="#wit-b">On suman ealugafol . hede se ðe scire healde þæt he wite a hwæt ealdland ræden sy . 7 hwæt ðeode ðeaw.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-b"><pb n="322" ed="#rabin-doml"/>Hede se ðe scire healde þæt he wite a hwæt ealdland ræden sy and hwæt ðeode ðeaw.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="448" ed="#liebermann"/>Achte [vgl. Ger. 2. 18] wer das [Gutsvogtei]amt inne hat, dass er stets wisse, was [echte] alte Gutsordnung und was Landesgewohnheit ist!</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="448" ed="#liebermann"/>Achte<ptr type="liebermannNote" n="a" target="#Rect_4-6.lnote.de1.a"/> wer das [Gutsvogtei]amt<ptr type="liebermannNote" n="1" target="#Rect_4-6.lnote.de.1"/> inne hat, dass er stets wisse, was [echte] alte Gutsordnung und was Landesgewohnheit<ptr type="liebermannNote" n="2" target="#Rect_4-6.lnote.de.2"/> ist!</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Let him who holds the [reeve's] office take heed that he always knows what the [true] ancient estate-custom is and what the custom of the people!</ab>
         <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">In some estates ale-rent. He that would hold a shire should heed that he know what the old estate customs and what the customs of the region are.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-b"><pb n="323" ed="#rabin-doml"/>The person who would oversee a shire should always take care to know what the previous estate agreements were and what the local customs are.</ab>
         <note type="editorial">B repeats ‘eald landræden sy ⁊ hwæt’ (a mistaken repetition of the line). Liebermann compares Gerefa 2 and 18.</note>
         <note type="textual" source="#rabin-doml">hwæt . . . sy: repeated B</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rect_4-6.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">448</biblScope></bibl><seg type="original" xml:lang="de">eald landræden sy ⁊ hwæt <hi rend="italic">fügt B ein: irrige Zeilenwiederholung</hi></seg><seg type="translation" xml:lang="en" source="#claude">eald landræden sy ⁊ hwæt inserted by B: an erroneous repetition of a line</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rect_4-6.lnote.oe.3-2" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">448</biblScope></bibl><seg type="original" xml:lang="de">scir. <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">scir. Hk</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Rect_4-6.lnote.de1.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">448</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl.</hi> Ger. 2. 18</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">cf.</hi> Ger. 2. 18</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rect_4-6.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">249</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Nicht ‘Landschaft’ (Leo) oder ‘Territorium’ (Andrews 55), missverstanden durch Q (der auch anderes <hi rend="italic">scir</hi> als <hi rend="italic">comitatus</hi> missversteht III Eg 3. 5, 2), wohl daher Toller 836a III. Richtig ‘Amt’ Schmid; <hi rend="italic">vgl. scirman</hi> Ger 5. 12.—<hi rend="italic">Eald</hi> hier ‘ehrwürdig, richtig’</seg><seg type="translation" xml:lang="en" source="#claude">Not ‘region’ (Leo) or ‘territory’ (Andrews 55); misunderstood by Q (who also misunderstands other instances of <hi rend="italic">scir</hi> as <hi rend="italic">comitatus</hi>, III Eg 3. 5, 2), whence probably Toller 836a III. Correctly ‘office’ Schmid; cf. <hi rend="italic">scirman</hi> Ger 5. 12.—<hi rend="italic">Eald</hi> here means ‘venerable, proper’</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rect_4-6.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">249</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">‘Volk’ Q Schmid, ‘Gemeinde’ Leo. Laut 21, 1; 2; 4, wo die lokale Bed. besonders klar, heisst <hi rend="italic">þeod</hi> hier ‘Landschaft, Gegend’</seg><seg type="translation" xml:lang="en" source="#claude">‘people’ Q Schmid, ‘community’ Leo. According to 21, 1; 2; 4, where the local meaning is especially clear, <hi rend="italic">þeod</hi> here means ‘region, district’</seg></note>
       </div>
     </body>
   </text>

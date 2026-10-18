@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +28,7 @@
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -51,20 +53,30 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2034 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 387.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 387: “7; þǽs; 7” → “⁊; þás; ⁊”.</change>
+      <change when="2026-10" type="checked">The modern editor’s text corrected against Attenborough, p. 172: “þǽs” → “þás”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6">
         <head><ref type="lawCode" target="law:Ordal">Ordal</ref> 6</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-h"><pb n="387" ed="#liebermann"/>7 se þe þǽs lage abréce, beo þ<hi rend="italic">æt</hi> órdal on him forad, 7 gilde þam cyninge CXX scill' to wíte.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6" corresp="#wit-q"><pb n="387" ed="#liebermann"/>Et qui leges istas infregerit (fregerit), sit ordalium (id est iudicium uel examen) fractum in eo, et reddat regi centum uiginti solidos wite.</ab>
-        <ab type="editionText" xml:lang="ang" source="#attenborough" n="1.6" corresp="#wit-h">And se þe þǽs lag abréce, beo þæt órdal on him forad, and gilde þan cyninge CXX scill. to wíte.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="387" ed="#liebermann"/>Und wer diese Vorschriften verletzt: an ihm sei das Ordal gescheitert, und er zahle dem König 120 Schill. als [Ungehorsams]strafe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-h"><pb n="387" ed="#liebermann"/>⁊ se þe þás lage abréce, beo þ<hi rend="italic">æt</hi> órdal on him forad, ⁊ gilde þam cyninge CXX scill' to wíte<ptr type="liebermannNote" n="4" target="#Ordal_6.lnote.oe.4"/>.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6" corresp="#wit-q"><pb n="387" ed="#liebermann"/>Et qui leges istas infregerit<ptr type="liebermannNote" n="7" target="#Ordal_6.lnote.oe.7"/> (fregerit), sit ordalium (id<ptr type="liebermannNote" n="23" target="#Ordal_6.lnote.oe.23"/> est iudicium uel examen) fractum<ptr type="liebermannNote" n="24" target="#Ordal_6.lnote.oe.24"/> in eo, et<ptr type="liebermannNote" n="25" target="#Ordal_6.lnote.oe.25"/> reddat regi<ptr type="liebermannNote" n="2" target="#Ordal_6.lnote.oe.2"/> centum uiginti solidos wite<ptr type="liebermannNote" n="26" target="#Ordal_6.lnote.oe.26"/>.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="1.6" corresp="#wit-h">And se þe þás lag abréce, beo þæt órdal on him forad, and gilde þan cyninge CXX scill. to wíte.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="387" ed="#liebermann"/>Und wer diese Vorschriften verletzt: an ihm sei das Ordal gescheitert, und er zahle dem König 120 Schill. als [Ungehorsams]strafe<ptr type="liebermannNote" n="1" target="#Ordal_6.lnote.de.1"/>.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And whoever breaks these rules: let the ordeal be [counted as] failed in his case, and let him pay the king 120 shillings as a fine [for disobedience].</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And if anyone breaks these rules, the ordeal shall in his case be invalidated, and he shall pay a fine of 120 shillings to the king.</ab>
         <note type="comparison" source="#wormald-mel" n="374"><label>shares phrases</label> <ref target="clause:IIAs_23-2">II As 23.2</ref> <quote>It also shares phrases with Æthelstan's ordeal laws [n. Ord. 1, 4, 6, II As 23:2]</quote></note>
         <note type="editorial">In H, Walreaf follows on a new line.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_6.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">387</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">folgt auf neuer Zeile</hi> Walreaf, <hi rend="italic">u. S.</hi> 392</seg><seg type="translation" xml:lang="en" source="#claude">followed on a new line by Walreaf, below p. 392</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_6.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">387</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vor der Klammer Lond; eingeklammertes übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">what precedes the bracket Lond; what is bracketed the rest</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_6.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">387</biblScope></bibl><seg type="original" xml:lang="de">sit <hi rend="italic">MHk; Glosse fehlt Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">sit MHk; gloss lacking in Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_6.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">387</biblScope></bibl><seg type="original" xml:lang="de">fac. <hi rend="italic">MHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">fac. MHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_6.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">387</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt T</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_6.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">387</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_6.lnote.oe.26" n="26" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">387</biblScope></bibl><seg type="original" xml:lang="de">wyte <hi rend="italic">Or; folgt</hi> A Gu. <hi rend="italic">T;</hi> II As. 24 <hi rend="italic">R;</hi> I Atr. <hi rend="italic">MHkBr;</hi> Cn <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">wyte Or; followed by A Gu. T; II As. 24 R; I Atr. MHkBr; Cn K</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ordal_6.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">227</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Ungehorsam 1c. e. 4b. 15</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Ungehorsam 1c. e. 4b. 15</seg></note>
       </div>
     </body>
   </text>

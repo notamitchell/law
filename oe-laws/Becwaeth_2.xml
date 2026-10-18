@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#wormald">Wormald</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +27,7 @@
           <bibl xml:id="wormald" type="translation">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -46,15 +48,17 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2073 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 400.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 400.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 400: “7:; 7” → “⁊:; ⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:Becwaeth">Becwæð</ref> 2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-b"><pb n="400" ed="#liebermann"/>7: swa ic hit hæbbe, swa hit se sealde, ðe to syllanne ahte, unbryde 7 unforboden.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-h"><pb n="400" ed="#liebermann"/>7: swa ic hit hæbbe, swa hit se sealde, ðe to syllanne ahte, unbryde 7 unforboden.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="400" ed="#liebermann"/>Beziehungsweise: Só habe ich es, wie es der veräusserte, der es zu veräussern befugt war, unangefochten und unverboten.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-h"><pb n="400" ed="#liebermann"/>⁊: swa ic hit hæbbe, swa hit se<ptr type="liebermannNote" n="2" target="#Becwaeth_2.lnote.oe.2"/> sealde, ðe to syllanne ahte, unbryde ⁊ unforboden.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-b"><pb n="400" ed="#liebermann"/>⁊: swa<ptr type="liebermannNote" n="1" target="#Becwaeth_2.lnote.oe.1"/> ic hit hæbbe, swa hit se sealde, ðe to syllanne ahte, unbryde ⁊ unforboden.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="400" ed="#liebermann"/>Beziehungsweise<ptr type="liebermannNote" n="1" target="#Becwaeth_2.lnote.de.1"/>: Só habe ich es, wie es der<ptr type="liebermannNote" n="2" target="#Becwaeth_2.lnote.de.2"/> veräusserte, der es zu veräussern befugt war, unangefochten<ptr type="liebermannNote" n="3" target="#Becwaeth_2.lnote.de.3"/> und<ptr type="liebermannNote" n="†" target="#Becwaeth_2.lnote.de1.dagger"/> unverboten<ptr type="liebermannNote" n="4" target="#Becwaeth_2.lnote.de.4"/>.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Or: I hold it just as he sold it who was entitled to sell it, unchallenged and unforbidden.</ab>
         <ab type="translation" xml:lang="en" source="#wormald" corresp="#wit-h">And as he gave it who had the power to give, without fraud or prohibition, so I have it.</ab>
         <ab type="translation" xml:lang="en" source="#wormald" corresp="#wit-b">And as he gave it who had the power to give, without fraud or prohibition, so I have it.</ab>
@@ -63,6 +67,13 @@
         <note type="comparedBy" source="#liebermann"><ref target="clause:Swer_3-3">Swer 3.3</ref></note>
         <note type="comparison" source="#wormald-mel" n="385"><label>common ground</label> <ref target="clause:Swer_3-3">Swer 3.3</ref> <quote>perhaps just enough common ground with Swerian to suggest a link between the two [n. Swer. 3:3/Becwæð 2]</quote></note>
         <note type="editorial">B's ‘se’ is corrected from ‘te’. Liebermann compares Swer 3.2 f.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Becwaeth_2.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">400</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">verb. aus</hi> te</seg><seg type="translation" xml:lang="en" source="#claude">corrected from te</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Becwaeth_2.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">400</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">übergeschr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Becwaeth_2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">237</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Alternativ wie Swer 3, 2¹</seg><seg type="translation" xml:lang="en" source="#claude">Alternative, as in Swer 3, 2¹</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Becwaeth_2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">237</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl.: gebohte se arcebisceop þæt land, . . ⁊ he him swa þa land geagnian derr, swa him se sealde þe to syllenne ahte</hi>; Urk. a. 961 Bi 1063</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf.: gebohte se arcebisceop þæt land, . . ⁊ he him swa þa land geagnian derr, swa him se sealde þe to syllenne ahte</hi>; charter a. 961 Bi 1063</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Becwaeth_2.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">237</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">‘ohne Trug’ Thorpe, Schmid, ‘honestly’ Sweet ungenan; ‘unclaimed’ Cockayne; ‘without liability to be reclaimed’ Toller; <hi rend="italic">vgl</hi>. Swer 2²; Parallelen <hi rend="italic">s. Wb</hi>.—Adverb sieht im Worte Holthausen <hi rend="italic">Beibl. z. Anglia</hi> Nov. 1909, 328</seg><seg type="translation" xml:lang="en" source="#claude">‘without deceit’ Thorpe, Schmid, ‘honestly’ Sweet ungenan; ‘unclaimed’ Cockayne; ‘without liability to be reclaimed’ Toller; <hi rend="italic">cf</hi>. Swer 2²; for parallels <hi rend="italic">see Wb</hi>. — Holthausen sees an adverb in the word, <hi rend="italic">Beibl. z. Anglia</hi> Nov. 1909, 328</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Becwaeth_2.lnote.de1.dagger" n="†" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">400</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Alliterationspaar</hi></seg><seg type="translation" xml:lang="en" source="#claude">alliterative pair</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Becwaeth_2.lnote.de.4" n="4" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">237</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">‘free from legal hindrance’ Toller</seg><seg type="translation" xml:lang="en" source="#claude">‘free from legal hindrance’ Toller</seg></note>
       </div>
     </body>
   </text>

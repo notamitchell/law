@@ -12,6 +12,8 @@
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Robertson’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,11 +32,12 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">34</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-cp" rend="bold"><abbr>Cp</abbr> <note type="manuscript">London, British Library, Cotton Cleopatra B.xiii</note></witness>
           <witness xml:id="wit-ju"><abbr>Ju</abbr></witness>
-          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-lat"><abbr>Lat</abbr> <note type="manuscript">Latin form of the coronation oath (the liturgical ordo), as printed by Liebermann</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -55,21 +58,27 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1914 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 216.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 216: “oðer is, þæt ic reaflac ⁊ ealle unrihte þing eallum hádum forbeode;” → “oðer is, þæt ic reaflac ⁊ ealle unrihte þing eallum hádum forbeode; (expanded letters in italics: æt)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.2">
         <head><ref type="lawCode" target="law:SacrCor">Prom. Reg.</ref> 1.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-cp"><pb n="216" ed="#liebermann"/>oðer is, þæt ic reaflac ⁊ ealle unrihte þing eallum hádum forbeode;</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.2" corresp="#wit-q"><pb n="217" ed="#liebermann"/>Aliud [est], ut rapacitates et omnes iniquitates omnibus gradibus interdicam.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-cp"><pb n="216" ed="#liebermann"/>oðer is, þ<hi rend="italic">æt</hi> ic reaflac ⁊ ealle unrihte þing eallum hádum<ptr type="liebermannNote" n="1" target="#Prom-Reg_1-2.lnote.oe.1"/> forbeode;</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.2" corresp="#wit-lat"><pb n="217" ed="#liebermann"/>Aliud [est<ptr type="liebermannNote" n="6" target="#Prom-Reg_1-2.lnote.oe.6"/>], ut rapacitates et omnes iniquitates omnibus gradibus interdicam.<ptr type="liebermannNote" n="7" target="#Prom-Reg_1-2.lnote.oe.7"/></ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="1.2" corresp="#wit-cp"><pb n="42" ed="#robertson"/>oðer is, þæt ic reaflac ⁊ ealle unrihte þing eallum hádum forbeode;</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-cp"><pb n="34" ed="#rabin-doml"/>oðer is þæt ic reaflac and ealle unrihte þing eallum hadum forbeode;</ab>
         <ab type="translation" xml:lang="de" source="#liebermann"><pb n="217" ed="#liebermann"/>das zweite ist, dass ich Raub und alle unrechten Dinge allen Ständen verbiete;</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">the second is that I forbid robbery and all wrongful things to all ranks;</ab>
-        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-cp"><pb n="43" ed="#robertson"/>Secondly, I forbid robbery and all unrighteous deeds by all classes of society.</ab>
+        <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-cp"><ptr type="editorNote" n="1" target="#Prom-Reg_1-2.robnote.n.0"/><pb n="43" ed="#robertson"/>Secondly, I forbid robbery and all unrighteous deeds by all classes of society.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-cp"><pb n="35" ed="#rabin-doml"/>second, that I forbid theft and all unjust things to all classes of people;</ab>
         <note type="editorial">Column O: Latin of the coronation liturgy.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Prom-Reg_1-2.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">217</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">aus PEl;</hi> promitto <hi rend="italic">Os</hi></seg><seg type="translation" xml:lang="en" source="#claude">from PEl; promitto Os</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Prom-Reg_1-2.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">217</biblScope></bibl><seg type="original" xml:lang="de">interdicat [R' <hi rend="italic">El</hi>]. <hi rend="spaced">Amen</hi> <hi rend="italic">PEl</hi></seg><seg type="translation" xml:lang="en" source="#claude">interdicat [R' El]. <hi rend="italic">Amen</hi> PEl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Prom-Reg_1-2.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">216</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">accentlos Cv</hi></seg><seg type="translation" xml:lang="en" source="#claude">no accent Cv</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Prom-Reg_1-2.lnote.de.0" n="0" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">145</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Die älteste Liturgie um 900, auch Rj, stellt den versprechenden König in dritte Person.—Raub (<hi rend="italic">s. d. Gl</hi> 1), auch sonst dem Diebstahl (<hi rend="italic">s. d. Gl</hi> 1. a) verwandt, steht hier, wie sonst dieser, für Verbrechen allgemein</seg><seg type="translation" xml:lang="en" source="#claude">The oldest liturgy, c. 900, and also Rj, put the promising king in the third person.—Robbery (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 1), which elsewhere too is akin to theft (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 1. a), stands here, as theft does elsewhere, for crime in general</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="Prom-Reg_1-2.robnote.n.0" n="0" source="#robertson"><bibl><biblScope unit="page">311</biblScope></bibl><seg type="original" xml:lang="en">Cf. the Latin form: <hi rend="italic">Aliud</hi> (<hi rend="italic">est</hi>) <hi rend="italic">ut rapacitates et omnes iniquitates omnibus gradibus interdicam</hi> (<hi rend="italic">interdicat</hi>).</seg></note>
       </div>
     </body>
   </text>

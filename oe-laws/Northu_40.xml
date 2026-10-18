@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">482</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -52,21 +55,25 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1986 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 382.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 382: “Gif preost searwað bewínde, gebete þæt.” → “Gif preost searwað bewínde, gebete þæt. (expanded letters in italics: eost, e, æt)”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 382: “Wenn ein Priester mit Trug dies (oder einen Eid?) umgiebt [d. h. sinnwidrig verdreht], büsse er das.” → “Wenn ein Priester mit Trug dies (oder einen Eid?) umgiebt [d. h. sinnwidrig verdreht], büsse er das. (expanded letters in italics: oder, d. h)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="40">
         <head><ref type="lawCode" target="law:Northu">Northu</ref> 40</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="40" corresp="#wit-d"><pb n="382" ed="#liebermann"/>Gif pr<hi rend="italic">eost</hi> searwað bewínde, gebete þ<hi rend="italic">æt</hi>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="40" corresp="#wit-d"><pb n="382" ed="#liebermann"/>Gif pr<hi rend="italic">eost</hi> searwað<ptr type="liebermannNote" n="*" target="#Northu_40.lnote.oe.star"/> bewínde, g<hi rend="italic">e</hi>bete þ<hi rend="italic">æt</hi>.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d"><pb n="308" ed="#rabin-doml"/>Gif preost searwað bewinde, gebete þæt.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="382" ed="#liebermann"/>Wenn ein Priester mit Trug dies (oder einen Eid?) umgiebt [d. h. sinnwidrig verdreht], büsse er das.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="382" ed="#liebermann"/>Wenn ein Priester mit Trug<ptr type="liebermannNote" n="1" target="#Northu_40.lnote.de.1"/> dies (<hi rend="italic">oder</hi> einen Eid?) umgiebt [<hi rend="italic">d. h</hi>. sinnwidrig verdreht], büsse er das.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a priest wraps this (or an oath?) in deceit [i.e. perversely twists it], let him atone for it.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d"><pb n="482" ed="#whitelock"/>If a priest covers up fraud, he is to compensate for it.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d"><pb n="482" ed="#whitelock"/>If a priest covers up fraud,<ptr type="editorNote" n="3" target="#Northu_40.whinote.n.3"/> he is to compensate for it.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d"><pb n="309" ed="#rabin-doml"/>If a priest conceals fraud while conducting an ordeal, he is to atone for that.</ab>
         <note type="editorial">Liebermann thinks ‘searwað’ corrupt and would read ‘searwa þæt’ or ‘searwe að’. Thorpe suggested ‘scearwað’ (tonsure), Ettmüller ‘scearswaðu’, Toller ‘be winde’ (cheats in wrapping [the hand endangered by the ordeal]); Liebermann notes that none of these three words occurs.</note>
-        <note type="translator" source="#whitelock">Liebermann thought searwað bewinde corrupt, but I take searwað as an unrecorded abstract noun. Bos-worth-Toller reads searwað be winde, rendering it “uses deceit in respect to the wrapping up of the hand”; but wind in this sense is unique.</note>
         <note type="translator" source="#rabin-doml">conceals fraud while conducting an ordeal: Literally, “If a priest deceives while binding,” presumably a reference to the bandaging of a proband’s burn or wound (so that the healing process may be inspected several days later) in the course of an ordeal.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Northu_40.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">382</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Verderbt; bessere</hi> searwa [<hi rend="italic">statt</hi> -we] ꝥ [<hi rend="italic">den Haken vergass D auch oben S.</hi> 237⁴] <hi rend="italic">oder</hi> searwe að. [Scearwað (tonsura) <hi rend="italic">empfiehlt Thorpe;</hi> scearswaðu (<hi rend="italic">tonsurae vestigium</hi>) <hi rend="italic">Ettmüller</hi> Lex. Anglosax. 679; be winde (‘<hi rend="italic">bei Umwindung</hi> [<hi rend="italic">der von Ordalhitze gefährdeten Hand</hi>] <hi rend="italic">betrügt</hi>’) <hi rend="italic">Toller</hi> Anglo-Saxon dict. 853. 1231. <hi rend="italic">Aber diese drei Wörter kommen nicht vor</hi>].</seg><seg type="translation" xml:lang="en" source="#claude">Corrupt; read searwa [for -we] ꝥ [D also forgot the hook above, p. 237⁴] or searwe að. [Scearwað (tonsura) is recommended by Thorpe; scearswaðu (tonsurae vestigium) Ettmüller Lex. Anglosax. 679; be winde (‘cheats while binding’ [the hand endangered by the heat of the ordeal]) Toller Anglo-Saxon dict. 853. 1231. But these three words do not occur].</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_40.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">224</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Die Bed. ‘umgeben, schützen’ kommt bildlich (‘mit Ruhme, Ehre, Freude, Sorge’: <hi rend="italic">mid seorwe bewunden</hi> Stratmann 72) auch sonst vor für <hi rend="italic">bewindan</hi>; Toller 97 und <hi rend="italic">Suppl</hi>. Dass sich ‘List’ gern mit ‘binden, flechten’ verbindet, beweisen die Composita <hi rend="italic">searubend, -bunden, -sæled, -net</hi>. <hi rend="italic">Vgl. Gl</hi> Ordal 12. 16a. b</seg><seg type="translation" xml:lang="en" source="#claude">The meaning ‘surround, protect’ also occurs elsewhere for <hi rend="italic">bewindan</hi> in a figurative sense (‘with fame, honour, joy, sorrow’: <hi rend="italic">mid seorwe bewunden</hi> Stratmann 72); Toller 97 and <hi rend="italic">Suppl</hi>. That ‘cunning’ readily combines with ‘binding, weaving’ is proved by the compounds <hi rend="italic">searubend, -bunden, -sæled, -net</hi>. <hi rend="italic">Cf. Gl</hi> Ordal 12. 16a. b</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="Northu_40.whinote.n.3" n="3" source="#whitelock"><bibl><biblScope unit="page">482</biblScope></bibl><seg type="original" xml:lang="en">Liebermann thought <hi rend="italic">searwað bewinde</hi> corrupt, but I take <hi rend="italic">searwað</hi> as an unrecorded abstract noun. Bos-worth-Toller reads <hi rend="italic">searwað be winde,</hi> rendering it “uses deceit in respect to the wrapping up of the hand”; but <hi rend="italic">wind</hi> in this sense is unique.</seg></note>
       </div>
     </body>
   </text>

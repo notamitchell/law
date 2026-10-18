@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +31,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">322</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -54,21 +56,27 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2099 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 448.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 448: “Bei uns ist festgesetzt, dass er 5 (6 Quadr.) Sextar Honig als Abgabe gebe; auf einigen Landgütern gebührt sich weitere Abgabenpflicht.” → “Bei uns ist festgesetzt, dass er 5 (6 Quadr.) Sextar Honig als Abgabe gebe; auf einigen Landgütern gebührt sich weitere Abgabenpflicht. (expanded letters in italics: Quadr)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5.1">
         <head><ref type="lawCode" target="law:Rect">Rect</ref> 5.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.1" corresp="#wit-b"><pb n="448" ed="#liebermann"/>[5.1] Mid us is geræd, þ<hi rend="italic">æt</hi> he sylle V sustras huniges to gafole; on suman landu<hi rend="italic">m</hi> gebyreð mare gafolræden.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5.1" corresp="#wit-q"><pb n="448" ed="#liebermann"/>In quibusdam locis est institutum reddi VI sestaria mellis ad censum; in quibusdam locis plus gabli redditur.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5.1" corresp="#wit-b"><pb n="448" ed="#liebermann"/>[5.1] Mid us is geræd, þ<hi rend="italic">æt</hi> he sylle V<ptr type="liebermannNote" n="b" target="#Rect_5-1.lnote.oe.b"/> sustras<ptr type="liebermannNote" n="2" target="#Rect_5-1.lnote.oe.2"/> huniges to gafole; on suman landu<hi rend="italic">m</hi> gebyreð mare gafolræden.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5.1" corresp="#wit-q"><pb n="448" ed="#liebermann"/>In<ptr type="liebermannNote" n="a" target="#Rect_5-1.lnote.oe.a"/> quibusdam locis est institutum reddi VI sestaria<ptr type="liebermannNote" n="7" target="#Rect_5-1.lnote.oe.7"/> mellis ad censum; in quibusdam locis plus gabli redditur.</ab>
         <ab type="editionText" xml:lang="ang" source="#gobbitt" n="6.1" corresp="#wit-b">On suman landum gebyreð mare gafol|ræden.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-b"><pb n="322" ed="#rabin-doml"/>Mid us is geræd þæt he sylle V sustras huniges to gafole; on suman landum gebyreð mare gafolræden.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="448" ed="#liebermann"/>Bei uns ist festgesetzt, dass er 5 (6 Quadr.) Sextar Honig als Abgabe gebe; auf einigen Landgütern gebührt sich weitere Abgabenpflicht.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="448" ed="#liebermann"/>Bei uns ist festgesetzt, dass er 5 (6 <hi rend="italic">Quadr</hi>.) Sextar<ptr type="liebermannNote" n="1" target="#Rect_5-1.lnote.de.1"/> Honig als Abgabe gebe; auf einigen Landgütern gebührt sich weitere Abgabenpflicht.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">With us it is laid down that he give 5 (6, Quadr.) sesters of honey as rent; on some estates a greater rent is due.</ab>
         <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">In some estates it is custom that a greater tax [is] due.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-b"><pb n="323" ed="#rabin-doml"/>Among us it is agreed that he is to pay five sesters of honey as dues; on some estates, it is the practice to assess a greater amount.</ab>
         <note type="editorial">Liebermann would correct ‘V’ to ‘VI’ (compare 4.1). B's ‘sustras’ stands so. The Quadripartitus avoids the first person (here, 5.4 and 21.4), probably so as not to be identified with the author.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rect_5-1.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">448</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">bessere</hi> VI? <hi rend="italic">vgl. S.</hi> 446<hi rend="italic">c</hi></seg><seg type="translation" xml:lang="en" source="#claude">read VI? cf. p. 446c</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rect_5-1.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">448</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rect_5-1.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">448</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Quadr. vermeidet erste Person</hi> 5, 1. 5, 4. 21, 4, <hi rend="italic">wohl um mit dem Verf. nicht identificirt zu werden</hi></seg><seg type="translation" xml:lang="en" source="#claude">Quadr. avoids the first person at 5, 1. 5, 4. 21, 4, probably so as not to be identified with the author</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rect_5-1.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">448</biblScope></bibl><seg type="original" xml:lang="de">sext. <hi rend="italic">T;</hi> sast. <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">sext. T; sast. Hk</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rect_5-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">250</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Sextar 2. 3a; Toller 866. Im 11. Jh. zinst ein Gut an St. Albans <hi rend="italic">unum sextarium mellis</hi> 32 <hi rend="italic">unciarum</hi>; Kemble n. 950</seg><seg type="translation" xml:lang="en" source="#claude">Cf. <hi rend="italic">Gl</hi> Sextar 2. 3a; Toller 866. In the 11th cent. an estate pays to St Albans <hi rend="italic">unum sextarium mellis</hi> 32 <hi rend="italic">unciarum</hi>; Kemble n. 950</seg></note>
       </div>
     </body>
   </text>

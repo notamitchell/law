@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +27,7 @@
           <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -50,22 +52,29 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2062 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 396.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 396.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 396: “7; se” → “⁊; ∅”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3.3">
         <head><ref type="lawCode" target="law:Swer">Swer</ref> 3.3</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.3" corresp="#wit-b"><pb n="396" ed="#liebermann"/>7 swa ic orf hæbbe, swa hit me se sealde, ðe hit to syllanne ahte.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.3" corresp="#wit-q"><pb n="397" ed="#liebermann"/>Et sic pecus habeo, sicut mihi uendidit, cui iure pertinebat.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.3" corresp="#wit-h"><pb n="396" ed="#liebermann"/>7 swa ic orf hæbbe, swa hit me se sealde, ðe hit to syllanne agte.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="397" ed="#liebermann"/>Beziehungsweise: só besitz ich Vieh, wie dér es mir veräussert hat, der es zu veräussern befugt war.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.3" corresp="#wit-h"><pb n="396" ed="#liebermann"/>⁊ swa ic orf hæbbe<ptr type="liebermannNote" n="6" target="#Swer_3-3.lnote.oe.6"/>, swa hit me se sealde, ðe hit to syllanne agte<ptr type="liebermannNote" n="7" target="#Swer_3-3.lnote.oe.7"/>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.3" corresp="#wit-b"><pb n="396" ed="#liebermann"/>⁊ swa ic orf hæbbe, swa hit me<ptr type="liebermannNote" n="5" target="#Swer_3-3.lnote.oe.5"/> sealde, ðe hit to syllanne ahte.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.3" corresp="#wit-q"><pb n="397" ed="#liebermann"/>Et sic pecus habeo, sicut mihi uendidit, cui iure pertinebat<ptr type="liebermannNote" n="18" target="#Swer_3-3.lnote.oe.18"/>.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="397" ed="#liebermann"/>Beziehungsweise<ptr type="liebermannNote" n="1" target="#Swer_3-3.lnote.de.1"/>: só besitz ich Vieh, wie dér es mir veräussert hat, der es zu veräussern befugt war.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Or: I possess the cattle just as he sold it to me who was entitled to sell it.</ab>
         <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-h">[Alternatively:] And so I [do] have cattle that were sold to me by [someone] who [legally] owned them.</ab>
         <note type="comparison" source="#liebermann" n="397"><ref target="clause:Becwaeth_2">Becwæð 2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">vgl. Becwæð 2</note>
         <note type="comparedBy" source="#wormald-mel" n="385"><ref target="clause:Becwaeth_2">Becwæð 2</ref></note>
         <note type="editorial">B lacks ‘se’; Liebermann supplies it. H reads ‘agte’ (so). Liebermann compares Becw 2.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Swer_3-3.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">396</biblScope></bibl><seg type="original" xml:lang="de">s. ic o. h. <hi rend="italic">nochmals, aber Striche darüber</hi></seg><seg type="translation" xml:lang="en" source="#claude">s. ic o. h. a second time, but with strokes above it</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Swer_3-3.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">396</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Swer_3-3.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">397</biblScope></bibl><seg type="original" xml:lang="de">-bit <hi rend="italic">MHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">-bit MHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Swer_3-3.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">396</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">ergänze</hi> se</seg><seg type="translation" xml:lang="en" source="#claude">supply se</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Swer_3-3.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">235</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Anefang 16f.; I Ew 1, 2³. Ähnlich klingt die sich auf den Veräusserer berufende Antwort des um Land Beklagten Becwæð 2²</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Anefang 16f.; I Ew 1, 2³. The answer of the defendant sued for land, appealing to the man who conveyed it to him, Becwæð 2², sounds similar</seg></note>
       </div>
     </body>
   </text>

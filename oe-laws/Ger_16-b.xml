@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -54,20 +55,23 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2148 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 455.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 455: “[16[b]] ælc weorc sylf wisað, hwæt him to gebyreð; nis ænig man, þæt atellan mæge ða tol ealle, ðe man habban sceal.” → “[16[b]] ælc weorc sylf wisað, hwæt him to gebyreð; nis ænig man, þæt atellan mæge ða tol ealle, ðe man habban sceal. (expanded letters in italics: æt)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="16[b]">
         <head><ref type="lawCode" target="law:Ger">Ger</ref> 16[b]</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16[b]" corresp="#wit-b"><pb n="455" ed="#liebermann"/>[16[b]] ælc weorc sylf wisað, hwæt him to gebyreð; nis ænig man, þæt atellan mæge ða tol ealle, ðe man habban sceal.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16[b]" corresp="#wit-b"><pb n="455" ed="#liebermann"/>[16[b]] ælc weorc sylf wisað, hwæt him to gebyreð; nis ænig man, þ<hi rend="italic">æt<ptr type="liebermannNote" n="a" target="#Ger_16-b.lnote.oe.a"/></hi> atellan mæge ða tol ealle, ðe man habban sceal.</ab>
         <ab type="editionText" xml:lang="ang" source="#gobbitt" n="29.1" corresp="#wit-b">Ælc weorc sylf wisað hwæt him to gebyreð . nis ænig man þæt atellan mæge ða tol ealle ðe man habban sceal .</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-b"><pb n="338" ed="#rabin-doml"/>Ælc weorc sylf wisað, hwæt him to gebyreð; nis ænig man, þæt atellan mæge ða tol ealle, ðe man habban sceal.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="455" ed="#liebermann"/>jede Arbeit zeigt [von] selbst, was für sie passt; niemand lebt, dass er herzählen könne die Werkzeuge alle, die man halten muss.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="455" ed="#liebermann"/>jede Arbeit zeigt [von] selbst, was für sie passt; niemand lebt, dass er herzählen<ptr type="liebermannNote" n="g" target="#Ger_16-b.lnote.de1.g"/> könne die Werkzeuge alle, die man halten muss.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">each task shows of itself what belongs to it; there is no one living who could recount all the tools that one must keep.</ab>
         <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">He must know himself what each type of work entails, [as] there is not any man who may recount all the tools a man must have.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-b"><pb n="339" ed="#rabin-doml"/>Each type of work demonstrates the tools most appropriate for it; there is no one who can list all the tools that a worker must have.</ab>
         <note type="editorial">‘þæt’ is a conjunction, with ellipsis of the pronoun after it (Pogatscher). Liebermann compares Gerefa 12 and 17 f.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ger_16-b.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">455</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Conjunction, danach Ellipse des Pron.; Pogatscher</hi> Anglia 23, 270. 275. 277</seg><seg type="translation" xml:lang="en" source="#claude">conjunction, followed by ellipsis of the pronoun; Pogatscher Anglia 23, 270. 275. 277</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Ger_16-b.lnote.de1.g" n="g" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">455</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">s. o.</hi> 12; <hi rend="italic">u.</hi> 17 <hi rend="italic">f.</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">see above</hi> 12; <hi rend="italic">below</hi> 17 <hi rend="italic">f.</hi></seg></note>
       </div>
     </body>
   </text>

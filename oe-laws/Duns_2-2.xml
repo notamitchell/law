@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +27,7 @@
           <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -51,18 +53,27 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1922 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 376.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 376: “stede” → “steðe”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2.2">
         <head><ref type="lawCode" target="law:Duns">Duns</ref> 2.2</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2.2" corresp="#wit-q"><pb n="377" ed="#liebermann"/>De utraque stede in aliam posse namiari, si non aliter rectum possit adquiri.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.2" corresp="#wit-b"><pb n="376" ed="#liebermann"/>Of ægðran stæðe on oðer man mot badian, bute man elles riht begytan mæge.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="377" ed="#liebermann"/>Von jedem Ufer zum andern darf man, wenn man sonst nicht Urtheilserfüllung erlangen kann, Pfand fortnehmen [von jedem Landsmann des Schuldigen].</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.2" corresp="#wit-b"><pb n="376" ed="#liebermann"/>Of ægðran stæðe<ptr type="liebermannNote" n="3" target="#Duns_2-2.lnote.oe.3"/> on oðer man mot badian, bute man<ptr type="liebermannNote" n="2" target="#Duns_2-2.lnote.oe.2"/> elles riht<ptr type="liebermannNote" n="4" target="#Duns_2-2.lnote.oe.4"/> begytan mæge.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2.2" corresp="#wit-q"><pb n="377" ed="#liebermann"/>De utraque<ptr type="liebermannNote" n="3" target="#Duns_2-2.lnote.oe.3-2"/> steðe in aliam posse<ptr type="liebermannNote" n="4" target="#Duns_2-2.lnote.oe.4-2"/> namiari, si non aliter rectum possit adquiri.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="377" ed="#liebermann"/>Von jedem Ufer zum andern darf man<ptr type="liebermannNote" n="1" target="#Duns_2-2.lnote.de.1"/>, wenn man sonst nicht Urtheilserfüllung erlangen kann, Pfand<ptr type="liebermannNote" n="2" target="#Duns_2-2.lnote.de.2"/> fortnehmen [von jedem<ptr type="liebermannNote" n="3" target="#Duns_2-2.lnote.de.3"/> Landsmann des Schuldigen].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">From each bank to the other one may take a distraint [from any fellow-countryman of the guilty party], if one cannot otherwise obtain justice.</ab>
         <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-b">Participants from either side [of the bank] can seize pledged monies, if the correct and legal outcome is not achieved.</ab>
         <note type="editorial">Liebermann would correct the Quadripartitus's ‘posse’ to ‘potest’.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_2-2.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">376</biblScope></bibl><seg type="original" xml:lang="de">staþe <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">staþe Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_2-2.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">376</biblScope></bibl><seg type="original" xml:lang="de">mon <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">mon Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_2-2.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">376</biblScope></bibl><seg type="original" xml:lang="de">-te <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-te Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_2-2.lnote.oe.3-2" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">377</biblScope></bibl><seg type="original" xml:lang="de">uterque stedere <hi rend="italic">R</hi></seg><seg type="translation" xml:lang="en" source="#claude">uterque stedere R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_2-2.lnote.oe.4-2" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">377</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">bessere</hi> potest. <hi rend="italic">Oder will Quadr.</hi> posse <hi rend="italic">irrig von</hi> pati <hi rend="italic">abhängen lassen?</hi></seg><seg type="translation" xml:lang="en" source="#claude">read potest. Or does Quadr. intend posse to depend, wrongly, on pati?</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Duns_2-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">218</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Pfändung (<hi rend="italic">s. d</hi>. 13) durch Kläger, ohne die vorherigen Termine, die Cnut fordern wird (<hi rend="italic">ebd</hi>. 14). Schwerlich ist neben unterlassener Urteilserfüllung, die in 2 behandelt war, hier auch die Einlassung in den Prozess, also allgemeiner Rechtsweigerung (<hi rend="italic">s. d. Gl</hi>), gemeint. Denn im letzteren Falle läge nicht dieselbe Bed. von <hi rend="italic">riht</hi> wie 2. 3, 1 vor.—Thorpe missversteht ‘A pledge must be given’</seg><seg type="translation" xml:lang="en" source="#claude">Distraint (<hi rend="italic">see</hi> that word 13) by the plaintiff, without the preliminary summonses that Cnut will require (<hi rend="italic">ibid</hi>. 14). It is hardly the case that, besides failure to fulfil a judgment, which was dealt with in 2, failure to enter an appearance in the suit, i.e. refusal of justice (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi>) in a more general sense, is also meant here. For in the latter case <hi rend="italic">riht</hi> would not have the same meaning as in 2. 3, 1.—Thorpe misunderstands: ‘A pledge must be given’</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Duns_2-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">218</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Q braucht das seit Cnut durchgedrungene, spätere Wort <hi rend="italic">nam</hi>, dem Nordischen entlehnt</seg><seg type="translation" xml:lang="en" source="#claude">Q uses the later word <hi rend="italic">nam</hi>, borrowed from Norse, which became established from Cnut onwards</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Duns_2-2.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">218</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Haftung 15f.</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Haftung 15f.</seg></note>
       </div>
     </body>
   </text>

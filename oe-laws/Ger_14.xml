@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +31,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">336</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -54,21 +56,26 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2145 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 455.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 455: “7” → “⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="14">
         <head><ref type="lawCode" target="law:Ger">Ger</ref> 14</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14" corresp="#wit-b"><pb n="455" ed="#liebermann"/>[14] He sceal fela tola to tune tilian 7 fela andlomena to husan habban:</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="14" corresp="#wit-b"><pb n="455" ed="#liebermann"/>[14] He sceal fela tola to tune tilian ⁊ fela andlomena to husan habban:</ab>
         <ab type="editionText" xml:lang="ang" source="#gobbitt" n="27.2" corresp="#wit-b">He sceal fela tola to tune tilian . 7 fela andlomena to husan habban .</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-b"><pb n="336" ed="#rabin-doml"/>He sceal fela tola to tune tilian and fela andlomena to husan habban:</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="455" ed="#liebermann"/>Er muss viele Werkzeuge für das Gut anschaffen und viele Geräthe für die Häuser halten:</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="455" ed="#liebermann"/>Er muss viele Werkzeuge<ptr type="liebermannNote" n="f" target="#Ger_14.lnote.de1.f"/> für das Gut<ptr type="liebermannNote" n="1" target="#Ger_14.lnote.de.1"/> anschaffen und viele Geräthe<ptr type="liebermannNote" n="g" target="#Ger_14.lnote.de1.g"/> für die Häuser<ptr type="liebermannNote" n="2" target="#Ger_14.lnote.de.2"/> halten:</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">He must provide many tools for the estate and keep many implements for the houses:</ab>
         <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">He must procure many tools for the estate and have many utensils for the house:</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-b"><pb n="337" ed="#rabin-doml"/>He must obtain many tools for the estate and have many utensils for the house:</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:Rect_4-3-to-4-3c">Rect 4.3, 4.3a, 4.3b, 4.3c</ref></note>
         <note type="editorial">K: ‘tilan’ corrected to ‘tilian’. Liebermann compares Rect 4.3b.</note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Ger_14.lnote.de1.f" n="f" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">455</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl.</hi> Rect. 4, 3b</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">cf.</hi> Rect. 4, 3b</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ger_14.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">254</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Wohl hier Domänengehöft, ohne Bauerdorf</seg><seg type="translation" xml:lang="en" source="#claude">Probably here the demesne farmstead, without a peasant village</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Ger_14.lnote.de1.g" n="g" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">455</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">s. o.</hi> 12; <hi rend="italic">u.</hi> 17 <hi rend="italic">f.</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">see above</hi> 12; <hi rend="italic">below</hi> 17 <hi rend="italic">f.</hi></seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ger_14.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">254</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Wohl Wirtschaftshäuser und Wohnungen der herrschaftlichen Unfreien, des Gesindes, der Domänenarbeiter, im Ggs. zu Bauerstellen</seg><seg type="translation" xml:lang="en" source="#claude">Probably the farm buildings and dwellings of the lord's unfree men, the household servants and the demesne labourers, in contrast to peasant holdings</seg></note>
       </div>
     </body>
   </text>

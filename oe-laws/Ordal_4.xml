@@ -10,6 +10,8 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Attenborough’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +29,7 @@
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -52,16 +55,17 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2027 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 386.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 386: “7; 7; 7; 7” → “⁊; ⁊; ⁊; ⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4">
         <head><ref type="lawCode" target="law:Ordal">Ordal</ref> 4</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-h"><pb n="386" ed="#liebermann"/>7 gan inn emfela manna of ægðre healfe 7 stande[n] on twa healfe þæs órdales andlang þære cyricean; 7 þa beon ealle fæstende 7 fram heora wífe gehealdene þære nyhte.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4" corresp="#wit-q"><pb n="386" ed="#liebermann"/>Et introeant totidem ex amba parte et consistant ex utraque parte iudicii ex (de) longo ecclesie; et sint omnes ieiuni et ab uxoribus suis se abstineant ipsa nocte.</ab>
-        <ab type="editionText" xml:lang="ang" source="#attenborough" n="1.4[a]" corresp="#wit-h">And gan inn emfela manna of ægðre healfe, and standen on twa healfe þæs órdales andlang þære cyricean, and þa beon ealle fæstende and fram heora wífe gehealdene þære nyhte;</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="386" ed="#liebermann"/>Und es mögen [dann] gleichviele Männer von jeder Partei hineingehen und entlang der Kirche auf beiden Seiten des Ordals stehen; und diese seien alle fastend und in der Nacht [vorher] enthaltsam gewesen von ihrem Weibe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-h"><pb n="386" ed="#liebermann"/>⁊ gan inn emfela manna of ægðre healfe ⁊ stande[n<ptr type="liebermannNote" n="7" target="#Ordal_4.lnote.oe.7"/>] on twa healfe þæs órdales andlang þære cyricean; ⁊ þa beon ealle fæstende ⁊ fram heora wífe gehealdene þære nyhte.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4" corresp="#wit-q"><pb n="386" ed="#liebermann"/>Et<ptr type="liebermannNote" n="23" target="#Ordal_4.lnote.oe.23"/> introeant totidem ex amba<ptr type="liebermannNote" n="24" target="#Ordal_4.lnote.oe.24"/> parte et<ptr type="liebermannNote" n="25" target="#Ordal_4.lnote.oe.25"/> consistant ex utraque<ptr type="liebermannNote" n="26" target="#Ordal_4.lnote.oe.26"/> parte iudicii<ptr type="liebermannNote" n="27" target="#Ordal_4.lnote.oe.27"/> ex<ptr type="liebermannNote" n="7" target="#Ordal_4.lnote.oe.7-2"/> (de) longo ecclesie; et sint omnes ieiuni et ab uxoribus suis se abstineant<ptr type="liebermannNote" n="28" target="#Ordal_4.lnote.oe.28"/> ipsa nocte.</ab>
+        <ab type="editionText" xml:lang="ang" source="#attenborough" n="1.4[a]" corresp="#wit-h">And gan inn emfela manna of ægðre healfe, and standen<ptr type="editorNote" n="1" target="#Ordal_4.attnote.fn.1"/> on twa healfe þæs órdales andlang þære cyricean, and þa beon ealle fæstende and fram heora wífe gehealdene þære nyhte;</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="386" ed="#liebermann"/>Und es mögen [dann] gleichviele Männer von jeder Partei hineingehen und entlang der Kirche auf beiden Seiten des Ordals stehen; und diese seien alle fastend<ptr type="liebermannNote" n="1" target="#Ordal_4.lnote.de.1"/> und in der Nacht [vorher] enthaltsam gewesen von ihrem Weibe.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let [then] an equal number of men from each party go in and stand along the church on both sides of the ordeal; and let them all be fasting and have abstained from their wives in the night [before].</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">And [then] an equal number of men from each party shall enter, and stand along the church on both sides of the ordeal, and all these shall be fasting and shall have abstained from their wives during the night;</ab>
         <note type="comparison" source="#liebermann" n="386"><ref target="clause:IIAs_23-2">II As 23.2</ref></note>
@@ -69,6 +73,16 @@
         <note type="comparisonIncomplete">Some of Liebermann’s notes here are cut off in the gutter of the scan used, and are still to be completed.</note>
         <note type="comparison" source="#wormald-mel" n="374"><label>shares phrases</label> <ref target="clause:IIAs_23-2">II As 23.2</ref> <quote>It also shares phrases with Æthelstan's ordeal laws [n. Ord. 1, 4, 6, II As 23:2]</quote></note>
         <note type="editorial">H reads ‘stande’; Liebermann prints ‘stande[n]’. Liebermann compares II As 23.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_4.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">386</biblScope></bibl><seg type="original" xml:lang="de">stande <hi rend="italic">H</hi></seg><seg type="translation" xml:lang="en" source="#claude">stande H</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_4.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">386</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt TMHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in TMHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_4.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">386</biblScope></bibl><seg type="original" xml:lang="de">alia <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">alia K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_4.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">386</biblScope></bibl><seg type="original" xml:lang="de">et—parte <hi rend="italic">überspringt KOr</hi></seg><seg type="translation" xml:lang="en" source="#claude">et—parte skipped by KOr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_4.lnote.oe.26" n="26" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">386</biblScope></bibl><seg type="original" xml:lang="de">amba <hi rend="italic">M</hi></seg><seg type="translation" xml:lang="en" source="#claude">amba M</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_4.lnote.oe.27" n="27" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">386</biblScope></bibl><seg type="original" xml:lang="de">iudicii—singuli ad aq. benedictam <hi rend="italic">überspringt MHkBr</hi></seg><seg type="translation" xml:lang="en" source="#claude">iudicii—singuli ad aq. benedictam skipped by MHkBr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_4.lnote.oe.7-2" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">386</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vor der Klammer Lond; eingeklammertes übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">what precedes the bracket Lond; what is bracketed the rest</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_4.lnote.oe.28" n="28" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">386</biblScope></bibl><seg type="original" xml:lang="de">conti. <hi rend="italic">T;</hi> continuerint <hi rend="italic">R</hi></seg><seg type="translation" xml:lang="en" source="#claude">conti. T; continuerint R</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ordal_4.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">227</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. Gl</hi> Ordal 7 E. 12. 14b; Fasten 9; eheliche Enthaltsamkeit 1. 3, zu der <hi rend="italic">vgl</hi>. Brotanek <hi rend="italic">Texte Altengl. Lit</hi>. 19. 106. 124</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See Gl</hi> Ordal 7 E. 12. 14b; Fasten 9; eheliche Enthaltsamkeit 1. 3, on which <hi rend="italic">cf</hi>. Brotanek <hi rend="italic">Texte Altengl. Lit</hi>. 19. 106. 124</seg></note>
+        <note type="editorNote" subtype="footnote" xml:id="Ordal_4.attnote.fn.1" n="1" source="#attenborough"><bibl><biblScope unit="page">172</biblScope></bibl><label>standen</label><seg type="original" xml:lang="en">em. Liebermann. <hi rend="italic">stande.</hi> H.</seg></note>
       </div>
     </body>
   </text>

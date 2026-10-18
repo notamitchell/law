@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">478</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -36,6 +39,7 @@
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-in"><abbr>In</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -56,26 +60,41 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2186 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 466.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 466.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS O added from Gesetze I, p. 466.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 466: “7; 7” → “⁊; ⁊”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 466.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 466: “Und wer ihnen schadet durch Wort oder durch (fehlt D) That, büsse es eifrig durch siebenfältige Busse, je nachdem die That ist, und je nachdem der Weihegrad [des Verletzten] ist, wenn er Gottes Gnade verdienen will.” → “Und wer ihnen schadet durch Wort oder durch (fehlt D) That, büsse es eifrig durch siebenfältige Busse, je nachdem die That ist, und je nachdem der Weihegrad [des Verletzten] ist, wenn er Gottes Gnade verdienen will. (expanded letters in italics: fehlt D)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1.2">
         <head><ref type="lawCode" target="law:Had">Had</ref> 1.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-h"><pb n="466" ed="#liebermann"/>7 se þe heom gederie mid worde oððe mid weorce, VIIfealdre bote gebete hit georne be þam þe seo dæd sy 7 be þam þe se had sy, gif he Godes mildse geearnian wylle.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.2" corresp="#wit-q"><pb n="467" ed="#liebermann"/>Et qui eis nocebit uerbo uel opere, septies emendet secundum quod factum sit et secundum ordinem, si Dei misericordiam habere uelit.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-d"><pb n="466" ed="#liebermann"/>And se þe heo<hi rend="italic">m</hi> gederige mid worde oððe weorce, seofonfealdre bote gebete hit georne be þa<hi rend="italic">m</hi> þe seo dæd sy. . ., gif he Godes miltse geearnian wille.</ab>
-        <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-h"><pb n="16" ed="#rabin-doml"/>And se þe heom gederie mid worde oððe mid weorce viifealdre bote gebete hit georne be þam þe seo dæd sy and be þam þe se had sy gif he Godes mildse geearnian wylle.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="467" ed="#liebermann"/>Und wer ihnen schadet durch Wort oder durch (fehlt D) That, büsse es eifrig durch siebenfältige Busse, je nachdem die That ist, und je nachdem der Weihegrad [des Verletzten] ist, wenn er Gottes Gnade verdienen will.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-d"><pb n="466" ed="#liebermann"/>And se þe heo<hi rend="italic">m</hi> gederige mid worde oððe weorce, seofonfealdre bote gebete hit georne be þa<hi rend="italic">m</hi> þe seo dæd sy . . .<ptr type="liebermannNote" n="a" target="#Had_1-2.lnote.oe.a"/>, gif he Godes miltse geearnian wille.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-o"><pb n="466" ed="#liebermann"/>⁊ se þe heo<hi rend="italic">m</hi> gederie mid worde oððe mid worce, seofonfealde<ptr type="liebermannNote" n="b" target="#Had_1-2.lnote.oe.b"/> bóte gebéte hit georne be þa<hi rend="italic">m</hi> þe séo dæd sy ⁊ be þa<hi rend="italic">m</hi> þe se hád sy, gif he Godes myltse geearnian wille<ptr type="liebermannNote" n="c" target="#Had_1-2.lnote.oe.c"/>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1.2" corresp="#wit-h"><pb n="466" ed="#liebermann"/>⁊ se þe heom gederie mid worde oððe mid weorce, VIIfealdre bote gebete hit georne be þam þe seo dæd sy ⁊ be þam þe se had sy, gif he Godes mildse geearnian wylle.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.2" corresp="#wit-q"><pb n="467" ed="#liebermann"/>Et qui<ptr type="liebermannNote" n="3" target="#Had_1-2.lnote.oe.3"/> eis<ptr type="liebermannNote" n="4" target="#Had_1-2.lnote.oe.4"/> nocebit uerbo uel opere, septies emendet secundum quod factum sit et secundum ordinem, si Dei misericordiam habere uelit.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1.2" corresp="#wit-in"><pb n="467" ed="#liebermann"/>Et propterea quisquis talibus nocere cupit aut fecit, oportet eum septupla emendatione illud emendare.</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-h"><pb n="16" ed="#rabin-doml"/>And se þe heom gederie mid worde oððe mid weorce VIIfealdre bote gebete hit georne be þam þe seo dæd sy and be þam þe se had sy gif he Godes mildse geearnian wylle.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="467" ed="#liebermann"/>Und wer ihnen schadet durch Wort<ptr type="liebermannNote" n="1" target="#Had_1-2.lnote.de.1"/> oder durch (<hi rend="italic">fehlt D</hi>) That, büsse es eifrig durch siebenfältige<ptr type="liebermannNote" n="2" target="#Had_1-2.lnote.de.2"/> Busse, je nachdem die That ist, und je nachdem der Weihegrad [des Verletzten] ist, wenn er Gottes Gnade verdienen will.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And whoever harms them by word or by (lacking in D) deed, let him atone for it earnestly with sevenfold compensation, according to what the deed is and according to the grade of orders [of the injured man], if he wishes to earn God's mercy.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d"><pb n="478" ed="#whitelock"/>And he who injures them by word or deed is to atone for it eagerly with seven-fold compensation, in proportion to the deed, if he wishes to deserve God's mercy.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d"><pb n="478" ed="#whitelock"/>And he who injures them by word or deed is to atone for it eagerly with seven-fold compensation, in proportion to the deed,<ptr type="editorNote" n="6" target="#Had_1-2.whinote.n.6"/> if he wishes to deserve God's mercy.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h"><pb n="17" ed="#rabin-doml"/>And he who injures them by word or deed must diligently remedy it with sevenfold compensation according to the deed and according to the order if he wishes to earn God’s favor.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h">And he who injures them by word or deed must diligently remedy it with sevenfold compensation according to the deed and according to the order if he wishes to earn God’s favor.</ab>
         <note type="comparison" source="#liebermann" n="467"><ref target="clause:Gethyn_8">Geþyncðo 8</ref>; Ps.-Egb. Exc. 62</note>
         <note type="comparisonPrinted" source="#liebermann">Geþyncðo 8 | Ps.-Egb. Exc. 62</note>
-        <note type="editorial">D lacks ‘⁊ be þam þe se had sy’ (Liebermann supplies it). Liebermann compares Geþyncðo 8 and Ps.-Egbert Excerptiones 62.</note>
-        <note type="translator" source="#whitelock">C.C.C.C., MS. 190, and Textus Roffensis add: “and in proportion to the orders”.</note>
+        <note type="editorial">D lacks ‘⁊ be þam þe se had sy’ (Liebermann supplies it). Liebermann compares Geþyncðo 8 and Ps.-Egbert Excerptiones 62.; AU: corrected against Rabin p. 16 / 17, October 2026 (was “viifealdre”, now “VIIfealdre”); AV: added from Rabin p. 16 / 17, October 2026 (Rabin’s translation)</note>
         <note type="textual" source="#rabin-doml">oððe mid weorce: oððe weorce D</note>
         <note type="textual" source="#rabin-doml">and be . . . sy: omitted D</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_1-2.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">466</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">ergänze</hi> ⁊ be þa<hi rend="italic">m</hi> þe se had sy</seg><seg type="translation" xml:lang="en" source="#claude">supply ⁊ be þa<hi rend="italic">m</hi> þe se had sy</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_1-2.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">467</biblScope></bibl><seg type="original" xml:lang="de">quis <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">quis Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_1-2.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">467</biblScope></bibl><seg type="original" xml:lang="de">eos <hi rend="italic">R</hi></seg><seg type="translation" xml:lang="en" source="#claude">eos R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_1-2.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">466</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl. I Cn.</hi> 5, 4 <hi rend="italic">Hs. A</hi></seg><seg type="translation" xml:lang="en" source="#claude">cf. I Cn. 5, 4 MS A</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_1-2.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">466</biblScope></bibl><seg type="original" xml:lang="de">i <hi rend="italic">später geänd.</hi> y</seg><seg type="translation" xml:lang="en" source="#claude">i later altered to y</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Had_1-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">263</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl</hi>.: <hi rend="italic">scynde mid worde oððe weorce</hi> Grið 27. Am nächsten steht EGu 2</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf.</hi>: <hi rend="italic">scynde mid worde oððe weorce</hi> Grið 27. Closest is EGu 2</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Had_1-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">264</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">‘<hi rend="italic">Si quis alicui ex ecclesiastico ordine nocuerit, secundum ordinis quantitatem septempliciter emendet et secundum ordinis dignitatem peniteat</hi>; Ps.-Egberti <hi rend="italic">Exc</hi>. 62</seg><seg type="translation" xml:lang="en" source="#claude">‘<hi rend="italic">Si quis alicui ex ecclesiastico ordine nocuerit, secundum ordinis quantitatem septempliciter emendet et secundum ordinis dignitatem peniteat</hi>; Ps.-Egberti <hi rend="italic">Exc</hi>. 62</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="Had_1-2.whinote.n.6" n="6" source="#whitelock"><bibl><biblScope unit="page">478</biblScope></bibl><seg type="original" xml:lang="en">C.C.C.C., MS. 190, and <hi rend="italic">Textus Roffensis</hi> add: “and in proportion to the orders”.</seg></note>
       </div>
     </body>
   </text>

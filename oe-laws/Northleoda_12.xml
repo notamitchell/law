@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +28,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">14</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">477</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -52,21 +54,31 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2174 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 460.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 460.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 460: “7” → “⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="12">
         <head><ref type="lawCode" target="law:Northleoda">Norðleoda</ref> 12</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12" corresp="#wit-h"><pb n="460" ed="#liebermann"/>7 gif hig þ<hi rend="italic">æt</hi> nabbað, ne to þa<hi rend="italic">m</hi> geþeon ne magan, gylde man cyrlisce.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="12" corresp="#wit-q"><pb n="461" ed="#liebermann"/>Et si non habeant hoc nec ad id conscendant, componatur de eis sicut de cyrlisco.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12" corresp="#wit-d"><pb n="460" ed="#liebermann"/>And gif hi þ<hi rend="italic">æt</hi> nabbað, ne to ðam geþeon ne magon, gilde man cirlisce.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12" corresp="#wit-d"><pb n="460" ed="#liebermann"/>And gif hi þ<hi rend="italic">æt</hi> nabbað, ne to ðam geþeon ne magon, gilde man cirlisce<ptr type="liebermannNote" n="2" target="#Northleoda_12.lnote.oe.2-2"/>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="12" corresp="#wit-h"><pb n="460" ed="#liebermann"/>⁊ gif hig þ<hi rend="italic">æt</hi> nabbað, ne to þa<hi rend="italic">m</hi> geþeon ne magan, gylde man cyrlisce.<ptr type="liebermannNote" n="2" target="#Northleoda_12.lnote.oe.2"/></ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="12" corresp="#wit-q"><ptr type="liebermannNote" n="30" target="#Northleoda_12.lnote.oe.30"/><pb n="461" ed="#liebermann"/>Et si non habeant<ptr type="liebermannNote" n="31" target="#Northleoda_12.lnote.oe.31"/> hoc nec ad id conscendant<ptr type="liebermannNote" n="32" target="#Northleoda_12.lnote.oe.32"/>, componatur de eis sicut de cyrlisco<ptr type="liebermannNote" n="33" target="#Northleoda_12.lnote.oe.33"/>.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-h"><pb n="14" ed="#rabin-doml"/>And gif hig þæt nabbað, ne to þam geþeon ne magan, gylde man cyrlisce.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="461" ed="#liebermann"/>Und wenn sie jenes [Land] nicht besitzen, noch dazu emporkommen können, entgelte man [sie nur als] gemeinfrei.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><ptr type="liebermannNote" n="1" target="#Northleoda_12.lnote.de.1"/><pb n="461" ed="#liebermann"/>Und wenn sie jenes [Land] nicht besitzen, noch dazu emporkommen können, entgelte man [sie nur als] gemeinfrei.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if they do not have that [land] and cannot rise to it, let them be paid for [only] as ceorls.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d"><pb n="477" ed="#whitelock"/>And if they have it not, and cannot prosper sufficiently, one is to pay at the <hi rend="italic">ceorl's</hi> rate.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h"><pb n="15" ed="#rabin-doml"/>And if they do not have it and cannot acquire enough, their compensation will be that of a commoner.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h">And if they do not have it and cannot acquire enough, their compensation will be that of a commoner.</ab>
-        <note type="editorial">Ld lacks this clause (perhaps as a mere repetition of 10), as does the first edition of the Quadripartitus. In H, Wif follows; in D, ‘Be Mircna laga’.</note>
+        <note type="editorial">Ld lacks this clause (perhaps as a mere repetition of 10), as does the first edition of the Quadripartitus. In H, Wif follows; in D, ‘Be Mircna laga’.; AV: added from Rabin p. 14 / 15, October 2026 (Rabin’s translation)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Northleoda_12.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">460</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">folgt</hi> Wif, <hi rend="italic">oben S.</hi> 442</seg><seg type="translation" xml:lang="en" source="#claude">followed by Wif, above p. 442</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Northleoda_12.lnote.oe.30" n="30" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">461</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">c.</hi> 12 <hi rend="italic">fehlt K Co</hi> [<hi rend="italic">wie Ld</hi>]</seg><seg type="translation" xml:lang="en" source="#claude">c. 12 lacking in K Co [as Ld]</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Northleoda_12.lnote.oe.31" n="31" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">461</biblScope></bibl><seg type="original" xml:lang="de">-at <hi rend="italic">TMHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">-at TMHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Northleoda_12.lnote.oe.32" n="32" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">461</biblScope></bibl><seg type="original" xml:lang="de">-nc. <hi rend="italic">R;</hi> -dat <hi rend="italic">MHk;</hi> -derat <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">-nc. R; -dat MHk; -derat T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Northleoda_12.lnote.oe.33" n="33" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">461</biblScope></bibl><seg type="original" xml:lang="de">ceorl. <hi rend="italic">RT; folgt</hi> Mirce [<hi rend="italic">nur R schaltet</hi> Geþyncðo <hi rend="italic">ein</hi>].</seg><seg type="translation" xml:lang="en" source="#claude">ceorl. RT; followed by Mirce [only R inserts Geþyncðo].</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Northleoda_12.lnote.oe.2-2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">460</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">folgt</hi> Be Mircna laga <hi rend="italic">D</hi></seg><seg type="translation" xml:lang="en" source="#claude">followed by Be Mircna laga D</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northleoda_12.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">261</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Sinn = 10</seg><seg type="translation" xml:lang="en" source="#claude">Sense = 10</seg></note>
       </div>
     </body>
   </text>

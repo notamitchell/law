@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -31,6 +32,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -58,21 +60,36 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2193 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 468.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 468.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS O added from Gesetze I, p. 468.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 468: “7” → “⁊”.</change>
+      <change when="2026-10" type="checked">Liebermann’s Latin text corrected against Gesetze I, p. 468: “libre” → “librę”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7">
         <head><ref type="lawCode" target="law:Had">Had</ref> 7</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-h"><pb n="468" ed="#liebermann"/>7 to hadbote, gif fullbryce wurðe, toeacan þam rihtwere, æt þam syxtan stæpe VI pund to bote, mid godcundan scrifte.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="7" corresp="#wit-q"><pb n="469" ed="#liebermann"/>In sexto gradu, si ordinis infractio fiat (infracto gradu), supra rectam weram, emendet sex libris (VI libre emendentur) cum (digna) penitentia.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-d"><pb n="468" ed="#liebermann"/>And to hadbote, gif fulbrice wurðe, toeacan þa<hi rend="italic">m</hi> rihtwere, æt þa<hi rend="italic">m</hi> VI. stæpe VI pund to bote, mid godcundan scrifte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-o"><pb n="468" ed="#liebermann"/>⁊ to hadbote, gif fullbrice wurðe, toeacan þa<hi rend="italic">m</hi> rihtwere, æt þa<hi rend="italic">m</hi> sixtan stæpe VI pund to bóte, mid godcundre scrifte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-h"><pb n="468" ed="#liebermann"/>⁊ to hadbote, gif fullbryce wurðe, toeacan þam rihtwere, æt þam syxtan stæpe VI pund to bote, mid godcundan scrifte.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="7" corresp="#wit-q"><pb n="469" ed="#liebermann"/>In<ptr type="liebermannNote" n="1" target="#Had_7.lnote.oe.1"/> sexto gradu<ptr type="liebermannNote" n="2" target="#Had_7.lnote.oe.2"/>, si<ptr type="liebermannNote" n="3" target="#Had_7.lnote.oe.3"/> ordinis infractio fiat (infracto<ptr type="liebermannNote" n="4" target="#Had_7.lnote.oe.4"/> gradu), supra<ptr type="liebermannNote" n="5" target="#Had_7.lnote.oe.5"/> rectam weram, emendet<ptr type="liebermannNote" n="2" target="#Had_7.lnote.oe.2"/> sex libris (VI librę<ptr type="liebermannNote" n="6" target="#Had_7.lnote.oe.6"/> emendentur<ptr type="liebermannNote" n="7" target="#Had_7.lnote.oe.7"/>) cum (digna<ptr type="liebermannNote" n="8" target="#Had_7.lnote.oe.8"/>) penitentia.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-h"><pb n="18" ed="#rabin-doml"/>And to hadbote, gif fullbryce wurðe, toeacan þam rihtwere æt þam syxtan stæpe VI pund to bote, mid godcundan scrifte.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="469" ed="#liebermann"/>Und wenn tödtliche Verletzung eintritt: ausser dem gesetzlichen Wergeld beim sechsten Ordo als Klerusbusse 6 Pfund zur Busse, neben geistlicher Poenitenz.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="469" ed="#liebermann"/>Und wenn tödtliche Verletzung eintritt: ausser dem gesetzlichen Wergeld beim sechsten<ptr type="liebermannNote" n="1" target="#Had_7.lnote.de.1"/> Ordo als Klerusbusse 6 Pfund zur Busse, neben geistlicher Poenitenz.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if fatal injury occurs: besides the lawful wergild, for the sixth grade 6 pounds as compensation for orders, with spiritual penance.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h"><pb n="19" ed="#rabin-doml"/>And as compensation for one in orders if a full breach of the peace occurs, the perpetrator must make amends for the sixth rank by paying six pounds as a penalty in addition to the standard wergild and by doing spiritual penance.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h">And as compensation for one in orders if a full breach of the peace occurs, the perpetrator must make amends for the sixth rank by paying six pounds as a penalty in addition to the standard wergild and by doing spiritual penance.</ab>
         <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-d">And in compensation for [an offence against a man in] orders, if a full breach occurs, one must pay for the sixth degree with six pounds in addition to the legal wergild, and intercede zealously with ecclesiastical penance.</ab>
-        <note type="editorial">U: not in Whitelock’s English Historical Documents, which prints only Had 1–2 and 9–11 (with “…” for the rest); the source of this translation is not recorded.</note>
+        <note type="editorial">U: not in Whitelock’s English Historical Documents, which prints only Had 1–2 and 9–11 (with “…” for the rest); the source of this translation is not recorded.; AV: added from Rabin p. 18 / 19, October 2026 (Rabin’s translation)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_7.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">469</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">aus R</hi></seg><seg type="translation" xml:lang="en" source="#claude">from R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_7.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">469</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vor der Klammer Lond; eingeklammertes übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">what precedes the bracket Lond; what is bracketed the rest</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_7.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">469</biblScope></bibl><seg type="original" xml:lang="de">si — sept. gradu <hi rend="italic">überspr. Or</hi></seg><seg type="translation" xml:lang="en" source="#claude">Or skips si — sept. gradu</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_7.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">469</biblScope></bibl><seg type="original" xml:lang="de">in facto <hi rend="italic">T; fehlt R</hi></seg><seg type="translation" xml:lang="en" source="#claude">in facto T; absent in R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_7.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">469</biblScope></bibl><seg type="original" xml:lang="de">super <hi rend="italic">TMHk;</hi> s. r. w. <hi rend="italic">fehlt R</hi></seg><seg type="translation" xml:lang="en" source="#claude">super TMHk; s. r. w. absent in R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_7.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">469</biblScope></bibl><seg type="original" xml:lang="de">libris emendetur <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">libris emendetur T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_7.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">469</biblScope></bibl><seg type="original" xml:lang="de">reddantur <hi rend="italic">R</hi></seg><seg type="translation" xml:lang="en" source="#claude">reddantur R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_7.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">469</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">nicht in Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">not in Lond</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Had_7.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">264</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Für Erschlagung des Diakon fordert Northu 24 nur 12 Ör als Altarbusse (<hi rend="italic">s. d. Gl</hi> 4), also ¹/₂, nicht wie hier ⁶/₇, der Summe für den erschlagenen Priester</seg><seg type="translation" xml:lang="en" source="#claude">For slaying a deacon Northu 24 demands only 12 ör as altar-compensation (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 4), i.e. ¹/₂, not, as here, ⁶/₇, of the sum for a slain priest</seg></note>
       </div>
     </body>
   </text>

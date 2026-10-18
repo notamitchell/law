@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +27,7 @@
           <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -50,20 +52,28 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2061 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 396.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 396.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 396: “7” → “⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3.2">
         <head><ref type="lawCode" target="law:Swer">Swer</ref> 3.2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.2" corresp="#wit-b"><pb n="396" ed="#liebermann"/>7 swa ic hit tyme, swa hit me se sealde, ðe ic hit nu on hand sette.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.2" corresp="#wit-q"><pb n="397" ed="#liebermann"/>Et sic aduoco, sicut hoc mihi uendidit, cui nunc in manu mitto.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.2" corresp="#wit-h"><pb n="396" ed="#liebermann"/>7 swa ic hit tyme, swa hit me se sealde, ðe ic hit nu on hand sette.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="397" ed="#liebermann"/>Beziehungsweise: só schieb ich es zur Gewähr, wie es mir dér veräussert hat, dem ich es jetzt in die Hand lege.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.2" corresp="#wit-h"><pb n="396" ed="#liebermann"/>⁊ swa ic hit<ptr type="liebermannNote" n="5" target="#Swer_3-2.lnote.oe.5"/> tyme, swa hit me se sealde, ðe ic hit nu on hand sette.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.2" corresp="#wit-b"><pb n="396" ed="#liebermann"/>⁊ swa ic hit tyme, swa hit me se sealde, ðe ic hit nu on hand sette.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.2" corresp="#wit-q"><pb n="397" ed="#liebermann"/>Et sic aduoco, sicut hoc mihi uendidit, cui nunc<ptr type="liebermannNote" n="16" target="#Swer_3-2.lnote.oe.16"/> in manu<ptr type="liebermannNote" n="17" target="#Swer_3-2.lnote.oe.17"/> mitto.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="397" ed="#liebermann"/>Beziehungsweise<ptr type="liebermannNote" n="1" target="#Swer_3-2.lnote.de.1"/>: só<ptr type="liebermannNote" n="2" target="#Swer_3-2.lnote.de.2"/> schieb<ptr type="liebermannNote" n="3" target="#Swer_3-2.lnote.de.3"/> ich es zur Gewähr, wie es mir dér veräussert hat, dem ich es jetzt in die Hand lege.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Or: I vouch it to warranty just as he sold it to me into whose hand I now place it.</ab>
         <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-h">[Alternatively:] And so I give a [written] guarantee that they [the cattle] were sold to me by the person in whose hands I now place it.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:Becwaeth_2">Becwæð 2</ref></note>
         <note type="editorial">Liebermann compares Duns 8.2.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Swer_3-2.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">396</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">übergeschrieben</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Swer_3-2.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">397</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Swer_3-2.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">397</biblScope></bibl><seg type="original" xml:lang="de">manum <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">manum T</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Swer_3-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">235</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. Wb: and</hi> 2.—Die Übersetzung in Stubbs (<hi rend="italic">Lect</hi>. 173) leidet an drei Fehlern</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See Wb: and</hi> 2.—The translation in Stubbs (<hi rend="italic">Lect</hi>. 173) suffers from three errors</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Swer_3-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">235</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Anefang 12. 18</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Anefang 12. 18</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Swer_3-2.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">235</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Im Ausdruck zunächst zu Duns 8, 2</seg><seg type="translation" xml:lang="en" source="#claude">In wording closest to Duns 8, 2</seg></note>
       </div>
     </body>
   </text>

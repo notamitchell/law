@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">484</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -60,7 +62,7 @@
         <head><ref type="lawCode" target="law:Northu">Northu</ref> 65</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="65" corresp="#wit-d"><pb n="384" ed="#liebermann"/>Ac healde gehwa mid rihte his æwe þa hwile þe heo libbe; buton þ<hi rend="italic">æt</hi> gewurðe, þ<hi rend="italic">æt</hi> hi buta geceosan be biscopes geþeahte, þ<hi rend="italic">æt</hi> hi getwæman ⁊ þanon forð willan clænnesse healdan.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d"><pb n="314" ed="#rabin-doml"/>Ac healde gehwa mid rihte his æwe þa hwile þe heo libbe; buton þæt gewurðe, þæt hi buta geceosan be biscopes geþeahte, þæt hi getwæman and þanon forð willan clænnesse healdan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="384" ed="#liebermann"/>Vielmehr behalte jeder rechtmässig seine Ehefrau so lange sie lebt; ausser wenn es geschieht, dass sie beide unter des Bischofs Beistimmung sich entschliessen, dass sie sich scheiden und hinfort Keuschheit halten wollen.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="384" ed="#liebermann"/>Vielmehr behalte jeder rechtmässig seine Ehefrau so<ptr type="liebermannNote" n="1" target="#Northu_65.lnote.de.1"/> lange sie lebt; ausser wenn es geschieht, dass sie beide<ptr type="liebermannNote" n="2" target="#Northu_65.lnote.de.2"/> unter des Bischofs Beistimmung sich entschliessen, dass sie sich scheiden und hinfort Keuschheit<ptr type="liebermannNote" n="3" target="#Northu_65.lnote.de.3"/> halten wollen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Rather let everyone lawfully keep his wife as long as she lives; unless it happens that they both choose, with the bishop's counsel, to separate and henceforth keep chastity.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d"><pb n="484" ed="#whitelock"/>But each is to keep rightly his legal wife as long as she lives; unless it comes about that they both choose to separate with the bishop’s advice and wish thenceforth to preserve chastity.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d"><pb n="315" ed="#rabin-doml"/>But everyone is to keep his lawful wife as is right while she lives, unless it so happens with the bishop’s guidance that they both decide to separate and remain celibate henceforth.</ab>
@@ -68,6 +70,9 @@
         <note type="comparisonPrinted" source="#liebermann">Vgl. I C[?]</note>
         <note type="comparisonIncomplete">Some of Liebermann’s notes here are cut off in the gutter of the scan used, and are still to be completed.</note>
         <note type="editorial">Liebermann compares I Cn.; U: checked against Whitelock, EHD I (1979), and corrected (before: ‘But each is to keep rightly his legal wife as long as she lives; unless it comes about that they both choose to separate with the bishop's advice and wish henceforth to preserve chastity.’).</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_65.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">226</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Diese Worte nimmt Cn aus VI Atr 12, 2</seg><seg type="translation" xml:lang="en" source="#claude">Cn takes these words from VI Atr 12, 2</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_65.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">226</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Ehescheidung 4; mit Beistimmung beider erlaubt sie Egb. <hi rend="italic">Dial</hi>. 13; Ps-Egb. <hi rend="italic">Conf</hi>. 25; <hi rend="italic">Poen</hi>. IV 55; Ps-Theod. <hi rend="italic">Poen</hi>. XIX 20</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Ehescheidung 4; with the consent of both it is permitted by Egb. <hi rend="italic">Dial</hi>. 13; Ps-Egb. <hi rend="italic">Conf</hi>. 25; <hi rend="italic">Poen</hi>. IV 55; Ps-Theod. <hi rend="italic">Poen</hi>. XIX 20</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_65.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">226</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Ehe 5—c</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Ehe 5—c</seg></note>
       </div>
     </body>
   </text>

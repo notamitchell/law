@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">482</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -52,21 +54,23 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1984 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 382.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 382: “Gif preost misendebirde ciriclice gearþenunga, dæges oððe nihtes, gebete þæt.” → “Gif preost misendebirde ciriclice gearþenunga, dæges oððe nihtes, gebete þæt. (expanded letters in italics: eost, e, æt)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="38">
         <head><ref type="lawCode" target="law:Northu">Northu</ref> 38</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="38" corresp="#wit-d"><pb n="382" ed="#liebermann"/>Gif pr<hi rend="italic">eost</hi> misendebirde ciriclice gearþenunga, dæges oððe nihtes, gebete þ<hi rend="italic">æt</hi>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="38" corresp="#wit-d"><pb n="382" ed="#liebermann"/>Gif pr<hi rend="italic">eost</hi> misendebirde ciriclice gearþenunga, dæges oððe nihtes, g<hi rend="italic">e</hi>bete þ<hi rend="italic">æt</hi>.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d"><pb n="308" ed="#rabin-doml"/>Gif preost misendebirde ciriclice gearþenunga, dæges oððe nihtes, gebete þæt.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="382" ed="#liebermann"/>Wenn ein Priester kirchliche Jahr[estag-Gottes]dienste bei Tage oder Nacht falsch abhält, büsse er das.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="382" ed="#liebermann"/>Wenn ein Priester kirchliche Jahr[estag<ptr type="liebermannNote" n="1" target="#Northu_38.lnote.de.1"/>-Gottes]dienste bei Tage oder Nacht falsch abhält, büsse er das.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a priest wrongly orders the church's annual services [for feast-days], by day or by night, let him atone for it.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d"><pb n="482" ed="#whitelock"/>If a priest performs in a wrong order the annual services of the church, by day or night, he is to compensate for it.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d"><pb n="309" ed="#rabin-doml"/>If a priest performs the annual services of the church in the wrong sequence, by day or night, he is to atone for that.</ab>
         <note type="comparison" source="#liebermann" n="382">Can. Eg. 50</note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 50</note>
         <note type="editorial">Liebermann compares Canons of Edgar 50.; U: checked against Whitelock, EHD I (1979), and corrected (before: ‘If a priest performs in the wrong order the annual services of the church, by day or night, he is to compensate for it.’).</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_38.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">224</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Liturgie bestimmten Festes; Toller 1046 IVa; <hi rend="italic">vgl. geargerihta</hi> 43 [dagegen ‘annual services’ Thorpe, Toller 368b; ‘Jahresdienst’ Schmid]; <hi rend="italic">yerdai, yearday</hi>: ‘anniversarius’ seit Mittelenglischem</seg><seg type="translation" xml:lang="en" source="#claude">Liturgy of a particular feast; Toller 1046 IVa; <hi rend="italic">cf. geargerihta</hi> 43 [on the other hand ‘annual services’ Thorpe, Toller 368b; ‘Jahresdienst’ Schmid]; <hi rend="italic">yerdai, yearday</hi>: ‘anniversarius’ from Middle English onwards</seg></note>
       </div>
     </body>
   </text>

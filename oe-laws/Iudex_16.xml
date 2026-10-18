@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +27,7 @@
           <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
@@ -50,6 +52,7 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2267 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 476.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 476: “Þa unrihtwisan deman hí dweliað on ðare soðfæstnesse cwyde, þonne hí behealdaþ þa geðincþo ðas mannes; ⁊ oft heo scaðað þam unrihtwisum, ðonne hí scyldað þam arleasum.” → “Þa unrihtwisan deman hí dweliað on ðare soðfæstnesse cwyde, þonne hí behealdaþ þa geðincþo ðas mannes; ⁊ oft heo scaðað þam unrihtwisum, ðonne hí scyldað þam arleasum. (expanded letters in italics: m)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -57,14 +60,16 @@
       <div type="clause" n="16">
         <head><ref type="lawCode" target="law:Iudex">Iudex</ref> 16</head>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="16"><pb n="476" ed="#liebermann"/>[Not in Q]</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16" corresp="#wit-g-a"><pb n="476" ed="#liebermann"/>Þa unrihtwisan deman hí dweliað on ðare soðfæstnesse cwyde, þonne hí behealdaþ þa geðincþo ðas mannes; ⁊ oft heo scaðað þam unrihtwisum, ðonne hí scyldað þam arleasum.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="476" ed="#liebermann"/>Die ungerechten Richter, sie gehen fehl am Verkünden der Wahrheit, indem sie die Rangstellung des [processirenden] Mannes beachten: und sie schaden oft den Gerechten, indem sie die Unredlichen schirmen.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="16" corresp="#wit-g-a"><pb n="476" ed="#liebermann"/>Þa unrihtwisan deman hí dweliað on ðare soðfæstnesse cwyde, þonne hí behealdaþ þa geðincþo ðas mannes; ⁊ oft heo scaðað þam unrihtwisu<hi rend="italic">m<ptr type="liebermannNote" n="b" target="#Iudex_16.lnote.oe.b"/></hi>, ðonne hí scyldað þam arleasum.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="476" ed="#liebermann"/>Die ungerechten Richter, sie gehen fehl am Verkünden der Wahrheit<ptr type="liebermannNote" n="c" target="#Iudex_16.lnote.de.c"/>, indem sie die Rangstellung des [processirenden] Mannes beachten: und sie schaden oft den Gerechten, indem sie die Unredlichen schirmen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Unjust judges go astray in declaring the truth when they consider the rank of the [litigating] man: and they often harm the righteous when they shield the dishonest.</ab>
         <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-g-a">Unjust judges are lead into error in their true judgements when they focus upon a man’s rank; and often protect [?] the unrighteous when they defend [?] the wicked.</ab>
         <note type="comparison" source="#liebermann" n="476">Isidor, Sent. III 53.2; <ref target="clause:Iudex_3">Iudex 3</ref>; <ref target="clause:Iudex_15">Iudex 15</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Isidor, Sent. III 53, 2 | (vgl. 3. 15)</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:Iudex_15">Iudex 15</ref></note>
         <note type="editorial">Not in the Quadripartitus (so K reads ‘[Not in Q]’). Liebermann would correct G's ‘unrihtwisum’ to ‘rihtwisum’. Isidore, Sent. III 53.2.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Iudex_16.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">476</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">bessere</hi> rihtwisum</seg><seg type="translation" xml:lang="en" source="#claude">read rihtwisum</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Iudex_16.lnote.de.c" n="c" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">269</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Zur letzten Z.: <hi rend="italic">rihtwis</hi> im Ggs. zu <hi rend="italic">arleas</hi> bietet auch die Agsä. Genesis-Übs. 18, 23</seg><seg type="translation" xml:lang="en" source="#claude">On the last line: <hi rend="italic">rihtwis</hi> in contrast to <hi rend="italic">arleas</hi> is also found in the Anglo-Saxon translation of Genesis 18, 23</seg></note>
       </div>
     </body>
   </text>

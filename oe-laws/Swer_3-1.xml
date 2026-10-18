@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +27,7 @@
           <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -51,20 +53,27 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2060 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 396.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 396.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3.1">
         <head><ref type="lawCode" target="law:Swer">Swer</ref> 3.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.1" corresp="#wit-b"><pb n="396" ed="#liebermann"/>Ac swa ic orf hæbbe, swa ic hit mid rihte begeat.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.1" corresp="#wit-q"><pb n="397" ed="#liebermann"/>Sed sic pecus habeo, sicut recte adquisiui.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.1" corresp="#wit-h"><pb n="396" ed="#liebermann"/>Ac swa ic orf hæbbe, swa ic hit mid rihte begeat.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="397" ed="#liebermann"/>Sondern só hab ich Vieh, wie ich es rechtlich erworben habe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.1" corresp="#wit-b"><pb n="396" ed="#liebermann"/>Ac swa ic orf hæbbe, swa ic hit mid rihte begeat.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.1" corresp="#wit-q"><pb n="397" ed="#liebermann"/>Sed sic<ptr type="liebermannNote" n="13" target="#Swer_3-1.lnote.oe.13"/> pecus<ptr type="liebermannNote" n="14" target="#Swer_3-1.lnote.oe.14"/> habeo<ptr type="liebermannNote" n="15" target="#Swer_3-1.lnote.oe.15"/>, sicut recte adquisiui.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="397" ed="#liebermann"/>Sondern<ptr type="liebermannNote" n="1" target="#Swer_3-1.lnote.de.1"/> só hab ich Vieh, wie ich es rechtlich<ptr type="liebermannNote" n="2" target="#Swer_3-1.lnote.de.2"/> erworben habe<ptr type="liebermannNote" n="3" target="#Swer_3-1.lnote.de.3"/>.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">But I have the cattle just as I lawfully acquired it.</ab>
         <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-h">However, I [do] have cattle that I acquired legally.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:Duns_8-2">Duns 8.2</ref></note>
         <note type="comparedBy" source="#wormald-mel" n="385"><ref target="clause:Becwaeth_1">Becwæð 1</ref></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Swer_3-1.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">397</biblScope></bibl><seg type="original" xml:lang="de">si <hi rend="italic">THk</hi></seg><seg type="translation" xml:lang="en" source="#claude">si THk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Swer_3-1.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">397</biblScope></bibl><seg type="original" xml:lang="de">hoc <hi rend="italic">fügt zu R</hi></seg><seg type="translation" xml:lang="en" source="#claude">hoc added by R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Swer_3-1.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">397</biblScope></bibl><seg type="original" xml:lang="de">ab eo <hi rend="italic">T</hi></seg><seg type="translation" xml:lang="en" source="#claude">ab eo T</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Swer_3-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">235</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Stilistisch scheint diese Z. Fortsetzung zu 3, harmoniert aber nicht (sondern alterniert) mit 3, 2; 3; 4</seg><seg type="translation" xml:lang="en" source="#claude">Stylistically this line seems to be a continuation of 3, but it does not harmonize with 3, 2; 3; 4 (rather, it alternates with them)</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Swer_3-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">235</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Anefang 16; die Worte <hi rend="italic">mid r. b</hi>. auch II Cn 23, 1. Becwæð 1</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Anefang 16; the words <hi rend="italic">mid r. b</hi>. also II Cn 23, 1. Becwæð 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Swer_3-1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">235</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Im Anefang (<hi rend="italic">s. d. Gl</hi> 12) folgt hier zeitlich der Eid der Kaufzeugen</seg><seg type="translation" xml:lang="en" source="#claude">In Anefang (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 12) the oath of the witnesses to the purchase follows here in time</seg></note>
       </div>
     </body>
   </text>

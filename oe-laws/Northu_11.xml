@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">481</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -60,13 +62,15 @@
         <head><ref type="lawCode" target="law:Northu">Northu</ref> 11</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="11" corresp="#wit-d"><pb n="381" ed="#liebermann"/>Gif pr<hi rend="italic">eost</hi> folce miswissige æt freolse oððe fæstene, bete wið God ⁊ gilde XII ór.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d"><pb n="304" ed="#rabin-doml"/>Gif preost folce miswissige æt freolse oððe fæstene, bete wið God and gilde XII or.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="381" ed="#liebermann"/>Wenn ein Pfarrer die Gemeinde missleitet betreffend Feiertag oder Fasten, büsse er geistlich und zahle 12 Ör.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="381" ed="#liebermann"/>Wenn ein Pfarrer die<ptr type="liebermannNote" n="1" target="#Northu_11.lnote.de.1"/> Gemeinde missleitet betreffend Feiertag oder Fasten, büsse er geistlich und zahle 12<ptr type="liebermannNote" n="2" target="#Northu_11.lnote.de.2"/> Ör.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a priest misleads the people about a feast-day or fast, let him atone with God and pay 12 ores.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d"><pb n="481" ed="#whitelock"/>If a priest misdirect the people regarding a festival or a fast, he is to make amends to God and pay 12 ores.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d"><pb n="305" ed="#rabin-doml"/>If a priest misleads the people concerning a holy day or a fast, he is to do penance before God and pay twelve oras.</ab>
         <note type="comparison" source="#liebermann" n="381"><ref target="clause:EGu_3-1">EGu 3.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. E Gu. 3, 1</note>
         <note type="editorial">Liebermann compares EGu 3.1.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_11.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">223</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">folc</hi> EGu; doch regiert <hi rend="italic">wissian</hi> bald Acc., bald Dat.</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">folc</hi> EGu; but <hi rend="italic">wissian</hi> governs sometimes the acc., sometimes the dat.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_11.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">223</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">= 3 Halbmark (EGu); <hi rend="italic">s. Gl</hi> Rechtsbruchbusse 4</seg><seg type="translation" xml:lang="en" source="#claude">= 3 half-marks (EGu); see <hi rend="italic">Gl</hi> Rechtsbruchbusse 4</seg></note>
       </div>
     </body>
   </text>

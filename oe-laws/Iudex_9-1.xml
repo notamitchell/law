@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +27,7 @@
           <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
@@ -50,20 +52,26 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2258 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 475.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 475: “Þa unrihtwisan deman hí beoð wyrsan þonne herigende here: here man mæg foroft befleon; ac þa deman for hira anwealde man ne mæg befleon, ðonne he him of hira ceastrewarena forðrycnesse gestreon gaderiað.” → “Þa unrihtwisan deman hí beoð wyrsan þonne herigende here: here man mæg foroft befleon; ac þa deman for hira anwealde man ne mæg befleon, ðonne he him of hira ceastrewarena forðrycnesse gestreon gaderiað. (expanded letters in italics: re)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="9.1">
         <head><ref type="lawCode" target="law:Iudex">Iudex</ref> 9.1</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="9.1" corresp="#wit-q"><pb n="475" ed="#liebermann"/>Hosticum potest aliquotiens homo fuga uel defensione uitare, prauos iudices non ita potest, quotiens aduersus subditos malis desideriis inflammantur.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9.1" corresp="#wit-g-a"><pb n="475" ed="#liebermann"/>Þa unrihtwisan deman hí beoð wyrsan þonne herigende here: here man mæg foroft befleon; ac þa deman for hira anwealde man ne mæg befleon, ðonne he him of hira ceastrewarena forðrycnesse gestreon gaderiað.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="475" ed="#liebermann"/>Die ungerechten Richter, die sind schlimmer als verheerendes [Feindes]heer: vor einem Heere kann man gar oft flüchten; aber jenen Richtern kann wegen ihrer Amtsgewalt niemand entrinnen, sobald sie aus Erpressung ihrer Bürger sich Gewinn sammeln.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9.1" corresp="#wit-g-a"><pb n="475" ed="#liebermann"/>Þa unrihtwisan deman hí beoð wyrsan þonne herigende here: here man mæg foroft befleon; ac þa deman for hira anwealde man ne mæg befleon, ðonne he<ptr type="liebermannNote" n="a" target="#Iudex_9-1.lnote.oe.a"/> him of hira ceast<hi rend="italic">re</hi>warena forðrycnesse gestreon gaderiað.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="9.1" corresp="#wit-q"><pb n="475" ed="#liebermann"/>Hosticum<ptr type="liebermannNote" n="12" target="#Iudex_9-1.lnote.oe.12"/> potest aliquotiens homo fuga uel defensione uitare, prauos iudices non ita potest<ptr type="liebermannNote" n="13" target="#Iudex_9-1.lnote.oe.13"/>, quotiens aduersus subditos malis desideriis inflammantur<ptr type="liebermannNote" n="c" target="#Iudex_9-1.lnote.oe.c"/>.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="475" ed="#liebermann"/>Die ungerechten Richter, die sind schlimmer als verheerendes [Feindes]heer: vor einem Heere kann man gar oft flüchten; aber jenen Richtern kann wegen ihrer Amtsgewalt niemand entrinnen, sobald sie aus Erpressung ihrer Bürger<ptr type="liebermannNote" n="1" target="#Iudex_9-1.lnote.de.1"/> sich Gewinn sammeln.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Unjust judges are worse than a ravaging [enemy] army: one can very often flee from an army; but from those judges, because of their official power, no one can escape when they gather gain for themselves by oppressing their citizens.</ab>
         <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-g-a">Unjust judges are worse than a plundering army. A man may often flee from an army, but from the power of judges no man can flee. Then they oppress the townspeople to gain profit.</ab>
         <note type="comparison" source="#liebermann" n="475">Isidor, Sent. III 52.9</note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 9</note>
         <note type="editorial">Isidore, Sent. III 52.9.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Iudex_9-1.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">475</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt TMHkBr</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in TMHkBr</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Iudex_9-1.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">475</biblScope></bibl><seg type="original" xml:lang="de">possunt iudices aliquotiens <hi rend="italic">Br-Ti</hi></seg><seg type="translation" xml:lang="en" source="#claude">possunt iudices aliquotiens <hi rend="italic">Br-Ti</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Iudex_9-1.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">475</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl.</hi> avaritiae flamma <hi rend="italic">Isidor</hi> 52, 2</seg><seg type="translation" xml:lang="en" source="#claude">cf. avaritiae flamma Isidor 52, 2</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Iudex_9-1.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">475</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">für</hi> heo <hi rend="italic">auch S.</hi> 460<hi rend="italic">f</hi></seg><seg type="translation" xml:lang="en" source="#claude">for heo also p. 460f</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Iudex_9-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">269</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Da die Stelle aus Isidor stammt, darf man nicht etwa folgern, jedes Gericht sitze nur in der Stadt; <hi rend="italic">s. d. Gl</hi> 12.—Zu <hi rend="italic">gestreon s. o</hi>. 9²: <hi rend="italic">strynan</hi></seg><seg type="translation" xml:lang="en" source="#claude">Since the passage comes from Isidor, one must not conclude, say, that every court sat only in the town; <hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 12.—On <hi rend="italic">gestreon see above</hi> 9²: <hi rend="italic">strynan</hi></seg></note>
       </div>
     </body>
   </text>

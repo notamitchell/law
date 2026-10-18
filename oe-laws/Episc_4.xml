@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -25,6 +26,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">477</biblScope></bibl>
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">102</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-x" rend="bold"><abbr>X</abbr> <note type="manuscript">Oxford, Bodleian Library, Junius 121</note></witness>
@@ -45,16 +47,17 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2274 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 477.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 477: “woruld-deman,” → “worulddeman,”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4">
         <head><ref type="lawCode" target="law:Episc">Episc</ref> 4</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-x"><pb n="477" ed="#liebermann"/>He sceall georne saca sehtan ⁊ frið wyrcan mid þam worulddeman, þe riht lufian.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4" corresp="#wit-q"><pb n="477" ed="#liebermann"/>operari cum seculi iudicibus, qui rectum uelle diligunt,</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4" corresp="#wit-x"><pb n="477" ed="#liebermann"/>He sceall georne saca sehtan ⁊ frið wyrcan mid þam woruld-deman, þe riht lufian.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-x"><pb n="102" ed="#rabin-doml"/>He sceall georne saca sehtan and frið wyrcan mid þam worulddeman þe riht lufian.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="477" ed="#liebermann"/>Er soll mit den weltlichen Richtern, die Recht lieben, ernstlich Streitsachen beilegen und Frieden wirken.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="477" ed="#liebermann"/>Er soll mit<ptr type="liebermannNote" n="1" target="#Episc_4.lnote.de.1"/> den weltlichen Richtern, die Recht lieben, ernstlich Streitsachen beilegen und Frieden<ptr type="liebermannNote" n="2" target="#Episc_4.lnote.de.2"/> wirken.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">He shall earnestly settle disputes and make peace together with the secular judges who love justice.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-x"><pb n="103" ed="#rabin-doml"/>He must readily resolve disputes and make peace along with those secular judges who love justice.</ab>
         <note type="comparison" source="#liebermann" n="477"><ref target="clause:Episc_9">Episc 9</ref></note>
@@ -62,6 +65,8 @@
         <note type="comparedBy" source="#liebermann"><ref target="clause:Episc_9">Episc 9</ref>; <ref target="clause:Episc_12">Episc 12</ref></note>
         <note type="editorial">Liebermann compares 9.</note>
         <note type="translator" source="#rabin-doml">resolve disputes: The bishop’s role in secular dispute resolution had been established in English law at least as early as 2–3 Edgar.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Episc_4.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">271</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ebd</hi>. Bischof 9d-q; Schiedsgericht 1. c; <hi rend="italic">s. u</hi>. 9. Der päpstliche Legat in England 786 schreibt: <hi rend="italic">Vidimus ibi episcopos in conciliis suis secularia iudicare prohibuimusque</hi>; ed. <hi rend="italic">Mon. Germ., Epist</hi>. IV 23.—Von einer Beschränkung des bischöflichen Gerichtsvorsitzes auf die Grafschaft oder von nur lokaler Geltung des Gesagten (<hi rend="italic">s. o</hi>. Einl. 9) erscheint hier, oder 6. 9, keine Spur. Verf. meint mehr: ein Ideal allgemeiner Beaufsichtigung aller Justiz durch den Klerus in Stadt und Land, im materiellen Recht wie im Beweisrecht und Urteil</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Ibid.</hi> Bischof 9d-q; Schiedsgericht 1. c; <hi rend="italic">see below</hi> 9. The papal legate in England in 786 writes: <hi rend="italic">Vidimus ibi episcopos in conciliis suis secularia iudicare prohibuimusque</hi>; ed. <hi rend="italic">Mon. Germ., Epist</hi>. IV 23.—There is no trace here, or in 6. 9, of any restriction of the bishop’s presidency of the court to the shire, or of a merely local validity of what is said (<hi rend="italic">see above</hi> Introduction 9). The author means more: an ideal of general supervision of all justice by the clergy in town and country, in substantive law as well as in the law of proof and in judgment</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Episc_4.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">271</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Der König <hi rend="italic">eall Cristen folc sibbie ⁊ sehte</hi>; Polity 2 = <hi rend="italic">Hom. n</hi>. Wulfstan 266. Hier also übernimmt der Bischof die Funktion des Königs</seg><seg type="translation" xml:lang="en" source="#claude">The king [is to] <hi rend="italic">eall Cristen folc sibbie ⁊ sehte</hi>; Polity 2 = <hi rend="italic">Hom. n</hi>. Wulfstan 266. Here, then, the bishop takes over the function of the king</seg></note>
       </div>
     </body>
   </text>

@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#wormald">Wormald</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +27,7 @@
           <bibl xml:id="wormald" type="translation">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -51,19 +53,24 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2055 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 392.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 392.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6.1">
         <head><ref type="lawCode" target="law:Wer">Wer</ref> 6.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.1" corresp="#wit-b"><pb n="392" ed="#liebermann"/>Syððan man mot mid lufe ofgan, gif man wille fulle freondræddene habban.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.1" corresp="#wit-h"><pb n="392" ed="#liebermann"/>Siððan man mot mid lufe ofgan, gif man hwile<ptr type="liebermannNote" n="***" target="#Wer_6-1.lnote.oe.star3"/>fulle freondrædne habban.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.1" corresp="#wit-b"><pb n="392" ed="#liebermann"/>Syððan man mot mid lufe ofgan, gif man wille fulle freondræddene habban<ptr type="liebermannNote" n="3" target="#Wer_6-1.lnote.oe.3"/>.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6.1" corresp="#wit-q"><pb n="393" ed="#liebermann"/>Deinde liceat per amorem procedere, si perfectam uelit amicorum consocietatem habere.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.1" corresp="#wit-h"><pb n="392" ed="#liebermann"/>Siððan man mot mid lufe ofgan, gif man hwile fulle freondrædne habban.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="393" ed="#liebermann"/>Nachher mag man [der Totschläger], wenn man volle Freundschaft [von der beleidigten Sippe] erhalten will, [das] erlangen durch private Versöhnung.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="393" ed="#liebermann"/>Nachher mag man [der Totschläger], wenn man volle Freundschaft [von der beleidigten Sippe] erhalten will, [das] erlangen<ptr type="liebermannNote" n="1" target="#Wer_6-1.lnote.de.1"/> durch private<ptr type="liebermannNote" n="2" target="#Wer_6-1.lnote.de.2"/> Versöhnung.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Afterwards one [the slayer], if one wishes to have full friendship [with the injured kin], may obtain [it] by private reconciliation.</ab>
         <ab type="translation" xml:lang="en" source="#wormald" corresp="#wit-h">Afterwards, one may depart with love, if one wish to have full friendship.</ab>
         <note type="editorial">H reads ‘hwile’, to be corrected to ‘wille’. B has a paragraph break after this clause.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Wer_6-1.lnote.oe.star3" n="***" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">392</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">bessere</hi> wille</seg><seg type="translation" xml:lang="en" source="#claude">read wille</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Wer_6-1.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">392</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Absatz</hi></seg><seg type="translation" xml:lang="en" source="#claude">new paragraph</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Wer_6-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">232</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Nicht ‘depart, vorschreiten’ oder ‘beendigen (Steenstrup <hi rend="italic">Danelag</hi> 304)’</seg><seg type="translation" xml:lang="en" source="#claude">Not ‘depart, advance’ or ‘bring to an end (Steenstrup <hi rend="italic">Danelag</hi> 304)’</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Wer_6-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">232</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Schiedsgericht 9h. Über dieses Geschenk in Dän. Sühne <hi rend="italic">vgl</hi>. Phillpotts <hi rend="italic">Kindred</hi> 226</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Schiedsgericht 9h. On this gift in Danish settlements <hi rend="italic">cf</hi>. Phillpotts <hi rend="italic">Kindred</hi> 226</seg></note>
       </div>
     </body>
   </text>

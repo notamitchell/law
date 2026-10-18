@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +28,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">22</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
@@ -51,20 +53,24 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2204 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 470.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 470: “7” → “⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5">
         <head><ref type="lawCode" target="law:Grith">Grið</ref> 5</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-g-b"><pb n="470" ed="#liebermann"/>7 gyf he gesohte leodbiscop oððe ealdorman oððon healicne heafodstede, þon<hi rend="italic">ne</hi> ahte he VII nihta grið, butan man leng geunnan wolde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-g-b"><pb n="470" ed="#liebermann"/>⁊ gyf<ptr type="liebermannNote" n="3" target="#Grith_5.lnote.oe.3"/> he gesohte leodbiscop oððe ealdorman oððon healicne heafodstede, þon<hi rend="italic">ne</hi> ahte he VII<ptr type="liebermannNote" n="c" target="#Grith_5.lnote.oe.c"/> nihta grið, butan man leng geunnan wolde.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" n="5" corresp="#wit-g-b"><pb n="22" ed="#rabin-doml"/>And gyf he gesohte leodbiscop oððe ealdorman oððon healicne heafodstede, þonne ahte he VII nihta grið, butan man leng geunnan wolde.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="470" ed="#liebermann"/>Und wenn er einen Diöcesanbischof oder Ealdorman oder eine hohe Hauptstätte [um Schutz] aufsuchte, dann hatte er 7 Nächte Sonderschutz, ausser wenn man ihm länger gewähren wollte.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="470" ed="#liebermann"/>Und wenn er einen Diöcesanbischof oder Ealdorman oder eine hohe Hauptstätte [um Schutz] aufsuchte, dann hatte er 7 Nächte Sonderschutz, ausser wenn man<ptr type="liebermannNote" n="1" target="#Grith_5.lnote.de.1"/> ihm länger gewähren wollte.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if he sought out a diocesan bishop or an ealdorman or a high chief place [for protection], then he had 7 nights' special protection, unless one wished to grant him longer.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-b"><pb n="23" ed="#rabin-doml"/>And if he appealed to a suffragan bishop or an ealdorman or an important capital city, then he had sanctuary for seven nights, unless he was granted more.</ab>
         <note type="comparison" source="#liebermann" n="470"><ref target="clause:IVAs_6-2">IV As 6.2</ref>; <ref target="clause:Grith_3">Grið 3</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 6, 2 | †s. o. 3</note>
         <note type="editorial">Liebermann notes that ‘VII’ comes from IV As 6.2a (Quadripartitus MS), perhaps altered after Af 5. Liebermann compares IV As 6.2.; T: corrected against Rabin, DOML 66 (2020), p. 22 (before: ‘A gyf he gesohte leodbiscop oððe ealdorman oððon healicne heafodstede, þonne ahte he VII nihta grið, butan man leng geunnan wolde.’)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Grith_5.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">470</biblScope></bibl><seg type="original" xml:lang="de">i <hi rend="italic">statt</hi> y <hi rend="italic">Thorpe</hi></seg><seg type="translation" xml:lang="en" source="#claude">i instead of y Thorpe</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Grith_5.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">470</biblScope></bibl><seg type="original" xml:lang="de">III <hi rend="italic">IV As.</hi> 6, 2<hi rend="italic">a</hi>, <hi rend="italic">vielleicht geändert nach</hi> Af 5</seg><seg type="translation" xml:lang="en" source="#claude">III IV As. 6, 2<hi rend="italic">a</hi>, perhaps altered on the model of Af 5</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Grith_5.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">265</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Nicht Bischof, Graf oder Kirche als Schutzgewährer kann gemeint sein, deren befristetes Privileg ja dadurch ins Ungemessene wüchse, sondern die zu Begnadigung oder Vollzugsaufschub berechtigte öffentliche Obrigkeit (König und Lokalgericht), vielleicht daneben der klagende Bluträcher.—Die Zahl ‘7’, statt ‘3’ bei As, stammt wohl aus Af 5</seg><seg type="translation" xml:lang="en" source="#claude">What is meant cannot be bishop, earl or church as granter of protection, whose time-limited privilege would thereby grow beyond all measure, but rather the public authority entitled to grant pardon or a stay of execution (king and local court), perhaps alongside it the avenger of blood who brings the charge.—The number ‘7’, instead of ‘3’ in As, probably comes from Af 5</seg></note>
       </div>
     </body>
   </text>

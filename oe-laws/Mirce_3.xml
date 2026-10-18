@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +28,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">14</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">478</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -34,6 +36,7 @@
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
           <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-in"><abbr>In</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -54,24 +57,40 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2179 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked and corrected against <title>Die Gesetze der Angelsachsen</title> I, p. 462.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 462.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS O added from Gesetze I, p. 462.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 462: “……..” → “. . . . . . . .”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Ld added from Gesetze I, p. 462.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 462.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3">
         <head><ref type="lawCode" target="law:Mirce">Mirce</ref> 3</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-h"><pb n="462" ed="#liebermann"/>Swa micel is þæs wergyldes on ……..</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3" corresp="#wit-q"><pb n="463" ed="#liebermann"/>Tantum est de weregildo.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-d"><pb n="462" ed="#liebermann"/>Swa micel is þæs wergildes on folces folcriht be Myrcna laga.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-o"><pb n="462" ed="#liebermann"/>Swa micel<ptr type="liebermannNote" n="2" target="#Mirce_3.lnote.oe.2"/> is þæs wergildes<ptr type="liebermannNote" n="2" target="#Mirce_3.lnote.oe.2"/> on folces folcriht be Mercena lage.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-h"><pb n="462" ed="#liebermann"/>Swa micel is þæs wergyldes on<ptr type="liebermannNote" n="b" target="#Mirce_3.lnote.oe.b"/> . . . . . . . .</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-ld"><pb n="463" ed="#liebermann"/>⁊<ptr type="liebermannNote" n="*" target="#Mirce_3.lnote.oe.star"/> swa micle biþ se wergyld.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3" corresp="#wit-q"><pb n="463" ed="#liebermann"/>Tantum est de weregildo.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3" corresp="#wit-in"><pb n="463" ed="#liebermann"/>[43, 2] Tantum<ptr type="liebermannNote" n="12" target="#Mirce_3.lnote.oe.12"/> secundum<ptr type="liebermannNote" n="13" target="#Mirce_3.lnote.oe.13"/> iustitiam est<ptr type="liebermannNote" n="14" target="#Mirce_3.lnote.oe.14"/> prętium regis.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-h"><pb n="14" ed="#rabin-doml"/>Swa micel is þæs wergyldes on folces folcriht be Myrcna laga.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="463" ed="#liebermann"/>Soviel ist [Betrag] dieses Wergeldes nach des Volkes gemeinem Recht im Mercier-Recht.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><ptr type="liebermannNote" n="1" target="#Mirce_3.lnote.de.1"/><pb n="463" ed="#liebermann"/>Soviel ist [Betrag] dieses Wergeldes nach des Volkes gemeinem Recht im Mercier-Recht.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">So much is [the amount of] this wergild by the people's common law under Mercian law.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d"><pb n="478" ed="#whitelock"/>So great is [the size of] the wergild in the common law according to the law of the Mercians;</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h"><pb n="15" ed="#rabin-doml"/>So much is wergild in the folk law of the people, according to the law of the Mercians.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h">So much is wergild in the folk law of the people, according to the law of the Mercians.</ab>
         <note type="comparison" source="#liebermann" n="463"><ref target="clause:Northleoda_1">Norðleoda 1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Norðleod 1</note>
-        <note type="editorial">The rest of the line (‘folces folcriht be Myrcna lage’, as in D and O) was already lacking in hlq, the exemplar of H. K: ‘is’ supplied from Liebermann. Liebermann compares Norðleod 1.; U: checked against Whitelock, EHD I (1979), and corrected (before: ‘So great is [the size of] the wergild in the common law according to the law of Mercians;’).</note>
+        <note type="editorial">The rest of the line (‘folces folcriht be Myrcna lage’, as in D and O) was already lacking in hlq, the exemplar of H. K: ‘is’ supplied from Liebermann. Liebermann compares Norðleod 1.; U: checked against Whitelock, EHD I (1979), and corrected (before: ‘So great is [the size of] the wergild in the common law according to the law of Mercians;’).; AV: added from Rabin p. 14 / 15, October 2026 (Rabin’s translation)</note>
         <note type="textual" source="#rabin-doml">folces . . . laga: omitted H, text supplied from D</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Mirce_3.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">462</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Zeile fehlte schon</hi> hlq</seg><seg type="translation" xml:lang="en" source="#claude">line already missing in hlq</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Mirce_3.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">463</biblScope></bibl><seg type="original" xml:lang="de">43, 2 <hi rend="italic">überspr. Di;</hi> propter <hi rend="italic">fügt zu Jo</hi></seg><seg type="translation" xml:lang="en" source="#claude">43, 2 skipped in Di; propter added by Jo</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Mirce_3.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">463</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Ct</hi></seg><seg type="translation" xml:lang="en" source="#claude">missing in Ct</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Mirce_3.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">463</biblScope></bibl><seg type="original" xml:lang="de">r. est p. <hi rend="italic">Lb S Pl Jo Ct</hi></seg><seg type="translation" xml:lang="en" source="#claude">r. est p. Lb S Pl Jo Ct</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Mirce_3.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">462</biblScope></bibl><seg type="original" xml:lang="de">i <hi rend="italic">später geänd. in</hi> y</seg><seg type="translation" xml:lang="en" source="#claude">i later altered to y</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Mirce_3.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">463</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Abweichung vom Original</hi></seg><seg type="translation" xml:lang="en" source="#claude">Departure from the original</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Mirce_3.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">262</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Thorpe hielt seinen Text für verderbt; <hi rend="italic">rihtes</hi> war aber nur sein eigener Fehler.—<hi rend="italic">Vgl</hi>. zu Norðleod 1³·⁶</seg><seg type="translation" xml:lang="en" source="#claude">Thorpe considered his text corrupt; but <hi rend="italic">rihtes</hi> was merely his own error. — <hi rend="italic">Cf.</hi> on Norðleod 1³·⁶</seg></note>
       </div>
     </body>
   </text>

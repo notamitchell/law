@@ -11,6 +11,8 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +31,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">482</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -52,23 +55,27 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1987 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 382.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 382: “Gif preost oferdruncen lufige oððe gliman oððe ealascop wurðe, gebete þæt.” → “Gif preost oferdruncen lufige oððe gliman oððe ealascop wurðe, gebete þæt. (expanded letters in italics: eost, oððe, e, æt)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="41">
         <head><ref type="lawCode" target="law:Northu">Northu</ref> 41</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="41" corresp="#wit-d"><pb n="382" ed="#liebermann"/>Gif pr<hi rend="italic">eost</hi> oferdruncen lufige oððe gliman oððe ealascop wurðe, gebete þ<hi rend="italic">æt</hi>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="41" corresp="#wit-d"><pb n="382" ed="#liebermann"/>Gif pr<hi rend="italic">eost</hi> oferdruncen lufige oððe gliman <hi rend="italic">oððe<ptr type="liebermannNote" n="5" target="#Northu_41.lnote.oe.5"/></hi> ealascop wurðe, g<hi rend="italic">e</hi>bete þ<hi rend="italic">æt</hi>.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d"><pb n="308" ed="#rabin-doml"/>Gif preost oferdruncen lufige oððe gliman oððe ealascop wurðe, gebete þæt.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="382" ed="#liebermann"/>Wenn ein Priester Trunkenheit liebt oder lustiger Spielmann oder Bierdichter wird, büsse er das.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="382" ed="#liebermann"/>Wenn ein Priester Trunkenheit<ptr type="liebermannNote" n="1" target="#Northu_41.lnote.de.1"/> liebt oder lustiger Spielmann oder Bierdichter<ptr type="liebermannNote" n="2" target="#Northu_41.lnote.de.2"/> wird, büsse er das.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a priest loves drunkenness or becomes a gleeman or an ale-poet, let him atone for it.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d"><pb n="482" ed="#whitelock"/>If a priest practises drunkenness or becomes a gleeman or a tavernminstrel, he is to compensate for it.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d"><pb n="482" ed="#whitelock"/>If a priest practises drunkenness or becomes a gleeman or a tavernminstrel,<ptr type="editorNote" n="4" target="#Northu_41.whinote.n.4"/> he is to compensate for it.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d"><pb n="309" ed="#rabin-doml"/>If a priest embraces drunkenness, or becomes an entertainer or a singer among drinkers, he is to atone for that.</ab>
         <note type="comparison" source="#liebermann" n="382">Can. Eg. 57f.</note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 57 f.</note>
         <note type="editorial">D writes the second ‘oððe’ with the abbreviation ‘ł’. Liebermann compares Canons of Edgar 57 f.</note>
-        <note type="translator" source="#whitelock">literally “an ale minstrel”, one who performs where men are drinking.</note>
         <note type="textual" source="#rabin-doml">oððe ealascop: vel ealascop D</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Northu_41.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">382</biblScope></bibl><seg type="original" xml:lang="de">ł</seg><seg type="translation" xml:lang="en" source="#claude">ł</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_41.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">224</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ebd</hi>. Biergelage 3b; Geistliche 29f. Ersetze dort Z. 5: ‘a. 641’ durch ‘679 Oct., § 7’: Bischöfen und Geistlichen ist verboten, Harfenspieler in Dienst zu haben und Schaustellungen geschehen zu lassen; Levison in <hi rend="italic">Zs. Savigny Rechtsg</hi>. 33 (Kanon. 2) 1912, 271; auch Synode a. 826c. 11 ed. <hi rend="italic">Mon. Germ</hi>., <hi rend="italic">Conc</hi>. II 572</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Ibid</hi>. Biergelage 3b; Geistliche 29f. There, in l. 5, replace ‘a. 641’ by ‘679 Oct., § 7’: bishops and clergy are forbidden to keep harpers in their service or to allow shows to take place; Levison in <hi rend="italic">Zs. Savigny Rechtsg</hi>. 33 (Kanon. 2) 1912, 271; also Synod a. 826c. 11 ed. <hi rend="italic">Mon. Germ</hi>., <hi rend="italic">Conc</hi>. II 572</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_41.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">224</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl</hi>. Zitat Toller <hi rend="italic">Suppl</hi>. s. v. <hi rend="italic">ealuscop</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf</hi>. the quotation in Toller <hi rend="italic">Suppl</hi>. s. v. <hi rend="italic">ealuscop</hi></seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="Northu_41.whinote.n.4" n="4" source="#whitelock"><bibl><biblScope unit="page">482</biblScope></bibl><seg type="original" xml:lang="en">literally “an ale minstrel”, one who performs where men are drinking.</seg></note>
       </div>
     </body>
   </text>

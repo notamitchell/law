@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +31,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">328</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -54,21 +56,30 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2112 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 451.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 451: “7; 7” → “⁊; ⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="15">
         <head><ref type="lawCode" target="law:Rect">Rect</ref> 15</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15" corresp="#wit-b"><pb n="451" ed="#liebermann"/>[15] Be gathyrde. Gathyrde gebyreð his heorde meolc ofer Martinus mæssedæig, 7 ær ðam his dæl hwæges 7 I ticcen of geares geogoðe, gif he his heorde wel begymeð.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="15" corresp="#wit-q"><pb n="451" ed="#liebermann"/>Caprario conuenit lac gregis sui post festum sancti Martini, et antea pars sui mesguii et unum capritum anniculum, si bene custodiat gregem suum.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="15" corresp="#wit-b"><pb n="451" ed="#liebermann"/>[15] Be gathyrde. Gathyrde gebyreð his heorde meolc ofer Martinus mæssedæig, ⁊ ær ðam his dæl hwæges ⁊ I ticcen of geares geogoðe, gif he his heorde wel begymeð.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="15" corresp="#wit-q"><pb n="451" ed="#liebermann"/>Caprario conuenit lac gregis sui post festum sancti Martini, et antea pars sui mesguii et unum<ptr type="liebermannNote" n="10" target="#Rect_15.lnote.oe.10"/> capritum<ptr type="liebermannNote" n="c" target="#Rect_15.lnote.oe.c"/><ptr type="liebermannNote" n="11" target="#Rect_15.lnote.oe.11"/> anniculum, si bene custodiat gregem suum.</ab>
         <ab type="editionText" xml:lang="ang" source="#gobbitt" n="16" corresp="#wit-b">Be Gat hyrde . Gathyrde gebyreð his heorde meolc ofer martinus mæssedæig . 7 ær ðam his dæl hwæges .7 i. ticcen . of geares geo|goðe gif he his heorde wel begymeð.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-b"><pb n="328" ed="#rabin-doml"/><hi rend="italic">Be gathyrde</hi> Gathyrde gebyreð his heorde meolc ofer Martinus mæssedæig, and ær ðam his dæl hwæges, and I ticcen of geares geogoðe, gif he his heorde wel begymeð.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="451" ed="#liebermann"/>Vom Ziegenhirten. Dem Ziegenhirten gebührt die Milch seiner Herde nach Martinus' Festtag, und vorher sein Theil Molken und ein Zicklein vom Jungvieh des Jahres, wenn er seine Herde wohl besorgt.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="451" ed="#liebermann"/>Vom Ziegenhirten<ptr type="liebermannNote" n="1" target="#Rect_15.lnote.de.1"/>. Dem Ziegenhirten gebührt die Milch seiner<ptr type="liebermannNote" n="e" target="#Rect_15.lnote.de1.e"/> Herde nach Martinus' Festtag, und vorher sein Theil<ptr type="liebermannNote" n="g" target="#Rect_15.lnote.de1.g"/> Molken und ein Zicklein<ptr type="liebermannNote" n="h" target="#Rect_15.lnote.de1.h"/> vom Jungvieh des Jahres, wenn er seine<ptr type="liebermannNote" n="e" target="#Rect_15.lnote.de1.e-2"/> Herde wohl besorgt.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of the goatherd. To the goatherd is due the milk of his herd after Martinmas, and before that his share of whey and one kid of the year's young, if he cares for his herd well.</ab>
         <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">Concerning the goatherd To the goatherd is due his herd’s milk on Martin’s Mass day, and before then his portion of whey, and one kid from the year’s young if he has looked after his herd well.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-b"><pb n="329" ed="#rabin-doml"/><hi rend="italic">Regarding the Goatherd</hi> To the goatherd is due the milk of his herd after the Feast of Saint Martin, and before that his share of whey, and one kid from the year’s young if he looks after his herd well.</ab>
         <note type="editorial">Liebermann compares Rect 14 and 7.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rect_15.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">451</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt R</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rect_15.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">451</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Lex Sal.</hi> 5, 1</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Lex Sal.</hi> 5, 1</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rect_15.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">451</biblScope></bibl><seg type="original" xml:lang="de">-icum agnic. <hi rend="italic">MHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">-icum agnic. MHk</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rect_15.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">251</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Ziege 1. 5. Man ass Zicklein; Round <hi rend="italic">aaO</hi>. 368. Es scheinen Ziegenmolken gemeint</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Ziege 1. 5. Kids were eaten; Round <hi rend="italic">loc. cit</hi>. 368. Goats' whey seems to be meant</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Rect_15.lnote.de1.e" n="e" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">451</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl.</hi> 4, 2<hi rend="italic">d</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">cf.</hi> 4, 2<hi rend="italic">d</hi></seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Rect_15.lnote.de1.g" n="g" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">451</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">wohl wie in</hi> 14</seg><seg type="translation" xml:lang="en" source="#claude">probably as in 14</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Rect_15.lnote.de1.h" n="h" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">451</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl.</hi> 7</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">cf.</hi> 7</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Rect_15.lnote.de1.e-2" n="e" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">451</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl.</hi> 4, 2<hi rend="italic">d</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">cf.</hi> 4, 2<hi rend="italic">d</hi></seg></note>
       </div>
     </body>
   </text>
