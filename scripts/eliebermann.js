@@ -33,7 +33,8 @@
     // and Next links and the search suggestions skip them too.
     const HIDE_KEY = 'eliebermann.hiddenLanguages';
     function hiddenLanguages() {
-        try { return new Set(JSON.parse(localStorage.getItem(HIDE_KEY) || '[]')); } catch (e) { return new Set(); }
+        // ("prop", the old "Hide OE Proper Nouns" button, is no longer offered: a remembered choice is ignored)
+        try { return new Set(JSON.parse(localStorage.getItem(HIDE_KEY) || '[]').filter(l => l !== 'prop')); } catch (e) { return new Set(); }
     }
     function setHiddenLanguages(set) {
         try { localStorage.setItem(HIDE_KEY, JSON.stringify([...set])); } catch (e) { /* not remembered */ }
