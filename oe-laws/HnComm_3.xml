@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Hn com 3</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +22,13 @@
       <sourceDesc>
         <bibl type="legalText"><title>Henry I: Decree Concerning the County and Hundred Courts</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">524</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">286</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-sc"><abbr>Sc</abbr> <note type="manuscript">The Red Book of the Exchequer (London, The National Archives, E 164/2)</note></witness>
+          <witness xml:id="wit-sc"><abbr>Sc</abbr> <note type="manuscript">Red Book of the Exchequer (Liber rubeus Scaccarii), c. 1230</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,16 +43,25 @@
       <creation><date source="#liebermann">1109–11</date><date source="#wormald-mel">1108</date><placeName source="#robertson">Reading</placeName><note type="promulgation">1109–11 (Liebermann); 1108 (Wormald); Reading (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2523 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2523 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Sc added from Gesetze I, p. 524.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3">
         <head><ref type="lawCode" target="law:HnComm">Hn com</ref> 3</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-sc"><pb n="524" ed="#liebermann"/>Et si amodo exurgat placitum de diuisione terrarum uel<ptr type="liebermannNote" n="19" target="#HnComm_3.lnote.oe.19"/> de preocupatione<ptr type="liebermannNote" n="20" target="#HnComm_3.lnote.oe.20"/>, si est<ptr type="liebermannNote" n="21" target="#HnComm_3.lnote.oe.21"/> inter dominicos<ptr type="liebermannNote" n="22" target="#HnComm_3.lnote.oe.22"/> barones meos, tractetur placitum in curia mea<ptr type="liebermannNote" n="23" target="#HnComm_3.lnote.oe.23"/>.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="3" corresp="#wit-sc"><pb n="286" ed="#robertson"/>Et si amodo exurgat placitum de divisione terrarum vel de preocupatione, si est inter barones meos dominicos, tractetur placitum in curia mea.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-sc"><pb n="287" ed="#robertson"/>And if henceforth a case arises concerning the division or occupation of lands—if it is between crown barons of mine, the case shall be dealt with in my court.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 286–287 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 286–287 (text and translation); Liebermann’s text added from Gesetze I p. 524, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnComm_3.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">524</biblScope></bibl><seg type="original" xml:lang="de">u. de p. <hi rend="italic">fehlt Sc Hg K</hi></seg><seg type="translation" xml:lang="en" source="#claude">u. de p. missing in Sc Hg K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnComm_3.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">524</biblScope></bibl><seg type="original" xml:lang="de">occup. <hi rend="italic">MHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">occup. MHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnComm_3.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">524</biblScope></bibl><seg type="original" xml:lang="de">interest <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">interest K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnComm_3.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">524</biblScope></bibl><seg type="original" xml:lang="de">b. m. d. <hi rend="italic">Sc Hg K</hi></seg><seg type="translation" xml:lang="en" source="#claude">b. m. d. Sc Hg K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnComm_3.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">524</biblScope></bibl><seg type="original" xml:lang="de">domini eorum [<hi rend="italic">aus folgender Zeile</hi>] <hi rend="italic">MHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">domini eorum [from the following line] MHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnComm_3.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">301</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Grafschaftsgericht 13c.—‘Abgrenzung oder Besitznahme’. Der Gegensatz ist Kriminalprozess laut Hn 25, 1</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Grafschaftsgericht 13c.—‘Demarcation or taking possession’. The contrast is criminal procedure, according to Hn 25, 1</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnComm_3.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">301</biblScope></bibl><seg type="original" xml:lang="de">Tenentes in capite, Kronlehnsträger. Die <hi rend="italic">curia mea</hi> steht unter dem König als Gerichtsherrn, und unter ihm oder dem Oberrichter oder einem Königsrichterkolleg als Richter. Auch wo sie in letzterem Falle in der Provinz tagt, geniesst sie das Vorrecht, <hi rend="italic">recognitio</hi> durch Geschworene anzuwenden; dieses fehlt dem anderen zwar öffentlichen und ebenfalls bisweilen ‘königlich’ heissenden, aber nicht zentralen, sondern lokalen Gerichte unter dem lokalen Kronbeamten (meist Sheriff), obwohl auch der damals noch, selbst bloss in dieser Eigenschaft, <hi rend="italic">iusticia regis</hi> heissen kann</seg><seg type="translation" xml:lang="en" source="#claude">Tenentes in capite, tenants-in-chief of the Crown. The <hi rend="italic">curia mea</hi> stands under the king as lord of the court, and under him or the chief justiciar or a bench of royal justices as judge. Even where, in the latter case, it sits in the provinces, it enjoys the privilege of employing <hi rend="italic">recognitio</hi> by jurors; this privilege is lacking in the other court — public, it is true, and likewise sometimes called ‘royal’, but local rather than central — under the local Crown official (usually the sheriff), although he too, even merely in that capacity, could at that time still be called <hi rend="italic">iusticia regis</hi></seg></note>
       </div>
     </body>
   </text>

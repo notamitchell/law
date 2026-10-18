@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Hn com Prol.</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +22,13 @@
       <sourceDesc>
         <bibl type="legalText"><title>Henry I: Decree Concerning the County and Hundred Courts</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">524</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">286</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-sc"><abbr>Sc</abbr> <note type="manuscript">The Red Book of the Exchequer (London, The National Archives, E 164/2)</note></witness>
+          <witness xml:id="wit-sc"><abbr>Sc</abbr> <note type="manuscript">Red Book of the Exchequer (Liber rubeus Scaccarii), c. 1230</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,16 +43,26 @@
       <creation><date source="#liebermann">1109–11</date><date source="#wormald-mel">1108</date><placeName source="#robertson">Reading</placeName><note type="promulgation">1109–11 (Liebermann); 1108 (Wormald); Reading (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2519 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2519 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Sc added from Gesetze I, p. 524.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Prol.">
         <head><ref type="lawCode" target="law:HnComm">Hn com</ref> Prol.</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-sc"><ptr type="liebermannNote" n="a" target="#HnComm_Prol.lnote.oe.a"/><pb n="524" ed="#liebermann"/>Henricus (Dei<ptr type="liebermannNote" n="1" target="#HnComm_Prol.lnote.oe.1"/> gratia) rex Anglorum Samsoni<ptr type="liebermannNote" n="2" target="#HnComm_Prol.lnote.oe.2"/> episcopo et<ptr type="liebermannNote" n="3" target="#HnComm_Prol.lnote.oe.3"/> Ursoni de Abetot et omnibus baronibus<ptr type="liebermannNote" n="4" target="#HnComm_Prol.lnote.oe.4"/> suis, Francis et Anglis<ptr type="liebermannNote" n="5" target="#HnComm_Prol.lnote.oe.5"/>, de<ptr type="liebermannNote" n="6" target="#HnComm_Prol.lnote.oe.6"/> Wirecestrescira salutem.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="Prol." corresp="#wit-sc"><pb n="286" ed="#robertson"/>Henricus (Dei gratia) rex Anglorum, Samsoni episcopo et Ursoni de Abetot et omnibus baronibus suis Francis et Anglis de Wirecestrescira, salutem.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-sc"><pb n="287" ed="#robertson"/>Henry, [by the grace of God] King of England, to Bishop Samson and Urso d'Abetot and all his barons in Worcestershire, both French and English—greeting.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 286–287 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 286–287 (text and translation); Liebermann’s text added from Gesetze I p. 524, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnComm_Prol.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">524</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Aus</hi> Sc (<hi rend="italic">Liber rub. Scacc. f.</hi> 164, <hi rend="italic">um</hi> 1230), <hi rend="italic">dem</hi> Hg (<hi rend="italic">Hargrave</hi> 313 <hi rend="italic">f.</hi> 100, <hi rend="italic">um</hi> 1251) <hi rend="italic">und</hi> K 3 (<hi rend="italic">Cotton Claudius D II f.</hi> 41<hi rend="italic">v</hi>, 15. <hi rend="italic">Jhs.</hi>), <hi rend="italic">folgen und</hi> Quadr(ipartitus <hi rend="italic">ed. Liebermann p.</hi> 165 <hi rend="italic">aus</hi> TMHk); <hi rend="italic">wohl aus</hi> T <hi rend="italic">schöpft</hi> Co (<hi rend="italic">Cambridge Corpus</hi> 70 <hi rend="italic">p.</hi> 76, <hi rend="italic">unterer Rand um</hi> 1320, <hi rend="italic">mit der Bemerkung am Schluss:</hi> Huius carte transcriptum habui apud Sanctum Augustinum extra Cantuariam, <hi rend="italic">d. i. wohl</hi> T. — Epistola Henrici regis ad omnes fideles suos <hi rend="italic">überschr.</hi> T; Carta eiusdem, ubi comitatus teneri debet et ubi placita de diuisis terrarum <hi rend="italic">überschr. Sc</hi>(13. <hi rend="italic">Jhs.</hi>) <hi rend="italic">HgK</hi></seg><seg type="translation" xml:lang="en" source="#claude">From Sc (Liber rub. Scacc. f. 164, c. 1230), which Hg (Hargrave 313 f. 100, c. 1251) and K 3 (Cotton Claudius D II f. 41v, 15th cent.) follow, and Quadr(ipartitus ed. Liebermann p. 165 from TMHk); Co (Cambridge Corpus 70 p. 76, lower margin c. 1320, with the remark at the end: Huius carte transcriptum habui apud Sanctum Augustinum extra Cantuariam, i.e. probably T. — Epistola Henrici regis ad omnes fideles suos written above T; Carta eiusdem, ubi comitatus teneri debet et ubi placita de diuisis terrarum written above Sc (13th cent.) Hg K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnComm_Prol.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">524</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so Quadr Co;</hi> D. g. <hi rend="italic">fehlt Sc Hg K</hi></seg><seg type="translation" xml:lang="en" source="#claude">thus Quadr Co; D. g. missing in Sc Hg K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnComm_Prol.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">524</biblScope></bibl><seg type="original" xml:lang="de">Sa. — Ab. et <hi rend="italic">fehlt Quadr Co;</hi> Samps. <hi rend="italic">Hg K</hi></seg><seg type="translation" xml:lang="en" source="#claude">Sa. — Ab. et missing in Quadr Co; Samps. Hg K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnComm_Prol.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">524</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt K</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnComm_Prol.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">524</biblScope></bibl><seg type="original" xml:lang="de">fidelibus <hi rend="italic">Quadr Co</hi></seg><seg type="translation" xml:lang="en" source="#claude">fidelibus Quadr Co</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnComm_Prol.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">524</biblScope></bibl><seg type="original" xml:lang="de">Anglicis <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">Anglicis K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnComm_Prol.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">524</biblScope></bibl><seg type="original" xml:lang="de">de W. <hi rend="italic">fehlt Quadr Co</hi></seg><seg type="translation" xml:lang="en" source="#claude">de W. missing in Quadr Co</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnComm_Prol.lnote.oe.a__b" n="a. b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">301</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. o</hi>. Einl. 1. 2; CHn cor Pro{d. e. f}. Vielleicht las Original <hi rend="italic">baronibus et fidelibus</hi>, und liess Q jenes, Sc dieses aus. <hi rend="italic">Vgl. Gl</hi> Grafschaft 13d; Breve 1</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See above</hi> Introduction 1. 2; CHn cor Pro{d. e. f}. Perhaps the original read <hi rend="italic">baronibus et fidelibus</hi>, and Q omitted the former, Sc the latter. <hi rend="italic">Cf. Gl</hi> Grafschaft 13d; Breve 1</seg></note>
       </div>
     </body>
   </text>

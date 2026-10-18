@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Wl art 8.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +22,13 @@
       <sourceDesc>
         <bibl type="legalText"><title>The Ten Articles of William I</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">488</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">240</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis), f. 80</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,17 +43,25 @@
       <creation><date source="#liebermann">compiled c.1110–35</date><date source="#robertson">compiled 1110–35</date><date source="#wormald-mel">late in William I's reign</date><note type="promulgation">compiled c.1110–35 (Liebermann); compiled 1110–35 (Robertson); late in William I's reign (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2337 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2337 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 488.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="8.1">
         <head><ref type="lawCode" target="law:WlArt">Wl art</ref> 8.1</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-h"><pb n="488" ed="#liebermann"/>Requiratur<ptr type="liebermannNote" n="21" target="#WlArt_8-1.lnote.oe.21"/> hundred<ptr type="liebermannNote" n="22" target="#WlArt_8-1.lnote.oe.22"/> et comitatus, sicut antecessores nostri<ptr type="liebermannNote" n="23" target="#WlArt_8-1.lnote.oe.23"/><ptr type="liebermannNote" n="e" target="#WlArt_8-1.lnote.oe.e"/> statuerunt<ptr type="liebermannNote" n="24" target="#WlArt_8-1.lnote.oe.24"/>.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="8.1" corresp="#wit-h"><pb n="240" ed="#robertson"/>Requiratur hundred et comitatus, sicut antecessores nostri statuerunt.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><pb n="241" ed="#robertson"/>The hundred and county courts shall be attended in accordance with the decrees of our predecessors.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:WlArtRetr_7">Wl art retr 7</ref>; <ref target="clause:LeisWl_43">Leis Wl 43</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 240–241 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 240–241 (text and translation); Liebermann’s text added from Gesetze I p. 488, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_8-1.lnote.oe.e" n="e" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">488</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">nicht authentisch, da Wilhelm I. nicht im Pluralis majestatis und seine</hi> Barones <hi rend="italic">nicht von den</hi> Witan <hi rend="italic">als Vorgängern reden.</hi> (<hi rend="italic">Vielleicht beeinflusst durch</hi> Hn com.? <hi rend="italic">Vgl.</hi> 7{a})</seg><seg type="translation" xml:lang="en" source="#claude">not authentic, since William I does not speak in the plural of majesty, nor would his Barones speak of the Witan as their predecessors. (Perhaps influenced by Hn com.? Cf. 7{a})</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_8-1.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">488</biblScope></bibl><seg type="original" xml:lang="de">Teneatur <hi rend="italic">Vi</hi></seg><seg type="translation" xml:lang="en" source="#claude">Teneatur Vi</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_8-1.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">488</biblScope></bibl><seg type="original" xml:lang="de">-dus <hi rend="italic">Cb Hv Retr Va Ph Pl</hi></seg><seg type="translation" xml:lang="en" source="#claude">-dus Cb Hv Retr Va Ph Pl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_8-1.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">488</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Cb Hv Retr Va Ph Pl</hi></seg><seg type="translation" xml:lang="en" source="#claude">omitted in Cb Hv Retr Va Ph Pl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_8-1.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">488</biblScope></bibl><seg type="original" xml:lang="de">constitu. <hi rend="italic">Hv</hi></seg><seg type="translation" xml:lang="en" source="#claude">constitu. Hv</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_8-1.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">281</biblScope></bibl><seg type="original" xml:lang="de">Neues Kapitel wäre angezeigt. In der Anknüpfung aber des Hundred (<hi rend="italic">s. d. Gl</hi> 10b) an die Zehnerschaft (<hi rend="italic">s. d. Gl</hi> 11d) folgt Kompilator richtigem Gefühle auch anderer Zeitgenossen.—Dieser Satz befiehlt Gerichtsfolge aller zur Teilnahme an der Versammlung Verbundenen, im Ggs. zu Folgendem.—Mir scheinen zwei Quellenstücke verschiedenen Inhalts zusammengeflossen</seg><seg type="translation" xml:lang="en" source="#claude">A new chapter would be appropriate. But in linking the hundred (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 10b) with the tithing (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 11d) the compiler follows a correct instinct shared by other contemporaries too.—This sentence orders attendance at court by all who are bound to take part in the assembly, in contrast to what follows.—Two source passages of different content seem to me to have run together here</seg></note>
       </div>
     </body>
   </text>

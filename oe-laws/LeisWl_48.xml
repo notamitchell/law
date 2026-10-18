@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 48</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,15 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">519</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">274</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">The French text printed in the chronicle ascribed to Ingulf of Croyland (Robertson’s I; known only from early printed editions)</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,18 +47,31 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2471 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2471 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 519.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 519.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="48">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 48</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-i"><ptr type="liebermannNote" n="9" target="#LeisWl_48.lnote.oe.9"/><pb n="519" ed="#liebermann"/>Nuls ne receit hom[e]<ptr type="liebermannNote" n="10" target="#LeisWl_48.lnote.oe.10"/> ultre III nuis, si [c]il<ptr type="liebermannNote" n="11" target="#LeisWl_48.lnote.oe.11"/> ne li<ptr type="liebermannNote" n="12" target="#LeisWl_48.lnote.oe.12"/> command<ptr type="liebermannNote" n="13" target="#LeisWl_48.lnote.oe.13"/>, od qui il fust ainz<ptr type="liebermannNote" n="14" target="#LeisWl_48.lnote.oe.14"/>.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="519" ed="#liebermann"/>Ne quis hospitem ultra tres noctes non retineat. Nullus hospitem ultra terciam noctem recipiat, nisi ille cum quo prius fuit, hoc ei mandauerit.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="48" corresp="#wit-i"><pb n="274" ed="#robertson"/>Nuls ne receit hom[e] ultre III nuis, si [c]il ne li command od qui il fust ainz.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="519" ed="#liebermann"/>48. Keiner nehme jemanden über drei Nächte lang auf<ptr type="liebermannNote" n="b" target="#LeisWl_48.lnote.de1.b"/>, wenn ihm nicht dér [ihn] empfiehlt, bei dem derselbe bisher war.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">48. Let no one take someone in for longer than three nights unless he recommends [him] to him with whom the same was hitherto.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-i"><pb n="275" ed="#robertson"/>No-one shall entertain a man for more than 3 days, unless he is committed to his charge by the man with whom he was formerly serving.</ab>
         <note type="comparison" source="#liebermann" n="519"><ref target="clause:IICn_28">II Cn 28</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 28</note>
-        <note type="editorial">Added October 2026 from Robertson pp. 274–275 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 274–275 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 519, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_48.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">519</biblScope></bibl><seg type="original" xml:lang="de">XLVI. <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">XLVI. I</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_48.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">519</biblScope></bibl><seg type="original" xml:lang="de">hom <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">hom I</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_48.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">519</biblScope></bibl><seg type="original" xml:lang="de">til <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">til I</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_48.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">519</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi> (ihm), <hi rend="italic">nicht</hi> le (ihn)</seg><seg type="translation" xml:lang="en" source="#claude">so (to him), not le (him)</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_48.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">519</biblScope></bibl><seg type="original" xml:lang="de">comand <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">comand Im</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_48.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">519</biblScope></bibl><seg type="original" xml:lang="de">amz <hi rend="italic">Im;</hi> aniz <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">amz Im; aniz Io</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_48.lnote.de1.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">519</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl.</hi> 30, 1</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">cf.</hi> 30, 1</seg></note>
       </div>
     </body>
   </text>

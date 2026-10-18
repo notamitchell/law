@@ -4,9 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Hn mon Epil.</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,11 +21,12 @@
       <sourceDesc>
         <bibl type="legalText"><title>Henry I: Decree Concerning the Coinage</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">523</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">284</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-sc"><abbr>Sc</abbr> <note type="manuscript">The Red Book of the Exchequer (London, The National Archives, E 164/2)</note></witness>
+          <witness xml:id="wit-sc"><abbr>Sc</abbr> <note type="manuscript">Red Book of the Exchequer (Liber rubeus Scaccarii), c. 1230</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -39,16 +41,23 @@
       <creation><date source="#liebermann">1100–3</date><placeName source="#robertson">Westminster</placeName><note type="promulgation">1100–3 (Liebermann); Westminster (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2517 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2517 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Sc added from Gesetze I, p. 523.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Epil.">
         <head><ref type="lawCode" target="law:HnMon">Hn mon</ref> Epil.</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-sc"><pb n="523" ed="#liebermann"/>Teste Willelmo<ptr type="liebermannNote" n="22" target="#HnMon_Epil.lnote.oe.22"/> cancellario et Roberto comite de Mellent et R[odberto] filio Hamonis et R[icardo] de Retuers<ptr type="liebermannNote" n="23" target="#HnMon_Epil.lnote.oe.23"/>. Apud Westmonasterium in natale Domini.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="Epil." corresp="#wit-sc"><pb n="284" ed="#robertson"/>Teste Willelmo cancellario et Roberto Comite de Mellent et R[odberto] filio Hamonis et R[icardo] de Retuers. Apud Westmonasterium in natale Domini.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-sc"><pb n="285" ed="#robertson"/>Witnesses: Chancellor William and Earl Robert de Meulan and Robert FitzHamo and Richard de Retuers. At Westminster at Christmas.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 284–285 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 284–285 (text and translation); Liebermann’s text added from Gesetze I p. 523, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_Epil.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">523</biblScope></bibl><seg type="original" xml:lang="de">-mus <hi rend="italic">Sc</hi></seg><seg type="translation" xml:lang="en" source="#claude">-mus <hi rend="italic">Sc</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_Epil.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">523</biblScope></bibl><seg type="original" xml:lang="de">Reuers <hi rend="italic">Hg K.</hi></seg><seg type="translation" xml:lang="en" source="#claude">Reuers <hi rend="italic">Hg K.</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_Epil.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="de">Im Ggs. zu CHn cor Test{c} heisst Giffard hier nicht ‘Erwählter von Winchester’, viell. weil der König ihn zu weihen verboten hatte, wenn Anselm nicht auch die gegen kanonisches Verbot Investierten weihen würde</seg><seg type="translation" xml:lang="en" source="#claude">In contrast to CHn cor Test{c}, Giffard is not called ‘elect of Winchester’ here, perhaps because the king had forbidden his consecration unless Anselm would also consecrate those invested contrary to the canonical prohibition</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_Epil.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="de">Meulan, Heinrichs wichtigster Staatsmann, bezeugt auch <hi rend="italic">u</hi>. Hn com</seg><seg type="translation" xml:lang="en" source="#claude">Meulan, Henry's most important statesman, also witnesses <hi rend="italic">below</hi> Hn com</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_Epil.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S</hi>. CHn cor Test{m}. Rivers, der Vater des ersten Grafen von Devon (Round <hi rend="italic">Feudal. Engl</hi>. 486), steht bei Will. Malmesb. (<hi rend="italic">Reg</hi>. V 394) unter Heinrichs Parteigängern gegen Robert v. d. Normandie a. 1100f.</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See</hi> CHn cor Test{m}. Rivers, the father of the first Earl of Devon (Round <hi rend="italic">Feudal. Engl</hi>. 486), appears in Will. Malmesb. (<hi rend="italic">Reg</hi>. V 394) among Henry's partisans against Robert of Normandy in 1100f.</seg></note>
       </div>
     </body>
   </text>

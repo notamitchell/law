@@ -4,9 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>CHn cor 8.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,10 +21,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The Coronation Charter of Henry I</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">522</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">280</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lat"><abbr>Lat</abbr> <note type="manuscript">Latin text as edited by Liebermann from chronicles and cartularies (no original survives)</note></witness>
+          <witness xml:id="wit-worc"><abbr>Worc</abbr></witness>
+          <witness xml:id="wit-herts"><abbr>Herts</abbr></witness>
+          <witness xml:id="wit-winch"><abbr>Winch</abbr></witness>
+          <witness xml:id="wit-roch"><abbr>Roch</abbr></witness>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5)</note></witness>
         </listWit>
       </sourceDesc>
@@ -39,16 +46,20 @@
       <creation><date source="#liebermann">5 Aug. 1100</date><placeName source="#robertson">Westminster</placeName><note type="promulgation">5 Aug. 1100 (Liebermann); Westminster (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2499 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2499 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lat added from Gesetze I, p. 522.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="8.1">
         <head><ref type="lawCode" target="law:CHnCor">CHn cor</ref> 8.1</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lat"><pb n="522" ed="#liebermann"/>Quodsi perfidiæ uel sceleris conuictus fuerit, sicut iustum<ptr type="liebermannNote" n="32" target="#CHnCor_8-1.lnote.oe.32"/> fuerit, sic emendet.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="8.1" corresp="#wit-h"><pb n="280" ed="#robertson"/>Quodsi perfidiae vel sceleris convictus fuerit, sicut iustum fuerit sic emendet.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><pb n="281" ed="#robertson"/>But if he has been convicted of treason or felony, he shall make amends as has been established by law.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 280–281 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 280–281 (text and translation); Liebermann’s text added from Gesetze I p. 522, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_8-1.lnote.oe.32" n="32" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">522</biblScope></bibl><seg type="original" xml:lang="de">erit culpa <hi rend="italic">statt</hi> i. f. <hi rend="italic">Alb</hi></seg><seg type="translation" xml:lang="en" source="#claude">erit culpa instead of i. f. Alb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_8-1.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">298</biblScope></bibl><seg type="original" xml:lang="de">Unter <hi rend="italic">perfidia vel scelus</hi> sehen <hi rend="italic">treason</hi> bzw. <hi rend="italic">felony</hi> Pol Mai II 512. Jedenfalls ist hier eine über schwerste Geldstrafe hinausgehende Strafe, also Leibesstrafe, gemeint. <hi rend="italic">Vgl. Gl</hi> Verbrechen 2A. Vielleicht trat damals noch, gemäss Wilhelms I. Einführung, Verstümmelung statt Todes ein; als neue <hi rend="italic">lex</hi> verzeichnet das Hängen des handhaften Diebes erst wieder zu 1108 Flor. Wig.</seg><seg type="translation" xml:lang="en" source="#claude">Pol Mai II 512 see in <hi rend="italic">perfidia vel scelus</hi> <hi rend="italic">treason</hi> and <hi rend="italic">felony</hi> respectively. In any case a punishment going beyond the heaviest money penalty, i.e. corporal punishment, is meant here. <hi rend="italic">Cf. Gl</hi> Verbrechen 2A. Perhaps at that time, in accordance with William I’s innovation, mutilation was still imposed instead of death; Flor. Wig. records the hanging of the thief caught in the act as a new <hi rend="italic">lex</hi> only again under 1108</seg></note>
       </div>
     </body>
   </text>

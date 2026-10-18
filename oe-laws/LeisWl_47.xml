@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 47</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">518</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">272</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">The French text printed in the chronicle ascribed to Ingulf of Croyland (Robertson’s I; known only from early printed editions)</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,18 +48,32 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2467 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2467 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 518.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 518.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="47">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 47</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><ptr type="liebermannNote" n="19" target="#LeisWl_47.lnote.oe.19"/><pb n="518" ed="#liebermann"/>E cil<ptr type="liebermannNote" n="20" target="#LeisWl_47.lnote.oe.20"/> qui est redté e testimoniet<ptr type="liebermannNote" n="4" target="#LeisWl_47.lnote.oe.4"/> de deleauté, e le plait tres foiz eschuit, e al quart mustrent li sumenour<ptr type="liebermannNote" n="21" target="#LeisWl_47.lnote.oe.21"/> de se[s<ptr type="liebermannNote" n="22" target="#LeisWl_47.lnote.oe.22"/>] treis defautes, uncore le mande l’um<ptr type="liebermannNote" n="5" target="#LeisWl_47.lnote.oe.5"/>, que<ptr type="liebermannNote" n="15" target="#LeisWl_47.lnote.oe.15"/> il plege truse e vienge a dreit.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="518" ed="#liebermann"/>De rectato qui uocatus non comparet. Si quis malam habens famam et de infidelitate rectatus tercio uocatus non comparet, quarto die ostendant summonitores tres defaltas, et adhuc summonicionem habeat, ut plegios inueniat et iuri pareat.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="47" corresp="#wit-i"><pb n="272" ed="#robertson"/>E cil qui est redté e testimoniet de deleauté e le plait tres foiz eschuit, e al quart mustrent li sumenour de se[s] treis defautes, uncore le mande l'um que il plege truse e vienge a dreit.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="518" ed="#liebermann"/>47. Und wer [= wenn einer] bescholten und durch Zeugniss wegen Unredlichkeit beleumundet ist und die Gerichtsverhandlung dreimal vermeidet, und [wenn] beim vierten [Gericht] die Vorlader<ptr type="liebermannNote" n="1" target="#LeisWl_47.lnote.de.1"/> seine drei [Termin-]Versäumnisse darlegen, fordere man ihn nochmals auf, dass er Bürgschaft finde und zu Recht erscheine.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">47. And whoever [= if one] is ill-reputed and accused by testimony of dishonesty and avoids the court proceedings three times, and [if] at the fourth [court] the summoners set forth his three defaults [of term], one shall summon him once more to find surety and appear to stand to law.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-i"><pb n="273" ed="#robertson"/>And if anyone who is accused and against whom evidence of untrustworthiness is given fails three times to attend the court proceedings, and if, at the fourth meeting of the court, the summoners bring forward his three defections, he shall once more be asked to find a surety and appear before the court.</ab>
         <note type="comparison" source="#liebermann" n="518"><ref target="clause:IICn_25">II Cn 25</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 25</note>
-        <note type="editorial">Added October 2026 from Robertson pp. 272–273 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 272–273 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 518, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_47.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">518</biblScope></bibl><seg type="original" xml:lang="de">testem. <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">testem. Im</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_47.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">518</biblScope></bibl><seg type="original" xml:lang="de">lun <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">lun Im</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_47.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">518</biblScope></bibl><seg type="original" xml:lang="de">qui <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">qui Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_47.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">518</biblScope></bibl><seg type="original" xml:lang="de">XLV. <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">XLV. I</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_47.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">518</biblScope></bibl><seg type="original" xml:lang="de">al <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">al Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_47.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">518</biblScope></bibl><seg type="original" xml:lang="de">-out <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">-out Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_47.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">518</biblScope></bibl><seg type="original" xml:lang="de">se <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">se I</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_47.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">292</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ebd</hi>. Vorladung 7a. Für gerichtlich hält die Vorlader Moisy <hi rend="italic">Gloss. Anglo-Normand</hi> 934, mit Zitat aus Britton [Ende 13. Jhs.!]: <hi rend="italic">Les sominours soient chargés de estre illonques mesme le jour à tesmoyner lour sumounse</hi>. Dies bezweifelt Opet <hi rend="italic">Prozesseinleitung</hi> 56. Auch besoldete Vorlader zum Reichsrat heissen aber 1164 ebenso; Stubbs <hi rend="italic">Constit. hist</hi>. I 467{3}</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Ibid</hi>. Vorladung 7a. Moisy (<hi rend="italic">Gloss. Anglo-Normand</hi> 934) takes the summoners to be officers of the court, quoting Britton [end of the 13th cent.!]: <hi rend="italic">Les sominours soient chargés de estre illonques mesme le jour à tesmoyner lour sumounse</hi>. Opet (<hi rend="italic">Prozesseinleitung</hi> 56) doubts this. But salaried summoners to the king’s council are also so called in 1164; Stubbs <hi rend="italic">Constit. hist</hi>. I 467{3}</seg></note>
       </div>
     </body>
   </text>

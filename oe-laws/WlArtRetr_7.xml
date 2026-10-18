@@ -4,9 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Wl art retr 7</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,10 +21,14 @@
       <sourceDesc>
         <bibl type="legalText"><title>Willelmi Articuli Retractati (the Ten Articles of William I, revised)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">490</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">246</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lond"><abbr>Lond</abbr> <note type="manuscript">Latin text as edited by Liebermann (London collection: MSS K2, Co, Or)</note></witness>
+          <witness xml:id="wit-guildhall"><abbr>Guildhall</abbr></witness>
+          <witness xml:id="wit-exchequer"><abbr>Exchequer</abbr></witness>
           <witness xml:id="wit-rs"><abbr>Rs</abbr> <note type="manuscript">Manchester, John Rylands Library, MS Latin 155</note></witness>
         </listWit>
       </sourceDesc>
@@ -39,20 +44,26 @@
       <creation><date source="#liebermann #robertson">c.1210</date><note type="promulgation">c.1210 (Liebermann, Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2348 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2348 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lond added from Gesetze I, p. 490.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7">
         <head><ref type="lawCode" target="law:WlArtRetr">Wl art retr</ref> 7</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lond"><ptr type="liebermannNote" n="25" target="#WlArtRetr_7.lnote.oe.25"/><pb n="490" ed="#liebermann"/>Et<ptr type="liebermannNote" n="i" target="#WlArtRetr_7.lnote.oe.i"/> quod habeant per uniuersum regnum mensuras fidelissimas et signatas et pondera fidelissima et signata, sicut boni<ptr type="liebermannNote" n="k" target="#WlArtRetr_7.lnote.oe.k"/> predecessores statuerunt.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="7" corresp="#wit-rs"><pb n="246" ed="#robertson"/>Et quod habeant per universum regnum mensuras fidelissimas et signatas, et pondera fidelissima et signata sicut boni praedecessores statuerunt.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-rs"><pb n="247" ed="#robertson"/>And throughout the whole of the realm they shall have weights and measures which are stamped and thoroughly reliable, in accordance with the decrees of our worthy predecessors.</ab>
         <note type="comparison" source="#liebermann" n="490"><ref target="clause:IICn_9">II Cn 9</ref>; <ref target="clause:WlArt_8-1">Wl art 8.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">vgl. II Cn. 9 Wl art. 8, 1</note>
         <note type="comparisonIncomplete">Some of Liebermann’s notes here are cut off in the gutter of the scan used, and are still to be completed.</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:WlArtRetr_11">Wl art retr 11</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 246–247 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 246–247 (text and translation); Liebermann’s text added from Gesetze I p. 490, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_7.lnote.oe.i" n="i" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Verf. legt solche Verordnung auch</hi> Ine <hi rend="italic">bei; vgl. meine</hi> Leges Angl. Lond. 13</seg><seg type="translation" xml:lang="en" source="#claude">The author attributes such an ordinance to Ine as well; cf. my Leges Angl. Lond. 13</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_7.lnote.oe.k" n="k" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Verf. liebt diese Phrase; vgl.</hi> 34</seg><seg type="translation" xml:lang="en" source="#claude">The author is fond of this phrase; cf. 34</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_7.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de">De ponderibus et mensuris <hi rend="italic">im</hi> 14. <hi rend="italic">Jh. am Rande Sc</hi></seg><seg type="translation" xml:lang="en" source="#claude">De ponderibus et mensuris in the margin in the 14th cent. Sc</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_7.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">283</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Mass 6b.—Zu I 490{k} schiebe vor ‘34’ das Wort ‘<hi rend="italic">ebd</hi>.’ ein</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Mass 6b.—In I 490{k} insert the word ‘<hi rend="italic">ibid</hi>.’ before ‘34’</seg></note>
       </div>
     </body>
   </text>

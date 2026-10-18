@@ -4,9 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Wl art retr 8</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,10 +21,14 @@
       <sourceDesc>
         <bibl type="legalText"><title>Willelmi Articuli Retractati (the Ten Articles of William I, revised)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">490</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">246</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lond"><abbr>Lond</abbr> <note type="manuscript">Latin text as edited by Liebermann (London collection: MSS K2, Co, Or)</note></witness>
+          <witness xml:id="wit-guildhall"><abbr>Guildhall</abbr></witness>
+          <witness xml:id="wit-exchequer"><abbr>Exchequer</abbr></witness>
           <witness xml:id="wit-rs"><abbr>Rs</abbr> <note type="manuscript">Manchester, John Rylands Library, MS Latin 155</note></witness>
         </listWit>
       </sourceDesc>
@@ -39,19 +44,32 @@
       <creation><date source="#liebermann #robertson">c.1210</date><note type="promulgation">c.1210 (Liebermann, Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2349 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2349 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lond added from Gesetze I, p. 490.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="8">
         <head><ref type="lawCode" target="law:WlArtRetr">Wl art retr</ref> 8</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lond"><pb n="490" ed="#liebermann"/>Statuimus etiam et firmiter precipimus, ut omnes comites et barones et milites et seruientes et uniuersi<ptr type="liebermannNote" n="l" target="#WlArtRetr_8.lnote.oe.l"/> liberi homines tocius regni nostri predicti habeant et teneant se semper bene in armis et in equis, ut decet et oportet, et quod sint semper prompti<ptr type="liebermannNote" n="m" target="#WlArtRetr_8.lnote.oe.m"/> et bene<ptr type="liebermannNote" n="26" target="#WlArtRetr_8.lnote.oe.26"/> parati ad seruicium suum integrum nobis explendum et peragendum, cum semper opus adfuerit, secundum quod nobis debent<ptr type="liebermannNote" n="27" target="#WlArtRetr_8.lnote.oe.27"/> de feodis et de<ptr type="liebermannNote" n="28" target="#WlArtRetr_8.lnote.oe.28"/> tenementis<ptr type="liebermannNote" n="29" target="#WlArtRetr_8.lnote.oe.29"/> suis de iure facere, et sicut illis statuimus per commune consilium totius regni nostri predicti et illis dedimus et concessimus<ptr type="liebermannNote" n="30" target="#WlArtRetr_8.lnote.oe.30"/> in feodis<ptr type="liebermannNote" n="31" target="#WlArtRetr_8.lnote.oe.31"/> iure hereditario. Hoc preceptum<ptr type="liebermannNote" n="32" target="#WlArtRetr_8.lnote.oe.32"/> non sit uiolatum ullo modo super forisfacturam nostram<ptr type="liebermannNote" n="33" target="#WlArtRetr_8.lnote.oe.33"/> plenam.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="8" corresp="#wit-rs"><pb n="246" ed="#robertson"/>Statuimus eciam et firmiter praecipimus, ut omnes comites et barones et milites et servientes et universi liberi homines tocius regni nostri praedicti habeant et teneant se semper bene in armis et in equis, ut decet et oportet, et quod sint semper prompti et bene parati ad servicium suum integrum nobis explendum et peragendum, cum semper opus adfuerit, secundum quod nobis debent de feodis et de tenementis suis de iure facere, et sicut illis statuimus per commune consilium tocius regni nostri praedicti, et illis dedimus et concessimus in feodis iure hereditario. Hoc praeceptum non sit violatum ullo modo super forisfacturam nostram plenam.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-rs"><pb n="247" ed="#robertson"/>We decree likewise and firmly enjoin, that all earls, barons, knights, tenants by serjeanty and all free men throughout the whole of our realm aforesaid shall always keep themselves well supplied with arms and horses, as is fitting and right, and that they shall always be ready and well prepared to perform and fulfil the whole of their service to us, whenever the need shall arise, in accordance with their legal duty to us, by virtue of their fiefs and holdings, and in accordance with what we have ordained for them, with the general approval of our whole realm aforesaid, and have granted and conceded to them [to be held] as fiefs by hereditary right. This decree shall not be violated in any way, under pain of incurring the full fine for insubordination to us.</ab>
         <note type="comparison" source="#liebermann" n="490"><ref target="clause:CHnCor_11">CHn cor 11</ref>; <ref target="clause:WlArtRetr_5">Wl art retr 5</ref>; <ref target="clause:WlArt_10">Wl art 10</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Charta Hn cor. 11 | vgl. o. 5 | Wl art. 10</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:WlArtRetr_5">Wl art retr 5</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 246–247 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 246–247 (text and translation); Liebermann’s text added from Gesetze I p. 490, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_8.lnote.oe.l" n="l" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">ebenso</hi> E Cf. 32 A 9</seg><seg type="translation" xml:lang="en" source="#claude">likewise E Cf. 32 A 9</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_8.lnote.oe.m" n="m" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de">prompti et <hi rend="italic">interpolirt Verf. auch unten in die</hi> C Hn cor. 11</seg><seg type="translation" xml:lang="en" source="#claude">prompti et is interpolated by the author below into C Hn cor. 11 as well</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_8.lnote.oe.26" n="26" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_8.lnote.oe.27" n="27" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de">de f. deb. <hi rend="italic">K3</hi></seg><seg type="translation" xml:lang="en" source="#claude">de f. deb. K3</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_8.lnote.oe.28" n="28" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Sc Hg K3</hi></seg><seg type="translation" xml:lang="en" source="#claude">omitted in Sc Hg K3</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_8.lnote.oe.29" n="29" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de">tene <hi rend="italic">Hg K3</hi></seg><seg type="translation" xml:lang="en" source="#claude">tene Hg K3</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_8.lnote.oe.30" n="30" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">nur</hi> ꝯ (<hi rend="italic">d. i.</hi> con) <hi rend="italic">Sc</hi></seg><seg type="translation" xml:lang="en" source="#claude">only ꝯ (i.e. con) Sc</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_8.lnote.oe.31" n="31" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de">-do <hi rend="italic">Se</hi></seg><seg type="translation" xml:lang="en" source="#claude">-do Se</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_8.lnote.oe.32" n="32" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de">nostrum <hi rend="italic">fügt zu Sc</hi></seg><seg type="translation" xml:lang="en" source="#claude">Sc adds nostrum</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_8.lnote.oe.33" n="33" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Co Or</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Co Or</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_8.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">283</biblScope></bibl><seg type="original" xml:lang="de">Vielleicht benutzt Verf. hier auch <hi rend="italic">Assisa armorum</hi> von 1181 (ed. Stubbs <hi rend="italic">Sel. char</hi>. 154), nach der jeder <hi rend="italic">liber</hi> je nach seinem <hi rend="italic">feodum arma habebit</hi>, wie er an anderen Stellen seines Werkes tat; <hi rend="italic">vgl</hi>. meine <hi rend="italic">Leges Angl. Lond. coll</hi>. S. 12. 34f. 59; <hi rend="italic">Gl</hi> Heer 2e; Lehn 10</seg><seg type="translation" xml:lang="en" source="#claude">Perhaps the author also uses the <hi rend="italic">Assisa armorum</hi> of 1181 here (ed. Stubbs <hi rend="italic">Sel. char</hi>. 154), under which every <hi rend="italic">liber</hi> <hi rend="italic">arma habebit</hi> according to his <hi rend="italic">feodum</hi>, as he did in other places in his work; <hi rend="italic">cf</hi>. my <hi rend="italic">Leges Angl. Lond. coll</hi>. p. 12. 34f. 59; <hi rend="italic">Gl</hi> Heer 2e; Lehn 10</seg></note>
       </div>
     </body>
   </text>

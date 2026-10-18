@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Hn Lond 14</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,11 +22,13 @@
       <sourceDesc>
         <bibl type="legalText"><title>Henry I: London Charter</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">525</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">292</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lat"><abbr>Lat</abbr> <note type="manuscript">Latin text as edited by Liebermann from the London collections (Lond, Cc, Horn, Cus, Cust …)</note></witness>
           <witness xml:id="wit-rs"><abbr>Rs</abbr> <note type="manuscript">Manchester, John Rylands Library, MS Latin 155</note></witness>
         </listWit>
       </sourceDesc>
@@ -41,16 +44,26 @@
       <creation><date source="#liebermann">1115–33, probably 1131</date><date source="#wormald-mel">very late in Henry I's reign</date><placeName source="#robertson">Westminster</placeName><note type="promulgation">1115–33, probably 1131 (Liebermann); very late in Henry I's reign (Wormald); Westminster (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2546 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2546 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lat added from Gesetze I, p. 525.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="14">
         <head><ref type="lawCode" target="law:HnLond">Hn Lond</ref> 14</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lat"><pb n="525" ed="#liebermann"/>Quodsi reddere noluerint neque<ptr type="liebermannNote" n="45" target="#HnLond_14.lnote.oe.45"/> ad disrationandum uenire, tunc ciues<ptr type="liebermannNote" n="46" target="#HnLond_14.lnote.oe.46"/>, quibus debita sua debent<ptr type="liebermannNote" n="47" target="#HnLond_14.lnote.oe.47"/>, capiant in<ptr type="liebermannNote" n="48" target="#HnLond_14.lnote.oe.48"/> ciuitatem namia sua uel de<ptr type="liebermannNote" n="49" target="#HnLond_14.lnote.oe.49"/> burgo uel uilla uel de comitatu<ptr type="liebermannNote" n="50" target="#HnLond_14.lnote.oe.50"/>, in quo manet qui debitum debet.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="14" corresp="#wit-rs"><pb n="292" ed="#robertson"/>Quodsi reddere noluerint neque ad disrationandum venire, tunc cives, quibus debita sua debent, capiant in civitatem namia sua vel de [burgo vel villa vel de] comitatu in quo manet qui debitum debet.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-rs"><pb n="293" ed="#robertson"/>But if they have refused to pay or to come to clear themselves, then the citizens to whom they are in debt shall seize their pledges [and bring them] into the city from the [town, village or] county in which the debtor lives.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 292–293 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 292–293 (text and translation); Liebermann’s text added from Gesetze I p. 525, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_14.lnote.oe.45" n="45" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">525</biblScope></bibl><seg type="original" xml:lang="de">quod non debent <hi rend="italic">schiebt ein Cc Horn Cust E IV</hi></seg><seg type="translation" xml:lang="en" source="#claude">quod non debent inserted in Cc Horn Cust E IV</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_14.lnote.oe.46" n="46" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">525</biblScope></bibl><seg type="original" xml:lang="de">Londoniae <hi rend="italic">fügt zu Horn Cust E IV</hi></seg><seg type="translation" xml:lang="en" source="#claude">Londoniae added in Horn Cust E IV</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_14.lnote.oe.47" n="47" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">525</biblScope></bibl><seg type="original" xml:lang="de">-ntur <hi rend="italic">Horn Cus Cust E IV</hi></seg><seg type="translation" xml:lang="en" source="#claude">-ntur Horn Cus Cust E IV</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_14.lnote.oe.48" n="48" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">525</biblScope></bibl><seg type="original" xml:lang="de">n. s. in ciuitate London' de b. <hi rend="italic">Horn Cust E IV</hi></seg><seg type="translation" xml:lang="en" source="#claude">n. s. in ciuitate London' de b. Horn Cust E IV</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_14.lnote.oe.49" n="49" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">525</biblScope></bibl><seg type="original" xml:lang="de">de b. u. uilla uel de <hi rend="italic">fehlt Lond Cus</hi></seg><seg type="translation" xml:lang="en" source="#claude">de b. u. uilla uel de omitted in Lond Cus</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_14.lnote.oe.50" n="50" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">525</biblScope></bibl><seg type="original" xml:lang="de">comm. <hi rend="italic">Co</hi></seg><seg type="translation" xml:lang="en" source="#claude">comm. Co</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_14.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">307</biblScope></bibl><seg type="original" xml:lang="de">Dass hierüber <hi rend="italic">placita apud Londonias</hi> stattfinden, sagt auch Freibrief 1155; dagegen die Exekutive bleibt dort fort. K. Johann gab dann die Klausel <hi rend="italic">De debitis quod debitores in civitate si venerint uel <hi rend="spaced">sui</hi></hi> [Angehörige] <hi rend="italic">distringantur; vgl</hi>. Bateson <hi rend="italic">EHR</hi> 1902, 726.—Stubbs nimmt die Einschiebung{45} ‘dass sie nicht schulden’ in den Text; <hi rend="italic">Lect</hi>. 128; die Worte <hi rend="italic">burgo uel uilla</hi> lässt er fort</seg><seg type="translation" xml:lang="en" source="#claude">That <hi rend="italic">placita apud Londonias</hi> are held on this matter is also stated by the charter of 1155; the provision for enforcement, on the other hand, is omitted there. King John then granted the clause <hi rend="italic">De debitis quod debitores in civitate si venerint uel <hi rend="italic">sui</hi></hi> [their kin] <hi rend="italic">distringantur; cf</hi>. Bateson <hi rend="italic">EHR</hi> 1902, 726.—Stubbs takes the interpolation{45} ‘that they do not owe’ into the text; <hi rend="italic">Lect</hi>. 128; he omits the words <hi rend="italic">burgo uel uilla</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_14.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">307</biblScope></bibl><seg type="original" xml:lang="de">Pfändung <hi rend="italic">de vicino debitoris</hi> begegnet in anderen städtischen Freibriefen (Ballard 164); die des in derselben Grafschaft (<hi rend="italic">s. d. Gl</hi> 12. 21b) Heimischen in Repressalie auch zu Colchester 1189; <hi rend="italic">communi</hi> dafür scheint mir aus <hi rend="italic">comitatu</hi> nur verlesen, gegen Bateson <hi rend="italic">Bor. cust</hi>. I 120. II p. <hi rend="smallcaps">liii</hi></seg><seg type="translation" xml:lang="en" source="#claude">Distraint <hi rend="italic">de vicino debitoris</hi> occurs in other town charters (Ballard 164); distraint, by way of reprisal, of a man resident in the same shire (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 12. 21b) also at Colchester 1189; <hi rend="italic">communi</hi> there seems to me merely a misreading of <hi rend="italic">comitatu</hi>, against Bateson <hi rend="italic">Bor. cust</hi>. I 120. II p. <hi rend="smallcaps">liii</hi></seg></note>
       </div>
     </body>
   </text>

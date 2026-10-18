@@ -4,9 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Hn mon Prol.</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,11 +21,12 @@
       <sourceDesc>
         <bibl type="legalText"><title>Henry I: Decree Concerning the Coinage</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">523</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">284</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-sc"><abbr>Sc</abbr> <note type="manuscript">The Red Book of the Exchequer (London, The National Archives, E 164/2)</note></witness>
+          <witness xml:id="wit-sc"><abbr>Sc</abbr> <note type="manuscript">Red Book of the Exchequer (Liber rubeus Scaccarii), c. 1230</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -39,16 +41,24 @@
       <creation><date source="#liebermann">1100–3</date><placeName source="#robertson">Westminster</placeName><note type="promulgation">1100–3 (Liebermann); Westminster (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2509 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2509 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Sc added from Gesetze I, p. 523.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Prol.">
         <head><ref type="lawCode" target="law:HnMon">Hn mon</ref> Prol.</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-sc"><ptr type="liebermannNote" n="a" target="#HnMon_Prol.lnote.oe.a"/><ptr type="liebermannNote" n="1" target="#HnMon_Prol.lnote.oe.1"/><pb n="523" ed="#liebermann"/>Henricus rex Anglorum Samsoni<ptr type="liebermannNote" n="2" target="#HnMon_Prol.lnote.oe.2"/> episcopo et Ursoni de Abetot et omnibus baronibus, Francis et Anglis<ptr type="liebermannNote" n="4" target="#HnMon_Prol.lnote.oe.4"/>, de Wirecestrescira salutem.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="Prol." corresp="#wit-sc"><pb n="284" ed="#robertson"/>Henricus, rex Anglorum, Samsoni episcopo et Ursoni de Abetot et omnibus baronibus, Francis et Anglis, de Wirecestrescira, salutem.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-sc"><pb n="285" ed="#robertson"/>Henry, King of England, to Bishop Samson and Urso d'Abetot and all the barons of Worcestershire, both French and English—greeting.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 284–285 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 284–285 (text and translation); Liebermann’s text added from Gesetze I p. 523, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_Prol.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">523</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Aus</hi> Sc (<hi rend="italic">Liber rub. Scacc.</hi>) <hi rend="italic">f.</hi> 163<hi rend="italic">d</hi>, <hi rend="italic">um</hi> 1230 (<hi rend="italic">hinter</hi> CHn cor), <hi rend="italic">dem</hi> K 3 (<hi rend="italic">Cotton Claudius D II f.</hi> 41 <hi rend="italic">vom</hi> 15. <hi rend="italic">Jh.</hi>) <hi rend="italic">und</hi> Hg (<hi rend="italic">Hargrave</hi> 313 <hi rend="italic">f.</hi> 100, <hi rend="italic">um</hi> 1251) <hi rend="italic">folgen.</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">From</hi> Sc (<hi rend="italic">Liber rub. Scacc.</hi>) <hi rend="italic">f.</hi> 163<hi rend="italic">d</hi>, <hi rend="italic">c.</hi> 1230 (<hi rend="italic">after</hi> CHn cor), <hi rend="italic">which</hi> K 3 (<hi rend="italic">Cotton Claudius D II f.</hi> 41, <hi rend="italic">of the</hi> 15<hi rend="italic">th cent.</hi>) <hi rend="italic">and</hi> Hg (<hi rend="italic">Hargrave</hi> 313 <hi rend="italic">f.</hi> 100, <hi rend="italic">c.</hi> 1251) <hi rend="italic">follow.</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_Prol.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">523</biblScope></bibl><seg type="original" xml:lang="de">Carta eiusdem [regis Henrici I. <hi rend="italic">K</hi>] de moneta falsa et cambiatoribus <hi rend="italic">Sc am Rande; Rubrik Hg K</hi></seg><seg type="translation" xml:lang="en" source="#claude">Carta eiusdem [regis Henrici I. <hi rend="italic">K</hi>] de moneta falsa et cambiatoribus <hi rend="italic">Sc in the margin; rubric in Hg K</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_Prol.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">523</biblScope></bibl><seg type="original" xml:lang="de">Samps. <hi rend="italic">Hg K</hi></seg><seg type="translation" xml:lang="en" source="#claude">Samps. <hi rend="italic">Hg K</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_Prol.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">523</biblScope></bibl><seg type="original" xml:lang="de">-icis de Wirc. <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">-icis de Wirc. <hi rend="italic">K</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_Prol.lnote.oe.a-2" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="de">Hall datierte 1101—04 (<hi rend="italic">Red book of the Exchequer</hi> I p. <hi rend="smallcaps">xcviii</hi>), Stubbs (<hi rend="italic">Lect. Engl. hist</hi>. 113) 1108 mit Bezug auf die Münzänderung. Allein Weihnachten 1104 war Heinrich zu Windsor, 1106 in der Normandie; und Aug. 1107 ward Wilhelm zum Bischof von Winchester geweiht, und starben die Zeugen Fitzhamon und Rivers (Ann. Margan.; Teokesbur.; Flor. Wigorn.). Und da 1102 Roger, 1105 Waldric Kanzler war, so datierte ich 1100/01 oder 1103. (Freilich war Wilhelm noch im Herbst 1103 in Rom; mein <hi rend="italic">Quadrip</hi>. 154.) <hi rend="italic">S</hi>. jetzt <hi rend="italic">o</hi>. Einl. 3</seg><seg type="translation" xml:lang="en" source="#claude">Hall dated it 1101—04 (<hi rend="italic">Red book of the Exchequer</hi> I p. <hi rend="smallcaps">xcviii</hi>), Stubbs (<hi rend="italic">Lect. Engl. hist</hi>. 113) 1108, with reference to the change in the coinage. But at Christmas 1104 Henry was at Windsor, in 1106 in Normandy; and in Aug. 1107 William was consecrated bishop of Winchester, and the witnesses Fitzhamon and Rivers died (Ann. Margan.; Teokesbur.; Flor. Wigorn.). And since Roger was chancellor in 1102 and Waldric in 1105, I dated it 1100/01 or 1103. (William, admittedly, was still in Rome in the autumn of 1103; my <hi rend="italic">Quadrip</hi>. 154.) <hi rend="italic">See</hi> now <hi rend="italic">above</hi> Introduction 3</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_Prol.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. o</hi>. CHn cor Pro{e}</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See above</hi> CHn cor Pro{e}</seg></note>
       </div>
     </body>
   </text>

@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 20.3</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">506–507</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">262</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228, f. 141, c. 1230</note></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,16 +48,30 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2414 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2414 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Hk added from Gesetze I, p. 506–507.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 506–507.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 506–507.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="20.3">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 20.3</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-hk"><pb n="506–507" ed="#liebermann"/>Del relief al vilain: le meillur aveir qu’il averad, u cheval u bof u vache, durrad a sun seinur.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><ptr type="liebermannNote" n="e" target="#LeisWl_20-3.lnote.oe.e"/><pb n="506–507" ed="#liebermann"/>De relief a vilain: le meillur aveir qu’il avera, u chival u buf u vache, donrad a soun<ptr type="liebermannNote" n="17" target="#LeisWl_20-3.lnote.oe.17"/> seignour<ptr type="liebermannNote" n="27" target="#LeisWl_20-3.lnote.oe.27"/> de<ptr type="liebermannNote" n="f" target="#LeisWl_20-3.lnote.oe.f"/> relief<ptr type="liebermannNote" n="10" target="#LeisWl_20-3.lnote.oe.10"/>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-l"><pb n="506–507" ed="#liebermann"/>Releuium uillani: melius auerium, siue bos fuerit siue equus, sui domini erit.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="20.3" corresp="#wit-hk"><pb n="262" ed="#robertson"/>Del relief al vilain: le meillur aveir qu'il averad, u cheval u bof u vache, durrad a sun seinur.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="506–507" ed="#liebermann"/>20, 3. An ‘Heriot’ für den [verstorbenen] Bauern: das beste<ptr type="liebermannNote" n="1" target="#LeisWl_20-3.lnote.de.1"/> Grossvieh das er hat, entweder Pferd oder Ochs oder Kuh, soll er seinem Herrn geben (als Besthaupt <hi rend="italic">I</hi>).</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">20, 3. As ‘heriot’ for the [deceased] peasant: the best beast of the larger cattle that he has, either horse or ox or cow, he shall give to his lord (as best beast <hi rend="italic">I</hi>).</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-hk"><pb n="263" ed="#robertson"/>The heriot of a villein: he shall give to his lord the best animal that he has, either a horse, an ox or a cow.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 262–263 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 262–263 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 506–507, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_20-3.lnote.oe.e" n="e" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">506</biblScope></bibl><seg type="original" xml:lang="de">20, 3 <hi rend="italic">und</hi> 20, 3<hi rend="italic">a steht, als</hi> XXIX <hi rend="italic">gezählt, hinter</hi> 24 <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">20, 3 and 20, 3a stand, numbered as XXIX, after 24 in I</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_20-3.lnote.oe.f" n="f" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">506</biblScope></bibl><seg type="original" xml:lang="de">de r. <hi rend="italic">fehlt L</hi></seg><seg type="translation" xml:lang="en" source="#claude">de r. missing in L</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_20-3.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">506</biblScope></bibl><seg type="original" xml:lang="de">releif <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">releif <hi rend="italic">Io</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_20-3.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">506</biblScope></bibl><seg type="original" xml:lang="de">son <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">son <hi rend="italic">Io</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_20-3.lnote.oe.27" n="27" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">506</biblScope></bibl><seg type="original" xml:lang="de">-nor <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">-nor Io</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_20-3.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">289</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Besthaupt, wofür auch <hi rend="italic">melior bestia (animal, catellum)</hi> vorkommt. Unten 20, 4 (<hi rend="italic">s</hi>. Erkl. hinter 38) steht die Mutung des Zinsbauern. Besthaupt und Mutung bleiben regelmässig begrifflich gesondert und kommen nebeneinander vor; Neilson <hi rend="italic">Customary rents</hi> 88</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Besthaupt, for which <hi rend="italic">melior bestia (animal, catellum)</hi> also occurs. Below, 20, 4 (<hi rend="italic">see</hi> note after 38) states the relief of the rent-paying tenant. Heriot and relief regularly remain conceptually distinct and occur side by side; Neilson <hi rend="italic">Customary rents</hi> 88</seg></note>
       </div>
     </body>
   </text>

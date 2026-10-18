@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 17.2</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">504–505</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">262</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">The French text printed in the chronicle ascribed to Ingulf of Croyland (Robertson’s I; known only from early printed editions)</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228, f. 141, c. 1230</note></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,18 +48,35 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2403 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2403 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Hk added from Gesetze I, p. 504–505.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 504–505.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 504–505.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="17.2">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 17.2</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-hk"><ptr type="liebermannNote" n="a" target="#LeisWl_17-2.lnote.oe.a"/><pb n="504–505" ed="#liebermann"/>. . . . . . . . . . . . . . . .</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><ptr type="liebermannNote" n="d" target="#LeisWl_17-2.lnote.oe.d"/><pb n="504–505" ed="#liebermann"/>Ki retient<ptr type="liebermannNote" n="18" target="#LeisWl_17-2.lnote.oe.18"/> le dener Seint Pere, le dener rendra<ptr type="liebermannNote" n="19" target="#LeisWl_17-2.lnote.oe.19"/> per la justice de seinte<ptr type="liebermannNote" n="20" target="#LeisWl_17-2.lnote.oe.20"/> eglise, e XXX den.<ptr type="liebermannNote" n="21" target="#LeisWl_17-2.lnote.oe.21"/> forfait.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="504–505" ed="#liebermann"/>Qui uero denarium Sancti Petri detinet<ptr type="liebermannNote" n="a" target="#LeisWl_17-2.lnote.oe.a-2"/>, cogetur censura<ptr type="liebermannNote" n="b" target="#LeisWl_17-2.lnote.oe.b"/> ecclesiastica illum soluere, et insuper XXX d. pro forisfacto.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="17.2" corresp="#wit-i"><pb n="262" ed="#robertson"/>[Ki retient le dener Seint Pere, le dener rendra per la justice de seinte eglise e XXX den. forfait.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="504–505" ed="#liebermann"/>17, 2. Wer den Peterspfennig vorenthält, soll den Pfennig hergeben (gezwungen <hi rend="italic">L</hi>) durch den Richter (die Gerichtsbarkeit <hi rend="italic">L</hi>) der heiligen Kirche, und 30 Pfennig Busse [an sie<ptr type="liebermannNote" n="1" target="#LeisWl_17-2.lnote.de.1"/>].</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">17, 2. Whoever withholds Peter's Pence shall hand over the penny (compelled <hi rend="italic">L</hi>) by the judge (the jurisdiction <hi rend="italic">L</hi>) of holy church, and 30 pennies compensation [to it].</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-i"><pb n="263" ed="#robertson"/>[He who withholds Peter's Pence shall pay the penny through the court of Holy Church, and 30 pence as a fine.</ab>
         <note type="comparison" source="#liebermann" n="505">ECf 10.2</note>
         <note type="comparisonPrinted" source="#liebermann">vgl. ebd. 10, 2</note>
-        <note type="editorial">Added October 2026 from Robertson pp. 262–263 (text and translation); Liebermann’s text (K–M) not yet added; 17.2 and 17.3 are from I (not in Hk) (Robertson).</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 262–263 (text and translation); 17.2 and 17.3 are from I (not in Hk) (Robertson).; Liebermann’s text and German translation added from Gesetze I p. 504–505, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17-2.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">ergänze aus IL</hi></seg><seg type="translation" xml:lang="en" source="#claude">supply from IL</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17-2.lnote.oe.d" n="d" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de">XX. <hi rend="italic">I, wo</hi> 17, 2 <hi rend="italic">und</hi> 17, 3 <hi rend="italic">hinter</hi> 18,2 (<hi rend="italic">irrig laut Inhalts und Lateinischen Textes</hi>) <hi rend="italic">folgen</hi></seg><seg type="translation" xml:lang="en" source="#claude">XX. I, where 17, 2 and 17, 3 follow after 18,2 (wrongly, judging by the content and the Latin text)</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17-2.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de">renent <hi rend="italic">Io Isp</hi></seg><seg type="translation" xml:lang="en" source="#claude">renent <hi rend="italic">Io Isp</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17-2.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de">pendra <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">pendra <hi rend="italic">Io</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17-2.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de">seint <hi rend="italic">Io Isp</hi></seg><seg type="translation" xml:lang="en" source="#claude">seint <hi rend="italic">Io Isp</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17-2.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de">de <hi rend="italic">ergänzt MAT.; gemäss L</hi></seg><seg type="translation" xml:lang="en" source="#claude">de supplied by MAT., in accordance with L</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17-2.lnote.oe.a-2" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">505</biblScope></bibl><seg type="original" xml:lang="de">detinuerit <hi rend="italic">auch ECf.; dass aber L die gemeinsame (Lateinische?) Quelle unmittelbar kannte, folgt deshalb noch nicht</hi></seg><seg type="translation" xml:lang="en" source="#claude">detinuerit also ECf.; but it does not yet follow from this that L knew the common (Latin?) source directly</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17-2.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">505</biblScope></bibl><seg type="original" xml:lang="de">iusticia s. ecclesiæ <hi rend="italic">ECf.;</hi> iustitia episcopi <hi rend="italic">Wl ep.</hi> 3,2; <hi rend="italic">den bischöflichen Official so zu nennen vermeidet L</hi></seg><seg type="translation" xml:lang="en" source="#claude">iusticia s. ecclesiæ ECf.; iustitia episcopi Wl ep. 3,2; L avoids giving the bishop’s official this name</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_17-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">289</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Peterspfennig 17c-g; Geistliches Gericht 12b. 21f. g; <hi rend="italic">o</hi>. Einl. 18, Z. 3 und 19ff.</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Peterspfennig 17c-g; Geistliches Gericht 12b. 21f. g; <hi rend="italic">above</hi> Introduction 18, l. 3 and 19ff.</seg><note type="remark" resp="#claude">Liebermann’s heading: Leis Wl 17, 2. 3</note></note>
       </div>
     </body>
   </text>

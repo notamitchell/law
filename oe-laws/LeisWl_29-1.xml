@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 29.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">512</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">268</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">The French text printed in the chronicle ascribed to Ingulf of Croyland (Robertson’s I; known only from early printed editions)</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,16 +48,27 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2435 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2435 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 512.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 512.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="29.1">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 29.1</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><pb n="512" ed="#liebermann"/>ne<ptr type="liebermannNote" n="20" target="#LeisWl_29-1.lnote.oe.20"/> leist a seignurage departir les cultivurs de lur terre, pur tant cum il pussent le dreit seirvise<ptr type="liebermannNote" n="b" target="#LeisWl_29-1.lnote.oe.b"/> faire.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="512" ed="#liebermann"/>nec licet dominis<ptr type="liebermannNote" n="1" target="#LeisWl_29-1.lnote.oe.1"/> remouere colonos a terris, dummodo debita seruitia persoluant.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="29.1" corresp="#wit-i"><pb n="268" ed="#robertson"/>ne leist a seignurage departir les cultivurs de lur terre, pur tant cum il pussent le dreit seirvise faire.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="512" ed="#liebermann"/>29, 1 noch auch ist es der Herrschaft erlaubt<ptr type="liebermannNote" n="1" target="#LeisWl_29-1.lnote.de.1"/>, die Bauern von deren Lande zu entfernen, sofern sie den richtigen Dienst<ptr type="liebermannNote" n="b" target="#LeisWl_29-1.lnote.de1.b"/> leisten können.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">29, 1 nor is it permitted to the lordship to remove the peasants from their land, so long as they can perform the proper service.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-i"><pb n="269" ed="#robertson"/>It is not permitted to estate-owners to eject the cultivators from their land, as long as they can perform their legal service.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 268–269 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 268–269 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 512, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_29-1.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">512</biblScope></bibl><seg type="original" xml:lang="de">serv. <hi rend="italic">bessert MAT.</hi></seg><seg type="translation" xml:lang="en" source="#claude">MAT. emend to serv.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_29-1.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">512</biblScope></bibl><seg type="original" xml:lang="de">le <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">le Im</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_29-1.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">512</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">verbessert aus</hi> -nos <hi rend="italic">S</hi></seg><seg type="translation" xml:lang="en" source="#claude">corrected from -nos S</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_29-1.lnote.de1.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">512</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">von ihrem Besitz dem Gutsherrn</hi></seg><seg type="translation" xml:lang="en" source="#claude">from their holding to the lord of the manor</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_29-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ebd</hi>. Bauer 10b; Fron. Nach <hi rend="italic">Dial. de scacc</hi>. I 10 C. 11 B.C durften zwar anfangs nach 1066 die Angelsachsen [auf Dorfboden, in Bauerstellen] <hi rend="italic">pro voluntate dominorum a possessionibus pell</hi>[<hi rend="italic">i</hi>], erhielten dann aber sicheren Besitz, und nur die Domänen-<hi rend="italic">ascriptitii a dominis suis ad alia loca transferri possunt, venduntur vel distrahuntur</hi>. Jene staatliche Aufsicht über die Beziehung zwischen Herrschaftsgut und Villan, gerichtet gegen die im 12. Jh. bisweilen nachweisbare Austreibung oder Verpflanzung von Villanen, ist älter als die Epoche Heinrichs II., in der die Zuständigkeit über Villane der Kronjustiz verloren ging; Vinogradoff <hi rend="italic">Villain</hi>. 159. 165. 219; Maitland <hi rend="italic">Domesday</hi> 62.—Vielleicht lag dieser Satz in L Bracton vor: einstige Freibauern auf ‘Alter Krondomäne’ [nur davon spricht er] <hi rend="italic">a gleba amoveri non poterunt, quamdiu solvere possunt debitas pensiones</hi>; I 11, 1f. 7 (bessere so <hi rend="italic">o</hi>. II 300 n. 10b)</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Ibid</hi>. Bauer 10b; Fron. According to <hi rend="italic">Dial. de scacc</hi>. I 10 C. 11 B.C, it is true that at first after 1066 the Anglo-Saxons [on village land, in peasant holdings] might <hi rend="italic">pro voluntate dominorum a possessionibus pell</hi>[<hi rend="italic">i</hi>], but they then obtained secure possession, and only the demesne <hi rend="italic">ascriptitii a dominis suis ad alia loca transferri possunt, venduntur vel distrahuntur</hi>. That supervision by the state of the relationship between manor and villein, directed against the eviction or transplanting of villeins occasionally attested in the 12th cent., is older than the period of Henry II, in which the royal courts lost jurisdiction over villeins; Vinogradoff <hi rend="italic">Villain</hi>. 159. 165. 219; Maitland <hi rend="italic">Domesday</hi> 62.—Perhaps Bracton had this sentence of L before him: former free peasants on ‘ancient demesne of the Crown’ [he speaks only of that] <hi rend="italic">a gleba amoveri non poterunt, quamdiu solvere possunt debitas pensiones</hi>; I 11, 1f. 7 (correct accordingly <hi rend="italic">above</hi> II 300 n. 10b)</seg></note>
       </div>
     </body>
   </text>

@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Hn Lond 4</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,11 +22,13 @@
       <sourceDesc>
         <bibl type="legalText"><title>Henry I: London Charter</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">525</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">288</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lat"><abbr>Lat</abbr> <note type="manuscript">Latin text as edited by Liebermann from the London collections (Lond, Cc, Horn, Cus, Cust …)</note></witness>
           <witness xml:id="wit-rs"><abbr>Rs</abbr> <note type="manuscript">Manchester, John Rylands Library, MS Latin 155</note></witness>
         </listWit>
       </sourceDesc>
@@ -41,16 +44,23 @@
       <creation><date source="#liebermann">1115–33, probably 1131</date><date source="#wormald-mel">very late in Henry I's reign</date><placeName source="#robertson">Westminster</placeName><note type="promulgation">1115–33, probably 1131 (Liebermann); very late in Henry I's reign (Wormald); Westminster (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2536 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2536 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lat added from Gesetze I, p. 525.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4">
         <head><ref type="lawCode" target="law:HnLond">Hn Lond</ref> 4</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lat"><pb n="525" ed="#liebermann"/>Et infra muros ciuitatis nullus hospitetur, neque de mea familia neque de alia ui<ptr type="liebermannNote" n="9" target="#HnLond_4.lnote.oe.9"/> alicui hospitium<ptr type="liebermannNote" n="10" target="#HnLond_4.lnote.oe.10"/> liberetur<ptr type="liebermannNote" n="11" target="#HnLond_4.lnote.oe.11"/>.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="4" corresp="#wit-rs"><pb n="288" ed="#robertson"/>Et infra muros civitatis nullus hospitetur, neque de mea familia neque de alia vi alicui [hospitium] liberatur.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-rs"><pb n="289" ed="#robertson"/>And no-one shall be billeted within the walls of the city nor shall hospitality be forcibly exacted for anyone belonging to my household or to any other.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 288–289 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 288–289 (text and translation); Liebermann’s text added from Gesetze I p. 525, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_4.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">525</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">auf Rasur Co;</hi> h. ui alicui <hi rend="italic">Cus;</hi> nisi <hi rend="italic">Or Gi Thorpe</hi> [<hi rend="italic">falsch laut</hi> ui <hi rend="italic">Libertas Lond.;</hi> per uim <hi rend="italic">Po</hi>]</seg><seg type="translation" xml:lang="en" source="#claude">on an erasure Co; h. ui alicui Cus; nisi Or Gi Thorpe [wrong, as shown by ui in Libertas Lond.; per uim Po]</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_4.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">525</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Cc Cust; übergeschr. Horn</hi></seg><seg type="translation" xml:lang="en" source="#claude">omitted in Cc Cust; written above Horn</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_4.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">525</biblScope></bibl><seg type="original" xml:lang="de">-ratur <hi rend="italic">Cus Cust</hi></seg><seg type="translation" xml:lang="en" source="#claude">-ratur Cus Cust</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_4.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">305</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Gastung 3a; über die Einquartierung in London durch den königlichen Marschall <hi rend="italic">s</hi>. Round <hi rend="italic">King's serjeants</hi> 88.—Für die Lesart <hi rend="italic">vi</hi> sprechen auch die Freibriefe für Colchester (wo erstes <hi rend="italic">neque</hi> fehlt), Edinburgh; Ballard 87. [Heinrich IV. privilegierte 1081 Lucca: <hi rend="italic">ut nostrum regale palatium intra civitatem . . non edificent, aut inibi vi hospitia capiantur</hi>; Stumpf <hi rend="italic">Kaiserurkunden</hi> n. 2833]</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Gastung 3a; on billeting in London by the royal marshal <hi rend="italic">see</hi> Round <hi rend="italic">King's serjeants</hi> 88.—The reading <hi rend="italic">vi</hi> is also supported by the charters for Colchester (where the first <hi rend="italic">neque</hi> is missing) and Edinburgh; Ballard 87. [In 1081 Henry IV granted Lucca the privilege <hi rend="italic">ut nostrum regale palatium intra civitatem . . non edificent, aut inibi vi hospitia capiantur</hi>; Stumpf <hi rend="italic">Kaiserurkunden</hi> n. 2833]</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_4.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">305</biblScope></bibl><seg type="original" xml:lang="de">Die Lesart <hi rend="italic">nisi</hi>, auch von Round angenommen, erklärt Stubbs (<hi rend="italic">Lect</hi>. 125): ‘unless the duty of entertaining him be assigned to some particular person to secure the safety and responsibility of the stranger entertained’—offenbar eine Künstelei, die man nicht hinter diesem einfachen Stile wittern darf. Vielleicht verstanden die <hi rend="italic">nisi</hi> bevorzugenden Abschreiber eher ungenau <hi rend="italic">liberare</hi> entweder als ‘freiwillig liefern’ oder als ‘bezahlen’. In Rouen steht zwar <hi rend="italic">nisi per proprium marescallum civitatis</hi>; ein solches dem Sinne des redenden Königs fremdes, ja entgegengesetztes, Subjekt konnte aber wohl ein Londoner sich nicht als elliptisch zu <hi rend="italic">liberare</hi> hinzudenken; Giry <hi rend="italic">Établ. de Rouen</hi> II 63</seg><seg type="translation" xml:lang="en" source="#claude">The reading <hi rend="italic">nisi</hi>, which Round also accepts, is explained by Stubbs (<hi rend="italic">Lect</hi>. 125): ‘unless the duty of entertaining him be assigned to some particular person to secure the safety and responsibility of the stranger entertained’—obviously an artificiality that one should not suspect behind this simple style. Perhaps the copyists who preferred <hi rend="italic">nisi</hi> understood <hi rend="italic">liberare</hi>, rather inexactly, either as ‘to supply voluntarily’ or as ‘to pay’. At Rouen, it is true, the text reads <hi rend="italic">nisi per proprium marescallum civitatis</hi>; but a Londoner could probably not have supplied in thought such a subject, foreign to, indeed contrary to, the meaning of the king who is speaking, as understood elliptically with <hi rend="italic">liberare</hi>; Giry <hi rend="italic">Établ. de Rouen</hi> II 63</seg></note>
       </div>
     </body>
   </text>

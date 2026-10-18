@@ -4,9 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Wl Lond 5</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
       </titleStmt>
       <publicationStmt>
@@ -21,11 +23,14 @@
       <sourceDesc>
         <bibl type="legalText"><title>William I: London Charter</title> <note type="reign">William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">486</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">230</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-orig"><abbr>Orig</abbr> <note type="manuscript">The original writ (London, Town Clerk’s Office), from Sharpe’s facsimile</note></witness>
+          <witness xml:id="wit-lond"><abbr>Lond</abbr> <note type="manuscript">Latin translation in the London collection (c. 1075–1300)</note></witness>
           <witness xml:id="wit-original"><abbr>Original</abbr> <note type="manuscript">The original writ, London, Town Clerk’s Office (Robertson)</note></witness>
         </listWit>
       </sourceDesc>
@@ -41,16 +46,22 @@
       <creation><date source="#liebermann">Dec. 1066–75</date><date source="#robertson">1066–75</date><date source="#wormald-mel">1066/7, within months of the coronation</date><placeName>London</placeName><note type="promulgation">Dec. 1066–75 (Liebermann); 1066–75 (Robertson); 1066/7, within months of the coronation (Wormald); London</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2299 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2299 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Orig added from Gesetze I, p. 486.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lond added from Gesetze I, p. 486.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5">
         <head><ref type="lawCode" target="law:WiLond">Wl Lond</ref> 5</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-orig"><pb n="486" ed="#liebermann"/>God eoƿ gehealde!</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-lond"><pb n="486" ed="#liebermann"/>Deus uos saluet!</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="5" corresp="#wit-original"><pb n="230" ed="#robertson"/>God eow gehealde.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="486" ed="#liebermann"/>5. Gott schütze euch!</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">5. God protect you!</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-original"><pb n="231" ed="#robertson"/>God keep you!</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 230–231 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 230–231 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 486, October 2026 (two independent readings of the page images)</note>
       </div>
     </body>
   </text>

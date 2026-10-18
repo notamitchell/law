@@ -4,9 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>CHn cor 3.3</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,10 +21,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The Coronation Charter of Henry I</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">521</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">278</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lat"><abbr>Lat</abbr> <note type="manuscript">Latin text as edited by Liebermann from chronicles and cartularies (no original survives)</note></witness>
+          <witness xml:id="wit-worc"><abbr>Worc</abbr></witness>
+          <witness xml:id="wit-herts"><abbr>Herts</abbr></witness>
+          <witness xml:id="wit-winch"><abbr>Winch</abbr></witness>
+          <witness xml:id="wit-roch"><abbr>Roch</abbr></witness>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5)</note></witness>
         </listWit>
       </sourceDesc>
@@ -39,16 +46,24 @@
       <creation><date source="#liebermann">5 Aug. 1100</date><placeName source="#robertson">Westminster</placeName><note type="promulgation">5 Aug. 1100 (Liebermann); Westminster (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2488 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2488 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lat added from Gesetze I, p. 521.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3.3">
         <head><ref type="lawCode" target="law:CHnCor">CHn cor</ref> 3.3</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lat"><pb n="521" ed="#liebermann"/>Et si, mortuo marito<ptr type="liebermannNote" n="33" target="#CHnCor_3-3.lnote.oe.33"/>, uxor eius<ptr type="liebermannNote" n="34" target="#CHnCor_3-3.lnote.oe.34"/> remanserit et sine liberis fuerit, dotem suam<ptr type="liebermannNote" n="35" target="#CHnCor_3-3.lnote.oe.35"/> et maritationem<ptr type="liebermannNote" n="36" target="#CHnCor_3-3.lnote.oe.36"/> habebit; et eam non dabo marito nisi secundum uelle suum.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="3.2" corresp="#wit-h"><pb n="278" ed="#robertson"/>Et si, mortuo viro, uxor eius remanserit et sine liberis fuerit, dotem suam et maritationem habebit, et eam non dabo marito nisi secundum velle suum.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><pb n="279" ed="#robertson"/>And if, on the death of her husband, a wife is left and has no children, she shall have her marriage-settlement and dowry, and I shall not bestow her in marriage except in accordance with her wishes.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 278–279 (text and translation); Liebermann’s text (K–M) not yet added; Robertson's 3 § 2 (Liebermann's 3,3).</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 278–279 (text and translation); Robertson's 3 § 2 (Liebermann's 3,3).; Liebermann’s text added from Gesetze I p. 521, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_3-3.lnote.oe.II_a" n="II a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">521</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Aufrechte</hi> (‘Antiqua’-)<hi rend="italic">Buchstabennoten beziehen sich auf</hi> Band II: Erklärungen.</seg><seg type="translation" xml:lang="en" source="#claude">Upright (‘Antiqua’, i.e. roman) letters used as note-markers refer to Band II: Erklärungen.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_3-3.lnote.oe.33" n="33" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">521</biblScope></bibl><seg type="original" xml:lang="de">† uiro <hi rend="italic">H Rl</hi></seg><seg type="translation" xml:lang="en" source="#claude">† uiro H Rl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_3-3.lnote.oe.34" n="34" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">521</biblScope></bibl><seg type="original" xml:lang="de">† <hi rend="italic">fehlt Sc 2 Hg</hi></seg><seg type="translation" xml:lang="en" source="#claude">† omitted Sc 2 Hg</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_3-3.lnote.oe.35" n="35" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">521</biblScope></bibl><seg type="original" xml:lang="de">d. et m. s. h. <hi rend="italic">Quadr Sc Gl</hi></seg><seg type="translation" xml:lang="en" source="#claude">d. et m. s. h. Quadr Sc Gl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_3-3.lnote.oe.36" n="36" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">521</biblScope></bibl><seg type="original" xml:lang="de">suam <hi rend="italic">fügt zu Rl;</hi> maritagium <hi rend="italic">Alb S</hi></seg><seg type="translation" xml:lang="en" source="#claude">suam added by Rl; maritagium Alb S</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_3-3.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">297</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Wittum 6; eheliches Güterrecht 8ff.; Aussteuer 3.—Diesen Satz benutzen ‘Unknown cha.’ 6, Magna charta 1215c. 7 und vielleicht Hn 70, 22</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Wittum 6; eheliches Güterrecht 8ff.; Aussteuer 3.—This sentence is used by ‘Unknown cha.’ 6, Magna charta 1215c. 7 and perhaps Hn 70, 22</seg></note>
       </div>
     </body>
   </text>

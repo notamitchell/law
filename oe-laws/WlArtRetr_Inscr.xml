@@ -4,9 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Wl art retr Inscr.</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,10 +21,14 @@
       <sourceDesc>
         <bibl type="legalText"><title>Willelmi Articuli Retractati (the Ten Articles of William I, revised)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">489</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">244</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lond"><abbr>Lond</abbr></witness>
+          <witness xml:id="wit-guildhall"><abbr>Guildhall</abbr> <note type="manuscript">Guildhall version (London collection: MSS K2, Co, Or)</note></witness>
+          <witness xml:id="wit-exchequer"><abbr>Exchequer</abbr> <note type="manuscript">Exchequer version (MS Sc, Red Book of the Exchequer, c. 1230)</note></witness>
           <witness xml:id="wit-rs"><abbr>Rs</abbr> <note type="manuscript">Manchester, John Rylands Library, MS Latin 155</note></witness>
         </listWit>
       </sourceDesc>
@@ -39,18 +44,25 @@
       <creation><date source="#liebermann #robertson">c.1210</date><note type="promulgation">c.1210 (Liebermann, Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2342 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2342 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Guildhall added from Gesetze I, p. 489.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Exchequer added from Gesetze I, p. 489.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Inscr.">
         <head><ref type="lawCode" target="law:WlArtRetr">Wl art retr</ref> Inscr.</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-guildhall"><pb n="489" ed="#liebermann"/>Decreta domini regis Willelmi bastardi et emendaciones, quas posuit in Anglia, que olim uocabatur Britannia. ¶ Hic etiam intimatur, quid Willelmus rex Anglorum cum principibus suis constituit post conquisicionem Anglie.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-exchequer"><pb n="489" ed="#liebermann"/>[Carta regis Willelmi conquisitoris de quibusdam statutis etc.] ¶ Willelmus rex Anglorum dux Normannorum omnibus hominibus suis Francis et Anglis salutem.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="Inscr." corresp="#wit-rs"><pb n="244" ed="#robertson"/>Decreta domini regis Willelmi bastardi et emendaciones quas posuit in Anglia quae olim vocabatur Britannia. Hic eciam intimatur &amp;c.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-rs"><pb n="245" ed="#robertson"/>The decrees and legal reforms of our lord King William the Bastard, which he established in England, formerly called Britain. Notice is hereby given &amp;c.</ab>
         <note type="comparison" source="#liebermann" n="489"><ref target="clause:WlArt_Inscr">Wl art Inscr.</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Wl art. Inscr.</note>
-        <note type="editorial">Added October 2026 from Robertson pp. 244–245 (text and translation); Liebermann’s text (K–M) not yet added; Robertson prints only the clauses that differ from Wl art: for 3.1–4, 10 and 12–15 she refers the reader to Wl art 3.1–4, 5 and 6–9.; F: corrected against Liebermann, Gesetze I (date in the running heads), October 2026 (was “c. 1210 (Robertson)”, now “c.1210 (Liebermann, Robertson)”); V: page of the modern editor’s text / translation, checked against Robertson (translation on the facing page), October 2026 (e.g. was “244”, now “244 / 245”; 14 rows of Wl art retr)</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 244–245 (text and translation); Robertson prints only the clauses that differ from Wl art: for 3.1–4, 10 and 12–15 she refers the reader to Wl art 3.1–4, 5 and 6–9.; Liebermann’s text added from Gesetze I p. 489, October 2026 (two independent readings of the page images); F: corrected against Liebermann, Gesetze I (date in the running heads), October 2026 (was “c. 1210 (Robertson)”, now “c.1210 (Liebermann, Robertson)”); V: page of the modern editor’s text / translation, checked against Robertson (translation on the facing page), October 2026 (e.g. was “244”, now “244 / 245”; 14 rows of Wl art retr)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_Inscr.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">489</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Hss.:</hi> K2 (<hi rend="italic">abgerissen bis c.</hi> 14, 1). Co Or. — <hi rend="italic">Lambarde Αρχαιονομια</hi> 124 (Ld) <hi rend="italic">mengt</hi> Co (?) <hi rend="italic">mit einer</hi> Tripartita-<hi rend="italic">Hs.</hi></seg><seg type="translation" xml:lang="en" source="#claude">MSS: K2 (torn off up to c. 14, 1). Co Or. — Lambarde Αρχαιονομια 124 (Ld) conflates Co (?) with a Tripartita MS</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_Inscr.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">489</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Hs.</hi> Sc <hi rend="italic">um</hi> 1230, <hi rend="italic">copirt durch</hi> Hg <hi rend="italic">und</hi> K3</seg><seg type="translation" xml:lang="en" source="#claude">MS Sc c. 1230, copied by Hg and K3</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_Inscr.lnote.oe.a-2" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">282</biblScope></bibl><seg type="original" xml:lang="de">In Wahrheit ist das Stück eine private Kompilation mit eingestreuten Erfindungen, die sich teils als Freibrief, teils als Statut aufputzt; <hi rend="italic">s</hi>. Einl. 1. 4; <hi rend="italic">Gl</hi> Britannien 4</seg><seg type="translation" xml:lang="en" source="#claude">In reality the piece is a private compilation with fabrications scattered through it, dressed up partly as a charter of liberties, partly as a statute; <hi rend="italic">see</hi> Introduction 1. 4; <hi rend="italic">Gl</hi> Britannien 4</seg></note>
       </div>
     </body>
   </text>

@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Wl Lond 3</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,11 +24,15 @@
       <sourceDesc>
         <bibl type="legalText"><title>William I: London Charter</title> <note type="reign">William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">486</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">230</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-orig"><abbr>Orig</abbr> <note type="manuscript">The original writ (London, Town Clerk’s Office), from Sharpe’s facsimile</note></witness>
+          <witness xml:id="wit-lond"><abbr>Lond</abbr> <note type="manuscript">Latin translation in the London collection (c. 1075–1300)</note></witness>
           <witness xml:id="wit-original"><abbr>Original</abbr> <note type="manuscript">The original writ, London, Town Clerk’s Office (Robertson)</note></witness>
         </listWit>
       </sourceDesc>
@@ -41,16 +48,24 @@
       <creation><date source="#liebermann">Dec. 1066–75</date><date source="#robertson">1066–75</date><date source="#wormald-mel">1066/7, within months of the coronation</date><placeName>London</placeName><note type="promulgation">Dec. 1066–75 (Liebermann); 1066–75 (Robertson); 1066/7, within months of the coronation (Wormald); London</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2297 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2297 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Orig added from Gesetze I, p. 486.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lond added from Gesetze I, p. 486.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3">
         <head><ref type="lawCode" target="law:WiLond">Wl Lond</ref> 3</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-orig"><pb n="486" ed="#liebermann"/>⁊ ic ƿylle, þæt ælc cyld beo his fæder yrfnume æfter his fæder dæge.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lond"><pb n="486" ed="#liebermann"/>Et uolo, quod omnis puer sit patris sui heres post diem patris sui.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="3" corresp="#wit-original"><pb n="230" ed="#robertson"/>7 ic wylle þæt ælc cyld beo his fæder yrfnume æfter his fæder dæge.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="486" ed="#liebermann"/>3. Und ich will, dass jedes Kind [= Nachkommenschaft<ptr type="liebermannNote" n="1" target="#WiLond_3.lnote.de.1"/>] Erbe<ptr type="liebermannNote" n="2" target="#WiLond_3.lnote.de.2"/> seines Vaters sei nach seines Vaters Lebzeiten.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">3. And I will that every child [= offspring] be his father's heir after his father's lifetime.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-original"><pb n="231" ed="#robertson"/>And it is my will that every child shall be his father's heir after his father's death.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 230–231 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 230–231 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 486, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="WiLond_3.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">276</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">puer</hi> (<hi rend="italic">s. d. Wb</hi>) heisst ‘Nachkommenschaft’, auch a. 1181 bei Madox <hi rend="italic">Hist. Exchequer</hi> 297. Die Versio braucht also nicht etwa zu meinen, das Erbrecht in Land sei allein dem ältesten Sohn zugewiesen</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">puer</hi> (<hi rend="italic">see</hi> that word in <hi rend="italic">Wb</hi>) means ‘offspring’, also in 1181 in Madox <hi rend="italic">Hist. Exchequer</hi> 297. The Versio therefore need not mean, say, that the right of inheritance in land is assigned to the eldest son alone</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="WiLond_3.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">276</biblScope></bibl><seg type="original" xml:lang="de">Abzulehnen ist die Deutung auf die etwa zu hindernde Absicht eines die Stadt mediatisieren wollenden Domanialherrn, Bürgereigen einzuziehen. Stubbs meinte [ich glaube: mit Unrecht], das Erbrecht sei unter Eadward III. durch Krone oder Stadt beschränkt worden. Ebensowenig darf man denken an das seit 12. Jh. nachweisbare Privileg mancher Stadt, dass Intestatgut des Bürgernachlasses von der Obrigkeit nicht ferner eingezogen werde; vielmehr <hi rend="italic">s. Gl</hi> Erbgang 9d. e. 12a ff.—Ähnliches aus städtischen Freibriefen sammelt Ballard (<hi rend="italic">Brit. borough chart</hi>. 74f.), der Intestates und Burgagium für gemeint hält</seg><seg type="translation" xml:lang="en" source="#claude">To be rejected is the interpretation that the aim was to forestall a possible intention on the part of a demesne lord seeking to mediatize the city to confiscate burgesses’ property. Stubbs thought [wrongly, I believe] that the right of inheritance had been restricted under Eadward III by the Crown or the city. Nor may one think of the privilege, attested from the 12th cent., of many a town that the intestate goods of a burgess’s estate should no longer be confiscated by the authorities; rather, see <hi rend="italic">Gl</hi> Erbgang 9d. e. 12a ff. — Similar material from town charters is collected by Ballard (<hi rend="italic">Brit. borough chart</hi>. 74f.), who takes intestacy and burgage to be meant</seg></note>
       </div>
     </body>
   </text>

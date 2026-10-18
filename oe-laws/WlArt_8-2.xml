@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Wl art 8.2</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +22,13 @@
       <sourceDesc>
         <bibl type="legalText"><title>The Ten Articles of William I</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">488</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">240</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis), f. 80</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,18 +43,33 @@
       <creation><date source="#liebermann">compiled c.1110–35</date><date source="#robertson">compiled 1110–35</date><date source="#wormald-mel">late in William I's reign</date><note type="promulgation">compiled c.1110–35 (Liebermann); compiled 1110–35 (Robertson); late in William I's reign (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2338 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2338 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 488.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="8.2">
         <head><ref type="lawCode" target="law:WlArt">Wl art</ref> 8.2</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-h"><pb n="488" ed="#liebermann"/>Et qui iuste uenire<ptr type="liebermannNote" n="25" target="#WlArt_8-2.lnote.oe.25"/> deberent<ptr type="liebermannNote" n="26" target="#WlArt_8-2.lnote.oe.26"/> et uenire<ptr type="liebermannNote" n="27" target="#WlArt_8-2.lnote.oe.27"/> noluerint, semel<ptr type="liebermannNote" n="28" target="#WlArt_8-2.lnote.oe.28"/> summoneantur<ptr type="liebermannNote" n="29" target="#WlArt_8-2.lnote.oe.29"/>; et si<ptr type="liebermannNote" n="30" target="#WlArt_8-2.lnote.oe.30"/> secundo uenire<ptr type="liebermannNote" n="31" target="#WlArt_8-2.lnote.oe.31"/> noluerint, accipiatur<ptr type="liebermannNote" n="32" target="#WlArt_8-2.lnote.oe.32"/> unus bos, et<ptr type="liebermannNote" n="33" target="#WlArt_8-2.lnote.oe.33"/> summoneantur<ptr type="liebermannNote" n="34" target="#WlArt_8-2.lnote.oe.34"/> tertio; et si non<ptr type="liebermannNote" n="35" target="#WlArt_8-2.lnote.oe.35"/> tertio uenerint<ptr type="liebermannNote" n="36" target="#WlArt_8-2.lnote.oe.36"/>, accipiatur alius bos.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="8.2" corresp="#wit-h"><pb n="240" ed="#robertson"/>Et qui iuste venire deberent et venire noluerint, semel summo[n]eantur; et si secundo venire noluerint, accipiatur unus bos et summo[n]eantur tertio; et si non tertio venerint, accipiatur alius bos.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><pb n="241" ed="#robertson"/>And those who are legally required to appear before them, and refuse to do so, shall be summoned once; and if they refuse to appear on the second summons, an ox shall be confiscated and they shall be summoned a third time; and if they do not come on the third summons, another ox shall be confiscated.</ab>
         <note type="comparison" source="#liebermann" n="488">Inst Cn II 17</note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 17</note>
-        <note type="editorial">Added October 2026 from Robertson pp. 240–241 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 240–241 (text and translation); Liebermann’s text added from Gesetze I p. 488, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_8-2.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">488</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt T</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_8-2.lnote.oe.26" n="26" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">488</biblScope></bibl><seg type="original" xml:lang="de">debent <hi rend="italic">T Cb Hv Retr Ra Va Ph Pl</hi></seg><seg type="translation" xml:lang="en" source="#claude">debent T Cb Hv Retr Ra Va Ph Pl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_8-2.lnote.oe.27" n="27" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">488</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Cb Hv Retr Ra Vi Va Ph Pl</hi> [<hi rend="italic">dennoch wohl archaisch</hi>]</seg><seg type="translation" xml:lang="en" source="#claude">omitted in Cb Hv Retr Ra Vi Va Ph Pl [nevertheless probably archaic]</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_8-2.lnote.oe.28" n="28" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">488</biblScope></bibl><seg type="original" xml:lang="de">su. se. <hi rend="italic">Cb Hv Retr Ra Vi Va Ph Pl</hi></seg><seg type="translation" xml:lang="en" source="#claude">su. se. Cb Hv Retr Ra Vi Va Ph Pl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_8-2.lnote.oe.29" n="29" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">488</biblScope></bibl><seg type="original" xml:lang="de">summoue. <hi rend="italic">H</hi></seg><seg type="translation" xml:lang="en" source="#claude">summoue. H</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_8-2.lnote.oe.30" n="30" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">488</biblScope></bibl><seg type="original" xml:lang="de">secundo et si <hi rend="italic">Ra Vi</hi></seg><seg type="translation" xml:lang="en" source="#claude">secundo et si Ra Vi</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_8-2.lnote.oe.31" n="31" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">488</biblScope></bibl><seg type="original" xml:lang="de">non uenerint <hi rend="italic">statt</hi> u. n. <hi rend="italic">Cb Hv Retr Ra Vi Va Ph Pl</hi></seg><seg type="translation" xml:lang="en" source="#claude">non uenerint instead of u. n. Cb Hv Retr Ra Vi Va Ph Pl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_8-2.lnote.oe.32" n="32" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">488</biblScope></bibl><seg type="original" xml:lang="de">capiatur <hi rend="italic">Vi</hi></seg><seg type="translation" xml:lang="en" source="#claude">capiatur Vi</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_8-2.lnote.oe.33" n="33" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">488</biblScope></bibl><seg type="original" xml:lang="de">et s. t. <hi rend="italic">fehlt Cb Vi;</hi> sum. t. et <hi rend="italic">fehlt Ph</hi></seg><seg type="translation" xml:lang="en" source="#claude">et s. t. omitted in Cb Vi; sum. t. et omitted in Ph</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_8-2.lnote.oe.34" n="34" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">488</biblScope></bibl><seg type="original" xml:lang="de">summoue. <hi rend="italic">H;</hi> -atur <hi rend="italic">Rl;</hi> sum. — quarta a. u. si n. uen. <hi rend="italic">fehlt Hv</hi></seg><seg type="translation" xml:lang="en" source="#claude">summoue. H; -atur Rl; sum. — quarta a. u. si n. uen. omitted in Hv</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_8-2.lnote.oe.35" n="35" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">488</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Cb Retr Ra Vi Va Ph Pl</hi></seg><seg type="translation" xml:lang="en" source="#claude">omitted in Cb Retr Ra Vi Va Ph Pl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_8-2.lnote.oe.36" n="36" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">488</biblScope></bibl><seg type="original" xml:lang="de">u. a. <hi rend="italic">fehlt Cb Retr Ra Vi Va Ph Pl</hi></seg><seg type="translation" xml:lang="en" source="#claude">u. a. omitted in Cb Retr Ra Vi Va Ph Pl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_8-2.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">281</biblScope></bibl><seg type="original" xml:lang="de">Hier bis 8, 3 wird nur die zum Prozess trotz Vorladung (<hi rend="italic">s. d. Gl</hi> 7. a) ausbleibende verklagte Partei gemeint.—Ein Ochs (<hi rend="italic">s. d. Gl</hi> 5) wird auch sonst Säumigen fortgenommen als Strafgeldfixum; <hi rend="italic">s. d</hi>. 9. Wahrscheinlich wird damit Ungehorsam (<hi rend="italic">s. d</hi>. 25—c) gegen das Hundred (<hi rend="italic">s. d</hi>. 18b. c) gebüsst. Es passt der Betrag aber nicht für die Grafschaft; diese ist vielleicht nur durch einen Nachgedanken mit jenem verbunden, wie zweimal in Leis Wl 43f., wo dieselbe Cnutstelle benutzt wird</seg><seg type="translation" xml:lang="en" source="#claude">From here to 8, 3 only the accused party who fails to appear for the suit despite summons (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 7. a) is meant.—An ox (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 5) is taken from defaulters elsewhere too, as a fixed fine; <hi rend="italic">see</hi> that word 9. This probably punishes disobedience (<hi rend="italic">see</hi> that word 25—c) towards the hundred (<hi rend="italic">see</hi> that word 18b. c). But the amount does not fit the shire; this has perhaps been linked with the hundred only as an afterthought, as twice in Leis Wl 43f., where the same passage of Cnut is used</seg></note>
       </div>
     </body>
   </text>

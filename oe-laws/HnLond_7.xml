@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Hn Lond 7</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,11 +22,13 @@
       <sourceDesc>
         <bibl type="legalText"><title>Henry I: London Charter</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">525</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">290</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lat"><abbr>Lat</abbr> <note type="manuscript">Latin text as edited by Liebermann from the London collections (Lond, Cc, Horn, Cus, Cust …)</note></witness>
           <witness xml:id="wit-rs"><abbr>Rs</abbr> <note type="manuscript">Manchester, John Rylands Library, MS Latin 155</note></witness>
         </listWit>
       </sourceDesc>
@@ -41,16 +44,25 @@
       <creation><date source="#liebermann">1115–33, probably 1131</date><date source="#wormald-mel">very late in Henry I's reign</date><placeName source="#robertson">Westminster</placeName><note type="promulgation">1115–33, probably 1131 (Liebermann); very late in Henry I's reign (Wormald); Westminster (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2539 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2539 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lat added from Gesetze I, p. 525.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7">
         <head><ref type="lawCode" target="law:HnLond">Hn Lond</ref> 7</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lat"><pb n="525" ed="#liebermann"/>Et homo Londoñ.<ptr type="liebermannNote" n="24" target="#HnLond_7.lnote.oe.24"/> non iudicetur in misericordia pecunie nisi a<ptr type="liebermannNote" n="25" target="#HnLond_7.lnote.oe.25"/> sa<ptr type="liebermannNote" n="26" target="#HnLond_7.lnote.oe.26"/> were, scilicet ad C solidos: dico de placito quod ad pecuniam pertineat.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="7" corresp="#wit-rs"><pb n="290" ed="#robertson"/>Et homo Lond. non iudicetur in misericordia pecuniae nisi ad sa were, scilicet ad C solidos; dico de placito quod ad pecuniam pertineat.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-rs"><pb n="291" ed="#robertson"/>And a citizen of London shall not be sentenced to forfeiture of a sum greater than his wergeld, namely 100 shillings, that is to say in a case concerned with monetary compensation.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 290–291 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 290–291 (text and translation); Liebermann’s text added from Gesetze I p. 525, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_7.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">525</biblScope></bibl><seg type="original" xml:lang="de">-niæ <hi rend="italic">Bra;</hi> -niarum <hi rend="italic">übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">-niæ Bra; -niarum the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_7.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">525</biblScope></bibl><seg type="original" xml:lang="de">ad <hi rend="italic">Cc Horn Cust El E IV;</hi> in <hi rend="italic">Whel.</hi></seg><seg type="translation" xml:lang="en" source="#claude">ad Cc Horn Cust El E IV; in Whel.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_7.lnote.oe.26" n="26" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">525</biblScope></bibl><seg type="original" xml:lang="de">suam <hi rend="italic">Ry</hi></seg><seg type="translation" xml:lang="en" source="#claude">suam Ry</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_7.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">306</biblScope></bibl><seg type="original" xml:lang="de">Heinrich II. wiederholt dies 1155</seg><seg type="translation" xml:lang="en" source="#claude">Henry II repeats this in 1155</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_7.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">306</biblScope></bibl><seg type="original" xml:lang="de">Die Krone verzichtet auf unbegrenzte Misericordia (<hi rend="italic">s. d. Gl</hi> 3) von Bürgern wie von Kronvassallen CHn cor 8. Ebenso wie hier lautet der Freibrief mit demselben Maximum (Wergeld) für Colchester 1189; Bateson <hi rend="italic">EHR</hi> 1901, 94; Ballard 151. Dass das Strafgeld höchstens Wergeld (<hi rend="italic">s. d. Gl</hi> 27) betrage, ist ein das 12. Jh. überdauernder Rest des Agsächs. Systems</seg><seg type="translation" xml:lang="en" source="#claude">The Crown renounces unlimited misericordia (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 3) from burgesses, as from its vassals in CHn cor 8. The charter for Colchester of 1189 is worded just as here, with the same maximum (wergild); Bateson <hi rend="italic">EHR</hi> 1901, 94; Ballard 151. That the fine should amount at most to the wergild (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 27) is a survival of the Anglo-Saxon system that outlasted the 12th cent.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_7.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">306</biblScope></bibl><seg type="original" xml:lang="de">Benutzt von Lib. Lond 3, 1. Dagegen sagt dafür <hi rend="italic">secundum legem civitatis</hi> der Freibrief von 1155.—Das <hi rend="italic">à</hi> bed. ‘bis zur Höhe von’, nicht ‘in’.—Über des Londoners 5 £-Wergeld <hi rend="italic">s. d. Gl</hi> 5, auch Bateson <hi rend="italic">EHR</hi> 1902, 484. 492. 495. 707. 709. 721.—Weit geringer war des Strafgelds (<hi rend="italic">s. d. Gl</hi> 1a. 17) Maximum, das Heinrich I. dem Newcastler setzte: 6 Ör = ¹/₂ £; die Bürger von Battle haben ein Strafmaximum von 2¹/₂ £; Davis <hi rend="italic">EHR</hi> 1914, 428</seg><seg type="translation" xml:lang="en" source="#claude">Used by Lib. Lond 3, 1. The charter of 1155, on the other hand, says <hi rend="italic">secundum legem civitatis</hi> instead.—The <hi rend="italic">à</hi> means ‘up to the amount of’, not ‘in’.—On the Londoner’s wergild of 5 £ <hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 5, also Bateson <hi rend="italic">EHR</hi> 1902, 484. 492. 495. 707. 709. 721.—Far lower was the maximum fine (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 1a. 17) that Henry I set for the burgess of Newcastle: 6 ores = ¹/₂ £; the burgesses of Battle have a maximum fine of 2¹/₂ £; Davis <hi rend="italic">EHR</hi> 1914, 428</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_7.lnote.oe.d" n="d" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">306</biblScope></bibl><seg type="original" xml:lang="de">Bussloses (<hi rend="italic">s. d. Gl</hi> 1c. 3), mit Leibesstrafe Bedrohtes, fällt also ausdrücklich nicht unter diesen Satz</seg><seg type="translation" xml:lang="en" source="#claude">Offences not admitting of compensation (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 1c. 3), which are threatened with corporal punishment, are therefore expressly excluded from this provision</seg></note>
       </div>
     </body>
   </text>

@@ -4,9 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Wl lad 2</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,11 +23,14 @@
       <sourceDesc>
         <bibl type="legalText"><title>William I: Regulations Regarding Exculpation</title> <note type="reign">William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">483–484</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">232</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis)</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -39,19 +45,27 @@
       <creation><date source="#liebermann">1067–77</date><date source="#robertson">1068–77</date><note type="promulgation">1067–77 (Liebermann); 1068–77 (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2304 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2304 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 483–484.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Q added from Gesetze I, p. 483–484.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:WiLad">Wl lad</ref> 2</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-h"><pb n="483–484" ed="#liebermann"/>Eft: Gif Frencisc man beclypað Engliscne man to orneste for ðam ylcan þingan, se Englisca be fulre leafe hine werige mid orneste oððe mid irene, gif hi<hi rend="italic">m</hi> þ<hi rend="italic">æt</hi> gecwemre byð.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-q"><pb n="483–484" ed="#liebermann"/>Item si Francigena compellet<ptr type="liebermannNote" n="17" target="#WiLad_2.lnote.oe.17"/> Anglicum per bellum de eisdem rebus, Anglicus plena licentia de- fendat se per bellum uel per iudicium, si magis ei placeat.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="2" corresp="#wit-h"><pb n="232" ed="#robertson"/>Eft: Gif Frencisc man beclypað Engliscne man to orneste for ðam ylcan þingan, se Englisca be fulre leafe hine werige mid orneste oððe mid irene, gif him þæt gecwemre byð.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="483–484" ed="#liebermann"/>2. Ferner: Wenn ein Französischer Mann einen Englischen Mann wegen jener selben Sachen [klagend,] zu gerichtlichem Zweikampf fordert, vertheidige sich der Englische bei voller Wahlfreiheit durch Kampf oder, wenn ihm das lieber ist, durch Eisen[ordal<ptr type="liebermannNote" n="1" target="#WiLad_2.lnote.de.1"/>].</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">2. Further: if a French man challenges an English man to judicial combat for those same matters, [accusing him,] the Englishman shall defend himself, with full freedom of choice, by combat or, if he prefers, by iron [ordeal].</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><pb n="233" ed="#robertson"/>Further, if a Frenchman challenges an Englishman to trial by combat for the same things, the Englishman shall have full permission to defend himself by combat or by the ordeal of iron, if he prefers it.</ab>
         <note type="comparison" source="#liebermann" n="483">Wl art</note>
         <note type="comparisonPrinted" source="#liebermann">vgl. Wl art.</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:WlArt_6">Wl art 6</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 232–233 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 232–233 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 483–484, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WiLad_2.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">483</biblScope></bibl><seg type="original" xml:lang="de">-lat <hi rend="italic">MHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">-lat MHk</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="WiLad_2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">273</biblScope></bibl><seg type="original" xml:lang="de">Indem Q für ‘Eisen[ordal]’ (<hi rend="italic">s. d. Gl</hi> 1. 11—12a) <hi rend="italic">iudicium</hi> setzt, bezeugt er, dass Eisen um 1114 gewöhnlich das einzige Ordal des Freien [den allein ein Normanne zum Zweikampf fordern konnte] geworden ist. Doch lebte das Ordal des Kaltwassers (<hi rend="italic">s. d. Gl</hi> 10), bisweilen auch für Freie, weiter.—Ein drittes Reinigungsmittel, das hier (vielleicht nur durch Lücke des Archetyps?) fehlt, steht in der Wiederholung 2, 3: Eideshilfe</seg><seg type="translation" xml:lang="en" source="#claude">In putting <hi rend="italic">iudicium</hi> for ‘iron [ordeal]’ (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 1. 11—12a), Q testifies that by c. 1114 iron had usually become the only ordeal of the freeman [whom alone a Norman could challenge to trial by combat]. Yet the ordeal of cold water (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 10) lived on, sometimes for freemen too.—A third means of exculpation, which is missing here (perhaps only through a lacuna in the archetype?), appears in the repetition 2, 3: compurgation</seg></note>
       </div>
     </body>
   </text>

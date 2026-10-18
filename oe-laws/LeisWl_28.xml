@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 28</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">512–513</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">266</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228, f. 141, c. 1230</note></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,16 +48,35 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2431 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2431 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Hk added from Gesetze I, p. 512–513.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 512–513.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 512–513.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="28">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 28</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-hk"><pb n="512–513" ed="#liebermann"/>De<ptr type="liebermannNote" n="a" target="#LeisWl_28.lnote.oe.a"/> stretwarde: De chascuns X hides del hundred un hume dedenz la feste seint Michel e la seint Martin.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><ptr type="liebermannNote" n="5" target="#LeisWl_28.lnote.oe.5"/><pb n="512–513" ed="#liebermann"/>De strewarde: De chescon dis<ptr type="liebermannNote" n="6" target="#LeisWl_28.lnote.oe.6"/> hides del<ptr type="liebermannNote" n="7" target="#LeisWl_28.lnote.oe.7"/> hundred un home dedenz la feste seint Michiel<ptr type="liebermannNote" n="8" target="#LeisWl_28.lnote.oe.8"/> et le seint Martin.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="512–513" ed="#liebermann"/>De uiarum custodibus. De qualibet hida in hundredo IIII<ptr type="liebermannNote" n="c" target="#LeisWl_28.lnote.oe.c"/> homines ad stretwarde inuenientur a festo sancti Michaelis usque ad festum sancti Martini.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="28" corresp="#wit-hk"><pb n="266" ed="#robertson"/>De stretwarde. De chascuns X hides del hundred un hume dedenz la feste seint Michel e la seint Martin.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="512–513" ed="#liebermann"/>28. Von Strassenwacht.<ptr type="liebermannNote" n="1" target="#LeisWl_28.lnote.de.1"/> [Dazu diene] von je 10<ptr type="liebermannNote" n="2" target="#LeisWl_28.lnote.de.2"/> Hufen der Hundertschaft<ptr type="liebermannNote" n="3" target="#LeisWl_28.lnote.de.3"/> 1<ptr type="liebermannNote" n="4" target="#LeisWl_28.lnote.de.4"/> Mann zwischen Michaelis<ptr type="liebermannNote" n="5" target="#LeisWl_28.lnote.de.5"/> und Martini Fest [29. September—11. November].</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">28. Of road-watch. [For this let there serve] from every 10 hides of the hundred 1 man between the feasts of Michaelmas and Martinmas [29 September—11 November].</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-hk"><pb n="267" ed="#robertson"/>The guarding of roads. Every 10 hides of the hundred [shall supply] a man between Michaelmas and Martinmas.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 266–267 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 266–267 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 512–513, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_28.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">512</biblScope></bibl><seg type="original" xml:lang="de">De s. <hi rend="italic">Rubrik, aber logisch dem Text zugehörig, wie L erkennt</hi></seg><seg type="translation" xml:lang="en" source="#claude">De s. rubric, but logically belonging to the text, as L recognizes</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_28.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">512</biblScope></bibl><seg type="original" xml:lang="de">XXXII. <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">XXXII. <hi rend="italic">I</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_28.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">512</biblScope></bibl><seg type="original" xml:lang="de">des <hi rend="italic">Io L</hi></seg><seg type="translation" xml:lang="en" source="#claude">des <hi rend="italic">Io L</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_28.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">512</biblScope></bibl><seg type="original" xml:lang="de">de <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">de Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_28.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">512</biblScope></bibl><seg type="original" xml:lang="de">-ell <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">-ell <hi rend="italic">Io</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_28.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">513</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">verlesen aus</hi> un</seg><seg type="translation" xml:lang="en" source="#claude">misread from un</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_28.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de">Nicht ‘Feldhüter’ (Schmid); <hi rend="italic">vgl. Gl</hi> Strassenwacht; Ducange s. v. <hi rend="italic">streteward</hi>. Diese ist Teil der allgemeinen Wachtpflicht; Neilson <hi rend="italic">Custom. rents</hi> 134. Kelham dachte aus I's Lesung an <hi rend="italic">strayward</hi> ‘Hüter gegen verlaufen Vieh’; zwar heisst Mengl. <hi rend="italic">straien</hi> ‘herumirren’, <hi rend="italic">estray, straires</hi> ‘herrenloses’; allein die Aussprache war von <hi rend="italic">stræt</hi> verschieden, das durch Hk L gesichert ist.—<hi rend="italic">Steward</hi> ist nur Fehler 18. Jhs.</seg><seg type="translation" xml:lang="en" source="#claude">Not ‘field-warden’ (Schmid); <hi rend="italic">cf. Gl</hi> Strassenwacht; Ducange s. v. <hi rend="italic">streteward</hi>. This is part of the general duty of watch; Neilson <hi rend="italic">Custom. rents</hi> 134. From I's reading Kelham thought of <hi rend="italic">strayward</hi> ‘keeper against stray cattle’; it is true that ME <hi rend="italic">straien</hi> means ‘wander about’, and <hi rend="italic">estray, straires</hi> ‘ownerless’; but the pronunciation differed from that of <hi rend="italic">stræt</hi>, which is assured by Hk L.—<hi rend="italic">Steward</hi> is merely an error of the 18th cent.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_28.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> zehn Hufen 5; L las wie Io <hi rend="italic">des</hi> statt <hi rend="italic">dis</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> zehn Hufen 5; L, like Io, read <hi rend="italic">des</hi> instead of <hi rend="italic">dis</hi></seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_28.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ebd</hi>. Hundred 5k. 17b. 24</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Ibid</hi>. Hundred 5k. 17b. 24</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_28.lnote.de.4" n="4" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de">Palgrave (<hi rend="italic">Rise</hi> II p. xcvii) bevorzugt ‘4’; allein F las <hi rend="italic">un</hi>, und die Zahl 4 für 1 Hufe in L wäre zu hoch. Vielleicht ward S, die einzige Hs. von L, zum Irrtum verführt durch <hi rend="italic">4 homines</hi> für jedes Dorf, die das Gesetz 1252f. als Wache anordnete; Stubbs <hi rend="italic">Sel. chart</hi>. 371. 375</seg><seg type="translation" xml:lang="en" source="#claude">Palgrave (<hi rend="italic">Rise</hi> II p. xcvii) prefers ‘4’; but F read <hi rend="italic">un</hi>, and the number 4 for 1 hide in L would be too high. Perhaps S, the only MS of L, was led into error by the <hi rend="italic">4 homines</hi> for each vill whom the law of 1252f. ordered as a watch; Stubbs <hi rend="italic">Sel. chart</hi>. 371. 375</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_28.lnote.de.5" n="5" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">290</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Martini 2c. d. Die Wiese steht Michaelis bis Martini Riud und Pferd offen nach Grimm <hi rend="italic">Weistümer</hi> III 462, 2</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Martini 2c. d. According to Grimm <hi rend="italic">Weistümer</hi> III 462, 2, the meadow is open to cattle and horses from Michaelmas to Martinmas</seg></note>
       </div>
     </body>
   </text>

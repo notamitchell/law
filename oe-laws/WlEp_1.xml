@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Wl ep 1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +22,15 @@
       <sourceDesc>
         <bibl type="legalText"><title>William I: Episcopal Laws</title> <note type="reign">William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">485</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">234</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lat"><abbr>Lat</abbr> <note type="manuscript">Latin text as edited by Liebermann from the copies Lp, Lc, Ry and Insp.</note></witness>
           <witness xml:id="wit-lp"><abbr>Lp</abbr> <note type="manuscript">Liber pilosus of St Paul’s Cathedral, London</note></witness>
+          <witness xml:id="wit-lc"><abbr>Lc</abbr></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,16 +45,25 @@
       <creation><date source="#liebermann #robertson">1070–76, perhaps April 1072</date><date source="#wormald-mel">after 1070</date><note type="promulgation">1070–76, perhaps April 1072 (Liebermann, Robertson); after 1070 (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2313 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2313 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lat added from Gesetze I, p. 485.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
         <head><ref type="lawCode" target="law:WlEp">Wl ep</ref> 1</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lat"><pb n="485" ed="#liebermann"/>Sciatis uos omnes et ceteri mei fideles, qui in Anglia manent, quod episcopales leges<ptr type="liebermannNote" n="b" target="#WlEp_1.lnote.oe.b"/>, que<ptr type="liebermannNote" n="11" target="#WlEp_1.lnote.oe.11"/> non bene nec secundum sanctorum canonum precepta usque ad mea tempora in regno Anglorum fuerunt, communi concilio et consilio<ptr type="liebermannNote" n="12" target="#WlEp_1.lnote.oe.12"/> archiepiscoporum<ptr type="liebermannNote" n="bb" target="#WlEp_1.lnote.oe.bb"/> (meorum<ptr type="liebermannNote" n="13" target="#WlEp_1.lnote.oe.13"/>) et (ceterorum<ptr type="liebermannNote" n="13" target="#WlEp_1.lnote.oe.13"/>) episcoporum et abbatum et omnium principum regni mei emendandas iudicaui.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="1" corresp="#wit-lp"><pb n="234" ed="#robertson"/>Sciatis vos omnes et ceteri mei fideles qui in Anglia manent, quod episcopales leges, quae non bene nec secundum sanctorum canonum praecepta usque ad mea tempora in regno Anglorum fuerunt, communi concilio et consilio archiepiscoporum et episcoporum et abbatum et omnium principum regni mei, emendandas iudicavi.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-lp"><pb n="235" ed="#robertson"/>Be it known to all of you and the rest of my loyal subjects who dwell in England, that I have decided, in full council and with the advice of my archbishops, bishops, abbots and all the magnates of my kingdom, upon the improvement of the conditions of episcopal jurisdiction which, up to my time, has not been of a proper character in England, or in accordance with the precepts of the holy Canon Law.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 234–235 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 234–235 (text and translation); Liebermann’s text added from Gesetze I p. 485, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlEp_1.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">485</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">d. i. hier</hi> geistliche Gerichtsbarkeit</seg><seg type="translation" xml:lang="en" source="#claude">i.e. here ecclesiastical jurisdiction</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlEp_1.lnote.oe.bb" n="bb" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">485</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Thomas ward für</hi> York <hi rend="italic">Ende</hi> 1070 <hi rend="italic">geweiht</hi></seg><seg type="translation" xml:lang="en" source="#claude">Thomas was consecrated for York at the end of 1070</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlEp_1.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">485</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Original schrieb für</hi> ae <hi rend="italic">wohl öfter noch</hi> ę</seg><seg type="translation" xml:lang="en" source="#claude">the original probably wrote ę for ae still more often</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlEp_1.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">485</biblScope></bibl><seg type="original" xml:lang="de">de communi cons. <hi rend="italic">beginnt Auszug Gra</hi></seg><seg type="translation" xml:lang="en" source="#claude">extract Gra begins with de communi cons.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlEp_1.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">485</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">nur Lc. Insp., nicht Ry Lp Gra</hi></seg><seg type="translation" xml:lang="en" source="#claude">only Lc. Insp., not Ry Lp Gra</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlEp_1.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">275</biblScope></bibl><seg type="original" xml:lang="de">Also anderen Sinnes als in 2. Ebenso sagt Synode zu Lillebonne 1080: Unrechtmässige Bewohner des Kirchhofs <hi rend="italic">de atrio exire cogantur aut episcopalibus legibus subdantur</hi></seg><seg type="translation" xml:lang="en" source="#claude">Thus in a different sense from that in 2. Similarly the Synod of Lillebonne, 1080, says: unlawful occupants of the churchyard <hi rend="italic">de atrio exire cogantur aut episcopalibus legibus subdantur</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlEp_1.lnote.oe.b-2" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">275</biblScope></bibl><seg type="original" xml:lang="de">Also ein vollbesetzter Reichstag hat das Gesetz (<hi rend="italic">s. d</hi>. 15c) beschlossen. <hi rend="italic">Principes</hi> kann <hi rend="italic">witan</hi> übersetzen; <hi rend="italic">s</hi>. mein <hi rend="italic">National assembly</hi> 10{4} und <hi rend="italic">u</hi>. S. 279 zu Wl art Insc{a}</seg><seg type="translation" xml:lang="en" source="#claude">Thus a fully attended national assembly (<hi rend="italic">see</hi> that word 15c) passed the law. <hi rend="italic">Principes</hi> may translate <hi rend="italic">witan</hi>; <hi rend="italic">see</hi> my <hi rend="italic">National assembly</hi> 10{4} and <hi rend="italic">below</hi> p. 279 on Wl art Insc{a}</seg></note>
       </div>
     </body>
   </text>

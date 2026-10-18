@@ -4,9 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Hn mon 2.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,11 +21,12 @@
       <sourceDesc>
         <bibl type="legalText"><title>Henry I: Decree Concerning the Coinage</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">523</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">284</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-sc"><abbr>Sc</abbr> <note type="manuscript">The Red Book of the Exchequer (London, The National Archives, E 164/2)</note></witness>
+          <witness xml:id="wit-sc"><abbr>Sc</abbr> <note type="manuscript">Red Book of the Exchequer (Liber rubeus Scaccarii), c. 1230</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -39,16 +41,23 @@
       <creation><date source="#liebermann">1100–3</date><placeName source="#robertson">Westminster</placeName><note type="promulgation">1100–3 (Liebermann); Westminster (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2512 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2512 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Sc added from Gesetze I, p. 523.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2.1">
         <head><ref type="lawCode" target="law:HnMon">Hn mon</ref> 2.1</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-sc"><pb n="523" ed="#liebermann"/>Si uero non poterit illum<ptr type="liebermannNote" n="8" target="#HnMon_2-1.lnote.oe.8"/> probare<ptr type="liebermannNote" n="11" target="#HnMon_2-1.lnote.oe.11"/>, de ipso falsonario fiat iusticia mea, scilicet de dextro pugno et<ptr type="liebermannNote" n="12" target="#HnMon_2-1.lnote.oe.12"/> testiculis.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="2.1" corresp="#wit-sc"><pb n="284" ed="#robertson"/>Si vero non poterit illum probare, de ipso falsonario fiat iusticia mea, scilicet de dextro pugno et testiculis.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-sc"><pb n="285" ed="#robertson"/>If, however, he does not succeed in proving him guilty, justice in accordance with my laws shall be executed upon the forger himself, namely, he shall lose his right hand and suffer castration.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 284–285 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 284–285 (text and translation); Liebermann’s text added from Gesetze I p. 523, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_2-1.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">523</biblScope></bibl><seg type="original" xml:lang="de">-ud <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">-ud <hi rend="italic">K</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_2-1.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">523</biblScope></bibl><seg type="original" xml:lang="de">p. de i. f., fiat <hi rend="italic">interpungirt Spelman bei Wilkins</hi> Leges Anglo-Sax. 305, <hi rend="italic">Rymer</hi> Foed. <hi rend="italic">I, p.</hi> 12</seg><seg type="translation" xml:lang="en" source="#claude">p. de i. f., fiat <hi rend="italic">punctuated thus by Spelman in Wilkins</hi> Leges Anglo-Sax. 305, <hi rend="italic">Rymer</hi> Foed. <hi rend="italic">I, p.</hi> 12</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_2-1.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">523</biblScope></bibl><seg type="original" xml:lang="de">de <hi rend="italic">fügt zu K</hi></seg><seg type="translation" xml:lang="en" source="#claude">de <hi rend="italic">added by K</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_2-1.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="de">Als Fälscher gilt also auch der Verbreiter der Münzfälschung (<hi rend="italic">s. d. Gl</hi> 3. 7a), der <hi rend="italic">o</hi>. CHn cor 5, 1{a} zitierte <hi rend="italic">expensor</hi></seg><seg type="translation" xml:lang="en" source="#claude">The distributor of counterfeit coin (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 3. 7a), the <hi rend="italic">expensor</hi> cited <hi rend="italic">above</hi> CHn cor 5, 1{a}, therefore also counts as a counterfeiter</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_2-1.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="de">Statt der Hand (<hi rend="italic">s. d. Gl</hi> 11) verlor der Fälscher 1108 die Augen nach Eadmer <hi rend="italic">Nov</hi>. ed. Rule 193 = Flor. Wig. <hi rend="italic">Pugnum</hi> erwähnt Will. Malm. zu 1107 <hi rend="italic">Reg</hi>. 399, bei dem auch 411 <hi rend="italic">justitiae rigor</hi> und <hi rend="italic">detruncatio</hi> (<hi rend="italic">V. Aldhelmi</hi> am Ende zu a. 1125) gegen Fälscher erwähnt wird. Die <hi rend="italic">rihthand</hi> ward abgehauen nach Agsächs. Annalist zu 1125; wozu Parallelen bei Plummer <hi rend="italic">Sax. chron</hi>. II 301; auch Ann. Margan. Daneben steht—nicht alternativ—Entmannung (<hi rend="italic">s. d. Gl</hi> 3f.) laut mehrerer Quellen. In späterer Zeit liess sich der König die Verstümmelung abkaufen (nach Will. Malm.); Fälle, wo er das nicht zugab, rühmt als selbstlosen Gerechtigkeitssinn Rob. Torin. bei Freeman <hi rend="italic">Nor. conq</hi>. V 841</seg><seg type="translation" xml:lang="en" source="#claude">Instead of the hand (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 11), the counterfeiter in 1108 lost his eyes, according to Eadmer <hi rend="italic">Nov</hi>. ed. Rule 193 = Flor. Wig. Will. Malm. mentions the <hi rend="italic">pugnum</hi> under 1107, <hi rend="italic">Reg</hi>. 399; he also mentions, at 411, <hi rend="italic">justitiae rigor</hi> and <hi rend="italic">detruncatio</hi> (<hi rend="italic">V. Aldhelmi</hi> at the end, under the year 1125) against counterfeiters. The <hi rend="italic">rihthand</hi> was cut off according to the Anglo-Saxon annalist under 1125; for parallels to this see Plummer <hi rend="italic">Sax. chron</hi>. II 301; also Ann. Margan. Alongside this—not as an alternative—castration (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 3f.) is attested by several sources. At a later time the king allowed the mutilation to be bought off (according to Will. Malm.); cases in which he did not permit this are praised as a selfless sense of justice by Rob. Torin. in Freeman <hi rend="italic">Nor. conq</hi>. V 841</seg></note>
       </div>
     </body>
   </text>

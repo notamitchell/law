@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Wl art 6.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +22,13 @@
       <sourceDesc>
         <bibl type="legalText"><title>The Ten Articles of William I</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">487</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">240</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis), f. 80</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,19 +43,26 @@
       <creation><date source="#liebermann">compiled c.1110–35</date><date source="#robertson">compiled 1110–35</date><date source="#wormald-mel">late in William I's reign</date><note type="promulgation">compiled c.1110–35 (Liebermann); compiled 1110–35 (Robertson); late in William I's reign (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2331 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2331 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 487.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6.1">
         <head><ref type="lawCode" target="law:WlArt">Wl art</ref> 6.1</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-h"><pb n="487" ed="#liebermann"/>Si autem<ptr type="liebermannNote" n="56" target="#WlArt_6-1.lnote.oe.56"/> Anglus<ptr type="liebermannNote" n="57" target="#WlArt_6-1.lnote.oe.57"/> infirmus<ptr type="liebermannNote" n="58" target="#WlArt_6-1.lnote.oe.58"/> fuerit, inueniat alium qui pro eo<ptr type="liebermannNote" n="59" target="#WlArt_6-1.lnote.oe.59"/> faciat.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="6.1" corresp="#wit-h"><pb n="240" ed="#robertson"/>Si autem Anglus infirmus fuerit, inveniat alium qui pro eo faciat.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><pb n="241" ed="#robertson"/>If, however, the Englishman is infirm, he shall find a substitute to act for him.</ab>
         <note type="comparison" source="#liebermann" n="487"><ref target="clause:WiLad_2-1">Wl lad 2.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 2, 1</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:WiLad_2-1">Wl lad 2.1</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 240–241 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 240–241 (text and translation); Liebermann’s text added from Gesetze I p. 487, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-1.lnote.oe.56" n="56" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">hier endet Ct mitten in der Columne</hi></seg><seg type="translation" xml:lang="en" source="#claude">Ct ends here in the middle of the column</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-1.lnote.oe.57" n="57" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">-licus <hi rend="italic">Hv; fehlt T Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">-licus Hv; omitted T Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-1.lnote.oe.58" n="58" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">f. i. <hi rend="italic">Hv</hi></seg><seg type="translation" xml:lang="en" source="#claude">f. i. <hi rend="italic">Hv</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-1.lnote.oe.59" n="59" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Hv</hi></seg><seg type="translation" xml:lang="en" source="#claude">omitted Hv</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-1.lnote.oe._" n="-" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">281</biblScope></bibl><seg type="original" xml:lang="de">Unrichtig erlaubt Verf. den Vertreter auch fürs Ordal (<hi rend="italic">s. d. Gl</hi> 26) und lässt dessen Qualifikation fort</seg><seg type="translation" xml:lang="en" source="#claude">The author wrongly permits a representative for the ordeal too (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 26) and omits his qualification</seg></note>
       </div>
     </body>
   </text>

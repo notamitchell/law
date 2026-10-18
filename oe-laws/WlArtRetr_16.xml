@@ -4,9 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Wl art retr 16</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,10 +21,14 @@
       <sourceDesc>
         <bibl type="legalText"><title>Willelmi Articuli Retractati (the Ten Articles of William I, revised)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">491</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">250</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lond"><abbr>Lond</abbr> <note type="manuscript">Latin text as edited by Liebermann (London collection: MSS K2, Co, Or)</note></witness>
+          <witness xml:id="wit-guildhall"><abbr>Guildhall</abbr></witness>
+          <witness xml:id="wit-exchequer"><abbr>Exchequer</abbr></witness>
           <witness xml:id="wit-rs"><abbr>Rs</abbr> <note type="manuscript">Manchester, John Rylands Library, MS Latin 155</note></witness>
         </listWit>
       </sourceDesc>
@@ -39,18 +44,27 @@
       <creation><date source="#liebermann #robertson">c.1210</date><note type="promulgation">c.1210 (Liebermann, Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2354 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2354 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lond added from Gesetze I, p. 491.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="16">
         <head><ref type="lawCode" target="law:WlArtRetr">Wl art retr</ref> 16</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lond"><ptr type="liebermannNote" n="54" target="#WlArtRetr_16.lnote.oe.54"/><pb n="491" ed="#liebermann"/>Item<ptr type="liebermannNote" n="e" target="#WlArtRetr_16.lnote.oe.e"/> si serui permanserint sine callumpnia per annum et diem in ciuitatibus nostris uel in burgis nostris<ptr type="liebermannNote" n="55" target="#WlArtRetr_16.lnote.oe.55"/> muro uallatis uel in castellis<ptr type="liebermannNote" n="56" target="#WlArtRetr_16.lnote.oe.56"/> nostris, a die illa liberi homines<ptr type="liebermannNote" n="57" target="#WlArtRetr_16.lnote.oe.57"/> efficiuntur<ptr type="liebermannNote" n="58" target="#WlArtRetr_16.lnote.oe.58"/> et liberi a iugo seruitutis sue sint in perpetuum.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="16" corresp="#wit-rs"><pb n="250" ed="#robertson"/>Item si servi permanserint sine callumpnia per annum et diem in civitatibus nostris vel in burgis nostris muro vallatis vel in castellis nostris, a die illa liberi homines efficiuntur, et liberi a iugo servitutis suae sint in perpetuum.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-rs"><pb n="251" ed="#robertson"/>Likewise, if slaves have remained for a year and a day, without being claimed, in our cities or in our walled boroughs or in our castles, from that day they shall become free men and shall remain for ever free from the yoke of slavery.</ab>
         <note type="comparison" source="#liebermann" n="491">Glanvilla V 5; <ref target="clause:WlArtRetr_11">Wl art retr 11</ref></note>
         <note type="comparisonPrinted" source="#liebermann">vgl. Glanvilla V 5 | vgl. o. 11</note>
-        <note type="editorial">Added October 2026 from Robertson pp. 250–251 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 250–251 (text and translation); Liebermann’s text added from Gesetze I p. 491, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_16.lnote.oe.e" n="e" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">491</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Verf. copirt später</hi> Hn <hi rend="italic">und</hi> Glanvilla</seg><seg type="translation" xml:lang="en" source="#claude">Hn and Glanvilla later copy the author</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_16.lnote.oe.54" n="54" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">491</biblScope></bibl><seg type="original" xml:lang="de">16 <hi rend="italic">fehlt Ld wie Trip.</hi> Quod serui fiunt liberi per moram in burgis muro uallatis <hi rend="italic">Hand</hi> 14. <hi rend="italic">Jhs. Sc</hi></seg><seg type="translation" xml:lang="en" source="#claude">16 missing in Ld, as in Trip. Quod serui fiunt liberi per moram in burgis muro uallatis in a 14th-cent. hand Sc</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_16.lnote.oe.55" n="55" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">491</biblScope></bibl><seg type="original" xml:lang="de">.n. <hi rend="italic">Sc;</hi> in <hi rend="italic">Se;</hi> uel <hi rend="italic">Edd.</hi></seg><seg type="translation" xml:lang="en" source="#claude">.n. Sc; in Se; uel Edd.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_16.lnote.oe.56" n="56" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">491</biblScope></bibl><seg type="original" xml:lang="de">castris <hi rend="italic">Sc Hg</hi></seg><seg type="translation" xml:lang="en" source="#claude">castris Sc Hg</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_16.lnote.oe.57" n="57" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">491</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Sc Hg</hi></seg><seg type="translation" xml:lang="en" source="#claude">missing in Sc Hg</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_16.lnote.oe.58" n="58" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">491</biblScope></bibl><seg type="original" xml:lang="de">-iantur <hi rend="italic">Thorpe gegen Hss.</hi></seg><seg type="translation" xml:lang="en" source="#claude">-iantur Thorpe, against the MSS</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_16.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">283</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ebd</hi>. Stadt 10; Bauer 10d. e. Offenbar nicht Wilhelms I. Zeit gemäss. Die Glanvilla-Stelle übernimmt auch ‘Glanvill [a. 1265] revised’ bei Maitland <hi rend="italic">Coll. pap</hi>. II 278. Der Londoner erhebt wieder das Privileg einiger Städte zum allgemeinen Rechte jeder Königstadt</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Ibid</hi>. Stadt 10; Bauer 10d. e. Evidently not in keeping with the time of William I. The Glanvilla passage is also taken over by ‘Glanvill [a. 1265] revised’ in Maitland <hi rend="italic">Coll. pap</hi>. II 278. The London author again raises the privilege of some towns into the general law of every royal town</seg></note>
       </div>
     </body>
   </text>

@@ -4,9 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Hn mon 2</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,11 +21,12 @@
       <sourceDesc>
         <bibl type="legalText"><title>Henry I: Decree Concerning the Coinage</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">523</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">284</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-sc"><abbr>Sc</abbr> <note type="manuscript">The Red Book of the Exchequer (London, The National Archives, E 164/2)</note></witness>
+          <witness xml:id="wit-sc"><abbr>Sc</abbr> <note type="manuscript">Red Book of the Exchequer (Liber rubeus Scaccarii), c. 1230</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -39,16 +41,25 @@
       <creation><date source="#liebermann">1100–3</date><placeName source="#robertson">Westminster</placeName><note type="promulgation">1100–3 (Liebermann); Westminster (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2511 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2511 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Sc added from Gesetze I, p. 523.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:HnMon">Hn mon</ref> 2</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-sc"><pb n="523" ed="#liebermann"/>Et si quis cum falso denario inuentus fuerit, si warant<ptr type="liebermannNote" n="6" target="#HnMon_2.lnote.oe.6"/> inde reuocauerit, ad eum ducatur<ptr type="liebermannNote" n="7" target="#HnMon_2.lnote.oe.7"/>; et si illum<ptr type="liebermannNote" n="8" target="#HnMon_2.lnote.oe.8"/> inde conprobare poterit, fiat<ptr type="liebermannNote" n="9" target="#HnMon_2.lnote.oe.9"/> iusticia mea de ipso warant<ptr type="liebermannNote" n="10" target="#HnMon_2.lnote.oe.10"/>.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="2" corresp="#wit-sc"><pb n="284" ed="#robertson"/>Et si quis cum falso denario inventus fuerit, si warant inde revocaverit, ad eum ducatur, et si illum inde conprobare poterit, fiat iusticia mea de ipso warant.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-sc"><pb n="285" ed="#robertson"/>And if anyone has been discovered with false money, and has vouched a warrantor for it, the prosecution shall be directed against the latter, and if he [the original defendant] succeeds in proving him guilty, justice in accordance with my laws shall be executed upon the warrantor himself.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 284–285 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 284–285 (text and translation); Liebermann’s text added from Gesetze I p. 523, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_2.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">523</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so Sc Hg;</hi> -ntum <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">so Sc Hg;</hi> -ntum <hi rend="italic">K</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_2.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">523</biblScope></bibl><seg type="original" xml:lang="de">deuc., <hi rend="italic">mit geänd.</hi> d. <hi rend="italic">Hg;</hi> feuc. <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">deuc., <hi rend="italic">with altered</hi> d. <hi rend="italic">Hg;</hi> feuc. <hi rend="italic">K</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_2.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">523</biblScope></bibl><seg type="original" xml:lang="de">-ud <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">-ud <hi rend="italic">K</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_2.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">523</biblScope></bibl><seg type="original" xml:lang="de">fiet <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">fiet <hi rend="italic">K</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_2.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">523</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so Sc Hg;</hi> -nto <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">so Sc Hg;</hi> -nto <hi rend="italic">K</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_2.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="de">Die Worte teilweise = CHn cor 5, 1.—<hi rend="italic">Vgl. Gl</hi> Gewährleisten 2a; Anefang 16e. 20d</seg><seg type="translation" xml:lang="en" source="#claude">The words partly = CHn cor 5, 1.—<hi rend="italic">Cf. Gl</hi> Gewährleisten 2a; Anefang 16e. 20d</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_2.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="de">Strafgericht; <hi rend="italic">s</hi>. folg. Z.</seg><seg type="translation" xml:lang="en" source="#claude">Criminal court; <hi rend="italic">see</hi> next l.</seg></note>
       </div>
     </body>
   </text>

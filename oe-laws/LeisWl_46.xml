@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 46</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">518</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">272</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">The French text printed in the chronicle ascribed to Ingulf of Croyland (Robertson’s I; known only from early printed editions)</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,18 +48,34 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2466 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2466 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 518.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 518.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="46">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 46</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><pb n="518" ed="#liebermann"/>Nus<ptr type="liebermannNote" n="13" target="#LeisWl_46.lnote.oe.13"/> ne semble pas raisoun<ptr type="liebermannNote" n="14" target="#LeisWl_46.lnote.oe.14"/>, que<ptr type="liebermannNote" n="15" target="#LeisWl_46.lnote.oe.15"/> l’um<ptr type="liebermannNote" n="5" target="#LeisWl_46.lnote.oe.5"/> face pruvance, sur testimonie ki conussent ço que entercé<ptr type="liebermannNote" n="16" target="#LeisWl_46.lnote.oe.16"/> est; e que<ptr type="liebermannNote" n="15" target="#LeisWl_46.lnote.oe.15"/> nul nel prust devant le terme de VI meis, aprés iço<ptr type="liebermannNote" n="17" target="#LeisWl_46.lnote.oe.17"/> que<ptr type="liebermannNote" n="15" target="#LeisWl_46.lnote.oe.15"/> l’aveir [f]u<ptr type="liebermannNote" n="18" target="#LeisWl_46.lnote.oe.18"/> emblé.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="518" ed="#liebermann"/>Ne probacio fiat super testes. Absonum uidetur et iuri contrarium, ut probacio fiat, super testes qui rem calumpniatam cognoscunt; nec admittatur probacio ante terminum statutum, scilicet VI. mensem, ex quo furatum fuit quod calumpniatur.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="46" corresp="#wit-i"><pb n="272" ed="#robertson"/>Nus ne semble pas raisoun que l'um face pruvance sur testimonie ki conussent ço que entercé est, e que nul nel prust devant le terme de VI meis aprés iço que l'aveir [f]u emblé.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="518" ed="#liebermann"/>46. Uns dünkt kein Recht, dass jemand Beweiseid<ptr type="liebermannNote" n="c" target="#LeisWl_46.lnote.de1.c"/> leisten dürfe, [siegend<ptr type="liebermannNote" n="d" target="#LeisWl_46.lnote.de1.d"/>] über Zeugenschaft [der Nachbarn des Bestohlenen], die das Angeschlagene kennen; und niemand [also fortan] dürfe es beweisen vor der Frist von 6 Monaten, nachdem das Vieh gestohlen ist.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">46. It seems to us no right that someone should be allowed to give an oath of proof, [prevailing] over testimony [of the neighbours of the man robbed] who know the attached thing; and let no one [therefore henceforth] be allowed to prove it before the term of 6 months after the cattle was stolen.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-i"><pb n="273" ed="#robertson"/>We regard it as unjust that a man should claim ownership against the witness of those who recognise the thing vouched to warranty. No-one shall claim ownership in less than six months from the time that the livestock was stolen.</ab>
         <note type="comparison" source="#liebermann" n="518"><ref target="clause:IICn_24-3">II Cn 24.3</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 24, 3</note>
-        <note type="editorial">Added October 2026 from Robertson pp. 272–273 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 272–273 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 518, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_46.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">518</biblScope></bibl><seg type="original" xml:lang="de">lun <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">lun Im</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_46.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">518</biblScope></bibl><seg type="original" xml:lang="de">XLIV. <hi rend="italic">I;</hi> Aus <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">XLIV. I; Aus Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_46.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">518</biblScope></bibl><seg type="original" xml:lang="de">-son <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">-son Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_46.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">518</biblScope></bibl><seg type="original" xml:lang="de">qui <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">qui Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_46.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">518</biblScope></bibl><seg type="original" xml:lang="de">entre <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">entre Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_46.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">518</biblScope></bibl><seg type="original" xml:lang="de">co <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">co Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_46.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">518</biblScope></bibl><seg type="original" xml:lang="de">su <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">su I</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_46.lnote.de1.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">518</biblScope></bibl><seg type="original" xml:lang="de">das bei ihm Beanspruchte sei von seiner eigenen Zucht</seg><seg type="translation" xml:lang="en" source="#claude">that what is claimed in his possession is of his own rearing</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_46.lnote.de1.d" n="d" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">518</biblScope></bibl><seg type="original" xml:lang="de">sour: <hi rend="italic">gegen</hi> (<hi rend="italic">Godefroy</hi>); ‘supérieur au témoignage’; <hi rend="italic">Chevallet. Nicht</hi> ‘durch Zeugen’.</seg><seg type="translation" xml:lang="en" source="#claude">sour: against (Godefroy); ‘supérieur au témoignage’; Chevallet. Not ‘through witnesses’.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_46.lnote.de._" n="-" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">292</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ebd</hi>. 25e</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Ibid</hi>. 25e</seg></note>
       </div>
     </body>
   </text>

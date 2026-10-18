@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 18.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">504–505</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">262</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228, f. 141, c. 1230</note></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,19 +48,31 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2406 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2406 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Hk added from Gesetze I, p. 504–505.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 504–505.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 504–505.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="18.1">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 18.1</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-hk"><pb n="504–505" ed="#liebermann"/>Ki abat femme a terre pur fere lui force: la munte al seinur X sol.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-i"><pb n="504–505" ed="#liebermann"/>Ki abate<ptr type="liebermannNote" n="f" target="#LeisWl_18-1.lnote.oe.f"/> femme a terre pur faire lui force: la multe<ptr type="liebermannNote" n="g" target="#LeisWl_18-1.lnote.oe.g"/> al seignur X solz.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="504–505" ed="#liebermann"/>Si ui ad terram prostrauerit, ut uiolaret, domino X sol. reddat.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="18.1" corresp="#wit-hk"><pb n="262" ed="#robertson"/>Ki abat femme a terre pur fere lui force, la munte al seinur X sol.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="504–505" ed="#liebermann"/>18, 1. Wer eine Frau zu Boden wirft<ptr type="liebermannNote" n="1" target="#LeisWl_18-1.lnote.de.1"/>, um ihr Gewalt anzuthun: die Mund<ptr type="liebermannNote" n="f" target="#LeisWl_18-1.lnote.de1.f"/> (Geldstrafe <hi rend="italic">I</hi>) an den Herrn 10 Schilling.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">18, 1. Whoever throws a woman to the ground in order to do her violence: the mund (money penalty <hi rend="italic">I</hi>) to the lord 10 shillings.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-hk"><pb n="263" ed="#robertson"/>If anyone throws a woman to the ground in order to offer violence to her, the compensation to her lord for breach of his mund shall be 10 shillings.</ab>
         <note type="comparison" source="#liebermann" n="505"><ref target="clause:Af_11-1">Af 11.1</ref>; <ref target="clause:LeisWl_16">Leis Wl 16</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 11, 1 | (*s. o. 16)</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:LeisWl_16">Leis Wl 16</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 262–263 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 262–263 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 504–505, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_18-1.lnote.oe.f" n="f" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de">abat <hi rend="italic">bessert MA.</hi></seg><seg type="translation" xml:lang="en" source="#claude">abat emended by MA.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_18-1.lnote.oe.g" n="g" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">da</hi> mulcte <hi rend="italic">nicht vor</hi> 14. <hi rend="italic">Jh. belegt, und L das Wort ausliess als unverständlich, vielleicht</hi> munte <hi rend="italic">zu bessern</hi></seg><seg type="translation" xml:lang="en" source="#claude">since mulcte is not attested before the 14th cent., and L omitted the word as unintelligible, it should perhaps be emended to munte</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_18-1.lnote.de1.f" n="f" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">505</biblScope></bibl><seg type="original" xml:lang="de">Busse für verletzte Schutzgewalt <hi rend="italic">an den Herrn der Frau</hi></seg><seg type="translation" xml:lang="en" source="#claude">compensation for breach of protective authority, to the woman’s lord</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_18-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">289</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Notzucht 5. a; Schutz 14f. 17; Versuch 2b. Als Empfänger missversteht wie <hi rend="italic">o</hi>. 12 den Eheherrn Chevallet</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Notzucht 5. a; Schutz 14f. 17; Versuch 2b. Chevallet, as <hi rend="italic">above</hi> 12, wrongly takes the husband to be the recipient</seg></note>
       </div>
     </body>
   </text>

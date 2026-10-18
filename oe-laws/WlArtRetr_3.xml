@@ -4,9 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Wl art retr 3</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,10 +21,14 @@
       <sourceDesc>
         <bibl type="legalText"><title>Willelmi Articuli Retractati (the Ten Articles of William I, revised)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">490</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">244</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lond"><abbr>Lond</abbr> <note type="manuscript">Latin text as edited by Liebermann (London collection: MSS K2, Co, Or)</note></witness>
+          <witness xml:id="wit-guildhall"><abbr>Guildhall</abbr></witness>
+          <witness xml:id="wit-exchequer"><abbr>Exchequer</abbr></witness>
           <witness xml:id="wit-rs"><abbr>Rs</abbr> <note type="manuscript">Manchester, John Rylands Library, MS Latin 155</note></witness>
         </listWit>
       </sourceDesc>
@@ -39,18 +44,22 @@
       <creation><date source="#liebermann #robertson">c.1210</date><note type="promulgation">c.1210 (Liebermann, Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2345 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2345 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lond added from Gesetze I, p. 490.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3">
         <head><ref type="lawCode" target="law:WlArtRetr">Wl art retr</ref> 3</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lond"><pb n="490" ed="#liebermann"/>Uolumus autem et firmiter precipimus, ut omnes homines, quos nobiscum adduximus, aut post nos uenerint<ptr type="liebermannNote" n="9" target="#WlArtRetr_3.lnote.oe.9"/>, sint sub protectione<ptr type="liebermannNote" n="c" target="#WlArtRetr_3.lnote.oe.c"/> et in pace nostra per uniuersum regnum predictum.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="3" corresp="#wit-rs"><pb n="244" ed="#robertson"/>Volumus autem et firmiter praecipimus, ut omnes homines quos nobiscum adduximus aut post nos venerint sint sub protectione et in pace nostra per universum regnum praedictum.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-rs"><pb n="245" ed="#robertson"/>We desire likewise and firmly enjoin, that all the men, whom we brought with us or who have come after us, shall enjoy the benefits of protection throughout the whole of the aforesaid realm.</ab>
         <note type="comparison" source="#liebermann" n="490"><ref target="clause:WlArt_3">Wl art 3</ref>; <ref target="clause:WlArt_3-1">Wl art 3.1</ref>; <ref target="clause:WlArt_3-2">Wl art 3.2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 3 | ebd. 3, 1 | ebd. 3, 2</note>
-        <note type="editorial">Added October 2026 from Robertson pp. 244–245 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 244–245 (text and translation); Liebermann’s text added from Gesetze I p. 490, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_3.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Verf. weiss nicht mehr, dass</hi> pax <hi rend="italic">wie</hi> mund <hi rend="italic">auch</hi> Sonderschutz <hi rend="italic">heisst</hi></seg><seg type="translation" xml:lang="en" source="#claude">The author no longer knows that pax, like mund, also means special protection</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_3.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de">-runt <hi rend="italic">Ld aus Trip.</hi></seg><seg type="translation" xml:lang="en" source="#claude">-runt Ld from Trip.</seg></note>
       </div>
     </body>
   </text>

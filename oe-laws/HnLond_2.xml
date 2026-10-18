@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Hn Lond 2</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,11 +22,13 @@
       <sourceDesc>
         <bibl type="legalText"><title>Henry I: London Charter</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">525</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">288</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lat"><abbr>Lat</abbr> <note type="manuscript">Latin text as edited by Liebermann from the London collections (Lond, Cc, Horn, Cus, Cust …)</note></witness>
           <witness xml:id="wit-rs"><abbr>Rs</abbr> <note type="manuscript">Manchester, John Rylands Library, MS Latin 155</note></witness>
         </listWit>
       </sourceDesc>
@@ -41,16 +44,20 @@
       <creation><date source="#liebermann">1115–33, probably 1131</date><date source="#wormald-mel">very late in Henry I's reign</date><placeName source="#robertson">Westminster</placeName><note type="promulgation">1115–33, probably 1131 (Liebermann); very late in Henry I's reign (Wormald); Westminster (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2532 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2532 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lat added from Gesetze I, p. 525.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:HnLond">Hn Lond</ref> 2</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lat"><pb n="525" ed="#liebermann"/>Et ciues non placitabunt extra muros ciuitates pro ullo<ptr type="liebermannNote" n="6" target="#HnLond_2.lnote.oe.6"/> placito.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="2" corresp="#wit-rs"><pb n="288" ed="#robertson"/>Et cives non placitabunt extra muros civitatis pro nullo placito.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-rs"><pb n="289" ed="#robertson"/>And the citizens shall not take part in any case whatsoever outside the city walls.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 288–289 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 288–289 (text and translation); Liebermann’s text added from Gesetze I p. 525, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_2.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">525</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so Cust El E IV Po;</hi> nullo <hi rend="italic">Lond Cus</hi></seg><seg type="translation" xml:lang="en" source="#claude">so Cust El E IV Po; nullo Lond Cus</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_2.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">304</biblScope></bibl><seg type="original" xml:lang="de">Beispiele für dieses Privileg seit Heinrich I. in Newcastle und sonst in England bei Ballard 115. Breteuil erhielt schon im 11. Jh. das Vorrecht, dass <hi rend="italic">nullus nisi pro ipso rege extra castellum placitaret</hi> (Bateson <hi rend="italic">EHR</hi> 1900, 755); in Rouen <hi rend="italic">nullus placitet extra Rotomagum</hi> (Giry <hi rend="italic">Établ. de Rouen</hi> II 63; <hi rend="italic">vgl</hi>. Hegel <hi rend="italic">Städte u. Gil</hi>. II 12). Für London (<hi rend="italic">s. d. Gl</hi> 57) ward es wiederholt 1155, mit der Einschränkung, dass für Grundbesitz [der Londoner] ausserhalb Londons sowie für [Londons] königliche Münzer und für Königsbeamte London nicht alleiniger Gerichtsort sei. So im Freibrief 1194 und allegiert vom Liber de antiq. leg. 46.—Der Londoner Vollbürger wird also hiernach verklagt nur vor Folcmot oder Husting unter dem königlichen Stadtrichter oder Stadt-Sheriff. Dass die Bürger miteinander nur vor dem Stadtgericht stritten, überwachte die Stadt späterhin eifersüchtig; Norton <hi rend="italic">Comment. Lon</hi>. 278.—In dieser Zeile bessere <hi rend="italic">civitatis</hi></seg><seg type="translation" xml:lang="en" source="#claude">Examples of this privilege from Henry I onwards in Newcastle and elsewhere in England in Ballard 115. Breteuil had already received in the 11th cent. the privilege that <hi rend="italic">nullus nisi pro ipso rege extra castellum placitaret</hi> (Bateson <hi rend="italic">EHR</hi> 1900, 755); in Rouen <hi rend="italic">nullus placitet extra Rotomagum</hi> (Giry <hi rend="italic">Établ. de Rouen</hi> II 63; <hi rend="italic">cf</hi>. Hegel <hi rend="italic">Städte u. Gil</hi>. II 12). For London (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 57) it was repeated in 1155, with the restriction that for landed property [of Londoners] outside London, and for [London’s] royal moneyers and for royal officials, London was not the sole place of trial. So too in the charter of 1194, and cited by the Liber de antiq. leg. 46.—Accordingly, then, the full burgess of London is impleaded only before the Folcmot or Husting under the royal town justiciar or the town sheriff. The city later watched jealously that burgesses litigated with one another only before the town court; Norton <hi rend="italic">Comment. Lon</hi>. 278.—In this line read <hi rend="italic">civitatis</hi></seg></note>
       </div>
     </body>
   </text>

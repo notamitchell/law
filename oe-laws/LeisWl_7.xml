@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 7</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">498–499</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">256</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228, f. 141, c. 1230</note></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,16 +48,38 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2377 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2377 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Hk added from Gesetze I, p. 498–499.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 498–499.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 498–499.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 7</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-hk"><pb n="498–499" ed="#liebermann"/>Si hom ocist auter<ptr type="liebermannNote" n="1" target="#LeisWl_7.lnote.oe.1"/>, e il seit cunuissant e il deive faire les amendes, durrad de sa manbote al seinur pur le franch hume X<ptr type="liebermannNote" n="a" target="#LeisWl_7.lnote.oe.a"/> sol. e pur le serf XX sol.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><ptr type="liebermannNote" n="13" target="#LeisWl_7.lnote.oe.13"/><pb n="498–499" ed="#liebermann"/>Si home occit alter<ptr type="liebermannNote" n="10" target="#LeisWl_7.lnote.oe.10"/>, e il seit conusaunt<ptr type="liebermannNote" n="14" target="#LeisWl_7.lnote.oe.14"/> e il de[iv]e<ptr type="liebermannNote" n="15" target="#LeisWl_7.lnote.oe.15"/> faire les amendes, durrad de sa manbote<ptr type="liebermannNote" n="16" target="#LeisWl_7.lnote.oe.16"/> al seignor pur le franc home X solz e pur le serf XX solz.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="498–499" ed="#liebermann"/>De homicidiis. Si quis conuictus<ptr type="liebermannNote" n="a" target="#LeisWl_7.lnote.oe.a-2"/> uel confessus fuerit in iure, alium occidisse, dat pere suum<ptr type="liebermannNote" n="c" target="#LeisWl_7.lnote.oe.c"/> et insuper domino occisi manbote, scilicet pro homine libero X sol., pro seruo XX solid.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="7" corresp="#wit-hk"><pb n="256" ed="#robertson"/>Si hom ocist auter e il seit cunuissant e il deive faire les amendes, durrad de sa manbote al seinur pur le franch hume X sol. e pur le serf XX sol.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="498–499" ed="#liebermann"/>7. Wenn jemand einen anderen tödtet, und er ist geständig und soll die Busse<ptr type="liebermannNote" n="a" target="#LeisWl_7.lnote.de1.a"/> zahlen, so soll er an<ptr type="liebermannNote" n="1" target="#LeisWl_7.lnote.de.1"/> Mannbusse für ihn<ptr type="liebermannNote" n="b" target="#LeisWl_7.lnote.de1.b"/> dem Herrn zahlen: für de[sse]n<ptr type="liebermannNote" n="c" target="#LeisWl_7.lnote.de1.c"/> freien Vasallen<ptr type="liebermannNote" n="2" target="#LeisWl_7.lnote.de.2"/> 10 Schill. und für den Unfreien 20 Schill.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">7. If someone kills another, and he confesses and is to pay the compensation, then he shall pay to the lord as manbot for him: for h[i]s free vassal 10 shill. and for the unfree man 20 shill.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-hk"><pb n="257" ed="#robertson"/>If a man slays another and confesses it and has to make amends, he shall pay manbot to the lord of the slain man—10 shillings for a free man, and 20 shillings for a slave.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 256–257 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 256–257 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 498–499, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_7.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de">autre <hi rend="italic">ändert stets MAT.</hi></seg><seg type="translation" xml:lang="en" source="#claude">autre always emended by MAT.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_7.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de">XL <hi rend="italic">ändern Frühere nach E Cf.</hi> 12, 3 <hi rend="italic">f.; allein</hi> X sol. <hi rend="italic">E Cf.</hi> 12, 5</seg><seg type="translation" xml:lang="en" source="#claude">earlier editors emend to XL after E Cf. 12, 3f.; but X sol. E Cf. 12, 5</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_7.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de">altre <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">altre Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_7.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de">VIII. <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">VIII. I</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_7.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de">couns. <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">couns. Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_7.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de">denie <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">denie I</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_7.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de">mainb. <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">mainb. Im</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_7.lnote.oe.a-2" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">499</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Römische Phraseologie</hi></seg><seg type="translation" xml:lang="en" source="#claude">Roman phraseology</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_7.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">499</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">L ergänzt</hi> (<hi rend="italic">was Verf. als selbstverständlich fortliess; vgl.</hi> 8 <hi rend="italic">f.</hi>), <hi rend="italic">das im</hi> 12. <hi rend="italic">Jh. ersterbende Recht noch kennend, das Wergeld des Erschlagenen</hi></seg><seg type="translation" xml:lang="en" source="#claude">L, still aware of the law that was dying out in the 12th cent., supplies the wergild of the slain man (which the author left out as self-evident; cf. 8f.)</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_7.lnote.de1.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">499</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Todtschlag aus Rache hörte auf unter Wilhelm I., so übertreibt Ann. Anglosax.</hi> 1087</seg><seg type="translation" xml:lang="en" source="#claude">killing in revenge ceased under William I: so Ann. Anglosax. 1087, exaggerating</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_7.lnote.de1.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">499</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">den Erschlagenen</hi></seg><seg type="translation" xml:lang="en" source="#claude">the slain man</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_7.lnote.de1.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">499</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl.</hi> 10</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">cf.</hi> 10</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_7.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">287</biblScope></bibl><seg type="original" xml:lang="de">Nicht ‘von’ (Schmid, der aber in der Anm. das Richtige vermutet); <hi rend="italic">vgl. Wb: de</hi> 7. 9. 11</seg><seg type="translation" xml:lang="en" source="#claude">Not ‘from’ (Schmid, who, however, conjectures the correct sense in his note); <hi rend="italic">cf. Wb: de</hi> 7. 9. 11</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_7.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">287</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Mannbusse 15c. d.—Die Zahlung für den Unfreien (<hi rend="italic">s. d. Gl</hi> 7b-e) ist aber im strengen Sinn des alten Rechts nicht Mannbusse (<hi rend="italic">ebd</hi>. 6a), sondern Sachpreis für die wertvollste Art Fahrhabe, daher höher als für Verletzung des Schutzes; <hi rend="italic">s. d. Gl</hi> 8.—Schilling hier und 8, 1 = 12 Pfennig (nicht, mit Seebohm <hi rend="italic">Tribal Agsa</hi>. 333. 335, nur 5)</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Mannbusse 15c. d.—The payment for the unfree man (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 7b-e) is, however, in the strict sense of the old law not manbot (<hi rend="italic">ibid</hi>. 6a) but the price of a thing, for the most valuable kind of movable property, and hence higher than for breach of protection; <hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 8.—The shilling here and in 8, 1 = 12 pence (not, with Seebohm <hi rend="italic">Tribal Agsa</hi>. 333. 335, only 5)</seg></note>
       </div>
     </body>
   </text>

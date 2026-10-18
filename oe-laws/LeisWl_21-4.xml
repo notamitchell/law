@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 21.4</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">508–509</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">264</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228, f. 141, c. 1230</note></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,16 +48,34 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2422 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2422 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Hk added from Gesetze I, p. 508–509.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 508–509.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 508–509.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="21.4">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 21.4</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-hk"><pb n="508–509" ed="#liebermann"/>En Denel<hi rend="italic">ahe<ptr type="liebermannNote" n="2" target="#LeisWl_21-4.lnote.oe.2"/></hi> mettrad l'om l'aveir en uele main, de ici qu'il seit derehdned.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-i"><pb n="508–509" ed="#liebermann"/>E en<ptr type="liebermannNote" n="21" target="#LeisWl_21-4.lnote.oe.21"/> Denelae mettre<ptr type="liebermannNote" n="22" target="#LeisWl_21-4.lnote.oe.22"/> . . . . .<ptr type="liebermannNote" n="b" target="#LeisWl_21-4.lnote.oe.b"/> en uele . . . .<ptr type="liebermannNote" n="b" target="#LeisWl_21-4.lnote.oe.b"/>, d'issi la que<ptr type="liebermannNote" n="17" target="#LeisWl_21-4.lnote.oe.17"/> il seit derained.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="508–509" ed="#liebermann"/>In Danelahe ponetur res in manu equali<ptr type="liebermannNote" n="3" target="#LeisWl_21-4.lnote.oe.3"/>, donec dirationetur.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="21.4" corresp="#wit-hk"><pb n="264" ed="#robertson"/>En Denelahe mettrad l'om l'aveir en uele main de ici qu'il seit derehdned.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="508–509" ed="#liebermann"/>21, 4. Im Dänen-Rechtsgebiet<ptr type="liebermannNote" n="1" target="#LeisWl_21-4.lnote.de.1"/> muss man [der Besitzer] das Vieh<ptr type="liebermannNote" n="d" target="#LeisWl_21-4.lnote.de1.d"/> in neutrale<ptr type="liebermannNote" n="2" target="#LeisWl_21-4.lnote.de.2"/> Hand<ptr type="liebermannNote" n="e" target="#LeisWl_21-4.lnote.de1.e"/> liefern, bis es gerichtlich erstritten ist.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">21, 4. In the Danish legal district one [the possessor] must deliver the cattle into a neutral hand until it has been won at law.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-hk"><pb n="265" ed="#robertson"/>In the Danelaw the livestock shall be placed in neutral hands until the case has been decided.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 264–265 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 264–265 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 508–509, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_21-4.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">508</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">oder</hi> -ahge; Denel' <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">or -ahge; Denel' Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_21-4.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">508</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">ergänze aus HkL</hi></seg><seg type="translation" xml:lang="en" source="#claude">supply from HkL</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_21-4.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">508</biblScope></bibl><seg type="original" xml:lang="de">qui <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">qui Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_21-4.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">508</biblScope></bibl><seg type="original" xml:lang="de">on <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">on Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_21-4.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">508</biblScope></bibl><seg type="original" xml:lang="de">meitre <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">meitre Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_21-4.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">509</biblScope></bibl><seg type="original" xml:lang="de">equalʒ <hi rend="italic">S</hi></seg><seg type="translation" xml:lang="en" source="#claude">equalʒ S</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_21-4.lnote.de1.d" n="d" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">509</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">das Kläger durch Anefang bei ihm beansprucht hat</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">which the plaintiff has claimed from him by attachment</hi></seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_21-4.lnote.de1.e" n="e" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">509</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">eines Unparteiischen, in ausseramtlichen Sequester</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">of an impartial person, in unofficial sequestration</hi></seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_21-4.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">289</biblScope></bibl><seg type="original" xml:lang="de">‘Skandinavisch’ Steenstrup <hi rend="italic">Danelag</hi> 368; Brunner II 499</seg><seg type="translation" xml:lang="en" source="#claude">‘Scandinavian’ Steenstrup <hi rend="italic">Danelag</hi> 368; Brunner II 499</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_21-4.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">289</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Sequester; <hi rend="italic">Wb: uwel</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Sequester; <hi rend="italic">Wb: uwel</hi></seg></note>
       </div>
     </body>
   </text>

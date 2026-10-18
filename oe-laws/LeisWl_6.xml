@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 6</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">498–499</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">256</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228, f. 141, c. 1230</note></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,17 +48,31 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2375 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2375 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Hk added from Gesetze I, p. 498–499.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 498–499.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 498–499.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 6</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-hk"><pb n="498–499" ed="#liebermann"/>Autersi<ptr type="liebermannNote" n="1" target="#LeisWl_6.lnote.oe.1"/> de aveir adiré e autersi<ptr type="liebermannNote" n="1" target="#LeisWl_6.lnote.oe.1"/> de truveure: seit mustred de treis parz del visned, qu’il ait testimonie de la truveure.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><pb n="498–499" ed="#liebermann"/>Altresi<ptr type="liebermannNote" n="3" target="#LeisWl_6.lnote.oe.3"/> de aver endirez<ptr type="liebermannNote" n="c" target="#LeisWl_6.lnote.oe.c"/> e de altre tr[o]veure<ptr type="liebermannNote" n="4" target="#LeisWl_6.lnote.oe.4"/>: seit mustred de treis pars del veisined, que il eit testimonie<ptr type="liebermannNote" n="5" target="#LeisWl_6.lnote.oe.5"/> de la troveure.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="498–499" ed="#liebermann"/>De auerio errante uel re inuenta. Si quis auerium errans recollegerit uel rem quamcunque inuenerit, denunciet illud per tres partes uisneti uillis proximis, ut sint in testimonium inuenti.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="6" corresp="#wit-hk"><pb n="256" ed="#robertson"/>Autersi de aveir adiré, e autersi de truveure—seit mustred de treis parz del visned qu'il ait testimonie de la truveure.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="498–499" ed="#liebermann"/>6. Ebenso bei verirrtem Vieh und ebenso bei (anderem <hi rend="italic">I</hi>) Fundstück: es werde gezeigt nach<ptr type="liebermannNote" n="1" target="#LeisWl_6.lnote.de.1"/> drei Richtungen der Nachbarschaft, damit er Zeugniss über die Fund[qualität] habe.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">6. Likewise with strayed cattle and likewise with (other <hi rend="italic">I</hi>) found property: it shall be shown in three directions of the neighbourhood, so that he may have testimony as to the [character of the] find.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-hk"><pb n="257" ed="#robertson"/>Similarly in the case of strayed livestock, and also in the case of found property; it shall be exhibited in three (different) parts of the neighbourhood so that he may have witness that it was found property.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:LeisWl_5-2">Leis Wl 5.2</ref>; <ref target="clause:LeisWl_21-5">Leis Wl 21.5</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 256–257 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 256–257 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 498–499, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_6.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de">autre <hi rend="italic">ändert stets MAT.</hi></seg><seg type="translation" xml:lang="en" source="#claude">autre always emended by MAT.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_6.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl. Suchier</hi> Über die Vie de s. Auban 35</seg><seg type="translation" xml:lang="en" source="#claude">cf. Suchier Über die Vie de s. Auban 35</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_6.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de">VII. <hi rend="italic">I;</hi> Altersi <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">VII. I; Altersi Im</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_6.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de">trev. <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">trev. I</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_6.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de">testem. <hi rend="italic">Io;</hi> testimoine <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">testem. Io; testimoine Im</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_6.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">287</biblScope></bibl><seg type="original" xml:lang="de">Ebenso wie ECf 24 wird Zulaufen von Tieren mit Fund vermischt; J. Hübner 54.—Nicht ‘three fourths’ (Riley) laut <hi rend="italic">u</hi>. 21, 5. <hi rend="italic">Vgl. Gl</hi> Fund 2; Dorf 7e; Nachbarn 3a; Jobbé-Duval [<hi rend="italic">o</hi>. 5, 2{1}] 473. Über das Aufgebot des Fundgutes durch den Finder, später (so in ECf 24, 1ff.) die Obrigkeit, <hi rend="italic">per tres marcas vgl</hi>. Hübner 42</seg><seg type="translation" xml:lang="en" source="#claude">As in ECf 24, the straying of animals is conflated with finding; J. Hübner 54.—Not ‘three fourths’ (Riley), according to <hi rend="italic">below</hi> 21, 5. <hi rend="italic">Cf. Gl</hi> Fund 2; Dorf 7e; Nachbarn 3a; Jobbé-Duval [<hi rend="italic">above</hi> 5, 2{1}] 473. On the public announcement of found property by the finder, later (as in ECf 24, 1ff.) by the authorities, <hi rend="italic">per tres marcas cf</hi>. Hübner 42</seg></note>
       </div>
     </body>
   </text>

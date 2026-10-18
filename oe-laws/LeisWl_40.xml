@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 40</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">516</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">270</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">The Latin version of the Leis Willelme (Robertson’s L)</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,21 +48,31 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2453 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2453 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 516.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 516.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="40">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 40</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-i"><ptr type="liebermannNote" n="c" target="#LeisWl_40.lnote.oe.c"/><pb n="516" ed="#liebermann"/>. . . . . . . . . . . .</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="516" ed="#liebermann"/>Ne quis pro parvo delicto morti adiudicetur. Prohibemus, ne pro parvo forisfacto adiudicetur aliquis homo morti; sed ad plebis castigacionem al[i]a<ptr type="liebermannNote" n="b" target="#LeisWl_40.lnote.oe.b"/> pena secundum qualitatem et quantitatem delicti plectatur. Non enim debet pro re parva deleri factura, quam ad ymaginem suam Deus condidit et sanguinis sui precio redemit.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="40" corresp="#wit-l"><pb n="270" ed="#robertson"/>[Ne quis pro parvo delicto morti adiudicetur. Prohibemus ne pro parvo forisfacto adiudicetur aliquis homo morti; sed ad plebis castigacionem al[i]a pena secundum qualitatem et quantitatem delicti plectatur. Non enim debet pro re parva deleri factura, quam ad ymaginem suam Deus condidit et sanguinis sui precio redemit.]</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="516" ed="#liebermann"/>40. Dass Keiner wegen kleiner Verfehlung zum Tode verurtheilt werde. Wir<ptr type="liebermannNote" n="1" target="#LeisWl_40.lnote.de.1"/> verbieten, dass wegen geringer Missethat, ein Mensch zum Tode verurtheilt werde; sondern zur Strafordnung des Volkes werde er mit anderer [hoher <hi rend="italic">S</hi>] Strafe nach Art und Grösse des Vergehens gestraft. Denn nicht soll wegen kleiner Ursache das Werk zerstört werden, welches Gott nach seinem Bilde geschaffen und mit dem Preise seines Blutes erkauft<ptr type="liebermannNote" n="d" target="#LeisWl_40.lnote.de1.d"/> hat.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">40. That No one be condemned to death for a small offence. We forbid that for a slight misdeed a man be condemned to death; but for the penal discipline of the people he shall be punished with another [heavy <hi rend="italic">S</hi>] punishment according to the kind and magnitude of the offence. For the work which God created in his image and bought with the price of his blood shall not be destroyed for a small cause.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-l"><pb n="271" ed="#robertson"/>[That no-one be condemned to death for a trivial crime. We forbid the practice of condemning a man to death for a trivial offence, but, for the correction of the public, another penalty [shall be devised] according to the nature and magnitude of the crime; for that which God made in his own image and redeemed at the cost of his own blood should not be destroyed for a trivial matter.]</ab>
         <note type="comparison" source="#liebermann" n="516"><ref target="clause:IICn_2-1">II Cn 2.1</ref>; Wl art [?]; Gen. 1, [?]; Apoc. 5, [?]</note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 2, 1 | (Wl art. [?]) | (Gen. 1, [?]) | (Apoc. 5, [?])</note>
         <note type="comparisonIncomplete">Some of Liebermann’s notes here are cut off in the gutter of the scan used, and are still to be completed.</note>
         <note type="comparison" source="#wormald-mel" n="409"><label>order of</label> <ref target="clause:IICn_2-1">II Cn 2.1</ref> <quote>Leis Wl 41 – 41:1 ... and 40 (on capital punishment) are ... in the order of the 'Articles' (9, 10), not that of Cnut (II 3 - 3:1, 2:1)</quote></note>
         <note type="comparison" source="#wormald-mel" n="409"><label>order of</label> <ref target="clause:WlArt_10">Wl art 10</ref> <quote>Leis Wl 41 – 41:1 ... and 40 (on capital punishment) are ... in the order of the 'Articles' (9, 10), not that of Cnut (II 3 - 3:1, 2:1)</quote></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 270–271 (text and translation); Liebermann’s text (K–M) not yet added; Latin: from L; not in I (Robertson).</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 270–271 (text and translation); Latin: from L; not in I (Robertson).; Liebermann’s text and German translation added from Gesetze I p. 516, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_40.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">516</biblScope></bibl><seg type="original" xml:lang="de">40 <hi rend="italic">ergänze aus L; stand im Original wohl hinter</hi> 39</seg><seg type="translation" xml:lang="en" source="#claude">supply 40 from L; in the original it probably stood after 39</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_40.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">516</biblScope></bibl><seg type="original" xml:lang="de">alta <hi rend="italic">S;</hi> elles <hi rend="italic">Cnut</hi></seg><seg type="translation" xml:lang="en" source="#claude">alta S; elles Cnut</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_40.lnote.de1.d" n="d" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">516</biblScope></bibl><seg type="original" xml:lang="de">racheter, redimere <hi rend="italic">auch theologisch</hi> erlösen</seg><seg type="translation" xml:lang="en" source="#claude">racheter, redimere, also in the theological sense ‘redeem’</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_40.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">291</biblScope></bibl><seg type="original" xml:lang="de">Dieser Satz fusst ganz auf Cnut, zu Ende <hi rend="italic">o</hi>. 41, 1{3} wiederholend, während Wl art 10 vielmehr positiv Verstümmelung einführt</seg><seg type="translation" xml:lang="en" source="#claude">This sentence rests entirely on Cnut, at the end repeating <hi rend="italic">above</hi> 41, 1{3}, whereas Wl art 10, on the contrary, positively introduces mutilation</seg></note>
       </div>
     </body>
   </text>

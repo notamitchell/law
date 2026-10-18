@@ -4,9 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Hn mon 3.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,11 +21,12 @@
       <sourceDesc>
         <bibl type="legalText"><title>Henry I: Decree Concerning the Coinage</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">523</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">284</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-sc"><abbr>Sc</abbr> <note type="manuscript">The Red Book of the Exchequer (London, The National Archives, E 164/2)</note></witness>
+          <witness xml:id="wit-sc"><abbr>Sc</abbr> <note type="manuscript">Red Book of the Exchequer (Liber rubeus Scaccarii), c. 1230</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -39,16 +41,22 @@
       <creation><date source="#liebermann">1100–3</date><placeName source="#robertson">Westminster</placeName><note type="promulgation">1100–3 (Liebermann); Westminster (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2515 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2515 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Sc added from Gesetze I, p. 523.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3.1">
         <head><ref type="lawCode" target="law:HnMon">Hn mon</ref> 3.1</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-sc"><pb n="523" ed="#liebermann"/>Et si in alio<ptr type="liebermannNote" n="19" target="#HnMon_3-1.lnote.oe.19"/> comitatu mutando denarios<ptr type="liebermannNote" n="20" target="#HnMon_3-1.lnote.oe.20"/> captus fuerit, <ptr type="liebermannNote" n="21" target="#HnMon_3-1.lnote.oe.21"/>captus sit ut falsonarius.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="3.1" corresp="#wit-sc"><pb n="284" ed="#robertson"/>Et si in ali[o] comitatu mutando denarios captus fuerit, captus sit ut falsonarius.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-sc"><pb n="285" ed="#robertson"/>And if he has been seized recasting money in another county, he shall be regarded as a forger.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 284–285 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 284–285 (text and translation); Liebermann’s text added from Gesetze I p. 523, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_3-1.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">523</biblScope></bibl><seg type="original" xml:lang="de">ali <hi rend="italic">Sc</hi></seg><seg type="translation" xml:lang="en" source="#claude">ali <hi rend="italic">Sc</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_3-1.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">523</biblScope></bibl><seg type="original" xml:lang="de">-io <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">-io <hi rend="italic">K</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_3-1.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">523</biblScope></bibl><seg type="original" xml:lang="de">si <hi rend="italic">fügen zu Sc Hg K;</hi> sic <hi rend="italic">Edd.;</hi> <hi rend="italic">‘superfluous’ Riley</hi> Mun. Gildh. Lond. <hi rend="italic">II</hi> 649</seg><seg type="translation" xml:lang="en" source="#claude">si <hi rend="italic">added by Sc Hg K;</hi> sic <hi rend="italic">Edd.;</hi> <hi rend="italic">‘superfluous’ Riley</hi> Mun. Gildh. Lond. <hi rend="italic">II</hi> 649</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnMon_3-1.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">299</biblScope></bibl><seg type="original" xml:lang="de">Das Umprägen in fremdem Gerichtsbezirk beweist die Absicht des Heimlichen; <hi rend="italic">s. d. Gl</hi> 1c. Münzer setzten falschen Prägernamen auf minderwertigen Pfennig, um diesen nicht verantworten zu müssen</seg><seg type="translation" xml:lang="en" source="#claude">Re-minting in another jurisdiction proves an intent of secrecy; <hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 1c. Moneyers put a false moneyer's name on an inferior penny so as not to have to answer for it</seg></note>
       </div>
     </body>
   </text>

@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Wl art 6.2</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +22,13 @@
       <sourceDesc>
         <bibl type="legalText"><title>The Ten Articles of William I</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">487</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">240</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis), f. 80</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,19 +43,26 @@
       <creation><date source="#liebermann">compiled c.1110–35</date><date source="#robertson">compiled 1110–35</date><date source="#wormald-mel">late in William I's reign</date><note type="promulgation">compiled c.1110–35 (Liebermann); compiled 1110–35 (Robertson); late in William I's reign (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2332 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2332 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 487.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6.2">
         <head><ref type="lawCode" target="law:WlArt">Wl art</ref> 6.2</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-h"><pb n="487" ed="#liebermann"/>Si quis<ptr type="liebermannNote" n="l" target="#WlArt_6-2.lnote.oe.l"/> eorum uictus fuerit, emendet XL<ptr type="liebermannNote" n="60" target="#WlArt_6-2.lnote.oe.60"/><ptr type="liebermannNote" n="m" target="#WlArt_6-2.lnote.oe.m"/> solidos<ptr type="liebermannNote" n="61" target="#WlArt_6-2.lnote.oe.61"/> regi.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="6.2" corresp="#wit-h"><pb n="240" ed="#robertson"/>Si quis eorum victus fuerit, emendet XL solidos regi.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><pb n="241" ed="#robertson"/>If either of them is defeated, he shall pay 40 shillings to the King.</ab>
         <note type="comparison" source="#liebermann" n="487"><ref target="clause:WiLad_2-2">Wl lad 2.2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 2, 2</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:WiLad_2-2">Wl lad 2.2</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 240–241 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 240–241 (text and translation); Liebermann’s text added from Gesetze I p. 487, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-2.lnote.oe.l" n="l" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlerhafte Abweichung von</hi> Wl lad</seg><seg type="translation" xml:lang="en" source="#claude">erroneous departure from Wl lad</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-2.lnote.oe.m" n="m" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">LX [<hi rend="italic">wie Wl lad</hi> 2, 2], <hi rend="italic">aber auf Rasur</hi> [<hi rend="italic">also gebessert aus eigenem Wissen</hi>] <hi rend="italic">Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">LX [as Wl lad 2, 2], but on an erasure [thus corrected from his own knowledge] Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-2.lnote.oe.60" n="60" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">r. XL [LX <hi rend="italic">Cb</hi>] s. <hi rend="italic">T Cb Hv Retr Ra Vi Va Ph Pl</hi></seg><seg type="translation" xml:lang="en" source="#claude">r. XL [LX <hi rend="italic">Cb</hi>] s. <hi rend="italic">T Cb Hv Retr Ra Vi Va Ph Pl</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-2.lnote.oe.61" n="61" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">-dis <hi rend="italic">Rl</hi></seg><seg type="translation" xml:lang="en" source="#claude">-dis <hi rend="italic">Rl</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-2.lnote.oe._" n="-" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">281</biblScope></bibl><seg type="original" xml:lang="de">Die Zahlung traf nach Wl lad nur den Normannen</seg><seg type="translation" xml:lang="en" source="#claude">According to Wl lad the payment fell only on the Norman</seg></note>
       </div>
     </body>
   </text>
