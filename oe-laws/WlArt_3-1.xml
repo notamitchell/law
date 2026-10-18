@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Wl art 3.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +22,13 @@
       <sourceDesc>
         <bibl type="legalText"><title>The Ten Articles of William I</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">487</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">238</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis), f. 80</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,17 +43,32 @@
       <creation><date source="#liebermann">compiled c.1110–35</date><date source="#robertson">compiled 1110–35</date><date source="#wormald-mel">late in William I's reign</date><note type="promulgation">compiled c.1110–35 (Liebermann); compiled 1110–35 (Robertson); late in William I's reign (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2326 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2326 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 487.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3.1">
         <head><ref type="lawCode" target="law:WlArt">Wl art</ref> 3.1</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-h"><pb n="487" ed="#liebermann"/>Et si quis de<ptr type="liebermannNote" n="8" target="#WlArt_3-1.lnote.oe.8"/> illis occisus fuerit, dominus eius habeat infra<ptr type="liebermannNote" n="9" target="#WlArt_3-1.lnote.oe.9"/> quinque<ptr type="liebermannNote" n="a" target="#WlArt_3-1.lnote.oe.a"/> dies homicidam eius, si potuerit<ptr type="liebermannNote" n="10" target="#WlArt_3-1.lnote.oe.10"/>; sin autem, incipiat<ptr type="liebermannNote" n="11" target="#WlArt_3-1.lnote.oe.11"/> persoluere mihi quadraginta<ptr type="liebermannNote" n="12" target="#WlArt_3-1.lnote.oe.12"/> sex marcas argenti, quamdiu substantia<ptr type="liebermannNote" n="13" target="#WlArt_3-1.lnote.oe.13"/> illius<ptr type="liebermannNote" n="14" target="#WlArt_3-1.lnote.oe.14"/> domini<ptr type="liebermannNote" n="15" target="#WlArt_3-1.lnote.oe.15"/> perdurauerit<ptr type="liebermannNote" n="16" target="#WlArt_3-1.lnote.oe.16"/>.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="3.1" corresp="#wit-h"><pb n="238" ed="#robertson"/>Et si quis de illis occisus fuerit, dominus eius habeat infra quinque dies homicidam eius, si potuerit; sin autem, incipiat persolvere mihi quadraginta sex marcas argenti, quamdiu substantia illius domini perduraverit.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><pb n="239" ed="#robertson"/>And if any of them is slain, his lord shall arrest the slayer within five days, if he can. If not, however, he shall begin to pay me 46 marks of silver from the property of that lord as long as it lasts out.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:WlArtRetr_3">Wl art retr 3</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 238–239 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 238–239 (text and translation); Liebermann’s text added from Gesetze I p. 487, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_3-1.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">diese Frist begegnet nur hier; vom</hi> Murdrum-<hi rend="italic">Gesetze Wilhelms I. bergen Spuren viele Quellen des</hi> 12. <hi rend="italic">Jhs.; vgl. Liebermann</hi> Über Leges Edw. Conf. <hi rend="italic">S.</hi> 108 <hi rend="italic">ff.</hi></seg><seg type="translation" xml:lang="en" source="#claude">this term occurs only here; many sources of the 12th cent. preserve traces of William I’s murdrum law; cf. Liebermann Über Leges Edw. Conf. p. 108 ff.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_3-1.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">ex <hi rend="italic">Hv Pl</hi></seg><seg type="translation" xml:lang="en" source="#claude">ex <hi rend="italic">Hv Pl</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_3-1.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">homic. e. i. <hi rend="spaced">quindecim</hi> dies <hi rend="italic">Hv</hi></seg><seg type="translation" xml:lang="en" source="#claude">homic. e. i. <hi rend="italic">quindecim</hi> dies <hi rend="italic">Hv</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_3-1.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">poterit <hi rend="italic">Cb Hv Ra Pl;</hi> poterint <hi rend="italic">Ct</hi></seg><seg type="translation" xml:lang="en" source="#claude">poterit <hi rend="italic">Cb Hv Ra Pl;</hi> poterint <hi rend="italic">Ct</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_3-1.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">persoluat (<hi rend="italic">ohne</hi> inc.) <hi rend="italic">Hv</hi></seg><seg type="translation" xml:lang="en" source="#claude">persoluat (without inc.) <hi rend="italic">Hv</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_3-1.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so H;</hi> XLVI <hi rend="italic">meiste; Rasur Vi</hi></seg><seg type="translation" xml:lang="en" source="#claude">thus H; XLVI most; erasure Vi</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_3-1.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">fuga <hi rend="italic">Vi</hi></seg><seg type="translation" xml:lang="en" source="#claude">fuga <hi rend="italic">Vi</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_3-1.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">d. i. <hi rend="italic">Cb Retr Vi Va Ph Ct Pl;</hi> dom. sui <hi rend="italic">Hv</hi></seg><seg type="translation" xml:lang="en" source="#claude">d. i. <hi rend="italic">Cb Retr Vi Va Ph Ct Pl;</hi> dom. sui <hi rend="italic">Hv</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_3-1.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt T</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in T</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_3-1.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">dur. <hi rend="italic">Hv Ra</hi></seg><seg type="translation" xml:lang="en" source="#claude">dur. <hi rend="italic">Hv Ra</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_3-1.lnote.oe.a-2" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">280</biblScope></bibl><seg type="original" xml:lang="de">Im Ggs. zu den vor 1066 in England naturalisierten Franzosen <hi rend="italic">u</hi>. 4.—Murdrum (<hi rend="italic">s. d. Gl</hi> 8. 10b. 11. 14) fällt nicht schon dann fort, wenn Mörder bekannt war, sondern erst wenn er dem Gericht gestellt ward. Die Nationalität des Täters war im Authenticum nicht erwähnt</seg><seg type="translation" xml:lang="en" source="#claude">In contrast to the Frenchmen naturalized in England before 1066 <hi rend="italic">below</hi> 4.—Murdrum (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 8. 10b. 11. 14) does not lapse as soon as the murderer was known, but only once he had been brought before the court. The nationality of the offender was not mentioned in the Authenticum</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_3-1.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">280</biblScope></bibl><seg type="original" xml:lang="de">Auch Maitland <hi rend="italic">Domesday</hi> 148 hält diese Haftung des Herrn für das frühere</seg><seg type="translation" xml:lang="en" source="#claude">Maitland <hi rend="italic">Domesday</hi> 148 also takes this liability of the lord to be the earlier one</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_3-1.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">280</biblScope></bibl><seg type="original" xml:lang="de">Dass hiervon 6 Mark der Sippe zufliessen, lässt Kompilator fort, wie so viele Einzelheiten <hi rend="italic">u</hi>. 6. Der Ausdruck des Straffixums in Mark (<hi rend="italic">s. d. Gl</hi> 1. 3) spricht für Entstehung des Instituts nách Cnut</seg><seg type="translation" xml:lang="en" source="#claude">The compiler omits that 6 marks of this go to the kindred, as he does so many details <hi rend="italic">below</hi> 6. The expression of the fixed penalty in marks (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 1. 3) points to the institution having arisen <hi rend="italic">after</hi> Cnut</seg></note>
       </div>
     </body>
   </text>

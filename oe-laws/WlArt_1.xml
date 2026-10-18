@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Wl art 1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +22,13 @@
       <sourceDesc>
         <bibl type="legalText"><title>The Ten Articles of William I</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">486</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">238</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis), f. 80</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,19 +43,31 @@
       <creation><date source="#liebermann">compiled c.1110–35</date><date source="#robertson">compiled 1110–35</date><date source="#wormald-mel">late in William I's reign</date><note type="promulgation">compiled c.1110–35 (Liebermann); compiled 1110–35 (Robertson); late in William I's reign (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2323 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2323 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 486.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
         <head><ref type="lawCode" target="law:WlArt">Wl art</ref> 1</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-h"><pb n="486" ed="#liebermann"/>Inprimis, quod<ptr type="liebermannNote" n="4" target="#WlArt_1.lnote.oe.4"/> super<ptr type="liebermannNote" n="5" target="#WlArt_1.lnote.oe.5"/> omnia unum uellet<ptr type="liebermannNote" n="6" target="#WlArt_1.lnote.oe.6"/> Deum<ptr type="liebermannNote" n="7" target="#WlArt_1.lnote.oe.7"/> per<ptr type="liebermannNote" n="8" target="#WlArt_1.lnote.oe.8"/> totum regnum<ptr type="liebermannNote" n="9" target="#WlArt_1.lnote.oe.9"/> suum uenerari, unam fidem Christi semper inuiolatam<ptr type="liebermannNote" n="10" target="#WlArt_1.lnote.oe.10"/> custodiri, pacem et securitatem inter Anglos et Normannos<ptr type="liebermannNote" n="c" target="#WlArt_1.lnote.oe.c"/> seruari.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="1" corresp="#wit-h"><pb n="238" ed="#robertson"/>Inprimis, quod super omnia unum vellet Deum per totum regnum suum venerari, unam fidem Christi semper inviolatam custodiri, pacem et securitatem inter Anglos et Normannos servari.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><pb n="239" ed="#robertson"/>In the first place, he desires above all that one God should be honoured throughout the whole of his kingdom, and that one Christian faith should be kept inviolate, and that peace and security should be maintained among the English and Normans.</ab>
         <note type="comparison" source="#liebermann" n="486">Inst Cn 1</note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 1</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:WlArtRetr_1">Wl art retr 1</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 238–239 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 238–239 (text and translation); Liebermann’s text added from Gesetze I p. 486, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_1.lnote.oe.II_a" n="II a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">486</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Aufrechte</hi> (‘Antiqua’-)<hi rend="italic">Buchstabennoten beziehen sich auf</hi> Band II: Erklärungen.</seg><seg type="translation" xml:lang="en" source="#claude">Upright (‘Antiqua’, i.e. roman) letters used as note-markers refer to Band II: Erklärungen.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_1.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">486</biblScope></bibl><seg type="original" xml:lang="de">Francos <hi rend="italic">oder</hi> Francigenas <hi rend="italic">hätten Wilhelm und seine Söhne gesagt</hi></seg><seg type="translation" xml:lang="en" source="#claude">William and his sons would have said Francos or Francigenas</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_1.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">486</biblScope></bibl><seg type="original" xml:lang="de">quidem <hi rend="italic">Hv Hy Gr Va Ph Ct Pl</hi></seg><seg type="translation" xml:lang="en" source="#claude">quidem Hv Hy Gr Va Ph Ct Pl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_1.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">486</biblScope></bibl><seg type="original" xml:lang="de">u. D. s. o. v. <hi rend="italic">Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">u. D. s. o. v. Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_1.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">486</biblScope></bibl><seg type="original" xml:lang="de">D. u. <hi rend="italic">T Hv Hy Retr Gr Va Ph Ct Pl</hi></seg><seg type="translation" xml:lang="en" source="#claude">D. u. T Hv Hy Retr Gr Va Ph Ct Pl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_1.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">486</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">übergeschr. H</hi></seg><seg type="translation" xml:lang="en" source="#claude">written above H</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_1.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">486</biblScope></bibl><seg type="original" xml:lang="de">super <hi rend="italic">Hv</hi></seg><seg type="translation" xml:lang="en" source="#claude">super Hv</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_1.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">486</biblScope></bibl><seg type="original" xml:lang="de">s. r. <hi rend="italic">Pl</hi></seg><seg type="translation" xml:lang="en" source="#claude">s. r. Pl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_1.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">486</biblScope></bibl><seg type="original" xml:lang="de">-ta <hi rend="italic">Pl</hi></seg><seg type="translation" xml:lang="en" source="#claude">-ta Pl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_1.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">279</biblScope></bibl><seg type="original" xml:lang="de">Unecht in der Form und wahrscheinlich im Inhalt; <hi rend="italic">s. o</hi>. Einl. 5</seg><seg type="translation" xml:lang="en" source="#claude">Spurious in form and probably in content; <hi rend="italic">see above</hi> Introduction 5</seg></note>
       </div>
     </body>
   </text>

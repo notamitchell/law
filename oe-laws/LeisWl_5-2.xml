@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 5.2</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">496–499</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">256</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228, f. 141, c. 1230</note></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,19 +48,36 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2374 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2374 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Hk added from Gesetze I, p. 496–499.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 496–499.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 496–499.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5.2">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 5.2</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-hk"><pb n="496–499" ed="#liebermann"/>e durrad gwage e truverad plege, que, si autre vienge aprof dedenz l’an e le jur pur l’aveir demander, qu’il . .<ptr type="liebermannNote" n="aa" target="#LeisWl_5-2.lnote.oe.aa"/> ait a dreit en la curt celui<ptr type="liebermannNote" n="ab" target="#LeisWl_5-2.lnote.oe.ab"/> ki l’aveit rescus.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><pb n="496–499" ed="#liebermann"/>e durra wage e truverad plege, que, si altre<ptr type="liebermannNote" n="29" target="#LeisWl_5-2.lnote.oe.29"/> veinged apref dedenz l’an e un jour pur l’aveir demander, qu’il<ptr type="liebermannNote" n="1" target="#LeisWl_5-2.lnote.oe.1"/> i<ptr type="liebermannNote" n="a" target="#LeisWl_5-2.lnote.oe.a"/> ait a droit en la curt celui de<ptr type="liebermannNote" n="b" target="#LeisWl_5-2.lnote.oe.b"/> que<ptr type="liebermannNote" n="2" target="#LeisWl_5-2.lnote.oe.2"/> il aveit escus.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="496–499" ed="#liebermann"/>Dabit insuper wagium et plegios inueniet, quod, si quis alius infra annum et diem ueniens, illa aueria tanquam sua quesierit, habebit ea ad iusticiam ubi habere debet.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="5.2" corresp="#wit-hk"><pb n="256" ed="#robertson"/>e durrad gwage e truverad plege que, si autre vienge aprof dedenz l'an e le jur pur l'aveir demander, qu'il [l']ait a dreit en la curt celui ki l'aveit rescus.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="496–499" ed="#liebermann"/>5, 2. und soll Pfand geben und Bürgschaft [dáfür] stellen<ptr type="liebermannNote" n="h" target="#LeisWl_5-2.lnote.de1.h"/>, dass, wenn binnen Jahr und Tag ein anderer herbei kommt, um [für sich] das Vieh zu verlangen, dass er es im [zuständigen] Gerichtshofe dessen<ptr type="liebermannNote" n="1" target="#LeisWl_5-2.lnote.de.1"/>, der es rettend ergriffen hatte, zu Recht stellen werde.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">5, 2. and shall give pledge and provide surety [for this], that, if within year and day another comes forward to demand the cattle [for himself], he will make it available at law in the [competent] court of him who had seized it by rescue.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-hk"><pb n="257" ed="#robertson"/>And he shall give pledge and find surety, that, if another man comes forward within a year and a day to claim the livestock, he will bring it for decision to the court of the man who had taken it into his care.</ab>
         <note type="comparison" source="#liebermann" n="497"><ref target="clause:LeisWl_6">Leis Wl 6</ref></note>
         <note type="comparisonPrinted" source="#liebermann">vgl. u. 6</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:LeisWl_6-1">Leis Wl 6.1</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 256–257 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 256–257 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 496–499, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_5-2.lnote.oe.29" n="29" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">496</biblScope></bibl><seg type="original" xml:lang="de">alter <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">alter Im</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_5-2.lnote.de1.h" n="h" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">497</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">der Beansprucher einer gefundenen Mähre</hi> in hundredo inuenit plegium de habendo equam ad standum in eadem curia recto per annum et diem; <hi rend="italic">Bracton’s</hi> Notebook <hi rend="italic">pl.</hi> 1115</seg><seg type="translation" xml:lang="en" source="#claude">the claimant of a found mare in hundredo inuenit plegium de habendo equam ad standum in eadem curia recto per annum et diem; Bracton’s Notebook pl. 1115</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_5-2.lnote.oe.aa" n="aa" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">ergänze</hi> l’ <hi rend="italic">aus IL und</hi> 6, 1</seg><seg type="translation" xml:lang="en" source="#claude">supply l’ from IL and 6, 1</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_5-2.lnote.oe.ab" n="ab" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Genetiv KELHAM. SUCHIER</hi></seg><seg type="translation" xml:lang="en" source="#claude">genitive KELHAM. SUCHIER</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_5-2.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">bessere</hi> l’ <hi rend="italic">gemäss L und</hi> 6, 1 <hi rend="italic">Ende</hi></seg><seg type="translation" xml:lang="en" source="#claude">read l’ in accordance with L and the end of 6, 1</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_5-2.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">missverstand I ‘von dem er’? bessere</hi> celui qui l’</seg><seg type="translation" xml:lang="en" source="#claude">did I misunderstand it as ‘from whom he’? read celui qui l’</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_5-2.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de">qil <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">qil Im</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_5-2.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de">qe <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">qe Im</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_5-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">287</biblScope></bibl><seg type="original" xml:lang="de">Nach Jahr und Tag (<hi rend="italic">s. d. Gl</hi> 4; Bürgschaft 9) verjährt hiernach nicht etwa (was anderswo bezeugt ist; J. Hübner [<hi rend="italic">o</hi>. 5{1}] 74f.) durch Verschweigung der Klageanspruch des Eigentümers [Verlierers] des Fundes gegen den Besitzer, wie Jobbé-Duval in <hi rend="italic">Nauv. rev. hist. de droit</hi> IV 476 annimmt, sondern die rechtsförmlich verbürgte Haftung des ersten Reklamanten, den Fund gerichtlich zu stellen; <hi rend="italic">s</hi>. 6, 1.—Schmid missverstand <hi rend="italic">celui</hi>: ‘für den’, und Chevallet: ‘erster Reklamant ait recours en cour contre celui, des mains duquel on l’a retiré’</seg><seg type="translation" xml:lang="en" source="#claude">According to this, after a year and a day (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 4; Bürgschaft 9) what lapses is not, say, the claim of the owner [loser] of the thing found against its possessor, barred through his silence (as is attested elsewhere; J. Hübner [<hi rend="italic">above</hi> 5{1}] 74f.), as Jobbé-Duval in <hi rend="italic">Nauv. rev. hist. de droit</hi> IV 476 assumes, but the formally guaranteed liability of the first claimant to produce the thing found in court; <hi rend="italic">see</hi> 6, 1.—Schmid misunderstood <hi rend="italic">celui</hi>: ‘for whom’, and so did Chevallet: ‘erster Reklamant ait recours en cour contre celui, des mains duquel on l’a retiré’</seg></note>
       </div>
     </body>
   </text>

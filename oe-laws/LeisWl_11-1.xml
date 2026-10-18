@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 11.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">500–501</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">258</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228, f. 141, c. 1230</note></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,19 +48,35 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2386 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2386 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Hk added from Gesetze I, p. 500–501.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 500–501.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 500–501.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="11.1">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 11.1</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-hk"><pb n="500–501" ed="#liebermann"/>Del poucer lui rendra la meité de la main. Del dei aprés le poucer XV sol. de sol. Engleis, que est apelé quaer<ptr type="liebermannNote" n="c" target="#LeisWl_11-1.lnote.oe.c"/> denier. Del lung dei XVI sol. De l’autre ki porte l’anel XVII sol. Del petit dei V sol.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><pb n="500–501" ed="#liebermann"/>Del pochier rendrad la meité de la mein. Del dei aprés le polcier XV solz de solt<ptr type="liebermannNote" n="22" target="#LeisWl_11-1.lnote.oe.22"/> Engleis, ço est quer<ptr type="liebermannNote" n="23" target="#LeisWl_11-1.lnote.oe.23"/> deners. De lunc dei XVI solz. De l’altre<ptr type="liebermannNote" n="24" target="#LeisWl_11-1.lnote.oe.24"/> qui ported l’anel XVII solz. Del petit dei V solz.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="500–501" ed="#liebermann"/>Si pollicem, reddat dimidium illius quod pro manu redderet. Si indicem, XV sol. Anglicos (solidum Anglicum IIII denarii constituunt). Si medium XVI sol., si anularem XVII sol., si auricularem V sol.,</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="11.1" corresp="#wit-hk"><pb n="258" ed="#robertson"/>Del poucer lui rendra la meité de la main. Del dei aprés le poucer, XV sol. de sol. Engleis que est apelé quaer denier. Del lung dei, XVI sol. De l'autre ki porte l'anel, XVII sol. Del petit dei, V sol.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="500–501" ed="#liebermann"/>11, 1. Für den Daumen<ptr type="liebermannNote" n="1" target="#LeisWl_11-1.lnote.de.1"/> soll er ihm die Hälfte der Hand[taxe] zahlen; für den Finger<ptr type="liebermannNote" n="2" target="#LeisWl_11-1.lnote.de.2"/> nach dem Daumen 15 Schill. — an Englischem Schill.<ptr type="liebermannNote" n="e" target="#LeisWl_11-1.lnote.de1.e"/>, das heisst (was genannt ist <hi rend="italic">Hk</hi>) vierfacher Pfennig<ptr type="liebermannNote" n="3" target="#LeisWl_11-1.lnote.de.3"/> —; für den langen [Mittel]finger 16 Schill.; für den anderen [vierten], der den Ring trägt, 17 Schill.; für den kleinen Finger 5 Schill.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">11, 1. For the thumb he shall pay him half of the hand[-tariff]; for the finger after the thumb 15 shill. — in English shill., that is (what is called <hi rend="italic">Hk</hi>) fourfold penny —; for the long [middle] finger 16 shill.; for the other [fourth], which bears the ring, 17 shill.; for the little finger 5 shill.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-hk"><pb n="259" ed="#robertson"/>For the thumb he shall pay him half the value of his hand; for the finger next the thumb 15 shillings according to the English reckoning, that is 4 pence to the shilling; for the middle finger 16 shillings; for the ring-finger 17 shillings; for the little finger 5 shillings.</ab>
         <note type="comparison" source="#liebermann" n="501"><ref target="clause:Af_57">Af 57</ref>; <ref target="clause:Af_59">Af 59</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 57 | ebd. 59</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:LeisWl_19">Leis Wl 19</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 258–259 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 258–259 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 500–501, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_11-1.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">500</biblScope></bibl><seg type="original" xml:lang="de">quaternum; <hi rend="italic">Suchier</hi> Litbl. f. Germ. Phil. 1892, 415</seg><seg type="translation" xml:lang="en" source="#claude">quaternum; Suchier Litbl. f. Germ. Phil. 1892, 415</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_11-1.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">500</biblScope></bibl><seg type="original" xml:lang="de">solz <hi rend="italic">ändern BA. MAT.</hi></seg><seg type="translation" xml:lang="en" source="#claude">solz altered by BA. MAT.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_11-1.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">500</biblScope></bibl><seg type="original" xml:lang="de">bener <hi rend="italic">fügt zu Im (verderbte Dittographie von</hi> deners)</seg><seg type="translation" xml:lang="en" source="#claude">bener added by Im (corrupt dittography of deners)</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_11-1.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">500</biblScope></bibl><seg type="original" xml:lang="de">autre <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">autre Im</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_11-1.lnote.de1.e" n="e" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">501</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Verf. nennt</hi> [alt]Englisch <hi rend="italic">die</hi> Mercische <hi rend="italic">Währung; s.</hi> 19</seg><seg type="translation" xml:lang="en" source="#claude">The author calls the Mercian currency [Old] English; see 19</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_11-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">288</biblScope></bibl><seg type="original" xml:lang="de">Den Daumen (<hi rend="italic">s. d. Gl</hi>) setzen = ½ Hand Dänen (Steenstrup <hi rend="italic">Danelag</hi> 308) neben anderen Germanen, gegen andere Agsachsen</seg><seg type="translation" xml:lang="en" source="#claude">The Danes (Steenstrup <hi rend="italic">Danelag</hi> 308), like other Germanic peoples, rate the thumb (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi>) at ½ hand, unlike the other Anglo-Saxons</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_11-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">288</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Finger 3h.—Wenn man <hi rend="italic">XVI</hi> für den Mittelfinger in <hi rend="italic">XIII</hi> emendieren dürfte (wegen der häufigen Verlesung von <hi rend="italic">II</hi> als <hi rend="italic">U</hi>), so ergäbe die Finger-Summe: 50, d. i. ¼ Wergeld, wie bei anderen Stellen; <hi rend="italic">s. Gl</hi> Haud 9a</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Finger 3h.—If one might emend <hi rend="italic">XVI</hi> for the middle finger to <hi rend="italic">XIII</hi> (because of the frequent misreading of <hi rend="italic">II</hi> as <hi rend="italic">U</hi>), the sum for the fingers would come to 50, i.e. ¼ of the wergild, as in other passages; <hi rend="italic">see Gl</hi> Haud 9a</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_11-1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">288</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. o</hi>. 10, 1{c}</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See above</hi> 10, 1{c}</seg></note>
       </div>
     </body>
   </text>

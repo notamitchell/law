@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Wl ep 4.2</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +22,15 @@
       <sourceDesc>
         <bibl type="legalText"><title>William I: Episcopal Laws</title> <note type="reign">William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">485</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">236</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lat"><abbr>Lat</abbr> <note type="manuscript">Latin text as edited by Liebermann from the copies Lp, Lc, Ry and Insp.</note></witness>
           <witness xml:id="wit-lp"><abbr>Lp</abbr> <note type="manuscript">Liber pilosus of St Paul’s Cathedral, London</note></witness>
+          <witness xml:id="wit-lc"><abbr>Lc</abbr></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,16 +45,24 @@
       <creation><date source="#liebermann #robertson">1070–76, perhaps April 1072</date><date source="#wormald-mel">after 1070</date><note type="promulgation">1070–76, perhaps April 1072 (Liebermann, Robertson); after 1070 (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2320 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2320 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lat added from Gesetze I, p. 485.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4.2">
         <head><ref type="lawCode" target="law:WlEp">Wl ep</ref> 4.2</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lat"><pb n="485" ed="#liebermann"/>Iudicium<ptr type="liebermannNote" n="h" target="#WlEp_4-2.lnote.oe.h"/> uero in nullo<ptr type="liebermannNote" n="22" target="#WlEp_4-2.lnote.oe.22"/> loco portetur nisi in episcopali sede aut in illo<ptr type="liebermannNote" n="23" target="#WlEp_4-2.lnote.oe.23"/> loco, quem ad<ptr type="liebermannNote" n="24" target="#WlEp_4-2.lnote.oe.24"/> hoc episcopus constituerit<ptr type="liebermannNote" n="25" target="#WlEp_4-2.lnote.oe.25"/>.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="4.2" corresp="#wit-lp"><pb n="236" ed="#robertson"/>Iudicium vero in nullo loco portetur nisi in episcopali sede aut in illo loco quem episcopus ad hoc constituerit.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-lp"><pb n="237" ed="#robertson"/>Trial by ordeal, likewise, shall not take place anywhere except at the bishop's see or at the place appointed for the purpose by the bishop.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 236–237 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 236–237 (text and translation); Liebermann’s text added from Gesetze I p. 485, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlEp_4-2.lnote.oe.h" n="h" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">485</biblScope></bibl><seg type="original" xml:lang="de">Eisenordal</seg><seg type="translation" xml:lang="en" source="#claude">ordeal of iron</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlEp_4-2.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">485</biblScope></bibl><seg type="original" xml:lang="de">-lum locum <hi rend="italic">Spelman</hi></seg><seg type="translation" xml:lang="en" source="#claude">-lum locum Spelman</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlEp_4-2.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">485</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Ry</hi></seg><seg type="translation" xml:lang="en" source="#claude">missing in Ry</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlEp_4-2.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">485</biblScope></bibl><seg type="original" xml:lang="de">ep. ad hoc <hi rend="italic">Ry</hi></seg><seg type="translation" xml:lang="en" source="#claude">ep. ad hoc Ry</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlEp_4-2.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">485</biblScope></bibl><seg type="original" xml:lang="de">In qua uidelicet matre ecclesia canonici Deo seruientes caste uiuant <hi rend="italic">etc. fügt hinzu</hi> (<hi rend="italic">aus Lc?</hi>) <hi rend="italic">Wilkins</hi> Leg. Anglosax. 231</seg><seg type="translation" xml:lang="en" source="#claude">In qua uidelicet matre ecclesia canonici Deo seruientes caste uiuant etc. added (from Lc?) by Wilkins Leg. Anglosax. 231</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlEp_4-2.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">275</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Ordal 28a-c</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Ordal 28a-c</seg></note>
       </div>
     </body>
   </text>

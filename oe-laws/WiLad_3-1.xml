@@ -4,9 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Wl lad 3.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,11 +23,14 @@
       <sourceDesc>
         <bibl type="legalText"><title>William I: Regulations Regarding Exculpation</title> <note type="reign">William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">484</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">232</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis)</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -39,19 +45,31 @@
       <creation><date source="#liebermann">1067–77</date><date source="#robertson">1068–77</date><note type="promulgation">1067–77 (Liebermann); 1068–77 (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2309 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2309 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 484.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Q added from Gesetze I, p. 484.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3.1">
         <head><ref type="lawCode" target="law:WiLad">Wl lad</ref> 3.1</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-h"><pb n="484" ed="#liebermann"/>⁊ gif se Englisca beclypað Frencisne<ptr type="liebermannNote" n="b" target="#WiLad_3-1.lnote.oe.b"/> mid utlagan þingan ⁊ wille hit þonne on hi<hi rend="italic">m</hi> gesoðian, se Fræncisca bewerie hine mid orneste.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-q"><pb n="484" ed="#liebermann"/>Et si Anglicus appellet<ptr type="liebermannNote" n="7" target="#WiLad_3-1.lnote.oe.7"/> Francigenam de utlagaria<ptr type="liebermannNote" n="8" target="#WiLad_3-1.lnote.oe.8"/> et hoc<ptr type="liebermannNote" n="9" target="#WiLad_3-1.lnote.oe.9"/> super eum inueritare<ptr type="liebermannNote" n="10" target="#WiLad_3-1.lnote.oe.10"/> uelit, defendat se Francigena per bellum.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="3.1" corresp="#wit-h"><pb n="232" ed="#robertson"/>7 gif se Englisca beclypað Frencisne mid utlagan þingan 7 wille hit þonne on him gesoðian, se Fræncisca bewerie hine mid orneste.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="484" ed="#liebermann"/>3, 1. Und wenn [andererseits] der Englische einen Französischen wegen friedlos<ptr type="liebermannNote" n="1" target="#WiLad_3-1.lnote.de.1"/> machender Sachen verklagt und dies nun gegen ihn beweisen will, vertheidige sich der Französische durch gerichtlichen Zweikampf.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">3, 1. And if [on the other hand] the Englishman accuses a Frenchman of matters entailing outlawry and wishes now to prove this against him, the Frenchman shall defend himself by judicial combat.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><pb n="233" ed="#robertson"/>And if the Englishman brings a charge involving outlawry against a Frenchman, and desires further to prove it against him, the Frenchman shall defend himself by combat.</ab>
         <note type="comparison" source="#liebermann" n="484"><ref target="clause:WlArt_6-3">Wl art 6.3</ref></note>
         <note type="comparisonPrinted" source="#liebermann">6, 3</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:WlArt_6-3">Wl art 6.3</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 232–233 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 232–233 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 484, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WiLad_3-1.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">484</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl.</hi> Wilisman <hi rend="italic">Norðleod</hi> 7; srift <hi rend="italic">II Cn.</hi> 44 <hi rend="italic">Hs. A</hi></seg><seg type="translation" xml:lang="en" source="#claude">cf. Wilisman Norðleod 7; srift II Cn. 44 MS A</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WiLad_3-1.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">484</biblScope></bibl><seg type="original" xml:lang="de">-lat <hi rend="italic">M Hk Cs</hi></seg><seg type="translation" xml:lang="en" source="#claude">-lat M Hk Cs</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WiLad_3-1.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">484</biblScope></bibl><seg type="original" xml:lang="de">utleg. <hi rend="italic">M Hk;</hi> uthl. <hi rend="italic">Cs</hi></seg><seg type="translation" xml:lang="en" source="#claude">utleg. M Hk; uthl. Cs</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WiLad_3-1.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">484</biblScope></bibl><seg type="original" xml:lang="de">hec <hi rend="italic">Sc</hi></seg><seg type="translation" xml:lang="en" source="#claude">hec Sc</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WiLad_3-1.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">484</biblScope></bibl><seg type="original" xml:lang="de">in ueritate <hi rend="italic">K Cs</hi></seg><seg type="translation" xml:lang="en" source="#claude">in ueritate K Cs</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="WiLad_3-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">273</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. o</hi>. 1, 1{1}</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See above</hi> 1, 1{1}</seg></note>
       </div>
     </body>
   </text>

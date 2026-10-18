@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 21.2</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">508–509</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">264</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228, f. 141, c. 1230</note></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,17 +48,34 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2420 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2420 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Hk added from Gesetze I, p. 508–509.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 508–509.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 508–509.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="21.2">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 21.2</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-hk"><pb n="508–509" ed="#liebermann"/>E s'il ne pot guarant ne testimonie aveir, si perderad e parsoudrad e pert sun aveir<ptr type="liebermannNote" n="c" target="#LeisWl_21-2.lnote.oe.c"/> vers sun seinur. Ceo est en M<hi rend="italic">er</hi>ch<hi rend="italic">ene</hi>lahe<ptr type="liebermannNote" n="1" target="#LeisWl_21-2.lnote.oe.1"/> e en Denelahge.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><pb n="508–509" ed="#liebermann"/>E s'il ne pot aveir guarant ne testimonie<ptr type="liebermannNote" n="19" target="#LeisWl_21-2.lnote.oe.19"/>, si perdrad et pursoldrad et<ptr type="liebermannNote" n="7" target="#LeisWl_21-2.lnote.oe.7"/> pert sa werre vers soun<ptr type="liebermannNote" n="4" target="#LeisWl_21-2.lnote.oe.4"/> seignur. Ço est en Merchenelae e en Denelae.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="508–509" ed="#liebermann"/>Quodsi nec warantum nec<ptr type="liebermannNote" n="b" target="#LeisWl_21-2.lnote.oe.b"/> plegium nec testes inuenerit, tunc, preter causam<ptr type="liebermannNote" n="c" target="#LeisWl_21-2.lnote.oe.c-2"/> clamantis, were domino suo soluet. Hoc generale est in Merchenelahe<ptr type="liebermannNote" n="2" target="#LeisWl_21-2.lnote.oe.2"/> et Danelahe et Westsaxenelahe.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="21.2" corresp="#wit-hk"><pb n="264" ed="#robertson"/>E s'il ne pot guarant ne testimonie aveir, si perderad e parsoudrad e pert [sa were] vers sun seinur. Ceo est en Merchenelahe e en Denelahge.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="508–509" ed="#liebermann"/>21, 2. Wenn er aber weder Gewährsmann noch Zeugniss stellen kann, so soll er [das Eingeklagte] verlieren und nochmals<ptr type="liebermannNote" n="1" target="#LeisWl_21-2.lnote.de.1"/> zahlen [Busse an den Kläger] und verliert sein Wergeld an seinen [Jurisdictions]-herrn. Dies gilt im Mercier- und im Dänen-Rechtsgebiet.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">21, 2. But if he can produce neither warrantor nor testimony, then he shall lose [what is claimed] and pay again [compensation to the plaintiff] and loses his wergild to his [jurisdictional] lord. This holds in the Mercian and in the Danish legal district.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-hk"><pb n="265" ed="#robertson"/>And if he can produce neither warrantor nor witness, he shall lose [the goods] and pay in addition [compensation to the claimant] and forfeit his wergeld to his lord. This holds good in the province of Mercia and in the Danelaw.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:LeisWl_12">Leis Wl 12</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 264–265 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 264–265 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 508–509, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_21-2.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">508</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">bessere</hi> were <hi rend="italic">aus IL</hi></seg><seg type="translation" xml:lang="en" source="#claude">read were, from IL</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_21-2.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">508</biblScope></bibl><seg type="original" xml:lang="de">M'ch'lahe <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">M'ch'lahe Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_21-2.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">508</biblScope></bibl><seg type="original" xml:lang="de">son <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">son <hi rend="italic">Io</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_21-2.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">508</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">missing in Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_21-2.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">508</biblScope></bibl><seg type="original" xml:lang="de">-oine <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">-oine Im</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_21-2.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">509</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">richtig (aus</hi> 21, 1<hi rend="italic">a?)</hi></seg><seg type="translation" xml:lang="en" source="#claude">correct (from 21, 1a?)</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_21-2.lnote.oe.c-2" n="c" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">509</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">L vergisst das</hi> æftergyld</seg><seg type="translation" xml:lang="en" source="#claude">L forgets the æftergyld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_21-2.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">509</biblScope></bibl><seg type="original" xml:lang="de">-nal. <hi rend="italic">Thorpe gegen S</hi></seg><seg type="translation" xml:lang="en" source="#claude">-nal. Thorpe, against S</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_21-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">289</biblScope></bibl><seg type="original" xml:lang="de">Nicht ‘Wette’ (Schmid); die Strafe besteht ja im Wergeld; <hi rend="italic">s. d. Gl</hi> 30u; Anefang 17; Busse 14; Schreuer <hi rend="italic">Verbrechenskonk</hi>. 44.—Dass ‘in Wessex’ zu c. 21, 3 gehört, folgt aus dessen Inversion</seg><seg type="translation" xml:lang="en" source="#claude">Not ‘Wette’ (Schmid); the penalty, after all, consists in the wergild; <hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 30u; Anefang 17; Busse 14; Schreuer <hi rend="italic">Verbrechenskonk</hi>. 44.—That ‘in Wessex’ belongs to c. 21, 3 follows from its inversion</seg></note>
       </div>
     </body>
   </text>

@@ -4,9 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>CHn cor 7.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,10 +21,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The Coronation Charter of Henry I</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">522</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">280</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lat"><abbr>Lat</abbr> <note type="manuscript">Latin text as edited by Liebermann from chronicles and cartularies (no original survives)</note></witness>
+          <witness xml:id="wit-worc"><abbr>Worc</abbr></witness>
+          <witness xml:id="wit-herts"><abbr>Herts</abbr></witness>
+          <witness xml:id="wit-winch"><abbr>Winch</abbr></witness>
+          <witness xml:id="wit-roch"><abbr>Roch</abbr></witness>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5)</note></witness>
         </listWit>
       </sourceDesc>
@@ -39,16 +46,28 @@
       <creation><date source="#liebermann">5 Aug. 1100</date><placeName source="#robertson">Westminster</placeName><note type="promulgation">5 Aug. 1100 (Liebermann); Westminster (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2497 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2497 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lat added from Gesetze I, p. 522.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7.1">
         <head><ref type="lawCode" target="law:CHnCor">CHn cor</ref> 7.1</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lat"><pb n="522" ed="#liebermann"/>Quodsi ipse præuentus uel<ptr type="liebermannNote" n="21" target="#CHnCor_7-1.lnote.oe.21"/> armis uel infirmitate, pecuniam suam non<ptr type="liebermannNote" n="22" target="#CHnCor_7-1.lnote.oe.22"/> dederit nec<ptr type="liebermannNote" n="23" target="#CHnCor_7-1.lnote.oe.23"/> dare disposuerit, uxor sua siue liberi aut parentes aut<ptr type="liebermannNote" n="24" target="#CHnCor_7-1.lnote.oe.24"/> legitimi homines<ptr type="liebermannNote" n="25" target="#CHnCor_7-1.lnote.oe.25"/> eius eam<ptr type="liebermannNote" n="26" target="#CHnCor_7-1.lnote.oe.26"/> pro anima eius diuidant, sicut eis<ptr type="liebermannNote" n="27" target="#CHnCor_7-1.lnote.oe.27"/> melius uisum fuerit.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="7.1" corresp="#wit-h"><pb n="280" ed="#robertson"/>Quodsi ipse praeventus armis vel infirmitate pecuniam suam non dederit vel dare disposuerit, uxor sua sive liberi aut parentes et legitimi homines eius eam pro anima eius dividant sicut eis melius visum fuerit.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><pb n="281" ed="#robertson"/>But if he has been prevented by military duty or illness from bestowing his personal property or from directing its bestowal by will, his wife or his children or his relatives and his liege-men shall divide it for the good of his soul as it shall seem best to them.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 280–281 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 280–281 (text and translation); Liebermann’s text added from Gesetze I p. 522, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_7-1.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">522</biblScope></bibl><seg type="original" xml:lang="de">† <hi rend="italic">fehlt HRl</hi></seg><seg type="translation" xml:lang="en" source="#claude">† omitted in HRl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_7-1.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">522</biblScope></bibl><seg type="original" xml:lang="de">nec <hi rend="italic">Sc 2 Hl, einige Alb</hi></seg><seg type="translation" xml:lang="en" source="#claude">nec Sc 2 Hl, some Alb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_7-1.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">522</biblScope></bibl><seg type="original" xml:lang="de">† uel <hi rend="italic">HRl Haug</hi></seg><seg type="translation" xml:lang="en" source="#claude">† uel HRl Haug</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_7-1.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">522</biblScope></bibl><seg type="original" xml:lang="de">† et <hi rend="italic">Alb HRl Haug Gl</hi></seg><seg type="translation" xml:lang="en" source="#claude">† et Alb HRl Haug Gl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_7-1.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">522</biblScope></bibl><seg type="original" xml:lang="de">et gentes <hi rend="italic">interpolirt Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">et gentes interpolated in Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_7-1.lnote.oe.26" n="26" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">522</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Quadr Sc</hi></seg><seg type="translation" xml:lang="en" source="#claude">omitted in Quadr Sc</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_7-1.lnote.oe.27" n="27" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">522</biblScope></bibl><seg type="original" xml:lang="de">* m. e. <hi rend="italic">Sc 2 Hg Haug T Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">* m. e. Sc 2 Hg Haug T Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_7-1.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">297</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">legitimus</hi> im Sinne von <hi rend="italic">ligius</hi> (<hi rend="italic">s.d. Wb</hi>); Pol Mai II 331. 354</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">legitimus</hi> in the sense of <hi rend="italic">ligius</hi> (<hi rend="italic">see</hi> that word in <hi rend="italic">Wb</hi>); Pol Mai II 331. 354</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_7-1.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">297</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Sippe 23; Seelschatz 7ff.; diesen besorgt dem <hi rend="italic">ligius</hi> dessen Mann auch nach Hn 82, 5</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Sippe 23; Seelschatz 7ff.; this is provided for the <hi rend="italic">ligius</hi> by his man according to Hn 82, 5 also</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_7-1.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">297</biblScope></bibl><seg type="original" xml:lang="de">Der Fall des aus Nachlässigkeit intestaten (<hi rend="italic">s. Gl</hi> Testament 2) Kronvassallen fehlt mit Absicht: da fuhr die Krone fort, die Fahrhabe zu konfiszieren; <hi rend="italic">vgl. Gl</hi> Erbgang 15b; II Cn 78</seg><seg type="translation" xml:lang="en" source="#claude">The case of the tenant-in-chief who dies intestate through negligence (<hi rend="italic">see Gl</hi> Testament 2) is deliberately omitted: there the Crown continued to confiscate the movable goods; <hi rend="italic">cf. Gl</hi> Erbgang 15b; II Cn 78</seg></note>
       </div>
     </body>
   </text>

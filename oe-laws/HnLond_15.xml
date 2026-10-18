@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Hn Lond 15</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,11 +22,13 @@
       <sourceDesc>
         <bibl type="legalText"><title>Henry I: London Charter</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">526</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">292</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lat"><abbr>Lat</abbr> <note type="manuscript">Latin text as edited by Liebermann from the London collections (Lond, Cc, Horn, Cus, Cust …)</note></witness>
           <witness xml:id="wit-rs"><abbr>Rs</abbr> <note type="manuscript">Manchester, John Rylands Library, MS Latin 155</note></witness>
         </listWit>
       </sourceDesc>
@@ -41,16 +44,25 @@
       <creation><date source="#liebermann">1115–33, probably 1131</date><date source="#wormald-mel">very late in Henry I's reign</date><placeName source="#robertson">Westminster</placeName><note type="promulgation">1115–33, probably 1131 (Liebermann); very late in Henry I's reign (Wormald); Westminster (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2547 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2547 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lat added from Gesetze I, p. 526.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="15">
         <head><ref type="lawCode" target="law:HnLond">Hn Lond</ref> 15</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lat"><pb n="526" ed="#liebermann"/>Et ciues<ptr type="liebermannNote" n="1" target="#HnLond_15.lnote.oe.1"/> habeant fugationes suas ad fugandum, sicut melius et plenius habuerunt antecessores eorum, scilicet in<ptr type="liebermannNote" n="2" target="#HnLond_15.lnote.oe.2"/> Chiltre<ptr type="liebermannNote" n="3" target="#HnLond_15.lnote.oe.3"/> et Middelsexe<ptr type="liebermannNote" n="4" target="#HnLond_15.lnote.oe.4"/> et Sureie<ptr type="liebermannNote" n="5" target="#HnLond_15.lnote.oe.5"/>.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="15" corresp="#wit-rs"><pb n="292" ed="#robertson"/>Et cives habeant fugationes suas ad fugandum sicut melius et plenius habuerunt antecessores eorum, scilicet [Ch]iltre e Middelsexe e Sureie.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-rs"><pb n="293" ed="#robertson"/>And the citizens shall enjoy as good and full hunting-rights as their ancestors ever did, namely, in the Chilterns, Middlesex and Surrey.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 292–293 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 292–293 (text and translation); Liebermann’s text added from Gesetze I p. 526, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_15.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">526</biblScope></bibl><seg type="original" xml:lang="de">Londoniæ <hi rend="italic">fügt zu Cust E IV</hi></seg><seg type="translation" xml:lang="en" source="#claude">Londoniæ added in Cust E IV</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_15.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">526</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_15.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">526</biblScope></bibl><seg type="original" xml:lang="de">Siltre <hi rend="italic">Lond Cus;</hi> Chyl. <hi rend="italic">Horn</hi></seg><seg type="translation" xml:lang="en" source="#claude">Siltre Lond Cus; Chyl. Horn</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_15.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">526</biblScope></bibl><seg type="original" xml:lang="de">-sex <hi rend="italic">Co;</hi> -xia <hi rend="italic">El;</hi> Midlesex <hi rend="italic">druckt Wh;</hi> -ddle- <hi rend="italic">E IV</hi></seg><seg type="translation" xml:lang="en" source="#claude">-sex Co; -xia El; Midlesex printed by Wh; -ddle- E IV</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_15.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">526</biblScope></bibl><seg type="original" xml:lang="de">Surr' <hi rend="italic">El Cust Horn E IV</hi></seg><seg type="translation" xml:lang="en" source="#claude">Surr' El Cust Horn E IV</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_15.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">307</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Jagd Z. 3. 10 n. 7; Forst 20; London 22. [<hi rend="italic">fugare</hi> in der anderen Bed. ‘(Weidevieh) auftreiben’ auch <hi rend="italic">Durham Halmote books</hi> p. 11a. 1296.] Jagd wird im 12. Jh. auch anderen Städten verbrieft, bisweilen nur niedere (Ballard 83); Stubbs <hi rend="italic">Lect</hi>. 128 erblickt auch hierin nur diese. Round sieht (<hi rend="italic">Athenæ</hi>. 30 June 1894, 838) hierin ein Zeichen, dass Londons Jagdrecht beschränkt worden war. Erweislich verbot Wilhelm I. den Londonern nur <hi rend="italic">venationem in cervos, cervas, capreolas</hi> [also Hochjagd] auf Lanfrancs Landgut Harrow, ausser wem der sie erlaube; Davis <hi rend="italic">Reg. Agn</hi>. n. 265.—Im Freibriefe 1155 wird Londons Jagd-Privileg wiederholt, aber kein Ortsname genannt.—Essex fehlt unter den Jagdgründen der Londoner, weil es Königsforst war</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Jagd ll. 3. 10 n. 7; Forst 20; London 22. [<hi rend="italic">fugare</hi> in the other meaning ‘to drive (grazing cattle) out to pasture’ also in <hi rend="italic">Durham Halmote books</hi> p. 11a. 1296.] In the 12th cent. hunting rights are granted by charter to other towns too, sometimes only the lesser hunting (Ballard 83); Stubbs <hi rend="italic">Lect</hi>. 128 sees only this here too. Round (<hi rend="italic">Athenæ</hi>. 30 June 1894, 838) sees in this a sign that London’s hunting right had been restricted. What can be proved is that William I forbade the Londoners only <hi rend="italic">venationem in cervos, cervas, capreolas</hi> [thus the greater hunting] on Lanfranc’s estate of Harrow, except for anyone to whom he gave leave; Davis <hi rend="italic">Reg. Agn</hi>. n. 265.—In the charter of 1155 London’s hunting privilege is repeated, but no place-name is given.—Essex is missing from the Londoners’ hunting grounds because it was royal forest</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_15.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">307</biblScope></bibl><seg type="original" xml:lang="de">Chiltern, Hügel in Oxfordshire, Bucks., Herts. bei St. Albans und Wendover, einst dicht bewaldet, waren durch Wulfhere von Mercien im 7. Jh. Wessex entrissen. (<hi rend="italic">De desertis Ciltine et Ondred</hi> [Andredesweald] kam 686 Ceadwalla von Wessex; Stephan <hi rend="italic">V. Wilfr</hi>. 42.) Schon hieraus folgt, dass dies Jagdrecht nicht aus einer Gebietshoheit Londons zur Römerzeit mit Gomme <hi rend="italic">Making of London</hi> 70 hergeleitet werden darf</seg><seg type="translation" xml:lang="en" source="#claude">The Chilterns, hills in Oxfordshire, Bucks. and Herts. near St Albans and Wendover, once densely wooded, had been wrested from Wessex by Wulfhere of Mercia in the 7th cent. (Ceadwalla of Wessex came <hi rend="italic">De desertis Ciltine et Ondred</hi> [Andredesweald] in 686; Stephan <hi rend="italic">V. Wilfr</hi>. 42.) This alone shows that this hunting right may not be derived, with Gomme <hi rend="italic">Making of London</hi> 70, from a territorial sovereignty of London in Roman times</seg></note>
       </div>
     </body>
   </text>

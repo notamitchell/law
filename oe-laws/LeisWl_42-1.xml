@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 42.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">516–517</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">272</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">The French text printed in the chronicle ascribed to Ingulf of Croyland (Robertson’s I; known only from early printed editions)</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,19 +48,34 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2457 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2457 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 516–517.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 516–517.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="42.1">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 42.1</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><pb n="516–517" ed="#liebermann"/>Si ço est envers l[e<ptr type="liebermannNote" n="19" target="#LeisWl_42-1.lnote.oe.19"/>] rei, VI liv[re]s<ptr type="liebermannNote" n="20" target="#LeisWl_42-1.lnote.oe.20"/>; si ço est envers cunte, XL solz; si ço est en hundred, XXX solz e envers touz içous<ptr type="liebermannNote" n="1" target="#LeisWl_42-1.lnote.oe.1"/> ki curt unt en Engleterre — ço est<ptr type="liebermannNote" n="2" target="#LeisWl_42-1.lnote.oe.2"/> a[s<ptr type="liebermannNote" n="3" target="#LeisWl_42-1.lnote.oe.3"/>] solz Engleis.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="516–517" ed="#liebermann"/>Si aduersus regem, VI libr., si aduersus comitem XL sol., si in hundredo uel in cuiuscumque curia, qui eam ex libertate habere debet, XXX sol. Anglicos.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="42.1" corresp="#wit-i"><pb n="272" ed="#robertson"/>Si ço est envers l[e] rei, VI liv[re]s, si ço est envers cunte, XL solz, si ço est en hundred, XXX solz, e envers touz içous ki curt unt en Engleterre—ço est a[s] solz Engleis.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="516–517" ed="#liebermann"/>42, 1. Wenn es gegenüber dem König ist, 6<ptr type="liebermannNote" n="e" target="#LeisWl_42-1.lnote.de1.e"/> Pfund [Silber], wenn es gegenüber dem Grafen ist, 40<ptr type="liebermannNote" n="a" target="#LeisWl_42-1.lnote.de1.a"/> Schilling; wenn es im Hundertgericht ist, 30 Schilling und gegenüber allen denen, welche<ptr type="liebermannNote" n="1" target="#LeisWl_42-1.lnote.de.1"/> einen Gerichtshof in England besitzen, nämlich nach Englischen Schillingen [zu 4 Pfennig<ptr type="liebermannNote" n="b" target="#LeisWl_42-1.lnote.de1.b"/>].</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">42, 1. If it is towards the king, 6 pounds [of silver]; if it is towards the count, 40 shillings; if it is in the hundred court, 30 shillings, and towards all those who possess a court in England, namely in English shillings [of 4 pennies].</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-i"><pb n="273" ed="#robertson"/>If it is to the king, [he shall pay] £6, if it is to an earl, 40 shillings, if it is to a hundred, 30 shillings, and [a similar amount] to all those who have a court in England—the payment to be made in English shillings.</ab>
         <note type="comparison" source="#liebermann" n="516, 517"><ref target="clause:IICn_15-2">II Cn 15.2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. | II Cn. 15, 2</note>
         <note type="comparisonIncomplete">Some of Liebermann’s notes here are cut off in the gutter of the scan used, and are still to be completed.</note>
-        <note type="editorial">Added October 2026 from Robertson pp. 272–273 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 272–273 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 516–517, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_42-1.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">516</biblScope></bibl><seg type="original" xml:lang="de">li <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">li I</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_42-1.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">516</biblScope></bibl><seg type="original" xml:lang="de">livers <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">livers I</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_42-1.lnote.de1.e" n="e" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">516</biblScope></bibl><seg type="original" xml:lang="de">120 scil. = 2½ <hi rend="italic">Pfund Cnut; Verf. rechnet auch</hi> 47, 2 <hi rend="italic">nach Normann. Währung, gegen oben Anm. a</hi></seg><seg type="translation" xml:lang="en" source="#claude">120 scil. = 2½ pounds Cnut; at 47, 2 too the author reckons in Norman currency, as against note a above</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_42-1.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">517</biblScope></bibl><seg type="original" xml:lang="de">icons <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">icons Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_42-1.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">517</biblScope></bibl><seg type="original" xml:lang="de">ert <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">ert Im</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_42-1.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">517</biblScope></bibl><seg type="original" xml:lang="de">al <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">al I</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_42-1.lnote.de1.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">517</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so lasen</hi> Cnut <hi rend="italic">Hs.</hi> D, Consil., Hn 34, 3</seg><seg type="translation" xml:lang="en" source="#claude">so read Cnut MS D, Consil., Hn 34, 3</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_42-1.lnote.de1.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">517</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">s. o.</hi> 11, 1. 19</seg><seg type="translation" xml:lang="en" source="#claude">see above 11, 1. 19</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_42-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">292</biblScope></bibl><seg type="original" xml:lang="de">Cnut sprach nicht von privater Gerichtsbarkeit (<hi rend="italic">s. d. Gl</hi> 23h. 43) <hi rend="spaced">neben</hi> den drei öffentlichen Gerichten, sondern von der Kumulation der drei Bussen, einer für jedes. Des Verfs. Änderung, vielleicht nur durch Flüchtigkeit, spricht für Anwachsen privater Jurisdiktion.—Die Umrechnung des ‘Ungehorsams’ (<hi rend="italic">s. d. Gl</hi> 18) von 120 Schill. zu 6 £ scheint Irrtum; <hi rend="italic">s. Gl</hi> Strafgeldfixum 18</seg><seg type="translation" xml:lang="en" source="#claude">Cnut was speaking not of private jurisdiction (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 23h. 43) <hi rend="italic">alongside</hi> the three public courts, but of the cumulation of the three compensations, one for each. The author’s alteration, perhaps due merely to carelessness, points to the growth of private jurisdiction.—The conversion of ‘disobedience’ (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 18) from 120 shill. to 6 £ seems to be a mistake; see <hi rend="italic">Gl</hi> Strafgeldfixum 18</seg></note>
       </div>
     </body>
   </text>

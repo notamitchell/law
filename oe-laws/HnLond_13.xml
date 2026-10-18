@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Hn Lond 13</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,11 +22,13 @@
       <sourceDesc>
         <bibl type="legalText"><title>Henry I: London Charter</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">525</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">290</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lat"><abbr>Lat</abbr> <note type="manuscript">Latin text as edited by Liebermann from the London collections (Lond, Cc, Horn, Cus, Cust …)</note></witness>
           <witness xml:id="wit-rs"><abbr>Rs</abbr> <note type="manuscript">Manchester, John Rylands Library, MS Latin 155</note></witness>
         </listWit>
       </sourceDesc>
@@ -41,16 +44,25 @@
       <creation><date source="#liebermann">1115–33, probably 1131</date><date source="#wormald-mel">very late in Henry I's reign</date><placeName source="#robertson">Westminster</placeName><note type="promulgation">1115–33, probably 1131 (Liebermann); very late in Henry I's reign (Wormald); Westminster (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2545 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2545 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lat added from Gesetze I, p. 525.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="13">
         <head><ref type="lawCode" target="law:HnLond">Hn Lond</ref> 13</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lat"><ptr type="liebermannNote" n="39" target="#HnLond_13.lnote.oe.39"/><pb n="525" ed="#liebermann"/>Et omnes debitores qui ciuibus<ptr type="liebermannNote" n="40" target="#HnLond_13.lnote.oe.40"/> debita<ptr type="liebermannNote" n="41" target="#HnLond_13.lnote.oe.41"/> debent, eis reddant<ptr type="liebermannNote" n="42" target="#HnLond_13.lnote.oe.42"/> uel in<ptr type="liebermannNote" n="43" target="#HnLond_13.lnote.oe.43"/> Londoñ. se disrationent, quod<ptr type="liebermannNote" n="44" target="#HnLond_13.lnote.oe.44"/> non debent.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="13" corresp="#wit-rs"><pb n="290" ed="#robertson"/>Et omnes debitores qui civibus debita sua debent, eis reddant vel in Londoniis se disrationent quod non debent.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-rs"><pb n="291" ed="#robertson"/>And all those who owe debts to citizens shall pay them or shall clear themselves in London from the charge of being in debt to them.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 290–291 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 290–291 (text and translation); Liebermann’s text added from Gesetze I p. 525, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_13.lnote.oe.39" n="39" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">525</biblScope></bibl><seg type="original" xml:lang="de">13. 14 <hi rend="italic">fehlen El</hi></seg><seg type="translation" xml:lang="en" source="#claude">13. 14 omitted in El</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_13.lnote.oe.40" n="40" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">525</biblScope></bibl><seg type="original" xml:lang="de">sua <hi rend="italic">fügt zu Cc</hi></seg><seg type="translation" xml:lang="en" source="#claude">sua added in Cc</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_13.lnote.oe.41" n="41" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">525</biblScope></bibl><seg type="original" xml:lang="de">London. <hi rend="italic">fügt zu Horn Cust E IV</hi></seg><seg type="translation" xml:lang="en" source="#claude">London. added in Horn Cust E IV</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_13.lnote.oe.42" n="42" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">525</biblScope></bibl><seg type="original" xml:lang="de">in Londonia <hi rend="italic">fügt zu Horn Cust E IV</hi></seg><seg type="translation" xml:lang="en" source="#claude">in Londonia added in Horn Cust E IV</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_13.lnote.oe.43" n="43" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">525</biblScope></bibl><seg type="original" xml:lang="de">inde iidem se d. <hi rend="italic">Cus</hi></seg><seg type="translation" xml:lang="en" source="#claude">inde iidem se d. Cus</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_13.lnote.oe.44" n="44" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">525</biblScope></bibl><seg type="original" xml:lang="de">q. n. d. <hi rend="italic">fehlt Cc</hi></seg><seg type="translation" xml:lang="en" source="#claude">q. n. d. omitted in Cc</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnLond_13.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">307</biblScope></bibl><seg type="original" xml:lang="de">Dass der Prozessort die betr. Stadt sei, ist Privileg auch anderswo; Ballard 143.—Nach Freibrief 1155 müssen solche Schulden und Wettversprechen in London kontrahiert und gegeben sein</seg><seg type="translation" xml:lang="en" source="#claude">That the place of the suit should be the town concerned is a privilege found elsewhere too; Ballard 143.—According to the charter of 1155 such debts must have been contracted, and such pledges given, in London</seg></note>
       </div>
     </body>
   </text>

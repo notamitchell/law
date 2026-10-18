@@ -4,9 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>CHn cor 4</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,10 +21,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The Coronation Charter of Henry I</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">522</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">278</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lat"><abbr>Lat</abbr> <note type="manuscript">Latin text as edited by Liebermann from chronicles and cartularies (no original survives)</note></witness>
+          <witness xml:id="wit-worc"><abbr>Worc</abbr></witness>
+          <witness xml:id="wit-herts"><abbr>Herts</abbr></witness>
+          <witness xml:id="wit-winch"><abbr>Winch</abbr></witness>
+          <witness xml:id="wit-roch"><abbr>Roch</abbr></witness>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5)</note></witness>
         </listWit>
       </sourceDesc>
@@ -39,16 +46,23 @@
       <creation><date source="#liebermann">5 Aug. 1100</date><placeName source="#robertson">Westminster</placeName><note type="promulgation">5 Aug. 1100 (Liebermann); Westminster (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2489 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2489 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lat added from Gesetze I, p. 522.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4">
         <head><ref type="lawCode" target="law:CHnCor">CHn cor</ref> 4</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lat"><pb n="522" ed="#liebermann"/>Si uero uxor cum liberis remanserit, dotem quidem<ptr type="liebermannNote" n="1" target="#CHnCor_4.lnote.oe.1"/> et<ptr type="liebermannNote" n="2" target="#CHnCor_4.lnote.oe.2"/> maritationem<ptr type="liebermannNote" n="3" target="#CHnCor_4.lnote.oe.3"/> suam<ptr type="liebermannNote" n="4" target="#CHnCor_4.lnote.oe.4"/> habebit, dum corpus suum legitime seruauerit; et eam non dabo nisi secundum uelle suum.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="4" corresp="#wit-h"><pb n="278" ed="#robertson"/>Si vero uxor cum liberis remanserit, dotem quidem et maritationem habebit dum corpus suum legitime servaverit, et eam non dabo nisi secundum velle suum.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><pb n="279" ed="#robertson"/>But if the wife is left with children, she shall have her marriage-settlement and dowry as long as she observes continence, and I shall not bestow her in marriage except in accordance with her wishes.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 278–279 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 278–279 (text and translation); Liebermann’s text added from Gesetze I p. 522, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_4.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">522</biblScope></bibl><seg type="original" xml:lang="de">† <hi rend="italic">fehlt Alb</hi></seg><seg type="translation" xml:lang="en" source="#claude">† omitted Alb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_4.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">522</biblScope></bibl><seg type="original" xml:lang="de">† su. et m. h. <hi rend="italic">Alb Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">† su. et m. h. Alb Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_4.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">522</biblScope></bibl><seg type="original" xml:lang="de">maritagium <hi rend="italic">Alb S</hi></seg><seg type="translation" xml:lang="en" source="#claude">maritagium Alb S</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_4.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">522</biblScope></bibl><seg type="original" xml:lang="de">* <hi rend="italic">fehlt HRl Gl; übergeschr. Sc 2; im Text Hg</hi></seg><seg type="translation" xml:lang="en" source="#claude">* omitted HRl Gl; written above Sc 2; in the text Hg</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_4.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">297</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl ebd</hi>.—Die Frau wird befragt im Ggs. zu <hi rend="italic">o</hi>. 3{a}</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl ibid</hi>.—The woman is consulted, in contrast to <hi rend="italic">above</hi> 3{a}</seg></note>
       </div>
     </body>
   </text>

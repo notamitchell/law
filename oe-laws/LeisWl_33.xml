@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 33</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">514</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">268</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">The French text printed in the chronicle ascribed to Ingulf of Croyland (Robertson’s I; known only from early printed editions)</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,19 +48,35 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2440 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2440 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 514.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 514.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="33">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 33</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><ptr type="liebermannNote" n="6" target="#LeisWl_33.lnote.oe.6"/><pb n="514" ed="#liebermann"/>Si femme<ptr type="liebermannNote" n="7" target="#LeisWl_33.lnote.oe.7"/> est jugee a mort u a defac[iun<ptr type="liebermannNote" n="8" target="#LeisWl_33.lnote.oe.8"/>] des membres, ki seit enceintee, ne faced<ptr type="liebermannNote" n="9" target="#LeisWl_33.lnote.oe.9"/> l’um justice desqu’ele seit delivere<ptr type="liebermannNote" n="*" target="#LeisWl_33.lnote.oe.star"/>.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="514" ed="#liebermann"/>Ne femina pregnans iudicium mortis subeat. Si femina pregnans adiudicata sit morti vel membrorum mutilacioni, differatur<ptr type="liebermannNote" n="a" target="#LeisWl_33.lnote.oe.a"/> executio sententie usque quo<ptr type="liebermannNote" n="1" target="#LeisWl_33.lnote.oe.1"/> pariat.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="33" corresp="#wit-i"><pb n="268" ed="#robertson"/>Si femme est jugee a mort u a defac[iun] des membres ki seit enceintee, ne faced l'um justice desqu'ele seit delivere.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="514" ed="#liebermann"/>33.<ptr type="liebermannNote" n="a" target="#LeisWl_33.lnote.de1.a"/> Wenn<ptr type="liebermannNote" n="1" target="#LeisWl_33.lnote.de.1"/> eine<ptr type="liebermannNote" n="2" target="#LeisWl_33.lnote.de.2"/> Frau zum Tode oder zur Gliederverstümmelung verurtheilt ist, welche schwanger ist, vollziehe man nicht das Strafgericht, bis sie entbunden ist.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">33. If a woman who is pregnant is condemned to death or to mutilation of limbs, the punishment shall not be carried out until she has been delivered.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-i"><pb n="269" ed="#robertson"/>If a woman who is pregnant is sentenced to death or to mutilation, the sentence shall not be carried out until she is delivered.</ab>
         <note type="comparison" source="#liebermann" n="514">Dig. 48, [?]</note>
         <note type="comparisonPrinted" source="#liebermann">Dig. 48, [?]</note>
         <note type="comparisonIncomplete">Some of Liebermann’s notes here are cut off in the gutter of the scan used, and are still to be completed.</note>
-        <note type="editorial">Added October 2026 from Robertson pp. 268–269 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 268–269 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 514, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_33.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">514</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">adj. ‘befreit’; Godefroy s. v.</hi> delivre <hi rend="italic">SU.</hi></seg><seg type="translation" xml:lang="en" source="#claude">adj. ‘freed’; Godefroy s. v. delivre SU.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_33.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">514</biblScope></bibl><seg type="original" xml:lang="de">XXXV. <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">XXXV. I</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_33.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">514</biblScope></bibl><seg type="original" xml:lang="de">famme <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">famme Im</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_33.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">514</biblScope></bibl><seg type="original" xml:lang="de">-cum <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">-cum I</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_33.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">514</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">nicht</hi> -et</seg><seg type="translation" xml:lang="en" source="#claude">not -et</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_33.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">514</biblScope></bibl><seg type="original" xml:lang="de">quando <hi rend="italic">Edd. gegen S</hi></seg><seg type="translation" xml:lang="en" source="#claude">quando edd. against S</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_33.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">514</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">hier steht L der Römischen Quelle näher als I, bietet also die Spur einer Lateinischen Urgestalt</hi> (<hi rend="italic">RL</hi>) <hi rend="italic">einiger Theile; s. o. S.</hi> 492, <hi rend="italic">Inscr.</hi>{a}</seg><seg type="translation" xml:lang="en" source="#claude">here L stands closer to the Roman source than I, and thus offers a trace of a Latin original form (RL) of some parts; see above p. 492, Inscr.{a}</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_33.lnote.de1.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">514</biblScope></bibl><seg type="original" xml:lang="de">33—38 <hi rend="italic">bilden einen vom Römischen Recht beeinflussten Abschnitt; Maitland</hi> Hist. Engl. law I 80</seg><seg type="translation" xml:lang="en" source="#claude">33—38 form a section influenced by Roman law; Maitland Hist. Engl. law I 80</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_33.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">291</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Röm. Recht 5; C. Witte <hi rend="italic">De Guill. Malmesb. cod. legis Rom. Wisigoth. diss</hi>.</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Röm. Recht 5; C. Witte <hi rend="italic">De Guill. Malmesb. cod. legis Rom. Wisigoth. diss</hi>.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_33.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">291</biblScope></bibl><seg type="original" xml:lang="de">Wenn L aus dem Französ. übersetzend mit <hi rend="italic">praegnans</hi> und <hi rend="italic">pariat</hi> zufällig den Wortlaut der Dig. treffen konnte, so doch kaum mit <hi rend="italic">differatur</hi>. Möglich bleibt, dass L jenen aus eigener Kenntnis einführte [wie Q den Text der Vulgata, indem er den von ihr abweichenden Ælfred (<hi rend="italic">o</hi>. I 27 Sp. 2*) überträgt].—<hi rend="italic">Vgl. Gl</hi> Frau 3a. b. c; Kind 1; Todesstrafe 7</seg><seg type="translation" xml:lang="en" source="#claude">Even if L, translating from the French, could have hit upon the wording of the Dig. by chance with <hi rend="italic">praegnans</hi> and <hi rend="italic">pariat</hi>, he could hardly have done so with <hi rend="italic">differatur</hi>. It remains possible that L introduced that wording from his own knowledge [as Q introduces the text of the Vulgate when translating Ælfred (<hi rend="italic">above</hi> I 27 col. 2*), who departs from it].—<hi rend="italic">Cf. Gl</hi> Frau 3a. b. c; Kind 1; Todesstrafe 7</seg></note>
       </div>
     </body>
   </text>

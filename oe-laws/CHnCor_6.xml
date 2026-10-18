@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>CHn cor 6</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,11 +22,17 @@
       <sourceDesc>
         <bibl type="legalText"><title>The Coronation Charter of Henry I</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">522</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">278</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lat"><abbr>Lat</abbr> <note type="manuscript">Latin text as edited by Liebermann from chronicles and cartularies (no original survives)</note></witness>
+          <witness xml:id="wit-worc"><abbr>Worc</abbr></witness>
+          <witness xml:id="wit-herts"><abbr>Herts</abbr></witness>
+          <witness xml:id="wit-winch"><abbr>Winch</abbr></witness>
+          <witness xml:id="wit-roch"><abbr>Roch</abbr></witness>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5)</note></witness>
         </listWit>
       </sourceDesc>
@@ -41,13 +48,15 @@
       <creation><date source="#liebermann">5 Aug. 1100</date><placeName source="#robertson">Westminster</placeName><note type="promulgation">5 Aug. 1100 (Liebermann); Westminster (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2494 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2494 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lat added from Gesetze I, p. 522.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6">
         <head><ref type="lawCode" target="law:CHnCor">CHn cor</ref> 6</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lat"><pb n="522" ed="#liebermann"/>Omnia placita et omnia debita quæ<ptr type="liebermannNote" n="13" target="#CHnCor_6.lnote.oe.13"/> fratri meo debebantur condono, exceptis rectis firmis meis<ptr type="liebermannNote" n="14" target="#CHnCor_6.lnote.oe.14"/> et exceptis illis quæ pacta erant pro aliorum hereditatibus uel pro eis<ptr type="liebermannNote" n="15" target="#CHnCor_6.lnote.oe.15"/> rebus quæ iustius aliis contingebant.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="6" corresp="#wit-h"><pb n="278" ed="#robertson"/>Omnia placita et omnia debita quae fratri meo debebantur condono exceptis rectis firmis meis et exceptis illis quae pacta erant pro aliorum hereditatibus vel pro eis rebus quae iustius aliis contingebant.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><pb n="279" ed="#robertson"/>I remit all pleas and all debts which were owing to my brother, with the exception of my legal rents and the payments which had been agreed upon with regard to the inheritances of others or with regard to property which more justly belonged to others.</ab>
         <note type="comparison" source="#wormald-mel" n="401"><label>compare (formulae)</label> <ref target="clause:IICn_69-1">II Cn 69.1</ref> <quote>The Charter's 'praecipio', 'defendo', 'condono', 'concedo' and 'reddo' compare with Cnut's 'ic bebeode', 'ic lete riht', 'ic forbeode' and 'ic wylle'</quote></note>
@@ -55,7 +64,12 @@
         <note type="comparison" source="#wormald-mel" n="401"><label>compare (formulae)</label> <ref target="clause:IICn_76-3">II Cn 76.3</ref> <quote>The Charter's 'praecipio', 'defendo', 'condono', 'concedo' and 'reddo' compare with Cnut's 'ic bebeode', 'ic lete riht', 'ic forbeode' and 'ic wylle'</quote></note>
         <note type="comparison" source="#wormald-mel" n="401"><label>compare (formulae)</label> <ref target="clause:IICn_80">II Cn 80</ref> <quote>The Charter's 'praecipio', 'defendo', 'condono', 'concedo' and 'reddo' compare with Cnut's 'ic bebeode', 'ic lete riht', 'ic forbeode' and 'ic wylle'</quote></note>
         <note type="comparison" source="#wormald-mel" n="401"><label>compare (formulae)</label> <ref target="clause:IICn_82">II Cn 82</ref> <quote>The Charter's 'praecipio', 'defendo', 'condono', 'concedo' and 'reddo' compare with Cnut's 'ic bebeode', 'ic lete riht', 'ic forbeode' and 'ic wylle'</quote></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 278–279 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 278–279 (text and translation); Liebermann’s text added from Gesetze I p. 522, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_6.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">522</biblScope></bibl><seg type="original" xml:lang="de">† regi <hi rend="italic">fügt zu Alb</hi></seg><seg type="translation" xml:lang="en" source="#claude">† regi added by Alb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_6.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">522</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Sc 2 Hg</hi></seg><seg type="translation" xml:lang="en" source="#claude">omitted in Sc 2 Hg</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_6.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">522</biblScope></bibl><seg type="original" xml:lang="de">† illis <hi rend="italic">Alb Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">† illis Alb Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_6.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">297</biblScope></bibl><seg type="original" xml:lang="de">Nach Eadmer verbriefte Wilhelm II. 1093 ähnlichen Schulderlass: <hi rend="italic">debita remittantur, offensiones antehac perpetratae oblivioni tradantur; s. o</hi>. Einl. 7. <hi rend="italic">Vgl. Gl</hi> Amnestie 4—5a.—Die <hi rend="italic">firmae</hi> sind die durch Kronbeamte dem Fiskus geschuldeten und von diesem gestundeten Pauschalsummen, um welche jene die Einkünfte aus Landgütern, Städten, Baronien der Krone, aus Hundreds und Grafschaften sowie aus vakanten Prälaturen gepachtet hatten; <hi rend="italic">vgl. Gl</hi> Pacht 11; Finanz 4</seg><seg type="translation" xml:lang="en" source="#claude">According to Eadmer, William II in 1093 granted by charter a similar remission of debts: <hi rend="italic">debita remittantur, offensiones antehac perpetratae oblivioni tradantur; see above</hi> Introduction 7. <hi rend="italic">Cf. Gl</hi> Amnestie 4—5a.—The <hi rend="italic">firmae</hi> are the lump sums owed to the Exchequer by royal officials, and deferred by it, for which those officials had farmed the revenues from estates, towns and baronies of the Crown, from hundreds and shires, and from vacant prelacies; <hi rend="italic">cf. Gl</hi> Pacht 11; Finanz 4</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_6.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">297</biblScope></bibl><seg type="original" xml:lang="de">Offenbar in Gegensatz zu <hi rend="italic">sua</hi> und <hi rend="italic">rectis</hi> 6, 1 war diese <hi rend="italic">hereditas</hi> (liegender Nachlass), zum Nachteil des richtigen Erben, von der Krone einem Fremden, der als Bestechung mehr Erbantrittsgeld bot, zuerteilt worden. Das Unrecht wird zugegeben, aber nicht gutgemacht; vielmehr zieht Fiskus von ihm Gewinn, etwa wie vom Wucher. Nicht gemeint sein kann verwirktes Erbe oder das von Sippelosen: beides würde nicht ‘gerechter anderen zukommen’</seg><seg type="translation" xml:lang="en" source="#claude">Evidently, in contrast to <hi rend="italic">sua</hi> and <hi rend="italic">rectis</hi> 6, 1, this <hi rend="italic">hereditas</hi> (inheritance in land) had been assigned by the Crown, to the detriment of the rightful heir, to a stranger who, by way of a bribe, offered a larger relief. The wrong is admitted but not made good; rather, the Exchequer draws profit from it, much as it does from usury. Forfeited inheritance, or that of men without kin, cannot be meant: neither would ‘more justly fall to others’</seg></note>
       </div>
     </body>
   </text>

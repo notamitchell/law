@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>CHn cor 5</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,11 +22,17 @@
       <sourceDesc>
         <bibl type="legalText"><title>The Coronation Charter of Henry I</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">522</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">278</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lat"><abbr>Lat</abbr> <note type="manuscript">Latin text as edited by Liebermann from chronicles and cartularies (no original survives)</note></witness>
+          <witness xml:id="wit-worc"><abbr>Worc</abbr></witness>
+          <witness xml:id="wit-herts"><abbr>Herts</abbr></witness>
+          <witness xml:id="wit-winch"><abbr>Winch</abbr></witness>
+          <witness xml:id="wit-roch"><abbr>Roch</abbr></witness>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5)</note></witness>
         </listWit>
       </sourceDesc>
@@ -41,13 +48,15 @@
       <creation><date source="#liebermann">5 Aug. 1100</date><placeName source="#robertson">Westminster</placeName><note type="promulgation">5 Aug. 1100 (Liebermann); Westminster (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2492 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2492 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lat added from Gesetze I, p. 522.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5">
         <head><ref type="lawCode" target="law:CHnCor">CHn cor</ref> 5</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lat"><pb n="522" ed="#liebermann"/>Monetagium commune quod capiebatur per ciuitates et<ptr type="liebermannNote" n="9" target="#CHnCor_5.lnote.oe.9"/> comitatus, quod non fuit tempore regis<ptr type="liebermannNote" n="10" target="#CHnCor_5.lnote.oe.10"/> Eadwardi<ptr type="liebermannNote" n="11" target="#CHnCor_5.lnote.oe.11"/>, hoc ne amodo sit<ptr type="liebermannNote" n="12" target="#CHnCor_5.lnote.oe.12"/>, omnino defendo.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="5" corresp="#wit-h"><pb n="278" ed="#robertson"/>Monetagium commune quod capiebatur per civitates et comitatus, quod non fuit tempore regis Edwardi, hoc ne amodo sit omnino defendo.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><pb n="279" ed="#robertson"/>I entirely forbid the continuance of the mint-tax levied on cities and counties as against the practice of King Edward's time.</ab>
         <note type="comparison" source="#wormald-mel" n="401"><label>compare (formulae)</label> <ref target="clause:IICn_69-1">II Cn 69.1</ref> <quote>The Charter's 'praecipio', 'defendo', 'condono', 'concedo' and 'reddo' compare with Cnut's 'ic bebeode', 'ic lete riht', 'ic forbeode' and 'ic wylle'</quote></note>
@@ -55,7 +64,13 @@
         <note type="comparison" source="#wormald-mel" n="401"><label>compare (formulae)</label> <ref target="clause:IICn_76-3">II Cn 76.3</ref> <quote>The Charter's 'praecipio', 'defendo', 'condono', 'concedo' and 'reddo' compare with Cnut's 'ic bebeode', 'ic lete riht', 'ic forbeode' and 'ic wylle'</quote></note>
         <note type="comparison" source="#wormald-mel" n="401"><label>compare (formulae)</label> <ref target="clause:IICn_80">II Cn 80</ref> <quote>The Charter's 'praecipio', 'defendo', 'condono', 'concedo' and 'reddo' compare with Cnut's 'ic bebeode', 'ic lete riht', 'ic forbeode' and 'ic wylle'</quote></note>
         <note type="comparison" source="#wormald-mel" n="401"><label>compare (formulae)</label> <ref target="clause:IICn_82">II Cn 82</ref> <quote>The Charter's 'praecipio', 'defendo', 'condono', 'concedo' and 'reddo' compare with Cnut's 'ic bebeode', 'ic lete riht', 'ic forbeode' and 'ic wylle'</quote></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 278–279 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 278–279 (text and translation); Liebermann’s text added from Gesetze I p. 522, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_5.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">522</biblScope></bibl><seg type="original" xml:lang="de">* per <hi rend="italic">fügt zu Sc 2 Hg Haug Quadr Sc</hi></seg><seg type="translation" xml:lang="en" source="#claude">* per added by Sc 2 Hg Haug Quadr Sc</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_5.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">522</biblScope></bibl><seg type="original" xml:lang="de">* E. r. <hi rend="italic">Sc 2 Hg Alb M Br Sc</hi></seg><seg type="translation" xml:lang="en" source="#claude">* E. r. Sc 2 Hg Alb M Br Sc</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_5.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">522</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so Sc 2 Alb;</hi> Æd. <hi rend="italic">M;</hi> Ed. <hi rend="italic">übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">thus Sc 2 Alb; Æd. M; Ed. the rest</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_5.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">522</biblScope></bibl><seg type="original" xml:lang="de">† fiat <hi rend="italic">Alb Quadr Gl</hi></seg><seg type="translation" xml:lang="en" source="#claude">† fiat Alb Quadr Gl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_5.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">297</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Münzänderung; die Ablösung des königlichen Verrufsrechts durch <hi rend="italic">monetagium</hi> entstammt Fränk. Wurzel; E. Mayer <hi rend="italic">Dt. Frz. Vfg</hi>. I 96 (missverstanden von Freeman <hi rend="italic">Wil. Rufus</hi> II 353 und Stubbs <hi rend="italic">Sel. char., Gloss.; Lect. Engl. hist</hi>. 112)</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Münzänderung; the commutation of the king’s right of calling in the coinage by <hi rend="italic">monetagium</hi> has a Frankish root; E. Mayer <hi rend="italic">Dt. Frz. Vfg</hi>. I 96 (misunderstood by Freeman <hi rend="italic">Wil. Rufus</hi> II 353 and Stubbs <hi rend="italic">Sel. char., Gloss.; Lect. Engl. hist</hi>. 112)</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_5.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">297</biblScope></bibl><seg type="original" xml:lang="de">Aus der Grafschaft (<hi rend="italic">s d. Gl</hi> 18. 23) war solche Stadt (<hi rend="italic">Gl</hi> 6) eximiert mindestens in der Steuererhebung</seg><seg type="translation" xml:lang="en" source="#claude">Such a town (<hi rend="italic">Gl</hi> 6) was exempt from the shire (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 18. 23), at least in the levying of taxes</seg></note>
       </div>
     </body>
   </text>

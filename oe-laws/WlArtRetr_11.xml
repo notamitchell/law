@@ -4,9 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Wl art retr 11</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,10 +21,14 @@
       <sourceDesc>
         <bibl type="legalText"><title>Willelmi Articuli Retractati (the Ten Articles of William I, revised)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">491</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">248</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lond"><abbr>Lond</abbr> <note type="manuscript">Latin text as edited by Liebermann (London collection: MSS K2, Co, Or)</note></witness>
+          <witness xml:id="wit-guildhall"><abbr>Guildhall</abbr></witness>
+          <witness xml:id="wit-exchequer"><abbr>Exchequer</abbr></witness>
           <witness xml:id="wit-rs"><abbr>Rs</abbr> <note type="manuscript">Manchester, John Rylands Library, MS Latin 155</note></witness>
         </listWit>
       </sourceDesc>
@@ -39,19 +44,32 @@
       <creation><date source="#liebermann #robertson">c.1210</date><note type="promulgation">c.1210 (Liebermann, Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2351 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2351 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lond added from Gesetze I, p. 491.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="11">
         <head><ref type="lawCode" target="law:WlArtRetr">Wl art retr</ref> 11</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lond"><pb n="491" ed="#liebermann"/>Item nullum mercatum uel forum sit nec fieri permittatur nisi in ciuitatibus regni nostri et in burgis clausis<ptr type="liebermannNote" n="10" target="#WlArtRetr_11.lnote.oe.10"/> et<ptr type="liebermannNote" n="11" target="#WlArtRetr_11.lnote.oe.11"/> muro uallatis et in<ptr type="liebermannNote" n="12" target="#WlArtRetr_11.lnote.oe.12"/> castellis et in<ptr type="liebermannNote" n="12" target="#WlArtRetr_11.lnote.oe.12"/> locis tutissimis, ubi consuetudines regni nostri et ius nostrum commune et dignitates<ptr type="liebermannNote" n="13" target="#WlArtRetr_11.lnote.oe.13"/> corone nostre, que constitute<ptr type="liebermannNote" n="14" target="#WlArtRetr_11.lnote.oe.14"/> sunt a bonis predecessoribus nostris, deperire<ptr type="liebermannNote" n="15" target="#WlArtRetr_11.lnote.oe.15"/> non possunt<ptr type="liebermannNote" n="16" target="#WlArtRetr_11.lnote.oe.16"/> nec defraudari<ptr type="liebermannNote" n="17" target="#WlArtRetr_11.lnote.oe.17"/> nec uiolari, sed omnia rite<ptr type="liebermannNote" n="18" target="#WlArtRetr_11.lnote.oe.18"/> et in<ptr type="liebermannNote" n="19" target="#WlArtRetr_11.lnote.oe.19"/> aperto et per iudicium et iustitiam fieri debent.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="11" corresp="#wit-rs"><pb n="248" ed="#robertson"/>Item nullum mercatum vel forum sit nec fieri permittatur nisi in civitatibus regni nostri, et in burgis clausis et muro vallatis, et in castellis, et in locis tutissimis ubi consuetudines regni nostri et ius nostrum commune et dignitates coronae nostrae quae constitutae sunt a bonis praedecessoribus nostris deperiri non possunt nec defraudari nec violari, sed omnia rite et in aperto et per iudicium et iusticiam fieri debent.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-rs"><pb n="249" ed="#robertson"/>Likewise, no market or fair shall be held or permitted to take place except in the cities of our realm, and in boroughs which are enclosed and walled, and in castles, and in well-guarded places, where the customs of our realm and our common law and the dignities of our crown, which were established by our worthy predecessors, cannot lapse or be defrauded or violated, but where all things must be done duly, openly and in accordance with law and justice.</ab>
-        <note type="comparison" source="#liebermann" n="491">Wl art retr 10; <ref target="clause:WlArtRetr_6">Wl art retr 6</ref>; <ref target="clause:WlArtRetr_1">Wl art retr 1</ref>; <ref target="clause:WlArtRetr_7">Wl art retr 7</ref></note>
+        <note type="comparison" source="#liebermann" n="491"><ref target="clause:WlArtRetr_10">Wl art retr 10</ref>; <ref target="clause:WlArtRetr_6">Wl art retr 6</ref>; <ref target="clause:WlArtRetr_1">Wl art retr 1</ref>; <ref target="clause:WlArtRetr_7">Wl art retr 7</ref></note>
         <note type="comparisonPrinted" source="#liebermann">vgl. o. 10 | o. 6 | o. 1. 7</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:WlArtRetr_16">Wl art retr 16</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 248–249 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 248–249 (text and translation); Liebermann’s text added from Gesetze I p. 491, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_11.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">491</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Sc Hg K3</hi></seg><seg type="translation" xml:lang="en" source="#claude">omitted in Sc Hg K3</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_11.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">491</biblScope></bibl><seg type="original" xml:lang="de">in <hi rend="italic">fügt zu Hg K3 Se</hi></seg><seg type="translation" xml:lang="en" source="#claude">Hg K3 Se add in</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_11.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">491</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_11.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">491</biblScope></bibl><seg type="original" xml:lang="de">-tis <hi rend="italic">Hg K3;</hi> dig <hi rend="italic">darüber</hi> tis <hi rend="italic">Sc</hi></seg><seg type="translation" xml:lang="en" source="#claude">-tis Hg K3; dig above tis Sc</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_11.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">491</biblScope></bibl><seg type="original" xml:lang="de">-ta <hi rend="italic">Se</hi></seg><seg type="translation" xml:lang="en" source="#claude">-ta Se</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_11.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">491</biblScope></bibl><seg type="original" xml:lang="de">-ri <hi rend="italic">Sc Co Se</hi></seg><seg type="translation" xml:lang="en" source="#claude">-ri Sc Co Se</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_11.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">491</biblScope></bibl><seg type="original" xml:lang="de">-sint <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-sint Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_11.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">491</biblScope></bibl><seg type="original" xml:lang="de">desyderari <hi rend="italic">Se</hi></seg><seg type="translation" xml:lang="en" source="#claude">desyderari Se</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_11.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">491</biblScope></bibl><seg type="original" xml:lang="de">recte <hi rend="italic">Se</hi></seg><seg type="translation" xml:lang="en" source="#claude">recte Se</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_11.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">491</biblScope></bibl><seg type="original" xml:lang="de">imperato <hi rend="italic">statt</hi> in ap. <hi rend="italic">Co;</hi> et in a. <hi rend="italic">fehlt Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">imperato instead of in ap. Co; et in a. missing in Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_11.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">283</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Handel 8b. c; Markt 2a; diese Wiederholung des Sinnes von 10 geschieht aus Interesse für die Stadt; <hi rend="italic">s. d. Gl</hi> 11. 15a; Verf. braucht anderswo ähnliche Wendungen; <hi rend="italic">s. ebd</hi>. 13c.—Er hatte vielleicht im Sinne die durch Wilhelm I. und dessen Barone erfolgte Ansiedelung von Untertanen in Städten mit Markt; <hi rend="italic">vgl</hi>. Bateson in <hi rend="italic">EHR</hi> XVI (1901) 335.—<hi rend="italic">deperiri</hi>{15} Rs</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Handel 8b. c; Markt 2a; this repetition of the sense of 10 arises from interest in the town; <hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 11. 15a; the author uses similar phrases elsewhere; <hi rend="italic">see ibid</hi>. 13c.—He perhaps had in mind the settlement of subjects in market towns carried out by William I and his barons; <hi rend="italic">cf</hi>. Bateson in <hi rend="italic">EHR</hi> XVI (1901) 335.—<hi rend="italic">deperiri</hi>{15} Rs</seg></note>
       </div>
     </body>
   </text>

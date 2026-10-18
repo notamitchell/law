@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 17</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">504–505</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">260</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228, f. 141, c. 1230</note></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,19 +48,35 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2399 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2399 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Hk added from Gesetze I, p. 504–505.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 504–505.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 504–505.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="17">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 17</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-hk"><pb n="504–505" ed="#liebermann"/>Cil ki ad aveir champestre XXX den. vaillant, deit duner le den. Sein<ptr type="liebermannNote" n="1" target="#LeisWl_17.lnote.oe.1"/> Piere.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><ptr type="liebermannNote" n="1" target="#LeisWl_17.lnote.oe.1-2"/><pb n="504–505" ed="#liebermann"/>Franc <ptr type="liebermannNote" n="2" target="#LeisWl_17.lnote.oe.2"/>home qui<ptr type="liebermannNote" n="3" target="#LeisWl_17.lnote.oe.3"/> ad aver champester trente deners vailaunt, deit doner le dener Seint<ptr type="liebermannNote" n="4" target="#LeisWl_17.lnote.oe.4"/> Pere.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="504–505" ed="#liebermann"/>De denariis Sancti Petri. Liber homo qui habet possessionem campestrem ad ualenciam XXX denar., dabit denarium Sancti Petri.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="17" corresp="#wit-hk"><pb n="260" ed="#robertson"/>Cil ki ad aveir champestre XXX den. vaillant deit duner le den. Sein Piere.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="504–505" ed="#liebermann"/>17. Der (freie<ptr type="liebermannNote" n="a" target="#LeisWl_17.lnote.de1.a"/> Mann <hi rend="italic">IL</hi>) welcher 30 Pfennig<ptr type="liebermannNote" n="1" target="#LeisWl_17.lnote.de.1"/> werthes Feldvieh<ptr type="liebermannNote" n="2" target="#LeisWl_17.lnote.de.2"/> besitzt, soll den Peterspfennig zahlen.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">17. He (the free man <hi rend="italic">IL</hi>) who possesses field-cattle worth 30 pennies shall pay Peter's Pence.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-hk"><pb n="261" ed="#robertson"/>He who possesses livestock of the value of 30 pence shall pay Peter's Pence.</ab>
         <note type="comparison" source="#liebermann" n="505">ECf 10</note>
         <note type="comparisonPrinted" source="#liebermann">vgl. Ed Cf 10</note>
         <note type="comparison" source="#wormald-mel" n="409"><label>overlaps</label> ECf <quote>Overlaps with Leges Edwardi Confessoris included Peter's Pence and the peace of the four great roads</quote></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 260–261 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 260–261 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 504–505, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17.lnote.oe.1-2" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de">XVIII. <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">XVIII. <hi rend="italic">I</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so auch L</hi></seg><seg type="translation" xml:lang="en" source="#claude">so also L</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de">qi <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">qi <hi rend="italic">Im</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de">Saint <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">Saint <hi rend="italic">Io</hi></seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_17.lnote.de1.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">505</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">da Wilhelm I. mit Rom über den Peterspfennig verhandelt hat, und da</hi> Leis <hi rend="italic">und</hi> Ed. Conf. <hi rend="italic">Einem Wortlaut folgen, entstammt dieser vielleicht einem Gesetze Wilhelms I. Der Zusatz in</hi> IL, <hi rend="italic">sonst unbelegt, entstand wohl schon in der Zeit des Verfassers, als der Villan noch als Freier galt; vgl.</hi> 17, 1</seg><seg type="translation" xml:lang="en" source="#claude">since William I negotiated with Rome about Peter’s Pence, and since Leis and Ed. Conf. follow one and the same wording, this perhaps derives from a law of William I. The addition in IL, not attested elsewhere, probably arose as early as the author’s time, when the villein still counted as a free man; cf. 17, 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_17.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">288</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Peterspfennig 14b; in Wells setzte ihn Wilhelm I. durch; Davis <hi rend="italic">Reg. Agnorm</hi>. n. 187.—Auch in Battle beginnt die Zahlungspflicht erst bei 30 Pf.; Neilson <hi rend="italic">Custom. rents</hi> 198. In L meint <hi rend="italic">possessio</hi> nicht (wie Schmid meint, sich berufend auf VIIa Atr 2, 2, wo aber nicht vom Peterspfennig die Rede) ‘Land’; denn 17, 1 steht synonym <hi rend="italic">catallum</hi>: ‘Fahrhabe’. Beim Verf. heisst <hi rend="italic">aveir</hi> Vieh, ‘auimaux domestiques’; Littré s. v. <hi rend="italic">avoir</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Peterspfennig 14b; at Wells William I enforced it; Davis <hi rend="italic">Reg. Agnorm</hi>. n. 187.—At Battle too the obligation to pay begins only at 30 pence; Neilson <hi rend="italic">Custom. rents</hi> 198. In L, <hi rend="italic">possessio</hi> does not mean ‘land’ (as Schmid thinks, appealing to VIIa Atr 2, 2, where, however, Peter’s Pence is not in question); for in 17, 1 the synonym <hi rend="italic">catallum</hi>: ‘movable goods’ is used. In the author, <hi rend="italic">aveir</hi> means livestock, ‘auimaux domestiques’; Littré s. v. <hi rend="italic">avoir</hi></seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_17.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">289</biblScope></bibl><seg type="original" xml:lang="de">Agsächs. stand vielleicht *<hi rend="italic">feldfeoh</hi>, wie <hi rend="italic">feldhryðer</hi>, <hi rend="italic">feldox</hi> : <hi rend="italic">pascualis</hi> übersetzt; letzteres steht in St. Albans in diesem Zusammenhang. Ausgeschlossen ist also Reitpferd, Hund, Geflügel, Wild, Fisch</seg><seg type="translation" xml:lang="en" source="#claude">In Anglo-Saxon there perhaps stood *<hi rend="italic">feldfeoh</hi>, just as <hi rend="italic">feldhryðer</hi>, <hi rend="italic">feldox</hi> render <hi rend="italic">pascualis</hi>; the latter occurs at St Albans in this context. Riding-horses, dogs, poultry, game and fish are therefore excluded</seg></note>
       </div>
     </body>
   </text>

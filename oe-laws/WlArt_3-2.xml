@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Wl art 3.2</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +22,13 @@
       <sourceDesc>
         <bibl type="legalText"><title>The Ten Articles of William I</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">487</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">238</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis), f. 80</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,17 +43,22 @@
       <creation><date source="#liebermann">compiled c.1110–35</date><date source="#robertson">compiled 1110–35</date><date source="#wormald-mel">late in William I's reign</date><note type="promulgation">compiled c.1110–35 (Liebermann); compiled 1110–35 (Robertson); late in William I's reign (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2327 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2327 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 487.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3.2">
         <head><ref type="lawCode" target="law:WlArt">Wl art</ref> 3.2</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-h"><pb n="487" ed="#liebermann"/>Ubi uero substantia domini<ptr type="liebermannNote" n="17" target="#WlArt_3-2.lnote.oe.17"/> defecerit, totus hundredus, in quo occisio facta est, communiter persoluat<ptr type="liebermannNote" n="18" target="#WlArt_3-2.lnote.oe.18"/> quod remanet.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="3.2" corresp="#wit-h"><pb n="238" ed="#robertson"/>Ubi vero substantia domini defecerit, totus hundredus in quo occisio facta est, communiter persolvat quod remanet.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><pb n="239" ed="#robertson"/>When, however, the property of the lord fails, the whole hundred in which the murder was committed shall pay in common what remains.</ab>
         <note type="comparedBy" source="#liebermann"><ref target="clause:WlArtRetr_3">Wl art retr 3</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 238–239 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 238–239 (text and translation); Liebermann’s text added from Gesetze I p. 487, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_3-2.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Rl</hi></seg><seg type="translation" xml:lang="en" source="#claude">omitted Rl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_3-2.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">soluat <hi rend="italic">Cb Hv Retr Vi;</hi> resoluat <hi rend="italic">Va Ph Pl</hi></seg><seg type="translation" xml:lang="en" source="#claude">soluat <hi rend="italic">Cb Hv Retr Vi;</hi> resoluat <hi rend="italic">Va Ph Pl</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_3-2.lnote.oe._" n="-" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">280</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Hundred 21b</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Hundred 21b</seg></note>
       </div>
     </body>
   </text>

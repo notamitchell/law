@@ -4,9 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Wl art retr 2</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,10 +21,14 @@
       <sourceDesc>
         <bibl type="legalText"><title>Willelmi Articuli Retractati (the Ten Articles of William I, revised)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">490</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">244</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lond"><abbr>Lond</abbr> <note type="manuscript">Latin text as edited by Liebermann (London collection: MSS K2, Co, Or)</note></witness>
+          <witness xml:id="wit-guildhall"><abbr>Guildhall</abbr></witness>
+          <witness xml:id="wit-exchequer"><abbr>Exchequer</abbr></witness>
           <witness xml:id="wit-rs"><abbr>Rs</abbr> <note type="manuscript">Manchester, John Rylands Library, MS Latin 155</note></witness>
         </listWit>
       </sourceDesc>
@@ -39,19 +44,28 @@
       <creation><date source="#liebermann #robertson">c.1210</date><note type="promulgation">c.1210 (Liebermann, Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2344 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2344 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lond added from Gesetze I, p. 490.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:WlArtRetr">Wl art retr</ref> 2</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lond"><pb n="490" ed="#liebermann"/>Statuimus etiam, ut omnes liberi homines federe<ptr type="liebermannNote" n="4" target="#WlArtRetr_2.lnote.oe.4"/> et sacramento affirment, quod intra et extra uniuersum regnum Anglie<ptr type="liebermannNote" n="5" target="#WlArtRetr_2.lnote.oe.5"/>, quod<ptr type="liebermannNote" n="a" target="#WlArtRetr_2.lnote.oe.a"/> olim uocabatur regnum Britannie, Willelmo regi<ptr type="liebermannNote" n="6" target="#WlArtRetr_2.lnote.oe.6"/>, domino<ptr type="liebermannNote" n="7" target="#WlArtRetr_2.lnote.oe.7"/> suo, fideles esse uolunt, terras et honores illius<ptr type="liebermannNote" n="8" target="#WlArtRetr_2.lnote.oe.8"/> omni<ptr type="liebermannNote" n="6" target="#WlArtRetr_2.lnote.oe.6"/> fidelitate ubique seruare cum eo et contra inimicos et alienigenas<ptr type="liebermannNote" n="b" target="#WlArtRetr_2.lnote.oe.b"/> defendere.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="2" corresp="#wit-rs"><pb n="244" ed="#robertson"/>Statuimus eciam, ut omnes liberi homines...affirment quod intra et extra universum regnum Angliae, quod olim vocabatur regnum Britanniae, Willelmo regi domino suo fideles esse volunt, terras et honores illius...ubique servare cum eo et contra inimicos et alienigenas defendere.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-rs"><pb n="245" ed="#robertson"/>We have likewise decreed that all free men...shall affirm that in and out of the whole kingdom of England, which was formerly called the kingdom of Britain, they will be loyal to King William their lord, and everywhere along with him uphold his lands and honours...and defend them against enemies and aliens.</ab>
         <note type="comparison" source="#liebermann" n="490"><ref target="clause:WlArt_2">Wl art 2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 2</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:WlArtRetr_9">Wl art retr 9</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 244–245 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 244–245 (text and translation); Liebermann’s text added from Gesetze I p. 490, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_2.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl. Anm. d auf S.</hi> 489</seg><seg type="translation" xml:lang="en" source="#claude">cf. note d on p. 489</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_2.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">ähnlich zu</hi> E Cf. 32 A 5: auswärtige Feinde; <hi rend="italic">wohl nicht mit Stubbs</hi> (Rog. Hoved. II p. xxxij) Hofschmarotzer fremder Geburt <hi rend="italic">zu verstehen</hi></seg><seg type="translation" xml:lang="en" source="#claude">similar to E Cf. 32 A 5: foreign enemies; probably not to be understood, with Stubbs (Rog. Hoved. II p. xxxij), as court parasites of foreign birth</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_2.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de">fide <hi rend="italic">Co Or</hi></seg><seg type="translation" xml:lang="en" source="#claude">fide Co Or</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_2.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Co Or</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Co Or</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_2.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt K3</hi></seg><seg type="translation" xml:lang="en" source="#claude">missing in K3</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_2.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de">s. d. <hi rend="italic">K3</hi></seg><seg type="translation" xml:lang="en" source="#claude">s. d. K3</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_2.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de">suos <hi rend="italic">Co Or</hi></seg><seg type="translation" xml:lang="en" source="#claude">suos Co Or</seg></note>
       </div>
     </body>
   </text>

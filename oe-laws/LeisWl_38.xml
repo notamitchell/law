@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 38</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">515</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">270</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">The French text printed in the chronicle ascribed to Ingulf of Croyland (Robertson’s I; known only from early printed editions)</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,18 +48,36 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2449 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2449 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 515.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 515.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="38">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 38</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><ptr type="liebermannNote" n="8" target="#LeisWl_38.lnote.oe.8"/><pb n="515" ed="#liebermann"/>Dous sunt perceners de<ptr type="liebermannNote" n="9" target="#LeisWl_38.lnote.oe.9"/> un’ erithet, e est l’un enplaidé senz<ptr type="liebermannNote" n="10" target="#LeisWl_38.lnote.oe.10"/> l’altre, et per sa folie si pert, ne d[e]it<ptr type="liebermannNote" n="11" target="#LeisWl_38.lnote.oe.11"/> pur<ptr type="liebermannNote" n="12" target="#LeisWl_38.lnote.oe.12"/> ço l’altre estre perdant, qui<ptr type="liebermannNote" n="13" target="#LeisWl_38.lnote.oe.13"/> present ne [f]ud<ptr type="liebermannNote" n="14" target="#LeisWl_38.lnote.oe.14"/>; kar jose<ptr type="liebermannNote" n="15" target="#LeisWl_38.lnote.oe.15"/> juge[e<ptr type="liebermannNote" n="16" target="#LeisWl_38.lnote.oe.16"/>] entre eus ne forsjuge pas les altres, qui<ptr type="liebermannNote" n="13" target="#LeisWl_38.lnote.oe.13"/> ne sunt a present.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="515" ed="#liebermann"/>Ne quis ex iudicio alterius preiudicium paciatur. Si duo aut plures hereditatem parciantur, et unus sine altero uel aliis in ius uocatus ex insipiencia uel alio casu amiserit, non debent partiarii inde dampnum sentire; quia res inter alios<ptr type="liebermannNote" n="a" target="#LeisWl_38.lnote.oe.a"/> iudicata aliis non preiudicat, presertim si presentes<ptr type="liebermannNote" n="a" target="#LeisWl_38.lnote.oe.a"/> non fuerunt<ptr type="liebermannNote" n="b" target="#LeisWl_38.lnote.oe.b"/>.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="38" corresp="#wit-i"><pb n="270" ed="#robertson"/>Dous sunt perceners de un erithet, e est l'un enplaidé senz l'altre, et per sa folie si pert, ne d[e]it pur ço l'altre estre perdant qui present ne [f]ud, kar jose juge[e] entre eus ne forsjuge pas les altres qui ne sunt a present.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="515" ed="#liebermann"/>38. Zwei sind Theilhaber einer Erbschaft, und der eine wird ohne den andern verklagt und verliert durch seine Thorheit: nicht soll deshalb der andere, welcher nicht anwesend war, Verlierer sein; denn eine zwischen jenen entschiedene Sache präjudicirt nicht den andern, welche nicht gegenwärtig sind.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">38. Two are partners in an inheritance, and the one is accused without the other and loses through his folly: the other, who was not present, shall not on that account be a loser; for a matter decided between those does not prejudice the others, who are not present.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-i"><pb n="271" ed="#robertson"/>If two men are sharers in an inheritance, and one is charged without the other, and loses [the case] through his folly, the other who was not present shall not be a loser because of that, for a judgment given in a case between those concerned cannot affect injuriously others who are not present.</ab>
         <note type="comparison" source="#liebermann" n="515">Petri exc. leg. Rom. I 27; Iustin. Codex 7, 56, 2; Iustin. Codex 7, 56, 4</note>
         <note type="comparisonPrinted" source="#liebermann">Petri exc. leg. Rom. I 27 | Iustin. Codex 7, 56, 2; 4</note>
-        <note type="editorial">Added October 2026 from Robertson pp. 270–271 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 270–271 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 515, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_38.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">515</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">gleich dem Römischen Wortlaut des</hi> Corpus iuris</seg><seg type="translation" xml:lang="en" source="#claude">the same as the Roman wording of the Corpus iuris</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_38.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">515</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">den in I hier folgenden Satz giebt L oben</hi> 20, 4</seg><seg type="translation" xml:lang="en" source="#claude">L gives the sentence that follows here in I above, at 20, 4</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_38.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">515</biblScope></bibl><seg type="original" xml:lang="de">XXXIX. <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">XXXIX. I</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_38.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">515</biblScope></bibl><seg type="original" xml:lang="de">d’vn crichet <hi rend="italic">Io;</hi> griðe <hi rend="italic">irrig Wilkins</hi></seg><seg type="translation" xml:lang="en" source="#claude">d’vn crichet Io; griðe wrongly Wilkins</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_38.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">515</biblScope></bibl><seg type="original" xml:lang="de">sanz <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">sanz Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_38.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">515</biblScope></bibl><seg type="original" xml:lang="de">dit <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">dit I</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_38.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">515</biblScope></bibl><seg type="original" xml:lang="de">per <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">per Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_38.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">515</biblScope></bibl><seg type="original" xml:lang="de">ki <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">ki Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_38.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">515</biblScope></bibl><seg type="original" xml:lang="de">sud <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">sud I</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_38.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">515</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl.</hi> 6, 1{d}</seg><seg type="translation" xml:lang="en" source="#claude">cf. 6, 1{d}</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_38.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">515</biblScope></bibl><seg type="original" xml:lang="de">juge <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">juge I</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_38.lnote.de._" n="-" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">291</biblScope></bibl><seg type="original" xml:lang="de">Justinians <hi rend="italic">Codex</hi> c. 14 C. 3, 36 und c. 8 C. 8, 45, die Schmid vergleicht, passen nicht genau. Das Zitat bei Conrat (<hi rend="italic">Gesch. Röm. Rechts im MA</hi>. I 628) scheint mir richtig, das Zusammentreffen nicht (wie ihm) möglicherweise zufällig: <hi rend="italic">Res inter alios iudicatae neque emolumentum afferre his qui iudicio non interfuerunt neque praeiudicium solent irrogare. Ideoque nepti tuae praeiudicare non potest quod aduersus coheredes eius iudicatum est</hi>; 7, 56, 4: <hi rend="italic">nec in simili negotio res inter alios acta praeiudicare</hi></seg><seg type="translation" xml:lang="en" source="#claude">Justinian’s <hi rend="italic">Codex</hi> c. 14 C. 3, 36 and c. 8 C. 8, 45, which Schmid compares, do not fit exactly. The citation in Conrat (<hi rend="italic">Gesch. Röm. Rechts im MA</hi>. I 628) seems to me correct, and the coincidence not (as it does to him) possibly accidental: <hi rend="italic">Res inter alios iudicatae neque emolumentum afferre his qui iudicio non interfuerunt neque praeiudicium solent irrogare. Ideoque nepti tuae praeiudicare non potest quod aduersus coheredes eius iudicatum est</hi>; 7, 56, 4: <hi rend="italic">nec in simili negotio res inter alios acta praeiudicare</hi></seg></note>
       </div>
     </body>
   </text>

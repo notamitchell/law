@@ -4,9 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>CHn cor 2</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,10 +21,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The Coronation Charter of Henry I</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">521</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">276</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lat"><abbr>Lat</abbr> <note type="manuscript">Latin text as edited by Liebermann from chronicles and cartularies (no original survives)</note></witness>
+          <witness xml:id="wit-worc"><abbr>Worc</abbr></witness>
+          <witness xml:id="wit-herts"><abbr>Herts</abbr></witness>
+          <witness xml:id="wit-winch"><abbr>Winch</abbr></witness>
+          <witness xml:id="wit-roch"><abbr>Roch</abbr></witness>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5)</note></witness>
         </listWit>
       </sourceDesc>
@@ -39,16 +46,24 @@
       <creation><date source="#liebermann">5 Aug. 1100</date><placeName source="#robertson">Westminster</placeName><note type="promulgation">5 Aug. 1100 (Liebermann); Westminster (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2484 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2484 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lat added from Gesetze I, p. 521.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:CHnCor">CHn cor</ref> 2</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lat"><pb n="521" ed="#liebermann"/>Si quis baronum meorum, comitum siue<ptr type="liebermannNote" n="22" target="#CHnCor_2.lnote.oe.22"/> aliorum qui de me tenent, mortuus fuerit, heres suus non redimet terram suam, sicut faciebat<ptr type="liebermannNote" n="23" target="#CHnCor_2.lnote.oe.23"/> tempore fratris mei, sed legitima<ptr type="liebermannNote" n="24" target="#CHnCor_2.lnote.oe.24"/> et iusta releuatione releuabit eam.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="2" corresp="#wit-h"><pb n="276" ed="#robertson"/>Si quis baronum meorum, comitum sive aliorum qui de me tenent, mortuus fuerit, heres suus non redimet terram suam sicut faciebat tempore fratris mei, sed iusta et legitima relevatione relevabit eam.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><pb n="277" ed="#robertson"/>If any of my barons, earls or other tenants-in-chief has died, his heir shall not redeem his land as he did in the time of my brother, but he shall pay the just and lawful relief for it.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 276–277 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 276–277 (text and translation); Liebermann’s text added from Gesetze I p. 521, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_2.lnote.oe.II_a" n="II a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">521</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Aufrechte</hi> (‘Antiqua’-)<hi rend="italic">Buchstabennoten beziehen sich auf</hi> Band II: Erklärungen.</seg><seg type="translation" xml:lang="en" source="#claude">Upright (‘Antiqua’, i.e. roman) letters used as note-markers refer to Band II: Erklärungen.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_2.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">521</biblScope></bibl><seg type="original" xml:lang="de">† uel <hi rend="italic">Alb</hi></seg><seg type="translation" xml:lang="en" source="#claude">† uel Alb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_2.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">521</biblScope></bibl><seg type="original" xml:lang="de">facere consueuerat t. patris [<hi rend="italic">falsch</hi>] <hi rend="italic">Alb</hi></seg><seg type="translation" xml:lang="en" source="#claude">facere consueuerat t. patris [wrong] Alb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_2.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">521</biblScope></bibl><seg type="original" xml:lang="de">* iu. et le. <hi rend="italic">HRl Lond, einige Alb</hi></seg><seg type="translation" xml:lang="en" source="#claude">* iu. et le. HRl Lond, some Alb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_2.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">297</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Heergewäte 12b. 14; Erbgang 12b. Die Erbschaftauslösung braucht nicht gerade deren ganzen Wert ausgemacht zu haben</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Heergewäte 12b. 14; Erbgang 12b. The redemption of the inheritance need not have amounted to its whole value</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="CHnCor_2.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">297</biblScope></bibl><seg type="original" xml:lang="de">Ich glaube nicht (mit Price <hi rend="italic">Anc. laws</hi> p. 267), hier sei die an Einzelheiten reiche Verfügung über Mutung in Leis Wl 20ff. gemeint, vielmehr wohl nur die 5 £ fürs Ritterlehn (Dial. de Scacc. II 10 ed. Hughes p. 223). Eine <hi rend="spaced">feste</hi> Summe ist aber gemeint; sonst hätte c. 2 keinen Vorteil für den Vassallen und 2, 1 für den Aftervassallen bedeutet. Freilich blieb tatsächlich im 12. Jh. die Mutung der Kronlehnsträger in der Willkür des Königs: dies könnte, wie beim Regalienrecht, auf Versprechensbruch des Königs beruhen. Die Wilhelm dem II. geschuldeten Mutungen des rechten Lehnserben erlässt <hi rend="italic">u</hi>. 6, 1, wo noch einmal deutlich wird, dass dieser sie willkürlich vereinbart hatte. Den Satz benutzt ‘Unknown ch. (<hi rend="italic">o</hi>. Einl. 13)’ 2</seg><seg type="translation" xml:lang="en" source="#claude">I do not believe (with Price <hi rend="italic">Anc. laws</hi> p. 267) that the provision on relief in Leis Wl 20ff., rich in detail, is meant here; rather, probably, only the 5 £ for a knight’s fee (Dial. de Scacc. II 10 ed. Hughes p. 223). A <hi rend="italic">fixed</hi> sum, however, is meant; otherwise c. 2 would have meant no advantage for the vassal, nor 2, 1 for the sub-vassal. Admittedly, in the 12th cent. the relief of tenants-in-chief in practice remained at the king’s discretion: this could, as with the regalian right, rest on the king’s breach of his promise. The reliefs owed to William II by the rightful heir to a fief are remitted <hi rend="italic">below</hi> 6, 1, where it becomes clear once again that he had fixed them arbitrarily. The sentence is used by ‘Unknown ch. (<hi rend="italic">above</hi> Introduction 13)’ 2</seg></note>
       </div>
     </body>
   </text>

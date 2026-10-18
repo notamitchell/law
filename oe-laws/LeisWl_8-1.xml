@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 8.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,15 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">498–499</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">256</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228, f. 141, c. 1230</note></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,16 +47,28 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2379 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2379 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Hk added from Gesetze I, p. 498–499.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 498–499.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 498–499.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="8.1">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 8.1</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-hk"><pb n="498–499" ed="#liebermann"/>[E<ptr type="liebermannNote" n="4" target="#LeisWl_8-1.lnote.oe.4"/>] la were del vilain C sol. en Merchenelahe e ensement en Westsexene<ptr type="liebermannNote" n="5" target="#LeisWl_8-1.lnote.oe.5"/>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-i"><ptr type="liebermannNote" n="19" target="#LeisWl_8-1.lnote.oe.19"/><pb n="498–499" ed="#liebermann"/>E la wer del vilain C solz en Merchenelae e e[n]sement<ptr type="liebermannNote" n="20" target="#LeisWl_8-1.lnote.oe.20"/> en Westsexenelae.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="498–499" ed="#liebermann"/>rustici autem C solid. in Merchenelahe et similiter in Westsaxenelahe.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="8.1" corresp="#wit-hk"><pb n="256" ed="#robertson"/>E la were del vilain—C sol. en Merchenelahe e ensement en Westsexene.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="498–499" ed="#liebermann"/>8, 1. Und das Wergeld des Bauern [= Ceorl] 100 Schill. im Mercier-Rechtsgebiet und ebenso im Westsachsen(-Rechtsgebiet <hi rend="italic">IL</hi>).</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">8, 1. And the wergild of the peasant [= ceorl] 100 shill. in the Mercian legal district and likewise in the West Saxon (legal district <hi rend="italic">IL</hi>).</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-hk"><pb n="257" ed="#robertson"/>And the wergeld of a villein is 100 shillings in the province of Mercia, and the same in the province of Wessex.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 256–257 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 256–257 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 498–499, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_8-1.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de">En <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">En Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_8-1.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de">lahe <hi rend="italic">ergänzen Edd. ohne Noth</hi></seg><seg type="translation" xml:lang="en" source="#claude">lahe supplied by edd. unnecessarily</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_8-1.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de">8, 1 <hi rend="italic">fehlt Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">8, 1 missing in Im</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_8-1.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">498</biblScope></bibl><seg type="original" xml:lang="de">eus. <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">eus. Io</seg></note>
       </div>
     </body>
   </text>

@@ -4,9 +4,12 @@
     <fileDesc>
       <titleStmt>
         <title>Wl lad 2.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,11 +23,14 @@
       <sourceDesc>
         <bibl type="legalText"><title>William I: Regulations Regarding Exculpation</title> <note type="reign">William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">484</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">232</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis)</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -39,20 +45,30 @@
       <creation><date source="#liebermann">1067–77</date><date source="#robertson">1068–77</date><note type="promulgation">1067–77 (Liebermann); 1068–77 (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2305 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2305 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 484.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Q added from Gesetze I, p. 484.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2.1">
         <head><ref type="lawCode" target="law:WiLad">Wl lad</ref> 2.1</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-h"><pb n="484" ed="#liebermann"/>⁊ gif he untru<hi rend="italic">m</hi> byð ⁊ nelle þ<hi rend="italic">æt</hi> ornest oððe ne mage, begyte him lahlicne spalan.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-q"><pb n="484" ed="#liebermann"/>Et si untrum<ptr type="liebermannNote" n="1" target="#WiLad_2-1.lnote.oe.1"/> sit (id est inualidus) et nolit bellum uel non possit, querat sibi legalem defensorem.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="2.1" corresp="#wit-h"><pb n="232" ed="#robertson"/>7 gif he untrum byð 7 nelle þæt ornest oððe ne mage, begyte him lahlicne spalan.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="484" ed="#liebermann"/>2, 1. Und wenn letzterer unkräftig ist und [deshalb] den Kampf<ptr type="liebermannNote" n="1" target="#WiLad_2-1.lnote.de.1"/> nicht will oder nicht vermag, schaffe er sich einen gesetzmässigen<ptr type="liebermannNote" n="2" target="#WiLad_2-1.lnote.de.2"/> Vertreter<ptr type="liebermannNote" n="3" target="#WiLad_2-1.lnote.de.3"/> [<hi rend="italic">d. h</hi>. Kämpen].</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">2, 1. And if the latter is infirm and [therefore] does not want the combat or is not able for it, he shall procure for himself a lawful representative [<hi rend="italic">i.e</hi>. champion].</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><pb n="233" ed="#robertson"/>And if he is infirm and will not or cannot undertake trial by combat, he shall procure a lawful substitute.</ab>
         <note type="comparison" source="#liebermann" n="484"><ref target="clause:WlArt_6-1">Wl art 6.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Wl art. 6, [?]</note>
         <note type="comparisonIncomplete">Some of Liebermann’s notes here are cut off in the gutter of the scan used, and are still to be completed.</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:WlArt_6-1">Wl art 6.1</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 232–233 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 232–233 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 484, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WiLad_2-1.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">484</biblScope></bibl><seg type="original" xml:lang="de">utrum <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">utrum Hk</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="WiLad_2-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">273</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Zweikampf 13b ff. Gegen einseitiges Ordal dagegen schützt Krankheit nicht: derjenige, den befreit vom <hi rend="italic">duellum ætas et mahemium, se purg</hi>[<hi rend="italic">et</hi>] <hi rend="italic">per ferrum vel aquam</hi>; Glanvilla 14, 1, 8</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Zweikampf 13b ff. Against a one-sided ordeal, on the other hand, sickness gives no protection: whoever is freed from the <hi rend="italic">duellum</hi> by <hi rend="italic">ætas et mahemium, se purg</hi>[<hi rend="italic">et</hi>] <hi rend="italic">per ferrum vel aquam</hi>; Glanvilla 14, 1, 8</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="WiLad_2-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">273</biblScope></bibl><seg type="original" xml:lang="de">Nicht gemietet; für die Normandie <hi rend="italic">s</hi>. Brunner <hi rend="italic">Schwurg</hi>. 180</seg><seg type="translation" xml:lang="en" source="#claude">Not hired; for Normandy <hi rend="italic">see</hi> Brunner <hi rend="italic">Schwurg</hi>. 180</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="WiLad_2-1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">273</biblScope></bibl><seg type="original" xml:lang="de">Technisch <hi rend="italic">campio</hi>. Q wählt ein Wort allgemeinerer Bed., wie sie <hi rend="italic">spala</hi> laut <hi rend="italic">gespelia</hi> ursprünglich hatte: ‘Vertreter’</seg><seg type="translation" xml:lang="en" source="#claude">Technically <hi rend="italic">campio</hi>. Q chooses a word of more general meaning, such as <hi rend="italic">spala</hi>, to judge from <hi rend="italic">gespelia</hi>, originally had: ‘representative’</seg></note>
       </div>
     </body>
   </text>

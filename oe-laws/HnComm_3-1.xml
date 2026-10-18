@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Hn com 3.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +22,13 @@
       <sourceDesc>
         <bibl type="legalText"><title>Henry I: Decree Concerning the County and Hundred Courts</title> <note type="reign">Henry I, r. 1100–1135</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">524</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">286</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-sc"><abbr>Sc</abbr> <note type="manuscript">The Red Book of the Exchequer (London, The National Archives, E 164/2)</note></witness>
+          <witness xml:id="wit-sc"><abbr>Sc</abbr> <note type="manuscript">Red Book of the Exchequer (Liber rubeus Scaccarii), c. 1230</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,16 +43,20 @@
       <creation><date source="#liebermann">1109–11</date><date source="#wormald-mel">1108</date><placeName source="#robertson">Reading</placeName><note type="promulgation">1109–11 (Liebermann); 1108 (Wormald); Reading (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2524 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2524 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Sc added from Gesetze I, p. 524.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3.1">
         <head><ref type="lawCode" target="law:HnComm">Hn com</ref> 3.1</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-sc"><ptr type="liebermannNote" n="24" target="#HnComm_3-1.lnote.oe.24"/><pb n="524" ed="#liebermann"/>Et si est inter uauasores alicuius baronis mei honoris, tractetur placitum in curia domini eorum.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="3.1" corresp="#wit-sc"><pb n="286" ed="#robertson"/>Et si est inter vavasores alicuius baronis mei honoris, tractetur placitum in curia domini eorum.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-sc"><pb n="287" ed="#robertson"/>And if it is between the vassals of a crown baron of mine, the case shall be dealt with in their lord's court.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 286–287 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 286–287 (text and translation); Liebermann’s text added from Gesetze I p. 524, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnComm_3-1.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">524</biblScope></bibl><seg type="original" xml:lang="de">3, 1 <hi rend="italic">überspringt Sc Hg K</hi></seg><seg type="translation" xml:lang="en" source="#claude">3, 1 skipped by Sc Hg K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="HnComm_3-1.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">301</biblScope></bibl><seg type="original" xml:lang="de">Sind beide Parteien Aftervassallen eines Kronbarons, so unterstehen sie dessen Lehnsgericht. Den Satz benutzt Hn 25, 1. <hi rend="italic">Vgl. Constit. Clarendon</hi>. 9: <hi rend="italic">Si uterque</hi> der Parteien, <hi rend="italic">clericus et laicus advocaverit de feudo illo ante eundem baronem, erit placitum in curia ipsius</hi>, sonst <hi rend="italic">in curia regia</hi></seg><seg type="translation" xml:lang="en" source="#claude">If both parties are under-vassals of one baron of the Crown, they are subject to his feudal court. The sentence is used by Hn 25, 1. <hi rend="italic">Cf. Constit. Clarendon</hi>. 9: <hi rend="italic">Si uterque</hi> of the parties, <hi rend="italic">clericus et laicus advocaverit de feudo illo ante eundem baronem, erit placitum in curia ipsius</hi>, otherwise <hi rend="italic">in curia regia</hi></seg></note>
       </div>
     </body>
   </text>

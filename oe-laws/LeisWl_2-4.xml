@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 2.4</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">494–495</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">254</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228, f. 141, c. 1230</note></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,16 +48,34 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2364 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2364 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Hk added from Gesetze I, p. 494–495.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 494–495.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 494–495.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2.4">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 2.4</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-hk"><pb n="494–495" ed="#liebermann"/>De cez XXXII<ptr type="liebermannNote" n="2" target="#LeisWl_2-4.lnote.oe.2"/> averad le vescunte a l’os le rei X ores, e cil ki le plait averad deredné vers lui XII ores, e le seinur, en ki fiu il meindra, les X ores. Ceo est en Denelahe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><pb n="494–495" ed="#liebermann"/>De ces XXXII ores avrat<ptr type="liebermannNote" n="15" target="#LeisWl_2-4.lnote.oe.15"/> li<ptr type="liebermannNote" n="16" target="#LeisWl_2-4.lnote.oe.16"/> vescunte a oes le roi X ores, e cil<ptr type="liebermannNote" n="17" target="#LeisWl_2-4.lnote.oe.17"/> qui li plait avrat dere[in]ied<ptr type="liebermannNote" n="18" target="#LeisWl_2-4.lnote.oe.18"/> vers lui XII ores, e le seignur, en ki fi[u<ptr type="liebermannNote" n="19" target="#LeisWl_2-4.lnote.oe.19"/>] il maindra, X ores. Ço est en Denelae.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="494–495" ed="#liebermann"/>de quibus uicecomes ad<ptr type="liebermannNote" n="b" target="#LeisWl_2-4.lnote.oe.b"/> opus regium X ores accipiet, et ei qui in [causa<ptr type="liebermannNote" n="1" target="#LeisWl_2-4.lnote.oe.1"/>] optinet, XII ores restituentur; residuum autem, id est X ores, ad dominum, in cuius feudo manet, deueniet secundum Danelahe.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="2.4" corresp="#wit-hk"><pb n="254" ed="#robertson"/>De cez XXXII [ores] averad le vescunte a l'os le rei X ores, e cil ki le plait averad deredné vers lui XII ores, e le seinur, en ki fiu il meindra, les X ores. Ceo est en Denelahe.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="494–495" ed="#liebermann"/>2, 4. Von diesen 32 (Ör <hi rend="italic">I</hi>) soll der Sheriff für die Casse des Königs 10 Ör erhalten und der, welcher die Klagesache gegen jenen erwiesen hat, 12 Ör<ptr type="liebermannNote" n="c" target="#LeisWl_2-4.lnote.de1.c"/>, und der Herr, in dessen Lehn [Beklagt]er wohnt, die 10 (übrigen <hi rend="italic">L</hi>) Ör. Dies ist im Dänen-Rechtsgebiet.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">2, 4. Of these 32 (ores <hi rend="italic">I</hi>) the sheriff shall receive 10 ores for the king's treasury, and he who has proved the suit against that man 12 ores, and the lord in whose fief the [accus]ed dwells the 10 (remaining <hi rend="italic">L</hi>) ores. This is in the Danish legal district.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-hk"><pb n="255" ed="#robertson"/>Of these 32 ores the sheriff shall reserve 10 for the King and 12 for the man who proves the charge against him, and the [remaining] 10 for the lord of the manor to which he (the accused) belongs. That applies to the Danelaw.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 254–255 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 254–255 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 494–495, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_2-4.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">494</biblScope></bibl><seg type="original" xml:lang="de">ores <hi rend="italic">ergänzt aus I Matzke</hi></seg><seg type="translation" xml:lang="en" source="#claude">ores supplied from I by Matzke</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_2-4.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">494</biblScope></bibl><seg type="original" xml:lang="de">arat <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">arat Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_2-4.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">494</biblScope></bibl><seg type="original" xml:lang="de">le <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">le Im</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_2-4.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">494</biblScope></bibl><seg type="original" xml:lang="de">til <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">til Im</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_2-4.lnote.oe.18" n="18" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">494</biblScope></bibl><seg type="original" xml:lang="de">de remied <hi rend="italic">Io;</hi> de remued <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">de remied Io; de remued Im</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_2-4.lnote.oe.19" n="19" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">494</biblScope></bibl><seg type="original" xml:lang="de">fin <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">fin I</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_2-4.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">495</biblScope></bibl><seg type="original" xml:lang="de">ad opus ‘<hi rend="italic">zum Vortheile von</hi>’ <hi rend="italic">in England seit Domesdaybuch, im Gallolatein früher</hi></seg><seg type="translation" xml:lang="en" source="#claude">ad opus ‘for the benefit of’ in England from Domesday Book onwards, earlier in Gallo-Latin</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_2-4.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">495</biblScope></bibl><seg type="original" xml:lang="de">eā <hi rend="italic">S;</hi> eam <hi rend="italic">Vl</hi> (<hi rend="italic">d. i. Vitell. E V, im</hi> 16. <hi rend="italic">Jh. aus</hi> S <hi rend="italic">copirt</hi>) <hi rend="italic">Thorpe;</hi> eum <hi rend="italic">Palgrave</hi> Rise of Engl. com. II <hi rend="italic">p.</hi> xc</seg><seg type="translation" xml:lang="en" source="#claude">eā S; eam Vl (i.e. Vitell. E V, copied from S in the 16th cent.) Thorpe; eum Palgrave Rise of Engl. com. II p. xc</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_2-4.lnote.de1.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">495</biblScope></bibl><seg type="original" xml:lang="de">= 240 Den. = 20 Schill.: 3, 1 <hi rend="italic">ff.</hi></seg><seg type="translation" xml:lang="en" source="#claude">= 240 Den. = 20 shill.: 3, 1 ff.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_2-4.lnote.de._" n="-" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">286</biblScope></bibl><seg type="original" xml:lang="de">Maitland <hi rend="italic">Coll. pap</hi>. II 410 scheidet ‘the king's use’ von des Sheriffs Kasse. Ich glaube, die 10 Ör fliessen in das durch den Sheriff (<hi rend="italic">s. d. Gl</hi> 11. 16) gepachtete Strafgeld, das nur fortfuhr ‘königlich’ zu heissen.—<hi rend="italic">Vgl. Gl</hi> Anzeige 16; Lehnwesen 5b</seg><seg type="translation" xml:lang="en" source="#claude">Maitland <hi rend="italic">Coll. pap</hi>. II 410 distinguishes ‘the king's use’ from the sheriff's coffer. I believe that the 10 ör go into the fines farmed by the sheriff (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 11. 16), which merely continued to be called ‘royal’.—<hi rend="italic">Cf. Gl</hi> Anzeige 16; Lehnwesen 5b</seg></note>
       </div>
     </body>
   </text>

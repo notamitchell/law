@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 17b</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">504–505</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">260</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">The French text printed in the chronicle ascribed to Ingulf of Croyland (Robertson’s I; known only from early printed editions)</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228, f. 141, c. 1230</note></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,16 +48,30 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2401 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2401 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Hk added from Gesetze I, p. 504–505.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 504–505.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 504–505.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="17b">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 17b</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-hk"><ptr type="liebermannNote" n="a" target="#LeisWl_17b.lnote.oe.a"/><pb n="504–505" ed="#liebermann"/>. . . . . . . . . . . . . . . .</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><pb n="504–505" ed="#liebermann"/>Li burgeis, qui<ptr type="liebermannNote" n="3" target="#LeisWl_17b.lnote.oe.3"/> ad en soun<ptr type="liebermannNote" n="6" target="#LeisWl_17b.lnote.oe.6"/> propre chatel demi marc vailant, deit doner<ptr type="liebermannNote" n="7" target="#LeisWl_17b.lnote.oe.7"/> le dener Seint Pere.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="504–505" ed="#liebermann"/>Burgensis si habet de proprio catallo ad ualenciam dimidie marce, dabit denar. Sancti Petri.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="17b" corresp="#wit-i"><pb n="260" ed="#robertson"/>Li burgeis qui ad en soun propre chatel demi marc vailant deit doner le dener Seint Pere.]</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="504–505" ed="#liebermann"/>17<hi rend="italic">b</hi>. Der Bürger, der in seinem Eigenthum eine Halbmark<ptr type="liebermannNote" n="c" target="#LeisWl_17b.lnote.de1.c"/> werthe Fahrhabe besitzt, soll den Peterspfennig zahlen.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">17<hi rend="italic">b</hi>. The burgess who possesses in his own property movable goods worth half a mark shall pay Peter's Pence.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-i"><pb n="261" ed="#robertson"/>A burgess who possesses property of his own of the value of half a mark shall pay Peter's Pence.]</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 260–261 (text and translation); Liebermann’s text (K–M) not yet added; 17a and 17b are from I (not in Hk) (Robertson).</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 260–261 (text and translation); 17a and 17b are from I (not in Hk) (Robertson).; Liebermann’s text and German translation added from Gesetze I p. 504–505, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17b.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">ergänze aus IL</hi></seg><seg type="translation" xml:lang="en" source="#claude">supply from IL</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17b.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de">qi <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">qi <hi rend="italic">Im</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17b.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de">son <hi rend="italic">Isp;</hi> sonn <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">son <hi rend="italic">Isp;</hi> sonn <hi rend="italic">Io</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17b.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de">do. le <hi rend="italic">fehlt Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">do. le missing in Io</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_17b.lnote.de1.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">505</biblScope></bibl><seg type="original" xml:lang="de">80 Pfennig</seg><seg type="translation" xml:lang="en" source="#claude">80 pence</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_17b.lnote.de._" n="-" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">289</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> II 489 Z. 2f.</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> II 489 l. 2f.</seg></note>
       </div>
     </body>
   </text>

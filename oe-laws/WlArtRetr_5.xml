@@ -4,9 +4,10 @@
     <fileDesc>
       <titleStmt>
         <title>Wl art retr 5</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -20,10 +21,14 @@
       <sourceDesc>
         <bibl type="legalText"><title>Willelmi Articuli Retractati (the Ten Articles of William I, revised)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">490</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">246</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
+          <witness xml:id="wit-lond"><abbr>Lond</abbr> <note type="manuscript">Latin text as edited by Liebermann (London collection: MSS K2, Co, Or)</note></witness>
+          <witness xml:id="wit-guildhall"><abbr>Guildhall</abbr></witness>
+          <witness xml:id="wit-exchequer"><abbr>Exchequer</abbr></witness>
           <witness xml:id="wit-rs"><abbr>Rs</abbr> <note type="manuscript">Manchester, John Rylands Library, MS Latin 155</note></witness>
         </listWit>
       </sourceDesc>
@@ -39,19 +44,28 @@
       <creation><date source="#liebermann #robertson">c.1210</date><note type="promulgation">c.1210 (Liebermann, Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2346 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2346 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Lond added from Gesetze I, p. 490.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5">
         <head><ref type="lawCode" target="law:WlArtRetr">Wl art retr</ref> 5</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-lond"><pb n="490" ed="#liebermann"/>Uolumus etiam<ptr type="liebermannNote" n="15" target="#WlArtRetr_5.lnote.oe.15"/> et firmiter precipimus et concedimus, ut omnes liberi homines tocius monarchie regni nostri predicti habeant et teneant terras suas et possessiones suas bene et in pace, libere<ptr type="liebermannNote" n="16" target="#WlArtRetr_5.lnote.oe.16"/> ab omni exactione iniusta et ab<ptr type="liebermannNote" n="e" target="#WlArtRetr_5.lnote.oe.e"/> omni tallagio, ita quod nichil<ptr type="liebermannNote" n="f" target="#WlArtRetr_5.lnote.oe.f"/> ab eis exigatur uel capiatur nisi seruitium suum liberum, quod de iure nobis facere debent et facere tenentur, et prout statutum est eis et illis a<ptr type="liebermannNote" n="17" target="#WlArtRetr_5.lnote.oe.17"/> nobis datum et concessum iure hereditario in perpetuum per<ptr type="liebermannNote" n="e" target="#WlArtRetr_5.lnote.oe.e"/> commune consilium tocius regni nostri predicti.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="5" corresp="#wit-rs"><pb n="246" ed="#robertson"/>Volumus eciam et firmiter praecipimus et concedimus, ut omnes liberi homines totius monarchiae regni nostri praedicti, habeant et teneant terras suas et possessiones suas bene et in pace, liberae ab omni exactione iniusta et ab omni tallagio, ita quod nichil ab eis exigatur vel capiatur nisi servicium suum liberum, quod de iure nobis facere debent et facere tenentur, et prout statutum est eis et illis a nobis datum et concessum iure hereditario in perpetuum per commune consilium totius regni nostri praedicti.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-rs"><pb n="247" ed="#robertson"/>We desire likewise and firmly enjoin and grant, that all free men throughout the whole of our realm aforesaid shall have and hold their lands and possessions properly and peacefully, free from all unjust exaction and from all tallage, so that nothing shall be demanded or taken from them except the free service which they legally owe and are bound to perform for us, in accordance with what we have ordained for them and granted and conceded to them as a hereditary right for all time, with the full consent of our whole realm aforesaid.</ab>
         <note type="comparison" source="#liebermann" n="490"><ref target="clause:WlArtRetr_8">Wl art retr 8</ref></note>
         <note type="comparisonPrinted" source="#liebermann">vgl. u. 8</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:WlArtRetr_8">Wl art retr 8</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 246–247 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 246–247 (text and translation); Liebermann’s text added from Gesetze I p. 490, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_5.lnote.oe.e" n="e" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ansprüche gegen König Johann</hi></seg><seg type="translation" xml:lang="en" source="#claude">Claims against King John</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_5.lnote.oe.f" n="f" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">ähnlich interpolirt Verf.</hi> Hn 8, 1b</seg><seg type="translation" xml:lang="en" source="#claude">the author makes a similar interpolation in Hn 8, 1b</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_5.lnote.oe.15" n="15" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de">u. et h' [hoc <hi rend="italic">Ld</hi>] f. <hi rend="italic">Co Or Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">u. et h' [hoc Ld] f. Co Or Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_5.lnote.oe.16" n="16" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de">-ras <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-ras Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_5.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">490</biblScope></bibl><seg type="original" xml:lang="de">de <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">de Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_5.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">282</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Steuer 8a. Freeman <hi rend="italic">Norm. conq</hi>. V 869 sah hierin mit Unrecht die Spur der Abfassung unter Edward I., beeinflusst von Stubbs <hi rend="italic">Rog. Hov</hi>. II p. xxxuj.—Hier und <hi rend="italic">u</hi>. 8 benutzt der Londoner CHn cor 11 (Price <hi rend="italic">Anc. laws</hi> 267 nahm irrig umgekehrtes Verhältnis an), die aber nur die Ritterlehn-Domäne von willkürlicher Steuer befreit; er dehnt das auf alle Freien aus</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Steuer 8a. Freeman <hi rend="italic">Norm. conq</hi>. V 869 wrongly saw in this a trace of composition under Edward I, influenced by Stubbs <hi rend="italic">Rog. Hov</hi>. II p. xxxuj.—Here and <hi rend="italic">below</hi> 8 the London author uses CHn cor 11 (Price <hi rend="italic">Anc. laws</hi> 267 wrongly assumed the reverse relationship), which, however, exempts only the demesne of knights’ fees from arbitrary taxation; he extends this to all freemen</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArtRetr_5.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">283</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Reichsrat 1e. 6. c</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Reichsrat 1e. 6. c</seg></note>
       </div>
     </body>
   </text>

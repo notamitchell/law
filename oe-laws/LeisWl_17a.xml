@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 17a</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">504–505</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">260</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">The French text printed in the chronicle ascribed to Ingulf of Croyland (Robertson’s I; known only from early printed editions)</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228, f. 141, c. 1230</note></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,16 +48,31 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2400 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2400 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Hk added from Gesetze I, p. 504–505.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 504–505.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 504–505.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="17a">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 17a</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-hk"><ptr type="liebermannNote" n="a" target="#LeisWl_17a.lnote.oe.a"/><pb n="504–505" ed="#liebermann"/>. . . . . . . . . . . . . . . .</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><pb n="504–505" ed="#liebermann"/>Le seignur: pur [un<ptr type="liebermannNote" n="a" target="#LeisWl_17a.lnote.oe.a-2"/>] den. que il dourad, si erunt<ptr type="liebermannNote" n="b" target="#LeisWl_17a.lnote.oe.b"/> quites ses bordiers e ses boverz<ptr type="liebermannNote" n="5" target="#LeisWl_17a.lnote.oe.5"/> e ses serjanz.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="504–505" ed="#liebermann"/>Dominus autem pro uno denario adquietabit bordarios suos et bubulcos et seruientes.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="17a" corresp="#wit-i"><pb n="260" ed="#robertson"/>[Le seignur pur un den. que il dourad si erunt quites ses bordiers e ses boverz e ses serjanz.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="504–505" ed="#liebermann"/>17<hi rend="italic">a</hi>. Der Herr<ptr type="liebermannNote" n="1" target="#LeisWl_17a.lnote.de.1"/>: für Einen Pfennig, den er giebt, sollen [auf der Domäne<ptr type="liebermannNote" n="b" target="#LeisWl_17a.lnote.de1.b"/>] seine Köthner und seine Rinderhirten<ptr type="liebermannNote" n="2" target="#LeisWl_17a.lnote.de.2"/> und seine Dienstleute frei [von Zahlung] sein.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">17<hi rend="italic">a</hi>. The lord: for One penny that he gives, his cottars and his oxherds and his servants [on the demesne] shall be free [of payment].</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-i"><pb n="261" ed="#robertson"/>[By the payment of one penny on the part of a lord his labourers, herdsmen and servants shall be exempt.</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 260–261 (text and translation); Liebermann’s text (K–M) not yet added; 17a and 17b are from I (not in Hk) (Robertson).</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 260–261 (text and translation); 17a and 17b are from I (not in Hk) (Robertson).; Liebermann’s text and German translation added from Gesetze I p. 504–505, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17a.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">ergänze aus IL</hi></seg><seg type="translation" xml:lang="en" source="#claude">supply from IL</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17a.lnote.oe.a-2" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de">IIII <hi rend="italic">I; gebessert aus L</hi></seg><seg type="translation" xml:lang="en" source="#claude">IIII I; corrected from L</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17a.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de">erent <hi rend="italic">bessert MAT.</hi></seg><seg type="translation" xml:lang="en" source="#claude">erent emended by MAT.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_17a.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">504</biblScope></bibl><seg type="original" xml:lang="de">-rs <hi rend="italic">MA.;</hi> boner <hi rend="italic">Io Isp</hi></seg><seg type="translation" xml:lang="en" source="#claude">-rs <hi rend="italic">MA.;</hi> boner <hi rend="italic">Io Isp</hi></seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="LeisWl_17a.lnote.de1.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">505</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">d. h. auf</hi> inland, <hi rend="italic">das der Herr bewirthschaftet, im Gegensatz zu</hi> Grossguts-Hintersassen auf Bauerhöfen</seg><seg type="translation" xml:lang="en" source="#claude">i.e. on inland, which the lord farms himself, as opposed to the manorial tenants on peasant holdings</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_17a.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">289</biblScope></bibl><seg type="original" xml:lang="de">Also im Ggs. zur Kopfsteuer; <hi rend="italic">s. d. Gl</hi>; Kossät 8; Herrschaftsgut 4. 9. a. So auch 17, 1</seg><seg type="translation" xml:lang="en" source="#claude">Thus as opposed to a poll tax (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi>); Kossät 8; Herrschaftsgut 4. 9. a. So also 17, 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_17a.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">289</biblScope></bibl><seg type="original" xml:lang="de">falsch <hi rend="italic">boner</hi>, <hi rend="italic">bonarii</hi> ‘Hübuer’ Frühere. <hi rend="italic">Vgl. bovarii</hi> (<hi rend="italic">bouvier</hi> Littré, dies zitierend), im <hi rend="italic">Gl</hi>: Hirten und Vinogradoff <hi rend="italic">Growth</hi> 334</seg><seg type="translation" xml:lang="en" source="#claude">Earlier scholars wrongly have <hi rend="italic">boner</hi>, <hi rend="italic">bonarii</hi> ‘hide-holders’. <hi rend="italic">Cf. bovarii</hi> (<hi rend="italic">bouvier</hi> Littré, citing this), in <hi rend="italic">Gl</hi>: Hirten, and Vinogradoff <hi rend="italic">Growth</hi> 334</seg></note>
       </div>
     </body>
   </text>

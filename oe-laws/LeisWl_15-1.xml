@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 15.1</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">502–503</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">260</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228, f. 141, c. 1230</note></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,16 +48,34 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2395 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2395 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Hk added from Gesetze I, p. 502–503.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 502–503.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 502–503.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="15.1">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 15.1</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-hk"><pb n="502–503" ed="#liebermann"/>E s’il ait auter fieðe<ptr type="liebermannNote" n="d" target="#LeisWl_15-1.lnote.oe.d"/> esté blasmé, s’en escundisse a treis duble, ceo est a saveir par<ptr type="liebermannNote" n="e" target="#LeisWl_15-1.lnote.oe.e"/> XLII leals humes numez sei trente-siste main.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><pb n="502–503" ed="#liebermann"/>E s’il eit<ptr type="liebermannNote" n="20" target="#LeisWl_15-1.lnote.oe.20"/> altre<ptr type="liebermannNote" n="21" target="#LeisWl_15-1.lnote.oe.21"/> fiee ested blamed, s’en escondied<ptr type="liebermannNote" n="22" target="#LeisWl_15-1.lnote.oe.22"/> a treis dubles, ceo . . .<ptr type="liebermannNote" n="7" target="#LeisWl_15-1.lnote.oe.7"/> a savoir per XLVIII<ptr type="liebermannNote" n="b" target="#LeisWl_15-1.lnote.oe.b"/> homes leals només, sei trente-siste<ptr type="liebermannNote" n="23" target="#LeisWl_15-1.lnote.oe.23"/> mein.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="502–503" ed="#liebermann"/>Quodsi alias culpatus fuerit, purget se iuramento triplicato, id est per XLVIII legales homines nominatos, manu XXXVI<ptr type="liebermannNote" n="a" target="#LeisWl_15-1.lnote.oe.a"/>.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="15.1" corresp="#wit-hk"><pb n="260" ed="#robertson"/>E s'il ait auter fiede esté blasmé, s'en escundisse a treis duble, ceo est a saveir par XLII leals humes numez sei trente-siste main.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="502–503" ed="#liebermann"/>15, 1. Wenn er aber vormals bescholten worden ist, reinige er sich davon dreidoppelt<ptr type="liebermannNote" n="1" target="#LeisWl_15-1.lnote.de.1"/>, d. h. nämlich durch 42 ernannte gesetzmässige Männer selbsechsunddreissigster Hand.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">15, 1. But if he has formerly been ill-reputed, he shall clear himself of it threefold, i.e. namely by 42 nominated lawful men, with himself as thirty-sixth hand.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-hk"><pb n="261" ed="#robertson"/>And if he has been previously accused, he shall clear himself with three times as many, namely with 35 compurgators found among 42 qualified men nominated [by the court].</ab>
-        <note type="editorial">Added October 2026 from Robertson pp. 260–261 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 260–261 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 502–503, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_15-1.lnote.oe.d" n="d" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">502</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so; vgl. MAT. p.</hi> <hi rend="smallcaps">xlviii</hi></seg><seg type="translation" xml:lang="en" source="#claude">so; cf. MAT. p. <hi rend="smallcaps">xlviii</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_15-1.lnote.oe.e" n="e" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">502</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">dies übersetzt Hk Lateinisch o. S.</hi> 315 <hi rend="italic">Sp.</hi> 3*</seg><seg type="translation" xml:lang="en" source="#claude">Hk translates this into Latin, above p. 315 col. 3*</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_15-1.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">502</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so auch L; bessere</hi> XLII</seg><seg type="translation" xml:lang="en" source="#claude">so also L; read XLII</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_15-1.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">502</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">ergänze aus HkL</hi></seg><seg type="translation" xml:lang="en" source="#claude">supply from HkL</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_15-1.lnote.oe.20" n="20" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">502</biblScope></bibl><seg type="original" xml:lang="de">ert <hi rend="italic">Im;</hi> est <hi rend="italic">Isp</hi></seg><seg type="translation" xml:lang="en" source="#claude">ert <hi rend="italic">Im;</hi> est <hi rend="italic">Isp</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_15-1.lnote.oe.21" n="21" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">502</biblScope></bibl><seg type="original" xml:lang="de">alre <hi rend="italic">Isp</hi></seg><seg type="translation" xml:lang="en" source="#claude">alre <hi rend="italic">Isp</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_15-1.lnote.oe.22" n="22" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">502</biblScope></bibl><seg type="original" xml:lang="de">escoud. <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">escoud. Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_15-1.lnote.oe.23" n="23" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">502</biblScope></bibl><seg type="original" xml:lang="de">sisce <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">sisce <hi rend="italic">Im</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_15-1.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">503</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">L versteht nicht mehr ganz die alte Erschwerung der Eideshilfe</hi></seg><seg type="translation" xml:lang="en" source="#claude">L no longer fully understands the old aggravated form of oath-helping</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_15-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">288</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">-duble</hi> = ‘-fach’ auch in <hi rend="italic">cent</hi>, <hi rend="italic">set duble</hi> (La Curne); <hi rend="italic">in quadruplum</hi> II Reg. 12, 6 wird übs.: <hi rend="italic">quatre duble</hi>; Littré <hi rend="italic">Dict</hi>. 1228 col. 3.—<hi rend="italic">Vgl. Gl</hi> Eideshelfer 9. 44ff.; Auswahleid 14—16; Reinigung 4a. <hi rend="italic">In Myrcenis in triplici lada</hi>: 35 <hi rend="italic">consacramentales</hi>; Hn 66, 10</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">-duble</hi> = ‘-fold’, also in <hi rend="italic">cent</hi>, <hi rend="italic">set duble</hi> (La Curne); <hi rend="italic">in quadruplum</hi> II Reg. 12, 6 is rendered <hi rend="italic">quatre duble</hi>; Littré <hi rend="italic">Dict</hi>. 1228 col. 3.—<hi rend="italic">Cf. Gl</hi> Eideshelfer 9. 44ff.; Auswahleid 14—16; Reinigung 4a. <hi rend="italic">In Myrcenis in triplici lada</hi>: 35 <hi rend="italic">consacramentales</hi>; Hn 66, 10</seg></note>
       </div>
     </body>
   </text>

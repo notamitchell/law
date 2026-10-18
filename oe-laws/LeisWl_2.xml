@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Leis Wl 2</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,16 @@
       <sourceDesc>
         <bibl type="legalText"><title>The (So-called) Laws of William I (Leis Willelme)</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">492–493</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">252</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228</note></witness>
+          <witness xml:id="wit-hk"><abbr>Hk</abbr> <note type="manuscript">Holkham Hall, MS 228, f. 141, c. 1230</note></witness>
+          <witness xml:id="wit-i"><abbr>I</abbr> <note type="manuscript">Pseudo-Ingulf (Crowland), known only from three 17th-century prints</note></witness>
+          <witness xml:id="wit-l"><abbr>L</abbr> <note type="manuscript">Latin translation (c. 1200?) in S (London, British Library, Harley MS 746, f. 55v, c. 1325)</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,18 +48,36 @@
       <creation><date source="#liebermann #robertson">1090–1135</date><date source="#wormald-mel">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, Robertson); mid-12th century (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2359 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2359 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Hk added from Gesetze I, p. 492–493.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS I added from Gesetze I, p. 492–493.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS L added from Gesetze I, p. 492–493.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:LeisWl">Leis Wl</ref> 2</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-hk"><pb n="492–493" ed="#liebermann"/>E ki enfrei[n]t<ptr type="liebermannNote" n="1" target="#LeisWl_2.lnote.oe.1"/> pais le rei, en Merchenelahe cent souz les amendes. Autresi de hemfare<ptr type="liebermannNote" n="2" target="#LeisWl_2.lnote.oe.2"/> et de agwait purpensé.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-i"><pb n="492–493" ed="#liebermann"/>E qui<ptr type="liebermannNote" n="24" target="#LeisWl_2.lnote.oe.24"/> enfraint<ptr type="liebermannNote" n="25" target="#LeisWl_2.lnote.oe.25"/> la pais le rei, en Merchenelae cent solz les amendes. Altresi de hemfare<ptr type="liebermannNote" n="26" target="#LeisWl_2.lnote.oe.26"/> et de aweit purpensed<ptr type="liebermannNote" n="27" target="#LeisWl_2.lnote.oe.27"/>.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-l"><pb n="492–493" ed="#liebermann"/>De pace regia. Qui pacem regiam infregerit, secundum Merchenalahe C solid. pene succumbet. Similis de hamfare et insidiis precogitatis pena delinquentem<ptr type="liebermannNote" n="d" target="#LeisWl_2.lnote.oe.d"/> manet.</ab>
         <ab type="editionText" xml:lang="xno" source="#robertson" n="2" corresp="#wit-hk"><pb n="252" ed="#robertson"/>E ki enfrei[n]t pais le rei, en Merchenelahe cent souz les amendes. Autresi de hemfare et de agwait purpensé. Ice[z] plai[z] afierent a la curune le rei.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="492–493" ed="#liebermann"/>2. Und wer des Königs Sonderfriedensschutz [‘Mund’] bricht: im Mercier-Rechtsgebiet 100 Schill.<ptr type="liebermannNote" n="1" target="#LeisWl_2.lnote.de.1"/> Busse. Ebenso bei gewaltsamer Heimsuchung<ptr type="liebermannNote" n="2" target="#LeisWl_2.lnote.de.2"/> und vorbedachtem<ptr type="liebermannNote" n="3" target="#LeisWl_2.lnote.de.3"/> Überfall aus Hinterhalt.</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">2. And whoever breaks the king's special-peace protection [‘mund’]: in the Mercian legal district 100 shill. compensation. Likewise for forcible house-attack and premeditated assault from ambush.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-hk"><pb n="253" ed="#robertson"/>And he who violates the king's peace shall pay 100 shillings as compensation in the province of Mercia. And similarly for attacks on people's houses and for premeditated waylaying. These pleas belong to the King's Crown.</ab>
         <note type="comparison" source="#liebermann" n="493"><ref target="clause:IICn_12">II Cn 12</ref>; <ref target="clause:IICn_14">II Cn 14f.</ref>; <ref target="clause:ICn_3-2">I Cn 3.2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">II Cn. 12; 14 f. | I Cn. 3, 2</note>
-        <note type="editorial">Added October 2026 from Robertson pp. 252–253 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 252–253 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 492–493, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_2.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">492</biblScope></bibl><seg type="original" xml:lang="de">enfreit <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">enfreit Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_2.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">492</biblScope></bibl><seg type="original" xml:lang="de">hamf. <hi rend="italic">L;</hi> heinf. <hi rend="italic">bevorzugt Toynbee</hi></seg><seg type="translation" xml:lang="en" source="#claude">hamf. L; heinf. preferred by Toynbee</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_2.lnote.oe.24" n="24" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">492</biblScope></bibl><seg type="original" xml:lang="de">que <hi rend="italic">Io Isp</hi></seg><seg type="translation" xml:lang="en" source="#claude">que Io Isp</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_2.lnote.oe.25" n="25" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">492</biblScope></bibl><seg type="original" xml:lang="de">enfraiant <hi rend="italic">Isp;</hi> ensyaint <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">enfraiant Isp; ensyaint Io</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_2.lnote.oe.26" n="26" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">492</biblScope></bibl><seg type="original" xml:lang="de">heinf. <hi rend="italic">Io Isp</hi></seg><seg type="translation" xml:lang="en" source="#claude">heinf. Io Isp</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_2.lnote.oe.27" n="27" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">492</biblScope></bibl><seg type="original" xml:lang="de">prepensed <hi rend="italic">Im</hi></seg><seg type="translation" xml:lang="en" source="#claude">prepensed Im</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="LeisWl_2.lnote.oe.d" n="d" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">493</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Römische Wendung, nicht aus Engl. Mittellatein</hi></seg><seg type="translation" xml:lang="en" source="#claude">Roman phrase, not from English Medieval Latin</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">286</biblScope></bibl><seg type="original" xml:lang="de">Wieder 5 £; <hi rend="italic">vgl. Gl</hi> Königsschutz 5—b</seg><seg type="translation" xml:lang="en" source="#claude">Again 5 £; <hi rend="italic">cf. Gl</hi> Königsschutz 5—b</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">286</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ebd</hi>. Heimsuchung 1b. 11; Verf. wählt das Normann. Wort; <hi rend="italic">heinfar praecogitata</hi> Domesday I 269.—Wilhelm I. trat <hi rend="italic">invasionibus</hi> entgegen (Wil. Pictav. ed. Giles 147): also im Kern authentisch</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Ibid</hi>. Heimsuchung 1b. 11; the author chooses the Norman word; <hi rend="italic">heinfar praecogitata</hi> Domesday I 269.—William I took action against <hi rend="italic">invasionibus</hi> (Wil. Pictav. ed. Giles 147): thus authentic in substance</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="LeisWl_2.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">286</biblScope></bibl><seg type="original" xml:lang="de">Rechtsperrung (<hi rend="italic">s. d. Gl</hi> 4a. b. 6) steht in Agsächs. Recht an dieser Stelle; sie vermengt mit <hi rend="italic">assaltus</hi> auch Hn; der hier gewählte Französ. Terminus ist Normannisch; <hi rend="italic">vgl. Gl</hi> Angriff 6</seg><seg type="translation" xml:lang="en" source="#claude">Obstruction (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 4a. b. 6) stands at this point in Anglo-Saxon law; Hn too confuses it with <hi rend="italic">assaltus</hi>; the French term chosen here is Norman; <hi rend="italic">cf. Gl</hi> Angriff 6</seg></note>
       </div>
     </body>
   </text>

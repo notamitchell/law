@@ -4,10 +4,11 @@
     <fileDesc>
       <titleStmt>
         <title>Wl art 6.3</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +22,13 @@
       <sourceDesc>
         <bibl type="legalText"><title>The Ten Articles of William I</title> <note type="reign">Attributed to William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">487</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">240</biblScope></bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis), f. 80</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,19 +43,33 @@
       <creation><date source="#liebermann">compiled c.1110–35</date><date source="#robertson">compiled 1110–35</date><date source="#wormald-mel">late in William I's reign</date><note type="promulgation">compiled c.1110–35 (Liebermann); compiled 1110–35 (Robertson); late in William I's reign (Wormald)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2333 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2333 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 487.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6.3">
         <head><ref type="lawCode" target="law:WlArt">Wl art</ref> 6.3</head>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-h"><pb n="487" ed="#liebermann"/>Si [autem<ptr type="liebermannNote" n="62" target="#WlArt_6-3.lnote.oe.62"/>] Anglus<ptr type="liebermannNote" n="54" target="#WlArt_6-3.lnote.oe.54"/> Francigenam<ptr type="liebermannNote" n="63" target="#WlArt_6-3.lnote.oe.63"/> appellauerit et probare<ptr type="liebermannNote" n="64" target="#WlArt_6-3.lnote.oe.64"/> noluerit<ptr type="liebermannNote" n="65" target="#WlArt_6-3.lnote.oe.65"/> iudicio<ptr type="liebermannNote" n="n" target="#WlArt_6-3.lnote.oe.n"/> aut duello, uolo tamen<ptr type="liebermannNote" n="66" target="#WlArt_6-3.lnote.oe.66"/> Francigenam purgare<ptr type="liebermannNote" n="67" target="#WlArt_6-3.lnote.oe.67"/> se<ptr type="liebermannNote" n="68" target="#WlArt_6-3.lnote.oe.68"/> sacramento non fracto<ptr type="liebermannNote" n="69" target="#WlArt_6-3.lnote.oe.69"/><ptr type="liebermannNote" n="o" target="#WlArt_6-3.lnote.oe.o"/>.</ab>
         <ab type="editionText" xml:lang="la" source="#robertson" n="6.3" corresp="#wit-h"><pb n="240" ed="#robertson"/>Si [autem] Anglus Francigen[a]m appellaverit et probare noluerit iudicio aut duello, volo tamen Francigenam purgare se sacramento non fracto.</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><pb n="241" ed="#robertson"/>If, however, an Englishman summons a Frenchman and declines to prove [the charge] by ordeal or by combat, it is my will that the Frenchman shall clear himself by a comprehensive oath.</ab>
         <note type="comparison" source="#liebermann" n="487"><ref target="clause:WiLad_3-1">Wl lad 3.1f.</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 3, 1 f.</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:WiLad_3-1">Wl lad 3.1</ref>; <ref target="clause:WiLad_3-2">Wl lad 3.2</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 240–241 (text and translation); Liebermann’s text (K–M) not yet added</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 240–241 (text and translation); Liebermann’s text added from Gesetze I p. 487, October 2026 (two independent readings of the page images)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-3.lnote.oe.n" n="n" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Eisenordal war Angelsächsisches Beweismittel, also vom Engländer nicht zu verweigern; es lag aber dem Beklagten ob; der Zusatz ist also späteres Missverständniss</hi></seg><seg type="translation" xml:lang="en" source="#claude">the iron ordeal was an Anglo-Saxon means of proof and so could not be refused by the Englishman; but it was incumbent on the accused; the addition is therefore a later misunderstanding</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-3.lnote.oe.o" n="o" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">für Hoveden um</hi> 1195 <hi rend="italic">war</hi> Stabeid <hi rend="italic">veraltet; vgl.</hi> Wl art. Franz. 6, 3</seg><seg type="translation" xml:lang="en" source="#claude">for Hoveden c. 1195 the formal oath (Stabeid) was obsolete; cf. Wl art. Franz. 6, 3</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-3.lnote.oe.54" n="54" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">-licus <hi rend="italic">Hv</hi></seg><seg type="translation" xml:lang="en" source="#claude">-licus <hi rend="italic">Hv</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-3.lnote.oe.62" n="62" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">aus T Cb Hv Retr Ra Vi Va Ph Pl; fehlt H Rl;</hi> and <hi rend="italic">Wl lad</hi> 3, 1</seg><seg type="translation" xml:lang="en" source="#claude">from T Cb Hv Retr Ra Vi Va Ph Pl; omitted H Rl; and Wl lad 3, 1</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-3.lnote.oe.63" n="63" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">-nem <hi rend="italic">H Rl;</hi> Franc. — tamen <hi rend="italic">überspringt Pl</hi></seg><seg type="translation" xml:lang="en" source="#claude">-nem H Rl; Franc. — tamen skipped by Pl</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-3.lnote.oe.64" n="64" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">eum approb. <hi rend="italic">Hv</hi></seg><seg type="translation" xml:lang="en" source="#claude">eum approb. <hi rend="italic">Hv</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-3.lnote.oe.65" n="65" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">uol. <hi rend="italic">Cb Hv Retr Ra Vi Ph</hi> [<hi rend="italic">also schon seit c.</hi> 1170 <hi rend="italic">missverstanden</hi>]</seg><seg type="translation" xml:lang="en" source="#claude">uol. Cb Hv Retr Ra Vi Ph [thus misunderstood already from c. 1170]</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-3.lnote.oe.66" n="66" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">tunc <hi rend="italic">Hv Retr</hi></seg><seg type="translation" xml:lang="en" source="#claude">tunc <hi rend="italic">Hv Retr</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-3.lnote.oe.67" n="67" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">se p. <hi rend="italic">Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">se p. Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-3.lnote.oe.68" n="68" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Hv;</hi> in <hi rend="italic">fügt zu Vi Va Ph Pl</hi></seg><seg type="translation" xml:lang="en" source="#claude">omitted in Hv; Vi Va Ph Pl add in</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-3.lnote.oe.69" n="69" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">487</biblScope></bibl><seg type="original" xml:lang="de">ferro <hi rend="italic">Hv</hi></seg><seg type="translation" xml:lang="en" source="#claude">ferro Hv</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WlArt_6-3.lnote.oe._" n="-" source="#liebermann"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">281</biblScope></bibl><seg type="original" xml:lang="de">Die Zufügung des Verfs. <hi rend="italic">iudicio</hi> macht aus dem Satze Unsinn</seg><seg type="translation" xml:lang="en" source="#claude">The compiler's addition <hi rend="italic">iudicio</hi> makes nonsense of the sentence</seg></note>
       </div>
     </body>
   </text>

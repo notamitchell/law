@@ -4,10 +4,13 @@
     <fileDesc>
       <titleStmt>
         <title>Wl lad Inscr.</title>
+        <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Edition of the text</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#robertson">Robertson</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
-        <respStmt><resp>Date and place</resp><name ref="#liebermann">Liebermann</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -21,12 +24,15 @@
       <sourceDesc>
         <bibl type="legalText"><title>William I: Regulations Regarding Exculpation</title> <note type="reign">William I, r. 1066–1087</note></bibl>
         <listBibl type="sources">
-          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903)</bibl>
+          <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">483</biblScope></bibl>
           <bibl xml:id="robertson" type="edition">A. J. Robertson, The Laws of the Kings of England from Edmund to Henry I (Cambridge: Cambridge University Press, 1925), p. <biblScope unit="page">232</biblScope></bibl>
+          <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
-          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5)</note></witness>
+          <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis)</note></witness>
+          <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -41,17 +47,30 @@
       <creation><date source="#liebermann">1067–77</date><date source="#robertson">1068–77</date><note type="promulgation">1067–77 (Liebermann); 1068–77 (Robertson)</note></creation>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-10-18">Generated from row 2300 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10-19">Generated from row 2300 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 483.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Q added from Gesetze I, p. 483.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="Inscr.">
         <head><ref type="lawCode" target="law:WiLad">Wl lad</ref> Inscr.</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-h"><pb n="483" ed="#liebermann"/>Willelmes<ptr type="liebermannNote" n="b" target="#WiLad_Inscr.lnote.oe.b"/> cyninges asetnysse.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" corresp="#wit-q"><pb n="483" ed="#liebermann"/>Institutio<ptr type="liebermannNote" n="1" target="#WiLad_Inscr.lnote.oe.1"/> regis<ptr type="liebermannNote" n="2" target="#WiLad_Inscr.lnote.oe.2"/> Willelmi.</ab>
         <ab type="editionText" xml:lang="ang" source="#robertson" n="Inscr." corresp="#wit-h"><pb n="232" ed="#robertson"/>Willelmes cyninges asetnysse.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><ptr type="liebermannNote" n="1" target="#WiLad_Inscr.lnote.de.1"/><pb n="483" ed="#liebermann"/>(König Wilhelms Satzungen<ptr type="liebermannNote" n="2" target="#WiLad_Inscr.lnote.de.2"/>).</ab>
+        <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">(King William's ordinances).</ab>
         <ab type="translation" xml:lang="en" source="#robertson" corresp="#wit-h"><pb n="233" ed="#robertson"/>King William's ordinances.</ab>
         <note type="comparedBy" source="#wormald-mel" n="403"><ref target="clause:WlArt_6">Wl art 6</ref></note>
-        <note type="editorial">Added October 2026 from Robertson pp. 232–233 (text and translation); Liebermann’s text (K–M) not yet added; F: corrected against Liebermann, Gesetze I (date in the running heads), October 2026 (was “1068–77 (Robertson)”, now “1067–77 (Liebermann); 1068–77 (Robertson)”); V: page of the modern editor’s text / translation, checked against Robertson (translation on the facing page), October 2026 (e.g. was “232”, now “232 / 233”; 11 rows of Wl lad)</note>
+        <note type="editorial">Added October 2026 from Robertson pp. 232–233 (text and translation); Liebermann’s text and German translation added from Gesetze I p. 483, October 2026 (two independent readings of the page images); F: corrected against Liebermann, Gesetze I (date in the running heads), October 2026 (was “1068–77 (Robertson)”, now “1067–77 (Liebermann); 1068–77 (Robertson)”); V: page of the modern editor’s text / translation, checked against Robertson (translation on the facing page), October 2026 (e.g. was “232”, now “232 / 233”; 11 rows of Wl lad)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="WiLad_Inscr.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">483</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Textus Roffensis f.</hi> 47, <hi rend="italic">hinter I Atr.</hi> (<hi rend="italic">s. oben S.</hi> 220{1}), <hi rend="italic">in derselben Hand um</hi> 1120</seg><seg type="translation" xml:lang="en" source="#claude">Textus Roffensis f. 47, after I Atr. (see above p. 220{1}), in the same hand, c. 1120</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WiLad_Inscr.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">483</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Überschrift roth, wie vor</hi> Ine <hi rend="italic">und</hi> I Em. <hi rend="italic">durch H eingeführt, nicht original</hi></seg><seg type="translation" xml:lang="en" source="#claude">Heading in red; like those before Ine and I Em., introduced by H, not original</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WiLad_Inscr.lnote.oe.a-2" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">483</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">hinter</hi> Rect. <hi rend="italic">R; hinter</hi> Wer <hi rend="italic">MHk; hinter</hi> III Em. <hi rend="italic">T; hinter</hi> Art. Wl. retractati <hi rend="italic">in derselben Hand um</hi> 1230 <hi rend="italic">Sc</hi> (<hi rend="italic">daraus Hg und Nachtrag</hi> 15. <hi rend="italic">Jhs. in K</hi>); <hi rend="italic">hinter Wilhelms I. Geschichte</hi> IpMl, <hi rend="italic">d. i. Interpolator Will. Malmesb. Reg. ed. Stubbs p.</hi> 348, <hi rend="italic">aus Cs He Ht</hi></seg><seg type="translation" xml:lang="en" source="#claude">after Rect. R; after Wer MHk; after III Em. T; after Art. Wl. retractati in the same hand, c. 1230, Sc (from which Hg and a 15th-cent. addition in K); after the history of William I IpMl, i.e. the interpolator of Will. Malmesb. Reg. ed. Stubbs p. 348, from Cs He Ht</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WiLad_Inscr.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">483</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so RMHk;</hi> Incipiunt instituta uel <hi rend="spaced">emendationes</hi> r. W. <hi rend="italic">T;</hi> Incipiunt leges eiusdem <hi rend="italic">Intp. Malmesb.;</hi> Carta eiusdem r. W. de appellatis pro aliquo maleficio, Franco uel Anglico <hi rend="italic">Sc</hi> (<hi rend="italic">nachträglich um</hi> 1250) <hi rend="italic">Hg</hi></seg><seg type="translation" xml:lang="en" source="#claude">so RMHk; Incipiunt instituta uel <hi rend="italic">emendationes</hi> r. W. T; Incipiunt leges eiusdem Intp. Malmesb.; Carta eiusdem r. W. de appellatis pro aliquo maleficio, Franco uel Anglico Sc (added later, c. 1250) Hg</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="WiLad_Inscr.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">483</biblScope></bibl><seg type="original" xml:lang="de">W. r. <hi rend="italic">MHk, wo folgt:</hi> Si Anglicus Francigenam uel conuerso homicidii uel furti uel utlagarię accusauerit. <hi rend="italic">Diese Rubrik des Quadr. letzter Edition, ohne Angelsächs. Vorlage, ähnelt der zu</hi> II Atr. 5, <hi rend="italic">oben S.</hi> 220**, <hi rend="italic">Z.</hi> 7 <hi rend="italic">v. u.</hi></seg><seg type="translation" xml:lang="en" source="#claude">W. r. MHk, where there follows: Si Anglicus Francigenam uel conuerso homicidii uel furti uel utlagarię accusauerit. This rubric of the last edition of the Quadr., which has no Anglo-Saxon original, resembles that to II Atr. 5, above p. 220**, l. 7 from the bottom</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="WiLad_Inscr.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">272</biblScope></bibl><seg type="original" xml:lang="de">Trotz Ähnlichkeit der Überschrift in H und Q liegt kein Anlass vor, sie aus der gemeinsamen Vorlage, dem Archetyp, herzuleiten; denn <hi rend="italic">asetnysse</hi> überschreibt Kompilator H auch Ine (<hi rend="italic">o</hi>. S. 67 Insc{1}) und I Em, während Q auch <hi rend="italic">gerædnis</hi> durch <hi rend="italic">instituta</hi> überträgt I Cn Pro</seg><seg type="translation" xml:lang="en" source="#claude">Despite the similarity of the heading in H and Q there is no reason to derive it from their common exemplar, the archetype; for compiler H also gives Ine (<hi rend="italic">above</hi> p. 67 Insc{1}) and I Em the heading <hi rend="italic">asetnysse</hi>, while Q also renders <hi rend="italic">gerædnis</hi> by <hi rend="italic">instituta</hi>, I Cn Pro</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="WiLad_Inscr.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">272</biblScope></bibl><seg type="original" xml:lang="de">H pflegt frühe Formen so gut zu wahren, dass er hier vielleicht Plural meint, obwohl er in Af 41{11} -<hi rend="italic">nesse</hi> und Hss. desselben Menschenalters -<hi rend="italic">nysse</hi> schon auch als Sing. verwenden II Cn 23, 1. 37.—<hi rend="italic">Emendationes</hi>, wie T überschreibt, gehört vielleicht Q selbst; denn Heinrich I. (C Hn cor 13) und seine Zeit bezeichneten so Wilhelms Gesetzgebung; <hi rend="italic">s. u</hi>. zu Wl art Insc{a}</seg><seg type="translation" xml:lang="en" source="#claude">H tends to preserve early forms so faithfully that he perhaps means a plural here, although in Af 41{11} he already uses -<hi rend="italic">nesse</hi> as a sing. too, as MSS of the same generation do -<hi rend="italic">nysse</hi>, II Cn 23, 1. 37.—<hi rend="italic">Emendationes</hi>, as T’s heading has it, perhaps belongs to Q himself; for Henry I (C Hn cor 13) and his age so described William’s legislation; see <hi rend="italic">below</hi> on Wl art Insc{a}</seg></note>
       </div>
     </body>
   </text>
