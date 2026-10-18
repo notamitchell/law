@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +27,7 @@
           <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
@@ -49,18 +51,24 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2248 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 474.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 474: “7” → “⁊”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 474: “jemand” → “jémand”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:Romscot">Romscot</ref> 2</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-g-a"><pb n="474" ed="#liebermann"/>Gif hit hwa forgumie, gylde LX scill' 7 be twelffealdan agife þene Rómpenincg.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="474" ed="#liebermann"/>Wenn es jemand versäumt, zahle er 60 Schill. und entrichte den Rompfennig mit Zwölffachem.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-g-a"><pb n="474" ed="#liebermann"/>Gif hit hwa forgumie, gylde LX scill' ⁊ be twelffealdan agife þene Rómpenincg<ptr type="liebermannNote" n="c" target="#Romscot_2.lnote.oe.c"/>.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="474" ed="#liebermann"/>Wenn es jémand versäumt<ptr type="liebermannNote" n="1" target="#Romscot_2.lnote.de.1"/>, zahle er 60<ptr type="liebermannNote" n="2" target="#Romscot_2.lnote.de.2"/> Schill. und entrichte den Rompfennig mit Zwölffachem<ptr type="liebermannNote" n="3" target="#Romscot_2.lnote.de.3"/>.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If anyone neglects it, let him pay 60 shillings and render the Rome-penny twelvefold.</ab>
         <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-g-a">If anyone misses [this date], he should pay [a fine of] 60 shillings, and pay twelve times [the Peter's pence].</ab>
         <note type="comparison" source="#wormald-mel" n="368"><label>term recurs</label> <ref target="clause:Northu_57-1">Northu 57.1</ref> <quote>the 'Rompenincg' of Romscot 2 recurs in Northu 57:1</quote></note>
         <note type="editorial">In G, Iudex follows in the same hand.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Romscot_2.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">474</biblScope></bibl><seg type="original" xml:lang="de">per aequitatem corrigat <hi rend="italic">Isidor</hi></seg><seg type="translation" xml:lang="en" source="#claude">per aequitatem corrigat Isidor</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Romscot_2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">268</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. ofergumian</hi> bei Toller</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. ofergumian</hi> in Toller</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Romscot_2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">268</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Öffentliches Strafgeld; anders <hi rend="italic">Gl</hi> Peterspfennig 17. Vielleicht erklärt sich diese Summe als das von Ine 4 für Vorenthaltung des Kirchenpfennigs angedrohte Strafgeldfixum; <hi rend="italic">s. d</hi>. 12. a</seg><seg type="translation" xml:lang="en" source="#claude">A public fine; differently in <hi rend="italic">Gl</hi> Peterspfennig 17. Perhaps this sum is to be explained as the fixed fine threatened by Ine 4 for withholding church-scot; <hi rend="italic">see</hi> that word 12. a</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Romscot_2.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">268</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Auch diese Busse für die Kirche regeln alle Gesetze über Peterspfennig anders; dageg. jenes Gesetz Ines ebenso: <hi rend="italic">LX scill. ⁊ be twelffealdum agife þone</hi></seg><seg type="translation" xml:lang="en" source="#claude">This compensation to the church, too, is regulated differently by all the laws on Peter's Pence; that law of Ine, on the other hand, has it in the same way: <hi rend="italic">LX scill. ⁊ be twelffealdum agife þone</hi></seg></note>
       </div>
     </body>
   </text>

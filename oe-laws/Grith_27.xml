@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +28,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">30</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
@@ -50,17 +52,21 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2232 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 472.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 472: “7; 7; 7; 7” → “⁊; ⁊; ⁊; ⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="27">
         <head><ref type="lawCode" target="law:Grith">Grið</ref> 27</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="27" corresp="#wit-g-b"><pb n="472" ed="#liebermann"/>Oððon hwilcan geþance mæg ænig man æfre geþencan on his mode, þ<hi rend="italic">æt</hi> he to sacerdan heafod ahylde 7 bletsunge gyrne 7 heora mæssan on cyrcan gestande 7 æt hlafgange heora hand cysse, 7 sona þær æfter hy hrædlice syððan scyrde oððe scynde mid worde oððe weorce?</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="27" corresp="#wit-g-b"><pb n="472" ed="#liebermann"/>Oððon hwilcan geþance mæg ænig man æfre geþencan on his mode, þ<hi rend="italic">æt</hi> he to sacerdan heafod ahylde ⁊ bletsunge gyrne ⁊ heora mæssan on cyrcan<ptr type="liebermannNote" n="1" target="#Grith_27.lnote.oe.1"/> gestande ⁊ æt hlafgange heora hand cysse, ⁊ sona þær æfter hy<ptr type="liebermannNote" n="1" target="#Grith_27.lnote.oe.1"/> hrædlice syððan<ptr type="liebermannNote" n="1" target="#Grith_27.lnote.oe.1"/> scyrde oððe scynde mid worde oððe weorce?</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" n="27" corresp="#wit-g-b"><pb n="30" ed="#rabin-doml"/>Oððon hwilcan geþance mæg ænig man æfre geþencan on his mode þæt he to sacerdan heafod ahylde, and bletsunge gyrne, and heora mæssan on cyrcan gestande, and æt hlafgange heora hand cysse, and sona þær æfter hy hrædlice syððan scyrde oððe scynde mid worde oððe weorce?</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="472" ed="#liebermann"/>Oder mit welcher Überlegung kann jemand jemals in seinem Sinne sich [dázu] entschliessen, dass er vor den Priestern das Haupt neigt und Segen erbittet und ihren Messen in der Kirche beiwohnt und beim Abendmahlsempfange ihre Hand küsst, sofort jedoch danach sie dann schnell verletzt oder bedrängt durch Wort oder That?</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="472" ed="#liebermann"/>Oder mit welcher Überlegung kann jemand jemals in seinem Sinne sich [dázu] entschliessen, dass er vor den Priestern das Haupt neigt und Segen erbittet und ihren Messen in der Kirche beiwohnt und beim Abendmahlsempfange<ptr type="liebermannNote" n="1" target="#Grith_27.lnote.de.1"/> ihre Hand küsst, sofort jedoch danach sie dann schnell verletzt<ptr type="liebermannNote" n="2" target="#Grith_27.lnote.de.2"/> oder bedrängt durch Wort oder That?</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Or with what consideration can anyone ever resolve in his mind [to do this]: that he bows his head before the priests and asks for blessing and attends their masses in church and kisses their hand at communion, yet immediately afterwards quickly injures or oppresses them by word or deed?</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-b"><pb n="31" ed="#rabin-doml"/>Or by what stretch of the imagination can anyone ever think in his mind that he may bow his head to the priests, desire their blessings, attend their Masses in church, and kiss their hand during the procession with the host, yet then immediately thereafter injure or abuse them by word or deed?</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Grith_27.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">473</biblScope></bibl><seg type="original" xml:lang="de">[<hi rend="italic">Eingeklammertes</hi>] <hi rend="italic">von mir ergänzt</hi></seg><seg type="translation" xml:lang="en" source="#claude">[Bracketed matter] supplied by me</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Grith_27.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">267</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Nicht ‘panis circumgestatio’ Wilkins; ‘procession with the host’ Toller, Sweet. Vielmehr = <hi rend="italic">huslgang; panem sanctum</hi> übersetzt Agsächs. Kanonistik um 1000 durch <hi rend="italic">gehalgod hláf</hi>; Bo.-Toller s. v.; <hi rend="italic">vgl. Gl</hi> Abendmahl 4; Geistliche 13a</seg><seg type="translation" xml:lang="en" source="#claude">Not ‘panis circumgestatio’ Wilkins; ‘procession with the host’ Toller, Sweet. Rather = <hi rend="italic">huslgang</hi>; Anglo-Saxon canon law c. 1000 translates <hi rend="italic">panem sanctum</hi> by <hi rend="italic">gehalgod hláf</hi>; Bo.-Toller s. v.; <hi rend="italic">cf. Gl</hi> Abendmahl 4; Geistliche 13a</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Grith_27.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">267</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Ungenau ‘revile’ Thorpe, ‘schiert oder beschimpft’ Schmid.—Auch in dieser Zeile stehen zwei Alliterationspaare</seg><seg type="translation" xml:lang="en" source="#claude">Inexactly ‘revile’ Thorpe, ‘schiert oder beschimpft’ Schmid.—In this line too there are two alliterating pairs</seg></note>
       </div>
     </body>
   </text>

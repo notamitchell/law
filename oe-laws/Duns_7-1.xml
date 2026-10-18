@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +27,7 @@
           <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -50,18 +52,24 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1934 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 378.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 378: “ungesaþene” → “ungesaƿene”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7.1">
         <head><ref type="lawCode" target="law:Duns">Duns</ref> 7.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7.1" corresp="#wit-q"><pb n="379" ed="#liebermann"/>Cetere res ungesaþene (id est non uise) possunt iuramento comprobari et secundum hoc reddi. Capra duos d.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7.1" corresp="#wit-b"><pb n="378" ed="#liebermann"/>Oðre ungesawene ðing man mot mid aðe gewyrðan, ⁊ syððan be ðam gyldan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="379" ed="#liebermann"/>Andere, unsichtbare [abstracte] Sachen dürfen [vom Kläger] durch Eid bewerthet und [ihm] dann demgemäss bezahlt werden.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7.1" corresp="#wit-b"><pb n="378" ed="#liebermann"/>Oðre ungesawene ðing man<ptr type="liebermannNote" n="5" target="#Duns_7-1.lnote.oe.5"/> mot mid aðe gewyrðan, ⁊ syððan be ðam gyldan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7.1" corresp="#wit-q"><pb n="379" ed="#liebermann"/>Cetere res ungesaƿene<ptr type="liebermannNote" n="13" target="#Duns_7-1.lnote.oe.13"/> (id est non uise) possunt<ptr type="liebermannNote" n="14" target="#Duns_7-1.lnote.oe.14"/> iuramento comprobari et secundum hoc reddi. Capra duos d.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="379" ed="#liebermann"/>Andere, unsichtbare [abstracte<ptr type="liebermannNote" n="1" target="#Duns_7-1.lnote.de.1"/>] Sachen dürfen [vom Kläger] durch Eid bewerthet<ptr type="liebermannNote" n="2" target="#Duns_7-1.lnote.de.2"/> und [ihm] dann demgemäss bezahlt werden.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Other, unseen [abstract] things may be valued by oath [by the plaintiff] and then paid [to him] accordingly.</ab>
         <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-b">Other unseen things [i.e. not on the above list?] may be valued [by the plaintiff] by [taking an] oath, and paid out accordingly.</ab>
         <note type="editorial">The Quadripartitus's ‘Capra duos d.’ at the end of this clause belongs to 7 in the OE (see the note there).</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_7-1.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">378</biblScope></bibl><seg type="original" xml:lang="de">mon <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">mon Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_7-1.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">379</biblScope></bibl><seg type="original" xml:lang="de">-seƿ. <hi rend="italic">T M Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">-seƿ. T M Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_7-1.lnote.oe.14" n="14" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">379</biblScope></bibl><seg type="original" xml:lang="de">-sint <hi rend="italic">M Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">-sint M Hk</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Duns_7-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">219</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. Archiv</hi> (<hi rend="italic">o</hi>. Pro⁶) 288f.</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See Archiv</hi> (<hi rend="italic">above</hi> Pro⁶) 288f.</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Duns_7-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">219</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. Gl</hi> Taxe 7. Q übs. besser <hi rend="italic">adpreciare</hi> AGu 3. Er meint hier wohl, dass der Eid zugleich beweist</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See Gl</hi> Taxe 7. Q translates better at AGu 3: <hi rend="italic">adpreciare</hi>. Here he probably means that the oath at the same time constitutes proof</seg></note>
       </div>
     </body>
   </text>

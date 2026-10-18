@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +28,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">30</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
@@ -50,21 +52,24 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2236 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 473.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 473: “7; 7; 7” → “⁊; ⁊; ⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="31">
         <head><ref type="lawCode" target="law:Grith">Grið</ref> 31</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="31" corresp="#wit-g-b"><pb n="473" ed="#liebermann"/>7 þon<hi rend="italic">ne</hi> is rihtlic eac, þ<hi rend="italic">æt</hi> ure ælce oðerne healde mid rihte, 7 þ<hi rend="italic">æt</hi> ælc cyrice sy æfre on Godes ealmihtiges griðe 7 on ealles Cristenes folces.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="31" corresp="#wit-g-b"><pb n="473" ed="#liebermann"/>⁊ þon<hi rend="italic">ne</hi> is rihtlic eac, þ<hi rend="italic">æt</hi> ure ælce oðerne healde mid rihte, ⁊ þ<hi rend="italic">æt</hi> ælc cyrice<ptr type="liebermannNote" n="1" target="#Grith_31.lnote.oe.1"/> sy<ptr type="liebermannNote" n="1" target="#Grith_31.lnote.oe.1"/> æfre on Godes ealmihtiges griðe ⁊ on ealles Cristenes folces.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" n="31" corresp="#wit-g-b"><pb n="30" ed="#rabin-doml"/>And þonne is rihtlic eac þæt ure ælce oðerne healde mid rihte, and þæt ælc cyrice sy æfre on Godes ealmihtiges griðe and on ealles Cristenes folces.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="473" ed="#liebermann"/>Und ferner ist auch richtig, dass jeder von uns den andern rechtmässig behandle, und dass jede Kirche immer im Sonderschutze des allmächtigen Gottes und des ganzen christlichen Volkes sei.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="473" ed="#liebermann"/>Und ferner ist auch richtig, dass jeder von uns den andern rechtmässig behandle, und dass jede<ptr type="liebermannNote" n="1" target="#Grith_31.lnote.de.1"/> Kirche immer im Sonderschutze des allmächtigen Gottes und des ganzen christlichen Volkes sei.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And further it is also right that each of us treat the other lawfully, and that every church be always under the special protection of Almighty God and of all the Christian people.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-b"><pb n="31" ed="#rabin-doml"/>And then it is also right that each of us treat one another with justice, and that every church be ever in the protection of God almighty and of all Christian people.</ab>
         <note type="comparison" source="#liebermann" n="473"><ref target="clause:VIAtr_13">VI Atr 13</ref></note>
         <note type="comparisonPrinted" source="#liebermann">VI Atr. 13</note>
         <note type="comparedBy" source="#wormald-mel" n="356"><ref target="clause:ICn_2-1">I Cn 2.1</ref></note>
         <note type="editorial">Liebermann compares VI Atr 13.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Grith_31.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">473</biblScope></bibl><seg type="original" xml:lang="de">[<hi rend="italic">Eingeklammertes</hi>] <hi rend="italic">von mir ergänzt</hi></seg><seg type="translation" xml:lang="en" source="#claude">[Bracketed matter] supplied by me</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Grith_31.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">267</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Ferner steht VIII Atr 1</seg><seg type="translation" xml:lang="en" source="#claude">A more remote parallel is VIII Atr 1</seg></note>
       </div>
     </body>
   </text>

@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#attenborough">Attenborough</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +28,7 @@
           <bibl xml:id="attenborough" type="edition">F. L. Attenborough, <title>The Laws of the Earliest English Kings</title> (Cambridge: Cambridge University Press, 1922)</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -52,18 +54,23 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2030 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 387.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 387: “7” → “⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4.3">
         <head><ref type="lawCode" target="law:Ordal">Ordal</ref> 4.3</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.3" corresp="#wit-h"><pb n="387" ed="#liebermann"/>7 ne sy þær nan oðer spǽc inne, buton þæt hig biddan God ælmihtig georne, þ<hi rend="italic">æt</hi> he þ<hi rend="italic">æt</hi> soðeste geswytelie.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.3" corresp="#wit-q"><pb n="387" ed="#liebermann"/>Et non sit ibi (illic) alia locutio, quam ut precentur sedulo Deum (patrem) omnipotentem, ut ueritatem suam (in eo) manifestare dignetur.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.3" corresp="#wit-h"><pb n="387" ed="#liebermann"/>⁊ ne sy þær nan oðer spǽc inne, buton þæt hig biddan God ælmihtig georne, þ<hi rend="italic">æt</hi> he þ<hi rend="italic">æt</hi> soðeste geswytelie.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.3" corresp="#wit-q"><pb n="387" ed="#liebermann"/>Et non sit<ptr type="liebermannNote" n="2" target="#Ordal_4-3.lnote.oe.2"/> ibi<ptr type="liebermannNote" n="7" target="#Ordal_4-3.lnote.oe.7"/> (illic) alia locutio, quam ut precentur sedulo Deum (patrem<ptr type="liebermannNote" n="2" target="#Ordal_4-3.lnote.oe.2"/>) omnipotentem<ptr type="liebermannNote" n="8" target="#Ordal_4-3.lnote.oe.8"/>, ut ueritatem suam (in<ptr type="liebermannNote" n="2" target="#Ordal_4-3.lnote.oe.2"/> eo) manifestare dignetur.</ab>
         <ab type="editionText" xml:lang="ang" source="#attenborough" n="1.4[d]" corresp="#wit-h">and ne sy þær nan oðer spǽc inne, buton þæt hig biddan God Ælmihtig georne, þæt he soðeste geswytelie.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="387" ed="#liebermann"/>Und kein anderes Sprechen finde drinnen statt, ausser dass sie Gott den allmächtigen eifrig bitten sollen, dass er das Wahrste offenbaren möge.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="387" ed="#liebermann"/>Und kein anderes Sprechen finde drinnen<ptr type="liebermannNote" n="1" target="#Ordal_4-3.lnote.de.1"/> statt, ausser dass sie Gott den allmächtigen eifrig bitten sollen, dass er das Wahrste offenbaren möge.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And let there be no other speech inside, except that they earnestly pray God almighty that he reveal the truest.</ab>
         <ab type="translation" xml:lang="en" source="#attenborough" corresp="#wit-h">and no other words shall be spoken in the church, except that God be earnestly prayed to make clear the whole truth.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_4-3.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">387</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_4-3.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">387</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vor der Klammer Lond; eingeklammertes übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">what precedes the bracket Lond; what is bracketed the rest</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ordal_4-3.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">387</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt MHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in MHk</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ordal_4-3.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">227</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">In der Kirche; grundlos figürlich: ‘trete dazwischen’ Schmid.—Die Wahrheit zu offenbaren, bittet Gott (<hi rend="italic">s. d. Gl</hi> 6b) das Ritual Iud Dei XII 17, 1. XVI 7</seg><seg type="translation" xml:lang="en" source="#claude">In the church; without grounds taken figuratively, ‘intervene’, by Schmid.—The ritual Iud Dei XII 17, 1. XVI 7 asks God (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 6b) to reveal the truth</seg></note>
       </div>
     </body>
   </text>

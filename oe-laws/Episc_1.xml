@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -25,6 +26,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">477</biblScope></bibl>
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">102</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-x" rend="bold"><abbr>X</abbr> <note type="manuscript">Oxford, Bodleian Library, Junius 121</note></witness>
@@ -51,15 +53,21 @@
     <body>
       <div type="clause" n="1">
         <head><ref type="lawCode" target="law:Episc">Episc</ref> 1</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1" corresp="#wit-q"><pb n="477" ed="#liebermann"/>Episcopo (iure) pertinet, omne rectum (omnem rectitudinem) promovere, Dei uidelicet et (ac) seculi.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-x"><pb n="477" ed="#liebermann"/>Bisceope gebyreð ælc rihting, ge on godcundan þingan ge on woruldcundan.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-x"><pb n="477" ed="#liebermann"/>Bisceope<ptr type="liebermannNote" n="1" target="#Episc_1.lnote.oe.1"/> gebyreð ælc rihting, ge on godcundan þingan ge on woruldcundan.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="1" corresp="#wit-q"><pb n="477" ed="#liebermann"/>Episcopo (iure<ptr type="liebermannNote" n="2" target="#Episc_1.lnote.oe.2"/>) pertinet, omne<ptr type="liebermannNote" n="3" target="#Episc_1.lnote.oe.3"/> rectum (omnem rectitudinem) promovere, Dei uidelicet et<ptr type="liebermannNote" n="3" target="#Episc_1.lnote.oe.3"/> (ac) seculi.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-x"><pb n="102" ed="#rabin-doml"/><hi rend="italic">Item</hi> Bisceope gebyreð ælc rihting, ge on godcundan þingan ge on woruldcundan.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="477" ed="#liebermann"/>Einem Bischofe gebührt jede Leitung sowohl in kirchlichen Dingen wie in weltlichen.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><ptr type="liebermannNote" n="1" target="#Episc_1.lnote.de.1"/><pb n="477" ed="#liebermann"/>Einem Bischofe gebührt jede Leitung sowohl in kirchlichen Dingen wie in weltlichen<ptr type="liebermannNote" n="2" target="#Episc_1.lnote.de.2"/>.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">To a bishop belongs all direction, both in spiritual matters and in secular ones.</ab>
-        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-x"><pb n="103" ed="#rabin-doml"/>It is proper for a bishop to offer guidance in all things, both in religious and secular matters.</ab>
-        <note type="editorial">Spacing and a line break inside K were tidied.</note>
-        <note type="textual" source="#rabin-doml">Manuscripts: X = Oxford, Bodleian Library, MS Junius 121, fols. 13v–15r. Item: preceded by vii. in manuscript</note>
-        <note type="translator" source="#rabin-doml">[title] Furthermore: This is the only title given to the text in the manuscript, where it follows the sixth chapter of 2 Polity (“Likewise, Concerning Bishops”). The title Episcopus (On Episcopal Duties) was given to it by Liebermann.</note>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-x"><pb n="103" ed="#rabin-doml"/><hi rend="italic">Furthermore</hi> It is proper for a bishop to offer guidance in all things, both in religious and secular matters.</ab>
+        <note type="editorial">Spacing and a line break inside K were tidied.; W: corrected against Rabin p. 103, October 2026 (was “∅”, now “Furthermore”); AY: corrected against Rabin p. 102 / 103, October 2026 (was “∅; vii.”, now “|; VII.”); AZ: corrected against Rabin p. 102 / 103, October 2026 (was “[title]”, now “∅”)</note>
+        <note type="textual" source="#rabin-doml">Manuscripts: X = Oxford, Bodleian Library, MS Junius 121, fols. 13v–15r.</note>
+        <note type="textual" source="#rabin-doml">Item: preceded by VII. in manuscript</note>
+        <note type="translator" source="#rabin-doml">Furthermore: This is the only title given to the text in the manuscript, where it follows the sixth chapter of 2 Polity (“Likewise, Concerning Bishops”). The title Episcopus (On Episcopal Duties) was given to it by Liebermann.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Episc_1.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">477</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt K</hi> [<hi rend="italic">besser</hi>]</seg><seg type="translation" xml:lang="en" source="#claude">omitted in K [better]</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Episc_1.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">477</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vor der Klammer Lond; eingeklammertes übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">the text before the bracket Lond; the bracketed text the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Episc_1.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">477</biblScope></bibl><seg type="original" xml:lang="de">B. g. ælc <hi rend="italic">uncial</hi></seg><seg type="translation" xml:lang="en" source="#claude">B. g. ælc in uncials</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Episc_1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">271</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Die Überschrift scheint laut Q das Wort ‘Bischof’ enthalten zu haben. Sie umfasst nicht den Inhalt von c. 9—12. Die in X kann nur die des Interpolators oder Kompilators sein; <hi rend="italic">s. o</hi>. Einl. 6</seg><seg type="translation" xml:lang="en" source="#claude">To judge from Q, the heading seems to have contained the word ‘bishop’. It does not cover the content of c. 9—12. The heading in X can only be that of the interpolator or compiler; <hi rend="italic">see above</hi> Introduction 6</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Episc_1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">271</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Diese nie wirkliche Weite der Befugnis (<hi rend="italic">s. Gl</hi> Bischof 5h. 7a. 9c. 12f-i; Kirchenstaatsrecht 2 ff.) schien dem Q<hi rend="smallcaps">ii</hi> wohl ungeheuerlich; er änderte <hi rend="italic">rectitudinem</hi> ‘Gerechtsame’; <hi rend="italic">s. u</hi>. 11¹</seg><seg type="translation" xml:lang="en" source="#claude">This breadth of authority, which never existed in reality (<hi rend="italic">see Gl</hi> Bischof 5h. 7a. 9c. 12f-i; Kirchenstaatsrecht 2 ff.), probably seemed monstrous to Q<hi rend="smallcaps">ii</hi>; he altered it to <hi rend="italic">rectitudinem</hi> ‘rights’; <hi rend="italic">see below</hi> 11¹</seg></note>
       </div>
     </body>
   </text>

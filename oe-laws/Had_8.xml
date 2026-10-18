@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -31,6 +32,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="whitelock" type="study">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -58,21 +60,35 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2194 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 468.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 468.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS O added from Gesetze I, p. 468.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 468: “7” → “⁊”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 468: “Und wenn tödtliche Verletzung eintritt: ausser dem gesetzlichen Wergeld beim siebenten Ordo [d. h. beim Priester] als Klerusbusse 7 Pfund zur Busse, neben geistlicher Poenitenz.” → “Und wenn tödtliche Verletzung eintritt: ausser dem gesetzlichen Wergeld beim siebenten Ordo [d. h. beim Priester] als Klerusbusse 7 Pfund zur Busse, neben geistlicher Poenitenz. (expanded letters in italics: d. h)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="8">
         <head><ref type="lawCode" target="law:Had">Had</ref> 8</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="8" corresp="#wit-h"><pb n="468" ed="#liebermann"/>7 to hadbote, gif fullbryce wurðe, toeacan þam rihtwere, æt þam seofoþam stæpe VII pund to bote, mid godcundan scrifte.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="8" corresp="#wit-q"><pb n="469" ed="#liebermann"/>Et ad emendationem ordinis, septimo gradu infracto, septem libris supra rectam weram cum penitentia emendet (emendetur cum iniuncta p.).</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="8" corresp="#wit-d"><pb n="468" ed="#liebermann"/>And to hadbote, gif fulbrice wurðe, toeacan þa<hi rend="italic">m</hi> rihtwere, æt þa<hi rend="italic">m</hi> seofoðan stæpe VII pund to bote, mid godcundan scrifte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="8" corresp="#wit-o"><pb n="468" ed="#liebermann"/>⁊ to hádbote, gif fullbrice wurðe, toeacan þa<hi rend="italic">m</hi> rihtwere, æt þa<hi rend="italic">m</hi> seofeðan stæpe VII pund to bote, mid godcundre scrifte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="8" corresp="#wit-h"><pb n="468" ed="#liebermann"/>⁊ to hadbote, gif fullbryce wurðe, toeacan þam rihtwere, æt þam seofoþam<ptr type="liebermannNote" n="a" target="#Had_8.lnote.oe.a"/> stæpe VII pund to bote, mid godcundan scrifte.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="8" corresp="#wit-q"><pb n="469" ed="#liebermann"/>Et<ptr type="liebermannNote" n="9" target="#Had_8.lnote.oe.9"/> ad emendationem ordinis, septimo gradu infracto, septem<ptr type="liebermannNote" n="10" target="#Had_8.lnote.oe.10"/> libris<ptr type="liebermannNote" n="11" target="#Had_8.lnote.oe.11"/> supra<ptr type="liebermannNote" n="12" target="#Had_8.lnote.oe.12"/> rectam weram cum<ptr type="liebermannNote" n="2" target="#Had_8.lnote.oe.2"/> penitentia emendet (emendetur cum iniuncta<ptr type="liebermannNote" n="13" target="#Had_8.lnote.oe.13"/> p.).</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-h"><pb n="18" ed="#rabin-doml"/>And to hadbote, gif fullbryce wurðe, toeacan þam rihtwere æt þam seofoðam stæpe VII pund to bote, mid godcundan scrifte.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="469" ed="#liebermann"/>Und wenn tödtliche Verletzung eintritt: ausser dem gesetzlichen Wergeld beim siebenten Ordo [d. h. beim Priester] als Klerusbusse 7 Pfund zur Busse, neben geistlicher Poenitenz.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="469" ed="#liebermann"/>Und wenn tödtliche Verletzung eintritt: ausser dem gesetzlichen Wergeld beim siebenten Ordo [<hi rend="italic">d. h</hi>. beim Priester<ptr type="liebermannNote" n="1" target="#Had_8.lnote.de.1"/>] als Klerusbusse 7 Pfund zur Busse, neben geistlicher Poenitenz.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if fatal injury occurs: besides the lawful wergild, for the seventh grade [that is, a priest] 7 pounds as compensation for orders, with spiritual penance.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h"><pb n="19" ed="#rabin-doml"/>And as compensation for one in orders if a full breach of the peace occurs, the perpetrator must make amends for the seventh rank by paying seven pounds as a penalty in addition to the standard wergild and by doing spiritual penance.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h">And as compensation for one in orders if a full breach of the peace occurs, the perpetrator must make amends for the seventh rank by paying seven pounds as a penalty in addition to the standard wergild and by doing spiritual penance.</ab>
         <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-d">And in compensation for [an offence against a man in] orders, if a full breach occurs, one must pay for the seventh degree with seven pounds in addition to the legal wergild, and intercede zealously with ecclesiastical penance.</ab>
-        <note type="editorial">H's ‘seofoþam’ stands so.; U: not in Whitelock’s English Historical Documents, which prints only Had 1–2 and 9–11 (with “…” for the rest); the source of this translation is not recorded.</note>
+        <note type="editorial">H's ‘seofoþam’ stands so.; U: not in Whitelock’s English Historical Documents, which prints only Had 1–2 and 9–11 (with “…” for the rest); the source of this translation is not recorded.; AV: added from Rabin p. 18 / 19, October 2026 (Rabin’s translation)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_8.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">469</biblScope></bibl><seg type="original" xml:lang="de">Et ad-e. o. <hi rend="italic">nur R</hi></seg><seg type="translation" xml:lang="en" source="#claude">Et ad-e. o. only R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_8.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">469</biblScope></bibl><seg type="original" xml:lang="de">VIII <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">VIII Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_8.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">469</biblScope></bibl><seg type="original" xml:lang="de">libre <hi rend="italic">Lond Hn</hi></seg><seg type="translation" xml:lang="en" source="#claude">libre Lond Hn</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_8.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">469</biblScope></bibl><seg type="original" xml:lang="de">super <hi rend="italic">RTMHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">super RTMHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_8.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">469</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vor der Klammer Lond; eingeklammertes übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">what precedes the bracket Lond; what is bracketed the rest</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_8.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">469</biblScope></bibl><seg type="original" xml:lang="de">inuicta <hi rend="italic">MHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">inuicta MHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Had_8.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">468</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl. II Cn.</hi> 19, 1 <hi rend="italic">Hs. A</hi></seg><seg type="translation" xml:lang="en" source="#claude">cf. II Cn. 19, 1 MS A</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Had_8.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">264</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Geistliche 15e.f</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Geistliche 15e.f</seg></note>
       </div>
     </body>
   </text>

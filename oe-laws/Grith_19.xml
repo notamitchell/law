@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +28,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">26</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
@@ -49,20 +51,26 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2220 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 471.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 471: “7; 7; 7” → “⁊; ⁊; ⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="19">
         <head><ref type="lawCode" target="law:Grith">Grið</ref> 19</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="19" corresp="#wit-g-b"><pb n="471" ed="#liebermann"/>Hælnesgrið 7 hadgrið healde man mid rihte æfre swyþe georne 7 Godes lagum fylge 7 lareowum hlyste, swa þærto gebyrige.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="19" corresp="#wit-g-b"><pb n="471" ed="#liebermann"/>Hælnesgrið ⁊ hadgrið<ptr type="liebermannNote" n="12" target="#Grith_19.lnote.oe.12"/> healde man mid rihte æfre swyþe<ptr type="liebermannNote" n="1" target="#Grith_19.lnote.oe.1"/> georne ⁊ Godes lagum fylge ⁊ lareowum<ptr type="liebermannNote" n="13" target="#Grith_19.lnote.oe.13"/> hlyste, swa þærto gebyrige.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" n="19" corresp="#wit-g-b"><pb n="26" ed="#rabin-doml"/>Hælnesgrið and hadgrið healde man mid rihte æfre swyþe georne, and Godes lagum fylge and lareowum hlyste, swa þærto gebyrige.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="471" ed="#liebermann"/>Den Sonderfrieden des Heiligthums und den des Klerus halte man stets nach Recht höchst willig und folge den kirchlichen Gesetzen und lausche den [geistlichen] Lehrern, wie jenen zukommt.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="471" ed="#liebermann"/>Den<ptr type="liebermannNote" n="1" target="#Grith_19.lnote.de.1"/> Sonderfrieden des Heiligthums<ptr type="liebermannNote" n="2" target="#Grith_19.lnote.de.2"/> und den des Klerus halte man stets nach Recht höchst willig und folge den kirchlichen Gesetzen und lausche den [geistlichen] Lehrern, wie jenen zukommt.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Let the special peace of the sanctuary and that of the clergy always be kept lawfully and most willingly, and let one follow the laws of the Church and listen to the [spiritual] teachers, as befits them.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-b"><pb n="27" ed="#rabin-doml"/>The security and ecclesiastical privileges of the sanctuary are always to be observed most assiduously according to the law, and God’s laws are to be followed and teachers are to be heeded, as is appropriate to them.</ab>
         <note type="comparedBy" source="#wormald-mel" n="395"><ref target="clause:ICn_26">I Cn 26–26.4</ref></note>
         <note type="editorial">T: corrected against Rabin, DOML 66 (2020), p. 26 (before: ‘Hælnesgrið and hadgrið healde man mid rihte æfre swyþe georne, and Godes lagum fylge 7 lareowum hlyste, swa þærto gebyrige.’)</note>
         <note type="translator" source="#rabin-doml">security and ecclesiastical privileges: Both hælnesgrið and hadgrið are hapax legomena.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Grith_19.lnote.oe.12" n="12" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">471</biblScope></bibl><seg type="original" xml:lang="de">handg., <hi rend="italic">aber</hi> n <hi rend="italic">radirt</hi></seg><seg type="translation" xml:lang="en" source="#claude">handg., but n erased</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Grith_19.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">471</biblScope></bibl><seg type="original" xml:lang="de">i <hi rend="italic">statt</hi> y <hi rend="italic">Tho.</hi></seg><seg type="translation" xml:lang="en" source="#claude">i instead of y Tho.</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Grith_19.lnote.oe.13" n="13" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">471</biblScope></bibl><seg type="original" xml:lang="de">larewas, <hi rend="italic">übergeschr.</hi> o</seg><seg type="translation" xml:lang="en" source="#claude">larewas, o written above</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Grith_19.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">266</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Hier beginnt klagende Strafpredigt; so Selborn <hi rend="italic">Anc. facts</hi> 278. Allein Gesetze, und zwar aus denselben Codices wie bisher, werden auch ferner benutzt: also kein Wechsel des Verfs.—C. 19 scheint Bisheriges zusammenzufassen</seg><seg type="translation" xml:lang="en" source="#claude">Here a lamenting sermon of rebuke begins; so Selborn <hi rend="italic">Anc. facts</hi> 278. But laws, and indeed from the same codices as before, continue to be used: hence no change of author.—Cap. 19 seems to sum up what has gone before</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Grith_19.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">266</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Halignessa sindon tó griðlease</hi> klagt Homilet ed. Sweet <hi rend="italic">Agsax. reader</hi> 106</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Halignessa sindon tó griðlease</hi>, laments the homilist, ed. Sweet <hi rend="italic">Agsax. reader</hi> 106</seg></note>
       </div>
     </body>
   </text>

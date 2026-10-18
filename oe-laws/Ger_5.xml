@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +31,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">334</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -63,11 +65,15 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-b"><pb n="453" ed="#liebermann"/>[5] Swa sceal god scyrman his hlafordes healdan, do ymbe his agen, swa swa he wylle.</ab>
         <ab type="editionText" xml:lang="ang" source="#gobbitt" n="22.7" corresp="#wit-b">Swa sceal god scyrman his hlafor||des Healdan do ymbe his agen swa swa he wylle.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-b"><pb n="334" ed="#rabin-doml"/>Swa sceal god scyrman his hlafordes healdan, do ymbe his agen, swa swa he wylle.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="453" ed="#liebermann"/>So soll ein guter Amtmann [das Gut] seines Herrn hüten, mag er betreffend sein eigen handeln, wie er will.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="453" ed="#liebermann"/>So soll ein guter<ptr type="liebermannNote" n="p" target="#Ger_5.lnote.de1.p"/> Amtmann [das Gut<ptr type="liebermannNote" n="1" target="#Ger_5.lnote.de.1"/>] seines Herrn hüten, mag er<ptr type="liebermannNote" n="q" target="#Ger_5.lnote.de1.q"/> betreffend sein<ptr type="liebermannNote" n="2" target="#Ger_5.lnote.de.2"/> eigen handeln, wie er will.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">So shall a good reeve guard his lord's [estate], whatever he may do about his own as he wishes.</ab>
         <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">Thus a good shireman should maintain his lord’s estate just as he would want concerning his own.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-b"><pb n="335" ed="#rabin-doml"/>A good shire reeve must oversee his lord’s property thus, no matter what he does about his own.</ab>
         <note type="editorial">‘mag er … handeln’: concessive, after Pogatscher. Liebermann compares Gerefa 12.</note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Ger_5.lnote.de1.p" n="p" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">453</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl.</hi> 12</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">cf.</hi> 12</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ger_5.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">253</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">‘Interesse’ Pogatscher in <hi rend="italic">Anglia</hi> 23, 287; ‘Güter’ Sk</seg><seg type="translation" xml:lang="en" source="#claude">‘interest’ Pogatscher in <hi rend="italic">Anglia</hi> 23, 287; ‘goods’ Sk</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Ger_5.lnote.de1.q" n="q" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">453</biblScope></bibl><seg type="original" xml:lang="de">‘<hi rend="italic">concessiv</hi>’; <hi rend="italic">Pogatscher</hi> Anglia 23, 287</seg><seg type="translation" xml:lang="en" source="#claude">‘<hi rend="italic">concessive</hi>’; <hi rend="italic">Pogatscher</hi> Anglia 23, 287</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ger_5.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">253</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Vielleicht besteht auch des Vogts Eigen z. T. in Land, das von diesem Herrschaftsgut entliehen ist, wie ja <hi rend="italic">reveland</hi> im Domesday oft vorkommt (Ellis <hi rend="italic">Introd. to Domesday</hi> I 231), und wie auch der Büttel vom Herrn mit Land ausgestattet war; Rect 18, 1</seg><seg type="translation" xml:lang="en" source="#claude">Perhaps the bailiff’s own property too consists in part of land lent out of this demesne, as indeed <hi rend="italic">reveland</hi> often occurs in Domesday (Ellis <hi rend="italic">Introd. to Domesday</hi> I 231), and as the beadle too was provided with land by the lord; Rect 18, 1</seg></note>
       </div>
     </body>
   </text>

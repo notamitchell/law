@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +27,7 @@
           <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
@@ -50,17 +52,20 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2250 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 474.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 474: “Quedam culpe; quedam” → “Quędam culpę; quędam”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:Iudex">Iudex</ref> 2</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2" corresp="#wit-q"><pb n="474" ed="#liebermann"/>Quedam culpe reputantur a bonis iudicibus secundum rectum emendande, quedam per Dei misericordiam condonande.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-g-a"><pb n="474" ed="#liebermann"/>Sume gyltas beoð fram þam godan deman þurh riht to betanne, sume þurh mildheortnesse tó forgyfanne.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="474" ed="#liebermann"/>Einige Vergehen sind von dem guten Richter durch [strenges] Recht zur Ordnung zu bringen, einige aus Barmherzigkeit zu vergeben.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-g-a"><pb n="474" ed="#liebermann"/>Sume gyltas beoð fram þam godan deman þurh<ptr type="liebermannNote" n="c" target="#Iudex_2.lnote.oe.c"/> riht to betanne, sume þurh mildheortnesse tó forgyfanne.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2" corresp="#wit-q"><pb n="474" ed="#liebermann"/>Quędam culpę reputantur a bonis iudicibus secundum rectum emendande, quędam per Dei misericordiam condonande.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="474" ed="#liebermann"/>Einige Vergehen sind von dem guten Richter durch [strenges] Recht zur Ordnung<ptr type="liebermannNote" n="1" target="#Iudex_2.lnote.de.1"/> zu bringen, einige aus Barmherzigkeit zu vergeben.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Some offences are to be set right by the good judge through [strict] law, some to be forgiven out of mercy.</ab>
         <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-g-a">The good judge corrects some faults in a strict manner; others [are corrected] with merciful forgiveness.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Iudex_2.lnote.oe.c" n="c" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">474</biblScope></bibl><seg type="original" xml:lang="de">per aequitatem corrigat <hi rend="italic">Isidor</hi></seg><seg type="translation" xml:lang="en" source="#claude">per aequitatem corrigat <hi rend="italic">Isidor</hi></seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Iudex_2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">269</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl</hi>. Geþyncðo 8².—Zu <hi rend="italic">fram</hi> beim Passiv <hi rend="italic">s. Ælfrics Hirtenbri</hi>. ed. Fehr S. 96.—Der Agsa. versteht wie in Sacr cor 1, 3¹ richtig Isidors <hi rend="italic">æquitas</hi> als <hi rend="italic">riht</hi>, nicht ‘Billigkeit’; <hi rend="italic">s. d. Gl</hi> 1</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf</hi>. Geþyncðo 8².—On <hi rend="italic">fram</hi> with the passive <hi rend="italic">see Ælfrics Hirtenbri</hi>. ed. Fehr p. 96.—The Anglo-Saxon, as in Sacr cor 1, 3¹, rightly understands Isidor’s <hi rend="italic">æquitas</hi> as <hi rend="italic">riht</hi>, not ‘equity’; <hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 1</seg></note>
       </div>
     </body>
   </text>

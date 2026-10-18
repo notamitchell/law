@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +28,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">30</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
@@ -51,13 +53,14 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2237 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 473.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 473: “7” → “⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="31.1">
         <head><ref type="lawCode" target="law:Grith">Grið</ref> 31.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="31.1" corresp="#wit-g-b"><pb n="473" ed="#liebermann"/>Forðam ælc cyricgrið is Cristenes agen grið; 7 ælc Cristen man ah micle þearfe, þ<hi rend="italic">æt</hi> he on ðam griðe mycle mæþe wite.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="31.1" corresp="#wit-g-b"><pb n="473" ed="#liebermann"/>Forðam ælc cyricgrið<ptr type="liebermannNote" n="1" target="#Grith_31-1.lnote.oe.1"/> is Cristenes<ptr type="liebermannNote" n="**" target="#Grith_31-1.lnote.oe.star2"/> agen grið; ⁊ ælc Cristen man ah micle þearfe, þ<hi rend="italic">æt</hi> he on ðam griðe mycle<ptr type="liebermannNote" n="1" target="#Grith_31-1.lnote.oe.1"/> mæþe wite.<ptr type="liebermannNote" n="2" target="#Grith_31-1.lnote.oe.2"/></ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" n="31.1" corresp="#wit-g-b"><pb n="30" ed="#rabin-doml"/>Forðam ælc cyricgrið is Cristes agen grið, and ælc Cristen man ah micle þearfe þæt he on ðam griðe mycle mæþe wite.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann"><pb n="473" ed="#liebermann"/>Denn jeder von einer Kirche [ausgehende] Sonderfriede ist Christi eigener Sonderfriede; und jeder Christenmensch hat stark die Pflicht, dass er vor diesem Sonderfrieden grosse Hochachtung empfinde.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">For every special peace [proceeding] from a church is Christ's own special peace; and every Christian person has a great duty to feel great respect for this special peace.</ab>
@@ -68,6 +71,10 @@
         <note type="comparedBy" source="#wormald-mel" n="394"><ref target="clause:ICn_2-1">I Cn 2.1–2</ref></note>
         <note type="editorial">G reads ‘Cristenes’; Liebermann would correct to ‘Cristes’ (as column T has it). Liebermann compares I Cn 2.1. In G, VIII Atr. follows in the same hand. Grið ends here.</note>
         <note type="textual" source="#rabin-doml">Cristes: Cristenes G</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Grith_31-1.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">473</biblScope></bibl><seg type="original" xml:lang="de">[<hi rend="italic">Eingeklammertes</hi>] <hi rend="italic">von mir ergänzt</hi></seg><seg type="translation" xml:lang="en" source="#claude">[Bracketed matter] supplied by me</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Grith_31-1.lnote.oe.star2" n="**" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">473</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">bessere</hi> Cristes</seg><seg type="translation" xml:lang="en" source="#claude">read Cristes</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Grith_31-1.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">473</biblScope></bibl><seg type="original" xml:lang="de">m <hi rend="italic">erkennt nicht WARNER</hi></seg><seg type="translation" xml:lang="en" source="#claude">m not recognized by WARNER</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Grith_31-1.lnote.de.0" n="0" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">267</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Das Ende des hier aus Cnut zitierten Satzes brachte Verf. <hi rend="italic">o</hi>. 1</seg><seg type="translation" xml:lang="en" source="#claude">The author gave the end of the sentence quoted here from Cnut <hi rend="italic">above</hi> 1</seg></note>
       </div>
     </body>
   </text>

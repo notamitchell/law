@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,11 +28,13 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">12</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">477</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-ld"><abbr>Ld</abbr> <note type="manuscript">William Lambarde, Archaionomia (London, 1568) – printed from manuscripts now lost</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -52,24 +55,39 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2167 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 460.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS D added from Gesetze I, p. 460.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 460: “7; 7” → “⁊; ⁊”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS Ld added from Gesetze I, p. 460.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 460: “[3⅓” → “[3¹/₃”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="6">
         <head><ref type="lawCode" target="law:Northleoda">Norðleoda</ref> 6</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-h"><pb n="460" ed="#liebermann"/>Ceorles wergyld is CC 7 VI 7 LX þrymsa, þ<hi rend="italic">æt</hi> bið twahund scyllinga be Myrcna lage.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6" corresp="#wit-q"><pb n="461" ed="#liebermann"/>Ceorles weregildum est CCLXVI þrimsa, id est CC sol. secundum lagam Mircenorum.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-d"><pb n="460" ed="#liebermann"/>Ceorles wergild is CC 7 LXVI þri<hi rend="italic">m</hi>sa, þ<hi rend="italic">æt</hi> bið II hund scill'. be Myrcna lage.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-d"><pb n="460" ed="#liebermann"/>Ceorles wergild is CC ⁊ LXVI<ptr type="liebermannNote" n="a" target="#Northleoda_6.lnote.oe.a-2"/> þri<hi rend="italic">m</hi>sa, þ<hi rend="italic">æt</hi> bið II hund scill'. be Myrcna lage.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-h"><pb n="460" ed="#liebermann"/>Ceorles wergyld is CC ⁊ VI ⁊ LX þrymsa, þ<hi rend="italic">æt<ptr type="liebermannNote" n="1" target="#Northleoda_6.lnote.oe.1"/></hi> bið twahund scyllinga be Myrcna lage.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6" corresp="#wit-ld"><pb n="460" ed="#liebermann"/>Ceorles weregild biþ CCLXVII ðrimsa be ðam<ptr type="liebermannNote" n="a" target="#Northleoda_6.lnote.oe.a"/> Dena<ptr type="liebermannNote" n="*" target="#Northleoda_6.lnote.oe.star"/> laga.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="6" corresp="#wit-q"><pb n="461" ed="#liebermann"/>Ceorles<ptr type="liebermannNote" n="8" target="#Northleoda_6.lnote.oe.8"/> weregildum est<ptr type="liebermannNote" n="9" target="#Northleoda_6.lnote.oe.9"/> CCLXVI þrimsa, id est CC sol. secundum lagam Mircenorum.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-h"><pb n="12" ed="#rabin-doml"/>Ceorles wergild is CC and VI and LX þrymsa, þæt bið twahund scyllinga be Myrcna lage.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="461" ed="#liebermann"/>Wergeld eines Gemeinfreien ist 266 Tremissen (nach Dänenrecht Ld), d. i. 200 Schilling nach Mercier-Recht [3⅓ Pfund].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="461" ed="#liebermann"/>Wergeld eines Gemeinfreien<ptr type="liebermannNote" n="1" target="#Northleoda_6.lnote.de.1"/> ist 266<ptr type="liebermannNote" n="2" target="#Northleoda_6.lnote.de.2"/> Tremissen (nach<ptr type="liebermannNote" n="3" target="#Northleoda_6.lnote.de.3"/> Dänenrecht <hi rend="italic">Ld</hi>), d. i. 200 Schilling nach Mercier-Recht [3¹/₃ Pfund].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">The wergild of a ceorl is 266 thrymsas (by Danish law, Ld), that is 200 shillings by Mercian law [3⅓ pounds].</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d"><pb n="477" ed="#whitelock"/>A <hi rend="italic">ceorl's</hi> wergild is 266 <hi rend="italic">thrymsas</hi>, which is 200 shillings according to the law of the Mercians.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h"><pb n="13" ed="#rabin-doml"/>A commoner’s wergild is two hundred and sixty-six thrymsas, that is, two hundred shillings according to the law of the Mercians.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h">A commoner’s wergild is two hundred and sixty-six thrymsas, that is, two hundred shillings according to the law of the Mercians.</ab>
         <note type="comparison" source="#liebermann" n="461"><ref target="clause:Mirce_1">Mirce 1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Mirce 1</note>
-        <note type="editorial">D reads ‘CC ⁊ LXVI’; Ld later 267 (but closer to the correct exact 266⅔). H writes ‘þþ’ (i.e. ‘þæt’ twice). Liebermann compares Mirce 1.</note>
+        <note type="editorial">D reads ‘CC ⁊ LXVI’; Ld later 267 (but closer to the correct exact 266⅔). H writes ‘þþ’ (i.e. ‘þæt’ twice). Liebermann compares Mirce 1.; AV: added from Rabin p. 12 / 13, October 2026 (Rabin’s translation)</note>
         <note type="translator" source="#rabin-doml">This is the final clause of the text’s “original” section, which likely dates from the ninth century but may have been composed as early as the mid-seventh century. The clauses that follow (nos. 7–12) are all composed by Archbishop Wulfstan.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Northleoda_6.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">460</biblScope></bibl><seg type="original" xml:lang="de">ꝥꝥ (<hi rend="italic">also zweimal</hi>) <hi rend="italic">H</hi></seg><seg type="translation" xml:lang="en" source="#claude">ꝥꝥ (i.e. twice) H</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Northleoda_6.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">461</biblScope></bibl><seg type="original" xml:lang="de">Che. <hi rend="italic">K</hi></seg><seg type="translation" xml:lang="en" source="#claude">Che. K</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Northleoda_6.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">461</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Northleoda_6.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">460</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Northleoda_6.lnote.oe.star" n="*" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">460</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">weniger archaisch, Abweichung vom Original</hi></seg><seg type="translation" xml:lang="en" source="#claude">less archaic, a departure from the original</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Northleoda_6.lnote.oe.a-2" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">460</biblScope></bibl><seg type="original" xml:lang="de">267 <hi rend="italic">in Ld später</hi> [<hi rend="italic">aber dem richtigen</hi> (<hi rend="italic">genau</hi> 266²/₃) <hi rend="italic">näher</hi>]</seg><seg type="translation" xml:lang="en" source="#claude">267 in Ld, later [but nearer to the correct figure (exactly 266²/₃)]</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northleoda_6.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">261</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Nur beim Gemeinfreien steht in Northumbrien und Mercien das Wergeld gleich; dessen Verhältnis zum Adel aber ist bei den beiden Stämmen verschieden</seg><seg type="translation" xml:lang="en" source="#claude">Only for the common freeman is the wergild the same in Northumbria and Mercia; his relation to the nobility, however, differs between the two peoples</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northleoda_6.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">261</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Emendiere (mit Kemble in <hi rend="italic">Brit. rev</hi>. 1841, 71): 266⅔. Vielleicht kam der Bearbeiter von l hier ausnahmsweise durch eigene Kenntnis dem Genauen näher.—Chadwick (<hi rend="italic">Anglo-Sax. inst</hi>. 77) vergleicht des Carl Wergeld 768 Pfennig in <hi rend="italic">Leges inter Brettos et Scottos</hi>.—Kaum ein anderer als ein Mercier hätte den Northumbrischen Wert gerade in Mercische Währung umgerechnet; <hi rend="italic">o</hi>. Einl. 4</seg><seg type="translation" xml:lang="en" source="#claude">Emend (with Kemble in <hi rend="italic">Brit. rev</hi>. 1841, 71) to 266⅔. Perhaps the reviser of l here, exceptionally, came nearer to the exact figure through his own knowledge. — Chadwick (<hi rend="italic">Anglo-Sax. inst</hi>. 77) compares the carl’s wergild of 768 pence in the <hi rend="italic">Leges inter Brettos et Scottos</hi>. — Hardly anyone but a Mercian would have converted the Northumbrian value into Mercian currency in particular; <hi rend="italic">above</hi> Introduction 4</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northleoda_6.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">261</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Zufügung l's zwar sachlich richtig, aber überflüssig, da ja das ganze Stück zur Denalagu gehört</seg><seg type="translation" xml:lang="en" source="#claude">Addition by l, factually correct but superfluous, since the whole piece belongs to the Danelaw anyway</seg></note>
       </div>
     </body>
   </text>

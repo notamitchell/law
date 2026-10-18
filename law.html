@@ -280,7 +280,7 @@ scripts:
     let siglumIndex = null;
     const sigKey = s => s.replace(/[\s.]/g, '');
     const SIGLUM_ALIASES = { 'InstCn': 'In(Cn)' };
-    const LATIN_VERSION = /^(Q|In|Inst\.? ?Cn\.?|Cons\.?(?: ?Cn\.?)?)(?![\w])/;
+    const LATIN_VERSION = /^(Q|Lat|In|Inst\.? ?Cn\.?|Cons\.?(?: ?Cn\.?)?)(?![\w])/;
     function loadSigla() {
         const get = f => fetch(root + 'data/' + f).then(r => r.json()).catch(() => []);
         return Promise.all([get('manuscripts.json'), get('markLaw.json')]).then(([ms, law]) => {

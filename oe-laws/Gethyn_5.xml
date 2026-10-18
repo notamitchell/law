@@ -10,6 +10,8 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Transcription of Whitelock’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,11 +29,13 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">10</biblScope></bibl>
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">476</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d" rend="bold"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
           <witness xml:id="wit-h"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
           <witness xml:id="wit-q"><abbr>Q</abbr> <note type="manuscript">Quadripartitus (Latin translation, c. 1114), as edited by Liebermann</note></witness>
+          <witness xml:id="wit-in"><abbr>In</abbr> <note type="manuscript">Instituta Cnuti (Latin translation of Anglo-Saxon laws, c. 1100), as printed by Liebermann</note></witness>
         </listWit>
       </sourceDesc>
     </fileDesc>
@@ -48,23 +52,34 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2157 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 458.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 458: “7” → “⁊”.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS In added from Gesetze I, p. 458.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5">
         <head><ref type="lawCode" target="law:Gethinctho">Geþyncðo</ref> 5</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-h"><pb n="458" ed="#liebermann"/>7 gif þegen geþeah, þ<hi rend="italic">æt</hi> he wearð to eorle, þonne wæs he syððan eorlrihtes weorðe.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5" corresp="#wit-q"><pb n="459" ed="#liebermann"/>Et si tainus prouehatur ad consulatum, sit postea dignus rectitudine comitis et honore.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-h"><pb n="458" ed="#liebermann"/>⁊ gif þegen geþeah, þ<hi rend="italic">æt</hi> he wearð to eorle, þonne wæs he syððan eorlrihtes weorðe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5" corresp="#wit-q"><pb n="459" ed="#liebermann"/>Et si tainus prouehatur<ptr type="liebermannNote" n="1" target="#Gethyn_5.lnote.oe.1-2"/> ad consulatum, sit postea dignus rectitudine comitis et honore.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5" corresp="#wit-in"><pb n="459" ed="#liebermann"/>[61, 2] Et si liberalis homo ita<ptr type="liebermannNote" n="1" target="#Gethyn_5.lnote.oe.1"/> ascendisset, ut comes fieret, habebat<ptr type="liebermannNote" n="2" target="#Gethyn_5.lnote.oe.2"/> omnes rectitudines suas sicut comes.</ab>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-d"><pb n="458" ed="#liebermann"/>….</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-h"><pb n="10" ed="#rabin-doml"/>And gif þegen geþeah þæt he wearð to eorle, þonne wæs he syððan eorlrihtes weorðe.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="459" ed="#liebermann"/>Und wenn ein Thegn emporstieg, dass er zum Grafen wurde, dann genoss er fortan Grafenberechtigung.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><ptr type="liebermannNote" n="a" target="#Gethyn_5.lnote.de1.a"/><pb n="459" ed="#liebermann"/>Und wenn ein Thegn emporstieg, dass er zum Grafen<ptr type="liebermannNote" n="1" target="#Gethyn_5.lnote.de.1"/> wurde<ptr type="liebermannNote" n="2" target="#Gethyn_5.lnote.de.2"/>, dann genoss er fortan Grafenberechtigung<ptr type="liebermannNote" n="3" target="#Gethyn_5.lnote.de.3"/>.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if a thegn rose so that he became an earl, then he was henceforth entitled to earl-right.</ab>
-        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d"><pb n="476" ed="#whitelock"/>[And if a thegn prospered, that he became an earl, then was he afterwards entitled to an earl’s rights.</ab>
+        <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d"><pb n="476" ed="#whitelock"/>[<ptr type="editorNote" n="1" target="#Gethyn_5.whinote.n.1"/>And if a thegn prospered, that he became an earl, then was he afterwards entitled to an earl’s rights.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h"><pb n="11" ed="#rabin-doml"/>And if a thane prospered so that he became a noble, he was afterward worthy of a noble’s rights.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-h">And if a thane prospered so that he became a noble, he was afterward worthy of a noble’s rights.</ab>
-        <note type="editorial">Lacking in D (Liebermann marks no gap there).; U: checked against Whitelock, EHD I (1979), and corrected (before: ‘…’).</note>
-        <note type="translator" source="#whitelock">These chapters are only in Textus Roffensis.</note>
+        <note type="editorial">Lacking in D (Liebermann marks no gap there).; U: checked against Whitelock, EHD I (1979), and corrected (before: ‘…’).; AV: added from Rabin p. 10 / 11, October 2026 (Rabin’s translation)</note>
         <note type="textual" source="#rabin-doml">And . . . weorðe: omitted D</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Gethyn_5.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">459</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Gethyn_5.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">459</biblScope></bibl><seg type="original" xml:lang="de">haberet <hi rend="italic">Cb</hi></seg><seg type="translation" xml:lang="en" source="#claude">haberet Cb</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Gethyn_5.lnote.oe.1-2" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">459</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Überschrift</hi> De regis weregildo <hi rend="italic">Lond</hi> (<hi rend="italic">K Co Or</hi>); De weregildis singularum personarum cum Anglis <hi rend="italic">MHk; fehlt Or R T</hi></seg><seg type="translation" xml:lang="en" source="#claude">Heading De regis weregildo Lond (K Co Or); De weregildis singularum personarum cum Anglis MHk; missing in Or R T</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Gethyn_5.lnote.de1.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">459</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Anglo-Skandinaven in Nordengland</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Anglo-Scandinavians in northern England</hi></seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Gethyn_5.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">259</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Dass 5. 6 bereits archetyp und von D nur willkürlich fortgelassen sind, beweisen Inst und der zum Übrigen passende Stil.—<hi rend="italic">Vgl. Gl</hi> Eorl 8; Thegn 9</seg><seg type="translation" xml:lang="en" source="#claude">That 5. 6 already stood in the archetype and were merely omitted arbitrarily by D is proved by Inst and by the style, which fits the rest.—<hi rend="italic">Cf. Gl</hi> Eorl 8; Thegn 9</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Gethyn_5.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">259</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Offenbar weiss Verf. nichts von angeblichem Zusammenhang eines noch grösseren Grundbesitzes mit <hi rend="spaced">dieser</hi> Standeserhöhung, obwohl er doch die zum Thegn ans Landeigentum <hi rend="italic">o</hi>. 2 anknüpft</seg><seg type="translation" xml:lang="en" source="#claude">Evidently the author knows nothing of any supposed connection of a still larger landholding with <hi rend="italic">this</hi> elevation in rank, although he does link elevation to thegn with ownership of land <hi rend="italic">above</hi> 2</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Gethyn_5.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">259</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Im privilegierten Schutz (<hi rend="italic">s. d. Gl</hi> 14c. d) und Wergeld; <hi rend="italic">s. d. Gl</hi> 10ff.</seg><seg type="translation" xml:lang="en" source="#claude">In privileged protection (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 14c. d) and wergild; <hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 10ff.</seg></note>
+        <note type="editorNote" subtype="endnote" xml:id="Gethyn_5.whinote.n.1" n="1" source="#whitelock"><bibl><biblScope unit="page">476</biblScope></bibl><seg type="original" xml:lang="en">These chapters are only in <hi rend="italic">Textus Roffensis</hi>.</seg></note>
       </div>
     </body>
   </text>

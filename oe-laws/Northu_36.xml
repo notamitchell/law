@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">482</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -52,13 +54,14 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1982 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 382.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 382: “Gif preost on gesetne timan tída ne ringe oððe tida ne singe, gebete þæt.” → “Gif preost on gesetne timan tída ne ringe oððe tida ne singe, gebete þæt. (expanded letters in italics: eost, e, e, æt)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="36">
         <head><ref type="lawCode" target="law:Northu">Northu</ref> 36</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="36" corresp="#wit-d"><pb n="382" ed="#liebermann"/>Gif pr<hi rend="italic">eost</hi> on gesetne timan tída ne ringe oððe tida ne singe, gebete þ<hi rend="italic">æt</hi>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="36" corresp="#wit-d"><pb n="382" ed="#liebermann"/>Gif pr<hi rend="italic">eost</hi> on g<hi rend="italic">e</hi>setne timan tída ne ringe oððe tida ne singe, g<hi rend="italic">e</hi>bete þ<hi rend="italic">æt</hi>.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d"><pb n="308" ed="#rabin-doml"/>Gif preost on gesetne timan tida ne ringe oððe tida ne singe, gebete þæt.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann"><pb n="382" ed="#liebermann"/>Wenn ein Priester nicht zur festgesetzten Zeit Hore(n?) läutet oder nicht Hore(n?) singt, büsse er das.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a priest does not ring the hour(s) at the appointed time or does not sing the hour(s), let him atone for it.</ab>
@@ -68,6 +71,7 @@
         <note type="comparisonPrinted" source="#liebermann">Can. Eg. [?]</note>
         <note type="comparisonIncomplete">Some of Liebermann’s notes here are cut off in the gutter of the scan used, and are still to be completed.</note>
         <note type="editorial">Liebermann compares the Canons of Edgar.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_36.lnote.de.0" n="0" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">224</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Horen; Brotanek <hi rend="italic">Texte Altengl. Lit</hi>. 111f.</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Horen; Brotanek <hi rend="italic">Texte Altengl. Lit</hi>. 111f.</seg></note>
       </div>
     </body>
   </text>

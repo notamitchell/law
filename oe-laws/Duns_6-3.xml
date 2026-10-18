@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +27,7 @@
           <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -57,11 +59,14 @@
     <body>
       <div type="clause" n="6.3">
         <head><ref type="lawCode" target="law:Duns">Duns</ref> 6.3</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.3" corresp="#wit-q"><pb n="379" ed="#liebermann"/>Si lex ista deficiat, reddat tƿigilde (id est duplo gildo) et domino witam suam.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.3" corresp="#wit-b"><pb n="378" ed="#liebermann"/>Gif ðeos lad teorie, gylde twygylde ⁊ hlaforde his wite.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="379" ed="#liebermann"/>Wenn jene Reinigung misslingt, zahle [Verklagt]er doppelt [dem klagenden Landsmann den Schaden] und [seinem Immunitäts]herrn sein Strafgeld.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.3" corresp="#wit-b"><pb n="378" ed="#liebermann"/>Gif ðeos<ptr type="liebermannNote" n="3" target="#Duns_6-3.lnote.oe.3"/> lad teorie, gylde twygylde ⁊ hlaforde his wite.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="6.3" corresp="#wit-q"><pb n="379" ed="#liebermann"/>Si lex ista deficiat, reddat tƿigilde<ptr type="liebermannNote" n="8" target="#Duns_6-3.lnote.oe.8"/> (id est duplo gildo) et domino witam suam.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="379" ed="#liebermann"/>Wenn jene Reinigung misslingt, zahle [Verklagt]er doppelt [dem klagenden Landsmann<ptr type="liebermannNote" n="1" target="#Duns_6-3.lnote.de.1"/> den Schaden] und [seinem Immunitäts]herrn sein Strafgeld.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If that clearing [oath] fails, let [the accused] pay double [the damage to the native plaintiff] and his fine to [his] lord [with jurisdiction].</ab>
         <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-b">If this exculpation fails, he [the defendant] pays double [compensation], and the fine to the lord.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_6-3.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">378</biblScope></bibl><seg type="original" xml:lang="de">ðæs <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">ðæs Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_6-3.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">379</biblScope></bibl><seg type="original" xml:lang="de">tƿyg. <hi rend="italic">M Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">tƿyg. M Hk</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Duns_6-3.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">219</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Diese Busse (<hi rend="italic">s. d. Gl</hi> 13b) und Strafgeldentrichtung, jedenfalls zwischen Parteien Eines Stammes, klingen rein Westsächsisch und gelten daher schwerlich auch für Walliser; <hi rend="italic">s. o</hi>. 6, 1¹</seg><seg type="translation" xml:lang="en" source="#claude">This compensation (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 13b) and payment of a fine, at any rate between parties of one people, sound purely West Saxon and therefore hardly apply to the Welsh as well; <hi rend="italic">see above</hi> 6, 1¹</seg></note>
       </div>
     </body>
   </text>

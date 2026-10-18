@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +27,7 @@
           <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-g-a"><abbr>G(A)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
@@ -50,20 +52,24 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2260 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 475.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 475: “eterna” → “ęterna”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="10.1">
         <head><ref type="lawCode" target="law:Iudex">Iudex</ref> 10.1</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="10.1" corresp="#wit-q"><pb n="475" ed="#liebermann"/>quia dominus et magister seculorum ait: Non solum male agentes, sed omnes consentientes digni sunt eterna morte.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10.1" corresp="#wit-g-a"><pb n="475" ed="#liebermann"/>Forðan se æðela middangeardes lareow cwæð: ‘Na ða áne ðe yfel doþ, ac ælc þara þe hit ðam dondum geðafiað, beoð wyrþe ðas ecean deaðes’.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="475" ed="#liebermann"/>Denn der edle Erdenlehrer [Paulus] sprach: ‘Nicht die allein, welche Übel thun, sondern jeder derer, die es den Thuenden gestatten, ist des ewigen Todes würdig’.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="10.1" corresp="#wit-g-a"><pb n="475" ed="#liebermann"/>Forðan se æðela middangeardes lareow cwæð: ‘Na ða áne ðe yfel doþ, ac ælc þara þe hit ðam dondum geðafiað, beoð wyrþe ðas<ptr type="liebermannNote" n="1" target="#Iudex_10-1.lnote.oe.1"/> ecean deaðes’.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="10.1" corresp="#wit-q"><pb n="475" ed="#liebermann"/>quia dominus et magister<ptr type="liebermannNote" n="17" target="#Iudex_10-1.lnote.oe.17"/> seculorum ait: Non solum male agentes, sed omnes consentientes digni sunt ęterna morte.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="475" ed="#liebermann"/>Denn der edle Erdenlehrer [Paulus] sprach: ‘Nicht die allein, welche Übel thun, sondern jeder derer, die es den Thuenden<ptr type="liebermannNote" n="1" target="#Iudex_10-1.lnote.de.1"/> gestatten, ist des ewigen Todes würdig’.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">For the noble teacher of the world [Paul] said: ‘Not only those who do evil, but everyone who permits it to those who do it, is worthy of eternal death’.</ab>
         <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-g-a">For the noble [and] worldly teacher said: “Not only those who do evil, but also those who permit it are deserving of eternal death.”</ab>
         <note type="passageSource">Romans 1:32</note>
         <note type="comparison" source="#liebermann" n="475">Rom. 1, 32</note>
         <note type="comparisonPrinted" source="#liebermann">Rom. 1, 32</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Iudex_10-1.lnote.oe.17" n="17" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">475</biblScope></bibl><seg type="original" xml:lang="de">minister <hi rend="italic">MBr</hi></seg><seg type="translation" xml:lang="en" source="#claude">minister <hi rend="italic">MBr</hi></seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Iudex_10-1.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">475</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Iudex_10-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">269</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Deman . . sceoldan symle þam unriht dondum . . steran</hi>; Blickling Hom. 63</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Deman . . sceoldan symle þam unriht dondum . . steran</hi>; Blickling Hom. 63</seg></note>
       </div>
     </body>
   </text>

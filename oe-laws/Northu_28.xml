@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">482</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -53,21 +55,23 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1974 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 381.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 381: “Gif preost silfwilles þa circan forlæte, ðe he to gehadod wæs, gebete þæt.” → “Gif preost silfwilles þa circan forlæte, ðe he to gehadod wæs, gebete þæt. (expanded letters in italics: e, æt)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="28">
         <head><ref type="lawCode" target="law:Northu">Northu</ref> 28</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28" corresp="#wit-d"><pb n="381" ed="#liebermann"/>Gif preost silfwilles þa circan forlæte, ðe he to gehadod wæs, gebete þ<hi rend="italic">æt</hi>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="28" corresp="#wit-d"><pb n="381" ed="#liebermann"/>Gif preost silfwilles þa circan forlæte, ðe he to gehadod wæs, g<hi rend="italic">e</hi>bete þ<hi rend="italic">æt</hi>.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d"><pb n="308" ed="#rabin-doml"/>Gif preost silfwilles þa circan forlæte ðe he to gehadod wæs, gebete þæt.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="381" ed="#liebermann"/>Wenn ein Priester willkürlich die Kirche, für die er geweiht worden ist, verlässt, büsse er das.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="381" ed="#liebermann"/>Wenn ein Priester willkürlich die Kirche, für die er geweiht worden ist, verlässt<ptr type="liebermannNote" n="1" target="#Northu_28.lnote.de.1"/>, büsse er das.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a priest wilfully leaves the church to which he was ordained, let him atone for it.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d"><pb n="482" ed="#whitelock"/>If a priest of his own free will deserts the church to which he was ordained, he is to compensate for it.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d"><pb n="309" ed="#rabin-doml"/>If a priest of his own volition abandons the church to which he was consecrated, he is to atone for that.</ab>
         <note type="comparison" source="#liebermann" n="381">Can. Eg. 8</note>
         <note type="comparisonPrinted" source="#liebermann">ebd. 8</note>
         <note type="editorial">Liebermann compares Canons of Edgar 8.; U: checked against Whitelock, EHD I (1979), and corrected (before: ‘If a priest of his own free will deserts the church to which he is ordained, he is to compensate for it.’).</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_28.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">223</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Ebd</hi>. Pfarre 7</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Ibid</hi>. Pfarre 7</seg></note>
       </div>
     </body>
   </text>

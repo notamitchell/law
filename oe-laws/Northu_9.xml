@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">481</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -60,13 +62,15 @@
         <head><ref type="lawCode" target="law:Northu">Northu</ref> 9</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="9" corresp="#wit-d"><pb n="380" ed="#liebermann"/>Gif pr<hi rend="italic">eost</hi> to rihtes timan crisman ne fecce, gilde XII ór.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d"><pb n="304" ed="#rabin-doml"/>Gif preost to rihtes timan crisman ne fecce, gilde XII or.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="380" ed="#liebermann"/>Wenn ein Priester das Chrisma nicht zur Gesetzeszeit [vom Bischof] holt, zahle er 12 Ör.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="380" ed="#liebermann"/>Wenn ein Priester das Chrisma nicht zur Gesetzeszeit<ptr type="liebermannNote" n="1" target="#Northu_9.lnote.de.1"/> [vom Bischof] holt<ptr type="liebermannNote" n="2" target="#Northu_9.lnote.de.2"/>, zahle er 12 Ör.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If a priest does not fetch the chrism [from the bishop] at the lawful time, let him pay 12 ores.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d"><pb n="481" ed="#whitelock"/>If a priest does not fetch the chrism at the proper time, he is to pay 12 ores.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d"><pb n="305" ed="#rabin-doml"/>If a priest does not fetch the chrism at the right time, he is to pay twelve oras.</ab>
         <note type="comparison" source="#liebermann" n="380"><ref target="clause:EGu_3-2">EGu 3.2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">ebd.</note>
         <note type="comparisonIncomplete">Some of Liebermann’s notes here are cut off in the gutter of the scan used, and are still to be completed.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_9.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">223</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Die Quelle las <hi rend="italic">andaga</hi>, welches Wort auch I As 1 in jüngerer Hs. durch ein ‘Zeit’ bedeutendes ersetzt wird.—<hi rend="italic">S. Gl</hi> Salböl</seg><seg type="translation" xml:lang="en" source="#claude">The source read <hi rend="italic">andaga</hi>, a word which in I As 1 too is replaced in a later MS by one meaning ‘time’. — See <hi rend="italic">Gl</hi> Salböl</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_9.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">223</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">‘bereitet’ Schmid falsch</seg><seg type="translation" xml:lang="en" source="#claude">‘prepares’ Schmid, wrongly</seg></note>
       </div>
     </body>
   </text>

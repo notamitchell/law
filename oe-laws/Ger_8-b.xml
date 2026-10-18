@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +31,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">334</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -54,20 +56,24 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2136 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 454.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 454: “[8[b]] huru is mæst neod, þæt he asece, hu he yrde mæge fyrme geforðian, ðonne ðæs tima sy.” → “[8[b]] huru is mæst neod, þæt he asece, hu he yrde mæge fyrme geforðian, ðonne ðæs tima sy. (expanded letters in italics: æt, ne)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="8[b]">
         <head><ref type="lawCode" target="law:Ger">Ger</ref> 8[b]</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="8[b]" corresp="#wit-b"><pb n="454" ed="#liebermann"/>[8[b]] huru is mæst neod, þæt he asece, hu he yrde mæge fyrme geforðian, ðonne ðæs tima sy.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="8[b]" corresp="#wit-b"><pb n="454" ed="#liebermann"/>[8[b]] huru is mæst neod, þ<hi rend="italic">æt</hi> he asece, hu he yrde<ptr type="liebermannNote" n="a" target="#Ger_8-b.lnote.oe.a"/> mæge fyrme geforðian, ðon<hi rend="italic">ne</hi> ðæs tima sy.</ab>
         <ab type="editionText" xml:lang="ang" source="#gobbitt" n="23.1" corresp="#wit-b">Huru is mæst neod þæt he asece hu he yrde mæge fyrme geforðian ðonne ðæs tima sy.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-b"><pb n="334" ed="#rabin-doml"/>Huru is mæst neod þæt he asece hu he yrde mæge fyrme geforðian ðonne ðæs tima sy.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="454" ed="#liebermann"/>namentlich ist zumeist nöthig, dass er erforsche, wie er den Boden durch Bearbeitung fördern könne, wenn der Zeitpunkt dafür ist.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="454" ed="#liebermann"/>namentlich ist zumeist nöthig, dass er erforsche, wie er den Boden durch Bearbeitung<ptr type="liebermannNote" n="1" target="#Ger_8-b.lnote.de.1"/> fördern könne, wenn der Zeitpunkt<ptr type="liebermannNote" n="k" target="#Ger_8-b.lnote.de1.k"/> dafür ist.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">above all it is most necessary that he find out how he can further the land by tillage, when the time for it comes.</ab>
         <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">At the least, it is most desirable that he learns how he may cultivate the land [and] what he should do when it is the right time.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-b"><pb n="335" ed="#rabin-doml"/>In particular, it is most necessary that he learn how to cultivate the earth when it is time.</ab>
         <note type="editorial">Liebermann asks whether the author means ‘yrðe’ as ‘ploughing’, as in 10. Compare 1 f.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Ger_8-b.lnote.oe.a" n="a" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">454</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">meint Verf.</hi> yrðe <hi rend="italic">Pflügen wie</hi> 10?</seg><seg type="translation" xml:lang="en" source="#claude">does the author mean yrðe, ploughing, as in 10?</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ger_8-b.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">253</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Zur Verschreibung <hi rend="italic">yrde</hi> [‘das Gut durch Ackerbau’ Sk-Wi falsch] statt <hi rend="italic">yrðe vgl. forðsit, dingan</hi> (Rect 4, 3c. 14) statt <hi rend="italic">-ið, ði-</hi>; bessere Übs.: ‘er das Pflügen durch’</seg><seg type="translation" xml:lang="en" source="#claude">On the miswriting <hi rend="italic">yrde</hi> [‘the estate by tillage’ Sk-Wi, wrong] for <hi rend="italic">yrðe cf. forðsit, dingan</hi> (Rect 4, 3c. 14) for <hi rend="italic">-ið, ði-</hi>; better translation: ‘er das Pflügen durch’</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Ger_8-b.lnote.de1.k" n="k" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">454</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl. o.</hi> 1 <hi rend="italic">f.</hi></seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">cf. above</hi> 1 <hi rend="italic">f.</hi></seg></note>
       </div>
     </body>
   </text>

@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">481</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -52,13 +54,14 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1948 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 380.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 380: “And gif hwilc preost agilte ⁊ he ofer biscopes gebod mæssige, gilde for ðam gebode XX ór, ⁊ þar to eacan þone gilt gebete, ðe hit ær geworhte.” → “And gif hwilc preost agilte ⁊ he ofer biscopes gebod mæssige, gilde for ðam gebode XX ór, ⁊ þar to eacan þone gilt gebete, ðe hit ær geworhte. (expanded letters in italics: ost, m)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3">
         <head><ref type="lawCode" target="law:Northu">Northu</ref> 3</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-d"><pb n="380" ed="#liebermann"/>And gif hwilc pr<hi rend="italic">eost</hi> agilte ⁊ he ofer biscopes gebod mæssige, gilde for ða<hi rend="italic">m</hi> gebode XX ór, ⁊ þar to eacan þone gilt gebete, ðe hit ær geworhte.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-d"><pb n="380" ed="#liebermann"/>And gif hwilc pre<hi rend="italic">ost</hi> agilte ⁊ he ofer biscopes gebod mæssige, gilde for ða<hi rend="italic">m</hi> gebode XX<ptr type="liebermannNote" n="4" target="#Northu_3.lnote.oe.4"/> ór, ⁊ þar to eacan þone gilt gebete, ðe hit<ptr type="liebermannNote" n="†" target="#Northu_3.lnote.oe.dagger"/> ær geworhte.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d"><pb n="302" ed="#rabin-doml"/>And gif hwilc preost agilte and he ofer biscopes gebod mæssige, gilde for ðam gebode XX or, and þartoeacan þone gilt gebete ðe hit ær geworhte.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann"><pb n="380" ed="#liebermann"/>Und wenn ein Priester schuldig wird und er [nachher] gegen des Bischofs Gebot Messe liest, so zahle er wegen des [gebrochenen] Gebots 20 Ör, und ausserdem büsse er jene Schuld, die er vor [dem Verbote] verbrochen hatte.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And if any priest does wrong and he [afterwards] says mass against the bishop's command, let him pay 20 ores for the [broken] command, and in addition atone for the offence which he committed before [the prohibition].</ab>
@@ -66,6 +69,9 @@
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d"><pb n="303" ed="#rabin-doml"/>And if any priest sins and he holds Mass in spite of the bishop’s command, he is to pay twenty oras for neglecting that command, and also do penance for the wrong which he committed previously.</ab>
         <note type="editorial">Thorpe corrects ‘hit’ to ‘he’. Earlier editions print XII here, wrongly.; U: checked against Whitelock, EHD I (1979), and corrected (before: ‘And if any priest commits an offence and he celebates mass in spite of the bishop's prohibition, he is to pay 20 ores for disregard of the prohibition, and in addition make amends for the offence which he previously committed.’).</note>
         <note type="textual" source="#rabin-doml">hit: he D</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Northu_3.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">380</biblScope></bibl><seg type="original" xml:lang="de">XII <hi rend="italic">Edd. falsch</hi></seg><seg type="translation" xml:lang="en" source="#claude">XII Edd. wrongly</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Northu_3.lnote.oe.dagger" n="†" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">380</biblScope></bibl><seg type="original" xml:lang="de">he <hi rend="italic">bessert Thorpe</hi></seg><seg type="translation" xml:lang="en" source="#claude">he emended by Thorpe</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_3.lnote.de.1" n="1" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">223</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">agyltan</hi> hier ‘Verbrechen begehn’, ärger als blosse Geldschuld oder kleine Übertretung.—Derselbe Fall, nur gegen Archidiakon, <hi rend="italic">u</hi>. 7.—<hi rend="italic">Vgl. o</hi>. 2. 2¹; <hi rend="italic">Gl</hi> Suspension 1; Messe 5.—Empfänger des Strafgelds in 3—18 ist der Bischof, in dem sich das Geistliche Gericht verkörpert</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">agyltan</hi> here ‘to commit a crime’, worse than mere debt or a minor transgression.—The same case, only against the archdeacon, <hi rend="italic">below</hi> 7.—<hi rend="italic">Cf. above</hi> 2. 2¹; <hi rend="italic">Gl</hi> Suspension 1; Messe 5.—The recipient of the fine in 3—18 is the bishop, in whom the ecclesiastical court is embodied</seg></note>
       </div>
     </body>
   </text>

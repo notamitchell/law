@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +27,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">475</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -51,18 +53,22 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2082 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 442.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 442.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 442: “7” → “⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="5">
         <head><ref type="lawCode" target="law:Wif">Wif</ref> 5</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-b"><pb n="442" ed="#liebermann"/>Trymme he eal mid wedde þ<hi rend="italic">æt</hi> þ<hi rend="italic">æt</hi> he behate; 7 aborgian frynd þ<hi rend="italic">æt</hi>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-h"><pb n="442" ed="#liebermann"/>Trymme he eal mid wedde þæt þæt he behate; ⁊ aborgian frynd þ<hi rend="italic">æt</hi>.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-b"><pb n="442" ed="#liebermann"/>Trymme he eal mid wedde þ<hi rend="italic">æt</hi> þ<hi rend="italic">æt</hi> he behate; ⁊ aborgian frynd þ<hi rend="italic">æt</hi>.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="5" corresp="#wit-q"><pb n="443" ed="#liebermann"/>Totum hoc uadio confirmetur; et amici sui plegient.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="5" corresp="#wit-h"><pb n="442" ed="#liebermann"/>Trymme he eal mid wedde þæt þæt he behate; 7 aborgian frynd þ<hi rend="italic">æt</hi>.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="443" ed="#liebermann"/>Jener [Bräutigam] bekräftige alles das, was er verheisst, durch Pfand; und [seine] Blutsfreunde sollen das verbürgen.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="443" ed="#liebermann"/>Jener [Bräutigam] bekräftige<ptr type="liebermannNote" n="1" target="#Wif_5.lnote.de.1"/> alles das, was er verheisst, durch Pfand<ptr type="liebermannNote" n="2" target="#Wif_5.lnote.de.2"/>; und [seine] Blutsfreunde sollen das verbürgen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Let [the bridegroom] confirm with a pledge all that he promises; and let [his] blood-friends stand surety for it.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-h"><pb n="475" ed="#whitelock"/>He is to strengthen all that he promises with a pledge, and his friends are to stand surety for it.</ab>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Wif_5.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">243</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Nach Urkk. geschieht dies Bekräftigen sonst mit Worten oder Handschlag</seg><seg type="translation" xml:lang="en" source="#claude">According to charters this confirmation is otherwise made by words or a handshake</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Wif_5.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">243</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Er stellt Pfand und Bürgschaft für die Versprechung in 3; für die in 1. 2 war es sofort miterwähnt</seg><seg type="translation" xml:lang="en" source="#claude">He gives pledge and surety for the promise in 3; for that in 1. 2 this was mentioned at once along with it</seg></note>
       </div>
     </body>
   </text>

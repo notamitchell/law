@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#whitelock">Whitelock</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007), p. <biblScope unit="page">482</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-d"><abbr>D</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 201</note></witness>
@@ -60,11 +62,14 @@
         <head><ref type="lawCode" target="law:Northu">Northu</ref> 24</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="24" corresp="#wit-d"><pb n="381" ed="#liebermann"/>Gif man pr<hi rend="italic">eost</hi> ofslea, forgilde man hine be fullan were ⁊ biscope feower ⁊ XX ór to weofodbote; æt diacone XII ór to weofodbote.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-d"><pb n="306" ed="#rabin-doml"/>Gif man preost ofslea, forgilde man hine be fullan were, and biscope feower and XX or to weofodbote; æt diacone XII or to weofodbote.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="381" ed="#liebermann"/>Wenn jemand einen Priester erschlägt, vergelte er ihn durch [dessen] volles Wergeld und dem Bischofe 24 Ör als Altarbusse; bei einem Diakon 12 Ör als Altarbusse.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="381" ed="#liebermann"/>Wenn jemand einen Priester erschlägt<ptr type="liebermannNote" n="1" target="#Northu_24.lnote.de.1"/>, vergelte er ihn durch [dessen] volles Wergeld und dem Bischofe 24 Ör<ptr type="liebermannNote" n="2" target="#Northu_24.lnote.de.2"/> als Altarbusse; bei einem Diakon<ptr type="liebermannNote" n="3" target="#Northu_24.lnote.de.3"/> 12 Ör als Altarbusse.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">If anyone kills a priest, let him pay for him with [his] full wergild and 24 ores to the bishop as altar-compensation; for a deacon, 12 ores as altar-compensation.</ab>
         <ab type="translation" xml:lang="en" source="#whitelock" corresp="#wit-d"><pb n="482" ed="#whitelock"/>If anyone slays a priest, he is to pay compensation for him with the full wergild, and 24 ores to the bishop as compensation for [insult to] the altar; for a deacon 12 ores as compensation for [insult to] the altar.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-d"><pb n="307" ed="#rabin-doml"/>If anyone kills a priest, he is to compensate for him with his full wergild and twenty-four oras to the bishop as compensation to the Church; for a deacon, twelve oras as compensation to the Church.</ab>
         <note type="translator" source="#rabin-doml">The penalties prescribed here are considerably less than those found in texts more closely associated with Wulfstan.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_24.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">223</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Geistliche 15c ff. Ausserdem forderte Cnut Schutzbruchbusse an den Herrn oder König, d. i. den Vormund des Geistlichen</seg><seg type="translation" xml:lang="en" source="#claude">Cf. <hi rend="italic">Gl</hi> Geistliche 15c ff. In addition Cnut demanded compensation for breach of protection, payable to the lord or king, i.e. the guardian of the cleric</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_24.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">223</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Weniger als nach Had; <hi rend="italic">s. Gl</hi> Altarbusse 6c</seg><seg type="translation" xml:lang="en" source="#claude">Less than according to Had; see <hi rend="italic">Gl</hi> Altarbusse 6c</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Northu_24.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">223</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. o</hi>. 12¹</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See above</hi> 12¹</seg></note>
       </div>
     </body>
   </text>

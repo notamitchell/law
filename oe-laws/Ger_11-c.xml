@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +31,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">336</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -54,21 +56,24 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2141 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 454.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 454: “–” → “—”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="11[c]">
         <head><ref type="lawCode" target="law:Ger">Ger</ref> 11[c]</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="11[c]" corresp="#wit-b"><pb n="454" ed="#liebermann"/>[11[c]] on odene cylne macian –</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="11[c]" corresp="#wit-b"><pb n="454" ed="#liebermann"/>[11[c]] on odene cylne macian —</ab>
         <ab type="editionText" xml:lang="ang" source="#gobbitt" n="26.2" corresp="#wit-b">On odene cylne macian .</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-b"><pb n="336" ed="#rabin-doml"/>on odene cylne macian,</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="454" ed="#liebermann"/>auf dem Dreschplatz eine Darre machen —</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="454" ed="#liebermann"/>auf dem Dreschplatz<ptr type="liebermannNote" n="u" target="#Ger_11-c.lnote.de1.u"/> eine Darre<ptr type="liebermannNote" n="4" target="#Ger_11-c.lnote.de.4"/> machen —</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">make a kiln on the threshing-floor —</ab>
         <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">To make a kiln on the threshing-floor.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-b"><pb n="337" ed="#rabin-doml"/>construct a kiln on the threshing floor and an oven and an oast,</ab>
         <note type="editorial">Liebermann compares Gerefa 3.1.</note>
         <note type="translator" source="#rabin-doml">a kiln on the threshing floor and an oven and an oast: The kiln and the oven were used to dry the harvest for preservation. An oast was a kiln specially designed for drying hops.</note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Ger_11-c.lnote.de1.u" n="u" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">454</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">o.</hi> 3, 1</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">above</hi> 3, 1</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ger_11-c.lnote.de.4" n="4" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">253</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Nicht gemäss heutigem <hi rend="italic">kiln</hi> ‘Ziegelei’, die gewiss nicht auf dem Domänenplatz lag; ‘Ofen’ Sweet, Kluge, ‘Feuerherd’ Sk-Wi zu weit; Ælfric glossiert <hi rend="italic">siccatorium</hi>; bei Mätzner <hi rend="italic">ustrina, torral</hi> (<hi rend="italic">s</hi>. Ducange s. v.), also für Korn und Malz.—Zu folg. Z. <hi rend="italic">ofn</hi> ‘Backofen’ Sk-Wi; zu <hi rend="italic">ast</hi>: provinziell lebt noch <hi rend="italic">oast</hi> ‘Gerstendarre zur Malzbereitung’; Wright <hi rend="italic">Dial. dict.</hi>; ‘Dörrofen’ Sk-Wi</seg><seg type="translation" xml:lang="en" source="#claude">Not in the sense of present-day <hi rend="italic">kiln</hi> ‘brickworks’, which certainly did not stand in the demesne yard; ‘oven’ Sweet, Kluge, ‘hearth’ Sk-Wi too wide; Ælfric glosses <hi rend="italic">siccatorium</hi>; in Mätzner <hi rend="italic">ustrina, torral</hi> (<hi rend="italic">see</hi> Ducange s. v.), thus for grain and malt.—On the following l.: <hi rend="italic">ofn</hi> ‘bake-oven’ Sk-Wi; on <hi rend="italic">ast</hi>: <hi rend="italic">oast</hi> ‘barley-kiln for malting’ still survives in provincial use; Wright <hi rend="italic">Dial. dict.</hi>; ‘drying-oven’ Sk-Wi</seg></note>
       </div>
     </body>
   </text>

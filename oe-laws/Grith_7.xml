@@ -11,6 +11,7 @@
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#jurasinski-and-oliver">Jurasinski and Oliver</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -29,6 +30,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="jurasinski-and-oliver" type="study">Stefan Jurasinski and Lisi Oliver, <title>The Laws of Alfred: The Domboc and the Making of Anglo-Saxon Law</title> (Cambridge: Cambridge University Press, 2021)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
@@ -52,15 +54,16 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2206 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 470.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 470: “7; 7” → “⁊; ⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="7">
         <head><ref type="lawCode" target="law:Grith">Grið</ref> 7</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-g-b"><pb n="470" ed="#liebermann"/>7 on þam lagum is arcebiscopes feoh endlyfangylde 7 cynges is nigongylde.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="7" corresp="#wit-g-b"><pb n="470" ed="#liebermann"/>⁊ on þam lagum is arcebiscopes feoh endlyfangylde<ptr type="liebermannNote" n="3" target="#Grith_7.lnote.oe.3"/> ⁊ cynges is nigongylde<ptr type="liebermannNote" n="3" target="#Grith_7.lnote.oe.3"/>.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" n="7" corresp="#wit-g-b"><pb n="22" ed="#rabin-doml"/>And on þam lagum is arcebiscopes feoh endlyfangylde and cynges is nigongylde.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="470" ed="#liebermann"/>Und in jenen Gesetzen ist des Erzbischofs Gut eilffach und das des Königs ist neunfach [zu entgelten].</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="470" ed="#liebermann"/>Und in jenen Gesetzen ist des Erzbischofs<ptr type="liebermannNote" n="1" target="#Grith_7.lnote.de.1"/> Gut eilffach und das des Königs<ptr type="liebermannNote" n="1" target="#Grith_7.lnote.de.1"/> ist neunfach [zu entgelten].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And in those laws the archbishop's property [is to be paid for] elevenfold and the king's ninefold.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-b"><pb n="23" ed="#rabin-doml"/>And according to those laws, elevenfold compensation is due for the archbishop’s property and ninefold for the king’s.</ab>
         <note type="comparison" source="#liebermann" n="470"><ref target="clause:Abt_1">Abt 1</ref>; <ref target="clause:Abt_4">Abt 4</ref></note>
@@ -69,6 +72,8 @@
         <note type="comparison" source="#jurasinski-and-oliver" n="367"><label>likely reference to</label> <ref target="clause:Ine_32">Ine 32</ref> <quote>Likely references include [...] Grið §7 (Ine §32)</quote></note>
         <note type="editorial">Liebermann compares Abt 1 and 4.</note>
         <note type="translator" source="#rabin-doml">This is the only surviving clause in Old English law to echo the first clause of Æthelbert’s legislation, the earliest royal law code, though it is significant that Wulfstan assigns compensation to the archbishop, rather than to a bishop, as in the earlier text. Moreover, Æthelbert’s laws do not mention the king, implying that one purpose of this clause may be to promote the church at the expense of the secular aristocracy.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Grith_7.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">470</biblScope></bibl><seg type="original" xml:lang="de">i <hi rend="italic">statt</hi> y <hi rend="italic">Thorpe</hi></seg><seg type="translation" xml:lang="en" source="#claude">i instead of y Thorpe</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Grith_7.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">265</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Die Änderung des ‘Bischofs’ bei Æthelberht zu ‘Erzbischof’ beweist zwar nicht gerade die Entstehung zu Canterbury (<hi rend="italic">s</hi>. Einl. 3), aber wohl gegen die zu Rochester, in dessen Rechtssammlung (H) ja demgemäss Grið fehlt.—In nächster Z. streiche ¹ hinter ‘Königs’</seg><seg type="translation" xml:lang="en" source="#claude">The change of Æthelberht’s ‘bishop’ to ‘archbishop’ does not exactly prove composition at Canterbury (<hi rend="italic">see</hi> Introduction 3), but it does probably tell against composition at Rochester, from whose legal collection (H) Grið is accordingly absent.—In the next l. delete ¹ after ‘Königs’</seg></note>
       </div>
     </body>
   </text>

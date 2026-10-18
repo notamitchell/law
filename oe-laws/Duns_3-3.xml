@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +27,7 @@
           <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -51,20 +53,27 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1926 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 376.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 376: “Ðolien ealles ðæs hy agon, gyf hi woh tæcen; oððe geladian hi, þæt hi bet ne cuðon.” → “Ðolien ealles ðæs hy agon, gyf hi woh tæcen; oððe geladian hi, þæt hi bet ne cuðon. (expanded letters in italics: æt)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3.3">
         <head><ref type="lawCode" target="law:Duns">Duns</ref> 3.3</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.3" corresp="#wit-q"><pb n="377" ed="#liebermann"/>Et perdant omne quod suum est, si iniustum (iudicium) iudicent; uel se adlegient, quod rectius nescierunt.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.3" corresp="#wit-b"><pb n="376" ed="#liebermann"/>Ðolien ealles ðæs hy agon, gyf hi woh tæcen; oððe geladian hi, þæt hi bet ne cuðon.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="377" ed="#liebermann"/>Sie sollen alles was sie haben verlieren, wenn sie Ungerechtes anordnen; oder sie mögen sich reinigen [durch Eid], dass sie [es] nicht besser wussten.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.3" corresp="#wit-b"><pb n="376" ed="#liebermann"/>Ðolien ealles ðæs hy agon, gyf<ptr type="liebermannNote" n="8" target="#Duns_3-3.lnote.oe.8"/> hi woh tæcen; oððe geladian hi, þ<hi rend="italic">æt</hi> hi bet ne cuðon.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.3" corresp="#wit-q"><pb n="377" ed="#liebermann"/>Et perdant omne quod suum est, si iniustum<ptr type="liebermannNote" n="9" target="#Duns_3-3.lnote.oe.9"/> (iudicium<ptr type="liebermannNote" n="10" target="#Duns_3-3.lnote.oe.10"/>) iudicent; uel se adlegient<ptr type="liebermannNote" n="11" target="#Duns_3-3.lnote.oe.11"/>, quod rectius nescierunt.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="377" ed="#liebermann"/>Sie sollen alles<ptr type="liebermannNote" n="1" target="#Duns_3-3.lnote.de.1"/> was sie haben verlieren<ptr type="liebermannNote" n="2" target="#Duns_3-3.lnote.de.2"/>, wenn sie Ungerechtes anordnen; oder sie mögen sich reinigen [durch Eid], dass sie [es] nicht besser wussten.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">They shall lose all that they have if they direct what is unjust; or they may clear themselves [by oath] that they did not know better.</ab>
         <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-b">They must suffer the loss of all they have, if they behave unjustly; or they may exculpate themselves [by showing] that they did not know better.</ab>
         <note type="comparison" source="#liebermann" n="377"><ref target="clause:IIIEg_3">III Eg 3</ref></note>
         <note type="comparisonPrinted" source="#liebermann">Vgl. III Eg. 3</note>
         <note type="editorial">Liebermann prefers the Quadripartitus reading without ‘(iudicium)’, which is only in MS R. Liebermann compares III Eg 3.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_3-3.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">376</biblScope></bibl><seg type="original" xml:lang="de">gif <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">gif Ld</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_3-3.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">377</biblScope></bibl><seg type="original" xml:lang="de">-ste <hi rend="italic">M Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">-ste M Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_3-3.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">377</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">nur R; fehlt übrigen</hi> [<hi rend="italic">besser</hi>]</seg><seg type="translation" xml:lang="en" source="#claude">only R; lacking in the others [better]</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_3-3.lnote.oe.11" n="11" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">377</biblScope></bibl><seg type="original" xml:lang="de">adlig. <hi rend="italic">R</hi></seg><seg type="translation" xml:lang="en" source="#claude">adlig. R</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Duns_3-3.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">218</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> falsches Urteil 2. Die Strenge, die Steenstrup <hi rend="italic">Danelag</hi> 207 aus Nordischem Einfluss erklärt, stimmt gerade zur Denalagu nicht. Sie sollte wohl an einem Platz, wo Parteilichkeit gegen Stammesfremde besonders leicht geargwöhnt wurde, zur Gerechtigkeit mahnen</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> falsches Urteil 2. The severity, which Steenstrup <hi rend="italic">Danelag</hi> 207 explains by Norse influence, is precisely not in keeping with the Danelaw. It was probably meant as an admonition to justice in a place where partiality against men of another people was particularly easily suspected</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Duns_3-3.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">218</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Als Beaufsichtiger und Vermögenseinzieher (<hi rend="italic">s. d. Gl</hi> 10c) ist ein staatlicher Delegat hinzuzudenken; <hi rend="italic">s. o</hi>. Einl. 13.—Zum Schwur der Unkenntnis <hi rend="italic">vgl. Gl</hi> Gefährdeeid 4</seg><seg type="translation" xml:lang="en" source="#claude">A public delegate must be understood as supervisor and as collector of the confiscated property (<hi rend="italic">see</hi> that word in <hi rend="italic">Gl</hi> 10c); <hi rend="italic">see above</hi> Introduction 13.—On the oath of ignorance <hi rend="italic">cf. Gl</hi> Gefährdeeid 4</seg></note>
       </div>
     </body>
   </text>

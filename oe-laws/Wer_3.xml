@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#wormald">Wormald</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-ppmel">Wormald, Papers Preparatory</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -28,6 +29,7 @@
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-ppmel" type="study">Patrick Wormald, <title>Papers Preparatory to The Making of English Law: King Alfred to the Twelfth Century, II: From God’s Law to Common Law</title>, ed. Stephen Baxter and John Hudson (London: University of London, 2014)</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-h" rend="bold"><abbr>H</abbr> <note type="manuscript">Strood, Medway Archive and Local Studies Centre, MS DRc/R1 (Textus Roffensis; formerly Rochester, Cathedral Library, A.3.5), c. 1120–25</note></witness>
@@ -53,22 +55,30 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2050 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 392.</change>
+      <change when="2026-10" type="checked">Liebermann’s text of MS H added from Gesetze I, p. 392.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 392: “7; 7” → “⁊; ⁊”.</change>
+      <change when="2026-10" type="checked">Liebermann’s Latin text corrected against Gesetze I, p. 392: “ƿelfhindi” → “tƿelfhindi”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3">
         <head><ref type="lawCode" target="law:Wer">Wer</ref> 3</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-b"><pb n="392" ed="#liebermann"/>7 riht is, þ<hi rend="italic">æt</hi> se slaga, syððan he weres beweddod hæbbe, finde ðærto wærborh, be ðam ðe ðærto gebyrige: þ<hi rend="italic">æt</hi> is æt twelfhyndum were gebyriað XII men to werborge, VIII fæderenmægðe 7 IIII medrenmægðe.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3" corresp="#wit-q"><pb n="393" ed="#liebermann"/>Et rectum est, ut homicida, postquam weregildum mortui uadiauerit, inueniat wereplegios, sicut ad eam pertinebit: hoc est de ƿelfhindi hominis weregildo debent dari XII homines ad wereplegium, octo de cognatione patris et quatuor de cognatione matris.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-h"><pb n="392" ed="#liebermann"/>7 riht is, ðæt se slaga, siððan he weres beweddod hæbbe, finde ðærto wærborh, be þam ðe ðærto gebyrige: ðæt is æt twelfhyndu<hi rend="italic">m</hi> were gebyriað twelf men to werborge, VIII fæderenmægðe 7 IIII medrenmægðe.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="393" ed="#liebermann"/>Und richtig ist, dass der Totschläger, sobald er das Wergeld rechtsförmlich versprochen hat, dafür Wergeld-Bürgschaft stellt: d. h. bei 1200 [Schilling] Wergeld [des Erschlagenen] gebühren sich 12 Männer zur Wergeld-Bürgschaft, 8 der Vatersippe und 4 der Muttersippe [des Totschlägers].</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-h"><pb n="392" ed="#liebermann"/>⁊ riht is, ðæt se slaga, siððan he weres beweddod hæbbe, finde ðærto wærborh, be þam ðe ðærto gebyrige: ðæt is æt twelfhyndu<hi rend="italic">m</hi> were gebyriað twelf men to werborge, VIII fæderenmægðe ⁊ IIII medrenmægðe.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3" corresp="#wit-b"><pb n="392" ed="#liebermann"/>⁊ riht is, þ<hi rend="italic">æt</hi> se slaga, syððan he weres beweddod hæbbe, finde ðærto wærborh, be ðam ðe ðærto gebyrige: þ<hi rend="italic">æt</hi> is æt twelfhyndum were gebyriað XII men to werborge, VIII fæderenmægðe ⁊ IIII medrenmægðe.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3" corresp="#wit-q"><pb n="393" ed="#liebermann"/>Et rectum est, ut homicida<ptr type="liebermannNote" n="8" target="#Wer_3.lnote.oe.8"/>, postquam weregildum mortui<ptr type="liebermannNote" n="9" target="#Wer_3.lnote.oe.9"/> uadiauerit, inueniat wereplegios, sicut ad eam pertinebit: hoc est de tƿelfhindi<ptr type="liebermannNote" n="10" target="#Wer_3.lnote.oe.10"/> hominis weregildo debent dari XII homines ad wereplegium, octo de cognatione patris et quatuor de cognatione matris.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="393" ed="#liebermann"/>Und richtig ist, dass der Totschläger, sobald er das Wergeld rechtsförmlich versprochen hat, dafür Wergeld-Bürgschaft stellt: d.<ptr type="liebermannNote" n="1" target="#Wer_3.lnote.de.1"/> h. bei 1200 [Schilling] Wergeld [des Erschlagenen] gebühren sich 12 Männer zur Wergeld-Bürgschaft, 8 der Vatersippe und 4<ptr type="liebermannNote" n="2" target="#Wer_3.lnote.de.2"/> der Muttersippe [des Totschlägers].</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">And it is right that the slayer, as soon as he has formally pledged the wergild, should provide wergild-sureties for it: that is, for a wergild of 1200 [shillings, of the slain man] 12 men are due as wergild-sureties, 8 from the father's kin and 4 from the mother's kin [of the slayer].</ab>
         <ab type="translation" xml:lang="en" source="#wormald" corresp="#wit-h">It is the law that the killer, after he has pledged the wergeld, should find wergeld-surety for it: that is for a twelve-hundred shilling wergeld, twelve men are appropriate as wergeld surety, eight from the paternal kin and four from the maternal.</ab>
         <note type="comparison" source="#liebermann" n="393"><ref target="clause:IIEm_7-1">II Em 7.1</ref>; <ref target="clause:IIEm_7-2">II Em 7.2</ref></note>
         <note type="comparisonPrinted" source="#liebermann">II Em. 7, 1 | ebd. 7, 2</note>
         <note type="comparedBy" source="#wormald-ppmel" n="148"><ref target="clause:IIEm_7">II Em 7–7.3</ref></note>
         <note type="editorial">Liebermann compares II Em 7.1–2.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Wer_3.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">393</biblScope></bibl><seg type="original" xml:lang="de">-dia <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">-dia Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Wer_3.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">393</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt Hn</hi></seg><seg type="translation" xml:lang="en" source="#claude">omitted in Hn</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Wer_3.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">393</biblScope></bibl><seg type="original" xml:lang="de">-hyndi <hi rend="italic">T;</hi> tƿue. <hi rend="italic">R;</hi> <hi rend="spaced">thaino</hi> <hi rend="italic">Hn</hi></seg><seg type="translation" xml:lang="en" source="#claude">-hyndi T; tƿue. R; <hi rend="italic">thaino</hi> Hn</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Wer_3.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">232</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">In meiner Übs. fiel aus hinter ‘stellt: je nachdem sich dazu gebührt’. Vielleicht sind die folgenden zwei Zeilen nur spätere Erklärung eines Privaten zur gemeinsamen Vorlage</seg><seg type="translation" xml:lang="en" source="#claude">In my translation, after ‘stellt’, the words ‘je nachdem sich dazu gebührt’ dropped out. Perhaps the following two lines are only a later explanation of the common source by a private individual</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Wer_3.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">232</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Bürgschaft 10; Muttersippe 1—3</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Bürgschaft 10; Muttersippe 1—3</seg></note>
       </div>
     </body>
   </text>

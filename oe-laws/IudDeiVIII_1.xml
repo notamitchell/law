@@ -8,6 +8,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -43,17 +44,22 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2287 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text added from <title>Die Gesetze der Angelsachsen</title> I, p. 415.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 415: “7; 7; 7; 7; 7; 7” → “⁊; ⁊; ⁊; ⁊; ⁊; ⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="1">
         <head><ref type="lawCode" target="law:IudDeiVIII">Iud Dei VIII</ref> 1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-ca"><pb n="415" ed="#liebermann"/>Ic eow halsie þurh ðonne Fæder 7 þone Sunu 7 þone Halgan gast 7 þurh heowerne cristendóm, þe ge underfengon, 7 þurh þa halgan rode, þe Crist on ðrowode, 7 þurh þa halgan godspel 7 ða reliquias, þe on ðisse cyrcan syndon,</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="1" corresp="#wit-ca"><ptr type="liebermannNote" n="2" target="#IudDeiVIII_1.lnote.oe.2"/><pb n="415" ed="#liebermann"/>Ic eow halsie þurh ðonne<ptr type="liebermannNote" n="1" target="#IudDeiVIII_1.lnote.oe.1"/> Fæder ⁊ þone Sunu ⁊ þone Halgan gast ⁊ þurh heowerne<ptr type="liebermannNote" n="3" target="#IudDeiVIII_1.lnote.oe.3"/> cristendóm, þe ge underfengon, ⁊ þurh þa <ptr type="liebermannNote" n="4" target="#IudDeiVIII_1.lnote.oe.4"/>halgan rode, þe Crist on ðrowode, ⁊ þurh þa halgan godspel ⁊ ða reliquias, þe on ðisse cyrcan syndon,</ab>
         <ab type="translation" xml:lang="de" source="#liebermann"><pb n="415" ed="#liebermann"/>Ich beschwöre euch bei dem Vater und dem Sohne und dem Heiligen Geiste und bei eurem Christenthum, welches ihr empfangen habt, und bei dem heiligen Kreuze, an welchem Christus gelitten hat, und bei den heiligen Evangelien und den Reliquien, welche in dieser Kirche sind,</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">I adjure you by the Father and the Son and the Holy Spirit, and by your Christianity which you have received, and by the holy cross on which Christ suffered, and by the holy gospels and the relics which are in this church,</ab>
         <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-ca">I adjure you by the Father and the Son and the Holy Spirit, and by the Christianity which you have received, and by the holy Cross on which Christ suffered, and by the holy Gospels and the relics which are in this church,</ab>
         <note type="editorial">Chapter 1 is translated word for word from the Latin ordo printed by Zeumer (Formulae p. 697, no. 5), Liebermann notes.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="IudDeiVIII_1.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">415</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">cap.</hi> 1 <hi rend="italic">wörtlich übersetzt aus Zeumer</hi> 697 (5), <hi rend="italic">zu welchem es näher steht als zu</hi> I 2, 1 <hi rend="italic">oder zu</hi> VI</seg><seg type="translation" xml:lang="en" source="#claude">cap. 1 translated literally from Zeumer 697 (5), to which it stands closer than to I 2, 1 or to VI</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IudDeiVIII_1.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">415</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">für</hi> ðone <hi rend="italic">auch cap.</hi> 1</seg><seg type="translation" xml:lang="en" source="#claude">for ðone, also cap. 1</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IudDeiVIII_1.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">415</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="IudDeiVIII_1.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">415</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Kreuz fehlt</hi> I. VI <hi rend="italic">Zeumer</hi> 697</seg><seg type="translation" xml:lang="en" source="#claude">Cross missing in I. VI Zeumer 697</seg></note>
       </div>
     </body>
   </text>

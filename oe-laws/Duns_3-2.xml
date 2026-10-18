@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#unattributed">Translator not recorded</name></respStmt>
         <respStmt><resp>Cross-references to other clauses</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -26,6 +27,7 @@
           <bibl xml:id="unattributed" type="translation">Translation from the original OE Laws Database spreadsheet; the translator is not recorded</bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -51,18 +53,23 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 1925 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 376.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 376: “Zwölf [Urtheil” → “Zwölf[Urtheil”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3.2">
         <head><ref type="lawCode" target="law:Duns">Duns</ref> 3.2</head>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.2" corresp="#wit-b"><pb n="376" ed="#liebermann"/>XII lahmen scylon riht<ptr type="liebermannNote" n="4" target="#Duns_3-2.lnote.oe.4"/> tæcean Wealan ⁊ Ænglan: VI Englisce ⁊ VI Wylisce.</ab>
         <ab type="liebermannText" xml:lang="la" source="#liebermann" n="3.2" corresp="#wit-q"><pb n="377" ed="#liebermann"/>Duodecim lahmen (id est legis homines) debent rectum discernere Walis et Anglis: sex Walisci et sex Anglici.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.2" corresp="#wit-b"><pb n="376" ed="#liebermann"/>XII lahmen scylon riht tæcean Wealan ⁊ Ænglan: VI Englisce ⁊ VI Wylisce.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="377" ed="#liebermann"/>Zwölf [Urtheil findende (und Recht weisende?)] Rechtsmannen sollen Recht anordnen Wallisern und [d. h. im Processe mit] Engländern [des Dunsæte-Bezirks]: 6 Englische und 6 Wälsche.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="377" ed="#liebermann"/>Zwölf<ptr type="liebermannNote" n="1" target="#Duns_3-2.lnote.de.1"/>[Urtheil findende (und Recht weisende?)] Rechtsmannen sollen Recht anordnen<ptr type="liebermannNote" n="2" target="#Duns_3-2.lnote.de.2"/> Wallisern und [<hi rend="italic">d. h</hi>. im Processe mit] Engländern [des Dunsæte-Bezirks]: 6 Englische<ptr type="liebermannNote" n="3" target="#Duns_3-2.lnote.de.3"/> und 6 Wälsche.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Twelve lawmen [who find judgment (and declare law?)] shall direct justice for the Welsh and [i.e. in suits with] the English [of the Dunsæte district]: 6 English and 6 Welsh.</ab>
         <ab type="translation" xml:lang="en" source="#unattributed" corresp="#wit-b">Twelve <hi rend="italic">lahmen</hi> must administer justice [between] the Welsh and English [of the Dunsæte district]: six Englishmen and six Welshmen.</ab>
         <note type="comparison" source="#wormald-mel" n="381"><label>resembles</label> <ref target="clause:IVEg_5">IV Eg 5–6.1</ref> <quote>the panel of twelve 'lahmen' … which resembles the system set up under Edgar's Wihtbordesstan code [n. Duns. 3:2–3, IV Eg 5 – 6:1]</quote></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Duns_3-2.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">376</biblScope></bibl><seg type="original" xml:lang="de">-te <hi rend="italic">Ld</hi></seg><seg type="translation" xml:lang="en" source="#claude">-te Ld</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Duns_3-2.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">218</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl: lagamen</hi> 1—2b. Ein weiterer Beleg für den Eigennamen in südl. Denalagu bei Rye <hi rend="italic">Calendar of Feet of fines for Suffolk</hi> (1901), Index</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl: lagamen</hi> 1—2b. A further instance of the personal name in the southern Danelaw in Rye <hi rend="italic">Calendar of Feet of fines for Suffolk</hi> (1901), Index</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Duns_3-2.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">218</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Also keine Beweisjury</seg><seg type="translation" xml:lang="en" source="#claude">So this is not a jury of proof</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Duns_3-2.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">218</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Zu dieser Halbteilung <hi rend="italic">vgl. o</hi>. Einl. 11. 13; auch K. Engel in <hi rend="italic">Hansi. Geschblä</hi>. 1914, 214. In Hn 31, 8 wählt jede Partei die Hälfte der Urteilfinder. Ebenso im Nordischen Schiedsgericht; Amira³ 160. Hier spricht der Zusammenhang gegen Wahl durch die Parteien, vielmehr für ein dauerndes Gericht unter staatlichem Richter</seg><seg type="translation" xml:lang="en" source="#claude">On this division into halves <hi rend="italic">cf. above</hi> Introduction 11. 13; also K. Engel in <hi rend="italic">Hansi. Geschblä</hi>. 1914, 214. In Hn 31, 8 each party chooses half of the doomsmen. Likewise in the Norse court of arbitration; Amira³ 160. Here the context tells against choice by the parties and rather in favour of a standing court under a public judge</seg></note>
       </div>
     </body>
   </text>

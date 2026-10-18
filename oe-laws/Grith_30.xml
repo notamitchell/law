@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +28,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">30</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
@@ -49,20 +51,25 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2235 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 473.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 473: “7; 'ecclesia'; 7” → “⁊; ‘ecclesia’; ⁊”.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 473: “Alle haben wir Einen himmlischen Vater und eine geistliche Mutter, welche ecclesia genannt ist, das heisst Gottes Kirche; und darum sind wir Brüder.” → “Alle haben wir Einen himmlischen Vater und eine geistliche Mutter, welche ecclesia genannt ist, das heisst Gottes Kirche; und darum sind wir Brüder. (expanded letters in italics: ecclesia)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="30">
         <head><ref type="lawCode" target="law:Grith">Grið</ref> 30</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="30" corresp="#wit-g-b"><pb n="473" ed="#liebermann"/>Ealle we habbað ænne heofonlicne fæder 7 ane gastlice modor, seo is 'ecclesia' genamod, þ<hi rend="italic">æt</hi> is Godes cyrice; 7 þy we syn gebroðra.</ab>
-        <ab type="editionText" xml:lang="ang" source="#rabin-doml" n="30" corresp="#wit-g-b"><pb n="30" ed="#rabin-doml"/>Ealle we habbað ænne heofonlicne fæder and ane gastlice modor. Seo is Ecclesia genamod, þæt is Godes cyrice, and þy we syn gebroðra.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="473" ed="#liebermann"/>Alle haben wir Einen himmlischen Vater und eine geistliche Mutter, welche ecclesia genannt ist, das heisst Gottes Kirche; und darum sind wir Brüder.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="30" corresp="#wit-g-b"><pb n="473" ed="#liebermann"/>Ealle we habbað ænne heofonlicne fæder ⁊ ane gastlice modor, seo is ‘ecclesia’ genamod, þ<hi rend="italic">æt</hi> is Godes cyrice<ptr type="liebermannNote" n="1" target="#Grith_30.lnote.oe.1"/>; ⁊ þy we syn<ptr type="liebermannNote" n="1" target="#Grith_30.lnote.oe.1"/> gebroðra.</ab>
+        <ab type="editionText" xml:lang="ang" source="#rabin-doml" n="30" corresp="#wit-g-b"><pb n="30" ed="#rabin-doml"/>Ealle we habbað ænne heofonlicne fæder and ane gastlice modor. Seo is <hi rend="italic">Ecclesia</hi> genamod, þæt is Godes cyrice, and þy we syn gebroðra.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="473" ed="#liebermann"/>Alle<ptr type="liebermannNote" n="1" target="#Grith_30.lnote.de.1"/> haben wir Einen himmlischen Vater und eine geistliche Mutter, welche <hi rend="italic">ecclesia</hi> genannt ist, das heisst Gottes Kirche<ptr type="liebermannNote" n="†" target="#Grith_30.lnote.de1.dagger"/>; und darum sind wir Brüder.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">We all have one heavenly Father and one spiritual mother, who is called ecclesia, that is, God's church; and therefore we are brothers.</ab>
-        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-b"><pb n="31" ed="#rabin-doml"/>We all have one heavenly father and one spiritual mother, who is named Ecclesia, that is, God’s Church; and therefore we are brothers.</ab>
+        <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-b"><pb n="31" ed="#rabin-doml"/>We all have one heavenly father and one spiritual mother, who is named <hi rend="italic">Ecclesia</hi>, that is, God’s Church; and therefore we are brothers.</ab>
         <note type="comparison" source="#liebermann" n="473">Wulfstan 112</note>
         <note type="comparisonPrinted" source="#liebermann">Wulfstan 112</note>
-        <note type="editorial">Liebermann compares Wulfstan 112, the homilies attributed to Wulfstan 67 and 143, and Polity 25.; T: corrected against Rabin, DOML 66 (2020), p. 30 (before: ‘Ealle we habbað ænne heofonlicne fæder and ane gastlice modor, seo is Ecclesia genamod, þæt is Godes cyrice, and þy we syn gebroðra.’)</note>
+        <note type="editorial">Liebermann compares Wulfstan 112, the homilies attributed to Wulfstan 67 and 143, and Polity 25.; T: corrected against Rabin, DOML 66 (2020), p. 30 (before: ‘Ealle we habbað ænne heofonlicne fæder and ane gastlice modor, seo is Ecclesia genamod, þæt is Godes cyrice, and þy we syn gebroðra.’); T: corrected against Rabin p. 30, October 2026 (was “Ealle we habbað ænne heofonlicne fæder and ane gastlice modor. Seo is Ecclesia genamod, þæt is Godes cyrice, and þy we syn gebroðra.”, now “Ealle we habbað ænne heofonlicne fæder and ane gastlice modor. Seo is Ecclesia genamod, þæt is Godes cyrice, and þy we syn gebroðra. (expanded letters in italics: Ecclesia)”); U: corrected against Rabin p. 31, October 2026 (was “We all have one heavenly father and one spiritual mother, who is named Ecclesia, that is, God’s Church; and therefore we are brothers.”, now “We all have one heavenly father and one spiritual mother, who is named Ecclesia, that is, God’s Church; and therefore we are brothers. (expanded letters in italics: Ecclesia)”)</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Grith_30.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">473</biblScope></bibl><seg type="original" xml:lang="de">[<hi rend="italic">Eingeklammertes</hi>] <hi rend="italic">von mir ergänzt</hi></seg><seg type="translation" xml:lang="en" source="#claude">[Bracketed matter] supplied by me</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Grith_30.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">267</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Hom. n</hi>. Wulfstan 67 begründet ebenso das Gebot, die Kirche zu schützen. Latein. Original dazu in Napiers <hi rend="italic">Wulfstan</hi> p. 61. <hi rend="italic">Vgl. Gl</hi> Kirche 4a</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Hom. n</hi>. Wulfstan 67 grounds the command to protect the church in the same way. The Latin original of it in Napier’s <hi rend="italic">Wulfstan</hi> p. 61. <hi rend="italic">Cf. Gl</hi> Kirche 4a</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Grith_30.lnote.de1.dagger" n="†" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">473</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Homilien nach Wulfstan</hi> 67. 143; <hi rend="italic">Polity</hi> 25</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Homilien nach Wulfstan</hi> 67. 143; <hi rend="italic">Polity</hi> 25</seg></note>
       </div>
     </body>
   </text>

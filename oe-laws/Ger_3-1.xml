@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +31,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">332</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -54,22 +56,27 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2127 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 453.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 453: “7” → “⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="3.1">
         <head><ref type="lawCode" target="law:Ger">Ger</ref> 3.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.1" corresp="#wit-b"><pb n="453" ed="#liebermann"/>[3.1] Forðam to soðe ic secge: oferhogie he oððe forgyme ða ðing to beganne 7 to bewitanne, ðe to scipene oððe to odene belimpað, sona hit wyrð on berne þ<hi rend="italic">æt</hi> to ðam belimpað.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="3.1" corresp="#wit-b"><pb n="453" ed="#liebermann"/>[3.1] Forðam to soðe ic secge: oferhogie he oððe forgyme ða ðing to beganne ⁊ to bewitanne, ðe to scipene oððe to odene belimpað, sona hit wyrð on berne þ<hi rend="italic">æt</hi> to ðam belimpað.</ab>
         <ab type="editionText" xml:lang="ang" source="#gobbitt" n="22.5" corresp="#wit-b">Forðam to soðe to secge . oferho|gie he . oððe forgyme ða ðing tobegan|ne 7 to bewitanne ðe to scipene oððe to odene be limpað . sona hit wyrð on ber|ne þæt to ðam belimpað.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-b"><pb n="332" ed="#rabin-doml"/>Forðam to soðe ic secge: oferhogie he oððe forgyme ða ðing to beganne and to bewitanne, ðe to scipene oððe to odene belimpað, sona hit wyrð on berne þæt to ðam belimpað.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="453" ed="#liebermann"/>Denn wahrlich sag ich: verachtet er oder vernachlässigt die Dinge zu besorgen und zu beaufsichtigen, welche zu Stall oder zu Tenne gehören, so gelangt alsbald in die Scheune, was zu jenen gehört.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="453" ed="#liebermann"/>Denn wahrlich<ptr type="liebermannNote" n="1" target="#Ger_3-1.lnote.de.1"/> sag ich: verachtet er oder vernachlässigt die Dinge zu besorgen und zu beaufsichtigen, welche zu Stall oder zu Tenne<ptr type="liebermannNote" n="2" target="#Ger_3-1.lnote.de.2"/> gehören, so gelangt<ptr type="liebermannNote" n="3" target="#Ger_3-1.lnote.de.3"/> alsbald in die Scheune<ptr type="liebermannNote" n="m" target="#Ger_3-1.lnote.de1.m"/>, was zu jenen gehört.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">For truly I say: if he scorns or neglects to manage and oversee the things that belong to the cattle-shed or the threshing-floor, then what belongs to them soon comes [short] in the barn.</ab>
         <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">Because to speak truthfully, if he is too proud or he neglects things which are to be done and attended to, that which belongs in the cattle-shed or to the threshing floor, will soon turn up in the barn.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-b"><pb n="333" ed="#rabin-doml"/>For it is true what I say: if he is disdainful or he overlooks those duties which must be carried out and overseen, then that which belongs in the cow stalls or on the threshing floor will soon turn up in the barn.</ab>
         <note type="editorial">Liebermann compares Rect 4.1b and 17.</note>
         <note type="textual" source="#rabin-doml">omitted B; text supplied from Quadripartitus</note>
         <note type="translator" source="#rabin-doml">that which belongs in the cow stalls: That is, grains meant for one purpose will be inadvertently used for another. In a broader sense, without proper care, the resources of the estate will be wasted.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ger_3-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">253</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Predigerhaft; <hi rend="italic">s. o</hi>. Einl. 6; Toller 896b</seg><seg type="translation" xml:lang="en" source="#claude">Preacher-like; <hi rend="italic">see above</hi> Introduction 6; Toller 896b</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ger_3-1.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">253</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. u</hi>. 17. Daneben gibt Sweet die Bed. ‘yard’, wohl ‘Hofplatz zwischen Domänengebäuden’; <hi rend="italic">s. u</hi>. 11{u}</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">See below</hi> 17. Sweet also gives the meaning ‘yard’, probably ‘courtyard between the demesne buildings’; <hi rend="italic">see below</hi> 11{u}</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ger_3-1.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">253</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de">Wohl nur ländliche Redensart sinnlichen Ausdrucks für ‘geht alles drunter und drüber’.—‘wird das Ergebnis, soweit es von solchen Dingen abhängt, sich bald in der Scheune zeigen (viell. Sprichwort)’ Sk-Wi; m. E. falsch</seg><seg type="translation" xml:lang="en" source="#claude">Probably only a rustic saying, vividly expressed, for ‘everything goes topsy-turvy’.—‘the result, so far as it depends on such things, will soon show itself in the barn (perhaps a proverb)’ Sk-Wi; in my opinion wrong</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Ger_3-1.lnote.de1.m" n="m" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">453</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl.</hi> Rect. 4, 1<hi rend="italic">b</hi>. 17</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">cf.</hi> Rect. 4, 1<hi rend="italic">b</hi>. 17</seg></note>
       </div>
     </body>
   </text>

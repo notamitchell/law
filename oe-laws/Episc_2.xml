@@ -9,6 +9,7 @@
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -25,6 +26,7 @@
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">477</biblScope></bibl>
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">102</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-x" rend="bold"><abbr>X</abbr> <note type="manuscript">Oxford, Bodleian Library, Junius 121</note></witness>
@@ -45,18 +47,28 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2272 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 477.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 477: “He sceall gehadode men ærest gewissian, þæt heora ælc wite, hwæt him mid rihte gebyrige to donne, ⁊ eac hwæt hy woruldmannum agan to beodanne.” → “He sceall gehadode men ærest gewissian, þæt heora ælc wite, hwæt him mid rihte gebyrige to donne, ⁊ eac hwæt hy woruldmannum agan to beodanne. (expanded letters in italics: æt)”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="2">
         <head><ref type="lawCode" target="law:Episc">Episc</ref> 2</head>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2" corresp="#wit-q"><pb n="477" ed="#liebermann"/>Inprimis debet omnem ordinatum instruere, quid ei iure pertineat facere (sit agendum), et quid hominibus secularibus indicare debeant.</ab>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-x"><pb n="477" ed="#liebermann"/>He sceall gehadode men ærest gewissian, þæt heora ælc wite, hwæt him mid rihte gebyrige to donne, ⁊ eac hwæt hy woruldmannum agan to beodanne.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="2" corresp="#wit-x"><pb n="477" ed="#liebermann"/>He sceall gehadode men ærest gewissian, þ<hi rend="italic">æt</hi> heora ælc wite, hwæt him mid rihte gebyrige to donne, ⁊ eac hwæt hy woruldmannum agan to beodanne.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="2" corresp="#wit-q"><pb n="477" ed="#liebermann"/>Inprimis debet omnem<ptr type="liebermannNote" n="4" target="#Episc_2.lnote.oe.4"/> ordinatum<ptr type="liebermannNote" n="5" target="#Episc_2.lnote.oe.5"/> instruere<ptr type="liebermannNote" n="6" target="#Episc_2.lnote.oe.6"/>, quid ei<ptr type="liebermannNote" n="7" target="#Episc_2.lnote.oe.7"/> iure<ptr type="liebermannNote" n="8" target="#Episc_2.lnote.oe.8"/> pertineat<ptr type="liebermannNote" n="3" target="#Episc_2.lnote.oe.3"/> facere (sit agendum), et quid hominibus<ptr type="liebermannNote" n="9" target="#Episc_2.lnote.oe.9"/> secularibus indicare<ptr type="liebermannNote" n="10" target="#Episc_2.lnote.oe.10"/> debeant.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-x"><pb n="102" ed="#rabin-doml"/>He sceall gehadode men ærest gewissian, þæt heora ælc wite hwæt him mid rihte gebyrige to donne and eac hwæt hy woruldmannum agan to beodanne.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann"><pb n="477" ed="#liebermann"/>Erstens soll er geweihte Männer (Kleriker) anleiten, dass ihrer jeder wisse, was ihm [dem Kleriker] von Rechts wegen zu thun gebühre, und auch was sie Laien verkünden [gebieten] sollen.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">First, he shall instruct ordained men (clerics), so that each of them knows what it rightly befits him [the cleric] to do, and also what they ought to proclaim [enjoin] to laymen.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-x"><pb n="103" ed="#rabin-doml"/>First, he must oversee men in orders so that each of them may know what is properly fitting for him to do and also what they should preach to the laity.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Episc_2.lnote.oe.4" n="4" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">477</biblScope></bibl><seg type="original" xml:lang="de">omne <hi rend="italic">Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">omne Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Episc_2.lnote.oe.5" n="5" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">477</biblScope></bibl><seg type="original" xml:lang="de">Dei <hi rend="italic">fügt zu R</hi></seg><seg type="translation" xml:lang="en" source="#claude">R adds Dei</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Episc_2.lnote.oe.6" n="6" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">477</biblScope></bibl><seg type="original" xml:lang="de">insinuare quod <hi rend="italic">Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">insinuare quod Lond</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Episc_2.lnote.oe.7" n="7" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">477</biblScope></bibl><seg type="original" xml:lang="de">sit ei a. iure <hi rend="italic">Br</hi></seg><seg type="translation" xml:lang="en" source="#claude">sit ei a. iure Br</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Episc_2.lnote.oe.8" n="8" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">477</biblScope></bibl><seg type="original" xml:lang="de">sit a. iure <hi rend="italic">M Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">sit a. iure M Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Episc_2.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">477</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vor der Klammer Lond; eingeklammertes übrige</hi></seg><seg type="translation" xml:lang="en" source="#claude">the text before the bracket Lond; the bracketed text the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Episc_2.lnote.oe.9" n="9" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">477</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">fehlt R</hi></seg><seg type="translation" xml:lang="en" source="#claude">lacking in R</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Episc_2.lnote.oe.10" n="10" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">477</biblScope></bibl><seg type="original" xml:lang="de">debeant intimare. Et debent sed. <hi rend="italic">Lond</hi></seg><seg type="translation" xml:lang="en" source="#claude">debeant intimare. Et debent sed. Lond</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Episc_2.lnote.de.1" n="1" source="#liebermann-erkl" rend="wholeClause"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">271</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Bischof 5c; Geistliche 26b. 27d. 35</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Bischof 5c; Geistliche 26b. 27d. 35</seg></note>
       </div>
     </body>
   </text>

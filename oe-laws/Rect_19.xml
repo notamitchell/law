@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +31,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">330</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -62,13 +64,17 @@
       <div type="clause" n="19">
         <head><ref type="lawCode" target="law:Rect">Rect</ref> 19</head>
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="19" corresp="#wit-b"><pb n="452" ed="#liebermann"/>[19] Be wudewarde. Wuduwearde gebyreð ælc windfylled treow.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="19" corresp="#wit-q"><pb n="452" ed="#liebermann"/>Ƿudeƿeard (id est custodi nemoris uel forestario) iure cedit lignum omne uento deiectum.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="19" corresp="#wit-q"><pb n="452" ed="#liebermann"/>Ƿudeƿeard<ptr type="liebermannNote" n="1" target="#Rect_19.lnote.oe.1"/> (id est custodi nemoris uel forestario) iure cedit<ptr type="liebermannNote" n="2" target="#Rect_19.lnote.oe.2"/> lignum omne uento deiectum<ptr type="liebermannNote" n="3" target="#Rect_19.lnote.oe.3"/>.</ab>
         <ab type="editionText" xml:lang="ang" source="#gobbitt" n="20" corresp="#wit-b">Be wudewarde . Wuduwearde gebyreð ælc wind fylled treow .</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-b"><pb n="330" ed="#rabin-doml"/><hi rend="italic">Be wudewarde</hi> Wuduwearde gebyreð ælc windfylled treow.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="452" ed="#liebermann"/>Vom Waldwart. Dem Waldwart gebührt jeder vom Wind gefällte Baum.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="452" ed="#liebermann"/>Vom Waldwart<ptr type="liebermannNote" n="1" target="#Rect_19.lnote.de.1"/>. Dem Waldwart gebührt jeder vom Wind gefällte Baum.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Of the woodward. To the woodward is due every tree blown down by the wind.</ab>
         <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">Concerning the forester To the forester is due each wind-felled tree.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-b"><pb n="331" ed="#rabin-doml"/><hi rend="italic">Regarding the Forester</hi> To the forester is due every tree felled by the wind.</ab>
+        <note type="liebermannNote" subtype="textual" xml:id="Rect_19.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">452</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so T;</hi> -ward <hi rend="italic">übr.</hi></seg><seg type="translation" xml:lang="en" source="#claude">thus T; -ward the others</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rect_19.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">452</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so TM;</hi> concedit <hi rend="italic">R;</hi> cecidit <hi rend="italic">Hk</hi></seg><seg type="translation" xml:lang="en" source="#claude">thus TM; concedit R; cecidit Hk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rect_19.lnote.oe.3" n="3" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">452</biblScope></bibl><seg type="original" xml:lang="de">-cto <hi rend="italic">R</hi></seg><seg type="translation" xml:lang="en" source="#claude">-cto R</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rect_19.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">252</biblScope><biblScope unit="column">1</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Wald 3; Windfall. Das Wort <hi rend="italic">wuduweard</hi> ging ins Mittelkymrische über; Windisch in <hi rend="italic">Abh. Sächs. Ges. Wiss</hi>. 29 VI (1912) 250.—In Battle ist der <hi rend="italic">wodeward</hi> zugleich Schweinehirt: <hi rend="italic">pro custodia porcorum habebit ad festum s. Martini intestina unius porci</hi>; Custumal of Battle ed. Scargill-Bird 67</seg><seg type="translation" xml:lang="en" source="#claude">Cf. <hi rend="italic">Gl</hi> Wald 3; Windfall. The word <hi rend="italic">wuduweard</hi> passed into Middle Welsh; Windisch in <hi rend="italic">Abh. Sächs. Ges. Wiss</hi>. 29 VI (1912) 250.—At Battle the <hi rend="italic">wodeward</hi> is at the same time swineherd: <hi rend="italic">pro custodia porcorum habebit ad festum s. Martini intestina unius porci</hi>; Custumal of Battle ed. Scargill-Bird 67</seg></note>
       </div>
     </body>
   </text>

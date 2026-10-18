@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +31,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">336</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -54,20 +56,25 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2140 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 454.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 454: “7” → “⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="11[b]">
         <head><ref type="lawCode" target="law:Ger">Ger</ref> 11[b]</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="11[b]" corresp="#wit-b"><pb n="454" ed="#liebermann"/>[11[b]] orceard ræran 7 mænige inweorc wyrcean, ðerhsan, wudu cleofan, hryðeran styllan, swyn stigian,</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="11[b]" corresp="#wit-b"><pb n="454" ed="#liebermann"/>[11[b]] orceard ræran ⁊ mænige inweorc wyrcean, ðerhsan, wudu cleofan, hryðeran styllan, swyn stigian,</ab>
         <ab type="editionText" xml:lang="ang" source="#gobbitt" n="26.1" corresp="#wit-b">Orceard ræran . 7 mænige inweorc wyrcean. ðerhsan . wudu cleofan . hryðeran styllan. swyn stygian .</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-b"><pb n="336" ed="#rabin-doml"/>orceard ræran and mænige inweorc wyrcean, ðerhsan, wudu cleofan, hryðeran styllan, swyn stician,</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="454" ed="#liebermann"/>Garten bauen und viele Arbeiten innerhalb [des Gehöfts] thun, dreschen, Holz spalten, den Rindern Stall machen, Schweine einpferchen,</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="454" ed="#liebermann"/>Garten<ptr type="liebermannNote" n="3" target="#Ger_11-b.lnote.de.3"/> bauen und viele Arbeiten innerhalb [des Gehöfts] thun, dreschen, Holz<ptr type="liebermannNote" n="2" target="#Ger_11-b.lnote.de.2"/> spalten, den Rindern<ptr type="liebermannNote" n="t" target="#Ger_11-b.lnote.de1.t"/> Stall machen, Schweine einpferchen<ptr type="liebermannNote" n="s" target="#Ger_11-b.lnote.de1.s"/>,</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">lay out an orchard and do many indoor tasks, thresh, split wood, make stalls for the cattle, pen the pigs,</ab>
         <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">To tend the orchard and to undertake many indoor duties, threshing, to cleave wood, put cattle in stalls, slaughter pigs.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-b"><pb n="337" ed="#rabin-doml"/>tend to the orchard, carry out indoor tasks, thresh, chop wood, put cattle in stalls, put pigs in their sty,</ab>
         <note type="editorial">Liebermann compares Gerefa 13 and Rect 7.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ger_11-b.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">253</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Garten; dazu Hoops in <hi rend="italic">Reallex. Germ. Altt</hi>. 113</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">Cf. Gl</hi> Garten; also Hoops in <hi rend="italic">Reallex. Germ. Altt</hi>. 113</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Ger_11-b.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">253</biblScope><biblScope unit="column">2</biblScope></bibl><seg type="original" xml:lang="de">Jede Hufe zu Stoke liefert dem Herrn 4 <hi rend="italic">foðera aclofenas gavolwyda</hi>; Bi 594. Das <hi rend="italic">wudu</hi> nächster Z. ist also Brennholz</seg><seg type="translation" xml:lang="en" source="#claude">Each hide at Stoke supplies the lord with 4 <hi rend="italic">foðera aclofenas gavolwyda</hi>; Bi 594. The <hi rend="italic">wudu</hi> of the next l. is therefore firewood</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Ger_11-b.lnote.de1.t" n="t" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">454</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl. u.</hi> 13</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">cf. below</hi> 13</seg></note>
+        <note type="liebermannNote" subtype="translationFootnote" xml:id="Ger_11-b.lnote.de1.s" n="s" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">454</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">vgl.</hi> Rect. 7</seg><seg type="translation" xml:lang="en" source="#claude"><hi rend="italic">cf.</hi> Rect. 7</seg></note>
       </div>
     </body>
   </text>

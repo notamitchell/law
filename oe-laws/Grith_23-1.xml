@@ -10,6 +10,7 @@
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -27,6 +28,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">28</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-g-b"><abbr>G(B)</abbr> <note type="manuscript">London, British Library, Cotton Nero A.i</note></witness>
@@ -49,21 +51,23 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2228 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 472.</change>
+      <change when="2026-10" type="checked">Liebermann’s text corrected against Gesetze I, p. 472: “7” → “⁊”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="23.1">
         <head><ref type="lawCode" target="law:Grith">Grið</ref> 23.1</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="23.1" corresp="#wit-g-b"><pb n="472" ed="#liebermann"/>Swylc understandað þa ðe Godes ege habbað 7 wisdomes gymað.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="23.1" corresp="#wit-g-b"><pb n="472" ed="#liebermann"/>Swylc understandað þa ðe Godes ege habbað ⁊ wisdomes gymað.</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" n="23.1" corresp="#wit-g-b"><pb n="28" ed="#rabin-doml"/>Swylc understandað þa ðe Godes ege habbað and wisdomes gymað.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="472" ed="#liebermann"/>Solches begreifen die, welche Gottesfurcht haben und auf Weisheit achten.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="472" ed="#liebermann"/>Solches begreifen<ptr type="liebermannNote" n="1" target="#Grith_23-1.lnote.de.1"/> die, welche Gottesfurcht haben und auf Weisheit achten.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">Those understand such things who have the fear of God and heed wisdom.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-g-b"><pb n="29" ed="#rabin-doml"/>This is understood by those who have a fear of God and heed wisdom.</ab>
         <note type="comparison" source="#liebermann" n="472"><ref target="clause:Grith_21-1">Grið 21.1</ref></note>
         <note type="comparisonPrinted" source="#liebermann">s. o. 21, 1</note>
         <note type="comparedBy" source="#liebermann"><ref target="clause:Grith_21-1">Grið 21.1</ref></note>
         <note type="translator" source="#rabin-doml">fear of God and heed wisdom: See Proverbs 1:7.</note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Grith_23-1.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">266</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de">Nicht: ‘damit versteht er die’. Vielmehr treten diese Weisen, die <hi rend="italic">understandað</hi>, in Ggs. zu den Toren (21, 1), die <hi rend="italic">ne understandan</hi></seg><seg type="translation" xml:lang="en" source="#claude">Not: ‘by this he understands those’. Rather, these wise men, who <hi rend="italic">understandað</hi>, are contrasted with the fools (21, 1), who <hi rend="italic">ne understandan</hi></seg></note>
       </div>
     </body>
   </text>

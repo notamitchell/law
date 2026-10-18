@@ -12,6 +12,7 @@
         <respStmt><resp>Translation</resp><name ref="#gobbitt">Gobbitt</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#rabin-doml">Rabin</name></respStmt>
         <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
+        <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
         <publisher>eLiebermann: An Online Dictionary of Pre-Conquest English Law</publisher>
@@ -30,6 +31,7 @@
           <bibl xml:id="rabin-doml" type="edition">Andrew Rabin, ed. and trans., <title>Old English Legal Writings: Wulfstan</title>, Dumbarton Oaks Medieval Library (Cambridge, MA: Harvard University Press, 2020), p. <biblScope unit="page">320</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
           <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
+          <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
           <witness xml:id="wit-b" rend="bold"><abbr>B</abbr> <note type="manuscript">Cambridge, Corpus Christi College, MS 383</note></witness>
@@ -54,21 +56,28 @@
     <revisionDesc>
       <change when="2026-10-18">Generated from row 2095 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
       <change when="2026-10" type="checked">Liebermann’s text checked against <title>Die Gesetze der Angelsachsen</title> I, p. 448.</change>
+      <change when="2026-10" type="checked">Liebermann’s German translation corrected against Gesetze I, p. 448: “einem” → “eínem”.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="clause" n="4.5">
         <head><ref type="lawCode" target="law:Rect">Rect</ref> 4.5</head>
-        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.5" corresp="#wit-b"><pb n="448" ed="#liebermann"/>[4.5] On sumen landa gebur sceal syllan huniggafol, on suman metegafol, on suman ealugafol.</ab>
-        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.5" corresp="#wit-q"><pb n="448" ed="#liebermann"/>In quibusdam locis gebúr dabit hunigablum, in quibusdam metegablum, in quibusdam ealagablum.</ab>
+        <ab type="liebermannText" xml:lang="ang" source="#liebermann" n="4.5" corresp="#wit-b"><pb n="448" ed="#liebermann"/>[4.5] On sumen<ptr type="liebermannNote" n="2" target="#Rect_4-5.lnote.oe.2"/> landa<ptr type="liebermannNote" n="2" target="#Rect_4-5.lnote.oe.2"/> gebur sceal syllan huniggafol, on suman metegafol, on suman ealugafol.</ab>
+        <ab type="liebermannText" xml:lang="la" source="#liebermann" n="4.5" corresp="#wit-q"><pb n="448" ed="#liebermann"/>In quibusdam locis gebúr dabit hunigablum<ptr type="liebermannNote" n="1" target="#Rect_4-5.lnote.oe.1"/>, in quibusdam metegablum<ptr type="liebermannNote" n="2" target="#Rect_4-5.lnote.oe.2-2"/>, in quibusdam ealagablum.</ab>
         <ab type="editionText" xml:lang="ang" source="#gobbitt" n="5.1" corresp="#wit-b">On sumen landa gebur sceal syllan huniggafol</ab>
         <ab type="editionText" xml:lang="ang" source="#rabin-doml" corresp="#wit-b"><pb n="320" ed="#rabin-doml"/>On sumen landa gebur sceal syllan huniggafol, on suman metegafol, on suman ealugafol.</ab>
-        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="448" ed="#liebermann"/>Auf einem Landgut muss der Bauer Abgabe in Honig geben, auf dem anderen Abgabe in Speise, auf dem anderen Abgabe in Bier.</ab>
+        <ab type="translation" xml:lang="de" source="#liebermann"><pb n="448" ed="#liebermann"/>Auf eínem Landgut muss der Bauer Abgabe in Honig<ptr type="liebermannNote" n="1" target="#Rect_4-5.lnote.de.1"/> geben, auf dem anderen Abgabe in Speise<ptr type="liebermannNote" n="2" target="#Rect_4-5.lnote.de.2"/>, auf dem anderen Abgabe in Bier<ptr type="liebermannNote" n="3" target="#Rect_4-5.lnote.de.3"/>.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">On one estate the gebur must pay a rent in honey, on another a rent in food, on another a rent in ale.</ab>
         <ab type="translation" xml:lang="en" source="#gobbitt" corresp="#wit-b">In some estates the peasant must give honey-rent.</ab>
         <ab type="translation" xml:lang="en" source="#rabin-doml" corresp="#wit-b"><pb n="321" ed="#rabin-doml"/>On some estates, the tenant farmer must pay honey dues, on some meat dues, on some ale dues.</ab>
         <note type="editorial">B's ‘sumen landa’ stands so.</note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rect_4-5.lnote.oe.2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">448</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">so</hi></seg><seg type="translation" xml:lang="en" source="#claude">sic</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rect_4-5.lnote.oe.1" n="1" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">448</biblScope></bibl><seg type="original" xml:lang="de">un. <hi rend="italic">MHk</hi></seg><seg type="translation" xml:lang="en" source="#claude">un. MHk</seg></note>
+        <note type="liebermannNote" subtype="textual" xml:id="Rect_4-5.lnote.oe.2-2" n="2" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">448</biblScope></bibl><seg type="original" xml:lang="de">methe. <hi rend="italic">MHk;</hi> m. in q. <hi rend="italic">überspringt R</hi></seg><seg type="translation" xml:lang="en" source="#claude">methe. MHk; m. in q. skipped by R</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rect_4-5.lnote.de.1" n="1" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">249</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Vgl. Gl</hi> Bienen. <hi rend="italic">Honeigsilver, metegafol, alerent</hi> belegt mit Beispielen Neilson <hi rend="italic">Custom. rents</hi></seg><seg type="translation" xml:lang="en" source="#claude">Cf. <hi rend="italic">Gl</hi> Bienen. Neilson <hi rend="italic">Custom. rents</hi> documents <hi rend="italic">Honeigsilver, metegafol, alerent</hi> with examples</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rect_4-5.lnote.de.2" n="2" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">249</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. Gl</hi> Speiseabgabe; diesen Sinn hat <hi rend="italic">mescinga</hi> in Hale (<hi rend="italic">o</hi>. 2⁸) 43, wohl <hi rend="italic">metsing</hi> zu lesen; <hi rend="italic">s. u</hi>. 8</seg><seg type="translation" xml:lang="en" source="#claude">See <hi rend="italic">Gl</hi> Speiseabgabe; <hi rend="italic">mescinga</hi> has this meaning in Hale (<hi rend="italic">above</hi> 2⁸) 43, where <hi rend="italic">metsing</hi> should probably be read; <hi rend="italic">see below</hi> 8</seg></note>
+        <note type="liebermannNote" subtype="erklaerung" xml:id="Rect_4-5.lnote.de.3" n="3" source="#liebermann-erkl"><bibl><biblScope unit="volume">3</biblScope><biblScope unit="page">249</biblScope><biblScope unit="column">3</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">S. Gl</hi> Bier 3—4</seg><seg type="translation" xml:lang="en" source="#claude">See <hi rend="italic">Gl</hi> Bier 3—4</seg></note>
       </div>
     </body>
   </text>
