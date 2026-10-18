@@ -259,8 +259,8 @@ scripts:
             ${e.translation ? `<section class="entry-section"><h2>English translation</h2>${senses(e.translation)}</section>` : ''}
         </div>` : ''}
 
-        ${see ? `<section class="entry-section"><h2>${e.xref ? 'See' : 'See also'}</h2><ul>${see}</ul></section>` : ''}
-        ${compare ? `<section class="entry-section"><h2>Compare</h2><ul>${compare}</ul></section>` : ''}
+        ${see ? `<section class="entry-section"><h2>${e.xref ? 'See' : 'See also'}</h2><ul class="link-columns">${see}</ul></section>` : ''}
+        ${compare ? `<section class="entry-section"><h2>Compare</h2><ul class="link-columns">${compare}</ul></section>` : ''}
         ${links ? `<section class="entry-section"><div class="notice warn dict-notice"><p><span class="wip-badge">Under construction</span> The work of linking to external dictionaries is ongoing. A semi-automated process is used to guess Bosworth-Toller links in the first instance, so note that some words may be incorrectly linked to Bosworth-Toller entries until checked by the editor.</p></div><h2>Other dictionaries</h2>${links}</section>` : ''}
         ${citations ? `<section class="entry-section"><h2>Law code citations</h2><div class="citation-groups">${citations}</div></section>` : ''}
 
