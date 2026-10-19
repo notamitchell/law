@@ -71,7 +71,7 @@ scripts:
 
         target.innerHTML = `
             <h1>Subjects</h1>
-            <p class="lede">The clauses of the laws have been read and indexed by hand, for this database: the legal matters it deals with, the people it concerns, and the places it names. Browse the subjects below to find every clause on a subject, and to see how it runs through the law codes from Æthelberht to Henry I.</p>
+            <p class="lede">The clauses of the laws have been read and indexed by hand, for this database: the legal matters it deals with, the people it concerns, and the places it names. Browse the subjects below to find every clause on a subject, and to see how it runs through the law codes from Æthelberht to Cnut.</p>
             <p class="small muted">${plural(total, 'subject', 'subjects')} on ${plural(tagged, 'clause', 'clauses')}. The number after each subject is the number of clauses indexed with it.</p>
             <div class="subject-tools">
                 <input type="search" id="find" placeholder="Find a subject, e.g. Theft, Widow, Churches" aria-label="Find a subject">
@@ -121,8 +121,10 @@ scripts:
             else if (g && g.broad) broader = g.broad;
         });
 
-        // The timeline: every law code, with the number of this subject's clauses in it.
-        const order = timelineOrder(codes);
+        // The timeline: the law codes that have been indexed (the kings' codes to Cnut and the
+        // other Old English texts), with the number of this subject's clauses in each.
+        const indexed = new Set(clauses.filter(c => FIELDS.some(f => c[f].length)).map(c => c.code));
+        const order = timelineOrder(codes).filter(c => indexed.has(c.code));
         const perCode = {}, sizeOf = {};
         clauses.forEach(c => { sizeOf[c.code] = (sizeOf[c.code] || 0) + 1; });
         mine.forEach(c => { perCode[c.code] = (perCode[c.code] || 0) + 1; });
@@ -135,8 +137,6 @@ scripts:
             'Edward the Elder': 'Edward', 'Edmund I': 'Edmund', 'Æthelred II': 'Æthelred II'
         };
         SHORT[OTHER] = 'Other texts';
-        // A law code none of whose clauses has been indexed yet.
-        const indexed = new Set(clauses.filter(c => FIELDS.some(f => c[f].length)).map(c => c.code));
         const kings = [];
         order.forEach(c => {
             const label = SHORT[c.group] || c.group;
@@ -146,20 +146,17 @@ scripts:
         const strip = `
             <figure class="subject-timeline">
                 <figcaption><strong>Through the law codes</strong> <span class="muted">Clauses on this subject in each law code, from the earliest to the latest. Point to a bar for details; click it to go to that law code below.</span></figcaption>
-                <div class="timeline-scroll"><div class="timeline" style="min-width:${order.length * 13}px">${kings.map(g => {
-                    const unindexed = g.codes.every(c => !indexed.has(c.code));
-                    return `
-                    <div class="timeline-king${g.other ? ' timeline-other' : ''}${unindexed ? ' timeline-unindexed' : ''}" style="flex-grow:${g.codes.length}">
+                <div class="timeline-scroll"><div class="timeline" style="min-width:${order.length * 13}px">${kings.map(g => `
+                    <div class="timeline-king${g.other ? ' timeline-other' : ''}" style="flex-grow:${g.codes.length}">
                         <div class="timeline-bars">${g.codes.map(c => {
                             const n = perCode[c.code] || 0;
-                            const tip = `${c.code} · ${c.name}: ${!indexed.has(c.code) ? 'not yet indexed' : n ? plural(n, 'clause', 'clauses') + ' of ' + sizeOf[c.code] : 'none'}`;
+                            const tip = `${c.code} · ${c.name}: ${n ? plural(n, 'clause', 'clauses') + ' of ' + sizeOf[c.code] : 'none'}`;
                             return n
                                 ? `<a class="timeline-bar" href="#code-${esc(c.code.replace(/\W+/g, '-'))}" title="${esc(tip)}" aria-label="${esc(tip)}"><span style="height:${Math.max(6, Math.round(n / max * 100))}%"></span></a>`
                                 : `<span class="timeline-bar timeline-empty" title="${esc(tip)}"><span></span></span>`;
                         }).join('')}</div>
-                        <div class="timeline-label">${esc(g.name)}${unindexed ? '<br><em>not yet indexed</em>' : ''}</div>
-                    </div>`;
-                }).join('')}
+                        <div class="timeline-label">${esc(g.name)}</div>
+                    </div>`).join('')}
                 </div></div>
                 <p class="timeline-scale small muted">Tallest bar: ${plural(max, 'clause', 'clauses')}.</p>
             </figure>`;
