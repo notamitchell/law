@@ -843,6 +843,14 @@ ${translation}
                     // A raised number after a citation ("Hn 29,4³⁹") is the number of
                     // Liebermann's footnote at that passage in vol. I, usually a manuscript reading.
                     const n = node.textContent.trim();
+                    // But a raised number followed by "/" and a lowered one is a
+                    // fraction (¹/₁₀ = one tenth), not a footnote.
+                    const next = node.nextSibling;
+                    const after = next && next.nextSibling;
+                    if (next && next.nodeType === 3 && next.nodeValue === '/' && after && after.nodeType === 1
+                        && after.localName === 'hi' && after.getAttribute('rend') === 'subscript') {
+                        return `<sup class="frac" title="the fraction ${n}/${after.textContent.trim()}">` + inner() + '</sup>';
+                    }
                     if (/^\d+$/.test(n)) return `<sup class="fn-ref" title="Liebermann’s footnote ${n} at this passage in vol. I, where he discusses the manuscript readings">` + inner() + '</sup>';
                     return '<sup>' + inner() + '</sup>';
                 }
