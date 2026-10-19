@@ -256,10 +256,12 @@ scripts:
             ${e.xref ? '' : `<p class="small muted reading-help">Click a <span class="link-key link-key--law">law code</span>, <span class="link-key link-key--ms">manuscript</span> or <span class="link-key link-key--gram">German term or abbreviation</span> or <span class="link-key link-key--bib">author or work cited</span> to see what it stands for, or a <span class="link-key link-key--clause">clause number</span> to read that clause.</p><p class="small muted reading-help reading-help--tilde">Liebermann's ~ repeats as much of the headword or preceding word as stays the same (e.g. under <i>abbod</i>, ~des is <i>abbodes</i>). <a href="${root}guide.html">How to read an entry</a>.</p>`}
         </section>
 
-        ${e.definition || e.translation ? `
+        ${/* An English translation of the definition (<sense type="translation">)
+             stays in the entry file but is not shown for now: hardly any
+             entries have one. */ ''}
+        ${e.definition ? `
         <div class="two-col">
-            ${e.definition ? `<section class="entry-section"><h2>Liebermann's definition</h2>${senses(e.definition)}</section>` : ''}
-            ${e.translation ? `<section class="entry-section"><h2>English translation</h2>${senses(e.translation)}</section>` : ''}
+            <section class="entry-section"><h2>Liebermann's definition</h2>${senses(e.definition)}</section>
         </div>` : ''}
 
         ${see ? `<section class="entry-section"><h2>${e.xref ? 'See' : 'See also'}</h2><ul${linkCols(see)}>${see}</ul></section>` : ''}

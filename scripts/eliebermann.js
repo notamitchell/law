@@ -938,7 +938,8 @@ ${translation}
             page: scope ? scope.textContent.trim() : '',
             facsimile: facs ? facs.getAttribute('target') : '',
             changes: changes.map(c => ({ when: c.getAttribute('when') || '', text: c.textContent.trim() })),
-            gloss: (translation || definition) ? (translation || definition).textContent.replace(/\s+/g, ' ').trim() : ''
+            // (the English translation, if any, is kept in the file but not shown)
+            gloss: definition ? definition.textContent.replace(/\s+/g, ' ').trim() : ''
         };
     }
 

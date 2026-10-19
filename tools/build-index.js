@@ -26,11 +26,10 @@ const entries = fs.readdirSync(dir)
     .map(f => {
         const xml = fs.readFileSync(path.join(dir, f), 'utf8');
         const scrap = pick(xml, /<dictScrap[^>]*>([\s\S]*?)<\/dictScrap>/);
-        const translation = pick(xml, /<sense type="translation"[^>]*>([\s\S]*?)<\/sense>\s*(?:<xr|<\/entry)/);
         const hw = decode(pick(xml, /<orth>([\s\S]*?)<\/orth>/));
         const text = decode(scrap);
-        // Short summary for the list: the English translation if there is
-        // one, otherwise the start of Liebermann's text after the headword.
+        // Short summary for the list: the start of Liebermann's text after the
+        // headword. (An English translation, if any, is not shown for now.)
         const t = text.replace(/^[LF]\s+/, '');
         const at = t.indexOf(hw);
         const rest = (at >= 0 ? t.slice(at + hw.length) : t).replace(/^[\s,.;:]+/, '');
@@ -40,8 +39,7 @@ const entries = fs.readdirSync(dir)
             hw,
             lang: pick(xml, /<entry[^>]*xml:lang="([^"]+)"/) || 'ang',
             page: pick(xml, /<biblScope unit="page">([^<]*)<\/biblScope>/),
-            gloss: decode(translation) || snippet,
-            en: !!translation,
+            gloss: snippet,
             // a spelling, not a word (<usg type="dom">spelling</usg>): badged in the list
             spelling: /<usg type="dom">spelling<\/usg>/.test(xml),
             text
