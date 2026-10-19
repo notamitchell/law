@@ -15,68 +15,95 @@
     </fileDesc>
     <revisionDesc>
       <change when="2026-10-17">First draft: general principles, the Legal Dictionary (abbreviations and technical terms, works cited, cross-reference and spelling entries, other dictionaries) and the Lawcodes Database.</change>
+      <change when="2026-10-19">Reorganised: the account of how the texts are made (transcription and collation, typography, encoding and linking, compilation of the database, review and checking) moved here from About and merged with the existing sections; light revision of wording throughout.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="page">
         <head>Editorial Principles</head>
-        <p>This page records the editorial decisions taken in the making of eLiebermann. It is revised as the work proceeds.</p>
+        <p>This page records the editorial decisions taken in the making of eLiebermann, and the methods by which its texts have been transcribed, checked and encoded. It is revised as the work proceeds. For an account of the project, of Felix Liebermann and his <title>Gesetze</title>, and of how to cite eLiebermann, see <ref target="about.html">About</ref>.</p>
       </div>
 
       <div type="section">
         <head>General</head>
 
         <head rend="sub">Aims and scope</head>
-        <p>eLiebermann has been built from spreadsheets and transcriptions compiled over many years for the editor's own research on the language and composition of the early English laws, and its structure, corrections and indexing reflect the questions that this research asked of the texts. It is offered here in the hope that it may be of wider use to others working on the laws and their language.</p>
-        <p>The Lawcodes Database is concerned principally with the Old English laws issued before 1066. These records will be found to be the most complete. But it also reproduces the majority the other legal and quasi-legal texts that Liebermann prints with them, including some post-Conquest codes and compilations. The Legal Dictionary is an edition of the whole of Liebermann's <title>Wörterbuch</title>.</p>
+        <p>eLiebermann has been built from spreadsheets and transcriptions compiled over many years for the editor's own research on the language and composition of the early English laws, and its structure, corrections and indexing reflect the questions that this research has asked of the texts. It is offered here in the hope that it may be of wider use to others working on the laws and their language.</p>
+        <p>The Lawcodes Database is concerned principally with the Old English laws issued before 1066, and its record of these is the most complete. It also reproduces the majority of the other legal and quasi-legal texts that Liebermann prints with them, including some post-Conquest codes and compilations. The Legal Dictionary is an edition of the whole of Liebermann's <title>Wörterbuch</title>.</p>
 
         <head rend="sub">Liebermann and beyond</head>
-        <p>The project takes its name from Felix Liebermann, and his <title>Gesetze der Angelsachsen</title> is its foundation: his texts, his German translation, his apparatus and his clause divisions are the frame to which everything else is fitted.</p> 
-        <p>But the project aims to be more than a digital reproduction of the <title>Gesetze</title>. It gathers beside Liebermann's text the editions and translations of later scholars, where these can be reproduced; it points users to more recent editions of Libermann's clauses by page number; it organises and corrects the texts, checking them against the printed volumes and against Liebermann's own textual notes and corrections; it records cross-references between clauses drawn from Liebermann's margins and from the scholarship of the following century; and it adds a subject index of the laws that is the editor's own. Where the site corrects or adds to Liebermann, this is noted.</p>
+        <p>The project takes its name from Felix Liebermann, and his <title>Gesetze der Angelsachsen</title> is its foundation: his texts, his German translation, his apparatus and his clause divisions are the frame to which everything else is fitted.</p>
+        <p>The project aims, however, to be more than a digital reproduction of the <title>Gesetze</title>. It gathers beside Liebermann's text the editions and translations of later scholars, where these can be reproduced; it directs readers by page number to more recent editions of Liebermann's clauses; it organises and corrects the texts, checking them against the printed volumes and against Liebermann's own textual notes and corrections; it records cross-references between clauses drawn from Liebermann's margins and from the scholarship of the following century; and it adds a subject index of the laws that is the editor's own. Where the site corrects or adds to Liebermann, this is noted.</p>
 
-        <head rend="sub">The base text and its citation</head>
-        <p>Liebermann's text is reproduced as he printed it, with his sigla, his numbering and his typography. Readers who wish to verify a reading are referred to the scans of the printed volumes linked from every dictionary entry and lawcode clause page. The edition is cited as: Felix Liebermann, ed. and trans., <title>Die Gesetze der Angelsachsen</title>, 3 vols (Halle: Niemeyer, 1903–16).</p>
+        <head rend="sub">The base text</head>
+        <p>Liebermann's text is reproduced as he printed it, with his sigla, his numbering and his typography. Every dictionary entry and every lawcode clause page is linked to its page in a scan of the printed volume (on archive.org), so that any reading may be verified against the original.</p>
+
+        <head rend="sub">Method</head>
+        <p>The editorial work combines the editor's scholarship with machine-assisted transcription, collation and encoding. The division of labour is fixed: machine processes produce, compare and encode text; the editor sets the editorial rules, resolves disputed readings against the printed page, and decides what is published.</p>
+        <p>Every dictionary entry and every lawcode clause is a separate file in TEI XML, the international standard for scholarly digital editions (Text Encoding Initiative, P5). All the project's text and data are kept under version control in a Git repository, in which every addition or correction, whether made by hand or by script, is proposed as a separate, documented change and published only after review. Errors may be reported, and new entries suggested, through <ref target="contribute.html">Make a suggestion</ref> or the <hi rend="italic">Suggest a change</hi> link at the foot of each entry.</p>
       </div>
 
       <div type="section">
         <head>The Legal Dictionary</head>
 
+        <head rend="sub">Transcription and collation</head>
+        <p>Every dictionary entry has been transcribed twice, independently. The project team keyed the entries by hand; a second transcription was made in 2026 from page images of the <title>Wörterbuch</title> by Claude, a large language model developed by Anthropic. The two transcriptions have been collated entry by entry and word by word. Each disagreement is classified (a slip in one transcription or the other, a difference of typography only, or a different division between entries) and, where it cannot be settled from the transcriptions alone, is checked by the editor against the printed volume. A report of each collation, and a running list of readings still to be checked against the print, are kept with the project's data.</p>
+
+        <head rend="sub">Typography</head>
+        <p>Liebermann's typography carries meaning: roman type is the language of the laws; italic is Liebermann's German and his grammatical commentary; bold marks headwords; and a superscript <hi rend="superscript">L</hi> or <hi rend="superscript">F</hi> marks a Latin or French word. This system is preserved in the transcriptions, and has occasionally been regularised where Liebermann's own practice is inconsistent. Page breaks are recorded, so that each entry is linked to its page in the printed volume.</p>
+
         <head rend="sub">Abbreviations, technical terms and conventional signs</head>
         <p>Liebermann's <title>Wörterbuch</title> relies on a dense system of abbreviations, grammatical terms and conventional signs, which Liebermann nowhere sets out in full. The list of <ref target="gramAbb.html">Grammatical Terms and Abbreviations</ref>, and the pop-ups drawn from it throughout the dictionary, are the editor's reconstruction of that system. Each item gives (i) the German form as Liebermann wrote it out, or as he would have written it out; (ii) the modern standard German equivalent, where the spelling or the word itself has since changed; and (iii) an English translation; with notes where needed.</p>
-        <p>Where Liebermann gives no expansion, meaning has been inferred from his usage. Every one of the c. 500 abbreviations (639 forms in all) has been checked against its occurrences across the entries. The meaning of an exclamation mark after a quoted form, for example, which Liebermann does not explain, is taken as <hi rend="italic">sic</hi> on the basis of its appearance where an unexpected or incorrect form appears in a manuscript (e.g. accusative ending where dative might be expected).</p>
+        <p>Where Liebermann gives no expansion, the meaning has been inferred from his usage. Every one of the c. 500 abbreviations (639 forms in all) has been checked against its occurrences across the entries. An exclamation mark after a quoted form, for example, which Liebermann does not explain, is taken to mean <hi rend="italic">sic</hi>, since it appears where a manuscript has an unexpected or incorrect form (an accusative ending, say, where a dative would be expected).</p>
         <p>Liebermann is not wholly consistent in either his terminology or his abbreviations. One term may appear in more than one abbreviated form, and one abbreviation may serve for more than one term: <hi rend="italic">sbj</hi> stands for "subject" in the grammatical notes but for "subjunctive" in the Old French entries. Some expansions offered here are therefore necessarily provisional. The list is meant as an aid to Liebermann's technical and explanatory vocabulary, not as a glossary of the ordinary German of his definitions, whose words are accordingly not linked. Corrections are welcome through <ref target="contribute.html">Make a suggestion</ref>.</p>
+        <p>Law-code sigla, manuscript sigla and grammatical abbreviations within an entry are identified automatically, by longest match against the authority lists compiled by the editor, and linked to their expansions.</p>
+
+        <head rend="sub">Citations of the laws</head>
+        <p>Each citation of a law in an entry is normalised to a standard key (law code and clause number, following the usual scholarly form of citation) and linked to that clause in the Lawcodes Database.</p>
 
         <head rend="sub">Authors and works cited</head>
-        <p>Liebermann prints no bibliography, and cites modern scholarship and editions by short title. The full citations on the list of <ref target="bibAbb.html">Authors and Works Cited</ref> have been reconstructed by the editor from those short titles, from the two brief lists of works in the <title>Gesetze</title> (I, p. LIV; II.2, p. 262), and from the editions current when he wrote. Where Liebermann cites a primary source without naming an edition, the edition he most probably used is given. These identifications are marked as provisional until they can be checked against the relevant editions.</p>
+        <p>Liebermann prints no bibliography, and cites modern scholarship and editions by short title. The full citations on the list of <ref target="bibAbb.html">Authors and Works Cited</ref> have been reconstructed by the editor from those short titles, from the two brief lists of works in the <title>Gesetze</title> (I, p. LIV; II.2, p. 262), and from the editions current when he wrote. Where Liebermann cites a primary source without naming an edition, the edition he most probably used is given. These identifications are marked as provisional until they can be checked against the editions themselves.</p>
 
         <head rend="sub">Cross-reference and spelling entries</head>
-        <p>Each entry that serves only to send the reader to another headword is shown with the headword(s) to which it refers, without the further apparatus of a full entry. Headwords that record orthographic variation rather than a headword (for example <hi rend="italic">aa</hi> for <hi rend="italic">ā</hi>) are marked as spelling entries.</p>
+        <p>Liebermann's own cross-references between entries (<hi rend="italic">s.</hi> WORD) are given as links. An entry that serves only to send the reader to another headword is shown with the headword or headwords to which it refers, without the further apparatus of a full entry. Headwords that record orthographic variation rather than a distinct word (for example <hi rend="italic">aa</hi> for <hi rend="italic">ā</hi>) are marked as spelling entries.</p>
+
+        <head rend="sub">Editorial corrections</head>
+        <p>Where Liebermann's printed entry is corrected (where, for example, it refers the reader to a headword that does not exist, or to an incorrect spelling), the change is explained in an <hi rend="italic">Editor's note</hi> on the entry page.</p>
 
         <head rend="sub">Other dictionaries</head>
-        <p>Where possible, Old English headwords are linked to the corresponding entries in the Bosworth–Toller <title>Anglo-Saxon Dictionary</title>, <title>The Dictionary of Old English</title>, and/or the entry at wiktionary.org. These links are added by the project team, and are a work in progress. A semi-automated process has been used in the first instance to add Bosworth-Toller links; some of these may be erroneous until checked and corrected by the editor.</p>
+        <p>Where possible, Old English headwords are linked to the corresponding entries in the Bosworth–Toller <title>Anglo-Saxon Dictionary</title>, the <title>Dictionary of Old English</title>, and/or Wiktionary. These links are the work of the project team and are not yet complete. The links to Bosworth–Toller were first made by a semi-automated process, and some may be erroneous until checked and corrected by the editor.</p>
       </div>
 
       <div type="section">
         <head>The Lawcodes Database</head>
 
+        <head rend="sub">Compilation</head>
+        <p>The database is compiled in a master spreadsheet of more than fifty fields for each clause, from which the clause files are generated by script. For every clause the spreadsheet records at least Liebermann's text of each manuscript he prints, identified by his siglum, with his page number; his German translation; and an English rendering of his German.</p>
+
         <head rend="sub">Clause division</head>
         <p>Liebermann's division of the laws into clauses is followed throughout, so that every citation of the form used by Liebermann and by the scholarship that depends on him leads to a single clause. The texts of later editions are divided at Liebermann's clause breaks, including those printed by their editors as continuous prose. Where a later editor divides a clause more finely, the clause is kept whole and the editor's divisions are marked within it by that editor's own numbers.</p>
 
         <head rend="sub">Manuscripts</head>
-        <p>Every text is identified by the manuscript from which it is taken, under Liebermann's siglum. Where Liebermann offers the text from more than one manuscript, his main text (taken to be that in the leftmost column) is given first.</p>
+        <p>Every text is identified by the manuscript from which it is taken, under Liebermann's siglum. Where Liebermann prints the text from more than one manuscript, his main text (taken to be that in his leftmost column) is given first.</p>
+
+        <head rend="sub">Later editions</head>
+        <p>The texts and translations of later editions are entered with their page references, and are in the process of being re-checked against the printed books.</p>
 
         <head rend="sub">Translations</head>
-        <p>Liebermann's German translation is accompanied by a close, semi-literal English rendering, made with the assistance of a large language model and so labelled. This is intended as a crib to Liebermann's German; it is not a new translation of the Old English, and should not be quoted as one. The translations of modern editors follow, each attributed.</p>
+        <p>Liebermann's German translation is accompanied by a close, semi-literal English rendering, made with the assistance of a large language model (Claude, developed by Anthropic, 2026) and labelled as such on every clause page. It is intended as a crib to Liebermann's German; it is not a new translation of the Old English, and should not be quoted as one. The editor has corrected its more serious misreadings where these have been noticed, but it has not been systematically revised, and it should be used with caution. The translations of modern editors follow, each attributed.</p>
 
         <head rend="sub">Liebermann's notes</head>
-        <p>Liebermann's textual notes and his commentary (the <hi rend="italic">Erklärungen</hi> of volume III) are given in his German as printed, with an English rendering, and are hidden by default, to be shown clause by clause. Much of this commentary, and the legal comparisons drawn by Liebermann, has been superseded by later scholarship; it is included as part of the record of Liebermann's edition.</p>
+        <p>Liebermann's textual notes and his commentary (the <hi rend="italic">Erklärungen</hi> of volume III) are given in his German as printed, with an English rendering, and are hidden by default, to be shown clause by clause. Much of this commentary, and many of the legal comparisons Liebermann draws, have been superseded by later scholarship; they are included as part of the record of Liebermann's edition.</p>
 
         <head rend="sub">Cross-references between clauses</head>
-        <p>The Early English legal corpus contains many laws that repeat or draw upon earlier laws; certain "early" laws are in fact historical forgeries composed by later writers. A database recording similarities between clauses offers a useful means of tracing these quirks of legislative composition. Accordingly, Liebermann's marginal cross-references and points of similarity or comparison made by later scholars are given with their source and page, and are linked in both directions. The wording on each clause page distinguishes the references made at that clause from those made at other clauses that point to it. Suggestions for additional links are welcome.</p>
+        <p>The early English legal corpus contains many laws that repeat or draw upon earlier laws, and certain "early" laws are in fact later compositions attributed to earlier kings. A record of the similarities between clauses offers a means of tracing these features of legislative composition. Liebermann's marginal cross-references have accordingly been transcribed from the page images of volume I, and the cross-references and comparisons of later scholars collected from their studies, editions, footnotes and tables of sources. Each is given with its source and page, and is linked in both directions. The wording on each clause page distinguishes the references made at that clause from those made at other clauses that point to it. The record is not yet complete, and suggestions for additional links are welcome.</p>
 
         <head rend="sub">Subject index</head>
-        <p>Every clause has been read and indexed by the offences, people, places and other matters with which it deals. The index was created for this project, and is independent of Liebermann's <title>Rechts- und Sachglossar</title>.</p>
+        <p>Every clause has been read and indexed by the offences, people, places and other matters with which it deals. The index was made for this project and is independent of Liebermann's <title>Rechts- und Sachglossar</title> (volume II, part 2).</p>
+
+        <head rend="sub">Record of checking</head>
+        <p>Checking is recorded clause by clause: the foot of each clause page states what has been checked, and against which page of which book. This work is ongoing, and the record on each clause will note when a final check has been made by a member of the project team.</p>
       </div>
     </body>
   </text>
