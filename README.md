@@ -163,9 +163,9 @@ Then open http://localhost:4000/law/.
 
 **Letter boundaries**
 
-- [ ] Þ starts halfway down column 2 of p. 216; the T entries above it belong to T. The team's transcription agrees (*tæcing - þe.docx*: *tyrian* is the last T entry and *þ* the first Þ entry, both on p. 216). (Þ)
-- [ ] The dictionary list has a section Æ for headwords that begin with æ, after A, as in other Old English dictionaries. This was added to the site's list on request. Check where the printed Wörterbuch files them (the words that begin with æ were listed within A before). (Æ)
-- [ ] R starts in the lower part of column 1 on p. 180, not 194 as first noted, and ends at the S heading at the top of column 3 on p. 187. Q runs from p. 179 to p. 180, as transcribed, P from the top of p. 170 to the Q heading on p. 179, and O from p. 159 to p. 169. K and L were both noted as starting on 128, and both are: the team's transcription (*iustitiabilis - mægen.docx*) has the few K entries and the start of L on p. 128. (S, R, Q, P, O)
+- Þ starts halfway down column 2 of p. 216; the T entries above it belong to T. The team's transcription agrees (*tæcing - þe.docx*: *tyrian* is the last T entry and *þ* the first Þ entry, both on p. 216). (Þ)
+- The dictionary list has a section Æ for headwords that begin with æ, after A, as in other Old English dictionaries. This was added to the site's list on request. 
+
 
 ## Roadmap
 
