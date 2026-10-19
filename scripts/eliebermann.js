@@ -141,6 +141,14 @@
         return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
 
+    // A link address from a file, kept only if it is a web or mail address or a
+    // path on this site, so a file can't carry a javascript: link.
+    function safeUrl(url) {
+        const u = String(url || '').trim();
+        if (!/^[a-z][a-z0-9+.-]*:/i.test(u.replace(/[\s\u0000-\u001f]/g, ''))) return u;
+        return /^(https?|mailto):/i.test(u) ? u : '';
+    }
+
     function useDom(win) { DOM = win; }
 
     function parseHtml(html) {
@@ -817,7 +825,7 @@ ${translation}
             if (m[1] === 'clause') return root + 'law.html?id=' + encodeURIComponent(m[2]);
             return root + 'entry.html?id=' + encodeURIComponent(m[2]);
         }
-        return target;
+        return safeUrl(target);
     }
 
     function renderNode(node, root) {
@@ -948,7 +956,7 @@ ${translation}
 
     const api = {
         TEI_NS, LANGUAGES, LANGUAGE_CODES, languageBadge, properNounBadge, isProperNoun, hiddenLanguages, setHiddenLanguages, isShown,
-        useDom, slugify, sortKey, alphaKey, letterOf, ALPHABET, escapeXml,
+        useDom, slugify, sortKey, alphaKey, letterOf, ALPHABET, escapeXml, safeUrl,
         linkAbbreviations, loadAbbreviations, extractCitations, linkClauseNumbers, citationXr, splitSenses, splitOutline, sensesXml, detectLanguage, detectHeadword,
         inlineToTei, isEmptyHtml, buildEntryXml,
         renderTei, resolveTarget, readEntry
