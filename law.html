@@ -529,11 +529,13 @@ scripts:
             });
             wrap.appendChild(box);
         }
+        // The clause notes (<note type="editorial">, spreadsheet column AI) are kept in the files but not
+        // shown, for a cleaner page (decided October 2026); only the source of a passage is shown here.
         tei(div, 'note').forEach(n => {
             const type = n.getAttribute('type');
-            if (type !== 'passageSource' && type !== 'editorial') return;
+            if (type !== 'passageSource') return;
             const p = el('p', 'clause-note small');
-            p.appendChild(el('strong', null, type === 'passageSource' ? 'Source of the passage: ' : 'Notes: '));
+            p.appendChild(el('strong', null, 'Source of the passage: '));
             p.appendChild(partLabel(n));
             p.appendChild(inline(n));
             wrap.appendChild(p);
@@ -690,7 +692,7 @@ scripts:
         if (parts) header.appendChild(parts);
         target.appendChild(header);
 
-        const sec = el('section', 'entry-section');
+        const sec = el('section', 'entry-section clause-texts-section');
         const t = texts(doc, el('span'));
         sec.appendChild(t);
         target.appendChild(sec);

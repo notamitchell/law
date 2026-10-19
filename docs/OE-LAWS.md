@@ -23,7 +23,7 @@ Take `oe-laws/Had_10.xml`, the clause *Had 10*. Its header says where the clause
 | **AA** translation of the manuscript in K | `<ab type="translation" corresp="#wit-…">` | right column, *of MS …* |
 | **AB**, **AC**, **AD** offence, people, places | `<keywords>` | *Keywords* |
 | **AH** source of the passage | `<note type="passageSource">` | under the texts |
-| **AI** notes | the scholarly notes in `<note type="editorial">`; the record of checking in `<revisionDesc>` (`<change type="checked">`) | *Notes* under the texts; the checking at the foot of the page |
+| **AI** notes | the scholarly notes in `<note type="editorial">`; the record of checking in `<revisionDesc>` (`<change type="checked">`) | not shown on the clause page (hidden October 2026, kept in the files); the checking at the foot of the page |
 | **AP–AT** Whitelock, *English Historical Documents* I (1979): translation, edition, manuscript, page, footnotes | `<ab type="translation" source="#whitelock">`; footnotes in `<note type="translator" source="#whitelock">` | after the other translations; her footnotes under her translation |
 | **AU–AZ** Rabin, *Old English Legal Writings: Wulfstan* (DOML 66, 2020): text, translation, edition and base manuscript, pages, textual notes, notes to the translation | `<ab type="editionText" source="#rabin-doml">` and `<ab type="translation" source="#rabin-doml">`; `<note type="textual">` and `<note type="translator">` with `source="#rabin-doml"` | his text after the other editors'; his textual notes (the other manuscripts' readings) under his text, his notes under his translation |
 
