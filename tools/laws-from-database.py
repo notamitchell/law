@@ -286,6 +286,8 @@ FRENCH_CODES = {'Leis Wl'}
 
 
 def language(text, code=''):
+    if code in PHASE2B:      # Latin with Old English terms (ƿere, þegen): always Latin
+        return 'la'
     # the Latin ordeal and excommunication texts (October 2026) write 'æ' (aquæ, Ysaiæ): go by the words there
     if re.search('[⁊þðÞÐƿ]' if code in OWN_MS_NAMES else '[⁊þðæÞÐÆƿ]', text):
         return 'ang'
@@ -1030,6 +1032,11 @@ GROUP_OVERRIDE = {'Ine Rb': 'Ine of Wessex', 'App AGu': 'Alfred the Great', 'Due
 GROUP_OVERRIDE.update({'Iud Dei ' + n: 'Ordeal rituals (Iudicia Dei)' for n in 'I II III IV V VI VII VIII IX X XI XII XIII XIV XV XVI'.split()})
 OWN_MS_NAMES = {'Erc', 'App AGu', 'Duel', 'Wl lad', 'Wl ep', 'Wl Lond', 'Wl art', 'Wl art Frz', 'Wl art retr', 'Leis Wl', 'Wl Edmr', 'CHn cor', 'Hn mon', 'Hn com', 'Hn Lond'} | {'Iud Dei ' + n for n in 'I II III IV V VI VII IX X XI XII XIII XIV XV XVI'.split()} | {'Excom ' + n for n in 'I II III IV V VI VII VIII IX X XI XII XIII'.split()}
 GROUP_OVERRIDE.update({'Excom ' + n: 'Excommunication formulae' for n in 'I II III IV V VI VII VIII IX X XI XII XIII'.split()})
+# Anglo-Latin law books (Gesetze I pp. 529–675; added 19 October 2026): Latin only, with æ and ę, so their language
+# is not guessed from those letters
+PHASE2B = ['Quadr Ded', 'Quadr Arg', 'Quadr I', 'Quadr Rb', 'Quadr II Praef', 'Quadr II', 'In Cn', 'Cons Cn', 'Ps Cn for', 'Lib Lond']
+OWN_MS_NAMES |= set(PHASE2B)
+GROUP_OVERRIDE.update({c: 'Anglo-Latin law books' for c in PHASE2B})
 
 
 def king_parts(king):
