@@ -107,7 +107,7 @@ scripts:
         return dictionaries.map(([type, name, sub, note]) => {
             const cards = e.xr.filter(x => x.getAttribute('type') === type).map(x => {
                 const ref = [...x.children].find(c => c.localName === 'ref') || x;
-                const url = ref.getAttribute('target') || '';
+                const url = ELieb.safeUrl(ref.getAttribute('target'));
                 const word = esc(ref.textContent.replace(/\s+/g, ' ').trim());
                 let host = '';
                 try { host = new URL(url).hostname.replace(/^www\./, '').replace(/^indiv\.dictionary\./, ''); } catch (err) { /* no address */ }
@@ -243,8 +243,8 @@ scripts:
         <header class="entry-header">
             <h1>${esc(e.headword)}${e.n ? ` <sup>${esc(e.n)}</sup>` : ''}</h1>
             <div class="meta">
-                <span class="lang-badge ${e.lang}">${esc(e.language)}</span>${e.spelling ? '<span class="lang-badge spelling" title="A spelling, not a word">Spelling</span>' : ELieb.isProperNoun(e.headword, e.lang) ? ELieb.properNounBadge() : ''}
-                ${page ? `<span>${page}${e.facsimile ? ` · <a href="${esc(e.facsimile)}" target="_blank" rel="noopener">page scan</a>` : ''}</span>` : ''}
+                <span class="lang-badge ${esc(e.lang)}">${esc(e.language)}</span>${e.spelling ? '<span class="lang-badge spelling" title="A spelling, not a word">Spelling</span>' : ELieb.isProperNoun(e.headword, e.lang) ? ELieb.properNounBadge() : ''}
+                ${page ? `<span>${page}${e.facsimile ? ` · <a href="${esc(ELieb.safeUrl(e.facsimile))}" target="_blank" rel="noopener">page scan</a>` : ''}</span>` : ''}
             </div>
         </header>
 
@@ -287,7 +287,7 @@ scripts:
             <aside class="entry-scan" aria-label="Page scan">
                 <div class="entry-scan-bar">
                     <span>${e.page ? `Printed page ${esc(e.page)}` : 'Page scan'}</span>
-                    <a href="${esc(e.facsimile)}" target="_blank" rel="noopener">Open on archive.org</a>
+                    <a href="${esc(ELieb.safeUrl(e.facsimile))}" target="_blank" rel="noopener">Open on archive.org</a>
                 </div>
                 <div class="entry-scan-load">
                     <button type="button" data-scan="${esc(scan)}" data-title="Liebermann, Gesetze II.1${e.page ? `, p. ${esc(e.page)}` : ''}, on archive.org">Show page scan</button>
