@@ -1034,7 +1034,7 @@ OWN_MS_NAMES = {'Erc', 'App AGu', 'Duel', 'Wl lad', 'Wl ep', 'Wl Lond', 'Wl art'
 GROUP_OVERRIDE.update({'Excom ' + n: 'Excommunication formulae' for n in 'I II III IV V VI VII VIII IX X XI XII XIII'.split()})
 # Anglo-Latin law books (Gesetze I pp. 529–675; added 19 October 2026): Latin only, with æ and ę, so their language
 # is not guessed from those letters
-PHASE2B = ['Quadr Ded', 'Quadr Arg', 'Quadr I', 'Quadr Rb', 'Quadr II Praef', 'Quadr II', 'In Cn', 'Cons Cn', 'Ps Cn for', 'Lib Lond']
+PHASE2B = ['Quadr Ded', 'Quadr Arg', 'Quadr I', 'Quadr Rb', 'Quadr II Praef', 'Quadr II', 'Hn', 'In Cn', 'Cons Cn', 'Ps Cn for', 'Lib Lond']
 OWN_MS_NAMES |= set(PHASE2B)
 GROUP_OVERRIDE.update({c: 'Anglo-Latin law books' for c in PHASE2B})
 
