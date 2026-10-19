@@ -47,7 +47,9 @@ scripts:
         const textLabel = commonest('oeLabel'), enLabel = commonest('glossLabel');
         const lang = commonest('oeLang');
         const textHead = (lang === 'la' ? 'Latin' : lang === 'ang' ? 'Old English' : 'Text') + (textLabel ? ': ' + textLabel : '');
-        const enHead = 'English' + (enLabel ? ': ' + enLabel : '');
+        // A Latin text Liebermann prints without a German translation has no English crib.
+        const enHead = mine.some(c => c.gloss) ? 'English' + (enLabel ? ': ' + enLabel : '')
+            : 'English: none (Liebermann gives no German translation of this text)';
         // Brief: just "MS B" when the editor is the same as the heading's.
         const tag = (label, usual) => {
             if (!label || label === usual) return '';
