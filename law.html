@@ -593,14 +593,17 @@ scripts:
                 if (i) p.appendChild(el('span', 'clause-dates__sep', ' · '));
                 p.appendChild(document.createTextNode(plainText(it)));
                 const ids = (it.getAttribute('source') || '').split(/\s+/).map(x => x.replace(/^#/, '')).filter(Boolean);
+                // n: the page where each scholar gives the date ("I p. 269|MEL p. 337"), in the order of source
+                const pages = (it.getAttribute('n') || '').split('|');
                 if (ids.length) {
                     p.appendChild(document.createTextNode(' ('));
                     ids.forEach((id, j) => {
-                        if (j) p.appendChild(document.createTextNode(', '));
+                        if (j) p.appendChild(document.createTextNode(pages.some(Boolean) ? '; ' : ', '));
                         const src = srcs[id] || { id, name: id, bibl: it };
                         const a = sourceLink(src);
                         a.textContent = src.name.split(',')[0];
                         p.appendChild(a);
+                        if (pages[j]) p.appendChild(document.createTextNode(', ' + pages[j]));
                     });
                     p.appendChild(document.createTextNode(')'));
                 }

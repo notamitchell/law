@@ -7,6 +7,8 @@
         <respStmt><resp>Edition of the text</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#liebermann">Liebermann</name></respStmt>
         <respStmt><resp>Translation</resp><name ref="#claude">Claude</name></respStmt>
+        <respStmt><resp>Date and place</resp><name ref="#robertson">Robertson</name></respStmt>
+        <respStmt><resp>Date and place</resp><name ref="#wormald-mel">Wormald, MEL</name></respStmt>
         <respStmt><resp>Transcription and English translation of Liebermann’s notes</resp><name ref="#claude">Claude</name></respStmt>
       </titleStmt>
       <publicationStmt>
@@ -23,6 +25,8 @@
         <listBibl type="sources">
           <bibl xml:id="liebermann" type="edition"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">1</biblScope> (Halle: Niemeyer, 1903), p. <biblScope unit="page">492–493</biblScope></bibl>
           <bibl xml:id="claude" type="translation">A semi-literal English rendering of Liebermann’s German, made for this database in 2026 with Claude, a large language model (LLM) made by Anthropic. It is a crib to help the reader with Liebermann’s German, not a separate translation</bibl>
+          <bibl xml:id="robertson" type="study">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925)</bibl>
+          <bibl xml:id="wormald-mel" type="study">Patrick Wormald, <title>The Making of English Law: King Alfred to the Twelfth Century, I: Legislation and its Limits</title> (Oxford: Blackwell, 1999)</bibl>
           <bibl xml:id="liebermann-erkl" type="commentary"><author>Felix Liebermann</author>, <title>Die Gesetze der Angelsachsen</title>, vol. <biblScope unit="volume">3</biblScope>: <title>Einleitung zu jedem Stück; Erklärungen zu einzelnen Stellen</title> (Halle: Niemeyer, 1916)</bibl>
         </listBibl>
         <listWit>
@@ -40,7 +44,7 @@
       </listPrefixDef>
     </encodingDesc>
     <profileDesc>
-      <creation><date source="#liebermann">1090–1135</date><note type="promulgation">1090–1135 (Liebermann)</note></creation>
+      <creation><date source="#liebermann #robertson" n="I p. 492|">1090–1135</date><date source="#wormald-mel" n="MEL pp. 407–9">mid-12th century</date><note type="promulgation">1090–1135 (Liebermann, I p. 492; Robertson); mid-12th century (Wormald, MEL pp. 407–9)</note></creation>
     </profileDesc>
     <revisionDesc>
       <change when="2026-10-19">Generated from row 3319 of the spreadsheet OE_Laws_Database - Updated by Claude.xlsx.</change>
@@ -54,7 +58,7 @@
         <ab type="liebermannText" xml:lang="ang" source="#liebermann" corresp="#wit-i"><ptr type="liebermannNote" n="28" target="#LeisWl_2a.lnote.oe.28"/><pb n="492–493" ed="#liebermann"/>Icez<ptr type="liebermannNote" n="29" target="#LeisWl_2a.lnote.oe.29"/> plaiz<ptr type="liebermannNote" n="30" target="#LeisWl_2a.lnote.oe.30"/> afierent<ptr type="liebermannNote" n="31" target="#LeisWl_2a.lnote.oe.31"/> a la coroune le rei.</ab>
         <ab type="translation" xml:lang="de" source="#liebermann"><pb n="492–493" ed="#liebermann"/>2<hi rend="italic">a</hi>. Diese Process[strafgelder] gehören der Krone<ptr type="liebermannNote" n="1" target="#LeisWl_2a.lnote.de.1"/> des Königs<ptr type="liebermannNote" n="i" target="#LeisWl_2a.lnote.de1.i"/>.</ab>
         <ab type="translation" xml:lang="en" source="#claude" ana="#fromGerman">2<hi rend="italic">a</hi>. These process [fines] belong to the crown of the king.</ab>
-        <note type="editorial">New row (October 2026): Liebermann’s text and German translation transcribed from Gesetze I p. 492–493 (two independent readings of the page images, differences settled against the page); Robertson does not print this clause separately</note>
+        <note type="editorial">New row (October 2026): Liebermann’s text and German translation transcribed from Gesetze I p. 492–493 (two independent readings of the page images, differences settled against the page); Robertson does not print this clause separately; F: corrected against Liebermann, Gesetze I (date at the head of the text); Wormald, Making of English Law I, October 2026 (was “1090–1135 (Liebermann)”, now “1090–1135 (Liebermann, I p. 492; Robertson); mid-12th century (Wormald, MEL pp. 407–9)”)</note>
         <note type="liebermannNote" subtype="textual" xml:id="LeisWl_2a.lnote.oe.b" n="b" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">492</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">Plural in I wohl besser</hi></seg><seg type="translation" xml:lang="en" source="#claude">Plural in I probably better</seg></note>
         <note type="liebermannNote" subtype="textual" xml:id="LeisWl_2a.lnote.oe.28" n="28" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">492</biblScope></bibl><seg type="original" xml:lang="de"><hi rend="italic">das Folgende</hi>—14 <hi rend="italic">fehlt Isp;</hi> II <hi rend="italic">I</hi></seg><seg type="translation" xml:lang="en" source="#claude">the following up to 14 omitted in Isp; II I</seg></note>
         <note type="liebermannNote" subtype="textual" xml:id="LeisWl_2a.lnote.oe.29" n="29" source="#liebermann"><bibl><biblScope unit="volume">1</biblScope><biblScope unit="page">492</biblScope></bibl><seg type="original" xml:lang="de">Icee <hi rend="italic">Io</hi></seg><seg type="translation" xml:lang="en" source="#claude">Icee Io</seg></note>
