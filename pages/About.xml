@@ -18,13 +18,14 @@
       <change when="2026-10-13">Added a section on the portrait of Felix Liebermann and its source.</change>
       <change when="2026-10-15">The portrait is no longer shown on the site, so the section now just introduces Liebermann.</change>
       <change when="2026-10-15">Rewritten: the project, Liebermann and the Gesetze, how the dictionary and the law codes database are made, citation of both, people, and rights and reuse. Added the funding acknowledgement; the database is the Lawcodes Database.</change>
+      <change when="2026-10-19">The section How Entries Are Made moved to Editorial Principles; the opening now points readers there.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
       <div type="page">
         <head>About the eLiebermann Project</head>
-        <p>The eLiebermann database is a digital research platform for the laws and legal language of early England. Its foundation is Felix Liebermann's <title>Die Gesetze der Angelsachsen</title> (1903–16), still the standard complete edition of the early English laws, which it makes searchable, interlinked and accessable to Anglophone readers. Around that core it collates later editions, translations and scholarship, so that the text of a law, the words it uses, and what scholars have said about both can be studied in one place.</p>
+        <p>The eLiebermann database is a digital research platform for the laws and legal language of early England. Its foundation is Felix Liebermann's <title>Die Gesetze der Angelsachsen</title> (1903–16), still the standard complete edition of the early English laws, which it makes searchable, interlinked and accessible to Anglophone readers. Around that core it collates later editions, translations and scholarship, so that the text of a law, the words it uses, and what scholars have said about both can be studied in one place.</p>
         <p>The platform has three parts:</p>
         <list>
           <item><hi rend="bold">The eLiebermann Lawcodes Database</hi> presents the laws clause by clause, according to Liebermann's own editorial divisions. Each clause gives the Old English or Latin text as Liebermann prints it, labelled by manuscript; his German translation with an English crib; and the texts and translations of later editors, where these exist in the public domain. Every clause is newly indexed by the offences, people and places it concerns. Similarities and points of comparison between legal clauses across the corpus made by Liebermann and later scholars are gathered and included as links, with citations.</item>
@@ -39,7 +40,7 @@
           <item>the texts and translations of a number of more modern editions, among them those of F. L. Attenborough and A. J. Robertson;</item>
           <item>1,348 cross-references between clauses from Liebermann's apparatus, and about 1,500 more from later scholars, each linked in both directions.</item>
         </list>
-        <p>eLiebermann is a work in progress. New material is added, and existing material corrected, continuously (see <hi rend="italic">Code and data</hi>, below).</p>
+        <p>eLiebermann is a work in progress. New material is added, and existing material corrected, continuously. The principles on which the texts have been edited, and the methods by which they have been transcribed, checked and encoded, are set out under <ref target="editorial.html">Editorial Principles</ref>.</p>
       </div>
       <div type="section">
         <head>Felix Liebermann and <title>Die Gesetze der Angelsachsen</title></head>
@@ -55,28 +56,6 @@
         <p>More than a century later the <title>Gesetze</title> remains the edition from which the laws are commonly cited, and much of what has been written on early English law since rests on it. But it is not an easy book to use. It is written in a heavily abbreviated academic German, it depends on hundreds of sigla, and its apparatus is dense and occasionally inconsistent. Parts of its scholarship have also been substantially revised by later studies. eLiebermann keeps Liebermann's text as he printed it, and sets beside it the work of the century since.</p>
       </div>
       <div type="section">
-        <head>How Entries Are Made</head>
-        <p>Both the Legal Dictionary and the Lawcodes Database are built from the printed <title>Gesetze</title>, and both add material that Liebermann does not have. The editorial work combines human scholarship with machine-assisted transcription, collation and encoding.</p>
-
-        <head rend="sub">Transcription and collation</head>
-        <p>Every dictionary entry has been transcribed twice, independently. The project team keyed the entries by hand into Word documents, preserving and at times intervening to regularise Liebermann's system of typography. A machine transcription was separately made in 2026 from page images of the <title>Wörterbuch</title> by Claude, a large language model developed by Anthropic. The two transcriptions are then collated and cross-checked entry by entry and word by word. Each disagreement is classified (a slip in one transcription or the other, a difference of typography only, a different division between entries) and, where it cannot be settled from the transcriptions alone, it is checked by the editor against the printed volume. A report of every collation, and a running list of readings still to be checked against the print, are kept in the project's data.</p>
-        <p>Liebermann's typography encodes meaning in a number of ways: roman type is the language of the laws, italic is Liebermann's German and/or grammatical commentary, bold marks headwords, and a superscript <hi rend="superscript">L</hi> or <hi rend="superscript">F</hi> distinguishes a Latin or French word. Transcriptions have kept this system of typography, and record page breaks to allow every entry to be linked to its page in a scan of the printed volume (housed at archive.org); users of the database can check entries against Liebermann's original printed version.</p>
-
-        <head rend="sub">Encoding and linking</head>
-        <p>Every dictionary entry and every law-code clause is a separate file in TEI XML, the international standard for scholarly digital editions (Text Encoding Initiative, P5). Within an entry, law-code sigla, manuscript sigla and grammatical abbreviations are identified automatically, by longest match against the authority lists created by the editor, and so are linked to their expansions. Each citation of a law is normalised to a standard key that follows the citation style of scholarship (law code and clause number) and resolved to its clause in the Lawcodes Database. Liebermann's own cross-references between entries (<hi rend="italic">s.</hi> WORD) become links, and headwords are linked to the Bosworth–Toller <title>Anglo-Saxon Dictionary</title>.</p>
-        <p>Where a correction is made (e.g. where Liebermann's printed entry sends readers to a headword that does not exist, or to an incorrect spelling) an "Editor's note" is included on the entry page, explaining the change or correction.</p>
-
-        <head rend="sub">The Lawcodes Database</head>
-        <p>The database is compiled in a master spreadsheet of more than fifty fields for each clause, from which the clause files are generated by script. For each clause the spreadsheet records, at least: Liebermann's text of each manuscript he prints, identified by his siglum, with his page number; his German translation; and an English rendering of his German.</p> 
-        <p>The English rendering of Liebermann's German is a deliberately close, semi-literal translation made with the help of an LLM (Claude, a Large Language Model created by Anthropic, 2026). This 'translation' is clearly labelled on every clause page; it is a crib to help readers through Liebermann's German, not a new translation of the Old English. The editor has intervened to correct some of its more egregious misprisions where these have been noticed; for the rest, users are on their own! Treating these renderings with caution is advised. The texts and translations of modern editions are entered with their page references and are in the process of being re-checked against the printed books.</p> 
-        <p>Liebermann's marginal cross-references were transcribed from the page images of volume I, and cross-references and comparisons made by later scholars have been collected from their studies, editions, footnotes and tables of sources. Each cross-reference link in the Lawcodes Database records its source with page reference, and each is linked in both directions between the relevant clauses. These are incomplete, and will continue to be added over time.</p> 
-        <p>The subject index of offences, people and places is the project's own editorial work, and does not reflect the subjects and concepts recorded in Liebermann's Vol II.2 <title>Rechts- und Sachglossar</title>.</p>
-        <p>Checking is recorded clause by clause: the foot of each clause page says what has been checked, and against which page of which book. This work is ongoing; the note on each individual clause will record when a final check has been made by a member of the project team.</p>
-
-        <head rend="sub">Review and publication</head>
-        <p>All the project's text and data are kept under version control in a Git repository. Every addition or correction, by a person or by a script, is proposed as a separate, documented change. Errors can be reported, and new entries suggested, through <ref target="contribute.html">Make a suggestion</ref> or the <hi rend="italic">Suggest a change</hi> link at the foot of an entry.</p>
-      </div>
-      <div type="section">
         <head>Citing eLiebermann</head>
         <p>When you use eLiebermann, you can open the linked archive.org pdfs of <title>Die Gesetze der Angelsachsen</title> to confirm the text and cite directly to the printed work:</p>
         <p>Felix Liebermann, ed. and trans., <title>Die Gesetze der Angelsachsen</title>, 3 vols (Halle: Niemeyer, 1903–16).</p>
@@ -89,7 +68,7 @@
         <head>People</head>
         <p><hi rend="bold">Anya Adair</hi>, Editor. School of English and Department of Law, The University of Hong Kong. Anya Adair directs the project, and is responsible for the creation and editing of the database and website.</p>
         <p><hi rend="bold">Mitchell Harrop</hi>, Website and Technical Development. Mitchell Harrop designed the core of the eLiebermann website and its data infrastructure.</p>
-        <p><hi rend="bold">Allan Adair</hi>, Research Assistant and Data Entry. Allan Adair underook a major portion of the work of keying and correcting dictionary and Old English lawcode entries against the print editions.</p>
+        <p><hi rend="bold">Allan Adair</hi>, Research Assistant and Data Entry. Allan Adair undertook a major portion of the work of keying and correcting dictionary and Old English lawcode entries against the print editions.</p>
       </div>
       <div type="section">
         <head>Funding</head>
