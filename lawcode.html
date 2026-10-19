@@ -28,12 +28,14 @@ scripts:
         ].filter(Boolean);
         // "Suggested dates: 601–4 (Liebermann) · 597–616, perhaps 602–3 (Whitelock) · …": Liebermann's first, then the
         // others in order of publication (as the database gives them); then the places, as on the clause pages.
-        const who = names => names.length ? ' (' + names.map(esc).join(', ') + ')' : '';
+        const who = names => names.length ? ' (' + names.map(esc).join(names.some(n => n.includes(',')) ? '; ' : ', ') + ')' : '';   // "Wormald, MEL p. 337" carries its page
         const dateLine = (label, items) => items && items.length ? `<p><span class="clause-dates__label">${label}: </span>${
             items.map(([text, names]) => esc(text) + who(names))
                 .join('<span class="clause-dates__sep"> · </span>')}</p>` : '';
         const dates = code.dates ? dateLine('Suggested dates', code.dates) + dateLine('Place', code.places)
             : (code.date ? `<p><span class="clause-dates__label">Suggested dates: </span>${esc(code.date)}</p>` : '');
+        // Manuscripts, editions and the number of clauses go under the dates, in the same "Label: …" style.
+        const plainLine = (label, html) => `<p><span class="clause-dates__label">${label}: </span>${html}</p>`;
         const sources = ['Liebermann'].concat(code.editors || []);
         // Column headings name the source most of this code's clauses use;
         // a clause from another source carries its own small label.
@@ -58,17 +60,16 @@ scripts:
             <header class="entry-header">
                 <h1>${esc(code.name)}</h1>
                 <div class="meta">${bits.map(b => `<span>${b}</span>`).join('')}</div>
-                ${dates ? `<div class="clause-dates">${dates}</div>` : ''}
+                <div class="clause-dates">${dates}${
+                    code.manuscripts && code.manuscripts.length ? plainLine('Manuscripts', code.manuscripts.map(esc).join(', ')) : ''}${
+                    plainLine('Editions and translations', sources.map(esc).join(', '))}${
+                    plainLine('Clauses', String(mine.length))}</div>
             </header>
-            <p>${mine.length} clauses.
-               ${code.manuscripts && code.manuscripts.length ? `Manuscripts: ${code.manuscripts.map(esc).join(', ')}.` : ''}
-               Editions and translations: ${sources.map(esc).join(', ')}.</p>
+            <p class="code-callout">Below is the code in summary form: one text (the first in Liebermann’s edition) and one translation (an English crib of Liebermann’s German). Where either of these is unavailable, an alternative is shown and labelled. Each clause has its own page with all its texts, manuscripts, editions and translations, and its notes, cross-references and keywords. Click a clause number, or <em>All texts and translations</em> under any clause, to open it.</p>
             <div class="code-tools">
                 <input type="search" id="find" placeholder="Find in this law code (clause number or words)" aria-label="Find in this law code">
                 <a class="button" href="${mine.length ? clauseUrl(mine[0].id) + '&all=1' : '#'}">Read with every text and translation</a>
             </div>
-            <p class="code-callout">Below is the code in summary form: one text and one translation of each clause. Each clause has its own page with all its texts, manuscripts, editions and translations, and its notes, cross-references and keywords. Click a clause number, or <em>All texts and translations</em> under any clause, to open it.</p>
-            <p class="small muted">The summary gives the text of the first manuscript in Liebermann’s edition (his leftmost column) and a semi-literal English rendering (made with an LLM, Claude) of Liebermann’s German translation. Where a clause has neither, another edition or translation is shown and labelled.</p>
             <div class="code-clauses-head">
                 <span></span>
                 <span>${esc(textHead)}</span>

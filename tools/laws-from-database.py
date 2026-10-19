@@ -208,7 +208,7 @@ MS_NAMES = {
     'Cons. Cn.': 'Consiliatio Cnuti (Latin translation, early 12th c.)',
     'Fl': 'Florence (John) of Worcester, Chronicon (Latin)',
     'Fl, Ox': 'Florence (John) of Worcester, Chronicon, and Oxford, Corpus Christi College MS 157',
-    'Wanley': 'Cotton Otho A.x (burnt 1731), known only from Wanley’s extract in Hickes, Thesaurus (1705)',
+    'Otho A.x': 'London, British Library, Cotton Otho A.x (burnt 1731), known only from Wanley’s extract in Hickes, Thesaurus (1705)',
     'Vr': 'Vatican, Biblioteca Apostolica, Reg. lat. 946',
     'York Gospels': 'York, Minster Library, Add. 1 (York Gospels)',
 }
@@ -478,19 +478,23 @@ def date_place(text, srcs):
     out = []
     for kind, items in (('date', dates), ('placeName', places)):
         for what, who in items:
-            ids = []
-            for name in who:
+            ids, pages = [], []
+            for entry in who:
+                name, page = promulgation.split_who(entry)
                 sid, short, ref = DATE_SCHOLARS[name]
                 srcs.add(sid, short, ref, 'study')
                 ids.append(sid)
-            out.append((kind, what, ids))
+                pages.append(page)
+            out.append((kind, what, ids, pages))
     return out
 
 
 def creation_xml(dated):
     """<date> and <placeName> elements, each pointing to the works that propose it."""
-    return ''.join('<%s%s>%s</%s>' % (kind, (' source="%s"' % ' '.join('#' + i for i in ids)) if ids else '', esc(what), kind)
-                   for kind, what, ids in dated)
+    # n: the page where each of those scholars gives it, in the same order, separated by "|" (blank if none)
+    return ''.join('<%s%s%s>%s</%s>' % (kind, (' source="%s"' % ' '.join('#' + i for i in ids)) if ids else '',
+                                         (' n="%s"' % esc('|'.join(pages))) if any(pages) else '', esc(what), kind)
+                   for kind, what, ids, pages in dated)
 
 
 # Keywords that mean the same, merged into one (the first form is kept).
@@ -826,7 +830,7 @@ def build(row, today, source_name, refs):
             seen.add(('x', sid))
             w('        <respStmt><resp>Cross-references to other clauses</resp><name ref="#%s">%s</name></respStmt>' % (sid, esc(srcs.items[sid][0])))
     dated = date_place(row['promulgation'], srcs)
-    for sid in dict.fromkeys(sid for _, _, ids in dated for sid in ids):
+    for sid in dict.fromkeys(sid for _, _, ids, _ in dated for sid in ids):
         if not any((k, sid) in seen for k in 'etx'):
             seen.add(('x', sid))
             w('        <respStmt><resp>Date and place</resp><name ref="#%s">%s</name></respStmt>' % (sid, esc(srcs.items[sid][0])))
