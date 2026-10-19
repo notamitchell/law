@@ -126,47 +126,40 @@ Then open http://localhost:4000/law/.
 
 ## Transcription notes to review
 
-The letters Z to O were transcribed from the page scans, working backwards from Z. These are the quirks and judgement calls recorded on their pull requests ([Z](https://github.com/notamitchell/law/pull/5), [Y](https://github.com/notamitchell/law/pull/7), [W](https://github.com/notamitchell/law/pull/8), [V](https://github.com/notamitchell/law/pull/9), [U](https://github.com/notamitchell/law/pull/10), [Þ](https://github.com/notamitchell/law/pull/12), [T](https://github.com/notamitchell/law/pull/14), [S](https://github.com/notamitchell/law/pull/17), [R](https://github.com/notamitchell/law/pull/19), [Q](https://github.com/notamitchell/law/pull/21), [P](https://github.com/notamitchell/law/pull/24), [O](https://github.com/notamitchell/law/pull/26)). Tick each one once someone has checked it against the print and agrees with it, or change the entries if not.
+
 
 **Source and status**
 
-- [ ] Z–O were transcribed from the page images, not archive.org's OCR. Every entry says "Transcribed by Claude from the page scan; not yet checked against the print." (all letters)
-- [ ] Only spot checks have been done so far, and all matched the scan: wis–wise (p. 245), wud[u] (p. 250), the end of Verbum to vers (p. 233), utalædan to [utaslean] (p. 231). (W, V, U)
-- [ ] The whole *Wörterbuch*, A to Z (pp. 1–253), has been cross-checked against the team's Word transcriptions: see [A – boc](docs/crosscheck-A-boc.md), [bocere – collaboratio](docs/crosscheck-bocere-collaboratio.md), [collarium – d](docs/crosscheck-collarium-d.md), [d – dryhten](docs/crosscheck-d-dryhten.md), [dryhtenbeag – fadian](docs/crosscheck-dryhtenbeag-fadian.md), [façe – forisfactum](docs/crosscheck-faece-forisfactum.md), [forisfactura – geargerihta](docs/crosscheck-forisfactura-geargerihta.md), [gearian – gerefa](docs/crosscheck-gearian-gerefa.md), [gerefscipe – habban](docs/crosscheck-gerefscipe-habban.md), [habban – hume](docs/crosscheck-habban-hume.md), [hund – iustitia](docs/crosscheck-hund-iustitia.md), [iustitiabilis – mægen](docs/crosscheck-iustitiabilis-maegen.md), [mægenþrymmas – minutus](docs/crosscheck-maegenthrymmas-minutus.md), [mirc – Northamtunescire](docs/crosscheck-mirc-northamtunescire.md), [norðan – orf](docs/crosscheck-nordan-orf.md), [orfenins – propriatio](docs/crosscheck-orfenins-propriatio.md), [prosecutio – sacu](docs/crosscheck-prosecutio-sacu.md), [sadelian – singan](docs/crosscheck-sadelian-singan.md), [Singular – tǣcan](docs/crosscheck-singular-taecan.md), [tǣcing – þe](docs/crosscheck-taecing-the.md), [þǣra – understandan](docs/crosscheck-thaera-understandan.md), [underþæncan – wedd](docs/crosscheck-underthaencan-wedd.md), [weddbryce – wiðertihtlan](docs/crosscheck-weddbryce-widertihtlan.md) and [wiðerwordian – Zahlwort](docs/crosscheck-widerwordian-zahlwort.md) for what was fixed. Readings still to check in the book are collected in [To check against the print](docs/to-check-against-print.md). (all letters)
-- [ ] An entry that runs over a page keeps a page marker where the page turns, e.g. ymbrenfæsten (p. 253) and vel (p. 233). The very long entry on, which runs from p. 162 to p. 165, is one entry. (Y, W, V, O)
+
+
+
+- An entry that runs over a page keeps a page marker where the page turns, e.g. ymbrenfæsten (p. 253) and vel (p. 233). The very long entry on, which runs from p. 162 to p. 165, is one entry. (Y, W, V, O)
 
 **Language labels**
 
-- [ ] z- carries the double marker LF, but w is marked FL. Decide on one order. (Z, W)
-- [ ] A superscript F or L inside an entry is kept as a language marker, not linked as a manuscript siglum, e.g. the F before *siste* in Zahlwort. (Z, Y)
-- [ ] Liebermann's German articles are tagged as grammatical terms: Zahlwort, Wortbildung, Wortschatz variirt, both Wortstellung, Verallgemeinernd, Verbum, Vocalverdoppelung, Umlaut, Unpersönliche and Urkundenstil. (Z, W, V, U)
-- [ ] German articles printed twice (Personalpronomen, Possessivprn., Praeposition) are stored as two entries each, the second being the Latin or French one with a `-2` file name. (P)
-- [ ] II) un has no F of its own and is tagged French, like I) un. (U)
+- A superscript F or L inside an entry is kept as a language marker, not linked as a manuscript siglum, e.g. the F before *siste* in Zahlwort. (Z, Y)
+- Liebermann's German articles are tagged as grammatical terms: Zahlwort, Wortbildung, Wortschatz variirt, both Wortstellung, Verallgemeinernd, Verbum, Vocalverdoppelung, Umlaut, Unpersönliche and Urkundenstil. (Z, W, V, U)
+- German articles printed twice (Personalpronomen, Possessivprn., Praeposition) are stored as two entries each, the second being the Latin or French one with a `-2` file name. (P)
 
 **Homographs and file names**
 
-- [ ] Homographs printed I), II) … are separate entries with the numeral kept in the text: yfel and yfel-2, and þa, þæt, þe, þon, þy in Þ, and I) sio / II) sio(n), I) set / II) set, scyld- and seo in S, and rad I–V, r[i]san, ryman and riht I/II in R, and the French que I–III in Q. Numbered senses inside one entry stay together, as in the long qui and quod, and so do numbered people under one name (Radulfus, Ricardus, Rodbertus). (Y, Þ, S, R, Q)
-- [ ] Under Petrus, the numbered people II) and III) are separate entries, unlike Radulfus, Ricardus and Rodbertus in R, which keep theirs together. Pick one rule. (R, P)
-- [ ] The two utlaga entries have no I)/II) numerals in print and are stored as utlaga and utlaga-2. (U)
-- [ ] The þæt abbreviation ꝥ now gives the file name "thaet", as þ gives "th". Before that change, the headword ꝥ gave an empty file name. (Þ)
-- [ ] Headwords printed under both T and Þ, such as T[h]eophania (p. 210 and p. 220), are kept as two entries, the T one taking the next free file name (T-h-eophania-2). (T)
-- [ ] A T headword whose file name is already taken gets the next free one, e.g. th-2 to th-4, so nothing already on the site is overwritten. Check whether these should be merged with the earlier entries or renamed. (T)
+- Homographs printed I), II) … are separate entries with the numeral kept in the text: yfel and yfel-2, and þa, þæt, þe, þon, þy in Þ, and I) sio / II) sio(n), I) set / II) set, scyld- and seo in S, and rad I–V, r[i]san, ryman and riht I/II in R, and the French que I–III in Q. Numbered senses inside one entry stay together, as in the long qui and quod, and so do numbered people under one name (Radulfus, Ricardus, Rodbertus). (Y, Þ, S, R, Q)
+
 
 **Headwords**
 
-- [ ] yfelwyrcendo is the headword, with "wyrto" left in the entry text. (Y)
-- [ ] Some headwords are printed after a plain word (openne **wiðercwide**, se **wodfreca**). The entry text starts with that word, as in the book. (W)
-- [ ] "-unga" stays inside the -ung entry, where it follows a bar. (U)
-- [ ] Wynn is written ƿ only in the w entry, where Liebermann prints the letter form, and in p 1), where the sign after "durch Ähnlichkeit mit" is read as wynn because the sense requires it. Wynn also appears in the manuscript forms sƿic (*spic*), sƿræt (*spræc*) and tƿuelfhindus (*twelfhynde*), in ƿác (*wac*) and ƿeach (*Wealh*), words that Q leaves untranslated or misreads, and in *y* 12) a) (y miswritten for wynn), all of which the scan transcription had misread as thorn; the team transcription has wynn. (W, P, S)
+
+- Some headwords are printed after a plain word (openne **wiðercwide**, se **wodfreca**). The entry text starts with that word, as in the book. (W)
+
+- Wynn is written ƿ only in the w entry, where Liebermann prints the letter form, and in p 1), where the sign after "durch Ähnlichkeit mit" is read as wynn because the sense requires it. Wynn also appears in the manuscript forms sƿic (*spic*), sƿræt (*spræc*) and tƿuelfhindus (*twelfhynde*), in ƿác (*wac*) and ƿeach (*Wealh*), words that Q leaves untranslated or misreads, and in *y* 12) a) (y miswritten for wynn), all of which the scan transcription had misread as thorn; the team transcription has wynn. (W, P, S)
 
 **Printed text: kept or corrected**
 
-- [ ] Letters broken in the type were read as the intended letter: "mögcn" → mögen, "seincs" → seines, "1,.7" → 1,7 (U); "aufhebend" and "Orthographie" (Þ); "Untergebenen" and "doppeltes" (T); "Streitigkeiten" and "einleitend" (S); "eigenem" and "retient" (R); "ceapnnge" → ceapunge in orceapunga, assuming the "nn" is broken type (O). Checked against the print: the "!" after sacu in -ch- is an ink mark and is left out, and "dém" in chose is a printing error for dem (C).
-- [ ] Likely misprints in the book are kept as printed: "derehdner" (voleir) and "-rseunessa" (v), "forhttundan" under Particip, "(þingc)" in oðer and "V G G 2" in oððon, and "As Alm 1.2" in bisceop, surely for 1,2. (V, P, O, B)
-- [ ] The gap printed "hundfeo:::" in þusend is kept as printed. (Þ)
-- [ ] In opprimere, the small superscript in "Rb. S. 537^73^" is read as 73 but could be another number. (O)
-- [ ] Literal asterisks in references are kept, e.g. *S.* 375*. (W)
-- [ ] "VIIa Atr" is written closed up, to match the law-code list. (W)
+- Letters broken in the type are read as the intended letter: e.g. "mögcn" → mögen, "seincs" → seines, "1,.7" → 1,7 (U); "aufhebend" and "Orthographie" (Þ); "Untergebenen" and "doppeltes" (T); "Streitigkeiten" and "einleitend" (S); "eigenem" and "retient" (R); "ceapnnge" → ceapunge in orceapunga, assuming the "nn" is broken type (O). 
+- Likely misprints in the book are kept as printed: "derehdner" (voleir) and "-rseunessa" (v), "forhttundan" under Particip, "(þingc)" in oðer and "V G G 2" in oððon, and "As Alm 1.2" in bisceop, surely for 1,2. (V, P, O, B). A note is added about the probable misprint.
+
+- Literal asterisks in references are kept, e.g. *S.* 375*. (W)
+
 
 **Letter boundaries**
 
