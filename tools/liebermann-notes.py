@@ -2,7 +2,7 @@
 """
 Adds the editors' notes to the clause files in oe-laws/ from the main spreadsheet
 (OE_Laws_Database - Updated by Claude.xlsx), sheets "Texts with note markers",
-"Liebermann notes" and (from October 2026) "Attenborough notes".
+"Liebermann notes" and (from October 2026) "Attenborough notes", "Robertson notes", "Whitelock notes" and "Oliver notes".
 
     python3 tools/liebermann-notes.py "OE_Laws_Database - Updated by Claude.xlsx" --dry-run
     python3 tools/liebermann-notes.py "OE_Laws_Database - Updated by Claude.xlsx"
@@ -90,13 +90,15 @@ RESP_ATT = ('<respStmt><resp>Transcription of Attenborough’s notes</resp>'
             '<name ref="#claude">Claude</name></respStmt>')
 
 # Sheets of editors' notes -> the source id of the editor
-EDITOR_SHEETS = {'Attenborough notes': 'attenborough', 'Robertson notes': 'robertson', 'Whitelock notes': 'whitelock'}
+EDITOR_SHEETS = {'Attenborough notes': 'attenborough', 'Robertson notes': 'robertson', 'Whitelock notes': 'whitelock',
+                 'Oliver notes': 'oliver'}
 EDITOR_BIBL = {
     'attenborough': ATT_BIBL,
     'robertson': '<bibl xml:id="robertson" type="edition">A. J. Robertson, <title>The Laws of the Kings of England from Edmund to Henry I</title> (Cambridge: Cambridge University Press, 1925)</bibl>',
+    'oliver': '<bibl xml:id="oliver" type="edition">Lisi Oliver, <title>The Beginnings of English Law</title> (Toronto: University of Toronto Press, 2002)</bibl>',
     'whitelock': '<bibl xml:id="whitelock" type="translation">Dorothy Whitelock, ed., <title>English Historical Documents, I: c. 500–1042</title> (London: Eyre &amp; Spottiswoode, 1955; 2nd edn, London: Eyre Methuen, 1979); page numbers are those of the Taylor &amp; Francis e-Library edition (2007)</bibl>',
 }
-EDITOR_NAME = {'attenborough': 'Attenborough', 'robertson': 'Robertson', 'whitelock': 'Whitelock'}
+EDITOR_NAME = {'attenborough': 'Attenborough', 'robertson': 'Robertson', 'whitelock': 'Whitelock', 'oliver': 'Oliver'}
 
 # Columns of "Texts with note markers" (0-based) -> the spreadsheet column they copy
 TEXT_COLS = {5: 'K', 6: 'L', 8: 'N', 9: 'AF', 10: 'O', 11: 'T', 12: 'U', 13: 'W', 14: 'BF', 15: 'BI', 16: 'BL', 17: 'AP'}
