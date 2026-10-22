@@ -132,8 +132,11 @@ scripts:
         robertson: { name: 'Robertson', intro: 'Robertson’s notes (The Laws of the Kings of England from Edmund to Henry I, 1925): the notes at the back of her book, keyed to the numbers in his translation, and his footnotes to her text.',
             textIntro: 'Robertson’s footnotes to her text (The Laws of the Kings of England from Edmund to Henry I, 1925), mostly the readings of the other manuscripts.',
             trIntro: 'Robertson’s notes to her translation, printed at the back of her book (The Laws of the Kings of England from Edmund to Henry I, 1925).' },
-        whitelock: { name: 'Whitelock', intro: 'Whitelock’s footnotes to her translation (English Historical Documents I, 2nd edn, 1979).',
-            textIntro: '', trIntro: 'Whitelock’s footnotes to her translation (English Historical Documents I, 2nd edn, 1979).' }
+        oliver: { name: 'Oliver', intro: 'Oliver’s footnotes to her edition and to her translation (The Beginnings of English Law, 2002).',
+            textIntro: 'Oliver’s footnotes to her Old English text (The Beginnings of English Law, 2002).',
+            trIntro: 'Oliver’s footnotes to her translation (The Beginnings of English Law, 2002).' },
+        whitelock: { name: 'Whitelock', intro: 'Whitelock’s introduction and footnotes to her translation (English Historical Documents I, 2nd edn, 1979).',
+            textIntro: '', trIntro: 'Whitelock’s introduction and footnotes to her translation (English Historical Documents I, 2nd edn, 1979).' }
     };
     const xmlId = n => n.getAttribute('xml:id') || n.getAttributeNS('http://www.w3.org/XML/1998/namespace', 'id') || '';
     const htmlId = id => 'ln-' + id.replace(/[^A-Za-z0-9_-]/g, '_');
@@ -167,9 +170,11 @@ scripts:
             li.id = htmlId(xmlId(n));
             const whole = /wholeClause/.test(n.getAttribute('rend') || '');
             const nn = n.getAttribute('n') || '';
+            const intro = nn === 'Introduction';     // an editor's introduction to the text (Whitelock)
             const num = el('span', 'lnotes__num', nn === '0' ? '' : nn + (whole ? '' : ')'));
             li.appendChild(num);
-            if (whole) li.appendChild(el('span', 'muted', ' (on the clause as a whole, no number in the text) '));
+            if (intro) li.appendChild(el('span', 'muted', ' (to the whole text) '));
+            else if (whole) li.appendChild(el('span', 'muted', ' (on the clause as a whole, no number in the text) '));
             const kids = Array.from(n.children);
             const label = kids.find(k => k.localName === 'label');
             if (n.getAttribute('subtype') === 'footnote' && group.textShown === false) {
