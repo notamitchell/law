@@ -75,6 +75,30 @@ code, pre, textarea.code { font-family: var(--mono); font-size: 0.9em; }
 .skip-link { position: absolute; left: -999px; }
 .skip-link:focus { left: 1rem; top: 1rem; background: var(--surface); padding: 0.5rem 1rem; z-index: 100; }
 
+/* ---------- Development copy ---------- */
+/* This repository is the DEV site; the public site is
+   anyaadair.github.io/eLiebermann. A faint checkerboard behind every page
+   and a banner at the top make that obvious at a glance. */
+body.dev-site {
+    background-color: var(--paper);
+    background-image: conic-gradient(#ece8de 25%, transparent 0 50%, #ece8de 0 75%, transparent 0);
+    background-size: 32px 32px;
+}
+body.dev-site .site-header { background: transparent; }
+.dev-banner {
+    background: repeating-linear-gradient(-45deg, #f2b705 0 10px, var(--navy-dark) 10px 20px);
+    padding: 4px 0;
+}
+.dev-banner p {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    background: #fff3c4;
+    color: var(--navy-dark);
+    font-size: 0.95rem;
+    text-align: center;
+}
+.dev-banner a { color: var(--link); font-weight: 600; }
+
 /* ---------- Site frame ---------- */
 
 .site-header {
