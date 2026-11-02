@@ -22,7 +22,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title and page.title != "Home" %}{{ page.title }} · {% endif %}{{ brand }}: {{ tagline }}</title>
+    <meta name="robots" content="noindex, nofollow">
+    <title>[DEV] {% if page.title and page.title != "Home" %}{{ page.title }} · {% endif %}{{ brand }}: {{ tagline }}</title>
     {%- if page.description %}
     <meta name="description" content="{{ page.description }}">
     {%- endif %}
@@ -44,8 +45,24 @@
     {%- endif %}
     {%- endfor %}
 </head>
-<body class="{% if page.full_width %}full-width{% endif %}{% if page.section == "home" %} home{% endif %}">
+<body class="dev-site{% if page.full_width %} full-width{% endif %}{% if page.section == "home" %} home{% endif %}">
     <a class="skip-link" href="#main">Skip to content</a>
+
+    {%- comment -%}
+      This repository is the development copy of eLiebermann. The public
+      site lives at anyaadair.github.io/eLiebermann; the link below goes to
+      the same page there, keeping any ?query and #anchor.
+    {%- endcomment %}
+    {%- assign live_site = "https://anyaadair.github.io/eLiebermann" %}
+    <div class="dev-banner" role="note" aria-label="Development copy">
+        <p><strong>Development copy.</strong> This is a test version of eLiebermann and may be incomplete or out of date. The live site is at <a id="dev-live-link" href="{{ live_site }}{{ page.url }}">anyaadair.github.io/eLiebermann</a>.</p>
+    </div>
+    <script>
+        (function () {
+            var a = document.getElementById("dev-live-link");
+            if (a) a.href += location.search + location.hash;
+        })();
+    </script>
 
     {%- if page.section == "home" %}
     <header class="site-header">
